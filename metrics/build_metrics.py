@@ -65,6 +65,7 @@ OUTLIER_MIN_REF = 3     # 비교 기준 거래가 이보다 적으면 판단 보
 RARE_AREA_MIN = 5       # 같은 단지·평형 누적 거래가 이보다 적으면 희귀 면적
 ZSCORE_MIN_WEEKS = 26   # 과거 표본이 이보다 적은 시군구는 Z-score 생략
 TOP_N = 50
+CHART_SERIES_N = 5    # 차트용 시계열을 뽑을 단지 수
 
 # 세대수 필터는 T6b(K-apt 기본정보) 수집 후 켠다. 지금은 세대수 자체가 없어
 # 켜면 전 건이 "세대수 미상"으로 통과하거나 전부 사라진다. None = 비활성.
@@ -330,6 +331,40 @@ def surge_apt(con, asof: date) -> list[dict]:
     """)
 
 
+def series_for_charts(con, asof: date, picks: list[dict]) -> list[dict]:
+    """차트가 그릴 월별 시계열.
+
+    차트는 **이 JSON 안의 숫자만** 그린다. 따로 DB 를 뒤지면 발행된 그림과
+    T12 숫자 검증기가 대조하는 값이 어긋날 수 있다. 같은 파일에서 나와야 한다.
+    """
+    if not picks:
+        return []
+    out = []
+    for p in picks[:CHART_SERIES_N]:
+        rows = q(con, f"""
+            {cte()}
+            SELECT strftime(date_trunc('month', deal_date), '%Y-%m') AS ym,
+                   round(avg(deal_amount)) AS avg_price,
+                   count(*) AS deals
+            FROM trades
+            WHERE apt_name_raw = '{p["apt_name"].replace("'", "''")}'
+              AND sigungu_name = '{p["sigungu_name"]}'
+              AND pyeong_bucket = '{p["pyeong_bucket"]}'
+              AND deal_date >= DATE '{asof}' - INTERVAL 5 YEAR
+              AND deal_date <= DATE '{asof}'
+            GROUP BY 1 ORDER BY 1
+        """)
+        if len(rows) >= 6:
+            out.append({
+                "apt_name": p["apt_name"],
+                "sigungu_name": p["sigungu_name"],
+                "legal_dong_name": p.get("legal_dong_name"),
+                "pyeong_bucket": p["pyeong_bucket"],
+                "points": rows,
+            })
+    return out
+
+
 # ── 메인 ─────────────────────────────────────────────────────────────────
 def main() -> int:
     ap = argparse.ArgumentParser(description="T9 지표 계산")
@@ -382,6 +417,8 @@ def main() -> int:
         result[bucket][key] = rows
         print(f"  {label:14s} {len(rows):>4}건  ({(datetime.now() - s).total_seconds():.1f}s)")
 
+    result["series"] = series_for_charts(con, asof, result["daily"]["new_high"])
+    print(f"  {'차트 시계열':14s} {len(result['series']):>4}건")
     con.close()
     result["peak_ram_mb"] = peak_ram_mb()
 
