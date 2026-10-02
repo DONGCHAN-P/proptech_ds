@@ -178,7 +178,17 @@ def stage_all_raw_trade(force: bool = False) -> pd.DataFrame:
 
             df = clean_trade_xml(xml_path)
             if len(df) == 0:
-                results.append({'path': str(xml_path), 'rows': 0, 'status': 'EMPTY'})
+                # 전에 받아둔 staged 가 있으면 지운다.
+                # 그냥 두면 소스에서 사라진 거래가 영구히 남는다. 90일 롤링
+                # 재수집으로 취소·정정을 반영한다는 전제가 깨지고, 폐지된
+                # 시군구 코드(2026-07 인천 개편)의 데이터도 계속 집계된다.
+                removed = False
+                if out_path.exists():
+                    out_path.unlink()
+                    out_path.with_suffix('.parquet.ver').unlink(missing_ok=True)
+                    removed = True
+                results.append({'path': str(xml_path), 'rows': 0,
+                                'status': 'EMPTY_PURGED' if removed else 'EMPTY'})
                 continue
 
             df = attach_apt_id(df)
@@ -195,7 +205,13 @@ def stage_all_raw_trade(force: bool = False) -> pd.DataFrame:
     summary = pd.DataFrame(results)
     ok = (summary.status == 'OK').sum()
     skip = (summary.status == 'SKIP').sum()
+    purged = (summary.status == 'EMPTY_PURGED').sum()
+    err = (summary.status == 'ERROR').sum()
     print(f'정제 완료: OK={ok}, SKIP={skip}, 신규 행={summary[summary.status=="OK"].rows.sum():,}건')
+    if purged:
+        print(f'  소스가 0건이 돼 제거한 staged: {purged}개')
+    if err:
+        print(f'  오류: {err}개')
     if (summary.status == 'ERROR').any():
         print('에러:')
         print(summary[summary.status == 'ERROR'][['path', 'error']].to_string())

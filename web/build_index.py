@@ -141,17 +141,28 @@ def build_geo_bridge(con: duckdb.DuckDBPyConnection) -> None:
     new["apt_name_norm"] = new["apt_name_raw"].map(legacy)
     new = new.drop(columns="apt_name_raw")
 
+    # 2026-07 인천 개편으로 생긴 신규 코드는 구 apt_id_map 에 없다.
+    # 조인용으로만 구 코드를 하나 더 들고 간다 (제물포·영종 -> 중구, 검단 -> 서구).
+    INCHEON_BACK = {"28125": "28110", "28155": "28110",
+                    "28275": "28260", "28290": "28260"}
+    new["sigungu_legacy"] = new["sigungu_code"].map(INCHEON_BACK).fillna(
+        new["sigungu_code"])
+
     key_sets = [
         ["sigungu_code", "apt_name_norm", "road_address"],
         ["sigungu_code", "legal_dong_name", "apt_name_norm"],
         ["sigungu_code", "apt_name_norm"],
+        ["sigungu_legacy", "apt_name_norm", "road_address"],
+        ["sigungu_legacy", "legal_dong_name", "apt_name_norm"],
+        ["sigungu_legacy", "apt_name_norm"],
     ]
     resolved: list[pd.DataFrame] = []
     pending = new
     for keys in key_sets:
         if pending.empty:
             break
-        cand = old.drop_duplicates(keys)[keys + ["old_apt_id", "lat", "lng"]]
+        src = old.rename(columns={"sigungu_code": "sigungu_legacy"})             if keys[0] == "sigungu_legacy" else old
+        cand = src.drop_duplicates(keys)[keys + ["old_apt_id", "lat", "lng"]]
         merged = pending.merge(cand, on=keys, how="left")
         hit = merged[merged["lat"].notna()]
         resolved.append(hit[["apt_id", "old_apt_id", "lat", "lng"]])
