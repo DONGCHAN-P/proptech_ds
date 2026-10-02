@@ -130,6 +130,35 @@ def make_apt_id(legal_dong_code, apt_name, road_address=''):
     return hashlib.sha256(raw.encode('utf-8')).hexdigest()[:16]
 
 
+def make_deal_hash(legal_dong_code, apt_name_norm, deal_date, deal_amount,
+                   area_m2, floor):
+    """거래 고유 해시키 (T5a).
+
+    한 건의 신고를 식별한다. upsert·중복검출·발행원장 대조의 기준키다.
+
+    apt_id 를 일부러 쓰지 않았다. apt_id 정의가 바뀌면(2026-05-03 umd_cd 전환,
+    향후 T6 건축년도 도입) 기존 해시가 전부 무효가 되기 때문이다. 대신 정의가
+    흔들리지 않는 원시 필드만 쓴다.
+
+    area_m2 는 소수 2자리로, deal_amount 는 정수로 고정한다. 부동소수점 표기가
+    달라지면 같은 거래가 다른 해시를 받는다.
+    """
+    def _num(v, nd):
+        if v is None or v != v:          # None / NaN
+            return ''
+        return f'{float(v):.{nd}f}'
+
+    raw = '|'.join([
+        str(legal_dong_code or ''),
+        str(apt_name_norm or ''),
+        str(deal_date)[:10],
+        _num(deal_amount, 0),
+        _num(area_m2, 2),
+        '' if floor is None or floor != floor else str(int(floor)),
+    ])
+    return hashlib.sha256(raw.encode('utf-8')).hexdigest()[:16]
+
+
 def make_legal_dong_code(sigungu_code, umd_cd):
     """Real 10-digit legal admin code = sigungu(5) + umdCd(5).
     v1.1: replaced fake sha256[:5] with RTMS umdCd."""
