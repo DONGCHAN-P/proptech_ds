@@ -15,6 +15,7 @@ import sys
 sys.path.insert(0, r'c:\projects\realestate_reco')
 
 from common import *
+from metrics.filters import apply_filters
 import pandas as pd
 import numpy as np
 from datetime import datetime
@@ -22,7 +23,12 @@ import json
 
 WATERMARK_KEYS = DIRS['logs'] / 'trade_watermark_keys.parquet'
 WATERMARK_META = DIRS['logs'] / 'trade_watermark_meta.json'
-KEY_COLS = ['apt_id', 'deal_date', 'area_m2', 'floor']
+# 워터마크 키는 deal_hash 하나다 (T5a).
+# 예전엔 (apt_id, 계약일, 면적, 층) 조합이었는데, apt_id 정의가 바뀌면
+# (2026-05 umd_cd, 2026-10 괄호보존) 전 건이 "신규"로 뒤집힌다. 실제로 T6
+# 마이그레이션 직후 신규 거래가 103만 건으로 집계됐다. deal_hash 는 API
+# 원본값으로만 만들어 그런 변경에 흔들리지 않는다.
+KEY_COLS = ['deal_hash']
 
 
 def load_new_deals(all_events: pd.DataFrame) -> tuple:
@@ -35,23 +41,14 @@ def load_new_deals(all_events: pd.DataFrame) -> tuple:
         return all_events.copy(), {}
 
     prev_keys = pd.read_parquet(WATERMARK_KEYS)
-    prev_meta = json.loads(WATERMARK_META.read_text(encoding='utf-8')) \
-        if WATERMARK_META.exists() else {}
+    prev_meta = json.loads(WATERMARK_META.read_text(encoding='utf-8'))         if WATERMARK_META.exists() else {}
 
-    # floor: Int64(nullable) -> float64 로 변환해 merge 호환성 확보
-    curr_keys = all_events[KEY_COLS].copy()
-    curr_keys['_floor_f'] = curr_keys['floor'].astype('float64')
-    curr_keys['_date_s']  = curr_keys['deal_date'].astype(str)
+    if 'deal_hash' not in prev_keys.columns:
+        print('  워터마크가 구버전(apt_id 기반) - 전체를 신규로 처리하고 갱신')
+        return all_events.copy(), prev_meta
 
-    prev_cmp = prev_keys.copy()
-    prev_cmp['_floor_f'] = prev_cmp['floor'].astype('float64')
-    prev_cmp['_date_s']  = pd.to_datetime(prev_cmp['deal_date']).astype(str)
-
-    merge_cols = ['apt_id', '_date_s', 'area_m2', '_floor_f']
-    indicator = curr_keys[merge_cols].merge(
-        prev_cmp[merge_cols], on=merge_cols, how='left', indicator=True
-    )
-    is_new = (indicator['_merge'] == 'left_only').values
+    seen = set(prev_keys['deal_hash'])
+    is_new = ~all_events['deal_hash'].isin(seen)
     new_deals = all_events[is_new].copy()
     return new_deals, prev_meta
 
@@ -167,6 +164,14 @@ DIRS['exports_daily'].mkdir(parents=True, exist_ok=True)
 # 전체 trade_events 로드
 all_events = pd.read_parquet(DIRS['master'] / 'trade_events.parquet')
 all_events['deal_date'] = pd.to_datetime(all_events['deal_date'])
+
+# 해제·이상치 공통 필터 (T8). 이게 없던 동안 해제된 거래가 특이거래 Top100 에
+# 올라가 있었다 — 발행됐다면 취소된 거래를 "신고가"로 소개할 뻔했다.
+_before = len(all_events)
+all_events = apply_filters(all_events)
+if _before != len(all_events):
+    print(f'공통 필터: {_before:,} -> {len(all_events):,}건 '
+          f'({_before - len(all_events):,}건 제외 — 해제·가격이상치)')
 
 # 신규 거래 추출
 new_deals, prev_meta = load_new_deals(all_events)

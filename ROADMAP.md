@@ -251,12 +251,26 @@
   - 결과: `trade_events` 4,907,024 → **4,921,615건**, unified 6,982,740행
   - 참고: `pytest.ini` 추가 — 실제 재실행 테스트는 `slow` 마커로 분리 (`pytest -m slow`)
 
-- [ ] **T8. 계약해제 필터 강제 적용** ← 지표 정확성의 핵심
-  - 이미 있는 것: `is_canceled`·`cancel_date` 컬럼, step4가 `is_canceled == False` 필터링,
-    `web/build_index.py`가 `WHERE NOT is_canceled` 적용
-  - 추가할 것: **공통 CTE로 강제**해 우회 불가하게 만들고 pytest로 고정
-  - 해제 발생 시 "기존 발행 콘텐츠 영향 여부" 점검 쿼리 작성
-  - 완료 기준: `pytest tests/test_cancelled_filter.py` 통과
+- [x] **T8. 계약해제 필터 강제 적용** *(2026-10-02 완료)*
+
+  ⚠️ **step8 이 해제 필터 없이 돌고 있었다.** 신규 거래 19,362건 중 **해제 324건**이 섞였고,
+  그중 하나가 **특이거래 Top 100 에 올라가 있었다** (주공3, 2026-08-27, 6억 4,700).
+  발행됐다면 취소된 거래를 "신고가"로 소개할 뻔했다. step4·web 은 필터가 있었지만
+  각자 WHERE 를 쓰다 보니 step8 만 빠진 것이다.
+
+  - `metrics/filters.py` 신설 — 모든 지표가 통과해야 하는 공통 관문
+    - `apply_filters()` (pandas) / `trades_cte()` (DuckDB) 두 경로 제공
+    - 해제 제외 + 가격 이상치(50~20,000 만원/㎡) 제외 + 층 구간화(저/중/고)
+    - `min_households` 는 **세대수가 확인된 단지만** 거른다. K-apt 미등록을 "소규모"로
+      단정하면 멀쩡한 대단지가 통째로 사라진다 (T6b 참조)
+  - step8 에 적용 — 4,921,615 → 4,853,283건 (68,332건 제외)
+  - **워터마크 키를 `deal_hash` 로 교체.** 기존 `(apt_id, 계약일, 면적, 층)` 조합은 apt_id
+    정의가 바뀔 때마다 전 건이 "신규"로 뒤집힌다. T6 직후 실제로 신규 거래가 **103만 건**으로
+    집계됐다. `deal_hash` 는 API 원본값으로만 만들어 그런 변경에 흔들리지 않는다 (T5a 의 의도)
+    - 2회 연속 실행 시 2회차 **신규 0건** 확인
+  - 정본(`trade_events`)에는 해제 정보를 **보존**한다. 거르는 건 지표 단계의 일이고,
+    정본에서 지우면 되돌릴 수 없다 (테스트로 고정)
+  - 완료 기준 ✅: `pytest tests/test_cancelled_filter.py` **16/16**, 전체 **68/68** 통과
 
 - [ ] **T9. 지표 계산 — DuckDB 단독 SQL**
   - Python 메모리 연산 없이 DuckDB SQL로만 계산 → `COPY (...) TO 'output/metrics_YYYYMMDD.json' (FORMAT JSON)`
