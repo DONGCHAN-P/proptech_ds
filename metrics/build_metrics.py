@@ -401,6 +401,14 @@ def main() -> int:
             "rare_area_min": RARE_AREA_MIN,
             "zscore_min_weeks": ZSCORE_MIN_WEEKS,
             "weekly_lag_days": WEEKLY_LAG_DAYS,
+            # 아래는 SQL 에 박혀 있던 상수를 끌어올린 것이다. 발행 문구가
+            # "직전 90일 평균" 처럼 인용하므로 숫자 검증기가 대조할 수 있어야
+            # 한다. 글의 모든 숫자는 이 파일에서 유래해야 한다는 원칙.
+            "outlier_ref_window_days": 90,
+            "surge_window_days": 90,
+            "zscore_hist_weeks": 52,
+            "data_start_year": 2006,
+            "report_deadline_days": 30,   # 계약 후 신고 기한 (법정)
             "week_min_deals": WEEK_MIN_DEALS,
             "weekly_note": ("주간 지표는 신고 지연 때문에 기준일에서 "
                             f"{WEEKLY_LAG_DAYS}일 물린 주를 쓴다"),
