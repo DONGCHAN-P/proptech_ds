@@ -331,17 +331,34 @@
   - 산출물: `master/apt_groups.parquet`, `apt_merge_*.csv`, `apt_unmerged_*.csv`
   - 완료 기준 ✅: 과분할 **92.5% 해소** (기준 90%), `pytest tests/test_apt_groups.py` 9/9
 
-- [ ] **T10a. apt_id 세대 불일치 복구** ⚠️ *신규 — 현존 버그*
-  - 증상: `master/apt_id_map.parquet`·`legacy/realestate.db`는 **구버전 apt_id**(가짜 sha5 법정동코드)로
-    만들어져 `trade_events`의 신규 apt_id와 **한 건도 겹치지 않는다**
-  - 영향: `run_step7_undervalue.py`의 인프라 피처가 2026-05-03 이후 전부 NaN/0 →
-    저평가 점수에서 **인프라 가중치 0.35가 무효**
-  - 임시 대응: `web/build_index.py`의 `build_geo_bridge()`가 (시군구, 정규화단지명, 도로명주소)로 99.5% 연결 중
-  - 선택지 ①: 그 브리지를 step7에도 적용 (빠름, 0.5% 유실)
-  - 선택지 ②: `run_geocode_apts.py`를 신규 apt_id 기준으로 재실행해 `apt_id_map`·`realestate.db` 재생성
-    (근본 해결, 지오코딩 API 2만 건 재호출)
-  - T6 결론이 나면 그에 맞춰 한 번에 처리하는 편이 낫다
-  - 완료 기준: step7 산출물의 `walk_min`·`nearest_station` 결측률 5% 이하
+- [x] **T10a. apt_id 세대 불일치 복구** *(2026-10-03 완료)*
+
+  **증상**: `master/apt_id_map.parquet` 과 `legacy/realestate.db` 가 2026-05-03 이전
+  apt_id(법정동코드가 가짜 sha5)로 만들어져 `trade_events` 의 apt_id 와 **한 건도 겹치지 않았다**.
+  그 결과 `run_step7_undervalue.py` 의 인프라 조인이 전부 빈 값이 됐고,
+  **저평가 점수에서 인프라 가중치 0.35 가 5개월째 무효**였다 (2026-05 ~ 10).
+
+  **근본 수정** — 임시 브리지가 아니라 구버전 체계 자체를 청산했다.
+  1. `run_rebuild_apt_id_map.py` — `trade_events` 의 신규 apt_id 기준으로 재생성
+     - 좌표는 **재지오코딩하지 않았다.** 기존 좌표를 이름·주소 브리지로 옮겨 **99.2%** 확보.
+       API 2만 건을 다시 태울 이유가 없다
+     - T6b 의 K-apt 목록을 **`bjdCode`(법정동코드 10자리)로** 붙여 3,401건 자동 매칭.
+       기존 step2 는 시군구 + 이름 유사도뿐이라 후보가 수백 개였는데 법정동으로 좁히니 훨씬 정확하다
+     - T10 의 `apt_group_id` 도 함께 싣는다
+  2. `run_populate_apt_master.py` → `apt_master` 20,570행 신규 ID 로 교체
+  3. `external_data_collector.py --score` → 인프라 점수 재산출
+     - ⚠️ 이 스크립트는 **INSERT 라 구 행이 남는다.** 20,232 + 20,404 = 40,636행이 됐다.
+       `apt_master` 에 없는 apt_seq 를 지워 20,404행으로 정리 + VACUUM
+  4. DB 는 작업 전 `legacy/realestate.db.bak_*` 로 백업
+
+  | | 복구 전 (8/27) | 복구 후 (10/03) |
+  |---|---|---|
+  | `infra_score` 평균 | 0.0 | **61.4** |
+  | `infra_score` 0인 비율 | 100% | **0%** |
+  | `walk_min` 비결측 | 0% | **100%** |
+
+  - 완료 기준 ✅: step7 산출물의 `walk_min`·`nearest_station` 결측률 **0.0%** (기준 5% 이하)
+  - **무결성 리포트 7/7, 치명 결함 0건** — I7 해소
 
 ---
 

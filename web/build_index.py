@@ -20,7 +20,6 @@ import duckdb
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from common import normalize_apt_name_legacy
 
 BASE = Path(__file__).resolve().parent.parent
 MASTER = BASE / "master"
@@ -116,62 +115,28 @@ def build_apt_pyeong(con: duckdb.DuckDBPyConnection) -> None:
 
 
 def build_geo_bridge(con: duckdb.DuckDBPyConnection) -> None:
-    """좌표/인프라 브리지.
+    """좌표 부착.
 
-    apt_id_map.parquet 과 realestate.db 는 구버전 apt_id(legal_dong_code 가
-    가짜 sha5)로 만들어져 trade_events 의 apt_id 와 한 건도 겹치지 않는다.
-    두 세대 모두에서 안정적인 (시군구, 정규화 단지명, 도로명주소)를 키로
-    신규 apt_id -> (lat, lng, 구 apt_id) 를 잇는다. 주소가 어긋난 건은
-    법정동명, 최후에는 단지명만으로 단계적으로 폴백한다.
+    T10a 에서 apt_id_map 을 신규 apt_id 기준으로 재생성하면서 이 함수의 존재
+    이유였던 세대 불일치가 사라졌다. 예전엔 apt_id_map 이 구버전 해시라
+    (시군구, 정규화명, 도로명주소) 로 이름 조인을 해야 했고, 그 과정에서
+    매칭률이 2~7%p 씩 샜다. 지금은 apt_id 로 바로 붙는다.
+
+    old_apt_id 컬럼은 하위 호환으로 남긴다 (값은 apt_id 와 같다).
     """
     out = CACHE / "apt_geo.parquet"
-    old = pd.read_parquet(APTMAP, columns=[
-        "apt_id", "sigungu_code", "legal_dong_name", "apt_name_norm",
-        "road_address", "lat", "lng"]).rename(columns={"apt_id": "old_apt_id"})
-    old = old[old["lat"].notna()]
-    new = con.execute(f"""
-        SELECT DISTINCT apt_id, sigungu_code, legal_dong_name, apt_name_raw, road_address
-        FROM '{TRADE}'
-    """).df()
-    # apt_id_map 은 v1.1 정규화(괄호 제거)로 만들어졌다. v1.2 에서 괄호를
-    # 보존하도록 바꿨으므로 이름이 서로 달라 조인이 깨진다. 비교할 때만
-    # 양쪽을 옛 규칙으로 맞춘다.
-    uniq = pd.Series(new["apt_name_raw"].unique())
-    legacy = dict(zip(uniq, uniq.map(normalize_apt_name_legacy)))
-    new["apt_name_norm"] = new["apt_name_raw"].map(legacy)
-    new = new.drop(columns="apt_name_raw")
+    m = pd.read_parquet(APTMAP, columns=["apt_id", "lat", "lng"])
+    m = m[m["lat"].notna() & m["lng"].notna()]
 
-    # 2026-07 인천 개편으로 생긴 신규 코드는 구 apt_id_map 에 없다.
-    # 조인용으로만 구 코드를 하나 더 들고 간다 (제물포·영종 -> 중구, 검단 -> 서구).
-    INCHEON_BACK = {"28125": "28110", "28155": "28110",
-                    "28275": "28260", "28290": "28260"}
-    new["sigungu_legacy"] = new["sigungu_code"].map(INCHEON_BACK).fillna(
-        new["sigungu_code"])
-
-    key_sets = [
-        ["sigungu_code", "apt_name_norm", "road_address"],
-        ["sigungu_code", "legal_dong_name", "apt_name_norm"],
-        ["sigungu_code", "apt_name_norm"],
-        ["sigungu_legacy", "apt_name_norm", "road_address"],
-        ["sigungu_legacy", "legal_dong_name", "apt_name_norm"],
-        ["sigungu_legacy", "apt_name_norm"],
-    ]
-    resolved: list[pd.DataFrame] = []
-    pending = new
-    for keys in key_sets:
-        if pending.empty:
-            break
-        src = old.rename(columns={"sigungu_code": "sigungu_legacy"})             if keys[0] == "sigungu_legacy" else old
-        cand = src.drop_duplicates(keys)[keys + ["old_apt_id", "lat", "lng"]]
-        merged = pending.merge(cand, on=keys, how="left")
-        hit = merged[merged["lat"].notna()]
-        resolved.append(hit[["apt_id", "old_apt_id", "lat", "lng"]])
-        pending = merged[merged["lat"].isna()][new.columns]
-
-    bridge = pd.concat(resolved, ignore_index=True).drop_duplicates("apt_id")
+    new = con.execute(f"SELECT DISTINCT apt_id FROM '{TRADE}'").df()
+    bridge = new.merge(m, on="apt_id", how="inner")
+    bridge["old_apt_id"] = bridge["apt_id"]
+    bridge = bridge[["apt_id", "old_apt_id", "lat", "lng"]]
     bridge.to_parquet(out, index=False)
+
     rate = len(bridge) / max(len(new), 1) * 100
-    log(f"apt_geo.parquet  {len(bridge):,}행  (좌표 매칭 {rate:.1f}%, 미매칭 {len(pending):,})")
+    log(f"apt_geo.parquet  {len(bridge):,}행  "
+        f"(좌표 매칭 {rate:.1f}%, 미매칭 {len(new) - len(bridge):,})")
 
 
 def build_apt_index(con: duckdb.DuckDBPyConnection) -> None:
