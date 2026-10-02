@@ -107,12 +107,72 @@ def to_pyeong_bucket(area_m2):
     return '60P+'
 
 
-def normalize_apt_name(name):
+# 괄호 안이 위치 표기면 버리고, 단지를 가르는 이름이면 남긴다.
+#   버림: "201동" "A동" "351~359동" "101~111,124~132" "609-1" "154" "(주)"
+#   남김: "건영15" "동성" "5차" "SK" "영구임대"
+# 한글이 섞였는지로 가르면 "SK" 같은 건설사 약어를 놓친다. 그래서
+#   ① 동으로 끝나고 앞이 영숫자·구분자뿐이거나  ② 통째로 숫자·지번이면
+# 위치 표기로 본다. "현대동" 처럼 앞이 한글이면 ①에 걸리지 않는다.
+_PAREN_DROP = re.compile(
+    r'^[A-Za-z0-9\s,~\-\.·]+동$'   # 201동, A동, 351~359동, 7동
+    r'|^[\d\s,~\-\.·]+$'            # 154, 609-1, 101~111,124~132, 550-0
+    r'|^동$|^주$|^주식회사$'
+)
+
+
+def _keep_paren(inner: str) -> bool:
+    s = inner.strip()
+    if not s:
+        return False
+    return not _PAREN_DROP.match(s)
+
+
+def normalize_apt_name_legacy(name):
+    """v1.1 이전 정규화 — 괄호를 통째로 버린다.
+
+    쓰지 말 것. apt_id_map.parquet 과 realestate.db 가 이 규칙으로 만들어져
+    있어서, 그쪽과 이름으로 조인할 때만 필요하다 (web/build_index.py 의
+    좌표·인프라 브리지). 두 세대를 같은 기준으로 맞추려는 용도다.
+    """
     if name is None:
         return ''
     s = str(name).strip()
     s = re.sub(r'\([^)]*\)', '', s)
     s = re.sub(r'\[[^\]]*\]', '', s)
+    s = re.sub(r'\s+', '', s)
+    s = re.sub(r'(?i)apt$', '아파트', s)
+    s = s.replace('아파트아파트', '아파트')
+    han2num = {'일':'1','이':'2','삼':'3','사':'4','오':'5','육':'6','칠':'7','팔':'8','구':'9','십':'10'}
+    for han, num in han2num.items():
+        s = s.replace(han + '차', num + '차')
+        s = s.replace(han + '단지', num + '단지')
+    return s
+
+
+def normalize_apt_name(name):
+    """단지명 정규화.
+
+    v1.2 (2026-10-02): 괄호를 통째로 버리지 않는다.
+
+    신도시 단지명은 괄호 안 건설사명·차수가 단지를 가르는 유일한 정보다.
+    "후곡마을(건영15)" "후곡마을(동성)" "진주(5차)" "진주(10차)" 가 모두
+    "후곡마을" "진주" 로 뭉개지면서 298개 apt_id 가 서로 다른 781개 단지를
+    삼키고 있었다 (영향 거래 135,899건).
+
+    다만 괄호가 동 번호나 지번인 경우도 많다 — "구로두산(201동)",
+    "한진(609-1)". 이건 같은 단지의 표기 흔들림이므로 보존하면 오히려
+    단지가 쪼개진다. 그래서 괄호 안을 보고 가린다.
+    """
+    if name is None:
+        return ''
+    s = str(name).strip()
+
+    # 괄호: 내용이 단지 구분 정보면 살리고, 위치 표기면 버린다
+    s = re.sub(r'\(([^)]*)\)',
+               lambda m: m.group(1) if _keep_paren(m.group(1)) else '', s)
+    s = re.sub(r'\[([^\]]*)\]',
+               lambda m: m.group(1) if _keep_paren(m.group(1)) else '', s)
+
     s = re.sub(r'\s+', '', s)
     s = re.sub(r'(?i)apt$', '아파트', s)
     s = s.replace('아파트아파트', '아파트')
@@ -130,15 +190,17 @@ def make_apt_id(legal_dong_code, apt_name, road_address=''):
     return hashlib.sha256(raw.encode('utf-8')).hexdigest()[:16]
 
 
-def make_deal_hash(legal_dong_code, apt_name_norm, deal_date, deal_amount,
+def make_deal_hash(legal_dong_code, apt_name_raw, deal_date, deal_amount,
                    area_m2, floor):
     """거래 고유 해시키 (T5a).
 
     한 건의 신고를 식별한다. upsert·중복검출·발행원장 대조의 기준키다.
 
-    apt_id 를 일부러 쓰지 않았다. apt_id 정의가 바뀌면(2026-05-03 umd_cd 전환,
-    향후 T6 건축년도 도입) 기존 해시가 전부 무효가 되기 때문이다. 대신 정의가
-    흔들리지 않는 원시 필드만 쓴다.
+    우리가 만든 파생값은 하나도 쓰지 않는다. apt_id 는 2026-05-03 에 정의가
+    바뀌어 기존 조인을 전부 깨뜨렸고, apt_name_norm 도 v1.2(괄호 보존)에서
+    바뀌었다. 그런 값에 거래 식별자를 묶으면 파이프라인을 손볼 때마다 원장이
+    끊긴다. 그래서 API 가 준 값만 쓴다 — 법정동코드·원본 단지명·계약일·금액·
+    면적·층.
 
     area_m2 는 소수 2자리로, deal_amount 는 정수로 고정한다. 부동소수점 표기가
     달라지면 같은 거래가 다른 해시를 받는다.
@@ -150,7 +212,7 @@ def make_deal_hash(legal_dong_code, apt_name_norm, deal_date, deal_amount,
 
     raw = '|'.join([
         str(legal_dong_code or ''),
-        str(apt_name_norm or ''),
+        str(apt_name_raw or ''),
         str(deal_date)[:10],
         _num(deal_amount, 0),
         _num(area_m2, 2),

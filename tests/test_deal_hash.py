@@ -52,11 +52,16 @@ def test_결측값이_있어도_예외없이_해시된다():
     assert len(make_deal_hash(None, None, "2026-07-09", None, None, None)) == 16
 
 
-def test_apt_id_정의와_무관하다():
-    """apt_id 가 바뀌어도 deal_hash 는 살아남아야 한다 — 입력에 apt_id 가 없다."""
+def test_파생값에_의존하지_않는다():
+    """파이프라인이 바뀌어도 해시는 살아남아야 한다.
+
+    apt_id 는 2026-05-03 에, apt_name_norm 은 v1.2(괄호 보존)에서 정의가
+    바뀌었다. 거기 묶으면 손볼 때마다 first_seen·발행 원장이 끊긴다.
+    """
     import inspect
-    src = inspect.getsource(make_deal_hash)
-    assert "apt_id" not in src.split('"""')[2], "deal_hash 계산에 apt_id 가 섞였다"
+    body = inspect.getsource(make_deal_hash).split('"""')[2]
+    for 파생 in ("apt_id", "apt_name_norm", "pyeong_bucket", "area_m2_key"):
+        assert 파생 not in body, f"deal_hash 계산에 파생값 {파생} 이 섞였다"
 
 
 # ── 실제 데이터 ──────────────────────────────────────────────────────────
@@ -66,7 +71,7 @@ def trades() -> pd.DataFrame:
         pytest.skip("trade_events.parquet 없음")
     df = pd.read_parquet(TRADE, columns=[
         "deal_hash", "first_seen_date", "first_seen_is_estimate",
-        "legal_dong_code", "apt_name_norm", "deal_date",
+        "legal_dong_code", "apt_name_raw", "deal_date",
         "deal_amount", "area_m2", "floor"])
     return df
 
@@ -88,7 +93,7 @@ def test_deal_hash_결측_0건(trades):
 
 def test_저장된_해시가_재계산과_일치(trades):
     s = trades.head(500)
-    calc = [make_deal_hash(r.legal_dong_code, r.apt_name_norm, r.deal_date,
+    calc = [make_deal_hash(r.legal_dong_code, r.apt_name_raw, r.deal_date,
                            r.deal_amount, r.area_m2, r.floor)
             for r in s.itertuples()]
     assert (pd.Series(calc, index=s.index) == s["deal_hash"]).all()

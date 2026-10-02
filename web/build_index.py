@@ -19,6 +19,9 @@ from pathlib import Path
 import duckdb
 import pandas as pd
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from common import normalize_apt_name_legacy
+
 BASE = Path(__file__).resolve().parent.parent
 MASTER = BASE / "master"
 DB_PATH = BASE / "legacy" / "realestate.db"
@@ -127,9 +130,16 @@ def build_geo_bridge(con: duckdb.DuckDBPyConnection) -> None:
         "road_address", "lat", "lng"]).rename(columns={"apt_id": "old_apt_id"})
     old = old[old["lat"].notna()]
     new = con.execute(f"""
-        SELECT DISTINCT apt_id, sigungu_code, legal_dong_name, apt_name_norm, road_address
+        SELECT DISTINCT apt_id, sigungu_code, legal_dong_name, apt_name_raw, road_address
         FROM '{TRADE}'
     """).df()
+    # apt_id_map 은 v1.1 정규화(괄호 제거)로 만들어졌다. v1.2 에서 괄호를
+    # 보존하도록 바꿨으므로 이름이 서로 달라 조인이 깨진다. 비교할 때만
+    # 양쪽을 옛 규칙으로 맞춘다.
+    uniq = pd.Series(new["apt_name_raw"].unique())
+    legacy = dict(zip(uniq, uniq.map(normalize_apt_name_legacy)))
+    new["apt_name_norm"] = new["apt_name_raw"].map(legacy)
+    new = new.drop(columns="apt_name_raw")
 
     key_sets = [
         ["sigungu_code", "apt_name_norm", "road_address"],

@@ -145,7 +145,7 @@ def _staged_is_fresh(xml_path: Path, out_path: Path) -> bool:
 
 
 # 코드 변경 시 이 값을 올리면 모든 staged 강제 재생성. apt_id 정의 바뀔 때마다 ↑.
-CODE_VERSION = 'v1.1-umd_cd'
+CODE_VERSION = 'v1.2.1-paren-keep'
 
 
 def stage_all_raw_trade(force: bool = False) -> pd.DataFrame:

@@ -43,15 +43,16 @@ def dedup_trades(df: pd.DataFrame) -> pd.DataFrame:
 def attach_identity(df: pd.DataFrame) -> pd.DataFrame:
     """거래 고유 해시키 부착 (T5a).
 
-    apt_id 를 쓰지 않고 원시 필드로만 만든다. apt_id 정의가 바뀌어도
-    해시가 살아남아야 first_seen 원장과 발행 원장이 끊기지 않는다.
+    우리가 만든 파생값(apt_id, apt_name_norm)은 쓰지 않는다. 둘 다 정의가
+    바뀐 전력이 있어, 거기 묶으면 파이프라인을 손볼 때마다 first_seen 원장과
+    발행 원장이 끊긴다. API 가 준 원본 값만 쓴다.
     """
     df = df.copy()
     area = df['area_m2'].astype(float).map(lambda v: '' if v != v else f'{v:.2f}')
     amt = df['deal_amount'].astype(float).map(lambda v: '' if v != v else f'{v:.0f}')
     flo = df['floor'].map(lambda v: '' if v is None or v != v else str(int(v)))
     raw = (df['legal_dong_code'].fillna('').astype(str)
-           + '|' + df['apt_name_norm'].fillna('').astype(str)
+           + '|' + df['apt_name_raw'].fillna('').astype(str)
            + '|' + pd.to_datetime(df['deal_date']).dt.strftime('%Y-%m-%d')
            + '|' + amt + '|' + area + '|' + flo)
     df['deal_hash'] = raw.map(
