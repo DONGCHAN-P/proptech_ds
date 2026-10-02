@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-05-01T20:07:06.966876",
+  "backtest_period": "2022-01-01 ~ 2025-12-31",
+  "future_days": 90,
+  "weights": {
+    "경기": {
+      "price_fit": 0.153,
+      "momentum_score": 0.025,
+      "accel_score": 0.017,
+      "value_score": 0.322,
+      "liquidity": 0.133,
+      "infra": 0.35
+    },
+    "서울": {
+      "price_fit": 0.153,
+      "momentum_score": 0.015,
+      "accel_score": 0.01,
+      "value_score": 0.437,
+      "liquidity": 0.034,
+      "infra": 0.35
+    },
+    "인천": {
+      "price_fit": 0.153,
+      "momentum_score": 0.028,
+      "accel_score": 0.018,
+      "value_score": 0.316,
+      "liquidity": 0.135,
+      "infra": 0.35
+    }
+  },
+  "importance": {
+    "경기": {
+      "mom_30_90": -0.0636,
+      "mom_90_365": -0.0937,
+      "accel": 0.0488,
+      "volatility": 0.1069,
+      "trade_freq": 0.0769,
+      "rel_value_pct": -0.1865,
+      "price_vs_median": -0.1795
+    },
+    "서울": {
+      "mom_30_90": -0.0431,
+      "mom_90_365": -0.0596,
+      "accel": 0.025,
+      "volatility": 0.0508,
+      "trade_freq": 0.0171,
+      "rel_value_pct": -0.2149,
+      "price_vs_median": -0.1803
+    },
+    "인천": {
+      "mom_30_90": -0.068,
+      "mom_90_365": -0.094,
+      "accel": 0.0558,
+      "volatility": 0.0905,
+      "trade_freq": 0.083,
+      "rel_value_pct": -0.1935,
+      "price_vs_median": -0.1731
+    }
+  },
+  "validation": {
+    "경기": {
+      "n_samples": 99675,
+      "spearman_corr": 0.2185,
+      "p_value": 0.0,
+      "hit_rate_top20": 0.3317,
+      "avg_return_top20_pred": 4.86,
+      "avg_return_bottom80_pred": -1.6,
+      "return_lift": 6.45
+    },
+    "서울": {
+      "n_samples": 63642,
+      "spearman_corr": 0.2282,
+      "p_value": 0.0,
+      "hit_rate_top20": 0.3831,
+      "avg_return_top20_pred": 13.12,
+      "avg_return_bottom80_pred": 0.52,
+      "return_lift": 12.61
+    },
+    "인천": {
+      "n_samples": 28249,
+      "spearman_corr": 0.2048,
+      "p_value": 0.0,
+      "hit_rate_top20": 0.3572,
+      "avg_return_top20_pred": 5.22,
+      "avg_return_bottom80_pred": -2.03,
+      "return_lift": 7.25
+    }
+  }
+}

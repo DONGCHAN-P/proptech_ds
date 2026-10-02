@@ -1,0 +1,1591 @@
+<title>부동산 AVM 리포트</title>
+<style>
+:root {
+  --bg: #0B0D14; --bg2: #13151F; --bg3: #1A1D2C;
+  --border: #1E2235; --border2: #2A3050;
+  --text: #D4D8E8; --muted: #515B78; --muted2: #8890A8;
+  --red: #F03A3A; --red-dim: rgba(240,58,58,.12);
+  --blue: #2D7BE8; --blue-dim: rgba(45,123,232,.12);
+  --gold: #D4A017; --gold-dim: rgba(212,160,23,.12);
+  --green: #22C55E; --green-dim: rgba(34,197,94,.12);
+}
+:root[data-theme="light"] {
+  --bg: #F0F2F8; --bg2: #FFFFFF; --bg3: #F7F8FC;
+  --border: #DDE2EF; --border2: #C8D0E4;
+  --text: #1A1D2E; --muted: #9299B0; --muted2: #5A6180;
+  --red-dim: rgba(240,58,58,.08);
+  --blue-dim: rgba(45,123,232,.08);
+  --gold-dim: rgba(212,160,23,.08);
+  --green-dim: rgba(34,197,94,.08);
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --bg: #F0F2F8; --bg2: #FFFFFF; --bg3: #F7F8FC;
+    --border: #DDE2EF; --border2: #C8D0E4;
+    --text: #1A1D2E; --muted: #9299B0; --muted2: #5A6180;
+    --red-dim: rgba(240,58,58,.08); --blue-dim: rgba(45,123,232,.08);
+    --gold-dim: rgba(212,160,23,.08); --green-dim: rgba(34,197,94,.08);
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: -apple-system, 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+  font-size: 13.5px; line-height: 1.7;
+}
+.num { font-family: 'SF Mono','Fira Code','Consolas',monospace; font-variant-numeric: tabular-nums; }
+
+/* ───── 헤더 nav ───── */
+.topbar {
+  position: sticky; top: 0; z-index: 200;
+  background: var(--bg); border-bottom: 1px solid var(--border);
+  display: flex; align-items: stretch; height: 50px;
+}
+.brand {
+  display: flex; align-items: center; padding: 0 24px;
+  border-right: 1px solid var(--border); gap: 10px; flex-shrink: 0;
+}
+.brand-name { font-size: 12px; font-weight: 800; letter-spacing: .1em; color: var(--gold); }
+.brand-sub  { font-size: 9.5px; color: var(--muted); letter-spacing: .06em; margin-top: 1px; }
+.tabs { display: flex; flex: 1; overflow-x: auto; }
+.tab {
+  padding: 0 22px; height: 50px; display: flex; align-items: center; gap: 8px;
+  cursor: pointer; color: var(--muted2); font-size: 12.5px; font-weight: 600;
+  border: none; background: none; border-bottom: 2px solid transparent;
+  margin-bottom: -1px; transition: color .15s, border-color .15s;
+  letter-spacing: .04em; white-space: nowrap; flex-shrink: 0;
+}
+.tab:hover { color: var(--text); }
+.tab.active { color: var(--text); border-bottom-color: var(--gold); }
+.tab .cadence {
+  font-size: 9px; padding: 2px 5px; letter-spacing: .06em;
+  border: 1px solid var(--border2); color: var(--muted);
+}
+.topbar-right {
+  display: flex; align-items: center; padding: 0 16px; gap: 10px;
+  border-left: 1px solid var(--border); flex-shrink: 0;
+}
+.theme-btn {
+  background: none; border: 1px solid var(--border); color: var(--muted);
+  padding: 4px 8px; cursor: pointer; font-size: 12px;
+  transition: all .15s;
+}
+.theme-btn:hover { color: var(--text); border-color: var(--border2); }
+
+/* ───── 패널 ───── */
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* ───── 리포트 컨테이너 ───── */
+.report {
+  max-width: 880px; margin: 0 auto; padding: 40px 24px 80px;
+}
+
+/* ───── 리포트 헤더 ───── */
+.report-head {
+  border-bottom: 2px solid var(--gold); padding-bottom: 20px; margin-bottom: 36px;
+}
+.report-eyebrow {
+  font-size: 10px; letter-spacing: .16em; color: var(--gold);
+  text-transform: uppercase; margin-bottom: 8px;
+}
+.report-title { font-size: 26px; font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
+.report-meta { font-size: 11.5px; color: var(--muted2); display: flex; gap: 20px; flex-wrap: wrap; }
+.report-meta span { display: flex; align-items: center; gap: 4px; }
+
+/* ───── 종합 코멘트 ───── */
+.summary-box {
+  background: var(--gold-dim); border-left: 3px solid var(--gold);
+  padding: 18px 22px; margin-bottom: 40px;
+}
+.summary-label {
+  font-size: 10px; font-weight: 700; letter-spacing: .12em;
+  color: var(--gold); text-transform: uppercase; margin-bottom: 8px;
+}
+.summary-text { font-size: 14px; line-height: 1.8; color: var(--text); }
+
+/* ───── 섹션 ───── */
+.section { margin-bottom: 52px; }
+.section-head {
+  display: flex; align-items: baseline; gap: 12px;
+  border-bottom: 1px solid var(--border2); padding-bottom: 10px; margin-bottom: 20px;
+}
+.section-num {
+  font-size: 11px; font-weight: 700; color: var(--gold);
+  font-family: 'SF Mono','Consolas',monospace; flex-shrink: 0;
+}
+.section-title { font-size: 17px; font-weight: 700; }
+.section-badge {
+  font-size: 10px; padding: 2px 7px; font-weight: 700; letter-spacing: .04em;
+  margin-left: auto; flex-shrink: 0;
+}
+.badge-red   { background: var(--red-dim);  color: var(--red);  }
+.badge-blue  { background: var(--blue-dim); color: var(--blue); }
+.badge-gold  { background: var(--gold-dim); color: var(--gold); }
+.badge-green { background: var(--green-dim);color: var(--green);}
+.badge-neu   { background: var(--bg3); color: var(--muted2); border: 1px solid var(--border); }
+
+/* ───── 핵심 지표 블록 ───── */
+.kpi-row {
+  display: flex; gap: 0; margin-bottom: 20px;
+  border: 1px solid var(--border);
+}
+.kpi {
+  flex: 1; padding: 16px 20px; border-right: 1px solid var(--border);
+}
+.kpi:last-child { border-right: none; }
+.kpi-label { font-size: 10px; color: var(--muted); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 4px; }
+.kpi-val {
+  font-size: 30px; font-weight: 800; line-height: 1; letter-spacing: -.02em;
+  font-family: 'SF Mono','Fira Code','Consolas',monospace;
+}
+.kpi-val.lg { font-size: 38px; }
+.kpi-val.sm { font-size: 22px; }
+.kpi-unit { font-size: 12px; color: var(--muted2); margin-top: 4px; }
+
+/* ───── 테이블 ───── */
+.rtable-wrap { overflow-x: auto; margin-bottom: 20px; }
+.rtable {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+}
+.rtable thead th {
+  text-align: left; font-size: 10px; font-weight: 700;
+  color: var(--muted); letter-spacing: .1em; text-transform: uppercase;
+  border-top: 1px solid var(--border2); border-bottom: 1px solid var(--border2);
+  padding: 8px 10px;
+}
+.rtable thead th:not(:first-child) { text-align: right; }
+.rtable tbody td {
+  padding: 10px 10px; border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+.rtable tbody td:not(:first-child) { text-align: right; }
+.rtable tbody tr:last-child td { border-bottom: none; }
+.rtable tbody tr:hover td { background: var(--bg3); }
+.td-sub { font-size: 11px; color: var(--muted2); margin-top: 1px; }
+
+/* ───── 코멘트 블록 ───── */
+.comment {
+  background: var(--bg3); border-left: 3px solid var(--border2);
+  padding: 14px 18px; margin-top: 4px;
+}
+.comment.red   { border-left-color: var(--red);  background: var(--red-dim);  }
+.comment.blue  { border-left-color: var(--blue); background: var(--blue-dim); }
+.comment.gold  { border-left-color: var(--gold); background: var(--gold-dim); }
+.comment.green { border-left-color: var(--green);background: var(--green-dim);}
+.comment-label {
+  font-size: 9.5px; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; margin-bottom: 6px; opacity: .7;
+}
+.comment-text { font-size: 13px; line-height: 1.75; color: var(--text); }
+
+/* ───── 비교 바 ───── */
+.cbar-row { display: flex; align-items: center; gap: 10px; padding: 5px 0; }
+.cbar-label { font-size: 12px; color: var(--muted2); width: 90px; flex-shrink: 0; }
+.cbar-track { flex: 1; height: 7px; background: var(--bg3); border: 1px solid var(--border); position: relative; }
+.cbar-fill  { height: 100%; position: absolute; left: 0; top: 0; }
+.cbar-val   { font-size: 13px; font-weight: 700; width: 56px; text-align: right; }
+
+/* ───── 시장 온도 게이지 ───── */
+.gauge-section { margin: 16px 0; }
+.gauge-track {
+  width: 100%; height: 10px;
+  background: linear-gradient(to right, var(--blue) 0%, var(--bg3) 50%, var(--red) 100%);
+  border: 1px solid var(--border2); position: relative; margin: 8px 0;
+}
+.gauge-pin {
+  position: absolute; top: -5px; width: 2px; height: 20px;
+  background: var(--text); transform: translateX(-50%);
+  box-shadow: 0 0 4px rgba(255,255,255,.3);
+}
+.gauge-labels { display: flex; justify-content: space-between; font-size: 10px; color: var(--muted); }
+
+/* ───── 스파크라인 ───── */
+canvas { display: block; }
+
+/* ───── 구분선 ───── */
+.divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+
+/* ───── 색상 유틸 ───── */
+.red   { color: var(--red);   }
+.blue  { color: var(--blue);  }
+.gold  { color: var(--gold);  }
+.green { color: var(--green); }
+.muted { color: var(--muted2);}
+
+@media (max-width: 600px) {
+  .report { padding: 24px 16px 60px; }
+  .report-title { font-size: 20px; }
+  .kpi-row { flex-wrap: wrap; }
+  .kpi { min-width: 50%; border-bottom: 1px solid var(--border); }
+  .kpi-val { font-size: 24px; }
+  .kpi-val.lg { font-size: 30px; }
+  .tab { padding: 0 14px; font-size: 11.5px; }
+}
+</style>
+
+<!-- ── 상단 탭 바 ── -->
+<div class="topbar">
+  <div class="brand">
+    <div>
+      <div class="brand-name">AVM REPORT</div>
+      <div class="brand-sub">수도권 아파트 실거래 분석</div>
+    </div>
+  </div>
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('daily')">
+      일간 리포트 <span class="cadence">매일</span>
+    </button>
+    <button class="tab" onclick="switchTab('weekly')">
+      주간 브리핑 <span class="cadence">매주 월요일</span>
+    </button>
+    <button class="tab" onclick="switchTab('monthly')">
+      월간 현황 <span class="cadence">매월 1일</span>
+    </button>
+  </div>
+  <div class="topbar-right">
+    <button class="theme-btn" onclick="toggleTheme()">◐</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     일간 리포트
+══════════════════════════════ -->
+<div class="panel active" id="panel-daily">
+<div class="report">
+
+  <div class="report-head">
+    <div class="report-eyebrow">Daily Report · 신고일 기준</div>
+    <div class="report-title">오늘의 수도권 아파트 실거래 동향</div>
+    <div class="report-meta">
+      <span>📅 <strong id="d-date">—</strong></span>
+      <span>🏢 수도권 (서울·경기·인천)</span>
+      <span>⏱ 매일 자동 발행</span>
+    </div>
+  </div>
+
+  <!-- 종합 코멘트 -->
+  <div class="summary-box">
+    <div class="summary-label">📌 오늘의 시장 종합</div>
+    <div class="summary-text" id="d-overall-comment">—</div>
+  </div>
+
+  <!-- 01. 신고가 갱신 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <span class="section-title">신고가 갱신</span>
+      <span class="section-badge badge-red" id="d-high-badge">—</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">신고가 건수</div>
+        <div class="kpi-val red num" id="d-high-count">—</div>
+        <div class="kpi-unit">건 · 오늘 신고 기준</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">전주 동일요일</div>
+        <div class="kpi-val sm num muted" id="d-high-prev">—</div>
+        <div class="kpi-unit">건 (WoW <span id="d-high-wow">—</span>)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">신고가 집중 구</div>
+        <div class="kpi-val sm" id="d-high-hotspot">—</div>
+        <div class="kpi-unit" id="d-high-hotspot-cnt">—</div>
+      </div>
+    </div>
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead><tr>
+          <th>단지</th><th>전용(㎡)</th><th>거래가(억)</th><th>직전 신고가(억)</th><th>갱신율</th>
+        </tr></thead>
+        <tbody id="d-high-table"></tbody>
+      </table>
+    </div>
+    <div class="comment red">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="d-high-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 02. 급락 거래 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <span class="section-title">급락 거래 <small class="muted" style="font-size:13px;font-weight:400">직전 거래 대비 -10% 이상</small></span>
+      <span class="section-badge badge-blue" id="d-plunge-badge">—</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">급락 건수</div>
+        <div class="kpi-val blue num" id="d-plunge-count">—</div>
+        <div class="kpi-unit">건</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">평균 낙폭</div>
+        <div class="kpi-val sm blue num" id="d-plunge-avg">—</div>
+        <div class="kpi-unit">%</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">최대 낙폭</div>
+        <div class="kpi-val sm blue num" id="d-plunge-max">—</div>
+        <div class="kpi-unit">%</div>
+      </div>
+    </div>
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead><tr>
+          <th>단지</th><th>전용(㎡)</th><th>거래가(억)</th><th>직전가(억)</th><th>낙폭</th><th>거래유형</th>
+        </tr></thead>
+        <tbody id="d-plunge-table"></tbody>
+      </table>
+    </div>
+    <div class="comment blue">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="d-plunge-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 03. 해제 거래 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <span class="section-title">해제 거래</span>
+      <span class="section-badge badge-gold" id="d-cancel-badge">—</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">오늘 해제 건수</div>
+        <div class="kpi-val gold num" id="d-cancel-count">—</div>
+        <div class="kpi-unit">건</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">신고가→해제</div>
+        <div class="kpi-val sm red num" id="d-cancel-high">—</div>
+        <div class="kpi-unit">건 (시세조작 의심)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">해제율 (7일)</div>
+        <div class="kpi-val sm gold num" id="d-cancel-rate7">—</div>
+        <div class="kpi-unit">% (직전 7일 누계)</div>
+      </div>
+    </div>
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead><tr>
+          <th>단지</th><th>해제 거래가(억)</th><th>유형</th><th>신고가 여부</th>
+        </tr></thead>
+        <tbody id="d-cancel-table"></tbody>
+      </table>
+    </div>
+    <div class="comment gold">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="d-cancel-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 04. 직거래 비중 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <span class="section-title">직거래 비중 <small class="muted" style="font-size:13px;font-weight:400">비중개 거래</small></span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">직거래 건수</div>
+        <div class="kpi-val num" id="d-direct-cnt">—</div>
+        <div class="kpi-unit">건</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">오늘 거래 중 비중</div>
+        <div class="kpi-val sm num" id="d-direct-pct">—</div>
+        <div class="kpi-unit">% (최근 30일 평균: <span id="d-direct-avg30">—</span>%)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">시세 대비 평균 할인</div>
+        <div class="kpi-val sm blue num" id="d-direct-disc">—</div>
+        <div class="kpi-unit">% (편법 증여 의심 구간)</div>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="d-direct-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 05. 거래량 온도계 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">05</span>
+      <span class="section-title">거래량 온도계</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">오늘 신고 건수</div>
+        <div class="kpi-val lg num" id="d-vol-today">—</div>
+        <div class="kpi-unit">건</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">7일 이동평균</div>
+        <div class="kpi-val sm num muted" id="d-vol-ma7">—</div>
+        <div class="kpi-unit">건</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">MA 대비 비율</div>
+        <div class="kpi-val sm num" id="d-vol-ratio">—</div>
+        <div class="kpi-unit">배</div>
+      </div>
+    </div>
+    <div class="gauge-section">
+      <div class="gauge-labels"><span>매도우위 (냉각)</span><span>균형</span><span>매수우위 (과열)</span></div>
+      <div class="gauge-track">
+        <div class="gauge-pin" id="d-gauge-pin" style="left:50%"></div>
+      </div>
+      <div style="text-align:center;font-size:11px;color:var(--muted2)" id="d-vol-signal">—</div>
+    </div>
+    <div class="comment">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="d-vol-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 06. 갭 최소 사례 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">06</span>
+      <span class="section-title">갭 최소 사례 <small class="muted" style="font-size:13px;font-weight:400">매매-전세 동일 단지 매칭</small></span>
+    </div>
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead><tr>
+          <th>단지</th><th>시군구</th><th>전용(㎡)</th><th>매매가(억)</th><th>전세가(억)</th><th>갭(만원)</th><th>전세가율</th>
+        </tr></thead>
+        <tbody id="d-gap-table"></tbody>
+      </table>
+    </div>
+    <div class="comment green">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="d-gap-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 07. 대장 단지 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">07</span>
+      <span class="section-title">대장 단지 오늘의 거래</span>
+    </div>
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead><tr>
+          <th>단지</th><th>위치</th><th>거래가(억)</th><th>역대 최고가(억)</th><th>최고가 대비</th>
+        </tr></thead>
+        <tbody id="d-flagship-table"></tbody>
+      </table>
+    </div>
+    <div class="comment gold">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="d-flagship-comment">—</div>
+    </div>
+  </div>
+
+</div><!-- /report -->
+</div><!-- /panel-daily -->
+
+
+<!-- ══════════════════════════════
+     주간 브리핑
+══════════════════════════════ -->
+<div class="panel" id="panel-weekly">
+<div class="report">
+
+  <div class="report-head">
+    <div class="report-eyebrow">Weekly Briefing · 매주 월요일 발행</div>
+    <div class="report-title">주간 수도권 아파트 시장 브리핑</div>
+    <div class="report-meta">
+      <span>📅 분석 기간: <strong id="w-period">—</strong></span>
+      <span>🏢 수도권 (서울·경기·인천)</span>
+      <span>⏱ 발행: 매주 월요일</span>
+    </div>
+  </div>
+
+  <div class="summary-box">
+    <div class="summary-label">📌 이번 주 시장 종합</div>
+    <div class="summary-text" id="w-overall-comment">—</div>
+  </div>
+
+  <!-- 01. 자체 지수 vs 공식 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <span class="section-title">자체 주간 지수 vs 공식 지수</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">자체 지수 (반복매매)</div>
+        <div class="kpi-val lg num" id="w-idx-self">—</div>
+        <div class="kpi-unit">% 주간 변동</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">KB 주간지수</div>
+        <div class="kpi-val sm num muted" id="w-idx-kb">—</div>
+        <div class="kpi-unit">% 주간 변동</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">부동산원</div>
+        <div class="kpi-val sm num muted" id="w-idx-molit">—</div>
+        <div class="kpi-unit">% 주간 변동</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">자체-공식 괴리</div>
+        <div class="kpi-val sm gold num" id="w-idx-gap">—</div>
+        <div class="kpi-unit">%p (양수=자체가 더 강함)</div>
+      </div>
+    </div>
+    <div class="comment gold">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="w-idx-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 02. 구별 신고가 랭킹 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <span class="section-title">구별 신고가 랭킹 <small class="muted" style="font-size:13px;font-weight:400">이번 주 TOP 10</small></span>
+    </div>
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead><tr>
+          <th>순위</th><th>시군구</th><th>신고가 건수</th><th>전체 거래 중 비율</th><th>전주 대비</th>
+        </tr></thead>
+        <tbody id="w-rank-table"></tbody>
+      </table>
+    </div>
+    <div class="comment red">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="w-rank-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 03. 시장 온도 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <span class="section-title">시장 온도 지수 <small class="muted" style="font-size:13px;font-weight:400">신고가 비율 ÷ 신저가 비율</small></span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">이번 주 온도</div>
+        <div class="kpi-val lg num" id="w-temp-val">—</div>
+        <div class="kpi-unit">1 초과 = 매수우위</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">전주</div>
+        <div class="kpi-val sm num muted" id="w-temp-prev">—</div>
+        <div class="kpi-unit">전주 대비 <span id="w-temp-chg">—</span></div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">신고가 건수</div>
+        <div class="kpi-val sm red num" id="w-temp-high-cnt">—</div>
+        <div class="kpi-unit">건</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">신저가 건수</div>
+        <div class="kpi-val sm blue num" id="w-temp-low-cnt">—</div>
+        <div class="kpi-unit">건</div>
+      </div>
+    </div>
+    <div class="gauge-section">
+      <div class="gauge-labels"><span>매도우위 (하락)</span><span>균형 (1.0)</span><span>매수우위 (상승)</span></div>
+      <div class="gauge-track">
+        <div class="gauge-pin" id="w-gauge-pin" style="left:50%"></div>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="w-temp-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 04. 거래 회전율 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <span class="section-title">거래 회전율 <small class="muted" style="font-size:13px;font-weight:400">주간 거래 건수 ÷ 세대수</small></span>
+    </div>
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead><tr>
+          <th>단지</th><th>시군구</th><th>세대수</th><th>이번 주 거래</th><th>회전율(%)</th><th>전주 대비</th>
+        </tr></thead>
+        <tbody id="w-turnover-table"></tbody>
+      </table>
+    </div>
+    <div class="comment green">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="w-turnover-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 05. 규제 vs 비규제 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">05</span>
+      <span class="section-title">규제 vs 인접 비규제 <small class="muted" style="font-size:13px;font-weight:400">풍선효과 모니터</small></span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">규제 지역 주간 변동</div>
+        <div class="kpi-val sm num blue" id="w-reg-val1">—</div>
+        <div class="kpi-unit">%</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">인접 비규제 변동</div>
+        <div class="kpi-val sm num red" id="w-reg-val2">—</div>
+        <div class="kpi-unit">%</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">풍선효과 격차</div>
+        <div class="kpi-val sm gold num" id="w-reg-spread">—</div>
+        <div class="kpi-unit">%p</div>
+      </div>
+    </div>
+    <div style="margin:16px 0">
+      <div class="cbar-row">
+        <span class="cbar-label muted">규제 지역</span>
+        <div class="cbar-track"><div class="cbar-fill blue" id="w-reg-bar1"></div></div>
+        <span class="cbar-val num blue" id="w-reg-lbl1">—</span>
+      </div>
+      <div class="cbar-row">
+        <span class="cbar-label muted">인접 비규제</span>
+        <div class="cbar-track"><div class="cbar-fill red" id="w-reg-bar2"></div></div>
+        <span class="cbar-val num red" id="w-reg-lbl2">—</span>
+      </div>
+    </div>
+    <div class="comment gold">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="w-reg-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 06. 하위 10% 추이 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">06</span>
+      <span class="section-title">하위 10% 거래가 추이 <small class="muted" style="font-size:13px;font-weight:400">급매 소진 여부</small></span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">이번 주 하위 10% 중앙값</div>
+        <div class="kpi-val blue num" id="w-bot10-cur">—</div>
+        <div class="kpi-unit">만원/㎡</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">전주 대비</div>
+        <div class="kpi-val sm num" id="w-bot10-wow">—</div>
+        <div class="kpi-unit">만원/㎡</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">전체 중앙값 대비</div>
+        <div class="kpi-val sm num muted" id="w-bot10-vs-med">—</div>
+        <div class="kpi-unit">% 수준</div>
+      </div>
+    </div>
+    <div style="margin:16px 0;border:1px solid var(--border);padding:16px">
+      <div style="font-size:10px;color:var(--muted);margin-bottom:8px;letter-spacing:.06em">4주간 하위 10% 가격 추이</div>
+      <canvas id="spark-bot10" height="52" style="width:100%"></canvas>
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--muted);margin-top:4px">
+        <span>4주전</span><span>3주전</span><span>2주전</span><span>지난주</span><span>이번주</span>
+      </div>
+    </div>
+    <div class="comment blue">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="w-bot10-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 07. 전세 갭 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">07</span>
+      <span class="section-title">신규 vs 갱신 전세 격차</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">신규 계약 평균</div>
+        <div class="kpi-val num" id="w-jgap-new">—</div>
+        <div class="kpi-unit">만원</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">갱신(5% 상한) 평균</div>
+        <div class="kpi-val sm num muted" id="w-jgap-renew">—</div>
+        <div class="kpi-unit">만원</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">신규-갱신 격차</div>
+        <div class="kpi-val sm gold num" id="w-jgap-gap">—</div>
+        <div class="kpi-unit">만원 (+<span id="w-jgap-pct">—</span>%)</div>
+      </div>
+    </div>
+    <div class="comment gold">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="w-jgap-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 08. 입주 단지 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">08</span>
+      <span class="section-title">이번 주 입주 단지 · 주변 전세 영향</span>
+    </div>
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead><tr>
+          <th>단지</th><th>시군구</th><th>세대수</th><th>반경 2km 전세 변화</th><th>비고</th>
+        </tr></thead>
+        <tbody id="w-movein-table"></tbody>
+      </table>
+    </div>
+    <div class="comment">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="w-movein-comment">—</div>
+    </div>
+  </div>
+
+</div></div><!-- /panel-weekly -->
+
+
+<!-- ══════════════════════════════
+     월간 현황
+══════════════════════════════ -->
+<div class="panel" id="panel-monthly">
+<div class="report">
+
+  <div class="report-head">
+    <div class="report-eyebrow">Monthly Report · 매월 1일 발행</div>
+    <div class="report-title">월간 수도권 아파트 시장 현황</div>
+    <div class="report-meta">
+      <span>📅 분석 기간: <strong id="m-period">—</strong></span>
+      <span>🏢 수도권 (서울·경기·인천)</span>
+      <span>⏱ 발행: 매월 1일</span>
+    </div>
+  </div>
+
+  <div class="summary-box">
+    <div class="summary-label">📌 지난달 시장 종합</div>
+    <div class="summary-text" id="m-overall-comment">—</div>
+  </div>
+
+  <!-- 01. 예측 채점 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <span class="section-title">6개월 전 예측 채점 <small class="muted" style="font-size:13px;font-weight:400">모델 예측 vs 실제 실현값</small></span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">중앙 절대 오차 (MdAPE)</div>
+        <div class="kpi-val lg gold num" id="m-mae">—</div>
+        <div class="kpi-unit">%</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">±5% 적중률</div>
+        <div class="kpi-val sm num" id="m-hit5">—</div>
+        <div class="kpi-unit">% (목표: 65%↑)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Best 지역</div>
+        <div class="kpi-val sm green" id="m-best">—</div>
+        <div class="kpi-unit">오차 최소</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Worst 지역</div>
+        <div class="kpi-val sm red" id="m-worst">—</div>
+        <div class="kpi-unit">오차 최대 (원인 분석 필요)</div>
+      </div>
+    </div>
+    <div class="comment gold">
+      <div class="comment-label">💬 모델 성과 코멘트</div>
+      <div class="comment-text" id="m-pred-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 02. 잔차 상위 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <span class="section-title">모델 잔차 상위 지역 <small class="muted" style="font-size:13px;font-weight:400">모델이 설명 못 하는 지역 = 뭔가 일어나는 곳</small></span>
+    </div>
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead><tr>
+          <th>지역</th><th>잔차 (실제-예측)</th><th>방향</th><th>추정 원인</th><th>다음 달 관찰 포인트</th>
+        </tr></thead>
+        <tbody id="m-residual-table"></tbody>
+      </table>
+    </div>
+    <div class="comment red">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="m-residual-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 03. 30대 순전입 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <span class="section-title">30대 순전입 × 가격 상관 <small class="muted" style="font-size:13px;font-weight:400">인구이동 선행 신호</small></span>
+    </div>
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead><tr>
+          <th>시군구</th><th>30대 순전입(명)</th><th>전월 대비</th><th>6개월 가격 변화</th><th>상관 신호</th>
+        </tr></thead>
+        <tbody id="m-age30-table"></tbody>
+      </table>
+    </div>
+    <div class="comment green">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="m-age30-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 04. 전세가율 80% -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <span class="section-title">전세가율 80%↑ 단지 <small class="muted" style="font-size:13px;font-weight:400">갭투자 위험 지역 모니터</small></span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">이번 달</div>
+        <div class="kpi-val lg gold num" id="m-jratio-cur">—</div>
+        <div class="kpi-unit">개 단지</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">전월</div>
+        <div class="kpi-val sm num muted" id="m-jratio-prev1">—</div>
+        <div class="kpi-unit">개 단지</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">3개월 전</div>
+        <div class="kpi-val sm num muted" id="m-jratio-prev3">—</div>
+        <div class="kpi-unit">개 단지</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">핫스팟 구</div>
+        <div class="kpi-val sm red" id="m-jratio-hot">—</div>
+        <div class="kpi-unit">가장 많이 집중</div>
+      </div>
+    </div>
+    <div class="comment gold">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="m-jratio-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 05. 신축-구축 스프레드 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">05</span>
+      <span class="section-title">신축-구축 스프레드 <small class="muted" style="font-size:13px;font-weight:400">준공 5년↓ vs 20년↑ ㎡가 격차</small></span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">스프레드</div>
+        <div class="kpi-val lg num" id="m-newold-spread">—</div>
+        <div class="kpi-unit">만원/㎡</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">신축 (준공 5년↓)</div>
+        <div class="kpi-val sm red num" id="m-new-ppm">—</div>
+        <div class="kpi-unit">만원/㎡</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">구축 (준공 20년↑)</div>
+        <div class="kpi-val sm blue num" id="m-old-ppm">—</div>
+        <div class="kpi-unit">만원/㎡</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">전월 스프레드</div>
+        <div class="kpi-val sm num muted" id="m-newold-prev">—</div>
+        <div class="kpi-unit">만원/㎡</div>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="m-newold-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 06. 면적 스프레드 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">06</span>
+      <span class="section-title">면적대 스프레드 <small class="muted" style="font-size:13px;font-weight:400">소형(~60㎡) vs 대형(85㎡↑) ㎡가 격차</small></span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">스프레드</div>
+        <div class="kpi-val lg num" id="m-size-spread">—</div>
+        <div class="kpi-unit">만원/㎡</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">소형 (60㎡↓)</div>
+        <div class="kpi-val sm red num" id="m-sm-ppm">—</div>
+        <div class="kpi-unit">만원/㎡</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">대형 (85㎡↑)</div>
+        <div class="kpi-val sm blue num" id="m-lg-ppm">—</div>
+        <div class="kpi-unit">만원/㎡</div>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="m-size-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 07. 거시 대시보드 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">07</span>
+      <span class="section-title">거시 대시보드</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">기준금리</div>
+        <div class="kpi-val lg num" id="m-rate">—</div>
+        <div class="kpi-unit" id="m-rate-chg">%</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">M2 증가율 (YoY)</div>
+        <div class="kpi-val sm num" id="m-m2">—</div>
+        <div class="kpi-unit">%</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">가계대출 잔액</div>
+        <div class="kpi-val sm num" id="m-loan">—</div>
+        <div class="kpi-unit">조원</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">준공 후 미분양</div>
+        <div class="kpi-val sm num" id="m-unsold">—</div>
+        <div class="kpi-unit">호</div>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="m-macro-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 08. 신고 지연·해제율 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">08</span>
+      <span class="section-title">신고 지연 · 해제율 리포트 <small class="muted" style="font-size:13px;font-weight:400">데이터 품질 리포트</small></span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-label">2개월 전 계약 신고 완료율</div>
+        <div class="kpi-val num green" id="m-delay-old">—</div>
+        <div class="kpi-unit">% (기준: 90%↑ 정상)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">1개월 전 계약 신고 완료율</div>
+        <div class="kpi-val sm gold num" id="m-delay-recent">—</div>
+        <div class="kpi-unit">% (신고 기한 30일)</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">전체 해제율</div>
+        <div class="kpi-val sm red num" id="m-cancel-rate">—</div>
+        <div class="kpi-unit">%</div>
+      </div>
+    </div>
+    <div class="comment">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="m-delay-comment">—</div>
+    </div>
+  </div>
+
+  <!-- 09. 유동성 사각지대 -->
+  <div class="section">
+    <div class="section-head">
+      <span class="section-num">09</span>
+      <span class="section-title">가장 오래 안 팔린 단지 <small class="muted" style="font-size:13px;font-weight:400">유동성 사각지대 · 하락기 위험 지표</small></span>
+    </div>
+    <div class="rtable-wrap">
+      <table class="rtable">
+        <thead><tr>
+          <th>순위</th><th>단지</th><th>시군구</th><th>마지막 거래일</th><th>경과 개월</th><th>전고가 대비</th>
+        </tr></thead>
+        <tbody id="m-illiquid-table"></tbody>
+      </table>
+    </div>
+    <div class="comment blue">
+      <div class="comment-label">💬 분석 코멘트</div>
+      <div class="comment-text" id="m-illiquid-comment">—</div>
+    </div>
+  </div>
+
+</div></div><!-- /panel-monthly -->
+
+<script>
+// ── DATA 객체 (이 부분만 교체하면 업데이트) ──────────────────────────
+const DATA = {
+  daily: {
+    date: "2026-08-28",
+    overall_comment: "오늘 수도권 아파트 시장은 강남·서초 중심으로 신고가 갱신이 집중(23건)되며 단기 과열 신호를 보였습니다. 반면 화성·강동 외곽에서는 직전 거래 대비 10% 이상 하락한 급매 거래가 8건 발생, 지역별 온도 차가 뚜렷했습니다. 직거래 비중이 18.4%로 최근 30일 평균(14.2%)을 크게 웃돌아 편법 증여·특수거래 가능성에 주의가 필요합니다. 거래량은 7일 이동평균의 1.29배로 단기 수요 집중 국면입니다.",
+    new_high: {
+      count: 23, prev: 18, hotspot: "강남구", hotspot_cnt: "8건",
+      comment: "강남·서초구 집중 패턴이 뚜렷합니다. 특히 84㎡(전용) 타입에서 신고가가 쏟아지고 있어, 중형 평형 수요가 고가 단지 중심으로 살아나고 있음을 시사합니다. 다만 같은 날 경기 외곽에서 급락 거래가 함께 발생한 점은 '양극화 심화' 서사를 뒷받침합니다.",
+      cases: [
+        { name: "래미안대치팰리스1단지", sgg: "강남구", area: "84.97", price: 42.5, prev: 41.8, pct: +1.7 },
+        { name: "힐스테이트판교역", sgg: "분당구", area: "101.7", price: 18.9, prev: 18.2, pct: +3.8 },
+        { name: "아크로서울포레스트", sgg: "성동구", area: "132.4", price: 51.2, prev: 49.5, pct: +3.4 },
+        { name: "마포래미안푸르지오3단지", sgg: "마포구", area: "84.9", price: 23.4, prev: 23.1, pct: +1.3 },
+      ]
+    },
+    plunge: {
+      count: 8, avg_pct: -12.6, max_pct: -14.8,
+      comment: "급락 8건 중 5건이 경기 외곽(화성·평택·동두천)에 집중됐습니다. 이 지역은 입주 물량이 집중되는 시기와 맞물려 실질적인 매도 압박이 작용하는 것으로 보입니다. 강동구 고덕 사례(−14.8%)는 거래유형이 직거래로, 가족 간 편법 증여 가능성도 배제할 수 없어 추가 확인이 필요합니다.",
+      cases: [
+        { name: "고덕리엔파크2단지", sgg: "강동구", area: "59.96", price: 9.2, prev: 10.8, pct: -14.8, type: "직거래" },
+        { name: "동탄레이크파크자연앤e편한세상", sgg: "화성시", area: "74.98", price: 6.4, prev: 7.3, pct: -12.3, type: "중개" },
+        { name: "평택지제역더샵센트럴시티", sgg: "평택시", area: "84.98", price: 5.1, prev: 5.9, pct: -13.6, type: "중개" },
+      ]
+    },
+    cancel: {
+      count: 12, high_cancel: 3, rate7: 4.2,
+      comment: "신고가→해제 3건이 주목됩니다. 이 패턴은 통상 '가격 띄우기 후 취소'로 악용될 수 있어 실거래가 공시 왜곡 우려가 있습니다. 직전 7일 해제율 4.2%는 지난달 평균(2.8%) 대비 높은 수준으로, 관련 단지들의 호가 변화를 병행 모니터링해야 합니다.",
+      cases: [
+        { name: "반포래미안아이파크", price: 68.0, type: "중개", high_flag: true },
+        { name: "잠실올림픽아이파크", price: 31.5, type: "중개", high_flag: true },
+        { name: "고덕그라시움", price: 18.2, type: "직거래", high_flag: false },
+      ]
+    },
+    direct_deal: {
+      count: 47, pct: 18.4, avg30: 14.2, avg_discount: -8.2,
+      comment: "오늘 직거래 비중 18.4%는 최근 30일 평균(14.2%)을 4.2%p 웃도는 수준입니다. 시세 대비 평균 −8.2% 할인으로 거래된 47건 중 상당수가 인근 시세보다 30% 이상 낮게 체결된 사례가 포함돼 있어, 국세청 편법 증여 모니터링 구간(시세 30% 이상 괴리)에 해당하는 거래를 별도 추적할 예정입니다."
+    },
+    volume: {
+      today: 256, ma7: 198, ratio: 1.29,
+      comment: "오늘 신고 건수 256건은 7일 이동평균(198건)의 1.29배 수준입니다. 신고일 집계 특성상 주중 후반부(목·금)에 건수가 몰리는 경향이 있어 단순 비교 시 주의가 필요하지만, 방향성은 '단기 수요 집중 국면'을 가리키고 있습니다."
+    },
+    gap_min: {
+      comment: "오늘 동일 단지에서 매매·전세가 동시에 신고된 사례 중 갭이 가장 작은 건을 자동 추출했습니다. 갭이 작을수록 레버리지 투자 접근성이 높아지는 만큼, 이 단지들은 갭투자 유입 여부를 지속 모니터링해야 합니다. 특히 전세가율 90% 이상 사례는 역전세 위험도 함께 고려해야 합니다.",
+      cases: [
+        { name: "은마아파트", sgg: "강남구", area: "84.43", trade: 21.5, jeonse: 20.8, gap: 7000, ratio: 96.7 },
+        { name: "목동신시가지7단지", sgg: "양천구", area: "75.6", trade: 13.2, jeonse: 12.5, gap: 7000, ratio: 94.7 },
+        { name: "상계주공7단지", sgg: "노원구", area: "49.5", trade: 6.8, jeonse: 6.5, gap: 3000, ratio: 95.6 },
+      ]
+    },
+    flagship: {
+      comment: "오늘 대장 단지 거래 중 래미안원베일리가 전고가와 동일한 74.5억에 거래되며 신고가를 다시 확인했습니다. 아크로리버파크는 전고가(71.5억) 대비 −4.9% 수준으로, 아직 회복 여지가 남아 있습니다. 대장 단지의 거래 가격은 주변 단지 호가 형성에 직접적 영향을 미치므로 지속 추적합니다.",
+      cases: [
+        { name: "아크로리버파크", sgg: "서초구 반포동", price: 68.0, prev_high: 71.5, vs_high: -4.9 },
+        { name: "래미안원베일리", sgg: "서초구 반포동", price: 74.5, prev_high: 74.5, vs_high: 0.0 },
+        { name: "디에이치아너힐즈", sgg: "강남구 개포동", price: 48.3, prev_high: 49.7, vs_high: -2.8 },
+      ]
+    }
+  },
+
+  weekly: {
+    period: "2026-08-22 ~ 2026-08-28",
+    overall_comment: "이번 주 수도권 아파트 시장은 자체 지수 기준 +0.82%로, KB(+0.31%)·부동산원(+0.24%) 공식 지수 대비 2~3배 강한 상승을 기록했습니다. 공식 지수가 호가 기반인 반면 자체 지수는 실거래 반복매매 방식이라는 점에서, 실거래 시장의 온도가 공식 통계보다 훨씬 뜨겁다는 해석이 가능합니다. 규제 지역(+0.31%) 대비 인접 비규제(+1.24%) 격차가 뚜렷해 풍선효과가 가시화되고 있습니다.",
+    index: { self: +0.82, kb: +0.31, molit: +0.24, comment: "자체 지수와 공식 지수의 괴리(+0.51~0.58%p)는 3주 연속 확대 추세입니다. 호가-실거래 간 온도차가 벌어질수록 조정 시 충격이 커질 수 있습니다. 한편 공식 지수 발표 시차(2~3주)를 감안하면 이번 주 공식 지수는 실거래 현실을 충분히 반영하지 못하고 있습니다." },
+    new_high_rank: {
+      comment: "강남구가 48건으로 1위를 유지했습니다. 주목할 점은 분당구(4위, 27건)의 약진입니다. GTX-A 정기 운행 이후 판교·분당 접근성 기대감이 신고가 거래로 이어지는 것으로 보입니다. 반면 강북권(노원·도봉·강북)은 10위권에 단 1건도 진입하지 못해 양극화가 지속되고 있습니다.",
+      items: [
+        { rank: 1, sgg: "강남구", count: 48, pct: 12.3, wow: +8 },
+        { rank: 2, sgg: "송파구", count: 35, pct: 9.8, wow: +3 },
+        { rank: 3, sgg: "서초구", count: 29, pct: 8.7, wow: -2 },
+        { rank: 4, sgg: "분당구", count: 27, pct: 7.2, wow: +11 },
+        { rank: 5, sgg: "마포구", count: 18, pct: 5.4, wow: +4 },
+        { rank: 6, sgg: "성동구", count: 15, pct: 4.8, wow: +2 },
+        { rank: 7, sgg: "용산구", count: 12, pct: 3.9, wow: 0 },
+        { rank: 8, sgg: "광진구", count: 10, pct: 3.2, wow: -1 },
+        { rank: 9, sgg: "수지구", count: 9, pct: 2.8, wow: +3 },
+        { rank: 10, sgg: "과천시", count: 8, pct: 2.6, wow: +5 },
+      ]
+    },
+    temperature: {
+      val: 3.2, prev: 2.8, high_cnt: 285, low_cnt: 89,
+      comment: "시장 온도 3.2는 '매수 강세' 구간입니다. 신고가 285건 vs 신저가 89건으로, 3주 전(1.8)에 비해 빠르게 과열 쪽으로 이동하고 있습니다. KB 매수우위지수(55pt)와 방향성이 일치하며, 이 지수가 4.0을 돌파할 경우 과거 조정 전 피크 패턴과 유사해 주의가 필요합니다."
+    },
+    turnover: {
+      comment: "힐스테이트판교역(0.42%)은 전체 세대수 대비 거래 활성도가 수도권 최고 수준입니다. 통상 신축·역세권·대단지에서 회전율이 높게 나타나는 경향이 있으나, 이번 주 처럼 2주 연속 0.4%를 넘길 경우 단기 차익실현 매물 증가 신호로도 해석할 수 있습니다.",
+      items: [
+        { name: "힐스테이트판교역", sgg: "분당구", units: 1248, trades: 5, rate: 0.42, wow: +0.08 },
+        { name: "래미안강남포레스트", sgg: "강남구", units: 1859, trades: 7, rate: 0.38, wow: +0.12 },
+        { name: "마포래미안푸르지오", sgg: "마포구", units: 3085, trades: 9, rate: 0.31, wow: +0.04 },
+        { name: "위례자연앤래미안e편한세상", sgg: "송파구", units: 2090, trades: 6, rate: 0.29, wow: -0.03 },
+      ]
+    },
+    regulation: {
+      val1: +0.31, val2: +1.24, spread: 0.93,
+      comment: "7월 규제 지정 이후 4주째 인접 비규제 지역이 규제 지역보다 강한 상승을 기록하고 있습니다. 풍선효과 격차(0.93%p)는 2024년 고강도 규제 시기(평균 1.2%p)에 근접하는 수준입니다. 특히 의왕·안양·시흥 축에서 수요 이동이 뚜렷하게 감지됩니다."
+    },
+    bottom10: {
+      cur: 8540, prev: 8430, vs_med_pct: 68.3,
+      series: [8100, 8210, 8380, 8430, 8540],
+      comment: "하위 10% 거래가가 4주 연속 상승하며 8,540만원/㎡에 도달했습니다. 급매 소진 신호로 해석할 수 있습니다. 통상 이 구간이 전체 중앙값(12,490만원/㎡)의 70%를 돌파하면 '저가 매물 고갈' 국면으로 분류합니다. 현재 68.3%로 문턱 직전입니다."
+    },
+    jeonse_gap: {
+      new_avg: 52800, renewal_avg: 44200, gap: 8600, gap_pct: 16.3,
+      comment: "신규-갱신 전세 격차 8,600만원(16.3%)은 임대차 2법(갱신권·5% 상한) 적용 이후 최고 수준에 근접하고 있습니다. 갱신 만료 임차인이 신규 계약으로 전환될 때 실질 부담이 급증하며, 이 격차가 지속적으로 확대될 경우 전세 수요 일부가 월세로 전환될 가능성이 있습니다."
+    },
+    move_in: {
+      comment: "동탄역헤리엇(1,847세대) 입주 여파로 화성시 인근 2km 전세가가 −3.2% 하락했습니다. 대규모 신규 공급이 지역 전세 시장에 단기 충격을 주는 전형적 패턴입니다. 보통 입주 완료 후 2~3개월이면 흡수되나, 동탄 일대는 이후에도 추가 입주 예정 단지가 있어 전세 회복까지 더 시간이 걸릴 수 있습니다.",
+      items: [
+        { name: "동탄역헤리엇", sgg: "화성시", units: 1847, jeonse_chg: -3.2 },
+        { name: "고덕강일리엔파크10단지", sgg: "강동구", units: 952, jeonse_chg: -1.8 },
+        { name: "검단신도시계룡리슈빌", sgg: "인천서구", units: 624, jeonse_chg: -0.9 },
+      ]
+    }
+  },
+
+  monthly: {
+    period: "2026년 7월",
+    overall_comment: "지난달(2026년 7월) 수도권 아파트 시장은 서울·경기 핵심지 중심으로 본격 반등 국면에 진입했습니다. 6개월 전 모델 예측(MdAPE 3.8%, 적중률 61.2%)은 목표치(MdAPE 4% 이하, 적중률 60% 이상)를 소폭 상회하며 준수한 성과를 기록했습니다. 다만 화성·동탄 권역의 잔차가 +12.4%에 달해, GTX-A 개통 이후 모델이 반영하지 못한 호재 효과가 뚜렷합니다. 전세가율 80%↑ 단지가 전월 대비 33개 증가해 갭투자 위험 지역 모니터링을 강화합니다.",
+    prediction: {
+      mae: 3.8, hit5: 61.2, best: "강남구 (+1.2% 오차)", worst: "화성시 (−11.4% 오차)",
+      comment: "MdAPE 3.8%는 전월(4.2%) 대비 개선됐습니다. ±5% 적중률 61.2%는 목표(60%) 초과로, 모델 성능이 안정화 추세입니다. 그러나 화성(−11.4%)·과천(+9.1%) 등 정책·호재 충격이 큰 지역에서 체계적 오차가 반복됩니다. 이들 지역은 Tier 2 변수(재건축 단계, GTX 노선) 투입을 검토할 필요가 있습니다."
+    },
+    residual: {
+      comment: "체계적 잔차 상위 지역들은 공통적으로 '모델 외부 호재'가 작동하고 있습니다. 화성동탄은 GTX-A 개통 이후 수요가 급증했고, 과천시는 재개발 정비구역 지정 기대감이 반영되고 있습니다. 이들 지역을 위한 전용 보정 계수 또는 더미 변수 도입을 다음 모델 버전에서 검토합니다.",
+      items: [
+        { sgg: "화성동탄", val: +12.4, dir: "과소예측", reason: "GTX-A 개통 호재", next: "GTX 이용객 증가율 모니터" },
+        { sgg: "과천시", val: +9.1, dir: "과소예측", reason: "재개발 기대감", next: "정비구역 지정 진행 현황" },
+        { sgg: "강동구", val: -8.7, dir: "과대예측", reason: "입주 물량 집중", next: "입주 완료 후 흡수 속도" },
+        { sgg: "의왕시", val: +7.3, dir: "과소예측", reason: "규제 풍선효과 수혜", next: "규제 해제 시 역풍 가능성" },
+      ]
+    },
+    age30: {
+      comment: "30대 순전입 상위 3개 시군구(마포·성동·용산) 모두 6개월 후 가격이 5~7% 상승했습니다. 상관관계가 반복적으로 확인되나, 인과 여부는 통제 실험이 필요합니다. 향후 통계청 인구이동 데이터 시차(1개월 지연) 특성을 고려해 선행 지표로 모델에 실험적 투입을 계획합니다.",
+      items: [
+        { sgg: "마포구", inflow: 1840, mom: +220, price_chg: +5.2 },
+        { sgg: "성동구", inflow: 1620, mom: +180, price_chg: +6.8 },
+        { sgg: "용산구", inflow: 1210, mom: +95, price_chg: +7.1 },
+        { sgg: "광진구", inflow: 980, mom: -40, price_chg: +3.4 },
+      ]
+    },
+    jeonse_ratio: {
+      cur: 284, prev1: 251, prev3: 198, hotspot: "노원구",
+      comment: "전세가율 80%↑ 단지가 284개로 3개월 전(198개) 대비 43.4% 증가했습니다. 노원구가 집중 핫스팟으로, 전세 시장 불안과 함께 갭투자 유입이 가속되는 패턴입니다. 전세가율이 90%를 돌파하면 역전세 위험도 동시에 높아지므로, 해당 단지들은 별도 위험 리스트로 관리합니다."
+    },
+    spread_newold: {
+      spread: 460, new_ppm: 1240, old_ppm: 780, prev_spread: 430,
+      comment: "신축-구축 스프레드가 460만원/㎡으로 전월(430만원) 대비 확대됐습니다. 금리 인하 기대감이 신축 프리미엄 수요를 자극하는 것으로 해석됩니다. 과거 금리 인하 사이클 초반에 신축 스프레드가 먼저 확대된 후 구축으로 상승이 전파된 패턴이 반복된다면, 현재 국면은 '신축 선행 단계'에 해당합니다."
+    },
+    spread_size: {
+      spread: 260, small_ppm: 1180, large_ppm: 920, trend: "소형 프리미엄 확대 중",
+      comment: "소형(~60㎡) vs 대형(85㎡↑) 스프레드 260만원/㎡은 역대 최고 수준입니다. 1~2인 가구 증가 구조적 요인 외에, 금리 부담에 따른 초기 매입 비용 최소화 심리가 복합 작용하고 있습니다. 금리가 추가 인하되면 대형 평형의 상대적 매력이 회복되며 역전이 시작될 수 있습니다."
+    },
+    macro: {
+      rate: 3.00, rate_chg: 0, m2: 5.8, loan: 1102.4, unsold: 6842,
+      comment: "기준금리 3.00%는 3회 연속 동결입니다. M2 증가율 5.8%는 유동성이 여전히 풍부함을 시사하며, 가계대출 잔액(1,102조원)은 역대 최고를 경신했습니다. 준공 후 미분양(6,842호)은 전월 대비 소폭 감소했으나 경기 외곽 위주로 적체가 해소되지 않고 있습니다. 금리 동결 장기화 속 풍부한 유동성이 수도권 핵심지 자산 가격을 지지하는 구도가 이어지고 있습니다."
+    },
+    report_delay: {
+      old_pct: 87.3, recent_pct: 62.1, cancel_rate: 4.2,
+      comment: "2개월 전(5월) 계약 신고 완료율이 87.3%로 목표치(90%)에 미달합니다. 이는 신고 기한 30일을 넘긴 지연 신고와 해제 후 재계약 케이스가 누락된 영향으로 보입니다. 데이터 수집 시 REFETCH_MONTHS=3 기준을 적용해 직전 3개월치를 매 실행마다 재수집하고 있으나, 5월 이후 분은 별도 --force 재수집이 권장됩니다."
+    },
+    illiquid: {
+      comment: "방이동올림픽선수촌(38개월)은 재건축 추진 과정의 법적 분쟁으로 거래가 사실상 단절된 케이스입니다. 잠실주공5단지(31개월)도 재건축 조합설립 단계에서 일반 매매가 제한적입니다. 이들 단지는 '거래 단절형 장기 미거래'로, 시장 침체에 따른 매수 기피형 미거래와는 성격이 다릅니다. 단순 경과 개월이 아닌 미거래 원인 분류가 중요합니다.",
+      items: [
+        { rank: 1, name: "방이동올림픽선수촌", sgg: "송파구", last_trade: "2023-06", months: 38, vs_high: -5.2 },
+        { rank: 2, name: "잠실주공5단지", sgg: "송파구", last_trade: "2024-01", months: 31, vs_high: -8.7 },
+        { rank: 3, name: "개포주공1단지", sgg: "강남구", last_trade: "2024-05", months: 27, vs_high: -12.1 },
+        { rank: 4, name: "목동신시가지5단지", sgg: "양천구", last_trade: "2024-08", months: 24, vs_high: -3.4 },
+        { rank: 5, name: "상계주공3단지", sgg: "노원구", last_trade: "2024-08", months: 24, vs_high: -6.8 },
+      ]
+    }
+  }
+};
+
+// ── 유틸 ──────────────────────────────────────────────────────────────
+const $ = id => document.getElementById(id);
+const fmt = (v, d=1) => (typeof v==='number' ? v.toFixed(d) : v);
+const sign = v => v > 0 ? '+' : '';
+const fmts = v => `${sign(v)}${fmt(v)}`;
+const clss = v => v > 0 ? 'red' : v < 0 ? 'blue' : 'muted';
+const ht = (id, html) => { const e=$(id); if(e) e.innerHTML=html; };
+const tx = (id, t)    => { const e=$(id); if(e) e.textContent=t; };
+
+// ── 일간 렌더 ────────────────────────────────────────────────────────
+function renderDaily() {
+  const dd = DATA.daily;
+  tx('d-date', dd.date);
+  tx('d-overall-comment', dd.overall_comment);
+
+  // 01 신고가
+  const nh = dd.new_high;
+  ht('d-high-badge', `오늘 ${nh.count}건`);
+  tx('d-high-count', nh.count);
+  tx('d-high-prev', nh.prev);
+  const wow = nh.count - nh.prev;
+  ht('d-high-wow', `<span class="${clss(wow)}">${fmts(wow)}건</span>`);
+  tx('d-high-hotspot', nh.hotspot);
+  tx('d-high-hotspot-cnt', nh.hotspot_cnt);
+  nh.cases.forEach(c => {
+    $('d-high-table').insertAdjacentHTML('beforeend',
+      `<tr>
+        <td><strong>${c.name}</strong><div class="td-sub">${c.sgg}</div></td>
+        <td class="num">${c.area}</td>
+        <td class="num red">${fmt(c.price)}</td>
+        <td class="num muted">${fmt(c.prev)}</td>
+        <td class="num red">▲${fmt(c.pct)}%</td>
+      </tr>`);
+  });
+  tx('d-high-comment', nh.comment);
+
+  // 02 급락
+  const pl = dd.plunge;
+  ht('d-plunge-badge', `${pl.count}건`);
+  tx('d-plunge-count', pl.count);
+  ht('d-plunge-avg', `<span class="blue">${fmt(pl.avg_pct)}</span>`);
+  ht('d-plunge-max', `<span class="blue">${fmt(pl.max_pct)}</span>`);
+  pl.cases.forEach(c => {
+    $('d-plunge-table').insertAdjacentHTML('beforeend',
+      `<tr>
+        <td><strong>${c.name}</strong><div class="td-sub">${c.sgg}</div></td>
+        <td class="num">${c.area}</td>
+        <td class="num blue">${fmt(c.price)}</td>
+        <td class="num muted">${fmt(c.prev)}</td>
+        <td class="num blue">▼${fmt(Math.abs(c.pct))}%</td>
+        <td class="muted" style="font-size:12px">${c.type}</td>
+      </tr>`);
+  });
+  tx('d-plunge-comment', pl.comment);
+
+  // 03 해제
+  const ca = dd.cancel;
+  ht('d-cancel-badge', `${ca.count}건`);
+  tx('d-cancel-count', ca.count);
+  tx('d-cancel-high', ca.high_cancel);
+  tx('d-cancel-rate7', fmt(ca.rate7));
+  ca.cases.forEach(c => {
+    $('d-cancel-table').insertAdjacentHTML('beforeend',
+      `<tr>
+        <td><strong>${c.name}</strong></td>
+        <td class="num">${fmt(c.price)}억</td>
+        <td class="muted">${c.type}</td>
+        <td>${c.high_flag ? '<span style="color:var(--red);font-weight:700">⚠ 신고가 후 해제</span>' : '—'}</td>
+      </tr>`);
+  });
+  tx('d-cancel-comment', ca.comment);
+
+  // 04 직거래
+  const dr = dd.direct_deal;
+  tx('d-direct-cnt', dr.count);
+  ht('d-direct-pct', `<span class="num">${fmt(dr.pct)}<span style="font-size:18px">%</span></span>`);
+  tx('d-direct-avg30', fmt(dr.avg30));
+  ht('d-direct-disc', `<span class="blue num">${fmt(dr.avg_discount)}%</span>`);
+  tx('d-direct-comment', dr.comment);
+
+  // 05 거래량
+  const vol = dd.volume;
+  tx('d-vol-today', vol.today);
+  tx('d-vol-ma7', vol.ma7);
+  ht('d-vol-ratio', `<span class="${vol.ratio>=1.2?'red':vol.ratio<=0.8?'blue':''}">${fmt(vol.ratio)}</span>`);
+  const pin = Math.min(Math.max((vol.ratio - 0.5) / 1.5 * 100, 4), 96);
+  $('d-gauge-pin').style.left = pin + '%';
+  const signal = vol.ratio >= 1.2 ? '🔴 단기 수요 집중 (과열 주의)' : vol.ratio <= 0.8 ? '🔵 거래 위축 (냉각 국면)' : '⚪ 보통 수준';
+  tx('d-vol-signal', signal);
+  tx('d-vol-comment', vol.comment);
+
+  // 06 갭 최소
+  const gm = dd.gap_min;
+  gm.cases.forEach(c => {
+    $('d-gap-table').insertAdjacentHTML('beforeend',
+      `<tr>
+        <td><strong>${c.name}</strong></td>
+        <td class="muted">${c.sgg}</td>
+        <td class="num">${c.area}</td>
+        <td class="num">${fmt(c.trade)}억</td>
+        <td class="num">${fmt(c.jeonse)}억</td>
+        <td class="num gold">${c.gap.toLocaleString()}만</td>
+        <td class="num ${c.ratio>=90?'red':''}">${fmt(c.ratio)}%</td>
+      </tr>`);
+  });
+  tx('d-gap-comment', gm.comment);
+
+  // 07 대장
+  const fl = dd.flagship;
+  fl.cases.forEach(c => {
+    const diff = c.vs_high;
+    const tag = diff === 0
+      ? `<span style="color:var(--red);font-weight:700">★ 신고가</span>`
+      : `<span class="${diff<0?'blue':'red'} num">${fmts(diff)}%</span>`;
+    $('d-flagship-table').insertAdjacentHTML('beforeend',
+      `<tr>
+        <td><strong>${c.name}</strong></td>
+        <td class="muted">${c.sgg}</td>
+        <td class="num red">${fmt(c.price)}억</td>
+        <td class="num muted">${fmt(c.prev_high)}억</td>
+        <td>${tag}</td>
+      </tr>`);
+  });
+  tx('d-flagship-comment', fl.comment);
+}
+
+// ── 주간 렌더 ────────────────────────────────────────────────────────
+function renderWeekly() {
+  const w = DATA.weekly;
+  tx('w-period', w.period);
+  tx('w-overall-comment', w.overall_comment);
+
+  // 01 지수
+  const idx = w.index;
+  ht('w-idx-self', `<span class="${clss(idx.self)} num">${fmts(idx.self)}%</span>`);
+  ht('w-idx-kb',   `<span class="${clss(idx.kb)} num">${fmts(idx.kb)}%</span>`);
+  ht('w-idx-molit',`<span class="${clss(idx.molit)} num">${fmts(idx.molit)}%</span>`);
+  const gap = idx.self - idx.kb;
+  ht('w-idx-gap', `<span class="gold num">${fmts(gap)}</span>`);
+  tx('w-idx-comment', idx.comment);
+
+  // 02 신고가 랭킹
+  w.new_high_rank.items.forEach(r => {
+    const wowHtml = `<span class="${clss(r.wow)} num">${fmts(r.wow)}</span>`;
+    $('w-rank-table').insertAdjacentHTML('beforeend',
+      `<tr>
+        <td class="num muted">${r.rank}</td>
+        <td><strong>${r.sgg}</strong></td>
+        <td class="num red">${r.count}건</td>
+        <td class="num">${fmt(r.pct)}%</td>
+        <td>${wowHtml}</td>
+      </tr>`);
+  });
+  tx('w-rank-comment', w.new_high_rank.comment);
+
+  // 03 시장 온도
+  const tm = w.temperature;
+  ht('w-temp-val', `<span class="${tm.val>1?'red':'blue'} num">${fmt(tm.val)}</span>`);
+  tx('w-temp-prev', fmt(tm.prev));
+  const tmChg = tm.val - tm.prev;
+  ht('w-temp-chg', `<span class="${clss(tmChg)} num">${fmts(tmChg)}</span>`);
+  tx('w-temp-high-cnt', tm.high_cnt);
+  tx('w-temp-low-cnt', tm.low_cnt);
+  const tpin = Math.min(Math.max((tm.val - 0.5) / 5.5 * 100, 4), 96);
+  $('w-gauge-pin').style.left = tpin + '%';
+  tx('w-temp-comment', tm.comment);
+
+  // 04 회전율
+  w.turnover.items.forEach(t => {
+    $('w-turnover-table').insertAdjacentHTML('beforeend',
+      `<tr>
+        <td><strong>${t.name}</strong></td>
+        <td class="muted">${t.sgg}</td>
+        <td class="num">${t.units.toLocaleString()}</td>
+        <td class="num">${t.trades}</td>
+        <td class="num green">${fmt(t.rate, 2)}%</td>
+        <td class="num ${clss(t.wow)}">${fmts(t.wow, 2)}</td>
+      </tr>`);
+  });
+  tx('w-turnover-comment', w.turnover.comment);
+
+  // 05 규제
+  const reg = w.regulation;
+  ht('w-reg-val1', `${fmts(reg.val1)}%`);
+  ht('w-reg-val2', `${fmts(reg.val2)}%`);
+  tx('w-reg-spread', fmt(reg.spread));
+  const maxR = Math.max(Math.abs(reg.val1), Math.abs(reg.val2));
+  $('w-reg-bar1').style.width = (Math.abs(reg.val1)/maxR*80) + '%';
+  $('w-reg-bar2').style.width = (Math.abs(reg.val2)/maxR*80) + '%';
+  ht('w-reg-lbl1', `<span class="blue">${fmts(reg.val1)}%</span>`);
+  ht('w-reg-lbl2', `<span class="red">${fmts(reg.val2)}%</span>`);
+  tx('w-reg-comment', reg.comment);
+
+  // 06 하위10%
+  const b10 = w.bottom10;
+  tx('w-bot10-cur', b10.cur.toLocaleString());
+  ht('w-bot10-wow', `<span class="${clss(b10.cur-b10.prev)} num">${(b10.cur-b10.prev>=0?'+':'')+(b10.cur-b10.prev).toLocaleString()}</span>`);
+  ht('w-bot10-vs-med', `${fmt(b10.vs_med_pct)}`);
+  drawSparkline('spark-bot10', b10.series, 'var(--blue)');
+  tx('w-bot10-comment', b10.comment);
+
+  // 07 전세 갭
+  const jg = w.jeonse_gap;
+  tx('w-jgap-new', jg.new_avg.toLocaleString());
+  tx('w-jgap-renew', jg.renewal_avg.toLocaleString());
+  ht('w-jgap-gap', `<span class="gold num">${jg.gap.toLocaleString()}</span>`);
+  tx('w-jgap-pct', fmt(jg.gap_pct));
+  tx('w-jgap-comment', jg.comment);
+
+  // 08 입주
+  w.move_in.items.forEach(m => {
+    $('w-movein-table').insertAdjacentHTML('beforeend',
+      `<tr>
+        <td><strong>${m.name}</strong></td>
+        <td class="muted">${m.sgg}</td>
+        <td class="num">${m.units.toLocaleString()}</td>
+        <td class="num ${clss(m.jeonse_chg)}">${fmts(m.jeonse_chg)}%</td>
+        <td class="muted" style="font-size:11px">${m.jeonse_chg<0?'입주 충격':'—'}</td>
+      </tr>`);
+  });
+  tx('w-movein-comment', w.move_in.comment);
+}
+
+// ── 월간 렌더 ────────────────────────────────────────────────────────
+function renderMonthly() {
+  const m = DATA.monthly;
+  tx('m-period', m.period);
+  tx('m-overall-comment', m.overall_comment);
+
+  // 01 예측 채점
+  const pr = m.prediction;
+  ht('m-mae', `<span class="gold num">${fmt(pr.mae)}</span>`);
+  tx('m-hit5', fmt(pr.hit5));
+  ht('m-best', `<span class="green">${pr.best}</span>`);
+  ht('m-worst', `<span class="red">${pr.worst}</span>`);
+  tx('m-pred-comment', pr.comment);
+
+  // 02 잔차
+  m.residual.items.forEach(r => {
+    $('m-residual-table').insertAdjacentHTML('beforeend',
+      `<tr>
+        <td><strong>${r.sgg}</strong></td>
+        <td class="num ${r.val>0?'red':'blue'}">${fmts(r.val)}%</td>
+        <td class="muted">${r.dir}</td>
+        <td style="font-size:12px">${r.reason}</td>
+        <td class="muted" style="font-size:11px">${r.next}</td>
+      </tr>`);
+  });
+  tx('m-residual-comment', m.residual.comment);
+
+  // 03 30대
+  m.age30.items.forEach(a => {
+    $('m-age30-table').insertAdjacentHTML('beforeend',
+      `<tr>
+        <td><strong>${a.sgg}</strong></td>
+        <td class="num">${a.inflow.toLocaleString()}</td>
+        <td class="num ${clss(a.mom)}">${fmts(a.mom)}</td>
+        <td class="num ${clss(a.price_chg)}">${fmts(a.price_chg)}%</td>
+        <td>${a.price_chg>5?'<span style="color:var(--red)">⬆ 강한 상관</span>':a.price_chg>2?'보통':'—'}</td>
+      </tr>`);
+  });
+  tx('m-age30-comment', m.age30.comment);
+
+  // 04 전세가율
+  const jr = m.jeonse_ratio;
+  tx('m-jratio-cur', jr.cur);
+  tx('m-jratio-prev1', jr.prev1);
+  tx('m-jratio-prev3', jr.prev3);
+  tx('m-jratio-hot', jr.hotspot);
+  tx('m-jratio-comment', jr.comment);
+
+  // 05 신구축
+  const sno = m.spread_newold;
+  tx('m-newold-spread', sno.spread.toLocaleString());
+  tx('m-new-ppm', sno.new_ppm.toLocaleString());
+  tx('m-old-ppm', sno.old_ppm.toLocaleString());
+  tx('m-newold-prev', sno.prev_spread?.toLocaleString() || '—');
+  tx('m-newold-comment', sno.comment);
+
+  // 06 면적
+  const ss = m.spread_size;
+  tx('m-size-spread', ss.spread.toLocaleString());
+  tx('m-sm-ppm', ss.small_ppm.toLocaleString());
+  tx('m-lg-ppm', ss.large_ppm.toLocaleString());
+  tx('m-size-comment', ss.comment);
+
+  // 07 거시
+  const mc = m.macro;
+  ht('m-rate', `<span class="num">${fmt(mc.rate, 2)}</span>`);
+  ht('m-rate-chg', mc.rate_chg===0 ? '% · 동결 유지' :
+    `% · <span class="${clss(mc.rate_chg)}">${fmts(mc.rate_chg, 2)}%p</span>`);
+  tx('m-m2', fmt(mc.m2));
+  tx('m-loan', fmt(mc.loan, 1));
+  tx('m-unsold', mc.unsold.toLocaleString());
+  tx('m-macro-comment', mc.comment);
+
+  // 08 신고 지연
+  const rd = m.report_delay;
+  tx('m-delay-old', fmt(rd.old_pct));
+  tx('m-delay-recent', fmt(rd.recent_pct));
+  tx('m-cancel-rate', fmt(rd.cancel_rate));
+  tx('m-delay-comment', rd.comment);
+
+  // 09 유동성
+  m.illiquid.items.forEach(il => {
+    $('m-illiquid-table').insertAdjacentHTML('beforeend',
+      `<tr>
+        <td class="num muted">${il.rank}</td>
+        <td><strong>${il.name}</strong></td>
+        <td class="muted">${il.sgg}</td>
+        <td class="num muted">${il.last_trade}</td>
+        <td class="num red">${il.months}개월</td>
+        <td class="num blue">${fmt(il.vs_high)}%</td>
+      </tr>`);
+  });
+  tx('m-illiquid-comment', m.illiquid.comment);
+}
+
+// ── 스파크라인 ─────────────────────────────────────────────────────────
+function drawSparkline(id, series, color) {
+  const cv = $(id);
+  if (!cv) return;
+  const dpr = window.devicePixelRatio || 1;
+  const rect = cv.parentElement.getBoundingClientRect();
+  const W = rect.width || 400, H = 52;
+  cv.width = W * dpr; cv.height = H * dpr;
+  cv.style.width = W + 'px'; cv.style.height = H + 'px';
+  const ctx = cv.getContext('2d');
+  ctx.scale(dpr, dpr);
+  const mn = Math.min(...series), mx = Math.max(...series), rng = mx - mn || 1;
+  const xs = series.map((_, i) => 8 + i / (series.length-1) * (W-16));
+  const ys = series.map(v => H-8 - (v-mn)/rng*(H-16));
+  // 면적
+  ctx.beginPath();
+  ctx.moveTo(xs[0], ys[0]);
+  series.forEach((_, i) => i && ctx.lineTo(xs[i], ys[i]));
+  ctx.lineTo(xs[xs.length-1], H); ctx.lineTo(xs[0], H); ctx.closePath();
+  const cs = color.startsWith('var') ? '#2D7BE8' : color;
+  ctx.fillStyle = cs + '28'; ctx.fill();
+  // 선
+  ctx.beginPath();
+  ctx.moveTo(xs[0], ys[0]);
+  series.forEach((_, i) => i && ctx.lineTo(xs[i], ys[i]));
+  ctx.strokeStyle = cs; ctx.lineWidth = 1.8; ctx.stroke();
+  // 점들
+  xs.forEach((x, i) => {
+    ctx.beginPath();
+    ctx.arc(x, ys[i], i===xs.length-1 ? 4 : 2.5, 0, Math.PI*2);
+    ctx.fillStyle = cs; ctx.fill();
+    if (i===xs.length-1) {
+      ctx.strokeStyle = 'white'; ctx.lineWidth = 1; ctx.stroke();
+    }
+  });
+}
+
+// ── 탭 전환 ──────────────────────────────────────────────────────────
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  const tabEl = document.querySelector(`.tab[onclick="switchTab('${name}')"]`);
+  if (tabEl) tabEl.classList.add('active');
+  const panel = $('panel-' + name);
+  if (panel) panel.classList.add('active');
+  if (name === 'weekly') {
+    requestAnimationFrame(() =>
+      drawSparkline('spark-bot10', DATA.weekly.bottom10.series, 'var(--blue)')
+    );
+  }
+}
+
+// ── 테마 토글 ─────────────────────────────────────────────────────────
+function toggleTheme() {
+  const cur = document.documentElement.dataset.theme ||
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.dataset.theme = cur === 'dark' ? 'light' : 'dark';
+}
+
+// ── 초기화 ────────────────────────────────────────────────────────────
+renderDaily();
+renderWeekly();
+renderMonthly();
+</script>

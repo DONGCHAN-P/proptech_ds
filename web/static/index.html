@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>집값지도 · 수도권 아파트 실거래</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%F0%9F%8F%A2%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<!-- ── 상단바 ──────────────────────────────────────────── -->
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">🏢</span>
+    <span class="brand-name">집값지도</span>
+  </div>
+
+  <div class="search" id="search">
+    <input type="text" id="searchInput" placeholder="아파트명 · 지역으로 검색" autocomplete="off" />
+    <div class="search-results" id="searchResults" hidden></div>
+  </div>
+
+  <nav class="filters" id="filters">
+    <button class="fbtn" data-panel="pyeong">평형 <b id="lblPyeong">전체</b></button>
+    <button class="fbtn" data-panel="price">가격 <b id="lblPrice">전체</b></button>
+    <button class="fbtn" data-panel="built">연식 <b id="lblBuilt">전체</b></button>
+    <button class="fbtn" data-panel="extra">조건 <b id="lblExtra">전체</b></button>
+    <button class="fbtn ghost" id="btnReset" title="필터 초기화">초기화</button>
+  </nav>
+
+  <div class="topbar-right">
+    <button class="tab-btn" data-rank="undervalue">저평가</button>
+    <button class="tab-btn" data-rank="newhigh">신고가</button>
+    <button class="tab-btn" data-rank="surge">급등</button>
+  </div>
+</header>
+
+<!-- ── 필터 드롭다운 ───────────────────────────────────── -->
+<div class="dropdown" id="dd-pyeong" hidden>
+  <div class="dd-title">평형 선택</div>
+  <div class="chips" id="pyeongChips"></div>
+</div>
+
+<div class="dropdown" id="dd-price" hidden>
+  <div class="dd-title">매매가 (만원)</div>
+  <div class="range-row">
+    <input type="number" id="priceMin" placeholder="최소" step="1000" />
+    <span>~</span>
+    <input type="number" id="priceMax" placeholder="최대" step="1000" />
+  </div>
+  <div class="chips" id="priceChips">
+    <button class="chip" data-min="" data-max="30000">3억 이하</button>
+    <button class="chip" data-min="30000" data-max="60000">3~6억</button>
+    <button class="chip" data-min="60000" data-max="90000">6~9억</button>
+    <button class="chip" data-min="90000" data-max="150000">9~15억</button>
+    <button class="chip" data-min="150000" data-max="">15억 이상</button>
+  </div>
+</div>
+
+<div class="dropdown" id="dd-built" hidden>
+  <div class="dd-title">준공 연도</div>
+  <div class="range-row">
+    <input type="number" id="builtFrom" placeholder="1980" />
+    <span>~</span>
+    <input type="number" id="builtTo" placeholder="2026" />
+  </div>
+  <div class="chips" id="builtChips">
+    <button class="chip" data-from="2021" data-to="">신축 5년내</button>
+    <button class="chip" data-from="2016" data-to="2020">준신축</button>
+    <button class="chip" data-from="2006" data-to="2015">10~20년</button>
+    <button class="chip" data-from="" data-to="1995">구축 30년+</button>
+  </div>
+</div>
+
+<div class="dropdown" id="dd-extra" hidden>
+  <div class="dd-title">추가 조건</div>
+  <label class="opt"><input type="checkbox" id="optRedv" /> 재개발·재건축 인접</label>
+  <label class="opt"><input type="checkbox" id="optGtx" /> GTX 3km 이내</label>
+  <label class="opt"><input type="checkbox" id="optActive" /> 최근 1년 거래 있음</label>
+  <div class="dd-sub">역까지 도보</div>
+  <div class="slider-row">
+    <input type="range" id="optWalk" min="0" max="30" step="1" value="30" />
+    <span id="lblWalk">제한 없음</span>
+  </div>
+  <div class="dd-sub">인프라 점수 최소</div>
+  <div class="slider-row">
+    <input type="range" id="optInfra" min="0" max="90" step="5" value="0" />
+    <span id="lblInfra">제한 없음</span>
+  </div>
+</div>
+
+<!-- ── 본문 ────────────────────────────────────────────── -->
+<main class="stage">
+  <!-- 좌측 목록 -->
+  <aside class="listpane" id="listpane">
+    <div class="list-head">
+      <div>
+        <b id="listCount">—</b><span class="muted"> 개 단지</span>
+        <div class="muted small" id="listHint">지도를 움직이면 목록이 갱신됩니다</div>
+      </div>
+      <select id="sortSel">
+        <option value="trade">거래 많은순</option>
+        <option value="recent">최근 거래순</option>
+        <option value="price_desc">가격 높은순</option>
+        <option value="price_asc">가격 낮은순</option>
+        <option value="ppy_desc">평단가 높은순</option>
+        <option value="ppy_asc">평단가 낮은순</option>
+        <option value="chg_desc">1년 상승순</option>
+        <option value="chg_asc">1년 하락순</option>
+        <option value="new">신축순</option>
+      </select>
+    </div>
+    <div class="list-body" id="listBody"></div>
+    <button class="listpane-toggle" id="listToggle" title="목록 접기">‹</button>
+  </aside>
+
+  <!-- 지도 -->
+  <div id="map"></div>
+
+  <div class="map-legend" id="legend">
+    <span class="lg-title">평당가</span>
+    <div class="lg-scale" id="lgScale"></div>
+  </div>
+
+  <div class="map-toast" id="toast" hidden></div>
+
+  <!-- 단지 상세 -->
+  <section class="detail" id="detail" hidden>
+    <button class="detail-close" id="detailClose">✕</button>
+    <div class="detail-inner" id="detailInner"></div>
+  </section>
+
+  <!-- 랭킹 패널 -->
+  <section class="rankpane" id="rankpane" hidden>
+    <div class="rank-head">
+      <b id="rankTitle">저평가 단지</b>
+      <button class="detail-close" id="rankClose">✕</button>
+    </div>
+    <div class="rank-desc" id="rankDesc"></div>
+    <div class="rank-body" id="rankBody"></div>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/state.js"></script>
+<script src="/js/map.js"></script>
+<script src="/js/list.js"></script>
+<script src="/js/detail.js"></script>
+<script src="/js/rank.js"></script>
+<script src="/js/filters.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

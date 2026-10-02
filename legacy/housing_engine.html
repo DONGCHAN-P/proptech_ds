@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>THE AI HOUSING ENGINE · v2</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<style>
+  :root {
+    --bg:#000; --bg-card:#0E1414; --bg-card-2:#0A1010; --bg-elev:#131C1C;
+    --line:#1B2A2A; --line-2:#243838;
+    --cyan:#00E5FF; --cyan-dim:rgba(0,229,255,.16);
+    --lime:#C8FF00; --lime-dim:rgba(200,255,0,.15);
+    --tier-s:#C8FF00; --tier-a:#00E5FF; --tier-b:#6C8C8C; --tier-c:#3D5050;
+    --grade-s:#C8FF00; --grade-a:#00E5FF; --grade-b:#88B0B0; --grade-c:#6C8C8C; --grade-d:#4A5A5A;
+    --text:#F2F4F4; --text-2:#B6BFBF; --text-3:#7A8585;
+    --danger:#FF4D6D; --warn:#FFB020;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; background:var(--bg); color:var(--text); }
+  body {
+    font-family:'Pretendard','Inter',-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden; height: 100vh;
+    background:
+      radial-gradient(1100px 700px at 92% -5%, rgba(0,229,255,.10), transparent 60%),
+      radial-gradient(900px 600px at -5% 110%, rgba(200,255,0,.07), transparent 60%),
+      var(--bg);
+  }
+  .nav { height:64px; border-bottom:1px solid var(--line); background:rgba(8,12,12,.85); backdrop-filter:blur(12px); display:flex; align-items:center; padding:0 24px; gap:28px; z-index:1000; position:relative; }
+  .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.04em; }
+  .brand-mark { width:28px; height:28px; border-radius:8px; background:linear-gradient(135deg,var(--cyan),var(--lime)); position:relative; }
+  .brand-mark::after { content:""; position:absolute; inset:6px; background:#000; border-radius:4px; }
+  .brand-text { font-size:14px; }
+  .brand-text .accent { color:var(--lime); }
+  .brand-tag { margin-left:6px; font-size:10px; letter-spacing:.18em; color:var(--cyan); padding:3px 8px; border:1px solid var(--cyan-dim); border-radius:999px; }
+  .search { flex:1; max-width:520px; height:40px; display:flex; align-items:center; gap:10px; background:var(--bg-card); border:1px solid var(--line); border-radius:999px; padding:0 16px; transition:border-color .15s; }
+  .search:focus-within { border-color:var(--cyan); box-shadow:0 0 0 3px rgba(0,229,255,.08); }
+  .search input { flex:1; background:transparent; border:none; outline:none; color:var(--text); font-size:14px; font-family:inherit; }
+  .search input::placeholder { color:var(--text-3); }
+  .search-icon { color:var(--text-3); }
+  .nav-actions { display:flex; gap:10px; align-items:center; }
+  .nav-cta { padding:8px 14px; border-radius:999px; background:var(--lime); color:#001b00; font-weight:700; font-size:13px; cursor:pointer; border:none; }
+  .data-stat { font-family:'Inter'; font-size:11px; color:var(--text-3); }
+  .data-stat b { color:var(--lime); font-weight:700; }
+  .app { display:grid; grid-template-columns:380px 1fr 400px; height:calc(100vh - 64px); min-height:0; }
+
+  /* LIST */
+  .panel-list { border-right:1px solid var(--line); background:linear-gradient(180deg,rgba(0,229,255,.025),transparent 240px),var(--bg); display:flex; flex-direction:column; min-height:0; }
+  .panel-head { padding:18px 20px 12px; border-bottom:1px solid var(--line); }
+  .panel-title { display:flex; align-items:center; gap:10px; font-size:18px; font-weight:700; }
+  .panel-title::before { content:""; width:3px; height:18px; background:var(--cyan); border-radius:2px; }
+  .panel-sub { color:var(--text-3); font-size:12px; margin-top:4px; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+  .chip { font-size:12px; padding:6px 12px; border:1px solid var(--line-2); border-radius:999px; color:var(--text-2); cursor:pointer; background:transparent; transition:all .15s; font-family:inherit; }
+  .chip:hover { border-color:var(--cyan); color:var(--text); }
+  .chip.active { background:var(--cyan-dim); border-color:var(--cyan); color:var(--cyan); font-weight:600; }
+  .chip[data-filter="S"].active { background:rgba(200,255,0,.18); border-color:var(--lime); color:var(--lime); }
+  .toggle-row { display:flex; align-items:center; gap:12px; margin-top:10px; font-size:11px; color:var(--text-3); }
+  .toggle { position:relative; width:32px; height:18px; background:var(--line-2); border-radius:999px; cursor:pointer; transition:background .15s; }
+  .toggle::after { content:""; position:absolute; top:2px; left:2px; width:14px; height:14px; border-radius:50%; background:var(--text-2); transition:all .15s; }
+  .toggle.on { background:var(--cyan-dim); }
+  .toggle.on::after { left:16px; background:var(--cyan); }
+  .list-tools { display:flex; gap:6px; padding:10px 16px; border-bottom:1px solid var(--line); font-size:12px; color:var(--text-3); align-items:center; justify-content:space-between; }
+  .sort-btn { background:transparent; border:1px solid var(--line-2); color:var(--text-2); padding:4px 10px; border-radius:6px; font-size:11px; cursor:pointer; font-family:inherit; }
+  .sort-btn.active { color:var(--lime); border-color:var(--lime); background:var(--lime-dim); }
+  .list-scroll { flex:1; overflow-y:auto; padding:8px 12px 80px; }
+  .list-scroll::-webkit-scrollbar { width:8px; }
+  .list-scroll::-webkit-scrollbar-thumb { background:var(--line-2); border-radius:4px; }
+
+  /* Apt card with tier left border */
+  .apt-card { background:var(--bg-card); border:1px solid var(--line); border-left:4px solid var(--tier-c); border-radius:14px; padding:14px 16px 12px; margin-bottom:10px; cursor:pointer; transition:all .15s; position:relative; overflow:hidden; }
+  .apt-card.tier-S { border-left-color:var(--tier-s); }
+  .apt-card.tier-A { border-left-color:var(--tier-a); }
+  .apt-card.tier-B { border-left-color:var(--tier-b); }
+  .apt-card.tier-C { border-left-color:var(--tier-c); opacity:.85; }
+  .apt-card:hover { border-color:var(--cyan); transform:translateY(-1px); opacity:1; }
+  .apt-card.selected { border-color:var(--cyan); background:linear-gradient(180deg,rgba(0,229,255,.06),var(--bg-card)); box-shadow:0 0 0 1px var(--cyan), 0 8px 24px rgba(0,229,255,.12); opacity:1; }
+  .apt-card.selected.tier-S { box-shadow:0 0 0 1px var(--tier-s), 0 8px 24px rgba(200,255,0,.18); }
+
+  .rank-badge { position:absolute; top:12px; right:14px; font-family:'Inter',sans-serif; font-size:10px; font-weight:800; letter-spacing:.08em; padding:3px 8px; border-radius:6px; color:var(--text-3); border:1px solid var(--line-2); }
+  .rank-badge.tier-bg-S { background:var(--lime); color:#001b00; border-color:var(--lime); }
+  .rank-badge.tier-bg-A { background:var(--cyan); color:#001b1b; border-color:var(--cyan); }
+  .rank-badge.tier-bg-B { color:var(--text-2); border-color:var(--tier-b); }
+  .rank-badge.tier-bg-C { color:var(--text-3); border-color:var(--tier-c); }
+  .apt-name { font-size:15px; font-weight:700; margin-bottom:4px; padding-right:60px; word-break:keep-all; }
+  .apt-loc { font-size:12px; color:var(--text-3); margin-bottom:10px; }
+  .apt-price-row { display:flex; align-items:baseline; gap:6px; margin-bottom:10px; }
+  .apt-price { font-family:'Inter',sans-serif; font-size:22px; font-weight:800; color:var(--lime); letter-spacing:-.02em; }
+  .apt-price.dim { color:var(--text-3); font-size:14px; }
+  .apt-price-unit { font-size:12px; color:var(--text-2); font-weight:600; }
+  .apt-delta { margin-left:auto; font-size:11px; font-weight:600; padding:2px 8px; border-radius:6px; }
+  .apt-delta.up { color:var(--lime); background:var(--lime-dim); }
+  .apt-delta.down { color:var(--danger); background:rgba(255,77,109,.12); }
+  .apt-delta.flat { color:var(--text-3); background:rgba(122,133,133,.08); }
+
+  .apt-badges { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:10px; }
+  .badge { font-size:10px; padding:3px 8px; border-radius:6px; background:rgba(255,255,255,.04); border:1px solid var(--line-2); color:var(--text-2); white-space:nowrap; display:inline-flex; align-items:center; gap:4px; }
+  .badge .emoji { font-size:11px; }
+  .badge .stars { font-family:Inter,sans-serif; color:var(--lime); letter-spacing:-1px; }
+  .badge.price-tier { background:rgba(200,255,0,.06); border-color:var(--lime-dim); color:var(--text); }
+  .badge.grade-S { background:rgba(200,255,0,.14); border-color:var(--grade-s); color:var(--grade-s); font-weight:700; }
+  .badge.grade-A { background:rgba(0,229,255,.12); border-color:var(--grade-a); color:var(--grade-a); font-weight:700; }
+  .badge.grade-B { color:var(--grade-b); }
+  .badge.grade-C { color:var(--grade-c); }
+  .badge.grade-D { color:var(--grade-d); }
+
+  .apt-meta { display:flex; gap:8px; font-size:11px; color:var(--text-3); border-top:1px dashed var(--line); padding-top:8px; flex-wrap:wrap; }
+  .apt-meta .hash { color:var(--cyan); }
+
+  .load-more { width:100%; padding:10px; background:transparent; border:1px dashed var(--line-2); border-radius:10px; color:var(--cyan); cursor:pointer; font-size:12px; font-family:inherit; margin-top:8px; }
+  .load-more:hover { background:var(--cyan-dim); }
+
+  /* MAP */
+  .panel-map { position:relative; min-height:0; }
+  #map { width:100%; height:100%; background:#050a0a; }
+  .leaflet-container { background:#050a0a; font-family:'Pretendard',sans-serif; }
+  .leaflet-control-attribution { background:rgba(0,0,0,.6)!important; color:var(--text-3)!important; border:1px solid var(--line); border-radius:6px; }
+  .leaflet-control-attribution a { color:var(--cyan)!important; }
+  .leaflet-bar a { background:var(--bg-card)!important; color:var(--text)!important; border-color:var(--line-2)!important; }
+  .leaflet-bar a:hover { background:var(--bg-elev)!important; color:var(--cyan)!important; }
+  .map-overlay { position:absolute; left:16px; top:16px; z-index:600; background:rgba(10,16,16,.85); backdrop-filter:blur(12px); border:1px solid var(--line); border-radius:14px; padding:14px 18px; min-width:280px; }
+  .map-overlay h4 { margin:0 0 4px; font-size:11px; letter-spacing:.18em; color:var(--cyan); font-weight:700; }
+  .map-overlay .hd { font-size:17px; font-weight:700; margin-bottom:6px; }
+  .map-overlay .sub { font-size:11px; color:var(--text-3); }
+  .map-legend { position:absolute; right:16px; bottom:24px; z-index:600; background:rgba(10,16,16,.9); border:1px solid var(--line); border-radius:12px; padding:12px 14px; font-size:11px; color:var(--text-2); }
+  .map-legend .lg-row { display:flex; align-items:center; gap:8px; margin:4px 0; }
+  .map-legend .lg-dot { width:12px; height:12px; border-radius:4px; }
+
+  /* Markers — name+price stacked, tier color */
+  .apt-marker {
+    display:flex; flex-direction:column; align-items:center;
+    background:var(--bg-card); border:1.5px solid var(--tier-c); border-radius:10px;
+    padding:3px 8px 4px; min-width:54px; white-space:nowrap;
+    font-family:'Pretendard','Inter',sans-serif;
+    cursor:pointer; transition:transform .12s, box-shadow .12s, border-color .12s;
+    transform:translate(-50%,-100%);
+  }
+  .apt-marker .m-name { font-size:10px; font-weight:700; color:var(--text-2); line-height:1.1; }
+  .apt-marker .m-price { font-family:'Inter',sans-serif; font-size:11px; font-weight:800; color:var(--text); line-height:1.2; letter-spacing:-.02em; }
+  .apt-marker.tier-S { border-color:var(--tier-s); box-shadow:0 3px 12px rgba(200,255,0,.35); }
+  .apt-marker.tier-S .m-name { color:var(--tier-s); }
+  .apt-marker.tier-S .m-price { color:var(--tier-s); }
+  .apt-marker.tier-A { border-color:var(--tier-a); box-shadow:0 3px 10px rgba(0,229,255,.28); }
+  .apt-marker.tier-A .m-name { color:var(--tier-a); }
+  .apt-marker.tier-A .m-price { color:var(--tier-a); }
+  .apt-marker.tier-B { border-color:var(--tier-b); background:var(--bg-card-2); }
+  .apt-marker.tier-B .m-name { color:var(--text-2); }
+  .apt-marker.tier-B .m-price { color:var(--text); }
+  .apt-marker.tier-C { border-color:var(--tier-c); background:#080d0d; opacity:.85; padding:2px 6px 3px; min-width:0; }
+  .apt-marker.tier-C .m-name { font-size:9px; color:var(--text-3); }
+  .apt-marker.tier-C .m-price { font-size:10px; color:var(--text-3); }
+  .apt-marker.no-price .m-price { color:var(--text-3); }
+  .apt-marker.selected, .apt-marker:hover {
+    transform:translate(-50%,-100%) scale(1.15); z-index:1000;
+    border-width:2px;
+  }
+  .apt-marker.tier-S.selected, .apt-marker.tier-S:hover { background:var(--tier-s); }
+  .apt-marker.tier-S.selected .m-name, .apt-marker.tier-S.selected .m-price,
+  .apt-marker.tier-S:hover .m-name, .apt-marker.tier-S:hover .m-price { color:#001b00; }
+  .apt-marker.tier-A.selected, .apt-marker.tier-A:hover { background:var(--tier-a); }
+  .apt-marker.tier-A.selected .m-name, .apt-marker.tier-A.selected .m-price,
+  .apt-marker.tier-A:hover .m-name, .apt-marker.tier-A:hover .m-price { color:#001b1b; }
+  .apt-marker.tier-B.selected, .apt-marker.tier-B:hover { background:var(--cyan); border-color:var(--cyan); }
+  .apt-marker.tier-B.selected .m-name, .apt-marker.tier-B.selected .m-price,
+  .apt-marker.tier-B:hover .m-name, .apt-marker.tier-B:hover .m-price { color:#001b1b; }
+
+  .marker-cluster { background:rgba(0,229,255,.14)!important; border:2px solid var(--cyan); }
+  .marker-cluster div { background:rgba(0,229,255,.85)!important; color:#001b1b!important; font-family:'Inter'; font-weight:800; }
+  .marker-cluster-large { background:rgba(200,255,0,.14)!important; border-color:var(--lime); }
+  .marker-cluster-large div { background:rgba(200,255,0,.9)!important; color:#001b00!important; }
+  .marker-cluster-medium { background:rgba(0,229,255,.18)!important; }
+  .marker-cluster-medium div { background:rgba(0,229,255,.9)!important; }
+
+  /* DETAIL */
+  .panel-detail { border-left:1px solid var(--line); background:var(--bg); overflow-y:auto; min-height:0; }
+  .panel-detail::-webkit-scrollbar { width:8px; }
+  .panel-detail::-webkit-scrollbar-thumb { background:var(--line-2); border-radius:4px; }
+  .detail-hero { padding:22px 22px 18px; border-bottom:1px solid var(--line); background:radial-gradient(600px 200px at 100% 0%,rgba(0,229,255,.10),transparent 60%),radial-gradient(500px 200px at 0% 100%,rgba(200,255,0,.06),transparent 60%); }
+  .detail-hero.tier-bg-S { background:radial-gradient(600px 200px at 100% 0%,rgba(200,255,0,.16),transparent 60%),radial-gradient(500px 200px at 0% 100%,rgba(200,255,0,.06),transparent 60%); }
+  .hero-tag { font-size:10px; letter-spacing:.2em; color:var(--cyan); margin-bottom:8px; font-weight:700; }
+  .hero-name { font-size:22px; font-weight:800; letter-spacing:-.01em; line-height:1.2; margin-bottom:4px; word-break:keep-all; }
+  .hero-loc { font-size:12px; color:var(--text-3); }
+  .hero-price-row { display:flex; align-items:flex-end; gap:10px; margin-top:16px; }
+  .hero-price { font-family:'Inter',sans-serif; font-size:38px; font-weight:800; color:var(--lime); letter-spacing:-.03em; line-height:1; }
+  .hero-price.dim { color:var(--text-3); font-size:22px; }
+  .hero-price-unit { font-size:14px; color:var(--text-2); font-weight:600; padding-bottom:4px; }
+  .hero-delta { margin-left:auto; font-size:12px; padding:4px 10px; border-radius:8px; font-weight:600; }
+  .hero-delta.up { color:var(--lime); background:var(--lime-dim); }
+  .hero-delta.down { color:var(--danger); background:rgba(255,77,109,.12); }
+  .hero-delta.flat { color:var(--text-3); background:rgba(122,133,133,.1); }
+  .hero-tags { display:flex; gap:6px; margin-top:12px; flex-wrap:wrap; }
+  .hero-tag-pill { font-size:11px; padding:4px 10px; background:rgba(255,255,255,.04); border:1px solid var(--line-2); border-radius:999px; color:var(--text-2); }
+
+  /* Tier grid (replaces ai-score) */
+  .ai-tier-grid { display:grid; grid-template-columns:1fr 1fr 1fr; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .tier-cell { padding:14px 10px; border-right:1px solid var(--line); text-align:center; }
+  .tier-cell:last-child { border-right:none; }
+  .tier-l { font-size:9px; letter-spacing:.16em; color:var(--text-3); margin-bottom:6px; font-weight:700; }
+  .tier-v { font-family:'Inter'; font-size:20px; font-weight:800; line-height:1; margin-bottom:6px; }
+  .tier-v.tier-emoji { font-size:24px; }
+  .tier-v .stars-big { font-family:Inter,sans-serif; color:var(--lime); letter-spacing:-2px; font-size:18px; }
+  .grade-letter { font-family:'Inter'; font-weight:900; font-size:24px; }
+  .grade-letter.grade-S { color:var(--grade-s); text-shadow:0 0 12px rgba(200,255,0,.5); }
+  .grade-letter.grade-A { color:var(--grade-a); text-shadow:0 0 10px rgba(0,229,255,.4); }
+  .grade-letter.grade-B { color:var(--grade-b); }
+  .grade-letter.grade-C { color:var(--grade-c); }
+  .grade-letter.grade-D { color:var(--grade-d); }
+  .tier-s { font-size:10px; color:var(--text-3); }
+
+  .det-section { padding:18px 22px; border-bottom:1px solid var(--line); }
+  .det-section h3 { display:flex; align-items:center; gap:8px; font-size:13px; font-weight:700; margin:0 0 12px; }
+  .det-section h3::before { content:""; width:3px; height:13px; background:var(--cyan); border-radius:2px; }
+  .det-section .small { font-size:11px; color:var(--text-3); margin-top:8px; }
+
+  /* Pyeong tabs */
+  .pb-tabs { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:12px; }
+  .pb-tab { background:var(--bg-card); border:1px solid var(--line-2); color:var(--text-2); padding:6px 10px; border-radius:8px; font-size:11px; cursor:pointer; font-family:inherit; line-height:1.3; text-align:left; }
+  .pb-tab .pb-cnt { color:var(--text-3); font-size:10px; }
+  .pb-tab .pb-avg { display:block; font-family:'Inter'; color:var(--cyan); font-size:10px; margin-top:2px; }
+  .pb-tab:hover { border-color:var(--cyan); color:var(--text); }
+  .pb-tab.active { background:var(--cyan-dim); border-color:var(--cyan); color:var(--cyan); }
+  .pb-tab.active .pb-avg { color:var(--lime); }
+  .chart-wrap { height:170px; position:relative; }
+  .pb-meta { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:6px; margin-top:8px; }
+  .pb-meta > div { background:var(--bg-card); border:1px solid var(--line); border-radius:8px; padding:6px 8px; }
+  .pb-meta-l { display:block; font-size:9px; color:var(--text-3); margin-bottom:2px; }
+  .pb-meta-v { font-family:'Inter'; font-weight:700; font-size:13px; color:var(--text); }
+  .pb-meta-v.lime { color:var(--lime); }
+  .pb-meta-v.cyan { color:var(--cyan); }
+
+  /* Breakdown checklist */
+  .breakdown { display:flex; flex-direction:column; gap:6px; }
+  .check-row { display:flex; align-items:center; padding:8px 10px; background:var(--bg-card); border-radius:8px; border:1px solid var(--line); font-size:12px; gap:10px; }
+  .check-row.met { border-color:rgba(200,255,0,.25); background:linear-gradient(90deg, rgba(200,255,0,.04), var(--bg-card) 60%); }
+  .check-row.met .ck { background:var(--lime); color:#001b00; }
+  .check-row.miss { opacity:.5; }
+  .ck { display:inline-flex; width:18px; height:18px; align-items:center; justify-content:center; border-radius:50%; background:var(--line-2); color:var(--text-3); font-weight:800; font-size:10px; flex-shrink:0; }
+  .cl { flex:1; color:var(--text); }
+  .cv { font-family:'Inter'; font-size:11px; color:var(--text-3); }
+  .check-row.met .cv { color:var(--text-2); }
+
+  .donut-wrap { height:180px; position:relative; }
+  .priority-legend { display:flex; flex-direction:column; gap:6px; margin-top:8px; }
+  .priority-legend .row { display:flex; align-items:center; font-size:11px; color:var(--text-2); }
+  .priority-legend .dot { width:10px; height:10px; border-radius:3px; margin-right:8px; }
+  .priority-legend .pct { margin-left:auto; font-family:'Inter'; font-weight:700; color:var(--text); }
+
+  .infra-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
+  .infra-row { background:var(--bg-card); border:1px solid var(--line); border-radius:10px; padding:10px 12px; }
+  .infra-row .l { font-size:10px; color:var(--text-3); margin-bottom:4px; }
+  .infra-row .v { font-family:'Inter'; font-size:14px; font-weight:700; color:var(--text); }
+  .infra-row .v.cyan { color:var(--cyan); }
+  .infra-row .v.lime { color:var(--lime); }
+  .cta-row { display:flex; gap:8px; padding:16px 22px; }
+  .cta { flex:1; padding:12px; border-radius:12px; font-weight:700; font-size:13px; cursor:pointer; border:none; font-family:inherit; }
+  .cta.primary { background:var(--lime); color:#001b00; }
+  .cta.secondary { background:transparent; color:var(--cyan); border:1px solid var(--cyan-dim); }
+  .cta:hover { filter:brightness(1.08); }
+  .ai-hint { background:linear-gradient(135deg,rgba(0,229,255,.08),rgba(200,255,0,.05)); border:1px solid var(--cyan-dim); border-radius:12px; padding:12px 14px; font-size:12px; color:var(--text-2); line-height:1.5; }
+  .ai-hint b { color:var(--cyan); }
+  .loader { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:16px; background:var(--bg); z-index:9999; }
+  .loader .ring { width:56px; height:56px; border:3px solid var(--line); border-top-color:var(--cyan); border-radius:50%; animation:spin .9s linear infinite; }
+  .loader .lbl { font-size:12px; letter-spacing:.2em; color:var(--cyan); }
+  .loader .sub { font-size:11px; color:var(--text-3); }
+  @keyframes spin { to { transform:rotate(360deg); } }
+  @media (max-width:1200px) { .app { grid-template-columns:340px 1fr 360px; } }
+</style>
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <div class="ring"></div>
+  <div class="lbl">LOADING HOUSING ENGINE</div>
+  <div class="sub" id="loaderSub">전국 매물 데이터 로드 중...</div>
+</div>
+
+<nav class="nav">
+  <div class="brand">
+    <div class="brand-mark"></div>
+    <div class="brand-text">THE AI <span class="accent">HOUSING ENGINE</span></div>
+    <span class="brand-tag">v2 INTUITIVE SCORING</span>
+  </div>
+  <div class="search">
+    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-3.5-3.5"/></svg>
+    <input id="searchInput" placeholder="단지명·구·역 이름 검색 (예: 헬리오시티, 강남구, 잠실역)" />
+    <span style="font-size:10px; color:var(--text-3); letter-spacing:.1em;">⌘K</span>
+  </div>
+  <div class="nav-actions">
+    <span class="data-stat">DATA <b id="dsTotal">—</b> · 시세 <b id="dsPriced">—</b></span>
+    <button class="nav-cta">내 취향 등록</button>
+  </div>
+</nav>
+
+<div class="app">
+  <aside class="panel-list">
+    <div class="panel-head">
+      <div class="panel-title">AI 추천 매물</div>
+      <div class="panel-sub">★ 라이프 · 가격대 · 성장 등급 — <span style="color:var(--cyan)">기준이 보이는 점수</span></div>
+      <div class="chips" id="chipFilters">
+        <button class="chip active" data-filter="all">전체</button>
+        <button class="chip" data-filter="S">S등급</button>
+        <button class="chip" data-filter="A">A등급</button>
+        <button class="chip" data-filter="강남권">강남권</button>
+        <button class="chip" data-filter="마용성">마용성</button>
+        <button class="chip" data-filter="용산권">용산권</button>
+        <button class="chip" data-filter="분당권">분당권</button>
+        <button class="chip" data-filter="기타">그 외</button>
+        <button class="chip" data-filter="hot">🔥 핫매물</button>
+      </div>
+      <div class="toggle-row">
+        <span>시세 보유만 보기</span>
+        <div class="toggle on" id="priceToggle"></div>
+        <span style="margin-left:auto">지도 동기화</span>
+        <div class="toggle on" id="syncToggle"></div>
+      </div>
+    </div>
+    <div class="list-tools">
+      <span>총 <b id="totalCount" style="color:var(--text)">—</b>개 매물</span>
+      <div style="display:flex; gap:6px;">
+        <button class="sort-btn active" data-sort="ai">AI 추천</button>
+        <button class="sort-btn" data-sort="price">저가</button>
+        <button class="sort-btn" data-sort="price_desc">고가</button>
+        <button class="sort-btn" data-sort="growth">성장</button>
+      </div>
+    </div>
+    <div class="list-scroll" id="listScroll"></div>
+  </aside>
+
+  <main class="panel-map">
+    <div id="map"></div>
+    <div class="map-overlay">
+      <h4>LIFE-CENTRIC DISCOVERY</h4>
+      <div class="hd">전국 매물 <span style="color:var(--lime)" id="mapCount">—</span>건</div>
+      <div class="sub">단지명 + 시세를 한 마커에 · 등급별 색상 표시</div>
+    </div>
+    <div class="map-legend">
+      <div class="lg-row"><span class="lg-dot" style="background:var(--tier-s); box-shadow:0 0 8px var(--tier-s)"></span> S등급 (8점 이상)</div>
+      <div class="lg-row"><span class="lg-dot" style="background:var(--tier-a); box-shadow:0 0 8px var(--tier-a)"></span> A등급 (6-7점)</div>
+      <div class="lg-row"><span class="lg-dot" style="background:var(--tier-b)"></span> B등급 (4-5점)</div>
+      <div class="lg-row"><span class="lg-dot" style="background:var(--tier-c)"></span> C등급 (3점 이하)</div>
+      <div class="lg-row" style="color:var(--text-3); margin-top:6px; font-size:10px">AI = LIFE ★ + GROWTH 등급 점수</div>
+    </div>
+  </main>
+
+  <aside class="panel-detail" id="detailPanel"></aside>
+</div>
+
+<script src="./apts_data.js"></script>
+<script src="./housing_engine.js"></script>
+</body>
+</html>

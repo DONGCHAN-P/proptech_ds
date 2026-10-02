@@ -1,0 +1,31 @@
+# ── 시크릿 — 절대 커밋 금지 ─────────────────────────────
+.env
+config/secrets.json
+
+# ── 가상환경 ────────────────────────────────────────────
+.venv/
+
+# ── 데이터 (raw/ 에서 전부 재생성 가능하므로 git에 넣지 않는다) ──
+raw/
+staged/
+master/
+master.backup_*/
+exports/
+logs/
+output/
+web/cache/
+legacy/*.db
+legacy/apts.json
+legacy/apts_data.js
+*.duckdb
+*.parquet
+
+# ── 캐시 ────────────────────────────────────────────────
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ── 임시 파일 ───────────────────────────────────────────
+*.tmp
+*.bak
