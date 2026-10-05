@@ -21,6 +21,10 @@ legacy/apts_data.js
 *.duckdb
 *.parquet
 
+# ── 로컬 런타임 (기기마다 다름) ─────────────────────────
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+
 # ── 캐시 ────────────────────────────────────────────────
 __pycache__/
 *.pyc
