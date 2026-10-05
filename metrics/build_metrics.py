@@ -63,6 +63,7 @@ WEEK_MIN_DEALS = 5      # 이보다 적으면 중위가가 요동쳐 Z-score 를
 OUTLIER_PCT = 15.0      # 직전 평균 대비 이 % 이상 벌어지면 특이
 OUTLIER_MIN_REF = 3     # 비교 기준 거래가 이보다 적으면 판단 보류
 RARE_AREA_MIN = 5       # 같은 단지·평형 누적 거래가 이보다 적으면 희귀 면적
+ZSCORE_HIST_WEEKS = 52  # "평소" 로 삼는 과거 구간 (주). 카드 문구와 같은 값
 ZSCORE_MIN_WEEKS = 26   # 과거 표본이 이보다 적은 시군구는 Z-score 생략
 TOP_N = 50
 CHART_SERIES_N = 5    # 차트용 시계열을 뽑을 단지 수
@@ -250,10 +251,14 @@ def sgg_zscore(con, asof: date) -> list[dict]:
     이번 주를 재는 편이 "평소와 다르다"를 제대로 잡는다.
     """
     target = asof - timedelta(days=WEEKLY_LAG_DAYS)
-    hist_start = target - timedelta(weeks=53)
+    # 주 경계에 맞춰 자른다. 날짜로 자르면 가장 이른 주가 반쪽만 들어와
+    # 그 주 거래량이 모자란 채로 평균에 섞인다 ("평소"가 실제보다 낮아진다).
+    # 평소지도(pulse/build_pulse.py)와 같은 창이어야 사이트와 게시물이
+    # 같은 수를 말한다.
+    hist_start = target - timedelta(days=target.weekday()) - timedelta(weeks=ZSCORE_HIST_WEEKS)
     return q(con, f"""
         {cte()},
-        weekly AS (
+        obs AS (
             SELECT sigungu_code, any_value(sigungu_name) AS sigungu_name,
                    date_trunc('week', deal_date) AS wk,
                    count(*) AS deals,
@@ -264,6 +269,36 @@ def sgg_zscore(con, asof: date) -> list[dict]:
             WHERE deal_date >= DATE '{hist_start}'
               AND deal_date <= date_trunc('week', DATE '{target}') + INTERVAL 6 DAY
             GROUP BY 1, 3
+        ),
+        names AS (
+            SELECT sigungu_code, any_value(sigungu_name) AS sigungu_name
+            FROM obs GROUP BY 1
+        ),
+        -- 거래가 0인 주도 0 으로 채운다.
+        --
+        -- GROUP BY 는 거래가 없는 주를 아예 만들지 않는다. 그 상태로 평균을
+        -- 내면 **조용한 주가 빠진 평균**이 나와 "평소"가 부풀려진다. 조용한
+        -- 지역일수록 심하다 — 연천군은 52주 중 49주만 세서 평소가 2.81건
+        -- 대신 3.0건이 됐다. 그만큼 "평소보다 많다"가 덜 잡힌다.
+        -- 80개 시군구 중 24곳이 영향을 받고 있었다.
+        spine AS (
+            SELECT n.sigungu_code, w.wk
+            FROM names n
+            CROSS JOIN (
+                SELECT unnest(generate_series(
+                    DATE '{hist_start}',
+                    date_trunc('week', DATE '{target}'),
+                    INTERVAL 7 DAY))::DATE AS wk
+            ) w
+        ),
+        weekly AS (
+            SELECT sp.sigungu_code, n.sigungu_name, sp.wk,
+                   coalesce(o.deals, 0) AS deals,
+                   -- 중위가는 채우지 않는다. 거래가 없는 주에 "가격"은 없다.
+                   o.med_ppy
+            FROM spine sp
+            JOIN names n USING (sigungu_code)
+            LEFT JOIN obs o USING (sigungu_code, wk)
         ),
         hist AS (
             SELECT sigungu_code,
@@ -406,7 +441,7 @@ def main() -> int:
             # 한다. 글의 모든 숫자는 이 파일에서 유래해야 한다는 원칙.
             "outlier_ref_window_days": 90,
             "surge_window_days": 90,
-            "zscore_hist_weeks": 52,
+            "zscore_hist_weeks": ZSCORE_HIST_WEEKS,
             "data_start_year": 2006,
             "report_deadline_days": 30,   # 계약 후 신고 기한 (법정)
             "week_min_deals": WEEK_MIN_DEALS,
