@@ -38,7 +38,9 @@ sys.path.insert(0, str(ROOT))
 from common import DIRS  # noqa: E402
 
 TRADE = DIRS["master"] / "trade_events.parquet"
-GEO = ROOT / "web" / "cache" / "apt_geo.parquet"
+# 좌표는 master/apt_id_map 이 정본이다 (T10a 이후). web/cache 는
+# 서빙용 파생물이라 거기에 의존하면 웹 빌드 순서에 묶인다.
+GEO = DIRS["master"] / "apt_id_map.parquet"
 OUT = DIRS["master"] / "apt_groups.parquet"
 
 # 같은 단지의 출입구 사이 거리.

@@ -28,7 +28,7 @@ from pathlib import Path
 from datetime import datetime, timedelta
 
 sys.path.insert(0, r'c:\projects\realestate_reco')
-from common import BASE, DIRS, SIGUNGU_CODES, load_secrets
+from common import BASE, DIRS, SIGUNGU_CODES, WATERMARK_KEY_COLS, load_secrets
 
 RTMS_TRADE_BASE = 'https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev'
 
@@ -124,19 +124,29 @@ def run_script(path: str, args: list = None, label: str = '') -> float:
 
 
 def save_pre_snapshot():
-    """갱신 전 거래 키 스냅샷 저장. step8이 신규 거래 비교에 사용."""
+    """갱신 전 거래 키 스냅샷 저장. step8이 신규 거래 비교에 사용.
+
+    키는 run_step8_new_trades.KEY_COLS 를 그대로 따라간다. 여기에 컬럼을
+    따로 적어두면 step8 쪽 정의가 바뀔 때 조용히 어긋난다 — 실제로 T8 에서
+    키를 deal_hash 로 바꿨는데 이 함수만 apt_id 조합을 쓰고 있었고, 그 바람에
+    step8 이 워터마크를 "구버전"으로 보고 485만 건 전부를 신규로 집계했다.
+    """
     import pandas as pd
+    KEY_COLS = WATERMARK_KEY_COLS
+
     p = DIRS['master'] / 'trade_events.parquet'
     if not p.exists():
         print('  trade_events 없음 - 스냅샷 생략')
         return
     DIRS['logs'].mkdir(parents=True, exist_ok=True)
-    df = pd.read_parquet(p, columns=['apt_id', 'deal_date', 'area_m2', 'floor'])
-    df.to_parquet(DIRS['logs'] / 'trade_watermark_keys.parquet',
-                  index=False, compression='zstd')
+    cols = list(dict.fromkeys(KEY_COLS + ['deal_date']))
+    df = pd.read_parquet(p, columns=cols)
+    df[KEY_COLS].to_parquet(DIRS['logs'] / 'trade_watermark_keys.parquet',
+                            index=False, compression='zstd')
     meta = {
         'saved_at': datetime.now().isoformat(),
         'count': len(df),
+        'key_cols': KEY_COLS,
         'max_deal_date': str(df['deal_date'].max().date()) if len(df) > 0 else None,
     }
     (DIRS['logs'] / 'trade_watermark_meta.json').write_text(
@@ -188,6 +198,14 @@ if __name__ == '__main__':
     # [4] unified_apt_pyeong_daily
     print('\n[4] unified_apt_pyeong_daily 빌드...')
     run_script(f'{base}/run_step4_unified_daily.py', label='step4')
+
+    # [4b] 단지 묶음 (apt_group_id) — 새 단지가 생기면 같이 갱신돼야 한다.
+    # 빠뜨리면 apt_groups 에 없는 apt_id 가 생겨 집계가 어긋난다.
+    print('\n[4b] 단지 묶음 갱신...')
+    try:
+        run_script(f'{base}/run_build_apt_groups.py', label='apt_groups')
+    except RuntimeError as e:
+        print(f'  ⚠️ 묶음 갱신 실패: {e}')
 
     # [5] 외부데이터 점수
     if not args.skip_score:

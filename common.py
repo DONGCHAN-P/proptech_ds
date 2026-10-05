@@ -46,6 +46,17 @@ DIRS = {
     'config':          BASE / 'config',
 }
 
+# step8 신규 거래 판정의 워터마크 키. 한 곳에서만 정의한다.
+#
+# 예전엔 (apt_id, 계약일, 면적, 층) 조합이었는데 apt_id 정의가 바뀔 때마다
+# 전 건이 "신규"로 뒤집혔다. deal_hash 는 API 원본값으로만 만들어 그런 변경에
+# 흔들리지 않는다 (T5a/T8).
+#
+# run_daily_update 와 run_step8 이 각자 적어두면 한쪽만 바뀌어도 조용히
+# 어긋난다. 실제로 그렇게 깨져서 485만 건이 전부 신규로 집계됐다.
+WATERMARK_KEY_COLS = ['deal_hash']
+
+
 def _resolve_db_path():
     """외부데이터 SQLite 경로.
 

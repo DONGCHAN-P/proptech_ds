@@ -23,12 +23,8 @@ import json
 
 WATERMARK_KEYS = DIRS['logs'] / 'trade_watermark_keys.parquet'
 WATERMARK_META = DIRS['logs'] / 'trade_watermark_meta.json'
-# 워터마크 키는 deal_hash 하나다 (T5a).
-# 예전엔 (apt_id, 계약일, 면적, 층) 조합이었는데, apt_id 정의가 바뀌면
-# (2026-05 umd_cd, 2026-10 괄호보존) 전 건이 "신규"로 뒤집힌다. 실제로 T6
-# 마이그레이션 직후 신규 거래가 103만 건으로 집계됐다. deal_hash 는 API
-# 원본값으로만 만들어 그런 변경에 흔들리지 않는다.
-KEY_COLS = ['deal_hash']
+# 워터마크 키는 common.WATERMARK_KEY_COLS 한 곳에서만 정의한다 (T5a/T8).
+KEY_COLS = WATERMARK_KEY_COLS
 
 
 def load_new_deals(all_events: pd.DataFrame) -> tuple:
