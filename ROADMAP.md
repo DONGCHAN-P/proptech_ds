@@ -90,10 +90,12 @@
       불필요하게 고치지 않았다. nano 는 조사·단어를 바꿔 의미가 미세하게 달라졌다.
       ⚠️ 다듬기는 **선택 기능**이다. 키가 없거나 API 가 막혀도 템플릿으로 발행된다
 - [ ] **H6.** ElevenLabs 가입 — 상업적 사용권 포함 플랜 확인 후 결제
-- [ ] **H7.** FAL 계정 + 크레딧 충전 (썸네일 추상 배경용)
+- [~] **H7.** FAL — **불필요** (2026-10-06). T16 에서 생성 이미지를 쓰지 않기로 했다.
+      실사풍 건물 이미지는 실제 단지 오인을 부른다. 썸네일은 타이포·차트 기반
 - [ ] **H8.** Telegram @BotFather로 봇 생성, 토큰 보관
-- [ ] **H9.** GitHub **프라이빗** 레포 생성 + `git remote add origin` + 첫 push
-      (로컬 git init·초기 커밋은 T2에서 AI가 완료함)
+- [x] **H9.** GitHub 레포 — **완료** (2026-10-06) `github.com/DONGCHAN-P/proptech_ds`
+      ⚠️ push 직전에 `legacy/external_data_collector.py` docstring 의 실제 API 키 3개를 발견해
+      커밋 이력 전체를 재작성했다. 자세한 경위는 `git log` 참조
 
 > 이후 사람의 일: 각 AI 태스크 완료 보고 확인, `/approve`, H2/H4 심사 통과 시 키를 `.env`에 붙여넣기.
 
