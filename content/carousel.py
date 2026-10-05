@@ -1,13 +1,24 @@
-"""T16 — 인스타 캐러셀 + 유튜브 썸네일.
+"""T16 — 인스타 캐러셀 + 스레드 이미지.
 
-한글 문구를 이미지에 얹어야 해서 HTML/CSS 로 조판하고 크로미움으로 찍는다.
-matplotlib 으로 글자를 그리면 줄바꿈·자간·굵기 통제가 어렵다.
+`docs/02_CLI_디자인지시사항.md` 를 따른다. 토큰과 헬퍼는 `content/design.py`.
 
-**실사풍 건물·아파트 이미지는 만들지 않는다.** 생성 이미지를 쓰면 보는 사람이
-실제 그 단지로 오인한다. 배경은 차트이거나 추상 도형이다 (로드맵 규칙).
+구성 7장 — 같은 레이아웃이 연속으로 오지 않게 섞는다.
+  1 표지        hero_number   큰 숫자 1개 + 헤드라인
+  2 지역 순위    ranked_bars   평소 대비 배수. "평소=1.0" 기준선을 긋는다
+  3 양 끝        rows          붐빈 곳 ↔ 조용한 곳 (빨강/파랑이 제 일을 한다)
+  4 반전/맥락    quote         반대로 읽히는 신호 (앞 장 안 봐도 이해되게)
+  5 단지 비교    compare_bars
+  6 표본 경고    hero_number   표본이 적다는 사실 자체를 장으로
+  7 정리 + CTA   summary_cta   새 숫자 금지
 
-입력은 T9 지표 JSON 과 T11 차트 PNG. 글의 숫자는 T12 검증기를 통과한다 —
-이미지에 박힌 숫자도 발행되는 숫자다.
+차트 모듈(T11)의 단독 4:5 PNG 는 스레드에 붙이는 1~2장으로 쓴다. 캐러셀
+안에 또 넣으면 2장과 같은 그래프가 두 번 나온다.
+
+지키는 것
+  · 빨강/파랑은 증감 전용. 일반 강조는 형광펜 띠
+  · σ·표준편차 금지 — "평소의 1.7배" 로 번역
+  · 표본 n<10 은 큰 숫자 장에 쓰지 않고 배지를 붙인다
+  · 렌더 후 안전영역 이탈·연속 레이아웃을 검사해 실패시 폰트를 줄여 재시도
 
 실행:
   .venv\\Scripts\\python.exe -m content.carousel
@@ -17,319 +28,311 @@ from __future__ import annotations
 import argparse
 import base64
 import json
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from content import design as D  # noqa: E402
 from content.validator import validate  # noqa: E402
-from templates.disclaimers import DISCLAIMER_SOCIAL, SOURCE_NOTE  # noqa: E402
+from templates.disclaimers import DISCLAIMER_SOCIAL  # noqa: E402
 
-CARD = 1080                 # 인스타 1:1
-THUMB_W, THUMB_H = 1280, 720  # 유튜브 16:9
-
-# T11 과 같은 팔레트. 발산 축은 한국 관례(상승 빨강 / 하락 파랑).
-SURFACE = "#fcfcfb"
-INK = "#0b0b0b"
-INK_2 = "#52514e"
-INK_MUTED = "#898781"
-LINE = "#e1e0d9"
-POS = "#e34948"
-NEG = "#2a78d6"
-ACCENT = "#2a78d6"
-
-FONT_STACK = "'Pretendard','Malgun Gothic','맑은 고딕',sans-serif"
+MIN_SAMPLE = 10          # 이보다 적으면 큰 숫자 장에 쓰지 않는다
+HEADLINE_MIN = 72        # 넘침 재시도의 하한 (지시사항)
 
 
-def won(man) -> str:
-    if man is None:
-        return "-"
-    man = float(man)
-    if abs(man) >= 10000:
-        v = man / 10000
-        return f"{v:.0f}억" if abs(v) >= 100 else f"{v:.1f}억"
-    return f"{man:,.0f}만"
-
-
-def num(v) -> str:
-    if v is None:
-        return "-"
-    f = float(v)
-    return f"{f:,.0f}" if f == int(f) else f"{f:,.1f}"
-
-
-def _img_uri(p: Path) -> str:
+def _img(p: Path) -> str:
     return "data:image/png;base64," + base64.b64encode(p.read_bytes()).decode()
 
 
-# ── 카드 조판 ────────────────────────────────────────────────────────────
-_CSS = f"""
-* {{ margin:0; padding:0; box-sizing:border-box; }}
-body {{ font-family:{FONT_STACK}; background:{SURFACE}; color:{INK};
-        -webkit-font-smoothing:antialiased; }}
-/* 내용을 수직 가운데로 모은다. margin-top:auto 로 본문만 바닥에 붙이면
-   제목과 본문 사이가 휑하게 빈다. 아래 여백은 푸터 자리로 크게 둔다. */
-.card {{ width:{CARD}px; height:{CARD}px; padding:84px 76px 164px;
-         display:flex; flex-direction:column; justify-content:center;
-         position:relative; }}
-.kicker {{ font-size:30px; color:{INK_MUTED}; letter-spacing:-.4px; }}
-.title {{ font-size:72px; font-weight:800; line-height:1.18;
-          letter-spacing:-2.2px; margin-top:18px; }}
-.title .hl {{ color:{ACCENT}; }}
-.body {{ margin-top:44px; }}
-.rows {{ display:flex; flex-direction:column; gap:26px; }}
-.row {{ display:flex; align-items:baseline; justify-content:space-between;
-        border-bottom:2px solid {LINE}; padding-bottom:20px; }}
-.row .k {{ font-size:34px; color:{INK_2}; }}
-.row .v {{ font-size:50px; font-weight:800; letter-spacing:-1.2px; }}
-.big {{ font-size:148px; font-weight:800; letter-spacing:-5px; line-height:1; }}
-.big.pos {{ color:{POS}; }} .big.neg {{ color:{NEG}; }}
-.note {{ font-size:27px; color:{INK_2}; line-height:1.6; margin-top:34px; }}
-.foot {{ position:absolute; left:76px; right:76px; bottom:52px;
-         font-size:21px; color:{INK_MUTED}; line-height:1.5; }}
-.pill {{ display:inline-block; font-size:24px; padding:10px 22px;
-         border-radius:999px; background:#f0efec; color:{INK_2}; }}
-.chart {{ width:100%; border-radius:18px; border:1px solid {LINE};
-          margin-top:30px; }}
-.disc {{ font-size:19px; color:{INK_MUTED}; line-height:1.55; }}
-.idx {{ position:absolute; top:60px; right:76px; font-size:24px;
-        color:{INK_MUTED}; }}
-"""
-
-
-def _card(inner: str, idx: str = "", foot: str = "") -> str:
-    foot_html = f'<div class="foot">{foot}</div>' if foot else ""
-    idx_html = f'<div class="idx">{idx}</div>' if idx else ""
-    return f'<div class="card">{idx_html}{inner}{foot_html}</div>'
-
-
-def build_cards(data: dict, chart_dir: Path) -> list[dict]:
-    """캐러셀 5~8장. 각 장의 숫자는 facts 에 담아 검증한다."""
-    p = data.get("params") or {}
-    z = data.get("weekly", {}).get("sgg_zscore") or []
+# ── 소재 ─────────────────────────────────────────────────────────────────
+def pick(data: dict) -> dict | None:
+    z = [r for r in (data.get("weekly", {}).get("sgg_zscore") or [])
+         if r.get("deals_z") is not None]
     surge = data.get("weekly", {}).get("surge_apt") or []
-    nh = data.get("daily", {}).get("new_high") or []
     if not z or not surge:
-        return []
-
-    busiest = max(z, key=lambda r: r["deals_z"])
-    quiet = min(z, key=lambda r: r["deals_z"])
+        return None
+    for r in z:
+        r["ratio"] = (r["week_deals"] / r["deals_avg_52w"]
+                      if r.get("deals_avg_52w") else 0)
+    solid = [r for r in z if r["week_deals"] >= MIN_SAMPLE
+             and r.get("deals_avg_52w")]
+    pool = solid or [r for r in z if r.get("deals_avg_52w")]
+    busiest = max(pool, key=lambda r: r["week_deals"] / r["deals_avg_52w"])
+    # 조용한 쪽도 같은 표본 기준을 태운다. 3건짜리 동네를 "평소의 0.2배"로
+    # 내보내면 붐빈 쪽에만 기준을 적용한 셈이 된다.
+    quiet = min(pool, key=lambda r: r["week_deals"] / r["deals_avg_52w"])
     top = surge[0]
-    cards: list[dict] = []
-    n_total = 6
-    src = f"{SOURCE_NOTE} · {data['asof']} 기준"
+    # 평소 대비 배수로 줄 세운다 (절대량이면 늘 큰 도시가 1위)
+    ranked = sorted([r for r in (solid or z) if r["ratio"]],
+                    key=lambda r: r["ratio"], reverse=True)[:6]
+    return {"busiest": busiest, "quiet": quiet, "top": top, "ranked": ranked,
+            "params": data.get("params") or {}, "asof": data["asof"]}
 
-    # 1 표지
-    cards.append({
-        "name": "01_cover",
-        "facts": {"busiest": busiest, "top": top},
-        "html": _card(
-            f'<div class="kicker">{busiest.get("week_start","")} 주 · 수도권 실거래</div>'
-            f'<div class="title">이번 주<br><span class="hl">{busiest["sigungu_name"]}</span>의 '
-            f'거래가<br>평소보다 많았습니다</div>'
-            f'<div class="body"><div class="note">'
-            f'거래량 {busiest["week_deals"]}건 · 평소 {num(busiest["deals_avg_52w"])}건<br>'
-            f'같은 주, 지역마다 방향은 갈렸습니다.</div></div>',
-            foot=src),
-    })
 
-    # 2 지역 비교 — 차트
-    chart = chart_dir / "chart_region_zscore.png"
-    cards.append({
-        "name": "02_region",
-        "facts": {"busiest": busiest, "quiet": quiet, "params": p},
-        "html": _card(
-            f'<div class="kicker">지역별 거래량</div>'
-            f'<div class="title">지역끼리 비교하지<br>않았습니다</div>'
-            f'<div class="note">강남과 가평은 규모가 달라 나란히 두면 의미가 없습니다. '
-            f'각 지역의 지난 {p.get("zscore_hist_weeks")}주 평균과 견줬습니다.</div>'
-            + (f'<img class="chart" src="{_img_uri(chart)}">' if chart.exists() else ""),
-            idx=f"2 / {n_total}", foot=src),
-    })
+# ── 장 ───────────────────────────────────────────────────────────────────
+def c1_cover(t: dict, n: int) -> dict:
+    b = t["busiest"]
+    mult = D.times(b["week_deals"], b["deals_avg_52w"])
+    inner = (
+        f'<div class="body">'
+        f'<div class="kicker">{b.get("week_start", "")} 주 · 거래량</div>'
+        f'<div class="label">{b["sigungu_name"]}</div>'
+        f'<div class="big-pre">평소의</div>'
+        f'<div class="big up">{mult}</div>'
+        f'<div class="lead">평소 {D.num(b["deals_avg_52w"])}건 → '
+        f'이번 주 <span class="mark">{b["week_deals"]}건</span></div>'
+        f'</div>')
+    return {"name": "01_cover", "layout": "hero_number",
+            "facts": {"busiest": b},
+            "html": D.head(1, n) + inner + D.foot(t["asof"])}
 
-    # 3 가장 많이 늘어난 곳
-    cards.append({
-        "name": "03_busiest",
-        "facts": {"busiest": busiest},
-        "html": _card(
-            f'<div class="kicker">{busiest["sigungu_name"]}</div>'
-            f'<div class="title">평소보다<br>이만큼</div>'
-            f'<div class="body">'
-            f'<div class="big pos">{busiest["deals_z"]:+.1f}σ</div>'
-            f'<div class="rows" style="margin-top:44px">'
-            f'<div class="row"><span class="k">이번 주</span>'
-            f'<span class="v">{busiest["week_deals"]}건</span></div>'
-            f'<div class="row"><span class="k">평소</span>'
-            f'<span class="v">{num(busiest["deals_avg_52w"])}건</span></div>'
-            f'</div></div>',
-            idx=f"3 / {n_total}", foot=src),
-    })
 
-    # 4 급등 단지
-    cards.append({
-        "name": "04_apt",
-        "facts": {"top": top, "params": p},
-        "html": _card(
-            f'<div class="kicker">{top["sigungu_name"]} {top["legal_dong_name"]}</div>'
-            f'<div class="title">{top["apt_name"]}<br>'
-            f'<span class="hl">{top["pyeong_bucket"]}</span></div>'
-            f'<div class="body"><div class="rows">'
-            f'<div class="row"><span class="k">직전 {p.get("surge_window_days")}일 평단</span>'
-            f'<span class="v">{num(top["ppy_prior_90d"])}만</span></div>'
-            f'<div class="row"><span class="k">최근 {p.get("surge_window_days")}일 평단</span>'
-            f'<span class="v">{num(top["ppy_recent_90d"])}만</span></div>'
-            f'<div class="row"><span class="k">차이</span>'
-            f'<span class="v" style="color:{POS}">{top["change_pct"]}%</span></div>'
-            f'</div></div>',
-            idx=f"4 / {n_total}", foot=src),
-    })
+def c4_counter(t: dict, n: int) -> dict:
+    """반전. 1~3장은 앞 장을 안 봐도 이해되게 쓴다."""
+    s = t["top"]
+    drop = (s["deals_recent"] / s["deals_prior"] - 1) * 100
+    inner = (
+        f'<div class="body">'
+        f'<div class="kicker">같이 봐야 할 것</div>'
+        f'<div class="quote">값이 올라도<br>'
+        f'<span class="mark">사고판 사람은</span><br>늘지 않았어요</div>'
+        f'<div class="rows" style="margin-top:8px">'
+        f'<div class="row"><span class="k">{s["apt_name"]} 평단가</span>'
+        f'<span class="v {D.delta_color(s["change_pct"])}">{D.delta(s["change_pct"])}</span></div>'
+        f'<div class="row"><span class="k">같은 기간 거래 건수</span>'
+        f'<span class="v {D.delta_color(drop)}">{D.delta(drop)}</span></div>'
+        f'</div></div>')
+    return {"name": "04_counter", "layout": "quote",
+            "facts": {"top": s, "drop_pct": round(drop, 1)},
+            "html": D.head(4, n) + inner + D.foot(t["asof"])}
 
-    # 5 반대로 읽히는 신호 — 이 장이 빠지면 투자 권유처럼 읽힌다
-    cards.append({
-        "name": "05_counter",
-        "facts": {"top": top, "params": p},
-        "html": _card(
-            f'<div class="kicker">같이 봐야 할 것</div>'
-            f'<div class="title">거래는<br><span class="hl">줄었습니다</span></div>'
-            f'<div class="body"><div class="rows">'
-            f'<div class="row"><span class="k">직전 거래</span>'
-            f'<span class="v">{top["deals_prior"]}건</span></div>'
-            f'<div class="row"><span class="k">최근 거래</span>'
-            f'<span class="v" style="color:{NEG}">{top["deals_recent"]}건</span></div>'
-            f'</div>'
-            f'<div class="note">오른 가격에 실제로 사고판 사람이 더 많아진 건 아닙니다. '
-            f'거래가 적을 때는 어떤 집이 팔렸느냐가 평균을 크게 흔듭니다.</div></div>',
-            idx=f"5 / {n_total}", foot=src),
-    })
 
-    # 6 마무리 + 면책
-    extra = ""
-    if nh:
-        extra = (f'<div class="row"><span class="k">신고가 경신</span>'
-                 f'<span class="v">{len(nh)}건</span></div>')
-    cards.append({
-        "name": "06_outro",
-        "facts": {"params": p, "new_high_n": len(nh)},
-        "html": _card(
-            f'<div class="kicker">정리</div>'
-            f'<div class="title">숫자는 그대로,<br>해석은 각자</div>'
-            f'<div class="body"><div class="rows">{extra}'
-            f'<div class="row"><span class="k">집계 기준</span>'
-            f'<span class="v">{p.get("weekly_lag_days")}일 물린 주</span></div>'
-            f'</div>'
-            f'<div class="note">계약 후 {p.get("report_deadline_days")}일 안에 신고합니다. '
-            f'최근 주는 집계가 덜 차 있어 뒤로 물려 봅니다.</div>'
-            f'<div class="note disc" style="margin-top:30px">{DISCLAIMER_SOCIAL}</div>'
-            f'</div>',
-            idx=f"6 / {n_total}"),
-    })
+def c2_ranked(t: dict, n: int) -> dict:
+    rows = t["ranked"]
+    top = rows[0]
+    mx = max(r["ratio"] for r in rows) or 1
+    base_pos = 1.0 / mx * 100      # "평소" 위치
+    bars = []
+    for r in rows:
+        color = D.UP if r is top else D.NEUTRAL
+        w = r["ratio"] / mx * 100
+        bars.append(
+            f'<div class="rank-row">'
+            f'<div class="rank-name">{r["sigungu_name"]}</div>'
+            f'<div class="rank-track">'
+            f'<div class="rank-fill" style="width:{w:.0f}%;background:{color}"></div>'
+            f'<div class="rank-base" style="left:{base_pos:.1f}%"></div></div>'
+            f'<div class="rank-val">{r["ratio"]:.1f}배</div></div>')
+    inner = (
+        f'<div class="body">'
+        f'<div class="h1 xs">평소보다<br>붐빈 지역</div>'
+        f'<div class="rank" style="margin-top:4px">{"".join(bars)}</div>'
+        f'<div class="rank-baselabel">세로선이 평소 수준이에요</div>'
+        f'<div class="sub" style="margin-top:20px">'
+        f'{top["sigungu_name"]}만 평소보다 {D.diff_count(top["week_deals"], top["deals_avg_52w"])} '
+        f'거래됐어요.</div>'
+        f'</div>')
+    # 파생값도 발행되는 숫자라 facts 에 남긴다 (검증기가 대조할 수 있게)
+    return {"name": "02_ranked", "layout": "ranked_bars",
+            "facts": {"ranked": rows,
+                      "top_diff": round(top["week_deals"] - top["deals_avg_52w"])},
+            "html": D.head(2, n) + inner + D.foot(t["asof"], "평소 = 지난 52주 평균")}
+
+
+def c3_extremes(t: dict, n: int) -> dict:
+    """같은 주의 양 끝.
+
+    순위 장(2)은 붐빈 쪽만 보여준다. 거기서 끊으면 "수도권 거래가 늘었다"로
+    읽히는데, 같은 주에 평소의 절반만 거래된 곳도 있다. 빨강/파랑이 증감
+    전용이라는 규칙이 처음으로 제 일을 하는 장이기도 하다.
+    """
+    b, q = t["busiest"], t["quiet"]
+    hi = b["week_deals"] / b["deals_avg_52w"]
+    lo = q["week_deals"] / q["deals_avg_52w"]
+    inner = (
+        f'<div class="body">'
+        f'<div class="kicker">같은 주, 정반대</div>'
+        f'<div class="h1 xs">한 주에도<br>동네마다 달라요</div>'
+        f'<div class="rows" style="margin-top:8px">'
+        f'<div class="row"><span class="k">{b["sigungu_name"]} '
+        f'{b["week_deals"]}건</span>'
+        f'<span class="v up">평소의 {hi:.1f}배</span></div>'
+        f'<div class="row"><span class="k">{q["sigungu_name"]} '
+        f'{q["week_deals"]}건</span>'
+        f'<span class="v down">평소의 {lo:.1f}배</span></div>'
+        f'</div>'
+        f'<div class="sub">수도권을 한 덩어리로 보면 '
+        f'<span class="mark">둘 다 안 보여요.</span></div>'
+        f'</div>')
+    return {"name": "03_extremes", "layout": "rows",
+            "facts": {"busiest": b, "quiet": q,
+                      "hi_ratio": round(hi, 1), "lo_ratio": round(lo, 1)},
+            "html": D.head(3, n) + inner + D.foot(t["asof"], "평소 = 지난 52주 평균")}
+
+
+def c5_compare(t: dict, n: int) -> dict:
+    s = t["top"]
+    prior, recent = s["ppy_prior_90d"], s["ppy_recent_90d"]
+    mx = max(prior, recent) or 1
+    name, paren = D.split_name(s["apt_name"])
+    paren_html = (f'<div class="sub" style="font-size:30px">{paren}</div>'
+                  if paren else "")
+    thin = (f'<div><span class="badge">거래 {s["deals_recent"]}건</span></div>'
+            if s["deals_recent"] < MIN_SAMPLE else "")
+
+    def bar(label, val, color):
+        return (f'<div class="bar-row"><div class="bar-top">'
+                f'<span class="bar-name">{label}</span>'
+                f'<span class="bar-val">{D.num(val)}만</span></div>'
+                f'<div class="bar-track"><div class="bar-fill" '
+                f'style="width:{val / mx * 100:.0f}%;background:{color}"></div>'
+                f'</div></div>')
+
+    inner = (
+        f'<div class="body">'
+        f'<div class="kicker">{s["sigungu_name"]} {s["legal_dong_name"]} · {s["pyeong_bucket"]}</div>'
+        f'<div class="h1 xs">{name}</div>{paren_html}'
+        f'<div class="sub">평당가, 3개월 전과 비교</div>'
+        f'<div class="bars">'
+        f'{bar("직전 3개월", prior, D.NEUTRAL)}{bar("최근 3개월", recent, D.UP)}'
+        f'</div>{thin}</div>')
+    return {"name": "05_compare", "layout": "compare_bars",
+            "facts": {"top": s},
+            "html": D.head(5, n) + inner + D.foot(t["asof"])}
+
+
+def c6_sample(t: dict, n: int) -> dict:
+    """표본이 적다는 사실 자체를 한 장으로. 숨기면 오해를 부른다."""
+    s = t["top"]
+    inner = (
+        f'<div class="body">'
+        f'<div class="kicker">숫자를 믿기 전에</div>'
+        f'<div class="big xs">{s["deals_recent"]}건</div>'
+        f'<div class="lead">최근 3개월 동안 이 평형에서<br>신고된 거래 수예요.</div>'
+        f'<div class="sub"><span class="mark">몇 건으로 평균이 크게 흔들려요.</span><br>'
+        f'어떤 층과 어떤 향이 팔렸는지에 따라 달라져요.</div>'
+        f'</div>')
+    return {"name": "06_sample", "layout": "hero_number",
+            "facts": {"top": s},
+            "html": D.head(6, n) + inner + D.foot(t["asof"])}
+
+
+def c7_outro(t: dict, n: int) -> dict:
+    """정리. 새 숫자를 쓰지 않는다 — 앞에 나온 값만 되짚는다."""
+    b, s = t["busiest"], t["top"]
+    inner = (
+        f'<div class="body">'
+        f'<div class="kicker">정리</div>'
+        f'<div class="h1 xs">세 줄 요약</div>'
+        f'<div class="lead">'
+        f'· {b["sigungu_name"]} 거래가 평소보다 많았어요<br>'
+        f'· {s["apt_name"]} 평단가는 올랐어요<br>'
+        f'· 다만 거래 건수는 줄었어요</div>'
+        f'<div class="cta">저장해두고 <span class="mark">다음 주와 비교</span>해보세요.<br>'
+        f'여러분 동네는 이번 주 어땠나요?</div>'
+        f'<div class="disc">{DISCLAIMER_SOCIAL}</div>'
+        f'</div>')
+    return {"name": "07_outro", "layout": "summary_cta",
+            "facts": {}, "html": D.head(7, n) + inner}
+
+
+def build_cards(data: dict, chart_dir: Path | None = None) -> list[dict]:
+    """chart_dir 은 더 이상 읽지 않는다 — 차트 조각을 카드에 넣지 않는다.
+    호출부(테스트 포함)가 넘기고 있어 인자만 남긴다."""
+    t = pick(data)
+    if t is None:
+        return []
+    n = 7
+    cards = [c1_cover(t, n), c2_ranked(t, n), c3_extremes(t, n),
+             c4_counter(t, n), c5_compare(t, n), c6_sample(t, n),
+             c7_outro(t, n)]
+    # 글에 나오는 방법론 상수(52주, 3개월 등)도 출처가 있어야 한다.
+    # 지표 JSON 의 params 를 함께 넘겨 숫자 검증기가 대조하게 한다.
+    for c in cards:
+        c["facts"] = {"card": c["facts"], "params": t["params"]}
     return cards
 
 
-def build_thumbnails(data: dict, chart_dir: Path) -> list[dict]:
-    """유튜브 썸네일 2안.
-
-    차트를 넣지 않는다. 썸네일은 작게 표시돼 축 라벨이 안 읽히고, 공간만
-    먹으면서 정작 봐야 할 숫자를 밀어낸다.
-
-    **대비되는 두 숫자를 같은 크기로 둔다.** 오른 숫자만 키우면 썸네일에서는
-    그것만 보이고 반대 지표가 묻힌다. 콘텐츠 본문에서 반대 지표를 같은 비중으로
-    싣는데 썸네일에서 뒤집으면 의미가 없다.
-    """
-    z = data.get("weekly", {}).get("sgg_zscore") or []
-    surge = data.get("weekly", {}).get("surge_apt") or []
-    if not z or not surge:
-        return []
-    busiest = max(z, key=lambda r: r["deals_z"])
-    top = surge[0]
-    p = data.get("params") or {}
-
-    css = f"""
-    .t {{ width:{THUMB_W}px; height:{THUMB_H}px; background:{SURFACE};
-          padding:76px 84px; display:flex; flex-direction:column;
-          justify-content:center; position:relative; }}
-    .t .kick {{ font-size:32px; color:{INK_MUTED}; letter-spacing:-.5px; }}
-    .t .hd {{ font-size:86px; font-weight:800; line-height:1.1;
-              letter-spacing:-3px; margin-top:12px; }}
-    .t .hd .hl {{ color:{ACCENT}; }}
-    /* 두 수치를 같은 크기로 나란히 — 한쪽만 키우지 않는다 */
-    .t .duo {{ display:flex; gap:64px; margin-top:44px; }}
-    .t .duo .c {{ flex:1; }}
-    .t .duo .lb {{ font-size:30px; color:{INK_2}; }}
-    .t .duo .vl {{ font-size:92px; font-weight:800; letter-spacing:-3px;
-                   line-height:1.05; margin-top:6px; }}
-    .t .duo .sm {{ font-size:28px; color:{INK_MUTED}; margin-top:8px; }}
-    .t .up {{ color:{POS}; }} .t .dn {{ color:{NEG}; }}
-    .t .foot {{ position:absolute; left:84px; bottom:46px;
-                font-size:23px; color:{INK_MUTED}; }}
-    """
-
-    a = f"""<div class="t">
-      <div class="kick">{busiest.get('week_start','')} 주 · 수도권 실거래</div>
-      <div class="hd"><span class="hl">{busiest['sigungu_name']}</span> 거래량,
-        평소와 얼마나 달랐나</div>
-      <div class="duo">
-        <div class="c"><div class="lb">이번 주</div>
-          <div class="vl up">{busiest['week_deals']}건</div>
-          <div class="sm">표준편차 {busiest['deals_z']:+.1f}</div></div>
-        <div class="c"><div class="lb">평소 ({p.get('zscore_hist_weeks')}주 평균)</div>
-          <div class="vl">{num(busiest['deals_avg_52w'])}건</div>
-          <div class="sm">같은 지역 과거 기준</div></div>
-      </div>
-      <div class="foot">{SOURCE_NOTE}</div></div>"""
-
-    drop = round((top['deals_recent'] / top['deals_prior'] - 1) * 100, 1)
-    b = f"""<div class="t">
-      <div class="kick">{top['sigungu_name']} {top['legal_dong_name']} · {top['pyeong_bucket']}</div>
-      <div class="hd">{top['apt_name']}</div>
-      <div class="duo">
-        <div class="c"><div class="lb">평단가</div>
-          <div class="vl up">{top['change_pct']}%</div>
-          <div class="sm">{num(top['ppy_prior_90d'])}만 → {num(top['ppy_recent_90d'])}만</div></div>
-        <div class="c"><div class="lb">거래 건수</div>
-          <div class="vl dn">{drop}%</div>
-          <div class="sm">{top['deals_prior']}건 → {top['deals_recent']}건</div></div>
-      </div>
-      <div class="foot">{SOURCE_NOTE}</div></div>"""
-
-    return [
-        {"name": "thumb_a_region", "html": a, "css": css,
-         "facts": {"busiest": busiest, "params": p}, "w": THUMB_W, "h": THUMB_H},
-        {"name": "thumb_b_apt", "html": b, "css": css,
-         "facts": {"top": top, "drop_pct": drop}, "w": THUMB_W, "h": THUMB_H},
-    ]
-
-
-# ── 렌더 ─────────────────────────────────────────────────────────────────
-def render(items: list[dict], outdir: Path, w: int, h: int) -> list[Path]:
-    from playwright.sync_api import sync_playwright
-    made = []
-    with sync_playwright() as pw:
-        b = pw.chromium.launch()
-        for it in items:
-            page = b.new_page(viewport={"width": it.get("w", w),
-                                        "height": it.get("h", h)},
-                              device_scale_factor=1)
-            page.set_content(
-                f"<style>{_CSS}{it.get('css','')}</style>{it['html']}",
-                wait_until="load")
-            out = outdir / f"{it['name']}.png"
-            page.screenshot(path=str(out))
-            page.close()
-            made.append(out)
-        b.close()
-    return made
-
-
+# ── 검사 ─────────────────────────────────────────────────────────────────
 def strip_html(h: str) -> str:
-    import re
     t = re.sub(r"<br\s*/?>", " ", h)
     t = re.sub(r"<[^>]+>", " ", t)
     return re.sub(r"\s+", " ", t).strip()
 
 
+def check_layout_variety(cards: list[dict]) -> list[str]:
+    return [f"{a['name']}·{b['name']} 레이아웃 연속 ({a['layout']})"
+            for a, b in zip(cards, cards[1:]) if a["layout"] == b["layout"]]
+
+
+def check_copy(cards: list[dict]) -> list[str]:
+    bad = []
+    for c in cards:
+        text = strip_html(c["html"])
+        try:
+            D.assert_no_jargon(text, c["name"])
+        except ValueError as e:
+            bad.append(str(e))
+        for w in ("폭등", "역대급", "지금 사야", "놓치면", "떡상"):
+            if w in text:
+                bad.append(f"{c['name']}: 자극 표현 '{w}'")
+    return bad
+
+
+# ── 렌더 ─────────────────────────────────────────────────────────────────
+OVERFLOW_JS = """() => {
+  const PX = %d, W = %d, H = %d, bad = [];
+  document.querySelectorAll('.card .body *, .card .hd, .card .ft').forEach(el => {
+    if (!el.textContent.trim() && el.tagName !== 'IMG') return;
+    const r = el.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    if (r.left < PX - 1 || r.right > W - PX + 1 || r.top < 8 || r.bottom > H - 8)
+      bad.push((el.className || el.tagName) + '@' + Math.round(r.top) + ':' + Math.round(r.bottom));
+  });
+  return bad;
+}"""
+
+
+def render(cards: list[dict], outdir: Path) -> tuple[list[Path], list[str]]:
+    """렌더 후 안전영역 이탈을 검사하고, 넘치면 폰트를 줄여 재시도한다."""
+    from playwright.sync_api import sync_playwright
+
+    made, problems = [], []
+    js = OVERFLOW_JS % (D.PAD_X, D.W, D.H)
+    with sync_playwright() as pw:
+        br = pw.chromium.launch()
+        for c in cards:
+            page = br.new_page(viewport={"width": D.W, "height": D.H},
+                               device_scale_factor=1)
+            shrink = 0
+            while True:
+                extra = ""
+                if shrink:
+                    extra = (f".h1{{font-size:{max(HEADLINE_MIN, 96 - shrink)}px}}"
+                             f".big{{font-size:{max(140, 280 - shrink * 3)}px}}"
+                             f".quote{{font-size:{max(48, 64 - shrink)}px}}")
+                page.set_content(
+                    f"<style>{D.base_css()}{extra}</style>"
+                    f'<div class="card">{c["html"]}</div>', wait_until="load")
+                page.wait_for_timeout(150)
+                over = page.evaluate(js)
+                if not over or shrink >= 24:
+                    if over:
+                        problems.append(f"{c['name']}: 넘침 {over[:2]}")
+                    break
+                shrink += 4
+            out = outdir / f"{c['name']}.png"
+            page.screenshot(path=str(out))
+            page.close()
+            made.append(out)
+        br.close()
+    return made, problems
+
+
 def main() -> int:
-    ap = argparse.ArgumentParser(description="T16 캐러셀·썸네일")
+    ap = argparse.ArgumentParser(description="T16 캐러셀")
     ap.add_argument("--metrics")
     args = ap.parse_args()
 
@@ -342,33 +345,34 @@ def main() -> int:
     outdir = ROOT / "output" / data["asof"]
     outdir.mkdir(parents=True, exist_ok=True)
 
+    print(f"\n{'=' * 62}\n  캐러셀  {data['asof']}  ({D.W}×{D.H})\n{'=' * 62}")
+    if not D.has_font():
+        print("  ⚠️ Pretendard 없음 — 폰트 품질이 떨어진다")
+
     cards = build_cards(data, outdir)
-    thumbs = build_thumbnails(data, outdir)
     if not cards:
-        print("재료 부족 — 이번 주는 만들지 않는다 (폴백)")
+        print("  재료 부족 — 이번 주는 만들지 않는다 (폴백)")
         return 0
 
-    print(f"\n{'=' * 60}\n  캐러셀·썸네일  {data['asof']}\n{'=' * 60}")
-
-    # 이미지에 박히는 글자도 발행되는 문구다. 숫자·금지어를 똑같이 검사한다.
-    blocked = 0
-    for it in cards + thumbs:
-        text = strip_html(it["html"])
-        r = validate(text, it["facts"], require_disclaimer=False)
+    fails = check_layout_variety(cards) + check_copy(cards)
+    for c in cards:
+        r = validate(strip_html(c["html"]), c["facts"], require_disclaimer=False)
         if not r.ok:
-            blocked += 1
-            print(f"  [차단] {it['name']}")
-            for why in r.reasons:
-                print(f"      ! {why}")
-    if blocked:
-        print(f"\n  검증 실패 {blocked}건 — 렌더하지 않는다\n{'=' * 60}\n")
+            fails += [f"{c['name']}: {w}" for w in r.reasons]
+    if fails:
+        print(f"\n  검증 실패 {len(fails)}건 — 렌더하지 않는다")
+        for f in fails:
+            print(f"    ! {f}")
         return 1
 
-    made = render(cards, outdir, CARD, CARD) + render(thumbs, outdir, THUMB_W, THUMB_H)
-    print(f"  캐러셀 {len(cards)}장 · 썸네일 {len(thumbs)}안  (검증 통과)")
-    for p in made:
-        print(f"    {p.name:22s} {p.stat().st_size / 1024:>5.0f}KB")
-    print(f"\n  저장: {outdir}\n{'=' * 60}\n")
+    made, problems = render(cards, outdir)
+    for c, p in zip(cards, made):
+        print(f"  {c['name']:14s} {c['layout']:14s} {p.stat().st_size / 1024:>5.0f}KB")
+    if problems:
+        print("\n  넘침 경고:")
+        for p in problems:
+            print(f"    ! {p}")
+    print(f"\n  저장: {outdir}\n{'=' * 62}\n")
     return 0
 
 

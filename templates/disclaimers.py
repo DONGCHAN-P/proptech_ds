@@ -13,6 +13,17 @@ DISCLAIMER_SOCIAL = (
     "있습니다."
 )
 
+# 스레드 본문용 1줄 축약.
+#
+# 스레드는 500자 제한이고 본문 3~5줄이 포맷이다. 4줄짜리 전문을 붙이면 본문보다
+# 면책이 길어져 아무도 읽지 않는다. 본문에는 이 한 줄을 쓰고, **전문은 프로필
+# 고정 게시물**에 둔다 — 책임 범위를 줄이는 게 아니라 읽히는 자리로 옮기는 것이다.
+# 캐러셀 마지막 장과 인스타 캡션에는 전문(DISCLAIMER_SOCIAL)이 그대로 들어간다.
+DISCLAIMER_THREADS = (
+    "공공데이터로 자동 생성한 정보 제공용 자료예요. "
+    "투자 판단과 책임은 본인에게 있어요. (전문은 프로필 고정 게시물)"
+)
+
 # 유튜브 영상 고정 자막 + 설명란
 DISCLAIMER_YOUTUBE = (
     "※ 안내: 본 영상은 공공데이터 API 기반으로 분석된 주간 거래 지표이며, "
@@ -29,6 +40,7 @@ CTA_PLACEHOLDER_URL = "(뉴스레터 링크 준비 중)"
 SOURCE_NOTE = "국토교통부 실거래가 공개시스템 · 해제(취소) 건 제외"
 
 ALL_DISCLAIMERS = {
-    "social": DISCLAIMER_SOCIAL,
+    "social": DISCLAIMER_SOCIAL,      # 인스타 캡션 · 캐러셀 마지막 장
+    "threads": DISCLAIMER_THREADS,    # 스레드 본문
     "youtube": DISCLAIMER_YOUTUBE,
 }

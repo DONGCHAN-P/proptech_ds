@@ -1,20 +1,20 @@
-"""T11 — 차트 템플릿.
+"""T11 — 차트.
 
-입력은 `output/metrics_YYYYMMDD.json` 하나뿐이다. 차트가 DB 를 따로 뒤지지
-않는 게 중요하다. 발행된 그림의 숫자와 T12 숫자 검증기가 대조하는 값이
-같은 파일에서 나와야 어긋나지 않는다.
+`docs/02_CLI_디자인지시사항.md` 7항을 따른다. matplotlib 대신 **HTML/SVG +
+Playwright** 로 그린다 — 같은 폰트와 토큰을 카드와 공유해야 하고, matplotlib
+기본 스타일이 남으면 바로 "자동 생성물" 로 보인다.
 
-두 종류를 만든다.
-  단지 추이  change-over-time  -> 선 그래프 (단일 계열)
-  지역 비교  polarity          -> 발산형 가로 막대 (Z-score, 0 = 자기 평균)
-
-지역 비교를 그냥 크기 막대로 그리지 않은 이유: 강남과 가평은 거래량 규모가
-달라 횡단 비교가 무의미하다. Z-score 는 "자기 평소 대비"라 0 이 의미를 갖는
-값이고, 그런 값은 발산형으로 그려야 읽힌다.
+규칙
+  · 제목은 결론 문장. 부제에 기간·기준
+  · 강조 1개만 의미색, 나머지는 중립색
+  · 막대는 축을 없애고 값 라벨을 막대 끝에
+  · 꺾은선은 거래가 드물면 **점 + 이동평균**. 면적 채움 금지,
+    y축이 0에서 시작하지 않으면 면적·막대 금지
+  · 차트 안 글자 최소 26px
+  · 카드 밖 단독 차트도 1080×1350 (유튜브용만 16:9)
 
 실행:
   .venv\\Scripts\\python.exe -m content.charts
-  .venv\\Scripts\\python.exe -m content.charts --metrics output/metrics_20261001.json
 """
 from __future__ import annotations
 
@@ -24,232 +24,225 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.dates as mdates               # noqa: E402
-import matplotlib.font_manager as fm            # noqa: E402
-import matplotlib.pyplot as plt                 # noqa: E402
-from matplotlib.ticker import FuncFormatter     # noqa: E402
-
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from content import design as D  # noqa: E402
 
-# ── 팔레트 ───────────────────────────────────────────────────────────────
-# dataviz 스킬의 검증된 기본 팔레트에서 가져왔다. 발산 축은 blue <-> red,
-# 중립 중앙값은 회색. validate_palette.js 로 통과 확인:
-#   CVD ΔE 21.6 (protan) / 정상시야 ΔE 32.3 / 대비 3:1 이상 — 전 항목 PASS
-SURFACE = "#fcfcfb"
-INK = "#0b0b0b"
-INK_2 = "#52514e"
-INK_MUTED = "#898781"
-GRID = "#e1e0d9"
-AXIS = "#c3c2b7"
-SERIES_1 = "#2a78d6"      # 단일 계열 (선 그래프)
-# 발산 축의 방향은 한국 관례를 따른다. 상승·증가가 빨강, 하락·감소가 파랑이다
-# (미국과 반대). 국내 독자가 보는 콘텐츠라 뒤집으면 바로 오독된다.
-DIVERGE_POS = "#e34948"   # 증가
-DIVERGE_NEG = "#2a78d6"   # 감소
-NEUTRAL = "#f0efec"
-
-# PNG 는 테마 전환이 없다. 스레드·인스타 발행 기준이 밝은 배경이라 light 로
-# 고정한다. 다크 변형이 필요해지면 같은 램프에서 다시 뽑아 검증해야 한다.
+CW, CH = 1080, 1350          # 단독 차트도 4:5
+MIN_SAMPLE = 10              # 큰 숫자에 쓰려면 이만큼은 있어야 한다
+IN_CARD_W, IN_CARD_H = 936, 560   # 카드 안에 넣는 차트 (1080 - 좌우 72*2)
 
 
-def setup_font() -> str:
-    """한글 폰트. 없으면 글자가 모두 두부(□)로 나온다.
+def _svg_bars(rows: list[dict], *, name_key: str, val_key: str,
+              hi_index: int = 0, unit: str = "건",
+              width: int, height: int, fmt=None) -> str:
+    """가로 막대. 축선·격자 없음, 값은 막대 끝에."""
+    n = len(rows)
+    gap, pad_l, pad_r = 18, 250, 150
+    bar_h = max(26, (height - gap * (n - 1)) // n)
+    mx = max(float(r[val_key]) for r in rows) or 1
+    track = width - pad_l - pad_r
 
-    로드맵은 Pretendard 를 지정했지만 설치돼 있지 않다. 맑은 고딕이 윈도우
-    기본으로 깔려 있고 한글 자소를 모두 포함하므로 그걸 쓴다.
+    parts = []
+    for i, r in enumerate(rows):
+        y = i * (bar_h + gap)
+        w = float(r[val_key]) / mx * track
+        color = D.UP if i == hi_index else D.NEUTRAL
+        parts.append(
+            f'<text x="{pad_l - 20}" y="{y + bar_h * 0.72}" text-anchor="end" '
+            f'font-size="30" font-weight="600" fill="{D.INK}">{r[name_key]}</text>'
+            f'<rect x="{pad_l}" y="{y}" width="{w:.1f}" height="{bar_h}" '
+            f'rx="{bar_h / 2:.0f}" fill="{color}"/>'
+            f'<text x="{pad_l + w + 18:.1f}" y="{y + bar_h * 0.72}" '
+            f'font-size="30" font-weight="700" fill="{D.INK}">'
+            f'{(fmt or D.num)(r[val_key])}{unit}</text>')
+    total_h = n * bar_h + (n - 1) * gap
+    return (f'<svg width="{width}" height="{total_h}" '
+            f'viewBox="0 0 {width} {total_h}" '
+            f'style="font-family:Pretendard">{"".join(parts)}</svg>')
+
+
+def _svg_scatter_ma(points: list[dict], *, width: int, height: int) -> str:
+    """거래 점 + 이동평균선.
+
+    거래가 드문 단지를 선으로 이으면 3년 공백이 연속 추세처럼 보인다.
+    점으로 찍고 추세는 이동평균으로만 보여준다. 면적 채움은 하지 않는다.
     """
-    for name in ("Pretendard", "Malgun Gothic", "맑은 고딕",
-                 "NanumGothic", "AppleGothic"):
-        try:
-            path = fm.findfont(fm.FontProperties(family=name), fallback_to_default=False)
-        except Exception:
+    if len(points) < 2:
+        return ""
+    xs = [datetime.strptime(p["ym"], "%Y-%m") for p in points]
+    ys = [float(p["avg_price"]) for p in points]
+    t0, t1 = xs[0].timestamp(), xs[-1].timestamp()
+    span = (t1 - t0) or 1
+    lo, hi = min(ys), max(ys)
+    rng = (hi - lo) or 1
+    pad = rng * 0.18
+    lo, hi = lo - pad, hi + pad
+
+    pl, pr, pt, pb = 130, 40, 30, 70
+    iw, ih = width - pl - pr, height - pt - pb
+
+    def X(d):
+        return pl + (d.timestamp() - t0) / span * iw
+
+    def Y(v):
+        return pt + (1 - (v - lo) / (hi - lo)) * ih
+
+    # 6개월 이동평균
+    ma = []
+    for i, d in enumerate(xs):
+        win = [ys[j] for j in range(len(xs))
+               if 0 <= (d - xs[j]).days <= 185 and j <= i]
+        if win:
+            ma.append((d, sum(win) / len(win)))
+    path = " ".join(f"{'M' if i == 0 else 'L'}{X(d):.1f},{Y(v):.1f}"
+                    for i, (d, v) in enumerate(ma))
+
+    grid = []
+    for k in range(3):
+        v = lo + (hi - lo) * (k + 0.5) / 3
+        y = Y(v)
+        grid.append(
+            f'<line x1="{pl}" x2="{width - pr}" y1="{y:.1f}" y2="{y:.1f}" '
+            f'stroke="{D.LINE}" stroke-width="1"/>'
+            f'<text x="{pl - 16}" y="{y + 10:.1f}" text-anchor="end" '
+            f'font-size="26" fill="{D.SUB}">{D.won(v)}</text>')
+
+    # 시간축은 연 단위로 규칙적으로
+    ticks = []
+    for yr in range(xs[0].year, xs[-1].year + 1):
+        d = datetime(yr, 1, 1)
+        if not (xs[0] <= d <= xs[-1]):
             continue
-        if path and Path(path).exists():
-            plt.rcParams["font.family"] = name
-            plt.rcParams["axes.unicode_minus"] = False   # 마이너스가 깨진다
-            return name
-    plt.rcParams["axes.unicode_minus"] = False
-    return "(기본 폰트 — 한글이 깨질 수 있음)"
+        ticks.append(f'<text x="{X(d):.1f}" y="{height - 24}" '
+                     f'text-anchor="middle" font-size="26" fill="{D.SUB}">{yr}</text>')
+
+    dots = "".join(f'<circle cx="{X(d):.1f}" cy="{Y(v):.1f}" r="9" '
+                   f'fill="{D.UP}" stroke="{D.BG}" stroke-width="3"/>'
+                   for d, v in zip(xs, ys))
+    return (f'<svg width="{width}" height="{height}" '
+            f'viewBox="0 0 {width} {height}" style="font-family:Pretendard">'
+            f'{"".join(grid)}{"".join(ticks)}'
+            f'<path d="{path}" fill="none" stroke="{D.NEUTRAL}" '
+            f'stroke-width="4" stroke-linecap="round"/>{dots}</svg>')
 
 
-def _style(ax) -> None:
-    """공통 뼈대. 격자와 축은 뒤로 물리고 데이터를 앞에 둔다."""
-    ax.set_facecolor(SURFACE)
-    for s in ("top", "right"):
-        ax.spines[s].set_visible(False)
-    for s in ("left", "bottom"):
-        ax.spines[s].set_color(AXIS)
-        ax.spines[s].set_linewidth(1)
-    ax.tick_params(colors=INK_MUTED, labelsize=9, length=0)
-    ax.grid(True, color=GRID, linewidth=1, axis="y", zorder=0)
-    ax.set_axisbelow(True)
+# ── 차트 페이지 ──────────────────────────────────────────────────────────
+def chart_region(data: dict) -> dict:
+    """지역별 거래량. 카드 2장에 들어갈 조각과 단독 장 양쪽으로 쓴다."""
+    z = [r for r in (data.get("weekly", {}).get("sgg_zscore") or [])
+         if r.get("deals_z") is not None]
+    if not z:
+        return {}
+    # 절대 거래량이 아니라 **평소 대비 배수**로 줄 세운다. 이 프로젝트의 앵글이
+    # "지역끼리가 아니라 자기 평소와 비교" 라서, 절대량으로 정렬하면 늘 큰 도시가
+    # 1위로 올라오고 제목이 "평소의 1.1배" 같은 밋밋한 값이 된다.
+    for r in z:
+        r["ratio"] = (r["week_deals"] / r["deals_avg_52w"]
+                      if r.get("deals_avg_52w") else 0)
+    # 표본이 적으면 배수가 쉽게 튄다 (연천군 7건으로 2.4배). 지시사항대로
+    # 큰 숫자·헤드라인에는 n>=MIN_SAMPLE 인 곳만 쓴다.
+    solid = [r for r in z if r["ratio"] and r["week_deals"] >= MIN_SAMPLE]
+    rows = sorted(solid or [r for r in z if r["ratio"]],
+                  key=lambda r: r["ratio"], reverse=True)[:6]
+    if not rows:
+        return {}
+    top = rows[0]
+    svg = _svg_bars(rows, name_key="sigungu_name", val_key="ratio",
+                    hi_index=0, unit="배", width=IN_CARD_W, height=IN_CARD_H,
+                    fmt=lambda v: f"{v:.1f}")
+    title = f'{top["sigungu_name"]} 거래, 평소의 {top["ratio"]:.1f}배'
+    return {"name": "chart_region", "in_card": svg, "title": title,
+            "sub": f'{top.get("week_start", "")} 주 · 평소 = 지난 52주 평균',
+            "facts": {"ranked": rows}}
 
 
-def won(man: float) -> str:
-    """만원 -> '12.3억'."""
-    if man is None:
-        return "-"
-    if abs(man) >= 10000:
-        v = man / 10000
-        return f"{v:.0f}억" if abs(v) >= 100 else f"{v:.1f}억"
-    return f"{man:,.0f}만"
+def chart_apt(data: dict) -> dict:
+    """단지 가격 추이. 점 + 이동평균."""
+    series = data.get("series") or []
+    if not series:
+        return {}
+    s = series[0]
+    pts = s["points"]
+    svg = _svg_scatter_ma(pts, width=IN_CARD_W, height=IN_CARD_H)
+    if not svg:
+        return {}
+    first, last = pts[0]["avg_price"], pts[-1]["avg_price"]
+    pct = (last / first - 1) * 100 if first else 0
+    name, _ = D.split_name(s["apt_name"])
+    return {"name": "chart_apt", "in_card": svg,
+            "title": f'{name} {s["pyeong_bucket"]}, {D.delta(pct)}',
+            "sub": f'{pts[0]["ym"]} ~ {pts[-1]["ym"]} · 거래 {len(pts)}건 · '
+                   f'점은 월평균, 선은 6개월 이동평균',
+            "facts": {"series": s, "change_pct": round(pct, 1)}}
 
 
-# ── 1. 단지 추이 ─────────────────────────────────────────────────────────
-def chart_apt_trend(series: dict, out: Path) -> Path:
-    """월별 평균 실거래가 추이. 단일 계열이라 범례를 두지 않는다 — 제목이 이름."""
-    pts = series["points"]
-    # 거래가 있는 달만 등간격으로 찍으면 시간 축이 왜곡된다. 13개월 공백이
-    # 1개월처럼 보여 "쭉 올랐다"는 인상을 준다. 실제 날짜에 배치한다.
-    x = [datetime.strptime(p["ym"], "%Y-%m") for p in pts]
-    y = [p["avg_price"] for p in pts]
-
-    fig, ax = plt.subplots(figsize=(9, 5), dpi=160, facecolor=SURFACE)
-    _style(ax)
-
-    ax.plot(x, y, color=SERIES_1, linewidth=2, zorder=3,
-            solid_capstyle="round")
-    ax.fill_between(x, y, min(y) * 0.97, color=SERIES_1, alpha=0.08, zorder=2)
-    # 거래가 드문드문하다는 사실 자체가 정보다. 점을 모두 찍어 드러낸다.
-    ax.scatter(x, y, s=26, color=SERIES_1, zorder=4,
-               edgecolors=SURFACE, linewidths=1.5)
-
-    # 라벨은 끝점과 최고점만. 모든 점에 숫자를 붙이면 읽히지 않는다.
-    hi = max(range(len(y)), key=lambda i: y[i])
-    marks = [len(y) - 1] + ([hi] if hi != len(y) - 1 else [])
-    for i in marks:
-        ax.scatter([x[i]], [y[i]], s=46, color=SERIES_1, zorder=5,
-                   edgecolors=SURFACE, linewidths=2)
-        ax.annotate(won(y[i]), (x[i], y[i]), textcoords="offset points",
-                    xytext=(0, 11), ha="center", va="bottom",
-                    fontsize=10, fontweight="bold", color=INK, zorder=6)
-
-    # AutoDateLocator 는 짧은 구간에서 적정 간격을 못 고르고 경고를 낸다.
-    # 기간 길이를 보고 직접 정한다.
-    months = (x[-1].year - x[0].year) * 12 + (x[-1].month - x[0].month) + 1
-    step = max(1, round(months / 6))
-    ax.xaxis.set_major_locator(mdates.MonthLocator(interval=step))
-    ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
-    ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: won(v)))
-
-    dong = series.get("legal_dong_name") or ""
-    fig.suptitle(f"{series['apt_name']} · {series['pyeong_bucket']}",
-                 x=0.015, y=0.975, ha="left", fontsize=15,
-                 fontweight="bold", color=INK)
-    ax.set_title(f"{series['sigungu_name']} {dong} · 월평균 실거래가",
-                 loc="left", fontsize=10.5, color=INK_2, pad=14)
-    fig.text(0.015, 0.02, "국토교통부 실거래가 공개시스템 · 해제 건 제외",
-             fontsize=8, color=INK_MUTED)
-
-    fig.tight_layout(rect=(0, 0.04, 1, 0.94))
-    fig.savefig(out, facecolor=SURFACE)
-    plt.close(fig)
-    return out
+def page_html(ch: dict, asof: str) -> str:
+    return (
+        f'<div class="card">'
+        f'{D.head(1, 1)}'
+        f'<div class="body">'
+        f'<div class="h1 xs">{ch["title"]}</div>'
+        f'<div class="sub">{ch["sub"]}</div>'
+        f'<div style="margin-top:12px">{ch["in_card"]}</div>'
+        f'</div>{D.foot(asof)}</div>')
 
 
-# ── 2. 지역 비교 ─────────────────────────────────────────────────────────
-def chart_region_zscore(rows: list[dict], out: Path, top: int = 12) -> Path:
-    """시군구 거래량 Z-score. 0 이 '자기 평소'라 발산형으로 그린다."""
-    rows = [r for r in rows if r.get("deals_z") is not None]
-    rows = sorted(rows, key=lambda r: r["deals_z"], reverse=True)
-    if len(rows) > top:
-        half = top // 2
-        rows = rows[:half] + rows[-half:]
-    rows = sorted(rows, key=lambda r: r["deals_z"])
-
-    names = [r["sigungu_name"] for r in rows]
-    vals = [r["deals_z"] for r in rows]
-    y = list(range(len(rows)))
-
-    fig, ax = plt.subplots(figsize=(9, max(4.5, len(rows) * 0.42)),
-                           dpi=160, facecolor=SURFACE)
-    _style(ax)
-    ax.grid(False, axis="y")
-    ax.grid(True, color=GRID, linewidth=1, axis="x", zorder=0)
-
-    colors = [DIVERGE_POS if v >= 0 else DIVERGE_NEG for v in vals]
-    bars = ax.barh(y, vals, height=0.62, color=colors, zorder=3)
-    for b in bars:                       # 막대 끝 둥글리기 대신 표면 링
-        b.set_edgecolor(SURFACE)
-        b.set_linewidth(2)
-
-    ax.axvline(0, color=AXIS, linewidth=1.2, zorder=4)
-    ax.set_yticks(y)
-    ax.set_yticklabels(names, fontsize=10, color=INK)
-
-    # 값은 직접 라벨로. 색만으로 +/- 를 읽게 두지 않는다.
-    span = max(abs(min(vals)), abs(max(vals))) or 1
-    for yi, v, r in zip(y, vals, rows):
-        off = 0.06 * span * (1 if v >= 0 else -1)
-        ax.annotate(f"{v:+.1f}σ  ({r['week_deals']}건)", (v, yi),
-                    textcoords="offset points",
-                    xytext=(6 if v >= 0 else -6, 0),
-                    ha="left" if v >= 0 else "right", va="center",
-                    fontsize=9, color=INK_2, zorder=5)
-    ax.set_xlim(-span * 1.45, span * 1.45)
-
-    wk = rows[0].get("week_start", "")
-    fig.suptitle("시군구 거래량 — 자기 평소 대비", x=0.015, y=0.975,
-                 ha="left", fontsize=15, fontweight="bold", color=INK)
-    ax.set_title(f"{wk} 주 · 지난 52주 평균·표준편차 기준 (0 = 평소 수준)",
-                 loc="left", fontsize=10.5, color=INK_2, pad=14)
-    fig.text(0.015, 0.015,
-             "국토교통부 실거래가 공개시스템 · 해제 건 제외 · "
-             "신고 지연을 피해 4주 물린 주를 집계",
-             fontsize=8, color=INK_MUTED)
-
-    fig.tight_layout(rect=(0, 0.05, 1, 0.94))
-    fig.savefig(out, facecolor=SURFACE)
-    plt.close(fig)
-    return out
-
-
-# ── 메인 ─────────────────────────────────────────────────────────────────
-def latest_metrics() -> Path | None:
-    files = sorted((ROOT / "output").glob("metrics_*.json"))
-    return files[-1] if files else None
+def render(pages: list[tuple[str, str]], outdir: Path) -> list[Path]:
+    from playwright.sync_api import sync_playwright
+    made = []
+    with sync_playwright() as pw:
+        br = pw.chromium.launch()
+        for name, html in pages:
+            page = br.new_page(viewport={"width": CW, "height": CH},
+                               device_scale_factor=1)
+            page.set_content(f"<style>{D.base_css()}</style>{html}",
+                             wait_until="load")
+            page.wait_for_timeout(150)
+            out = outdir / f"{name}.png"
+            page.screenshot(path=str(out))
+            page.close()
+            made.append(out)
+        br.close()
+    return made
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="T11 차트 생성")
-    ap.add_argument("--metrics", help="지표 JSON 경로")
-    ap.add_argument("--outdir", help="출력 디렉터리")
+    ap = argparse.ArgumentParser(description="T11 차트")
+    ap.add_argument("--metrics")
     args = ap.parse_args()
 
-    src = Path(args.metrics) if args.metrics else latest_metrics()
+    files = sorted((ROOT / "output").glob("metrics_*.json"))
+    src = Path(args.metrics) if args.metrics else (files[-1] if files else None)
     if src is None or not src.exists():
         print("지표 JSON 이 없다. 먼저: python -m metrics.build_metrics")
         return 1
     data = json.loads(src.read_text(encoding="utf-8"))
-
-    font = setup_font()
-    outdir = Path(args.outdir) if args.outdir else ROOT / "output" / data["asof"]
+    outdir = ROOT / "output" / data["asof"]
     outdir.mkdir(parents=True, exist_ok=True)
 
-    print(f"\n{'=' * 60}\n  차트 생성  기준일 {data['asof']}\n{'=' * 60}")
-    print(f"  폰트: {font}")
+    print(f"\n{'=' * 62}\n  차트  {data['asof']}  ({CW}×{CH})\n{'=' * 62}")
+    if not D.has_font():
+        print("  ⚠️ Pretendard 없음")
 
-    made = []
-    series = data.get("series") or []
-    if series:
-        p = chart_apt_trend(series[0], outdir / "chart_apt_trend.png")
-        made.append(p)
-        print(f"  단지 추이: {series[0]['apt_name']} ({len(series[0]['points'])}개월)")
+    charts = [c for c in (chart_region(data), chart_apt(data)) if c]
+    if not charts:
+        print("  재료 부족")
+        return 0
 
-    z = data.get("weekly", {}).get("sgg_zscore") or []
-    if z:
-        p = chart_region_zscore(z, outdir / "chart_region_zscore.png")
-        made.append(p)
-        print(f"  지역 비교: 시군구 {len(z)}개 중 상·하위")
+    for c in charts:
+        D.assert_no_jargon(c["title"] + c["sub"], c["name"])
 
-    print(f"\n  저장: {outdir}")
-    for p in made:
-        print(f"    {p.name}  ({p.stat().st_size / 1024:.0f}KB)")
-    print(f"{'=' * 60}\n")
-    return 0 if made else 1
+    # 카드 안에 넣을 조각(SVG)은 따로 저장해 carousel 이 가져다 쓴다
+    for c in charts:
+        (outdir / f'{c["name"]}.svg').write_text(c["in_card"], encoding="utf-8")
+
+    made = render([(c["name"], page_html(c, data["asof"])) for c in charts],
+                  outdir)
+    for c, p in zip(charts, made):
+        print(f'  {c["name"]:14s} {p.stat().st_size / 1024:>5.0f}KB  {c["title"]}')
+    print(f"\n  저장: {outdir}\n{'=' * 62}\n")
+    return 0
 
 
 if __name__ == "__main__":
