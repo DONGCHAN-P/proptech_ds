@@ -133,6 +133,12 @@ DRAFTERS = {
 
 
 # ── LLM (선택) ───────────────────────────────────────────────────────────
+#
+# 문장 다듬기용 모델. 실측으로 골랐다 — 숫자 보존·지시 준수·지연을 같은 과제로
+# 비교했을 때 mini 급이 가장 안정적이었고, 상위 모델은 3~5배 느린데 결과가 더
+# 낫지 않았다. 월 사용량이 입력 90K·출력 42K 토큰 수준이라 비용 차이는 어차피
+# 의미가 없다. 바꾸려면 OPENAI_MODEL 환경변수로 덮어쓴다.
+LLM_MODEL = os.environ.get("OPENAI_MODEL", "gpt-5.4-mini")
 LLM_SYSTEM = """\
 너는 부동산 실거래 데이터를 문장으로 옮기는 편집자다.
 
@@ -146,33 +152,60 @@ LLM_SYSTEM = """\
 """
 
 
-def polish_with_llm(draft: str, facts: dict) -> str:
-    """초안을 LLM 으로 다듬는다. 키가 없으면 초안을 그대로 돌려준다.
+def split_fixed(draft: str) -> tuple[str, str]:
+    """다듬을 본문과 그대로 둘 고정 꼬리(면책 + CTA)로 가른다.
 
-    다듬은 결과도 호출부에서 다시 검증한다. LLM 이 숫자를 건드리면 거기서
-    걸린다.
+    면책은 '변경 금지' 문구인데 통째로 LLM 에 넘기면 재배열한다. 실제로
+    후보 모델 셋 다 "매수·매도를 추천하거나" 의 구두점과 줄바꿈을 바꿨다.
+    아예 보내지 않으면 건드릴 수가 없다 — 모델을 고르는 것보다 확실하다.
     """
-    key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+    i = draft.find(DISCLAIMER_SOCIAL)
+    if i < 0:
+        return draft, ""
+    return draft[:i].rstrip(), draft[i:]
+
+
+def polish_with_llm(draft: str, facts: dict) -> str:
+    """초안의 **본문만** LLM 으로 다듬는다. 키가 없으면 초안을 그대로 돌려준다.
+
+    면책과 CTA 는 손대지 않고 그대로 다시 붙인다. 다듬은 결과도 호출부에서
+    검증하므로, LLM 이 숫자를 건드리면 거기서 걸린다.
+    """
+    key = os.environ.get("OPENAI_API_KEY", "").strip()
     if not key:
         return draft
     try:
-        import anthropic
+        from openai import OpenAI
     except ImportError:
         return draft
+
+    body, fixed = split_fixed(draft)
+    if not body:
+        return draft
     try:
-        client = anthropic.Anthropic(api_key=key)
-        msg = client.messages.create(
-            model="claude-sonnet-5",
-            max_tokens=1200,
-            system=LLM_SYSTEM,
-            messages=[{"role": "user", "content":
-                       f"데이터:\n{json.dumps(facts, ensure_ascii=False)}\n\n"
-                       f"초안:\n{draft}\n\n"
-                       f"문장만 자연스럽게 다듬어 돌려줘."}],
+        client = OpenAI(api_key=key)
+        kw = dict(
+            model=LLM_MODEL,
+            messages=[
+                {"role": "system", "content": LLM_SYSTEM},
+                {"role": "user", "content":
+                 f"데이터:\n{json.dumps(facts, ensure_ascii=False)}\n\n"
+                 f"초안:\n{body}\n\n문장만 자연스럽게 다듬어 돌려줘."},
+            ],
         )
-        return msg.content[0].text.strip()
+        try:
+            r = client.chat.completions.create(**kw, max_completion_tokens=2000)
+        except TypeError:
+            r = client.chat.completions.create(**kw, max_tokens=2000)
+        out = (r.choices[0].message.content or "").strip()
+        if not out:
+            print("  LLM 이 빈 응답 — 초안 사용")
+            return draft
+        return f"{out}\n\n{fixed}" if fixed else out
     except Exception as e:
-        print(f"  LLM 다듬기 실패 ({e}) — 초안 사용")
+        # 다듬기는 선택 기능이다. 무슨 이유로 실패하든 초안으로 발행을 이어간다 —
+        # API 가 막혔다고 그날 발행을 못 하는 상황을 만들지 않는다.
+        print(f"  LLM 다듬기 실패 ({type(e).__name__}: {e}) — 초안 사용")
         return draft
 
 

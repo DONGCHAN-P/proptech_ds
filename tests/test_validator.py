@@ -182,3 +182,37 @@ def test_한_군데만_틀려도_차단된다():
     ]:
         r = validate(broken, FACTS)
         assert not r.ok, f"{why} 가 안 걸렸다"
+
+
+# ── 고정 꼬리 분리 (LLM 다듬기 안전장치) ────────────────────────────────
+def test_면책은_LLM에_보내지_않는다():
+    """면책은 '변경 금지' 문구인데 LLM 에 넘기면 재배열한다.
+
+    실측: 후보 모델 3종 모두 "매수·매도를 추천하거나" 의 구두점과 줄바꿈을
+    바꿨다. 모델을 고르는 것보다 아예 보내지 않는 쪽이 확실하다.
+    """
+    from content.thread import split_fixed
+    draft = f"본문입니다.\n\n{DISCLAIMER_SOCIAL}\n\n가입 링크"
+    body, fixed = split_fixed(draft)
+    assert DISCLAIMER_SOCIAL not in body, "면책이 다듬기 대상에 들어갔다"
+    assert DISCLAIMER_SOCIAL in fixed
+    assert "가입 링크" in fixed, "CTA 도 고정 꼬리에 있어야 한다"
+
+
+def test_면책이_없는_초안은_통째로_본문():
+    from content.thread import split_fixed
+    body, fixed = split_fixed("면책 없는 글")
+    assert body == "면책 없는 글" and fixed == ""
+
+
+def test_다듬기는_선택_기능이다():
+    """키가 없거나 API 가 막혀도 그날 발행이 멈추면 안 된다."""
+    import os
+    from content.thread import polish_with_llm
+    saved = os.environ.pop("OPENAI_API_KEY", None)
+    try:
+        draft = f"본문\n\n{DISCLAIMER_SOCIAL}"
+        assert polish_with_llm(draft, {}) == draft
+    finally:
+        if saved is not None:
+            os.environ["OPENAI_API_KEY"] = saved
