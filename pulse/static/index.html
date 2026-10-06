@@ -22,31 +22,30 @@
   </section>
 
   <nav id="levelbar" class="block">
-    <button class="lv on" data-level="sgg">시군구 · 이번 주</button>
-    <button class="lv" data-level="dong">읍면동 · 최근 4주</button>
+    <button class="lv on" data-level="sgg">시군구</button>
+    <button class="lv" data-level="dong">읍면동</button>
+    <button class="lv" data-level="apt">단지</button>
   </nav>
 
-  <section class="block">
-    <h2>평소보다 붐빈 곳</h2>
-    <ol id="busy" class="ranklist"></ol>
+  <!-- 평형 — 단지 레벨에서만. 평형을 안 고르면 대표 평형(최근 1년 거래가
+       가장 많은 평형)으로 보여준다. -->
+  <section id="pyeongbar" class="block" hidden>
+    <h2>평형</h2>
+    <div class="chips" id="pyeongs"></div>
+    <p class="note" id="pyeongnote"></p>
   </section>
 
-  <section class="block">
-    <h2>평소보다 조용한 곳</h2>
+  <section class="block" id="ranks">
+    <h2 id="busyh">평소보다 붐빈 곳</h2>
+    <ol id="busy" class="ranklist"></ol>
+    <h2 id="quieth" style="margin-top:22px">평소보다 조용한 곳</h2>
     <ol id="quiet" class="ranklist"></ol>
   </section>
 
   <section class="block" id="legend">
     <h2>지도 보는 법</h2>
-    <ul class="legend">
-      <li><i class="dot up"></i> 거래가 평소보다 <b>많음</b></li>
-      <li><i class="dot flat"></i> 평소 수준</li>
-      <li><i class="dot down"></i> 거래가 평소보다 <b>적음</b></li>
-      <li><i class="dot thin"></i> 거래가 적어 판단 보류</li>
-      <li><i class="dot ring"></i> 테두리 = 값이 평소보다 <b>빠르게</b> 오름</li>
-      <li><i class="dot size"></i> 원 크기 = 그 기간 거래 건수</li>
-    </ul>
-    <p class="note">색은 거래량만 나타냅니다. 값의 움직임은 테두리로 따로 표시합니다.</p>
+    <ul class="legend"></ul>
+    <p class="note"></p>
   </section>
 
   <section class="block" id="limits">

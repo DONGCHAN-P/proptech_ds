@@ -47,5 +47,27 @@ const U = (() => {
   const radius = (n, lo = 5, hi = 22) =>
     Math.max(lo, Math.min(hi, Math.sqrt(Math.max(n, 0)) * 1.8 + 3));
 
-  return { $, $$, esc, num, ppy, times, pct, arrow, dirOf, json, debounce, radius };
+  /* 만원 → 사람이 말하는 단위. 12.8억 / 9,800만 */
+  const won = v => {
+    if (v == null) return '–';
+    const m = Number(v);
+    if (Math.abs(m) < 10000) return num(m) + '만';
+    const e = m / 10000;
+    return (Math.abs(e) >= 100 ? e.toFixed(0) : e.toFixed(1)) + '억';
+  };
+
+  /* 아파트 글리프. 이모지를 쓰지 않는 이유는 플랫폼마다 모양이 달라서
+     디자인이 기기별로 깨지기 때문이다. */
+  const BLDG = `<svg class="bldg" viewBox="0 0 12 14" fill="currentColor"
+      aria-hidden="true"><rect x="0.5" y="1.5" width="11" height="12" rx="1.2"/>
+      <g fill="#fff"><rect x="2.4" y="3.6" width="2.2" height="2.2" rx=".4"/>
+      <rect x="7.4" y="3.6" width="2.2" height="2.2" rx=".4"/>
+      <rect x="2.4" y="7.4" width="2.2" height="2.2" rx=".4"/>
+      <rect x="7.4" y="7.4" width="2.2" height="2.2" rx=".4"/></g></svg>`;
+
+  /* "2026-09-29" → "26.09.29" */
+  const ymd = d => !d ? '–' : String(d).slice(2).replace(/-/g, '.');
+
+  return { $, $$, esc, num, ppy, won, times, pct, arrow, dirOf, json,
+           debounce, radius, BLDG, ymd };
 })();

@@ -292,3 +292,94 @@ def test_NaN이_JSON으로_새지_않는다(client):
     """NaN 은 표준 JSON 이 아니라 프런트에서 조용히 파싱이 깨진다."""
     raw = client.get("/api/regions?level=dong").text
     assert "NaN" not in raw and "Infinity" not in raw
+
+
+# ── 단지 레벨 ────────────────────────────────────────────────────────────
+#
+# "현재 실거래가"를 보여주기 시작하면 틀릴 수 있는 방식이 늘어난다.
+# 평형을 빼먹는 것, 오래된 거래를 현재가로 찍는 것, 추정가와 섞이는 것.
+def test_평형_없는_가격을_내보내지_않는다(client):
+    """같은 단지에서 15평과 40평이 두 배 넘게 차이 난다.
+
+    평형 없는 "현재 실거래가"는 어느 쪽을 보는 사람에게든 틀린 값이다.
+    """
+    items = client.get("/api/apts?limit=50").json()["items"]
+    assert items
+    for a in items:
+        assert a["last_price"] is not None
+        assert a["pyeong_bucket"], a
+        # 마커에 박히는 짧은 평형 — 실제 거래 면적에서 환산한다
+        assert a["pyeong_short"], a["apt_name"]
+
+
+def test_마커가_평형을_실제로_그린다():
+    """API 가 내려줘도 화면이 안 쓰면 소용없다."""
+    js = (STATIC / "js" / "map.js").read_text(encoding="utf-8")
+    assert "pyeong_short" in js, "마커가 평형을 안 쓴다"
+    css = (STATIC / "css" / "style.css").read_text(encoding="utf-8")
+    assert ".apt-mk.compact .py{display:none}" not in css, "줌에 따라 평형을 숨기고 있다"
+
+
+def test_오래된_거래를_현재가로_찍지_않는다(con):
+    """5년 전 거래 한 건을 '현재 실거래가'라고 지도에 올리면 그 자체가 거짓이다."""
+    old = con.execute(f"""
+        SELECT apt_name, last_date FROM apt_now
+        WHERE last_date <= (SELECT max(last_date) FROM apt_now)
+                           - INTERVAL {B.APT_MAP_MAX_AGE_DAYS} DAY
+    """).fetchall()
+    assert not old, old[:5]
+
+
+def test_마커_가격은_추정이_아니라_신고값이다(con):
+    """last_price 는 실제 신고된 거래 금액이어야 한다 — 평균도 보간도 아니다."""
+    src = (ROOT / "pulse" / "build_pulse.py").read_text(encoding="utf-8")
+    assert "arg_max(deal_amount, deal_date) AS last_price" in src
+    for 금지 in ("avg(deal_amount)", "median(deal_amount)"):
+        assert 금지 not in src, f"마커 가격에 {금지} 를 쓰고 있다"
+
+
+def test_평형별로_접지_않는다(client, con):
+    """한 단지를 한 숫자로 요약하면 어느 평형을 보는 사람에게든 틀린 값이 된다."""
+    aid = con.execute("""
+        SELECT apt_id FROM apt_pyeong_now
+        GROUP BY 1 HAVING count(*) >= 3 LIMIT 1""").fetchone()
+    if not aid:
+        pytest.skip("평형이 여럿인 단지 없음")
+    d = client.get(f"/api/apt/{aid[0]}").json()
+    assert len(d["pyeongs"]) >= 3
+    assert len({p["pyeong_bucket"] for p in d["pyeongs"]}) == len(d["pyeongs"])
+
+
+def test_단지_상세가_지역_맥락을_같이_준다(client, con):
+    """단지만 보면 동네가 통째로 움직인 건지 이 단지만인지 알 수 없다."""
+    aid = con.execute("SELECT apt_id FROM apt_now LIMIT 1").fetchone()[0]
+    d = client.get(f"/api/apt/{aid}").json()
+    assert "region" in d
+
+
+def test_평형_필터가_값을_바꾼다(client):
+    """평형을 고르면 마커 가격도 그 평형 기준으로 바뀌어야 한다."""
+    a = client.get("/api/apts?pyeong=20P&limit=30").json()["items"]
+    b = client.get("/api/apts?pyeong=40P&limit=30").json()["items"]
+    assert a and b
+    assert all(x["pyeong_bucket"] == "20P" for x in a)
+    assert all(x["pyeong_bucket"] == "40P" for x in b)
+
+
+def test_잘못된_평형은_거절한다(client):
+    assert client.get("/api/apts?pyeong=99평").status_code == 400
+
+
+def test_얇은_표본은_변화율을_감춘다(client):
+    """마지막 거래가는 사실이라 그대로 두되, 3건으로 뽑은 변화율은 가린다."""
+    items = client.get("/api/apts?limit=200").json()["items"]
+    for a in items:
+        if a["thin"]:
+            assert a["dir"] == "thin", a["apt_name"]
+
+
+def test_겹치는_말풍선을_솎아낸다():
+    """70px 말풍선을 전부 그리면 도심에서 숫자가 서로를 덮는다."""
+    js = (STATIC / "js" / "map.js").read_text(encoding="utf-8")
+    assert "declutter" in js
+    assert "latLngToContainerPoint" in js, "화면 좌표로 솎아내지 않는다"

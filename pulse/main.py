@@ -35,9 +35,24 @@ DONG_NOW = (CACHE / "dong_now.parquet").as_posix()
 SGG_WEEKS = (CACHE / "sgg_weeks.parquet").as_posix()
 DONG_WEEKS = (CACHE / "dong_weeks.parquet").as_posix()
 APT_NOW = (CACHE / "apt_now.parquet").as_posix()
+APT_PY = (CACHE / "apt_pyeong_now.parquet").as_posix()
 META = (CACHE / "meta.parquet").as_posix()
 
 SPARK_WEEKS = 52   # 상세 그래프 길이 = 비교 창과 같게
+
+# 평형 표기. "현재 실거래가"를 평형 없이 찍으면 거짓말이 된다 — 같은 단지에서
+# 15평과 40평이 두 배 넘게 차이 난다. 마커에도 반드시 같이 적는다.
+PYEONG_ORDER = ["10P", "15P", "20P", "25P", "30P", "35P", "40P", "50P", "60P+"]
+PYEONG_LABEL = {
+    "10P": "10평대", "15P": "10평대 후반", "20P": "20평대", "25P": "20평대 후반",
+    "30P": "30평대", "35P": "30평대 후반", "40P": "40평대", "50P": "50평대",
+    "60P+": "60평 이상",
+}
+
+# 단지 마커 색은 **90일 전과 견준 평당가 변화**를 나타낸다. 지역 마커(거래량)와
+# 기준이 달라서 범례를 레벨에 따라 바꿔 단다 — 같은 빨강이 다른 뜻이면
+# 범례를 외워야 읽히는 지도가 된다.
+APT_DIR_BAND = 1.0   # ±1% 안쪽은 회색. 0.2% 를 빨갛게 칠하지 않는다
 
 LEVELS = {
     "sgg": {"now": SGG_NOW, "weeks": SGG_WEEKS, "label": "시군구",
@@ -133,6 +148,7 @@ def meta() -> dict:
         "levels": {k: {"label": v["label"], "window": v["window"]}
                    for k, v in LEVELS.items()},
         "distribution": dist,
+        "pyeongs": [{"code": c, "label": PYEONG_LABEL[c]} for c in PYEONG_ORDER],
         "source": "국토교통부 실거래가 공개시스템 · 해제(취소) 건 제외",
         # 면책은 '변경 금지' 고정 문구다. 화면용으로 다시 쓰지 않고 승인된
         # 문구를 그대로 내려보낸다 — 스레드·인스타·캐러셀과 같은 문장이다.
@@ -239,25 +255,101 @@ def region(level: str, code: str) -> dict:
 
 
 # ── 단지 ─────────────────────────────────────────────────────────────────
+def apt_dir(chg, thin) -> str:
+    if thin or chg is None:
+        return "thin"
+    return "up" if chg >= APT_DIR_BAND else ("down" if chg <= -APT_DIR_BAND else "flat")
+
+
+M2_PER_PYEONG = 3.305785
+
+
+def decorate(r: dict) -> dict:
+    """마커·목록이 쓸 표시용 필드를 붙인다."""
+    r["dir"] = apt_dir(r.get("chg"), r.get("thin"))
+    r["pyeong_label"] = PYEONG_LABEL.get(r.get("pyeong_bucket"), r.get("pyeong_bucket"))
+    # 마커에 박을 짧은 평형.
+    #
+    # 버킷 라벨("20평대 후반")은 말풍선에 넣기엔 길고, 범위라 어느 거래를
+    # 말하는지도 흐리다. **그 거래의 실제 전용면적**을 평으로 환산해 쓴다 —
+    # 가격과 면적이 같은 거래에서 나온 한 쌍이 되므로 더 정확하다.
+    a = r.get("last_area")
+    r["pyeong_short"] = f"{a / M2_PER_PYEONG:.0f}평" if a else None
+    return r
+
+
+APT_COLS = """
+    apt_id, apt_name, sigungu_name, legal_dong_name, build_year,
+    pyeong_bucket, last_date, last_price, round(last_ppy) AS last_ppy,
+    last_floor, last_area, n_1y, n_recent, n_prior,
+    round(chg_pct, 1) AS chg, round(vs_peak_pct, 1) AS vs_peak,
+    peak_price, peak_date, thin, lat, lng
+"""
+
+
 @app.get("/api/apts")
 def apts(bbox: str | None = Query(None), q: str | None = Query(None),
-         limit: int = Query(80, le=300)) -> dict:
-    where, params = ["lat IS NOT NULL"], []
+         pyeong: str | None = Query(None),
+         limit: int = Query(220, le=600)) -> dict:
+    """지도 마커용 단지 목록.
+
+    `pyeong` 을 주면 그 평형 기준으로 값이 바뀐다 — 평형을 고르면 마커 가격도
+    같이 바뀌어야 한다. 안 주면 대표 평형(최근 1년 거래가 가장 많은 평형)이다.
+    """
+    src, where, params = APT_NOW, ["lat IS NOT NULL"], []
+    if pyeong:
+        want = [p for p in pyeong.split(",") if p in PYEONG_ORDER]
+        if not want:
+            raise HTTPException(400, f"pyeong 은 {PYEONG_ORDER} 중에서")
+        src = APT_PY
+        where.append("pyeong_bucket IN (" + ",".join("?" * len(want)) + ")")
+        params += want
+        where.append("last_date > current_date - INTERVAL 730 DAY")
     if bbox:
-        w, s, e, n = (float(x) for x in bbox.split(","))
+        try:
+            w, s_, e, n = (float(x) for x in bbox.split(","))
+        except ValueError:
+            raise HTTPException(400, "bbox 는 'w,s,e,n' 형식")
         where.append("lng BETWEEN ? AND ? AND lat BETWEEN ? AND ?")
-        params += [w, e, s, n]
+        params += [w, e, s_, n]
     if q:
         where.append("apt_name ILIKE ?")
         params.append(f"%{q}%")
-    return {"items": rows(f"""
-        SELECT apt_id, apt_name, sigungu_name, legal_dong_name, build_year,
-               n_recent, n_prior, round(ppy_recent) AS ppy,
-               round(chg_pct, 1) AS chg, thin, lat, lng
-        FROM read_parquet('{APT_NOW}')
+    # 거래가 많은 단지를 먼저 남긴다. 겹쳐서 잘릴 때 표본이 두터운 쪽이 살아야 한다.
+    items = rows(f"""SELECT {APT_COLS} FROM read_parquet('{src}')
         WHERE {' AND '.join(where)}
-        ORDER BY thin ASC, n_recent DESC
-        LIMIT {limit}""", params)}
+        ORDER BY n_1y DESC, last_date DESC LIMIT {limit}""", params)
+    total = rows(f"""SELECT count(*) AS n FROM read_parquet('{src}')
+        WHERE {' AND '.join(where)}""", params)[0]["n"]
+    return {"items": [decorate(r) for r in items], "total": total,
+            "truncated": total > len(items), "pyeong": pyeong}
+
+
+@app.get("/api/apt/{apt_id}")
+def apt_detail(apt_id: str) -> dict:
+    """단지 상세 — 평형을 전부 펼친다.
+
+    한 단지를 한 숫자로 요약하지 않는다. 평형마다 가격도 거래도 다르고,
+    그걸 접으면 어느 평형을 보는 사람에게든 틀린 값이 된다.
+    """
+    py = rows(f"""SELECT {APT_COLS}, n_total FROM read_parquet('{APT_PY}')
+        WHERE apt_id = ?""", [apt_id])
+    if not py:
+        raise HTTPException(404, "단지를 찾을 수 없습니다")
+    py.sort(key=lambda r: PYEONG_ORDER.index(r["pyeong_bucket"])
+            if r["pyeong_bucket"] in PYEONG_ORDER else 99)
+    head = max(py, key=lambda r: (r["n_1y"], r["n_total"]))
+    # 이 단지가 속한 지역이 지금 평소와 다른지도 같이 보여준다 — 단지만 보면
+    # 동네 전체가 움직인 건지 이 단지만 움직인 건지 알 수 없다.
+    region = rows(f"""
+        SELECT name, state, deals, round(deals_avg, 1) AS deals_usual,
+               round(r_deals, 2) AS ratio
+        FROM read_parquet('{DONG_NOW}')
+        WHERE code = (SELECT legal_dong_code FROM read_parquet('{APT_PY}')
+                      WHERE apt_id = ? LIMIT 1)""", [apt_id])
+    return {"apt": decorate(head), "pyeongs": [decorate(r) for r in py],
+            "region": region[0] if region else None,
+            "region_state": STATES.get(region[0]["state"], {}) if region else {}}
 
 
 @app.get("/api/search")

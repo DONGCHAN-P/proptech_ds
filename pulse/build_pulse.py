@@ -93,6 +93,10 @@ APT_WINDOW = 90
 # 목록에 올라왔다. 한 건만 달라도 뒤집히는 수다.
 APT_MIN_DEALS = 5
 
+# 지도 마커에 올릴 마지막 거래의 유효기간.
+# 5년 전 거래 한 건을 '현재 실거래가'라고 찍으면 그 자체가 틀린 정보다.
+APT_MAP_MAX_AGE_DAYS = 730
+
 
 def log(msg: str) -> None:
     print(f"  {msg}", flush=True)
@@ -278,54 +282,94 @@ def build_now(con, cur_week: str) -> tuple[int, int]:
 
 
 # ── 단지 ─────────────────────────────────────────────────────────────────
-def build_apt(con, asof: str) -> int:
-    """단지는 **90일 vs 직전 90일**로 본다 (weekly surge_apt 와 같은 정의).
+def build_apt(con, asof: str) -> tuple[int, int]:
+    """단지 — 평형별로 만든다.
 
-    단지 하나의 주간 거래는 0건인 주가 대부분이라 주간 비교가 성립하지 않는다.
-    표본(n)을 반드시 같이 들고 다닌다 — 9건으로 계산한 +35% 를 그냥 내보내면
-    거짓말이 된다.
+    "현재 실거래가"는 **평형을 빼면 거짓말이 된다.** 같은 단지에서 15평과
+    40평이 두 배 넘게 차이 나서, 평형 없이 한 숫자만 찍으면 어느 쪽을 봐도
+    틀린 값이 된다. 그래서 (단지 × 평형)이 기본 단위이고, 지도 마커에는
+    **대표 평형**(최근 1년 거래가 가장 많은 평형)을 쓰고 그 평형을 같이 적는다.
+
+    변화율은 90일 vs 직전 90일 (weekly surge_apt 와 같은 정의). 단지 하나의
+    주간 거래는 0건인 주가 대부분이라 주간 비교가 성립하지 않는다.
+
+    마지막 거래가는 **사실**이라 표본 경고가 필요 없다. 경고가 붙는 건
+    변화율 쪽이다 — 3건으로 뽑은 −11% 는 한 건만 달라도 뒤집힌다.
     """
+    W, Y = APT_WINDOW, 365
     sql = trades_cte(TRADES) + f""",
     t AS (
-        SELECT apt_id, deal_date, price_per_pyeong AS ppy
+        SELECT apt_id, pyeong_bucket, area_m2, deal_date, deal_amount,
+               price_per_pyeong AS ppy, floor_band
         FROM trades
-        WHERE price_per_pyeong IS NOT NULL
-          AND deal_date > DATE '{asof}' - INTERVAL {APT_WINDOW * 2} DAY
+        WHERE price_per_pyeong IS NOT NULL AND pyeong_bucket IS NOT NULL
           AND deal_date <= DATE '{asof}'
     ),
-    split AS (
-        SELECT apt_id,
+    agg AS (
+        SELECT apt_id, pyeong_bucket,
+               count(*) AS n_total,
+               count(*) FILTER (WHERE deal_date > DATE '{asof}' - INTERVAL {Y} DAY)
+                   AS n_1y,
+               count(*) FILTER (WHERE deal_date > DATE '{asof}' - INTERVAL {W} DAY)
+                   AS n_recent,
                count(*) FILTER (
-                   WHERE deal_date > DATE '{asof}' - INTERVAL {APT_WINDOW} DAY
-               ) AS n_recent,
-               count(*) FILTER (
-                   WHERE deal_date <= DATE '{asof}' - INTERVAL {APT_WINDOW} DAY
+                   WHERE deal_date <= DATE '{asof}' - INTERVAL {W} DAY
+                     AND deal_date >  DATE '{asof}' - INTERVAL {W * 2} DAY
                ) AS n_prior,
+               median(ppy) FILTER (WHERE deal_date > DATE '{asof}' - INTERVAL {W} DAY)
+                   AS ppy_recent,
                median(ppy) FILTER (
-                   WHERE deal_date > DATE '{asof}' - INTERVAL {APT_WINDOW} DAY
-               ) AS ppy_recent,
-               median(ppy) FILTER (
-                   WHERE deal_date <= DATE '{asof}' - INTERVAL {APT_WINDOW} DAY
-               ) AS ppy_prior
-        FROM t GROUP BY 1
+                   WHERE deal_date <= DATE '{asof}' - INTERVAL {W} DAY
+                     AND deal_date >  DATE '{asof}' - INTERVAL {W * 2} DAY
+               ) AS ppy_prior,
+               -- 전고점은 같은 평형 안에서만 뜻이 있다
+               max(deal_amount) AS peak_price,
+               arg_max(deal_date, deal_amount)::DATE AS peak_date,
+               arg_max(deal_date, deal_date)::DATE AS last_date,
+               arg_max(deal_amount, deal_date) AS last_price,
+               arg_max(ppy, deal_date) AS last_ppy,
+               arg_max(floor_band, deal_date) AS last_floor,
+               arg_max(area_m2, deal_date) AS last_area
+        FROM t GROUP BY 1, 2
     )
-    SELECT s.apt_id, a.apt_name, a.sigungu_code, a.sigungu_name,
-           a.legal_dong_code, a.legal_dong_name, a.lat, a.lng, a.build_year,
-           s.n_recent, s.n_prior, s.ppy_recent, s.ppy_prior,
-           (s.ppy_recent / s.ppy_prior - 1) * 100 AS chg_pct,
-           -- 표본이 얇다는 사실을 행에 박아 둔다. 화면에서 빠뜨릴 수 없게.
-           (s.n_recent < {APT_MIN_DEALS} OR s.n_prior < {APT_MIN_DEALS}) AS thin
-    FROM split s
-    JOIN read_parquet('{APT}') a USING (apt_id)
-    WHERE s.ppy_recent IS NOT NULL AND s.ppy_prior IS NOT NULL
-      AND a.lat IS NOT NULL
+    SELECT a.apt_id, x.apt_name, x.sigungu_code, x.sigungu_name,
+           x.legal_dong_code, x.legal_dong_name, x.lat, x.lng, x.build_year,
+           a.pyeong_bucket, a.n_total, a.n_1y, a.n_recent, a.n_prior,
+           a.ppy_recent, a.ppy_prior,
+           (a.ppy_recent / a.ppy_prior - 1) * 100 AS chg_pct,
+           a.last_date, a.last_price, a.last_ppy, a.last_floor, a.last_area,
+           a.peak_price, a.peak_date,
+           (a.last_price / a.peak_price - 1) * 100 AS vs_peak_pct,
+           (a.ppy_recent IS NULL OR a.ppy_prior IS NULL
+            OR a.n_recent < {APT_MIN_DEALS} OR a.n_prior < {APT_MIN_DEALS}) AS thin
+    FROM agg a
+    JOIN read_parquet('{APT}') x USING (apt_id)
+    WHERE x.lat IS NOT NULL
     """
-    con.execute(f"CREATE OR REPLACE TABLE apt_now AS {sql}")
-    return con.execute("SELECT count(*) FROM apt_now").fetchone()[0]
+    con.execute(f"CREATE OR REPLACE TABLE apt_pyeong_now AS {sql}")
+
+    # 지도 마커용 1행/1단지. 대표 평형은 최근 1년 거래가 가장 많은 평형이고,
+    # 1년 거래가 아예 없으면 누적 최다 평형으로 떨어진다.
+    con.execute(f"""
+    CREATE OR REPLACE TABLE apt_now AS
+    SELECT * EXCLUDE (rn) FROM (
+        SELECT *, row_number() OVER (
+            PARTITION BY apt_id
+            ORDER BY n_1y DESC, n_total DESC, last_date DESC
+        ) AS rn
+        FROM apt_pyeong_now
+    ) WHERE rn = 1
+      -- 지도에 올릴 값은 '최근'이어야 한다. 5년 전 거래 한 건을 '현재
+      -- 실거래가'로 찍으면 그 자체가 틀린 정보다.
+      AND last_date > DATE '{asof}' - INTERVAL {APT_MAP_MAX_AGE_DAYS} DAY
+    """)
+    return (con.execute("SELECT count(*) FROM apt_pyeong_now").fetchone()[0],
+            con.execute("SELECT count(*) FROM apt_now").fetchone()[0])
 
 
 # ── 메인 ─────────────────────────────────────────────────────────────────
-TABLES = ["sgg_weeks", "dong_weeks", "sgg_now", "dong_now", "apt_now"]
+TABLES = ["sgg_weeks", "dong_weeks", "sgg_now", "dong_now",
+          "apt_now", "apt_pyeong_now"]
 
 
 def main() -> int:
@@ -348,7 +392,9 @@ def main() -> int:
     log(f"읍면동 {DONG_WINDOW}일 … {build_dong(con, str(cur_week)):,}행")
     n_sgg, n_dong = build_now(con, str(cur_week))
     log(f"현재 상태 … 시군구 {n_sgg} · 읍면동 {n_dong}")
-    log(f"단지 {APT_WINDOW}일 비교 … {build_apt(con, str(asof)):,}개")
+    n_ap, n_a = build_apt(con, str(asof))
+    log(f"단지×평형 … {n_ap:,}행 · 지도 마커 {n_a:,}개 "
+        f"(최근 {APT_MAP_MAX_AGE_DAYS}일 안에 거래가 있는 단지)")
 
     for t in TABLES:
         con.execute(f"COPY {t} TO '{(OUT / f'{t}.parquet').as_posix()}' (FORMAT PARQUET)")

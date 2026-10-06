@@ -152,6 +152,110 @@ const Panel = (() => {
     U.$('#drawer').hidden = false;
   }
 
+  /* ── 범례 — 레벨마다 색의 뜻이 다르다 ─────────────────────────
+     지역에서는 색이 거래량, 단지에서는 90일 전 대비 값의 변화다. 같은 빨강이
+     다른 뜻이면 범례를 외워야 읽히는 지도가 되므로, 지금 뭘 보고 있는지에
+     맞춰 범례를 바꿔 단다. */
+  const LEGEND = {
+    region: {
+      rows: [
+        ['dot up', '거래가 평소보다 <b>많음</b>'],
+        ['dot flat', '평소 수준'],
+        ['dot down', '거래가 평소보다 <b>적음</b>'],
+        ['dot thin', '거래가 적어 판단 보류'],
+        ['dot ring', '테두리 = 값이 평소보다 <b>빠르게</b> 오름'],
+        ['dot size', '원 크기 = 그 기간 거래 건수'],
+      ],
+      note: '색은 거래량만 나타냅니다. 값의 움직임은 테두리로 따로 표시합니다.',
+    },
+    apt: {
+      rows: [
+        ['dot up', '90일 전보다 평당가 <b>오름</b>'],
+        ['dot flat', '거의 그대로 (±1% 안)'],
+        ['dot down', '90일 전보다 평당가 <b>내림</b>'],
+        ['dot thin', '거래가 적어 비교 보류 (점선)'],
+      ],
+      note: '말풍선 숫자는 <b>그 평형의 마지막 실거래가</b>입니다. 추정가가 '
+          + '아니라 신고된 금액이에요. 평형이 다르면 가격도 달라서 평형을 '
+          + '같이 적습니다.',
+    },
+  };
+
+  function legend(level) {
+    const L = LEGEND[level === 'apt' ? 'apt' : 'region'];
+    U.$('#legend ul').innerHTML = L.rows
+      .map(([c, t]) => `<li><i class="${c}"></i> ${t}</li>`).join('');
+    U.$('#legend .note').innerHTML = L.note;
+  }
+
+  /* ── 단지 상세 — 평형을 접지 않는다 ────────────────────────── */
+  function aptDetail(d) {
+    const a = d.apt;
+    const rows = d.pyeongs.map(p => `
+      <div class="pyrow ${p.thin ? 'thin' : ''}">
+        <div class="k">${U.esc(p.pyeong_label)}
+          <small>${p.last_area ? p.last_area.toFixed(0) + '㎡ · ' : ''}${U.esc(p.last_floor || '')}
+            · ${U.ymd(p.last_date)} · 1년 ${p.n_1y}건</small>
+        </div>
+        <div class="pr">${U.won(p.last_price)}
+          <small>평당 ${U.ppy(p.last_ppy)}</small>
+        </div>
+        <div class="ch ${p.thin ? 'flat' : p.dir}">
+          ${p.thin ? '–' : U.pct(p.chg)}
+          <small>${p.thin ? `${p.n_recent}/${p.n_prior}건` : '90일 전'}</small>
+        </div>
+      </div>`).join('');
+
+    const r = d.region;
+    const ctx = r ? `<div class="hint">
+        이 단지가 있는 <b>${U.esc(r.name)}</b>은 최근 4주 거래가
+        <b>평소의 ${U.times(r.ratio)}</b>예요
+        (${r.deals}건 / 평소 ${U.num(r.deals_usual)}건) —
+        ${U.esc(d.region_state.label || '')}.
+        단지만 보면 동네가 통째로 움직인 건지 이 단지만 움직인 건지 알 수 없어요.
+      </div>` : '';
+
+    U.$('#detail').innerHTML = `
+      <div class="d-kicker">${U.esc(a.sigungu_name)} ${U.esc(a.legal_dong_name || '')}${a.build_year ? ' · ' + a.build_year + '년 준공' : ''}</div>
+      <div class="d-name">${U.esc(a.apt_name)}</div>
+
+      <div class="d-rows">
+        <div class="d-row">
+          <div class="k">마지막 실거래<small>${U.esc(a.pyeong_label)} · ${U.esc(a.last_floor || '')} · ${U.ymd(a.last_date)}</small></div>
+          <div class="v">${U.won(a.last_price)}<small>평당 ${U.ppy(a.last_ppy)}</small></div>
+        </div>
+        <div class="d-row">
+          <div class="k">전고점 대비<small>${U.ymd(a.peak_date)} ${U.won(a.peak_price)}</small></div>
+          <div class="v ${U.dirOf(a.vs_peak, .5)}">${U.pct(a.vs_peak)}</div>
+        </div>
+      </div>
+
+      <div class="d-h">평형별 — 마지막 실거래와 90일 전 대비</div>
+      <div class="pytable">${rows}</div>
+      ${ctx}
+
+      <p class="disc">${U.esc(META.source)}.
+        표에 적힌 금액은 <b>신고된 실거래가</b>이고 추정가가 아닙니다.
+        같은 평형이어도 층·향·수리 상태로 갈립니다.<br><br>
+        ${U.esc(META.disclaimer)}</p>`;
+    U.$('#drawer').hidden = false;
+  }
+
+  /* ── 단지 목록 (좌측) ──────────────────────────────────────── */
+  function aptlist(el, items) {
+    el.innerHTML = items.map(a => `
+      <li data-apt="${U.esc(a.apt_id)}" class="${a.thin ? 'thin' : ''}">
+        <div class="nm">${U.esc(a.apt_name)}
+          <small>${U.esc(a.legal_dong_name || '')} · ${U.esc(a.pyeong_label)}
+            · ${U.ymd(a.last_date)} · 1년 ${a.n_1y}건</small>
+        </div>
+        <div class="val">${U.won(a.last_price)}
+          <small class="${a.thin ? '' : a.dir}">${a.thin ? '비교 보류' : U.pct(a.chg) + ' (90일)'}</small>
+        </div>
+      </li>`).join('');
+    U.$$('li', el).forEach(li => li.onclick = () => onPick(li.dataset.apt));
+  }
+
   function limits(meta) {
     U.$('#limits ul').innerHTML = [
       `<b>가격 수준이 아니라 변화 속도</b>를 봅니다. 비싼 동네인지 싼 동네인지는
@@ -170,5 +274,6 @@ const Panel = (() => {
     ].map(t => `<li>${t}</li>`).join('');
   }
 
-  return { setMeta, headline, ranklist, detail, limits };
+  return { setMeta, headline, ranklist, detail, limits,
+           legend, aptDetail, aptlist };
 })();
