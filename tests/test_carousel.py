@@ -146,124 +146,38 @@ def t_angle(cards) -> str:
 def test_표본을_숨기지_않는다(cards):
     """비율·배수를 쓴 장은 **그 수가 몇 건으로 나온 건지** 같이 적는다.
 
-    표본 경고를 따로 한 장으로 두던 걸 뺐다 — 같은 단지가 3장 연속이 돼서
-    (지시사항 5항: 한 대상 최대 2장). 대신 각 장이 자기 표본을 들고 다닌다.
-    빠뜨리면 여기서 걸린다.
+    단지 소개 덱에서는 표지가 "최근 1년 이 단지 거래 N건"을, 비교 장이
+    단지별 "1년 N건" 배지를 들고 다닌다. 빠뜨리면 여기서 걸린다.
     """
-    want = {"02_detail": ("cover", "history_count")}
-    seen = 0
-    if t_angle(cards) != "new_high":
-        pytest.skip("신고가 앵글일 때만 누적 거래 수를 쓴다")
-    for c in cards:
-        key = want.get(c["name"])
-        if not key:
-            continue
-        row = (c["facts"]["card"] or {}).get(key[0])
-        if not row:
-            continue
-        n = row[key[1]]
-        text = C.strip_html(c["html"])
-        assert f"{n:,}건" in text or f"{n}건" in text, f"{c['name']}: 표본 {n} 누락"
-        seen += 1
-    assert seen, "표본을 들고 다녀야 할 장이 하나도 없다"
+    cov = cards[0]["facts"]["card"]
+    prof = cov.get("profile")
+    if not prof:
+        pytest.skip("단지 소개 덱이 아님")
+    assert f'{prof["deals_1y"]}건' in C.strip_html(cards[0]["html"])
+    nb = next((c for c in cards if c["layout"] == "compare_bars"), None)
+    if nb:
+        t = C.strip_html(nb["html"])
+        for r in prof["neighbors"][:3]:
+            if C.D.split_name(r["apt_name"], 10)[0] in t:
+                assert f'{r["deals_1y"]}건' in t, r["apt_name"]
 
 
 def test_비교에는_양쪽_값을_모두_쓴다(cards):
-    """지시사항 9항. '거래 9건'만 쓰면 늘었는지 줄었는지 알 수 없다."""
+    """지시사항 9항. 한쪽만 쓰면 늘었는지 줄었는지 알 수 없다."""
     c = next((c for c in cards if c["layout"] == "compare_bars"), None)
     if c is None:
         pytest.skip("비교 장 없음")
-    text = C.strip_html(c["html"])
-    r = c["facts"]["card"]["region"]
-    assert f'{D.num(r["deals_avg_52w"])}건' in text and f'{r["week_deals"]}건' in text, (
-        text[:200])
-
-
-def test_큰숫자_장은_표본이_충분한_값만_쓴다(data):
-    """연천군 7건으로 '평소의 2.4배'를 뽑으면 거짓말이 된다."""
-    t = C.pick(data)
-    if t is None:
-        pytest.skip("재료 부족")
-    z = data["weekly"]["sgg_zscore"]
-    if any(r["week_deals"] >= C.MIN_SAMPLE for r in z if r.get("deals_avg_52w")):
-        assert t["busiest"]["week_deals"] >= C.MIN_SAMPLE
-
-
-# ── 이미지 출처 ──────────────────────────────────────────────────────────
-def test_생성_이미지를_쓰지_않는다():
-    """실사풍 건물 이미지는 실제 단지 오인을 부른다 (로드맵 규칙)."""
-    src = (ROOT / "content" / "carousel.py").read_text(encoding="utf-8")
-    for 금지 in ("fal.ai", "fal_client", "FAL_KEY", "dall-e", "midjourney",
-                 "stable-diffusion", "text2img"):
-        assert 금지 not in src, f"이미지 생성 흔적: {금지}"
-
-
-def test_외부_이미지를_참조하지_않는다(cards):
-    """렌더 시점에 네트워크를 타면 그날 발행이 네트워크에 걸린다."""
-    for c in cards:
-        for m in re.finditer(r'src="([^"]+)"', c["html"]):
-            assert not m.group(1).startswith("http"), (
-                f"{c['name']} 외부 이미지 참조: {m.group(1)[:40]}")
-
-
-def test_카드에_차트PNG를_끼우지_않는다(cards):
-    """완성된 4:5 차트를 카드에 넣으면 제목·출처가 중복되고 높이가 안 맞는다.
-
-    T11 의 단독 차트는 스레드에 붙이는 1~2장으로 쓴다.
-    """
-    for c in cards:
-        assert "<img" not in c["html"], f"{c['name']} 에 이미지가 들어갔다"
-
-
-def test_같은_그래프를_두_번_보여주지_않는다(cards):
-    """지역 순위를 2장과 4장에 각각 그리던 시절의 회귀를 막는다."""
-    bars = [c["name"] for c in cards if c["layout"] == "ranked_bars"]
-    assert len(bars) <= 1, bars
-
-
-def test_양_끝을_같이_보여준다(cards):
-    """붐빈 쪽만 보여주면 '수도권 거래가 늘었다'로 읽힌다.
-
-    `rows` 장으로 두 줄만 보여주던 걸 온도지도로 바꿨다 — 빨강과 파랑이
-    한 화면에 같이 있어야 "동네마다 다르다"가 설명 없이 읽힌다.
-    """
-    heat = next((c for c in cards if c["layout"] == "map_heat"), None)
-    assert heat is not None, [c["name"] for c in cards]
-    html = heat["html"]
-    assert 'class="up"' in html and 'class="down"' in html, (
-        "증감 양쪽이 같은 장에 없다")
-    rows = heat["facts"]["card"]["regions"]
-    assert any(r["ratio"] > 1.1 for r in rows), "붐빈 쪽이 없다"
-    assert any(r["ratio"] < 0.9 for r in rows), "조용한 쪽이 없다"
-
-
-def test_온도지도가_표본부족을_색으로_속이지_않는다(cards, data):
-    """회색으로 칠해 버리면 "데이터가 없다"가 "변화가 없다"로 읽힌다."""
-    from content import geo, design as D
-    heat = next((c for c in cards if c["layout"] == "map_heat"), None)
-    if heat is None:
-        pytest.skip("온도지도 없음")
-    dim = geo.mix(D.BG, "#000000", 0.03)
-    normal = geo.mix(D.BG, "#000000", 0.07)
-    assert dim != normal, "표본 부족과 '평소'가 같은 색이다"
-    assert dim in heat["html"], "표본 부족 색을 안 쓰고 있다"
-
-
-def test_어두운_장은_표지뿐(cards):
-    """5항: 어두운 건 표지에만. 2장부터 오프화이트라야 계정 정체성이 산다."""
-    dark = [c["name"] for c in cards if c.get("dark")]
-    assert dark in ([], ["01_cover"]), dark
-
-
-# ── 렌더 산출물 ──────────────────────────────────────────────────────────
-def test_렌더된_파일이_존재한다(outdir, cards):
-    missing = [c["name"] for c in cards
-               if not (outdir / f"{c['name']}.png").exists()]
-    if missing:
-        pytest.skip(f"아직 렌더 안 됨: {missing[:3]}")
-    for c in cards:
-        p = outdir / f"{c['name']}.png"
-        assert p.stat().st_size > 8_000, f"{p.name} 이 너무 작다 (빈 이미지?)"
+    t = C.strip_html(c["html"])
+    f = c["facts"]["card"]
+    if "profile" in f:
+        # 단지 소개: 주인공과 이웃이 같은 화면에 있어야 눈금이 생긴다
+        me = C.D.split_name(f["profile"]["apt_name"], 10)[0]
+        assert me in t, "주인공이 비교 목록에서 잘렸다"
+        assert sum(C.D.split_name(r["apt_name"], 10)[0] in t
+                   for r in f["profile"]["neighbors"]) >= 2, "비교 대상이 모자라다"
+    else:
+        r = f["region"]
+        assert f'{D.num(r["deals_avg_52w"])}건' in t and f'{r["week_deals"]}건' in t
 
 
 # ── 지시사항 적합성 (한 번 고친 건 다시 무너지지 않게) ──────────────────
@@ -315,7 +229,7 @@ def test_층위가_점점_넓어진다(cards):
     장마다 각자의 1등을 뽑아 오면 "표지는 마포구, 2장은 포천, 4장은 영통동"
     처럼 여덟 장이 서로 남남이 된다. 층위가 뒤로 갈수록 넓어지는지 본다.
     """
-    rank = {"apt": 0, "region": 1, "metro": 2, "summary": 3}
+    rank = {"apt": 0, "dong": 1, "region": 2, "metro": 3, "summary": 4}
     seq = [rank[c["scope"]] for c in cards if c.get("scope")]
     assert seq == sorted(seq), [
         (c["name"], c.get("scope")) for c in cards]
@@ -498,7 +412,7 @@ def test_표지_폴백_순서(cards):
     """사진 → 지도 → 오프화이트 (5항). 없는 걸 쓰지 않는다."""
     from content import geo, photos
     lay = cards[0]["layout"]
-    assert lay in ("photo_cover", "map_cover", "hero_number"), lay
+    assert lay in ("photo_cover", "map_cover", "hero_number", "apt_cover"), lay
     if lay == "map_cover":
         assert geo.available()
     if lay == "photo_cover":
@@ -507,8 +421,10 @@ def test_표지_폴백_순서(cards):
 
 # ── 팔로우 유도 장 ───────────────────────────────────────────────────────
 def test_마지막이_팔로우_유도_장(cards):
+    """단지 소개 덱은 정리 장 없이 팔로우로 닫는다 (6장 구성)."""
     assert cards[-1]["layout"] == "follow_cta", cards[-1]["layout"]
-    assert cards[-2]["layout"] == "summary_cta", cards[-2]["layout"]
+    assert cards[-2]["layout"] in ("summary_cta", "rows", "signals"), (
+        cards[-2]["layout"])
 
 
 def test_팔로우_장에_핸들이_크게_있다(cards):

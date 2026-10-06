@@ -202,7 +202,10 @@ def test_좌표계를_투영_미터로_다룬다():
     cos(radians(1951000)) 은 뜻 없는 값이다. 투영 좌표는 이미 평면이다.
     """
     src = (ROOT / "content" / "geo.py").read_text(encoding="utf-8")
-    assert "math.cos" not in src, "투영 좌표에 위도 보정을 쓰고 있다"
+    # 투영 좌표에 **위도 보정을 거는 것**만 금지다. 위경도→UTM-K 변환식
+    # (to_utmk) 은 당연히 삼각함수를 쓴다 — 그건 다른 얘기다.
+    assert "math.radians((y0" not in src, "투영 좌표에 위도 보정을 쓰고 있다"
+    assert "def to_utmk" in src, "좌표 변환이 없다"
     if geo.available():
         f = geo.load()["features"][0]
         x, y = f["geometry"]["coordinates"][0][0][0]

@@ -172,7 +172,8 @@ def scope_of(code: str | None) -> str | None:
 def svg(highlight: dict[str, str], *, width: int, height: int,
         line: str, fill: str, label_color: str,
         label_halo: str = "#FFFFFF",
-        scope: str | None = None) -> str | None:
+        scope: str | None = None,
+        pins: list[dict] | None = None) -> str | None:
     """수도권 지도 SVG.
 
     `highlight` 는 {우리 시군구명: 색}. 거기 없는 곳은 전부 중립색이다 —
@@ -188,6 +189,7 @@ def svg(highlight: dict[str, str], *, width: int, height: int,
              if scope is None or f["properties"]["region"] == scope]
     if not feats:
         feats = data["features"]
+    fill_pin = next(iter(highlight.values()), label_color)
     want = {}
     for name, color in highlight.items():
         g, _ = geo_name(name)
@@ -238,6 +240,29 @@ def svg(highlight: dict[str, str], *, width: int, height: int,
             f'font-size="30" font-weight="700" fill="{label_color}" '
             f'stroke="{label_halo}" stroke-width="5" paint-order="stroke" '
             f'style="font-family:Pretendard">{nm}</text>')
+    # 단지 핀. 경계는 투영 미터라 위경도를 같은 좌표계로 옮겨 찍는다.
+    for pin in (pins or []):
+        if pin.get("lat") is None or pin.get("lng") is None:
+            continue
+        px, py = P(*to_utmk(pin["lng"], pin["lat"]))
+        if pin.get("primary"):
+            parts.append(
+                f'<circle cx="{px:.1f}" cy="{py:.1f}" r="22" fill="{line}" '
+                f'opacity=".35"/>'
+                f'<circle cx="{px:.1f}" cy="{py:.1f}" r="11" fill="{fill_pin}" '
+                f'stroke="#FFFFFF" stroke-width="4"/>')
+        else:
+            parts.append(
+                f'<circle cx="{px:.1f}" cy="{py:.1f}" r="7" '
+                f'fill="{label_color}" opacity=".55" '
+                f'stroke="{label_halo}" stroke-width="2"/>')
+        if pin.get("label"):
+            parts.append(
+                f'<text x="{px:.1f}" y="{py - 28:.1f}" text-anchor="middle" '
+                f'font-size="30" font-weight="800" fill="{label_color}" '
+                f'stroke="{label_halo}" stroke-width="6" paint-order="stroke" '
+                f'style="font-family:Pretendard">{pin["label"]}</text>')
+
     return (f'<svg width="{width}" height="{height}" '
             f'viewBox="0 0 {width} {height}">{"".join(parts)}</svg>')
 
@@ -374,3 +399,47 @@ def _path(f: dict, ox: float, oy: float, y1: float, x0: float,
                    for x, y in ring]
             d.append("M" + "L".join(f"{a:.1f},{b:.1f}" for a, b in pts) + "Z")
     return "".join(d)
+
+
+# ── 좌표 변환 (WGS84 → EPSG:5179) ────────────────────────────────────────
+#
+# 경계는 UTM-K(Korea 2000 Unified, EPSG:5179) 투영 미터인데 단지 좌표는
+# 위경도다. 지도에 단지 핀을 찍으려면 같은 좌표계로 옮겨야 한다.
+#
+# pyproj 를 쓰지 않는다 — 의존성 하나를 더 들이는 대신, 파라미터가 공개된
+# 표준 횡축 메르카토르 식을 그대로 옮긴다. 아래 상수가 EPSG:5179 정의다.
+# (`tests/test_cover.py` 가 시군구 경계 중심과 대조해 오차를 확인한다.)
+import math  # noqa: E402
+
+_A = 6378137.0                 # GRS80 장반경
+_F = 1 / 298.257222101         # GRS80 편평률
+_K0, _LAT0, _LON0 = 0.9996, 38.0, 127.5
+_X0, _Y0 = 1_000_000.0, 2_000_000.0
+
+
+def to_utmk(lng: float, lat: float) -> tuple[float, float]:
+    """위경도 → EPSG:5179 (m). 표준 TM 전개식."""
+    e2 = _F * (2 - _F)
+    ep2 = e2 / (1 - e2)
+    p, l = math.radians(lat), math.radians(lng)
+    p0, l0 = math.radians(_LAT0), math.radians(_LON0)
+
+    def M(phi: float) -> float:
+        return _A * (
+            (1 - e2 / 4 - 3 * e2**2 / 64 - 5 * e2**3 / 256) * phi
+            - (3 * e2 / 8 + 3 * e2**2 / 32 + 45 * e2**3 / 1024) * math.sin(2 * phi)
+            + (15 * e2**2 / 256 + 45 * e2**3 / 1024) * math.sin(4 * phi)
+            - (35 * e2**3 / 3072) * math.sin(6 * phi))
+
+    N = _A / math.sqrt(1 - e2 * math.sin(p) ** 2)
+    T = math.tan(p) ** 2
+    C = ep2 * math.cos(p) ** 2
+    A = (l - l0) * math.cos(p)
+    x = _X0 + _K0 * N * (
+        A + (1 - T + C) * A**3 / 6
+        + (5 - 18 * T + T**2 + 72 * C - 58 * ep2) * A**5 / 120)
+    y = _Y0 + _K0 * (
+        M(p) - M(p0) + N * math.tan(p) * (
+            A**2 / 2 + (5 - T + 9 * C + 4 * C**2) * A**4 / 24
+            + (61 - 58 * T + T**2 + 600 * C - 330 * ep2) * A**6 / 720))
+    return x, y

@@ -37,6 +37,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from content import cover as CV  # noqa: E402
 from content import design as D  # noqa: E402
+from content import apt_story as A  # noqa: E402
 from content import geo  # noqa: E402
 from content import photos  # noqa: E402
 from content.validator import validate  # noqa: E402
@@ -641,18 +642,27 @@ def build_cards(data: dict, chart_dir: Path | None = None) -> list[dict]:
     # 전에는 장마다 각자의 1등을 뽑아 왔다. 표지는 마포구 신고가, 2장은
     # 포천·안성 순위, 4~5장은 수원 영통동 단지… 한 장씩은 다 맞는 말인데
     # 여덟 장이 서로 남남이라 "그래서 무슨 얘기냐"가 안 남는다.
-    cards = [c1_cover(t, 0), n2_detail(t, 0)]
-    region = n3_region(t)
-    if region:
-        cards.append(region)
-    cards.append(c3_heat(t, 0))
-    # 같은 주 다른 곳 — 단지에서 시작했으면 다른 단지, 지역에서 시작했으면
-    # 다른 지역으로 받는다. 소재가 바뀌는 자리는 여기 한 장뿐이다.
-    others = (c6_tiles(t, 0) if t["cover"].angle in ("new_high", "counter")
-              else c2_ranking(t, 0))
-    if others:
-        cards.append(others)
-    cards += [c7_outro(t, 0, 0), c8_follow(t, 0, 0)]
+    c = t["cover"]
+    prof = (c.data or {}).get("profile")
+    if prof:
+        # **단지 소개** — 한 단지를 여섯 장에 걸쳐 설명한다.
+        cards = [A.cover(t, prof, 0), A.trend(t, prof, 0),
+                 A.nearby(t, prof, 0), A.signals(t, prof, 0)]
+        reg = A.region(t, prof, 0)
+        if reg:
+            cards.append(reg)
+        cards.append(c8_follow(t, 0, 0))
+    else:
+        # 소개할 단지가 없으면 지역 이야기로 간다 (폴백).
+        cards = [c1_cover(t, 0), n2_detail(t, 0)]
+        region = n3_region(t)
+        if region:
+            cards.append(region)
+        cards.append(c3_heat(t, 0))
+        others = c2_ranking(t, 0)
+        if others:
+            cards.append(others)
+        cards += [c7_outro(t, 0, 0), c8_follow(t, 0, 0)]
 
     # 페이지 번호는 장이 다 정해진 뒤에 매긴다. 중간 장이 빠질 수 있어서
     # 각 함수가 자기 번호를 들고 있으면 1,2,4,5… 가 된다.

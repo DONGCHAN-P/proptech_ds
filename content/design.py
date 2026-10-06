@@ -211,6 +211,17 @@ body{{background:{BG};color:{INK};
 .heat-ticks{{display:flex;justify-content:space-between;margin-top:8px;
             font-size:24px;color:{SUB};}}
 
+/* ── signals (같이 볼 만한 것) ─────────────────────────────────────
+   "원인"이 아니라 "신호"다. 그래서 각 항목에 **왜 이걸 보는지**를 한 줄
+   덧붙인다. 숫자만 세 개 나열하면 읽는 사람이 원인으로 받아들인다. */
+.sigs{{display:flex;flex-direction:column;gap:24px;}}
+.sig{{border-left:4px solid {LINE};padding-left:24px;}}
+.sig-k{{font-size:26px;font-weight:700;color:{SUB};letter-spacing:-.01em;}}
+.sig-v{{font-size:36px;font-weight:700;line-height:1.35;margin-top:8px;
+       letter-spacing:-.02em;}}
+.sig-w{{font-size:26px;font-weight:500;color:{SUB};line-height:1.45;
+       margin-top:8px;}}
+
 /* ── follow_cta ────────────────────────────────────────────────────
    마지막 장. 여기까지 넘긴 사람은 이미 관심이 있는 사람이라, 설득이 아니라
    **무엇을 계속 받게 되는지**만 말하면 된다. 과장하면 그동안 쌓은 톤이 깨진다. */

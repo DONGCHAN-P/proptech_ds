@@ -26,6 +26,19 @@ ROOT = Path(__file__).resolve().parent.parent
 LOG = ROOT / "output" / "cover_log.json"
 
 MIN_SAMPLE = 10          # 표본이 이보다 적으면 표지 금지 (5-1, 6항)
+
+# 단지 소개 캐러셀은 한 단지를 여섯 장에 걸쳐 설명한다. 그러려면 **받쳐줄
+# 데이터**가 있어야 한다 — 추이를 그릴 만큼의 월별 기록과, 견줄 이웃 단지.
+#
+# 실측: 마포구 서강오벨리스크스위트는 신고가 +53.5% 로 1위였지만 창전동
+# 같은 평형대에 비교할 단지가 **한 곳뿐**이었다. 그 상태로 "주변과 비교"
+# 장을 만들면 막대 두 개짜리 그림이 나온다. 수치가 1위라고 글이 되는 게
+# 아니다.
+PROFILE_MIN_POINTS = 12      # 월별 기록
+PROFILE_MIN_NEIGHBORS = 3    # 견줄 이웃 단지
+# 그 단지의 **연간 거래량**. "많은 사람이 아는 곳"의 대리 지표다.
+# 상승률로 줄 세우면 아무도 모르는 소형 단지가 1위로 올라온다.
+POPULAR_MIN = 20
 OUTSIDER_EDGE = 1.5      # 비우선 지역이 표지가 되려면 이만큼 더 커야 한다
 RECENT_WEEKS = 1         # 직전 몇 회차까지 같은 지역을 막을 것인가
 
@@ -102,20 +115,39 @@ class Candidate:
 
 
 # ── 후보 만들기 ──────────────────────────────────────────────────────────
+def profile_ok(prof: dict | None) -> bool:
+    """단지 소개를 끌고 갈 만한 프로필인가."""
+    if not prof:
+        return False
+    return (len(prof.get("series") or []) >= PROFILE_MIN_POINTS
+            and len(prof.get("neighbors") or []) >= PROFILE_MIN_NEIGHBORS
+            and prof.get("deals_1y", 0) >= POPULAR_MIN)
+
+
 def build(data: dict) -> list[Candidate]:
     out: list[Candidate] = []
     weekly = data.get("weekly") or {}
     daily = data.get("daily") or {}
+    profs = data.get("profiles") or {}
 
     # ① 신고가 — 누적 거래가 두터운 평형만. 누적 6건짜리 "148% 경신"은
     #    시세가 아니라 표본이 만든 숫자다.
     for r in daily.get("new_high") or []:
         if r.get("history_count", 0) < MIN_SAMPLE:
             continue
+        # 소개할 재료가 없으면 표지로 쓰지 않는다. 수치가 1위여도
+        # 여섯 장을 채울 수 없으면 글이 안 된다.
+        if not profile_ok(profs.get(r.get("apt_id"))):
+            continue
+        prof = profs[r["apt_id"]]
+        # 세기는 **인기(연간 거래량)**다. 상승률은 헤드라인 숫자로 쓰되
+        # 줄 세우는 데는 쓰지 않는다 — 한 단지를 여섯 장에 소개하는 포맷에서
+        # 중요한 건 "그 단지를 아는 사람이 얼마나 되는가"다.
         out.append(Candidate(
             "new_high", r["sigungu_name"], r.get("sigungu_code"),
-            f'{r["apt_name"]} 종전 최고가 경신 (+{r["over_peak_pct"]}%)',
-            r["over_peak_pct"], r["history_count"], r))
+            f'{r["apt_name"]} 종전 최고가 경신 (+{r["over_peak_pct"]}%) · '
+            f'1년 거래 {prof["deals_1y"]}건',
+            prof["deals_1y"], r["history_count"], dict(r, profile=prof)))
 
     # ② 반전 — 값은 오르는데 거래는 줄었다. 숫자만 보면 "오르는 동네"로
     #    읽히는 구간이라 설명 가치가 가장 크다.

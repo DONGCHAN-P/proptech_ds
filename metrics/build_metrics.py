@@ -146,7 +146,8 @@ def new_high(con, asof: date) -> list[dict]:
     return q(con, f"""
         {cte()},
         ranked AS (
-            SELECT apt_id, apt_name_raw, sigungu_code, sigungu_name, legal_dong_name,
+            SELECT apt_id, apt_name_raw, sigungu_code, sigungu_name,
+                   legal_dong_code, legal_dong_name, build_year,
                    pyeong_bucket, floor_band, deal_date, deal_amount, area_m2,
                    price_per_pyeong,
                    max(deal_amount) OVER (
@@ -156,7 +157,8 @@ def new_high(con, asof: date) -> list[dict]:
                    count(*) OVER (PARTITION BY apt_id, pyeong_bucket) AS hist_n
             FROM trades
         )
-        SELECT apt_name_raw AS apt_name, sigungu_name, legal_dong_name,
+        SELECT apt_id, apt_name_raw AS apt_name, sigungu_code, sigungu_name,
+               legal_dong_code, legal_dong_name, build_year,
                pyeong_bucket, floor_band, deal_date, deal_amount,
                round(area_m2, 1) AS area_m2,
                round(price_per_pyeong) AS price_per_pyeong,
@@ -217,7 +219,8 @@ def outliers(con, asof: date) -> list[dict]:
         {cte()},
         base AS (
             SELECT t.apt_id, t.pyeong_bucket, t.deal_date, t.deal_amount,
-                   t.apt_name_raw, t.sigungu_name, t.legal_dong_name,
+                   t.apt_name_raw, t.sigungu_code, t.sigungu_name,
+                   t.legal_dong_code, t.legal_dong_name, t.build_year,
                    t.floor_band, t.area_m2,
                    avg(p.deal_amount) AS ref_avg,
                    count(p.deal_amount) AS ref_n
@@ -227,9 +230,10 @@ def outliers(con, asof: date) -> list[dict]:
              AND p.deal_date < t.deal_date
              AND p.deal_date >= t.deal_date - INTERVAL 90 DAY
             WHERE t.deal_date > DATE '{since}' AND t.deal_date <= DATE '{asof}'
-            GROUP BY 1, 2, 3, 4, 5, 6, 7, 8, 9
+            GROUP BY ALL
         )
-        SELECT apt_name_raw AS apt_name, sigungu_name, legal_dong_name,
+        SELECT apt_id, apt_name_raw AS apt_name, sigungu_code, sigungu_name,
+               legal_dong_code, legal_dong_name, build_year,
                pyeong_bucket, floor_band, deal_date, deal_amount,
                round(area_m2, 1) AS area_m2,
                round(ref_avg) AS ref_avg, ref_n AS ref_count,
@@ -401,6 +405,123 @@ def series_for_charts(con, asof: date, picks: list[dict]) -> list[dict]:
     return out
 
 
+# ── 단지 프로필 ──────────────────────────────────────────────────────────
+#
+# "단지 한 곳을 소개하는" 캐러셀에 필요한 재료를 한 덩어리로 만든다.
+# 캐러셀이 DB 를 따로 뒤지지 않게 하려는 것이다 — 발행되는 숫자는 전부 이
+# JSON 에서 나와야 T12 검증기가 전수 대조할 수 있다.
+PROFILE_N = 8            # 표지 후보 상위 몇 곳까지 프로필을 만들 것인가
+PROFILE_MIN_HIST = 10    # 누적 거래가 이보다 적은 평형은 소개하지 않는다
+NEIGHBOR_N = 6           # 주변 단지 비교에 쓸 개수
+NEIGHBOR_YEARS = 1       # 주변 단지는 최근 이 기간에 거래가 있어야 한다
+
+APT_MAP = (DIRS["master"] / "apt_id_map.parquet").as_posix()
+
+
+def profiles(con, asof: date, picks: list[dict]) -> dict:
+    """표지 후보 단지의 소개 재료.
+
+    담는 것
+      series    그 평형의 월별 실거래 추이 (이번 거래를 짚어 보여주려고)
+      neighbors 같은 법정동·같은 평형대의 다른 단지 최근 실거래가
+      others    같은 단지의 다른 평형
+      coords    지도에 점을 찍을 좌표
+
+    **원인은 담지 않는다.** 왜 올랐는지는 거래 데이터로 확인할 수 없다.
+    대신 "같이 볼 만한 것"을 판단할 재료만 넣는다 — 같은 단지 다른 평형도
+    올랐는지, 동네 다른 단지는 어떤지, 거래가 늘었는지.
+    """
+    # 후보를 **그 단지의 연간 거래량** 순으로 줄 세운다.
+    #
+    # 상승률 순으로 잡으면 아무도 모르는 소형 단지가 올라온다 (실측: 구로구
+    # 성원, 중랑구 현대휴온). 한 단지를 여섯 장에 걸쳐 소개하는 포맷에서는
+    # "그 단지를 아는 사람이 얼마나 되는가"가 더 중요하고, 거래량이 그
+    # 대리 지표다. 상승률은 헤드라인 숫자로 그대로 쓴다.
+    cand = {p["apt_id"]: p for p in picks
+            if p.get("apt_id") and p.get("history_count", 0) >= PROFILE_MIN_HIST}
+    if not cand:
+        return {}
+    ids = ",".join(f"'{a}'" for a in cand)
+    pop = {r["apt_id"]: r["deals_1y"] for r in q(con, f"""
+        {cte()}
+        SELECT apt_id, count(*) AS deals_1y FROM trades
+        WHERE apt_id IN ({ids})
+          AND deal_date > DATE '{asof}' - INTERVAL 1 YEAR
+          AND deal_date <= DATE '{asof}'
+        GROUP BY 1
+    """)}
+    ordered = sorted(cand.values(),
+                     key=lambda r: pop.get(r["apt_id"], 0), reverse=True)
+
+    out: dict[str, dict] = {}
+    for p in ordered:
+        aid = p["apt_id"]
+        if len(out) >= PROFILE_N:
+            break
+
+        pts = q(con, f"""
+            {cte()}
+            SELECT strftime(date_trunc('month', deal_date), '%Y-%m') AS ym,
+                   round(avg(deal_amount)) AS avg_price,
+                   count(*) AS deals
+            FROM trades
+            WHERE apt_id = '{aid}' AND pyeong_bucket = '{p["pyeong_bucket"]}'
+              AND deal_date <= DATE '{asof}'
+            GROUP BY 1 ORDER BY 1
+        """)
+
+        nb = q(con, f"""
+            {cte()},
+            last AS (
+                SELECT apt_id, any_value(apt_name_raw) AS apt_name,
+                       any_value(build_year) AS build_year,
+                       count(*) AS deals_1y,
+                       arg_max(deal_amount, deal_date) AS last_price,
+                       arg_max(deal_date, deal_date)::DATE AS last_date
+                FROM trades
+                WHERE legal_dong_code = '{p["legal_dong_code"]}'
+                  AND pyeong_bucket = '{p["pyeong_bucket"]}'
+                  AND apt_id <> '{aid}'
+                  AND deal_date > DATE '{asof}' - INTERVAL {NEIGHBOR_YEARS} YEAR
+                  AND deal_date <= DATE '{asof}'
+                GROUP BY 1
+            )
+            SELECT l.*, m.lat, m.lng
+            FROM last l LEFT JOIN read_parquet('{APT_MAP}') m USING (apt_id)
+            ORDER BY l.deals_1y DESC LIMIT {NEIGHBOR_N}
+        """)
+
+        others = q(con, f"""
+            {cte()}
+            SELECT pyeong_bucket,
+                   count(*) AS deals_1y,
+                   arg_max(deal_amount, deal_date) AS last_price,
+                   arg_max(deal_date, deal_date)::DATE AS last_date
+            FROM trades
+            WHERE apt_id = '{aid}' AND pyeong_bucket <> '{p["pyeong_bucket"]}'
+              AND deal_date > DATE '{asof}' - INTERVAL 1 YEAR
+              AND deal_date <= DATE '{asof}'
+            GROUP BY 1 ORDER BY 2 DESC
+        """)
+
+        geo = q(con, f"""
+            SELECT lat, lng, road_address FROM read_parquet('{APT_MAP}')
+            WHERE apt_id = '{aid}' LIMIT 1
+        """)
+        out[aid] = {
+            "apt_id": aid, "apt_name": p["apt_name"],
+            "sigungu_code": p.get("sigungu_code"),
+            "sigungu_name": p["sigungu_name"],
+            "legal_dong_name": p.get("legal_dong_name"),
+            "pyeong_bucket": p["pyeong_bucket"],
+            "build_year": p.get("build_year"),
+            "deals_1y": pop.get(aid, 0),
+            "series": pts, "neighbors": nb, "other_pyeongs": others,
+            **(geo[0] if geo else {}),
+        }
+    return out
+
+
 # ── 메인 ─────────────────────────────────────────────────────────────────
 def main() -> int:
     ap = argparse.ArgumentParser(description="T9 지표 계산")
@@ -463,6 +584,10 @@ def main() -> int:
 
     result["series"] = series_for_charts(con, asof, result["daily"]["new_high"])
     print(f"  {'차트 시계열':14s} {len(result['series']):>4}건")
+    # 표지 후보는 신고가·특이거래 양쪽에서 나온다
+    cand = (result["daily"]["new_high"] or []) + (result["daily"]["outlier"] or [])
+    result["profiles"] = profiles(con, asof, cand)
+    print(f"  {'단지 프로필':14s} {len(result['profiles']):>4}건")
     con.close()
     result["peak_ram_mb"] = peak_ram_mb()
 
