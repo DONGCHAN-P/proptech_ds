@@ -421,6 +421,87 @@ APT_MAP = (DIRS["master"] / "apt_id_map.parquet").as_posix()
 AROUND_DEG = 0.012
 AROUND_STATIONS, AROUND_PARKS, AROUND_COMMERCE = 8, 10, 40
 
+# 도로는 OpenStreetMap(ODbL)에서 가져온다.
+#
+# 호갱노노는 공개 API 가 없고 캡처 재발행은 약관 위반이다. 카카오·구글 지도는
+# **이미지**를 저장·재발행하는 데 제약이 크고, 받아 와도 우리 디자인과 전혀
+# 다른 그림이라 톤이 깨진다. OSM 은 출처만 밝히면 상업 사용·재배포가 되고,
+# 이미 web/ 앱이 같은 조건으로 타일을 쓰고 있다.
+OSM_CREDIT = "도로 © OpenStreetMap contributors (ODbL)"
+# 공개 서버는 연속 요청을 제한한다. 실제로 단지 8곳 중 3곳만 받아지고
+# 나머지는 조용히 빈 결과가 됐다 — 지도에 도로가 없는데 실패는 안 보였다.
+# 미러를 돌려 쓰고 한 번 쉬었다 재시도한다.
+OSM_URLS = ("https://overpass-api.de/api/interpreter",
+            "https://overpass.kumi.systems/api/interpreter",
+            "https://overpass.osm.jp/api/interpreter")
+OSM_PAUSE = 2.0
+OSM_CACHE = ROOT / "raw" / "osm"
+OSM_KINDS = "motorway|trunk|primary|secondary|tertiary|residential"
+# 지도에 **그릴** 도로는 간선만. 이면도로까지 다 그리면 그물망이 돼서
+# 참고로 삼은 안내도의 "굵은 선 몇 개" 느낌이 사라진다 (실측: 강북구 한 곳에
+# 1,204개). 수집은 넓게 해서 캐시에 두고, 내보낼 때 걸러 JSON 도 가볍게 한다.
+OSM_DRAW = {"motorway", "trunk", "primary", "secondary", "tertiary"}
+
+
+def osm_roads(lat: float, lng: float) -> list[dict]:
+    """주변 도로 중심선. 실패하면 빈 리스트 — 도로 없이도 지도는 그려진다.
+
+    한 번 받은 구역은 파일로 남긴다. 매주 같은 단지를 다시 뽑을 수도 있고,
+    남의 공개 서버를 반복해서 두드릴 이유가 없다.
+    """
+    import json as _json
+    import urllib.parse
+    import urllib.request
+
+    OSM_CACHE.mkdir(parents=True, exist_ok=True)
+    cache = OSM_CACHE / f"roads_{lat:.3f}_{lng:.3f}.json"
+    def major(rows: list[dict]) -> list[dict]:
+        return [r for r in rows if r.get("kind") in OSM_DRAW]
+
+    if cache.exists():
+        try:
+            return major(_json.loads(cache.read_text(encoding="utf-8")))
+        except Exception:
+            pass
+
+    d = AROUND_DEG
+    q = (f'[out:json][timeout:25];'
+         f'way["highway"~"^({OSM_KINDS})$"]'
+         f'({lat - d:.4f},{lng - d * 1.3:.4f},{lat + d:.4f},{lng + d * 1.3:.4f});'
+         f'out geom;')
+    data = None
+    last = ""
+    for i, base in enumerate(OSM_URLS):
+        try:
+            if i:
+                time.sleep(OSM_PAUSE)
+            req = urllib.request.Request(
+                base + "?" + urllib.parse.urlencode({"data": q}),
+                headers={"User-Agent": "proptech-ds/1.0 (weekly carousel)"})
+            with urllib.request.urlopen(req, timeout=50) as r:
+                data = _json.loads(r.read().decode("utf-8"))
+            break
+        except Exception as e:
+            last = f"{type(e).__name__}"
+    if data is None:
+        print(f"  OSM 도로 조회 실패 ({last}) — 이 단지는 도로 없이 간다")
+        return []
+
+    roads = []
+    for el in data.get("elements", []):
+        g = el.get("geometry") or []
+        if len(g) < 2:
+            continue
+        roads.append({
+            "kind": (el.get("tags") or {}).get("highway"),
+            "name": (el.get("tags") or {}).get("name"),
+            # 좌표를 그대로 두면 프로필 JSON 이 금세 커진다. 카드 축척에서
+            # 10m 아래는 같은 픽셀이라 소수 4자리로 줄인다.
+            "pts": [[round(p["lat"], 4), round(p["lon"], 4)] for p in g],
+        })
+    cache.write_text(_json.dumps(roads, ensure_ascii=False), encoding="utf-8")
+    return major(roads)
+
 
 def around(lat: float | None, lng: float | None) -> dict:
     """단지 주변의 지하철역·공원·상권·하천.
@@ -456,6 +537,8 @@ def around(lat: float | None, lng: float | None) -> dict:
             "rivers": pick(
                 "SELECT river_name AS name, lat, lng FROM rivers"
                 " WHERE lat BETWEEN ? AND ? AND lng BETWEEN ? AND ?", 3),
+            "roads": osm_roads(lat, lng),
+            "road_credit": OSM_CREDIT,
         }
     except Exception as e:
         print(f"  주변 지리 조회 실패 ({type(e).__name__}) — 지도 없이 간다")

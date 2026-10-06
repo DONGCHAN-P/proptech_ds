@@ -29,7 +29,7 @@ from content import geo  # noqa: E402
 from content import neighbor_map as NM  # noqa: E402
 
 # 동네 데이터는 대체로 정사각이라 상자도 정사각에 가깝게 둔다.
-MAP_W, MAP_H = 620, 420
+MAP_W, MAP_H = 600, 392
 TREND_W, TREND_H = 936, 420
 MIN_SAMPLE = 10
 
@@ -62,6 +62,11 @@ def cover(t: dict, prof: dict, n: int) -> dict:
                       scope=geo.scope_of(prof.get("sigungu_code")),
                       pins=[{"lat": prof.get("lat"), "lng": prof.get("lng"),
                              "primary": True}])
+    # 지도에 쓴 자료의 출처를 전부 밝힌다 (경계·도로).
+    a = prof.get("around") or {}
+    credit = " · ".join(x for x in (
+        geo.CREDIT if svg and "mc-map" else None,
+        a.get("road_credit") if a.get("roads") else None) if x)
     inner = (
         f'<div class="body">'
         f'{cond}'
@@ -76,7 +81,7 @@ def cover(t: dict, prof: dict, n: int) -> dict:
         f'</div>')
     return {"name": "01_cover", "layout": "apt_cover", "dark": True,
             "scope": "apt", "facts": {"cover": d, "profile": pf(prof)},
-            "html": D.head(1, n) + inner + D.foot(t["asof"], geo.CREDIT)}
+            "html": D.head(1, n) + inner + D.foot(t["asof"], credit)}
 
 
 # ── 2 실거래 추이 ────────────────────────────────────────────────────────

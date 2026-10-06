@@ -74,6 +74,8 @@ def render(prof: dict, *, width: int, height: int, dark: bool = False,
              for f in (a.get(key) or [])]
     feats += [(f["lat"], f["lng"]) for f in (neighbors or [])
               if f.get("lat") is not None]
+    # 도로는 범위 계산에서 뺀다 — 한 구간이 멀리까지 뻗으면 축척이 내려간다.
+    # 그려질 때 뷰박스 밖은 자연히 잘린다.
     def spread(vals: list[float]) -> float:
         """바깥 15% 는 버린다. 멀리 떨어진 상권 격자 하나 때문에 축척이
         내려가면 정작 단지 주변이 작아진다."""
@@ -107,6 +109,24 @@ def render(prof: dict, *, width: int, height: int, dark: bool = False,
     ink, sub, halo, paper = D.INK, D.SUB, "#FFFFFF", "#FFFFFF"
     parts: list[str] = [
         f'<rect width="{width}" height="{height}" rx="28" fill="{paper}"/>']
+
+    # ── 도로: 지도의 뼈대 ────────────────────────────────────────────
+    #    참고 안내도의 굵은 회색 선이다. 간선일수록 굵게 그려 위계를 준다.
+    #    OSM(ODbL) 이라 출처를 각주에 적는다.
+    ROAD_W = {"motorway": 16, "trunk": 14, "primary": 12,
+              "secondary": 9, "tertiary": 7, "residential": 4}
+    roads = sorted((r for r in (a.get("roads") or [])),
+                   key=lambda r: ROAD_W.get(r.get("kind"), 4))
+    for rd in roads:
+        pts = [P(la, ln) for la, ln in rd["pts"]]
+        if not any(-60 <= x <= width + 60 and -60 <= y <= height + 60
+                   for x, y in pts):
+            continue
+        d_ = "M" + "L".join(f"{x:.0f},{y:.0f}" for x, y in pts)
+        w = ROAD_W.get(rd.get("kind"), 4)
+        parts.append(
+            f'<path d="{d_}" fill="none" stroke="#C3C7CF" stroke-width="{w}" '
+            f'stroke-linecap="round" stroke-linejoin="round"/>')
 
     # ── 상권: 가게가 몰린 격자를 둥근 띠로 뭉뚱그린다 ──────────────────
     #    격자 하나하나를 네모로 그리면 모자이크가 된다. 겹치는 원을 흐리게

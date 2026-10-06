@@ -245,3 +245,54 @@ def test_금지_소스를_쓰지_않는다():
     for 금지 in ("kakao", "naver.com/map", "roadview", "dall-e", "midjourney",
                  "stable-diffusion", "fal.ai", "text2img"):
         assert 금지 not in src.lower(), f"금지 소스 흔적: {금지}"
+
+
+# ── 동네 지도 (OSM 도로 포함) ────────────────────────────────────────────
+def test_외부_지도_서비스를_캡처하지_않는다():
+    """호갱노노·카카오·구글 지도 이미지를 가져다 쓰지 않는다.
+
+    공개 API 가 없거나(호갱노노), 지도 이미지를 저장·재발행하는 데 제약이
+    크다(카카오·구글). 우리는 공공데이터와 OSM(ODbL)으로만 그린다.
+    """
+    # **호스트·API 흔적**만 본다. "호갱노노를 쓰지 않는다"는 설명 주석까지
+    # 걸면, 왜 안 쓰는지 적어 둔 글이 위반으로 잡힌다.
+    src = "".join((ROOT / "content" / f).read_text(encoding="utf-8")
+                  for f in ("neighbor_map.py", "geo.py", "apt_story.py"))
+    src += (ROOT / "metrics" / "build_metrics.py").read_text(encoding="utf-8")
+    src = src.lower()
+    for host in ("hogangnono.com", "dapi.kakao.com", "maps.googleapis.com",
+                 "map.naver.com", "openapi.map.naver", "staticmap",
+                 "roadview", "api.vworld.kr/req/image"):
+        assert host not in src, host
+
+
+def test_도로_출처를_밝힌다():
+    """ODbL 은 출처 표기를 요구한다. 표기 없이 쓰면 라이선스 위반이다."""
+    from metrics import build_metrics as M
+    assert "OpenStreetMap" in M.OSM_CREDIT and "ODbL" in M.OSM_CREDIT
+
+
+def test_간선도로만_그린다():
+    """이면도로까지 다 그리면 그물망이 된다 (실측: 강북구 한 곳에 1,204개)."""
+    from metrics import build_metrics as M
+    assert "residential" not in M.OSM_DRAW
+    assert {"primary", "secondary", "tertiary"} <= M.OSM_DRAW
+
+
+def test_도로가_없어도_지도는_그려진다(data):
+    """공개 Overpass 는 연속 요청을 제한한다. 한 번 실패했다고 그 주 발행이
+    멈추면 안 된다."""
+    from content import neighbor_map as NM
+    prof = next(iter((data.get("profiles") or {}).values()), None)
+    if not prof:
+        pytest.skip("프로필 없음")
+    stripped = dict(prof, around=dict(prof.get("around") or {}, roads=[]))
+    svg = NM.render(stripped, width=620, height=420, dark=True)
+    assert svg and svg.startswith("<svg")
+
+
+def test_지도에_그리는_것은_다섯_가지뿐(data):
+    """상권·역·단지·자연·라벨. 요청받은 범위 밖을 임의로 늘리지 않는다."""
+    src = (ROOT / "content" / "neighbor_map.py").read_text(encoding="utf-8")
+    for layer in ("commerce", "stations", "parks", "rivers", "roads"):
+        assert layer in src, layer
