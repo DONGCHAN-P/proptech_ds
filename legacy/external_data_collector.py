@@ -57,7 +57,19 @@ except ImportError:
 
 ROOT     = Path(__file__).parent
 CONFIG   = ROOT / "config" / "secrets.json"
-RAW      = ROOT / "raw"
+# 이 파일이 legacy/ 로 옮겨지면서 ROOT 가 legacy/ 가 됐는데, 원본 데이터는
+# 프로젝트 루트의 raw/ 에 있다. legacy/raw/ 도 **폴더만** 남아 있어서
+# "폴더가 있나"로 고르면 빈 쪽을 집는다. 실제로 그래서 "raw/shop/ 에 CSV
+# 없음" 으로 조용히 건너뛰었다 — 루트에 CSV 17개가 멀쩡히 있는데도.
+# 내용물이 있는 쪽을 고른다.
+def _pick_raw() -> Path:
+    for base in (ROOT / "raw", ROOT.parent / "raw"):
+        if base.is_dir() and any(p.is_file() for p in base.rglob("*")):
+            return base
+    return ROOT / "raw"
+
+
+RAW      = _pick_raw()
 DB_PATH  = ROOT / "realestate.db"
 
 RAW_SUBWAY  = RAW / "subway"
@@ -722,9 +734,14 @@ def step5_commerce():
         print(f"     파일명 예: 소상공인시장진흥공단_상가(상권)정보_20251231.csv (utf-8)")
         return
 
-    csv_path = csv_files[0]
-    file_size = csv_path.stat().st_size / (1024**2)
-    print(f"  CSV: {csv_path.name} ({file_size:.0f}MB)")
+    # **모든 CSV 를 읽는다.**
+    #
+    # 전에는 csv_files[0] 하나만 읽었다. 알파벳순 첫 파일이 "강원"이라
+    # 수도권 격자가 가평·양평 언저리 1,281개뿐이었고, 서울·인천은 0개였다.
+    # 그 상태로 "주변 상권" 을 그리면 서울 한복판이 상권 없는 동네로 나온다.
+    csv_files = sorted(csv_files)
+    total_mb = sum(f.stat().st_size for f in csv_files) / (1024**2)
+    print(f"  CSV {len(csv_files)}개 ({total_mb:.0f}MB)")
     print(f"  수도권 필터 후 0.005도 격자 집계 중...")
 
     grids     = defaultdict(lambda: {
@@ -734,34 +751,36 @@ def step5_commerce():
     })
     processed = filtered = 0
 
-    with open(csv_path, encoding="utf-8") as f:
-        reader  = csv.DictReader(f)
-        headers = reader.fieldnames or []
-        lat_col = next((c for c in headers if "위도" in c), "위도")
-        lng_col = next((c for c in headers if "경도" in c), "경도")
-        cat_col = next((c for c in headers if "소분류명" in c), "상권업종소분류명")
+    for csv_path in csv_files:
+        with open(csv_path, encoding="utf-8") as f:
+            reader  = csv.DictReader(f)
+            headers = reader.fieldnames or []
+            lat_col = next((c for c in headers if "위도" in c), "위도")
+            lng_col = next((c for c in headers if "경도" in c), "경도")
+            cat_col = next((c for c in headers if "소분류명" in c), "상권업종소분류명")
 
-        for row in reader:
-            processed += 1
-            if processed % 500_000 == 0:
-                print(f"  → {processed:,}건 처리 중 (격자 {len(grids):,}개)...")
-            try:
-                lat = float(row.get(lat_col, 0) or 0)
-                lng = float(row.get(lng_col, 0) or 0)
-                if not (36.8 < lat < 38.1 and 126.5 < lng < 127.8):
+            for row in reader:
+                processed += 1
+                if processed % 500_000 == 0:
+                    print(f"  → {processed:,}건 처리 중 (격자 {len(grids):,}개)...",
+                          flush=True)
+                try:
+                    lat = float(row.get(lat_col, 0) or 0)
+                    lng = float(row.get(lng_col, 0) or 0)
+                    if not (36.8 < lat < 38.1 and 126.5 < lng < 127.8):
+                        continue
+                    gid = _grid_id(lat, lng)
+                    g   = grids[gid]
+                    g["total"] += 1
+                    g["lat"]    = round(lat/GRID_STEP) * GRID_STEP
+                    g["lng"]    = round(lng/GRID_STEP) * GRID_STEP
+                    cat = row.get(cat_col, "")
+                    for key, kws in COMMERCE_KEYWORDS.items():
+                        if any(k in cat for k in kws):
+                            g[key] += 1; break
+                    filtered += 1
+                except Exception:
                     continue
-                gid = _grid_id(lat, lng)
-                g   = grids[gid]
-                g["total"] += 1
-                g["lat"]    = round(lat/GRID_STEP) * GRID_STEP
-                g["lng"]    = round(lng/GRID_STEP) * GRID_STEP
-                cat = row.get(cat_col, "")
-                for key, kws in COMMERCE_KEYWORDS.items():
-                    if any(k in cat for k in kws):
-                        g[key] += 1; break
-                filtered += 1
-            except Exception:
-                continue
 
     print(f"  처리 완료: {processed:,}건 → 수도권 {filtered:,}건 → {len(grids):,}개 격자")
 

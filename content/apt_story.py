@@ -26,8 +26,10 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from content import design as D  # noqa: E402
 from content import geo  # noqa: E402
+from content import neighbor_map as NM  # noqa: E402
 
-MAP_W, MAP_H = 936, 360
+# 동네 데이터는 대체로 정사각이라 상자도 정사각에 가깝게 둔다.
+MAP_W, MAP_H = 620, 420
 TREND_W, TREND_H = 936, 420
 MIN_SAMPLE = 10
 
@@ -49,12 +51,17 @@ def cover(t: dict, prof: dict, n: int) -> dict:
     built = f'{prof["build_year"]}년 준공' if prof.get("build_year") else ""
     cond = D.cond(f'{prof["sigungu_name"]} {prof["legal_dong_name"]}', built,
                   D.pyeong(prof["pyeong_bucket"]))
-    svg = geo.svg({prof["sigungu_name"]: D.UP}, width=MAP_W, height=MAP_H,
-                  line=D.LINE, fill=geo.mix(D.INK, "#FFFFFF", 0.18),
-                  label_color=D.COVER_INK, label_halo=D.INK,
-                  scope=geo.scope_of(prof.get("sigungu_code")),
-                  pins=[{"lat": prof.get("lat"), "lng": prof.get("lng"),
-                         "primary": True}])
+    # 동네 지도가 먼저. 시군구 경계 지도는 "어디쯤"만 알려주는데, 단지를
+    # 소개하는 글에서 궁금한 건 "주변에 뭐가 있나"다.
+    svg = NM.render(prof, width=MAP_W, height=MAP_H, dark=True,
+                    neighbors=prof.get("neighbors"))
+    if not svg:
+        svg = geo.svg({prof["sigungu_name"]: D.UP}, width=MAP_W, height=MAP_H,
+                      line=D.LINE, fill=geo.mix(D.INK, "#FFFFFF", 0.18),
+                      label_color=D.COVER_INK, label_halo=D.INK,
+                      scope=geo.scope_of(prof.get("sigungu_code")),
+                      pins=[{"lat": prof.get("lat"), "lng": prof.get("lng"),
+                             "primary": True}])
     inner = (
         f'<div class="body">'
         f'{cond}'

@@ -33,7 +33,7 @@ import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from common import DIRS  # noqa: E402
+from common import DB_PATH, DIRS  # noqa: E402
 from metrics.filters import trades_cte  # noqa: E402
 
 TRADE = (DIRS["master"] / "trade_events.parquet").as_posix()
@@ -417,6 +417,52 @@ NEIGHBOR_YEARS = 1       # 주변 단지는 최근 이 기간에 거래가 있�
 
 APT_MAP = (DIRS["master"] / "apt_id_map.parquet").as_posix()
 
+# 동네 지도(`content/neighbor_map.py`)가 그릴 주변 요소. 반경(도) 약 1.3km.
+AROUND_DEG = 0.012
+AROUND_STATIONS, AROUND_PARKS, AROUND_COMMERCE = 8, 10, 40
+
+
+def around(lat: float | None, lng: float | None) -> dict:
+    """단지 주변의 지하철역·공원·상권·하천.
+
+    `legacy/realestate.db` 의 참조 지리 데이터다. 거래 숫자가 아니라 **지도에
+    그릴 요소**라 여기서 읽어 지표 JSON 에 함께 담는다 — 캐러셀이 DB 를 따로
+    열지 않게 하려는 것이다(발행물은 한 파일에서 나온다는 원칙).
+    """
+    if lat is None or lng is None or not Path(DB_PATH).exists():
+        return {}
+    import sqlite3
+    d = AROUND_DEG
+    box = (lat - d, lat + d, lng - d * 1.3, lng + d * 1.3)
+    con = sqlite3.connect(str(DB_PATH))
+    con.row_factory = sqlite3.Row
+    try:
+        def pick(sql: str, n: int) -> list[dict]:
+            return [dict(r) for r in con.execute(sql, box).fetchall()[:n]]
+
+        return {
+            "stations": pick(
+                "SELECT station_name AS name, line, lat, lng FROM subway_stations"
+                " WHERE lat BETWEEN ? AND ? AND lng BETWEEN ? AND ?", AROUND_STATIONS),
+            # 작은 쌈지공원까지 다 그리면 지도가 초록 점으로 덮인다
+            "parks": pick(
+                "SELECT park_name AS name, area_m2, lat, lng FROM parks"
+                " WHERE lat BETWEEN ? AND ? AND lng BETWEEN ? AND ?"
+                " AND area_m2 >= 3000 ORDER BY area_m2 DESC", AROUND_PARKS),
+            "commerce": pick(
+                "SELECT lat, lng, total_stores, commerce_score FROM commerce_zones"
+                " WHERE lat BETWEEN ? AND ? AND lng BETWEEN ? AND ?"
+                " ORDER BY commerce_score DESC", AROUND_COMMERCE),
+            "rivers": pick(
+                "SELECT river_name AS name, lat, lng FROM rivers"
+                " WHERE lat BETWEEN ? AND ? AND lng BETWEEN ? AND ?", 3),
+        }
+    except Exception as e:
+        print(f"  주변 지리 조회 실패 ({type(e).__name__}) — 지도 없이 간다")
+        return {}
+    finally:
+        con.close()
+
 
 def profiles(con, asof: date, picks: list[dict]) -> dict:
     """표지 후보 단지의 소개 재료.
@@ -518,6 +564,8 @@ def profiles(con, asof: date, picks: list[dict]) -> dict:
             "deals_1y": pop.get(aid, 0),
             "series": pts, "neighbors": nb, "other_pyeongs": others,
             **(geo[0] if geo else {}),
+            "around": around(geo[0]["lat"] if geo else None,
+                             geo[0]["lng"] if geo else None),
         }
     return out
 
