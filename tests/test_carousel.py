@@ -466,3 +466,41 @@ def test_표지_폴백_순서(cards):
         assert geo.available()
     if lay == "photo_cover":
         assert cards[0].get("photo") and not photos.audit()
+
+
+# ── 팔로우 유도 장 ───────────────────────────────────────────────────────
+def test_마지막이_팔로우_유도_장(cards):
+    assert cards[-1]["layout"] == "follow_cta", cards[-1]["layout"]
+    assert cards[-2]["layout"] == "summary_cta", cards[-2]["layout"]
+
+
+def test_팔로우_장에_핸들이_크게_있다(cards):
+    """계정을 적지 않은 팔로우 유도는 아무 일도 안 한다."""
+    html = cards[-1]["html"]
+    assert 'class="fl-handle"' in html
+    assert D.HANDLE in C.strip_html(html)
+
+
+def test_팔로우_장이_과장하지_않는다(cards):
+    """일곱 장 동안 지킨 톤이 마지막 한 장에서 무너지면 전부 무너진다."""
+    from content.validator import check_banned
+    t = C.strip_html(cards[-1]["html"])
+    assert not check_banned(t)
+    for w in ("놓치", "지금 바로", "필수", "무료 공개", "선착순", "단독"):
+        assert w not in t, f"과장 표현 '{w}'"
+
+
+def test_팔로우_장에_새_숫자가_없다(cards):
+    """7장과 같은 규칙 (5항). 날짜·페이지·핸들 말고는 숫자를 쓰지 않는다."""
+    t = C.strip_html(cards[-1]["html"])
+    t = re.sub(r"\d{4}-\d{2}-\d{2}", " ", t)       # 기준일
+    t = re.sub(r"\d+\s*/\s*\d+", " ", t)           # 페이지
+    t = t.replace(D.HANDLE, " ")                   # 핸들
+    assert not re.search(r"\d", t), t[:160]
+
+
+def test_팔로우_장이_무엇을_주는지_말한다(cards):
+    """설득 대신 '앞으로 뭘 받게 되는지'. 그게 이 계정의 약속이다."""
+    t = C.strip_html(cards[-1]["html"])
+    assert "팔로우" in t
+    assert "오를지 내릴지는 말하지 않아요" in t, "투자 예측을 안 한다는 약속이 없다"

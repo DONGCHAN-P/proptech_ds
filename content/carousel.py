@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse
 import base64
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -480,6 +481,40 @@ def c7_outro(t: dict, page: int, n: int) -> dict:
             "html": D.head(page, n) + inner}
 
 
+def c8_follow(t: dict, page: int, n: int) -> dict:
+    """마지막 장 — 팔로우 유도.
+
+    여기까지 넘긴 사람은 이미 관심이 있는 사람이다. 그래서 설득하지 않고
+    **앞으로 뭘 받게 되는지**만 적는다. "놓치면 후회" 같은 말을 넣는 순간
+    일곱 장 동안 지킨 톤이 한 장에서 무너진다 (6항 금지 표현).
+
+    새 숫자를 쓰지 않는다 — 7장과 같은 규칙이다. 숫자가 없으니 여기서
+    과장할 거리도 없다.
+    """
+    url = os.environ.get("NEWSLETTER_URL", "").strip()
+    mail = (f'<div class="sub">메일로 받고 싶으면 → {url}</div>' if url else "")
+    inner = (
+        f'<div class="body">'
+        f'<div class="kicker">다음 주에도</div>'
+        f'{D.cond("수도권 아파트 · 해제 건 제외")}'
+        f'<div class="h1 sm">이런 숫자,<br>매주 받아보실래요?</div>'
+        f'<div><span class="fl-handle">{D.HANDLE}</span></div>'
+        f'<div class="fl-list">'
+        f'<div>평소와 <b>달라진 동네</b>를 매주 한 장으로 정리해요</div>'
+        f'<div>그 숫자가 <b>몇 건으로 나왔는지</b> 늘 같이 적어요</div>'
+        f'<div>앞으로 <b>오를지 내릴지는 말하지 않아요</b></div>'
+        f'</div>'
+        f'<div class="cta">팔로우해두면 다음 주에 또 만나요.</div>'
+        f'{mail}'
+        # 면책은 **전문**을 쓴다. 스레드용 1줄 축약은 500자 제한 때문에
+        # 만든 것이고, 이미지에는 그런 제한이 없다. 마지막 장은 사람들이
+        # 가장 오래 보고 캡처도 하는 자리라 여기서 줄일 이유가 없다.
+        f'<div class="disc">{DISCLAIMER_SOCIAL}</div>'
+        f'</div>')
+    return {"name": f"{page:02d}_follow", "layout": "follow_cta",
+            "facts": {}, "html": D.head(page, n) + inner + D.foot(t["asof"])}
+
+
 def build_cards(data: dict, chart_dir: Path | None = None) -> list[dict]:
     """chart_dir 은 더 이상 읽지 않는다 — 차트 조각을 카드에 넣지 않는다.
     호출부(테스트 포함)가 넘기고 있어 인자만 남긴다."""
@@ -491,13 +526,15 @@ def build_cards(data: dict, chart_dir: Path | None = None) -> list[dict]:
     # 지시사항 5항 레이아웃 조합:
     #   1 표지 → 2 ranking_table → 3 반전/맥락 → 4~6 혼합 → 7 정리
     # 같은 계열(rows·compare_bars)과 (ranking_table·tile_grid)은 붙이지 않는다.
-    maybe_six = c6_tiles(t, 7)
-    n = 7 if maybe_six else 6
+    # 마지막에 팔로우 유도 한 장을 더 둔다 (5~8장 범위 안).
+    n = 8 if t.get("new_highs") else 7
     cards = [c1_cover(t, n), c2_ranking(t, n), c3_heat(t, n),
              c4_counter(t, n), c5_compare(t, n)]
-    if maybe_six:
-        cards.append(c6_tiles(t, n))
+    six = c6_tiles(t, n)
+    if six:
+        cards.append(six)
     cards.append(c7_outro(t, len(cards) + 1, n))
+    cards.append(c8_follow(t, len(cards) + 1, n))
     return [finish(c, t["params"]) for c in cards]
 
 

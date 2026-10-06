@@ -211,6 +211,20 @@ body{{background:{BG};color:{INK};
 .heat-ticks{{display:flex;justify-content:space-between;margin-top:8px;
             font-size:24px;color:{SUB};}}
 
+/* ── follow_cta ────────────────────────────────────────────────────
+   마지막 장. 여기까지 넘긴 사람은 이미 관심이 있는 사람이라, 설득이 아니라
+   **무엇을 계속 받게 되는지**만 말하면 된다. 과장하면 그동안 쌓은 톤이 깨진다. */
+.fl-handle{{font-size:72px;font-weight:800;letter-spacing:-.03em;
+           background:linear-gradient(to top,{ACCENT} 40%,transparent 40%);
+           display:inline-block;padding:0 .08em;}}
+.fl-list{{display:flex;flex-direction:column;gap:16px;}}
+.fl-list div{{font-size:34px;font-weight:500;line-height:1.45;
+             padding-left:32px;position:relative;}}
+.fl-list div::before{{content:'';position:absolute;left:0;top:14px;
+                     width:16px;height:16px;border-radius:50%;
+                     background:{NEUTRAL};}}
+.fl-list b{{font-weight:700;}}
+
 /* ── ranking_table ─────────────────────────────────────────────────
    명단형 장. 막대보다 **값을 정확히 읽히게** 하는 게 목적이라 숫자 열을
    오른쪽 정렬하고 tnum 으로 자릿수를 고정한다. */
