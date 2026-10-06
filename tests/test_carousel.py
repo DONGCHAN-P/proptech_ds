@@ -205,12 +205,37 @@ def test_같은_그래프를_두_번_보여주지_않는다(cards):
 
 
 def test_양_끝을_같이_보여준다(cards):
-    """붐빈 쪽만 보여주면 '수도권 거래가 늘었다'로 읽힌다."""
-    ex = next((c for c in cards if c["name"] == "03_extremes"), None)
-    assert ex is not None, [c["name"] for c in cards]
-    html = ex["html"]
-    assert 'class="v up"' in html and 'class="v down"' in html, (
+    """붐빈 쪽만 보여주면 '수도권 거래가 늘었다'로 읽힌다.
+
+    `rows` 장으로 두 줄만 보여주던 걸 온도지도로 바꿨다 — 빨강과 파랑이
+    한 화면에 같이 있어야 "동네마다 다르다"가 설명 없이 읽힌다.
+    """
+    heat = next((c for c in cards if c["layout"] == "map_heat"), None)
+    assert heat is not None, [c["name"] for c in cards]
+    html = heat["html"]
+    assert 'class="up"' in html and 'class="down"' in html, (
         "증감 양쪽이 같은 장에 없다")
+    rows = heat["facts"]["card"]["regions"]
+    assert any(r["ratio"] > 1.1 for r in rows), "붐빈 쪽이 없다"
+    assert any(r["ratio"] < 0.9 for r in rows), "조용한 쪽이 없다"
+
+
+def test_온도지도가_표본부족을_색으로_속이지_않는다(cards, data):
+    """회색으로 칠해 버리면 "데이터가 없다"가 "변화가 없다"로 읽힌다."""
+    from content import geo, design as D
+    heat = next((c for c in cards if c["layout"] == "map_heat"), None)
+    if heat is None:
+        pytest.skip("온도지도 없음")
+    dim = geo.mix(D.BG, "#000000", 0.03)
+    normal = geo.mix(D.BG, "#000000", 0.07)
+    assert dim != normal, "표본 부족과 '평소'가 같은 색이다"
+    assert dim in heat["html"], "표본 부족 색을 안 쓰고 있다"
+
+
+def test_어두운_장은_표지뿐(cards):
+    """5항: 어두운 건 표지에만. 2장부터 오프화이트라야 계정 정체성이 산다."""
+    dark = [c["name"] for c in cards if c.get("dark")]
+    assert dark in ([], ["01_cover"]), dark
 
 
 # ── 렌더 산출물 ──────────────────────────────────────────────────────────

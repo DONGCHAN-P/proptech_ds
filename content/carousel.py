@@ -88,6 +88,7 @@ def pick(data: dict) -> dict | None:
     # "많은 사람이 아는 곳 중 의미 있는 변화". 고른 이유는 로그로 남긴다.
     picked, top3, notes = CV.choose(data)
     return {"busiest": busiest, "quiet": quiet, "top": top, "ranked": ranked,
+            "all_regions": z,
             "new_high": nh[0] if nh else None, "new_highs": nh,
             "cover": picked, "cover_top3": top3, "cover_notes": notes,
             "params": data.get("params") or {}, "asof": data["asof"]}
@@ -194,8 +195,8 @@ def map_cover(t: dict, c, cp: dict, n: int) -> dict | None:
         return None
     scope = geo.scope_of(CV.resolve(c.region, c.code))
     svg = geo.svg({c.region: D.UP}, width=MAP_W, height=MAP_H,
-                  line=D.LINE, fill=D.NEUTRAL, label_color=D.INK,
-                  scope=scope)
+                  line=D.LINE, fill=geo.mix(D.INK, "#FFFFFF", 0.18),
+                  label_color=D.COVER_INK, label_halo=D.INK, scope=scope)
     if not svg:
         return None
     _, approx = geo.geo_name(c.region)
@@ -210,6 +211,9 @@ def map_cover(t: dict, c, cp: dict, n: int) -> dict | None:
         f'<div class="mc-foot">{cp["lead"]} · 지도는 {where}</div>'
         f'</div>')
     return {"name": "01_cover", "layout": "map_cover",
+            # 표지만 어둡게. 2장부터는 오프화이트로 돌아간다 (5항) —
+            # 일곱 장이 전부 오프화이트면 피드에서 묻힌다.
+            "dark": True,
             "facts": cover_facts(c), "approx_boundary": approx,
             "html": D.head(1, n) + inner
                     + D.foot(t["asof"], geo.CREDIT + note)}
@@ -245,15 +249,31 @@ def c2_ranking(t: dict, n: int, rows_max: int = RT_ROWS_MAX) -> dict:
     강조 행은 하나뿐이다 (5항). 여러 행을 칠하면 "강조"가 아니게 된다.
     """
     rows = t["ranked"][:rows_max]
+    # 막대는 표 안에서 서로 비교되게 같은 축을 쓴다. 행마다 최대치를 다시
+    # 잡으면 1.7배와 1.2배가 같은 길이로 보인다.
+    mx = max(r["ratio"] for r in rows) or 1
+    base = 1.0 / mx * 100
     out = []
     for i, r in enumerate(rows, 1):
         thin = (f'<span class="badge">거래 {r["week_deals"]}건</span>'
                 if r["week_deals"] < MIN_SAMPLE else "")
+        w = r["ratio"] / mx * 100
+        over = max(0.0, w - base)
+        # 기준선(평소)을 넘은 부분만 의미색. 막대 전체를 칠하면 평소만큼
+        # 거래된 것까지 "성과"처럼 보인다 (지시사항 5항).
+        bar = (f'<div class="rt-bar">'
+               f'<b style="left:0;width:{min(w, base):.1f}%;'
+               f'background:{D.NEUTRAL};opacity:.5"></b>'
+               + (f'<b style="left:{base:.1f}%;width:{over:.1f}%;'
+                  f'background:{D.UP if i == 1 else D.NEUTRAL}"></b>'
+                  if over > 0 else "")
+               + f'<i style="left:{base:.1f}%"></i></div>')
         out.append(
             f'<div class="rt-row{" hi" if i == 1 else ""}">'
             f'<div class="rt-rank">{i}</div>'
             f'<div class="rt-name">{r["sigungu_name"]}{thin}'
             f'<small>평소 {D.num(r["deals_avg_52w"])}건</small></div>'
+            f'{bar}'
             f'<div class="rt-val">{r["week_deals"]}건</div>'
             f'<div class="rt-chg {D.delta_color(r["ratio"] - 1)}">'
             f'{r["ratio"]:.1f}배</div></div>')
@@ -298,39 +318,55 @@ def c4_counter(t: dict, n: int) -> dict:
             "html": D.head(4, n) + inner + D.foot(t["asof"])}
 
 
-def c3_extremes(t: dict, n: int) -> dict:
-    """같은 주의 양 끝.
+HEAT_W, HEAT_H = 936, 400
 
-    순위 장(2)은 붐빈 쪽만 보여준다. 거기서 끊으면 "수도권 거래가 늘었다"로
-    읽히는데, 같은 주에 평소의 절반만 거래된 곳도 있다. 빨강/파랑이 증감
-    전용이라는 규칙이 처음으로 제 일을 하는 장이기도 하다.
 
-    의미색은 up/down 둘뿐이다 — 지시사항 3항이 한 장에 두 개까지만 허용한다.
-    여기에 형광펜 띠까지 쓰면 셋이 되고, 그러면 빨강/파랑이 "증감"이라는
-    신호가 묻힌다.
+def c3_heat(t: dict, n: int) -> dict:
+    """수도권 온도지도.
+
+    순위표(2장)는 위에서 여덟 곳만 보여준다. 거기서 끊으면 "수도권 거래가
+    늘었다"로 읽히는데, 같은 주에 평소의 절반만 거래된 곳도 있다. 지도는
+    **양쪽을 동시에** 보여준다 — 빨강과 파랑이 한 화면에 같이 있어야
+    "동네마다 다르다"가 설명 없이 읽힌다.
+
+    표본이 부족한 곳은 칠하지 않고 비운다. 회색으로 칠해 버리면 "데이터가
+    없다"가 "변화가 없다"로 읽힌다.
     """
-    b, q = t["busiest"], t["quiet"]
-    hi = b["week_deals"] / b["deals_avg_52w"]
-    lo = q["week_deals"] / q["deals_avg_52w"]
+    z = t["all_regions"]
+    vals = {r["sigungu_name"]: r["ratio"] for r in z
+            if r.get("ratio") and r["week_deals"] >= MIN_SAMPLE}
+    # 지도 위에 이름을 얹지 않는다. 서울 구는 면이 작아 라벨끼리 겹치고,
+    # 겹친 글자는 지도까지 가린다. 양 끝은 아래 캡션에서 말한다.
+    svg = geo.heat(vals, width=HEAT_W, height=HEAT_H, bg=D.BG,
+                   up=D.UP, down=D.DOWN, dim=geo.mix(D.BG, "#000000", 0.03))
+    ends = ""
+    if vals:
+        hi, lo = max(vals, key=vals.get), min(vals, key=vals.get)
+        ends = (f'<div class="lead">가장 붐빈 곳 <span class="up">{hi} '
+                f'{vals[hi]:.1f}배</span> · 가장 조용한 곳 '
+                f'<span class="down">{lo} {vals[lo]:.1f}배</span></div>')
+    legend = "".join(f'<i style="background:{c}"></i>'
+                     for c, _ in geo.legend_colors(D.BG, D.UP, D.DOWN))
+    ticks = geo.BIN_LABELS
     inner = (
         f'<div class="body">'
-        f'<div class="kicker">같은 주, 정반대</div>'
         f'{D.cond("수도권 시군구 · 이번 주 · 거래 10건 이상")}'
         f'<div class="h1 sm">한 주에도<br>동네마다 달라요</div>'
-        f'<div class="rows">'
-        f'<div class="row"><span class="k">{b["sigungu_name"]} '
-        f'{b["week_deals"]}건</span>'
-        f'<span class="v up">평소의 {hi:.1f}배</span></div>'
-        f'<div class="row"><span class="k">{q["sigungu_name"]} '
-        f'{q["week_deals"]}건</span>'
-        f'<span class="v down">평소의 {lo:.1f}배</span></div>'
-        f'</div>'
-        f'<div class="sub">수도권을 한 덩어리로 보면 둘 다 안 보여요.</div>'
+        f'<div class="heat">{svg}</div>'
+        f'{ends}'
+        f'<div><div class="heat-legend">{legend}</div>'
+        f'<div class="heat-ticks"><span>{ticks[0]}</span>'
+        f'<span>{ticks[2]}</span><span>{ticks[-1]}</span></div></div>'
+        f'<div class="rt-note">색이 없는 곳은 거래가 적어 판단하지 않았어요 · '
+        f'평소 = 지난 52주 평균</div>'
         f'</div>')
-    return {"name": "03_extremes", "layout": "rows",
-            "facts": {"busiest": b, "quiet": q,
-                      "hi_ratio": round(hi, 1), "lo_ratio": round(lo, 1)},
-            "html": D.head(3, n) + inner + D.foot(t["asof"], "평소 = 지난 52주 평균")}
+    return {"name": "03_heat", "layout": "map_heat",
+            "facts": {"regions": [
+                {"sigungu_name": r["sigungu_name"],
+                 "week_deals": r["week_deals"],
+                 "deals_avg_52w": r["deals_avg_52w"],
+                 "ratio": round(r["ratio"], 2)} for r in z if r.get("ratio")]},
+            "html": D.head(3, n) + inner + D.foot(t["asof"], geo.CREDIT)}
 
 
 def c5_compare(t: dict, n: int) -> dict:
@@ -457,7 +493,7 @@ def build_cards(data: dict, chart_dir: Path | None = None) -> list[dict]:
     # 같은 계열(rows·compare_bars)과 (ranking_table·tile_grid)은 붙이지 않는다.
     maybe_six = c6_tiles(t, 7)
     n = 7 if maybe_six else 6
-    cards = [c1_cover(t, n), c2_ranking(t, n), c3_extremes(t, n),
+    cards = [c1_cover(t, n), c2_ranking(t, n), c3_heat(t, n),
              c4_counter(t, n), c5_compare(t, n)]
     if maybe_six:
         cards.append(c6_tiles(t, n))
@@ -593,7 +629,8 @@ def render(cards: list[dict], outdir: Path,
                               f".quote{{font-size:{max(48, 64 - shrink)}px}}")
                 page.set_content(
                     f"<style>{D.base_css()}{extra}</style>"
-                    f'<div class="card">{c["html"]}</div>', wait_until="load")
+                    f'<div class="card{" dark" if c.get("dark") else ""}">'
+                    f'{c["html"]}</div>', wait_until="load")
                 page.wait_for_timeout(120)
                 bad, g = page.evaluate(js), page.evaluate(gjs)
                 if g and g["gap"] < MIN_FOOT_GAP:

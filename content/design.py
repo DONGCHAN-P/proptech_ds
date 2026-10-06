@@ -200,12 +200,23 @@ body{{background:{BG};color:{INK};
 .cta{{font-size:34px;font-weight:600;line-height:1.5;}}
 .disc{{font-size:24px;font-weight:400;color:{SUB};line-height:1.5;}}
 
+/* ── 온도지도 ──────────────────────────────────────────────────────
+   대상 하나만 칠하는 map_cover 와 달리 전부 칠한다. 어디가 뜨겁고 어디가
+   식었는지를 한 장에 보여주는 게 목적이라, 전부 칠해야 그림이 된다. */
+.heat{{display:flex;justify-content:center;}}
+.heat-legend{{display:flex;align-items:center;gap:0;margin-top:8px;}}
+.heat-legend i{{flex:1;height:24px;}}
+.heat-legend i:first-child{{border-radius:12px 0 0 12px;}}
+.heat-legend i:last-child{{border-radius:0 12px 12px 0;}}
+.heat-ticks{{display:flex;justify-content:space-between;margin-top:8px;
+            font-size:24px;color:{SUB};}}
+
 /* ── ranking_table ─────────────────────────────────────────────────
    명단형 장. 막대보다 **값을 정확히 읽히게** 하는 게 목적이라 숫자 열을
    오른쪽 정렬하고 tnum 으로 자릿수를 고정한다. */
 .rt-eyebrow{{font-size:24px;font-weight:700;letter-spacing:.08em;color:{SUB};}}
 .rt{{display:flex;flex-direction:column;}}
-.rt-row{{display:grid;grid-template-columns:64px 1fr 168px 136px;
+.rt-row{{display:grid;grid-template-columns:56px 260px 1fr 120px 120px;
         align-items:center;gap:16px;min-height:80px;padding:8px 16px;
         border-bottom:1px solid {LINE};border-radius:12px;}}
 .rt-row:last-child{{border-bottom:none;}}
@@ -218,6 +229,12 @@ body{{background:{BG};color:{INK};
 .rt-val{{font-size:32px;font-weight:800;text-align:right;letter-spacing:-.02em;}}
 .rt-chg{{font-size:30px;font-weight:800;text-align:right;letter-spacing:-.02em;}}
 .rt-note{{font-size:24px;color:{SUB};line-height:1.45;}}
+/* 행마다 "평소=1.0" 기준선과 초과분. 표는 값을 정확히 읽히게 하고,
+   막대는 한눈에 비교되게 한다. 둘 다 필요하다. */
+.rt-bar{{position:relative;height:20px;background:#EDEAE2;border-radius:999px;}}
+.rt-bar b{{position:absolute;top:0;height:100%;border-radius:999px;}}
+.rt-bar i{{position:absolute;top:-5px;bottom:-5px;width:3px;
+          background:{INK};opacity:.7;border-radius:2px;}}
 
 /* ── tile_grid ─────────────────────────────────────────────────────
    "모음"형 장. 2열 고정 — 3열로 늘리면 단지명이 줄바꿈돼 읽기가 끊긴다. */
@@ -229,6 +246,19 @@ body{{background:{BG};color:{INK};
 .tile .t-sub{{font-size:24px;font-weight:500;color:{SUB};}}
 .tile .t-val{{font-size:44px;font-weight:800;letter-spacing:-.03em;}}
 .tile .t-chg{{font-size:28px;font-weight:700;}}
+
+/* ── 어두운 표지 ───────────────────────────────────────────────────
+   피드에서 오프화이트만 일곱 장이면 묻힌다. **표지만** 어둡게 해서 눈에
+   걸리게 하고, 2장부터는 다시 오프화이트로 돌아간다 — 지시사항 5항이
+   "어두운 사진은 표지에만, 2장부터 오프화이트"라고 못 박은 그 이유다.
+   토큰은 photo_cover 와 같은 걸 쓴다(--cover-ink / --cover-key). */
+.card.dark{{background:{INK};}}
+.card.dark .hd,.card.dark .ft,.card.dark .cond,.card.dark .mc-foot{{
+  color:rgba(255,255,255,.62);}}
+.card.dark .mc-h1{{color:{COVER_INK};}}
+.card.dark .mc-num{{color:{COVER_KEY};}}
+.card.dark .mark-brand{{background:{COVER_INK};}}
+.card.dark .mark-brand span{{color:{INK};}}
 
 /* ── map_cover ─────────────────────────────────────────────────────
    사진의 대안. 사진은 "마포구 ○○아파트 +53.5%" 옆에 두면 보는 사람이 그게
