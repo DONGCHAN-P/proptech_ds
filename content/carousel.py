@@ -39,7 +39,8 @@ from content.validator import validate  # noqa: E402
 from templates.disclaimers import DISCLAIMER_SOCIAL  # noqa: E402
 
 MIN_SAMPLE = 10          # 이보다 적으면 큰 숫자 장에 쓰지 않는다
-HEADLINE_MIN = 72        # 넘침 재시도의 하한 (지시사항)
+HEADLINE_MIN = 72        # 넘침 재시도의 하한 (지시사항 9항)
+FILL_STEP, FILL_MAX = 0.12, 2.4   # 빈 공간 채우기 반복 폭
 
 
 def _img(p: Path) -> str:
@@ -67,22 +68,36 @@ def pick(data: dict) -> dict | None:
     # 평소 대비 배수로 줄 세운다 (절대량이면 늘 큰 도시가 1위)
     ranked = sorted([r for r in (solid or z) if r["ratio"]],
                     key=lambda r: r["ratio"], reverse=True)[:6]
+    # 신고가는 **누적 거래가 두터운** 평형에서 고른다. 지표 JSON 은 편차가
+    # 큰 순으로 정렬돼 있어 첫 행이 누적 6건짜리인 경우가 흔한데, 그런
+    # "148% 경신"은 시세가 아니라 표본이 만든 숫자다.
+    nh = [r for r in (data.get("daily", {}).get("new_high") or [])
+          if r.get("history_count", 0) >= MIN_SAMPLE]
+    new_high = max(nh, key=lambda r: r["history_count"]) if nh else None
     return {"busiest": busiest, "quiet": quiet, "top": top, "ranked": ranked,
+            "new_high": new_high,
             "params": data.get("params") or {}, "asof": data["asof"]}
 
 
 # ── 장 ───────────────────────────────────────────────────────────────────
 def c1_cover(t: dict, n: int) -> dict:
+    """표지 — 헤드라인이 궁금증을 만들고, 큰 숫자가 답의 크기를 보여준다.
+
+    지시사항 5항: 지역명은 **회색 라벨이 아니라 헤드라인 안에** 넣는다.
+    라벨로 빼두면 눈이 큰 글씨부터 읽어서 "어디 얘기인지"가 뒤늦게 들어온다.
+    헤드라인은 질문형으로 두고, 왜 그런지는 2~3장이 받는다.
+    """
     b = t["busiest"]
     mult = D.times(b["week_deals"], b["deals_avg_52w"])
     inner = (
         f'<div class="body">'
-        f'<div class="kicker">{b.get("week_start", "")} 주 · 거래량</div>'
-        f'<div class="label">{b["sigungu_name"]}</div>'
+        f'<div class="kicker">{b.get("week_start", "")} 주 · 수도권 거래량</div>'
+        f'<div class="h1">{b["sigungu_name"]} 거래가<br>갑자기 늘었어요.<br>'
+        f'얼마나 늘었을까요?</div>'
         f'<div class="big-pre">평소의</div>'
         f'<div class="big up">{mult}</div>'
         f'<div class="lead">평소 {D.num(b["deals_avg_52w"])}건 → '
-        f'이번 주 <span class="mark">{b["week_deals"]}건</span></div>'
+        f'이번 주 {b["week_deals"]}건</div>'
         f'</div>')
     return {"name": "01_cover", "layout": "hero_number",
             "facts": {"busiest": b},
@@ -96,9 +111,10 @@ def c4_counter(t: dict, n: int) -> dict:
     inner = (
         f'<div class="body">'
         f'<div class="kicker">같이 봐야 할 것</div>'
-        f'<div class="quote">값이 올라도<br>'
-        f'<span class="mark">사고판 사람은</span><br>늘지 않았어요</div>'
-        f'<div class="rows" style="margin-top:8px">'
+        # 아래 두 행이 up/down 을 쓴다. 여기에 형광펜 띠까지 더하면 한 장에
+        # 의미색이 셋이 돼 증감 신호가 묻힌다 (지시사항 3항).
+        f'<div class="quote">값이 올라도<br>사고판 사람은<br>늘지 않았어요</div>'
+        f'<div class="rows">'
         f'<div class="row"><span class="k">{s["apt_name"]} 평단가</span>'
         f'<span class="v {D.delta_color(s["change_pct"])}">{D.delta(s["change_pct"])}</span></div>'
         f'<div class="row"><span class="k">같은 기간 거래 건수</span>'
@@ -110,27 +126,38 @@ def c4_counter(t: dict, n: int) -> dict:
 
 
 def c2_ranked(t: dict, n: int) -> dict:
+    """평소 대비 배수 순위.
+
+    지시사항 5항: **1.0(평소)을 기준선으로 굵게 긋고, 기준선을 넘는 부분만**
+    의미색으로 칠한다. 막대 전체를 칠하면 1.0 까지의 길이까지 "성과"처럼
+    보인다 — 평소만큼 거래된 것도 빨갛게 나오는 셈이다. 초과분만 칠해야
+    "평소보다 얼마나 더"가 길이로 읽힌다.
+    """
     rows = t["ranked"]
     top = rows[0]
     mx = max(r["ratio"] for r in rows) or 1
     base_pos = 1.0 / mx * 100      # "평소" 위치
     bars = []
     for r in rows:
-        color = D.UP if r is top else D.NEUTRAL
         w = r["ratio"] / mx * 100
+        over = max(0.0, w - base_pos)
+        color = D.UP if r is top else D.NEUTRAL
         bars.append(
             f'<div class="rank-row">'
             f'<div class="rank-name">{r["sigungu_name"]}</div>'
             f'<div class="rank-track">'
-            f'<div class="rank-fill" style="width:{w:.0f}%;background:{color}"></div>'
-            f'<div class="rank-base" style="left:{base_pos:.1f}%"></div></div>'
+            f'<div class="rank-fill" style="width:{min(w, base_pos):.1f}%"></div>'
+            + (f'<div class="rank-over" style="left:{base_pos:.1f}%;'
+               f'width:{over:.1f}%;background:{color}"></div>' if over > 0 else '')
+            + f'<div class="rank-base" style="left:{base_pos:.1f}%"></div></div>'
             f'<div class="rank-val">{r["ratio"]:.1f}배</div></div>')
     inner = (
         f'<div class="body">'
-        f'<div class="h1 xs">평소보다<br>붐빈 지역</div>'
-        f'<div class="rank" style="margin-top:4px">{"".join(bars)}</div>'
-        f'<div class="rank-baselabel">세로선이 평소 수준이에요</div>'
-        f'<div class="sub" style="margin-top:20px">'
+        f'<div class="h1 sm">평소보다<br>붐빈 지역</div>'
+        f'<div class="rank">{"".join(bars)}</div>'
+        f'<div class="rank-baselabel">굵은 세로선이 평소 수준이에요. '
+        f'색칠된 부분이 그걸 넘은 만큼이고요.</div>'
+        f'<div class="sub">'
         f'{top["sigungu_name"]}만 평소보다 {D.diff_count(top["week_deals"], top["deals_avg_52w"])} '
         f'거래됐어요.</div>'
         f'</div>')
@@ -147,6 +174,10 @@ def c3_extremes(t: dict, n: int) -> dict:
     순위 장(2)은 붐빈 쪽만 보여준다. 거기서 끊으면 "수도권 거래가 늘었다"로
     읽히는데, 같은 주에 평소의 절반만 거래된 곳도 있다. 빨강/파랑이 증감
     전용이라는 규칙이 처음으로 제 일을 하는 장이기도 하다.
+
+    의미색은 up/down 둘뿐이다 — 지시사항 3항이 한 장에 두 개까지만 허용한다.
+    여기에 형광펜 띠까지 쓰면 셋이 되고, 그러면 빨강/파랑이 "증감"이라는
+    신호가 묻힌다.
     """
     b, q = t["busiest"], t["quiet"]
     hi = b["week_deals"] / b["deals_avg_52w"]
@@ -154,8 +185,8 @@ def c3_extremes(t: dict, n: int) -> dict:
     inner = (
         f'<div class="body">'
         f'<div class="kicker">같은 주, 정반대</div>'
-        f'<div class="h1 xs">한 주에도<br>동네마다 달라요</div>'
-        f'<div class="rows" style="margin-top:8px">'
+        f'<div class="h1 sm">한 주에도<br>동네마다 달라요</div>'
+        f'<div class="rows">'
         f'<div class="row"><span class="k">{b["sigungu_name"]} '
         f'{b["week_deals"]}건</span>'
         f'<span class="v up">평소의 {hi:.1f}배</span></div>'
@@ -163,8 +194,7 @@ def c3_extremes(t: dict, n: int) -> dict:
         f'{q["week_deals"]}건</span>'
         f'<span class="v down">평소의 {lo:.1f}배</span></div>'
         f'</div>'
-        f'<div class="sub">수도권을 한 덩어리로 보면 '
-        f'<span class="mark">둘 다 안 보여요.</span></div>'
+        f'<div class="sub">수도권을 한 덩어리로 보면 둘 다 안 보여요.</div>'
         f'</div>')
     return {"name": "03_extremes", "layout": "rows",
             "facts": {"busiest": b, "quiet": q,
@@ -179,8 +209,13 @@ def c5_compare(t: dict, n: int) -> dict:
     name, paren = D.split_name(s["apt_name"])
     paren_html = (f'<div class="sub" style="font-size:30px">{paren}</div>'
                   if paren else "")
-    thin = (f'<div><span class="badge">거래 {s["deals_recent"]}건</span></div>'
-            if s["deals_recent"] < MIN_SAMPLE else "")
+    # 표본은 **항상** 적는다. 얇을 때만 붙이면 "배지가 없으면 안심"이라는
+    # 신호가 되는데, 15건으로 뽑은 평균도 흔들린다. 지시사항 9항대로 양쪽
+    # 값을 모두 쓴다 — "거래 14건 → 9건".
+    warn = " · 몇 건으로 평균이 크게 흔들려요" \
+        if min(s["deals_recent"], s["deals_prior"]) < MIN_SAMPLE else ""
+    sample = (f'<div><span class="badge">거래 {s["deals_prior"]}건 → '
+              f'{s["deals_recent"]}건{warn}</span></div>')
 
     def bar(label, val, color):
         return (f'<div class="bar-row"><div class="bar-top">'
@@ -192,40 +227,60 @@ def c5_compare(t: dict, n: int) -> dict:
 
     inner = (
         f'<div class="body">'
-        f'<div class="kicker">{s["sigungu_name"]} {s["legal_dong_name"]} · {s["pyeong_bucket"]}</div>'
-        f'<div class="h1 xs">{name}</div>{paren_html}'
+        f'<div class="kicker">{s["sigungu_name"]} {s["legal_dong_name"]} · {D.pyeong(s["pyeong_bucket"])}</div>'
+        f'<div class="h1 sm">{name}</div>{paren_html}'
         f'<div class="sub">평당가, 3개월 전과 비교</div>'
         f'<div class="bars">'
         f'{bar("직전 3개월", prior, D.NEUTRAL)}{bar("최근 3개월", recent, D.UP)}'
-        f'</div>{thin}</div>')
+        f'</div>{sample}</div>')
     return {"name": "05_compare", "layout": "compare_bars",
             "facts": {"top": s},
             "html": D.head(5, n) + inner + D.foot(t["asof"])}
 
 
-def c6_sample(t: dict, n: int) -> dict:
-    """표본이 적다는 사실 자체를 한 장으로. 숨기면 오해를 부른다."""
-    s = t["top"]
+def c6_newhigh(t: dict, n: int) -> dict | None:
+    """이번 주 신고가 — **다른 단지**를 쓴다.
+
+    4·5장이 모두 같은 단지(급등 단지)라, 6장까지 같은 대상이면 한 캐러셀에
+    같은 단지가 3장 연속으로 나온다. 지시사항 5항은 한 대상당 최대 2장이다.
+    보는 사람 입장에서도 세 장째면 "아직도 이 단지야?"가 된다.
+
+    표본이 얇은 신고가는 쓰지 않는다. 누적 6건짜리 평형에서 "종전 최고가
+    148% 경신"이 나오는데, 그건 시세가 아니라 표본이 만든 숫자다
+    (지시사항 6항: n<10 은 hero_number 금지).
+    """
+    h = t.get("new_high")
+    if not h:
+        return None
+    # 긴 단지명은 괄호를 떼어 작은 글씨로 내린다 (9항). 떼지 않으면
+    # "청솔마을(주공9단지) 15P가 종전 최고를..."가 헤드라인에서 네 줄을 먹는다.
+    name, paren = D.split_name(h["apt_name"])
+    tail = (f'<div class="sub">{paren} · {D.pyeong(h["pyeong_bucket"])}</div>'
+            if paren else
+            f'<div class="sub">{D.pyeong(h["pyeong_bucket"])}</div>')
     inner = (
         f'<div class="body">'
-        f'<div class="kicker">숫자를 믿기 전에</div>'
-        f'<div class="big xs">{s["deals_recent"]}건</div>'
-        f'<div class="lead">최근 3개월 동안 이 평형에서<br>신고된 거래 수예요.</div>'
-        f'<div class="sub"><span class="mark">몇 건으로 평균이 크게 흔들려요.</span><br>'
-        f'어떤 층과 어떤 향이 팔렸는지에 따라 달라져요.</div>'
+        f'<div class="kicker">이번 주 신고가 · {h["sigungu_name"]}</div>'
+        f'<div class="h1 sm">{name}가<br>종전 최고를 넘었어요</div>'
+        f'{tail}'
+        f'<div class="big sm up">{D.delta(h["over_peak_pct"], arrow=False)}</div>'
+        f'<div class="lead">종전 최고 {D.won(h["prev_peak"])} → '
+        f'이번 거래 {D.won(h["deal_amount"])}</div>'
+        f'<div><span class="badge">이 평형 누적 거래 '
+        f'{D.num(h["history_count"])}건</span></div>'
         f'</div>')
-    return {"name": "06_sample", "layout": "hero_number",
-            "facts": {"top": s},
+    return {"name": "06_newhigh", "layout": "hero_number",
+            "facts": {"new_high": h},
             "html": D.head(6, n) + inner + D.foot(t["asof"])}
 
 
-def c7_outro(t: dict, n: int) -> dict:
+def c7_outro(t: dict, page: int, n: int) -> dict:
     """정리. 새 숫자를 쓰지 않는다 — 앞에 나온 값만 되짚는다."""
     b, s = t["busiest"], t["top"]
     inner = (
         f'<div class="body">'
         f'<div class="kicker">정리</div>'
-        f'<div class="h1 xs">세 줄 요약</div>'
+        f'<div class="h1 sm">세 줄 요약</div>'
         f'<div class="lead">'
         f'· {b["sigungu_name"]} 거래가 평소보다 많았어요<br>'
         f'· {s["apt_name"]} 평단가는 올랐어요<br>'
@@ -235,7 +290,7 @@ def c7_outro(t: dict, n: int) -> dict:
         f'<div class="disc">{DISCLAIMER_SOCIAL}</div>'
         f'</div>')
     return {"name": "07_outro", "layout": "summary_cta",
-            "facts": {}, "html": D.head(7, n) + inner}
+            "facts": {}, "html": D.head(page, n) + inner}
 
 
 def build_cards(data: dict, chart_dir: Path | None = None) -> list[dict]:
@@ -244,10 +299,15 @@ def build_cards(data: dict, chart_dir: Path | None = None) -> list[dict]:
     t = pick(data)
     if t is None:
         return []
-    n = 7
+    # 신고가 재료가 없으면 6장으로 낸다. 억지로 7장을 채우려고 같은 단지를
+    # 세 번 쓰지 않는다 (지시사항 5항: 5~8장, 한 대상 최대 2장).
+    n = 7 if t.get("new_high") else 6
     cards = [c1_cover(t, n), c2_ranked(t, n), c3_extremes(t, n),
-             c4_counter(t, n), c5_compare(t, n), c6_sample(t, n),
-             c7_outro(t, n)]
+             c4_counter(t, n), c5_compare(t, n)]
+    six = c6_newhigh(t, n)
+    if six:
+        cards.append(six)
+    cards.append(c7_outro(t, len(cards) + 1, n))
     # 글에 나오는 방법론 상수(52주, 3개월 등)도 출처가 있어야 한다.
     # 지표 JSON 의 params 를 함께 넘겨 숫자 검증기가 대조하게 한다.
     for c in cards:
@@ -295,34 +355,102 @@ OVERFLOW_JS = """() => {
 }"""
 
 
+GEOM_JS = """() => {
+  const b = document.querySelector('.card .body');
+  const kids = [...b.querySelectorAll(':scope > *')]
+      .filter(e => e.getBoundingClientRect().height);
+  if (!kids.length) return null;
+  const ft = document.querySelector('.card .ft');
+  const bot = Math.max(...kids.map(e => e.getBoundingClientRect().bottom));
+  const stop = ft ? ft.getBoundingClientRect().top : %d;
+  const big = document.querySelector('.card .big');
+  return {gap: stop - bot, bigW: big ? big.getBoundingClientRect().width : null};
+}"""
+
+
+def fill_css(f: float) -> str:
+    """남는 공간을 **키워서** 채운다 (지시사항 5항).
+
+    세로 중앙 정렬로 때우면 위아래가 똑같이 비어서 "덜 채운 장"이 된다.
+    본문 글자는 34~36px 상한이 따로 있으므로(2항) 늘릴 수 있는 건 구조 쪽이다 —
+    행 높이, 막대 두께, 장 사이 여백, 그리고 상한이 없는 인용문.
+    8px 그리드를 깨지 않도록 8의 배수로 맞춘다.
+    """
+    def g(base: int, cap: int) -> int:
+        return min(cap, round(base * f / 8) * 8)
+    return (f".body{{gap:{g(32, 72)}px}}"
+            f".row{{padding:{g(24, 56)}px 0}}"
+            f".rank{{gap:{g(16, 40)}px}}"
+            f".rank-track{{height:{g(24, 48)}px}}"
+            f".bars{{gap:{g(32, 64)}px}}"
+            f".bar-track{{height:{g(32, 56)}px}}"
+            f".quote{{font-size:{g(64, 88)}px}}")
+
+
 def render(cards: list[dict], outdir: Path) -> tuple[list[Path], list[str]]:
-    """렌더 후 안전영역 이탈을 검사하고, 넘치면 폰트를 줄여 재시도한다."""
+    """넘치면 줄이고, 비면 키운다.
+
+    두 방향을 다 본다. 넘침만 보면 안전영역은 지키지만 아래가 300px 넘게
+    비는 장이 나오고, 그건 지시사항 5항이 실패로 규정한 상태다.
+    """
     from playwright.sync_api import sync_playwright
 
     made, problems = [], []
     js = OVERFLOW_JS % (D.PAD_X, D.W, D.H)
+    gjs = GEOM_JS % (D.H - D.PAD_BOTTOM + 48)
+
     with sync_playwright() as pw:
         br = pw.chromium.launch()
         for c in cards:
             page = br.new_page(viewport={"width": D.W, "height": D.H},
                                device_scale_factor=1)
-            shrink = 0
-            while True:
-                extra = ""
+
+            def draw(shrink: int, fill: float):
+                extra = fill_css(fill)
                 if shrink:
-                    extra = (f".h1{{font-size:{max(HEADLINE_MIN, 96 - shrink)}px}}"
-                             f".big{{font-size:{max(140, 280 - shrink * 3)}px}}"
-                             f".quote{{font-size:{max(48, 64 - shrink)}px}}")
+                    extra += (f".h1{{font-size:{max(HEADLINE_MIN, 104 - shrink)}px}}"
+                              f".big{{font-size:{max(140, 280 - shrink * 3)}px}}"
+                              f".quote{{font-size:{max(48, 64 - shrink)}px}}")
                 page.set_content(
                     f"<style>{D.base_css()}{extra}</style>"
                     f'<div class="card">{c["html"]}</div>', wait_until="load")
-                page.wait_for_timeout(150)
-                over = page.evaluate(js)
+                page.wait_for_timeout(120)
+                return page.evaluate(js), page.evaluate(gjs)
+
+            # ① 빈 공간을 채운다 — 넘치기 직전까지만 키운다
+            fill, best = 1.0, 1.0
+            while fill <= FILL_MAX:
+                over, geo = draw(0, fill)
+                if over:
+                    break
+                best = fill
+                if geo and geo["gap"] <= D.MAX_BOTTOM_GAP:
+                    break
+                fill += FILL_STEP
+            fill = best
+
+            # ② 그래도 넘치면 폰트를 줄인다 (9항: 헤드라인 하한 72px)
+            shrink = 0
+            while True:
+                over, geo = draw(shrink, fill)
                 if not over or shrink >= 24:
-                    if over:
-                        problems.append(f"{c['name']}: 넘침 {over[:2]}")
                     break
                 shrink += 4
+
+            if over:
+                problems.append(f"{c['name']}: 안전영역 넘침 {over[:2]}")
+            if geo and geo["gap"] > D.MAX_BOTTOM_GAP:
+                problems.append(
+                    f"{c['name']}: 하단 빈 공간 {geo['gap']:.0f}px "
+                    f"(한도 {D.MAX_BOTTOM_GAP})")
+            # 표지 대형 숫자는 가로 폭의 70% 이상이어야 한다 (5항)
+            if c["name"].endswith("cover") and geo and geo["bigW"]:
+                r = geo["bigW"] / D.W
+                if r < D.COVER_NUM_RATIO:
+                    problems.append(
+                        f"{c['name']}: 대형 숫자가 폭의 {r:.0%} "
+                        f"(최소 {D.COVER_NUM_RATIO:.0%})")
+
             out = outdir / f"{c['name']}.png"
             page.screenshot(path=str(out))
             page.close()

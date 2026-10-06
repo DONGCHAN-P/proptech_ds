@@ -11,6 +11,7 @@
 from __future__ import annotations
 
 import base64
+import os
 import re
 from pathlib import Path
 
@@ -24,6 +25,12 @@ W, H = 1080, 1350
 PAD_X, PAD_TOP, PAD_BOTTOM = 72, 96, 112
 # 프로필 그리드 3:4 크롭을 감안해 핵심 요소는 가운데 1000px 안에 둔다
 SAFE_CORE = 1000
+# 본문 시작 y. 지시사항 5항 "상단 정보줄 아래 y=200부터 시작".
+BODY_TOP = 200
+# 콘텐츠 하단과 출처 사이가 이보다 비면 실패로 본다 (5항).
+MAX_BOTTOM_GAP = 300
+# 표지 대형 숫자는 가로 폭의 이 비율 이상 (5항).
+COVER_NUM_RATIO = 0.70
 
 # ── 색 토큰 ──────────────────────────────────────────────────────────────
 BG = "#F6F4EF"        # 오프화이트
@@ -36,7 +43,9 @@ ACCENT = "#FFE45C"    # 일반 강조(형광펜 띠) 전용
 NEUTRAL = "#C9C6BE"   # 차트 비강조
 
 # ── 브랜드 ───────────────────────────────────────────────────────────────
-HANDLE = "@수도권_실거래"
+# 인스타 사용자명은 영문·숫자·_·. 만 쓸 수 있다. 공백·한글은 들어가지 않는다.
+# 이미지 상단에 박히는 값이라 실제 핸들과 달라지면 유입이 끊긴다.
+HANDLE = os.environ.get("SNS_HANDLE", "@proptech_ds")
 SERIES = "이번 주 실거래"
 
 
@@ -85,21 +94,29 @@ body{{background:{BG};color:{INK};
 .ft{{position:absolute;left:{PAD_X}px;right:{PAD_X}px;bottom:{PAD_BOTTOM - 48}px;
     font-size:24px;font-weight:400;color:{SUB};line-height:1.45;}}
 
-.body{{flex:1;display:flex;flex-direction:column;justify-content:center;gap:24px;}}
+/* 세로 중앙 정렬을 쓰지 않는다 (지시사항 5항).
+   중앙에 띄우면 위아래가 똑같이 비어서 "덜 채운 장"처럼 보인다. 상단 정보줄
+   아래 BODY_TOP 에서 시작하고, 남는 공간은 글자·숫자를 키워 채운다. */
+.body{{flex:1;display:flex;flex-direction:column;justify-content:flex-start;
+      gap:32px;padding-top:{BODY_TOP - PAD_TOP}px;}}
 
 /* 타이포 스케일 */
 .kicker{{font-size:38px;font-weight:600;color:{SUB};letter-spacing:-.01em;}}
-.h1{{font-size:96px;font-weight:800;letter-spacing:-.03em;line-height:1.2;}}
-.h1.sm{{font-size:80px;}}
-.h1.xs{{font-size:72px;}}
+/* 헤드라인 88~104px (지시사항 2항). 그 아래로는 **넘칠 때만** 내려간다
+   — 9항이 재시도 하한으로 72px 를 따로 정해 뒀다. */
+.h1{{font-size:104px;font-weight:800;letter-spacing:-.03em;line-height:1.2;}}
+.h1.sm{{font-size:88px;}}
+.h1.xs{{font-size:88px;}}
 .lead{{font-size:36px;font-weight:500;line-height:1.5;color:{INK};}}
 .sub{{font-size:34px;font-weight:500;line-height:1.5;color:{SUB};}}
 .label{{font-size:38px;font-weight:600;color:{SUB};letter-spacing:-.01em;}}
 
 /* 대형 숫자 — 표지와 hero 장 전용 */
+/* 대형 숫자 220~280px (2항). 표지는 가로 폭 70% 이상이어야 해서(5항)
+   렌더 단계에서 따로 키운다 — carousel.fit_cover() */
 .big{{font-size:280px;font-weight:800;letter-spacing:-.04em;line-height:.95;}}
-.big.sm{{font-size:200px;}}
-.big.xs{{font-size:164px;}}
+.big.sm{{font-size:248px;}}
+.big.xs{{font-size:220px;}}
 /* 대형 숫자 위에 붙는 작은 말 — "평소의" 같은 수식어가 숫자 크기로 커지면 안 된다 */
 .big-pre{{font-size:48px;font-weight:600;color:{SUB};letter-spacing:-.01em;
          margin-bottom:-8px;}}
@@ -113,8 +130,8 @@ body{{background:{BG};color:{INK};
 .up{{color:{UP};}} .down{{color:{DOWN};}}
 
 /* 비교 막대 — 축 없이 값 라벨만 */
-.bars{{display:flex;flex-direction:column;gap:28px;}}
-.bar-row{{display:flex;flex-direction:column;gap:10px;}}
+.bars{{display:flex;flex-direction:column;gap:32px;}}
+.bar-row{{display:flex;flex-direction:column;gap:8px;}}
 .bar-top{{display:flex;justify-content:space-between;align-items:baseline;}}
 .bar-name{{font-size:34px;font-weight:600;}}
 .bar-val{{font-size:38px;font-weight:800;letter-spacing:-.02em;}}
@@ -122,30 +139,37 @@ body{{background:{BG};color:{INK};
 .bar-fill{{height:100%;border-radius:15px;}}
 
 /* 순위 막대 */
-.rank{{display:flex;flex-direction:column;gap:18px;}}
-.rank-row{{display:flex;align-items:center;gap:20px;}}
+.rank{{display:flex;flex-direction:column;gap:16px;}}
+.rank-row{{display:flex;align-items:center;gap:24px;}}
 .rank-name{{width:280px;font-size:32px;font-weight:600;text-align:right;
            white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}}
 /* 배수 막대는 1.0~1.7 처럼 범위가 좁아 0 부터 그리면 차이가 안 보인다.
    "평소=1.0" 자리에 기준선을 그어 초과분이 읽히게 한다. */
-.rank-track{{flex:1;height:26px;position:relative;}}
-.rank-base{{position:absolute;top:-10px;bottom:-10px;width:2px;
-           background:{SUB};opacity:.45;}}
-.rank-baselabel{{font-size:24px;color:{SUB};margin-top:10px;}}
-.rank-fill{{height:100%;border-radius:13px;}}
+.rank-track{{flex:1;height:24px;position:relative;
+            background:#EDEAE2;border-radius:999px;}}
+/* 기준선은 굵게. 가늘면 "평소"가 어디인지 안 보여서 막대 길이만 남는다. */
+.rank-base{{position:absolute;top:-8px;bottom:-8px;width:4px;
+           background:{INK};opacity:.8;border-radius:2px;}}
+.rank-baselabel{{font-size:24px;color:{SUB};margin-top:8px;line-height:1.45;}}
+/* 기준선까지는 중립색, 기준선을 넘은 부분만 의미색 (지시사항 5항).
+   막대 전체를 칠하면 "평소만큼 거래된 것"까지 빨갛게 보인다. */
+.rank-fill{{position:absolute;left:0;top:0;height:100%;
+           border-radius:999px;background:{NEUTRAL};opacity:.55;}}
+.rank-over{{position:absolute;top:0;height:100%;
+           border-radius:0 999px 999px 0;}}
 .rank-val{{width:150px;font-size:30px;font-weight:700;}}
 
 /* 수치 행 */
 .rows{{display:flex;flex-direction:column;gap:0;}}
 .row{{display:flex;justify-content:space-between;align-items:baseline;
-     padding:26px 0;border-bottom:2px solid {LINE};}}
+     padding:24px 0;border-bottom:2px solid {LINE};}}
 .row:last-child{{border-bottom:none;}}
 .row .k{{font-size:34px;font-weight:500;color:{SUB};}}
 .row .v{{font-size:46px;font-weight:800;letter-spacing:-.02em;}}
 
 /* 표본 배지 — 적은 표본을 숨기지 않고 드러낸다 */
 .badge{{display:inline-block;font-size:26px;font-weight:600;color:{SUB};
-       background:#EDEAE2;border-radius:999px;padding:8px 18px;}}
+       background:#EDEAE2;border-radius:999px;padding:8px 16px;}}
 
 .quote{{font-size:64px;font-weight:700;line-height:1.35;letter-spacing:-.02em;}}
 .cta{{font-size:34px;font-weight:600;line-height:1.5;}}
@@ -204,6 +228,23 @@ def num(v) -> str:
         return "-"
     f = float(v)
     return f"{f:,.0f}" if f == int(f) else f"{f:,.1f}"
+
+
+def pyeong(bucket: str) -> str:
+    """'15P' → '10평대 후반'. 내부 코드를 화면에 그대로 내보내지 않는다.
+
+    평형 버킷은 지표 계산용 식별자다. "15P"가 무슨 뜻인지 아는 건 이 파이프라인을
+    만든 사람뿐이다.
+    """
+    if not bucket:
+        return ""
+    if bucket.endswith("+"):
+        return f"{bucket[:-2]}평 이상"
+    n = bucket.rstrip("P")
+    if not n.isdigit():
+        return bucket
+    v = int(n)
+    return f"{v - 5}평대 후반" if v % 10 else f"{v}평대"
 
 
 def split_name(name: str, limit: int = 12) -> tuple[str, str]:

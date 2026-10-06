@@ -128,9 +128,38 @@ def test_캐러셀에_반대지표_카드가_있다(cards):
     assert any("counter" in n for n in names), names
 
 
-def test_표본이_적으면_드러낸다(cards):
-    """표본 경고를 장으로 따로 둔다. 각주로 숨기면 아무도 안 읽는다."""
-    assert any("sample" in c["name"] for c in cards)
+def test_표본을_숨기지_않는다(cards):
+    """비율·배수를 쓴 장은 **그 수가 몇 건으로 나온 건지** 같이 적는다.
+
+    표본 경고를 따로 한 장으로 두던 걸 뺐다 — 같은 단지가 3장 연속이 돼서
+    (지시사항 5항: 한 대상 최대 2장). 대신 각 장이 자기 표본을 들고 다닌다.
+    빠뜨리면 여기서 걸린다.
+    """
+    want = {"05_compare": ("top", "deals_recent"),
+            "06_newhigh": ("new_high", "history_count")}
+    seen = 0
+    for c in cards:
+        key = want.get(c["name"])
+        if not key:
+            continue
+        row = (c["facts"]["card"] or {}).get(key[0])
+        if not row:
+            continue
+        n = row[key[1]]
+        text = C.strip_html(c["html"])
+        assert f"{n:,}건" in text or f"{n}건" in text, f"{c['name']}: 표본 {n} 누락"
+        seen += 1
+    assert seen, "표본을 들고 다녀야 할 장이 하나도 없다"
+
+
+def test_비교에는_양쪽_값을_모두_쓴다(cards):
+    """지시사항 9항. '거래 9건'만 쓰면 늘었는지 줄었는지 알 수 없다."""
+    c = next((c for c in cards if c["name"] == "05_compare"), None)
+    if c is None:
+        pytest.skip("비교 장 없음")
+    s = c["facts"]["card"]["top"]
+    text = C.strip_html(c["html"])
+    assert f'{s["deals_prior"]}건 → {s["deals_recent"]}건' in text, text[:200]
 
 
 def test_큰숫자_장은_표본이_충분한_값만_쓴다(data):
@@ -193,3 +222,94 @@ def test_렌더된_파일이_존재한다(outdir, cards):
     for c in cards:
         p = outdir / f"{c['name']}.png"
         assert p.stat().st_size > 8_000, f"{p.name} 이 너무 작다 (빈 이미지?)"
+
+
+# ── 지시사항 적합성 (한 번 고친 건 다시 무너지지 않게) ──────────────────
+def test_계정_핸들이_인스타에서_쓸_수_있는_형식(cards):
+    """인스타 사용자명은 영문·숫자·_·. 만 된다. 한글·공백 핸들은 존재할 수 없다."""
+    assert re.fullmatch(r"@[A-Za-z0-9._]+", D.HANDLE), D.HANDLE
+    for c in cards:
+        assert D.HANDLE in c["html"], c["name"]
+
+
+def test_한_장에_의미색이_둘을_넘지_않는다(cards):
+    """빨강·파랑·형광펜을 한 장에 다 쓰면 '증감'이라는 신호가 묻힌다 (3항)."""
+    for c in cards:
+        h = c["html"]
+        used = set()
+        if re.search(r'class="[^"]*\bup\b', h):
+            used.add("up")
+        if re.search(r'class="[^"]*\bdown\b', h):
+            used.add("down")
+        if 'class="mark"' in h:
+            used.add("accent")
+        assert len(used) <= 2, f"{c['name']}: 의미색 {used}"
+
+
+def test_같은_대상이_3장_연속_나오지_않는다(cards):
+    """세 장째면 "아직도 이 단지야?"가 된다 (5항: 한 대상 최대 2장)."""
+    def subjects(c) -> set:
+        out = set()
+        for v in (c["facts"]["card"] or {}).values():
+            if isinstance(v, dict):
+                out |= {v[k] for k in ("apt_name", "sigungu_name") if v.get(k)}
+        return out
+    subs = [subjects(c) for c in cards]
+    for i in range(len(subs) - 2):
+        common = subs[i] & subs[i + 1] & subs[i + 2]
+        assert not common, f"{cards[i]['name']}~{cards[i+2]['name']}: {common}"
+
+
+def test_내부_평형코드가_화면에_새지_않는다(cards):
+    """'15P' 가 무슨 뜻인지 아는 건 이 파이프라인을 만든 사람뿐이다."""
+    for c in cards:
+        m = re.search(r"\b\d{2}P\b", C.strip_html(c["html"]))
+        assert not m, f"{c['name']}: 평형 코드 '{m.group(0)}' 노출"
+
+
+@pytest.mark.parametrize("bucket,label", [
+    ("10P", "10평대"), ("15P", "10평대 후반"), ("30P", "30평대"),
+    ("35P", "30평대 후반"), ("60P+", "60평 이상"), ("", ""),
+])
+def test_평형_라벨_변환(bucket, label):
+    assert D.pyeong(bucket) == label
+
+
+def test_타입_스케일이_지시사항_범위_안(cards):
+    """2항: 헤드라인 88~104, 대형 숫자 220~280. 그 아래로는 **넘칠 때만** 간다."""
+    css = D.base_css()
+    for sel, lo, hi in [(r"\.h1\{\{?font-size:(\d+)px", 88, 104),
+                        (r"\.h1\.sm\{font-size:(\d+)px", 88, 104),
+                        (r"\.big\{font-size:(\d+)px", 220, 280),
+                        (r"\.big\.sm\{font-size:(\d+)px", 220, 280),
+                        (r"\.big\.xs\{font-size:(\d+)px", 220, 280)]:
+        m = re.search(sel, css)
+        assert m, sel
+        v = int(m.group(1))
+        assert lo <= v <= hi, f"{sel} = {v}px (허용 {lo}~{hi})"
+
+
+def test_출처_글자가_24px_미만이_아니다():
+    """24px 미만 금지 (2항). 폰에서 안 읽힌다."""
+    small = [int(n) for n in re.findall(r"font-size:(\d+)px", D.base_css())
+             if int(n) < 24]
+    assert not small, f"24px 미만: {small}"
+
+
+def test_여백이_8px_그리드를_따른다():
+    """1항. 8의 배수가 아니면 장마다 미세하게 어긋나 보인다."""
+    vals = [int(n) for n in re.findall(
+        r"(?:gap|margin-top|margin-bottom):(\d+)px", D.base_css())]
+    bad = sorted({v for v in vals if v % 8})
+    assert not bad, f"8의 배수가 아닌 여백: {bad}"
+
+
+# ── 렌더 결과 (느리지만 여기가 실제 보증) ───────────────────────────────
+def test_렌더가_세로배치_규칙을_통과한다(cards, outdir, tmp_path):
+    """5항: y=200에서 시작, 하단 빈 공간 300px 이하, 표지 숫자 폭 70% 이상.
+
+    렌더러가 직접 재서 보고한다. 정적 검사로는 못 잡는 항목들이다 —
+    글자 수가 바뀌면 같은 CSS 로도 결과가 달라진다.
+    """
+    _, problems = C.render(cards, tmp_path)
+    assert not problems, problems
