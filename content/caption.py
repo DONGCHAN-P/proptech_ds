@@ -82,23 +82,43 @@ def cover_line(c) -> str:
 
 
 def detail_lines(t: dict) -> list[str]:
-    """캐러셀 2~4장을 글로 옮긴다. **순서가 같아야** 넘겨 본 사람이 안 헷갈린다."""
+    """캡션 본문은 **캐러셀 장 순서를 그대로** 따라간다.
+
+    넘겨 본 사람이 캡션을 읽을 때 순서가 어긋나면 "어느 장 얘기지"가 된다.
+    없는 장을 가리키는 건 더 나쁘다 — 전에 "수도권 전체로 보면…" 이라고
+    썼는데 그 주 덱에는 온도지도가 없었다.
+    """
     c = t["cover"]
     d = c.data
-    out = []
-    if c.angle == "new_high":
+    prof = d.get("profile")
+    out: list[str] = []
+
+    if prof:
+        # 2장 — 이번 거래
         out.append(f'· 이번 거래 {D.won(d["deal_amount"])} '
                    f'(종전 최고 {D.won(d["prev_peak"])})')
-        out.append(f'· 이 평형 누적 거래 {D.num(d["history_count"])}건으로 '
-                   f'견준 값이에요')
+        # 3장 — 주변 단지
+        nb = prof.get("neighbors") or []
+        if nb:
+            hi = max(nb, key=lambda r: r["last_price"])
+            name = D.split_name(hi["apt_name"], 10)[0]
+            # "9.8억예요" → "9.8억이에요". 억·만 뒤에는 늘 받침이 있다.
+            out.append(f'· 같은 동 {D.pyeong(prof["pyeong_bucket"])}에서 가장 비싼 '
+                       f'거래는 {name} {D.won(hi["last_price"])}이에요')
+        # 4장 — 거래 건수
+        pts = prof.get("series") or []
+        recent = sum(p["deals"] for p in pts[-12:]) if pts else 0
+        prior = sum(p["deals"] for p in pts[-24:-12]) if len(pts) > 12 else 0
+        if prior:
+            out.append(f'· 이 평형 거래는 직전 1년 {prior}건 → 최근 1년 {recent}건')
     elif c.angle == "counter":
         out.append(f'· 평단가 {D.delta(d["change_pct"], arrow=False)}, '
                    f'거래는 {d["deals_prior"]}건 → {d["deals_recent"]}건')
-        out.append(f'· 최근 {d["deals_recent"]}건으로 계산한 값이라 '
-                   f'흔들릴 수 있어요')
     else:
         out.append(f'· 이번 주 {d["week_deals"]}건 '
                    f'(평소 {D.num(d["deals_avg_52w"])}건)')
+
+    # 5장 — 그 구는
     r = t.get("cover_region")
     if r and r.get("deals_avg_52w"):
         ratio = r["week_deals"] / r["deals_avg_52w"]
@@ -106,7 +126,6 @@ def detail_lines(t: dict) -> list[str]:
                 "조용했어요" if ratio <= 0.9 else "평소와 비슷했어요")
         out.append(f'· {c.region} 전체는 이번 주 {r["week_deals"]}건 '
                    f'(평소 {D.num(r["deals_avg_52w"])}건) — {word}')
-    out.append('· 수도권 전체로 보면 동네마다 방향이 달랐어요')
     return out
 
 
@@ -157,8 +176,14 @@ def build(data: dict) -> dict | None:
     if t is None:
         return None
     text = caption(t)
+    # 캡션이 쓰는 파생값(1년 거래 합)도 발행되는 숫자다. 출처를 대지 않으면
+    # 검증기가 막는다 — 막는 게 맞고, 실제로 여기서 한 번 걸렸다.
+    prof = (t["cover"].data or {}).get("profile") or {}
+    pts = prof.get("series") or []
     facts = {"busiest": t["busiest"], "top": t["top"],
              "cover": t["cover"].data, "cover_region": t.get("cover_region"),
+             "deals_recent_1y": sum(p["deals"] for p in pts[-12:]),
+             "deals_prior_1y": sum(p["deals"] for p in pts[-24:-12]),
              "drop_pct": round((t["top"]["deals_recent"]
                                 / t["top"]["deals_prior"] - 1) * 100, 1),
              "params": t["params"]}
