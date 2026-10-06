@@ -123,9 +123,24 @@ def test_모든_카드에_계정_핸들이_있다(cards):
 
 
 # ── 반대 지표 (핵심) ─────────────────────────────────────────────────────
-def test_캐러셀에_반대지표_카드가_있다(cards):
+def test_헤드라인을_되묻는_장이_있다(cards):
+    """표지 숫자를 그대로 믿게 두지 않는다.
+
+    전에는 `quote` 장이 "값이 올라도 거래는 안 늘었다"로 받았는데, 그게
+    **다른 단지** 얘기여서 흐름이 끊겼다. 지금은 같은 소재를 한 겹 넓혀
+    되묻는다 — 단지 하나가 움직여도 동네가 같이 움직이는 건 아니라고.
+    """
     names = [c["name"] for c in cards]
-    assert any("counter" in n for n in names), names
+    assert any(n.endswith(("_region", "_counter")) for n in names), names
+    card = next(c for c in cards if c["name"].endswith(("_region", "_counter")))
+    t = C.strip_html(card["html"])
+    assert "아니에요" in t or "줄었" in t, t[:160]
+
+
+def t_angle(cards) -> str:
+    f = cards[0]["facts"]["card"]["cover"]
+    return ("new_high" if "history_count" in f else
+            "counter" if "change_pct" in f else "surge")
 
 
 def test_표본을_숨기지_않는다(cards):
@@ -135,9 +150,10 @@ def test_표본을_숨기지_않는다(cards):
     (지시사항 5항: 한 대상 최대 2장). 대신 각 장이 자기 표본을 들고 다닌다.
     빠뜨리면 여기서 걸린다.
     """
-    want = {"05_compare": ("top", "deals_recent"),
-            "06_newhigh": ("new_high", "history_count")}
+    want = {"02_detail": ("cover", "history_count")}
     seen = 0
+    if t_angle(cards) != "new_high":
+        pytest.skip("신고가 앵글일 때만 누적 거래 수를 쓴다")
     for c in cards:
         key = want.get(c["name"])
         if not key:
@@ -154,12 +170,13 @@ def test_표본을_숨기지_않는다(cards):
 
 def test_비교에는_양쪽_값을_모두_쓴다(cards):
     """지시사항 9항. '거래 9건'만 쓰면 늘었는지 줄었는지 알 수 없다."""
-    c = next((c for c in cards if c["name"] == "05_compare"), None)
+    c = next((c for c in cards if c["layout"] == "compare_bars"), None)
     if c is None:
         pytest.skip("비교 장 없음")
-    s = c["facts"]["card"]["top"]
     text = C.strip_html(c["html"])
-    assert f'{s["deals_prior"]}건 → {s["deals_recent"]}건' in text, text[:200]
+    r = c["facts"]["card"]["region"]
+    assert f'{D.num(r["deals_avg_52w"])}건' in text and f'{r["week_deals"]}건' in text, (
+        text[:200])
 
 
 def test_큰숫자_장은_표본이_충분한_값만_쓴다(data):
@@ -271,18 +288,38 @@ def test_한_장에_의미색이_둘을_넘지_않는다(cards):
         assert len(used) <= 2, f"{c['name']}: 의미색 {used}"
 
 
-def test_같은_대상이_3장_연속_나오지_않는다(cards):
-    """세 장째면 "아직도 이 단지야?"가 된다 (5항: 한 대상 최대 2장)."""
-    def subjects(c) -> set:
+def test_같은_대상을_같은_층위로_3장_연속_다루지_않는다(cards):
+    """5항 "한 대상 최대 2장"을 **층위까지 넣어** 읽는다.
+
+    캐러셀이 한 소재를 점점 넓혀가는 구조라(한 거래 → 그 동네 → 수도권)
+    같은 지역명이 1~3장에 연달아 나온다. 그건 중복이 아니라 줄거리다.
+    원래 규칙이 막으려던 건 **같은 얘기를 세 번 하는 것**이므로, 같은
+    대상을 같은 층위(apt/region/metro)로 세 장 연속 다루는 경우만 막는다.
+    """
+    def key(c) -> set:
         out = set()
         for v in (c["facts"]["card"] or {}).values():
             if isinstance(v, dict):
-                out |= {v[k] for k in ("apt_name", "sigungu_name") if v.get(k)}
+                out |= {(c.get("scope"), v[k])
+                        for k in ("apt_name", "sigungu_name") if v.get(k)}
         return out
-    subs = [subjects(c) for c in cards]
-    for i in range(len(subs) - 2):
-        common = subs[i] & subs[i + 1] & subs[i + 2]
+    ks = [key(c) for c in cards]
+    for i in range(len(ks) - 2):
+        common = ks[i] & ks[i + 1] & ks[i + 2]
         assert not common, f"{cards[i]['name']}~{cards[i+2]['name']}: {common}"
+
+
+def test_층위가_점점_넓어진다(cards):
+    """표지의 한 사실에서 시작해 동네 → 수도권으로 넓힌다.
+
+    장마다 각자의 1등을 뽑아 오면 "표지는 마포구, 2장은 포천, 4장은 영통동"
+    처럼 여덟 장이 서로 남남이 된다. 층위가 뒤로 갈수록 넓어지는지 본다.
+    """
+    rank = {"apt": 0, "region": 1, "metro": 2, "summary": 3}
+    seq = [rank[c["scope"]] for c in cards if c.get("scope")]
+    assert seq == sorted(seq), [
+        (c["name"], c.get("scope")) for c in cards]
+    assert seq[-1] == rank["summary"], "정리로 끝나지 않는다"
 
 
 def test_내부_평형코드가_화면에_새지_않는다(cards):

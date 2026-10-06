@@ -92,6 +92,11 @@ def pick(data: dict) -> dict | None:
             "all_regions": z,
             "new_high": nh[0] if nh else None, "new_highs": nh,
             "cover": picked, "cover_top3": top3, "cover_notes": notes,
+            # 표지 소재가 있는 지역의 주간 행. 2~4장이 "그 동네는 어땠나"로
+            # 이어지려면 필요하다.
+            "cover_region": next(
+                (r for r in z if r["sigungu_name"] == picked.region), None)
+            if picked else None,
             "params": data.get("params") or {}, "asof": data["asof"]}
 
 
@@ -175,7 +180,7 @@ def c1_cover(t: dict, n: int) -> dict:
         f'<div class="big up">{cp["big"]}</div>'
         f'<div class="lead">{cp["lead"]}</div>'
         f'</div>')
-    return {"name": "01_cover", "layout": "hero_number",
+    return {"name": "01_cover", "layout": "hero_number", "scope": ("apt" if c.angle in ("new_high", "counter") else "region"),
             "facts": cover_facts(c),
             "html": D.head(1, n) + inner + D.foot(t["asof"])}
 
@@ -211,7 +216,7 @@ def map_cover(t: dict, c, cp: dict, n: int) -> dict | None:
         f'<div class="mc-map">{svg}</div>'
         f'<div class="mc-foot">{cp["lead"]} · 지도는 {where}</div>'
         f'</div>')
-    return {"name": "01_cover", "layout": "map_cover",
+    return {"name": "01_cover", "layout": "map_cover", "scope": ("apt" if c.angle in ("new_high", "counter") else "region"),
             # 표지만 어둡게. 2장부터는 오프화이트로 돌아간다 (5항) —
             # 일곱 장이 전부 오프화이트면 피드에서 묻힌다.
             "dark": True,
@@ -286,7 +291,7 @@ def c2_ranking(t: dict, n: int, rows_max: int = RT_ROWS_MAX) -> dict:
         f'<div class="rt">{"".join(out)}</div>'
         f'<div class="rt-note">평소 = 지난 52주 평균 · 평소 대비 배수 순</div>'
         f'</div>')
-    return {"name": "02_ranking", "layout": "ranking_table",
+    return {"name": "02_ranking", "layout": "ranking_table", "scope": "metro",
             "facts": {"ranked": rows}, "rows_max": rows_max, "rows_min": RT_ROWS_MIN,
             # 표가 안전 영역을 넘으면 렌더러가 행을 줄여 다시 만든다 (9항).
             # 글자를 줄이는 쪽으로 풀면 28px 하한을 깨게 된다.
@@ -361,7 +366,7 @@ def c3_heat(t: dict, n: int) -> dict:
         f'<div class="rt-note">색이 없는 곳은 거래가 적어 판단하지 않았어요 · '
         f'평소 = 지난 52주 평균</div>'
         f'</div>')
-    return {"name": "03_heat", "layout": "map_heat",
+    return {"name": "03_heat", "layout": "map_heat", "scope": "metro",
             "facts": {"regions": [
                 {"sigungu_name": r["sigungu_name"],
                  "week_deals": r["week_deals"],
@@ -444,7 +449,7 @@ def c6_tiles(t: dict, n: int, rows_max: int = TILE_MAX) -> dict | None:
         f'<div class="rt-note">종전 최고 대비 상승률 순 · 같은 단지·같은 평형 '
         f'기록과 견준 값</div>'
         f'</div>')
-    return {"name": "06_tiles", "layout": "tile_grid",
+    return {"name": "06_tiles", "layout": "tile_grid", "scope": "metro",
             "facts": {"new_highs": [with_label(r) for r in rows]},
             # 타일도 넘치면 글자가 아니라 **개수**를 줄인다 (글자 하한이 있다)
             "rows_max": rows_max, "rows_min": TILE_MIN,
@@ -453,31 +458,44 @@ def c6_tiles(t: dict, n: int, rows_max: int = TILE_MAX) -> dict | None:
 
 
 def c7_outro(t: dict, page: int, n: int) -> dict:
-    """정리. 새 숫자를 쓰지 않는다 — 앞에 나온 값만 되짚는다."""
-    b, s, c = t["busiest"], t["top"], t["cover"]
-    # 첫 줄은 **표지에서 한 얘기**다. 표지가 5-1항 규칙으로 정해지므로
-    # 거래량 1위와 다를 수 있는데, 요약이 그걸 빠뜨리면 "표지는 왜 그거였지"가
-    # 된다. 새 숫자는 쓰지 않는다 (5항) — 앞 장에 나온 값만 되짚는다.
-    first = {
-        "new_high": f'{c.region} {c.data.get("apt_name", "")}가 '
-                    f'종전 최고가를 넘었어요',
-        "counter": f'{c.region} {c.data.get("apt_name", "")} 평단가가 올랐어요',
-    }.get(c.angle, f'{c.region} 거래가 평소보다 많았어요')
+    """정리 — **앞 장들을 순서대로** 되짚는다.
+
+    새 숫자를 쓰지 않는다 (5항). 세 줄이 곧 이 캐러셀의 줄거리라, 여기가
+    앞 장과 다른 얘기를 하면 그동안 쌓은 흐름이 마지막에 흩어진다.
+    """
+    c = t["cover"]
+    d = c.data
+    if c.angle == "new_high":
+        one = f'{c.region} {d["apt_name"]}가 종전 최고가를 넘었어요'
+    elif c.angle == "counter":
+        one = f'{c.region} {d["apt_name"]}는 값이 올랐는데 거래는 줄었어요'
+    else:
+        one = f'{c.region} 거래가 평소와 달랐어요'
+
+    r = t.get("cover_region")
+    if r and r.get("deals_avg_52w"):
+        ratio = r["week_deals"] / r["deals_avg_52w"]
+        two = (f'그런데 {c.region} 전체는 '
+               + ("평소보다 붐볐어요" if ratio >= 1.1 else
+                  "평소보다 조용했어요" if ratio <= 0.9 else "평소와 비슷했어요"))
+    else:
+        two = f'다만 {c.region} 전체가 그런 건 아니에요'
+
     inner = (
         f'<div class="body">'
         f'<div class="kicker">정리</div>'
         f'{D.cond("수도권 아파트 · 해제 건 제외")}'
         f'<div class="h1 sm">세 줄 요약</div>'
         f'<div class="lead">'
-        f'· {first}<br>'
-        f'· {b["sigungu_name"]} 거래는 평소보다 많았어요<br>'
-        f'· 다만 {s["apt_name"]}은 값이 올라도 거래가 줄었어요</div>'
+        f'· {one}<br>'
+        f'· {two}<br>'
+        f'· 수도권 전체로 보면 동네마다 방향이 달랐어요</div>'
         f'<div class="cta">저장해두고 <span class="mark">다음 주와 비교</span>해보세요.<br>'
         f'여러분 동네는 이번 주 어땠나요?</div>'
         f'<div class="disc">{DISCLAIMER_SOCIAL}</div>'
         f'</div>')
-    return {"name": "07_outro", "layout": "summary_cta",
-            "facts": {"cover": with_label(c.data)},
+    return {"name": "07_outro", "layout": "summary_cta", "scope": "summary",
+            "facts": {"cover": with_label(d)},
             "html": D.head(page, n) + inner}
 
 
@@ -511,8 +529,97 @@ def c8_follow(t: dict, page: int, n: int) -> dict:
         # 가장 오래 보고 캡처도 하는 자리라 여기서 줄일 이유가 없다.
         f'<div class="disc">{DISCLAIMER_SOCIAL}</div>'
         f'</div>')
-    return {"name": f"{page:02d}_follow", "layout": "follow_cta",
+    return {"name": f"{page:02d}_follow", "layout": "follow_cta", "scope": "summary",
             "facts": {}, "html": D.head(page, n) + inner + D.foot(t["asof"])}
+
+
+def n2_detail(t: dict, n: int) -> dict:
+    """2장 — 표지에서 던진 사실을 자세히.
+
+    표지는 "얼마나?"를 묻고 끝낸다. 여기서 답한다. 양쪽 값을 모두 쓰고
+    (9항), 그 값이 **몇 건으로 나왔는지**를 같은 장에 붙인다 — 숫자를 먼저
+    보여주고 표본을 나중 장으로 미루면 그 사이에 믿어버린다.
+    """
+    c = t["cover"]
+    d = c.data
+    if c.angle == "new_high":
+        name, _ = D.split_name(d["apt_name"])
+        head = (f'{d["sigungu_name"]} {d["legal_dong_name"]} · {name}',
+                D.cond(D.pyeong(d["pyeong_bucket"]), d["floor_band"],
+                       f'{t["params"]["data_start_year"]}년 이후 기록과 견줌'))
+        pre, big = "이번 거래", D.won(d["deal_amount"])
+        lead = (f'종전 최고 {D.won(d["prev_peak"])} → '
+                f'이번 거래 {D.won(d["deal_amount"])}')
+        badge = f'이 평형 누적 거래 {D.num(d["history_count"])}건'
+    elif c.angle == "counter":
+        name, _ = D.split_name(d["apt_name"])
+        head = (f'{d["sigungu_name"]} {d["legal_dong_name"]} · {name}',
+                D.cond(D.pyeong(d["pyeong_bucket"]),
+                       f'최근 {t["params"]["surge_window_days"]}일 vs 직전 동기간'))
+        pre, big = "최근 90일 거래", f'{d["deals_recent"]}건'
+        lead = f'직전 {d["deals_prior"]}건 → 최근 {d["deals_recent"]}건'
+        badge = f'평단가는 {D.delta(d["change_pct"], arrow=False)} 올랐어요'
+    else:
+        head = (f'{d["sigungu_name"]}',
+                D.cond(f'{d.get("week_start", "")} 주',
+                       f'평소 = 지난 {t["params"]["zscore_hist_weeks"]}주 평균'))
+        pre, big = "이번 주 거래", f'{d["week_deals"]}건'
+        lead = (f'평소 {D.num(d["deals_avg_52w"])}건 → '
+                f'이번 주 {d["week_deals"]}건')
+        badge = f'평소의 {D.times(d["week_deals"], d["deals_avg_52w"])}예요'
+    inner = (
+        f'<div class="body">'
+        f'<div class="kicker">{head[0]}</div>{head[1]}'
+        f'<div class="big-pre">{pre}</div>'
+        f'<div class="big sm up">{big}</div>'
+        f'<div class="lead">{lead}</div>'
+        f'<div><span class="badge">{badge}</span></div>'
+        f'</div>')
+    return {"name": "02_detail", "layout": "hero_number", "scope": ("apt" if c.angle in ("new_high", "counter") else "region"),
+            "facts": {"cover": with_label(d)},
+            "html": D.head(2, n) + inner + D.foot(t["asof"])}
+
+
+def n3_region(t: dict) -> dict | None:
+    """3장 — 그 단지가 있는 **동네**는 어땠나.
+
+    단지 하나가 움직였다고 동네가 움직인 건 아니다. 이 장이 없으면 표지의
+    한 거래가 그 지역 전체를 대표하는 것처럼 읽힌다.
+    """
+    r = t.get("cover_region")
+    if not r or not r.get("deals_avg_52w"):
+        return None
+    c = t["cover"]
+    ratio = r["week_deals"] / r["deals_avg_52w"]
+    word = ("더 붐볐어요" if ratio >= 1.1 else
+            "더 조용했어요" if ratio <= 0.9 else "평소와 비슷했어요")
+    mx = max(r["week_deals"], r["deals_avg_52w"]) or 1
+    cond = D.cond(c.region, f'{r.get("week_start", "")} 주')
+
+    def bar(label, val, color):
+        return (f'<div class="bar-row"><div class="bar-top">'
+                f'<span class="bar-name">{label}</span>'
+                f'<span class="bar-val">{D.num(val)}건</span></div>'
+                f'<div class="bar-track"><div class="bar-fill" '
+                f'style="width:{val / mx * 100:.0f}%;background:{color}"></div>'
+                f'</div></div>')
+
+    inner = (
+        f'<div class="body">'
+        f'<div class="kicker">그 단지가 있는 동네는</div>'
+        f'{cond}'
+        f'<div class="h1 sm">{c.region}는<br>{word}</div>'
+        f'<div class="bars">'
+        f'{bar("평소", r["deals_avg_52w"], D.NEUTRAL)}'
+        f'{bar("이번 주", r["week_deals"], D.UP if ratio >= 1 else D.DOWN)}'
+        f'</div>'
+        f'<div class="sub">단지 하나가 움직여도 동네 전체가 '
+        f'같이 움직이는 건 아니에요.</div>'
+        f'</div>')
+    return {"name": "03_region", "layout": "compare_bars", "scope": "region",
+            "facts": {"region": r, "ratio": round(ratio, 2)},
+            "html": D.head(3, 0) + inner
+                    + D.foot(t["asof"], "평소 = 지난 52주 평균")}
 
 
 def build_cards(data: dict, chart_dir: Path | None = None) -> list[dict]:
@@ -526,15 +633,34 @@ def build_cards(data: dict, chart_dir: Path | None = None) -> list[dict]:
     # 지시사항 5항 레이아웃 조합:
     #   1 표지 → 2 ranking_table → 3 반전/맥락 → 4~6 혼합 → 7 정리
     # 같은 계열(rows·compare_bars)과 (ranking_table·tile_grid)은 붙이지 않는다.
-    # 마지막에 팔로우 유도 한 장을 더 둔다 (5~8장 범위 안).
-    n = 8 if t.get("new_highs") else 7
-    cards = [c1_cover(t, n), c2_ranking(t, n), c3_heat(t, n),
-             c4_counter(t, n), c5_compare(t, n)]
-    six = c6_tiles(t, n)
-    if six:
-        cards.append(six)
-    cards.append(c7_outro(t, len(cards) + 1, n))
-    cards.append(c8_follow(t, len(cards) + 1, n))
+    # 한 소재를 잡고 **점점 넓혀간다.**
+    #
+    #   표지(한 사실) → 자세히 → 그 동네는 → 수도권에선 → 같은 주 다른 곳
+    #   → 정리 → 팔로우
+    #
+    # 전에는 장마다 각자의 1등을 뽑아 왔다. 표지는 마포구 신고가, 2장은
+    # 포천·안성 순위, 4~5장은 수원 영통동 단지… 한 장씩은 다 맞는 말인데
+    # 여덟 장이 서로 남남이라 "그래서 무슨 얘기냐"가 안 남는다.
+    cards = [c1_cover(t, 0), n2_detail(t, 0)]
+    region = n3_region(t)
+    if region:
+        cards.append(region)
+    cards.append(c3_heat(t, 0))
+    # 같은 주 다른 곳 — 단지에서 시작했으면 다른 단지, 지역에서 시작했으면
+    # 다른 지역으로 받는다. 소재가 바뀌는 자리는 여기 한 장뿐이다.
+    others = (c6_tiles(t, 0) if t["cover"].angle in ("new_high", "counter")
+              else c2_ranking(t, 0))
+    if others:
+        cards.append(others)
+    cards += [c7_outro(t, 0, 0), c8_follow(t, 0, 0)]
+
+    # 페이지 번호는 장이 다 정해진 뒤에 매긴다. 중간 장이 빠질 수 있어서
+    # 각 함수가 자기 번호를 들고 있으면 1,2,4,5… 가 된다.
+    n = len(cards)
+    for i, c in enumerate(cards, 1):
+        c["html"] = re.sub(r'<div class="hd">.*?</div>', D.head(i, n),
+                           c["html"], count=1, flags=re.S)
+        c["name"] = f"{i:02d}_{c['name'].split('_', 1)[1]}"
     return [finish(c, t["params"]) for c in cards]
 
 
@@ -697,7 +823,15 @@ def render(cards: list[dict], outdir: Path,
             # ③ 표는 글자를 줄이는 대신 **행을 줄인다** (9항).
             #    28px 하한이 따로 있어서 글자로는 못 푼다.
             while over and c.get("rebuild") and c["rows_max"] > c["rows_min"]:
+                # 다시 만든 장은 **원래 이름과 머리말**을 들고 온다. 장 번호는
+                # build_cards 가 마지막에 매기므로, 그대로 두면 5장이 다시
+                # "06_tiles · 6/7" 로 돌아간다.
+                nm, hd = c["name"], re.search(
+                    r'<div class="hd">.*?</div>', c["html"], re.S).group(0)
                 c = finish(dict(c, **c["rebuild"](c["rows_max"] - 1)), params)
+                c["name"] = nm
+                c["html"] = re.sub(r'<div class="hd">.*?</div>', hd,
+                                   c["html"], count=1, flags=re.S)
                 cards[idx] = c
                 fill, shrink = 1.0, 0
                 over, geo = draw(shrink, fill)

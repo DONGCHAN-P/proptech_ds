@@ -34,6 +34,8 @@ from content.thread import cta  # noqa: E402
 from content.validator import validate  # noqa: E402
 from templates.disclaimers import DISCLAIMER_SOCIAL  # noqa: E402
 
+NL = chr(10)
+
 MAX_LEN = 2200      # 인스타 캡션 한도
 MAX_TAGS = 30       # 해시태그 한도
 PREVIEW_LINES = 2   # "더 보기" 전에 보이는 줄
@@ -53,9 +55,10 @@ def tags(t: dict) -> str:
     태그는 그 게시물이 어디 얘기인지 알리는 자리다. 표지가 마포구인데 태그에
     마포구가 없으면 검색으로 들어올 사람이 못 찾는다.
     """
-    b, s, c = t["busiest"], t["top"], t["cover"]
-    names = [c.region, b["sigungu_name"], s["sigungu_name"],
-             s["legal_dong_name"]]
+    c = t["cover"]
+    # 덱에 나오는 지역만 태그한다. 표지가 마포구인데 #포천시 가 붙어 있으면
+    # 그 태그로 들어온 사람이 "왜 여기 있지"가 된다.
+    names = [c.region, c.data.get("legal_dong_name") or ""]
     out, seen = [], set()
     for n in names + BASE_TAGS:
         n = n.replace(" ", "")
@@ -78,24 +81,56 @@ def cover_line(c) -> str:
             f'{D.times(d["week_deals"], d["deals_avg_52w"])}였어요.')
 
 
+def detail_lines(t: dict) -> list[str]:
+    """캐러셀 2~4장을 글로 옮긴다. **순서가 같아야** 넘겨 본 사람이 안 헷갈린다."""
+    c = t["cover"]
+    d = c.data
+    out = []
+    if c.angle == "new_high":
+        out.append(f'· 이번 거래 {D.won(d["deal_amount"])} '
+                   f'(종전 최고 {D.won(d["prev_peak"])})')
+        out.append(f'· 이 평형 누적 거래 {D.num(d["history_count"])}건으로 '
+                   f'견준 값이에요')
+    elif c.angle == "counter":
+        out.append(f'· 평단가 {D.delta(d["change_pct"], arrow=False)}, '
+                   f'거래는 {d["deals_prior"]}건 → {d["deals_recent"]}건')
+        out.append(f'· 최근 {d["deals_recent"]}건으로 계산한 값이라 '
+                   f'흔들릴 수 있어요')
+    else:
+        out.append(f'· 이번 주 {d["week_deals"]}건 '
+                   f'(평소 {D.num(d["deals_avg_52w"])}건)')
+    r = t.get("cover_region")
+    if r and r.get("deals_avg_52w"):
+        ratio = r["week_deals"] / r["deals_avg_52w"]
+        word = ("붐볐어요" if ratio >= 1.1 else
+                "조용했어요" if ratio <= 0.9 else "평소와 비슷했어요")
+        out.append(f'· {c.region} 전체는 이번 주 {r["week_deals"]}건 '
+                   f'(평소 {D.num(r["deals_avg_52w"])}건) — {word}')
+    out.append('· 수도권 전체로 보면 동네마다 방향이 달랐어요')
+    return out
+
+
+def hook2(t: dict) -> str:
+    """미리보기 둘째 줄. 넘길 이유를 만든다 — 1장과 3장 사이의 긴장."""
+    c = t["cover"]
+    r = t.get("cover_region")
+    if r and r.get("deals_avg_52w"):
+        ratio = r["week_deals"] / r["deals_avg_52w"]
+        if ratio <= 0.9:
+            return f'그런데 {c.region} 전체 거래는 평소보다 조용했어요. →'
+        if ratio >= 1.1:
+            return f'{c.region} 전체도 평소보다 붐볐고요. →'
+    return '같은 주, 동네마다 방향이 달랐어요. →'
+
+
 def caption(t: dict) -> str:
-    b, s = t["busiest"], t["top"]
-    mult = D.times(b["week_deals"], b["deals_avg_52w"])
-    drop = (s["deals_recent"] / s["deals_prior"] - 1) * 100
     # 첫 줄은 **캐러셀 표지와 같은 얘기**여야 한다. 캡션이 다른 지역을
-    # 말하면 넘겨 본 사람이 "무슨 소리지"가 된다. 표지는 5-1항 규칙으로
-    # 고르므로 거래량 1위와 다를 수 있다.
-    hook = cover_line(t["cover"])
+    # 말하면 넘겨 본 사람이 "무슨 소리지"가 된다.
     body = [
-        # 앞 2줄 = 미리보기. 여기서 넘길지 말지가 결정된다.
-        hook,
-        "그런데 값이 오른 단지는 오히려 손바뀜이 줄었어요. →",
+        cover_line(t["cover"]),
+        hook2(t),
         "",
-        f"· {b['sigungu_name']} 이번 주 {b['week_deals']}건 "
-        f"(평소 {D.num(b['deals_avg_52w'])}건)",
-        f"· {s['apt_name']} {s['pyeong_bucket']} 평단가 {D.delta(s['change_pct'], arrow=False)}",
-        f"· 같은 기간 거래 건수는 {D.delta(drop, arrow=False)}",
-        f"· 다만 최근 {s['deals_recent']}건으로 계산한 값이라 흔들릴 수 있어요",
+        *detail_lines(t),
         "",
         f"'평소'는 지난 {t['params']['zscore_hist_weeks']}주 평균이에요. "
         f"지역끼리 비교한 게 아니라 그 지역의 평소와 비교한 값이고요.",
@@ -106,16 +141,15 @@ def caption(t: dict) -> str:
         "저장해두고 다음 주 숫자와 비교해보세요.",
         "여러분 동네는 이번 주 어땠나요? 댓글로 알려주세요.",
         "",
-        # 링크가 없으면 CTA 줄을 아예 뺀다. "(링크 준비 중)" 을 그대로
-        # 올리면 미완성으로 보이고, 그게 계정 첫인상이 된다.
-        *( [cta(), ""] if os.environ.get("NEWSLETTER_URL", "").strip() else [] ),
-        f"매주 이렇게 한 장으로 정리해요. {D.HANDLE} 팔로우하면 다음 주에 또 만나요.",
+        *([cta(), ""] if os.environ.get("NEWSLETTER_URL", "").strip() else []),
+        f"매주 이렇게 한 장으로 정리해요. {D.HANDLE} 팔로우하면 "
+        f"다음 주에 또 만나요.",
         "",
         DISCLAIMER_SOCIAL,
         "",
         tags(t),
     ]
-    return "\n".join(body)
+    return NL.join(body)
 
 
 def build(data: dict) -> dict | None:
@@ -124,7 +158,7 @@ def build(data: dict) -> dict | None:
         return None
     text = caption(t)
     facts = {"busiest": t["busiest"], "top": t["top"],
-             "cover": t["cover"].data,
+             "cover": t["cover"].data, "cover_region": t.get("cover_region"),
              "drop_pct": round((t["top"]["deals_recent"]
                                 / t["top"]["deals_prior"] - 1) * 100, 1),
              "params": t["params"]}

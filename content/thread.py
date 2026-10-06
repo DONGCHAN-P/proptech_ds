@@ -34,6 +34,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from content.design import pyeong  # noqa: E402
 from content.validator import validate  # noqa: E402
 from templates.disclaimers import (  # noqa: E402
     ALL_DISCLAIMERS, CTA_NEWSLETTER, CTA_PLACEHOLDER_URL,
@@ -107,7 +108,7 @@ def draft_new_high(f: dict, p: dict) -> str:
         body.append(f"· 다만 이 평형 누적 거래가 {f['history_count']}건뿐이라 "
                     f"들쭉날쭉해요")
     return assemble(
-        f"{f['sigungu_name']} {f['apt_name']} {f['pyeong_bucket']}, "
+        f"{f['sigungu_name']} {f['apt_name']} {pyeong(f['pyeong_bucket'])}, "
         f"종전 최고가를 넘겼어요.",
         body,
         "이 동네 보고 계신 분 있나요? 체감은 어떠세요?")
@@ -121,7 +122,7 @@ def draft_outlier(f: dict, p: dict) -> str:
         f"{f['sigungu_name']} {f['legal_dong_name']} {f['apt_name']}, "
         f"평소와 꽤 벌어진 거래가 신고됐어요.",
         [f"· 이번 거래 {won(f['deal_amount'])} · {f['floor_band']} · "
-         f"{f['pyeong_bucket']}",
+         f"{pyeong(f['pyeong_bucket'])}",
          f"· 직전 {p['outlier_ref_window_days']}일 평균은 "
          f"{won(f['ref_avg'])} (거래 {f['ref_count']}건)",
          f"· {abs(gap)}% {way} 찍힌 셈이에요",
@@ -173,8 +174,37 @@ def prep_zscore(rows: list[dict]) -> list[dict]:
 
 
 def prep_new_high(rows: list[dict]) -> list[dict]:
-    """누적 거래가 두터운 단지를 앞으로. 6건짜리 신고가는 글감이 아니다."""
-    return sorted(rows, key=lambda r: r.get("history_count", 0), reverse=True)
+    """누적 거래가 두터운 단지를 앞으로. 6건짜리 신고가는 글감이 아니다.
+
+    그 주 캐러셀 표지로 고른 단지가 있으면 **그걸 맨 앞에** 둔다. 같은 주에
+    인스타는 마포구 얘기를 하는데 스레드는 다른 단지를 말하면, 두 계정이
+    따로 노는 것처럼 보인다.
+    """
+    rows = sorted(rows, key=lambda r: r.get("history_count", 0), reverse=True)
+    try:
+        from content import cover as CV
+        picked = _cover_pick()
+        if picked and picked.angle == "new_high":
+            name = picked.data.get("apt_name")
+            rows.sort(key=lambda r: r.get("apt_name") != name)
+    except Exception:
+        pass
+    return rows
+
+
+_COVER: object | None = None
+
+
+def _cover_pick():
+    """표지 선정 결과. 같은 지표 JSON 이면 몇 번을 불러도 같은 답이다."""
+    global _COVER
+    if _COVER is None:
+        from content import cover as CV
+        src = latest_metrics()
+        if not src:
+            return None
+        _COVER = CV.choose(json.loads(src.read_text(encoding="utf-8")))[0]
+    return _COVER
 
 
 DRAFTERS = {
@@ -287,7 +317,13 @@ def generate(kind: str, data: dict, n: int = 1, use_llm: bool = False) -> list[d
             text = polish_with_llm(text, f)
         # 방법론 상수(90일 창, 52주 기준 등)도 발행되는 숫자라 출처가 있어야
         # 한다. params 를 함께 넘겨 검증 대상에 포함시킨다.
-        r = validate(text, {"facts": f, "params": params}, kind="threads")
+        # 평형 라벨("25P" → "20평대 후반")은 화면에 **20** 이라는 숫자를
+        # 새로 만든다. 원본에 없는 숫자라 검증기가 바로 잡는데, 옳은 동작이다.
+        # 라벨도 발행되는 값이므로 facts 에 남겨 출처를 댄다.
+        fx = dict(f)
+        if f.get("pyeong_bucket"):
+            fx["pyeong_label"] = pyeong(f["pyeong_bucket"])
+        r = validate(text, {"facts": fx, "params": params}, kind="threads")
         # 길이는 검증기가 아니라 플랫폼이 거는 제약이라 여기서 본다.
         if len(text) > MAX_LEN:
             r.fail(f"스레드 한도 초과 {len(text)}자 (최대 {MAX_LEN})")

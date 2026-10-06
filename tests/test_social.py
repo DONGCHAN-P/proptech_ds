@@ -196,5 +196,8 @@ def test_캡션과_캐러셀이_같은_단지를_가리킨다(data, cap):
     cards = build_cards(data, ROOT / "output" / data["asof"])
     if not cards:
         pytest.skip("재료 부족")
-    apt = cap["facts"]["top"]["apt_name"]
-    assert any(apt in c["html"] for c in cards), apt
+    # 캡션 첫 줄은 **표지 소재**를 말한다. 전에는 거래량 1위 단지(top)를
+    # 봤는데, 표지는 5-1항 규칙으로 따로 고르므로 둘이 달라질 수 있다.
+    cov = cap["facts"]["cover"]
+    key = cov.get("apt_name") or cov.get("sigungu_name")
+    assert any(key in c["html"] for c in cards), key
