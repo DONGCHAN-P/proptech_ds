@@ -418,10 +418,26 @@ def test_표지_단지가_타일에_다시_나오지_않는다(cards, data):
     assert cov not in {r["apt_name"] for r in tg["facts"]["card"]["new_highs"]}
 
 
-def test_사진이_없으면_오프화이트_표지로_간다(cards):
-    """5항 폴백. 라이선스 있는 사진이 없는데 photo_cover 를 내면 안 된다."""
+
+
+def test_표지가_지도면_출처를_밝힌다(cards):
+    """5-0항: 경계 자료의 출처를 각주에 넣는다."""
     c = cards[0]
-    if c["layout"] == "photo_cover":
-        assert c.get("photo"), "사진 경로 없이 photo_cover 를 썼다"
-    else:
-        assert c["layout"] == "hero_number", c["layout"]
+    if c["layout"] != "map_cover":
+        pytest.skip("지도 표지가 아님")
+    from content import geo
+    t = C.strip_html(c["html"])
+    assert geo.CREDIT in t, "경계 출처가 없다"
+    if c.get("approx_boundary"):
+        assert "개편 전 경계" in t, "근사 표시인데 밝히지 않았다"
+
+
+def test_표지_폴백_순서(cards):
+    """사진 → 지도 → 오프화이트 (5항). 없는 걸 쓰지 않는다."""
+    from content import geo, photos
+    lay = cards[0]["layout"]
+    assert lay in ("photo_cover", "map_cover", "hero_number"), lay
+    if lay == "map_cover":
+        assert geo.available()
+    if lay == "photo_cover":
+        assert cards[0].get("photo") and not photos.audit()

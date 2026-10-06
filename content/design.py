@@ -230,6 +230,14 @@ body{{background:{BG};color:{INK};
 .tile .t-val{{font-size:44px;font-weight:800;letter-spacing:-.03em;}}
 .tile .t-chg{{font-size:28px;font-weight:700;}}
 
+/* ── map_cover ─────────────────────────────────────────────────────
+   사진의 대안. 사진은 "마포구 ○○아파트 +53.5%" 옆에 두면 보는 사람이 그게
+   그 단지라고 믿는다. 지도는 그 오인이 없고 데이터에서 바로 나온다. */
+.mc-num{{font-size:148px;font-weight:800;letter-spacing:-.04em;line-height:1;}}
+.mc-h1{{font-size:88px;font-weight:800;letter-spacing:-.03em;line-height:1.2;}}
+.mc-map{{display:flex;justify-content:center;align-items:center;}}
+.mc-foot{{font-size:24px;color:{SUB};line-height:1.45;}}
+
 /* ── photo_cover ───────────────────────────────────────────────────
    사진은 **표지에만** 쓴다. 2장부터 오프화이트로 돌아가야 계정 정체성이
    유지된다 (지시사항 5항). */

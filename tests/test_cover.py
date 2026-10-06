@@ -159,3 +159,86 @@ def test_사진이_없는_건_실패가_아니다(tmp_path, monkeypatch):
 
 def test_보유_사진이_전부_라이선스를_갖췄다():
     assert not photos.audit()
+
+
+# ── map 레이아웃 (5-0항) ─────────────────────────────────────────────────
+from content import geo  # noqa: E402
+
+pytestmark_geo = pytest.mark.skipif(not geo.available(),
+                                    reason="경계 파일 없음 — python -m content.geo --build")
+
+
+def test_모든_시군구가_경계와_매칭된다():
+    """이름으로 맞추므로 하나라도 어긋나면 그 지역은 영영 안 칠해진다.
+
+    경계 파일의 코드는 SGIS 체계라 우리 법정동 코드와 다르다(강남구가
+    11230 vs 11680). 그래서 코드가 아니라 이름으로 맞춘다.
+    """
+    if not geo.available():
+        pytest.skip("경계 파일 없음")
+    from common import SIGUNGU_CODES
+    have = {f["properties"]["name"] for f in geo.load()["features"]}
+    miss = [n for n in SIGUNGU_CODES.values() if geo.geo_name(n)[0] not in have]
+    assert not miss, miss
+
+
+def test_행정구역_개편분은_근사로_표시된다():
+    """부천원미구는 경계 파일에 없어 부천시 전체로 칠해진다.
+
+    실제보다 넓은 면이 칠해지므로 카드 각주에 그 사실을 적는다. 숨기면
+    "저 동네 전체가 그렇다"로 읽힌다.
+    """
+    for name in ("부천원미구", "화성동탄구", "검단구"):
+        _, approx = geo.geo_name(name)
+        assert approx, name
+    for name in ("마포구", "오산시", "성남분당구"):
+        _, approx = geo.geo_name(name)
+        assert not approx, name
+
+
+def test_좌표계를_투영_미터로_다룬다():
+    """경위도로 알고 cos(위도) 보정을 넣었다가 지도가 세로 줄무늬로 깨졌다.
+
+    cos(radians(1951000)) 은 뜻 없는 값이다. 투영 좌표는 이미 평면이다.
+    """
+    src = (ROOT / "content" / "geo.py").read_text(encoding="utf-8")
+    assert "math.cos" not in src, "투영 좌표에 위도 보정을 쓰고 있다"
+    if geo.available():
+        f = geo.load()["features"][0]
+        x, y = f["geometry"]["coordinates"][0][0][0]
+        assert x > 10000 and y > 10000, (x, y)   # 경위도가 아니라 미터
+
+
+@pytest.mark.parametrize("name,scope", [
+    ("마포구", "서울"), ("오산시", "경기"), ("남동구", "인천"),
+])
+def test_대상_지역만_칠한다(name, scope):
+    if not geo.available():
+        pytest.skip("경계 파일 없음")
+    from content import design as D
+    svg = geo.svg({name: D.UP}, width=936, height=400, line=D.LINE,
+                  fill=D.NEUTRAL, label_color=D.INK, scope=scope)
+    assert svg and svg.startswith("<svg")
+    # 의미색은 대상 하나에만. 나머지는 전부 중립색이어야 한다.
+    assert svg.count(f'fill="{D.UP}"') == 1, "대상 외에도 칠해졌다"
+    assert f">{name}<" in svg, "대상 라벨이 없다"
+    assert svg.count("<text") == 1, "라벨을 전부 달면 어디를 보라는 건지 사라진다"
+
+
+def test_경계_출처를_밝힌다():
+    """5-0항: 이용허락 범위를 확인하고 출처를 각주에 넣는다."""
+    assert "SGIS" in geo.CREDIT and "MIT" in geo.CREDIT
+    lic = ROOT / "assets" / "geo" / "LICENSE.md"
+    if geo.available():
+        assert lic.exists(), "LICENSE.md 없이 경계를 쓰고 있다"
+        t = lic.read_text(encoding="utf-8")
+        assert "MIT" in t and "statgarten" in t
+
+
+def test_금지_소스를_쓰지_않는다():
+    """포털 지도·로드뷰 캡처, 뉴스 사진, AI 생성 이미지 (5-0항)."""
+    src = "".join((ROOT / "content" / f).read_text(encoding="utf-8")
+                  for f in ("geo.py", "photos.py", "carousel.py"))
+    for 금지 in ("kakao", "naver.com/map", "roadview", "dall-e", "midjourney",
+                 "stable-diffusion", "fal.ai", "text2img"):
+        assert 금지 not in src.lower(), f"금지 소스 흔적: {금지}"

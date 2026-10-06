@@ -36,6 +36,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from content import cover as CV  # noqa: E402
 from content import design as D  # noqa: E402
+from content import geo  # noqa: E402
 from content import photos  # noqa: E402
 from content.validator import validate  # noqa: E402
 from templates.disclaimers import DISCLAIMER_SOCIAL  # noqa: E402
@@ -105,6 +106,7 @@ def cover_copy(c) -> dict:
     if c.angle == "new_high":
         name, _ = D.split_name(d["apt_name"])
         return {"h1": f'{c.region},<br>종전 최고가가<br>얼마나 깨졌을까요?',
+                "h1x": f'{c.region} 종전 최고가가<br>얼마나 깨졌을까요?',
                 "pre": "종전 최고 대비",
                 "big": D.delta(d["over_peak_pct"], arrow=False),
                 "lead": f'{name} {D.pyeong(d["pyeong_bucket"])} · '
@@ -113,11 +115,13 @@ def cover_copy(c) -> dict:
     if c.angle == "counter":
         name, _ = D.split_name(d["apt_name"])
         return {"h1": f'{c.region}에서<br>값은 올랐는데<br>거래는 줄었어요',
+                "h1x": f'{c.region}, 값은 올랐는데<br>거래는 줄었어요',
                 "pre": "평단가",
                 "big": D.delta(d["change_pct"], arrow=False),
                 "lead": f'같은 기간 거래 {d["deals_prior"]}건 → {d["deals_recent"]}건',
                 "cond": f'{D.pyeong(d["pyeong_bucket"])} · 최근 90일 vs 직전 90일'}
     return {"h1": f'{c.region} 거래가<br>갑자기 늘었어요.<br>얼마나 늘었을까요?',
+            "h1x": f'{c.region} 거래가 갑자기<br>늘었어요. 얼마나요?',
             "pre": "평소의",
             "big": D.times(d["week_deals"], d["deals_avg_52w"]),
             "lead": f'평소 {D.num(d["deals_avg_52w"])}건 → '
@@ -156,6 +160,11 @@ def c1_cover(t: dict, n: int) -> dict:
                 "facts": cover_facts(c), "photo": str(photo.path),
                 "html": D.head(1, n) + inner}
 
+    # 사진이 없으면 지도. 지도도 없으면 오프화이트 (5항 폴백 순서).
+    m = map_cover(t, c, cp, n)
+    if m:
+        return m
+
     inner = (
         f'<div class="body">'
         f'{D.cond(cp["cond"])}'
@@ -167,6 +176,43 @@ def c1_cover(t: dict, n: int) -> dict:
     return {"name": "01_cover", "layout": "hero_number",
             "facts": cover_facts(c),
             "html": D.head(1, n) + inner + D.foot(t["asof"])}
+
+
+MAP_W, MAP_H = 936, 400
+
+
+def map_cover(t: dict, c, cp: dict, n: int) -> dict | None:
+    """지도 표지.
+
+    대형 숫자를 따로 두지 않고 **헤드라인 첫 줄 자리**에 둔다 — `photo_cover`
+    가 쓰는 방식이다. 지도가 세로를 많이 먹어서 340px 짜리 숫자까지 넣으면
+    둘 다 작아진다.
+
+    칠하는 건 대상 지역 하나뿐이다. 전부 칠하면 어디를 보라는 건지 사라진다.
+    """
+    if not geo.available():
+        return None
+    scope = geo.scope_of(CV.resolve(c.region, c.code))
+    svg = geo.svg({c.region: D.UP}, width=MAP_W, height=MAP_H,
+                  line=D.LINE, fill=D.NEUTRAL, label_color=D.INK,
+                  scope=scope)
+    if not svg:
+        return None
+    _, approx = geo.geo_name(c.region)
+    note = (f" · {c.region}는 행정구역 개편 전 경계로 표시" if approx else "")
+    where = {"서울": "서울 25개 구", "인천": "인천", "경기": "경기"}.get(scope, "수도권")
+    inner = (
+        f'<div class="body">'
+        f'{D.cond(cp["cond"], cp["pre"].rstrip(" 의"))}'
+        f'<div class="mc-num up">{cp["big"]}</div>'
+        f'<div class="mc-h1">{cp["h1x"]}</div>'
+        f'<div class="mc-map">{svg}</div>'
+        f'<div class="mc-foot">{cp["lead"]} · 지도는 {where}</div>'
+        f'</div>')
+    return {"name": "01_cover", "layout": "map_cover",
+            "facts": cover_facts(c), "approx_boundary": approx,
+            "html": D.head(1, n) + inner
+                    + D.foot(t["asof"], geo.CREDIT + note)}
 
 
 def with_label(row: dict) -> dict:
