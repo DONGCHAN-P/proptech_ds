@@ -80,10 +80,15 @@ def test_훅_다음이_근거_3에서_5줄(posts):
 
 
 def test_마지막_본문줄이_질문형(posts):
-    """댓글이 붙어야 노출이 는다. 평서문으로 끝나면 대화가 안 열린다."""
+    """댓글이 붙어야 노출이 는다. 평서문으로 끝나면 대화가 안 열린다.
+
+    본문과 고정 꼬리(면책 + CTA)는 `split_fixed` 가 가른다. 꼬리 문구를
+    테스트가 직접 열거하면 CTA 가 바뀔 때마다 같이 고쳐야 한다 — 실제로
+    자리표시자를 팔로우 유도로 바꾸자 이 검사가 깨졌다.
+    """
+    from content.thread import split_fixed
     for p in posts:
-        body = [ln for ln in lines(p["text"])
-                if ln not in (DISCLAIMER_THREADS,) and "받아보기" not in ln]
+        body = lines(split_fixed(p["text"])[0])
         assert body[-1].endswith("?"), f"{p['kind']}: {body[-1]}"
 
 
@@ -120,9 +125,16 @@ def test_스레드에_통계용어가_없다(posts):
 
 
 def test_CTA가_모든_글에_있다(posts):
-    """Phase 7 M0 — Day 1부터 가입 동선을 넣는다."""
+    """Phase 7 M0 — Day 1부터 동선을 넣는다.
+
+    뉴스레터 링크가 아직 없으면 팔로우 유도로 대신한다. 자리표시자
+    "(링크 준비 중)" 을 그대로 올리지는 않는다.
+    """
+    import os
+    want = "받아보기" if os.environ.get("NEWSLETTER_URL", "").strip() else "팔로우"
     for p in posts:
-        assert "받아보기" in p["text"], p["kind"]
+        assert want in p["text"], p["kind"]
+        assert "준비 중" not in p["text"], f"{p['kind']}: 자리표시자가 올라간다"
 
 
 # ── 인스타 캡션 ──────────────────────────────────────────────────────────

@@ -61,8 +61,16 @@ def num(v) -> str:
 
 
 def cta() -> str:
-    url = os.environ.get("NEWSLETTER_URL", "").strip() or CTA_PLACEHOLDER_URL
-    return CTA_NEWSLETTER.format(url=url)
+    """가입 동선. 링크가 없으면 **자리표시자 대신 팔로우 유도**를 쓴다.
+
+    "(뉴스레터 링크 준비 중)" 을 그대로 올리면 미완성으로 보이고, 그게
+    계정 첫인상이 된다. 링크가 생기면 .env 의 NEWSLETTER_URL 만 채우면 된다.
+    """
+    url = os.environ.get("NEWSLETTER_URL", "").strip()
+    if url:
+        return CTA_NEWSLETTER.format(url=url)
+    from content.design import HANDLE
+    return f"매주 이렇게 정리해요. {HANDLE} 팔로우하면 다음 주에 또 만나요."
 
 
 # ── 포맷 ─────────────────────────────────────────────────────────────────

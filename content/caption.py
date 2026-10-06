@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -47,8 +48,14 @@ BASE_TAGS = [
 
 
 def tags(t: dict) -> str:
-    b, s = t["busiest"], t["top"]
-    names = [b["sigungu_name"], s["sigungu_name"], s["legal_dong_name"]]
+    """표지 지역이 맨 앞에 온다.
+
+    태그는 그 게시물이 어디 얘기인지 알리는 자리다. 표지가 마포구인데 태그에
+    마포구가 없으면 검색으로 들어올 사람이 못 찾는다.
+    """
+    b, s, c = t["busiest"], t["top"], t["cover"]
+    names = [c.region, b["sigungu_name"], s["sigungu_name"],
+             s["legal_dong_name"]]
     out, seen = [], set()
     for n in names + BASE_TAGS:
         n = n.replace(" ", "")
@@ -99,7 +106,10 @@ def caption(t: dict) -> str:
         "저장해두고 다음 주 숫자와 비교해보세요.",
         "여러분 동네는 이번 주 어땠나요? 댓글로 알려주세요.",
         "",
-        cta(),
+        # 링크가 없으면 CTA 줄을 아예 뺀다. "(링크 준비 중)" 을 그대로
+        # 올리면 미완성으로 보이고, 그게 계정 첫인상이 된다.
+        *( [cta(), ""] if os.environ.get("NEWSLETTER_URL", "").strip() else [] ),
+        f"매주 이렇게 한 장으로 정리해요. {D.HANDLE} 팔로우하면 다음 주에 또 만나요.",
         "",
         DISCLAIMER_SOCIAL,
         "",
