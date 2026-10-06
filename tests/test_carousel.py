@@ -289,10 +289,25 @@ def test_타입_스케일이_지시사항_범위_안(cards):
         assert lo <= v <= hi, f"{sel} = {v}px (허용 {lo}~{hi})"
 
 
+# 지시사항이 **직접 크기를 지정한** 요소들. 24px 하한의 예외다.
+#   워드마크 22px (4항) · "이미지는 지역 참고용" 20px (5-0항)
+SPEC_SMALL = {".mark-brand span": 22, ".pc-note": 20}
+
+
 def test_출처_글자가_24px_미만이_아니다():
-    """24px 미만 금지 (2항). 폰에서 안 읽힌다."""
-    small = [int(n) for n in re.findall(r"font-size:(\d+)px", D.base_css())
-             if int(n) < 24]
+    """24px 미만 금지 (2항). 폰에서 안 읽힌다.
+
+    지시사항이 값을 직접 박아 둔 두 요소만 예외다 — 거기까지 24px 로 올리면
+    지시사항과 어긋난다. 예외를 목록으로 못 박아 두면 "작게 쓸 자리"가
+    슬그머니 늘어난다.
+    """
+    css = D.base_css()
+    for sel, px in SPEC_SMALL.items():
+        pat = re.escape(sel) + r"\{[^}]*font-size:(\d+)px"
+        m = re.search(pat, css)
+        assert m and int(m.group(1)) == px, f"{sel} 가 {px}px 가 아니다"
+        css = re.sub(pat, sel + "{font-size:24px", css)
+    small = [int(n) for n in re.findall(r"font-size:(\d+)px", css) if int(n) < 24]
     assert not small, f"24px 미만: {small}"
 
 
@@ -313,3 +328,100 @@ def test_렌더가_세로배치_규칙을_통과한다(cards, outdir, tmp_path):
     """
     _, problems = C.render(cards, tmp_path)
     assert not problems, problems
+
+
+# ── 새 레이아웃 · 공통 요소 (2026-10-06 지시사항) ───────────────────────
+def test_브랜드_마크가_모든_장에_있다(cards):
+    """9항: 모든 장의 **같은 좌표**. 장마다 붙이면 새 장을 만들 때 빠뜨린다."""
+    for c in cards:
+        assert 'class="mark-brand' in c["html"], c["name"]
+    assert c["html"].count('class="mark-brand') == 1, "마크가 두 번 들어갔다"
+
+
+def test_브랜드_마크_좌표가_CSS로_고정돼_있다():
+    css = D.base_css()
+    m = re.search(r"\.mark-brand\{([^}]*)\}", css)
+    assert m, "마크 규칙이 없다"
+    assert f"right:{D.PAD_X}px" in m.group(1)
+    assert f"bottom:{D.PAD_BOTTOM - 48}px" in m.group(1)
+
+
+def test_조건_라벨이_헤드라인_위에_있다(cards):
+    """4항: 대괄호 라벨 1개. 독자가 알아야 할 조건·범위를 적는다."""
+    for c in cards:
+        if c["layout"] == "summary_cta":
+            continue
+        t = C.strip_html(c["html"])
+        assert re.search(r"\[[^\]]+\]", t), f"{c['name']}: 조건 라벨 없음"
+
+
+def test_조건_라벨에_마케팅_문구가_없다(cards):
+    from content.validator import check_banned
+    for c in cards:
+        for m in re.finditer(r"\[([^\]]+)\]", C.strip_html(c["html"])):
+            txt = m.group(1)
+            assert not check_banned(txt), f"{c['name']}: {txt}"
+            for w in ("필수", "꼭 보", "놓치", "지금"):
+                assert w not in txt, f"{c['name']}: 마케팅 문구 '{w}' — {txt}"
+
+
+def test_순위표가_10행을_넘지_않는다(cards):
+    """9항. 넘으면 글자를 줄이는 게 아니라 행을 줄인다."""
+    rt = next((c for c in cards if c["layout"] == "ranking_table"), None)
+    if rt is None:
+        pytest.skip("순위표 없음")
+    assert rt["html"].count('class="rt-row') <= 10
+    assert C.RT_ROWS_MIN <= rt["rows_max"] <= 10
+
+
+def test_순위표_글자가_28px_이상():
+    css = D.base_css()
+    for sel in (".rt-rank", ".rt-name", ".rt-val", ".rt-chg"):
+        m = re.search(re.escape(sel) + r"\{font-size:(\d+)px", css)
+        assert m and int(m.group(1)) >= 28, f"{sel} 가 28px 미만"
+
+
+def test_순위표_강조행이_하나뿐(cards):
+    """여러 행을 칠하면 '강조'가 아니게 된다 (5항)."""
+    rt = next((c for c in cards if c["layout"] == "ranking_table"), None)
+    if rt is None:
+        pytest.skip("순위표 없음")
+    assert rt["html"].count('rt-row hi') == 1
+
+
+def test_표와_타일을_붙여놓지_않는다(cards):
+    """같은 계열이라 연속하면 두 장이 한 장처럼 읽힌다 (5항)."""
+    pairs = [(a["layout"], b["layout"]) for a, b in zip(cards, cards[1:])]
+    assert ("ranking_table", "tile_grid") not in pairs
+    assert ("tile_grid", "ranking_table") not in pairs
+    assert ("rows", "compare_bars") not in pairs
+    assert ("compare_bars", "rows") not in pairs
+
+
+def test_타일은_여러_단지를_보여준다(cards):
+    """한 단지만 크게 쓰면 '이 주의 신고가는 한 곳뿐'처럼 읽힌다."""
+    tg = next((c for c in cards if c["layout"] == "tile_grid"), None)
+    if tg is None:
+        pytest.skip("타일 장 없음")
+    names = {r["apt_name"] for r in tg["facts"]["card"]["new_highs"]}
+    assert len(names) >= C.TILE_MIN
+
+
+def test_표지_단지가_타일에_다시_나오지_않는다(cards, data):
+    tg = next((c for c in cards if c["layout"] == "tile_grid"), None)
+    if tg is None:
+        pytest.skip("타일 장 없음")
+    t = C.pick(data)
+    if t["cover"].angle != "new_high":
+        pytest.skip("표지가 신고가 앵글이 아님")
+    cov = t["cover"].data["apt_name"]
+    assert cov not in {r["apt_name"] for r in tg["facts"]["card"]["new_highs"]}
+
+
+def test_사진이_없으면_오프화이트_표지로_간다(cards):
+    """5항 폴백. 라이선스 있는 사진이 없는데 photo_cover 를 내면 안 된다."""
+    c = cards[0]
+    if c["layout"] == "photo_cover":
+        assert c.get("photo"), "사진 경로 없이 photo_cover 를 썼다"
+    else:
+        assert c["layout"] == "hero_number", c["layout"]

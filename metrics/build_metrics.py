@@ -146,7 +146,7 @@ def new_high(con, asof: date) -> list[dict]:
     return q(con, f"""
         {cte()},
         ranked AS (
-            SELECT apt_id, apt_name_raw, sigungu_name, legal_dong_name,
+            SELECT apt_id, apt_name_raw, sigungu_code, sigungu_name, legal_dong_name,
                    pyeong_bucket, floor_band, deal_date, deal_amount, area_m2,
                    price_per_pyeong,
                    max(deal_amount) OVER (
@@ -335,6 +335,7 @@ def surge_apt(con, asof: date) -> list[dict]:
         {cte()},
         w AS (
             SELECT apt_id, any_value(apt_name_raw) AS apt_name,
+                   any_value(sigungu_code) AS sigungu_code,
                    any_value(sigungu_name) AS sigungu_name,
                    any_value(legal_dong_name) AS legal_dong_name,
                    pyeong_bucket,

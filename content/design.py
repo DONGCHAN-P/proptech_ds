@@ -41,11 +41,17 @@ UP = "#E5484D"        # 상승·증가 **전용**
 DOWN = "#2F6FED"      # 하락·감소 **전용**
 ACCENT = "#FFE45C"    # 일반 강조(형광펜 띠) 전용
 NEUTRAL = "#C9C6BE"   # 차트 비강조
+COVER_INK = "#FFFFFF"  # 사진 표지 본문
+COVER_KEY = "#FFE45C"  # 사진 표지 키워드(첫 줄)
 
 # ── 브랜드 ───────────────────────────────────────────────────────────────
 # 인스타 사용자명은 영문·숫자·_·. 만 쓸 수 있다. 공백·한글은 들어가지 않는다.
 # 이미지 상단에 박히는 값이라 실제 핸들과 달라지면 유입이 끊긴다.
 HANDLE = os.environ.get("SNS_HANDLE", "@proptech_ds")
+# 로고 파일이 없으면 계정명 워드마크 박스로 대신한다 (지시사항 4항).
+LOGO = ROOT / "assets" / "brand" / "logo.png"
+MARK = 64            # 브랜드 마크 한 변
+WORDMARK = os.environ.get("SNS_WORDMARK", HANDLE)
 SERIES = "이번 주 실거래"
 
 
@@ -171,9 +177,76 @@ body{{background:{BG};color:{INK};
 .badge{{display:inline-block;font-size:26px;font-weight:600;color:{SUB};
        background:#EDEAE2;border-radius:999px;padding:8px 16px;}}
 
+
+/* 브랜드 마크 — 출처 줄과 같은 높이, 안전 영역 안 */
+/* 로고가 있으면 정사각 64×64, 없으면 계정명이 들어가야 해서 높이만 맞춘
+   알약 박스로 쓴다. **기준점(오른쪽·아래)은 어느 쪽이든 같다** — 9항이
+   요구하는 건 "모든 장의 같은 좌표"지 같은 크기가 아니다. */
+.mark-brand{{position:absolute;right:{PAD_X}px;bottom:{PAD_BOTTOM - 48}px;
+            height:{MARK}px;min-width:{MARK}px;border-radius:14px;padding:0 16px;
+            display:flex;align-items:center;justify-content:center;
+            background:{INK};overflow:hidden;}}
+.mark-brand.logo{{width:{MARK}px;padding:0;}}
+.mark-brand img{{width:100%;height:100%;object-fit:cover;}}
+.mark-brand span{{color:#FFFFFF;font-size:22px;font-weight:800;
+                 letter-spacing:-.02em;white-space:nowrap;}}
+/* 출처 줄이 마크와 겹치지 않게 폭을 비워 둔다 */
+.ft{{padding-right:260px;}}   /* 워드마크 자리를 비워 둔다 */
+
+/* 조건 라벨 — 헤드라인 바로 위 */
+.cond{{font-size:28px;font-weight:600;color:{SUB};letter-spacing:-.01em;}}
+
 .quote{{font-size:64px;font-weight:700;line-height:1.35;letter-spacing:-.02em;}}
 .cta{{font-size:34px;font-weight:600;line-height:1.5;}}
 .disc{{font-size:24px;font-weight:400;color:{SUB};line-height:1.5;}}
+
+/* ── ranking_table ─────────────────────────────────────────────────
+   명단형 장. 막대보다 **값을 정확히 읽히게** 하는 게 목적이라 숫자 열을
+   오른쪽 정렬하고 tnum 으로 자릿수를 고정한다. */
+.rt-eyebrow{{font-size:24px;font-weight:700;letter-spacing:.08em;color:{SUB};}}
+.rt{{display:flex;flex-direction:column;}}
+.rt-row{{display:grid;grid-template-columns:64px 1fr 168px 136px;
+        align-items:center;gap:16px;min-height:80px;padding:8px 16px;
+        border-bottom:1px solid {LINE};border-radius:12px;}}
+.rt-row:last-child{{border-bottom:none;}}
+/* 강조 행은 **하나만**. 형광펜 배경을 쓰고 글자색은 건드리지 않는다. */
+.rt-row.hi{{background:{ACCENT};}}
+.rt-rank{{font-size:28px;font-weight:700;color:{SUB};text-align:center;}}
+.rt-name{{font-size:32px;font-weight:700;letter-spacing:-.01em;line-height:1.25;}}
+.rt-name small{{display:block;font-size:24px;font-weight:500;color:{SUB};
+               margin-top:8px;}}
+.rt-val{{font-size:32px;font-weight:800;text-align:right;letter-spacing:-.02em;}}
+.rt-chg{{font-size:30px;font-weight:800;text-align:right;letter-spacing:-.02em;}}
+.rt-note{{font-size:24px;color:{SUB};line-height:1.45;}}
+
+/* ── tile_grid ─────────────────────────────────────────────────────
+   "모음"형 장. 2열 고정 — 3열로 늘리면 단지명이 줄바꿈돼 읽기가 끊긴다. */
+.tiles{{display:grid;grid-template-columns:1fr 1fr;gap:16px;}}
+.tile{{background:#FFFFFF;border:1px solid {LINE};border-radius:24px;
+      padding:24px;display:flex;flex-direction:column;gap:8px;}}
+.tile .t-nm{{font-size:30px;font-weight:700;letter-spacing:-.01em;
+            line-height:1.25;word-break:keep-all;}}
+.tile .t-sub{{font-size:24px;font-weight:500;color:{SUB};}}
+.tile .t-val{{font-size:44px;font-weight:800;letter-spacing:-.03em;}}
+.tile .t-chg{{font-size:28px;font-weight:700;}}
+
+/* ── photo_cover ───────────────────────────────────────────────────
+   사진은 **표지에만** 쓴다. 2장부터 오프화이트로 돌아가야 계정 정체성이
+   유지된다 (지시사항 5항). */
+.pc{{position:absolute;inset:0;overflow:hidden;background:{INK};}}
+.pc-img{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}}
+.pc-grad{{position:absolute;left:0;right:0;bottom:0;height:60%;}}
+.pc-body{{position:absolute;left:{PAD_X}px;right:{PAD_X}px;
+         bottom:{PAD_BOTTOM}px;display:flex;flex-direction:column;gap:16px;}}
+.pc-cond{{font-size:28px;font-weight:600;color:rgba(255,255,255,.7);}}
+.pc-h1{{font-size:96px;font-weight:800;letter-spacing:-.03em;line-height:1.15;}}
+.pc-h1 .k{{color:{COVER_KEY};display:block;}}
+.pc-h1 .b{{color:{COVER_INK};display:block;}}
+.pc-ft{{font-size:24px;color:rgba(255,255,255,.75);line-height:1.45;
+       padding-right:{MARK + 24}px;}}
+/* 지역 풍경 사진이면 특정 단지로 오인되지 않게 밝힌다 (5-0항) */
+.pc-note{{position:absolute;top:{PAD_TOP - 40}px;right:{PAD_X}px;
+         font-size:20px;color:rgba(255,255,255,.8);}}
 """
 
 
@@ -257,6 +330,30 @@ def split_name(name: str, limit: int = 12) -> tuple[str, str]:
     if m and len(name) > limit:
         return m.group(1).strip(), m.group(2)
     return name, ""
+
+
+def brand_mark() -> str:
+    """모든 장 우하단 같은 자리에 찍는다 (지시사항 4항).
+
+    캡처되어 돌아다닐 때 출처 계정을 알 수 있어야 한다. 장마다 위치가 달라지면
+    여러 장을 이어 봤을 때 눈에 걸린다 — 9항이 "같은 좌표"를 요구하는 이유다.
+    로고 파일이 없으면 워드마크 박스로 대신한다.
+    """
+    if LOGO.exists():
+        b64 = base64.b64encode(LOGO.read_bytes()).decode()
+        return (f'<div class="mark-brand logo">'
+                f'<img src="data:image/png;base64,{b64}" alt=""></div>')
+    return f'<div class="mark-brand"><span>{WORDMARK}</span></div>'
+
+
+def cond(*parts: str) -> str:
+    """헤드라인 위 대괄호 조건 라벨 (지시사항 4항).
+
+    독자가 알아야 할 **조건·범위**만 쓴다. "지금 꼭 보세요" 같은 마케팅 문구는
+    넣지 않는다 — 그 자리는 숫자가 어떤 범위에서 나온 값인지 알리는 자리다.
+    """
+    text = " · ".join(p for p in parts if p)
+    return f'<div class="cond">[{text}]</div>' if text else ""
 
 
 def head(page: int, total: int) -> str:

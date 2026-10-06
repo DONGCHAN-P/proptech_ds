@@ -58,13 +58,30 @@ def tags(t: dict) -> str:
     return " ".join(out[:MAX_TAGS])
 
 
+def cover_line(c) -> str:
+    """캐러셀 표지와 같은 사실을 한 줄로."""
+    d = c.data
+    if c.angle == "new_high":
+        return (f'{c.region} {d["apt_name"]}, 종전 최고가를 '
+                f'{d["over_peak_pct"]}% 넘겼어요.')
+    if c.angle == "counter":
+        return (f'{c.region} {d["apt_name"]} 평단가가 '
+                f'{d["change_pct"]}% 올랐어요.')
+    return (f'{c.region}, 이번 주 거래가 평소의 '
+            f'{D.times(d["week_deals"], d["deals_avg_52w"])}였어요.')
+
+
 def caption(t: dict) -> str:
     b, s = t["busiest"], t["top"]
     mult = D.times(b["week_deals"], b["deals_avg_52w"])
     drop = (s["deals_recent"] / s["deals_prior"] - 1) * 100
+    # 첫 줄은 **캐러셀 표지와 같은 얘기**여야 한다. 캡션이 다른 지역을
+    # 말하면 넘겨 본 사람이 "무슨 소리지"가 된다. 표지는 5-1항 규칙으로
+    # 고르므로 거래량 1위와 다를 수 있다.
+    hook = cover_line(t["cover"])
     body = [
         # 앞 2줄 = 미리보기. 여기서 넘길지 말지가 결정된다.
-        f"{b['sigungu_name']}, 이번 주 거래가 평소의 {mult}였어요.",
+        hook,
         "그런데 값이 오른 단지는 오히려 손바뀜이 줄었어요. →",
         "",
         f"· {b['sigungu_name']} 이번 주 {b['week_deals']}건 "
@@ -97,6 +114,7 @@ def build(data: dict) -> dict | None:
         return None
     text = caption(t)
     facts = {"busiest": t["busiest"], "top": t["top"],
+             "cover": t["cover"].data,
              "drop_pct": round((t["top"]["deals_recent"]
                                 / t["top"]["deals_prior"] - 1) * 100, 1),
              "params": t["params"]}
