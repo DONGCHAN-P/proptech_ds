@@ -35,6 +35,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from content import aptname as AN
 from content import cover as CV  # noqa: E402
 from content import design as D  # noqa: E402
 from content import apt_story as A  # noqa: E402
@@ -66,6 +67,7 @@ def pick(data: dict, force=None) -> dict | None:
     사람이 텔레그램에서 고른 단지로 덱을 만들 때 쓴다 — 규칙이 고른 것과
     사람이 고른 것이 다를 수 있고, 그때는 사람이 이긴다.
     """
+    AN.normalize(data)   # 단지명을 사람이 부르는 꼴로 (멱등)
     z = [r for r in (data.get("weekly", {}).get("sgg_zscore") or [])
          if r.get("deals_z") is not None]
     surge = data.get("weekly", {}).get("surge_apt") or []

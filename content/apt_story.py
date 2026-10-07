@@ -39,8 +39,11 @@ def pf(prof: dict) -> dict:
     return {k: v for k, v in prof.items() if k not in ("lat", "lng")}
 
 
-def short(name: str, limit: int = 10) -> str:
-    return D.split_name(name, limit)[0]
+def short(name: str, limit: int = 15) -> str:
+    """괄호까지 살린다. 자리가 모자랄 때만 뗀다 — "청솔마을(주공9단지)"
+    에서 괄호를 떼면 그 동네 여러 청솔마을과 구분되지 않는다."""
+    s = " ".join(str(name).split())
+    return s if len(s) <= limit else D.split_name(s, 0)[0]
 
 
 # ── 1 표지 ───────────────────────────────────────────────────────────────
@@ -147,7 +150,7 @@ def trend(t: dict, prof: dict, n: int) -> dict:
         f'<div class="kicker">{short(prof["apt_name"], 14)} '
         f'{D.pyeong(prof["pyeong_bucket"])}</div>'
         f'{cond}'
-        f'<div class="h1 sm">이번 거래는<br>여기예요</div>'
+        f'<div class="h1 sm">이번 거래는<br>여기</div>'
         f'<div>{svg}</div>'
         f'<div class="sub">붉은 점이 이번 거래 {D.won(d["deal_amount"])}, '
         f'회색 점은 지난 거래예요. 점은 그 달 평균이고요.</div>'

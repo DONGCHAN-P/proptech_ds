@@ -165,7 +165,7 @@ def scenes(t: dict, prof: dict) -> list[dict]:
         "body": lambda p, _d=d: (
             f'<div class="rv-kick" {anim(0, p)}>'
             f'{D.pyeong(prof["pyeong_bucket"])} 실거래</div>'
-            f'<div class="rv-h1" {anim(1, p)}>이번 거래는<br>여기예요</div>'
+            f'<div class="rv-h1" {anim(1, p)}>이번 거래는<br>여기</div>'
             f'<div {anim(2, p)}>{trend_svg(prof, p)}</div>'
             f'<div class="rv-sub" {anim(3, p)}>붉은 점이 이번 거래 '
             f'{D.won(_d["deal_amount"])}. 회색은 지난 거래예요.</div>'),
@@ -267,11 +267,22 @@ def bars(rows, p: float) -> str:
     return "".join(out)
 
 
+def label(name: str, limit: int = 15) -> str:
+    """막대 옆에 붙는 단지명.
+
+    괄호까지 살린다. "청솔마을(주공9단지)" 에서 괄호를 떼면 "청솔마을"만
+    남는데, 그 동네에는 청솔마을이 여럿이라 어느 단지인지 알 수 없다.
+    자리가 모자랄 때만 괄호를 뗀다.
+    """
+    s = " ".join(str(name).split())
+    return s if len(s) <= limit else D.split_name(s, 0)[0]
+
+
 def nearby_rows(t: dict, prof: dict) -> list[tuple]:
     d = t["cover"].data
-    me = (D.split_name(prof["apt_name"], 9)[0], d["deal_amount"], D.UP)
+    me = (label(prof["apt_name"]), d["deal_amount"], D.UP)
     nb = sorted(prof["neighbors"], key=lambda r: r["last_price"], reverse=True)
-    rows = [me] + [(D.split_name(r["apt_name"], 9)[0], r["last_price"],
+    rows = [me] + [(label(r["apt_name"]), r["last_price"],
                     D.NEUTRAL) for r in nb[:3]]
     return sorted(rows, key=lambda r: r[1], reverse=True)
 
@@ -288,7 +299,7 @@ def signals(t: dict, prof: dict) -> dict:
     if nb:
         hi = max(nb, key=lambda r: r["last_price"])
         items.append(("같은 동 최고가",
-                      f'{D.split_name(hi["apt_name"], 9)[0]} '
+                      f'{label(hi["apt_name"])} '
                       f'{D.won(hi["last_price"])}'))
     pts = prof.get("series") or []
     recent = sum(x["deals"] for x in pts[-12:]) if pts else 0

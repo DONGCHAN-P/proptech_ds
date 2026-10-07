@@ -37,7 +37,22 @@ from notify import telegram as TG  # noqa: E402
 
 POLL_TIMEOUT = 50          # getUpdates 를 붙잡아 두는 시간 (초)
 STATE = ROOT / "output" / "bot_state.json"
+LOG = ROOT / "logs" / "bot.log"
 NL = chr(10)
+
+
+def to_log() -> None:
+    """작업 스케줄러로 뜨면 콘솔이 없다.
+
+    pythonw 에 콘솔이 붙지 않으면 sys.stdout 이 None 이 되고, print 한 줄에
+    AttributeError 로 죽는다. 상주 프로세스가 첫 메시지에서 조용히 사라지는
+    셈이다. 어차피 로그 없이는 왜 죽었는지도 알 수 없으니 파일로 돌린다.
+    """
+    LOG.parent.mkdir(parents=True, exist_ok=True)
+    fh = open(LOG, "a", encoding="utf-8", buffering=1)
+    if sys.stdout is None or not sys.stdout.isatty():
+        sys.stdout = sys.stderr = fh
+    print(f"{NL}--- {datetime.now():%Y-%m-%d %H:%M:%S} 시작 ---")
 
 HELP = f"""쓸 수 있는 것
 /today  오늘 단지 후보 5곳
@@ -255,6 +270,10 @@ def main() -> int:
     ap.add_argument("--morning", action="store_true",
                     help="후보만 한 번 보내고 끝 (작업 스케줄러용)")
     a = ap.parse_args()
+    try:
+        to_log()
+    except Exception:
+        pass
     if a.morning:
         return 0 if morning() else 1
     try:

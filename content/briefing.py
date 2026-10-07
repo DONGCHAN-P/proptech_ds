@@ -32,6 +32,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from content import aptname as AN  # noqa: E402
 from content import cover as CV  # noqa: E402
 from content import design as D  # noqa: E402
 
@@ -103,6 +104,7 @@ def lookup(idx: dict, r: dict) -> dict | None:
 
 def build(data: dict) -> list[Idea]:
     """앵글별 후보를 전부 만든다. 고르는 건 pick() 이 한다."""
+    AN.normalize(data)
     daily = data.get("daily") or {}
     weekly = data.get("weekly") or {}
     idx = index(data.get("profiles") or {})
@@ -256,6 +258,7 @@ def apt_candidates(data: dict, n: int = APT_N) -> list[dict]:
 
     같은 시군구는 하나만 올린다. 다섯 개가 전부 화성시면 고를 이유가 없다.
     """
+    AN.normalize(data)   # 봇 카드에도 같은 이름이 나가야 한다
     rows = [r for r in (data.get("daily", {}).get("new_high") or [])
             if r.get("history_count", 0) >= MIN_SAMPLE
             and r.get("apt_id") and r.get("pyeong_bucket")]
