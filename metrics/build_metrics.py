@@ -7,7 +7,8 @@
 
 일간
   new_high      신고가 경신 — 2006~ 전체 이력 기준, 같은 단지·같은 평형
-  vs_peak       전고점 이격 — 전고점 대비 현재가
+  vs_peak       전고점 이격 — 전고점에서 가장 많이 내려온 쪽
+  near_peak     전고점 근접 — 아직 못 넘었지만 거의 닿은 쪽
   outlier       특이 거래 — 같은 단지·평형의 직전 90일 평균 대비 +-N%
 
 주간
@@ -26,6 +27,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import time
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
@@ -175,9 +177,19 @@ def new_high(con, asof: date) -> list[dict]:
     """)
 
 
-def vs_peak(con, asof: date) -> list[dict]:
-    """전고점 이격 — 최근 거래가 역대 최고가에서 얼마나 내려와 있나."""
+def _peak_gap(con, asof: date, *, near: bool) -> list[dict]:
+    """전고점 이격.
+
+    near=False 는 전고점에서 가장 많이 내려온 쪽, near=True 는 전고점에 거의
+    닿은 쪽을 돌려준다. 한쪽만 뽑으면 "전고점까지 N% 남았다" 같은 소재가
+    아예 보이지 않는다 — 정렬이 반대라 목록에 들어올 자리가 없다.
+
+    near=True 는 전고점과 같은 값(= 오늘의 신고가)은 뺀다. 그건 new_high 가
+    이미 다루는 사건이고, 0% 가 목록 맨 위를 채워 버린다.
+    """
     since = asof - timedelta(days=DAILY_WINDOW)
+    order = "vs_peak_pct DESC" if near else "vs_peak_pct ASC"
+    below = "AND r.last_price < p.peak_price" if near else ""
     return q(con, f"""
         {cte()},
         peaks AS (
@@ -203,10 +215,20 @@ def vs_peak(con, asof: date) -> list[dict]:
                round((r.last_price / p.peak_price - 1) * 100, 1) AS vs_peak_pct,
                p.hist_n AS history_count
         FROM recent r JOIN peaks p USING (apt_id, pyeong_bucket)
-        WHERE p.hist_n >= {RARE_AREA_MIN} AND p.peak_price > 0
-        ORDER BY vs_peak_pct ASC
+        WHERE p.hist_n >= {RARE_AREA_MIN} AND p.peak_price > 0 {below}
+        ORDER BY {order}
         LIMIT {TOP_N}
     """)
+
+
+def vs_peak(con, asof: date) -> list[dict]:
+    """전고점 이격 — 최근 거래가 역대 최고가에서 얼마나 내려와 있나."""
+    return _peak_gap(con, asof, near=False)
+
+
+def near_peak(con, asof: date) -> list[dict]:
+    """전고점 근접 — 전고점을 아직 못 넘었지만 거의 닿은 단지."""
+    return _peak_gap(con, asof, near=True)
 
 
 def outliers(con, asof: date) -> list[dict]:
@@ -435,6 +457,8 @@ OSM_URLS = ("https://overpass-api.de/api/interpreter",
             "https://overpass.kumi.systems/api/interpreter",
             "https://overpass.osm.jp/api/interpreter")
 OSM_PAUSE = 2.0
+AROUND_DB_WAIT = 8.0    # 참조 DB 잠금 대기 (초). 짧게 — 커밋 한 번은 넘기되
+                        # 수집이 쓰는 내내 붙잡혀 지표 계산이 멈추지 않게.
 OSM_CACHE = ROOT / "raw" / "osm"
 OSM_KINDS = "motorway|trunk|primary|secondary|tertiary|residential"
 # 지도에 **그릴** 도로는 간선만. 이면도로까지 다 그리면 그물망이 돼서
@@ -470,7 +494,7 @@ def osm_roads(lat: float, lng: float) -> list[dict]:
          f'({lat - d:.4f},{lng - d * 1.3:.4f},{lat + d:.4f},{lng + d * 1.3:.4f});'
          f'out geom;')
     data = None
-    last = ""
+    errs: list[str] = []
     for i, base in enumerate(OSM_URLS):
         try:
             if i:
@@ -482,9 +506,11 @@ def osm_roads(lat: float, lng: float) -> list[dict]:
                 data = _json.loads(r.read().decode("utf-8"))
             break
         except Exception as e:
-            last = f"{type(e).__name__}"
+            # 미러마다 남긴다. 마지막 것만 들고 있으면 첫 미러의 진짜 이유가
+            # 뒤 미러의 실패에 덮여 원인을 못 찾는다.
+            errs.append(f"{base.split('/')[2]}:{type(e).__name__}")
     if data is None:
-        print(f"  OSM 도로 조회 실패 ({last}) — 이 단지는 도로 없이 간다")
+        print(f"  OSM 도로 조회 실패 ({', '.join(errs)}) — 도로 없이 간다")
         return []
 
     roads = []
@@ -515,7 +541,11 @@ def around(lat: float | None, lng: float | None) -> dict:
     import sqlite3
     d = AROUND_DEG
     box = (lat - d, lat + d, lng - d * 1.3, lng + d * 1.3)
-    con = sqlite3.connect(str(DB_PATH))
+    # 읽기 전용 + 대기. 주간 수집이 같은 파일에 쓰는 중이면 그냥 연결하면
+    # "database is locked" 로 즉시 터지고, 지도는 지하철·상권 없이 나간다.
+    # 조용히 품질이 깎이는 쪽이 느린 쪽보다 나쁘다.
+    con = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True,
+                          timeout=AROUND_DB_WAIT)
     con.row_factory = sqlite3.Row
     try:
         def pick(sql: str, n: int) -> list[dict]:
@@ -541,7 +571,7 @@ def around(lat: float | None, lng: float | None) -> dict:
             "road_credit": OSM_CREDIT,
         }
     except Exception as e:
-        print(f"  주변 지리 조회 실패 ({type(e).__name__}) — 지도 없이 간다")
+        print(f"  주변 지리 조회 실패 ({type(e).__name__}: {e}) — 지도 없이 간다")
         return {}
     finally:
         con.close()
@@ -675,6 +705,7 @@ def main() -> int:
     sections = [
         ("new_high", "신고가 경신", new_high),
         ("vs_peak", "전고점 이격", vs_peak),
+        ("near_peak", "전고점 근접", near_peak),
         ("outlier", "특이 거래", outliers),
         ("sgg_zscore", "시군구 Z-score", sgg_zscore),
         ("surge_apt", "급등 단지", surge_apt),
