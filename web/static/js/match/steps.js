@@ -25,7 +25,19 @@ window.STEPS = (function () {
   ];
 
   const BUDGET_CHIPS = [30000, 50000, 70000, 90000, 120000, 150000, 200000];
-  const COMMUTES = [30, 45, 60];
+  // max=null 은 시간으로 거르지 않는다. strict 는 추정 오차 여유(+10분) 없이 자른다.
+  const COMMUTES = [
+    { k: 'lt30', t: '30분 미만', max: 30, strict: true },
+    { k: '30', t: '30분', max: 30, strict: false },
+    { k: '60', t: '60분', max: 60, strict: false },
+    { k: '90', t: '90분', max: 90, strict: false },
+    { k: 'open', t: '2시간 이상', max: null, strict: false },
+  ];
+  const commuteKey = a => (COMMUTES.find(c => c.max === a.commute_max && c.strict === !!a.commute_strict) || COMMUTES[2]).k;
+  const commuteText = a => {
+    const c = COMMUTES.find(x => x.k === commuteKey(a));
+    return c.max == null ? '시간 무관' : c.strict ? c.t : c.t + ' 안';
+  };
   const REGIONS = ['서울', '경기', '인천'];
 
   const esc = s => U.esc(s);
@@ -46,6 +58,54 @@ window.STEPS = (function () {
       return '<b>' + t + '</b><small>억</small>';
     }
     return '<b>' + Math.round(man).toLocaleString() + '</b><small>만</small>';
+  }
+
+  /** 현금+대출 → 매매가. 1주택 취득세 + 중개보수 대략치 (6억↓ 1.5%, 9억↓ 2.7%, 그 위 3.9%) */
+  function feeRate(price) { return price <= 60000 ? 0.015 : price <= 90000 ? 0.027 : 0.039; }
+  function priceFromMoney(money) {
+    let price = money / 1.015;
+    for (let i = 0; i < 4; i++) price = money / (1 + feeRate(price));
+    return { price, rate: feeRate(price) };
+  }
+
+  function workSlot(n, w, ph, label) {
+    return '<div class="work-slot"><span class="work-lbl">' + label + '</span>' +
+      '<div class="search-box"><span class="search-ic">' + (n === '1' ? '🔍' : '👥') + '</span>' +
+      '<input id="stInput' + n + '" type="text" autocomplete="off" placeholder="' + ph + '" value="' +
+      esc(w ? w.name : '') + '" aria-label="' + label + '" />' +
+      '<div class="st-results" id="stResults' + n + '" hidden></div></div>' +
+      (w ? '<div class="work-picked"><span class="pin">📍</span><b>' + esc(w.name) + '역</b> 근처' +
+        '<button type="button" class="link" id="workClear' + n + '">지우기</button></div>' : '') +
+      '</div>';
+  }
+
+  function bindWorkSlot(el, n, a, key, ctx) {
+    const inp = el.querySelector('#stInput' + n);
+    const box = el.querySelector('#stResults' + n);
+    const search = U.debounce(async () => {
+      const q = inp.value.trim();
+      if (!q) { box.hidden = true; return; }
+      const d = await U.get('/api/stations?q=' + encodeURIComponent(q), 'st' + n);
+      box.innerHTML = d.items.length ? d.items.map((s, i) =>
+        '<button type="button" class="st" data-i="' + i + '"><b>' + esc(s.name) + '</b>' +
+        '<span>' + s.lines.map(esc).join(' · ') + '</span></button>').join('')
+        : '<div class="st-empty">역을 찾지 못했어요</div>';
+      box.hidden = false;
+      box.querySelectorAll('.st').forEach(b => b.addEventListener('click', () => {
+        const s = d.items[+b.dataset.i];
+        a[key] = { name: s.name, lat: s.lat, lng: s.lng, lines: s.lines };
+        ctx.changed(true); ctx.rerender();
+      }));
+    }, 160);
+    inp.addEventListener('input', search);
+    if (n === '1' && !a.work) setTimeout(() => inp.focus(), 380);
+    const clr = el.querySelector('#workClear' + n);
+    clr && clr.addEventListener('click', () => {
+      a[key] = null;
+      if (key === 'work' && a.work2) { a.work = a.work2; a.work2 = null; }
+      if (key === 'work2') a._two = false;
+      ctx.changed(true); ctx.rerender();
+    });
   }
 
   const list = [
@@ -82,12 +142,23 @@ window.STEPS = (function () {
         '<div class="range-scale"><span>1억</span><span>10억</span><span>20억</span><span>30억</span></div>' +
         '<div class="chips">' + BUDGET_CHIPS.map(v =>
           '<button type="button" class="chip' + (a.budget === v ? ' on' : '') + '" data-v="' + v + '">' +
-          U.won(v) + '</button>').join('') + '</div></div>',
+          U.won(v) + '</button>').join('') + '</div>' +
+        '<button type="button" class="link calc-toggle" id="calcToggle">' +
+        (a._calc ? '계산기 닫기' : '🧮 현금 + 대출로 계산하기') + '</button>' +
+        '<div class="calc" id="calc"' + (a._calc ? '' : ' hidden') + '>' +
+        '<label>보유 현금<span><input type="number" id="cCash" min="0" step="0.1" inputmode="decimal" value="' +
+        (a._cash != null ? a._cash : '') + '" placeholder="2" />억</span></label>' +
+        '<label>대출 예정<span><input type="number" id="cLoan" min="0" step="0.1" inputmode="decimal" value="' +
+        (a._loan != null ? a._loan : '') + '" placeholder="4" />억</span></label>' +
+        '<p class="calc-out" id="calcOut">두 칸을 채우면 매매가 상한을 계산해 드려요.</p>' +
+        '<p class="calc-note">취득세·중개보수를 1주택 기준 대략치로 뺀 값입니다. 대출 한도(LTV·DSR)는 소득과 지역에 따라 달라요.</p>' +
+        '</div></div>',
       bind(el, a, ctx) {
         const r = el.querySelector('#budgetRange');
         const big = el.querySelector('#budgetBig');
         const paint = () => {
           big.innerHTML = bigWon(a.budget) + '<span class="budget-tail">이하</span>';
+          r.value = a.budget;
           const pct = (r.value - r.min) / (r.max - r.min) * 100;
           r.style.setProperty('--fill', pct + '%');
           el.querySelectorAll('.chip').forEach(c => c.classList.toggle('on', +c.dataset.v === a.budget));
@@ -96,8 +167,24 @@ window.STEPS = (function () {
         paint(); ctx.changed();
         r.addEventListener('input', () => { a.budget = +r.value; paint(); ctx.changed(); });
         el.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
-          a.budget = +c.dataset.v; r.value = a.budget; paint(); ctx.changed(true);
+          a.budget = +c.dataset.v; paint(); ctx.changed(true);
         }));
+        el.querySelector('#calcToggle').addEventListener('click', () => { a._calc = !a._calc; ctx.rerender(); });
+        const cash = el.querySelector('#cCash'), loan = el.querySelector('#cLoan'), out = el.querySelector('#calcOut');
+        const calc = () => {
+          a._cash = cash.value === '' ? null : +cash.value;
+          a._loan = loan.value === '' ? null : +loan.value;
+          if (a._cash == null && a._loan == null) return;
+          const money = ((a._cash || 0) + (a._loan || 0)) * 10000;
+          const r2 = priceFromMoney(money);
+          if (r2.price < 10000) { out.textContent = '1억 미만은 찾을 수 있는 단지가 거의 없어요.'; return; }
+          a.budget = Math.min(300000, Math.floor(r2.price / 1000) * 1000);
+          out.innerHTML = '총 <b>' + U.won(money) + '</b> − 부대비용 약 ' + (r2.rate * 100).toFixed(1) +
+            '% → 매매가 <b>' + U.won(a.budget) + '</b> 이하';
+          paint(); ctx.changed();
+        };
+        cash.addEventListener('input', calc); loan.addEventListener('input', calc);
+        if (a._calc) calc();
       },
       valid: a => a.budget > 0,
       summary: a => '💰 ' + U.won(a.budget) + ' 이하',
@@ -131,53 +218,36 @@ window.STEPS = (function () {
     {
       key: 'work', icon: '🏢', hue: 32, label: '출근',
       title: '출근은 어디로 하세요?',
-      sub: '회사 근처 지하철역을 검색하세요. 출근하지 않으면 건너뛰어도 돼요.',
+      sub: '회사 근처 지하철역을 검색하세요. 함께 사는 분의 근무지도 넣을 수 있어요.',
       render: a => '<div class="work">' +
-        '<div class="search-box"><span class="search-ic">🔍</span>' +
-        '<input id="stInput" type="text" autocomplete="off" placeholder="예: 강남, 판교, 여의도" value="' +
-        esc(a.work ? a.work.name : '') + '" aria-label="회사 근처 역" />' +
-        '<div class="st-results" id="stResults" hidden></div></div>' +
-        '<div class="work-picked" id="workPicked">' + (a.work
-          ? '<span class="pin">📍</span><b>' + esc(a.work.name) + '역</b> 근처로 출근' +
-            '<button type="button" class="link" id="workClear">지우기</button>' : '') + '</div>' +
-        '<div class="sub-q">출근에 얼마나 쓸 수 있나요? <small>(편도)</small></div>' +
-        '<div class="seg" role="radiogroup">' + COMMUTES.map(m =>
-          '<button type="button" class="seg-b' + (a.commute_max === m ? ' on' : '') + '" data-m="' + m + '">' +
-          m + '분</button>').join('') + '</div>' +
+        workSlot('1', a.work, '예: 강남, 판교, 여의도', '나의 출근지') +
+        (a.work2 || a._two ? workSlot('2', a.work2, '함께 사는 분 회사 근처 역', '함께 사는 분 출근지')
+          : (a.work ? '<button type="button" class="link add-work" id="addWork">＋ 함께 사는 분 근무지 추가</button>' : '')) +
+        '<div class="sub-q">출근에 얼마나 쓸 수 있나요? <small>(편도' + (a.work2 ? ', 두 사람 모두' : '') + ')</small></div>' +
+        '<div class="seg" role="radiogroup">' + COMMUTES.map(c =>
+          '<button type="button" class="seg-b' + (commuteKey(a) === c.k ? ' on' : '') + '" data-m="' + c.k + '">' +
+          c.t + '</button>').join('') + '</div>' +
         '<button type="button" class="link skip" id="workSkip">출근하지 않아요 · 건너뛰기</button></div>',
       bind(el, a, ctx) {
-        const inp = el.querySelector('#stInput');
-        const box = el.querySelector('#stResults');
-        const search = U.debounce(async () => {
-          const q = inp.value.trim();
-          if (!q) { box.hidden = true; return; }
-          const d = await U.get('/api/stations?q=' + encodeURIComponent(q), 'st');
-          box.innerHTML = d.items.length ? d.items.map((s, i) =>
-            '<button type="button" class="st" data-i="' + i + '"><b>' + esc(s.name) + '</b>' +
-            '<span>' + s.lines.map(esc).join(' · ') + '</span></button>').join('')
-            : '<div class="st-empty">역을 찾지 못했어요</div>';
-          box.hidden = false;
-          box.querySelectorAll('.st').forEach(b => b.addEventListener('click', () => {
-            const s = d.items[+b.dataset.i];
-            a.work = { name: s.name, lat: s.lat, lng: s.lng, lines: s.lines };
-            ctx.changed(true); ctx.rerender();
-          }));
-        }, 160);
-        inp.addEventListener('input', search);
-        if (!a.work) setTimeout(() => inp.focus(), 380);
-        const clr = el.querySelector('#workClear');
-        clr && clr.addEventListener('click', () => { a.work = null; ctx.changed(true); ctx.rerender(); });
+        bindWorkSlot(el, '1', a, 'work', ctx);
+        if (el.querySelector('#stInput2')) bindWorkSlot(el, '2', a, 'work2', ctx);
+        const add = el.querySelector('#addWork');
+        add && add.addEventListener('click', () => {
+          a._two = true; ctx.rerender();
+          setTimeout(() => { const i = document.getElementById('stInput2'); i && i.focus(); }, 50);
+        });
         el.querySelectorAll('.seg-b').forEach(b => b.addEventListener('click', () => {
-          a.commute_max = +b.dataset.m;
+          const c = COMMUTES.find(x => x.k === b.dataset.m);
+          a.commute_max = c.max; a.commute_strict = c.strict;
           el.querySelectorAll('.seg-b').forEach(x => x.classList.toggle('on', x === b));
           ctx.changed(true);
         }));
         el.querySelector('#workSkip').addEventListener('click', () => {
-          a.work = null; ctx.changed(true); ctx.next();
+          a.work = null; a.work2 = null; a._two = false; ctx.changed(true); ctx.next();
         });
       },
       valid: () => true,
-      summary: a => a.work ? '🏢 ' + a.work.name + ' ' + a.commute_max + '분 안' : '🏢 출근 무관',
+      summary: a => a.work ? '🏢 ' + a.work.name + (a.work2 ? '·' + a.work2.name : '') + ' ' + commuteText(a) : '🏢 출근 무관',
     },
 
     // 5 ─ 지역
@@ -249,5 +319,5 @@ window.STEPS = (function () {
     },
   ];
 
-  return { list, PRIORITIES, PYEONG_GROUPS };
+  return { list, PRIORITIES, PYEONG_GROUPS, commuteText };
 })();

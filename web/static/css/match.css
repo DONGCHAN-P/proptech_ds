@@ -262,7 +262,7 @@ body[data-view="result"] .mesh { opacity: .35; }
 .work-picked .pin { font-size: 22px; animation: hop .6s var(--ease); }
 .sub-q { font-weight: 700; margin: 8px 0 10px; }
 .sub-q small { color: var(--ink-3); font-weight: 500; }
-.seg { display: inline-flex; padding: 4px; border-radius: 14px; background: var(--surface-2); border: 1px solid var(--line); }
+.seg { display: inline-flex; flex-wrap: wrap; padding: 4px; border-radius: 14px; background: var(--surface-2); border: 1px solid var(--line); }
 .seg-b { padding: 10px 22px; border-radius: 10px; font-weight: 700; color: var(--ink-2); transition: all .25s var(--ease); }
 .seg-b.on { background: var(--surface-solid); color: var(--accent-ink); box-shadow: var(--shadow); }
 .link { color: var(--accent-ink); font-weight: 600; font-size: 14px; text-decoration: underline; text-underline-offset: 3px; }
@@ -526,6 +526,8 @@ path.cand { fill: var(--dot); }
   .counter-l { font-size: 11px; }
   .btn-next { padding: 13px 18px; }
   .btn-back { padding: 13px 10px; }
+  .seg { display: flex; }
+  .seg-b { flex: 1 1 30%; padding: 10px 8px; font-size: 14px; }
 
   .result { grid-template-columns: 1fr; grid-template-rows: 42vh 1fr; }
   .rmap { grid-row: 1; }
@@ -541,3 +543,50 @@ path.cand { fill: var(--dot); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* ── 페르소나 검증 후 추가 ─────────────────────────────────────────── */
+/* 예산 계산기 */
+.calc-toggle { display: inline-block; margin-top: 18px; }
+.calc {
+  margin-top: 12px; padding: 16px; border-radius: 16px; background: var(--surface-2); border: 1px solid var(--line);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; animation: rise .35s var(--ease);
+}
+.calc label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: var(--ink-2); }
+.calc label span { display: flex; align-items: center; gap: 6px; font-weight: 600; }
+.calc input {
+  width: 100%; padding: 12px 14px; border-radius: 12px; font-size: 18px; font-weight: 700;
+  background: var(--surface-solid); border: 1.5px solid var(--line-2); outline: none;
+}
+.calc input:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+.calc-out { grid-column: span 2; margin: 2px 0 0; font-size: 14.5px; color: var(--ink-2); }
+.calc-out b { color: var(--accent-ink); }
+.calc-note { grid-column: span 2; margin: 0; font-size: 11.5px; color: var(--ink-3); }
+
+/* 근무지 두 칸 */
+.work-slot { margin-bottom: 8px; }
+.work-lbl { display: block; font-size: 12px; font-weight: 700; color: var(--ink-3); margin: 0 0 6px 2px; }
+.work-slot + .work-slot { margin-top: 10px; }
+.work-slot .work-picked { min-height: 34px; margin: 8px 0 0; font-size: 14.5px; }
+.add-work { display: inline-block; margin: 6px 0 14px; }
+
+/* 결과 머리 */
+.rhead-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.share-btn {
+  flex: none; padding: 8px 12px; border-radius: 999px; font-size: 13px; font-weight: 700;
+  background: var(--surface-solid); border: 1px solid var(--line-2); color: var(--ink-2); transition: all .2s;
+}
+.share-btn:hover { border-color: var(--accent); color: var(--accent-ink); }
+.sumchips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.sumchips .tchip { padding: 6px 11px; font-size: 12px; }
+
+/* 시세 신선도 */
+.rc-fresh { font-size: 11.5px; color: var(--ink-3); }
+.rc-fresh.warn { color: hsl(30 85% 42%); font-weight: 600; }
+:root[data-theme="dark"] .rc-fresh.warn { color: hsl(36 100% 68%); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .rc-fresh.warn { color: hsl(36 100% 68%); } }
+.warn-box {
+  margin: 0 0 14px; padding: 11px 14px; border-radius: 12px; font-size: 13px; line-height: 1.5;
+  background: hsl(36 100% 55% / .13); color: var(--ink-2);
+}
+.kpi-plus { font-size: .5em !important; color: var(--ink-3) !important; }
+.rc-commute + .rc-commute { margin-top: 0; }

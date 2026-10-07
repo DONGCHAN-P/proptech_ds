@@ -3,7 +3,7 @@ window.WIZ = (function () {
 
   const steps = STEPS.list;
   const ans = {
-    household: null, budget: null, pyeongs: [], work: null, commute_max: 45,
+    household: null, budget: null, pyeongs: [], work: null, work2: null, commute_max: 60, commute_strict: false,
     sgg: [], priorities: [], _touched: {},
   };
   let cur = 0;          // 현재 단계 인덱스
@@ -36,7 +36,9 @@ window.WIZ = (function () {
       budget: has('budget') ? ans.budget : null,
       pyeongs: has('pyeongs') ? ans.pyeongs : [],
       work: has('work') && ans.work ? { lat: ans.work.lat, lng: ans.work.lng } : null,
+      work2: has('work') && ans.work && ans.work2 ? { lat: ans.work2.lat, lng: ans.work2.lng } : null,
       commute_max: ans.commute_max,
+      commute_strict: ans.commute_strict,
       sgg: has('sgg') ? ans.sgg : [],
       priorities: ans.priorities,
     };
@@ -190,10 +192,21 @@ window.WIZ = (function () {
     })(t0);
   }
 
+  /** 공유 링크로 받은 답을 채우고 마지막 단계에 서 있게 한다 */
+  function restore(st) {
+    Object.assign(ans, st);
+    ans._touched = { pyeongs: true, priorities: true };
+    reached = steps.length - 1;
+    show(steps.length - 1, 0);
+    refreshCount();
+  }
+
+  function finish() { ctx.onDone(payload(true), ans); }
+
   function reopen(i) {
     $('wizard').hidden = false;
     go(i == null ? cur : i);
   }
 
-  return { init, ans, payload, reopen };
+  return { init, ans, payload, reopen, restore, finish };
 })();

@@ -84,7 +84,19 @@ def test_same_line_beats_transfer_at_equal_distance():
     ride_same = M.ride_minutes(1.0, "2호선", "2호선")
     ride_xfer = M.ride_minutes(1.0, "2호선", "신분당선")
     assert ride_xfer - ride_same == pytest.approx(M.TRANSFER_MIN)
-    assert M.ride_minutes(1.0, "신분당선(연장)", "신분당선") == ride_same
+    assert M.ride_minutes(1.0, "신분당선(연장)", "신분당선") == M.ride_minutes(1.0, "신분당선", "신분당선")
+
+
+def test_through_running_lines_are_not_transfers():
+    # 부평(경인선) → 서울역(경부선) 은 같은 1호선 열차다
+    assert M.ride_minutes(24.0, "경인선", "경부선") == M.ride_minutes(24.0, "1호선", "1호선")
+    assert M.norm_line("중앙선") == M.norm_line("경의중앙선")
+
+
+def test_ride_speed_grows_with_distance():
+    per_km_short = M.ride_minutes(3.0, "2호선", "2호선") / 3
+    per_km_long = M.ride_minutes(25.0, "2호선", "2호선") / 25
+    assert per_km_long < per_km_short
 
 
 def test_short_distance_uses_walking():
@@ -103,7 +115,7 @@ def test_budget_use_score(ratio, expected):
 
 
 def test_commute_score_bounds():
-    s = M.commute_score(np.array([15, 20, 55, 70]), limit=45)
+    s = M.commute_score(np.array([15, 20, 55, 70]), limit=55)
     assert s[0] == 100 and s[1] == 100
     assert s[2] == pytest.approx(0)
     assert s[3] == 0
@@ -219,3 +231,69 @@ def test_small_complex_excluded_new_build_exempt():
     ])
     keep = df[M.hard_filter(df, _ans(), TODAY)]
     assert list(keep["apt_id"]) == ["A1", "A3"]
+
+
+def test_commute_options_strict_and_unlimited():
+    df = _frame([_row(1), _row(2), _row(3)])
+    df["commute_min"] = [28.0, 35.0, 130.0]
+    work = (37.5, 127.0)
+    strict = df[M.hard_filter(df, _ans(work=work, commute_max=30, commute_strict=True), TODAY)]
+    loose = df[M.hard_filter(df, _ans(work=work, commute_max=30), TODAY)]
+    open_ = df[M.hard_filter(df, _ans(work=work, commute_max=None), TODAY)]
+    assert list(strict["apt_id"]) == ["A1"]            # 30분 미만: 여유 없음
+    assert list(loose["apt_id"]) == ["A1", "A2"]       # 30분: +10분 여유
+    assert list(open_["apt_id"]) == ["A1", "A2", "A3"]  # 2시간 이상: 거르지 않음
+    s = M.score(open_, _ans(work=work, commute_max=None))
+    assert s.set_index("apt_id")["s_commute"]["A1"] > s.set_index("apt_id")["s_commute"]["A3"]
+
+
+def test_payload_commute_none_means_unlimited():
+    assert M.Answers.from_payload({"commute_max": None}).commute_max is None
+    assert M.Answers.from_payload({}).commute_max == 60
+    a = M.Answers.from_payload({"commute_max": 30, "commute_strict": True})
+    assert a.commute_max == 30 and a.commute_strict
+
+
+
+def test_new_priority_is_absolute_not_relative():
+    # 후보가 전부 구축이면 '신축' 점수도 낮아야 한다 (상대 순위면 2006년이 100점이 된다)
+    df = _frame([_row(1, build_year=2005), _row(2, build_year=2006)])
+    sc = M.score(df, _ans(priorities=["new"]), TODAY)
+    assert sc["s_new"].max() < 30
+    df = _frame([_row(1, build_year=2022)])
+    assert M.score(df, _ans(priorities=["new"]), TODAY)["s_new"].iloc[0] == 100
+
+
+def test_thin_trades_lower_the_score():
+    df = _frame([_row(1, trade_1y=0), _row(2, trade_1y=5)])
+    sc = M.score(df, _ans(), TODAY).set_index("apt_id")
+    assert sc.loc["A1", "score"] < sc.loc["A2", "score"]
+
+
+def test_stale_two_years_excluded():
+    df = _frame([_row(1, last_date=pd.Timestamp("2024-06-01")), _row(2)])
+    assert list(df[M.hard_filter(df, _ans(), TODAY)]["apt_id"]) == ["A2"]
+
+
+def test_second_workplace_filters_and_scores():
+    df = _frame([_row(1), _row(2)])
+    df["commute_min"] = [30.0, 30.0]
+    df["commute2_min"] = [40.0, 90.0]
+    a = _ans(work=(37.5, 127.0), work2=(37.4, 127.1), commute_max=60)
+    keep = df[M.hard_filter(df, a, TODAY)]
+    assert list(keep["apt_id"]) == ["A1"]                     # 배우자 90분 > 70
+    row = M.score(keep, a, TODAY).iloc[0]
+    assert "함께 사는 분 40분" in M.reason_text("commute", row, a)
+
+
+def test_park_zero_distance_copy():
+    row = pd.Series({"park_dist": 0.0, "s_green": 90})
+    assert M.reason_text("green", row, _ans()) == "단지 바로 옆 공원"
+
+
+def test_weak_point_names_the_unmet_condition():
+    items = [{"score": 45, "breakdown": {"price": 90, "new": 20}} for _ in range(5)]
+    wk = M.weak_point(items, {"price": 0.4, "new": 0.6})
+    assert wk == {"key": "new", "label": "신축", "avg": 20}
+    good = [{"score": 85, "breakdown": {"price": 90, "new": 80}}]
+    assert M.weak_point(good, {"price": 0.4, "new": 0.6}) is None

@@ -23,6 +23,26 @@
 
   REP.init({ ans: () => WIZ.ans });
 
+  // ── 공유 링크: #q=<base64 JSON> ─────────────────────────────────────
+  const SHARE_KEYS = ['household', 'budget', 'pyeongs', 'work', 'work2', 'commute_max', 'commute_strict', 'sgg', 'priorities'];
+  function encodeState(a) {
+    const o = {};
+    SHARE_KEYS.forEach(k => { o[k] = a[k]; });
+    ['work', 'work2'].forEach(k => { if (o[k]) o[k] = { name: o[k].name, lat: +o[k].lat.toFixed(5), lng: +o[k].lng.toFixed(5) }; });
+    return btoa(unescape(encodeURIComponent(JSON.stringify(o)))).replace(/=+$/, '');
+  }
+  function decodeState(s) {
+    try { return JSON.parse(decodeURIComponent(escape(atob(s)))); } catch (e) { return null; }
+  }
+  $('shareBtn').addEventListener('click', async () => {
+    const url = location.origin + location.pathname + '#q=' + encodeState(WIZ.ans);
+    history.replaceState(null, '', url);
+    try { await navigator.clipboard.writeText(url); U.toast('링크를 복사했어요. 받는 분도 같은 결과를 봅니다.'); }
+    catch (e) { U.toast('주소창의 링크를 복사해 보내 주세요.', 3000); }
+  });
+
+  const ctxForSummary = { meta };
+
   WIZ.init({
     meta,
     async onDone(payload, ans) {
@@ -45,9 +65,16 @@
       $('searching').hidden = true;
       document.body.dataset.view = 'result';
       RES.render(data, ans, { tiles: meta.tiles || { url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: '&copy; OpenStreetMap', maxZoom: 19 },
-        onOpen: it => REP.open(it, last) });
+        onOpen: it => REP.open(it, last), ctx: ctxForSummary,
+        onEdit: i => { REP.close(); RES.hide(); document.body.dataset.view = 'wizard'; WIZ.reopen(i); } });
     },
   });
+
+  const shared = location.hash.startsWith('#q=') && decodeState(location.hash.slice(3));
+  if (shared) {
+    WIZ.restore(shared);
+    WIZ.finish();
+  }
 
   $('editBtn').addEventListener('click', () => {
     REP.close();

@@ -24,8 +24,15 @@ import pandas as pd
 # ── 통근 추정 상수 ────────────────────────────────────────────────────
 WALK_KMH = 4.5
 WALK_DETOUR = 1.25        # 직선 → 실제 보행 경로
-RIDE_KMH = 32.0           # 정차 포함 표정속도
-RIDE_DETOUR = 1.3         # 역간 직선 → 선로
+# 역간 **직선거리** 기준 표정속도. 짧은 구간은 정차가 촘촘해 느리고, 먼 구간은 선로가
+# 곧고 급행이 섞여 빠르다. 실측 몇 개로 맞췄다 (직선 km → 실제 탑승 분):
+#   잠실→강남 2호선 6km 17분 · 사당→시청 4호선 8km 20분 · 부평→서울역 1호선 24km 40분
+RIDE_KMH_BASE = 18.0
+RIDE_KMH_PER_KM = 0.9
+RIDE_KMH_MAX = 42.0
+# 정차가 드문 노선 — 같은 노선으로 끝까지 가면 더 빠르다 (강남→판교 13km 16분)
+FAST_LINES = {"신분당선", "공항철도", "GTX-A", "GTX-B", "GTX-C"}
+FAST_BONUS = 1.35
 WAIT_MIN = 4.0
 TRANSFER_MIN = 7.0
 WALK_ONLY_KM = 1.5        # 이 안쪽이면 걸어가는 경우와 비교
@@ -33,10 +40,13 @@ K_NEAR = 3
 
 COMMUTE_SLACK = 10        # 추정 오차만큼 허용시간에 여유
 COMMUTE_FULL = 20         # 이 이하면 통근 점수 만점
+COMMUTE_OPEN_END = 150    # "2시간 이상"(제한 없음)일 때 통근 점수가 0 이 되는 지점
 
 # ── 점수 가중치 ───────────────────────────────────────────────────────
 W_PRICE, W_COMMUTE, W_PRIORITY = 0.30, 0.25, 0.45
-STALE_YEARS = 3
+STALE_YEARS = 2           # 이보다 오래된 거래가로는 '지금 이 가격' 이라고 말할 수 없다
+# 최근 1년 거래가 얇으면 가격이 지금과 다를 수 있다 — 순위를 조금 내린다
+CONFIDENCE = {0: 0.88, 1: 0.95}
 MIN_TRADES = 3            # 그 평형의 누적 거래 — 시세라고 부를 최소 표본
 # 세대수가 없어(T6b) 단지 전체 누적 거래로 규모를 가린다. 나홀로 단지가 역 앞이라는
 # 이유만으로 1위에 오르는 걸 막는다. 신축은 거래 기간이 짧아 기준을 낮춘다.
@@ -44,7 +54,8 @@ MIN_APT_TRADES = 50
 MIN_APT_TRADES_NEW = 15
 NEW_BUILD_YEARS = 5
 
-# key → (라벨, 컬럼, 클수록 좋은가)
+# key → (라벨, 컬럼, 클수록 좋은가). 점수는 priority_score() 의 절대 기준을 쓴다 —
+# 후보 안 상대 순위로 매기면 2005년 준공이 '신축' 1등이 되고 적합도가 부풀려진다.
 PRIORITIES: dict[str, tuple[str, str, bool]] = {
     "station": ("역세권", "walk_min", False),
     "school": ("학군", "elem_school_cnt_1km", True),
@@ -73,26 +84,33 @@ class Answers:
     budget: float | None = None                  # 만원
     pyeongs: list[str] = field(default_factory=list)
     work: tuple[float, float] | None = None      # (lat, lng)
-    commute_max: int = 45
+    work2: tuple[float, float] | None = None     # 함께 사는 사람의 근무지 (맞벌이)
+    commute_max: int | None = 60                 # None = 2시간 이상 (시간으로 거르지 않음)
+    commute_strict: bool = False                 # "30분 미만" — 추정 여유 없이 자른다
     sgg: list[str] = field(default_factory=list)
     priorities: list[str] = field(default_factory=list)
 
     @classmethod
     def from_payload(cls, p: dict) -> "Answers":
-        work = p.get("work")
-        if isinstance(work, dict) and work.get("lat") is not None:
-            work = (float(work["lat"]), float(work["lng"]))
-        elif isinstance(work, (list, tuple)) and len(work) == 2:
-            work = (float(work[0]), float(work[1]))
-        else:
-            work = None
+        def point(v):
+            if isinstance(v, dict) and v.get("lat") is not None:
+                return (float(v["lat"]), float(v["lng"]))
+            if isinstance(v, (list, tuple)) and len(v) == 2:
+                return (float(v[0]), float(v[1]))
+            return None
+        work, work2 = point(p.get("work")), point(p.get("work2"))
+        if work is None:
+            work, work2 = work2, None
         budget = p.get("budget")
         return cls(
             household=str(p.get("household") or "couple"),
             budget=float(budget) if budget else None,
             pyeongs=[x for x in (p.get("pyeongs") or []) if x in PYEONG_CODES],
             work=work,
-            commute_max=int(p.get("commute_max") or 45),
+            work2=work2,
+            commute_max=(None if p.get("commute_max") in (None, "", 0) and "commute_max" in p
+                         else int(p.get("commute_max") or 60)),
+            commute_strict=bool(p.get("commute_strict")),
             sgg=[str(x) for x in (p.get("sgg") or []) if x],
             priorities=[x for x in (p.get("priorities") or []) if x in PRIORITIES][:3],
         )
@@ -111,16 +129,30 @@ def walk_minutes(km):
     return np.asarray(km, dtype=float) * WALK_DETOUR / WALK_KMH * 60
 
 
+# 운영상 한 열차로 직결되는 노선들 — 이름이 달라도 갈아타지 않는다.
+# 부평(경인선) → 서울역(경부선) 이 환승으로 잡혀 80분이 나오던 문제.
+LINE_ALIAS = {
+    "경인선": "1호선", "경부선": "1호선", "경원선": "1호선", "장항선": "1호선",
+    "중앙선": "경의중앙선", "경의선": "경의중앙선",
+    "분당선": "수인분당선", "수인선": "수인분당선",
+}
+
+
 def norm_line(line: str) -> str:
     """'9호선(연장)' · '신분당선(연장2)' · '7호선(인천)' 을 본선과 같은 노선으로 본다."""
-    return re.sub(r"\(.*?\)", "", str(line)).strip()
+    s = re.sub(r"\(.*?\)", "", str(line)).strip()
+    return LINE_ALIAS.get(s, s)
 
 
 def ride_minutes(km, line_a, line_b):
     km = np.asarray(km, dtype=float)
     a = np.vectorize(norm_line)(np.asarray(line_a, dtype=object))
     b = np.vectorize(norm_line)(np.asarray(line_b, dtype=object))
-    return WAIT_MIN + km * RIDE_DETOUR / RIDE_KMH * 60 + np.where(a == b, 0.0, TRANSFER_MIN)
+    same = a == b
+    kmh = np.clip(RIDE_KMH_BASE + RIDE_KMH_PER_KM * km, RIDE_KMH_BASE, RIDE_KMH_MAX)
+    fast = same & np.isin(a, list(FAST_LINES))
+    kmh = np.where(fast, kmh * FAST_BONUS, kmh)
+    return WAIT_MIN + km / kmh * 60 + np.where(same, 0.0, TRANSFER_MIN)
 
 
 class Stations:
@@ -133,7 +165,7 @@ class Stations:
         self.lng = df["lng"].to_numpy(float)
         self.line = df["line"].map(norm_line).to_numpy(object)
         # '남한산성입구(성남법원.검찰청)' → '남한산성입구' (표시용)
-        self.name = df["station_name"].map(norm_line).to_numpy(object)
+        self.name = df["station_name"].map(lambda x: re.sub(r"\(.*?\)", "", str(x)).strip()).to_numpy(object)
 
     def nearest(self, lat, lng, k: int = K_NEAR) -> tuple[np.ndarray, np.ndarray]:
         """각 점의 가까운 역 k곳 (인덱스, km). 2만 점 × 800역 정도는 한 번에 된다."""
@@ -190,9 +222,17 @@ def budget_use_score(ratio):
     return np.clip((r - 0.40) / (0.75 - 0.40), 0, 1) * 100
 
 
-def commute_score(minutes, limit: int):
+def commute_limit(ans: "Answers") -> float | None:
+    """하드 필터에 쓰는 실제 상한 (분). None 이면 거르지 않는다."""
+    if ans.commute_max is None:
+        return None
+    return ans.commute_max + (0 if ans.commute_strict else COMMUTE_SLACK)
+
+
+def commute_score(minutes, limit: float | None):
+    """limit 은 commute_limit() 값. 20분 이하 만점, 상한에서 0."""
     m = np.asarray(minutes, dtype=float)
-    end = limit + COMMUTE_SLACK
+    end = COMMUTE_OPEN_END if limit is None else max(limit, COMMUTE_FULL + 5)
     return np.clip((end - m) / (end - COMMUTE_FULL), 0, 1) * 100
 
 
@@ -250,8 +290,11 @@ def hard_filter(df: pd.DataFrame, ans: Answers, today: date,
         m &= df["pyeong_bucket"].isin(ans.pyeongs)
     if ans.sgg and "region" not in skip:
         m &= df["sigungu_code"].astype(str).isin(ans.sgg)
-    if ans.work and "commute_min" in df and "commute" not in skip:
-        m &= df["commute_min"] <= ans.commute_max + COMMUTE_SLACK
+    lim = commute_limit(ans)
+    if ans.work and "commute_min" in df and "commute" not in skip and lim is not None:
+        m &= df["commute_min"] <= lim
+        if ans.work2 and "commute2_min" in df:
+            m &= df["commute2_min"] <= lim
     return m
 
 
@@ -266,7 +309,30 @@ def weights(ans: Answers) -> dict[str, float]:
     return {k: v / total for k, v in w.items()}
 
 
-def score(df: pd.DataFrame, ans: Answers) -> pd.DataFrame:
+def ramp(x, zero, full):
+    """zero 에서 0, full 에서 100 인 선형 (방향은 두 값의 크기로 정해진다)."""
+    x = np.asarray(x, dtype=float)
+    return np.nan_to_num(np.clip((x - zero) / (full - zero), 0, 1) * 100, nan=0.0)
+
+
+def priority_score(key: str, df: pd.DataFrame, today: date) -> np.ndarray:
+    """고른 우선순위의 0~100 점수 — 절대 기준."""
+    if key == "station":                              # 도보 5분 이내 만점, 20분이면 0
+        return ramp(df["walk_min"], 20, 5)
+    if key == "school":                               # 1km 안 초교 5곳이면 만점 (중앙값 4)
+        return ramp(df["elem_school_cnt_1km"], 0, 5)
+    if key == "new":                                  # 준공 5년 이내 만점, 25년 넘으면 0
+        return ramp(df["build_year"], today.year - 25, today.year - 5)
+    if key == "green":                                # 공원 거리와 녹지 점수 반반
+        park = ramp(df["park_dist"], 800, 150) if "park_dist" in df else 50.0
+        return 0.5 * park + 0.5 * np.nan_to_num(df["green_score"].to_numpy(float), nan=0.0)
+    if key == "active":                               # 같은 평형 1년 12건이면 만점
+        return ramp(df["trade_1y"], 0, 12)
+    raise KeyError(key)
+
+
+def score(df: pd.DataFrame, ans: Answers, today: date | None = None) -> pd.DataFrame:
+    today = today or date.today()
     df = df.copy()
     w = weights(ans)
     if ans.budget:
@@ -275,12 +341,18 @@ def score(df: pd.DataFrame, ans: Answers) -> pd.DataFrame:
         use = np.full(len(df), 50.0)
     df["s_price"] = 0.5 * use + 0.5 * (100 - df["rel_price_pct"].fillna(50))
     if "commute" in w:
-        df["s_commute"] = commute_score(df["commute_min"], ans.commute_max)
+        lim = commute_limit(ans)
+        s1 = commute_score(df["commute_min"], lim)
+        if ans.work2 and "commute2_min" in df:
+            s1 = (s1 + commute_score(df["commute2_min"], lim)) / 2
+        df["s_commute"] = s1
     for p in w:
         if p in PRIORITIES:
-            _, col, higher = PRIORITIES[p]
-            df[f"s_{p}"] = norm_rank(df[col], higher_is_better=higher).to_numpy()
-    df["score"] = sum(df[f"s_{k}"] * v for k, v in w.items()).round(1)
+            df[f"s_{p}"] = priority_score(p, df, today)
+    raw = sum(df[f"s_{k}"] * v for k, v in w.items())
+    conf = df["trade_1y"].fillna(0).astype(int).map(lambda t: CONFIDENCE.get(t, 1.0))
+    df["confidence"] = conf.to_numpy()
+    df["score"] = (raw * df["confidence"]).round(1)
     return df
 
 
@@ -322,7 +394,9 @@ def reason_text(key: str, row: pd.Series, ans: Answers) -> str | None:
             return "예산과 거의 같은 가격" if gap < 500 else f"예산보다 {fmt_won(gap)} 아래"
         return None
     if key == "commute":
-        return f"출근 약 {round(row['commute_min'])}분"
+        t = f"출근 약 {round(row['commute_min'])}분"
+        c2 = row.get("commute2_min")
+        return t + f" · 함께 사는 분 {round(c2)}분" if c2 is not None and pd.notna(c2) else t
     if key == "station":
         wm = row.get("walk_min")
         st = row.get("nearest_station")
@@ -338,6 +412,8 @@ def reason_text(key: str, row: pd.Series, ans: Answers) -> str | None:
         return f"{int(y)}년 준공" if pd.notna(y) else None
     if key == "green":
         d = row.get("park_dist")
+        if pd.notna(d) and d < 50:
+            return "단지 바로 옆 공원"
         if pd.notna(d) and d < 2000:
             return f"공원까지 약 {int(round(d, -1))}m"
         return "녹지 점수 상위권" if row.get("s_green", 0) >= 70 else None
@@ -365,7 +441,7 @@ ITEM_COLS = ["apt_id", "apt_name", "sigungu_name", "legal_dong_name", "road_addr
              "lat", "lng", "build_year", "pyeong_bucket", "area_m2", "last_price",
              "last_date", "last_ppy", "ppy_1y", "chg_1y", "vs_peak", "trade_1y",
              "walk_min", "nearest_station", "elem_school_cnt_1km", "rel_price_pct",
-             "commute_min", "score"]
+             "commute_min", "commute2_min", "confidence", "score"]
 
 
 def with_commute(df: pd.DataFrame, ans: Answers, stations: Stations | None,
@@ -373,8 +449,10 @@ def with_commute(df: pd.DataFrame, ans: Answers, stations: Stations | None,
     if not ans.work or stations is None:
         return df
     df = df.copy()
-    df["commute_min"] = stations.commute(df["lat"].to_numpy(), df["lng"].to_numpy(),
-                                         *ans.work, home=home)
+    lat, lng = df["lat"].to_numpy(), df["lng"].to_numpy()
+    df["commute_min"] = stations.commute(lat, lng, *ans.work, home=home)
+    if ans.work2:
+        df["commute2_min"] = stations.commute(lat, lng, *ans.work2, home=home)
     return df
 
 
@@ -388,11 +466,12 @@ def run_match(df: pd.DataFrame, ans: Answers, today: date,
     """답변 → Top n. df 는 prepare() 산출물 (commute_min 은 여기서 붙인다)."""
     df = with_commute(df, ans, stations, home)
     if "commute_min" not in df:
-        ans = replace(ans, work=None)
+        ans = replace(ans, work=None, work2=None)
 
     stages: list[tuple[str, Answers]] = [("", ans)]
-    if ans.work:
-        stages.append(("commute", replace(stages[-1][1], commute_max=ans.commute_max + 15)))
+    if ans.work and ans.commute_max is not None:
+        stages.append(("commute", replace(stages[-1][1], commute_max=ans.commute_max + 15,
+                                          commute_strict=False)))
     if ans.budget:
         stages.append(("budget", replace(stages[-1][1], budget=ans.budget * 1.1)))
 
@@ -408,12 +487,13 @@ def run_match(df: pd.DataFrame, ans: Answers, today: date,
 
     result = {"count": int(cand["apt_id"].nunique()), "relaxed": relaxed,
               "weights": weights(eff), "items": [], "points": [],
-              "effective": {"budget": eff.budget, "commute_max": eff.commute_max}}
+              "effective": {"budget": eff.budget, "commute_max": eff.commute_max,
+                            "commute_strict": eff.commute_strict}}
     if cand.empty:
         result["blocker"] = blocker(df, ans, today)
         return result
 
-    scored = score(cand, eff)
+    scored = score(cand, eff, today)
     top = pick_top(scored, n=n)
     w = weights(eff)
     for rank, (_, row) in enumerate(top.iterrows(), 1):
@@ -423,11 +503,35 @@ def run_match(df: pd.DataFrame, ans: Answers, today: date,
         item["reasons"] = reasons(row, eff)
         if ans.work and stations is not None:
             item["commute"] = stations.route(row["lat"], row["lng"], *ans.work)
+        if ans.work2 and stations is not None:
+            item["commute2"] = stations.route(row["lat"], row["lng"], *ans.work2)
         result["items"].append(item)
+
+    result["weak"] = weak_point(result["items"], w)
 
     pts = scored.sort_values("score", ascending=False).drop_duplicates("apt_id").head(300)
     result["points"] = pts[["apt_id", "lat", "lng", "score"]].to_dict(orient="records")
     return result
+
+
+WEAK_SCORE = 65            # Top5 평균 적합도가 이보다 낮으면 무엇이 아쉬운지 알려 준다
+WEAK_ITEM = 50
+
+
+def weak_point(items: list[dict], w: dict[str, float]) -> dict | None:
+    """Top5 가 전반적으로 덜 맞을 때, 평균 점수가 가장 낮은 조건 하나.
+
+    30억 · 강남 · 신축처럼 동시에 만족하는 곳이 거의 없는 조합이면 적합도가 40점대로
+    나오는데, 이유를 말하지 않으면 사용자는 순위를 믿지 못한다.
+    """
+    if not items or np.mean([it["score"] for it in items]) >= WEAK_SCORE:
+        return None
+    avg = {k: float(np.mean([it["breakdown"][k] for it in items])) for k in w}
+    key = min(avg, key=avg.get)
+    if avg[key] >= WEAK_ITEM:
+        return None
+    label = {"price": "가격", "commute": "출근 시간"}.get(key) or PRIORITIES[key][0]
+    return {"key": key, "label": label, "avg": round(avg[key])}
 
 
 def blocker(df: pd.DataFrame, ans: Answers, today: date) -> dict:

@@ -44,7 +44,7 @@ window.REP = (function () {
     }).join('');
     return '<div class="tile fit-tile"><h3>내 조건 적합도 <b>' + Math.round(it.score) + '</b><small>/100</small></h3>' +
       '<div class="bars">' + rows + '</div>' +
-      '<p class="tile-note">항목별 점수는 같은 조건 후보 안에서의 상대 순위입니다 (괄호는 반영 비중).</p></div>';
+      '<p class="tile-note">항목별 점수는 고정 기준으로 매깁니다 — 역 도보 5분 이내·준공 5년 이내·초등학교 5곳이면 100점, 가격은 예산 활용도와 같은 구 평당가 순위 (괄호는 반영 비중). 최근 1년 거래가 없으면 총점을 조금 낮춥니다.</p></div>';
   }
 
   function compareTile(it, items) {
@@ -101,13 +101,17 @@ window.REP = (function () {
       '</div></div></header>' +
 
       '<div class="why">' + (it.reasons || []).map(r => '<span>✓ ' + U.esc(r) + '</span>').join('') + '</div>' +
+      ((py.trade_1y || 0) === 0 ? '<div class="warn-box">⚠︎ 최근 1년 사이 이 평형 거래가 없어요. 아래 가격은 ' +
+        U.fmtDate(py.last_date) + ' 거래라 지금 시세와 다를 수 있어요. 순위도 그만큼 낮춰 반영했어요.</div>' : '') +
 
       '<div class="bento">' +
       kpi('최근 실거래가', bigWon(py.last_price), U.fmtDate(py.last_date) + ' · ' + (py.last_floor || '-') + '층') +
       kpi('1년 평당가 변화', chg.text, '최근 1년 vs 직전 1년', chg.cls) +
       kpi('역대 최고가 대비', peak.text, '최고 ' + U.won(py.peak_price) + ' (' + U.fmtDate(py.peak_date) + ')', peak.cls) +
-      (c ? kpi('출근 · ' + U.esc(ctx.ans().work.name), '<b>' + c.minutes + '</b><small>분</small>',
-          U.esc(c.route) + (c.source === 'odsay' ? ' · 실제 경로' : ' · 역 좌표로 추정'))
+      (c ? kpi('출근 · ' + U.esc(ctx.ans().work.name), '<b>' + c.minutes + '</b><small>분</small>' +
+          (it.commute2 ? '<small class="kpi-plus"> · 👥 ' + it.commute2.minutes + '분</small>' : ''),
+          U.esc(c.route) + (it.commute2 ? '<br>👥 ' + U.esc(ctx.ans().work2.name) + ': ' + U.esc(it.commute2.route) : '') +
+          (c.source === 'odsay' ? ' · 실제 경로' : ' · 역 좌표로 추정'))
          : kpi('최근 1년 거래', '<b>' + (py.trade_1y || 0) + '</b><small>건</small>', '같은 평형 기준')) +
 
       '<div class="tile chart-tile"><h3>시세 추이 <small>' + Math.round(it.area_m2) + '㎡ · 월평균 실거래가</small></h3>' +
