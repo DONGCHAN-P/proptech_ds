@@ -89,8 +89,16 @@ def index(profs: dict) -> dict:
 
 
 def lookup(idx: dict, r: dict) -> dict | None:
-    return (idx.get(r.get("apt_id"))
-            or idx.get((r.get("apt_name"), r.get("sigungu_name"))))
+    """단지+평형이 맞는 프로필. 평형이 어긋나면 덱의 숫자가 어긋난다."""
+    hit = CV.find_profile(idx, r)
+    if hit:
+        return hit
+    # 이름으로 찾은 건 평형까지 맞을 때만 받는다
+    by_name = idx.get((r.get("apt_name"), r.get("sigungu_name")))
+    py = r.get("pyeong_bucket")
+    if by_name and (not py or by_name.get("pyeong_bucket") == py):
+        return by_name
+    return None
 
 
 def build(data: dict) -> list[Idea]:

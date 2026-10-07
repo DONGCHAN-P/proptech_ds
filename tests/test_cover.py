@@ -296,3 +296,57 @@ def test_지도에_그리는_것은_다섯_가지뿐(data):
     src = (ROOT / "content" / "neighbor_map.py").read_text(encoding="utf-8")
     for layer in ("commerce", "stations", "parks", "rivers", "roads"):
         assert layer in src, layer
+
+
+# ── 프로필과 표지의 평형이 같아야 한다 ───────────────────────────────────
+def _prof(py: str, name: str = "가단지", aid: str = "a1") -> dict:
+    return {"apt_id": aid, "apt_name": name, "pyeong_bucket": py,
+            "deals_1y": 200, "series": [{"ym": "2024-01", "avg_price": 1}] * 20,
+            "neighbors": [{"apt_name": f"N{i}"} for i in range(6)]}
+
+
+def test_같은_단지_다른_평형을_붙이지_않는다():
+    """한 단지에서 평형 둘이 같은 날 신고가를 치는 건 드물지 않다.
+
+    그때 apt_id 만으로 프로필을 붙이면 헤드라인은 85㎡ 10.3억인데 그래프는
+    최대 8.2억인 59㎡ 시계열이 깔린다. 숫자가 둘 다 진짜라서 못 알아챈다.
+    """
+    profs = {"a1:20P": _prof("20P"), "a1:30P": _prof("30P")}
+    row30 = {"apt_id": "a1", "pyeong_bucket": "30P"}
+    row20 = {"apt_id": "a1", "pyeong_bucket": "20P"}
+    assert CV.find_profile(profs, row30)["pyeong_bucket"] == "30P"
+    assert CV.find_profile(profs, row20)["pyeong_bucket"] == "20P"
+
+
+def test_맞는_평형이_없으면_안_붙인다():
+    profs = {"a1:20P": _prof("20P")}
+    assert CV.find_profile(profs, {"apt_id": "a1", "pyeong_bucket": "30P"}) is None
+
+
+def test_옛_키는_평형이_같을_때만_받는다():
+    """옛 지표 파일은 apt_id 만으로 키가 잡혀 있다. 그냥 받으면 버그가
+    그대로 돌아온다."""
+    old = {"a1": _prof("20P")}
+    assert CV.find_profile(old, {"apt_id": "a1", "pyeong_bucket": "20P"}) is not None
+    assert CV.find_profile(old, {"apt_id": "a1", "pyeong_bucket": "30P"}) is None
+
+
+def test_apt_id가_없으면_안_붙인다():
+    assert CV.find_profile({"a1:20P": _prof("20P")}, {"pyeong_bucket": "20P"}) is None
+
+
+def test_지표_프로필_키가_단지와_평형을_함께_담는다(data):
+    """키가 apt_id 로 돌아가면 위 버그가 조용히 되살아난다."""
+    profs = data.get("profiles") or {}
+    if not profs:
+        pytest.skip("프로필 없음")
+    for k, v in profs.items():
+        assert ":" in k, f"프로필 키에 평형이 없다: {k}"
+        assert k == f'{v["apt_id"]}:{v["pyeong_bucket"]}', k
+
+
+def test_실제_표지와_프로필의_평형이_같다(data):
+    picked, _, _ = CV.choose(data)
+    if not picked or "profile" not in (picked.data or {}):
+        pytest.skip("단지 표지가 아님")
+    assert picked.data["pyeong_bucket"] == picked.data["profile"]["pyeong_bucket"]

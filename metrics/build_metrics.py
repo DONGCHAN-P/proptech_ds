@@ -596,11 +596,18 @@ def profiles(con, asof: date, picks: list[dict]) -> dict:
     # 성원, 중랑구 현대휴온). 한 단지를 여섯 장에 걸쳐 소개하는 포맷에서는
     # "그 단지를 아는 사람이 얼마나 되는가"가 더 중요하고, 거래량이 그
     # 대리 지표다. 상승률은 헤드라인 숫자로 그대로 쓴다.
-    cand = {p["apt_id"]: p for p in picks
-            if p.get("apt_id") and p.get("history_count", 0) >= PROFILE_MIN_HIST}
+    # 키는 **단지+평형**이다. apt_id 만으로 잡으면 한 단지에서 평형 둘이
+    # 신고가를 치는 날(흔하다) 뒤엣것이 앞엣것을 덮어쓰고, 표지가 고른 평형과
+    # 다른 평형의 추이가 붙는다. 실제로 병점역아이파크캐슬에서 헤드라인은
+    # 85㎡ 10.3억인데 그래프는 최대 8.2억인 59㎡ 시계열이 깔렸다.
+    cand = {f'{p["apt_id"]}:{p["pyeong_bucket"]}': p for p in picks
+            if p.get("apt_id") and p.get("pyeong_bucket")
+            and p.get("history_count", 0) >= PROFILE_MIN_HIST}
     if not cand:
         return {}
-    ids = ",".join(f"'{a}'" for a in cand)
+    # cand 의 키는 "단지:평형"이다. 여기 그대로 넣으면 apt_id IN (...) 이
+    # 하나도 안 맞아 거래량이 전부 0 이 되고, 줄 세우기가 무너진다.
+    ids = ",".join(f"'{a}'" for a in {p["apt_id"] for p in cand.values()})
     pop = {r["apt_id"]: r["deals_1y"] for r in q(con, f"""
         {cte()}
         SELECT apt_id, count(*) AS deals_1y FROM trades
@@ -667,7 +674,7 @@ def profiles(con, asof: date, picks: list[dict]) -> dict:
             SELECT lat, lng, road_address FROM read_parquet('{APT_MAP}')
             WHERE apt_id = '{aid}' LIMIT 1
         """)
-        out[aid] = {
+        out[f'{aid}:{p["pyeong_bucket"]}'] = {
             "apt_id": aid, "apt_name": p["apt_name"],
             "sigungu_code": p.get("sigungu_code"),
             "sigungu_name": p["sigungu_name"],

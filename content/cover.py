@@ -115,6 +115,28 @@ class Candidate:
 
 
 # ── 후보 만들기 ──────────────────────────────────────────────────────────
+def find_profile(profs: dict, row: dict) -> dict | None:
+    """그 행의 **단지+평형**에 맞는 프로필.
+
+    평형을 안 맞추면 헤드라인과 그래프가 어긋난다. 한 단지에서 평형 둘이
+    같은 날 신고가를 치는 건 드문 일이 아니고, 그때 금액은 85㎡ 것인데
+    추이는 59㎡ 것이 깔린다 — 숫자는 둘 다 진짜라서 아무도 못 알아챈다.
+
+    옛 지표 파일은 apt_id 만으로 키가 잡혀 있다. 그건 평형이 실제로 같을
+    때만 받는다. 그냥 받아 주면 고치려던 버그가 그대로 돌아온다.
+    """
+    aid, py = row.get("apt_id"), row.get("pyeong_bucket")
+    if not aid:
+        return None
+    hit = profs.get(f"{aid}:{py}") if py else None
+    if hit:
+        return hit
+    old = profs.get(aid)
+    if old and py and old.get("pyeong_bucket") == py:
+        return old
+    return None
+
+
 def profile_ok(prof: dict | None) -> bool:
     """단지 소개를 끌고 갈 만한 프로필인가."""
     if not prof:
@@ -137,9 +159,9 @@ def build(data: dict) -> list[Candidate]:
             continue
         # 소개할 재료가 없으면 표지로 쓰지 않는다. 수치가 1위여도
         # 여섯 장을 채울 수 없으면 글이 안 된다.
-        if not profile_ok(profs.get(r.get("apt_id"))):
+        prof = find_profile(profs, r)
+        if not profile_ok(prof):
             continue
-        prof = profs[r["apt_id"]]
         # 세기는 **인기(연간 거래량)**다. 상승률은 헤드라인 숫자로 쓰되
         # 줄 세우는 데는 쓰지 않는다 — 한 단지를 여섯 장에 소개하는 포맷에서
         # 중요한 건 "그 단지를 아는 사람이 얼마나 되는가"다.

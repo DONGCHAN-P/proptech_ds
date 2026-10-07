@@ -57,8 +57,10 @@ def pack(**kw) -> dict:
             "profiles": kw.pop("profiles", {})}
 
 
-def prof(apt, sgg, *, points=20, neighbors=6, deals=200):
-    return {"apt_name": apt, "sigungu_name": sgg, "deals_1y": deals,
+def prof(apt, sgg, *, points=20, neighbors=6, deals=200, py="25P",
+         aid="a1"):
+    return {"apt_id": aid, "apt_name": apt, "sigungu_name": sgg,
+            "pyeong_bucket": py, "deals_1y": deals,
             "series": [{"ym": "2024-01", "price": 1}] * points,
             "neighbors": [{"apt_name": f"N{i}"} for i in range(neighbors)]}
 
@@ -149,7 +151,7 @@ def test_과거가_얕으면_평소를_말하지_않는다():
 # ── 포맷 표시 ────────────────────────────────────────────────────────────
 def test_프로필이_있으면_바로_제작으로_적는다():
     d = pack(new_high=[nh("있는단지", "마포구", apt_id="a1")],
-             profiles={"a1": prof("있는단지", "마포구")})
+             profiles={"a1:25P": prof("있는단지", "마포구")})
     i = B.build(d)[0]
     assert i.ready and i.fmt == B.FMT_READY
 
@@ -164,20 +166,20 @@ def test_apt_id가_없어도_이름으로_프로필을_찾는다():
     """surge_apt·near_peak 행에는 apt_id 가 없다. 이름으로도 찾지 않으면
     프로필이 있는데도 "재생성 필요"로 잘못 적힌다."""
     d = pack(surge_apt=[sa("이름만", "마포구")],
-             profiles={"a1": prof("이름만", "마포구")})
+             profiles={"a1:25P": prof("이름만", "마포구")})
     assert B.build(d)[0].ready
 
 
 def test_다른_구의_같은_이름을_프로필로_붙이지_않는다():
     """주공·래미안처럼 같은 이름이 전국에 있다. 구까지 맞아야 한다."""
     d = pack(surge_apt=[sa("주공", "강남구")],
-             profiles={"a1": prof("주공", "마포구")})
+             profiles={"a1:25P": prof("주공", "마포구")})
     assert not B.build(d)[0].ready
 
 
 def test_얕은_프로필은_덱을_끌고_가지_못한다():
     d = pack(new_high=[nh("얕음", "마포구", apt_id="a1")],
-             profiles={"a1": prof("얕음", "마포구", neighbors=1)})
+             profiles={"a1:25P": prof("얕음", "마포구", neighbors=1)})
     assert not B.build(d)[0].ready
 
 
@@ -322,3 +324,11 @@ def test_실제_지표로_후보가_나온다(real):
     assert len(got) == len({i.region for i in got})
     for i in got:
         assert i.headline and i.why and i.sample
+
+
+def test_평형이_다른_프로필은_쓰지_않는다():
+    """같은 단지라도 평형이 다르면 그래프와 헤드라인이 어긋난다.
+    tests/test_cover.py 의 같은 이름 검사와 짝이다."""
+    d = pack(new_high=[nh("가단지", "마포구", apt_id="a1")],
+             profiles={"a1:30P": prof("가단지", "마포구", py="30P")})
+    assert not B.build(d)[0].ready
