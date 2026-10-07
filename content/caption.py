@@ -171,6 +171,39 @@ def caption(t: dict) -> str:
     return NL.join(body)
 
 
+def reels_caption(t: dict) -> str:
+    """릴스 캡션 — 피드보다 짧게.
+
+    릴스는 영상이 말을 하고 캡션은 거들 뿐이다. 피드 캡션처럼 길게 쓰면
+    "더 보기"에 가려 아무도 안 읽는다. 훅 한 줄 + 핵심 두 줄 + 동선만 둔다.
+    해시태그도 줄인다 — 릴스는 태그보다 시청 완료율로 퍼진다.
+    """
+    c = t["cover"]
+    d = c.data
+    prof = d.get("profile") or {}
+    lines = [cover_line(c), ""]
+    if prof:
+        lines.append(f'{prof["sigungu_name"]} {prof["legal_dong_name"]} '
+                     f'{D.pyeong(prof["pyeong_bucket"])} · '
+                     f'최근 1년 이 단지 거래 {prof["deals_1y"]}건')
+        nb = prof.get("neighbors") or []
+        if nb:
+            hi = max(nb, key=lambda r: r["last_price"])
+            lines.append(f'같은 동 최고가는 '
+                         f'{D.split_name(hi["apt_name"], 10)[0]} '
+                         f'{D.won(hi["last_price"])}이에요.')
+    lines += [
+        "",
+        "여러분 동네는 이번 주 어땠나요? 댓글로 알려주세요.",
+        f"매주 이렇게 정리해요. {D.HANDLE} 팔로우하면 다음 주에 또 만나요.",
+        "",
+        DISCLAIMER_SOCIAL,
+        "",
+        tags(t),
+    ]
+    return NL.join(lines)
+
+
 def build(data: dict) -> dict | None:
     t = pick(data)
     if t is None:
@@ -193,7 +226,11 @@ def build(data: dict) -> dict | None:
     if text.count("#") > MAX_TAGS:
         r.fail(f"해시태그 {text.count('#')}개 (최대 {MAX_TAGS})")
     D.assert_no_jargon(text, "caption")
-    return {"text": text, "facts": facts, "ok": r.ok, "reasons": r.reasons,
+    reels = reels_caption(t)
+    rr = validate(reels, facts, kind="social")
+    return {"text": text, "reels": reels, "reels_ok": rr.ok,
+            "reels_reasons": rr.reasons,
+            "facts": facts, "ok": r.ok, "reasons": r.reasons,
             "length": len(text), "numbers_checked": r.numbers_checked,
             "preview": "\n".join(text.split("\n")[:PREVIEW_LINES])}
 
@@ -226,6 +263,12 @@ def main() -> int:
         return 1
 
     (outdir / "instagram.txt").write_text(res["text"], encoding="utf-8")
+    if res.get("reels_ok"):
+        (outdir / "reels.txt").write_text(res["reels"], encoding="utf-8")
+    else:
+        print("  릴스 캡션 검증 실패 — 저장하지 않는다")
+        for w in res.get("reels_reasons") or []:
+            print(f"    ! {w}")
     (outdir / "instagram.json").write_text(
         json.dumps(res, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"  {res['length']}자 / 숫자 {res['numbers_checked']}개 검증")
