@@ -57,6 +57,47 @@ def test_안전영역이_인스타_UI를_피한다():
     assert R.W - R.SAFE_X - R.SAFE_RIGHT >= 760
 
 
+def test_자르기_영역이_가운데_1대1이다():
+    """9:16 으로 올려도 피드·프로필 게시물은 가운데 1:1 만 보여 준다."""
+    assert R.CROP_TOP == (R.H - R.W) // 2 == 420
+    assert R.CROP_BOTTOM == R.CROP_TOP + R.W == 1500
+
+
+def test_안전영역이_자르기_선에_맞는다():
+    """예전 값(위 300·아래 460)으로는 브랜드와 진행 점이 통째로, 헤드라인
+    첫 줄과 출처가 반쯤 잘려 나갔다. 전체 화면에서만 멀쩡해서 못 봤다."""
+    assert R.SAFE_TOP == R.CROP_TOP
+    assert R.H - R.SAFE_BOTTOM == R.CROP_BOTTOM
+
+
+def test_머리글과_꼬리글이_자르기_안에_있다():
+    """CSS 가 안전 영역 밖으로 음수 오프셋을 주면 다시 잘린다."""
+    css = R.css()
+    assert f"top:{R.SAFE_TOP}px" in css, "브랜드가 자르기 위로 나갔다"
+    assert f"bottom:{R.SAFE_BOTTOM}px" in css, "출처가 자르기 아래로 나갔다"
+    assert f"top:{R.SAFE_TOP - 92}px" not in css
+    assert f"bottom:{R.SAFE_BOTTOM - 96}px" not in css
+
+
+def test_유튜브_쇼츠_하단_띠도_피한다():
+    """같은 파일을 쇼츠에도 올린다. 쇼츠는 아래 제목·채널 띠가 더 두껍다."""
+    assert R.H - R.CROP_BOTTOM >= 400
+
+
+def test_출처에_해제_문구가_없다(scs):
+    """자리가 모자라 제일 먼저 잘리던 줄이다. 실제 필터링은 그대로 걸린다
+    — tests/test_cancelled_filter.py 가 데이터 쪽을 지킨다."""
+    for i, sc in enumerate(scs, 1):
+        assert "해제" not in sc["foot"], f"{i}장 출처: {sc['foot']}"
+
+
+def test_출처에_기관과_기준일은_남는다(scs):
+    """문구를 줄이다 출처까지 지우면 안 된다."""
+    for i, sc in enumerate(scs, 1):
+        assert "국토교통부" in sc["foot"], f"{i}장"
+        assert "기준" in sc["foot"], f"{i}장"
+
+
 def test_길이가_릴스에_맞다(scs):
     """너무 길면 끝까지 안 본다. 완주율이 노출을 끌어올리는 지표다."""
     secs = len(scs) * (R.ANIM_S + R.HOLD_S) + (R.LAST_HOLD_S - R.HOLD_S)

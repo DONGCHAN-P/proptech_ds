@@ -44,11 +44,18 @@ FPS = 30
 ANIM_S, HOLD_S = 0.8, 2.6      # 들어오는 시간 / 읽는 시간
 LAST_HOLD_S = 3.4              # 마지막 장은 조금 더 — 팔로우를 누를 시간
 
-# 인스타 릴스 UI 가 덮는 자리. 실측 기준으로 넉넉히 잡는다.
-#   위   계정·추천 배지
-#   아래 캡션 2줄 + 음원 + 버튼
-#   오른 좋아요·댓글·공유·더보기 열
-SAFE_TOP, SAFE_BOTTOM, SAFE_X, SAFE_RIGHT = 300, 460, 72, 160
+# 9:16 으로 올려도 피드·프로필 게시물에서는 **가운데 1:1 만** 보인다.
+# 바깥은 잘린다. 예전 값(위 300·아래 460)으로는 브랜드와 진행 점이 통째로,
+# 헤드라인 첫 줄과 출처가 반쯤 잘려 나갔다 — 전체 화면 릴스에서만 멀쩡했다.
+#
+# 그래서 안전 영역을 이 자르기 선에 맞춘다. 같은 값이 다른 데도 맞는다:
+#   인스타 릴스 전체화면  아래 캡션·음원, 오른쪽 버튼 열을 피한다
+#   유튜브 쇼츠          아래 제목·채널 띠(~400), 오른쪽 버튼 열을 피한다
+# 세 곳을 한 파일로 쓰려면 가장 좁은 쪽에 맞추는 수밖에 없다.
+CROP_TOP = (H - W) // 2           # 420 — 가운데 1:1 의 위 끝
+CROP_BOTTOM = CROP_TOP + W        # 1500 — 아래 끝
+SAFE_TOP, SAFE_BOTTOM = CROP_TOP, H - CROP_BOTTOM
+SAFE_X, SAFE_RIGHT = 72, 160
 
 
 def ease(t: float) -> float:
@@ -61,20 +68,20 @@ def css() -> str:
 {D.base_css()}
 .card{{width:{W}px;height:{H}px;padding:0;}}
 .rv{{position:absolute;left:{SAFE_X}px;right:{SAFE_RIGHT}px;
-    top:{SAFE_TOP}px;bottom:{SAFE_BOTTOM}px;
-    display:flex;flex-direction:column;justify-content:center;gap:40px;}}
+    top:{SAFE_TOP + 112}px;bottom:{SAFE_BOTTOM + 96}px;
+    display:flex;flex-direction:column;justify-content:center;gap:30px;}}
 .rv-dark{{background:{D.INK};}}
 /* 안전 영역 밖은 비워 둔다. 인스타 UI 가 그 위에 올라온다. */
-.rv-brand{{position:absolute;left:{SAFE_X}px;top:{SAFE_TOP - 92}px;
+.rv-brand{{position:absolute;left:{SAFE_X}px;top:{SAFE_TOP}px;
          font-size:32px;font-weight:600;color:{D.SUB};}}
 .rv-foot{{position:absolute;left:{SAFE_X}px;right:{SAFE_RIGHT}px;
-        bottom:{SAFE_BOTTOM - 96}px;font-size:26px;color:{D.SUB};
+        bottom:{SAFE_BOTTOM}px;font-size:26px;color:{D.SUB};
         line-height:1.5;}}
 .rv-dark .rv-brand,.rv-dark .rv-foot{{color:rgba(255,255,255,.6);}}
 
-.rv-kick{{font-size:40px;font-weight:600;color:{D.SUB};letter-spacing:-.01em;}}
-.rv-h1{{font-size:104px;font-weight:800;letter-spacing:-.03em;line-height:1.18;}}
-.rv-num{{font-size:210px;font-weight:800;letter-spacing:-.04em;line-height:1;}}
+.rv-kick{{font-size:38px;font-weight:600;color:{D.SUB};letter-spacing:-.01em;}}
+.rv-h1{{font-size:96px;font-weight:800;letter-spacing:-.03em;line-height:1.18;}}
+.rv-num{{font-size:180px;font-weight:800;letter-spacing:-.04em;line-height:1;}}
 .rv-lead{{font-size:44px;font-weight:600;line-height:1.45;}}
 .rv-sub{{font-size:38px;font-weight:500;color:{D.SUB};line-height:1.5;}}
 .rv-dark .rv-h1{{color:{D.COVER_INK};}}
@@ -103,7 +110,7 @@ def css() -> str:
 .rv-disc{{font-size:26px;color:{D.SUB};line-height:1.5;}}
 
 /* 진행 표시 — 몇 장 남았는지 보이면 이탈이 준다 */
-.rv-dots{{position:absolute;left:{SAFE_X}px;top:{SAFE_TOP - 40}px;
+.rv-dots{{position:absolute;left:{SAFE_X}px;top:{SAFE_TOP + 56}px;
          display:flex;gap:10px;}}
 .rv-dots i{{width:46px;height:6px;border-radius:3px;background:{D.LINE};}}
 .rv-dots i.on{{background:{D.UP};}}
@@ -132,12 +139,12 @@ def anim(idx: int, t: float) -> str:
 def scenes(t: dict, prof: dict) -> list[dict]:
     """영상 장면 목록. 캐러셀과 **같은 줄거리**를 쓴다."""
     d = t["cover"].data
-    src = f'국토교통부 실거래가 · 해제 건 제외 · {t["asof"]} 기준'
+    src = f'국토교통부 실거래가 · {t["asof"]} 기준'
     out: list[dict] = []
 
     # 1 훅 — 첫 1초가 전부다. 단지명과 금액을 바로 띄운다.
     name, _ = D.split_name(prof["apt_name"], 11)
-    svg = NM.render(prof, width=840, height=520, dark=True,
+    svg = NM.render(prof, width=848, height=330, dark=True,
                     neighbors=prof.get("neighbors"))
     out.append({
         "dark": True, "foot": f'{src} · {NM_credit(prof)}',
@@ -298,7 +305,7 @@ def trend_svg(prof: dict, p: float) -> str:
     pts = [x for x in prof["series"] if x.get("avg_price")]
     xs = [datetime.strptime(x["ym"], "%Y-%m") for x in pts]
     ys = [float(x["avg_price"]) for x in pts]
-    w, h = 840, 560
+    w, h = 848, 450
     t0, t1 = xs[0].timestamp(), xs[-1].timestamp()
     span = (t1 - t0) or 1
     lo, hi = min(ys), max(ys)
@@ -346,6 +353,39 @@ def trend_svg(prof: dict, p: float) -> str:
 
 
 # ── 렌더 ─────────────────────────────────────────────────────────────────
+# 가라앉은 마지막 프레임에서 잰다. 들어오는 중에는 translateY 때문에
+# 위치가 흔들려서, 그때 재면 멀쩡한 장면도 넘쳤다고 나온다.
+CROP_JS = """() => {
+  const bad = [];
+  const box = document.querySelector('.rv');
+  if (box && box.scrollHeight > box.clientHeight + 2)
+    bad.push(`본문이 ${box.scrollHeight - box.clientHeight}px 넘침`);
+  if (box && box.scrollWidth > box.clientWidth + 2)
+    bad.push(`본문이 가로로 ${box.scrollWidth - box.clientWidth}px 넘침`);
+  for (const [sel, name] of [['.rv', '본문'], ['.rv-brand', '브랜드'],
+                             ['.rv-dots', '진행점'], ['.rv-foot', '출처']]) {
+    const el = document.querySelector(sel);
+    if (!el) continue;
+    const r = el.getBoundingClientRect();
+    if (r.top < TOP - 1) bad.push(`${name}이 자르기 위로 ${(TOP - r.top).toFixed(0)}px 벗어남`);
+    if (r.bottom > BOT + 1) bad.push(`${name}이 자르기 아래로 ${(r.bottom - BOT).toFixed(0)}px 벗어남`);
+  }
+  return bad;
+}"""
+
+
+def check_crop(page, where: str) -> None:
+    """가운데 1:1 밖으로 삐져나간 게 있으면 세운다.
+
+    조용히 잘려 나가는 게 최악이다 — 영상은 멀쩡히 만들어지고, 올린 뒤에야
+    헤드라인 첫 줄이 없어진 걸 본다. 실제로 그렇게 한 번 올라갔다.
+    """
+    js = CROP_JS.replace("TOP", str(CROP_TOP)).replace("BOT", str(CROP_BOTTOM))
+    bad = page.evaluate(js)
+    if bad:
+        raise RuntimeError(f"{where}: " + " / ".join(bad))
+
+
 def render(scs: list[dict], outdir: Path) -> Path:
     """장면을 프레임으로 찍고 ffmpeg 으로 잇는다."""
     from playwright.sync_api import sync_playwright
@@ -367,6 +407,8 @@ def render(scs: list[dict], outdir: Path) -> Path:
                             f'<div class="rv">{sc["body"](p)}</div></div>')
                     page.set_content(f"<style>{css()}</style>{html}",
                                      wait_until="load")
+                    if f == n_anim - 1:
+                        check_crop(page, f"{i}장")
                     fp = tmp / f"f{k:05d}.png"
                     page.screenshot(path=str(fp))
                     listing.append(f"file '{fp.as_posix()}'\nduration {1 / FPS:.5f}")
