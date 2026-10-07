@@ -604,6 +604,110 @@ def nearby(lat: float | None, lng: float | None) -> dict:
         return empty
 
 
+# ── 맞춤 찾기 ─────────────────────────────────────────────────────────
+# 순위 로직은 web/match.py 에 있다. 여기서는 캐시 파케이를 메모리에 올려 두고
+# (mtime 이 바뀌면 다시 읽는다) 답변을 넘기기만 한다.
+_match_cache: dict[str, Any] = {}
+
+
+def match_data() -> tuple[Any, Any, Any]:
+    """(후보 프레임, Stations | None, 단지별 근접역) — 캐시 갱신 시 다시 만든다."""
+    import pandas as pd
+    from web import match as M
+
+    ensure_cache()
+    stamp = tuple((CACHE / f).stat().st_mtime for f in ("apt_index.parquet", "apt_pyeong.parquet"))
+    with _lock:
+        if _match_cache.get("stamp") != stamp:
+            df = M.prepare(pd.read_parquet(APT), pd.read_parquet(PYEONG))
+            df = df[df["lat"].notna() & df["lng"].notna()].reset_index(drop=True)
+            stations, home = None, None
+            if DB_PATH.exists():
+                cx = sqlite3.connect(DB_PATH)
+                try:
+                    sdf = pd.read_sql("SELECT station_name, line, lat, lng FROM subway_stations", cx)
+                finally:
+                    cx.close()
+                if len(sdf):
+                    stations = M.Stations(sdf)
+                    home = stations.nearest(df["lat"].to_numpy(), df["lng"].to_numpy())
+            _match_cache.update(stamp=stamp, df=df, stations=stations, home=home)
+    return _match_cache["df"], _match_cache["stations"], _match_cache["home"]
+
+
+def odsay_commute(lat: float, lng: float, wlat: float, wlng: float) -> dict | None:
+    """ODsay 대중교통 실측. 키가 없거나 실패하면 None (추정값을 그대로 쓴다)."""
+    key = os.environ.get("ODSAY_API_KEY", "").strip()
+    if not key:
+        return None
+    try:
+        import httpx
+        r = httpx.get("https://api.odsay.com/v1/api/searchPubTransPathT", timeout=3.0,
+                      params={"SX": lng, "SY": lat, "EX": wlng, "EY": wlat, "apiKey": key})
+        paths = r.json().get("result", {}).get("path") or []
+        if not paths:
+            return None
+        best = min(paths, key=lambda p: p["info"]["totalTime"])
+        legs = [s["lane"][0].get("name") or s["lane"][0].get("busNo")
+                for s in best.get("subPath", []) if s.get("trafficType") in (1, 2) and s.get("lane")]
+        return {"minutes": int(best["info"]["totalTime"]), "source": "odsay",
+                "route": " → ".join(str(x) for x in legs) or "도보",
+                "transfer": len(legs) > 1}
+    except Exception:
+        return None
+
+
+def _answers(payload: dict) -> Any:
+    from web import match as M
+    return M.Answers.from_payload(payload or {})
+
+
+@app.post("/api/match/count")
+def match_count(payload: dict) -> dict:
+    from web import match as M
+    df, stations, home = match_data()
+    ans = _answers(payload)
+    df = M.with_commute(df, ans, stations, home)
+    return {"count": M.count(df, ans, date.today()), "total": int(df["apt_id"].nunique())}
+
+
+@app.post("/api/match")
+def match_run(payload: dict) -> dict:
+    from concurrent.futures import ThreadPoolExecutor
+    from web import match as M
+
+    df, stations, home = match_data()
+    ans = _answers(payload)
+    res = M.run_match(df, ans, date.today(), stations, home=home)
+    if ans.work and res["items"]:
+        with ThreadPoolExecutor(max_workers=5) as ex:
+            real = list(ex.map(lambda it: odsay_commute(it["lat"], it["lng"], *ans.work),
+                               res["items"]))
+        for it, r in zip(res["items"], real):
+            if r:
+                it["commute"] = r
+    res["items"] = clean(res["items"])
+    res["points"] = clean(res["points"])
+    res["today"] = date.today().isoformat()
+    return res
+
+
+@app.get("/api/stations")
+def stations_search(q: str = Query("", max_length=30), limit: int = Query(12, le=50)) -> dict:
+    _, stations, _ = match_data()
+    if stations is None or not q.strip():
+        return {"items": []}
+    sdf = stations.df.assign(line=stations.line)
+    hit = sdf[sdf["station_name"].str.contains(q.strip(), regex=False, na=False)]
+    grp = (hit.groupby("station_name")
+              .agg(lat=("lat", "mean"), lng=("lng", "mean"), lines=("line", lambda s: sorted(set(s))))
+              .reset_index())
+    grp["exact"] = grp["station_name"] == q.strip()
+    grp = grp.sort_values(["exact", "station_name"], ascending=[False, True]).head(limit)
+    return {"items": [{"name": r.station_name, "lat": r.lat, "lng": r.lng, "lines": r.lines}
+                      for r in grp.itertuples()]}
+
+
 @app.get("/api/health")
 def health() -> dict:
     return {
