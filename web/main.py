@@ -662,6 +662,19 @@ def _answers(payload: dict) -> Any:
     return M.Answers.from_payload(payload or {})
 
 
+@app.on_event("startup")
+def _warm_match() -> None:
+    """첫 질문 화면의 카운터가 1~2초 비어 있지 않도록 후보 프레임을 미리 올린다."""
+    threading.Thread(target=lambda: _safe(match_data), daemon=True).start()
+
+
+def _safe(fn) -> None:
+    try:
+        fn()
+    except Exception as e:  # 기동은 막지 않는다 — 첫 요청 때 다시 시도된다
+        print(f"[web] 맞춤 찾기 준비 실패: {e}", flush=True)
+
+
 @app.post("/api/match/count")
 def match_count(payload: dict) -> dict:
     from web import match as M

@@ -21,6 +21,18 @@
       String(st.first_trade).slice(0, 4) + '~' + U.fmtDate(st.last_trade) + ')', 4200);
 
     refresh();
+    openFromHash();
+  }
+
+  /** 맞춤 찾기 리포트의 "지도에서 자세히 보기" — explore.html#<apt_id> 로 들어온다 */
+  async function openFromHash() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    try {
+      const d = await U.get('/api/apt/' + encodeURIComponent(id));
+      if (d.info.lat != null) M.focus(d.info.lat, d.info.lng, 16);
+      pick(id);
+    } catch (e) { /* 없는 단지면 그냥 지도만 보여준다 */ }
   }
 
   function renderLegend() {

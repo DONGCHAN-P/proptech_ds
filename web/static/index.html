@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>맞춤 단지 찾기 — 집값지도</title>
+<meta name="description" content="예산 · 평형 · 출근 · 지역 · 중요한 것을 고르면 조건에 잘 맞는 수도권 아파트 5곳을 실거래 데이터로 찾아 드립니다." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏡</text></svg>" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<link rel="stylesheet" href="/css/match.css" />
+</head>
+<body data-view="wizard" data-step="1">
+
+<div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="top">
+  <a class="brand" href="/" aria-label="처음으로">
+    <span class="brand-mark">◆</span> 집값지도 <em>맞춤 찾기</em>
+  </a>
+  <div class="top-right">
+    <button class="ghost" id="themeBtn" type="button" aria-label="화면 테마 바꾸기">◐</button>
+    <a class="ghost" href="/explore.html">지도로 직접 둘러보기 →</a>
+  </div>
+</header>
+
+<!-- ① 질문 ------------------------------------------------------------ -->
+<main class="wizard" id="wizard">
+  <nav class="progress" id="progress" aria-label="진행 단계"></nav>
+
+  <div class="stage" id="stage" aria-live="polite"></div>
+
+  <div class="trail" id="trail" aria-label="지금까지 고른 조건"></div>
+
+  <footer class="wnav">
+    <button class="btn-back" id="backBtn" type="button">← 이전</button>
+    <div class="counter" id="counter" title="지금 조건에 맞는 단지 수">
+      <span class="counter-n" id="counterN">—</span>
+      <span class="counter-l">곳이 조건에 맞아요</span>
+    </div>
+    <button class="btn-next" id="nextBtn" type="button">다음 →</button>
+  </footer>
+</main>
+
+<!-- 좁혀지는 연출 -->
+<section class="searching" id="searching" hidden>
+  <div class="dots" id="dots"></div>
+  <p class="searching-t" id="searchingT">조건에 맞는 단지를 고르는 중…</p>
+</section>
+
+<!-- ② 결과 ------------------------------------------------------------ -->
+<section class="result" id="result" hidden>
+  <aside class="rlist">
+    <div class="rlist-head">
+      <p class="eyebrow" id="rEyebrow"></p>
+      <h1>조건에 잘 맞는 <b>5곳</b></h1>
+      <div class="relaxed" id="relaxed" hidden></div>
+    </div>
+    <ol class="cards" id="cards"></ol>
+    <div class="rlist-foot">
+      <button class="btn-ghost" id="editBtn" type="button">조건 바꾸기</button>
+      <p class="fine">순위는 고르신 조건에 대한 <b>적합도</b>이며, 매수·매도 권유가 아닙니다.
+        출근 시간은 지하철역 좌표로 계산한 추정치입니다.</p>
+    </div>
+  </aside>
+  <div class="rmap"><div id="map"></div></div>
+</section>
+
+<!-- ③ 단지 리포트 ----------------------------------------------------- -->
+<aside class="report" id="report" hidden aria-label="단지 리포트">
+  <button class="report-close" id="reportClose" type="button" aria-label="닫기">×</button>
+  <div class="report-inner" id="reportInner"></div>
+</aside>
+
+<div class="toast" id="toast" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/match/steps.js"></script>
+<script src="/js/match/wizard.js"></script>
+<script src="/js/match/result.js"></script>
+<script src="/js/match/report.js"></script>
+<script src="/js/match/app.js"></script>
+</body>
+</html>

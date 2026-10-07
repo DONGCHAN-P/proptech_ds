@@ -59,6 +59,10 @@ HOUSEHOLD_DEFAULTS = {
     "kids": {"pyeongs": ["30P", "35P"], "priorities": ["school"]},
 }
 
+# 평형 코드 → 화면에서 부르는 이름. 대형·소형은 코드 여러 개가 한 묶음이라
+# "같은 구 대형 중" 이라고 하면 비교 집단을 잘못 말하게 된다 → 비슷한 면적.
+AREA_LABEL = {"20P": "59㎡대", "25P": "74㎡대", "30P": "84㎡대"}
+
 PYEONG_CODES = ["10P", "15P", "20P", "25P", "30P", "35P", "40P", "50P", "60P+"]
 
 
@@ -311,8 +315,7 @@ def reason_text(key: str, row: pd.Series, ans: Answers) -> str | None:
     if key == "price":
         pct = row.get("rel_price_pct")
         if pd.notna(pct) and pct <= 40:
-            area = row.get("area_m2")
-            area_s = f"{round(area)}㎡" if pd.notna(area) else "같은 평형"
+            area_s = AREA_LABEL.get(row.get("pyeong_bucket"), "비슷한 면적")
             return f"같은 구 {area_s} 중 평당가 하위 {max(1, round(pct))}%"
         if ans.budget:
             gap = ans.budget - row["last_price"]
