@@ -246,6 +246,8 @@ def main():
                         help="실패 항목 있으면 exit code 1 반환 (CI/CD용)")
     parser.add_argument("--no-slack", action="store_true",
                         help="Slack 알림 스킵")
+    parser.add_argument("--no-telegram", action="store_true",
+                        help="텔레그램 알림 스킵")
     parser.add_argument("--update-baseline", action="store_true",
                         help="베이스라인 갱신만 하고 종료")
     args = parser.parse_args()
@@ -342,6 +344,14 @@ def _finish(results, baseline, secrets, args, run_ts, df=None):
         send_slack(webhook, results, run_ts)
     elif not webhook:
         print("  [Slack] webhook 미설정 — 알림 스킵 (config/secrets.json의 slack_webhook 설정 필요)")
+
+    # 텔레그램 알림 (T24) — 실패했을 때만 보낸다.
+    # 통과까지 매일 보내면 알림을 안 보게 되고, 그러면 정작 실패한 날도
+    # 안 보게 된다. 조용하면 정상이라는 뜻이 되어야 한다.
+    if failed and not args.no_telegram:
+        from notify.telegram import alert
+        alert(f"품질 검사 {len(failed)}건 실패 ({run_ts})",
+              [str(r) for r in failed])
 
     print(f"{'='*60}\n")
 
