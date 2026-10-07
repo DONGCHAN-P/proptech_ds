@@ -691,6 +691,32 @@ def profiles(con, asof: date, picks: list[dict]) -> dict:
 
 
 # ── 메인 ─────────────────────────────────────────────────────────────────
+def profile_for(data: dict, row: dict) -> dict | None:
+    """행 하나짜리 프로필을 즉석에서 만들어 data 에 끼워 넣는다.
+
+    프로필은 매주 8개만 미리 만든다. 사람이 그 밖의 단지를 고르면 재료가
+    없는데, 그 때문에 지표 전체를 다시 돌리면 몇 분이 날아간다. 필요한
+    한 단지만 뽑아 쓴다.
+
+    이미 있으면 그대로 돌려준다 — 같은 걸 두 번 묻지 않는다.
+    """
+    from content import cover as CV
+    profs = data.setdefault("profiles", {})
+    hit = CV.find_profile(profs, row)
+    if hit:
+        return hit
+    if not (row.get("apt_id") and row.get("pyeong_bucket")):
+        return None
+    asof = date.fromisoformat(data["asof"])
+    con = duckdb.connect()
+    try:
+        made = profiles(con, asof, [row])
+    finally:
+        con.close()
+    profs.update(made)
+    return CV.find_profile(profs, row)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="T9 지표 계산")
     ap.add_argument("--asof", help="기준일 (기본: trade_events 최신 거래일)")

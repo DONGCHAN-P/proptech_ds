@@ -209,6 +209,98 @@ def build(data: dict) -> list[Idea]:
     return out
 
 
+APT_N = 5
+TRADE = ROOT / "master" / "trade_events.parquet"
+
+
+def deals_1y(apt_ids: list[str], asof: str) -> dict[str, int]:
+    """단지별 최근 1년 거래 건수. 인기의 대리 지표다.
+
+    상승률로 줄 세우면 아무도 모르는 소형 단지가 1위가 된다. 한 단지를
+    여섯 장에 소개하는 포맷에서는 "그 단지를 아는 사람이 얼마나 되는가"가
+    더 중요하다 — cover.py 가 쓰는 기준과 같다.
+
+    DB 를 못 열면 빈 dict. 부르는 쪽은 누적 거래로 줄 세우면 된다.
+    """
+    if not apt_ids or not TRADE.exists():
+        return {}
+    try:
+        import duckdb
+        from metrics.filters import trades_cte
+        ids = ",".join(f"'{a}'" for a in set(apt_ids))
+        con = duckdb.connect()
+        try:
+            rows = con.execute(f"""
+                {trades_cte(TRADE.as_posix())}
+                SELECT apt_id, count(*) FROM trades
+                WHERE apt_id IN ({ids})
+                  AND deal_date > DATE '{asof}' - INTERVAL 1 YEAR
+                  AND deal_date <= DATE '{asof}'
+                GROUP BY 1
+            """).fetchall()
+        finally:
+            con.close()
+        return {a: n for a, n in rows}
+    except Exception as e:
+        print(f"  거래량 조회 실패 ({type(e).__name__}) — 누적 거래로 줄 세운다")
+        return {}
+
+
+def apt_candidates(data: dict, n: int = APT_N) -> list[dict]:
+    """덱으로 만들 수 있는 **단지** 후보.
+
+    briefing 의 다섯 앵글과 다르다. 저쪽은 "무엇을 쓸까"를 넓게 펴는 쪽이고,
+    여기는 "지금 영상 하나를 만든다면 어느 단지인가"만 본다. 그래서 단지가
+    특정되는 신고가 행만 쓴다 — 지역 단위(급증·급감)나 한 건짜리(특이거래)는
+    여섯 장을 못 채운다.
+
+    같은 시군구는 하나만 올린다. 다섯 개가 전부 화성시면 고를 이유가 없다.
+    """
+    rows = [r for r in (data.get("daily", {}).get("new_high") or [])
+            if r.get("history_count", 0) >= MIN_SAMPLE
+            and r.get("apt_id") and r.get("pyeong_bucket")]
+    if not rows:
+        return []
+    pop = deals_1y([r["apt_id"] for r in rows], data["asof"])
+    idx = index(data.get("profiles") or {})
+
+    seen: set[tuple] = set()
+    uniq = []
+    for r in rows:
+        k = (r["apt_id"], r["pyeong_bucket"])
+        if k in seen:
+            continue
+        seen.add(k)
+        uniq.append(r)
+
+    uniq.sort(key=lambda r: (
+        not CV.is_priority(r["sigungu_name"], r.get("sigungu_code")),
+        -(pop.get(r["apt_id"]) or r["history_count"] / 10)))
+
+    out, regions = [], set()
+    for r in uniq:
+        if len(out) >= n:
+            break
+        if r["sigungu_name"] in regions:
+            continue
+        regions.add(r["sigungu_name"])
+        out.append({
+            "key": f'{r["apt_id"]}:{r["pyeong_bucket"]}',
+            "apt_name": r["apt_name"], "region": r["sigungu_name"],
+            "dong": r.get("legal_dong_name", ""),
+            "pyeong": D.pyeong(r["pyeong_bucket"]),
+            "amount": D.won(r["deal_amount"]),
+            "over": r["over_peak_pct"],
+            "hist": r["history_count"],
+            "deals_1y": pop.get(r["apt_id"]),
+            "ready": CV.profile_ok(CV.find_profile(idx, r)),
+            "priority": CV.is_priority(r["sigungu_name"],
+                                       r.get("sigungu_code")),
+            "row": r,
+        })
+    return out
+
+
 def pick(ideas: list[Idea], n: int = 5) -> list[Idea]:
     """앵글과 지역이 겹치지 않게 고른다.
 

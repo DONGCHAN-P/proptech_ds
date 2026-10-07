@@ -455,12 +455,27 @@ def main() -> int:
     outdir = ROOT / "output" / data["asof"]
     outdir.mkdir(parents=True, exist_ok=True)
 
-    t = pick(data)
-    prof = (t["cover"].data or {}).get("profile") if t else None
     print(f"\n{'=' * 62}\n  릴스  {data['asof']}  ({W}×{H} · {FPS}fps)\n{'=' * 62}")
+    try:
+        out = build(data, outdir)
+    except RuntimeError:
+        return 1
+    if out is not None:
+        print(f"{'=' * 62}\n")
+    return 0
+
+
+def build(data: dict, outdir: Path, force=None) -> Path | None:
+    """지표 → 영상 한 편. force 에 Candidate 를 주면 그 단지로 만든다.
+
+    봇이 부르는 입구이기도 하다. 검증에 걸리면 RuntimeError 로 사유를 들고
+    올라간다 — 폰으로 "실패"만 가면 뭘 고쳐야 할지 알 수 없다.
+    """
+    t = pick(data, force=force)
+    prof = (t["cover"].data or {}).get("profile") if t else None
     if not prof:
         print("  소개할 단지가 없다 — 이번 주는 만들지 않는다 (폴백)")
-        return 0
+        return None
 
     scs = scenes(t, prof)
     # 영상에 박히는 글자도 발행 문구다. 카드와 같은 검증을 거친다.
@@ -476,14 +491,13 @@ def main() -> int:
         print(f"\n  검증 실패 {len(fails)}건 — 렌더하지 않는다")
         for f in fails:
             print(f"    ! {f}")
-        return 1
+        raise RuntimeError("검증 실패: " + " / ".join(fails[:3]))
 
     secs = len(scs) * (ANIM_S + HOLD_S) + (LAST_HOLD_S - HOLD_S)
     print(f"  {len(scs)}장 · 약 {secs:.0f}초 · 무음 (음악은 인스타에서)")
     out = render(scs, outdir)
     print(f"\n  저장: {out}  ({out.stat().st_size / 1e6:.1f}MB)")
-    print(f"{'=' * 62}\n")
-    return 0
+    return out
 
 
 if __name__ == "__main__":

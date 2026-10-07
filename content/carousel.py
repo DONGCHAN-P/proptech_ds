@@ -59,7 +59,13 @@ def _img(p: Path) -> str:
 
 
 # ── 소재 ─────────────────────────────────────────────────────────────────
-def pick(data: dict) -> dict | None:
+def pick(data: dict, force=None) -> dict | None:
+    """주간 재료 한 벌.
+
+    force 에 Candidate 를 주면 표지 선정(5-1항)을 건너뛰고 그걸 쓴다.
+    사람이 텔레그램에서 고른 단지로 덱을 만들 때 쓴다 — 규칙이 고른 것과
+    사람이 고른 것이 다를 수 있고, 그때는 사람이 이긴다.
+    """
     z = [r for r in (data.get("weekly", {}).get("sgg_zscore") or [])
          if r.get("deals_z") is not None]
     surge = data.get("weekly", {}).get("surge_apt") or []
@@ -89,6 +95,8 @@ def pick(data: dict) -> dict | None:
     # 표지는 5-1항 규칙으로 고른다 — "통계적으로 가장 튄 곳"이 아니라
     # "많은 사람이 아는 곳 중 의미 있는 변화". 고른 이유는 로그로 남긴다.
     picked, top3, notes = CV.choose(data)
+    if force is not None:
+        picked, notes = force, ["사람이 고른 표지 — 자동 선정을 건너뛰었다"]
     return {"busiest": busiest, "quiet": quiet, "top": top, "ranked": ranked,
             "all_regions": z,
             "new_high": nh[0] if nh else None, "new_highs": nh,
