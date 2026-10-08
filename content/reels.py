@@ -97,6 +97,11 @@ def css() -> str:
 .rv-bar .t small{{font-size:28px;font-weight:500;color:{D.SUB};}}
 .rv-bar .track{{height:34px;border-radius:999px;background:#EDEAE2;
                margin-top:12px;overflow:hidden;}}
+/* 어두운 장에서 막대 라벨이 검은 글씨로 검은 배경에 그려지고 있었다.
+   글자가 "없는" 게 아니라 "안 보이는" 것이라 렌더 검사에도 안 걸린다. */
+.rv-dark .rv-bar .t{{color:{D.COVER_INK};}}
+.rv-dark .rv-bar .t small{{color:rgba(255,255,255,.66);}}
+.rv-dark .rv-bar .track{{background:rgba(255,255,255,.14);}}
 .rv-bar .fill{{height:100%;border-radius:999px;}}
 
 /* 신호 */

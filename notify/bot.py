@@ -34,6 +34,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from content import ledger as LD  # noqa: E402
+from content import reels as R  # noqa: E402
 from notify import telegram as TG  # noqa: E402
 
 POLL_TIMEOUT = 50          # getUpdates 를 붙잡아 두는 시간 (초)
@@ -64,6 +65,7 @@ HELP = """쓸 수 있는 것
 /all     영상+캐러셀+스레드 한 번에
 
 /단지 래미안   이름으로 찾기 (오늘 신고가 목록 안에서)
+/예산 6       "6억이면 어디 살 수 있나" 지도
 /평형        같은 단지 다른 평형으로
 
 /done    올렸다고 기록 (다음 회차에 그 지역을 피합니다)
@@ -226,6 +228,58 @@ def caption(data: dict, cand) -> str:
     except Exception as e:
         print(f"  캡션 생성 실패 ({type(e).__name__})")
         return ""
+
+
+# ── 예산 지도 ────────────────────────────────────────────────────────────
+def budget_map(cap: float) -> None:
+    """"N억이면 어디 살 수 있나" 한 편.
+
+    단지 덱과 **다른 아젠다**다. 단지 소개는 그 단지를 아는 사람에게만 뜻이
+    통하는데, 릴스는 모르는 사람에게 노출되는 매체다. 예산은 설명이 필요
+    없고 보는 사람 모두가 자기 숫자를 갖고 있다.
+    """
+    from content import budget as BG
+    if not 1 <= cap <= 50:
+        TG.send("예산은 1~50억 사이로 보내 주세요. 예: /예산 6", quiet=True)
+        return
+    TG.send(f"{cap:g}억 기준으로 지도를 그리겠습니다. 1~2분 걸려요.",
+            quiet=True)
+    try:
+        b = BG.compute(int(round(cap * 10000)))
+        if not b["rows"]:
+            TG.send("표본을 넘긴 시군구가 없습니다.", quiet=True)
+            return
+        scs = BG.scenes(b)
+        outdir = ROOT / "output" / b["asof"]
+        outdir.mkdir(parents=True, exist_ok=True)
+        out = R.render(scs, outdir)
+        final = outdir / f'budget_{b["cap_label"]}.mp4'
+        out.replace(final)
+
+        st = load()
+        st["last"] = str(final)
+        st["last_label"] = f'예산 지도 {b["cap_label"]}'
+        # 예산 지도는 단지가 없다. 발행 기록은 단지 기준이라 비워 둔다 —
+        # 안 비우면 직전에 만든 단지가 올린 것으로 잘못 기록된다.
+        st.pop("last_info", None)
+        st.pop("last_asof", None)
+        save(st)
+
+        none_n, all_n = len(b["none"]), len(b["all_"])
+        head = (f'{b["cap_label"]} 기준 · {b["pyeong_label"]} · '
+                f'최근 {b["months"]}개월')
+        lines = [head, "",
+                 f'거의 전부 살 수 있는 곳 {all_n}곳',
+                 f'한 건도 없는 곳 {none_n}곳']
+        for r in b["none"][:3]:
+            lines.append(f'  · {r["sigungu_name"]} '
+                         f'(0/{r["deals"]:,}건)')
+        TG.send_file(final, head, quiet=True)
+        TG.send(NL.join(lines), quiet=True)
+    except Exception as e:
+        TG.send(f"예산 지도에서 막혔습니다 — "
+                f"{TG.mask(str(e) or type(e).__name__)}")
+        traceback.print_exc()
 
 
 # ── 후보 밖 찾기 ─────────────────────────────────────────────────────────
@@ -420,6 +474,15 @@ def handle(text: str) -> None:
             TG.send_file(last, st.get("last_label", ""), quiet=True)
         else:
             TG.send("아직 만든 영상이 없습니다.", quiet=True)
+    elif low.startswith(("/예산", "/budget")):
+        part = t.split(maxsplit=1)
+        if len(part) < 2:
+            TG.send("예: /예산 6  (6억으로 어디 살 수 있나)", quiet=True)
+        else:
+            try:
+                budget_map(float(part[1].replace("억", "").strip()))
+            except ValueError:
+                TG.send("숫자로 보내 주세요. 예: /예산 6", quiet=True)
     elif low.startswith(("/단지", "/find", "/찾기")):
         term = t.split(maxsplit=1)
         if len(term) < 2:

@@ -307,7 +307,8 @@ def _bbox(feats: list[dict]) -> tuple[float, float, float, float]:
 
 def heat(values: dict[str, float], *, width: int, height: int,
          bg: str, up: str, down: str, dim: str,
-         labels: dict[str, str] | None = None) -> str | None:
+         labels: dict[str, str] | None = None,
+         bins: list | None = None) -> str | None:
     """수도권 전체를 평소 대비 배수로 칠한다.
 
     `map_cover` 가 대상 하나만 칠하는 것과 다르다. 여기서는 **어디가 뜨겁고
@@ -318,6 +319,9 @@ def heat(values: dict[str, float], *, width: int, height: int,
 
     `values` 에 없는 지역은 `dim` (표본 부족·판단 보류)으로 둔다. 회색으로
     칠하지 않고 비워 두면 "데이터가 없다"가 "변화가 없다"로 읽힌다.
+
+    `bins` 를 주면 다른 잣대로 칠한다. 기본은 "평소 대비 배수"지만, 예산
+    지도는 "살 수 있는 비율"이라 구간도 색의 뜻도 다르다.
     """
     data = load()
     if not data:
@@ -328,10 +332,13 @@ def heat(values: dict[str, float], *, width: int, height: int,
     ox, oy = (width - w * scale) / 2, (height - h * scale) / 2
 
     # 우리 이름 → 경계 이름. 개편으로 여러 구가 한 면을 가리키면 가장 센 쪽을 쓴다.
+    # 기본 잣대(배수)는 1 에서 멀수록 세다. 다른 잣대면 그 규칙이 틀리므로
+    # 큰 값을 쓴다 — 비율 잣대에서 "1 에서 멀다"는 아무 뜻이 없다.
+    far = (lambda v: abs(v - 1)) if bins is None else (lambda v: v)
     byname: dict[str, float] = {}
     for name, v in values.items():
         g, _ = geo_name(name)
-        if g not in byname or abs(v - 1) > abs(byname[g] - 1):
+        if g not in byname or far(v) > far(byname[g]):
             byname[g] = v
 
     parts = []
@@ -340,7 +347,7 @@ def heat(values: dict[str, float], *, width: int, height: int,
         v = byname.get(nm)
         parts.append(
             f'<path d="{_path(f, ox, oy, y1, x0, scale)}" '
-            f'fill="{bin_color(v, bg, up, down, dim)}" '
+            f'fill="{bin_color(v, bg, up, down, dim, bins)}" '
             f'stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round"/>')
     for nm, txt in (labels or {}).items():
         g, _ = geo_name(nm)
@@ -370,10 +377,11 @@ BINS = [(0.75, "down", 1.0), (0.9, "down", 0.45),
 BIN_LABELS = ["0.8배 이하", "0.9배", "평소", "1.2배", "1.3배 이상"]
 
 
-def bin_color(v: float | None, bg: str, up: str, down: str, dim: str) -> str:
+def bin_color(v: float | None, bg: str, up: str, down: str, dim: str,
+              bins: list | None = None) -> str:
     if v is None:
         return dim
-    for edge, side, t in BINS:
+    for edge, side, t in (bins or BINS):
         if v < edge:
             if side is None:
                 return mix(bg, "#000000", 0.07)
