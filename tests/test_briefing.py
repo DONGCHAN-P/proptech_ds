@@ -332,3 +332,37 @@ def test_평형이_다른_프로필은_쓰지_않는다():
     d = pack(new_high=[nh("가단지", "마포구", apt_id="a1")],
              profiles={"a1:30P": prof("가단지", "마포구", py="30P")})
     assert not B.build(d)[0].ready
+
+
+# ── 헤드라인 세기 ────────────────────────────────────────────────────────
+def test_상승폭이_약한_후보를_앞세우지_않는다():
+    """이 게이트가 없을 때 봇은 45건 중 가장 약한 쪽을 1~3위에 올렸다
+    (+2.9/2.8/2.1%, 중앙값 5.6%). 인기순으로만 줄 세운 탓이다."""
+    strong = [nh(f"센것{k}", f"가구{k}", over=9.0, apt_id=f"s{k}")
+              for k in range(5)]
+    weak = [nh(f"약한것{k}", f"나구{k}", over=1.0, apt_id=f"w{k}")
+            for k in range(5)]
+    got = B.apt_candidates(pack(new_high=weak + strong), 5)
+    assert all(c["over"] >= B.MIN_OVER for c in got), \
+        [(c["apt_name"], c["over"]) for c in got]
+
+
+def test_센_게_모자라면_기준을_낮춘다():
+    """후보가 비어 돌아가는 것보다는 약한 걸 내놓는 편이 낫다."""
+    weak = [nh(f"약한것{k}", f"구{k}", over=1.0, apt_id=f"w{k}")
+            for k in range(5)]
+    got = B.apt_candidates(pack(new_high=weak), 5)
+    assert len(got) == 5
+
+
+def test_기준을_낮춰도_센_것부터_나온다():
+    rows = [nh("약함", "가구", over=1.0, apt_id="w"),
+            nh("중간", "나구", over=4.0, apt_id="m")]
+    got = B.apt_candidates(pack(new_high=rows), 2)
+    assert got[0]["apt_name"] == "중간"
+
+
+def test_표본_문턱은_게이트보다_먼저다():
+    """상승폭이 커도 누적 거래가 얇으면 시세가 아니라 표본이 만든 숫자다."""
+    rows = [nh("얇음", "가구", over=30.0, hist=B.MIN_SAMPLE - 1, apt_id="t")]
+    assert B.apt_candidates(pack(new_high=rows), 5) == []

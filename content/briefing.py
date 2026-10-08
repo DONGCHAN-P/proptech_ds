@@ -214,6 +214,24 @@ def build(data: dict) -> list[Idea]:
 APT_N = 5
 TRADE = ROOT / "master" / "trade_events.parquet"
 
+# 헤드라인이 서려면 상승폭이 이만큼은 돼야 한다.
+#
+# 이 숫자가 없을 때 봇은 45건 중 **가장 약한 쪽**을 1~3위에 올렸다
+# (+2.9% / +2.8% / +2.1%, 전체 중앙값 5.6%). 인기순으로만 줄 세웠기
+# 때문인데, 그 기준은 cover.py 에서 가져온 것이고 거기서는 맞다 —
+# 이미 팔로우한 사람에게는 "아는 단지"가 중요하다.
+#
+# 릴스는 반대다. 나를 모르는 사람에게 노출되는 매체라 모르는 단지라도
+# 숫자가 놀라워야 한다. 실측: 평균 시청 2초, 팔로우 0.
+#
+# 그렇다고 상승폭 순으로만 잡으면 cover.py 가 경고한 자리로 돌아간다
+# ("아무도 모르는 소형 단지가 올라온다 — 실측: 구로구 성원"). 실제로
+# 오늘 상승폭 1위가 그 성원이다. 그래서 **게이트로만** 쓰고, 줄 세우기는
+# 인기에 맡긴다.
+MIN_OVER = 5.0
+# 그날 재료가 얇으면 기준을 낮춘다. 후보가 비어 돌아가는 것보다는 낫다.
+OVER_STEPS = (5.0, 3.0, 0.0)
+
 
 def deals_1y(apt_ids: list[str], asof: str) -> dict[str, int]:
     """단지별 최근 1년 거래 건수. 인기의 대리 지표다.
@@ -278,15 +296,26 @@ def apt_candidates(data: dict, n: int = APT_N) -> list[dict]:
 
     uniq.sort(key=lambda r: (
         not CV.is_priority(r["sigungu_name"], r.get("sigungu_code")),
-        -(pop.get(r["apt_id"]) or r["history_count"] / 10)))
+        -(pop.get(r["apt_id"]) or r["history_count"] / 10),
+        # 인기가 같으면 센 쪽이 앞. 기준을 낮춰 고를 때 특히 중요하다.
+        -r["over_peak_pct"]))
 
-    out, regions = [], set()
-    for r in uniq:
-        if len(out) >= n:
+    # 자극이 되는 것부터 고르되, 그날 재료가 얇으면 기준을 낮춘다.
+    picked = []
+    for gate in OVER_STEPS:
+        picked, regions = [], set()
+        for r in uniq:
+            if len(picked) >= n:
+                break
+            if r["over_peak_pct"] < gate or r["sigungu_name"] in regions:
+                continue
+            regions.add(r["sigungu_name"])
+            picked.append(r)
+        if len(picked) >= n:
             break
-        if r["sigungu_name"] in regions:
-            continue
-        regions.add(r["sigungu_name"])
+
+    out = []
+    for r in picked:
         out.append({
             "key": f'{r["apt_id"]}:{r["pyeong_bucket"]}',
             "apt_name": r["apt_name"], "region": r["sigungu_name"],
