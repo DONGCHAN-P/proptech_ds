@@ -2,6 +2,11 @@
 window.RES = (function () {
 
   const RANK_COLORS = ['#7c5cff', '#ff5c8a', '#ff9f43', '#1fbf8f', '#2d9cff'];
+  const PART = {
+    price: ['가격', '#8b7cf6'], commute: ['출근', '#f5a524'], station: ['역세권', '#22b8cf'],
+    school: ['학군', '#2fb37a'], new: ['신축', '#e8618c'], green: ['녹지', '#8cc63f'], active: ['거래', '#94a3b8'],
+  };
+  const TIE = 1.0;   // 앞 순위와 이 점수 이내면 '사실상 동률'
   const $ = id => document.getElementById(id);
   let map = null, layers = null, data = null, ans = null, onOpen = null, hoverLines = [];
   const pins = {};
@@ -125,17 +130,35 @@ window.RES = (function () {
   }
 
   // ── 카드 ────────────────────────────────────────────────────────────
+  /** 총점이 어느 조건에서 나왔는지 — 조건별 (점수 × 비중) 을 이어 붙인 막대 */
+  function parts(it) {
+    const w = data.weights, conf = it.confidence == null ? 1 : it.confidence;
+    const segs = Object.keys(it.breakdown).map(k => {
+      const v = it.breakdown[k] * w[k] * conf;
+      const [lbl, col] = PART[k] || [k, '#999'];
+      return '<i style="width:' + v.toFixed(2) + '%;background:' + col + '" title="' + lbl + ' ' +
+        Math.round(it.breakdown[k]) + '점 × 비중 ' + Math.round(w[k] * 100) + '% = ' + v.toFixed(1) + '"></i>';
+    }).join('');
+    return '<span class="parts" aria-hidden="true">' + segs + '</span>';
+  }
+
+  function tie(it, i) {
+    if (i === 0) return '';
+    const gap = data.items[i - 1].score - it.score;
+    return gap < TIE ? '<span class="tie" title="앞 순위와 ' + gap.toFixed(1) + '점 차이">≈ ' + i + '위와 동률</span>' : '';
+  }
+
   function card(it, i) {
     const c = it.commute;
     return '<li class="rcard" data-id="' + U.esc(it.apt_id) + '" style="--c:' + RANK_COLORS[i] + ';--d:' + (i * 90) + 'ms">' +
       '<button type="button" class="rcard-btn">' +
       '<span class="rank">' + (i + 1) + '</span>' +
       '<span class="rc-main">' +
-      '<span class="rc-name">' + U.esc(it.apt_name) + '</span>' +
+      '<span class="rc-name">' + U.esc(it.apt_name) + tie(it, i) + '</span>' +
       '<span class="rc-loc">' + U.esc(it.sigungu_name) + ' ' + U.esc(it.legal_dong_name || '') +
       ' · ' + (it.build_year || '-') + '년</span>' +
       '<span class="rc-price"><b>' + U.won(it.last_price) + '</b><small>전용 ' + Math.round(it.area_m2 || 0) + '㎡</small></span>' +
-      freshness(it) +
+      freshness(it) + parts(it) +
       '<span class="rc-why">' + (it.reasons || []).map(r => '<i>' + U.esc(r) + '</i>').join('') + '</span>' +
       '</span>' +
       '<span class="rc-side">' +
@@ -181,12 +204,14 @@ window.RES = (function () {
 
     if (!d.items.length) {
       const b = d.blocker;
+      $('fitStrip').innerHTML = '';
       $('cards').innerHTML = '<li class="empty-res"><b>조건에 맞는 단지가 없어요</b>' +
         (b ? '<p><b>' + U.esc(b.label) + '</b> 조건을 풀면 ' + b.count.toLocaleString() + '곳이 있어요.</p>' : '') + '</li>';
       layers && layers.clearLayers();
       return;
     }
     $('cards').innerHTML = d.items.map(card).join('');
+    strip(d);
     document.querySelectorAll('.rcard').forEach(el => {
       const it = d.items.find(x => x.apt_id === el.dataset.id);
       el.addEventListener('mouseenter', () => highlight(it.apt_id, true));
@@ -194,6 +219,40 @@ window.RES = (function () {
       el.querySelector('button').addEventListener('click', () => { focus(it.apt_id); onOpen(it); });
     });
     drawMap();
+  }
+
+  /** 0~100 위에 5곳을 찍는다. 점이 겹치면 겹친 대로 — 차이가 작다는 사실 자체가 정보다 */
+  function strip(d) {
+    const el = $('fitStrip');
+    if (!d.items.length) { el.innerHTML = ''; return; }
+    const sc = d.items.map(x => x.score);
+    const spread = Math.max(...sc) - Math.min(...sc);
+    const lo = Math.max(0, Math.floor(Math.min(...sc) / 10) * 10 - 10);
+    const pos = v => ((v - lo) / (100 - lo) * 100).toFixed(2) + '%';
+    // 같은 자리에 겹치는 점은 위아래로 살짝 엇갈려 번호가 읽히게
+    const lane = d.items.map((x, i) => d.items.slice(0, i).filter(y => Math.abs(y.score - x.score) < 2.5).length % 3);
+    const used = Object.keys(d.items[0].breakdown);
+    el.innerHTML =
+      '<div class="fs-head"><span>적합도 분포</span><b>' +
+      (spread < 3 ? '5곳이 ' + spread.toFixed(1) + '점 안에 몰려 있어요 — 순위보다 조건을 비교해 보세요'
+                  : '1위와 5위 차이 ' + spread.toFixed(1) + '점') + '</b></div>' +
+      '<div class="fs-track"><span class="fs-fill" style="left:' + pos(Math.min(...sc)) + ';right:calc(100% - ' + pos(Math.max(...sc)) + ')"></span>' +
+      d.items.map((x, i) => '<button type="button" class="fs-dot' + ['', ' up', ' down'][lane[i]] + '" data-id="' + U.esc(x.apt_id) +
+        '" style="left:' + pos(x.score) + ';--c:' + RANK_COLORS[i] + ';--d:' + (200 + i * 90) + 'ms" title="' +
+        (i + 1) + '위 ' + U.esc(x.apt_name) + ' ' + x.score.toFixed(1) + '점">' + (i + 1) + '</button>').join('') +
+      '</div><div class="fs-scale"><span>' + lo + '</span><span>100</span></div>' +
+      '<div class="fs-legend">' + used.map(k => '<span><i style="background:' + (PART[k] || ['', '#999'])[1] + '"></i>' +
+        (PART[k] || [k])[0] + ' ' + Math.round(d.weights[k] * 100) + '%</span>').join('') +
+      '<em>카드 아래 막대 = 조건별 기여</em></div>';
+    el.querySelectorAll('.fs-dot').forEach(b => {
+      b.addEventListener('mouseenter', () => highlight(b.dataset.id, true));
+      b.addEventListener('mouseleave', () => highlight(b.dataset.id, false));
+      b.addEventListener('click', () => {
+        const c = document.querySelector('.rcard[data-id="' + CSS.escape(b.dataset.id) + '"]');
+        c && c.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        focus(b.dataset.id);
+      });
+    });
   }
 
   function hide() { $('result').hidden = true; }

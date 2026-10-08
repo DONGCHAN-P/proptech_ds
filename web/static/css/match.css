@@ -590,3 +590,42 @@ path.cand { fill: var(--dot); }
 }
 .kpi-plus { font-size: .5em !important; color: var(--ink-3) !important; }
 .rc-commute + .rc-commute { margin-top: 0; }
+
+/* ── 적합도 시각화 ─────────────────────────────────────────────────── */
+.fitstrip { margin-top: 14px; padding: 12px 14px 10px; border-radius: 16px; background: var(--surface-solid); border: 1px solid var(--line); }
+.fitstrip:empty { display: none; }
+.fs-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 11.5px; color: var(--ink-3); font-weight: 600; }
+.fs-head span { white-space: nowrap; }
+.fs-head b { font-weight: 700; color: var(--ink-2); text-align: right; }
+.fs-track { position: relative; height: 46px; margin: 8px 12px 0; }
+.fs-track::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 4px; translate: 0 -50%; border-radius: 4px; background: var(--line); }
+.fs-fill { position: absolute; top: 50%; height: 4px; translate: 0 -50%; border-radius: 4px;
+  background: linear-gradient(90deg, #2d9cff, #7c5cff); opacity: .55; animation: grow-x .9s var(--ease) both .15s; }
+@keyframes grow-x { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+.fs-dot {
+  position: absolute; top: 50%; width: 24px; height: 24px; translate: -50% -50%; border-radius: 50%;
+  background: var(--c); color: #fff; font-size: 11.5px; font-weight: 800; display: grid; place-items: center;
+  border: 2px solid var(--surface-solid); box-shadow: 0 3px 10px color-mix(in srgb, var(--c) 45%, transparent);
+  animation: dotIn .6s var(--ease) both; animation-delay: var(--d); transition: transform .2s var(--ease);
+}
+.fs-dot.up { top: 9px; }
+.fs-dot.down { top: calc(100% - 9px); }
+.fs-dot:hover { transform: scale(1.25); z-index: 2; }
+@keyframes dotIn { from { left: 0; opacity: 0; } }
+.fs-scale { display: flex; justify-content: space-between; margin: 2px 12px 0; font-size: 10px; color: var(--ink-3); }
+.fs-legend { display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: 8px; font-size: 11px; color: var(--ink-2); align-items: center; }
+.fs-legend span { display: inline-flex; align-items: center; gap: 4px; }
+.fs-legend i { width: 8px; height: 8px; border-radius: 2px; }
+.fs-legend em { font-style: normal; color: var(--ink-3); margin-left: auto; }
+
+.parts { display: flex; height: 6px; margin-top: 6px; border-radius: 6px; overflow: hidden; background: var(--line); }
+.parts i { display: block; height: 100%; animation: grow 0.9s var(--ease) both .35s; }
+.parts i + i { box-shadow: -1px 0 0 var(--surface-solid); }
+
+.tie {
+  display: inline-block; margin-left: 6px; padding: 2px 7px; border-radius: 6px; vertical-align: 2px;
+  font-size: 10.5px; font-weight: 700; color: var(--ink-2); background: var(--surface-2); border: 1px solid var(--line-2);
+}
+@media (max-width: 860px) {
+  .fs-legend em { display: none; }
+}
