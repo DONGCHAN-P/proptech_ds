@@ -165,3 +165,28 @@ def test_평소_지도의_잣대를_바꾸지_않았다():
     """같은 heat() 를 쓰므로, 구간을 안 넘기면 예전 그대로여야 한다."""
     v = G.bin_color(1.5, D.BG, D.UP, D.DOWN, D.NEUTRAL)
     assert v == G.mix(D.BG, D.UP, 1.0)
+
+
+# ── 아젠다끼리 파일을 두고 싸우지 않는다 ─────────────────────────────────
+def test_렌더러가_파일_이름을_받는다():
+    """이름이 고정이면 예산 지도가 단지 영상을 지운다. 실제로 지웠다."""
+    import inspect
+    sig = inspect.signature(R.render)
+    assert "name" in sig.parameters
+    assert sig.parameters["name"].default == "reels.mp4"
+
+
+def test_예산_지도는_제_이름으로_저장한다(monkeypatch, tmp_path):
+    got = {}
+    def fake_render(scs, outdir, name="reels.mp4"):
+        got["name"] = name
+        f = tmp_path / name
+        f.write_bytes(b"0")      # main 이 크기를 찍는다
+        return f
+
+    monkeypatch.setattr(R, "render", fake_render)
+    monkeypatch.setattr(B, "compute", lambda *a, **k: fake())
+    import sys as _s
+    monkeypatch.setattr(_s, "argv", ["x", "--cap", "6"])
+    B.main()
+    assert got["name"] == "budget_6억.mp4"

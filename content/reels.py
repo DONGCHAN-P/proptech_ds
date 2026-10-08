@@ -412,8 +412,13 @@ def check_crop(page, where: str) -> None:
         raise RuntimeError(f"{where}: " + " / ".join(bad))
 
 
-def render(scs: list[dict], outdir: Path) -> Path:
-    """장면을 프레임으로 찍고 ffmpeg 으로 잇는다."""
+def render(scs: list[dict], outdir: Path, name: str = "reels.mp4") -> Path:
+    """장면을 프레임으로 찍고 ffmpeg 으로 잇는다.
+
+    name 을 받는 이유: 예산 지도처럼 다른 아젠다도 이 렌더러를 쓴다.
+    이름이 고정이면 둘이 같은 파일을 두고 싸우고, 나중에 만든 쪽이
+    먼저 만든 쪽을 지운다 (실제로 단지 영상이 그렇게 사라졌다).
+    """
     from playwright.sync_api import sync_playwright
 
     tmp = Path(tempfile.mkdtemp(prefix="reels_"))
@@ -454,7 +459,7 @@ def render(scs: list[dict], outdir: Path) -> Path:
         lst = tmp / "list.txt"
         lst.write_text("\n".join(listing) + f"\nfile '{(tmp / f'f{k-1:05d}.png').as_posix()}'\n",
                        encoding="utf-8")
-        out = outdir / "reels.mp4"
+        out = outdir / name
         # concat 목록은 프레임마다 길이가 다르다(멈춤 구간을 마지막 프레임으로
         # 늘려 쓴다). -fps_mode cfr 로 고정 프레임레이트로 다시 샘플링한다 —
         # vfr 과 -r 을 같이 주면 ffmpeg 가 모순이라며 거부한다.

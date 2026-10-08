@@ -252,9 +252,8 @@ def budget_map(cap: float) -> None:
         scs = BG.scenes(b)
         outdir = ROOT / "output" / b["asof"]
         outdir.mkdir(parents=True, exist_ok=True)
-        out = R.render(scs, outdir)
-        final = outdir / f'budget_{b["cap_label"]}.mp4'
-        out.replace(final)
+        final = R.render(scs, outdir,
+                         name=f'budget_{b["cap_label"]}.mp4')
 
         st = load()
         st["last"] = str(final)

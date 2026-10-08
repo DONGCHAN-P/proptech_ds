@@ -302,9 +302,7 @@ def main() -> int:
         return 0
     outdir = ROOT / "output" / b["asof"]
     outdir.mkdir(parents=True, exist_ok=True)
-    out = R.render(scs, outdir)
-    final = outdir / f"budget_{b['cap_label']}.mp4"
-    out.replace(final)
+    final = R.render(scs, outdir, name=f"budget_{b['cap_label']}.mp4")
     print(f"\n  저장: {final}  ({final.stat().st_size / 1e6:.1f}MB)\n{bar}\n")
     return 0
 
