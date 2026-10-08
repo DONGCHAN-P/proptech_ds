@@ -178,3 +178,30 @@ def test_만들어진_영상이_규격에_맞다(data):
     st = j["streams"][0]
     assert (st["width"], st["height"]) == (1080, 1920)
     assert 12 <= float(j["format"]["duration"]) <= 45
+
+
+# ── 첫 프레임 ────────────────────────────────────────────────────────────
+def test_훅은_첫_프레임부터_완성돼_있다(scs):
+    """들어오는 동안은 글자가 투명해서 0초가 빈 화면이 된다.
+
+    릴스는 첫 프레임이 전부고, 그리드 썸네일도 기본이 첫 프레임이다.
+    실측: 평균 시청 2초 / 21초, 첫 프레임에 제목도 금액도 안 보였다.
+    """
+    assert scs[0].get("static") is True, "1장이 멈춰 서 있지 않다"
+
+
+def test_올라가는_숫자는_1장에_쓰지_않는다(scs):
+    """6.5억짜리 거래가 4.5억으로 먼저 보이고 그 상태로 스크린샷이 찍힌다.
+    화면에 뜬 숫자는 늘 참이어야 한다."""
+    body = R.strip_html(scs[0]["body"](1.0))
+    first = R.strip_html(scs[0]["body"](1 / (R.ANIM_S * R.FPS)))
+    assert body == first, "1장이 프레임마다 다른 숫자를 보여 준다"
+
+
+def test_카운트업은_끝에서_참값에_멎는다():
+    assert R.count(65000, 1.0) == D.won(65000)
+
+
+def test_뒷장은_여전히_움직인다(scs):
+    """이미 보고 있는 사람에게는 움직임이 시선을 끈다. 훅만 멈춘다."""
+    assert not any(sc.get("static") for sc in scs[1:])

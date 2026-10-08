@@ -147,14 +147,19 @@ def scenes(t: dict, prof: dict) -> list[dict]:
     svg = NM.render(prof, width=848, height=330, dark=True,
                     neighbors=prof.get("neighbors"))
     out.append({
-        "dark": True, "foot": f'{src} · {NM_credit(prof)}',
+        "dark": True, "static": True,
+        "foot": f'{src} · {NM_credit(prof)}',
         "facts": {"cover": d, "profile": _pf(prof)},
+        # p 를 **일부러 무시한다.** 멈춤은 렌더러의 사정이 아니라 이 장의
+        # 성질이다. 여기서 p 를 쓰면, 누가 나중에 다른 p 로 부르는 순간
+        # 0초가 다시 빈 화면이 되고 금액도 거짓값으로 돌아간다.
         "body": lambda p, _n=name, _s=svg, _d=d: (
-            f'<div class="rv-kick" {anim(0, p)}>'
+            f'<div class="rv-kick" {anim(0, 1.0)}>'
             f'{prof["sigungu_name"]} {prof["legal_dong_name"]}</div>'
-            f'<div class="rv-h1" {anim(1, p)}>{_n},<br>종전 최고가</div>'
-            f'<div class="rv-num" {anim(2, p)}>{count(_d["deal_amount"], p)}</div>'
-            f'<div class="rv-map" {anim(3, p)}>{_s or ""}</div>'),
+            f'<div class="rv-h1" {anim(1, 1.0)}>{_n},<br>종전 최고가</div>'
+            f'<div class="rv-num" {anim(2, 1.0)}>'
+            f'{count(_d["deal_amount"], 1.0)}</div>'
+            f'<div class="rv-map" {anim(3, 1.0)}>{_s or ""}</div>'),
     })
 
     # 2 추이 — 20년 기록 위에 이번 거래
@@ -246,7 +251,12 @@ def _pf(prof: dict) -> dict:
 
 
 def count(value: float, p: float) -> str:
-    """숫자가 올라가며 멎는다. 릴스에서 큰 숫자는 움직여야 눈이 멈춘다."""
+    """숫자가 올라가며 멎는다. 릴스에서 큰 숫자는 움직여야 눈이 멈춘다.
+
+    다만 **올라가는 동안 화면에 뜬 숫자는 거짓이다.** 6.5억짜리 거래가
+    4.5억으로 먼저 보이고, 그 상태로 스크린샷이 찍힌다. 훅(1장)은 멈춰
+    세워서 처음부터 참값을 보여 준다.
+    """
     return D.won(value * ease(min(1.0, p / 0.75)))
 
 
@@ -411,14 +421,19 @@ def render(scs: list[dict], outdir: Path) -> Path:
                                device_scale_factor=1)
             k = 0
             for i, sc in enumerate(scs, 1):
-                for f in range(n_anim):
-                    p = (f + 1) / n_anim
+                # 훅은 **첫 프레임부터 완성돼 있어야** 한다. 들어오는 동안은
+                # 글자가 투명해서, 릴스에서 제일 중요한 0초가 빈 화면이 된다.
+                # 그리드 썸네일도 기본이 첫 프레임이라 빈 타일로 걸린다.
+                # (실측: 평균 시청 2초 / 21초)
+                n_f = 1 if sc.get("static") else n_anim
+                for f in range(n_f):
+                    p = 1.0 if sc.get("static") else (f + 1) / n_anim
                     html = (f'<div class="card{" rv-dark" if sc["dark"] else ""}">'
                             f'{chrome(i, len(scs), sc["foot"], sc["dark"])}'
                             f'<div class="rv">{sc["body"](p)}</div></div>')
                     page.set_content(f"<style>{css()}</style>{html}",
                                      wait_until="load")
-                    if f == n_anim - 1:
+                    if f == n_f - 1:
                         check_crop(page, f"{i}장")
                     fp = tmp / f"f{k:05d}.png"
                     page.screenshot(path=str(fp))
