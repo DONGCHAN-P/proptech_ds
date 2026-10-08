@@ -158,6 +158,8 @@ def ride_minutes(km, line_a, line_b):
 class Stations:
     """지하철역 좌표·노선. 통근 추정의 유일한 근거."""
 
+    CHUNK = 4000
+
     def __init__(self, df: pd.DataFrame):
         df = df.dropna(subset=["lat", "lng"]).reset_index(drop=True)
         self.df = df
@@ -168,13 +170,22 @@ class Stations:
         self.name = df["station_name"].map(lambda x: re.sub(r"\(.*?\)", "", str(x)).strip()).to_numpy(object)
 
     def nearest(self, lat, lng, k: int = K_NEAR) -> tuple[np.ndarray, np.ndarray]:
-        """각 점의 가까운 역 k곳 (인덱스, km). 2만 점 × 800역 정도는 한 번에 된다."""
+        """각 점의 가까운 역 k곳 (인덱스, km).
+
+        4만 점 × 800역을 한 번에 계산하면 거리 행렬만 250MB 다 — 1GB 서버에서 기동 피크가
+        된다. CHUNK 행씩 나눠 계산한다.
+        """
         lat = np.atleast_1d(np.asarray(lat, dtype=float))
         lng = np.atleast_1d(np.asarray(lng, dtype=float))
         k = min(k, len(self.lat))
-        d = haversine_km(lat[:, None], lng[:, None], self.lat[None, :], self.lng[None, :])
-        idx = np.argpartition(d, k - 1, axis=1)[:, :k]
-        return idx, np.take_along_axis(d, idx, axis=1)
+        idx = np.empty((len(lat), k), dtype=np.int32)
+        dist = np.empty((len(lat), k), dtype=float)
+        for a in range(0, len(lat), self.CHUNK):
+            b = a + self.CHUNK
+            d = haversine_km(lat[a:b, None], lng[a:b, None], self.lat[None, :], self.lng[None, :])
+            part = np.argpartition(d, k - 1, axis=1)[:, :k]
+            idx[a:b], dist[a:b] = part, np.take_along_axis(d, part, axis=1)
+        return idx, dist
 
     def _combos(self, h_idx, h_d, wlat, wlng):
         w_idx, w_d = self.nearest(wlat, wlng)

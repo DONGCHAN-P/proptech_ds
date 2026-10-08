@@ -19,6 +19,7 @@ from typing import Any
 
 import duckdb
 from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -48,11 +49,15 @@ ATTRIB = "실거래가 출처 국토교통부"
 # 키에 접속 도메인이 등록돼 있어야 하고, localhost 도 따로 등록해야 한다).
 # CARTO basemaps 는 등록되지 않은 도메인에 "API KEY REQUIRED" 워터마크가
 # 찍힌 타일을 내려주므로 쓰지 않는다.
+PRODUCTION = os.environ.get("APP_ENV") == "production"
+
+
 def tile_config() -> dict:
     key = os.environ.get("VWORLD_MAP_KEY", "").strip()
+    layer = os.environ.get("VWORLD_LAYER", "Base").strip() or "Base"   # Base · gray · midnight
     if key:
         return {
-            "url": f"https://api.vworld.kr/req/wmts/1.0.0/{key}/Base/{{z}}/{{y}}/{{x}}.png",
+            "url": f"https://api.vworld.kr/req/wmts/1.0.0/{key}/{layer}/{{z}}/{{y}}/{{x}}.png",
             "attribution": f"&copy; VWorld · {ATTRIB}",
             "maxZoom": 18,
         }
@@ -63,7 +68,15 @@ def tile_config() -> dict:
     }
 
 
-app = FastAPI(title="수도권 아파트 실거래 지도", default_response_class=JSONResponse)
+# tile.openstreetmap.org 은 이용 정책상 서비스 트래픽에 쓸 수 없다 — 운영에서 키가 없으면 크게 알린다
+if PRODUCTION and not os.environ.get("VWORLD_MAP_KEY", "").strip():
+    print("[web] [경고] 운영 환경인데 VWORLD_MAP_KEY 가 없어 OSM 공식 타일을 씁니다 (이용 정책 위반 소지)", flush=True)
+
+app = FastAPI(title="수도권 아파트 실거래 지도", default_response_class=JSONResponse,
+              docs_url=None if PRODUCTION else "/docs", redoc_url=None,
+              openapi_url=None if PRODUCTION else "/openapi.json")
+# 지도 말풍선 · 후보 점 JSON 이 수백 KB 라 압축 효과가 크다
+app.add_middleware(GZipMiddleware, minimum_size=1024)
 
 _con: duckdb.DuckDBPyConnection | None = None
 _lock = threading.Lock()
@@ -73,6 +86,8 @@ _lock = threading.Lock()
 def ensure_cache() -> None:
     if (CACHE / "apt_index.parquet").exists():
         return
+    if PRODUCTION:   # 배포 묶음에는 원본(master/)이 없다 — deploy/bundle.py 로 캐시를 같이 넣어야 한다
+        raise RuntimeError("web/cache 가 없습니다. deploy/bundle.py 로 묶음을 다시 만드세요")
     print("[web] 캐시 없음 — build_index.py 실행", flush=True)
     subprocess.run([sys.executable, str(HERE / "build_index.py")], check=True)
 
