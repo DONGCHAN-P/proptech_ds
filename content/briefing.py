@@ -304,6 +304,71 @@ def apt_candidates(data: dict, n: int = APT_N) -> list[dict]:
     return out
 
 
+SEARCH_N = 8
+
+
+def search_apts(data: dict, term: str, n: int = SEARCH_N) -> list[dict]:
+    """이름으로 단지를 찾는다. **오늘 신고가 목록 안에서만** 찾는다.
+
+    덱의 첫 장이 "종전 최고가"라서, 신고가가 아닌 단지로 만들면 그 헤드라인이
+    거짓말이 된다. 아무 단지나 찾아 주면 쓸 수 없는 걸 고르게 되므로, 애초에
+    만들 수 있는 것만 보여 준다.
+
+    띄어쓰기는 무시한다 — 사람은 "목동신시가지" 로 치고 데이터에는
+    "목동 신시가지" 로 들어 있다 (aptname 정규화 뒤).
+    """
+    AN.normalize(data)
+    key = "".join(str(term).split()).lower()
+    if not key:
+        return []
+    rows = [r for r in (data.get("daily", {}).get("new_high") or [])
+            if r.get("history_count", 0) >= MIN_SAMPLE
+            and r.get("apt_id") and r.get("pyeong_bucket")
+            and key in "".join(str(r.get("apt_name", "")).split()).lower()]
+    pop = deals_1y([r["apt_id"] for r in rows], data["asof"])
+    idx = index(data.get("profiles") or {})
+    rows.sort(key=lambda r: -(pop.get(r["apt_id"])
+                              or r["history_count"] / 10))
+    out = []
+    for r in rows[:n]:
+        out.append({
+            "key": f'{r["apt_id"]}:{r["pyeong_bucket"]}',
+            "apt_name": r["apt_name"], "region": r["sigungu_name"],
+            "dong": r.get("legal_dong_name", ""),
+            "pyeong": D.pyeong(r["pyeong_bucket"]),
+            "amount": D.won(r["deal_amount"]),
+            "over": r["over_peak_pct"], "hist": r["history_count"],
+            "deals_1y": pop.get(r["apt_id"]),
+            "ready": CV.profile_ok(CV.find_profile(idx, r)),
+            "priority": CV.is_priority(r["sigungu_name"],
+                                       r.get("sigungu_code")),
+            "row": r,
+        })
+    return out
+
+
+def pyeongs_of(data: dict, apt_id: str) -> list[dict]:
+    """같은 단지의 다른 평형. 둘이 같은 날 신고가를 치는 일이 있다."""
+    AN.normalize(data)
+    rows = [r for r in (data.get("daily", {}).get("new_high") or [])
+            if r.get("apt_id") == apt_id
+            and r.get("history_count", 0) >= MIN_SAMPLE]
+    idx = index(data.get("profiles") or {})
+    rows.sort(key=lambda r: -r["history_count"])
+    return [{
+        "key": f'{r["apt_id"]}:{r["pyeong_bucket"]}',
+        "apt_name": r["apt_name"], "region": r["sigungu_name"],
+        "dong": r.get("legal_dong_name", ""),
+        "pyeong": D.pyeong(r["pyeong_bucket"]),
+        "amount": D.won(r["deal_amount"]),
+        "over": r["over_peak_pct"], "hist": r["history_count"],
+        "deals_1y": None,
+        "ready": CV.profile_ok(CV.find_profile(idx, r)),
+        "priority": CV.is_priority(r["sigungu_name"], r.get("sigungu_code")),
+        "row": r,
+    } for r in rows]
+
+
 def pick(ideas: list[Idea], n: int = 5) -> list[Idea]:
     """앵글과 지역이 겹치지 않게 고른다.
 

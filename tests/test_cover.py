@@ -82,7 +82,20 @@ def test_같은_데이터면_항상_같은_표지(data):
     assert len(picks) == 1, picks
 
 
-def test_이번_회차는_반복금지에_걸리지_않는다(data, tmp_path, monkeypatch):
+@pytest.fixture
+def 빈원장(tmp_path, monkeypatch):
+    """발행 원장을 빈 파일로 격리한다.
+
+    원장이 비어 있을 때만 cover_log(고른 기록)로 되돌아간다. 격리하지
+    않으면 실제 원장이 끼어들어, 여기서 쓴 로그가 무시된다.
+    """
+    from content import ledger as LD
+    monkeypatch.setattr(LD, "LOG", tmp_path / "pub.json")
+    return LD
+
+
+def test_이번_회차는_반복금지에_걸리지_않는다(data, tmp_path, monkeypatch,
+                                            빈원장):
     """로그를 쓴 뒤 다시 고를 때 자기 자신이 걸리면 안 된다."""
     monkeypatch.setattr(CV, "LOG", tmp_path / "log.json")
     first, top3, notes = CV.choose(data)
@@ -91,7 +104,8 @@ def test_이번_회차는_반복금지에_걸리지_않는다(data, tmp_path, mo
     assert again.region == first.region
 
 
-def test_직전_회차_지역은_연속으로_오르지_않는다(data, tmp_path, monkeypatch):
+def test_직전_회차_지역은_연속으로_오르지_않는다(data, tmp_path, monkeypatch,
+                                                  빈원장):
     monkeypatch.setattr(CV, "LOG", tmp_path / "log.json")
     first, top3, notes = CV.choose(data)
     CV.log("2000-01-01", first, top3, notes)     # 다른 회차로 기록
@@ -350,3 +364,31 @@ def test_실제_표지와_프로필의_평형이_같다(data):
     if not picked or "profile" not in (picked.data or {}):
         pytest.skip("단지 표지가 아님")
     assert picked.data["pyeong_bucket"] == picked.data["profile"]["pyeong_bucket"]
+
+
+def test_원장이_있으면_직전_발행_지역을_막는다(data, tmp_path, monkeypatch,
+                                              빈원장):
+    """발행 원장이 중복 방지의 근거가 된다 (T20b).
+
+    cover_log 는 **고른** 기록이라, 봇으로 만들기만 하고 버린 지역까지
+    다음 회차를 막았다. 올린 것만 막아야 한다.
+    """
+    monkeypatch.setattr(CV, "LOG", tmp_path / "log.json")
+    first, _, _ = CV.choose(data)
+    빈원장.record("2000-01-01", {"key": "x:20P", "apt_name": "가",
+                                 "region": first.region, "pyeong": "20평대"},
+                  빈원장.PUBLISHED)
+    again, _, _ = CV.choose(data)
+    if len({c.region for c in CV.build(data)}) > 1:
+        assert again.region != first.region
+
+
+def test_안_올린_것은_다음_회차를_막지_않는다(data, tmp_path, monkeypatch,
+                                            빈원장):
+    monkeypatch.setattr(CV, "LOG", tmp_path / "log.json")
+    first, _, _ = CV.choose(data)
+    빈원장.record("2000-01-01", {"key": "x:20P", "apt_name": "가",
+                                 "region": first.region, "pyeong": "20평대"},
+                  빈원장.SKIPPED)
+    again, _, _ = CV.choose(data)
+    assert again.region == first.region

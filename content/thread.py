@@ -304,11 +304,25 @@ def latest_metrics() -> Path | None:
     return files[-1] if files else None
 
 
-def generate(kind: str, data: dict, n: int = 1, use_llm: bool = False) -> list[dict]:
+def generate(kind: str, data: dict, n: int = 1, use_llm: bool = False,
+             force=None) -> list[dict]:
+    """force 는 사람이 고른 표지(Candidate).
+
+    prep_new_high 가 자동 선정 결과를 앞세우는데, 봇에서 사람이 다른 단지를
+    고르면 그 둘이 갈라진다. 같은 주에 영상은 양천구인데 스레드는 다른 구를
+    말하면 두 계정이 따로 노는 것처럼 보인다.
+    """
+    from content import aptname as AN
+    AN.normalize(data)   # CLI 로 직접 부를 때도 이름이 맞게
     drafter, (bucket, key) = DRAFTERS[kind]
     rows = (data.get(bucket) or {}).get(key) or []
     if kind in PREPS:
         rows = PREPS[kind](rows)
+    if force is not None:
+        want = (f'{force.data.get("apt_id")}:'
+                f'{force.data.get("pyeong_bucket")}')
+        rows = sorted(rows, key=lambda r: (
+            f'{r.get("apt_id")}:{r.get("pyeong_bucket")}' != want))
     params = data.get("params") or {}
     out = []
     for f in rows[:n]:

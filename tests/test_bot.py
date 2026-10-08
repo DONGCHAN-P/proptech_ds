@@ -219,3 +219,109 @@ def test_깨진_상태파일을_읽어도_안_터진다(sent):
 def test_상태를_저장하고_다시_읽는다(sent):
     B.save({"offset": 42})
     assert B.load()["offset"] == 42
+
+
+# ── 발행 기록 (1순위) ────────────────────────────────────────────────────
+def test_만든_게_없으면_done을_막는다(sent):
+    B.save({})
+    B.handle("/done")
+    assert any("먼저" in s for s in sent)
+
+
+def test_done이_원장에_남는다(sent, monkeypatch, tmp_path):
+    from content import ledger as LD
+    monkeypatch.setattr(LD, "LOG", tmp_path / "pub.json")
+    B.save({"last_asof": "2026-10-06",
+            "last_info": {"key": "a1:20P", "apt_name": "신트리 4단지",
+                          "region": "양천구", "pyeong": "20평대"}})
+    B.handle("/done")
+    rows = LD.rows()
+    assert len(rows) == 1 and rows[0]["status"] == LD.PUBLISHED
+    assert any("양천구" in s for s in sent)
+
+
+def test_skip은_막지_않는다고_알린다(sent, monkeypatch, tmp_path):
+    from content import ledger as LD
+    monkeypatch.setattr(LD, "LOG", tmp_path / "pub.json")
+    B.save({"last_asof": "2026-10-06",
+            "last_info": {"key": "a1:20P", "apt_name": "가단지",
+                          "region": "마포구", "pyeong": "20평대"}})
+    B.handle("/skip")
+    assert LD.rows()[0]["status"] == LD.SKIPPED
+    assert any("다시" in s for s in sent)
+
+
+def test_기록이_없으면_log가_알려준다(sent, monkeypatch, tmp_path):
+    from content import ledger as LD
+    monkeypatch.setattr(LD, "LOG", tmp_path / "pub.json")
+    B.handle("/log")
+    assert any("없습니다" in s for s in sent)
+
+
+# ── 발행 패키지 (2순위) ──────────────────────────────────────────────────
+def test_만든_게_없으면_캐러셀을_막는다(sent, monkeypatch):
+    monkeypatch.setattr(B, "resolve", lambda st: (None, None, None))
+    B.send_carousel()
+    assert any("먼저" in s for s in sent)
+
+
+def test_만든_게_없으면_스레드를_막는다(sent, monkeypatch):
+    monkeypatch.setattr(B, "resolve", lambda st: (None, None, None))
+    B.send_thread()
+    assert any("먼저" in s for s in sent)
+
+
+def test_resolve는_이름이_아니라_키로_찾는다(sent, monkeypatch):
+    """한 단지가 평형 둘로 올라오는 날이 있다. 이름으로 맞추면 엉뚱한
+    평형의 캐러셀이 영상과 다른 숫자를 들고 나간다."""
+    rows = [{"apt_id": "a1", "pyeong_bucket": "20P"},
+            {"apt_id": "a1", "pyeong_bucket": "30P"}]
+    cands = [{"key": "a1:20P", "apt_name": "같은단지"},
+             {"key": "a1:30P", "apt_name": "같은단지"}]
+    B.save({"last_asof": "2026-10-06", "rows": rows, "candidates": cands,
+            "last_info": {"key": "a1:30P", "apt_name": "같은단지",
+                          "region": "마포구", "pyeong": "30평대"}})
+    seen = {}
+    monkeypatch.setattr(B, "metrics", lambda: {"asof": "2026-10-06"})
+    monkeypatch.setattr("metrics.build_metrics.profile_for",
+                        lambda d, r: seen.update(row=r) or {"ok": 1})
+    monkeypatch.setattr("content.cover.build", lambda d: [])
+    B.resolve(B.load())
+    assert seen["row"]["pyeong_bucket"] == "30P"
+
+
+# ── 후보 밖 찾기 (3순위) ─────────────────────────────────────────────────
+def test_찾기에_검색어가_없으면_예시를_준다(sent):
+    B.handle("/단지")
+    assert any("예:" in s for s in sent)
+
+
+def test_못_찾으면_왜인지_설명한다(sent, monkeypatch):
+    """'오늘 신고가 목록 안에서만' 찾는다는 걸 모르면 버그로 보인다."""
+    monkeypatch.setattr(B, "metrics", lambda: {"asof": "2026-10-06"})
+    monkeypatch.setattr("content.briefing.search_apts", lambda d, t: [])
+    B.handle("/단지 없는이름")
+    assert any("신고가" in s for s in sent)
+
+
+def test_찾은_것을_번호와_묶어_남긴다(sent, monkeypatch):
+    """번호로 고르려면 상태를 덮어써야 한다."""
+    found = [{"key": "z:20P", "apt_name": "찾은단지", "region": "구로구",
+              "dong": "동", "pyeong": "20평대", "amount": "9.7억",
+              "over": 2.1, "hist": 100,
+              "row": {"apt_id": "z", "pyeong_bucket": "20P"}}]
+    monkeypatch.setattr(B, "metrics", lambda: {"asof": "2026-10-06"})
+    monkeypatch.setattr("content.briefing.search_apts", lambda d, t: found)
+    B.handle("/단지 찾은")
+    st = B.load()
+    assert st["rows"][0]["apt_id"] == "z"
+    assert any("찾은단지" in s for s in sent)
+
+
+def test_평형이_하나뿐이면_그렇게_알린다(sent, monkeypatch):
+    B.save({"last_info": {"key": "a1:20P", "apt_name": "외동이단지"}})
+    monkeypatch.setattr(B, "metrics", lambda: {"asof": "2026-10-06"})
+    monkeypatch.setattr("content.briefing.pyeongs_of",
+                        lambda d, a: [{"key": "a1:20P"}])
+    B.handle("/평형")
+    assert any("평형뿐" in s for s in sent)

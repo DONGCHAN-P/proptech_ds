@@ -33,6 +33,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from content import ledger as LD  # noqa: E402
 from notify import telegram as TG  # noqa: E402
 
 POLL_TIMEOUT = 50          # getUpdates 를 붙잡아 두는 시간 (초)
@@ -54,11 +55,22 @@ def to_log() -> None:
         sys.stdout = sys.stderr = fh
     print(f"{NL}--- {datetime.now():%Y-%m-%d %H:%M:%S} 시작 ---")
 
-HELP = f"""쓸 수 있는 것
-/today  오늘 단지 후보 5곳
-1~5     그 번호로 영상 만들기
-/again  마지막에 만든 영상 다시 보내기
-/help   이 안내
+HELP = """쓸 수 있는 것
+/today   오늘 단지 후보 5곳
+1~5      그 번호로 영상 만들기
+/again   마지막에 만든 영상 다시 보내기
+/carousel 캐러셀 6장 (피드용)
+/thread  스레드 본문
+/all     영상+캐러셀+스레드 한 번에
+
+/단지 래미안   이름으로 찾기 (오늘 신고가 목록 안에서)
+/평형        같은 단지 다른 평형으로
+
+/done    올렸다고 기록 (다음 회차에 그 지역을 피합니다)
+/skip    안 올렸다고 기록 (다시 권해도 됩니다)
+/log     최근 발행 기록
+
+/help    이 안내
 
 후보를 받은 뒤 번호만 보내면 됩니다. 한 편에 1~2분 걸려요."""
 
@@ -85,10 +97,17 @@ def allowed(chat_id) -> bool:
 
 # ── 지표·후보 ────────────────────────────────────────────────────────────
 def metrics() -> dict | None:
+    """지표 JSON. 봇의 모든 길이 여기를 지난다.
+
+    이름 정규화를 여기서 한 번에 한다. carousel.pick() 은 자기 입구에서
+    하지만 thread.generate() 는 안 하므로, 영상은 "신트리 4단지"인데
+    스레드만 "신트리4" 로 나갔다.
+    """
+    from content import aptname as AN
     files = sorted((ROOT / "output").glob("metrics_*.json"))
     if not files:
         return None
-    return json.loads(files[-1].read_text(encoding="utf-8"))
+    return AN.normalize(json.loads(files[-1].read_text(encoding="utf-8")))
 
 
 def candidates(data: dict) -> list[dict]:
@@ -181,6 +200,10 @@ def make(n: int) -> None:
 
         st["last"] = str(out)
         st["last_label"] = f'{info["apt_name"]} ({info["region"]})'
+        # /done 이 무엇을 기록할지 알아야 한다. 라벨만으로는 모자라다.
+        st["last_info"] = {k: info.get(k) for k in
+                           ("key", "apt_name", "region", "pyeong")}
+        st["last_asof"] = data["asof"]
         save(st)
 
         cap = caption(data, cand)
@@ -205,6 +228,183 @@ def caption(data: dict, cand) -> str:
         return ""
 
 
+# ── 후보 밖 찾기 ─────────────────────────────────────────────────────────
+def offer(cands: list[dict], head: str) -> None:
+    """찾은 것을 번호와 묶어 내놓는다. 상태를 덮어써야 번호가 통한다."""
+    st = load()
+    data = metrics()
+    st["asof"] = data["asof"]
+    st["candidates"] = [{k: v for k, v in c.items() if k != "row"}
+                        for c in cands]
+    st["rows"] = [c["row"] for c in cands]
+    save(st)
+    body = (NL + NL).join(card(i, c) for i, c in enumerate(cands, 1))
+    TG.send(NL.join([head, "", body, "", "번호를 보내면 만들어 드립니다."]),
+            quiet=True)
+
+
+def find(term: str) -> None:
+    from content import briefing as B
+    data = metrics()
+    if not data:
+        TG.send("지표 파일이 없습니다.", quiet=True)
+        return
+    got = B.search_apts(data, term)
+    if not got:
+        TG.send(f'"{term}" 로 찾은 단지가 없습니다.{NL}'
+                f'오늘 신고가 목록 안에서만 찾습니다 — 덱 첫 장이 '
+                f'"종전 최고가"라서, 신고가가 아닌 단지로 만들면 그 문구가 '
+                f'거짓이 됩니다.', quiet=True)
+        return
+    offer(got, f'"{term}" 로 찾은 단지 {len(got)}곳')
+
+
+def other_pyeongs() -> None:
+    """같은 단지 다른 평형. 둘이 같은 날 신고가를 치는 일이 있다."""
+    from content import briefing as B
+    st = load()
+    info = st.get("last_info")
+    data = metrics()
+    if not (info and data):
+        TG.send("먼저 번호를 보내 주세요.", quiet=True)
+        return
+    apt_id = str(info.get("key", "")).split(":")[0]
+    got = B.pyeongs_of(data, apt_id)
+    if len(got) < 2:
+        TG.send(f'{info.get("apt_name")} 는 오늘 신고가가 '
+                f'{len(got)}개 평형뿐입니다.', quiet=True)
+        return
+    offer(got, f'{got[0]["apt_name"]} 의 평형 {len(got)}개')
+
+
+# ── 발행 패키지 (T17) ────────────────────────────────────────────────────
+def resolve(st: dict):
+    """마지막에 고른 단지로 (지표, Candidate, info) 를 되살린다.
+
+    캐러셀·스레드도 **같은 단지**로 나와야 한다. 각자 자동 선정을 돌리면
+    영상은 양천구인데 캐러셀은 다른 구가 되는 일이 생긴다.
+    """
+    from content import cover as CV
+    from metrics.build_metrics import profile_for
+
+    info, asof = st.get("last_info"), st.get("last_asof")
+    rows_, cands = st.get("rows") or [], st.get("candidates") or []
+    if not (info and asof):
+        return None, None, None
+    data = metrics()
+    if not data or data["asof"] != asof:
+        return None, None, None
+    # 이름이 아니라 **키**로 찾는다. 한 단지가 평형 둘로 올라오는 날이
+    # 있고(병점역아이파크캐슬 20·30평대), 이름으로 맞추면 엉뚱한 평형의
+    # 캐러셀이 영상과 다른 숫자를 들고 나간다.
+    row = next((r for i, r in enumerate(rows_)
+                if i < len(cands)
+                and cands[i].get("key") == info.get("key")), None)
+    if row is None or not profile_for(data, row):
+        return None, None, None
+    cand = next((c for c in CV.build(data)
+                 if f'{c.data.get("apt_id")}:{c.data.get("pyeong_bucket")}'
+                 == info.get("key")), None)
+    return data, cand, info
+
+
+def send_carousel() -> None:
+    """캐러셀 6장. 피드에도 올리실 수 있게."""
+    from content import carousel as C
+    st = load()
+    data, cand, info = resolve(st)
+    if cand is None:
+        TG.send("먼저 번호를 보내 영상을 만들어 주세요.", quiet=True)
+        return
+    TG.send("캐러셀 6장을 만들겠습니다. 1분쯤 걸려요.", quiet=True)
+    try:
+        outdir = ROOT / "output" / data["asof"]
+        cards = C.build_cards(data, outdir, force=cand)
+        if not cards:
+            TG.send("캐러셀 재료가 모자랐습니다.", quiet=True)
+            return
+        made, problems = C.render(cards, outdir, cand.data.get("params") or {})
+        for p in made:
+            TG.send_file(p, "", quiet=True)
+        msg = f'{info["apt_name"]} 캐러셀 {len(made)}장'
+        if problems:
+            msg += f'{NL}넘침 경고 {len(problems)}건 — PC 에서 확인하세요'
+        TG.send(msg, quiet=True)
+    except Exception as e:
+        TG.send(f"캐러셀에서 막혔습니다 — {TG.mask(str(e) or type(e).__name__)}")
+        traceback.print_exc()
+
+
+def send_thread() -> None:
+    """스레드 본문. 검증을 통과한 것만 보낸다."""
+    from content import thread as TH
+    st = load()
+    data, cand, info = resolve(st)
+    if cand is None:
+        TG.send("먼저 번호를 보내 영상을 만들어 주세요.", quiet=True)
+        return
+    try:
+        items = TH.generate("new_high", data, 1, force=cand)
+        ok = [r for r in items if r.get("ok")]
+        if not ok:
+            why = NL.join(f'· {w}' for r in items for w in r.get("reasons", []))
+            TG.send(f'스레드가 검증에 걸렸습니다.{NL}{why}', quiet=True)
+            return
+        for r in ok:
+            TG.send(r["text"], quiet=True)
+    except Exception as e:
+        TG.send(f"스레드에서 막혔습니다 — {TG.mask(str(e) or type(e).__name__)}")
+        traceback.print_exc()
+
+
+def send_all() -> None:
+    """영상 + 캐러셀 + 캡션 + 스레드. 폰에서 그대로 올리실 수 있게."""
+    st = load()
+    last = st.get("last")
+    if last and Path(last).exists():
+        TG.send_file(last, st.get("last_label", ""), quiet=True)
+    send_carousel()
+    send_thread()
+    TG.send("다 보냈습니다. 올리신 뒤 /done 을 보내 주세요.", quiet=True)
+
+
+# ── 발행 기록 ────────────────────────────────────────────────────────────
+def mark(status: str) -> None:
+    """마지막에 만든 것을 올렸는지 기록한다.
+
+    수동 업로드라서 올렸다는 사실은 사람만 안다. 이 한 줄이 없으면 다음 주
+    중복 방지가 아무 일도 못 한다 — 같은 지역을 연달아 권하게 된다.
+    """
+    st = load()
+    info, asof = st.get("last_info"), st.get("last_asof")
+    if not (info and asof):
+        TG.send("아직 만든 게 없습니다. 번호를 먼저 보내 주세요.", quiet=True)
+        return
+    LD.record(asof, info, status)
+    if status == LD.PUBLISHED:
+        TG.send(f'기록했습니다 — {info["apt_name"]} ({info["region"]}).{NL}'
+                f'다음 회차 표지에서 {info["region"]} 는 빼겠습니다.', quiet=True)
+    else:
+        TG.send(f'건너뜀으로 기록했습니다 — {info["apt_name"]}. '
+                f'다시 권해도 됩니다.', quiet=True)
+
+
+def show_log(n: int = 8) -> None:
+    rs = LD.recent(n)
+    if not rs:
+        TG.send("아직 발행 기록이 없습니다.", quiet=True)
+        return
+    lines = []
+    for r in rs:
+        mk = "올림" if r.get("status") == LD.PUBLISHED else "건너뜀"
+        lines.append(f'{r.get("asof")}  {r.get("apt_name")} '
+                     f'({r.get("region")}) — {mk}')
+    blocked = LD.regions(2)
+    tail = (f'{NL}다음 회차에 피할 지역: {", ".join(sorted(blocked))}'
+            if blocked else "")
+    TG.send("최근 발행 기록" + NL + NL.join(lines) + tail, quiet=True)
+
+
 # ── 받기 ─────────────────────────────────────────────────────────────────
 def handle(text: str) -> None:
     t = (text or "").strip()
@@ -220,6 +420,26 @@ def handle(text: str) -> None:
             TG.send_file(last, st.get("last_label", ""), quiet=True)
         else:
             TG.send("아직 만든 영상이 없습니다.", quiet=True)
+    elif low.startswith(("/단지", "/find", "/찾기")):
+        term = t.split(maxsplit=1)
+        if len(term) < 2:
+            TG.send("예: /단지 래미안", quiet=True)
+        else:
+            find(term[1])
+    elif low in ("/평형", "/pyeong"):
+        other_pyeongs()
+    elif low in ("/carousel", "/캐러셀"):
+        send_carousel()
+    elif low in ("/thread", "/스레드"):
+        send_thread()
+    elif low in ("/all", "/전부"):
+        send_all()
+    elif low in ("/done", "/올림", "올림"):
+        mark(LD.PUBLISHED)
+    elif low in ("/skip", "/건너뜀"):
+        mark(LD.SKIPPED)
+    elif low == "/log":
+        show_log()
     elif t.isdigit():
         make(int(t))
     else:

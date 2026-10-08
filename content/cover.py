@@ -207,6 +207,12 @@ def recent_regions(asof: str | None = None, n: int = RECENT_WEEKS) -> set[str]:
     걸려서 다른 지역이 나온다 — 캐러셀은 마포구, 캡션은 구로구가 되는
     식으로 같은 발행물 안에서 말이 갈린다. 실제로 그렇게 어긋났다.
     """
+    # 발행 원장이 쓰이기 시작했으면 그쪽이 맞다. cover_log 는 **고른** 기록
+    # 이라, 봇으로 만들기만 하고 버린 지역까지 다음 주를 막는다.
+    from content import ledger as LD
+    if LD.has_any():
+        return LD.regions(n, exclude_asof=asof)
+
     if not LOG.exists():
         return set()
     try:

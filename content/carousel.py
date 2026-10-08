@@ -633,10 +633,13 @@ def n3_region(t: dict) -> dict | None:
                     + D.foot(t["asof"], "평소 = 지난 52주 평균")}
 
 
-def build_cards(data: dict, chart_dir: Path | None = None) -> list[dict]:
+def build_cards(data: dict, chart_dir: Path | None = None,
+                force=None) -> list[dict]:
     """chart_dir 은 더 이상 읽지 않는다 — 차트 조각을 카드에 넣지 않는다.
-    호출부(테스트 포함)가 넘기고 있어 인자만 남긴다."""
-    t = pick(data)
+    호출부(테스트 포함)가 넘기고 있어 인자만 남긴다.
+
+    force 는 표지 강제 (사람이 텔레그램에서 고른 단지)."""
+    t = pick(data, force=force)
     if t is None:
         return []
     # 신고가 재료가 없으면 6장으로 낸다. 억지로 7장을 채우려고 같은 단지를
