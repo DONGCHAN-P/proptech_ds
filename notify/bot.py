@@ -66,6 +66,8 @@ HELP = """쓸 수 있는 것
 
 /단지 래미안   이름으로 찾기 (오늘 신고가 목록 안에서)
 /예산 6       "6억이면 어디 살 수 있나" 지도
+/역세권       "역세권, 진짜 비쌀까" (착시 걷어내기)
+/시간여행     "20년 전 그 아파트는 얼마였나"
 /평형        같은 단지 다른 평형으로
 
 /done    올렸다고 기록 (다음 회차에 그 지역을 피합니다)
@@ -281,6 +283,64 @@ def budget_map(cap: float) -> None:
         traceback.print_exc()
 
 
+def agenda_run(kind: str) -> None:
+    """지역·비교 단위 아젠다 한 편.
+
+    단지 소개와 달리 고를 것이 없다 — 데이터가 정해 준다. 그래서 후보
+    목록을 거치지 않고 바로 만든다.
+    """
+    jobs = {
+        "subway": ("역세권 프리미엄", "content.subway", "subway.mp4"),
+        "timetravel": ("20년 시간여행", "content.timetravel", None),
+    }
+    title, mod, fixed = jobs[kind]
+    TG.send(f"{title} 한 편 만들겠습니다. 1~2분 걸려요.", quiet=True)
+    try:
+        import importlib
+        m = importlib.import_module(mod)
+        data = m.compute()
+        outdir = ROOT / "output" / data["asof"]
+        name = fixed or f'timetravel_{data["from_year"]}.mp4'
+        from content import agenda as AG
+        out = AG.publish(m.scenes(data), kind, outdir, name)
+        st = load()
+        st["last"] = str(out)
+        st["last_label"] = title
+        # 단지가 없는 아젠다다. 단지 기준 발행 기록은 비운다.
+        st.pop("last_info", None)
+        st.pop("last_asof", None)
+        save(st)
+        TG.send_file(out, title, quiet=True)
+        TG.send(summary(kind, data), quiet=True)
+    except Exception as e:
+        TG.send(f"{title}에서 막혔습니다 — "
+                f"{TG.mask(str(e) or type(e).__name__)}")
+        traceback.print_exc()
+
+
+def summary(kind: str, d: dict) -> str:
+    """폰에서 바로 읽을 요약. 영상을 틀기 전에 쓸 만한지 판단할 수 있게."""
+    if kind == "subway":
+        return NL.join([
+            f'전체로 보면 {d["naive"]}배',
+            f'같은 구 안에서 보면 {d["median_gap"]}배 '
+            f'({d["regions"]}곳 중앙값)',
+            f'역에서 먼 쪽이 비싼 곳 {d["cheaper_n"]}곳',
+        ])
+    rows = d["rows"]
+    out = [f'서울 {d["from_year"]} → {d["to_year"]} : '
+           f'{d["seoul_times"]}배']
+    out.append(f'가장 많이 오른 곳 {rows[0]["sigungu_name"]} '
+               f'{rows[0]["times"]}배')
+    if d.get("pair"):
+        hi, lo = d["pair"]
+        from content import agenda as AG
+        out.append(f'{d["from_year"]}년 같은 값이었던 '
+                   f'{hi["sigungu_name"]}·{lo["sigungu_name"]} → '
+                   f'{AG.eok(hi["new"] - lo["new"])} 차이')
+    return NL.join(out)
+
+
 # ── 후보 밖 찾기 ─────────────────────────────────────────────────────────
 def offer(cands: list[dict], head: str) -> None:
     """찾은 것을 번호와 묶어 내놓는다. 상태를 덮어써야 번호가 통한다."""
@@ -473,6 +533,10 @@ def handle(text: str) -> None:
             TG.send_file(last, st.get("last_label", ""), quiet=True)
         else:
             TG.send("아직 만든 영상이 없습니다.", quiet=True)
+    elif low in ("/역세권", "/subway"):
+        agenda_run("subway")
+    elif low in ("/시간여행", "/timetravel"):
+        agenda_run("timetravel")
     elif low.startswith(("/예산", "/budget")):
         part = t.split(maxsplit=1)
         if len(part) < 2:
