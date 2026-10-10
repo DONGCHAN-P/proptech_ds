@@ -173,7 +173,8 @@ def svg(highlight: dict[str, str], *, width: int, height: int,
         line: str, fill: str, label_color: str,
         label_halo: str = "#FFFFFF",
         scope: str | None = None,
-        pins: list[dict] | None = None) -> str | None:
+        pins: list[dict] | None = None,
+        show_labels: bool = True) -> str | None:
     """수도권 지도 SVG.
 
     `highlight` 는 {우리 시군구명: 색}. 거기 없는 곳은 전부 중립색이다 —
@@ -231,7 +232,9 @@ def svg(highlight: dict[str, str], *, width: int, height: int,
         parts.append(f'<path d="{"".join(d)}" fill="{hit[0] if hit else fill}" '
                      f'stroke="#FFFFFF" stroke-width="2" '
                      f'stroke-linejoin="round"/>')
-        if hit and n:
+        # 시군구 이름이 늘 맞는 이름은 아니다. 신도시 지도처럼 핀이 더
+        # 정확한 이름(광교·동탄)을 들고 있으면 경계 라벨은 방해만 된다.
+        if hit and n and show_labels:
             labels.append((cx / n, cy / n, hit[1]))
 
     for x, y, nm in labels:
