@@ -131,7 +131,7 @@ def fab_map() -> tuple[str, str]:
           "평택시": G.mix(D.BG, GOLD, 0.35),
           "이천시": G.mix(D.BG, GOLD, 0.35),
           "용인기흥구": G.mix(D.BG, GOLD, 0.35)}
-    svg = G.svg(hl, width=1180, height=700, line=D.SUB, fill=D.NEUTRAL,
+    svg = G.svg(hl, width=1180, height=638, line=D.SUB, fill=D.NEUTRAL,
                 label_color=D.INK, label_halo="#FFFFFF", pins=pins,
                 show_labels=False) or ""
     side = (f'<div class="cap">동탄에서 출퇴근권</div>'
@@ -171,7 +171,7 @@ def gen23_map() -> tuple[str, str]:
           "남양주시": G.mix(D.BG, GOLD, 0.4),
           "하남시": G.mix(D.BG, GOLD, 0.4),
           "용인처인구": G.mix(D.BG, GOLD, 0.4)}
-    svg = G.svg(hl, width=1180, height=720, line=D.SUB, fill=D.NEUTRAL,
+    svg = G.svg(hl, width=1180, height=638, line=D.SUB, fill=D.NEUTRAL,
                 label_color=D.INK, label_halo="#FFFFFF", pins=pins,
                 show_labels=False) or ""
     side = (
@@ -204,7 +204,7 @@ def woncheon() -> tuple[str, str]:
     무엇이 있었고 지금 무엇이 있는가'를 글자와 지도로 보여 준다.
     """
     hl = {"수원영통구": G.mix(D.BG, WIN, 0.5)}
-    svg = G.svg(hl, width=900, height=620, line=D.SUB, fill=D.NEUTRAL,
+    svg = G.svg(hl, width=880, height=600, line=D.SUB, fill=D.NEUTRAL,
                 label_color=D.INK, label_halo="#FFFFFF",
                 pins=[{"label": "광교", "lat": 37.2860, "lng": 127.0530,
                        "primary": True},

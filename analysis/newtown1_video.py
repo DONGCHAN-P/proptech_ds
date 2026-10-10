@@ -20,14 +20,23 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from content import frame as FR  # noqa: E402
 from content import longvideo as LV  # noqa: E402
 
 ART = ROOT / "output" / "longform" / "newtown1"
 CARDS = ART / "cards"
+FRAMES = ART / "frames"
 OUT = ROOT / "output" / "longform" / "newtown1_full.mp4"
+
+# 장(章). 테두리 오른쪽 위에 뜨고 진행 점이 여기 맞춰 움직인다.
+# 너무 잘게 나누면 점이 기어가는 것처럼 보이고, 뭉치면 어디쯤인지 모른다.
+CHAPTERS = ["여는 말", "영통", "광교", "동탄", "반례", "착시",
+            "원인", "다시 재기", "시점", "같은 동탄", "결론",
+            "한계", "질문", "후보", "예고"]
 
 _cards: dict[str, str] = {}
 _n = 0
+_chap = CHAPTERS[0]
 
 
 def card(kind: str, **kw) -> str:
@@ -42,7 +51,14 @@ def card(kind: str, **kw) -> str:
 def B(visual: str, text: str = "", motion: str = "in",
       section: bool = False, hold: float = 0.0) -> LV.Beat:
     return LV.Beat(visual=visual, text=text, motion=motion,
-                   section=section, hold=hold)
+                   section=section, hold=hold, chapter=_chap)
+
+
+def CH(name: str) -> None:
+    """여기부터 새 장. 뒤따르는 B() 들이 이 이름을 단다."""
+    global _chap
+    assert name in CHAPTERS, name
+    _chap = name
 
 
 def beats() -> list[LV.Beat]:
@@ -73,6 +89,7 @@ def beats() -> list[LV.Beat]:
                "still"))
 
     # ── 영통 ─────────────────────────────────────────────────────────────
+    CH("영통")
     b.append(B(card("title", sec="01", big="영통에서 본<br>두 번의 변화"),
                "", "still", section=True, hold=1.6))
     b.append(B(card("plain", big="수원 영통",
@@ -88,6 +105,7 @@ def beats() -> list[LV.Beat]:
                "변화를 두 번 겪었습니다."))
 
     # ── 광교 ─────────────────────────────────────────────────────────────
+    CH("광교")
     b.append(B(card("title", sec="02", big="첫 번째,<br><b>광교</b>"),
                "", "still", section=True, hold=1.6))
     b.append(B("A1_woncheon.png",
@@ -121,6 +139,7 @@ def beats() -> list[LV.Beat]:
                "짜였습니다."))
 
     # ── 동탄 ─────────────────────────────────────────────────────────────
+    CH("동탄")
     b.append(B(card("title", sec="03", big="두 번째,<br><b>동탄</b>"),
                "", "still", section=True, hold=1.6))
     b.append(B(card("plain", big='이번에도<br><em>"거기를 왜 가냐"</em>'),
@@ -164,6 +183,7 @@ def beats() -> list[LV.Beat]:
                "있습니다."))
 
     # ── 반례 ─────────────────────────────────────────────────────────────
+    CH("반례")
     b.append(B(card("title", sec="04", dark=True,
                     big="그런데,<br><em>안 오른 신도시</em>도<br>있습니다"),
                "", "still", section=True, hold=1.8))
@@ -188,6 +208,7 @@ def beats() -> list[LV.Beat]:
                "지금은 세 배 가까이 벌어져 있습니다.", "in", hold=1.5))
 
     # ── 착시 ─────────────────────────────────────────────────────────────
+    CH("착시")
     b.append(B(card("title", sec="05", dark=True,
                     big="여기서 제 기준이<br><em>한 번 무너집니다</em>"),
                "", "still", section=True, hold=1.8))
@@ -209,6 +230,7 @@ def beats() -> list[LV.Beat]:
                hold=1.0))
 
     # ── 왜 틀렸나 ────────────────────────────────────────────────────────
+    CH("원인")
     b.append(B(card("title", sec="06", big="무엇이<br><b>잘못됐나</b>"),
                "", "still", section=True, hold=1.6))
     b.append(B(card("plain",
@@ -238,6 +260,7 @@ def beats() -> list[LV.Beat]:
                "같은 자로 잰 게 아니었던 겁니다.", "still", hold=1.0))
 
     # ── 다시 재면 ────────────────────────────────────────────────────────
+    CH("다시 재기")
     b.append(B(card("title", sec="07", big="다시<br><b>재면</b>"),
                "", "still", section=True, hold=1.6))
     b.append(B(card("plain", big="두 해 모두 거래된<br><b>같은 단지만</b>",
@@ -255,6 +278,7 @@ def beats() -> list[LV.Beat]:
                "처음에 세웠던 기준이 이제야 데이터로 섭니다.", "still"))
 
     # ── 언제 갈렸나 ──────────────────────────────────────────────────────
+    CH("시점")
     b.append(B(card("title", sec="08", big="언제<br><b>갈렸나</b>"),
                "", "still", section=True, hold=1.6))
     b.append(B("05_split.png",
@@ -276,6 +300,7 @@ def beats() -> list[LV.Beat]:
                "내렸습니다.", "still", hold=1.0))
 
     # ── 같은 동탄 ────────────────────────────────────────────────────────
+    CH("같은 동탄")
     b.append(B(card("title", sec="09",
                     big="같은 동탄인데도<br><b>갈렸습니다</b>"),
                "", "still", section=True, hold=1.6))
@@ -309,6 +334,7 @@ def beats() -> list[LV.Beat]:
                "이야기의 가장 깨끗한 증거입니다.", "still"))
 
     # ── 무엇이 갈랐나 ────────────────────────────────────────────────────
+    CH("결론")
     b.append(B(card("title", sec="10", big="무엇이<br><b>갈랐나</b>"),
                "", "still", section=True, hold=1.6))
     b.append(B("08_map.png",
@@ -360,6 +386,7 @@ def beats() -> list[LV.Beat]:
                "했습니다.", "still", hold=1.2))
 
     # ── 한계 ─────────────────────────────────────────────────────────────
+    CH("한계")
     b.append(B(card("title", sec="11", dark=True,
                     big="다만, 이건<br><em>여섯 사례</em>에서<br>"
                         "뽑은 패턴입니다"),
@@ -385,6 +412,7 @@ def beats() -> list[LV.Beat]:
                "압니다.", "still", hold=1.0))
 
     # ── 질문 ─────────────────────────────────────────────────────────────
+    CH("질문")
     b.append(B(card("title", sec="12", big="그래서<br>생긴 <b>질문</b>"),
                "", "still", section=True, hold=1.6))
     b.append(B(card("plain", dark=True,
@@ -397,6 +425,7 @@ def beats() -> list[LV.Beat]:
                "데이터로 골라보려고 합니다.", "still"))
 
     # ── 후보 ─────────────────────────────────────────────────────────────
+    CH("후보")
     b.append(B(card("title", sec="13", big="후보<br><b>네 곳</b>"),
                "", "still", section=True, hold=1.6))
     b.append(B("A7_gen2_gen3.png",
@@ -430,6 +459,7 @@ def beats() -> list[LV.Beat]:
                "있습니다.", "out"))
 
     # ── 예고 ─────────────────────────────────────────────────────────────
+    CH("예고")
     b.append(B(card("title", sec="14", big="다음 영상<br><b>예고</b>"),
                "", "still", section=True, hold=1.6))
     b.append(B(card("plain", big="한 곳씩<br>다뤄보겠습니다",
@@ -480,11 +510,14 @@ def main() -> int:
 
     print("\n  카드 만드는 중...")
     LV.build_cards(_cards, CARDS)
+    print("  테두리 만드는 중...")
+    chrome = FR.build(CHAPTERS, FRAMES, ep="신도시 시리즈 · ",
+                      source="국토교통부 실거래가 · 해제 건 제외")
     if a.cards:
         return 0
 
     print("  영상 만드는 중...")
-    out = LV.render(bs, ART, OUT)
+    out = LV.render(bs, ART, OUT, chrome)
     srt = LV.write_srt(bs, OUT.with_suffix(".srt"))
     cue = LV.cue_sheet(bs, ROOT / "docs" / "longform" /
                        "2026-10-10-newtown-1-cue.md")

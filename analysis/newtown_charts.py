@@ -18,7 +18,10 @@ from content import design as D  # noqa: E402
 from metrics.filters import trades_cte  # noqa: E402
 
 TRADE = (ROOT / "master" / "trade_events.parquet").as_posix()
-W, H = 1920, 1080
+from content import frame as FR  # noqa: E402
+# 테두리 안쪽 판에 꼭 맞게 그린다. 1920 으로 그려 줄이면
+# 글자가 한 번 더 뭉개진다.
+W, H = FR.CONTENT_W, FR.CONTENT_H
 OUT = ROOT / "output" / "longform" / "newtown1"
 
 WIN = "#2F6FED"    # 성공조
@@ -33,41 +36,42 @@ def css() -> str:
     return f"""
 {D.base_css()}
 .pg{{width:{W}px;height:{H}px;background:{D.BG};position:relative;
-    padding:68px 80px;box-sizing:border-box;
+    padding:56px 68px;box-sizing:border-box;
+    border-radius:{FR.RADIUS}px;overflow:hidden;
     font-family:Pretendard,system-ui,sans-serif;color:{D.INK};}}
-.kick{{font-size:30px;font-weight:600;color:{D.SUB};letter-spacing:-.01em;}}
-.ttl{{font-size:64px;font-weight:800;letter-spacing:-.03em;margin-top:8px;
+.kick{{font-size:27px;font-weight:600;color:{D.SUB};letter-spacing:-.01em;}}
+.ttl{{font-size:54px;font-weight:800;letter-spacing:-.03em;margin-top:8px;
      line-height:1.14;}}
 .ttl em{{font-style:normal;color:{LOSE};}}
 .ttl b{{color:{WIN};}}
-.note{{position:absolute;left:80px;bottom:48px;font-size:24px;
+.note{{position:absolute;left:68px;bottom:34px;right:68px;font-size:21px;
       color:{D.SUB};line-height:1.5;}}
-.wrap{{margin-top:44px;}}
-table{{width:100%;border-collapse:collapse;font-size:34px;}}
-th{{font-size:26px;color:{D.SUB};font-weight:600;text-align:right;
-   padding:0 0 14px;}}
+.wrap{{margin-top:26px;}}
+table{{width:100%;border-collapse:collapse;font-size:30px;}}
+th{{font-size:23px;color:{D.SUB};font-weight:600;text-align:right;
+   padding:0 0 10px;}}
 th:first-child{{text-align:left;}}
-td{{padding:13px 0;border-top:1px solid {D.LINE};text-align:right;
+td{{padding:9px 0;border-top:1px solid {D.LINE};text-align:right;
    font-weight:700;font-variant-numeric:tabular-nums;}}
 td:first-child{{text-align:left;font-weight:600;}}
 tr.win td{{color:{WIN};}}
 tr.lose td{{color:{LOSE};}}
 tr.base td{{color:{D.SUB};}}
 tr.base td:first-child{{color:{D.SUB};}}
-.bars{{display:flex;flex-direction:column;gap:20px;margin-top:10px;}}
+.bars{{display:flex;flex-direction:column;gap:13px;margin-top:6px;}}
 .bar .t{{display:flex;justify-content:space-between;align-items:baseline;
-        font-size:32px;font-weight:700;}}
-.bar .t small{{font-size:24px;font-weight:500;color:{D.SUB};}}
-.bar .track{{height:30px;border-radius:999px;background:#E9E6DE;
-            margin-top:9px;position:relative;overflow:hidden;}}
+        font-size:28px;font-weight:700;}}
+.bar .t small{{font-size:21px;font-weight:500;color:{D.SUB};}}
+.bar .track{{height:23px;border-radius:999px;background:#E9E6DE;
+            margin-top:7px;position:relative;overflow:hidden;}}
 .bar .fill{{height:100%;border-radius:999px;position:absolute;top:0;}}
-.lg{{display:flex;gap:30px;font-size:26px;color:{D.SUB};margin-top:26px;}}
+.lg{{display:flex;gap:26px;font-size:23px;color:{D.SUB};margin-top:18px;}}
 .lg i{{width:26px;height:26px;border-radius:7px;display:inline-block;
       margin-right:9px;vertical-align:-4px;}}
 .two{{display:flex;gap:56px;}}
 .two>div{{flex:1;}}
-.cap{{font-size:28px;font-weight:700;color:{D.SUB};margin-bottom:14px;}}
-.big{{font-size:120px;font-weight:800;letter-spacing:-.04em;line-height:1;}}
+.cap{{font-size:25px;font-weight:700;color:{D.SUB};margin-bottom:14px;}}
+.big{{font-size:104px;font-weight:800;letter-spacing:-.04em;line-height:1;}}
 .big.w{{color:{WIN};}} .big.l{{color:{LOSE};}}
 """
 
@@ -377,7 +381,7 @@ def chart_map(c) -> tuple[str, str]:
         if t not in WINNERS:
             hl[TOWNS[t][0]] = G.mix(D.BG, LOSE, 0.55)
     hl["강남구"] = "#111111"
-    svg = G.svg(hl, width=1180, height=700, line=D.SUB, fill=D.NEUTRAL,
+    svg = G.svg(hl, width=1180, height=638, line=D.SUB, fill=D.NEUTRAL,
                 label_color=D.INK, label_halo="#FFFFFF", pins=PINS,
                 show_labels=False) or ""
     side = (
@@ -399,22 +403,44 @@ def chart_map(c) -> tuple[str, str]:
         "경계: 통계청 SGIS · 점은 각 신도시 중심의 대략적 위치입니다")
 
 
+OVERFLOW_JS = """() => {
+  const el = document.querySelector('.pg');
+  const note = document.querySelector('.note');
+  const wrap = document.querySelector('.wrap');
+  const bad = [];
+  if (el && el.scrollHeight > el.clientHeight + 2)
+    bad.push(`${el.scrollHeight - el.clientHeight}px 넘침`);
+  if (note && wrap) {
+    const n = note.getBoundingClientRect(), w = wrap.getBoundingClientRect();
+    if (w.bottom > n.top + 2)
+      bad.push(`각주와 ${(w.bottom - n.top).toFixed(0)}px 겹침`);
+  }
+  return bad;
+}"""
+
+
 def render(pages, outdir: Path) -> list[Path]:
+    """판 크기를 바꾸면 조용히 넘친다. 찍기 전에 재고 세운다 — 마지막
+    행이 잘린 채로 영상에 들어간 적이 있다."""
     from playwright.sync_api import sync_playwright
     outdir.mkdir(parents=True, exist_ok=True)
-    made = []
+    made, bad = [], []
     with sync_playwright() as pw:
         br = pw.chromium.launch()
         for name, html in pages:
             pg = br.new_page(viewport={"width": W, "height": H},
-                             device_scale_factor=1)
+                             device_scale_factor=2)
             pg.set_content(f"<style>{css()}</style>{html}", wait_until="load")
             pg.wait_for_timeout(200)
+            for w in pg.evaluate(OVERFLOW_JS):
+                bad.append(f"{name}: {w}")
             out = outdir / f"{name}.png"
             pg.screenshot(path=str(out))
             pg.close()
             made.append(out)
         br.close()
+    if bad:
+        raise RuntimeError("판을 넘쳤다 — " + " / ".join(bad))
     return made
 
 

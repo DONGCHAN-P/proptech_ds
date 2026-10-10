@@ -28,8 +28,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from content import design as D  # noqa: E402
+from content import frame as FR  # noqa: E402
 
-W, H, FPS = 1920, 1080, 30
+# 바깥 틀은 1920x1080 이고, 그림이 들어가는 안쪽 판은 더 작다.
+# 테두리는 고정이고 본문만 움직인다 — 켄번즈로 테두리까지 흔들면
+# 멀미가 나고 계정 이름이 안 읽힌다.
+W, H, FPS = FR.CONTENT_W, FR.CONTENT_H, 30
+OUT_W, OUT_H = FR.W, FR.H
 CPS = 5.6              # 초당 읽는 글자 수 (분당 약 336자)
 MIN_DUR = 2.6          # 아무리 짧아도 이만큼은 둔다
 PAD = 0.45             # 문장 사이 숨 쉬는 시간
@@ -46,6 +51,7 @@ class Beat:
     motion: str = "in"           # in | out | still | panL | panR
     section: bool = False        # 여기서 단락이 바뀌나 (디졸브)
     hold: float = 0.0            # 내레이션 없이 더 두고 싶을 때
+    chapter: str = ""            # 테두리 오른쪽 위에 뜨는 장 이름
     dur: float = field(default=0.0, init=False)
 
     def measure(self) -> float:
@@ -183,25 +189,35 @@ def motion_filter(motion: str, dur: float) -> str:
             f"s={W}x{H}:fps={FPS},format=yuv420p")
 
 
-def clip(src: Path, dur: float, motion: str, out: Path,
+def clip(src: Path, chrome: Path, dur: float, motion: str, out: Path,
          fade_in: bool, fade_out: bool) -> None:
+    """본문을 움직여 안쪽 판에 넣고, 그 위에 고정 테두리를 얹는다."""
     vf = motion_filter(motion, dur)
     if fade_in:
         vf += f",fade=t=in:st=0:d={FADE}:c={D.BG}"
     if fade_out:
         vf += f",fade=t=out:st={max(0, dur - FADE):.3f}:d={FADE}:c={D.BG}"
-    cmd = ["ffmpeg", "-v", "error", "-y", "-loop", "1", "-i", str(src),
-           "-t", f"{dur:.3f}", "-vf", vf,
+    fc = (f"color=c={FR.SHELL}:s={OUT_W}x{OUT_H}:r={FPS}[bg];"
+          f"[0:v]{vf}[c];"
+          f"[bg][c]overlay={FR.CONTENT_X}:{FR.CONTENT_Y}:shortest=1[b];"
+          f"[b][1:v]overlay=0:0:format=auto,format=yuv420p[v]")
+    cmd = ["ffmpeg", "-v", "error", "-y",
+           "-loop", "1", "-i", str(src),
+           "-loop", "1", "-i", str(chrome),
+           "-filter_complex", fc, "-map", "[v]",
+           "-t", f"{dur:.3f}",
            "-c:v", "libx264", "-pix_fmt", "yuv420p", "-r", str(FPS),
            "-preset", "medium", "-crf", "19", str(out)]
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode:
-        raise RuntimeError(f"{src.name}: {r.stderr[-400:]}")
+        raise RuntimeError(f"{src.name}: {r.stderr[-500:]}")
 
 
-def render(beats: list[Beat], assets: Path, out: Path) -> Path:
+def render(beats: list[Beat], assets: Path, out: Path,
+           chrome: dict[str, Path]) -> Path:
     """장면마다 짧은 클립을 만들고 이어 붙인다."""
     tmp = Path(tempfile.mkdtemp(prefix="longvid_"))
+    first = next(iter(chrome.values()))
     try:
         parts = []
         for i, b in enumerate(beats):
@@ -211,7 +227,7 @@ def render(beats: list[Beat], assets: Path, out: Path) -> Path:
                 raise FileNotFoundError(src)
             nxt = beats[i + 1] if i + 1 < len(beats) else None
             p = tmp / f"c{i:03d}.mp4"
-            clip(src, b.dur, b.motion, p,
+            clip(src, chrome.get(b.chapter, first), b.dur, b.motion, p,
                  fade_in=b.section or i == 0,
                  fade_out=bool(nxt and nxt.section) or nxt is None)
             parts.append(p)
