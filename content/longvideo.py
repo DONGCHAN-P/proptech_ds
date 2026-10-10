@@ -155,6 +155,64 @@ def build_cards(cards: dict[str, str], outdir: Path) -> None:
         br.close()
 
 
+# ── 자막 띠 ──────────────────────────────────────────────────────────────
+# 참고한 포맷(비디오머그 「오그랩」)의 핵심은 **자막이 두 겹**이라는 것이다.
+# 평범한 서술은 하단 박스 자막으로 흘리고, 때릴 문장만 큰 카드로 때린다.
+# 그 교대가 리듬을 만든다. 우리는 큰 카드를 이미 쓰고 있었으니 띠가 없었다.
+SUB_W = FR.CONTENT_W - 180      # 카드 안쪽에서 양옆을 띄운다
+SUB_BOTTOM = 26                 # 카드 아래 끝에서 띄우는 거리
+
+
+def subs_css() -> str:
+    return f"""
+@font-face{{font-family:Pretendard;src:local('Pretendard');}}
+*{{margin:0;padding:0;box-sizing:border-box;}}
+body{{width:{OUT_W}px;height:{OUT_H}px;background:transparent;
+     font-family:Pretendard,system-ui,sans-serif;
+     -webkit-font-smoothing:antialiased;}}
+.band{{position:absolute;left:50%;transform:translateX(-50%);
+      bottom:{OUT_H - FR.CONTENT_Y - FR.CONTENT_H + SUB_BOTTOM}px;
+      max-width:{SUB_W}px;
+      padding:15px 34px;border-radius:11px;
+      background:#FFFFFF;
+      /* 테두리를 두 겹으로 둔다. 바깥은 노랑, 안쪽은 먹색 실선 —
+         밝은 차트 위에서도 어두운 카드 위에서도 띠가 뜬다. */
+      border:3px solid {D.ACCENT};
+      box-shadow:0 0 0 1.5px rgba(17,17,17,.82),
+                 0 14px 34px rgba(0,0,0,.30);
+      font-size:34px;font-weight:700;color:{D.INK};
+      line-height:1.42;text-align:center;letter-spacing:-.015em;
+      word-break:keep-all;}}
+"""
+
+
+def sub_html(text: str) -> str:
+    return f'<div class="band">{text}</div>'
+
+
+def build_subs(beats: list[Beat], outdir: Path) -> dict[int, Path]:
+    """비트마다 자막 띠 한 장. 내레이션이 없는 비트는 만들지 않는다."""
+    from playwright.sync_api import sync_playwright
+    outdir.mkdir(parents=True, exist_ok=True)
+    out: dict[int, Path] = {}
+    with sync_playwright() as pw:
+        br = pw.chromium.launch()
+        pg = br.new_page(viewport={"width": OUT_W, "height": OUT_H},
+                         device_scale_factor=1)
+        for i, b in enumerate(beats):
+            t = b.text.strip()
+            if not t:
+                continue
+            pg.set_content(f"<style>{subs_css()}</style>{sub_html(t)}",
+                           wait_until="load")
+            pg.wait_for_timeout(60)
+            f = outdir / f"sub_{i:03d}.png"
+            pg.screenshot(path=str(f), omit_background=True)
+            out[i] = f
+        br.close()
+    return out
+
+
 # ── 렌더 ─────────────────────────────────────────────────────────────────
 def motion_filter(motion: str, dur: float) -> str:
     """켄번즈. 3840 으로 키워 놓고 자르므로 글자가 선명하다."""
@@ -190,7 +248,7 @@ def motion_filter(motion: str, dur: float) -> str:
 
 
 def clip(src: Path, chrome: Path, dur: float, motion: str, out: Path,
-         fade_in: bool, fade_out: bool) -> None:
+         fade_in: bool, fade_out: bool, sub: Path | None = None) -> None:
     """본문을 움직여 안쪽 판에 넣고, 그 위에 고정 테두리를 얹는다."""
     vf = motion_filter(motion, dur)
     if fade_in:
@@ -200,10 +258,14 @@ def clip(src: Path, chrome: Path, dur: float, motion: str, out: Path,
     fc = (f"color=c={FR.SHELL}:s={OUT_W}x{OUT_H}:r={FPS}[bg];"
           f"[0:v]{vf}[c];"
           f"[bg][c]overlay={FR.CONTENT_X}:{FR.CONTENT_Y}:shortest=1[b];"
-          f"[b][1:v]overlay=0:0:format=auto,format=yuv420p[v]")
-    cmd = ["ffmpeg", "-v", "error", "-y",
-           "-loop", "1", "-i", str(src),
-           "-loop", "1", "-i", str(chrome),
+          f"[b][1:v]overlay=0:0:format=auto[t]")
+    ins = ["-loop", "1", "-i", str(src), "-loop", "1", "-i", str(chrome)]
+    if sub is not None:
+        ins += ["-loop", "1", "-i", str(sub)]
+        fc += f";[t][2:v]overlay=0:0:format=auto,format=yuv420p[v]"
+    else:
+        fc += ";[t]format=yuv420p[v]"
+    cmd = ["ffmpeg", "-v", "error", "-y", *ins,
            "-filter_complex", fc, "-map", "[v]",
            "-t", f"{dur:.3f}",
            "-c:v", "libx264", "-pix_fmt", "yuv420p", "-r", str(FPS),
@@ -214,7 +276,8 @@ def clip(src: Path, chrome: Path, dur: float, motion: str, out: Path,
 
 
 def render(beats: list[Beat], assets: Path, out: Path,
-           chrome: dict[str, Path]) -> Path:
+           chrome: dict[str, Path],
+           subs: dict[int, Path] | None = None) -> Path:
     """장면마다 짧은 클립을 만들고 이어 붙인다."""
     tmp = Path(tempfile.mkdtemp(prefix="longvid_"))
     first = next(iter(chrome.values()))
@@ -229,7 +292,8 @@ def render(beats: list[Beat], assets: Path, out: Path,
             p = tmp / f"c{i:03d}.mp4"
             clip(src, chrome.get(b.chapter, first), b.dur, b.motion, p,
                  fade_in=b.section or i == 0,
-                 fade_out=bool(nxt and nxt.section) or nxt is None)
+                 fade_out=bool(nxt and nxt.section) or nxt is None,
+                 sub=(subs or {}).get(i))
             parts.append(p)
             print(f"\r  장면 {i + 1}/{len(beats)}", end="", flush=True)
         print()

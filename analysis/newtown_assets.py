@@ -131,13 +131,13 @@ def fab_map() -> tuple[str, str]:
           "평택시": G.mix(D.BG, GOLD, 0.35),
           "이천시": G.mix(D.BG, GOLD, 0.35),
           "용인기흥구": G.mix(D.BG, GOLD, 0.35)}
-    svg = G.svg(hl, width=1180, height=638, line=D.SUB, fill=D.NEUTRAL,
+    svg = G.svg(hl, width=1150, height=448, line=D.SUB, fill=D.NEUTRAL,
                 label_color=D.INK, label_halo="#FFFFFF", pins=pins,
                 show_labels=False) or ""
     side = (f'<div class="cap">동탄에서 출퇴근권</div>'
-            f'<div style="font-size:31px;font-weight:700;line-height:1.85">'
+            f'<div style="font-size:26px;font-weight:700;line-height:1.55">'
             + "<br>".join(f["label"] for f in FABS) +
-            f'</div><div style="font-size:26px;color:{D.SUB};margin-top:34px;'
+            f'</div><div style="font-size:22px;color:{D.SUB};margin-top:22px;'
             f'line-height:1.6">파란 점이 동탄입니다.<br>'
             f'반도체 공장이 <b style="color:{GOLD}">남쪽으로</b> 줄지어 '
             f'있습니다.</div>')
@@ -171,23 +171,23 @@ def gen23_map() -> tuple[str, str]:
           "남양주시": G.mix(D.BG, GOLD, 0.4),
           "하남시": G.mix(D.BG, GOLD, 0.4),
           "용인처인구": G.mix(D.BG, GOLD, 0.4)}
-    svg = G.svg(hl, width=1180, height=638, line=D.SUB, fill=D.NEUTRAL,
+    svg = G.svg(hl, width=1150, height=448, line=D.SUB, fill=D.NEUTRAL,
                 label_color=D.INK, label_halo="#FFFFFF", pins=pins,
                 show_labels=False) or ""
     side = (
         f'<div class="cap">2기 · 오늘 본 곳</div>'
-        f'<div style="font-size:29px;font-weight:700;color:{WIN};'
-        f'line-height:1.7">광교 · 동탄</div>'
-        f'<div style="font-size:29px;font-weight:700;color:{LOSE};'
-        f'line-height:1.7">검단 · 김포한강<br>운정 · 옥정</div>'
-        f'<div class="cap" style="margin-top:32px">3기 · 다음 편 후보</div>'
-        f'<div style="font-size:29px;font-weight:700;color:{GOLD};'
-        f'line-height:1.7">▲ 하남 교산<br>▲ 고양 창릉<br>'
-        f'▲ 남양주 왕숙<br>▲ 용인 이동</div>'
-        f'<div style="font-size:25px;color:{D.SUB};margin-top:30px;'
+        f'<div style="font-size:23px;font-weight:700;color:{WIN};'
+        f'line-height:1.4">광교 · 동탄</div>'
+        f'<div style="font-size:23px;font-weight:700;color:{LOSE};'
+        f'line-height:1.4">검단 · 김포한강 · 운정 · 옥정</div>'
+        f'<div class="cap" style="margin-top:12px">3기 · 다음 편 후보</div>'
+        f'<div style="font-size:23px;font-weight:700;color:{GOLD};'
+        f'line-height:1.4">▲ 하남 교산 · 고양 창릉<br>'
+        f'▲ 남양주 왕숙 · 용인 이동</div>'
+        f'<div style="font-size:19px;color:{D.SUB};margin-top:12px;'
         f'line-height:1.6">창릉은 운정 바로 아래,<br>'
         f'교산은 강남 바로 옆입니다.</div>'
-        f'<div style="font-size:23px;color:{D.SUB};margin-top:16px">'
+        f'<div style="font-size:18px;color:{D.SUB};margin-top:8px">'
         f'인천 계양·부천 대장·광명 시흥은 이번 기준에서 뺐습니다.</div>')
     body = (f'<div class="two"><div style="flex:3">{svg}</div>'
             f'<div style="flex:1">{side}</div></div>')
@@ -204,7 +204,7 @@ def woncheon() -> tuple[str, str]:
     무엇이 있었고 지금 무엇이 있는가'를 글자와 지도로 보여 준다.
     """
     hl = {"수원영통구": G.mix(D.BG, WIN, 0.5)}
-    svg = G.svg(hl, width=880, height=600, line=D.SUB, fill=D.NEUTRAL,
+    svg = G.svg(hl, width=820, height=470, line=D.SUB, fill=D.NEUTRAL,
                 label_color=D.INK, label_halo="#FFFFFF",
                 pins=[{"label": "광교", "lat": 37.2860, "lng": 127.0530,
                        "primary": True},

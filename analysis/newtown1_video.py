@@ -26,6 +26,7 @@ from content import longvideo as LV  # noqa: E402
 ART = ROOT / "output" / "longform" / "newtown1"
 CARDS = ART / "cards"
 FRAMES = ART / "frames"
+SUBS = ART / "subs"
 OUT = ROOT / "output" / "longform" / "newtown1_full.mp4"
 
 # 장(章). 테두리 오른쪽 위에 뜨고 진행 점이 여기 맞춰 움직인다.
@@ -494,6 +495,8 @@ def main() -> int:
     ap = argparse.ArgumentParser(description="신도시 1편 영상")
     ap.add_argument("--cards", action="store_true", help="카드만 다시 만든다")
     ap.add_argument("--plan", action="store_true", help="길이만 계산")
+    ap.add_argument("--no-subs", action="store_true",
+                    help="하단 자막 띠 없이 (직접 얹으실 때)")
     a = ap.parse_args()
 
     bs = beats()
@@ -516,8 +519,12 @@ def main() -> int:
     if a.cards:
         return 0
 
+    subs = {}
+    if not a.no_subs:
+        print("  자막 띠 만드는 중...")
+        subs = LV.build_subs(bs, SUBS)
     print("  영상 만드는 중...")
-    out = LV.render(bs, ART, OUT, chrome)
+    out = LV.render(bs, ART, OUT, chrome, subs)
     srt = LV.write_srt(bs, OUT.with_suffix(".srt"))
     cue = LV.cue_sheet(bs, ROOT / "docs" / "longform" /
                        "2026-10-10-newtown-1-cue.md")
