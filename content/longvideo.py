@@ -123,36 +123,85 @@ def card_css() -> str:
 """
 
 
-def card_html(kind: str, **kw) -> str:
+CARD_ANIM_S = 0.62          # 들어오는 시간
+CARD_ANIM_N = 19            # 그 동안 찍는 장 수 (0.62 x 30fps)
+
+
+def ease(t: float) -> float:
+    """끝에서 부드럽게 멎는 곡선. 선형이면 기계가 민 것처럼 보인다."""
+    return 1 - (1 - max(0.0, min(1.0, t))) ** 3
+
+
+def _in(p: float, idx: int, *, rise: float = 34.0) -> str:
+    """요소 하나의 등장. 순서대로 조금씩 늦게 올라온다.
+
+    글자 카드가 10초씩 멈춰 있으면 재생이 멈춘 것처럼 보인다. 드리프트만
+    주던 것을 실제 등장 동작으로 바꾼다 — 한 줄씩 올라오면 눈이 따라간다.
+    """
+    d = (p - idx * 0.11) / 0.52
+    e = ease(d)
+    return f'opacity:{e:.3f};transform:translateY({(1 - e) * rise:.1f}px)'
+
+
+def _pop(p: float, idx: int) -> str:
+    """숫자는 밀어 올리지 않고 살짝 커지며 들어온다. 더 세게 보인다."""
+    d = (p - idx * 0.11) / 0.52
+    e = ease(d)
+    return (f'opacity:{e:.3f};'
+            f'transform:scale({0.93 + 0.07 * e:.3f});'
+            f'transform-origin:left center')
+
+
+def card_html(kind: str, p: float = 1.0, **kw) -> str:
     dark = " dark" if kw.get("dark") else ""
     if kind == "title":
-        return (f'<div class="pg{dark}"><div class="sec">{kw["sec"]}</div>'
-                f'<div class="big">{kw["big"]}</div><div class="rule"></div>'
-                f'</div>')
+        # 노란 띠는 왼쪽에서 자라난다. 제목이 다 올라온 뒤에 긋는다.
+        w = 120 * ease((p - 0.33) / 0.5)
+        return (f'<div class="pg{dark}">'
+                f'<div class="sec" style="{_in(p, 0)}">{kw["sec"]}</div>'
+                f'<div class="big" style="{_in(p, 1)}">{kw["big"]}</div>'
+                f'<div class="rule" style="width:{w:.0f}px"></div></div>')
     if kind == "stat":
         cls = " l" if kw.get("down") else ""
-        return (f'<div class="pg{dark}"><div class="sec">{kw["sec"]}</div>'
-                f'<div class="num{cls}">{kw["num"]}</div>'
-                f'<div class="cap">{kw["cap"]}</div></div>')
-    return (f'<div class="pg{dark}"><div class="big">{kw["big"]}</div>'
-            f'{f"<div class=cap>{kw[chr(99)+chr(97)+chr(112)]}</div>" if kw.get("cap") else ""}'
-            f'</div>')
+        return (f'<div class="pg{dark}">'
+                f'<div class="sec" style="{_in(p, 0)}">{kw["sec"]}</div>'
+                f'<div class="num{cls}" style="{_pop(p, 1)}">{kw["num"]}</div>'
+                f'<div class="cap" style="{_in(p, 2)}">{kw["cap"]}</div></div>')
+    cap = kw.get("cap")
+    cap_html = (f'<div class="cap" style="{_in(p, 1)}">{cap}</div>'
+                if cap else "")
+    return (f'<div class="pg{dark}">'
+            f'<div class="big" style="{_in(p, 0)}">{kw["big"]}</div>'
+            f'{cap_html}</div>')
 
 
-def build_cards(cards: dict[str, str], outdir: Path) -> None:
-    """카드 HTML 을 PNG 로. 한 번만 찍으면 되므로 금방 끝난다."""
+def build_cards(cards: dict[str, tuple], outdir: Path) -> dict[str, list[Path]]:
+    """카드마다 **등장 장면들**을 찍는다.
+
+    한 장만 찍어 ffmpeg 로 밀던 것을 바꿨다. 드리프트는 "안 멈춘 것처럼"
+    보이게 할 뿐, 들어오는 맛이 없다. 19장이면 0.62초짜리 등장이 된다.
+    """
     from playwright.sync_api import sync_playwright
     outdir.mkdir(parents=True, exist_ok=True)
+    out: dict[str, list[Path]] = {}
     with sync_playwright() as pw:
         br = pw.chromium.launch()
         pg = br.new_page(viewport={"width": W, "height": H},
                          device_scale_factor=2)
-        for name, html in cards.items():
-            pg.set_content(f"<style>{card_css()}</style>{html}",
-                           wait_until="load")
-            pg.wait_for_timeout(120)
-            pg.screenshot(path=str(outdir / f"{name}.png"))
+        for name, (kind, kw) in cards.items():
+            seq = []
+            for k in range(CARD_ANIM_N):
+                p = (k + 1) / CARD_ANIM_N
+                pg.set_content(
+                    f"<style>{card_css()}</style>{card_html(kind, p, **kw)}",
+                    wait_until="load")
+                pg.wait_for_timeout(16)
+                f = outdir / f"{name}_{k:02d}.png"
+                pg.screenshot(path=str(f))
+                seq.append(f)
+            out[name] = seq
         br.close()
+    return out
 
 
 # ── 자막 띠 ──────────────────────────────────────────────────────────────
@@ -247,10 +296,30 @@ def motion_filter(motion: str, dur: float) -> str:
             f"s={W}x{H}:fps={FPS},format=yuv420p")
 
 
+def seq_input(seq: list[Path], dur: float, tmp: Path, i: int) -> Path:
+    """등장 장면들 + 마지막 장 늘리기. 같은 그림을 수백 장 더 찍지 않는다."""
+    nl = chr(10)
+    hold = max(0.1, dur - len(seq) / FPS)
+    lines = [f"file '{f.as_posix()}'{nl}duration {1 / FPS:.5f}"
+             for f in seq[:-1]]
+    lines.append(f"file '{seq[-1].as_posix()}'{nl}duration {hold:.5f}")
+    lines.append(f"file '{seq[-1].as_posix()}'")
+    lst = tmp / f"seq{i:03d}.txt"
+    lst.write_text(nl.join(lines), encoding="utf-8")
+    return lst
+
+
 def clip(src: Path, chrome: Path, dur: float, motion: str, out: Path,
-         fade_in: bool, fade_out: bool, sub: Path | None = None) -> None:
-    """본문을 움직여 안쪽 판에 넣고, 그 위에 고정 테두리를 얹는다."""
+         fade_in: bool, fade_out: bool, sub: Path | None = None,
+         seq_list: Path | None = None) -> None:
+    """본문을 움직여 안쪽 판에 넣고, 그 위에 고정 테두리를 얹는다.
+
+    seq_list 가 있으면 **등장 애니메이션**이 든 장면 목록을 쓴다. 그때는
+    켄번즈를 걸지 않는다 — 이미 움직이는 그림을 또 밀면 어지럽다.
+    """
     vf = motion_filter(motion, dur)
+    if seq_list is not None:
+        vf = f"fps={FPS},scale={W}:{H}:flags=lanczos,format=yuv420p"
     if fade_in:
         vf += f",fade=t=in:st=0:d={FADE}:c={D.BG}"
     if fade_out:
@@ -259,7 +328,12 @@ def clip(src: Path, chrome: Path, dur: float, motion: str, out: Path,
           f"[0:v]{vf}[c];"
           f"[bg][c]overlay={FR.CONTENT_X}:{FR.CONTENT_Y}:shortest=1[b];"
           f"[b][1:v]overlay=0:0:format=auto[t]")
-    ins = ["-loop", "1", "-i", str(src), "-loop", "1", "-i", str(chrome)]
+    if seq_list is not None:
+        ins = ["-f", "concat", "-safe", "0", "-i", str(seq_list),
+               "-loop", "1", "-i", str(chrome)]
+    else:
+        ins = ["-loop", "1", "-i", str(src),
+               "-loop", "1", "-i", str(chrome)]
     if sub is not None:
         ins += ["-loop", "1", "-i", str(sub)]
         fc += f";[t][2:v]overlay=0:0:format=auto,format=yuv420p[v]"
@@ -277,23 +351,30 @@ def clip(src: Path, chrome: Path, dur: float, motion: str, out: Path,
 
 def render(beats: list[Beat], assets: Path, out: Path,
            chrome: dict[str, Path],
-           subs: dict[int, Path] | None = None) -> Path:
+           subs: dict[int, Path] | None = None,
+           card_frames: dict[str, list[Path]] | None = None) -> Path:
     """장면마다 짧은 클립을 만들고 이어 붙인다."""
     tmp = Path(tempfile.mkdtemp(prefix="longvid_"))
     first = next(iter(chrome.values()))
     try:
         parts = []
         for i, b in enumerate(beats):
-            src = assets / b.visual if not Path(b.visual).is_absolute() \
-                else Path(b.visual)
-            if not src.exists():
-                raise FileNotFoundError(src)
+            # 카드는 장면 목록으로, 그림은 한 장 + 켄번즈로 만든다.
+            key = (b.visual.split("/", 1)[1]
+                   if b.visual.startswith("cards/") else None)
+            seq = (card_frames or {}).get(key) if key else None
+            lst = seq_input(seq, b.dur, tmp, i) if seq else None
+            src = Path(b.visual)
+            if seq is None:
+                src = assets / b.visual if not src.is_absolute() else src
+                if not src.exists():
+                    raise FileNotFoundError(src)
             nxt = beats[i + 1] if i + 1 < len(beats) else None
             p = tmp / f"c{i:03d}.mp4"
             clip(src, chrome.get(b.chapter, first), b.dur, b.motion, p,
                  fade_in=b.section or i == 0,
                  fade_out=bool(nxt and nxt.section) or nxt is None,
-                 sub=(subs or {}).get(i))
+                 sub=(subs or {}).get(i), seq_list=lst)
             parts.append(p)
             print(f"\r  장면 {i + 1}/{len(beats)}", end="", flush=True)
         print()

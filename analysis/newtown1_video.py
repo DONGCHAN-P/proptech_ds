@@ -41,12 +41,16 @@ _chap = CHAPTERS[0]
 
 
 def card(kind: str, **kw) -> str:
-    """카드를 하나 만들고 파일명을 돌려준다. 이름은 자동으로 붙인다."""
+    """카드를 하나 등록하고 참조 이름을 돌려준다.
+
+    HTML 을 바로 만들지 않고 (종류, 인자) 로 들고 있는다. 등장 장면을
+    프레임마다 다시 그려야 해서, 완성된 HTML 한 장으로는 안 된다.
+    """
     global _n
     _n += 1
     name = f"c{_n:03d}"
-    _cards[name] = LV.card_html(kind, **kw)
-    return f"cards/{name}.png"
+    _cards[name] = (kind, kw)
+    return f"cards/{name}"
 
 
 def B(visual: str, text: str = "", motion: str = "in",
@@ -177,8 +181,7 @@ def beats() -> list[LV.Beat]:
                "강남 접근성은 광교보다 약했지만 빠르게 좋아졌습니다. "
                "2016년 SRT, 2024년 GTX-A가 개통되면서 수서까지 20분대가 "
                "됐습니다."))
-    b.append(B(card("plain", big="2028년<br>GTX 삼성역",
-                    cap="정식 개통되면 강남 한복판까지"),
+    b.append(B("C_GTX.png",
                "2028년 GTX 삼성역이 정식 개통되면 강남 한복판까지 "
                "연결됩니다. 생활 인프라로는 동탄호수공원과 그 주변 상권이 "
                "있습니다."))
@@ -201,8 +204,7 @@ def beats() -> list[LV.Beat]:
                     cap="인천 검단 · 김포 한강 · 파주 운정 · 양주 옥정"),
                "같은 2기 신도시인데 사정이 다른 곳이 있습니다. 인천 검단, "
                "김포 한강, 파주 운정, 양주 옥정입니다."))
-    b.append(B(card("plain", big="여기도<br>미분양이 쌓였고",
-                    cap="언젠가 오를 거라는 기대가 있었습니다"),
+    b.append(B("C_신도시관련.png",
                "이곳들도 초기에 미분양이 쌓였고, 언젠가 오를 거라는 기대가 "
                "있었습니다.", "still"))
     b.append(B("01_level.png",
@@ -349,9 +351,7 @@ def beats() -> list[LV.Beat]:
                         "있느냐"),
                "갈린 건 그 방향에 강남으로 가는 길이 있느냐였습니다.",
                "still", hold=0.8))
-    b.append(B(card("plain", big="운정의 GTX-A는<br><em>서울역</em>으로 "
-                                 "갑니다",
-                    cap="강북 도심이지 강남이 아닙니다"),
+    b.append(B("C_GTX2.png",
                "먼저 강남 접근성입니다. 운정에도 GTX-A가 들어왔지만, 이 "
                "노선은 서울역으로 갑니다. 강북 도심이지 강남이 아닙니다."))
     b.append(B(card("plain", big="검단과 옥정은<br>지금도 <em>한 시간 +</em>",
@@ -368,15 +368,14 @@ def beats() -> list[LV.Beat]:
                     big="일자리 하나만으로는<br><em>부족합니다</em>"),
                "일자리 하나만으로는 부족하다는 뜻입니다.", "still",
                hold=0.8))
-    b.append(B("A6_changneung_news.png",
+    b.append(B("C_신도시_결사반대.png",
                "마지막은 주변 공급입니다. 2019년 고양 창릉이 3기 신도시로 "
                "발표되자, 운정·일산·검단 주민들이 집값 하락을 걱정하며 "
                "집회까지 열었습니다.", "in"))
-    b.append(B("A6_changneung_news.png",
+    b.append(B("C_신도시_결사반대.png",
                "운정 행정복지센터 앞에 500여 명이 모였고, 3기 발표 후 첫 "
                "반대 집회였습니다.", "out"))
-    b.append(B(card("plain", big="옆에 공급이 계속 나오면<br>"
-                                 "<em>기다림이 길어집니다</em>"),
+    b.append(B("C_양주옥정_미달.png",
                "옆에 대규모 공급이 계속 나오면 기다림이 길어집니다.",
                "still"))
     b.append(B(card("title", sec="정리하면",
@@ -431,15 +430,11 @@ def beats() -> list[LV.Beat]:
                "", "still", section=True, hold=1.6))
     b.append(B("A7_gen2_gen3.png",
                "이 기준으로 추린 후보는 네 곳입니다.", "in", hold=1.0))
-    b.append(B(card("plain", big="① <b>하남 교산</b>",
-                    cap="3호선 연장 2032년 목표 · 강남고속터미널 40분대 · "
-                        "3기 중 강남에 가장 가까움"),
+    b.append(B("C_송파하남선.png",
                "하남 교산. 3호선 연장선이 2032년 개통을 목표로 하고 있고, "
                "강남고속터미널까지 40분대가 예상됩니다. 3기 중 강남에 가장 "
                "가깝습니다."))
-    b.append(B(card("plain", big="② <b>고양 창릉</b>",
-                    cap="GTX-A 창릉역 · 2028년 삼성역 정차 후 강남 직결 · "
-                        "다만 오늘 본 운정과 같은 노선"),
+    b.append(B("C_GTX4.png",
                "고양 창릉. GTX-A 창릉역이 생깁니다. 2028년 삼성역 정차가 "
                "시작되면 강남 직결이 됩니다. 다만 오늘 본 운정과 같은 "
                "노선입니다."))
@@ -448,13 +443,11 @@ def beats() -> list[LV.Beat]:
                         "자체 물량이 곧 브레이크"),
                "남양주 왕숙. GTX-B와 9호선 연장이 지나갑니다. 3기 최대 규모, "
                "약 8만 가구입니다. 자체 물량이 곧 브레이크일 수 있습니다."))
-    b.append(B(card("plain", big="④ <b>용인 이동</b>",
-                    cap="삼성 반도체 국가산단 배후 · 2030년 첫 입주 목표 · "
-                        "동탄 모델이 반복될까"),
+    b.append(B("C_용인_반도체.png",
                "용인 이동. 삼성전자 반도체 국가산단 바로 옆 배후 "
                "신도시입니다. 2030년 첫 입주가 목표고, 오늘 본 동탄 모델이 "
                "반복될지가 관건입니다."))
-    b.append(B("A7_gen2_gen3.png",
+    b.append(B("C_입주_카운트다운.png",
                "다만 한 가지 짚고 가겠습니다. 3기 신도시는 그 자체가 대규모 "
                "공급입니다. 오늘 본 브레이크가 이 도시들에도 걸릴 수 "
                "있습니다.", "out"))
@@ -511,8 +504,9 @@ def main() -> int:
     if a.plan:
         return 0
 
-    print("\n  카드 만드는 중...")
-    LV.build_cards(_cards, CARDS)
+    print(f"\n  카드 만드는 중... ({len(_cards)}장 × "
+          f"{LV.CARD_ANIM_N}프레임)")
+    card_frames = LV.build_cards(_cards, CARDS)
     print("  테두리 만드는 중...")
     chrome = FR.build(CHAPTERS, FRAMES, ep="신도시 시리즈 · ",
                       source="국토교통부 실거래가 · 해제 건 제외")
@@ -524,7 +518,7 @@ def main() -> int:
         print("  자막 띠 만드는 중...")
         subs = LV.build_subs(bs, SUBS)
     print("  영상 만드는 중...")
-    out = LV.render(bs, ART, OUT, chrome, subs)
+    out = LV.render(bs, ART, OUT, chrome, subs, card_frames)
     srt = LV.write_srt(bs, OUT.with_suffix(".srt"))
     cue = LV.cue_sheet(bs, ROOT / "docs" / "longform" /
                        "2026-10-10-newtown-1-cue.md")

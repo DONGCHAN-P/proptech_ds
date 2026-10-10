@@ -249,11 +249,77 @@ def main() -> int:
                   "기사 제목·매체·날짜만 인용했습니다"),
         gen23_map(),
     ]
+    for art in ARTICLES:
+        pages.append(clip_card(*art))
     made = render(pages, OUT)
     print(f"  저장: {OUT}")
     for p in made:
         print(f"    {p.name}  {p.stat().st_size / 1024:.0f}KB")
     return 0
+
+
+
+
+# ── 기사 캡처 카드 ───────────────────────────────────────────────────────
+# 직접 캡처해 두신 기사 이미지를 우리 판 안에 앉힌다. 글자 카드만 이어지면
+# 지루하고, 기사 화면은 "실제로 보도된 일"이라는 무게를 준다.
+#
+# 다만 **우리 말로 제목을 단다.** 기사 제목을 그대로 큰 글씨로 올리면
+# 그 기사를 재현하는 꼴이 된다. 기사는 근거로 보여 주고, 주장은 우리가 한다.
+CLIP_DIR = ROOT / "output" / "longform" / "참고기사"
+
+ARTICLES = [
+    # (파일, 눈표, 우리 제목, 출처 한 줄)
+    ("GTX3.png", "2025.09.30 · 서울시 미디어허브",
+     'GTX-A, <b>남북이 이어집니다</b>',
+     "서울시 미디어허브 기사 캡처 · mediahub.seoul.go.kr"),
+    ("GTX4.jpg", "GTX-A 구간별 개통 일정",
+     '운정에서 <b>동탄</b>까지 한 노선',
+     "자료: 서울시 미디어허브"),
+    ("GTX.png", "2025.03.02 · 뉴시스",
+     '삼성역은 <em>아직</em>입니다',
+     "뉴시스 기사 캡처 · newsis.com"),
+    ("GTX2.jpg", "GTX A~F 계획 노선",
+     '운정은 <em>서울역</em>, 동탄은 <b>삼성역</b>',
+     "자료: 뉴시스 · D/E/F 노선은 확정 전 계획입니다"),
+    ("신도시관련.png", "2026.04.13 · 헤럴드경제",
+     '<b>강남 가까운 곳만</b> 올랐습니다',
+     "헤럴드경제 기사 캡처 · heraldk.com"),
+    ("신도시 결사반대.png", "2019.05.12 · 경기일보",
+     '옆에 신도시가 생긴다고 하자 <em>집회</em>가 열렸습니다',
+     "경기일보 기사 캡처 · 사진 연합뉴스"),
+    ("양주옥정 미달.png", "아시아경제",
+     "3기 사전청약에 <em>2기가 밀렸습니다</em>",
+     "아시아경제 기사 캡처"),
+    ("입주 카운트다운.png", "2026.03.17 · 이투데이",
+     '3기는 <b>2026~2029년</b>에 걸쳐 들어옵니다',
+     "이투데이 기사 캡처 · 표 출처 한국토지주택공사"),
+    ("송파하남선.png", "2025.07.21 · 한국경제",
+     '하남~강남 <b>40분</b>, 2032년 목표',
+     "한국경제 기사 캡처 · hankyung.com"),
+    ("용인 반도체.png", "2026.10.01 · CBS노컷뉴스",
+     '용인 국가산단, <b>10월 착공</b>',
+     "노컷뉴스 기사 캡처 · 조감도 LH 제공"),
+]
+
+
+def clip_card(fname: str, kick: str, ttl: str, src: str) -> tuple[str, str]:
+    """캡처 한 장을 판 안에 앉힌다. 비율이 제각각이라 contain 으로 맞춘다."""
+    import base64
+    p = CLIP_DIR / fname
+    if not p.exists():
+        raise FileNotFoundError(p)
+    mime = "jpeg" if p.suffix.lower() in (".jpg", ".jpeg") else "png"
+    b64 = base64.b64encode(p.read_bytes()).decode()
+    body = (
+        f'<div style="display:flex;justify-content:center;align-items:center;'
+        f'height:532px">'
+        f'<img src="data:image/{mime};base64,{b64}" '
+        f'style="max-height:532px;max-width:1420px;object-fit:contain;'
+        f'border-radius:10px;border:1px solid {D.LINE};'
+        f'box-shadow:0 14px 36px rgba(0,0,0,.16)" alt=""></div>')
+    name = "C_" + p.stem.replace(" ", "_")
+    return name, page(kick, ttl, body, src)
 
 
 if __name__ == "__main__":
