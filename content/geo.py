@@ -153,6 +153,14 @@ def available() -> bool:
     return GEO_FILE.exists()
 
 
+def _text_w(text: str, size: int) -> float:
+    """글자 폭 어림. 한글은 거의 한 글자가 한 em, 영숫자는 그 절반쯤."""
+    w = 0.0
+    for ch in text:
+        w += size * (1.0 if ord(ch) > 0x2000 else 0.55)
+    return w
+
+
 def mix(hex_a: str, hex_b: str, t: float) -> str:
     """두 색을 섞는다. 증감 색의 농담을 만들 때 쓴다.
 
@@ -244,6 +252,7 @@ def svg(highlight: dict[str, str], *, width: int, height: int,
             f'stroke="{label_halo}" stroke-width="5" paint-order="stroke" '
             f'style="font-family:Pretendard">{nm}</text>')
     # 단지 핀. 경계는 투영 미터라 위경도를 같은 좌표계로 옮겨 찍는다.
+    pin_labels: list[tuple[float, float, str]] = []
     for pin in (pins or []):
         if pin.get("lat") is None or pin.get("lng") is None:
             continue
@@ -260,11 +269,35 @@ def svg(highlight: dict[str, str], *, width: int, height: int,
                 f'fill="{label_color}" opacity=".55" '
                 f'stroke="{label_halo}" stroke-width="2"/>')
         if pin.get("label"):
-            parts.append(
-                f'<text x="{px:.1f}" y="{py - 28:.1f}" text-anchor="middle" '
-                f'font-size="30" font-weight="800" fill="{label_color}" '
-                f'stroke="{label_halo}" stroke-width="6" paint-order="stroke" '
-                f'style="font-family:Pretendard">{pin["label"]}</text>')
+            pin_labels.append((px, py, str(pin["label"])))
+
+    # 라벨끼리 겹치면 둘 다 못 읽는다. 겹치는 것만 아래로 밀고, 점과
+    # 멀어지면 가는 선으로 이어 준다. 핀이 몰려 있는 지도(신도시·공장
+    # 분포)에서는 이게 없으면 글자가 뭉개진다.
+    placed: list[tuple[float, float, float]] = []   # (x, y, 반폭)
+    for px, py, text in sorted(pin_labels, key=lambda r: (r[1], r[0])):
+        half = _text_w(text, 30) / 2 + 8
+        ty = py - 28
+        for _ in range(40):
+            if not any(abs(ty - uy) < 34 and abs(px - ux) < half + uh
+                       for ux, uy, uh in placed):
+                break
+            ty += 34
+        # 그래도 못 피하면 캔버스 안으로 되돌린다. 화면 밖으로 밀려 아예
+        # 사라지는 것보다, 겹치더라도 보이는 편이 낫다.
+        if ty > height - 12:
+            ty = min(py - 28, height - 12)
+        placed.append((px, ty, half))
+        if ty > py - 24:
+            parts.append(f'<line x1="{px:.1f}" y1="{py:.1f}" '
+                         f'x2="{px:.1f}" y2="{ty - 22:.1f}" '
+                         f'stroke="{label_color}" stroke-width="1.6" '
+                         f'opacity=".45"/>')
+        parts.append(
+            f'<text x="{px:.1f}" y="{ty:.1f}" text-anchor="middle" '
+            f'font-size="30" font-weight="800" fill="{label_color}" '
+            f'stroke="{label_halo}" stroke-width="6" paint-order="stroke" '
+            f'style="font-family:Pretendard">{text}</text>')
 
     return (f'<svg width="{width}" height="{height}" '
             f'viewBox="0 0 {width} {height}">{"".join(parts)}</svg>')
