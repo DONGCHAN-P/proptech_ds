@@ -1,7 +1,7 @@
 {
   "episode_id": "newlywed-apartment-picks-20261101",
   "revision": "top20-enhance-v2",
-  "phase": "awaiting_shorts_ui_v2_20261104_completed_review",
+  "phase": "awaiting_longform_natural_v5_script_and_budget_review",
   "topic": "authorized_by_current_user",
   "script": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-enhance-v2/script_v5.md",
   "voice": "free Microsoft Edge InJoonNeural; no paid generation",
@@ -26,7 +26,7 @@
     "reason": "usage_request_failed"
   },
   "current_listing_evidence": "research\\listing_evidence_v1.json",
-  "updated_at": "2026-11-03T15:32:57.794282+00:00",
+  "updated_at": "2026-11-03T16:28:33.634911+00:00",
   "public_ad_examples_observed": 1,
   "seller_availability_confirmed": false,
   "open_research_items": [
@@ -195,13 +195,13 @@
   "active_price_pack": "research/top20-explain-v3/prices/final-api-20261103-v2",
   "active_approval_status": {
     "topic": "approved_by_direct_user_two_part_revision",
-    "script": "scoped_user_revision:291dc0fbeafc",
-    "budget": "approved:9cde211f3073:credits6500_cash0",
-    "completed": "pending:f1c59d4d4dca",
-    "pre_upload": "not_reached_shorts_ui_v2"
+    "script": "pending:1f74e5af7653",
+    "budget": "pending:b5e5f31691ec",
+    "completed": "revision_requested:longform-natural-v5",
+    "pre_upload": "not_reached_longform_natural_v5"
   },
   "baseline_delivery_revision": "top20-enhance-v2",
-  "pending_decision_id": "f1c59d4d4dca",
+  "pending_decision_id": "1f74e5af7653",
   "active_script_sha256": "6fe716bc6454a6c1e564f713b10b7fd2e8022af653c44ba4d4c74a660018c7d4",
   "active_review_folder": "영상/신혼부부_TOP20_1편",
   "script_approval_receipt": "director/top20-split-v4/part1-production-v1/script_approval.json",
@@ -284,7 +284,7 @@
     "active_qa": "qa/top20-split-v4/part1-production-v1/final_review.json"
   },
   "active_intro_revision": "intro-rationale-v3",
-  "active_script_proposal": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/intro-rationale-v3/intro_proposal_v3.json",
+  "active_script_proposal": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/script_v5.md",
   "active_intro_review_file": "영상/신혼부부_지역별아파트/2부작_수정안/1편_20-11위_대본_v3_도입수정안.md",
   "active_intro_direction": "영상/신혼부부_지역별아파트/2부작_수정안/도입_방향과모션_v3.md",
   "active_new_intro_audio_generated": true,
@@ -352,7 +352,7 @@
       "bytes": 11214561
     }
   ],
-  "requested_revision": "top20-split-v4/shorts-ui-v2-20261104",
+  "requested_revision": "top20-split-v4/longform-natural-v5-20261104",
   "shorts_revision_request": {
     "at": "2026-11-03T15:15:57.576407+00:00",
     "source": "same_conversation_direct_user",
@@ -362,5 +362,22 @@
   },
   "shorts_revision_paid_calls_authorized": 0,
   "active_shorts_revision": "top20-split-v4/shorts-ui-v2-20261104",
-  "shorts_ui_revision_additional_credits": 0
+  "shorts_ui_revision_additional_credits": 0,
+  "pending_decision_ids": {
+    "script": "1f74e5af7653",
+    "budget": "b5e5f31691ec"
+  },
+  "natural_language_revision": {
+    "revision": "top20-split-v4/longform-natural-v5-20261104",
+    "generation_authorized": false,
+    "tts_post_calls": 0,
+    "script_qa_required": 0,
+    "script_qa_critical": 0,
+    "old_main_and_shorts_preserved": true,
+    "reading_replacements": 47,
+    "proposed_credit_cap": 3800,
+    "upload_authorized": false,
+    "actual_listening": false,
+    "continuous_playback": false
+  }
 }

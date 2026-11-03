@@ -1,0 +1,56 @@
+{
+  "issue_id": "V5-PARENT-ADOPTION",
+  "task_id": "longform-natural-v5-20261104",
+  "scene_ids": [
+    "INTRO-PURPOSE",
+    "P01-R20",
+    "P01-R19",
+    "P01-R18",
+    "P01-R17",
+    "P01-R16",
+    "P01-R15",
+    "P01-R14",
+    "P01-R13",
+    "P01-R12",
+    "P01-R11",
+    "P01-OUTRO"
+  ],
+  "problem": "문구안 채택 시 기존 Jun 청크·자막·일부 쇼츠 재사용 구간의 후속 버전 연결 필요",
+  "evidence": [
+    "sentence_patches.json",
+    "validation.json"
+  ],
+  "proposal": "총괄이 script 결정과 필요한 독립 QA를 진행하고, 유료 생성 전에 이 문구안 기준의 정확한 새 입력·예산 제안을 확정",
+  "impact": {
+    "main": [
+      "INTRO-PURPOSE",
+      "P01-R20",
+      "P01-R19",
+      "P01-R18",
+      "P01-R17",
+      "P01-R16",
+      "P01-R15",
+      "P01-R14",
+      "P01-R13",
+      "P01-R12",
+      "P01-R11",
+      "P01-OUTRO"
+    ],
+    "shorts": {
+      "short01_promo": [
+        "P01-INTRO-V3-04"
+      ],
+      "short02_ranks20_16": [
+        "P01-R20-V2-05",
+        "P01-R19-V2-07",
+        "P01-R18-V2-07"
+      ],
+      "short03_ranks15_11": [
+        "P01-R15-V2-07"
+      ]
+    },
+    "shared_cta_changed": false
+  },
+  "status": "proposal_to_director_not_applied",
+  "peer_message_tool_available": false
+}

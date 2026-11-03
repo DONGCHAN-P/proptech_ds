@@ -1,0 +1,56 @@
+{
+  "task_id": "longform-natural-v5-20261104",
+  "role": "qa",
+  "scope": "최신 대본·읽기문 및 로컬 스킬 적용 시험. 오디오·영상 품질 통과가 아님.",
+  "checked_revision": {
+    "script_sha256": "b29dde75627f6fea1ed692e7cf353fc080d457c5740440af99126d860323282d",
+    "input_manifest": "script_audit_checks.json#/input_sha256",
+    "latest_config_delta": {
+      "evidence": "config_delta_checks.json",
+      "path": "config/video_language.json",
+      "sha256": "d68039458419fa56f08e768646cbe59288472b15f9700e3c51ea85acb881b116"
+    }
+  },
+  "open_counts": {
+    "critical": 0,
+    "required": 0,
+    "recommended": 0
+  },
+  "findings": [],
+  "item_schema": [
+    "issue_id",
+    "scene_id",
+    "timecode",
+    "severity",
+    "문제",
+    "evidence",
+    "수정안",
+    "owner",
+    "status",
+    "checked_revision"
+  ],
+  "coverage": {
+    "script_text": "90/90",
+    "patches": "47/47",
+    "actual_listening": "unchecked",
+    "continuous_playback": "unchecked",
+    "actual_mp4_sampled_frames": "unchecked",
+    "media_stream_decode": "unchecked",
+    "new_audio_render": "not_created",
+    "external_claude": "not_used"
+  },
+  "evidence": [
+    "script_audit_checks.json",
+    "config_delta_checks.json",
+    "skill_structure_checks.json",
+    "skill_application_test.md",
+    "final_report.md"
+  ],
+  "native_skill_auto_discovery": "unchecked; WORKFLOW 상대 링크와 명시 경로만 확인",
+  "new_voice_generation": {
+    "needed_if_adopted_sentence_count": 47,
+    "reading_characters": 3088,
+    "approval_granted": false,
+    "performed": false
+  }
+}

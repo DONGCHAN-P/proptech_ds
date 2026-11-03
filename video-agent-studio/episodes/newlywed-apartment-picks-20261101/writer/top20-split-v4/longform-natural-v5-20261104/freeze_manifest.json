@@ -1,0 +1,38 @@
+{
+  "task_id": "longform-natural-v5-20261104",
+  "status": "writer_text_frozen_reference_only_not_approved_or_generated",
+  "main_sentence_count": 90,
+  "changed_sentence_count": 47,
+  "reading_characters": 5332,
+  "changed_reading_characters": 3088,
+  "character_count_policy": "공백·문장부호 포함, 문장 사이 연결용 구분자 제외; API 전송량이나 청구 크레딧은 아님",
+  "parent_review_delta": [
+    {
+      "sentence_id": "P01-INTRO-V3-02",
+      "text_changed": false,
+      "reading_changed": true
+    },
+    {
+      "sentence_id": "P01-INTRO-V3-04",
+      "text_changed": true,
+      "reading_changed": true
+    },
+    {
+      "sentence_id": "P01-R20-V2-05",
+      "text_changed": true,
+      "reading_changed": true
+    }
+  ],
+  "artifact_hashes": {
+    "script_v5.md": "b29dde75627f6fea1ed692e7cf353fc080d457c5740440af99126d860323282d",
+    "sentence_patches.json": "4a38655b950315cbff4f3b89b508a41bcb12674e982c69f4366d43eb4a18c9bb",
+    "sentence_mapping.json": "ecf1b790a7360e76ad376bd3e706fc217be426d7cc26f14418cd388919f4f032",
+    "before_after.md": "daad043a6c8caa626a8089d7cbca74b50c52050b306809668a2e0597009faa5f",
+    "phonetics.json": "ab1ad7fdd00dc3daefb6af6e4f72fc2480a6cd483760e3bdeeeace78074d6fde",
+    "validation.json": "46a9a98111a53453921b07da94bcbf89b77bbe5aef7dd00d249700d4e398f6e0",
+    "issue_V5-PARENT-ADOPTION.json": "821b6b138f06158fb628b674d67d5cd771a97c7bcb02ad0a7413201ccd17917f",
+    "build_packet.py": "a58e040e1843f5552a3192c7139d7f58c692d0b5ed5217dfd94466bb98317bfa",
+    "verify_packet.py": "9feadc60fa510b39c2b6a985b848ae0c83f80b99abcdcf934ebeb3ad2590033b",
+    "verification.json": "4a2c7c65163afaa9685757a2ab22b140b8a15971cdb1bbadd95d102279b551d2"
+  }
+}

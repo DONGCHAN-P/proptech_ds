@@ -1,0 +1,131 @@
+{
+  "task_id": "longform-natural-v5-20261104",
+  "scope": "발음 보호가 필요한 단지명·영문명·숫자 포함 고유명과 교통명; 실제 TTS 발음 미청취",
+  "entries": [
+    {
+      "canonical_entity": "상계2차중앙하이츠",
+      "display_name": "상계2차 중앙하이츠",
+      "reading_text": "상계 이차 중앙 하이츠",
+      "note": "2차를 유지하고 단어 사이를 띄워 낭독"
+    },
+    {
+      "canonical_entity": "용인기흥효성해링턴플레이스",
+      "display_name": "용인기흥효성해링턴플레이스",
+      "reading_text": "용인 기흥 효성 해링턴 플레이스",
+      "note": "긴 단지명은 단어 단위로 분리"
+    },
+    {
+      "canonical_entity": "e편한세상송도",
+      "display_name": "e편한세상송도",
+      "reading_text": "이편한세상 송도",
+      "note": "브랜드 e를 이로 읽고 송도를 분리"
+    },
+    {
+      "canonical_entity": "미리내마을(롯데2)",
+      "display_name": "미리내마을(롯데2)",
+      "reading_text": "미리내마을 롯데 이",
+      "note": "원문 롯데2 유지; 근거 없는 차를 덧붙이지 않음"
+    },
+    {
+      "canonical_entity": "망포마을쌍용1차",
+      "display_name": "망포마을쌍용1차",
+      "reading_text": "망포마을 쌍용 일차",
+      "note": "1차를 일차로 읽음"
+    },
+    {
+      "canonical_entity": "Y CITY(와이시티)",
+      "display_name": "Y CITY(와이시티)",
+      "reading_text": "와이시티",
+      "note": "영문 표기와 괄호 설명을 중복 낭독하지 않음"
+    },
+    {
+      "canonical_entity": "GTX-A",
+      "display_name": "GTX-A",
+      "reading_text": "지티엑스 에이",
+      "note": "수도권광역급행철도 고유 노선명 유지; 지하철로 일괄 치환하지 않음"
+    },
+    {
+      "canonical_entity": "G밸리",
+      "display_name": "G밸리",
+      "reading_text": "지밸리",
+      "note": "영문 G 낭독"
+    },
+    {
+      "canonical_entity": "연수2동",
+      "display_name": "연수2동",
+      "reading_text": "연수 이 동",
+      "note": "행정동 숫자 유지"
+    },
+    {
+      "canonical_entity": "용마산(용마폭포공원)역",
+      "display_name": "용마산(용마폭포공원)역",
+      "reading_text": "용마산 용마폭포공원 역",
+      "note": "괄호 부역명 유지; 슬래시를 읽지 않음"
+    },
+    {
+      "canonical_entity": "녹번역센트레빌",
+      "display_name": "녹번역센트레빌",
+      "reading_text": "녹번역 센트레빌",
+      "note": "역명과 브랜드 사이 분리"
+    },
+    {
+      "canonical_entity": "현대연예인",
+      "display_name": "현대연예인",
+      "reading_text": "현대 연예인",
+      "note": "단지명 단어 분리"
+    },
+    {
+      "canonical_entity": "논현 웰카운티",
+      "display_name": "논현 웰카운티",
+      "reading_text": "논현 웰카운티",
+      "note": "원문 띄어쓰기 유지"
+    },
+    {
+      "canonical_entity": "논현 파크 포레",
+      "display_name": "논현 파크 포레",
+      "reading_text": "논현 파크 포레",
+      "note": "원문 띄어쓰기 유지"
+    },
+    {
+      "canonical_entity": "송도달빛축제공원역",
+      "display_name": "송도달빛축제공원역",
+      "reading_text": "송도달빛축제공원역",
+      "note": "역 고유명 유지"
+    },
+    {
+      "canonical_entity": "수인분당선",
+      "display_name": "수인분당선",
+      "reading_text": "수인분당선",
+      "note": "노선명 유지"
+    },
+    {
+      "canonical_entity": "경춘선",
+      "display_name": "경춘선",
+      "reading_text": "경춘선",
+      "note": "노선명 유지"
+    },
+    {
+      "canonical_entity": "경춘선숲길",
+      "display_name": "경춘선숲길",
+      "reading_text": "경춘선숲길",
+      "note": "폐선 철길을 바꾼 공원 이름; 지하철로 바꾸지 않음"
+    }
+  ],
+  "emphasis": [
+    "데이터로보는부동산",
+    "2024년 신혼부부 통계",
+    "20위부터 11위",
+    "단지별 중위가격",
+    "상계 이차 중앙 하이츠"
+  ],
+  "reading_policy": "슬래시·괄호 문자를 읽지 않음; 차수와 노선 번호를 유지; 학교·역 이름은 원문을 유지",
+  "precedence": "보호 고유명사의 전체 낭독을 숫자 변환보다 먼저 고정; P01-R11-V2-04는 전체 낭독문을 명시적으로 지정",
+  "language_config": {
+    "path": "config/video_language.json",
+    "revision": "2026-11-04-natural-korean-v1",
+    "sha256": "63b07982d86f9fed74fedcb7f90149146dfb1a64f6e92e13f447aa7487fb55ce"
+  },
+  "must_listen_before_final_merge": [
+    "P01-R11-V2-04"
+  ]
+}

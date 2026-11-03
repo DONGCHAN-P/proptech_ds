@@ -1,0 +1,110 @@
+{
+  "task_id": "longform-natural-v5-20261104",
+  "phase": "skill_application_only_before_writer_audit",
+  "frontmatter": {
+    "valid_simple_key_value_yaml_shape": true,
+    "name": "realestate-shorts",
+    "description_present": true,
+    "parser_scope": "현재 두 항목의 단순한 비인용 스칼라 형식을 정규식으로 확인. 범용 YAML 파서는 아니다."
+  },
+  "workflow_discovery_links": [
+    {
+      "source": "video-agent-studio\\WORKFLOW.md",
+      "link": "../skills/realestate-shorts/SKILL.md",
+      "resolved": "C:/projects/realestate_reco/skills/realestate-shorts/SKILL.md",
+      "exists": true,
+      "within_workspace": true
+    }
+  ],
+  "local_links": [
+    {
+      "source": "skills\\realestate-shorts\\SKILL.md",
+      "link": "../../video-agent-studio/WORKFLOW.md",
+      "resolved": "C:/projects/realestate_reco/video-agent-studio/WORKFLOW.md",
+      "exists": true,
+      "within_workspace": true
+    },
+    {
+      "source": "skills\\realestate-shorts\\SKILL.md",
+      "link": "../../video-agent-studio/guides/영상제작_마스터가이드.md",
+      "resolved": "C:/projects/realestate_reco/video-agent-studio/guides/영상제작_마스터가이드.md",
+      "exists": true,
+      "within_workspace": true
+    },
+    {
+      "source": "skills\\realestate-shorts\\SKILL.md",
+      "link": "../../video-agent-studio/guides/대본_자연스러운표현과_발음.md",
+      "resolved": "C:/projects/realestate_reco/video-agent-studio/guides/대본_자연스러운표현과_발음.md",
+      "exists": true,
+      "within_workspace": true
+    },
+    {
+      "source": "skills\\realestate-shorts\\SKILL.md",
+      "link": "../../config/vertical_video_safe_area.json",
+      "resolved": "C:/projects/realestate_reco/config/vertical_video_safe_area.json",
+      "exists": true,
+      "within_workspace": true
+    },
+    {
+      "source": "skills\\realestate-shorts\\SKILL.md",
+      "link": "references/production.md",
+      "resolved": "C:/projects/realestate_reco/skills/realestate-shorts/references/production.md",
+      "exists": true,
+      "within_workspace": true
+    }
+  ],
+  "reference_example_paths": [
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-split-v4/shorts-ui-v2-20261104",
+      "exists": true,
+      "within_workspace": true
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/editor/top20-split-v4/shorts-ui-v2-20261104",
+      "exists": true,
+      "within_workspace": true
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-split-v4/shorts-ui-v2-20261104",
+      "exists": true,
+      "within_workspace": true
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/qa/top20-split-v4/shorts-ui-v2-20261104",
+      "exists": true,
+      "within_workspace": true
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/shorts-ui-v2-20261104/research_packet.md",
+      "exists": true,
+      "within_workspace": true
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-split-v4/shorts-ui-v2-20261104/archive_render_source.py",
+      "exists": true,
+      "within_workspace": true
+    }
+  ],
+  "input_sha256": {
+    "skills/realestate-shorts/SKILL.md": "2a1b1b586c9488e9db9c32cc64110204473497af8706eac7237fb8c22d7b16e9",
+    "skills/realestate-shorts/references/production.md": "c9717c4b87cfe7bc5c9bfab6c1b42e702c111e8dad7adb50e8d5bcfdb8e4958d",
+    "video-agent-studio/WORKFLOW.md": "eada0de379eaa83c420de6b18bd4964bab980eea03834232ad0526f68031a74a",
+    "config/video_language.json": "63b07982d86f9fed74fedcb7f90149146dfb1a64f6e92e13f447aa7487fb55ce",
+    "config/vertical_video_safe_area.json": "30aed5ad4864efe5043e1f4409ac86b7e0d4923edefe30e899972249ae32a907"
+  },
+  "budget_scope": {
+    "skill_grants_generation_or_upload": false,
+    "example_budget_inherited": false,
+    "current_execution": "local_outlines_and_checks_only",
+    "paid_generation": "not_executed",
+    "external_api": "not_executed",
+    "render": "not_executed",
+    "upload": "not_executed"
+  },
+  "catalog_discovery": {
+    "listed_in_current_available_skills": false,
+    "local_explicit_and_workflow_discovery": true,
+    "native_auto_registration": "unchecked"
+  },
+  "pass": true
+}

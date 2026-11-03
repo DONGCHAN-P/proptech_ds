@@ -1,0 +1,18 @@
+{
+  "issue_id": "SKILL_TEST_READY",
+  "task_id": "longform-natural-v5-20261104",
+  "scene_id": "skill-only",
+  "timecode": null,
+  "severity": "recommended",
+  "문제": "미래 요청 A/B에 대한 독립 로컬 준비안과 스킬 구조 점검을 완료해 총괄에게 전달한다. 작가 v5 검수 결과는 이 전달 범위에 포함하지 않는다.",
+  "evidence": [
+    "skill_application_test.md",
+    "skill_structure_checks.json: pass=true, local_links=5, workflow_links=1, example_paths=6, missing=[]"
+  ],
+  "수정안": "필수 수정 없음. 현재 세션의 스킬 목록에는 이름이 없으므로 네이티브 자동 등록은 별도 확인 대상이며, WORKFLOW 링크와 명시 경로를 통한 적용은 확인했다.",
+  "owner": "director",
+  "status": "handoff_ready",
+  "checked_revision": "realestate-shorts 로컬 파일의 SHA256은 skill_structure_checks.json 참조",
+  "impact": "새 비용·게시·실제 청취·렌더 승인을 부여하지 않는다.",
+  "delivery": "직접 에이전트 메시지 도구가 없어 담당 QA 폴더의 issue 파일로 전달"
+}

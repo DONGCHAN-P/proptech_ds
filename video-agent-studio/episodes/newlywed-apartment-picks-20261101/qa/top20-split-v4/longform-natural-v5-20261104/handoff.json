@@ -1,0 +1,121 @@
+{
+  "task_id": "longform-natural-v5-20261104",
+  "role": "qa",
+  "status": "text_qa_complete_media_unchecked",
+  "summary": "최신 v5 critical/required/recommended 각 0. 90ID 유지, 변경47/미변경43, 새 읽기문3088자. 스킬 A/B 로컬 준비안 및 링크/참조/권한 점검 완료.",
+  "input_revisions": {
+    "script_sha256": "b29dde75627f6fea1ed692e7cf353fc080d457c5740440af99126d860323282d",
+    "input_manifest": "script_audit_checks.json#/input_sha256",
+    "latest_config_delta": {
+      "evidence": "config_delta_checks.json",
+      "path": "config/video_language.json",
+      "sha256": "d68039458419fa56f08e768646cbe59288472b15f9700e3c51ea85acb881b116"
+    }
+  },
+  "outputs": [
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/qa/top20-split-v4/longform-natural-v5-20261104/final_report.md",
+      "sha256": "bea90f5dd95404701d4aed4104b441cb8d0727cf86a2bc4bf15a7033e0745aa4",
+      "bytes": 8313
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/qa/top20-split-v4/longform-natural-v5-20261104/findings.json",
+      "sha256": "2990c262508b5cd2fc62de8b6aa6d075a29245ba945116455384e1fa54fc2bc2",
+      "bytes": 1655
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/qa/top20-split-v4/longform-natural-v5-20261104/script_audit_checks.json",
+      "sha256": "2831484be404b3de9bad5872f2f2635100ab90965d9c65667ef41d7203b2ed82",
+      "bytes": 100197
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/qa/top20-split-v4/longform-natural-v5-20261104/config_delta_checks.json",
+      "sha256": "6cf85f9205c31978ff9ad0113e38eb406934f8709e577dc1f1e6e6b2088e0326",
+      "bytes": 852
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/qa/top20-split-v4/longform-natural-v5-20261104/skill_application_test.md",
+      "sha256": "ba4a86f50d96f29fea5222fbec48c4f2c3109f0b6f9086ac3775d7e62faf49f6",
+      "bytes": 8741
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/qa/top20-split-v4/longform-natural-v5-20261104/skill_structure_checks.json",
+      "sha256": "90f6e4911e0b413dff30e24ac7c52b16177dbb9a5edf75399f1cc4e24685b381",
+      "bytes": 4675
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/qa/top20-split-v4/longform-natural-v5-20261104/issue_SKILL_TEST_READY.json",
+      "sha256": "823860f44f7ca467f726019539e18f1a1d56f5fb94d4459737b8d54ecc32f28f",
+      "bytes": 1103
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/qa/top20-split-v4/longform-natural-v5-20261104/issue_QA_TEXT_READY.json",
+      "sha256": "e50fd832bc02c703a77d16957ba390137e6ade30f26b3c8fe38b0cc10f597249",
+      "bytes": 1328
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/qa/top20-split-v4/longform-natural-v5-20261104/audit_script.py",
+      "sha256": "4b81120baee390738e7795a45beb1cb30aea3a55a1d700b672331de66f9cea34",
+      "bytes": 15500
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/qa/top20-split-v4/longform-natural-v5-20261104/audit_config_delta.py",
+      "sha256": "afe738d32dbc56aeb4e5704b0f5028838deffc7eb8773c5f4d462930d5c49fce",
+      "bytes": 2030
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/qa/top20-split-v4/longform-natural-v5-20261104/audit_skill.py",
+      "sha256": "6f0b84b57a57321a8a48177aa1b38a61e1971270b1e5195d2e7e434bb9377b8d",
+      "bytes": 3813
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/qa/top20-split-v4/longform-natural-v5-20261104/finalize_review.py",
+      "sha256": "2009e716761753b409988e398d114a4e7fc1202e6b7fb3465e61ee337d66f50e",
+      "bytes": 5061
+    }
+  ],
+  "affected_scene_ids": [
+    "INTRO-PURPOSE",
+    "P01-OUTRO",
+    "P01-R11",
+    "P01-R12",
+    "P01-R13",
+    "P01-R14",
+    "P01-R15",
+    "P01-R16",
+    "P01-R17",
+    "P01-R18",
+    "P01-R19",
+    "P01-R20"
+  ],
+  "checks": [
+    {
+      "check": "독립 대본·숫자·참조·해시",
+      "result": "passed",
+      "evidence": "script_audit_checks.json"
+    },
+    {
+      "check": "스킬 A/B 로컬 준비안·구조·권한",
+      "result": "passed",
+      "evidence": "skill_application_test.md / skill_structure_checks.json"
+    },
+    {
+      "check": "실제 청취·연속 재생·MP4 프레임/기술 검사",
+      "result": "unchecked",
+      "evidence": null
+    }
+  ],
+  "open_issue_ids": [],
+  "unresolved": [
+    "실제 새 음성·타이밍·영상은 미생성/미검수",
+    "네이티브 스킬 자동 등록은 미확인"
+  ],
+  "next_role": "director",
+  "expected_voice_regeneration": {
+    "sentences": 47,
+    "reading_characters_including_spaces": 3088,
+    "approval": false,
+    "performed": false
+  },
+  "next_action": "총괄이 현재 파일 SHA로 원고·실제 전송 청크·예산 범위를 연결한다. 생성 후 음성 담당의 실제 청취·정렬, 편집 담당의 영향 장면 수정과 독립 QA가 필요하다."
+}

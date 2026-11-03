@@ -1,0 +1,67 @@
+{
+  "task_id": "longform-natural-v5-20261104",
+  "role": "writer",
+  "status": "writing_reference_ready_for_parent_review_not_approved_or_rendered",
+  "artifact_base": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104",
+  "input_revisions": "validation.json#/input_revisions",
+  "outputs": [
+    "script_v5.md",
+    "sentence_patches.json",
+    "sentence_mapping.json",
+    "before_after.md",
+    "phonetics.json",
+    "validation.json",
+    "issue_V5-PARENT-ADOPTION.json",
+    "build_packet.py",
+    "verify_packet.py",
+    "verification.json"
+  ],
+  "changed_counts": {
+    "main_total": 90,
+    "changed": 46,
+    "unchanged": 44,
+    "added_ids": 0,
+    "removed_ids": 0
+  },
+  "reading_characters": {
+    "all_main": 5327,
+    "changed_sentences": 2999
+  },
+  "affected_scene_ids": [
+    "INTRO-PURPOSE",
+    "P01-R20",
+    "P01-R19",
+    "P01-R18",
+    "P01-R17",
+    "P01-R16",
+    "P01-R15",
+    "P01-R14",
+    "P01-R13",
+    "P01-R12",
+    "P01-R11",
+    "P01-OUTRO"
+  ],
+  "checks": [
+    {
+      "check": "문장 ID·숫자·원본 SHA·보호명사 등 로컬 검사 13개",
+      "result": "passed",
+      "evidence": "validation.json"
+    }
+  ],
+  "open_issue_ids": [
+    "V5-PARENT-ADOPTION"
+  ],
+  "issue_path": "issue_V5-PARENT-ADOPTION.json",
+  "unresolved": [
+    "총괄 채택·대본 결정",
+    "독립 QA 미실행",
+    "새 유료 생성 전 정확한 새 예산 제안은 부모 담당",
+    "발음 사전은 제안이며 실제 새 음성 발음 미청취"
+  ],
+  "next_role": "director",
+  "actual_listening": false,
+  "continuous_playback": false,
+  "tts_api_calls": 0,
+  "external_transfer": false,
+  "upload": false
+}

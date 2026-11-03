@@ -1,0 +1,39 @@
+{
+  "issue_id": "QA_TEXT_READY",
+  "scene_id": [
+    "INTRO-PURPOSE",
+    "P01-OUTRO",
+    "P01-R11",
+    "P01-R12",
+    "P01-R13",
+    "P01-R14",
+    "P01-R15",
+    "P01-R16",
+    "P01-R17",
+    "P01-R18",
+    "P01-R19",
+    "P01-R20"
+  ],
+  "timecode": null,
+  "severity": "recommended",
+  "문제": "최신 v5의 문구 독립 QA 전달. 미해결 critical/required 0.",
+  "evidence": [
+    "final_report.md",
+    "script_audit_checks.json",
+    "findings.json"
+  ],
+  "수정안": "문구 필수 수정 없음. 채택 시 47개 읽기문을 새 발화 대상으로 검토하고 실제 청취·정렬·영향 장면 QA를 이어간다.",
+  "owner": "director",
+  "status": "handoff_ready",
+  "checked_revision": {
+    "script_sha256": "b29dde75627f6fea1ed692e7cf353fc080d457c5740440af99126d860323282d",
+    "input_manifest": "script_audit_checks.json#/input_sha256",
+    "latest_config_delta": {
+      "evidence": "config_delta_checks.json",
+      "path": "config/video_language.json",
+      "sha256": "d68039458419fa56f08e768646cbe59288472b15f9700e3c51ea85acb881b116"
+    }
+  },
+  "impact": "미디어·예산·유료 생성·게시 승인 아님. 기존 오디오·영상 변경 없음.",
+  "delivery": "직접 에이전트 메시지 도구가 없어 로컬 issue 파일로 전달"
+}

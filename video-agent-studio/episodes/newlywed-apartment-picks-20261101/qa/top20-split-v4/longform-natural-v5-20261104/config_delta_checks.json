@@ -1,0 +1,16 @@
+{
+  "task_id": "longform-natural-v5-20261104",
+  "path": "config/video_language.json",
+  "previous_sha256": "51bb57694a4022526eef65190708e2e9589a9b4c0ad4144ad2a4b1ed24d85f71",
+  "current_sha256": "d68039458419fa56f08e768646cbe59288472b15f9700e3c51ea85acb881b116",
+  "observed_delta": "최종 납품 확인 중 브랜드 보호명 항목 추가를 발견해 해당 설정과 최신 읽기문 관계만 재검수했다. 기존 단지명 보호와 숫자 변환 전 처리·실제 청취 조건은 유지된다.",
+  "checks": {
+    "단지명_차수보존": true,
+    "브랜드_간격추가_최신읽기문과일치": true,
+    "고유명사_숫자변환보다우선": true,
+    "실제청취_요구유지": true,
+    "원본숫자_장소_근거보존": true
+  },
+  "passed": true,
+  "actual_generation_pipeline_execution": "unchecked"
+}

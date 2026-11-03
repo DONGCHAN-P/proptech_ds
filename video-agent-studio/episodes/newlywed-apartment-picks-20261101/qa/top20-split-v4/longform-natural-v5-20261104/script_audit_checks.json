@@ -1,0 +1,2435 @@
+{
+  "task_id": "longform-natural-v5-20261104",
+  "method": "독립 로컬 텍스트·원본·숫자·참조 현물 검사. 작가 validation 결과로 대체하지 않음.",
+  "source_scope": {
+    "ranking_metadata": {
+      "reference_date": "2024-11-01",
+      "publication_date": "2025-12-12",
+      "retrieved_date": "2026-11-01",
+      "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3",
+      "pdf_sha256": "d7e883c41ba0add0b26433edb4aeb45dbd56b5390eb4ccdeb0ebc6f5361cb0c0",
+      "table": "6. 시군구별 신혼부부 수",
+      "printed_pages": [
+        25,
+        26
+      ],
+      "pdf_pages": [
+        32,
+        33
+      ],
+      "transcription": "Manual numeric transcription from official PDF table and its web-extracted text; cross-check against province totals and independent review required.",
+      "definition": "2024-11-01 기준 혼인신고 후 5년 미경과, 혼인관계 유지, 부부 중 1명 이상 국내 거주. 전체는 초혼·재혼·혼인종류 미상 포함.",
+      "weighting": "부부의 거처가 다르면 각 시군구에 0.5 가중치. 공표 수치는 반올림되어 합계 차이 가능.",
+      "boundaries": "2024 통계표 행정구역. 이후 분구·개편은 이 순위에 소급 적용하지 않음.",
+      "ranking_metric": "전체 신혼부부 수 내림차순, 동률 공동순위(competition ranking). 초혼은 별도 열.",
+      "scope_counts": {
+        "capital_gu_ranking": 53,
+        "capital_municipality_ranking": 66,
+        "capital_leaf_ranking": 79
+      },
+      "city_with_gu": [
+        "고양시",
+        "부천시",
+        "성남시",
+        "수원시",
+        "안산시",
+        "안양시",
+        "용인시"
+      ],
+      "reconciliation": [
+        {
+          "province": "서울",
+          "scope": "municipalities",
+          "sum": 166168,
+          "official_province_total": 166163,
+          "rounding_difference": 5,
+          "rounding_bound": 13.0
+        },
+        {
+          "province": "서울",
+          "scope": "leaf",
+          "sum": 166168,
+          "official_province_total": 166163,
+          "rounding_difference": 5,
+          "rounding_bound": 13.0
+        },
+        {
+          "province": "인천",
+          "scope": "municipalities",
+          "sum": 61065,
+          "official_province_total": 61064,
+          "rounding_difference": 1,
+          "rounding_bound": 5.5
+        },
+        {
+          "province": "인천",
+          "scope": "leaf",
+          "sum": 61065,
+          "official_province_total": 61064,
+          "rounding_difference": 1,
+          "rounding_bound": 5.5
+        },
+        {
+          "province": "경기",
+          "scope": "municipalities",
+          "sum": 288809,
+          "official_province_total": 288801,
+          "rounding_difference": 8,
+          "rounding_bound": 16.0
+        },
+        {
+          "province": "경기",
+          "scope": "leaf",
+          "sum": 288809,
+          "official_province_total": 288801,
+          "rounding_difference": 8,
+          "rounding_bound": 22.5
+        }
+      ],
+      "interpretation": "구가 있는 도시의 전체 합계와 하위 구를 같은 순위에 중복 포함하지 않음. 신혼부부 거주 규모로 활용하며 선호도·순유입·투자수익은 별도 검증.",
+      "built_at": "2026-11-01T21:12:48.243796+09:00"
+    },
+    "price_method": {
+      "legend": {
+        "unit": "만원",
+        "bands": [
+          {
+            "label": "5억 미만",
+            "min_manwon": 0,
+            "max_manwon": 50000,
+            "color": "#3E82BD"
+          },
+          {
+            "label": "5~7억",
+            "min_manwon": 50000,
+            "max_manwon": 70000,
+            "color": "#299D92"
+          },
+          {
+            "label": "7~10억",
+            "min_manwon": 70000,
+            "max_manwon": 100000,
+            "color": "#BEA52D"
+          },
+          {
+            "label": "10~15억",
+            "min_manwon": 100000,
+            "max_manwon": 150000,
+            "color": "#E3913D"
+          },
+          {
+            "label": "15~20억",
+            "min_manwon": 150000,
+            "max_manwon": 200000,
+            "color": "#D75B58"
+          },
+          {
+            "label": "20억 이상",
+            "min_manwon": 200000,
+            "max_manwon": null,
+            "color": "#954B87"
+          }
+        ],
+        "boundary_rule": "lower_inclusive_upper_exclusive",
+        "period": [
+          "2026-05-01",
+          "2026-10-31"
+        ],
+        "retrieved_date": "2026-11-03",
+        "area_m2": [
+          83,
+          85
+        ],
+        "statistic": "per-api-complex median of recorded uncancelled individual transactions",
+        "point": "one location-verified official complex internal point",
+        "sample_rule": "n>=1; selected labels show n",
+        "school_symbol": "square",
+        "station_symbol": "rounded_square",
+        "commerce_symbol": "diamond"
+      },
+      "coverage": {
+        "observed_complexes": 2304,
+        "mapped_complexes": 2094,
+        "observed_transactions": 14303,
+        "mapped_transactions": 12829
+      },
+      "coverage_screen_note": "위치 확인 단지만 점으로 표시합니다. 미연결 210단지·1,474건을 가격 0으로 채우지 않습니다.",
+      "layout": "왼쪽: 통계구역 전체 가격 분포 고정 / 오른쪽: 대표 생활권의 실제 맥락 레이어와 학교·역·상업시설 상세",
+      "dot_statistic": "one recorded qualifying transaction median per location-verified complex",
+      "dong_statistic": "transaction-weighted median; each trade counted once, not mean of complex medians",
+      "dong_comparison_minimum_transactions": 20,
+      "source_date_caveats": "2024 residence rank versus 2026 trade observation; October reporting incomplete; school and station record dates differ",
+      "noncausal": true,
+      "placeholder_coordinates_allowed": false
+    },
+    "current_reader": "영상/신혼부부_지역별아파트/2부작_수정안/1편_20-11위_대본_v4_지도기준과사진전환.md"
+  },
+  "counts": {
+    "main": 90,
+    "changed": 47,
+    "unchanged": 43,
+    "reading_changed": 47,
+    "changed_reading_chars_including_spaces": 3088,
+    "changed_reading_chars_no_whitespace": 2384,
+    "numeric_spans": 71,
+    "entity_checks": 66,
+    "price_source_fields": 21
+  },
+  "changed_sentence_ids": [
+    "P01-INTRO-V3-02",
+    "P01-INTRO-V3-03",
+    "P01-INTRO-V3-04",
+    "P01-R20-V2-02",
+    "P01-R20-V2-04",
+    "P01-R20-V2-05",
+    "P01-R20-V2-07",
+    "P01-R19-V2-03",
+    "P01-R19-V2-04",
+    "P01-R19-V2-05",
+    "P01-R19-V2-06",
+    "P01-R19-V2-07",
+    "P01-R19-V2-08",
+    "P01-R18-V2-03",
+    "P01-R18-V2-04",
+    "P01-R18-V2-05",
+    "P01-R18-V2-06",
+    "P01-R18-V2-07",
+    "P01-R18-V2-08",
+    "P01-R17-V2-02",
+    "P01-R17-V2-03",
+    "P01-R17-V2-04",
+    "P01-R17-V2-06",
+    "P01-R17-V2-07",
+    "P01-R17-V2-08",
+    "P01-R16-V2-03",
+    "P01-R16-V2-06",
+    "P01-R15-V2-02",
+    "P01-R15-V2-03",
+    "P01-R15-V2-04",
+    "P01-R15-V2-05",
+    "P01-R15-V2-06",
+    "P01-R15-V2-07",
+    "P01-R15-V2-08",
+    "P01-R14-V2-03",
+    "P01-R14-V2-06",
+    "P01-R14-V2-07",
+    "P01-R14-V2-08",
+    "P01-R13-V2-04",
+    "P01-R13-V2-05",
+    "P01-R13-V2-07",
+    "P01-R12-V2-03",
+    "P01-R12-V2-05",
+    "P01-R11-V2-04",
+    "P01-R11-V2-05",
+    "P01-R11-V2-07",
+    "P01-OUTRO-V2-01"
+  ],
+  "affected_scene_ids": [
+    "INTRO-PURPOSE",
+    "P01-OUTRO",
+    "P01-R11",
+    "P01-R12",
+    "P01-R13",
+    "P01-R14",
+    "P01-R15",
+    "P01-R16",
+    "P01-R17",
+    "P01-R18",
+    "P01-R19",
+    "P01-R20"
+  ],
+  "linked_shorts_impact_against_original_sequences": {
+    "short01_promo.json": {
+      "changed_sentence_ids": [
+        "P01-INTRO-V3-04"
+      ],
+      "changed_count": 1,
+      "new_asset_created": false
+    },
+    "short02_ranks20_16.json": {
+      "changed_sentence_ids": [
+        "P01-R20-V2-05",
+        "P01-R19-V2-07",
+        "P01-R18-V2-07"
+      ],
+      "changed_count": 3,
+      "new_asset_created": false
+    },
+    "short03_ranks15_11.json": {
+      "changed_sentence_ids": [
+        "P01-R15-V2-07"
+      ],
+      "changed_count": 1,
+      "new_asset_created": false
+    }
+  },
+  "audio_expectation": "채택 시 바뀐 읽기문만 새 음성 필요. 기존 음성과 동일하다고 간주할 수 없음. 비용·생성 승인이 아님.",
+  "old_sanggye_reading": "상계이 차중앙하이츠 상세도에는 상계중학교, 서울상계초등학교와 노원역이 표시돼, 단지에서 학교와 역을 향하는 방향을 살펴볼 수 있습니다.",
+  "new_sanggye_reading": "상계 이차 중앙 하이츠 상세도에는 상계중학교, 서울상계초등학교와 노원역이 표시돼, 단지에서 학교와 지하철역을 향하는 방향을 살펴볼 수 있습니다.",
+  "latest_targeted_texts": {
+    "P01-INTRO-V3-02": {
+      "text": "‘데이터로보는부동산’에서는 신혼부부가 매매를 검토할 만한 지역과 아파트를 데이터로 살펴봅니다.",
+      "reading_text": "데이터로 보는 부동산에서는 신혼부부가 매매를 검토할 만한 지역과 아파트를 데이터로 살펴봅니다."
+    },
+    "P01-INTRO-V3-04": {
+      "text": "2024년 신혼부부 통계를 보고, 지역마다 신혼부부가 몇 쌍씩 살고 있는지 비교한 거죠.",
+      "reading_text": "이천이십사 년 신혼부부 통계를 보고, 지역마다 신혼부부가 몇 쌍씩 살고 있는지 비교한 거죠."
+    },
+    "P01-R20-V2-05": {
+      "text": "준공 시기로 나눠 보면 거래 중위값은 2000년까지 지어진 아파트가 6억원, 2011년 이후 지어진 아파트가 8억9,900만원입니다.",
+      "reading_text": "준공 시기로 나눠 보면 거래 중윗값은 이천 년까지 지어진 아파트가 육 억 원, 이천십일 년 이후 지어진 아파트가 팔 억 구천구백 만 원입니다."
+    }
+  },
+  "checks": [
+    {
+      "check": "원본_90ID_순서_유지",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "원본_reader_해시",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "원본90문장_reader_내용과순서",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "v5_MD와_mapping_90문장_일치",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "patch_count_실제변경집합",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "patches_전후와_원본_mapping_일치",
+      "passed": true,
+      "details": []
+    },
+    {
+      "check": "기존_전체숫자_유지_유일한추가2024",
+      "passed": true,
+      "details": [
+        {
+          "sentence_id": "P01-INTRO-V3-04",
+          "old": [],
+          "new": [
+            "2024"
+          ]
+        }
+      ]
+    },
+    {
+      "check": "보호숫자span_표시문_읽기문유지",
+      "passed": true,
+      "details": [
+        {
+          "sentence_id": "P01-INTRO-V3-05",
+          "display": "53개",
+          "reading": "쉰세 개",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-INTRO-V3-05",
+          "display": "20위부터",
+          "reading": "이십 위부터",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-INTRO-V3-05",
+          "display": "11위까지",
+          "reading": "십일 위까지",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-CRITERIA-01",
+          "display": "2026년",
+          "reading": "이천이십육 년",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-CRITERIA-01",
+          "display": "5월부터",
+          "reading": "오 월부터",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-CRITERIA-01",
+          "display": "10월까지",
+          "reading": "시월까지",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-CRITERIA-01",
+          "display": "83~85제곱미터",
+          "reading": "팔십삼에서 팔십오 제곱미터",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-CRITERIA-02",
+          "display": "11월",
+          "reading": "십일 월",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-CRITERIA-02",
+          "display": "3일",
+          "reading": "삼 일",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-INTRO-V3-08",
+          "display": "20위",
+          "reading": "이십 위",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-01",
+          "display": "20위는",
+          "reading": "이십 위는",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-01",
+          "display": "7,365쌍입니다",
+          "reading": "칠천삼백육십오 쌍입니다",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-05",
+          "display": "2000년까지",
+          "reading": "이천 년까지",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-05",
+          "display": "6억원",
+          "reading": "육 억 원",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-05",
+          "display": "2011년",
+          "reading": "이천십일 년",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-05",
+          "display": "8억9,900만원입니다",
+          "reading": "팔 억 구천구백 만 원입니다",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-07",
+          "display": "미리내마을(롯데2",
+          "reading": "미리내마을 롯데이",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-01",
+          "display": "19위는",
+          "reading": "십구 위는",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-01",
+          "display": "7,547쌍입니다",
+          "reading": "칠천오백사십칠 쌍입니다",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-02",
+          "display": "6호선을",
+          "reading": "육 호선을",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-05",
+          "display": "7호선",
+          "reading": "칠 호선",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-06",
+          "display": "경춘선·6호선과",
+          "reading": "경춘선, 육 호선과",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-06",
+          "display": "7호선",
+          "reading": "칠 호선",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-07",
+          "display": "7억4,000만원",
+          "reading": "칠 억 사천 만 원",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-07",
+          "display": "8억4,000만원으로",
+          "reading": "팔 억 사천 만 원으로",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-01",
+          "display": "18위는",
+          "reading": "십팔 위는",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-01",
+          "display": "7,686쌍입니다",
+          "reading": "칠천육백팔십육 쌍입니다",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-04",
+          "display": "5번출구에는",
+          "reading": "오 번출구에는",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-07",
+          "display": "5억2,000만원",
+          "reading": "오 억 이천 만 원",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-07",
+          "display": "7억1,500만원으로",
+          "reading": "칠 억 천오백 만 원으로",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-01",
+          "display": "17위는",
+          "reading": "십칠 위는",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-01",
+          "display": "7,875쌍입니다",
+          "reading": "칠천팔백칠십오 쌍입니다",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-02",
+          "display": "연수2동의",
+          "reading": "연수이 동의",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-05",
+          "display": "3억3,150만원",
+          "reading": "삼 억 삼천백오십 만 원",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-05",
+          "display": "7억4,000만원으로",
+          "reading": "칠 억 사천 만 원으로",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-01",
+          "display": "16위는",
+          "reading": "십육 위는",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-01",
+          "display": "7,997쌍입니다",
+          "reading": "칠천구백구십칠 쌍입니다",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-02",
+          "display": "2000년대에",
+          "reading": "이천 년대에",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-07",
+          "display": "77개",
+          "reading": "칠십칠 개",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-07",
+          "display": "61곳은",
+          "reading": "육십일 곳은",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-07",
+          "display": "5억원",
+          "reading": "오 억 원",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-07",
+          "display": "16곳은",
+          "reading": "십육 곳은",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-07",
+          "display": "5억원",
+          "reading": "오 억 원",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-07",
+          "display": "7억원",
+          "reading": "칠 억 원",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-01",
+          "display": "15위는",
+          "reading": "십오 위는",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-01",
+          "display": "8,016쌍입니다",
+          "reading": "팔천십육 쌍입니다",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-03",
+          "display": "1호선과",
+          "reading": "일 호선과",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-03",
+          "display": "2호선을",
+          "reading": "이 호선을",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-07",
+          "display": "7억8,000만원",
+          "reading": "칠 억 팔천 만 원",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-07",
+          "display": "13억2,000만원으로",
+          "reading": "십삼 억 이천 만 원으로",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-01",
+          "display": "14위는",
+          "reading": "십사 위는",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-01",
+          "display": "8,267쌍입니다",
+          "reading": "팔천이백육십칠 쌍입니다",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-05",
+          "display": "6억3,800만원",
+          "reading": "육 억 삼천팔백 만 원",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-05",
+          "display": "9억4,000만원으로",
+          "reading": "구 억 사천 만 원으로",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-01",
+          "display": "13위는",
+          "reading": "십삼 위는",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-01",
+          "display": "8,329쌍입니다",
+          "reading": "팔천삼백이십구 쌍입니다",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-06",
+          "display": "5억3,000만원",
+          "reading": "오 억 삼천 만 원",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-06",
+          "display": "6억4,750만원으로",
+          "reading": "육 억 사천칠백오십 만 원으로",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-01",
+          "display": "12위는",
+          "reading": "십이 위는",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-01",
+          "display": "8,388쌍입니다",
+          "reading": "팔천삼백팔십팔 쌍입니다",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-05",
+          "display": "망포마을쌍용1차",
+          "reading": "망포마을쌍용일 차",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-07",
+          "display": "7억3,000만원",
+          "reading": "칠 억 삼천 만 원",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-07",
+          "display": "11억9,000만원으로",
+          "reading": "십일 억 구천 만 원으로",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-01",
+          "display": "11위는",
+          "reading": "십일 위는",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-01",
+          "display": "8,473쌍입니다",
+          "reading": "팔천사백칠십삼 쌍입니다",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-04",
+          "display": "상계2차중앙하이츠",
+          "reading": "상계 이차 중앙 하이츠",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-06",
+          "display": "7억1,000만원",
+          "reading": "칠 억 천 만 원",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-06",
+          "display": "8억6,000만원으로",
+          "reading": "팔 억 육천 만 원으로",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-OUTRO-V2-02",
+          "display": "2024년",
+          "reading": "이천이십사 년",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-OUTRO-V2-02",
+          "display": "10위에서",
+          "reading": "십 위에서",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        },
+        {
+          "sentence_id": "P01-OUTRO-V2-02",
+          "display": "1위를",
+          "reading": "일 위를",
+          "comparison_policy": "공백 및 끝의 을/를/의 조사만 제외; 숫자·단위는 유지",
+          "display_preserved": true,
+          "reading_preserved": true
+        }
+      ]
+    },
+    {
+      "check": "순위10곳_지역_거주수_원천랭킹대조",
+      "passed": true,
+      "details": [
+        {
+          "sentence_id": "P01-R20-V2-01",
+          "expected": "20위는 경기 부천시 원미구, 7,365쌍입니다.",
+          "actual": "20위는 경기 부천시 원미구, 7,365쌍입니다.",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-01",
+          "expected": "19위는 서울 중랑구, 7,547쌍입니다.",
+          "actual": "19위는 서울 중랑구, 7,547쌍입니다.",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-01",
+          "expected": "18위는 경기 용인시 기흥구, 7,686쌍입니다.",
+          "actual": "18위는 경기 용인시 기흥구, 7,686쌍입니다.",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-01",
+          "expected": "17위는 인천 연수구, 7,875쌍입니다.",
+          "actual": "17위는 인천 연수구, 7,875쌍입니다.",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-01",
+          "expected": "16위는 인천 남동구, 7,997쌍입니다.",
+          "actual": "16위는 인천 남동구, 7,997쌍입니다.",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-01",
+          "expected": "15위는 서울 구로구, 8,016쌍입니다.",
+          "actual": "15위는 서울 구로구, 8,016쌍입니다.",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-01",
+          "expected": "14위는 서울 은평구, 8,267쌍입니다.",
+          "actual": "14위는 서울 은평구, 8,267쌍입니다.",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-01",
+          "expected": "13위는 경기 수원시 권선구, 8,329쌍입니다.",
+          "actual": "13위는 경기 수원시 권선구, 8,329쌍입니다.",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-01",
+          "expected": "12위는 경기 수원시 영통구, 8,388쌍입니다.",
+          "actual": "12위는 경기 수원시 영통구, 8,388쌍입니다.",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-01",
+          "expected": "11위는 서울 노원구, 8,473쌍입니다.",
+          "actual": "11위는 서울 노원구, 8,473쌍입니다.",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "check": "가격10지역_참조수치_표본_분모_현물대조",
+      "passed": true,
+      "details": [
+        {
+          "claim_id": "W4V2-R20-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/19/build_cohorts/0",
+          "expected": {
+            "label": "2000년 이전 준공",
+            "transaction_n": 279,
+            "complex_n": 28,
+            "median_manwon": 60000.0
+          },
+          "actual": {
+            "label": "2000년 이전 준공",
+            "transaction_n": 279,
+            "complex_n": 28,
+            "median_manwon": 60000.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R20-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/19/build_cohorts/2",
+          "expected": {
+            "label": "2011년 이후 준공",
+            "transaction_n": 167,
+            "complex_n": 13,
+            "median_manwon": 89900.0
+          },
+          "actual": {
+            "label": "2011년 이후 준공",
+            "transaction_n": 167,
+            "complex_n": 13,
+            "median_manwon": 89900.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R19-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/18/dong_prices_by_transaction_count/1",
+          "expected": {
+            "dong": "신내동",
+            "transaction_n": 100,
+            "complex_n": 17,
+            "median_manwon": 74000.0
+          },
+          "actual": {
+            "dong": "신내동",
+            "transaction_n": 100,
+            "complex_n": 17,
+            "median_manwon": 74000.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R19-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/18/dong_prices_by_transaction_count/0",
+          "expected": {
+            "dong": "면목동",
+            "transaction_n": 132,
+            "complex_n": 30,
+            "median_manwon": 84000.0
+          },
+          "actual": {
+            "dong": "면목동",
+            "transaction_n": 132,
+            "complex_n": 30,
+            "median_manwon": 84000.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R18-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/17/dong_prices_by_transaction_count/1",
+          "expected": {
+            "dong": "동백동",
+            "transaction_n": 165,
+            "complex_n": 15,
+            "median_manwon": 52000.0
+          },
+          "actual": {
+            "dong": "동백동",
+            "transaction_n": 165,
+            "complex_n": 15,
+            "median_manwon": 52000.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R18-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/17/dong_prices_by_transaction_count/0",
+          "expected": {
+            "dong": "영덕동",
+            "transaction_n": 179,
+            "complex_n": 14,
+            "median_manwon": 71500.0
+          },
+          "actual": {
+            "dong": "영덕동",
+            "transaction_n": 179,
+            "complex_n": 14,
+            "median_manwon": 71500.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R17-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/16/dong_prices_by_transaction_count/2",
+          "expected": {
+            "dong": "연수동",
+            "transaction_n": 70,
+            "complex_n": 10,
+            "median_manwon": 33150.0
+          },
+          "actual": {
+            "dong": "연수동",
+            "transaction_n": 70,
+            "complex_n": 10,
+            "median_manwon": 33150.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R17-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/16/dong_prices_by_transaction_count/0",
+          "expected": {
+            "dong": "송도동",
+            "transaction_n": 860,
+            "complex_n": 65,
+            "median_manwon": 74000.0
+          },
+          "actual": {
+            "dong": "송도동",
+            "transaction_n": 860,
+            "complex_n": 65,
+            "median_manwon": 74000.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R16-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/15/mapped_bands/0",
+          "expected": {
+            "label": "5억 미만",
+            "color": "#3E82BD",
+            "complex_n": 61,
+            "denominator": 77
+          },
+          "actual": {
+            "label": "5억 미만",
+            "color": "#3E82BD",
+            "complex_n": 61,
+            "denominator": 77
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R16-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/15/mapped_bands/1",
+          "expected": {
+            "label": "5~7억",
+            "color": "#299D92",
+            "complex_n": 16,
+            "denominator": 77
+          },
+          "actual": {
+            "label": "5~7억",
+            "color": "#299D92",
+            "complex_n": 16,
+            "denominator": 77
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R16-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/15/mapped_complexes",
+          "expected": 77,
+          "actual": 77,
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R15-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/14/dong_prices_by_transaction_count/0",
+          "expected": {
+            "dong": "구로동",
+            "transaction_n": 123,
+            "complex_n": 40,
+            "median_manwon": 78000.0
+          },
+          "actual": {
+            "dong": "구로동",
+            "transaction_n": 123,
+            "complex_n": 40,
+            "median_manwon": 78000.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R15-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/14/dong_prices_by_transaction_count/3",
+          "expected": {
+            "dong": "신도림동",
+            "transaction_n": 80,
+            "complex_n": 18,
+            "median_manwon": 132000.0
+          },
+          "actual": {
+            "dong": "신도림동",
+            "transaction_n": 80,
+            "complex_n": 18,
+            "median_manwon": 132000.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R14-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/13/dong_prices_by_transaction_count/3",
+          "expected": {
+            "dong": "신사동",
+            "transaction_n": 67,
+            "complex_n": 20,
+            "median_manwon": 63800.0
+          },
+          "actual": {
+            "dong": "신사동",
+            "transaction_n": 67,
+            "complex_n": 20,
+            "median_manwon": 63800.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R14-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/13/dong_prices_by_transaction_count/1",
+          "expected": {
+            "dong": "진관동",
+            "transaction_n": 91,
+            "complex_n": 25,
+            "median_manwon": 94000.0
+          },
+          "actual": {
+            "dong": "진관동",
+            "transaction_n": 91,
+            "complex_n": 25,
+            "median_manwon": 94000.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R13-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/12/dong_prices_by_transaction_count/0",
+          "expected": {
+            "dong": "금곡동",
+            "transaction_n": 217,
+            "complex_n": 17,
+            "median_manwon": 53000.0
+          },
+          "actual": {
+            "dong": "금곡동",
+            "transaction_n": 217,
+            "complex_n": 17,
+            "median_manwon": 53000.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R13-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/12/dong_prices_by_transaction_count/1",
+          "expected": {
+            "dong": "권선동",
+            "transaction_n": 192,
+            "complex_n": 18,
+            "median_manwon": 64750.0
+          },
+          "actual": {
+            "dong": "권선동",
+            "transaction_n": 192,
+            "complex_n": 18,
+            "median_manwon": 64750.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R12-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/11/dong_prices_by_transaction_count/0",
+          "expected": {
+            "dong": "망포동",
+            "transaction_n": 235,
+            "complex_n": 23,
+            "median_manwon": 73000.0
+          },
+          "actual": {
+            "dong": "망포동",
+            "transaction_n": 235,
+            "complex_n": 23,
+            "median_manwon": 73000.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R12-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/11/dong_prices_by_transaction_count/3",
+          "expected": {
+            "dong": "이의동",
+            "transaction_n": 100,
+            "complex_n": 10,
+            "median_manwon": 119000.0
+          },
+          "actual": {
+            "dong": "이의동",
+            "transaction_n": 100,
+            "complex_n": 10,
+            "median_manwon": 119000.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R11-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/10/dong_prices_by_transaction_count/0",
+          "expected": {
+            "dong": "상계동",
+            "transaction_n": 213,
+            "complex_n": 43,
+            "median_manwon": 71000.0
+          },
+          "actual": {
+            "dong": "상계동",
+            "transaction_n": 213,
+            "complex_n": 43,
+            "median_manwon": 71000.0
+          },
+          "passed": true
+        },
+        {
+          "claim_id": "W4V2-R11-PRICE-SELECTED",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "pointer": "/regions/10/dong_prices_by_transaction_count/1",
+          "expected": {
+            "dong": "중계동",
+            "transaction_n": 159,
+            "complex_n": 37,
+            "median_manwon": 86000.0
+          },
+          "actual": {
+            "dong": "중계동",
+            "transaction_n": 159,
+            "complex_n": 37,
+            "median_manwon": 86000.0
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "check": "가격기준문2개_완전보존",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "원본기간_면적_조회일",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "보호지명_학교_단지_교통명_문장별유지",
+      "passed": true,
+      "details": [
+        {
+          "sentence_id": "P01-R20-V2-07",
+          "entity": "미리내마을(롯데2)",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-07",
+          "entity": "계남초등학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-07",
+          "entity": "계남중학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-07",
+          "entity": "신중동역",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-02",
+          "entity": "신내역",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-02",
+          "entity": "경춘선",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-03",
+          "entity": "서울의료원",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-03",
+          "entity": "청남공원",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-04",
+          "entity": "신내역",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-05",
+          "entity": "서울면남초등학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-05",
+          "entity": "용마중학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-05",
+          "entity": "용마산(용마폭포공원)역",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-06",
+          "entity": "경춘선",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-04",
+          "entity": "GTX-A",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-04",
+          "entity": "수인분당선",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-04",
+          "entity": "구성역",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-05",
+          "entity": "용인기흥효성해링턴플레이스",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-05",
+          "entity": "청곡초등학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-05",
+          "entity": "상갈역",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-06",
+          "entity": "구성역",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-02",
+          "entity": "연수2동",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-04",
+          "entity": "송도 센트럴파크",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-07",
+          "entity": "e편한세상송도",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-07",
+          "entity": "인천송담초등학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-07",
+          "entity": "인천미송중학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-07",
+          "entity": "송도달빛축제공원역",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-02",
+          "entity": "논현 웰카운티",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-03",
+          "entity": "소래습지생태공원",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-05",
+          "entity": "논현 파크 포레",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-05",
+          "entity": "인천논곡초등학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-05",
+          "entity": "인천금융고등학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-03",
+          "entity": "신도림로",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-03",
+          "entity": "경인로",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-03",
+          "entity": "신도림역",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-04",
+          "entity": "G밸리",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-04",
+          "entity": "금천구 가산동",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-05",
+          "entity": "현대연예인",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-05",
+          "entity": "서울구일초등학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-05",
+          "entity": "구일중학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-05",
+          "entity": "구일고등학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-02",
+          "entity": "상림마을",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-02",
+          "entity": "우물골",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-03",
+          "entity": "우물골",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-03",
+          "entity": "진관동 주민센터",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-07",
+          "entity": "녹번역센트레빌",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-07",
+          "entity": "영락중학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-07",
+          "entity": "서울녹번초등학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-07",
+          "entity": "녹번역",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-03",
+          "entity": "수원종합버스터미널",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-04",
+          "entity": "Y CITY(와이시티)",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-04",
+          "entity": "수원중촌초등학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-04",
+          "entity": "상촌초등학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-04",
+          "entity": "칠보중학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-04",
+          "entity": "원천호수",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-04",
+          "entity": "신대호수",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-04",
+          "entity": "광교호수공원",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-05",
+          "entity": "망포마을쌍용1차",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-05",
+          "entity": "태장초등학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-05",
+          "entity": "잠원중학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-05",
+          "entity": "망포역",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-03",
+          "entity": "경춘선",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-03",
+          "entity": "경춘선숲길",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-04",
+          "entity": "상계2차중앙하이츠",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-04",
+          "entity": "상계중학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-04",
+          "entity": "서울상계초등학교",
+          "preserved": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-04",
+          "entity": "노원역",
+          "preserved": true
+        }
+      ]
+    },
+    {
+      "check": "90문장_참조경로와본문_원본claimIDs_유지",
+      "passed": true,
+      "details": [
+        {
+          "sentence_id": "P01-INTRO-V3-01",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/intro-rationale-v3/intro_proposal_v3.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-INTRO-V3-02",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/intro-rationale-v3/intro_proposal_v3.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-INTRO-V3-03",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/intro-rationale-v3/intro_proposal_v3.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-INTRO-V3-04",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/intro-rationale-v3/intro_proposal_v3.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-INTRO-V3-05",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/intro-rationale-v3/intro_proposal_v3.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-INTRO-V3-06",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/intro-rationale-v3/intro_proposal_v3.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-CRITERIA-01",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/map-clean-v1/criteria_script.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-CRITERIA-02",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/map-clean-v1/criteria_script.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-INTRO-V3-07",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/intro-rationale-v3/intro_proposal_v3.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-INTRO-V3-08",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/intro-rationale-v3/intro_proposal_v3.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-01",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-02",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-03",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-04",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-05",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-06",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-07",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R20-V2-08",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-01",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-02",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-03",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-04",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-05",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-06",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-07",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R19-V2-08",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-01",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-02",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-03",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-04",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-05",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-06",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-07",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R18-V2-08",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-01",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-02",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-03",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-04",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-05",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-06",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-07",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R17-V2-08",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-01",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-02",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-03",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-04",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-05",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-06",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-07",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R16-V2-08",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-01",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-02",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-03",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-04",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-05",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-06",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-07",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R15-V2-08",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-01",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-02",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-03",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-04",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-05",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-06",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-07",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R14-V2-08",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-01",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-02",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-03",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-04",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-05",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-06",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R13-V2-07",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-01",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-02",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-03",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-04",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-05",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-06",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R12-V2-07",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-01",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-02",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-03",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-04",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-05",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-06",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-R11-V2-07",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-OUTRO-V2-01",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-OUTRO-V2-02",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        },
+        {
+          "sentence_id": "P01-OUTRO-V2-03",
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "check": "작가선언입력9개_현재해시대조",
+      "passed": true,
+      "details": [
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/narration_manifest.json",
+          "expected": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+          "actual": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/timing_proposals.json",
+          "expected": "1078cce4ad6bb6ec9c11432daeb50f6925dd7452fd3cf7874f75f235cdf92717",
+          "actual": "1078cce4ad6bb6ec9c11432daeb50f6925dd7452fd3cf7874f75f235cdf92717",
+          "passed": true
+        },
+        {
+          "path": "영상/신혼부부_지역별아파트/2부작_수정안/1편_20-11위_대본_v4_지도기준과사진전환.md",
+          "expected": "32f5259b7be09742b1280434cba3a3f37989c97a32003340d72ed037b8fcc6b6",
+          "actual": "32f5259b7be09742b1280434cba3a3f37989c97a32003340d72ed037b8fcc6b6",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "expected": "5a2a098c23137d64fbc23fd861ca1eeff5a76554d397d22171dac54b091b8b3b",
+          "actual": "5a2a098c23137d64fbc23fd861ca1eeff5a76554d397d22171dac54b091b8b3b",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/intro-rationale-v3/intro_proposal_v3.json",
+          "expected": "0cbd68f79ca4981b13d08b68547811c19102be6594933b3d59617af51168ea5d",
+          "actual": "0cbd68f79ca4981b13d08b68547811c19102be6594933b3d59617af51168ea5d",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/map-clean-v1/criteria_script.json",
+          "expected": "6fe716bc6454a6c1e564f713b10b7fd2e8022af653c44ba4d4c74a660018c7d4",
+          "actual": "6fe716bc6454a6c1e564f713b10b7fd2e8022af653c44ba4d4c74a660018c7d4",
+          "passed": true
+        },
+        {
+          "path": "config/video_language.json",
+          "expected": "51bb57694a4022526eef65190708e2e9589a9b4c0ad4144ad2a4b1ed24d85f71",
+          "actual": "51bb57694a4022526eef65190708e2e9589a9b4c0ad4144ad2a4b1ed24d85f71",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/guides/대본_자연스러운표현과_발음.md",
+          "expected": "ec2d1a425bf2c9317728f72151286c91a850468dfd0c4758610dabea6e3a1aae",
+          "actual": "ec2d1a425bf2c9317728f72151286c91a850468dfd0c4758610dabea6e3a1aae",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/jun-and-shorts-v1/short01_promo.json",
+          "expected": "2852176dbb994e19630a931b4ec9f766a0c4f16794b936b0a6e699bc1a1a8428",
+          "actual": "2852176dbb994e19630a931b4ec9f766a0c4f16794b936b0a6e699bc1a1a8428",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/jun-and-shorts-v1/short02_ranks20_16.json",
+          "expected": "71485094fa2787dd167c311013d8a8343827268cd6fef025fc73dc9362de97bc",
+          "actual": "71485094fa2787dd167c311013d8a8343827268cd6fef025fc73dc9362de97bc",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/jun-and-shorts-v1/short03_ranks15_11.json",
+          "expected": "bbf657b92e4a767bbcb819e7e6a67fa7674cd34cf1108f4cc7675697807350f9",
+          "actual": "bbf657b92e4a767bbcb819e7e6a67fa7674cd34cf1108f4cc7675697807350f9",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "check": "작가freeze_manifest_출력현재해시대조",
+      "passed": true,
+      "details": [
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/script_v5.md",
+          "expected": "b29dde75627f6fea1ed692e7cf353fc080d457c5740440af99126d860323282d",
+          "actual": "b29dde75627f6fea1ed692e7cf353fc080d457c5740440af99126d860323282d",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/sentence_patches.json",
+          "expected": "4a38655b950315cbff4f3b89b508a41bcb12674e982c69f4366d43eb4a18c9bb",
+          "actual": "4a38655b950315cbff4f3b89b508a41bcb12674e982c69f4366d43eb4a18c9bb",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/sentence_mapping.json",
+          "expected": "ecf1b790a7360e76ad376bd3e706fc217be426d7cc26f14418cd388919f4f032",
+          "actual": "ecf1b790a7360e76ad376bd3e706fc217be426d7cc26f14418cd388919f4f032",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/before_after.md",
+          "expected": "daad043a6c8caa626a8089d7cbca74b50c52050b306809668a2e0597009faa5f",
+          "actual": "daad043a6c8caa626a8089d7cbca74b50c52050b306809668a2e0597009faa5f",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/phonetics.json",
+          "expected": "ab1ad7fdd00dc3daefb6af6e4f72fc2480a6cd483760e3bdeeeace78074d6fde",
+          "actual": "ab1ad7fdd00dc3daefb6af6e4f72fc2480a6cd483760e3bdeeeace78074d6fde",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/validation.json",
+          "expected": "46a9a98111a53453921b07da94bcbf89b77bbe5aef7dd00d249700d4e398f6e0",
+          "actual": "46a9a98111a53453921b07da94bcbf89b77bbe5aef7dd00d249700d4e398f6e0",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/issue_V5-PARENT-ADOPTION.json",
+          "expected": "821b6b138f06158fb628b674d67d5cd771a97c7bcb02ad0a7413201ccd17917f",
+          "actual": "821b6b138f06158fb628b674d67d5cd771a97c7bcb02ad0a7413201ccd17917f",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/build_packet.py",
+          "expected": "a58e040e1843f5552a3192c7139d7f58c692d0b5ed5217dfd94466bb98317bfa",
+          "actual": "a58e040e1843f5552a3192c7139d7f58c692d0b5ed5217dfd94466bb98317bfa",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/verify_packet.py",
+          "expected": "9feadc60fa510b39c2b6a985b848ae0c83f80b99abcdcf934ebeb3ad2590033b",
+          "actual": "9feadc60fa510b39c2b6a985b848ae0c83f80b99abcdcf934ebeb3ad2590033b",
+          "passed": true
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/verification.json",
+          "expected": "4a2c7c65163afaa9685757a2ab22b140b8a15971cdb1bbadd95d102279b551d2",
+          "actual": "4a2c7c65163afaa9685757a2ab22b140b8a15971cdb1bbadd95d102279b551d2",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "check": "상계_원본식별자_2차_표시문_이차읽기",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "2024거주통계_scope",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "최신국소수정_도입04_브랜드간격_준공집단표현",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "freeze_문자수_변경수독립대조",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "검수중_입력불변",
+      "passed": true,
+      "details": [
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/narration_manifest.json",
+          "read_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+          "current_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1"
+        },
+        {
+          "path": "영상/신혼부부_지역별아파트/2부작_수정안/1편_20-11위_대본_v4_지도기준과사진전환.md",
+          "read_sha256": "32f5259b7be09742b1280434cba3a3f37989c97a32003340d72ed037b8fcc6b6",
+          "current_sha256": "32f5259b7be09742b1280434cba3a3f37989c97a32003340d72ed037b8fcc6b6"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/sentence_mapping.json",
+          "read_sha256": "ecf1b790a7360e76ad376bd3e706fc217be426d7cc26f14418cd388919f4f032",
+          "current_sha256": "ecf1b790a7360e76ad376bd3e706fc217be426d7cc26f14418cd388919f4f032"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/sentence_patches.json",
+          "read_sha256": "4a38655b950315cbff4f3b89b508a41bcb12674e982c69f4366d43eb4a18c9bb",
+          "current_sha256": "4a38655b950315cbff4f3b89b508a41bcb12674e982c69f4366d43eb4a18c9bb"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/phonetics.json",
+          "read_sha256": "ab1ad7fdd00dc3daefb6af6e4f72fc2480a6cd483760e3bdeeeace78074d6fde",
+          "current_sha256": "ab1ad7fdd00dc3daefb6af6e4f72fc2480a6cd483760e3bdeeeace78074d6fde"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/script_v5.md",
+          "read_sha256": "b29dde75627f6fea1ed692e7cf353fc080d457c5740440af99126d860323282d",
+          "current_sha256": "b29dde75627f6fea1ed692e7cf353fc080d457c5740440af99126d860323282d"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/handoff.json",
+          "read_sha256": "edea52026a8300fa3701c0d1353c6191978086c8e34655edc526c6aa2dbf13e7",
+          "current_sha256": "edea52026a8300fa3701c0d1353c6191978086c8e34655edc526c6aa2dbf13e7"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/freeze_manifest.json",
+          "read_sha256": "bd39cf394ad1b28a0ca2f7454e1d720dd5843bb98ab78cb1be17279b973aa393",
+          "current_sha256": "bd39cf394ad1b28a0ca2f7454e1d720dd5843bb98ab78cb1be17279b973aa393"
+        },
+        {
+          "path": "config/video_language.json",
+          "read_sha256": "51bb57694a4022526eef65190708e2e9589a9b4c0ad4144ad2a4b1ed24d85f71",
+          "current_sha256": "51bb57694a4022526eef65190708e2e9589a9b4c0ad4144ad2a4b1ed24d85f71"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/timing_proposals.json",
+          "read_sha256": "1078cce4ad6bb6ec9c11432daeb50f6925dd7452fd3cf7874f75f235cdf92717",
+          "current_sha256": "1078cce4ad6bb6ec9c11432daeb50f6925dd7452fd3cf7874f75f235cdf92717"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json",
+          "read_sha256": "5a2a098c23137d64fbc23fd861ca1eeff5a76554d397d22171dac54b091b8b3b",
+          "current_sha256": "5a2a098c23137d64fbc23fd861ca1eeff5a76554d397d22171dac54b091b8b3b"
+        },
+        {
+          "path": "analysis/newlywed_region_2024/rankings.json",
+          "read_sha256": "275ce96232e523428bcea02aa3f11bd0f29ca70f2e8a13bbc55aa40b389d1d61",
+          "current_sha256": "275ce96232e523428bcea02aa3f11bd0f29ca70f2e8a13bbc55aa40b389d1d61"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/legend.json",
+          "read_sha256": "c3ccb0ba50de09a17712e15c34eabd567f629b45b7083f5db2bc2bc3d58c1fc1",
+          "current_sha256": "c3ccb0ba50de09a17712e15c34eabd567f629b45b7083f5db2bc2bc3d58c1fc1"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+          "read_sha256": "4ec97af499b520b6030411c636877c93e4c6f877769e43d35d0137ea49ea76d1",
+          "current_sha256": "4ec97af499b520b6030411c636877c93e4c6f877769e43d35d0137ea49ea76d1"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/intro-rationale-v3/intro_proposal_v3.json",
+          "read_sha256": "0cbd68f79ca4981b13d08b68547811c19102be6594933b3d59617af51168ea5d",
+          "current_sha256": "0cbd68f79ca4981b13d08b68547811c19102be6594933b3d59617af51168ea5d"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/map-clean-v1/criteria_script.json",
+          "read_sha256": "6fe716bc6454a6c1e564f713b10b7fd2e8022af653c44ba4d4c74a660018c7d4",
+          "current_sha256": "6fe716bc6454a6c1e564f713b10b7fd2e8022af653c44ba4d4c74a660018c7d4"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/jun-and-shorts-v1/short01_promo.json",
+          "read_sha256": "2852176dbb994e19630a931b4ec9f766a0c4f16794b936b0a6e699bc1a1a8428",
+          "current_sha256": "2852176dbb994e19630a931b4ec9f766a0c4f16794b936b0a6e699bc1a1a8428"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/jun-and-shorts-v1/short02_ranks20_16.json",
+          "read_sha256": "71485094fa2787dd167c311013d8a8343827268cd6fef025fc73dc9362de97bc",
+          "current_sha256": "71485094fa2787dd167c311013d8a8343827268cd6fef025fc73dc9362de97bc"
+        },
+        {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/jun-and-shorts-v1/short03_ranks15_11.json",
+          "read_sha256": "bbf657b92e4a767bbcb819e7e6a67fa7674cd34cf1108f4cc7675697807350f9",
+          "current_sha256": "bbf657b92e4a767bbcb819e7e6a67fa7674cd34cf1108f4cc7675697807350f9"
+        }
+      ]
+    }
+  ],
+  "input_sha256": {
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/narration_manifest.json": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+    "영상/신혼부부_지역별아파트/2부작_수정안/1편_20-11위_대본_v4_지도기준과사진전환.md": "32f5259b7be09742b1280434cba3a3f37989c97a32003340d72ed037b8fcc6b6",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/sentence_mapping.json": "ecf1b790a7360e76ad376bd3e706fc217be426d7cc26f14418cd388919f4f032",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/sentence_patches.json": "4a38655b950315cbff4f3b89b508a41bcb12674e982c69f4366d43eb4a18c9bb",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/phonetics.json": "ab1ad7fdd00dc3daefb6af6e4f72fc2480a6cd483760e3bdeeeace78074d6fde",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/script_v5.md": "b29dde75627f6fea1ed692e7cf353fc080d457c5740440af99126d860323282d",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/handoff.json": "edea52026a8300fa3701c0d1353c6191978086c8e34655edc526c6aa2dbf13e7",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/longform-natural-v5-20261104/freeze_manifest.json": "bd39cf394ad1b28a0ca2f7454e1d720dd5843bb98ab78cb1be17279b973aa393",
+    "config/video_language.json": "51bb57694a4022526eef65190708e2e9589a9b4c0ad4144ad2a4b1ed24d85f71",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/timing_proposals.json": "1078cce4ad6bb6ec9c11432daeb50f6925dd7452fd3cf7874f75f235cdf92717",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/scene_proposals_v2.json": "5a2a098c23137d64fbc23fd861ca1eeff5a76554d397d22171dac54b091b8b3b",
+    "analysis/newlywed_region_2024/rankings.json": "275ce96232e523428bcea02aa3f11bd0f29ca70f2e8a13bbc55aa40b389d1d61",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/legend.json": "c3ccb0ba50de09a17712e15c34eabd567f629b45b7083f5db2bc2bc3d58c1fc1",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json": "4ec97af499b520b6030411c636877c93e4c6f877769e43d35d0137ea49ea76d1",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/intro-rationale-v3/intro_proposal_v3.json": "0cbd68f79ca4981b13d08b68547811c19102be6594933b3d59617af51168ea5d",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/map-clean-v1/criteria_script.json": "6fe716bc6454a6c1e564f713b10b7fd2e8022af653c44ba4d4c74a660018c7d4",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/jun-and-shorts-v1/short01_promo.json": "2852176dbb994e19630a931b4ec9f766a0c4f16794b936b0a6e699bc1a1a8428",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/jun-and-shorts-v1/short02_ranks20_16.json": "71485094fa2787dd167c311013d8a8343827268cd6fef025fc73dc9362de97bc",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/jun-and-shorts-v1/short03_ranks15_11.json": "bbf657b92e4a767bbcb819e7e6a67fa7674cd34cf1108f4cc7675697807350f9"
+  },
+  "coverage": {
+    "script_text": "90/90",
+    "patches": "47/47",
+    "actual_listening": "unchecked",
+    "continuous_playback": "unchecked",
+    "actual_mp4_sampled_frames": "unchecked",
+    "media_stream_decode": "unchecked",
+    "new_audio_render": "not_created",
+    "external_claude": "not_used"
+  },
+  "passed": true
+}
