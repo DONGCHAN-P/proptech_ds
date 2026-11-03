@@ -1,0 +1,5 @@
+const path=require('path'),R=path.resolve(__dirname,'../../../../..'),out=path.resolve(__dirname,'../../outputs/readability-cta-v15');
+const {bundle}=require(path.join(R,'video/node_modules/@remotion/bundler'));
+const {selectComposition,renderMedia}=require(path.join(R,'video/node_modules/@remotion/renderer'));
+const browserExecutable=path.join(R,'video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe');
+(async()=>{const serveUrl=await bundle({entryPoint:path.join(R,'video/src/namyangju-v15/common_entry.tsx'),outDir:path.join(__dirname,'jobs-rail-v15-render-bundle'),publicDir:path.join(R,'video/public')});for(const id of ['JobsDatesV14','RailDatesV14']){const composition=await selectComposition({serveUrl,browserExecutable,id});let last=-1;await renderMedia({serveUrl,browserExecutable,composition,codec:'h264',crf:18,concurrency:4,outputLocation:path.join(out,id+'_video.mp4'),onProgress:p=>{const n=Math.floor(p.progress*10);if(n!==last){last=n;console.log(`${id} ${n*10}% frames ${p.renderedFrames}`)}}});console.log(id+' render complete')}})().catch(e=>{console.error(e.stack);process.exitCode=1});

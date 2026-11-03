@@ -1,0 +1,36 @@
+{
+  "revision": "map-clean-v1",
+  "source_user_request": "지도 하단 계약 기준·긴 지도 출처를 정리하고 도입 기준 설명과 지역 대표 사진 순위 전환을 추가",
+  "application": [
+    {
+      "request": "지도 하단 계약·조회·긴 OSM 문구 정리",
+      "implementation": "10개 지역 y889..923 반복 문구 제거, 상단 간결한 OSM 표기·별도 상세 크레딧",
+      "evidence": "final_signal_verification.json:10 clean footer checks;actual71frames"
+    },
+    {
+      "request": "초반에 기준 설명",
+      "implementation": "39.7~52.5초 2개 새 무료 InJoon 문장·3개 기준 카드·단계 모션",
+      "evidence": "native word timing, media_receipt.json, actual criteria frames"
+    },
+    {
+      "request": "순위 변경마다 대표 이미지로 전환",
+      "implementation": "20~11위10개 새로운 실제 지역 사진→큰 순위/지역명→지도",
+      "evidence": "71 actual encoded frames, all10 distinct_from_existing_body_photo true"
+    }
+  ],
+  "preserved": {
+    "existing_voice_sentences": 88,
+    "body_outro_sentences": 80,
+    "raw_data_and_old_videos": true,
+    "paid_budget_krw": 0,
+    "part2_gate": "c35ac917a1fe",
+    "upload_authorized": false
+  },
+  "new_audio_sentences": 2,
+  "full_sentence_count": 90,
+  "new_captions": 181,
+  "duration_s": 615.1333333333333,
+  "video_sha256": "a8d7771668848fe406d76e429db85026f1b300e634d6096b0a780390a9a2a064",
+  "actual_listening": false,
+  "continuous_playback": false
+}

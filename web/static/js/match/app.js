@@ -23,22 +23,10 @@
 
   REP.init({ ans: () => WIZ.ans });
 
-  // ── 공유 링크: #q=<base64 JSON> ─────────────────────────────────────
-  const SHARE_KEYS = ['household', 'budget', 'pyeongs', 'work', 'work2', 'commute_max', 'commute_strict', 'sgg', 'priorities'];
-  function encodeState(a) {
-    const o = {};
-    SHARE_KEYS.forEach(k => { o[k] = a[k]; });
-    ['work', 'work2'].forEach(k => { if (o[k]) o[k] = { name: o[k].name, lat: +o[k].lat.toFixed(5), lng: +o[k].lng.toFixed(5) }; });
-    return btoa(unescape(encodeURIComponent(JSON.stringify(o)))).replace(/=+$/, '');
-  }
-  function decodeState(s) {
-    try { return JSON.parse(decodeURIComponent(escape(atob(s)))); } catch (e) { return null; }
-  }
   $('shareBtn').addEventListener('click', async () => {
-    const url = location.origin + location.pathname + '#q=' + encodeState(WIZ.ans);
-    history.replaceState(null, '', url);
-    try { await navigator.clipboard.writeText(url); U.toast('링크를 복사했어요. 받는 분도 같은 결과를 봅니다.'); }
-    catch (e) { U.toast('주소창의 링크를 복사해 보내 주세요.', 3000); }
+    if(!last) return;
+    try { await JIP.save('recommendation', crypto.randomUUID(), {label:'맞춤 추천 · '+last.items.length+'곳', result:last, answers:{...WIZ.payload(true),work:WIZ.ans.work,work2:WIZ.ans.work2}});U.toast('내 저장함에 보관했습니다.'); }
+    catch(e){U.toast(e.message,4000);}
   });
 
   const ctxForSummary = { meta };
@@ -46,19 +34,19 @@
   WIZ.init({
     meta,
     async onDone(payload, ans) {
+      try {await JIP.ready;await JIP.login();}catch(e){U.toast(e.message);return;}
       document.body.dataset.view = 'searching';
       const count = +($('counterN').textContent.replace(/,/g, '')) || 0;
-      const req = fetch('/api/match', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload),
-      }).then(r => r.json());
       $('wizard').hidden = true;
       let data;
       try {
+        const req = JIP.api('/api/match', {method:'POST',body:JSON.stringify(payload)});
         [data] = await Promise.all([req, RES.searching(count)]);
+        await JIP.refresh();
       } catch (e) {
         $('searching').hidden = true; $('wizard').hidden = false;
         document.body.dataset.view = 'wizard';
-        U.toast('찾는 중 문제가 생겼어요. 다시 시도해 주세요.', 3000);
+        U.toast(e.message || '찾는 중 문제가 생겼어요. 다시 시도해 주세요.', 4000);
         return;
       }
       last = data;
@@ -70,11 +58,11 @@
     },
   });
 
-  const shared = location.hash.startsWith('#q=') && decodeState(location.hash.slice(3));
-  if (shared) {
-    WIZ.restore(shared);
-    WIZ.finish();
-  }
+  // Search draft is tab-local, limited to price only, expires in 30 minutes, consumed once.
+  try {const raw=sessionStorage.getItem('jip-search-draft');sessionStorage.removeItem('jip-search-draft');if(raw){const draft=JSON.parse(raw);if(draft.expires>Date.now()&&Number.isFinite(draft.budget))WIZ.ans.budget=draft.budget;}}catch(_){}
+  if(location.hash.startsWith('#q=')) history.replaceState(null,'',location.pathname);
+  const savedId=new URLSearchParams(location.search).get('saved');
+  if(savedId){try{await JIP.ready;await JIP.login();const saved=await JIP.api('/api/saved');const found=saved.items.find(x=>x.id===savedId&&x.kind==='recommendation');if(found){WIZ.restore(found.payload.answers);last=found.payload.result;$('wizard').hidden=true;document.body.dataset.view='result';RES.render(last,WIZ.ans,{tiles:meta.tiles,onOpen:it=>REP.open(it,last),ctx:ctxForSummary,onEdit:i=>{REP.close();RES.hide();document.body.dataset.view='wizard';WIZ.reopen(i);}});}}catch(e){U.toast(e.message);}}
 
   $('editBtn').addEventListener('click', () => {
     REP.close();

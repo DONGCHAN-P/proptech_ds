@@ -1,0 +1,58 @@
+{
+  "task_id": "FP59-readable-v2-20261025",
+  "role": "research",
+  "status": "verified",
+  "base_folder": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\regional-price-recovery-20261022\\research\\readable-v2",
+  "input_revisions": {
+    "source_packet": "namyangju-wangsuk-20261014/research/map-led-v5",
+    "pamphlet_sha256": "e3d20f00903d9809e9f054e7285badfd6924a0d7160553a9cdcd06663a540864",
+    "notice_sha256": "1dac689d7133335f0bd75cc2a88000f862410209efa5bcfc9ea429ca4dc19515",
+    "latest_user_request": "평형을 보여줄 거면 대표적인 건축 예시 활용"
+  },
+  "outputs": [
+    "floorplan_facts.json",
+    "source59.png",
+    "source59_plan.png",
+    "LH_남양주왕숙_A1_팸플릿_20250724.pdf",
+    "LH_남양주왕숙_A1_모집공고_20250724.pdf",
+    "facts.json",
+    "paper59_check.json",
+    "source_manifest.json",
+    "issue_FP59_USAGE.json",
+    "verification.json"
+  ],
+  "affected_scene_ids": [
+    "L004"
+  ],
+  "checks": [
+    {
+      "check": "PDF9쪽·최종PNG·공고4쪽열람",
+      "result": "passed",
+      "evidence": "verification.json"
+    },
+    {
+      "check": "원본해시·59A면적",
+      "result": "passed",
+      "evidence": "source_manifest.json"
+    },
+    {
+      "check": "논문59㎡의전용명시",
+      "result": "unconfirmed",
+      "evidence": "paper59_check.json"
+    },
+    {
+      "check": "상업영상재이용허락",
+      "result": "unconfirmed",
+      "evidence": "rights_status=reuse_permission_unverified"
+    }
+  ],
+  "open_issue_ids": [
+    "FP59-USAGE"
+  ],
+  "next_role": "director → writer/visual",
+  "limitations": [
+    "같은블록84없음",
+    "독립QA미실행",
+    "신규시세·유료생성·외부전송없음"
+  ]
+}

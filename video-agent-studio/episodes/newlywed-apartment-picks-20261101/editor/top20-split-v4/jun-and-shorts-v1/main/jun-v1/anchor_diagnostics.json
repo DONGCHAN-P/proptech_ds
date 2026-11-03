@@ -1,0 +1,48 @@
+{
+  "lock_sha256": "96e04175f2b44f54fec4b966954684253dbda42cd8803d702b94e5be6e1ed675",
+  "anchors": 389,
+  "anchors_dropped": 0,
+  "anchor_policy": "All parent float anchors retained. Only raster picture selection is quantized to 30fps.",
+  "frame_sampling": "floor(source_s*30), never look ahead",
+  "minimum_rate_interval": {
+    "source_rate": 0.27006172839514797,
+    "target_duration_s": 0.2400000000000091,
+    "source_duration_s": 0.06481481481483797,
+    "left": {
+      "source_s": 373.5106878306878,
+      "target_s": 414.59000000000003,
+      "kind": "number_or_place",
+      "priority": 50,
+      "sentence_id": "P01-R15-V2-07"
+    },
+    "right": {
+      "source_s": 373.57550264550264,
+      "target_s": 414.83000000000004,
+      "kind": "number_or_place",
+      "priority": 50,
+      "sentence_id": "P01-R15-V2-07"
+    }
+  },
+  "maximum_rate_interval": {
+    "source_rate": 9.496598639484088,
+    "target_duration_s": 0.0033333333333303017,
+    "source_duration_s": 0.0316553287982515,
+    "left": {
+      "source_s": 615.1016780045351,
+      "target_s": 681.73,
+      "kind": "brand_outro_end",
+      "priority": 1000,
+      "sentence_id": null
+    },
+    "right": {
+      "source_s": 615.1333333333333,
+      "target_s": 681.7333333333333,
+      "kind": "end",
+      "priority": 1000,
+      "sentence_id": null
+    }
+  },
+  "sub_frame_intervals": 1,
+  "rate_limit_applied": false,
+  "caption_timing_from_parent_unchanged": true
+}

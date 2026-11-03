@@ -1,0 +1,74 @@
+{
+  "critical_open": 0,
+  "required_open": 0,
+  "findings": [
+    {
+      "id": "TH001-READ",
+      "scene_id": "TH001",
+      "status": "pass",
+      "scope": "Small-screen readability",
+      "evidence": "Directly viewed the 320x180 and 160x90 images with view_image at original detail. The main white cash range of KRW 100-500 million and yellow home-price question remain identifiable at both sizes. Supporting text is small at 160px but does not prevent understanding the main question."
+    },
+    {
+      "id": "TH001-CLIP",
+      "scene_id": "TH001",
+      "status": "pass",
+      "scope": "Text clipping",
+      "evidence": "Directly viewed the full-size candidate and both mobile images. Text edges, the question mark, and currency units remain inside the frame. Visual observations agree with source_qa clippingIssues=0."
+    },
+    {
+      "id": "TH001-MATCH",
+      "scene_id": "TH001",
+      "status": "pass",
+      "scope": "Consistency with supplied video content",
+      "evidence": "The KRW 100-500 million range explicitly labels available cash, and the home price is phrased as a question. The loan, tax, and monthly-payment subtitle agrees with the latest user-supplied content scope and the current title in state.json. No guaranteed purchase price or actual apartment-complex name is stated.",
+      "limitation": "Limited to the latest user-supplied content scope and current title. The full script was not reread and the video was not played."
+    },
+    {
+      "id": "TH001-TONE",
+      "scene_id": "TH001",
+      "status": "pass",
+      "scope": "Consistency with the reference style",
+      "evidence": "Direct comparison with the reference thumbnail.png shows continuity in the dark navy evening apartment photo-style background, warm window lighting, bold white and yellow main text, and text-left/buildings-right arrangement. No real-location identity was assessed for the fictional background."
+    }
+  ],
+  "checked_sha256": {
+    "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/TH001_affordable_photo_v1.png": "e8a83381203874fe2768e6bfd57b7b490f65f6fd75ceabd9c635d0592d1fc096",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/mobile_320.png": "ed468c44607c976d22c4088ce98f6c4e01be5e3c9e4612daee336313e924f48b",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/mobile_160.png": "1bf5c5fb94d12812bd53307605efb1643c8eb90527b8e2e604590d2362e50499",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-release-v1/thumbnail.png": "ddeae250181103ca29b5f2c81461cd222d75875f8f3ad97e014ab8a07bc0b085"
+  },
+  "viewed_files": [
+    "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/TH001_affordable_photo_v1.png",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/mobile_320.png",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/mobile_160.png",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-release-v1/thumbnail.png"
+  ],
+  "dimensions": {
+    "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/TH001_affordable_photo_v1.png": [
+      1280,
+      720
+    ],
+    "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/mobile_320.png": [
+      320,
+      180
+    ],
+    "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/mobile_160.png": [
+      160,
+      90
+    ],
+    "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-release-v1/thumbnail.png": [
+      1280,
+      720
+    ]
+  },
+  "reviewed_at_utc": "2026-10-29T15:12:06.991966+00:00",
+  "review_scope": "Direct visual review of the completed thumbnail, limited to readability, clipping, consistency with supplied video content, and consistency with the reference style.",
+  "source_qa": {
+    "path": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/director/thumbnail-rework-20261030/source_qa.json",
+    "sha256": "2864c76df2b722e53468da3f1857dc4e0d7a50f5532f8322cdf91967d795efb5",
+    "clippingIssues": 0
+  },
+  "result": "pass_bounded_visual_review",
+  "ctr_effect": "This visual review neither determines nor guarantees an improvement in CTR."
+}

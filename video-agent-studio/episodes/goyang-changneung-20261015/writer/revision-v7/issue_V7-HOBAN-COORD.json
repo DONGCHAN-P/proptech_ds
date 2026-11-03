@@ -1,0 +1,15 @@
+{
+  "issue_id": "V7-HOBAN-COORD",
+  "scene_id": "M007",
+  "problem": "기존 창릉호반써밋 실제 단지 좌표가 writer가 확인한 geographic-v1 목록에 없음",
+  "evidence": "visual/geographic-v1/locations.json에는 다른 다섯 비교 단지의 OSM 실제 도형 중심이 존재하나 호반은 없음. 거래 claim CN-PRICE-6d132d1b88760197의 단지 가격·건수는 확인됨.",
+  "proposal": "총괄/리서치가 기존 검증된 좌표 출처를 인계한 후 비교핀 생성. 미확인 좌표를 추정하지 않음.",
+  "impact": "M007 실제 위치 비교 화면 최종 확정 전 필요. 대본 낭독과 가격 내림차순은 변경 불필요.",
+  "status": "resolved_existing_official_address_locator",
+  "resolution": {
+    "source": "visual/semantic-v5/verified_missing_locations.json",
+    "lon": 126.88969554509904,
+    "lat": 37.646405154969955,
+    "basis": "VWorld 지번주소 대표점; 단지중심/경계/출입구 아님"
+  }
+}

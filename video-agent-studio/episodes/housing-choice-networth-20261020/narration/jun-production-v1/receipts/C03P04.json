@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C03P04",
+  "scene_id": "C03",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:05:28.012Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "d04dd7f472c811eead4d1c65ad257d8c9acb096ea36f017180877d313c0418ed",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "월세 가구는 보증금 일억 원에 월세 백만 원인 조건입니다. 보증금에는 자기자금 팔천만 원과 대출 이천만 원이 들어갑니다. 월세도 중개보수 등 초기 부대비용 묶음에 설명용 가정 약 백만 원을 적용하겠습니다. 이 비용을 내고 나면 투자계좌의 출발 금액은 일억육천구백만 원입니다. 월세 가구가 더 큰 투자계좌로 시작하는 이유는 주거 보증금에 묶인 자기자금이 적기 때문입니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 206,
+  "characters": 206,
+  "actual_credits": 82,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18316,
+    "character_limit": 40000,
+    "included_remaining": 21684,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:05:22.437Z",
+  "local_shadow_remaining_before": 21608,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "07EU7j3DUbpffIBk4MPV",
+    "x-request-id": null,
+    "character-cost": "82",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:05:27 GMT"
+  },
+  "pcm_samples": 1125432,
+  "pcm_duration_s": 25.52,
+  "provider_last_spoken_end_s": 25.6,
+  "artifact_sha256": {
+    "paragraphs/C03P04/audio.mp3": "08b40473e41a06fe4478f851b4454a93f2c8fb9699a3f5b8d93763fa5c58d908",
+    "paragraphs/C03P04/audio.wav": "3c54a73ecd0d48ceacb6775240da81f85f4a733104573c79714c37f647809b5c",
+    "paragraphs/C03P04/alignment.json": "536186a7f4e44a9ce58f51fc327527aa9fced32da87fbd61311a5b41c4e75ea2",
+    "paragraphs/C03P04/normalized_alignment.json": "536186a7f4e44a9ce58f51fc327527aa9fced32da87fbd61311a5b41c4e75ea2"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21526,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:05:34.301Z"
+}

@@ -1,0 +1,1026 @@
+{
+  "revision": "top20-split-v4/jun-and-shorts-v1",
+  "task_id": "part1-Jun-shorts-3way-content-plan",
+  "short_id": "SHORT03-R15-R11",
+  "title": "신혼부부 거주 순위 15~11위 | 다섯 지역의 아파트 가격 비교",
+  "rankrange": {
+    "from": 15,
+    "to": 11,
+    "role": "내용 분할",
+    "spoken_ranks": [
+      15,
+      14,
+      13,
+      12,
+      11
+    ]
+  },
+  "regions": [
+    {
+      "region_id": "R15",
+      "rank": 15,
+      "province": "서울",
+      "region": "구로구",
+      "couples": 8016,
+      "ledger_label": "15위 구로구 · 8,016쌍",
+      "active_full_region_title": "15위 서울 구로구",
+      "rank_sentence_id": "P01-R15-V2-01",
+      "price_sentence_id": "P01-R15-V2-07",
+      "price_type": "dong_pair",
+      "price_definition": "법정동별 수록 거래마다 한 표를 주는 중위값",
+      "claim_id": "W4V2-R15-PRICE-SELECTED",
+      "rows": [
+        {
+          "dong": "구로동",
+          "transaction_n": 123,
+          "complex_n": 40,
+          "median_manwon": 78000.0,
+          "display_label": "구로동",
+          "display_value": "7억8,000만원",
+          "sample_display": "거래 n=123",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/14/dong_prices_by_transaction_count/0"
+        },
+        {
+          "dong": "신도림동",
+          "transaction_n": 80,
+          "complex_n": 18,
+          "median_manwon": 132000.0,
+          "display_label": "신도림동",
+          "display_value": "13억2,000만원",
+          "sample_display": "거래 n=80",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/14/dong_prices_by_transaction_count/3"
+        }
+      ]
+    },
+    {
+      "region_id": "R14",
+      "rank": 14,
+      "province": "서울",
+      "region": "은평구",
+      "couples": 8267,
+      "ledger_label": "14위 은평구 · 8,267쌍",
+      "active_full_region_title": "14위 서울 은평구",
+      "rank_sentence_id": "P01-R14-V2-01",
+      "price_sentence_id": "P01-R14-V2-05",
+      "price_type": "dong_pair",
+      "price_definition": "법정동별 수록 거래마다 한 표를 주는 중위값",
+      "claim_id": "W4V2-R14-PRICE-SELECTED",
+      "rows": [
+        {
+          "dong": "신사동",
+          "transaction_n": 67,
+          "complex_n": 20,
+          "median_manwon": 63800.0,
+          "display_label": "신사동",
+          "display_value": "6억3,800만원",
+          "sample_display": "거래 n=67",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/13/dong_prices_by_transaction_count/3"
+        },
+        {
+          "dong": "진관동",
+          "transaction_n": 91,
+          "complex_n": 25,
+          "median_manwon": 94000.0,
+          "display_label": "진관동",
+          "display_value": "9억4,000만원",
+          "sample_display": "거래 n=91",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/13/dong_prices_by_transaction_count/1"
+        }
+      ]
+    },
+    {
+      "region_id": "R13",
+      "rank": 13,
+      "province": "경기",
+      "region": "수원시 권선구",
+      "couples": 8329,
+      "ledger_label": "13위 권선구 · 8,329쌍",
+      "active_full_region_title": "13위 경기 수원시 권선구",
+      "rank_sentence_id": "P01-R13-V2-01",
+      "price_sentence_id": "P01-R13-V2-06",
+      "price_type": "dong_pair",
+      "price_definition": "법정동별 수록 거래마다 한 표를 주는 중위값",
+      "claim_id": "W4V2-R13-PRICE-SELECTED",
+      "rows": [
+        {
+          "dong": "금곡동",
+          "transaction_n": 217,
+          "complex_n": 17,
+          "median_manwon": 53000.0,
+          "display_label": "금곡동",
+          "display_value": "5억3,000만원",
+          "sample_display": "거래 n=217",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/12/dong_prices_by_transaction_count/0"
+        },
+        {
+          "dong": "권선동",
+          "transaction_n": 192,
+          "complex_n": 18,
+          "median_manwon": 64750.0,
+          "display_label": "권선동",
+          "display_value": "6억4,750만원",
+          "sample_display": "거래 n=192",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/12/dong_prices_by_transaction_count/1"
+        }
+      ]
+    },
+    {
+      "region_id": "R12",
+      "rank": 12,
+      "province": "경기",
+      "region": "수원시 영통구",
+      "couples": 8388,
+      "ledger_label": "12위 영통구 · 8,388쌍",
+      "active_full_region_title": "12위 경기 수원시 영통구",
+      "rank_sentence_id": "P01-R12-V2-01",
+      "price_sentence_id": "P01-R12-V2-07",
+      "price_type": "dong_pair",
+      "price_definition": "법정동별 수록 거래마다 한 표를 주는 중위값",
+      "claim_id": "W4V2-R12-PRICE-SELECTED",
+      "rows": [
+        {
+          "dong": "망포동",
+          "transaction_n": 235,
+          "complex_n": 23,
+          "median_manwon": 73000.0,
+          "display_label": "망포동",
+          "display_value": "7억3,000만원",
+          "sample_display": "거래 n=235",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/11/dong_prices_by_transaction_count/0"
+        },
+        {
+          "dong": "이의동",
+          "transaction_n": 100,
+          "complex_n": 10,
+          "median_manwon": 119000.0,
+          "display_label": "이의동",
+          "display_value": "11억9,000만원",
+          "sample_display": "거래 n=100",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/11/dong_prices_by_transaction_count/3"
+        }
+      ]
+    },
+    {
+      "region_id": "R11",
+      "rank": 11,
+      "province": "서울",
+      "region": "노원구",
+      "couples": 8473,
+      "ledger_label": "11위 노원구 · 8,473쌍",
+      "active_full_region_title": "11위 서울 노원구",
+      "rank_sentence_id": "P01-R11-V2-01",
+      "price_sentence_id": "P01-R11-V2-06",
+      "price_type": "dong_pair",
+      "price_definition": "법정동별 수록 거래마다 한 표를 주는 중위값",
+      "claim_id": "W4V2-R11-PRICE-SELECTED",
+      "rows": [
+        {
+          "dong": "상계동",
+          "transaction_n": 213,
+          "complex_n": 43,
+          "median_manwon": 71000.0,
+          "display_label": "상계동",
+          "display_value": "7억1,000만원",
+          "sample_display": "거래 n=213",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/10/dong_prices_by_transaction_count/0"
+        },
+        {
+          "dong": "중계동",
+          "transaction_n": 159,
+          "complex_n": 37,
+          "median_manwon": 86000.0,
+          "display_label": "중계동",
+          "display_value": "8억6,000만원",
+          "sample_display": "거래 n=159",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/10/dong_prices_by_transaction_count/1"
+        }
+      ]
+    }
+  ],
+  "purpose": "구로·은평·권선·영통·노원 다섯 지역의 순위·쌍 수와 동별 거래 중위값 비교를 완결",
+  "sequence": [
+    {
+      "sentence_id": "P01-R15-V2-01",
+      "exacttext": "15위는 서울 구로구, 8,016쌍입니다.",
+      "reading_text": "십오 위는 서울 구로구, 팔천십육 쌍입니다.",
+      "regionid": "R15",
+      "screenmessage": "15위 서울 구로구 · 8,016쌍",
+      "visualpurpose": "설명: 다섯 지역의 순위·쌍 수 목록을 유지하고 현재 지역 한 행을 강조한다.",
+      "material_types": [
+        "data_chart"
+      ],
+      "screen_role": "explanation",
+      "voice_mode": "reuse_full_main_Jun_complete_sentence",
+      "audio_asset_ref": "JUN-MAIN-SENTENCE/P01-R15-V2-01",
+      "audio_asset_status": "logical_reference_pending_parent_Jun_sentence_manifest",
+      "claim_ids": [
+        "W4-R15-RANK"
+      ],
+      "source_ids": [
+        "SRC-BODY-LOCK"
+      ],
+      "source_json_pointer": "/body_scenes/5/sentences/0",
+      "reference_free_voice_timing": {
+        "source_id": "SRC-BODY-LOCK",
+        "start_s": 334.04772486772487,
+        "end_s": 336.91809523809525,
+        "purpose": "원문 위치/기존 무료 음성 길이 참고. Jun 추출 in/out 및 쇼츠 타임코드로 사용 금지"
+      },
+      "jun_start_s": null,
+      "jun_end_s": null
+    },
+    {
+      "sentence_id": "P01-R15-V2-07",
+      "exacttext": "거래 중위값은 구로동 7억8,000만원, 신도림동 13억2,000만원으로, 업무지 연결과 예산을 함께 놓고 비교할 차이가 있습니다.",
+      "reading_text": "거래 중윗값은 구로동 칠 억 팔천 만 원, 신도림동 십삼 억 이천 만 원으로, 업무지 연결과 예산을 함께 놓고 비교할 차이가 있습니다.",
+      "regionid": "R15",
+      "screenmessage": "구로동 7억8,000만원 (거래 n=123) / 신도림동 13억2,000만원 (거래 n=80)",
+      "visualpurpose": "설명: 현재 행을 펼쳐 비교 집단명·두 중위값·거래 표본수를 함께 표시하고 발화에 맞춰 해당 값을 강조한다.",
+      "material_types": [
+        "data_chart"
+      ],
+      "screen_role": "explanation",
+      "voice_mode": "reuse_full_main_Jun_complete_sentence",
+      "audio_asset_ref": "JUN-MAIN-SENTENCE/P01-R15-V2-07",
+      "audio_asset_status": "logical_reference_pending_parent_Jun_sentence_manifest",
+      "claim_ids": [
+        "W4V2-R15-PRICE-SELECTED",
+        "W4-METHOD"
+      ],
+      "source_ids": [
+        "SRC-BODY-LOCK"
+      ],
+      "source_json_pointer": "/body_scenes/5/sentences/6",
+      "reference_free_voice_timing": {
+        "source_id": "SRC-BODY-LOCK",
+        "start_s": 371.9736507936508,
+        "end_s": 379.1403174603175,
+        "purpose": "원문 위치/기존 무료 음성 길이 참고. Jun 추출 in/out 및 쇼츠 타임코드로 사용 금지"
+      },
+      "jun_start_s": null,
+      "jun_end_s": null
+    },
+    {
+      "sentence_id": "P01-R14-V2-01",
+      "exacttext": "14위는 서울 은평구, 8,267쌍입니다.",
+      "reading_text": "십사 위는 서울 은평구, 팔천이백육십칠 쌍입니다.",
+      "regionid": "R14",
+      "screenmessage": "14위 서울 은평구 · 8,267쌍",
+      "visualpurpose": "설명: 다섯 지역의 순위·쌍 수 목록을 유지하고 현재 지역 한 행을 강조한다.",
+      "material_types": [
+        "data_chart"
+      ],
+      "screen_role": "explanation",
+      "voice_mode": "reuse_full_main_Jun_complete_sentence",
+      "audio_asset_ref": "JUN-MAIN-SENTENCE/P01-R14-V2-01",
+      "audio_asset_status": "logical_reference_pending_parent_Jun_sentence_manifest",
+      "claim_ids": [
+        "W4-R14-RANK"
+      ],
+      "source_ids": [
+        "SRC-BODY-LOCK"
+      ],
+      "source_json_pointer": "/body_scenes/6/sentences/0",
+      "reference_free_voice_timing": {
+        "source_id": "SRC-BODY-LOCK",
+        "start_s": 387.2933484504913,
+        "end_s": 390.6637188208617,
+        "purpose": "원문 위치/기존 무료 음성 길이 참고. Jun 추출 in/out 및 쇼츠 타임코드로 사용 금지"
+      },
+      "jun_start_s": null,
+      "jun_end_s": null
+    },
+    {
+      "sentence_id": "P01-R14-V2-05",
+      "exacttext": "예산의 대비를 보면 거래 중위값은 신사동 6억3,800만원, 진관동 9억4,000만원으로, 구 안에서도 비교할 가격대가 넓습니다.",
+      "reading_text": "예산의 대비를 보면 거래 중윗값은 신사동 육 억 삼천팔백 만 원, 진관동 구 억 사천 만 원으로, 구 안에서도 비교할 가격대가 넓습니다.",
+      "regionid": "R14",
+      "screenmessage": "신사동 6억3,800만원 (거래 n=67) / 진관동 9억4,000만원 (거래 n=91)",
+      "visualpurpose": "설명: 현재 행을 펼쳐 비교 집단명·두 중위값·거래 표본수를 함께 표시하고 발화에 맞춰 해당 값을 강조한다.",
+      "material_types": [
+        "data_chart"
+      ],
+      "screen_role": "explanation",
+      "voice_mode": "reuse_full_main_Jun_complete_sentence",
+      "audio_asset_ref": "JUN-MAIN-SENTENCE/P01-R14-V2-05",
+      "audio_asset_status": "logical_reference_pending_parent_Jun_sentence_manifest",
+      "claim_ids": [
+        "W4V2-R14-PRICE-SELECTED",
+        "W4-METHOD"
+      ],
+      "source_ids": [
+        "SRC-BODY-LOCK"
+      ],
+      "source_json_pointer": "/body_scenes/6/sentences/4",
+      "reference_free_voice_timing": {
+        "source_id": "SRC-BODY-LOCK",
+        "start_s": 410.7563114134542,
+        "end_s": 418.4692743764172,
+        "purpose": "원문 위치/기존 무료 음성 길이 참고. Jun 추출 in/out 및 쇼츠 타임코드로 사용 금지"
+      },
+      "jun_start_s": null,
+      "jun_end_s": null
+    },
+    {
+      "sentence_id": "P01-R13-V2-01",
+      "exacttext": "13위는 경기 수원시 권선구, 8,329쌍입니다.",
+      "reading_text": "십삼 위는 경기 수원시 권선구, 팔천삼백이십구 쌍입니다.",
+      "regionid": "R13",
+      "screenmessage": "13위 경기 수원시 권선구 · 8,329쌍",
+      "visualpurpose": "설명: 다섯 지역의 순위·쌍 수 목록을 유지하고 현재 지역 한 행을 강조한다.",
+      "material_types": [
+        "data_chart"
+      ],
+      "screen_role": "explanation",
+      "voice_mode": "reuse_full_main_Jun_complete_sentence",
+      "audio_asset_ref": "JUN-MAIN-SENTENCE/P01-R13-V2-01",
+      "audio_asset_status": "logical_reference_pending_parent_Jun_sentence_manifest",
+      "claim_ids": [
+        "W4-R13-RANK"
+      ],
+      "source_ids": [
+        "SRC-BODY-LOCK"
+      ],
+      "source_json_pointer": "/body_scenes/7/sentences/0",
+      "reference_free_voice_timing": {
+        "source_id": "SRC-BODY-LOCK",
+        "start_s": 442.9736432350718,
+        "end_s": 446.8903099017385,
+        "purpose": "원문 위치/기존 무료 음성 길이 참고. Jun 추출 in/out 및 쇼츠 타임코드로 사용 금지"
+      },
+      "jun_start_s": null,
+      "jun_end_s": null
+    },
+    {
+      "sentence_id": "P01-R13-V2-06",
+      "exacttext": "거래 중위값은 금곡동 5억3,000만원, 권선동 6억4,750만원으로, 두 생활권에서 검토할 예산 조건이 다릅니다.",
+      "reading_text": "거래 중윗값은 금곡동 오 억 삼천 만 원, 권선동 육 억 사천칠백오십 만 원으로, 두 생활권에서 검토할 예산 조건이 다릅니다.",
+      "regionid": "R13",
+      "screenmessage": "금곡동 5억3,000만원 (거래 n=217) / 권선동 6억4,750만원 (거래 n=192)",
+      "visualpurpose": "설명: 현재 행을 펼쳐 비교 집단명·두 중위값·거래 표본수를 함께 표시하고 발화에 맞춰 해당 값을 강조한다.",
+      "material_types": [
+        "data_chart"
+      ],
+      "screen_role": "explanation",
+      "voice_mode": "reuse_full_main_Jun_complete_sentence",
+      "audio_asset_ref": "JUN-MAIN-SENTENCE/P01-R13-V2-06",
+      "audio_asset_status": "logical_reference_pending_parent_Jun_sentence_manifest",
+      "claim_ids": [
+        "W4V2-R13-PRICE-SELECTED",
+        "W4-METHOD"
+      ],
+      "source_ids": [
+        "SRC-BODY-LOCK"
+      ],
+      "source_json_pointer": "/body_scenes/7/sentences/5",
+      "reference_free_voice_timing": {
+        "source_id": "SRC-BODY-LOCK",
+        "start_s": 473.98290249433103,
+        "end_s": 481.3810506424792,
+        "purpose": "원문 위치/기존 무료 음성 길이 참고. Jun 추출 in/out 및 쇼츠 타임코드로 사용 금지"
+      },
+      "jun_start_s": null,
+      "jun_end_s": null
+    },
+    {
+      "sentence_id": "P01-R12-V2-01",
+      "exacttext": "12위는 경기 수원시 영통구, 8,388쌍입니다.",
+      "reading_text": "십이 위는 경기 수원시 영통구, 팔천삼백팔십팔 쌍입니다.",
+      "regionid": "R12",
+      "screenmessage": "12위 경기 수원시 영통구 · 8,388쌍",
+      "visualpurpose": "설명: 다섯 지역의 순위·쌍 수 목록을 유지하고 현재 지역 한 행을 강조한다.",
+      "material_types": [
+        "data_chart"
+      ],
+      "screen_role": "explanation",
+      "voice_mode": "reuse_full_main_Jun_complete_sentence",
+      "audio_asset_ref": "JUN-MAIN-SENTENCE/P01-R12-V2-01",
+      "audio_asset_status": "logical_reference_pending_parent_Jun_sentence_manifest",
+      "claim_ids": [
+        "W4-R12-RANK"
+      ],
+      "source_ids": [
+        "SRC-BODY-LOCK"
+      ],
+      "source_json_pointer": "/body_scenes/8/sentences/0",
+      "reference_free_voice_timing": {
+        "source_id": "SRC-BODY-LOCK",
+        "start_s": 490.35538926681784,
+        "end_s": 494.31835222978077,
+        "purpose": "원문 위치/기존 무료 음성 길이 참고. Jun 추출 in/out 및 쇼츠 타임코드로 사용 금지"
+      },
+      "jun_start_s": null,
+      "jun_end_s": null
+    },
+    {
+      "sentence_id": "P01-R12-V2-07",
+      "exacttext": "거래 중위값은 망포동 7억3,000만원, 이의동 11억9,000만원으로, 어느 생활권을 선택하느냐에 따라 필요한 예산이 달라집니다.",
+      "reading_text": "거래 중윗값은 망포동 칠 억 삼천 만 원, 이의동 십일 억 구천 만 원으로, 어느 생활권을 선택하느냐에 따라 필요한 예산이 달라집니다.",
+      "regionid": "R12",
+      "screenmessage": "망포동 7억3,000만원 (거래 n=235) / 이의동 11억9,000만원 (거래 n=100)",
+      "visualpurpose": "설명: 현재 행을 펼쳐 비교 집단명·두 중위값·거래 표본수를 함께 표시하고 발화에 맞춰 해당 값을 강조한다.",
+      "material_types": [
+        "data_chart"
+      ],
+      "screen_role": "explanation",
+      "voice_mode": "reuse_full_main_Jun_complete_sentence",
+      "audio_asset_ref": "JUN-MAIN-SENTENCE/P01-R12-V2-07",
+      "audio_asset_status": "logical_reference_pending_parent_Jun_sentence_manifest",
+      "claim_ids": [
+        "W4V2-R12-PRICE-SELECTED",
+        "W4-METHOD"
+      ],
+      "source_ids": [
+        "SRC-BODY-LOCK"
+      ],
+      "source_json_pointer": "/body_scenes/8/sentences/6",
+      "reference_free_voice_timing": {
+        "source_id": "SRC-BODY-LOCK",
+        "start_s": 528.4387226001511,
+        "end_s": 535.3553892668177,
+        "purpose": "원문 위치/기존 무료 음성 길이 참고. Jun 추출 in/out 및 쇼츠 타임코드로 사용 금지"
+      },
+      "jun_start_s": null,
+      "jun_end_s": null
+    },
+    {
+      "sentence_id": "P01-R11-V2-01",
+      "exacttext": "11위는 서울 노원구, 8,473쌍입니다.",
+      "reading_text": "십일 위는 서울 노원구, 팔천사백칠십삼 쌍입니다.",
+      "regionid": "R11",
+      "screenmessage": "11위 서울 노원구 · 8,473쌍",
+      "visualpurpose": "설명: 다섯 지역의 순위·쌍 수 목록을 유지하고 현재 지역 한 행을 강조한다.",
+      "material_types": [
+        "data_chart"
+      ],
+      "screen_role": "explanation",
+      "voice_mode": "reuse_full_main_Jun_complete_sentence",
+      "audio_asset_ref": "JUN-MAIN-SENTENCE/P01-R11-V2-01",
+      "audio_asset_status": "logical_reference_pending_parent_Jun_sentence_manifest",
+      "claim_ids": [
+        "W4-R11-RANK"
+      ],
+      "source_ids": [
+        "SRC-BODY-LOCK"
+      ],
+      "source_json_pointer": "/body_scenes/9/sentences/0",
+      "reference_free_voice_timing": {
+        "source_id": "SRC-BODY-LOCK",
+        "start_s": 536.1379062736205,
+        "end_s": 539.4156840513983,
+        "purpose": "원문 위치/기존 무료 음성 길이 참고. Jun 추출 in/out 및 쇼츠 타임코드로 사용 금지"
+      },
+      "jun_start_s": null,
+      "jun_end_s": null
+    },
+    {
+      "sentence_id": "P01-R11-V2-06",
+      "exacttext": "거래 중위값은 상계동 7억1,000만원, 중계동 8억6,000만원으로, 예산에 따라 살펴볼 단지를 좁혀볼 수 있습니다.",
+      "reading_text": "거래 중윗값은 상계동 칠 억 천 만 원, 중계동 팔 억 육천 만 원으로, 예산에 따라 살펴볼 단지를 좁혀볼 수 있습니다.",
+      "regionid": "R11",
+      "screenmessage": "상계동 7억1,000만원 (거래 n=213) / 중계동 8억6,000만원 (거래 n=159)",
+      "visualpurpose": "설명: 현재 행을 펼쳐 비교 집단명·두 중위값·거래 표본수를 함께 표시하고 발화에 맞춰 해당 값을 강조한다.",
+      "material_types": [
+        "data_chart"
+      ],
+      "screen_role": "explanation",
+      "voice_mode": "reuse_full_main_Jun_complete_sentence",
+      "audio_asset_ref": "JUN-MAIN-SENTENCE/P01-R11-V2-06",
+      "audio_asset_status": "logical_reference_pending_parent_Jun_sentence_manifest",
+      "claim_ids": [
+        "W4V2-R11-PRICE-SELECTED",
+        "W4-METHOD"
+      ],
+      "source_ids": [
+        "SRC-BODY-LOCK"
+      ],
+      "source_json_pointer": "/body_scenes/9/sentences/5",
+      "reference_free_voice_timing": {
+        "source_id": "SRC-BODY-LOCK",
+        "start_s": 570.4064247921391,
+        "end_s": 576.8045729402872,
+        "purpose": "원문 위치/기존 무료 음성 길이 참고. Jun 추출 in/out 및 쇼츠 타임코드로 사용 금지"
+      },
+      "jun_start_s": null,
+      "jun_end_s": null
+    },
+    {
+      "sentence_id": "P01-SHORTS-CTA-01",
+      "exacttext": "나머지 순위도 궁금하시다면 다른 순위 영상을 확인해 주세요.",
+      "reading_text": "나머지 순위도 궁금하시다면 다른 순위 영상을 확인해 주세요.",
+      "regionid": null,
+      "screenmessage": "다른 순위 영상에서 나머지 지역 확인",
+      "visualpurpose": "설명: 현재 편의 다른 순위 영상과 20~11위 본편으로 연결한다. 공개 상태 확인 후 총괄이 실제 링크를 연결한다.",
+      "material_types": [
+        "editorial_card"
+      ],
+      "screen_role": "explanation",
+      "voice_mode": "new_common_CTA_reuse_in_all_three",
+      "audio_asset_ref": "JUN-SHORTS-COMMON-CTA-V1/S01",
+      "source_ids": [
+        "USER-LATEST-TASK-CTA"
+      ],
+      "claim_ids": [],
+      "jun_start_s": null,
+      "jun_end_s": null
+    },
+    {
+      "sentence_id": "P01-SHORTS-CTA-02",
+      "exacttext": "지역별 자세한 가격과 생활권 비교는 본편에서 이어집니다.",
+      "reading_text": "지역별 자세한 가격과 생활권 비교는 본편에서 이어집니다.",
+      "regionid": null,
+      "screenmessage": "20~11위 전체 가격·생활권 비교는 본편",
+      "visualpurpose": "설명: 현재 편의 다른 순위 영상과 20~11위 본편으로 연결한다. 공개 상태 확인 후 총괄이 실제 링크를 연결한다.",
+      "material_types": [
+        "editorial_card"
+      ],
+      "screen_role": "explanation",
+      "voice_mode": "new_common_CTA_reuse_in_all_three",
+      "audio_asset_ref": "JUN-SHORTS-COMMON-CTA-V1/S02",
+      "source_ids": [
+        "USER-LATEST-TASK-CTA"
+      ],
+      "claim_ids": [],
+      "jun_start_s": null,
+      "jun_end_s": null
+    }
+  ],
+  "screenfacts": [
+    {
+      "fact_id": "F-RANK-DEFINITION",
+      "text": "2024.11.01 신혼부부 수 · 수도권 53개 구",
+      "source_ids": [
+        "SRC-RANKING"
+      ],
+      "source_fields": [
+        "/scope",
+        "/statistic_reference_date",
+        "/unit"
+      ],
+      "show": "첫 순위 표시 전부터, 신혼부부 거주 수 순위임을 표시"
+    },
+    {
+      "fact_id": "F-PRICE-CONDITIONS",
+      "text": "아파트 실거래 · 전용 83~85㎡ · 2026.05~10 계약",
+      "source_ids": [
+        "SRC-PRICE-LEGEND",
+        "SRC-CRITERIA"
+      ],
+      "source_fields": [
+        "/area_m2",
+        "/period",
+        "/sentences/0/text"
+      ],
+      "show": "첫 프레임의 조건 화면과 모든 가격 화면; 신규 낭독 없음"
+    },
+    {
+      "fact_id": "F-PRICE-CUTOFF",
+      "text": "2026.11.03 조회 · 취소 제외 · 10월은 조회일까지 신고분",
+      "source_ids": [
+        "SRC-PRICE-LEGEND",
+        "SRC-CRITERIA",
+        "SRC-APPROVED-BODY"
+      ],
+      "source_fields": [
+        "/retrieved_date",
+        "/sentences/1/text",
+        "/scenes/0/sentences/4/text"
+      ],
+      "show": "가격 조건 화면에서 먼저 표시, 가격 화면에는 조회일·취소 제외 유지"
+    },
+    {
+      "fact_id": "F-R15-RANK",
+      "regionid": "R15",
+      "text": "15위 서울 구로구 · 8,016쌍",
+      "sentence_id": "P01-R15-V2-01",
+      "claim_ids": [
+        "W4-R15-RANK"
+      ],
+      "source_ids": [
+        "SRC-RANKING",
+        "SRC-BODY-LOCK"
+      ],
+      "source_fields": [
+        "/regions/14",
+        "/body_scenes/5/sentences/0"
+      ]
+    },
+    {
+      "fact_id": "F-R15-PRICE",
+      "regionid": "R15",
+      "sentence_id": "P01-R15-V2-07",
+      "claim_ids": [
+        "W4V2-R15-PRICE-SELECTED",
+        "W4-METHOD"
+      ],
+      "definition": "법정동별 수록 거래마다 한 표를 주는 중위값",
+      "price_type": "dong_pair",
+      "source_ids": [
+        "SRC-PRICE-INSIGHTS",
+        "SRC-PRICE-LEGEND",
+        "SRC-APPROVED-BODY"
+      ],
+      "source_fields": [
+        "/regions/14/dong_prices_by_transaction_count/0",
+        "/regions/14/dong_prices_by_transaction_count/3"
+      ],
+      "rows": [
+        {
+          "dong": "구로동",
+          "transaction_n": 123,
+          "complex_n": 40,
+          "median_manwon": 78000.0,
+          "display_label": "구로동",
+          "display_value": "7억8,000만원",
+          "sample_display": "거래 n=123",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/14/dong_prices_by_transaction_count/0"
+        },
+        {
+          "dong": "신도림동",
+          "transaction_n": 80,
+          "complex_n": 18,
+          "median_manwon": 132000.0,
+          "display_label": "신도림동",
+          "display_value": "13억2,000만원",
+          "sample_display": "거래 n=80",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/14/dong_prices_by_transaction_count/3"
+        }
+      ],
+      "period": [
+        "2026-05-01",
+        "2026-10-31"
+      ],
+      "area_m2_inclusive": [
+        83,
+        85
+      ],
+      "retrieved_date": "2026-11-03",
+      "display_definition": "법정동별 거래 중위값",
+      "interpretation": "동결 표본의 비교. 거래 구성·입지·연식 등의 차이가 함께 섞여 있다.",
+      "show": "비교 집단명·두 값·각 표본수를 해당 발화에서 끝까지 표시"
+    },
+    {
+      "fact_id": "F-R14-RANK",
+      "regionid": "R14",
+      "text": "14위 서울 은평구 · 8,267쌍",
+      "sentence_id": "P01-R14-V2-01",
+      "claim_ids": [
+        "W4-R14-RANK"
+      ],
+      "source_ids": [
+        "SRC-RANKING",
+        "SRC-BODY-LOCK"
+      ],
+      "source_fields": [
+        "/regions/13",
+        "/body_scenes/6/sentences/0"
+      ]
+    },
+    {
+      "fact_id": "F-R14-PRICE",
+      "regionid": "R14",
+      "sentence_id": "P01-R14-V2-05",
+      "claim_ids": [
+        "W4V2-R14-PRICE-SELECTED",
+        "W4-METHOD"
+      ],
+      "definition": "법정동별 수록 거래마다 한 표를 주는 중위값",
+      "price_type": "dong_pair",
+      "source_ids": [
+        "SRC-PRICE-INSIGHTS",
+        "SRC-PRICE-LEGEND",
+        "SRC-APPROVED-BODY"
+      ],
+      "source_fields": [
+        "/regions/13/dong_prices_by_transaction_count/3",
+        "/regions/13/dong_prices_by_transaction_count/1"
+      ],
+      "rows": [
+        {
+          "dong": "신사동",
+          "transaction_n": 67,
+          "complex_n": 20,
+          "median_manwon": 63800.0,
+          "display_label": "신사동",
+          "display_value": "6억3,800만원",
+          "sample_display": "거래 n=67",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/13/dong_prices_by_transaction_count/3"
+        },
+        {
+          "dong": "진관동",
+          "transaction_n": 91,
+          "complex_n": 25,
+          "median_manwon": 94000.0,
+          "display_label": "진관동",
+          "display_value": "9억4,000만원",
+          "sample_display": "거래 n=91",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/13/dong_prices_by_transaction_count/1"
+        }
+      ],
+      "period": [
+        "2026-05-01",
+        "2026-10-31"
+      ],
+      "area_m2_inclusive": [
+        83,
+        85
+      ],
+      "retrieved_date": "2026-11-03",
+      "display_definition": "법정동별 거래 중위값",
+      "interpretation": "동결 표본의 비교. 거래 구성·입지·연식 등의 차이가 함께 섞여 있다.",
+      "show": "비교 집단명·두 값·각 표본수를 해당 발화에서 끝까지 표시"
+    },
+    {
+      "fact_id": "F-R13-RANK",
+      "regionid": "R13",
+      "text": "13위 경기 수원시 권선구 · 8,329쌍",
+      "sentence_id": "P01-R13-V2-01",
+      "claim_ids": [
+        "W4-R13-RANK"
+      ],
+      "source_ids": [
+        "SRC-RANKING",
+        "SRC-BODY-LOCK"
+      ],
+      "source_fields": [
+        "/regions/12",
+        "/body_scenes/7/sentences/0"
+      ]
+    },
+    {
+      "fact_id": "F-R13-PRICE",
+      "regionid": "R13",
+      "sentence_id": "P01-R13-V2-06",
+      "claim_ids": [
+        "W4V2-R13-PRICE-SELECTED",
+        "W4-METHOD"
+      ],
+      "definition": "법정동별 수록 거래마다 한 표를 주는 중위값",
+      "price_type": "dong_pair",
+      "source_ids": [
+        "SRC-PRICE-INSIGHTS",
+        "SRC-PRICE-LEGEND",
+        "SRC-APPROVED-BODY"
+      ],
+      "source_fields": [
+        "/regions/12/dong_prices_by_transaction_count/0",
+        "/regions/12/dong_prices_by_transaction_count/1"
+      ],
+      "rows": [
+        {
+          "dong": "금곡동",
+          "transaction_n": 217,
+          "complex_n": 17,
+          "median_manwon": 53000.0,
+          "display_label": "금곡동",
+          "display_value": "5억3,000만원",
+          "sample_display": "거래 n=217",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/12/dong_prices_by_transaction_count/0"
+        },
+        {
+          "dong": "권선동",
+          "transaction_n": 192,
+          "complex_n": 18,
+          "median_manwon": 64750.0,
+          "display_label": "권선동",
+          "display_value": "6억4,750만원",
+          "sample_display": "거래 n=192",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/12/dong_prices_by_transaction_count/1"
+        }
+      ],
+      "period": [
+        "2026-05-01",
+        "2026-10-31"
+      ],
+      "area_m2_inclusive": [
+        83,
+        85
+      ],
+      "retrieved_date": "2026-11-03",
+      "display_definition": "법정동별 거래 중위값",
+      "interpretation": "동결 표본의 비교. 거래 구성·입지·연식 등의 차이가 함께 섞여 있다.",
+      "show": "비교 집단명·두 값·각 표본수를 해당 발화에서 끝까지 표시"
+    },
+    {
+      "fact_id": "F-R12-RANK",
+      "regionid": "R12",
+      "text": "12위 경기 수원시 영통구 · 8,388쌍",
+      "sentence_id": "P01-R12-V2-01",
+      "claim_ids": [
+        "W4-R12-RANK"
+      ],
+      "source_ids": [
+        "SRC-RANKING",
+        "SRC-BODY-LOCK"
+      ],
+      "source_fields": [
+        "/regions/11",
+        "/body_scenes/8/sentences/0"
+      ]
+    },
+    {
+      "fact_id": "F-R12-PRICE",
+      "regionid": "R12",
+      "sentence_id": "P01-R12-V2-07",
+      "claim_ids": [
+        "W4V2-R12-PRICE-SELECTED",
+        "W4-METHOD"
+      ],
+      "definition": "법정동별 수록 거래마다 한 표를 주는 중위값",
+      "price_type": "dong_pair",
+      "source_ids": [
+        "SRC-PRICE-INSIGHTS",
+        "SRC-PRICE-LEGEND",
+        "SRC-APPROVED-BODY"
+      ],
+      "source_fields": [
+        "/regions/11/dong_prices_by_transaction_count/0",
+        "/regions/11/dong_prices_by_transaction_count/3"
+      ],
+      "rows": [
+        {
+          "dong": "망포동",
+          "transaction_n": 235,
+          "complex_n": 23,
+          "median_manwon": 73000.0,
+          "display_label": "망포동",
+          "display_value": "7억3,000만원",
+          "sample_display": "거래 n=235",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/11/dong_prices_by_transaction_count/0"
+        },
+        {
+          "dong": "이의동",
+          "transaction_n": 100,
+          "complex_n": 10,
+          "median_manwon": 119000.0,
+          "display_label": "이의동",
+          "display_value": "11억9,000만원",
+          "sample_display": "거래 n=100",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/11/dong_prices_by_transaction_count/3"
+        }
+      ],
+      "period": [
+        "2026-05-01",
+        "2026-10-31"
+      ],
+      "area_m2_inclusive": [
+        83,
+        85
+      ],
+      "retrieved_date": "2026-11-03",
+      "display_definition": "법정동별 거래 중위값",
+      "interpretation": "동결 표본의 비교. 거래 구성·입지·연식 등의 차이가 함께 섞여 있다.",
+      "show": "비교 집단명·두 값·각 표본수를 해당 발화에서 끝까지 표시"
+    },
+    {
+      "fact_id": "F-R11-RANK",
+      "regionid": "R11",
+      "text": "11위 서울 노원구 · 8,473쌍",
+      "sentence_id": "P01-R11-V2-01",
+      "claim_ids": [
+        "W4-R11-RANK"
+      ],
+      "source_ids": [
+        "SRC-RANKING",
+        "SRC-BODY-LOCK"
+      ],
+      "source_fields": [
+        "/regions/10",
+        "/body_scenes/9/sentences/0"
+      ]
+    },
+    {
+      "fact_id": "F-R11-PRICE",
+      "regionid": "R11",
+      "sentence_id": "P01-R11-V2-06",
+      "claim_ids": [
+        "W4V2-R11-PRICE-SELECTED",
+        "W4-METHOD"
+      ],
+      "definition": "법정동별 수록 거래마다 한 표를 주는 중위값",
+      "price_type": "dong_pair",
+      "source_ids": [
+        "SRC-PRICE-INSIGHTS",
+        "SRC-PRICE-LEGEND",
+        "SRC-APPROVED-BODY"
+      ],
+      "source_fields": [
+        "/regions/10/dong_prices_by_transaction_count/0",
+        "/regions/10/dong_prices_by_transaction_count/1"
+      ],
+      "rows": [
+        {
+          "dong": "상계동",
+          "transaction_n": 213,
+          "complex_n": 43,
+          "median_manwon": 71000.0,
+          "display_label": "상계동",
+          "display_value": "7억1,000만원",
+          "sample_display": "거래 n=213",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/10/dong_prices_by_transaction_count/0"
+        },
+        {
+          "dong": "중계동",
+          "transaction_n": 159,
+          "complex_n": 37,
+          "median_manwon": 86000.0,
+          "display_label": "중계동",
+          "display_value": "8억6,000만원",
+          "sample_display": "거래 n=159",
+          "source_id": "SRC-PRICE-INSIGHTS",
+          "json_pointer": "/regions/10/dong_prices_by_transaction_count/1"
+        }
+      ],
+      "period": [
+        "2026-05-01",
+        "2026-10-31"
+      ],
+      "area_m2_inclusive": [
+        83,
+        85
+      ],
+      "retrieved_date": "2026-11-03",
+      "display_definition": "법정동별 거래 중위값",
+      "interpretation": "동결 표본의 비교. 거래 구성·입지·연식 등의 차이가 함께 섞여 있다.",
+      "show": "비교 집단명·두 값·각 표본수를 해당 발화에서 끝까지 표시"
+    }
+  ],
+  "related_short_ids": [
+    "SHORT02-R20-R16"
+  ],
+  "CTAasset_refs": [
+    "JUN-SHORTS-COMMON-CTA-V1/S01",
+    "JUN-SHORTS-COMMON-CTA-V1/S02"
+  ],
+  "CTA_text_ref": "common_cta.json",
+  "targetduration": {
+    "status": "estimate_not_Jun_measured",
+    "target_range_seconds": [
+      60,
+      90
+    ],
+    "planning_range_seconds": [
+      65,
+      85
+    ],
+    "existing_free_voice_speech_sum_seconds_reference_only": 52.991,
+    "new_common_CTA_estimate_seconds": [
+      10,
+      14
+    ],
+    "silent_final_hold_seconds": 3,
+    "early_conditions_reading_hold_estimate_seconds": [
+      1.5,
+      2.5
+    ],
+    "Jun_measured_seconds": null,
+    "playback_rate": 1.0,
+    "timing_rule": "Jun 생성 후 문장 전체와 호흡을 실제 청취·정렬해 확정. 문장별 전후 여유를 확인하고 목표 길이에 맞추려고 배속하거나 문장 일부를 자르지 않는다.",
+    "if_over_target": "우선 자연스러운 발화·조건·다섯 지역 완결을 보존하고 총괄에 실제 길이를 보고한다. 신규 다른 내레이션은 추가하지 않는다."
+  },
+  "shared_layout_ref": "shorts_plan.json#/layout_contract",
+  "source_manifest_ref": "source_manifest.json",
+  "voice_reuse_policy": "본편 Jun 문장 ID 단위로 완결된 음성을 재사용한다. exacttext와 reading_text를 보존하고 신규 음성은 공통 CTA 2문장뿐이다.",
+  "opening_conditions": {
+    "before_first_price": true,
+    "on_first_frame": true,
+    "screen_only_text": [
+      "가격: 거래 중위값",
+      "전용 83~85㎡ · 2026.05~10 계약",
+      "2026.11.03 조회 · 취소 제외",
+      "10월은 조회일까지 신고분"
+    ],
+    "definition_detail": "법정동별 수록 거래의 가운데 값. 지도 점의 단지별 중위가격과 집계 단위를 구분한다.",
+    "narration_added": false
+  },
+  "ending": {
+    "exacttext": "나머지 순위도 궁금하시다면 다른 순위 영상을 확인해 주세요. 지역별 자세한 가격과 생활권 비교는 본편에서 이어집니다.",
+    "silent_hold_after_last_word_seconds": 3,
+    "other_ranking_targets": [
+      "SHORT02-R20-R16"
+    ],
+    "full_main_target": "map-clean-v1을 계승하는 Jun 본편 20~11위",
+    "actual_urls": null,
+    "links_applied": false,
+    "release_dependency": "다른 순위 영상/본편의 실제 게시 상태와 URL은 총괄이 확인 후 연결한다. 10~1위 제작·공개를 전제하지 않는다."
+  }
+}

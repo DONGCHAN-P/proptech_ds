@@ -1,0 +1,22 @@
+{
+  "status": "editorial_research_preparation_only",
+  "sequence": "Actual next-episode production starts after the first private upload.",
+  "case_ledger": "next_case_engine_prep_v2/results.json",
+  "arithmetic_review": "next_case_independent_arithmetic.json",
+  "policy_merge": "policy_facts.json overridden by matching claim_id in policy_facts_v2.json",
+  "narrative_order": ["보유자금", "LTV와 담보 차감", "DSR·DTI와 스트레스 심사", "세금·복비·등기", "6억·9억·12억 사례", "정책상품", "신생아 사례", "월 예산에서 역산", "가격 범위와 다음 단지 선택"],
+  "findings": [
+    {"id":"I01","message":"보유자금에서 예비자금과 거래비용을 먼저 분리하면 잔금에 넣을 자기자금이 보입니다.","evidence":"A cash250m, reserve30m, 6억 costs10.74m including separate planning1.5m; usable equity209.26m, required loan390.74m."},
+    {"id":"I02","message":"같은 집에서도 일반 무주택과 생애최초의 담보 한도가 달라집니다.","evidence":"서울 규제지역 A 인정소득1억·부채0·평가액=가격·보증승인 차감0 가정: 6억 일반240m vs first420m. 서민실수요 LTV60 별도 설명."},
+    {"id":"I03","message":"생애최초 사례는 6억에서 담보가, 9억과 12억에서는 소득 심사가 대출 상한을 결정합니다.","evidence":"A_first_C0: 6억420m collateral; 9억 and12억501.025226m DSR. 4%variable30y, stress7%, bankDSR40%."},
+    {"id":"I04","message":"6억·9억·12억은 세금과 상품의 경계이고, 수도권 구입 주담대 총액 경계는 15억·25억입니다.","evidence":"Tax LTV product limits each shown on separate axes; current official facts L04,T01,C01,B02,N03,T04."},
+    {"id":"I05","message":"주택가격 자격과 상품 대출 한도를 따로 보면 필요한 현금이 드러납니다.","evidence":"B newborn9억 eligible price, cap400m; costs36.15m+reserve30m→cash566.15m, short316.15m against250m. At6억 newborn cap400m, required390.74m fits conditional guarantee case."},
+    {"id":"I06","message":"보증 승인 여부가 같은 LTV의 실제 담보 상한을 바꿉니다.","evidence":"6억 first70%: C0=420m; Seoul uncovered55m→365m. Required390.74m means short25.74m. Do not imply blanket bank availability or automatic waiver."},
+    {"id":"I07","message":"월 저축 목표를 넣으면 감당할 가격 범위가 구체적으로 좁혀집니다.","evidence":"A_first_C0 planning assumptions maxprice680.19m, requiredloan476.130426m, payment2.273119m; savings426881won from3m budget after0.3m ownercost. With mortgage target1.7m and savings1m: maxprice565.86m, requiredloan356.074244m."},
+    {"id":"I08","message":"금리가 올라갈 때 남는 저축액을 보면 가격 선택의 여유를 비교할 수 있습니다.","evidence":"Same original principal/new360months 4→6% illustration: maxprice680.19m payment2.273→2.855m, budget remainder0.427→-0.155m; price565.86m payment1.700→2.135m, remainder1.000→0.565m. Not a remaining-balance projection after5years."},
+    {"id":"I09","message":"신생아 특례의 초기 금리와 기본 특례기간을 한 화면의 시간축에서 연결합니다.","evidence":"B income80m,30y, basic initial2.9%,5years; required390.74m payment1.626377m. Bank4% is a separate illustrative calculation rate; later policy rate must follow applicable reset rules."},
+    {"id":"I10","message":"세금 감면과 대출 자격은 각자의 요건으로 확인합니다.","evidence":"Base84sqm ordinary one-home taxes before relief: 6/9/12억6.6/29.7/39.6m. Ordinary apartment firstbuy acquisition reliefmax2m; childbirthmax5m, each eligibility and residence/recapture conditions; larger one when overlapping, no sum7m. Net education tax after relief remains outside computed table."}
+  ],
+  "visual_controls": ["가격·소득·부채·지역·면적·금리 조건은 해당 사례 옆에 짧게 표시", "실제 필요한 대출과 빌릴 수 있는 상한을 혼합하지 않음", "취득세는 곡선, 복비는 구간별 계단, 현금은 워터폴, 월부담은 예산 막대로 구분", "주제 전환에 다른 배경·자료 목적 적용", "모든 내용은 의미 단위 1~2줄 자막과 실제 글리프 경계 검수", "사례B는 별도 가구 전환을 표시", "생성 주택 이미지를 실제84㎡ 평면의 근거로 사용하지 않음"],
+  "viewer_language": "합니다체·짧은 문장·긍정형 기준 설명. 반복 면책·AI 개념 이미지 배지를 넣지 않습니다. 실행 조건은 확정 단계와 입력값을 직접 설명합니다."
+}

@@ -1,0 +1,113 @@
+{
+  "role": "video_editor",
+  "status": "render_ready_for_independent_qa",
+  "episode_id": "data-insight-20261019",
+  "outputs": {
+    "mp4": "video-agent-studio\\episodes\\data-insight-20261019\\outputs\\v1\\data_insight_30s_v1.mp4",
+    "srt": "video-agent-studio\\episodes\\data-insight-20261019\\outputs\\v1\\captions.srt",
+    "captions_json": "video-agent-studio\\episodes\\data-insight-20261019\\outputs\\v1\\captions.json",
+    "asset_usage": "video-agent-studio\\episodes\\data-insight-20261019\\editor\\asset_usage.json",
+    "entry": "video/src/data-insight-v1/entry.tsx",
+    "public_media": "video/public/data-insight-v1",
+    "placement_guide": "video-agent-studio\\episodes\\data-insight-20261019\\editor\\placement_guide.md",
+    "text_inventory": "video-agent-studio\\episodes\\data-insight-20261019\\editor\\on_screen_text_v1.md",
+    "technical": "video-agent-studio\\episodes\\data-insight-20261019\\editor\\technical_verification.json",
+    "cut_frames": "video-agent-studio\\episodes\\data-insight-20261019\\editor\\frames",
+    "contact": "video-agent-studio\\episodes\\data-insight-20261019\\editor\\final_contact.jpg",
+    "reproduce_job": "video-agent-studio\\episodes\\data-insight-20261019\\editor\\render_job.json",
+    "receipt": "output/video_jobs/data-insight-v1-final/receipt.json"
+  },
+  "input_versions": {
+    "render_data_revision": "v1.1-30s-text-locked",
+    "text_source": "script_v1_1.md + pre-render editor/on_screen_text_v1.md; director approved exact S3c split labels and reconciled script/scenes v1.2",
+    "source_manifest": "inputs/manifest.json; SHA256 per asset in asset_usage.json",
+    "api_media": [
+      "visual/office.mp4",
+      "visual/pantry.mp4",
+      "visual/team.mp4"
+    ],
+    "api_crop": "0.5-4.5s; 1280x720 source upscaled to1080p",
+    "bgm": "original procedural composition; prepare.py; 44100Hz PCM source, AAC encoded output"
+  },
+  "verified": {
+    "status": "technical_pass",
+    "duration": "30.016000",
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": 30,
+    "frames": 900,
+    "audio_codec": "aac",
+    "decode_errors": 0,
+    "sampled_frames": [
+      0,
+      60,
+      119,
+      120,
+      165,
+      209,
+      210,
+      255,
+      299,
+      300,
+      345,
+      389,
+      390,
+      435,
+      479,
+      480,
+      525,
+      569,
+      570,
+      630,
+      689,
+      690,
+      750,
+      809,
+      810,
+      855,
+      899
+    ],
+    "continuous_playback": false,
+    "actual_listening": false,
+    "sha256": "89d2d58c93c9d72ba52645f2ed64e975de92bcf1810f712c3a39158fad2dd666"
+  },
+  "visual_inspection": {
+    "original_contact": true,
+    "remotion_stills": [
+      "S1",
+      "S3b",
+      "S3c",
+      "S4"
+    ],
+    "encoded_final_frames": [
+      "f060",
+      "f435",
+      "f479"
+    ],
+    "gif": "7 frames /23.1seconds compressed into3seconds; fast playback label shown; final frame shows completed requirements UI",
+    "asset_count": 13,
+    "continuous_playback": false,
+    "actual_listening": false
+  },
+  "unresolved": [
+    "Independent final QA pending; continuous audiovisual review not claimed by editor."
+  ],
+  "affected_scenes": [
+    "S1",
+    "S2",
+    "S3a",
+    "S3b",
+    "S3c",
+    "S3d",
+    "S4",
+    "S5",
+    "S6"
+  ],
+  "next_owner": "video_qa then director",
+  "preserved_renders": [
+    "outputs/v1/data_insight_30s_v1_pre_qa.mp4",
+    "outputs/v1/data_insight_30s_v1_pre_gif_fix.mp4"
+  ]
+}

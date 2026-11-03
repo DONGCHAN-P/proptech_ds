@@ -1,0 +1,46 @@
+{
+  "checked_on": "2026-10-16",
+  "sources": [
+    {
+      "url": "https://www.openstreetmap.org/copyright",
+      "method": "web open 직접본문확인",
+      "facts": [
+        "ODbL 데이터 복사·배포·가공허용,기여자출처/라이선스고지 필요",
+        "파생데이터배포시동일라이선스조건"
+      ],
+      "license": "ODbL1.0",
+      "local_source": "raw/osm.json;osm_subset.geojson"
+    },
+    {
+      "url": "https://operations.osmfoundation.org/policies/tiles/",
+      "method": "web open 직접본문확인",
+      "facts": [
+        "표준타일대량사전수집금지 확인;이번타일요청0"
+      ]
+    },
+    {
+      "url": "https://www.ikea.com/kr/ko/stores/goyang/",
+      "method": "web open 직접본문확인",
+      "facts": [
+        "고양점주소권율대로420",
+        "P1/P2 롯데아울렛 입주",
+        "3호선원흥역및버스안내"
+      ],
+      "reuse": "텍스트사실확인만;웹이미지사용없음"
+    },
+    {
+      "url": "https://www.lotteshopping.com/store/main?cstr=0355",
+      "method": "검색결과만;좌표독립검증근거로사용안함"
+    }
+  ],
+  "existing_inputs": [
+    "research/commute-v3/report.md",
+    "research/commute-v3/facts.json",
+    "research/prices-v2/facts.json",
+    "research/map-clearance-v1/handoff.md"
+  ],
+  "derivative_database": "osm_subset.geojson ODbL1.0; attribution kept",
+  "no_tiles": true,
+  "no_proprietary_map_images": true,
+  "no_photo_reuse": true
+}

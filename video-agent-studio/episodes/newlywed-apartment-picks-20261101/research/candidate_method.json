@@ -1,0 +1,36 @@
+{
+  "contract_window": [
+    "2026-04-01",
+    "2026-09-30"
+  ],
+  "area_bands": [
+    "59<=exclusive_m2<60",
+    "84<=exclusive_m2<85"
+  ],
+  "floor": ">=3",
+  "minimum_n": 5,
+  "statistic": "raw transaction median per apartment and area band",
+  "cancellation": "web/build_index.py build_trades selects NOT is_canceled from source master; late cancellations require refresh before publication",
+  "transaction_type": "local cache does not expose direct/brokered flag; no brokered-only filter claimed",
+  "q3_sensitivity": "2026-07-01~09-30 subset, same area/floor filters; eligibility remains six-month n>=5. Display Q3 median only with its own n, and do not promote a low-n subset to a confirmed price level.",
+  "cache_max_contract_date": "2026-10-05",
+  "candidate_rows": 121,
+  "candidate_complexes": 106,
+  "scope": "Local cache 28275/28290, connected to 2024 Seo-gu as a research grouping; administrative crosswalk to be independently verified.",
+  "source_files": [
+    {
+      "path": "web\\cache\\apt_index.parquet",
+      "sha256": "4d1600f3def279f549147fbe08c69d6990e9bd7e998c86dbeb74607c299d15ab"
+    },
+    {
+      "path": "web\\cache\\trades.parquet",
+      "sha256": "0a1788ddcd1ad70179ade38650de8c77dd43b7876ac4edad296c6abc10cfb1b0"
+    }
+  ],
+  "known_gaps": [
+    "매물 호가·판매 상태·동향·수리·입주 가능일",
+    "면적별 주택형/평면·관리비",
+    "현재 역 출입구 기준 도보 경로·운영 상태",
+    "신혼부부의 실제 단지 거주 또는 선택 이유"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "status": "ready_for_editor_and_qa",
+  "input_episode": "namyangju-wangsuk-20261014",
+  "input_video": "base full v8 14:50.667; parent supplied SHA94b6d04aa780c93509203b705ce02fa12085d57a0faef23a0629769db0549ba4; file path resolved by editor",
+  "scope": "visual changes through actual time 8:45 only; approved script/audio unchanged",
+  "outputs": [
+    {
+      "path": "anchors.json",
+      "bytes": 8720,
+      "sha256": "d19b0d89b752d60f5866a1ecfc5f8c1ff887e47497a4cb78c377206860a548fd"
+    },
+    {
+      "path": "facts.json",
+      "bytes": 10628,
+      "sha256": "6244c6320746f9fa5a28b1e8718afcf8acf730de14795f1c18ba833366ef6829"
+    },
+    {
+      "path": "regional_rail_reference.png",
+      "bytes": 356296,
+      "sha256": "ea6dda5a6eaa7c9e1f5e37d212b6083389acaeae47a0a2dc385a27d9c7af8f6c"
+    },
+    {
+      "path": "regional_registration_evidence.json",
+      "bytes": 6645,
+      "sha256": "c38c112cfc3dbd8e928cc5271541dbbe3167198f8bfd4c10cefd711741289ea8"
+    },
+    {
+      "path": "w1_station_reference.png",
+      "bytes": 388375,
+      "sha256": "3ea0ef3a3bb58d7a41f28630a4f7de0b6a030d29798ca8e288d6c2e751d715c6"
+    },
+    {
+      "path": "w2_regional_rail_reference.png",
+      "bytes": 1542971,
+      "sha256": "55f02b045872ad879734ec0780dff3ed16867af5175c3900e6fdd4d22b7f6de7"
+    },
+    {
+      "path": "w2_station_reference.png",
+      "bytes": 848037,
+      "sha256": "83d99dd22fad7f85ede023c50a43cc94d650beac8684a4f42175480a7e3811fc"
+    }
+  ],
+  "stations": 2,
+  "roads": 6,
+  "verified_on": "2026-10-15",
+  "verification": [
+    "Viewed actual official W1 B17 p5 왕숙 station symbol and W2 A3 p5 일패 symbol.",
+    "Viewed actual official p4 regional maps and identified seven existing station symbols against stored OSM coordinates.",
+    "Computed regional schematic affine guide fit (not survey registration); RMS85m and held-out existing station max191m.",
+    "Recommended500m uncertainty zone and mandatory approximate/planned labels.",
+    "Native W2 source crop direct transform; W1 same-geography correspondence approximate ±45boardpx.",
+    "JSON readback verified."
+  ],
+  "unresolved": [
+    "No official exact WGS84 station center or exit coordinate established.",
+    "No precise native/GIS legal registration or current traversable route.",
+    "No new north-native station inserted without direct location evidence."
+  ],
+  "required_editor_behavior": [
+    "Keep planned symbols visibly distinct from operating station symbols.",
+    "Show GIS note 계획위치개략 and uncertainty halo; do not display decimal coordinates to audience.",
+    "Road lines demonstrate existing approved map plan relation only; no times or fake connections to entrances.",
+    "Keep W1/W2 full names to prevent same A1 confusion."
+  ],
+  "affected_scene_ids": [
+    "M003",
+    "M004",
+    "M005"
+  ],
+  "next_assignees": [
+    "/root/rail_route_editor",
+    "/root/fact_review",
+    "/root"
+  ]
+}

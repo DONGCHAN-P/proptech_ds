@@ -1,0 +1,36 @@
+{
+  "task_id": "living",
+  "role": "video_research",
+  "status": "ready_with_qualifications",
+  "input_revisions": {
+    "sources": "input-v1"
+  },
+  "outputs": [
+    "C:/projects/realestate_reco/video-agent-studio/episodes/namyangju-wangsuk-20261014/research/living/facts.json",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/namyangju-wangsuk-20261014/research/living/findings.md"
+  ],
+  "affected_scene_ids": [],
+  "checks": [
+    {
+      "check": "공식 출처 본문/검색 결과 확인",
+      "result": "passed_with_limits",
+      "evidence": "facts.json의 evidence_location 및 caveat"
+    },
+    {
+      "check": "가격 비교조건 구분",
+      "result": "passed",
+      "evidence": "LH 타입별 기준층 각주 확인; 실거래 우열 주장 제외"
+    },
+    {
+      "check": "실거래·공고 첨부·시설 실물",
+      "result": "unchecked",
+      "evidence": "확보하지 못함; 총괄 로컬 통계는 별도 파일·총괄 검증 범위"
+    }
+  ],
+  "open_issue_ids": [
+    "LIV-REGULATION-PDF",
+    "LIV-HOSPITAL-TIMING",
+    "LIV-TRANSACTION-COMPARABILITY"
+  ],
+  "next_role": "video_writer"
+}

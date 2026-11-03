@@ -1,0 +1,115 @@
+{
+  "task_id": "next-policy-source-prep-v1",
+  "as_of_kst": "2026-10-26",
+  "gaps": [
+    {
+      "id": "G01",
+      "severity": "required_before_script",
+      "affected_claim_ids": [
+        "D05",
+        "N04"
+      ],
+      "question": "디딤돌/신생아 현행 실거주 유지기간·유예·적용일",
+      "evidence": "KB 신생아 본문1년 vs 변경이력2025-03-24 1→2년, 기존고객미적용. 기금 해당 항목 미확보",
+      "resolution": "기금 현행 업무취급기준/공식FAQ에서 일반·신생아 각각 대조",
+      "use_until_resolved": "1개월 전입만 조건부 인용, 유지기간 수치 보류"
+    },
+    {
+      "id": "G02",
+      "severity": "required_before_exact_loan_model",
+      "affected_claim_ids": [
+        "L02",
+        "P01"
+      ],
+      "question": "2026 차주단위DSR 적용대상·정책모기지 제외 및 기존대출 산입범위",
+      "evidence": "2024 FSC 명시적 제외와 현행상품DTI는 확인, 2026 감독규정 별표 직접대조 미완",
+      "resolution": "은행업감독규정/시행세칙 현행 별표 및 HF/기금 상품 심사기준 대조",
+      "use_until_resolved": "DSR40 일반대출만 적용, 정책모기지 DSR 처리 qualified. 모든부채무시 표현 금지"
+    },
+    {
+      "id": "G03",
+      "severity": "required_if_using_exception",
+      "affected_claim_ids": [
+        "B01",
+        "B02"
+      ],
+      "question": "보금자리론 별도 자산·면적 상한 부재 및 신혼소득특례 DTI 세칙",
+      "evidence": "HF 일반 안내에 자산·면적 별도상한 미기재, 소득특례는 반영",
+      "resolution": "HF 현행 업무처리기준·상품설명서 확인",
+      "use_until_resolved": "자산/면적 무제한 단정 및 부부합산소득 DTI 자동적용 금지"
+    },
+    {
+      "id": "G04",
+      "severity": "minor_conditional",
+      "affected_claim_ids": [
+        "T03"
+      ],
+      "question": "84㎡ 서민주택 적용의 주택법2조6호·토지조건 직접대조",
+      "evidence": "농특세법/시행령 현행 비과세와 국민주택규모 인용은 확인",
+      "resolution": "특수토지·비아파트를 추가할 때 현행 주택법 및 실제 물건 확인",
+      "use_until_resolved": "통상84㎡ 아파트와 적격 부속토지 가정만 사용"
+    },
+    {
+      "id": "G05",
+      "severity": "required_before_net_relief_total",
+      "affected_claim_ids": [
+        "T02",
+        "T04",
+        "T05"
+      ],
+      "question": "정액 취득세 감면 뒤 지방교육세·중복감면·개정 부칙 적용",
+      "evidence": "감면액200/특수300/출산500 및 최신 추징조문 확인; 정액공제 후 교육세 정산·중복세칙 미완",
+      "resolution": "지특법180/부칙·지방세법151과 지자체 공식 실무안내 확인",
+      "use_until_resolved": "기본 무감면 세액만 확정 계산, 200+500 자동합산·세금총액 단정 금지"
+    },
+    {
+      "id": "G06",
+      "severity": "conditional",
+      "affected_claim_ids": [
+        "C02"
+      ],
+      "question": "간이과세 중개사의 실제 부가세 청구·면제",
+      "evidence": "국세청 일반10%와 간이 납부세액 구조만 확인",
+      "resolution": "실제 중개사 과세유형/청구 조건 확인",
+      "use_until_resolved": "일반과세10% 사례를 명시하고 간이유형은 수치 보류"
+    },
+    {
+      "id": "G07",
+      "severity": "required_before_all_in_cost",
+      "affected_claim_ids": [
+        "C05"
+      ],
+      "question": "사례별 채권매입액·할인손실",
+      "evidence": "공시가격·주소·등기일·실행일 할인율 미정; 기금 실제계산 조회 미실행",
+      "resolution": "기금 공식 고객부담금 조회에 익명 가정값 입력 후 기준일 보존",
+      "use_until_resolved": "채권 원금 전액을 비용으로 잡거나 6/9/12억 매매가에서 임의비율 계산 금지"
+    },
+    {
+      "id": "G08",
+      "severity": "conditional",
+      "affected_claim_ids": [
+        "C06",
+        "C07"
+      ],
+      "question": "대법원 현행 등기수수료 원문·법무사보수/실비",
+      "evidence": "정부해설18천/15천/10천 확인, 예규연결은 본문 미반환; 법무사보수 견적없음",
+      "resolution": "대법원 예규 원문 대조 및 소유권이전 견적을 세금/채권/수수료/보수로 분리",
+      "use_until_resolved": "수수료 qualified, 임의50만원 같은 총액 미기재"
+    },
+    {
+      "id": "G09",
+      "severity": "input_needed_for_model_not_a_research_blocker",
+      "affected_claim_ids": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L06"
+      ],
+      "question": "실제 지역/주택평가/소득/기존부채/금리/연령/가구유형",
+      "evidence": "사례는 가격6/9/12억·전용84㎡ 가정만 있음",
+      "resolution": "첫 영상 완료 후 총괄이 다음편 브리프에서 가정 확정; 예시와 실제심사 구분",
+      "use_until_resolved": "LTV·총액 전처리 상한만 제시, 대출가능액·필요소득·최종자기자본을 확정하지 않음"
+    }
+  ]
+}

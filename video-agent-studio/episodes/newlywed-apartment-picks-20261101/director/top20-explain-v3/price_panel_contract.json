@@ -1,0 +1,29 @@
+{
+  "status": "interface_only_not_price_evidence",
+  "revision": "top20-explain-v3",
+  "normalized_file": "director/top20-explain-v3/price_panel_data.json",
+  "fields": {
+    "region_id": "R01..R20; unchanged ranking region id",
+    "median_manwon": "exact aggregate numeric median in ten-thousand KRW",
+    "display_price": "readable rounded price; exact and rounding method stored",
+    "n": "actual qualifying transactions count",
+    "contract_window": "start and end inclusive ISO dates",
+    "as_of_date": "retrieved/verified snapshot date",
+    "area_range_m2": "exact filter bounds",
+    "representative": {
+      "apt_id": "verified local or source identifier",
+      "apt_name": "verified actual complex name",
+      "median_manwon": "same period/area own median",
+      "n": "own qualifying transaction count",
+      "lat": "numeric actual coordinate if verified",
+      "lng": "numeric actual coordinate if verified",
+      "coordinate_status": "verified only when provenance is checked; else no map point"
+    }
+  },
+  "map_rules": [
+    "actual2024regionalgeometry projected once at fixed aspect ratio",
+    "region median belongs to region and is not shown as apartment price",
+    "representative apartment has its own statistic and n",
+    "no invented coordinate; omit marker if coordinate unverified or outside shape"
+  ]
+}

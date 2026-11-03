@@ -1,0 +1,16 @@
+from pathlib import Path
+import json,hashlib,shutil
+EP=Path(__file__).resolve().parents[2];ROOT=EP.parents[2];O=EP/'outputs/readability-cta-v15';S=O/'sources';S.mkdir(exist_ok=True)
+a=json.loads((ROOT/'video/src/namyangju-v14/project_v14.json').read_text(encoding='utf-8'));b=json.loads((ROOT/'video/src/namyangju-v15/project_v15.json').read_text(encoding='utf-8'));assert a['captions']=={k:v for k,v in b['captions'].items() if k!='M010'};assert a['narration']==b['narration'][:-1]
+(O/'caption_preservation_v15.json').write_text(json.dumps({'original_301_caption_objects_exact_equal':True,'original_narration_metadata_exact_equal':True,'new_CTA_cues':4,'total_cues':305,'new_CTA_raw_exact_character_alignment':True},indent=2),encoding='utf-8')
+paths=[EP/'timing_lock_v15.json',EP/'outputs/story-review-v8/manifest.json',EP/'narration/cta-v8/handoff.json',EP/'narration/cta-v8/M010.captions_timed.json',EP/'research/region-leaders-v14/locator_transform.json',EP/'research/region-leaders-v14/north_closing_map.json',EP/'research/landuse-v7/source_rights.json',EP/'research/ilpae-v13/joint_geometry.json'];records=[]
+for i,p in enumerate(paths):
+ if p.exists():
+  name=(str(i)+'_'+p.name);shutil.copy2(p,S/name);records.append({'path':str(p.relative_to(ROOT)),'delivery':'sources/'+name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+shutil.copy2(next((ROOT/'video-agent-studio/guides').glob('*.md')),O/'map_caption_guide.md')
+files=list((ROOT/'video/src/namyangju-v15').glob('*.tsx'))+list((ROOT/'video/src/namyangju-v15').glob('*.ts'))+list((ROOT/'video/src/namyangju-v15').glob('*.json'))+list((ROOT/'video/public/namyangju-v15').glob('*'))
+r={'revision':'readability-cta-v15','base_file':'outputs/locator-timeline-v14/namyangju_locator_timeline_full_v14.mp4','base_sha256':'ba5bcfdc625f3c15b3f13548f43696e6f7d8b0579c8f8374d46df7d2083966f1','video_frames':27959,'caption_count':305,'records':records,'editor_source_files':[{'path':str(p.relative_to(ROOT)),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in files if p.is_file()],'changes':['common timeline glyph baseline margin; actual SVG font+stroke bounding boxes12cases all fit','M002 single W1wholelocator and exact detail camera box','M003 W1south inset before5642; W2Ilpae joint geometry from5642','South school4 orthogonal noncrossing leader labels; geometry unchanged','approved literal M0107.44sec4cues; provider-last-spoken-end+3sec hold; original10sec brand outro'],'geometry_policy':'existing verified source-native fact diagrams and planned rail intervals preserved; no new exact station point or imaginary entrance','rights':'existing own fact diagrams, OSM and previously verified CI/brand sources reused; no new paid image/video','CTA_included_credits':24,'new_cash_payment':0,'audio':'canonical v14 decoded PCM0..27353 exact reused; finalAAC reencoded to append CTA','actual_listening':False,'continuous_playback':False}
+for name in ['namyangju_readability_cta_full_v15.mp4','namyangju_readability_cta_full_v15.srt']:
+ p=O/name
+ if p.exists():r.setdefault('final_artifacts',[]).append({'file':name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size})
+(O/'source_manifest_v15.json').write_text(json.dumps(r,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps({'source_records':len(records),'original_301_exact':True,'total_cues':305}))

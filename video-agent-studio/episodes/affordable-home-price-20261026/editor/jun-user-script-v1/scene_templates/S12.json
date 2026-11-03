@@ -1,0 +1,54 @@
+{
+  "scene_id": "S12",
+  "chapter": 3,
+  "message": "이후 사례의 공통 조건",
+  "narration_text": "오늘 사례에서는 LTV 70퍼센트, 기존 대출 없음, 그리고 이 사람의 소득과 심사 조건에 따른 대출한도는 최대 4억 원이라고 가정하겠습니다. 여기서 4억은 정부가 모든 사람에게 정한 일괄 한도가 아닙니다. 계산을 보여드리기 위해 정한 개인별 대출한도예요.\n\n실제로는 지역과 주택가격에 따른 정책상 제한, 은행 심사, 담보평가도 함께 봐야 합니다. 오늘은 이 조건들이 예시 계산을 추가로 제한하지 않는다고 놓고 보겠습니다. 월 상환액은 연 4.5퍼센트, 30년 원리금균등으로 계산할게요. 현재 시중금리를 안내하는 숫자는 아닙니다.",
+  "paragraph_ids": [
+    "P028",
+    "P029"
+  ],
+  "claim_ids": [
+    "DOC",
+    "CALC"
+  ],
+  "material_type": "대출 한도 게이트",
+  "asset_ids": [
+    "M12"
+  ],
+  "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "audio_revision": null,
+  "start": null,
+  "end": null,
+  "timing_basis": "UNLOCKED: awaiting actual Jun alignment",
+  "beats": [
+    {
+      "anchor": "LTV 70퍼센트",
+      "action": "LTV 게이트 70%",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "최대 4억 원",
+      "action": "사례 개인 한도 4억 게이트",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "연 4.5퍼센트, 30년 원리금균등",
+      "action": "월 원리금 계산 조건 고정",
+      "start": null,
+      "end": null
+    }
+  ],
+  "status": "designed_not_rendered",
+  "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+  "fallback": "LTV·개인한도·월납부 조건을 한 문장씩 구성",
+  "template_status": "contract_only_not_authored",
+  "template": "S12",
+  "beat_ids": [
+    "S12.b01",
+    "S12.b02",
+    "S12.b03"
+  ],
+  "preview_seconds": null
+}

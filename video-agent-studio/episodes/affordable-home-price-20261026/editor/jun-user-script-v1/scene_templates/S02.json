@@ -1,0 +1,45 @@
+{
+  "scene_id": "S02",
+  "chapter": 1,
+  "message": "통장과 매물 가격 연결",
+  "narration_text": "그런데 막상 돈을 모으고 나면, 여기서 또 막힙니다. 그래서 이 돈으로 무슨 집을 살 수 있는데? 부동산 앱을 켜보면 6억, 10억, 15억짜리 아파트가 나오는데, 내 통장에 있는 돈하고 저 가격이 바로 연결되지는 않거든요.",
+  "paragraph_ids": [
+    "P008"
+  ],
+  "claim_ids": [
+    "DOC"
+  ],
+  "material_type": "집·가격 비교",
+  "asset_ids": [
+    "M02"
+  ],
+  "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "audio_revision": null,
+  "start": null,
+  "end": null,
+  "timing_basis": "UNLOCKED: awaiting actual Jun alignment",
+  "beats": [
+    {
+      "anchor": "그래서 이 돈으로 무슨 집을 살 수 있는데?",
+      "action": "통장 잔액과 집 세 개를 분리",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "6억, 10억, 15억",
+      "action": "가격별 매물 모형에 금액 표시",
+      "start": null,
+      "end": null
+    }
+  ],
+  "status": "designed_not_rendered",
+  "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+  "fallback": "실제 앱 화면을 쓰지 않고 집 실루엣과 가격으로 제작",
+  "template_status": "contract_only_not_authored",
+  "template": "S02",
+  "beat_ids": [
+    "S02.b01",
+    "S02.b02"
+  ],
+  "preview_seconds": null
+}

@@ -1,0 +1,47 @@
+{
+  "timing_locked": "boolean. True only when director supplies actual audio lock",
+  "timing_basis": "actual_audio or provisional_*",
+  "audio_file": "absolute local path of full-timeline dry narration (optional for snapshots)",
+  "audio_mix_file": "optional completed full-timeline mix, preferred over audio_file",
+  "audio_includes_brand": false,
+  "last_speech_end_s": "global last spoken endpoint; E001.end must equal this +3 exactly once",
+  "inserts": [
+    {
+      "kind": "intro",
+      "start_s": 24.0,
+      "duration_s": 5.0
+    },
+    {
+      "kind": "outro",
+      "start_s": 485.0,
+      "duration_s": 10.0
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "S003",
+      "start_s": 46.0,
+      "end_s": 59.0,
+      "anchors": {
+        "count": 0.2,
+        "change": 6.3
+      },
+      "sentence_times": [
+        {
+          "sentence_id": "S003-01",
+          "text": "Exact spoken sentence",
+          "start_s": 0.0,
+          "end_s": 3.0
+        }
+      ],
+      "captions": [
+        {
+          "text": "Exact display cue",
+          "start_s": 46.0,
+          "end_s": 49.0
+        }
+      ]
+    }
+  ],
+  "note": "scene times/captions global seconds; anchors/sentence_times local seconds. Optional brand insert slots cover explicit scene gaps. Pass --timing. Any unique scene IDs; each must be present in script, lock and a visual renderer/spec. Extra scenes use extra_scenes.py or --scene-data."
+}

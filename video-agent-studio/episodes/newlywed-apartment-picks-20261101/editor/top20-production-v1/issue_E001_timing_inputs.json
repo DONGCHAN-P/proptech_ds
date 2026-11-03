@@ -1,0 +1,10 @@
+{
+  "issue_id": "E001-timing-inputs",
+  "scene_ids": ["ALL_27", "shorts_promo", "shorts_content"],
+  "to": ["director", "narration"],
+  "problem": "실제 본편 음성/타임록 및 두 쇼츠 정확한 완결문장 클립 목록 대기",
+  "evidence": "현재 writer scene_proposals_v3.json은480초 추정이며 audio_confirmed=false. 직접 peer message 도구가 제공되지 않음.",
+  "proposal": "timing_adapter_schema.json 계약으로 audio_file,27 scene_id의 global start/end,local sentence_times/anchors,global captions를 전달. 쇼츠는 본편 source start/end와 마지막 발화 끝을 전달.",
+  "impact": "대표 스냅샷/프로젝트 제작은 가능. 실제 음성 연결·전체 렌더·자막 싱크/끝말 검수는 인계 후 수행.",
+  "blocking_full_render_only": true
+}

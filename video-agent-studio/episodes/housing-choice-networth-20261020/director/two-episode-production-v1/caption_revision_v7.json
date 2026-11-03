@@ -1,0 +1,25 @@
+{
+  "id": "CAPTION-MEANING-001",
+  "status": "closed_after_exact_final_dual_review",
+  "evidence": [
+    "C09_P048Q007",
+    "C10_P052Q006",
+    "encoded contact_05.jpg"
+  ],
+  "finding": "Greedy caption length splitting leaves isolated predicates on screen.",
+  "decision": "Rebalance display cues at existing native word boundaries; preserve script, audio and all chapter durations.",
+  "input": "narration/free-tts-v1/final_timing.v6.json",
+  "output": "narration/free-tts-v1/caption-v7/final_timing.json",
+  "owner": "video_narration; integration video_editor; independent video_qa",
+  "paid_calls": 0,
+  "preservation": "Existing v6 audio, timing and final MP4 retained. Caption revision renders under private-production-v3.",
+  "at_utc": "2026-10-25T19:06:45.602515+00:00",
+  "source_status": "conservation_and_native_timing_passed",
+  "caption_cues": 206,
+  "source_timing_sha256": "a97d59fbe5d9dccb4b4b936dc8a839c4a02d754479a34bab4220760925bd40f7",
+  "source_repaired_short_cues": 47,
+  "remaining_gate": "Actual glyph bounds and final encoded captions, exact-version dual media review",
+  "final_video_sha256": "28b2623aed5b74478a113ab453825cb809311c7bc46ce5f94b1c90cc009273b8",
+  "final_subtitles_sha256": "23f177b22a24696f4d1889fc70506608de5ce343af463748061db94446d09aaf",
+  "dual_review": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/private-release-v3/dual_media_review.json"
+}

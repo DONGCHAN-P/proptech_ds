@@ -1,0 +1,24 @@
+{
+  "as_of": "2026-10-27 00:00:00",
+  "winner": "boosting_full",
+  "feature_count": 78,
+  "price_features": 18,
+  "external_features": 58,
+  "policy_features": 2,
+  "province_forecasts": 11,
+  "district_forecasts": 119,
+  "excluded": 22,
+  "training_origin_start": "2009-01",
+  "price_input_end": "2026-07",
+  "raw_history_start": "2006-01",
+  "sklearn": "1.9.0",
+  "forecast_sha256": "ce66fed7be4ab4db8dcda7fed00ba935123a73e7402c99e9bae8dff0d37ef695",
+  "limitations": [
+    "revised historical snapshots",
+    "assumed transaction/statistical release lags where noted",
+    "matched complex/area does not control floor or renovation",
+    "partial policy registry; no policy-causal interpretation",
+    "unobserved origin-month price; forecasts are relative returns, not won prices",
+    "empirical error spread; dependent observations; no guaranteed coverage"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "gate": {
+    "authorization_path": "video-agent-studio/episodes/affordable-home-price-20261026/director/rebuild-v2/free_edge_recovery_authorization_r2.json",
+    "authorization_sha256": "725282d40502e1486045760c46b233e3585b79b71cc78fcf71a86ca4f7af1738",
+    "lock_path": "video-agent-studio/episodes/affordable-home-price-20261026/director/rebuild-v2/locked_script_r2.json",
+    "lock_sha256": "755e26dbd80d416e2b64420343d4b5de6b39359700a791d8d79a04bb7d1391d1",
+    "prepared_sha256": "fcf8158c3cfb37f916d106ed1bd25e36467a42bbcb757b361a5dce363f1aa41d",
+    "script_sha256": "cc1ef7d80225e992e7e5d31faffbfb09a8f90c80fb5352e17c36eb8c90755b12",
+    "recovery_code_sha256": "da6131869f96c7ed79ecd339d0857082b7b0e82019e295babbac7368d6ca6c76"
+  },
+  "pipeline_inputs": {
+    "video-agent-studio/episodes/affordable-home-price-20261026/narration/rebuild-v2/build_narration.py": "364ea929707983ee0b786a5b1fbf085e609ca04402267e29c5c677726af2c8d7",
+    "video-agent-studio/episodes/affordable-home-price-20261026/narration/rebuild-v2/build_contract.json": "e23f8f4cb8a2cd933c32114ce05b1e25e255d60c18068df17c5cfed9f0cc2bf4",
+    "video-agent-studio/episodes/affordable-home-price-20261026/narration/production_v1.py": "77cc23a640a1d0c6298ba5a3cc2da6996f3012c476225b7fa844226235b95c3c",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/production_narration.py": "009e85a92892002c54de3236395e76f0ee12af3fc3a874e9089b60fe02fc4a36"
+  },
+  "dependencies": {
+    "edge_tts": "7.3.1",
+    "deps_path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/deps",
+    "ffmpeg_path": "video/node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe",
+    "ffmpeg_sha256": "5d1aa3706022b2f1814993c7108ca689a0a2e6fe9af91ec15dbf0bc05d6d39e4",
+    "python": "3.11.9",
+    "WordBoundary_supported": true,
+    "network_calls": 0,
+    "installation_performed": false
+  },
+  "voice": "ko-KR-InJoonNeural",
+  "rate": "+0%",
+  "command_argv": [
+    "C:\\projects\\realestate_reco\\tools\\python311\\python.exe",
+    "-X",
+    "utf8",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\rebuild-v2\\build_narration.py",
+    "generate",
+    "--prepared",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\rebuild-v2\\prepare-r2\\prepared.json",
+    "--lock",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\director\\rebuild-v2\\locked_script_r2.json",
+    "--authorization",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\director\\rebuild-v2\\free_edge_recovery_authorization_r2.json",
+    "--out",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\rebuild-v2\\audio-r2-recovered"
+  ]
+}

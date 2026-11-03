@@ -1,0 +1,115 @@
+{
+  "task_id": "FULL-JUN-US1-ASSETS",
+  "scope": "visual/jun-user-script-v1/ only",
+  "revision": "jun-user-script-v1",
+  "source_doc_sha256": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "scene_plan_revision": "user-recording-guide-v1-r2",
+  "latest_user_requirements": {
+    "chapters": 7,
+    "scenes": 31,
+    "style": "natural warm ivory / navy / oak photographic or believable house interior",
+    "no_people": true,
+    "no_stickmen": true,
+    "no_generated_text_numbers_logos": true,
+    "titles_separate": true,
+    "screenbadge": false,
+    "distinct_complete_photo_per_chapter": true,
+    "requested_resolution": [
+      1920,
+      1080
+    ],
+    "margin": "low-detail left 42% title area; source framing preserved; no extra zoom",
+    "no_paid_external_API_or_account_data": true
+  },
+  "ownership": {
+    "parent": "TTS/alignment",
+    "editor": "Newton 01a17db2-40c1-7f73-a24b-236c89fd9d92",
+    "self": "visual/jun-user-script-v1/"
+  },
+  "superseded_inputs": "brief.json historical 10chapter policy sequence is not this 7chapter user DOCX; Jun choice and 7000credit approval belong to parent, not visual spend authority.",
+  "excluded_assets": [
+    "visual/rebuild-v2/family-policy.png",
+    "visual/newborn-home-v1.png"
+  ],
+  "preflight_applied": {
+    "input_contract": true,
+    "different_image_per_chapter": true,
+    "unvoiced_brand_captions_hidden": "editor responsibility",
+    "body_caption_and_source_safe_areas": "editor responsibility",
+    "last_spoken_word_plus_3s": "editor responsibility",
+    "actual_property_or_map": "not applicable: concept atmosphere only",
+    "audio_generation": "out of scope"
+  },
+  "input_versions": [
+    {
+      "path": "video-agent-studio/WORKFLOW.md",
+      "sha256": "348fe6e213706d6a7cb9d710da59a45649356c1bc2d735c146418a98452b16ce",
+      "bytes": 13325
+    },
+    {
+      "path": "video-agent-studio/agents/video_director.toml",
+      "sha256": "2d17b36d3573b1d51a0f2d3e41a7f26056adef23cad4aa49967e15e58c737b6b",
+      "bytes": 4758
+    },
+    {
+      "path": "video-agent-studio/guides/영상제작_마스터가이드.md",
+      "sha256": "e0a8ed20243a802376fb2c248a80ba8431e2b76d4bc09638cb41d18d9c23e040",
+      "bytes": 36266
+    },
+    {
+      "path": "video-agent-studio/guides/호출_효율_운영.md",
+      "sha256": "7d9acfb13123fb146cfe5920a345048e1e35fc4c6bcc577b5419eb739ea4fd6b",
+      "bytes": 5654
+    },
+    {
+      "path": "config/video_call_policy.json",
+      "sha256": "52c4ce2df30201a2d4baa41e215c7ea1ed8736e17a18abdf7e76c40a0f0f06a3",
+      "bytes": 1464
+    },
+    {
+      "path": "video-agent-studio/templates/episode_preflight.json",
+      "sha256": "5fa945842ee41dc810f179d51cc989538fe097f6014f7ca7ec35a8f7782e52a7",
+      "bytes": 6115
+    },
+    {
+      "path": "영상/매매가격계산/영상가이드_직접녹음_v1.md",
+      "sha256": "fd55d5ea241d45dcf06688966297a54dfc15427653f1de517cd806570be22fcb",
+      "bytes": 25346
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/brief.json",
+      "sha256": "1ebf1d2b9d1c1e8a70201b629e4222059406146c6e458dba8016e5eb37dd0317",
+      "bytes": 7135
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/state.json",
+      "sha256": "fdc8fcfe6822a89884166333159a11302ef33d1ce25c7ff06759120f9306650a",
+      "bytes": 3117
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/director/user-recording-v1/scene_plan.json",
+      "sha256": "4dab2711b570621a5f5dbe6b03e9ae83e94030fd149cf8e43d9e1b74ba6d836e",
+      "bytes": 59986
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/director/jun-user-script-v1/episode_preflight.json",
+      "sha256": "ceea48b84453b21ec3f3fad27890ba5690a5e474da927d07572a1de08366dd1d",
+      "bytes": 7902
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/director/jun-user-script-v1/PLAN.md",
+      "sha256": "b167141b75fac34d4a1caec1fa49d6d3c9cf0ebec1fb9e8400d363e92b0a8ebe",
+      "bytes": 2750
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/director/jun-user-script-v1/authorization.json",
+      "sha256": "ff4a4b0a3b4551435ce1f525f96d01c98c3d01080dec54ec3b96c869a82a0c8e",
+      "bytes": 1125
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/director/jun-user-script-v1/input_verification.json",
+      "sha256": "410087b01c9cb0ce68fc4967067507d85e87e5ce519e1df3dd5140774593c6e1",
+      "bytes": 2361
+    }
+  ]
+}

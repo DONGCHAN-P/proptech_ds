@@ -1,0 +1,31 @@
+{
+  "boundary_sha256": "cba9fea0a6fb66e23ccc2d2d5952416dcb0ea563c40a7d9044a62b3929b3b398",
+  "boundary_features": 77,
+  "inferred_crs": "EPSG:5179",
+  "local_file_crs_metadata_present": false,
+  "crs_inference_scope": "SGIS 출처+공식SGIS 좌표계 설명+강남역 앵커 서울면내 검사. 파일별 CRS 인증이나 정밀도 검증 아님.",
+  "anchor": {
+    "name": "강남역",
+    "lonlat": [
+      127.0275574,
+      37.4979497
+    ],
+    "projected_xy": [
+      958239.4980972591,
+      1944403.664212253
+    ],
+    "inside_seoul": true,
+    "matched_districts": [
+      "서초구"
+    ],
+    "source": "기존 검증 OSM node5927529147"
+  },
+  "sources": [
+    "assets/geo/LICENSE.md",
+    "https://github.com/statgarten/maps",
+    "https://sgis.mods.go.kr/view/pss/dataProvdIntrcn",
+    "https://sgis.kostat.go.kr/developer/upload/doc/DataAPI-definition.pdf"
+  ],
+  "metadata_issue": "LICENSE의 °솎아냄 표기와 실제 투영 좌표 단위가 모순. 원본은 보존.",
+  "font_conversion": "기존 Pretendard WOFF2를 설치 없이 TTF로 변환, 새 의존성 없음"
+}

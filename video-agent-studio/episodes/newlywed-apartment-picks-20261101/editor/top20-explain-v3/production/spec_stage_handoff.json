@@ -1,0 +1,142 @@
+{
+  "task_id": "TOP20-explain-v3-editor",
+  "role": "editor",
+  "status": "유일필수사진수정완료_독립QA최종확인대기",
+  "input_revisions": {
+    "scene_json_sha256": "8beec59448e180617327f17913aaa25277b3152769a1815cbdc493351003803e",
+    "script_md_sha256": "4259f50a9c5cadbadd864d838559a16f85e07316818ddcb31ce40939fbccac38",
+    "price_panel_sha256": "844f0ee211dfc89094b8160558d72e0f8f001e8072d361123447e8c1ebfacdef",
+    "map_manifest_sha256": "ba2effd89d97ebc3415c2472a8519375897bc76aaf1e0eeacd4e4f537cb4601b",
+    "price_source": "final-api-20261103-v2"
+  },
+  "outputs": [
+    {
+      "path": "editor/top20-explain-v3/evidence/contactsheet_final_v6.png",
+      "sha256": "f28da4080a4ec5f159910cf30ec6f37d3a8bbc4f2dec08d8248cc2e46d193580"
+    },
+    {
+      "path": "editor/top20-explain-v3/evidence/gallery.html",
+      "sha256": "98de404770cfb3cd81790c288abd544597065a9c32e628d2c0fac238b86e136c"
+    },
+    {
+      "path": "editor/top20-explain-v3/evidence/png_manifest.json",
+      "sha256": "6d84554aef1759b0466cd8bb2822fef4e5f33fced69b62116fc6cfc496f117d6"
+    },
+    {
+      "path": "editor/top20-explain-v3/spec/index.html",
+      "sha256": "ed3cebd1ca36f1523ff9836c76b5c4b9075addb8938e4547504c192a0296277c"
+    },
+    {
+      "path": "editor/top20-explain-v3/spec/caption_mapping.json",
+      "sha256": "5cdfc47bc013eb27217358a42e9541452d255e8302694e9be7cc15679d782701"
+    },
+    {
+      "path": "editor/top20-explain-v3/caption_integrity.json",
+      "sha256": "f58fcb3596d111723b18b54b894398901df1e6f697d64b2ec9fd53218c3cf772"
+    },
+    {
+      "path": "editor/top20-explain-v3/infrastructure_verification.json",
+      "sha256": "1ab771bd6a9b6f1f1c5900997b1e8145a77636621f8faa107e9378ee8f46cd4d"
+    },
+    {
+      "path": "editor/top20-explain-v3/evidence/check_receipt.json",
+      "sha256": "87fb5c5fddb30fa9eb99aaee8d787f54af7a365fe9e5535f576c43f1b73e6267"
+    },
+    {
+      "path": "editor/top20-explain-v3/evidence/text_bounds.json",
+      "sha256": "b7fff40a8dfd4f9738522a1f5d8ef92b83e19ba0cc08eace36ceaa9483388664"
+    },
+    {
+      "path": "editor/top20-explain-v3/evidence/editor_visual_review.json",
+      "sha256": "d064fc1d5c47a28e5d1eda1ddbfae89e0d16a59f7c47df3a2cf9401261f063dc"
+    },
+    {
+      "path": "editor/top20-explain-v3/input_manifest.json",
+      "sha256": "2930ee8ac33e9cdd927167b97e525229ee4024b4798d450ef83684255071c063"
+    },
+    {
+      "path": "editor/top20-explain-v3/input_contract.json",
+      "sha256": "e3d7f619f0195299ac2e5887fc84af9f6faa2ad59a8c78eefa2fe8726015ba41"
+    },
+    {
+      "path": "editor/top20-explain-v3/placement_guide.md",
+      "sha256": "a635ce69d4d368e760ee5074c2992d9ed73d2d400d4d31f98532555292ef160f"
+    },
+    {
+      "path": "editor/top20-explain-v3/credits.md",
+      "sha256": "782d51b33f471596612c19f0d6550f34de68a2b200c6547fc1976265fb46ce22"
+    },
+    {
+      "path": "editor/top20-explain-v3/credits.json",
+      "sha256": "78206f69968f760aa5d7960dd6619d5571b042f93cad267589beb1d4eb9586d6"
+    },
+    {
+      "path": "editor/top20-explain-v3/price_map_credits.json",
+      "sha256": "07de3d3b2556731deea0e91022873e721039ea7ad88e0a54be941c6f93e90f50"
+    },
+    {
+      "path": "editor/top20-explain-v3/issue_EDITOR_V3_QA_RECHECK.json",
+      "sha256": "3e50a0758c273e175dd0daf7144708cf85c2362b4323a54905d89f801de980d9"
+    },
+    {
+      "path": "editor/top20-explain-v3/README.md",
+      "sha256": "d51b12e06859b3a2afdacaa8326663aa92fc9431dea7334942d3aac9e3d1e10a"
+    },
+    {
+      "path": "editor/top20-explain-v3/evidence/contactsheet_photo_fix_v1.png",
+      "sha256": "aa15dc52dc9836d974917fb73f1d51a979c73281622c372f852219f80c2b0c5b"
+    },
+    {
+      "path": "editor/top20-explain-v3/evidence/photo-fix-v1/validation.json",
+      "sha256": "9ab3021f1bdcb06a90723e437fdd4b8890652def55b642e15071a219fbf1b5db"
+    },
+    {
+      "path": "editor/top20-explain-v3/photo_bindings.json",
+      "sha256": "191744f6ed2c508c705bbc1636203bcbbcfd36d976980bfc8c0f547a87cde0fb"
+    }
+  ],
+  "affected_scene_ids": [
+    "S005",
+    "S017",
+    "S022"
+  ],
+  "checks": [
+    {
+      "check": "최종 원고SHA·입력·앵커·가격·지도·자막",
+      "result": "passed",
+      "evidence": "infrastructure_verification.json:34개; caption_integrity.json:41문장/68큐 정확일치; 해당 로직·문장·가격은 불변으로 기존 근거 재사용"
+    },
+    {
+      "check": "실제브라우저 경계13표본",
+      "result": "passed",
+      "evidence": "evidence/check_receipt.json:lint/runtime/layout0,contrast67/67"
+    },
+    {
+      "check": "PNG13개1920x1080·대표7개직접열람",
+      "result": "passed_in_stated_scope",
+      "evidence": "evidence/png_manifest.json; evidence/editor_visual_review.json"
+    },
+    {
+      "check": "독립QA REQ001 재검수",
+      "result": "pending",
+      "evidence": "issue_EDITOR_V3_QA_RECHECK.json"
+    },
+    {
+      "check": "사진3개 수정 범위 재검증",
+      "result": "passed",
+      "evidence": "evidence/photo-fix-v1/validation.json:9표본오류0·사진원본SHA/라이선스일치·불변자막/PNG10개대조"
+    }
+  ],
+  "open_issue_ids": [
+    "QA-V3-REQ-001_사진수정독립최종확인대기"
+  ],
+  "next_role": "QA LockE(01a19d09-266e-7ab1-80d6-d2bdd28a026e) → director의script gate",
+  "summary": "유일하게 남은 필수 사진연결3곳을 수정했습니다. S005 구성역5번출구(2026·CC0), S017 양재천 교체본(2019·CC BY4.0/공공누리1), S022 청라호수공원(연도미상·공공누리1)을 확정 manifest의 asset_id/SHA로 연결했습니다. 대기문구가 없으며 지역자료사진 캡션·연도·라이선스와 전체귀속문을 유지합니다. 특징3장면9표본 실제브라우저 배치오류0, 새PNG3개1920x1080 생성 후 모두 원본크기로 직접확인했습니다. 사진은 가격단지 전경으로 사용하지 않습니다. 자막매핑SHA5cdf…와 나머지10개PNG는 불변입니다. 최종8bee/4259·가격·지도·문장·타이밍은 유지합니다. 수정 연락시트와 QA LockE용 파일패킷을 갱신했습니다. 직접 메시지도구는 없으며 QA의 최종이슈판정만 남습니다. 실제음성·본편렌더·업로드는 하지 않았습니다.",
+  "timing_locked": false,
+  "actual_listening_performed": false,
+  "continuous_playback_performed": false,
+  "new_tts_generated": false,
+  "full_render_started": false,
+  "upload_performed": false,
+  "direct_peer_message_sent": false
+}

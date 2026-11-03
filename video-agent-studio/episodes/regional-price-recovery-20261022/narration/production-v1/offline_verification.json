@@ -1,0 +1,131 @@
+{
+  "task_id": "RPR-PROD1-JUN-PREP",
+  "status": "passed",
+  "at": "2026-10-23T06:00:10.657Z",
+  "checks": [
+    {
+      "check": "network_mock_positive_control",
+      "result": "passed",
+      "external_requests": 0
+    },
+    {
+      "check": "missing_authorization_rejected_before_network",
+      "result": "passed",
+      "exit_code": 1,
+      "network_calls": 0
+    },
+    {
+      "check": "pending_budget_rejected_before_network",
+      "result": "passed",
+      "exit_code": 1,
+      "network_calls": 0
+    },
+    {
+      "check": "authorization_script_sha_mismatch_before_network",
+      "result": "passed",
+      "exit_code": 1,
+      "network_calls": 0
+    },
+    {
+      "check": "authorization_manifest_sha_mismatch_before_network",
+      "result": "passed",
+      "exit_code": 1,
+      "network_calls": 0
+    },
+    {
+      "check": "decision_manifest_sha_mismatch_before_network",
+      "result": "passed",
+      "exit_code": 1,
+      "network_calls": 0
+    },
+    {
+      "check": "changed_script_bytes_before_network",
+      "result": "passed",
+      "exit_code": 1,
+      "network_calls": 0
+    },
+    {
+      "check": "changed_manifest_bytes_before_network",
+      "result": "passed",
+      "exit_code": 1,
+      "network_calls": 0
+    },
+    {
+      "check": "request_started_receipt_before_network",
+      "result": "passed",
+      "exit_code": 1,
+      "network_calls": 0
+    },
+    {
+      "check": "pending_no_automatic_retry_receipt_before_network",
+      "result": "passed",
+      "exit_code": 1,
+      "network_calls": 0
+    },
+    {
+      "check": "failed_receipt_before_network",
+      "result": "passed",
+      "exit_code": 1,
+      "network_calls": 0
+    },
+    {
+      "check": "failed_no_automatic_retry_receipt_before_network",
+      "result": "passed",
+      "exit_code": 1,
+      "network_calls": 0
+    },
+    {
+      "check": "valid_matching_authorization_positive_control",
+      "result": "passed"
+    },
+    {
+      "check": "expired_authorization_rejected",
+      "result": "passed"
+    },
+    {
+      "check": "missing_unknown_or_excess_charge_rejected",
+      "result": "passed"
+    },
+    {
+      "check": "cumulative_reserved_cost_cap_enforced",
+      "result": "passed"
+    },
+    {
+      "check": "live_included_only_and_rates_guard",
+      "result": "passed"
+    },
+    {
+      "check": "alignment_exact_text_monotonic_duration_guards",
+      "result": "passed"
+    },
+    {
+      "check": "protected_number_unit_atoms",
+      "result": "passed"
+    },
+    {
+      "check": "all_39_original_caption_plans_lossless_55chars_2lines",
+      "result": "passed"
+    },
+    {
+      "check": "caption_times_are_global_body_with_local_mapping",
+      "result": "passed"
+    },
+    {
+      "check": "timing_builder_refuses_missing_actual_audio",
+      "result": "passed",
+      "network_calls": 0
+    }
+  ],
+  "source_sha256": {
+    "common.mjs": "99b63053e73a9414f129e59af50d574a1b1b44cf2064608b26b5c3264d593ed1",
+    "generate.mjs": "2583f6968cd3fc73cd4472a47b4cdec0f0cdf884512c9ba6f8dc979ef205d3b5",
+    "build_timing.mjs": "b431401f1f1cd5e89d17f5405906043da85d919dfb3b9e2c93fa745b84e606ed",
+    "offline_checks.mjs": "d7ce734dc3c1f146f49d0ce16699b15ae813f2acf84d2f912d6adbd5ed8c6340"
+  },
+  "external_requests": 0,
+  "paid_calls": 0,
+  "credentials_read": false,
+  "actual_audio_generated": false,
+  "actual_listening": false,
+  "remaining_validation": "Live account, synthesis, ffmpeg decode/concat and actual listening require director execution after budget approval."
+}

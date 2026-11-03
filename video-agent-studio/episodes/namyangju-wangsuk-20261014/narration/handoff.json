@@ -1,0 +1,45 @@
+﻿{
+    "status":  "audio_generated_decode_verified_listening_pending",
+    "role":  "narration",
+    "input_revision":  "script-v2 / budget-v1",
+    "audio_revision":  "audio-v1",
+    "outputs":  [
+                    "narration/audio-v1/S001.mp3 through S008.mp3",
+                    "narration/audio-v1/S001.json through S008.json",
+                    "narration/generation_ledger_v1.json",
+                    "narration/timing_proposals_v1.json",
+                    "narration/preflight_v1.json"
+                ],
+    "validation":  [
+                       "8 requests, 8 saved MP3; each file SHA256/bytes recorded",
+                       "7419 exact input characters, no tags or pronunciation expansion",
+                       "Provider character-cost sum2968; final subscription counter delta=",
+                       2968,
+                       "Actual 2968 credits \u003c=8903; additional cash0; no retries",
+                       "All eight files ffprobe duration and ffmpeg complete decode passed",
+                       "Total measured913.188571 seconds (15m13.19s)",
+                       "Jun model/voice maintained; active starter and overage disabled confirmed"
+                   ],
+    "unresolved":  [
+                       "Actual listening not performed; numbers/proper names/naturalness require listening QA",
+                       "No word-level alignment; timing proposal contains scene file lengths only",
+                       "15m13s measured audio exceeds writer709s estimate; director/editor must use actual timing"
+                   ],
+    "affected_scene_ids":  [
+                               "S001",
+                               "S002",
+                               "S003",
+                               "S004",
+                               "S005",
+                               "S006",
+                               "S007",
+                               "S008"
+                           ],
+    "next_role":  "director/editor/qa",
+    "next_action":  "Lock actual scene duration after deciding trims/gaps; review audio listening before final render.",
+    "generation_started":  true,
+    "actual_credit_total":  2968,
+    "remaining_credit_balance":  34560,
+    "listening_verified":  false,
+    "verified_at":  "2026-10-14T13:26:51.169Z"
+}

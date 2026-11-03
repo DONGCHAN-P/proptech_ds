@@ -1,0 +1,22 @@
+{
+  "episode_id": "newlywed-apartment-picks-20261101",
+  "studio_root": "C:/projects/realestate_reco/video-agent-studio",
+  "request": "신혼부부 지역별 수치를 순위대로 기록하고 지역별 아파트 매물 추천 영상으로 발전",
+  "request_date": "2026-11-01",
+  "type": "new_video",
+  "topic_authority": "current direct user instruction",
+  "planning_assumptions": {
+    "initial_scope": "수도권; 2024 통계구역 기준 구 53곳, 시·군·자치구 66곳 및 세부 지역 79곳 별도 기록",
+    "format_proposal": "16:9 본편 시리즈, 편당 한 지역의 생활권·아파트 3개 안팎 비교",
+    "first_episode_proposal": "2024 인천 서구 권역: 현재 행정구역을 확인해 검단·청라·가정 생활권 비교",
+    "duration_proposal": "7~10분; 실제 음성 확정 전 시간은 추정",
+    "voice": "미선택; 과거 Jun 예산은 이번 편에 승계하지 않음"
+  },
+  "source": "analysis/newlywed_region_2024/rankings.json",
+  "ranking_basis": "2024-11-01 거주지 기준 혼인신고 후 5년 미경과 신혼부부 전체 수",
+  "recommendation_basis": "현재 매물 확인가격과 과거 실거래, 실제 출퇴근 동선·생활·면적·연식·관리비·공급을 대조한 조건별 후보",
+  "paid_generation_authorized": false,
+  "upload_authorized": false,
+  "external_claude_transfer_authorized_for_this_packet": false,
+  "state_note": "자료 기록·리서치·기획 단계. 새 대본은 script 결정 대상으로 별도 전달한다."
+}

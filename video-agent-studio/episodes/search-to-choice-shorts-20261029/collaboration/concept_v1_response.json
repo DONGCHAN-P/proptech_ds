@@ -1,0 +1,72 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": false,
+  "api_error_status": null,
+  "duration_ms": 132679,
+  "duration_api_ms": 135274,
+  "ttft_ms": 117770,
+  "ttft_stream_ms": 1886,
+  "time_to_request_ms": 240,
+  "num_turns": 1,
+  "result": "먼저 결론: **B 유지에 동의하되, 지금 프레이밍이 가장 약하다.** 나머지는 짧게 — A는 개인 대출조건 탓에 '살 수 있다' 단정이 위험, C는 지역별 고점분기 불일치로 설명이 길어져 쇼츠 부적합, D는 거래량≠가격 연결 부담, E는 참고 #2·#4처럼 '완성표 정지형'이라 채널의 움직이는 데이터 강점을 못 살린다. B가 보유 실거래·모션 둘 다 유리하다.\n\n**가장 약한 점(먼저 지적)**\n1) 포맷–메시지 불일치: 레이스의 재미는 '순위 교차'인데 서울·경기는 20년 내내 1·2위 고정이라 상단이 심심하다. 실제 드라마는 하위권 — 부산 2006Q1 꼴찌(12,750)→2026Q2 4위(47,000), 대구 5위→꼴찌. 그런데 훅이 '서울-경기 격차'(상단)라 모션과 엔딩이 따로 논다.\n2) 통계 오해 핵심: 상승 '배수'로는 부산 3.7배 > 서울 3.6배로 부산이 1위다. \"서울만 올랐다\"식 훅은 사실과 어긋난다. 절대 격차는 서울이 키웠고(1.16억→4.9억, 4.2배), 상승률 1위는 부산 — 두 축을 절대 섞지 말 것.\n3) 중위값 구성 변화: 경기 표본 8,855→15,106 급증(신축·택지 유입)으로 중위 단지 구성이 바뀐다. 최소셀 n=368로 표본은 튼튼하나 '동일 아파트 가격'이 아님.\n4) 페이스: 82분기를 22초면 0.27초/분기라 이동 중 숫자는 못 읽는다. 모션=형태·추월, 숫자=엔딩 고정으로 역할을 나눠라.\n\n**인사이트 1개 + 제목/훅**\n핀 메시지는 하나로: \"서울-경기 84㎡ 격차 1.16억→4.9억\". 부산 상승은 중반 긴장 요소로만 쓴다.\n제목: \"같은 84㎡, 서울-경기 격차 20년\" / 훅(0~1.5s): \"2006년엔 1.16억 차이였는데…\"\n\n**오해 방지 문구(부정형 푸터 대신 긍정형)**\n상단 고정 \"전용 84–85㎡ 실거래 중위가격(명목)\", 날짜 \"2026Q2 · 기준일 2026-06-30\", 엔딩 \"격차=서울−경기 중위값\". 방법·제외(세종 제외, 대구 군위 제외, 분기별 거래구성 변동 포함)는 설명란에 상세히. '현재 시세' 표현 금지, 캐시 종점임을 날짜로 드러낸다.\n\n**28초 구성**\n0–1.5s 제목+2006Q1 세팅+훅 / 1.5–23s 82분기 타임랩스(날짜 티커 상단) / 23–27s 종점 고정+서울·경기 막대 사이 브래킷 '4.9억'+부산 라벨 / 27–28s 출처·기간. 숫자 확인용 정지는 엔딩 4초에 몰아준다.\n\n**레이스·안전영역·끝잘림**\n- 겹침: 하위 4개만 교차하므로 라벨을 막대 '안쪽 좌측'에 고정(막대 끝 배치 금지), 최소 행높이·행간 확보, 근접값(41,000~47,000) 구간은 순서 애니메이션을 느리게.\n- 지역명 칩은 막대에 붙여 이동, 값은 막대 바깥 끝에 한 단위 반올림으로.\n- 9:16 상단 12%·하단 15%는 UI/자막 영역 — 제목·출처는 그 안쪽.\n- 끝 잘림: 핵심 수치는 26초까지 등장시키고, 마지막 0.5초에 결론을 두지 말 것. 엔딩 정지 3–4초 유지.\n\n이대로면 \"서울 독주\" 오해 없이 격차 한 줄로 떨어지고, 하위권 역전이 시청 유지도 잡는다.",
+  "stop_reason": "end_turn",
+  "session_id": "1e5d093a-e6c5-461d-ade1-3e77262aebb4",
+  "total_cost_usd": 0.24149425000000002,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 3189,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 8742,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 3189,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 8742,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 3189,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3189
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 2928,
+      "outputTokens": 15,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.003003,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000
+    },
+    "claude-opus-4-8": {
+      "inputTokens": 2,
+      "outputTokens": 8742,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 3189,
+      "webSearchRequests": 0,
+      "costUSD": 0.23849125000000002,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "uuid": "8c7d6dca-8723-4237-a54a-621cbb0bbb2e"
+}

@@ -1,0 +1,22 @@
+{
+  "issue_id": "JUN_GENERATION_BLOCK",
+  "scene_ids": [],
+  "problem": {
+    "type": "AssertionError",
+    "network_code": "ERR_ASSERTION",
+    "reason": "Expected values to be strictly equal:\n\n2208 !== 5520\n"
+  },
+  "evidence": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/generation_ledger.json",
+  "proposal": "실패 POST 재전송 금지. 보존된 자산과 사용량을 총괄이 확인한 뒤 필요한 별도 결정을 진행",
+  "impact": "남은 Jun 생성/새 타이밍 납품 보류",
+  "actual_credits": 2208,
+  "pending_reserved": 0,
+  "status": "resolved_without_new_generation",
+  "resolution": {
+    "at_utc": "2026-11-03T13:28:53.707Z",
+    "actual_credits": 2208,
+    "included_remaining": 14456,
+    "header_account_delta_matches": true,
+    "additional_paid_calls": 0
+  }
+}

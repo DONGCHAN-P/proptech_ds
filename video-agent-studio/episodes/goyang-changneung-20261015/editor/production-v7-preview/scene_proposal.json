@@ -1,0 +1,189 @@
+{
+  "scenes": [
+    {
+      "scene_id": "M000",
+      "start_frame": 0,
+      "chapter": null,
+      "speech_start_frame": 0,
+      "end_frame": 1782,
+      "start_s": 0.0,
+      "end_s": 59.4,
+      "timing_basis": "measured semantic PCM units plus explicit 5s intro/3s independent title insertions"
+    },
+    {
+      "scene_id": "M001",
+      "start_frame": 1782,
+      "chapter": null,
+      "speech_start_frame": 1782,
+      "end_frame": 3865,
+      "start_s": 59.4,
+      "end_s": 128.83333333333334,
+      "timing_basis": "measured semantic PCM units plus explicit 5s intro/3s independent title insertions"
+    },
+    {
+      "scene_id": "M002",
+      "start_frame": 3865,
+      "chapter": "01 · 일자리",
+      "speech_start_frame": 3955,
+      "end_frame": 7865,
+      "start_s": 128.83333333333334,
+      "end_s": 262.1666666666667,
+      "timing_basis": "measured semantic PCM units plus explicit 5s intro/3s independent title insertions"
+    },
+    {
+      "scene_id": "M003",
+      "start_frame": 7865,
+      "chapter": "02 · 교통",
+      "speech_start_frame": 7955,
+      "end_frame": 10973,
+      "start_s": 262.1666666666667,
+      "end_s": 365.76666666666665,
+      "timing_basis": "measured semantic PCM units plus explicit 5s intro/3s independent title insertions"
+    },
+    {
+      "scene_id": "M004",
+      "start_frame": 10973,
+      "chapter": "03 · 가격",
+      "speech_start_frame": 11063,
+      "end_frame": 14150,
+      "start_s": 365.76666666666665,
+      "end_s": 471.6666666666667,
+      "timing_basis": "measured semantic PCM units plus explicit 5s intro/3s independent title insertions"
+    },
+    {
+      "scene_id": "M007",
+      "start_frame": 14150,
+      "chapter": "04 · 주변 가격 비교",
+      "speech_start_frame": 14240,
+      "end_frame": 18572,
+      "start_s": 471.6666666666667,
+      "end_s": 619.0666666666667,
+      "timing_basis": "measured semantic PCM units plus explicit 5s intro/3s independent title insertions"
+    },
+    {
+      "scene_id": "M006",
+      "start_frame": 18572,
+      "chapter": "05 · 공급",
+      "speech_start_frame": 18662,
+      "end_frame": 23042,
+      "start_s": 619.0666666666667,
+      "end_s": 768.0666666666667,
+      "timing_basis": "measured semantic PCM units plus explicit 5s intro/3s independent title insertions"
+    },
+    {
+      "scene_id": "M005",
+      "start_frame": 23042,
+      "chapter": "06 · 생활시설",
+      "speech_start_frame": 23132,
+      "end_frame": 26067,
+      "start_s": 768.0666666666667,
+      "end_s": 868.9,
+      "timing_basis": "measured semantic PCM units plus explicit 5s intro/3s independent title insertions"
+    },
+    {
+      "scene_id": "M009",
+      "start_frame": 26067,
+      "chapter": null,
+      "speech_start_frame": 26067,
+      "end_frame": 31126,
+      "start_s": 868.9,
+      "end_s": 1037.5333333333333,
+      "timing_basis": "measured semantic PCM units plus explicit 5s intro/3s independent title insertions"
+    }
+  ],
+  "insertions": [
+    {
+      "start_frame": 867,
+      "end_frame": 1017,
+      "duration_frames": 150,
+      "kind": "intro",
+      "props": {},
+      "unit_id": "brand_intro"
+    },
+    {
+      "start_frame": 3865,
+      "end_frame": 3955,
+      "duration_frames": 90,
+      "props": {
+        "mode": "chapter",
+        "active": "all",
+        "chapter": "01 · 일자리"
+      },
+      "kind": "chapter",
+      "unit_id": "M002_chapter"
+    },
+    {
+      "start_frame": 7865,
+      "end_frame": 7955,
+      "duration_frames": 90,
+      "props": {
+        "mode": "chapter",
+        "active": "all",
+        "chapter": "02 · 교통"
+      },
+      "kind": "chapter",
+      "unit_id": "M003_chapter"
+    },
+    {
+      "start_frame": 10973,
+      "end_frame": 11063,
+      "duration_frames": 90,
+      "props": {
+        "mode": "chapter",
+        "active": "all",
+        "chapter": "03 · 가격"
+      },
+      "kind": "chapter",
+      "unit_id": "M004_chapter"
+    },
+    {
+      "start_frame": 14150,
+      "end_frame": 14240,
+      "duration_frames": 90,
+      "props": {
+        "mode": "chapter",
+        "active": "all",
+        "chapter": "04 · 주변 가격 비교"
+      },
+      "kind": "chapter",
+      "unit_id": "M007_chapter"
+    },
+    {
+      "start_frame": 18572,
+      "end_frame": 18662,
+      "duration_frames": 90,
+      "props": {
+        "mode": "chapter",
+        "active": "all",
+        "chapter": "05 · 공급"
+      },
+      "kind": "chapter",
+      "unit_id": "M006_chapter"
+    },
+    {
+      "start_frame": 23042,
+      "end_frame": 23132,
+      "duration_frames": 90,
+      "props": {
+        "mode": "chapter",
+        "active": "all",
+        "chapter": "06 · 생활시설"
+      },
+      "kind": "chapter",
+      "unit_id": "M005_chapter"
+    },
+    {
+      "start_frame": 31126,
+      "end_frame": 31426,
+      "duration_frames": 300,
+      "kind": "outro",
+      "unit_id": "brand_outro",
+      "props": {}
+    }
+  ],
+  "duration_frames": 31426,
+  "duration_s": 1047.5333333333333,
+  "outro_start": 31126,
+  "speech_signal_end_s": 1034.534920739,
+  "shared_state_modified": false
+}

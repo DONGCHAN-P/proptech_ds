@@ -1,0 +1,66 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": false,
+  "api_error_status": null,
+  "duration_ms": 269123,
+  "duration_api_ms": 268972,
+  "ttft_ms": 180197,
+  "ttft_stream_ms": 31387,
+  "time_to_request_ms": 144,
+  "num_turns": 4,
+  "result": "**Verdict: approved** — the R1 source clarification holds up under independent checking of the glyph identities, so the one required issue is resolved and the same MP4 (`136a20c4…b1079`) is approved under the reused prior scope. The two carried-over items (ASR '202만원' human-listen, s3a '초기 순자산' wording) stay as non-blocking recommendations.\n\nNote on process: my first two tool calls were premature placeholders — only the final `StructuredOutput` above is valid. And to be transparent, I judged from the provided codepoint/source evidence (verifying the ㅂ+ㅣ+ㅈ→빚 vs ㅂ+ㅣ+ㅊ→빛 composition and the 듦/둠 distinction myself); I did not have file access to recompute the HTML SHAs, nor did I listen to audio or play continuously — those limits are recorded in the coverage notes.",
+  "stop_reason": "end_turn",
+  "session_id": "bf544f77-fc21-4f57-96ac-719a9508f015",
+  "total_cost_usd": 0.7911900000000001,
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 38740,
+    "cache_read_input_tokens": 81050,
+    "output_tokens": 20340,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 38740,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-4-8": {
+      "inputTokens": 8,
+      "outputTokens": 20340,
+      "cacheReadInputTokens": 81050,
+      "cacheCreationInputTokens": 38740,
+      "webSearchRequests": 0,
+      "costUSD": 0.7911900000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000
+    }
+  },
+  "permission_denials": [],
+  "structured_output": {
+    "artifact_sha256": "136a20c43ba3a99a138ba7282c1fb1a8532fc3aa92695c57ca2f904d011b1079",
+    "approved": true,
+    "required_issues": [],
+    "recommended": [
+      "[비차단] C04P01 '202만원' 교차엔진 불일치(Whisper small/medium '220' vs Vosk/화면 '202')는 프레임·ASR로 해소 불가 — 최종화 전 사람 청취 + 연속재생 1회(장 결합부·+3초 엔드홀드·BGM/내레이션 믹스 포함)로 종결 권장.",
+      "[비차단] s3a '자기자금 2억5천만원' 라벨은 대본·s3 용어 '초기 순자산'과 불일치하고 같은 장면 2.4억 지분도 '자기자금'으로 표기돼 중의적 — 향후 재렌더 시 '초기 순자산'으로 통일 검토(수치 정확)."
+    ],
+    "coverage_notes": [
+      "(방법·한계) 이번 판정 근거는 제공된 소스 증거(HTML 텍스트 노드 + Unicode codepoint + HTML SHA 표기) + 전해상도 s5a 1장 + 기존 콘택트시트. 파일시스템/셸 접근은 없어 HTML SHA를 직접 재계산하지 못했고, 실제 청취·연속재생도 수행하지 않음. 불변 장면은 기존 검수 범위 재사용.",
+      "(R1 해소) Hangul 조합 직접 검증: U+BE5A=ㅂ+ㅣ+ㅈ=빚(debt), U+BE5B=ㅂ+ㅣ+ㅊ=빛(light). 제공 노드 집계 ch02 빚×4·빛×0, ch05 빚×6·빛×0. 지적된 두 장면(s2d 범례+박스, s5a 박스+우패널) 모두 빚 글립 사용. '빛' 오타 가설 반증됨.",
+      "(듦/둠 해소) '줄어듦' 노드는 U+B4E6(듦, 줄어들다의 정상 명사형) 사용, 둠(U+B460) 아님. 표기 정확.",
+      "(불변 확정) 생산자가 영상·자막·내레이션·소스텍스트 미변경 및 HTML=최종 소스임을 확인, video_sha256 136a… 동일 → 소스가 정확하므로 재렌더 불필요. 다만 HTML SHA 일치는 독립 재계산 못함(파일 접근 없음) — 내부 정합적인 codepoint 증거 + 기존 픽셀 표본에 근거.",
+      "(이월·범위 외) ASR '202만원'은 미청취·비차단 유지. 지침대로 전체 금융모형·불변 장면 미재검산. 설명문(description)·메타데이터 본문 미제공(SHA 바인딩만) — 링크·타임스탬프·고지 내용 미검토."
+    ]
+  },
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "uuid": "d6c7d7ed-0362-4e8b-9809-cc5b6f21ebd6"
+}

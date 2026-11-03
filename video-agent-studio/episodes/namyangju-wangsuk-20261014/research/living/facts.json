@@ -1,0 +1,182 @@
+{
+  "revision": "living-v1",
+  "input_revision": "input-v1",
+  "facts": [
+    {
+      "claim_id": "LIV-001",
+      "sentence": "왕숙11초·왕숙1고·왕숙2-1초·왕숙2-1중은 2025년 중앙투자심사를 통과했고 2029년 3월 개교를 목표로 추진한다.",
+      "source_url": "https://www.goegn.kr/goegn/na/ntt/selectNttInfo.do?bbsId=8350&mi=13502&nttSn=1342380",
+      "evidence_location": "본문 358~365행",
+      "reference_date": "2025-10-29",
+      "checked_date": "2026-10-14",
+      "status": "verified",
+      "project_status": "approved_plan",
+      "caveat": "실제 개교·배정·통학로 미확인",
+      "affected_scene_ids": []
+    },
+    {
+      "claim_id": "LIV-002",
+      "sentence": "왕숙7유·왕숙2-1유는 재정투자심사를 통과했고 2029년 3월 개원을 목표로 추진한다.",
+      "source_url": "https://www.goegn.kr/goegn/na/ntt/selectNttInfo.do?bbsId=8350&mi=13502&nttSn=1345584",
+      "evidence_location": "본문 358~365행",
+      "reference_date": "2025-11-12",
+      "checked_date": "2026-10-14",
+      "status": "verified",
+      "project_status": "approved_plan",
+      "caveat": "구리·남양주 전체 17개 확정과 왕숙 학교 총수를 혼합하지 않는다.",
+      "affected_scene_ids": []
+    },
+    {
+      "claim_id": "LIV-003",
+      "sentence": "왕숙2 A1은 전용 59.95~84.67㎡ 812세대, 2029년 2월 입주예정으로 안내된다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&panId=0000061080&uppAisTpCd=05",
+      "evidence_location": "공급정보 517~521행",
+      "reference_date": "2026-04-30",
+      "checked_date": "2026-10-14",
+      "status": "verified",
+      "project_status": "approved_plan",
+      "caveat": "예정일은 확정 입주·인프라 완공 증거가 아니다.",
+      "affected_scene_ids": []
+    },
+    {
+      "claim_id": "LIV-004",
+      "sentence": "왕숙2 A3은 전용 59.72~84.75㎡ 686세대, 2030년 5월 입주예정으로 안내된다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&panId=0000061086&uppAisTpCd=05",
+      "evidence_location": "공급정보 541~545행",
+      "reference_date": "2026-04-30",
+      "checked_date": "2026-10-14",
+      "status": "verified",
+      "project_status": "approved_plan",
+      "caveat": "A1과 단지·면적·입주일이 다르다.",
+      "affected_scene_ids": []
+    },
+    {
+      "claim_id": "LIV-005",
+      "sentence": "왕숙2 A1 공식 페이지는 59A 493,040,000원·84A 693,630,000원을 표시하며 기준층 5층 이상 가격이라는 각주가 있다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&panId=0000061080&uppAisTpCd=05",
+      "evidence_location": "주택형안내 553~564행",
+      "reference_date": "2026-04-30",
+      "checked_date": "2026-10-14",
+      "status": "qualified",
+      "project_status": null,
+      "caveat": "첨부 공고 미확보로 층별·발코니·유상선택품목 최종비용 미검증",
+      "affected_scene_ids": [],
+      "price_conditions": {
+        "statistic": "LH 웹 열명은 평균분양가격, 각주는 타입별 기준층(5층 이상) 기준 가격",
+        "scope": "왕숙2 A1",
+        "exclusive_area_m2": [
+          59.95,
+          84.67
+        ],
+        "transaction_period": "2026-04-30 공고",
+        "transaction_type": "공공분양 공급가격",
+        "sample_count": null,
+        "sample_note": "실거래 표본 아님; 웹 표는 타입별 공급호수",
+        "unit": "원",
+        "aggregation_method": "원문 표시값, 가중평균 계산 안 함",
+        "cancelled_transactions": "해당 없음",
+        "options": "첨부 미검증; 옵션 포함 총비용으로 표현 금지"
+      }
+    },
+    {
+      "claim_id": "LIV-006",
+      "sentence": "왕숙2 A3 공식 페이지는 59A 526,340,000원·84A 732,450,000원을 표시하며 기준층 5층 이상 가격이라는 각주가 있다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&panId=0000061086&uppAisTpCd=05",
+      "evidence_location": "주택형안내 578~589행",
+      "reference_date": "2026-04-30",
+      "checked_date": "2026-10-14",
+      "status": "qualified",
+      "project_status": null,
+      "caveat": "단지 전체 평균·실거래 평균으로 쓰지 않는다.",
+      "affected_scene_ids": [],
+      "price_conditions": {
+        "statistic": "LH 웹 열명은 평균분양가격, 각주는 타입별 기준층(5층 이상) 기준 가격",
+        "scope": "왕숙2 A3",
+        "exclusive_area_m2": [
+          59.72,
+          84.75
+        ],
+        "transaction_period": "2026-04-30 공고",
+        "transaction_type": "공공분양 공급가격",
+        "sample_count": null,
+        "sample_note": "실거래 표본 아님; 웹 표는 타입별 공급호수",
+        "unit": "원",
+        "aggregation_method": "원문 표시값, 가중평균 계산 안 함",
+        "cancelled_transactions": "해당 없음",
+        "options": "첨부 미검증; 옵션 포함 총비용으로 표현 금지"
+      }
+    },
+    {
+      "claim_id": "LIV-007",
+      "sentence": "왕숙2 A3은 정정공고이고 본문은 확장면적 표기와 신혼부부 특별공급 소득기준 숫자의 정정을 안내한다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&panId=0000061086&uppAisTpCd=05",
+      "evidence_location": "정정사항 509~518행",
+      "reference_date": "2026-04-30",
+      "checked_date": "2026-10-14",
+      "status": "verified",
+      "project_status": null,
+      "caveat": "전매제한·거주의무·대출 등 세부 규제는 첨부 공고 재검증 필요",
+      "affected_scene_ids": []
+    },
+    {
+      "claim_id": "LIV-008",
+      "sentence": "WE 드림파크는 2025년 교육부 공모 선정으로 총사업비 669억원 중 335억원 확보를 발표한 왕숙2 교육·문화시설 계획이다.",
+      "source_url": "https://nyj.go.kr/www/selectBbsNttView.do?bbsNo=68&key=2498&nttNo=498672&pageIndex=86&pageUnit=8&searchCnd=all",
+      "evidence_location": "보도자료 2025-08-08 제목 및 본문",
+      "reference_date": "2025-08-08",
+      "checked_date": "2026-10-14",
+      "status": "qualified",
+      "project_status": "approved_plan",
+      "caveat": "공식 검색 결과 본문 확인; 완공·운영일 미확인",
+      "affected_scene_ids": []
+    },
+    {
+      "claim_id": "LIV-009",
+      "sentence": "2026년 3월 의회 발표는 남양주 동북부 공공의료원 추진 일정을 2028년 중투심·2031년 착공·2033년 개원 순서로 설명했다.",
+      "source_url": "https://www.ggc.go.kr/site/cmt/xb/lwmkr/lawmakerpressrelease/294287",
+      "evidence_location": "2026-03-25 보도자료 마지막 문단, 공식 검색 결과",
+      "reference_date": "2026-03-25",
+      "checked_date": "2026-10-14",
+      "status": "qualified",
+      "project_status": "proposal",
+      "caveat": "확정 개원일 아님. 시 2028 조기착공 목표와 합치지 않는다.",
+      "affected_scene_ids": []
+    },
+    {
+      "claim_id": "LIV-010",
+      "sentence": "별내역에서는 8호선 별내선과 경춘선을 환승할 수 있다.",
+      "source_url": "https://www.ncuc.or.kr/jj_line/2340",
+      "evidence_location": "운영사 시설개요, 공식 검색 결과 본문",
+      "reference_date": "확인일 현재",
+      "checked_date": "2026-10-14",
+      "status": "qualified",
+      "project_status": "operating",
+      "caveat": "별내별가람역과 별내역을 구분. 역 이용가능성과 모든 단지 도보접근성은 다르다.",
+      "affected_scene_ids": []
+    },
+    {
+      "claim_id": "LIV-011",
+      "sentence": "진접선 운영사는 4호선 진접선의 별내별가람·오남·진접 세 역의 운영 개선사항을 2026년 10월에도 게시했다.",
+      "source_url": "https://www.ncuc.or.kr/jj_line/1694",
+      "evidence_location": "2026-10-02 공지 본문, 공식 검색 결과",
+      "reference_date": "2026-10-02",
+      "checked_date": "2026-10-14",
+      "status": "qualified",
+      "project_status": "operating",
+      "caveat": "진접·오남을 별내역 8호선 생활권과 동일시하지 않는다.",
+      "affected_scene_ids": []
+    },
+    {
+      "claim_id": "LIV-012",
+      "sentence": "다산역 운영사 안내에는 다산1동 주거·상권과 다산선형공원·중앙공원·아이비플레이스몰 출구가 기재돼 있다.",
+      "source_url": "https://www.ncuc.or.kr/jj_line/2351",
+      "evidence_location": "역사정보, 공식 검색 결과",
+      "reference_date": "확인일 현재",
+      "checked_date": "2026-10-14",
+      "status": "qualified",
+      "project_status": "operating",
+      "caveat": "열기 실패로 검색 결과 수준 확인. 다산 모든 단지의 도보거리를 주장하지 않는다.",
+      "affected_scene_ids": []
+    }
+  ]
+}

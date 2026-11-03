@@ -1,0 +1,22 @@
+{
+  "episode_id": "apartment-top20-race-20261029",
+  "request": "월별 TOP20, 새 실거래가 없으면 직전 가격 유지, 자연스러운 HyperFrames 전환, 완성 후 오늘21시 공개 예약",
+  "studio_root": "C:/projects/realestate_reco/video-agent-studio",
+  "baseline_episode": "search-to-choice-shorts-20261029",
+  "format": "9:16 data-driven ranking race",
+  "area_basis": "previous 84 <= exclusive area < 85 square meters retained",
+  "period_candidate": "2006-12 through2026-06, monthly updates of trailing12-month transaction median",
+  "eligibility_candidate": "new valid trade in month AND trailing12-month n>=5 updates quote; otherwise keep prior qualified quote",
+  "scope": "all identifiable collected apartment complexes; explicitly label collected regions, do not claim nationwide complete coverage",
+  "duration_candidate_seconds": 56.8,
+  "audio": "reuse prior original local BGM; no new paid voice/image/music generation",
+  "approval_basis": "current remake request and prior continuing delegation, no intermediate approval questions",
+  "upload_requested": true,
+  "guides": [
+    "guides/영상제작_마스터가이드.md",
+    "config/vertical_video_safe_area.json"
+  ],
+  "revision": "monthly-v2",
+  "upload_visibility": "scheduled public",
+  "publish_at_kst": "2026-10-29T21:00:00+09:00"
+}

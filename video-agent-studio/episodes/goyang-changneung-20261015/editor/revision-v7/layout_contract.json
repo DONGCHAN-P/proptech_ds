@@ -1,0 +1,53 @@
+{
+  "revision": "v7-proposal",
+  "guard": "React fonts.ready→DOM bounds/overflow checks→continueRender→PNG capture. Failure calls cancelRender before capture.",
+  "regions": {
+    "chapter_card": [
+      80,
+      425,
+      1760,
+      130
+    ],
+    "content": [
+      0,
+      170,
+      1920,
+      665
+    ],
+    "caption": [
+      96,
+      875,
+      1728,
+      125
+    ],
+    "source": [
+      96,
+      1018,
+      1728,
+      50
+    ]
+  },
+  "chapter": "모든 장번호 타이틀은 sceneFrame<90(30fps3초)에 번호와 제목만 보이는 독립 카드. 본문/자막/출처 미노출.90f부터 본문 동일좌표로 전환; 이동/줌 없음.",
+  "source_font_px": 20,
+  "assertions": [
+    "본문/지도/표/자막/출처 형제 rect 교차 금지",
+    "각 live DOM 텍스트 scrollWidth/clientWidth 및 scrollHeight/clientHeight",
+    "SVG live text getBBox와 viewBox 경계",
+    "최대 단지명과 가격 원문/최대 caption 상태 실제 검사"
+  ],
+  "exceptions": [
+    "본문이 지도/표/카드를 포함하는 부모-자식 계층",
+    "previous-map-crop의 실제 전편 이미지 잘라보기; live text clipping 허용 아님",
+    "지도 선/필지/핀은 같은 실제 좌표에 겹침; label leader는 통근 노선 아님",
+    "원문가격표의 선택선/반투명 선택 영역은 인용 표와 의도적 중첩"
+  ],
+  "final_QA_contract": [
+    "새 승인대본/음성 후 모든 신규 상태 guard 재실행",
+    "구간별 motion0/15/30/44f와 앞뒤1f를 실제 최종MP4에서 확인",
+    "통근15값·가격6값·거래건수6값·S6제외·두 기산사건 수치 일치",
+    "원문헤더/천원단위/84AH기본형/확장비 합과 출처",
+    "모든 장번호3초/내부제작안내 미노출/고정자막과 최하단출처",
+    "무음 클립은 실제 청취 검수 대상으로 주장하지 않음; 새 본편 청취/전체재생은 별도"
+  ],
+  "new_full_render_authorized": false
+}

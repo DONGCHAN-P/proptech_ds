@@ -1,0 +1,11 @@
+{
+  "issue_id":"REBUILD_V2_SOURCE_EXCERPTS",
+  "scene_ids":["R009","R014","R019","R023"],
+  "to":"director/visual (직접 peer 메시지 도구 없음)",
+  "status":"superseded_by_parent_r2_ledger_based_diagrams_no_capture_blocker",
+  "problem":"동결 scenes_v3.json의 원문 행 강조 지시는 실제 원문 이미지가 필요합니다. 임의 문장을 공식 문서 캡처처럼 재현하지 않습니다.",
+  "evidence":"frozen-script-v3/scenes_v3.json SHA c85c47768b3e9b981c83b2e35b6e42548ceb726a33f9c43c37068077469c5e2a; R009 DTI 행, R014 두 감면 원문, R019 신혼 조건 행, R023 B 소득·자산 해당 행",
+  "proposal":"각 이미지/페이지 경로·SHA·원문 source_id·페이지/행 또는 crop 좌표·출처 URL·기준일을 인계해 주세요. 원문 이미지는 담당이 보존하고 editor는 scene_id로 읽기만 연결합니다. 인계 전 해당 슬롯은 source_pending으로 유지합니다.",
+  "impact":"부모 최신 지시: R014 최대 감면액 도해로 구현. R019/R023도 원문 인용 화면이 아닌 정확한 수치·조건 도해와 출처ID 기록으로 구현하므로 캡처 미제공을 빌드 장애로 삼지 않음. 기존 요청은 이력으로 보존.",
+  "next_owner":"director/visual → editor"
+}

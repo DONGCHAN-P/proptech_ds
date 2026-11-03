@@ -1,0 +1,56 @@
+{
+  "status": "signal_measurement_complete_human_audio_review_pending",
+  "final_sha256": "136a20c43ba3a99a138ba7282c1fb1a8532fc3aa92695c57ca2f904d011b1079",
+  "measurements": {
+    "integrated_LUFS": -17.2,
+    "true_peak_dBFS": -2.0,
+    "RMS_level_dBFS": -19.796045,
+    "peak_level_dBFS": -1.9995,
+    "number_of_samples": 57237504.0
+  },
+  "logs": {
+    "loudness": {
+      "argv": [
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\media-bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-i",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\jun-production-v1\\renders\\measured-jun-v1\\housing_choice_jun_v1.mp4",
+        "-map",
+        "0:a:0",
+        "-vn",
+        "-af",
+        "ebur128=peak=true",
+        "-f",
+        "null",
+        "-"
+      ],
+      "returncode": 0,
+      "log": "qa_signal/loudness.log",
+      "log_sha256": "b09969a1bfba387a0cc653db7d1510cbf3f2ff75b374870b5345144d9023fe98"
+    },
+    "activity": {
+      "argv": [
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\media-bin\\ffmpeg.exe",
+        "-hide_banner",
+        "-nostdin",
+        "-i",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\jun-production-v1\\renders\\measured-jun-v1\\housing_choice_jun_v1.mp4",
+        "-map",
+        "0:a:0",
+        "-vn",
+        "-af",
+        "astats=metadata=0:reset=0,silencedetect=noise=-60dB:d=0.5",
+        "-f",
+        "null",
+        "-"
+      ],
+      "returncode": 0,
+      "log": "qa_signal/activity.log",
+      "log_sha256": "44bbc9ed14c1d84395ee415b31f9a2efbb4e540d21327a8a1d56f3a867f85f4a"
+    }
+  },
+  "actual_listening": false,
+  "pronunciation_naturalness": "unverified; ASR/alignment/signal cannot establish listening",
+  "continuous_playback": false
+}

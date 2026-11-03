@@ -1,0 +1,86 @@
+{
+  "target": "analysis",
+  "command": [
+    "npx.cmd",
+    "--no-install",
+    "hyperframes",
+    "render",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-production-v1\\shorts\\analysis",
+    "--output",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-production-v1\\shorts\\top20_analysis_free_v3.mp4",
+    "--fps",
+    "30",
+    "--quality",
+    "delivery",
+    "--workers",
+    "4"
+  ],
+  "project_sha256": "54e0d3f9300a4b1bc507552e96c54805017ab8e21b47abeb1013f20ceb03ea0b",
+  "source_files": {
+    "assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+    "assets/narration.wav": "3ec73b51c31d48afc49518a7f27af8854cf4433a5f5919b0ec962e75488ff6f1",
+    "assets/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "assets/Pretendard-Regular.woff2": "fad853f7f47c6c8b103171e7193fa095708cdcd70850a71d93aa5379e8a61d63",
+    "assets/R01.jpg": "0ac3d1cd636426f4605936a58c5115a150b5b5754a83ebeb8ffd85631688c5a2",
+    "assets/R01_locator.svg": "91bb6c334dddec6ce8ac17afef4e234ec8d6204283284cf60c2284efccd0eb63",
+    "assets/R06.jpg": "5be076060a15e197e78b08c431510a50d107157eb1b2b43627122ca95fe8bd59",
+    "assets/R06_locator.svg": "bfb5ccd2d70263495c00a856fd6312b8e9cd59d588a0928696c863599ec84366",
+    "assets/R10.jpg": "c9c6ad60e247233a7268281112bb2ff12510beaf83892e02c7df228db3709a6a",
+    "assets/R11.jpg": "cd7a950eb136409617d879122d2ae7640feab83cb96f5bd662ac0055f7b71a54",
+    "assets/thinking_music_loop_raw.wav": "9e67a2b2f639122450295beeec7d4cbf60501ae3b6671014d7cb392080fb95e4",
+    "assets/top20_overview.svg": "bde75967f78e18c797ce327660ee4cfbe96d7e30ce1407f0b22cbfd41e318601",
+    "index.html": "e34945a902c2da8a595d086206e97656c64a6ea6ddab36d54c9c3af9a255c7d3",
+    "scenes/analysis-CAPTIONS.html": "6ad81dee2b99fa3134c4167318581ed983c08f2508f3daa847d14f9fbf8528df",
+    "scenes/analysis-S00.html": "4493617b27775f5451732a0fedd7a179a0887e74fd827438faaf0acdf009ac4a",
+    "scenes/analysis-S01.html": "b8d5177f4c54f9c0c52ddba087266622af425b2ed6b49e1d86803df005bb11aa",
+    "scenes/analysis-S02.html": "ea243920b9a9f04b84c4c33aea301bd56fa529379bea2381a6fa3017b639e5f7",
+    "scenes/analysis-S03.html": "c408de838ab4715a5b201d8fb5c45b77eb60428e87e4144677e1bfeacb51a02f",
+    "scenes/analysis-S04.html": "37b01b181b4196599764f1c5a949183f0b61d4b21fd89efbe682cf8a44a7ad31",
+    "scenes/analysis-S05.html": "36fd4f67a34059e6c599b53e411bdbd7cfb8c654c2434b6218ca56a02e37567f",
+    "scenes/analysis-S06.html": "3ec7ffb25dd37758ae87e03e87b6c0887200a8c1512ef6d9d5f96a1bfa62bfe9",
+    "scenes/analysis-S07.html": "b89dff912906133ee42ba5c01ee07aba3e74c69f9a18ea4b05b8e06a9c89f2ab"
+  },
+  "audio_input_sha256": "3ec73b51c31d48afc49518a7f27af8854cf4433a5f5919b0ec962e75488ff6f1",
+  "planned_duration_s": 41.100362811791385,
+  "started_at_epoch": 1793548933.7070448,
+  "new_paid_calls": 0,
+  "cloud_render": false,
+  "exit_code": 0,
+  "elapsed_s": 38.661,
+  "log": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-production-v1\\evidence\\render-analysis-v3.log",
+  "output": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-production-v1\\shorts\\top20_analysis_free_v3.mp4",
+  "output_sha256": "6f4cac49d21af1dd934759faa140a1f760d60262ca179121e5483865b89ad3f1",
+  "bytes": 2800402,
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_type": "video",
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "30/1",
+        "duration": "41.133333"
+      },
+      {
+        "index": 1,
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "duration": "41.133000"
+      }
+    ],
+    "format": {
+      "duration": "41.133333",
+      "size": "2800402"
+    }
+  },
+  "full_decode_passed": true,
+  "actual_listening": false,
+  "continuous_playback": false,
+  "status": "encoded_ready_for_independent_QA_frames_following",
+  "decoded_frame_count": 33,
+  "decoded_frame_manifest": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-production-v1\\evidence\\encoded-analysis-v3\\frames.json"
+}

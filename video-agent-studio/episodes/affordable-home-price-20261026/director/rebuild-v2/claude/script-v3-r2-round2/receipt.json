@@ -1,0 +1,29 @@
+{
+  "phase": "script",
+  "artifact_sha256": "b58af9894aabfd7cfd231bcddc98448bd3e2af0e136b10b335083e717cc6a034",
+  "script_sha256": "b58af9894aabfd7cfd231bcddc98448bd3e2af0e136b10b335083e717cc6a034",
+  "packet_sha256": "9d766f6a638ca67653ee2fb522289007c2e433c7398121167d6bffba44dafe9e",
+  "authorization_sha256": "2ba985ef3ffb5a870d8ad1938459ea6b397b7b35e09214042a9d2be83c9fe2f0",
+  "exit_code": 0,
+  "is_error": false,
+  "approved": true,
+  "required_count": 0,
+  "model_requested": "opus",
+  "effort_requested": "max",
+  "model_usage": {
+    "claude-opus-4-8": {
+      "inputTokens": 4,
+      "outputTokens": 39015,
+      "cacheReadInputTokens": 23939,
+      "cacheCreationInputTokens": 68266,
+      "webSearchRequests": 0,
+      "costUSD": 1.414027,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000
+    }
+  },
+  "authentication": "existing subscription; API key environments removed; no paid-provider fallback",
+  "elapsed_seconds": 539.27,
+  "images": [],
+  "at_utc": "2026-10-26T11:52:14.261471+00:00"
+}

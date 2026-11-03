@@ -1,0 +1,128 @@
+{
+  "status": "passed_asset_packet_self_review",
+  "performed_at_utc": "2026-10-27T15:57:49.526015+00:00",
+  "task_id": "FULL-JUN-US1-ASSETS",
+  "visual_observations": {
+    "source_reuse_candidates_viewed": 5,
+    "built_in_generation_edit_outputs_viewed": 6,
+    "final_chapters_contact_viewed": 7,
+    "full_size_title_proofs_viewed": [
+      "CH01",
+      "CH06"
+    ],
+    "optional_alpha_composites_viewed": "2assets on ivory and navy, 560px display width",
+    "title_space_readability": "navy on light CH01/04/06; white on dark CH02/03/05/07",
+    "people_detected": false,
+    "generated_text_numbers_logos_detected_in_final_backgrounds": false,
+    "same_complete_photo_in_different_chapters": false,
+    "newborn_family_policy_assets_used": false,
+    "framing": "No material new crop from resize. CH01 calculator has intentional source-edge crop, no extra zoom. Generic Korean skyline in CH05/07 is atmosphere only."
+  },
+  "technical_checks": [
+    {
+      "asset_id": "JUS1_CH01",
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S01_CH01_AI_1920x1080.png",
+      "sha256": "c00d359767013a82f5fd001c5786b9fc72f5948ee12e32ebfeb12cf391ed9a66",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "decoded": true
+    },
+    {
+      "asset_id": "JUS1_CH02",
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S04_CH02_AI_1920x1080.png",
+      "sha256": "580cda057e4f7fc8b94081be98e8b8ad97c11f8836a262a186894b4dc1c6dd41",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "decoded": true
+    },
+    {
+      "asset_id": "JUS1_CH03",
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S08_CH03_AI_1920x1080.png",
+      "sha256": "eabed121c221bfdd16c3c69c8b809601460ea42febc28fdff28e595b43a6640a",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "decoded": true
+    },
+    {
+      "asset_id": "JUS1_CH04",
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S13_CH04_AI_1920x1080.png",
+      "sha256": "752ef4dac66874e92845bd12a18728ef1149e3f576763891da04088dc320f56b",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "decoded": true
+    },
+    {
+      "asset_id": "JUS1_CH05",
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S18_CH05_AI_1920x1080.png",
+      "sha256": "3d99078922ac6d59cac933c18214983fa8fb0cfbf28f1b06bdd0a59fc357f9bc",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "decoded": true
+    },
+    {
+      "asset_id": "JUS1_CH06",
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S22_CH06_AI_1920x1080.png",
+      "sha256": "e7e9460939cf006578113c95133b4178f65ee1f3ed209f05479c1348c3134f03",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "decoded": true
+    },
+    {
+      "asset_id": "JUS1_CH07",
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S27_CH07_AI_1920x1080.png",
+      "sha256": "e42428ecb2566d5cf9cb81ce5850eee1462cfe3e300c46ead477994871bdfa09",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "decoded": true
+    },
+    {
+      "asset_id": "JUS1_HOUSE_CUTOUT",
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S02_house_cutout_AI.png",
+      "sha256": "b77e9bc6e1d6c50c92bcfad81cc3477212c96e1c4d22a142c6d9f30995d35ae1",
+      "dimensions": [
+        1347,
+        1167
+      ],
+      "decoded": true
+    },
+    {
+      "asset_id": "JUS1_BLANK_BUDGET_NOTEBOOK",
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S28_blank_budget_notebook_AI.png",
+      "sha256": "4118aa8ca263428043b39bccc0e96afce8c9e3269901c628ba6155a46a5b37ea",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "decoded": true
+    }
+  ],
+  "all_7_chapters_1920x1080": true,
+  "scene_coverage_31": true,
+  "review_images": [
+    "review/chapter_contact.png",
+    "review/representative_CH01_title_proof.png",
+    "review/representative_CH06_title_proof.png",
+    "review/cutout_alpha_contact.png"
+  ],
+  "proof_font": "Malgun Gothic for QA overlay only; final editor titles use approved Pretendard. Review proofs are not production backgrounds.",
+  "independent_review": false,
+  "actual_audio_listening": false,
+  "continuous_video_playback": false,
+  "final_encoded_video_review": false,
+  "required_asset_issues_open": 0,
+  "next_checks": "편집자가 최종 Pretendard 글자 경계·흰 자막 rail·모든 컷·발화 타이밍을 실제 MP4로 확인하고 독립 QA에 연결."
+}

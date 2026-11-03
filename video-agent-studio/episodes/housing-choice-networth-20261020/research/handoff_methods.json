@@ -1,0 +1,17 @@
+{
+  "task_id": "buy_rent_reference_research",
+  "role": "research",
+  "status": "research_notes_ready_with_gaps",
+  "input_revisions": {"brief": "2026-10-20 research_and_script_only", "state": "research_in_progress", "parent_packet": "유사 분석/모형/ETF 총수익", "source_sheet": "직접 접근하지 않음"},
+  "outputs": ["C:/projects/realestate_reco/research_notes/거주비를 포함한 주거 선택 비교/comparative_methods.md", "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/research/method_sources.json"],
+  "affected_scene_ids": [],
+  "checks": [{"check":"공식·원저자 자료 16 claim records", "result":"verified_with_qualified_records", "evidence":"method_sources.json"}, {"check":"월자료 실취득·수치 승패 재현", "result":"not_run", "evidence":null}, {"check":"출력 파일 JSON 파싱 및 존재", "result":"passed", "evidence":"PowerShell ConvertFrom-Json claims=16; notes file 15521 bytes before final appendix"}],
+  "open_issue_ids": ["monthly_total_return_data_missing", "historical_tax_engine_missing", "nyt_access_failed", "korean_reproducible_analogue_missing"],
+  "illustrative_addendum": {
+    "revision": "illustrative-v1",
+    "outputs": ["illustrative_model.py", "illustrative_results.json", "illustrative_model_note.md"],
+    "checks": "8 fixtures passed; 10 sensitivity cases; monthly wealth identity; closed-form mortgage remaining principal; all base paths nonnegative",
+    "limitation": "hypothetical prices/returns/costs only; no actual tax engine or historical winner; independent QA pending"
+  },
+  "next_role": "director/writer; independent QA of illustrative model"
+}

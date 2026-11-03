@@ -1,0 +1,32 @@
+{
+  "checked_on": "2026-10-20",
+  "max_requests": 12,
+  "purpose": "presence_and_pagination_only_not_price_statistics",
+  "units": {
+    "dealAmount": "만원",
+    "deposit": "만원",
+    "monthlyRent": "만원/월",
+    "excluUseAr": "㎡"
+  },
+  "queries": [
+    {
+      "district": "11710",
+      "candidate": "서울 송파 잠실엘스",
+      "contract_month": "201601",
+      "kind": "trade",
+      "pages": [],
+      "totalCount": null,
+      "received_rows": 0,
+      "matched_rows": [],
+      "source_endpoint": "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade",
+      "error": {
+        "http_status": 403
+      },
+      "pagination_complete": false,
+      "matched_count": 0,
+      "area_rule": "84 <= exclusive_area_m2 < 85; exact values retained, not assumed identical"
+    }
+  ],
+  "errors": [],
+  "actual_requests": 1
+}

@@ -1,0 +1,11 @@
+import React from 'react';
+import {Img,staticFile} from 'remotion';
+import {Shell,Timeline} from './Representative';
+const ink='#173348',blue='#286cda',muted='#637580';
+export function PlanFrame({focus='S-5',overview=false,caption='S5는 2028년 1월 입주 예정이고,'}:{focus?:string;overview?:boolean;caption?:string}){
+ const rows:any={'S-5':['입주 2028.01 예정','가칭 초5·유5 개교 2028.03 목표','초기 두 달 돌봄·이동'],'S-1':['입주 2029.05 예정','가칭 초7·유7 개교 미정','초기 학생 배치 확인'],'S-4':['입주 2030.03 예정','가칭 초6·유6 개교 2030.03 목표','기존 원흥 생활 접점']};
+ const title=overview?'창릉지구 · 세 후보의 실제 계획 위치':`${focus.replace('-','')} · 학교와 공원, 주변 도로`;
+ return <Shell title={title} caption={caption} source={'자료: LH 내집어디 공개 공간정보 · 2026.10.16 조회 · 계획 변경 가능\n입주·학교 목표: 각 모집공고 / 계획용지와 실제 개교·배정은 별도'}>
+ {overview?<><div style={{position:'absolute',left:80,top:190,width:1170,height:650}}><Img src={staticFile('changneung-v4/plan_geometry/overall.svg')} style={{width:'100%',height:'100%',objectFit:'contain'}}/></div><div style={{position:'absolute',left:1310,top:220,width:500}}><div style={{fontSize:29,fontWeight:700,color:blue}}>창릉지구 = 넓은 개발 권역</div><div style={{fontSize:27,lineHeight:1.5,marginTop:28}}>S1 · S4 · S5는<br/>각기 다른 계획 주거용지</div><div style={{borderTop:'2px solid #d7dfdf',marginTop:32,paddingTop:30,fontSize:27,lineHeight:1.5}}>GTX-A 창릉역은<br/><b>지구 안의 예정 철도역</b></div><div style={{fontSize:21,color:muted,marginTop:26}}>지구 전체와 역 예정 위치를 구분</div></div></>:<><div style={{position:'absolute',left:80,top:190,width:320}}><div style={{fontSize:23,fontWeight:700,marginBottom:12}}>창릉지구 · 상세 범위</div><Img src={staticFile(`changneung-v4/plan_geometry/${focus}_locator.svg`)} style={{width:320,height:520}}/></div><div style={{position:'absolute',left:440,top:190,width:1100,height:560}}><Img src={staticFile(`changneung-v4/plan_geometry/${focus}_detail.svg`)} style={{width:'100%',height:'100%'}}/></div><div style={{position:'absolute',left:1570,top:225,width:270}}><div style={{fontSize:27,fontWeight:700,color:blue,marginBottom:25}}>{focus.replace('-','')} 생활 달력</div>{rows[focus].map((s:string)=><div key={s} style={{fontSize:24,lineHeight:1.5,padding:'20px 0',borderBottom:'1px solid #d5dcd8'}}>{s}</div>)}<div style={{fontSize:18,color:muted,lineHeight:1.5,marginTop:22}}>황색 주거 / 청록 학교<br/>녹색 공원·녹지<br/>회색 도로 / 보라 업무·상업</div></div><Timeline mode="school"/></>}
+ </Shell>
+}

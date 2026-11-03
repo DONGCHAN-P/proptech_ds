@@ -1,0 +1,46 @@
+{
+  "role": "video_research",
+  "inputs": [
+    "video/src/namyangju-v2/project.json",
+    "research/rail-route-proof-v1/raw_osm.json",
+    "research/dasan-context-v2/context.json"
+  ],
+  "outputs": [
+    "audit.json",
+    "byeollae_context.json",
+    "facts.json"
+  ],
+  "affected_scenes": [
+    "V2-054"
+  ],
+  "unchanged_scenes": [
+    "V2-009",
+    "V2-034"
+  ],
+  "validated": {
+    "polygon_counts": {
+      "housing": 23,
+      "park": 1,
+      "commerce": 1
+    },
+    "all_rings_closed": true,
+    "named_official_landmarks": 4
+  },
+  "unresolved": [
+    "별내시설전수조사아님",
+    "지역시세동일조건미확인",
+    "진접산단정밀경계미확인"
+  ],
+  "editor_instructions": [
+    "다산→별내→진접명확구도전환",
+    "다산context를다른지역으로재라벨링금지",
+    "V2-054내진접은기존광역기준점만",
+    "공식왕숙계획도원본유지",
+    "본문음성/대본새생성없음"
+  ],
+  "next_roles": [
+    "video_editor",
+    "video_qa"
+  ],
+  "sha256": "14d8f04f5e5110935a0f531e3dd65e915c366fb5f2bc312f3d55358a7d837c9f"
+}

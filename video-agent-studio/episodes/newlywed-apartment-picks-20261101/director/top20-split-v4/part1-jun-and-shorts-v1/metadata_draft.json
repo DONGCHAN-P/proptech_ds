@@ -1,0 +1,80 @@
+{
+  "revision": "jun-and-shorts-v1",
+  "local_only": true,
+  "upload_authorized": false,
+  "part2_authorized": false,
+  "main": {
+    "title": "신혼부부가 많이 사는 수도권 지역 20~11위 | 아파트 가격과 생활권 비교",
+    "voice": "ElevenLabs Jun",
+    "description_credit_source": "outputs/top20-split-v4/map-clean-v1/출처_지도정리와사진전환.md"
+  },
+  "shorts": [
+    {
+      "short_id": "SHORT01-PROMO",
+      "title": "신혼부부가 많이 사는 동네, 같은 구에서도 예산은 다릅니다 | 20~11위 #Shorts",
+      "rankrange": {
+        "from": 20,
+        "to": 11,
+        "role": "20~11위 본편 홍보",
+        "spoken_ranks": [
+          17
+        ]
+      },
+      "related_short_ids": [
+        "SHORT02-R20-R16",
+        "SHORT03-R15-R11"
+      ],
+      "source_script": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/jun-and-shorts-v1/short01_promo.json",
+      "source_sha256": "2852176dbb994e19630a931b4ec9f766a0c4f16794b936b0a6e699bc1a1a8428",
+      "related_video_url": null,
+      "related_video_setting_applied": false
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "title": "신혼부부 거주 순위 20~16위 | 다섯 지역의 아파트 가격 비교 #Shorts",
+      "rankrange": {
+        "from": 20,
+        "to": 16,
+        "role": "내용 분할",
+        "spoken_ranks": [
+          20,
+          19,
+          18,
+          17,
+          16
+        ]
+      },
+      "related_short_ids": [
+        "SHORT03-R15-R11"
+      ],
+      "source_script": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/jun-and-shorts-v1/short02_ranks20_16.json",
+      "source_sha256": "71485094fa2787dd167c311013d8a8343827268cd6fef025fc73dc9362de97bc",
+      "related_video_url": null,
+      "related_video_setting_applied": false
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "title": "신혼부부 거주 순위 15~11위 | 다섯 지역의 아파트 가격 비교 #Shorts",
+      "rankrange": {
+        "from": 15,
+        "to": 11,
+        "role": "내용 분할",
+        "spoken_ranks": [
+          15,
+          14,
+          13,
+          12,
+          11
+        ]
+      },
+      "related_short_ids": [
+        "SHORT02-R20-R16"
+      ],
+      "source_script": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/jun-and-shorts-v1/short03_ranks15_11.json",
+      "source_sha256": "bbf657b92e4a767bbcb819e7e6a67fa7674cd34cf1108f4cc7675697807350f9",
+      "related_video_url": null,
+      "related_video_setting_applied": false
+    }
+  ],
+  "scope": "20~11위10regions; promotional1 and20→16/15→11 content2"
+}

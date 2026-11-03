@@ -1,0 +1,60 @@
+{
+  "source_inputs": [
+    {
+      "path": "video-agent-studio/episodes/capital-10eok-map-20261017/research/source-completion-v1/episode_84_source_rows.parquet",
+      "sha256": "86b39d1800da16c87039bcaf58e3f0a1a143b2dcafb12eb8a793148b3f1399ab",
+      "bytes": 42349980
+    },
+    {
+      "path": "analysis/housing_growth_2006/regional_expansion_v1/expansion_normalized.parquet",
+      "sha256": "e12a397460797b19d8ca84898a2934217871b3656fa49d21023c1f218ea80450",
+      "bytes": 138842507
+    }
+  ],
+  "raw_input_rows": {
+    "master": 1653378,
+    "expansion": 1883246
+  },
+  "sequential_exclusions": {
+    "master": {
+      "excluded_by_included_price_analysis": 27086,
+      "canceled": 0,
+      "outside_area": 49905,
+      "bad_price_or_date": 0,
+      "outside_period": 18908,
+      "uncertain_canonical_identity": 0
+    },
+    "expansion": {
+      "parse_error": 0,
+      "canceled": 31637,
+      "outside_area": 1248957,
+      "bad_price_or_date": 0,
+      "outside_period": 6105,
+      "gunwi_fixed_boundary": 196,
+      "fallback_or_uncertain_identity": 0
+    }
+  },
+  "source_region_overlap": [],
+  "all_complexes": 12470,
+  "valid_transactions": 2153830,
+  "master_included_rows": 1557479,
+  "expansion_included_rows": 596351,
+  "fallback_excluded": 0,
+  "master_item_multiplicity_preserved": true,
+  "additional_deduplication_applied": false,
+  "inherited_expansion_normalization": {
+    "xml_files": 9308,
+    "source_manifest_sha256": "867228212e8202ddf97a4bc6063e7a910a10f29b39ba3083544bed848f684213",
+    "api_rows": {
+      "부산": 866481,
+      "대구": 597113,
+      "대전": 392725,
+      "광주": 0,
+      "세종": 65968
+    },
+    "parse_errors": 0,
+    "fallback_id_rows": 0,
+    "duplicate_transaction_keys_removed": 39041,
+    "canceled_after_dedup": 31637
+  }
+}

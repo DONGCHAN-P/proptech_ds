@@ -1,0 +1,14 @@
+{
+  "revision":"block-locator-v3",
+  "status":"completed_with_qualified_location_context",
+  "artifacts":["report.md","facts.json"],
+  "input_versions":["brief.json","state.json script-v3","research/production-v2","visual/geographic-v1/locations.json","visual/geographic-v1/rights_and_sources.json"],
+  "verified_scope":["온라인LH공고주소·IKEA공식주소·뉴시스본문확인","보존된최신정정공고텍스트의방위문구확인","기존OSM시설좌표주소태그와공식주소일치"],
+  "unresolved":["S1/S4/S5대표좌표·경계·출입구","학교부지와단지경계정밀연결","상업재가공가능공식대체계획도"],
+  "affected_scenes":["S4학교·생활시설장면","S1/S5주변계획맥락장면"],
+  "next_owner":"/root/changneung_editor_prep_v1/director",
+  "production_proposal":"기존시설실지도+지도밖상대위치설명 / 비례없는독립방위관계패널",
+  "prohibited_inference":["지구중앙핀을블록핀으로사용","학교필지를S4좌표로사용","가짜geometry","공식도면crop/overpaint/trace"],
+  "paid_api_used":false,
+  "shared_files_modified":false
+}

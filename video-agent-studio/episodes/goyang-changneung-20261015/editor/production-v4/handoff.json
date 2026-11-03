@@ -1,0 +1,63 @@
+{
+    "revision":  "production-v4r2",
+    "status":  "v4r2 출력 및 독립 encoded QA 통과 · 총괄 납품 대기",
+    "primary_video":  "outputs/production-v4/changneung_full_v4r2.mp4",
+    "video_sha256":  "2fe7362fcbe46e45f69f411a5bbf02391c56610a39bf9cbb5aea9105fdf564e0",
+    "srt":  "outputs/production-v4/changneung_full_v4.srt",
+    "srt_sha256":  "2f43c5f9a1f7857635224ee073d013a42234eeb7abdd95af6a5611ab88b2a3a1",
+    "project":  "outputs/production-v4/project_v4.json",
+    "project_sha256":  "ee97a7d3cb808f175a1f67c098c7386f1942f0c1c4324eb856f6290e63a5c299",
+    "input_freeze":  "outputs/production-v4/source_freeze_v4.json",
+    "actual_render_receipt":  "outputs/production-v4/render_frames_receipt.json",
+    "technical":  "outputs/production-v4/technical_v4r2.json",
+    "input_versions":  {
+                           "base":  "production-v3r2",
+                           "script":  "script-v3",
+                           "audio":  "audio-v3 Jun 기존 AAC 믹스",
+                           "map":  "research/map-location-v4",
+                           "duration_frames":  24140,
+                           "fps":  30
+                       },
+    "verified":  [
+                     "230개 고유 상태 PNG + CTA 227프레임 출력",
+                     "MP4 조립 프로세스 0 종료",
+                     "H264 1920x1080 30fps · 24140프레임 · 804.666667초",
+                     "전체 decode 0 종료",
+                     "자막 183큐 · 118표기 치환 독립 QA 통과",
+                     "상세 지도 3종 geometry·locator·라벨 대표 QA 통과",
+                     "독립 encoded QA: required 0 / critical 0 / local_review_ready true; 271표본 실제열람·24140 전체decode 0·AAC 동일·67입력해시 일치"
+                 ],
+    "affected_scenes":  [
+                            "M000",
+                            "M001",
+                            "M002",
+                            "M003",
+                            "M004",
+                            "M005",
+                            "M006",
+                            "M007",
+                            "M008",
+                            "M009"
+                        ],
+    "changes":  [
+                    "숫자·노선·기관·블록·타입·금액은 display_text에서 시각 표기로 정규화; spoken_text와 원문 span 보존",
+                    "0.87초 동산동 소개를 다음 단지 큐와 결합",
+                    "학교·후보 상세는 실제 WFS 도형과 전체지구 locator로 교체",
+                    "지구 실제 경계와 GTX-A 창릉역 예정 안내권역을 구분",
+                    "공식 2025 변경고시 원본 전체 설명 화면 보존",
+                    "GeoMap 단지 라벨을 실제 내부점·작은 점·2.5px 인출선으로 연결; S5 예정역 서측·북측 관계 명료화"
+                ],
+    "rights":  "research/map-location-v4/source_manifest.json 및 기존 v3 개별 원천 출처 유지",
+    "paid_calls":  0,
+    "audio_reencoded":  false,
+    "originals_preserved":  true,
+    "actual_listening":  false,
+    "continuous_playback":  false,
+    "unresolved":  [
+
+                   ],
+    "next_owner":  "video_qa → video_director",
+    "placement_guide":  "editor/production-v4/placement_guide.md",
+    "upload_performed":  false,
+    "final_qa":  "qa/production-v4/final_review.json"
+}

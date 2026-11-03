@@ -1,0 +1,92 @@
+[
+  {
+    "asset_id": "M002_workplace_preview",
+    "scene_ids": [
+      "M002"
+    ],
+    "type": "geographic_vector_map",
+    "source_or_prompt": "workplace_geometry.json",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "actual_file": "outputs/visual-semantic-v5/M002_workplace_preview.svg",
+    "actual_place": "서울 도심/상암DMC/여의도/마곡/강남의 운영역 안내 앵커",
+    "AI": false,
+    "usage_conditions": "© OpenStreetMap contributors · ODbL 1.0 · openstreetmap.org/copyright;파생 지리 JSON 함께 보존",
+    "review_status": "최종 수정 PNG1920x1080 직접 재확인: 마곡 글자-표식 겹침 해소, 6앵커 전체 표시, 주요 라벨 서로 겹치지 않음. 본편 합성 QA 별도",
+    "upscaled": false,
+    "preview_png": "outputs/visual-semantic-v5/M002_workplace_preview.png",
+    "sha256": "e9b83154fe971d319a7d51f24287f5c636fcf246b1c073ea4cfef3cf3d71fcfc"
+  },
+  {
+    "asset_id": "M002_company_plan",
+    "scene_ids": [
+      "M002"
+    ],
+    "type": "code_motion_graphic_source",
+    "source_or_prompt": "승인 script-v3 / commute_steps.json / company_plan.json",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "actual_file": "outputs/visual-semantic-v5/M002_company_plan.svg",
+    "actual_place": "해당 없음: 독립 설명 도식",
+    "AI": false,
+    "usage_conditions": "독립 코드 도식. 인용 원문 이미지를 사용하지 않음",
+    "review_status": "1920x1080 PNG 직접확인: 텍스트 잘림·겹침 없음, 기존채널 크림/굵은 제목 계승",
+    "upscaled": false,
+    "preview_png": "outputs/visual-semantic-v5/M002_company_plan.png",
+    "sha256": "5623c10b73fe3f402e387c8d31759d64be8f4049f6e86c502872fc72d4abca02"
+  },
+  {
+    "asset_id": "M002_commute_steps",
+    "scene_ids": [
+      "M002"
+    ],
+    "type": "code_motion_graphic_source",
+    "source_or_prompt": "승인 script-v3 / commute_steps.json / company_plan.json",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "actual_file": "outputs/visual-semantic-v5/M002_commute_steps.svg",
+    "actual_place": "해당 없음: 독립 설명 도식",
+    "AI": false,
+    "usage_conditions": "독립 코드 도식. 인용 원문 이미지를 사용하지 않음",
+    "review_status": "1920x1080 PNG 직접확인: 텍스트 잘림·겹침 없음, 기존채널 크림/굵은 제목 계승",
+    "upscaled": false,
+    "preview_png": "outputs/visual-semantic-v5/M002_commute_steps.png",
+    "sha256": "318a143a26883b5d08d6ed9f56d764cb4ff02c8546a3d751f200279e9f950a01"
+  },
+  {
+    "asset_id": "M002_commute_journey_concept_AI_v1",
+    "scene_ids": [
+      "M002",
+      "M003"
+    ],
+    "type": "ai_concept",
+    "source_or_prompt": "visual/semantic-v5/assets/M002_commute_journey_concept_AI_v1.prompt.txt",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "actual_file": "visual/semantic-v5/assets/M002_commute_journey_concept_AI_v1.png",
+    "actual_place": "가상 한국형 주거·전철 승강장·오피스; 실존 장소 아님",
+    "AI": true,
+    "AI_display": "AI 개념 이미지 · 실제 창릉 현장 아님",
+    "usage_conditions": "내장 image_gen 생성. 실존 철도/공사완공/역세권 직결을 입증하는 자료로 사용 금지. 지도·자료화면과 구분해 개념설명에 사용.",
+    "review_status": "원본 PNG 직접 view: 좌 주거/중앙 전철/우 오피스 연결, 상단·하단 여백, 숫자/브랜드/워드 없음 확인. 중앙장면 일부 지상보행과 철도가 인접한 가상 배치이므로 실제 이동 동선 증거 사용 금지.",
+    "sha256": "bcf85affe5cf72b12d6004afea8033f9f2875709b3b30cb796ce8f2a2c3c8f58",
+    "upscaled": false,
+    "requested_composition": "16:9; tool actual1672x941",
+    "render_guidance": "원비율 contain. 출력1920x1080의 상단제목/하단단계라벨은 코드 오버레이. 현존 역명 넣지 않기. 정지 이미지 줌 사용시 still_motion 표기. 문앞/대기/철도/마지막이동 중 발화 단계만 가는 파란 밑줄·주변 하이라이트로 전환; 이동거리나 소요시간 축으로 해석하지 않기.",
+    "generation": {
+      "tool": "built-in image_gen",
+      "calls": 1,
+      "CLI_fallback": false,
+      "external_paid_API": false
+    },
+    "original_generated_path": "C:/Users/e2ken/.codex/generated_images/01a141a9-c9a8-7b00-b26d-82db30735e93/exec-7b453369-68cd-41a7-84a7-5cffd8005237.png"
+  }
+]

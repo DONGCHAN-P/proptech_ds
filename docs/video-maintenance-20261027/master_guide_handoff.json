@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0",
+  "task_id": "video-master-guide-20261027",
+  "role": "video_writer",
+  "status": "completed_documents_only",
+  "created_at": "2026-10-27T00:43:47.079483+09:00",
+  "studio_root": "C:/projects/realestate_reco/video-agent-studio",
+  "episode_root": "common_guides_not_an_episode",
+  "scope": "User request 2 only: master production guide and request audit within accessible current conversation and specified local records.",
+  "allowed_write_files": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\guides\\영상제작_마스터가이드.md",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\guides\\영상제작_요청추적표.md",
+    "C:\\projects\\realestate_reco\\docs\\video-maintenance-20261027\\master_guide_handoff.json"
+  ],
+  "outputs": [
+    {
+      "path": "video-agent-studio/guides/영상제작_마스터가이드.md",
+      "bytes": 36266,
+      "sha256": "e0a8ed20243a802376fb2c248a80ba8431e2b76d4bc09638cb41d18d9c23e040"
+    },
+    {
+      "path": "video-agent-studio/guides/영상제작_요청추적표.md",
+      "bytes": 36221,
+      "sha256": "3df27745feef82211576a786746856187fd193b6d98cdf9c246bc8dc66ff53ac"
+    }
+  ],
+  "source_snapshot": [
+    {
+      "path": "video-agent-studio/WORKFLOW.md",
+      "bytes": 12137,
+      "sha256": "066180aef28e6bf5b75928cf3de6d555d1fb478946b1d6515e23fee26e182060"
+    },
+    {
+      "path": "video-agent-studio/agents/video_director.toml",
+      "bytes": 4758,
+      "sha256": "2d17b36d3573b1d51a0f2d3e41a7f26056adef23cad4aa49967e15e58c737b6b"
+    },
+    {
+      "path": "video-agent-studio/agents/video_writer.toml",
+      "bytes": 3584,
+      "sha256": "53d66110e511e3b4b504a78c26daa7c69778510b161133bac8924a31cc863609"
+    },
+    {
+      "path": "video-agent-studio/guides/제작_기본가이드.md",
+      "bytes": 28323,
+      "sha256": "816564bd14a98623632182deb406f11cd39e87b3d72a7f01506c84b46d17d260"
+    },
+    {
+      "path": "video-agent-studio/guides/사용자_피드백_이력.md",
+      "bytes": 41580,
+      "sha256": "b9c42daca7612f86ea6022c3b4823130717993c7fc9a29b1541eda8d9e084824"
+    },
+    {
+      "path": "video-agent-studio/guides/채널_톤앤매너와_복기루프.md",
+      "bytes": 3628,
+      "sha256": "988bac02003f13ac10516f83990bde49096bb5153939f067f89bc18d792e6430"
+    },
+    {
+      "path": "video-agent-studio/guides/자료화면_설계_원칙.md",
+      "bytes": 3967,
+      "sha256": "622eea253e24dd5b1632efcbf3aa525f61b05e356b7aff69e66781834ff22c3d"
+    },
+    {
+      "path": "video-agent-studio/guides/세로영상_안전영역.md",
+      "bytes": 7042,
+      "sha256": "cb2f0ca1b9a7bdd5f76eff9883573fdc3a1f38ae8e6314126174dd0c61559836"
+    },
+    {
+      "path": "video-agent-studio/guides/지역_상세지도와_의미단위_자막.md",
+      "bytes": 18368,
+      "sha256": "e2bd55ae010f0e98805c199954da3aece0ffa8ef6db547d03dd2917bec0f8d96"
+    },
+    {
+      "path": "video-agent-studio/guides/레퍼런스_설명과_자료연출.md",
+      "bytes": 8456,
+      "sha256": "a2a3b9e9a9d80b5443dd0ccba03343f92b02ba08beea2dbf76361f1c2c4f0d85"
+    },
+    {
+      "path": "video-agent-studio/guides/호출_효율_운영.md",
+      "bytes": 5654,
+      "sha256": "7d9acfb13123fb146cfe5920a345048e1e35fc4c6bcc577b5419eb739ea4fd6b"
+    },
+    {
+      "path": "영상/매매가격계산/영상가이드_직접녹음_v1.md",
+      "bytes": 25346,
+      "sha256": "fd55d5ea241d45dcf06688966297a54dfc15427653f1de517cd806570be22fcb"
+    },
+    {
+      "path": "config/current_video.json",
+      "bytes": 812,
+      "sha256": "2cfbd606ce61a3b547e7a441c0f15d5270b1e7837c6ed4363dba813382ebfa4c"
+    },
+    {
+      "path": "video-agent-studio/templates/episode_preflight.json",
+      "bytes": 5674,
+      "sha256": "fc8a4da0f47ba0f0468d5f80f8def85e5b02618cd1f33f10c8d1697c98c418c8"
+    },
+    {
+      "path": "config/vertical_video_safe_area.json",
+      "bytes": 5725,
+      "sha256": "30aed5ad4864efe5043e1f4409ac86b7e0d4923edefe30e899972249ae32a907"
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/qa/user-recording-v1/review.json",
+      "bytes": 21990,
+      "sha256": "ad779acd83d2d5468d7871719c907f227299058e4da5dbad7ff9ea0be57c2295"
+    }
+  ],
+  "conversation_source": {
+    "kind": "accessible_current_conversation_and_explicit_user_replies",
+    "date_inference": "none_for_undated_turns",
+    "unavailable_past_chat_claimed_read": false
+  },
+  "coverage": {
+    "current_conversation": 45,
+    "local_w": 62,
+    "local_g": 28,
+    "local_addenda": 15,
+    "operational_guides": 3
+  },
+  "validation": {
+    "checks": [
+      {
+        "check": "utf8_no_replacement_character",
+        "path": "video-agent-studio\\guides\\영상제작_마스터가이드.md",
+        "pass": true
+      },
+      {
+        "check": "local_links_exist",
+        "path": "video-agent-studio\\guides\\영상제작_마스터가이드.md",
+        "pass": true,
+        "missing": []
+      },
+      {
+        "check": "utf8_no_replacement_character",
+        "path": "video-agent-studio\\guides\\영상제작_요청추적표.md",
+        "pass": true
+      },
+      {
+        "check": "local_links_exist",
+        "path": "video-agent-studio\\guides\\영상제작_요청추적표.md",
+        "pass": true,
+        "missing": []
+      },
+      {
+        "check": "unique_ids_current_conversation",
+        "pass": true,
+        "actual": 45,
+        "expected": 45
+      },
+      {
+        "check": "unique_ids_local_w",
+        "pass": true,
+        "actual": 62,
+        "expected": 62
+      },
+      {
+        "check": "unique_ids_local_g",
+        "pass": true,
+        "actual": 28,
+        "expected": 28
+      },
+      {
+        "check": "unique_ids_local_addenda",
+        "pass": true,
+        "actual": 15,
+        "expected": 15
+      },
+      {
+        "check": "unique_ids_operational_guides",
+        "pass": true,
+        "actual": 3,
+        "expected": 3
+      },
+      {
+        "check": "no_accidental_japanese_prose",
+        "pass": true
+      },
+      {
+        "check": "balanced_table_columns",
+        "path": "video-agent-studio\\guides\\영상제작_마스터가이드.md",
+        "pass": true,
+        "bad_column_counts": []
+      },
+      {
+        "check": "balanced_table_columns",
+        "path": "video-agent-studio\\guides\\영상제작_요청추적표.md",
+        "pass": true,
+        "bad_column_counts": []
+      }
+    ],
+    "document_content_review": "Author reviewed coverage and conflicts against the read sources; no independent external document review performed."
+  },
+  "decisions": [
+    "Prioritize insights and mechanisms before narration and visual production.",
+    "Separate common rules from episode-specific numbers, assumptions, voice, thumbnails, shorts counts and permissions.",
+    "Current user DOCX and natural self-recording take precedence for this episode; original and proposals remain separate.",
+    "Remove unnecessary viewer-facing AI badges and negative disclaimers while retaining sources, periods, assumptions and uncertainty.",
+    "Distinguish frame sampling, continuous playback, actual listening, ASR and technical signal checks.",
+    "Preserve final/current reproducibility inputs, sources and evidence; do not require every rejected intermediate forever."
+  ],
+  "unresolved": [
+    "Unavailable historical original chats were not accessed; local W/G summaries are labeled secondary records.",
+    "Online publication state, latest policy validity, new user audio and finished-video quality were not verified here.",
+    "Current recording guide differs from the prior QA input hash; no prior verdict is carried over.",
+    "Parent owns entry links, storage inventory, protection/deletion manifests and actual cleanup."
+  ],
+  "actions_not_performed": {
+    "delete": false,
+    "move": false,
+    "render": false,
+    "install": false,
+    "external_transfer": false,
+    "tts_generation": false,
+    "upload": false,
+    "other_file_mutation": false,
+    "actual_listening": false,
+    "continuous_playback": false
+  },
+  "parent_integration_recommendations": [
+    "Link both guides from AGENTS.md, WORKFLOW.md and the basic guide within parent ownership.",
+    "Apply latest overrides before old AI-label, default-Jun, formal-style and conservative-vertical-layout clauses.",
+    "Protect these three outputs in the cleanup manifest.",
+    "Use the documented preservation policy in the separate storage cleanup."
+  ],
+  "next_owner": "parent_director",
+  "required_open_document_issues": 0
+}

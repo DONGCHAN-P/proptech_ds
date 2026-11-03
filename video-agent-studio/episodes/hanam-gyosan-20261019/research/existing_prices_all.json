@@ -1,0 +1,522 @@
+{
+  "period": "2026Q3",
+  "area": "83<=exclusive sqm<85",
+  "floor": ">=5",
+  "type": "매매/중개·직거래 포함",
+  "statistic": "median",
+  "unit": "만원",
+  "cancel": "cdealType OR cdealDay nonblank excluded",
+  "dedup": "no dedup: preserve distinct official items",
+  "checked_on": "2026-10-19",
+  "warning": "월별 수집시점은 sources.metadata; 이후해제 미반영 가능; 현재호가·현재전수 아님",
+  "sources": [
+    {
+      "file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\price_raw\\41450_202607.xml",
+      "sha256": "27b92466ff09acd71bfe2ee61fd3aeab21ff8422767e88fd7b7f86265d3f7118",
+      "items": 317,
+      "total": "317",
+      "metadata": {
+        "fetched_at": "2026-10-19T01:27:08.055418+09:00",
+        "items": 317,
+        "total": 317,
+        "result_code": "000",
+        "complete": true,
+        "endpoint": "https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev"
+      }
+    },
+    {
+      "file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\price_raw\\41450_202608.xml",
+      "sha256": "98d8c024c4f49f2ab14022614f814ba08040784f990e78feef2fa8fab7b5235e",
+      "items": 246,
+      "total": "246",
+      "metadata": {
+        "fetched_at": "2026-10-19T01:27:08.332668+09:00",
+        "items": 246,
+        "total": 246,
+        "result_code": "000",
+        "complete": true,
+        "endpoint": "https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev"
+      }
+    },
+    {
+      "file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\price_raw\\41450_202609.xml",
+      "sha256": "8f2ca90c4cc2044fff0f5a604837e0b26545026979cfa5e3a5e14cc18f142132",
+      "items": 182,
+      "total": "182",
+      "metadata": {
+        "fetched_at": "2026-10-19T01:27:08.596051+09:00",
+        "items": 182,
+        "total": 182,
+        "result_code": "000",
+        "complete": true,
+        "endpoint": "https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev"
+      }
+    }
+  ],
+  "results": [
+    {
+      "dong": "감이동",
+      "name": "e편한세상감일",
+      "n": 1,
+      "median_manwon": 165000,
+      "min_manwon": 165000,
+      "max_manwon": 165000
+    },
+    {
+      "dong": "감이동",
+      "name": "감일센트레빌",
+      "n": 3,
+      "median_manwon": 139000,
+      "min_manwon": 137000,
+      "max_manwon": 141000
+    },
+    {
+      "dong": "감이동",
+      "name": "감일수자인",
+      "n": 4,
+      "median_manwon": 148500.0,
+      "min_manwon": 145000,
+      "max_manwon": 161000
+    },
+    {
+      "dong": "감이동",
+      "name": "감일스윗시티10단지",
+      "n": 6,
+      "median_manwon": 125000.0,
+      "min_manwon": 82150,
+      "max_manwon": 138000
+    },
+    {
+      "dong": "감이동",
+      "name": "감일스타힐스",
+      "n": 2,
+      "median_manwon": 146500.0,
+      "min_manwon": 145000,
+      "max_manwon": 148000
+    },
+    {
+      "dong": "감이동",
+      "name": "감일푸르지오마크베르",
+      "n": 2,
+      "median_manwon": 143000.0,
+      "min_manwon": 137000,
+      "max_manwon": 149000
+    },
+    {
+      "dong": "감이동",
+      "name": "감일한라비발디",
+      "n": 8,
+      "median_manwon": 143250.0,
+      "min_manwon": 136500,
+      "max_manwon": 146000
+    },
+    {
+      "dong": "감일동",
+      "name": "감일금강펜테리움센트럴파크",
+      "n": 1,
+      "median_manwon": 138900,
+      "min_manwon": 138900,
+      "max_manwon": 138900
+    },
+    {
+      "dong": "덕풍동",
+      "name": "금강KCC",
+      "n": 3,
+      "median_manwon": 73000,
+      "min_manwon": 71500,
+      "max_manwon": 75000
+    },
+    {
+      "dong": "덕풍동",
+      "name": "더샵하남에디피스",
+      "n": 1,
+      "median_manwon": 146500,
+      "min_manwon": 146500,
+      "max_manwon": 146500
+    },
+    {
+      "dong": "덕풍동",
+      "name": "덕풍쌍용",
+      "n": 1,
+      "median_manwon": 66000,
+      "min_manwon": 66000,
+      "max_manwon": 66000
+    },
+    {
+      "dong": "덕풍동",
+      "name": "덕풍현대",
+      "n": 2,
+      "median_manwon": 63250.0,
+      "min_manwon": 62000,
+      "max_manwon": 64500
+    },
+    {
+      "dong": "덕풍동",
+      "name": "동원베네스트",
+      "n": 3,
+      "median_manwon": 94500,
+      "min_manwon": 90000,
+      "max_manwon": 95000
+    },
+    {
+      "dong": "덕풍동",
+      "name": "라인",
+      "n": 1,
+      "median_manwon": 69500,
+      "min_manwon": 69500,
+      "max_manwon": 69500
+    },
+    {
+      "dong": "덕풍동",
+      "name": "벽산블루밍",
+      "n": 2,
+      "median_manwon": 90450.0,
+      "min_manwon": 89200,
+      "max_manwon": 91700
+    },
+    {
+      "dong": "덕풍동",
+      "name": "서해",
+      "n": 2,
+      "median_manwon": 64250.0,
+      "min_manwon": 63000,
+      "max_manwon": 65500
+    },
+    {
+      "dong": "덕풍동",
+      "name": "정목e-미지",
+      "n": 2,
+      "median_manwon": 54900.0,
+      "min_manwon": 49800,
+      "max_manwon": 60000
+    },
+    {
+      "dong": "덕풍동",
+      "name": "진모루마을현대",
+      "n": 2,
+      "median_manwon": 92250.0,
+      "min_manwon": 91500,
+      "max_manwon": 93000
+    },
+    {
+      "dong": "덕풍동",
+      "name": "하남더샵센트럴뷰",
+      "n": 2,
+      "median_manwon": 112750.0,
+      "min_manwon": 107000,
+      "max_manwon": 118500
+    },
+    {
+      "dong": "덕풍동",
+      "name": "하남자이",
+      "n": 7,
+      "median_manwon": 79000,
+      "min_manwon": 70000,
+      "max_manwon": 84000
+    },
+    {
+      "dong": "덕풍동",
+      "name": "하남풍산센트레빌",
+      "n": 1,
+      "median_manwon": 95000,
+      "min_manwon": 95000,
+      "max_manwon": 95000
+    },
+    {
+      "dong": "덕풍동",
+      "name": "하남풍산아이파크(1단지)",
+      "n": 4,
+      "median_manwon": 111000.0,
+      "min_manwon": 106000,
+      "max_manwon": 118000
+    },
+    {
+      "dong": "덕풍동",
+      "name": "하남풍산아이파크(5단지)",
+      "n": 3,
+      "median_manwon": 104700,
+      "min_manwon": 102000,
+      "max_manwon": 119000
+    },
+    {
+      "dong": "덕풍동",
+      "name": "하남한솔솔파크",
+      "n": 4,
+      "median_manwon": 92900.0,
+      "min_manwon": 92200,
+      "max_manwon": 93000
+    },
+    {
+      "dong": "덕풍동",
+      "name": "한솔리치빌(1단지)",
+      "n": 7,
+      "median_manwon": 71500,
+      "min_manwon": 69000,
+      "max_manwon": 74000
+    },
+    {
+      "dong": "덕풍동",
+      "name": "한솔리치빌(2단지)",
+      "n": 4,
+      "median_manwon": 74250.0,
+      "min_manwon": 67000,
+      "max_manwon": 74800
+    },
+    {
+      "dong": "덕풍동",
+      "name": "한솔리치빌(3단지)",
+      "n": 2,
+      "median_manwon": 72000.0,
+      "min_manwon": 71000,
+      "max_manwon": 73000
+    },
+    {
+      "dong": "덕풍동",
+      "name": "한솔리치빌(5단지)",
+      "n": 2,
+      "median_manwon": 74000.0,
+      "min_manwon": 73000,
+      "max_manwon": 75000
+    },
+    {
+      "dong": "망월동",
+      "name": "미사강변 골든 센트로",
+      "n": 7,
+      "median_manwon": 136000,
+      "min_manwon": 101000,
+      "max_manwon": 140500
+    },
+    {
+      "dong": "망월동",
+      "name": "미사강변 센텀팰리스",
+      "n": 8,
+      "median_manwon": 125600.0,
+      "min_manwon": 122000,
+      "max_manwon": 131000
+    },
+    {
+      "dong": "망월동",
+      "name": "미사강변 파크뷰",
+      "n": 7,
+      "median_manwon": 120000,
+      "min_manwon": 117500,
+      "max_manwon": 128000
+    },
+    {
+      "dong": "망월동",
+      "name": "미사강변 하우스디 더 레이크",
+      "n": 7,
+      "median_manwon": 126000,
+      "min_manwon": 125000,
+      "max_manwon": 132000
+    },
+    {
+      "dong": "망월동",
+      "name": "미사강변루나리움",
+      "n": 4,
+      "median_manwon": 133750.0,
+      "min_manwon": 124000,
+      "max_manwon": 135000
+    },
+    {
+      "dong": "망월동",
+      "name": "미사강변스타힐스아파트",
+      "n": 3,
+      "median_manwon": 137000,
+      "min_manwon": 134500,
+      "max_manwon": 138000
+    },
+    {
+      "dong": "망월동",
+      "name": "미사강변파밀리에",
+      "n": 3,
+      "median_manwon": 134500,
+      "min_manwon": 132000,
+      "max_manwon": 135000
+    },
+    {
+      "dong": "망월동",
+      "name": "미사강변푸르지오",
+      "n": 6,
+      "median_manwon": 155250.0,
+      "min_manwon": 142500,
+      "max_manwon": 159000
+    },
+    {
+      "dong": "망월동",
+      "name": "미사강변한신휴플러스",
+      "n": 2,
+      "median_manwon": 112900.0,
+      "min_manwon": 111800,
+      "max_manwon": 114000
+    },
+    {
+      "dong": "망월동",
+      "name": "미사강변효성해링턴플레이스엔에이치에프",
+      "n": 3,
+      "median_manwon": 125000,
+      "min_manwon": 123000,
+      "max_manwon": 130000
+    },
+    {
+      "dong": "망월동",
+      "name": "미사레스티아",
+      "n": 13,
+      "median_manwon": 122000,
+      "min_manwon": 115000,
+      "max_manwon": 125000
+    },
+    {
+      "dong": "선동",
+      "name": "리버나인RIVERNINE",
+      "n": 6,
+      "median_manwon": 123850.0,
+      "min_manwon": 88000,
+      "max_manwon": 130000
+    },
+    {
+      "dong": "선동",
+      "name": "미사강변도시 베라체",
+      "n": 1,
+      "median_manwon": 118000,
+      "min_manwon": 118000,
+      "max_manwon": 118000
+    },
+    {
+      "dong": "선동",
+      "name": "미사강변리슈빌엔에이치에프",
+      "n": 1,
+      "median_manwon": 127000,
+      "min_manwon": 127000,
+      "max_manwon": 127000
+    },
+    {
+      "dong": "신장동",
+      "name": "대명강변타운",
+      "n": 11,
+      "median_manwon": 98000,
+      "min_manwon": 94500,
+      "max_manwon": 100000
+    },
+    {
+      "dong": "신장동",
+      "name": "동일하이빌",
+      "n": 2,
+      "median_manwon": 85850.0,
+      "min_manwon": 84000,
+      "max_manwon": 87700
+    },
+    {
+      "dong": "신장동",
+      "name": "진도로르빌",
+      "n": 1,
+      "median_manwon": 54500,
+      "min_manwon": 54500,
+      "max_manwon": 54500
+    },
+    {
+      "dong": "신장동",
+      "name": "하남석바대마을동신",
+      "n": 2,
+      "median_manwon": 50350.0,
+      "min_manwon": 35700,
+      "max_manwon": 65000
+    },
+    {
+      "dong": "신장동",
+      "name": "하남유니온시티에일린의뜰",
+      "n": 3,
+      "median_manwon": 116000,
+      "min_manwon": 116000,
+      "max_manwon": 123000
+    },
+    {
+      "dong": "창우동",
+      "name": "꿈동산신안",
+      "n": 9,
+      "median_manwon": 87000,
+      "min_manwon": 85000,
+      "max_manwon": 94500
+    },
+    {
+      "dong": "풍산동",
+      "name": "미사강변더샵센트럴포레",
+      "n": 2,
+      "median_manwon": 134250.0,
+      "min_manwon": 134000,
+      "max_manwon": 134500
+    },
+    {
+      "dong": "풍산동",
+      "name": "미사강변동원로얄듀크",
+      "n": 2,
+      "median_manwon": 125150.0,
+      "min_manwon": 123000,
+      "max_manwon": 127300
+    },
+    {
+      "dong": "풍산동",
+      "name": "미사강변동일하이빌",
+      "n": 3,
+      "median_manwon": 122500,
+      "min_manwon": 115000,
+      "max_manwon": 125000
+    },
+    {
+      "dong": "풍산동",
+      "name": "미사강변브라운스톤엔에이치에프",
+      "n": 3,
+      "median_manwon": 127000,
+      "min_manwon": 126000,
+      "max_manwon": 129300
+    },
+    {
+      "dong": "풍산동",
+      "name": "미사강변센트럴풍경채",
+      "n": 1,
+      "median_manwon": 140000,
+      "min_manwon": 140000,
+      "max_manwon": 140000
+    },
+    {
+      "dong": "풍산동",
+      "name": "미사강변아란티움",
+      "n": 7,
+      "median_manwon": 122500,
+      "min_manwon": 100000,
+      "max_manwon": 127000
+    },
+    {
+      "dong": "풍산동",
+      "name": "신안인스빌",
+      "n": 3,
+      "median_manwon": 135000,
+      "min_manwon": 134500,
+      "max_manwon": 136000
+    },
+    {
+      "dong": "풍산동",
+      "name": "이편한세상미사",
+      "n": 6,
+      "median_manwon": 122900.0,
+      "min_manwon": 120000,
+      "max_manwon": 129800
+    },
+    {
+      "dong": "풍산동",
+      "name": "하남힐즈파크푸르지오2단지",
+      "n": 1,
+      "median_manwon": 103000,
+      "min_manwon": 103000,
+      "max_manwon": 103000
+    },
+    {
+      "dong": "학암동",
+      "name": "위례롯데캐슬",
+      "n": 7,
+      "median_manwon": 170000,
+      "min_manwon": 135000,
+      "max_manwon": 175000
+    }
+  ]
+}

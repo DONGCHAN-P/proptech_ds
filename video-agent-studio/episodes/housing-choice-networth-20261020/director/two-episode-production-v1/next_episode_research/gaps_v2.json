@@ -1,0 +1,105 @@
+{
+  "task_id": "next-policy-source-prep-v1",
+  "revision": "v2_addendum",
+  "as_of_kst": "2026-10-26",
+  "focus_resolutions": [
+    {
+      "id": "G01",
+      "status": "closed_for_current_new_application_cases",
+      "affected_claim_ids": [
+        "D05",
+        "N04",
+        "D06"
+      ],
+      "resolution": "현행 기금의 일반/신생아 FAQ 각각1개월 전입·전입일부터2년 확인. R01의 현재 신규사례 상충 해소.",
+      "remaining": "과거 접수·계약 경과 적용은 별도; 일괄 소급 금지."
+    },
+    {
+      "id": "G02",
+      "status": "closed_for_regulatory_principle_and_debt_inclusion",
+      "affected_claim_ids": [
+        "P01",
+        "P02",
+        "P03",
+        "P04"
+      ],
+      "resolution": "현행 감독규정·세칙의 신규예외/기존부채 단서를 대조. 상품별DTI와 내부DSR 구별.",
+      "remaining": "P01 상품명별 예외 연결은2024 FSC와2026 현행 규정의 교차해석으로 표시. 은행 내부 심사·개인별 부채금액/스트레스 계산은 실행입력."
+    },
+    {
+      "id": "G03",
+      "status": "partially_closed_by_director_addendum",
+      "affected_claim_ids": [
+        "HFV2_01",
+        "HFV2_02",
+        "HFV2_03",
+        "HFV2_04",
+        "HFV2_05"
+      ],
+      "resolution": "10/19 시행 신혼1인소득 특례·동일1인DTI·차주·배우자확인·기존기준내합산방식을 main 직접열람 인계로 반영.",
+      "remaining": "자산/면적 별도상한 부재의 법적 단정은 미확인·이번 범위에서 보류."
+    },
+    {
+      "id": "G10",
+      "status": "open_execution_condition_not_blanket_policy_claim",
+      "affected_claim_ids": [
+        "M03",
+        "M04",
+        "M08"
+      ],
+      "question": "실행일·은행·채널별 수도권 MCI/MCG/생초특례 실제 취급과 보증가입 승인",
+      "verified": "담보차감 틀·서울5500·HF생초상품·상품별 방공제/보증 예외 확인.",
+      "unverified": "수도권 전은행 공통금지/재개 및 생초 자동면제; 신생아6억초과2025기관회신의2026통합보증세칙 직접대조.",
+      "use_until_resolved": "일반은행은 보증없음/승인시 조건부로 표시. 신생아6억초과는 공식회신상 차감 시나리오와 실행시 재확인을 함께 명시. 담보차감전 숫자를 실행한도로 제시하지 않음."
+    },
+    {
+      "id": "G11",
+      "status": "limited_document_version_gap",
+      "affected_claim_ids": [
+        "M09",
+        "P04"
+      ],
+      "question": "HF 보금자리론10월 개정 전체 반영 통합PDF",
+      "verified": "5월 확정본 + 현행 공식 상품/조회 + main의10/19 FAQ 인계.",
+      "unverified": "확보 PDF 전체가10월 최신합본이라는 단정.",
+      "use_until_resolved": "해당 교차확인 항목만 사용;5월본을 최신 전면 규정으로 표기하지 않음."
+    }
+  ],
+  "carried_forward": [
+    {
+      "id": "G04",
+      "status": "v1_carried_forward_no_new_check",
+      "use_until_resolved": "통상84㎡ 아파트와 적격 부속토지 가정만 사용"
+    },
+    {
+      "id": "G05",
+      "status": "v1_carried_forward_no_new_check",
+      "use_until_resolved": "기본 무감면 세액만 확정 계산, 200+500 자동합산·세금총액 단정 금지"
+    },
+    {
+      "id": "G06",
+      "status": "v1_carried_forward_no_new_check",
+      "use_until_resolved": "일반과세10% 사례를 명시하고 간이유형은 수치 보류"
+    },
+    {
+      "id": "G07",
+      "status": "v1_carried_forward_no_new_check",
+      "use_until_resolved": "채권 원금 전액을 비용으로 잡거나 6/9/12억 매매가에서 임의비율 계산 금지"
+    },
+    {
+      "id": "G08",
+      "status": "v1_carried_forward_no_new_check",
+      "use_until_resolved": "수수료 qualified, 임의50만원 같은 총액 미기재"
+    },
+    {
+      "id": "G09",
+      "status": "v1_carried_forward_no_new_check",
+      "use_until_resolved": "LTV·총액 전처리 상한만 제시, 대출가능액·필요소득·최종자기자본을 확정하지 않음"
+    }
+  ],
+  "user_priority_notes": [
+    "G05: 기본 무감면 세액과 조건부 최대 취득세 감면을 분리; 감면후 총납부세액·중복감면 확정 안함.",
+    "G07/G08: 매물별 실액은 별도입력/견적 필요. 다음 브리프의 계획예산 가정과 실제 견적을 구별.",
+    "사례가구 소득1억/부부합산8천은 구상 단계 입력이며 확정 사례 아님."
+  ]
+}

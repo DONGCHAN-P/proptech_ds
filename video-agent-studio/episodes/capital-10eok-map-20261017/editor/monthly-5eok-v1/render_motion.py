@@ -1,0 +1,31 @@
+﻿from pathlib import Path
+from functools import lru_cache
+import json,hashlib,time,subprocess,datetime
+from PIL import Image,ImageDraw
+P=Path(__file__).resolve().parent;E=P.parent.parent;O=E/'outputs/monthly-5eok-v1';C=O/'cache';R=E/'research/monthly-5eok-v1';B=Path('C:/Users/e2ken/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-124716-g054dffd133-win64-gpl/bin');summary=json.loads((R/'monthly_summary.json').read_text(encoding='utf8'));cache=json.loads((O/'cache_receipt.json').read_text(encoding='utf8'));static=Image.open(C/'static.png').convert('RGB');points=[tuple(p) for p in cache['chart_points']];out=O/'capital_5eok_monthly_2006-2026_v1.mp4';expected=1710
+@lru_cache(maxsize=4)
+def map_image(i):return Image.open(C/f'map_{i:03d}.png').convert('RGB')
+@lru_cache(maxsize=4)
+def panel(i):return Image.open(C/f'panel_{i:03d}.png').convert('RGBA')
+def state_at(f):
+ if f<90:return 0,0,1.,0.,'opening_hold'
+ if f>=1590:return 249,249,1.,249.,'ending_hold'
+ k=f-90;mi=k//6;phase=(k%6+1)/6;alpha=phase*phase*(3-2*phase);return mi,max(0,mi-1),alpha,max(0.,mi-1+phase),'monthly_motion'
+def compose(f):
+ mi,prev,alpha,pos,phase=state_at(f);im=static.copy();a=map_image(prev);b=map_image(mi);layer=b if alpha>=1 or mi==prev else Image.blend(a,b,alpha);im.paste(layer,(0,690));d=ImageDraw.Draw(im);k=int(pos);fract=pos-k;cursor=points[k] if k>=249 else (points[k][0]+(points[k+1][0]-points[k][0])*fract,points[k][1]+(points[k+1][1]-points[k][1])*fract);line=points[:k+1]+([cursor] if fract else []);
+ if len(line)>1:d.line(line,fill='#ff9f5b',width=4)
+ x,y=cursor;d.ellipse([x-6,y-6,x+6,y+6],fill='#ffb56f');pa=panel(mi);im.paste(pa,(0,380),pa);return im,{'frame':f,'month_index':mi,'month':summary[mi]['month'],'previous_month_index':prev,'alpha_smoothstep':alpha,'chart_time_position':pos,'phase':phase,'actual_map_under':summary[mi]['map_under'],'actual_map_observed':summary[mi]['map_observed'],'numbers_interpolated':False}
+args=[str(B/'ffmpeg.exe'),'-v','error','-y','-f','rawvideo','-pixel_format','rgb24','-video_size','1080x1920','-framerate','30','-i','pipe:0','-an','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-vf','setsar=1','-frames:v',str(expected),'-movflags','+faststart',str(out)];start=time.perf_counter();started=datetime.datetime.now(datetime.timezone.utc).isoformat();log=(O/'encoding_errors.log').open('wb');proc=subprocess.Popen(args,stdin=subprocess.PIPE,stdout=subprocess.DEVNULL,stderr=log,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0));(O/'render_started.json').write_text(json.dumps({'ffmpeg_pid':proc.pid,'started_at_utc':started,'target_frames':1710,'target_duration_s':57,'motion':'each-frame smoothstep map crossfade and moving chart cursor; actual discrete source counters'},indent=2),encoding='utf8');print('ACTUAL_MONTHLY_MOTION_RENDER_STARTED_PID='+str(proc.pid),flush=True);records=[]
+try:
+ for f in range(expected):
+  im,r=compose(f);proc.stdin.write(im.tobytes());records.append(r)
+  if f in [0,95,965,966,967,968,969,970,971,1589,1709]:im.save(O/f'source_motion_f{f:04d}.png')
+  if f%300==0:
+   elapsed=time.perf_counter()-start;(O/'render_progress.json').write_text(json.dumps({'frame':f,'target':1710,'elapsed_seconds':elapsed,'ffmpeg_pid':proc.pid,'month':r['month']}),encoding='utf8');print('RENDER_FRAME '+str(f)+'/1710 '+r['month']+' elapsed='+str(round(elapsed,1)),flush=True)
+ proc.stdin.close();code=proc.wait();assert code==0
+except BaseException:
+ proc.kill();proc.wait();raise
+finally:log.close()
+probe=json.loads(subprocess.check_output([str(B/'ffprobe.exe'),'-v','error','-show_streams','-show_format','-of','json',str(out)]));v=next(x for x in probe['streams'] if x['codec_type']=='video');assert int(v['nb_frames'])==1710 and v['width']==1080 and v['height']==1920 and v['avg_frame_rate']=='30/1' and v['sample_aspect_ratio']=='1:1';assert abs(float(probe['format']['duration'])-57)<.001 and not any(x['codec_type']=='audio' for x in probe['streams']);subprocess.run([str(B/'ffmpeg.exe'),'-v','error','-i',str(out),'-f','null','-'],check=True);(O/'motion_frame_log.json').write_text(json.dumps(records,separators=(',',':')),encoding='utf8')
+excerpt=O/'motion_excerpt_10s.mp4';subprocess.run([str(B/'ffmpeg.exe'),'-v','error','-y','-ss','32','-i',str(out),'-t','10','-an','-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-movflags','+faststart',str(excerpt)],check=True);ep=json.loads(subprocess.check_output([str(B/'ffprobe.exe'),'-v','error','-show_streams','-show_format','-of','json',str(excerpt)]));ev=next(x for x in ep['streams'] if x['codec_type']=='video');assert int(ev['nb_frames'])==300 and abs(float(ep['format']['duration'])-10)<.001
+receipt={'file':out.name,'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'bytes':out.stat().st_size,'duration_s':57,'frames':1710,'fps':30,'audio_streams':0,'probe':probe,'full_decode_exit_code':0,'render_seconds':time.perf_counter()-start,'started_at_utc':started,'completed_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'render_backend':'PIL frame composition streamed as rawvideo to FFmpeg, not concat of monthly stop frames','motion':'6 frame smoothstep endpoint opacity transition; fixed coordinates; every-frame chart reveal/cursor','displayed_numbers':'actual discrete contract month median-derived counts; never interpolated','new_api_calls':0,'paid_calls':0,'excerpt':{'file':excerpt.name,'sha256':hashlib.sha256(excerpt.read_bytes()).hexdigest(),'source_start_s':32,'duration_s':10,'frames':300,'period_approx':'2018.02~2022.03'},'actual_listening':False,'continuous_playback':False,'upload_performed':False};(O/'technical_receipt.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2),encoding='utf8');timeline={'fps':30,'total_frames':1710,'duration_s':57,'opening_frames':[0,90],'motion_frames':[90,1590],'ending_frames':[1590,1710],'month_frames':6,'months':[{'month':s['month'],'start_frame':90+i*6,'end_frame_exclusive':96+i*6} for i,s in enumerate(summary)],'first_month_total_frames':96,'last_month_total_frames':126};(O/'timeline.json').write_text(json.dumps(timeline,ensure_ascii=False,indent=2),encoding='utf8');print(json.dumps({k:receipt[k] for k in ['file','bytes','sha256','frames','duration_s','render_seconds']},ensure_ascii=False),flush=True)

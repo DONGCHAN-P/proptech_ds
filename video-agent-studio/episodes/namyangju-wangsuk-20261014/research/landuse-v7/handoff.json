@@ -1,0 +1,42 @@
+{
+  "checked_on": "2026-10-15",
+  "scope": "front visual revision v7; no script/audio regeneration",
+  "coordinate_accuracy": "published schematic, hand digitized; not cadastral/survey/WGS84 georegistered",
+  "status": "ready_for_visual_editor",
+  "input_revision": "approved script-v4-hook-outside / audio-v2 / existing map-led-v5 sources",
+  "outputs": [
+    "w1_north_geometry.json",
+    "w1_south_geometry.json",
+    "source_assets.json",
+    "source_rights.json",
+    "facts.json",
+    "source_assets/w1_north_detail_reference.png",
+    "source_assets/w1_south_detail_reference.png",
+    "source_assets/woori_bank_logo.png",
+    "source_assets/shinhan_logo.svg",
+    "source_assets/shinhan_ci_png.zip",
+    "source_assets/city_business_p6.png"
+  ],
+  "geometry_counts": {
+    "w1_north": 30,
+    "w1_south": 44
+  },
+  "verification": [
+    "Inspected actual p5 plans for A1 and A3 plus B17 p5.",
+    "Manually digitized north30 and south44 features against actual high-resolution PDF clip; same-source-PDF transforms supplied.",
+    "Downloaded official Woori Bank PNG and Shinhan SVG/CI ZIP; file sizes and SHA256 recorded.",
+    "Preserved all original PDFs and current production artifacts."
+  ],
+  "unresolved": [
+    "No source confirms enterprise-specific exact plot points.",
+    "No georegistered legal district boundary; macro is relational schematic.",
+    "Original LH raster direct derivative license unverified.",
+    "Kakao CI not delivered; company name fallback."
+  ],
+  "next_assignees": [
+    "/root/landuse_visual_v7",
+    "/root/rail_route_editor",
+    "/root"
+  ],
+  "required_display_label": "공개 계획자료를 바탕으로 재구성한 개략 배치도 · 정밀 경계/보행 경로 아님 · 계획 변경 가능"
+}

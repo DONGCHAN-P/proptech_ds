@@ -1,0 +1,33 @@
+{
+  "task_id": "top20-free-narration-v1",
+  "role": "narration",
+  "status": "free_audio_complete_frozen_source_for_sentencecut_v2",
+  "provider": "microsoft_edge_consumer_tts",
+  "voice": "ko-KR-InJoonNeural",
+  "raw_body_duration_s": 702.6482086167803,
+  "production_body_duration_s": 520.0812698412698,
+  "uniform_atempo_factor": 1.35,
+  "raw_scene_count": 26,
+  "sentences": 116,
+  "provider_words": 1086,
+  "outputs": [
+    "proposed_timing.json",
+    "proposed_timing_raw.json",
+    "audio_raw_manifest.json",
+    "audio_production_manifest.json",
+    "free-edge-atempo135-v1/narration_body.wav"
+  ],
+  "checks": [
+    {
+      "check": "165 source files unchanged and all source PCM slices validated in v2",
+      "result": "passed",
+      "evidence": "production-v2/validation_final.json"
+    }
+  ],
+  "new_paid_api_calls": 0,
+  "cash_cost_krw": 0,
+  "actual_listening_performed": false,
+  "asr_performed": false,
+  "note": "Original Jun budget preparation records are historical. Explicit free TTS selection superseded Jun. Current delivery: production-v2/handoff.json.",
+  "next_role": "director/editor/qa"
+}

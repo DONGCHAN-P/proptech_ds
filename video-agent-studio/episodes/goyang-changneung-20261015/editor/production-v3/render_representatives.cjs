@@ -1,0 +1,5 @@
+const fs=require('fs'),path=require('path');
+const r=path.resolve(__dirname,'../../../../..'),o=path.resolve(__dirname,'../../outputs/production-v3'),nm=path.join(r,'video/node_modules');
+const {bundle}=require(path.join(nm,'@remotion/bundler')),{selectComposition,renderStill}=require(path.join(nm,'@remotion/renderer'));
+(async()=>{fs.mkdirSync(o,{recursive:true});const serveUrl=await bundle({entryPoint:path.join(r,'video/src/changneung-v3/representative_entry.tsx'),outDir:path.join(__dirname,'representative-bundle'),publicDir:path.join(r,'video/public')});const browserExecutable=path.join(nm,'.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe');
+for(const [id,file] of [['ChangneungTransportRepV3','M003_transport_v3.png'],['ChangneungPriceRepV3','M004_price_v3.png'],['ChangneungLifeRepV3','M005_life_v3.png']]){const composition=await selectComposition({serveUrl,browserExecutable,id});await renderStill({serveUrl,browserExecutable,composition,frame:120,output:path.join(o,file)});console.log(file)}})().catch(e=>{console.error(e.stack);process.exitCode=1});

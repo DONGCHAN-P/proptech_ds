@@ -1,0 +1,133 @@
+{
+  "task_id": "JUN-QUALITY-V2-TWO-PORTRAIT-SHORTS",
+  "role": "editor",
+  "status": "v4_artifacts_complete_pending_Sagan_QA",
+  "summary": "v4 홍보38.17초·요약51.47초 완성. 승인 목재 집 표식만 교체하고 공개 홍보 설명의 내부 문구 제거. 음성 AAC/WAV·SRT 바이트 동일, 타이밍/막대/안전영역 유지. 전체 디코딩·146개 경계 통과, 변경 프레임4개 관찰. Sagan은 v4 최종 QA 대상.",
+  "input_revisions": {
+    "script": "jun-user-script-v1",
+    "audio": "Jun existing chapter WAV",
+    "alignment": "provider_character_alignment_verified",
+    "frozen_inputs": "input_versions.json",
+    "visual_house_asset": {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\visual\\jun-user-script-v1\\outputs\\S02_house_cutout_AI.png",
+      "sha256": "b77e9bc6e1d6c50c92bcfad81cc3477212c96e1c4d22a142c6d9f30995d35ae1",
+      "source_mode": "RGBA",
+      "source_dimensions": [
+        1347,
+        1167
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1327,
+        1143
+      ],
+      "fixed_container_px": [
+        270,
+        208
+      ],
+      "fixed_marker_px": [
+        241,
+        208
+      ],
+      "behavior": "Same asset, displayed size and orientation at all price markers; centers stay in their v3 slots"
+    }
+  },
+  "outputs": [
+    "outputs/jun-quality-v2/shorts/01_promo_jun_v4.mp4",
+    "outputs/jun-quality-v2/shorts/02_summary_jun_v4.mp4",
+    "outputs/jun-quality-v2/shorts/final_outputs.json",
+    "outputs/jun-quality-v2/shorts/publishing_metadata.json",
+    "editor/jun-quality-v2/shorts/edit_plan.json",
+    "editor/jun-quality-v2/shorts/placement_guide.md"
+  ],
+  "affected_scene_ids": [
+    "S02",
+    "S03",
+    "S25",
+    "S13",
+    "S14",
+    "S28"
+  ],
+  "checks": [
+    {
+      "check": "encoded_media_and_full_decode",
+      "result": "passed",
+      "evidence": "qa/portrait-shorts-v4-wood-house/technical_report.json"
+    },
+    {
+      "check": "v3_to_v4_audio_subtitles_timing_bars",
+      "result": "passed; AAC/WAV/SRT byte-identical; non-house source pixels unchanged",
+      "evidence": "v4_regression.json"
+    },
+    {
+      "check": "glyph_bounds_and_font_sizes_146",
+      "result": "passed",
+      "evidence": "layout_validation.json"
+    },
+    {
+      "check": "actual_encoded_changed_markers",
+      "result": "4 frames visually inspected; no clipping/overlap found",
+      "evidence": "v4_검수기록.md"
+    },
+    {
+      "check": "actual_listening_continuous_playback_independent_QA",
+      "result": "pending_Sagan",
+      "evidence": "issue_SHORTS-V4-SAGAN.json"
+    }
+  ],
+  "open_issue_ids": [
+    "SHORTS-QA-001",
+    "SHORTS-V4-SAGAN"
+  ],
+  "next_role": "Sagan independent QA on v4 → parent director PRIVATE upload",
+  "new_external_calls": 0,
+  "new_paid_tts_calls": 0,
+  "upload_performed": false,
+  "framework_decision": {
+    "hyperframes_entry_skill_read": true,
+    "hyperframes_project_built": false,
+    "actual_implementation": "Python/Pillow native portrait frame composition + existing local FFmpeg",
+    "editable_project": "editor/jun-quality-v2/shorts/build_shorts.py",
+    "reason": "사용자가 제작 구현 판단을 위임했고 기존 로컬 FFmpeg/HyperFrames를 허용했다. 고정 Jun PCM·문자 정렬·타이밍·시각 레이어를 결정적 프레임으로 합성하는 Pillow/FFmpeg 경로를 의도적으로 선택했다. 이번 목재 컷아웃 교체에도 적합하므로 엔진 이전은 필요하지 않다.",
+    "framework_equivalence_claim": false,
+    "render_evidence": "promo_render_command.json; summary_render_command.json; qa/portrait-shorts-v4-wood-house/technical_report.json",
+    "hyperframes_usage": "unknown; CLI usage probe/설치/업데이트/렌더 호출은 수행하지 않음",
+    "report_only_no_rebuild": false,
+    "engine_migration_needed": false
+  },
+  "coordination": {
+    "independent_reviewer_assigned_by_parent": "Sagan",
+    "independent_review_result": "pending; Sagan final QA target updated to v4; findings not observed by editor",
+    "hold": "v4 생성·자체 검수 완료. 기존 음성·소스·v1~v4 MP4 보존. 후속 QA 요청 전 추가 편집 없음.",
+    "version_change_notice": "issue_SHORTS-V4-SAGAN.json (parent relay; no direct agent-message capability)"
+  },
+  "upload_handoff": {
+    "user_private_upload_authorized": true,
+    "authorization_basis": "최신 사용자/상위 담당 지시",
+    "requested_visibility": "private",
+    "editor_upload_performed": false,
+    "status": "reported_blocked; no verified upload URL",
+    "reported_blocks": [
+      "YouTube API invalid_grant",
+      "CUA safety stop prevents URL verification"
+    ],
+    "block_evidence_scope": "상위 담당이 최신 메시지로 전달한 상태. editor가 API/CUA를 직접 재실행하거나 독립 확인하지 않음.",
+    "owner": "parent director",
+    "retry_performed_for_this_report": false
+  },
+  "final_video_hashes": [
+    {
+      "id": "promo",
+      "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-quality-v2\\shorts\\01_promo_jun_v4.mp4",
+      "sha256": "215968608a3a6d5159f35195e65378de4d6b9f8ed63f19e5d00bc97059997953",
+      "duration_s": 38.166666666666664
+    },
+    {
+      "id": "summary",
+      "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-quality-v2\\shorts\\02_summary_jun_v4.mp4",
+      "sha256": "cd72bb6c827b6695c2f24d6ed2474f7c6901943114443fe639c33168bcc703c9",
+      "duration_s": 51.46666666666667
+    }
+  ]
+}

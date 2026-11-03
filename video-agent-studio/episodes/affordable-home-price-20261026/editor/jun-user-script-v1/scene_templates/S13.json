@@ -1,0 +1,61 @@
+{
+  "scene_id": "S13",
+  "chapter": 4,
+  "message": "현금 1억의 가격",
+  "narration_text": "자, 현금 1억 원부터 보겠습니다. 준비금 2천만 원을 빼면 집값에 넣을 돈이 8천만 원 남습니다.\n\nLTV 70퍼센트라면 내 돈이 집값의 30퍼센트는 있어야 하잖아요. 그래서 8천만 원을 30퍼센트로 나누면, 계산상으로는 약 2억 6천6백만 원대가 나옵니다. 오늘은 조금 내려서 2억 6천6백만 원짜리 집을 예로 들게요.",
+  "paragraph_ids": [
+    "P032",
+    "P033"
+  ],
+  "claim_ids": [
+    "DOC",
+    "CALC"
+  ],
+  "material_type": "현금→가격 계산",
+  "asset_ids": [
+    "M13"
+  ],
+  "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "audio_revision": null,
+  "start": null,
+  "end": null,
+  "timing_basis": "UNLOCKED: awaiting actual Jun alignment",
+  "beats": [
+    {
+      "anchor": "준비금 2천만 원",
+      "action": "1억에서 2000만원 분리",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "8천만 원",
+      "action": "집값 투입 8000만원",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "30퍼센트로 나누면",
+      "action": "8000만원÷30%",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "2억 6천6백만 원짜리",
+      "action": "집값 2억6600만원 결과",
+      "start": null,
+      "end": null
+    }
+  ],
+  "status": "designed_not_rendered",
+  "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+  "fallback": "워터폴에서 70:30 막대로 이어지는 실제 수치 모션",
+  "template_status": "representative_authored",
+  "template": "S13",
+  "beat_ids": [
+    "S13.b01",
+    "S13.b02",
+    "S13.b03",
+    "S13.b04"
+  ],
+  "preview_seconds": null
+}

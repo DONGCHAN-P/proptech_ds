@@ -182,6 +182,7 @@ def svg(highlight: dict[str, str], *, width: int, height: int,
         label_halo: str = "#FFFFFF",
         scope: str | None = None,
         pins: list[dict] | None = None,
+        arcs: list[dict] | None = None,
         show_labels: bool = True) -> str | None:
     """수도권 지도 SVG.
 
@@ -251,6 +252,24 @@ def svg(highlight: dict[str, str], *, width: int, height: int,
             f'font-size="30" font-weight="700" fill="{label_color}" '
             f'stroke="{label_halo}" stroke-width="5" paint-order="stroke" '
             f'style="font-family:Pretendard">{nm}</text>')
+    # 두 점을 잇는 선. "강남에서 어느 쪽으로 가는가"처럼 **방향**이
+    # 주장인 지도는 점만 찍어서는 말이 안 된다. t 로 자라는 길이를 준다.
+    for arc in (arcs or []):
+        ax, ay = P(*to_utmk(arc["a"][1], arc["a"][0]))
+        bx, by = P(*to_utmk(arc["b"][1], arc["b"][0]))
+        t = max(0.0, min(1.0, arc.get("t", 1.0)))
+        if t <= 0:
+            continue
+        ex, ey = ax + (bx - ax) * t, ay + (by - ay) * t
+        col = arc.get("color", label_color)
+        parts.append(f'<line x1="{ax:.1f}" y1="{ay:.1f}" '
+                     f'x2="{ex:.1f}" y2="{ey:.1f}" stroke="{col}" '
+                     f'stroke-width="{arc.get("width", 5)}" '
+                     f'stroke-linecap="round" opacity="{arc.get("alpha", .85)}"/>')
+        if t >= 1.0 and arc.get("dot"):
+            parts.append(f'<circle cx="{bx:.1f}" cy="{by:.1f}" r="8" '
+                         f'fill="{col}" stroke="#FFFFFF" stroke-width="3"/>')
+
     # 단지 핀. 경계는 투영 미터라 위경도를 같은 좌표계로 옮겨 찍는다.
     pin_labels: list[tuple[float, float, str]] = []
     for pin in (pins or []):
@@ -274,23 +293,40 @@ def svg(highlight: dict[str, str], *, width: int, height: int,
     # 라벨끼리 겹치면 둘 다 못 읽는다. 겹치는 것만 아래로 밀고, 점과
     # 멀어지면 가는 선으로 이어 준다. 핀이 몰려 있는 지도(신도시·공장
     # 분포)에서는 이게 없으면 글자가 뭉개진다.
+    # 점도 피해야 한다. 글자만 서로 밀다 보면 **자기 점 위에** 내려앉아
+    # 점을 가려 버린다 (강남 핀이 그렇게 사라졌다). 그리고 아래로만 밀면
+    # 한 번 밀린 글자가 다음 글자를 또 밀어 맨 아래에 줄줄이 쌓인다.
+    # 위아래로 번갈아 자리를 찾는다.
+    dots = [(x, y) for x, y, _ in pin_labels]
+    STEP, GAP_Y, PIN_Y, PIN_X = 34.0, 34.0, 26.0, 14.0
+    tries = [0.0]
+    for k in range(1, 14):
+        tries += [STEP * k, -STEP * k]
+
     placed: list[tuple[float, float, float]] = []   # (x, y, 반폭)
     for px, py, text in sorted(pin_labels, key=lambda r: (r[1], r[0])):
-        half = _text_w(text, 30) / 2 + 8
-        ty = py - 28
-        for _ in range(40):
-            if not any(abs(ty - uy) < 34 and abs(px - ux) < half + uh
-                       for ux, uy, uh in placed):
-                break
-            ty += 34
-        # 그래도 못 피하면 캔버스 안으로 되돌린다. 화면 밖으로 밀려 아예
-        # 사라지는 것보다, 겹치더라도 보이는 편이 낫다.
-        if ty > height - 12:
-            ty = min(py - 28, height - 12)
+        half = _text_w(text, 30) / 2 + 4
+        base = py - 28
+        ty = base
+        for d in tries:
+            t = base + d
+            if t < 26 or t > height - 12:
+                continue
+            if any(abs(t - uy) < GAP_Y and abs(px - ux) < half + uh
+                   for ux, uy, uh in placed):
+                continue
+            # 글자 상자가 점을 덮나. 자기 점도 센다.
+            if any(abs(t - qy) < PIN_Y and abs(px - qx) < half + PIN_X
+                   for qx, qy in dots):
+                continue
+            ty = t
+            break
         placed.append((px, ty, half))
-        if ty > py - 24:
+        # 제자리를 벗어났으면 어느 점의 이름인지 선으로 묶어 준다.
+        if abs(ty - base) > 6:
+            y2 = ty - 22 if ty > py else ty + 10
             parts.append(f'<line x1="{px:.1f}" y1="{py:.1f}" '
-                         f'x2="{px:.1f}" y2="{ty - 22:.1f}" '
+                         f'x2="{px:.1f}" y2="{y2:.1f}" '
                          f'stroke="{label_color}" stroke-width="1.6" '
                          f'opacity=".45"/>')
         parts.append(

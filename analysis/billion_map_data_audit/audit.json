@@ -1,0 +1,620 @@
+{
+  "checked_on": "2026-10-17",
+  "source_rows": 4925669,
+  "source_bytes": 217650236,
+  "all_date_min": "2006-01-01 00:00:00",
+  "all_date_max": "2026-10-10 00:00:00",
+  "all_region_counts": {
+    "경기": 2866642,
+    "서울": 1395943,
+    "인천": 663084
+  },
+  "canceled_rows": 67894,
+  "duplicate_deal_hash_rows": 0,
+  "eligible_rows": 1568065,
+  "eligible_complexes": 9653,
+  "eligible_geocoded_complexes": 9595,
+  "eligible_missing_geo_complexes": 58,
+  "geo_master_rows": 20570,
+  "geo_valid_rows": 20404,
+  "raw_xml_count": 21343,
+  "raw_xml_bytes": 4230298375,
+  "raw_sample_paths": [
+    "raw\\rtms_rent\\2026\\08\\11110_202608.xml",
+    "raw\\rtms_rent\\2026\\08\\11140_202608.xml",
+    "raw\\rtms_rent\\2026\\08\\11170_202608.xml",
+    "raw\\rtms_rent\\2026\\08\\11200_202608.xml"
+  ],
+  "annual_regions": [
+    {
+      "region": "경기",
+      "year": 2006,
+      "transactions": 54090,
+      "complexes": 2170,
+      "geo_transactions": 54090
+    },
+    {
+      "region": "경기",
+      "year": 2007,
+      "transactions": 24435,
+      "complexes": 2060,
+      "geo_transactions": 24435
+    },
+    {
+      "region": "경기",
+      "year": 2008,
+      "transactions": 24735,
+      "complexes": 2271,
+      "geo_transactions": 24734
+    },
+    {
+      "region": "경기",
+      "year": 2009,
+      "transactions": 40727,
+      "complexes": 2435,
+      "geo_transactions": 40727
+    },
+    {
+      "region": "경기",
+      "year": 2010,
+      "transactions": 30426,
+      "complexes": 2519,
+      "geo_transactions": 30426
+    },
+    {
+      "region": "경기",
+      "year": 2011,
+      "transactions": 39943,
+      "complexes": 2680,
+      "geo_transactions": 39943
+    },
+    {
+      "region": "경기",
+      "year": 2012,
+      "transactions": 31212,
+      "complexes": 2668,
+      "geo_transactions": 31212
+    },
+    {
+      "region": "경기",
+      "year": 2013,
+      "transactions": 50135,
+      "complexes": 2820,
+      "geo_transactions": 50135
+    },
+    {
+      "region": "경기",
+      "year": 2014,
+      "transactions": 58218,
+      "complexes": 2922,
+      "geo_transactions": 58218
+    },
+    {
+      "region": "경기",
+      "year": 2015,
+      "transactions": 68161,
+      "complexes": 3045,
+      "geo_transactions": 68161
+    },
+    {
+      "region": "경기",
+      "year": 2016,
+      "transactions": 58411,
+      "complexes": 3078,
+      "geo_transactions": 58411
+    },
+    {
+      "region": "경기",
+      "year": 2017,
+      "transactions": 51412,
+      "complexes": 3045,
+      "geo_transactions": 51412
+    },
+    {
+      "region": "경기",
+      "year": 2018,
+      "transactions": 51170,
+      "complexes": 3112,
+      "geo_transactions": 51170
+    },
+    {
+      "region": "경기",
+      "year": 2019,
+      "transactions": 49706,
+      "complexes": 3226,
+      "geo_transactions": 49706
+    },
+    {
+      "region": "경기",
+      "year": 2020,
+      "transactions": 78786,
+      "complexes": 3401,
+      "geo_transactions": 78786
+    },
+    {
+      "region": "경기",
+      "year": 2021,
+      "transactions": 45301,
+      "complexes": 3403,
+      "geo_transactions": 45301
+    },
+    {
+      "region": "경기",
+      "year": 2022,
+      "transactions": 13788,
+      "complexes": 2817,
+      "geo_transactions": 13788
+    },
+    {
+      "region": "경기",
+      "year": 2023,
+      "transactions": 35338,
+      "complexes": 3254,
+      "geo_transactions": 35338
+    },
+    {
+      "region": "경기",
+      "year": 2024,
+      "transactions": 41763,
+      "complexes": 3452,
+      "geo_transactions": 41763
+    },
+    {
+      "region": "경기",
+      "year": 2025,
+      "transactions": 47496,
+      "complexes": 3567,
+      "geo_transactions": 47496
+    },
+    {
+      "region": "경기",
+      "year": 2026,
+      "transactions": 42998,
+      "complexes": 3579,
+      "geo_transactions": 42840
+    },
+    {
+      "region": "서울",
+      "year": 2006,
+      "transactions": 31314,
+      "complexes": 2615,
+      "geo_transactions": 31239
+    },
+    {
+      "region": "서울",
+      "year": 2007,
+      "transactions": 12064,
+      "complexes": 2202,
+      "geo_transactions": 12063
+    },
+    {
+      "region": "서울",
+      "year": 2008,
+      "transactions": 12925,
+      "complexes": 2300,
+      "geo_transactions": 12925
+    },
+    {
+      "region": "서울",
+      "year": 2009,
+      "transactions": 21401,
+      "complexes": 2608,
+      "geo_transactions": 21401
+    },
+    {
+      "region": "서울",
+      "year": 2010,
+      "transactions": 13114,
+      "complexes": 2416,
+      "geo_transactions": 13114
+    },
+    {
+      "region": "서울",
+      "year": 2011,
+      "transactions": 16437,
+      "complexes": 2670,
+      "geo_transactions": 16430
+    },
+    {
+      "region": "서울",
+      "year": 2012,
+      "transactions": 12500,
+      "complexes": 2382,
+      "geo_transactions": 12500
+    },
+    {
+      "region": "서울",
+      "year": 2013,
+      "transactions": 22697,
+      "complexes": 2762,
+      "geo_transactions": 22697
+    },
+    {
+      "region": "서울",
+      "year": 2014,
+      "transactions": 27690,
+      "complexes": 2967,
+      "geo_transactions": 27690
+    },
+    {
+      "region": "서울",
+      "year": 2015,
+      "transactions": 39778,
+      "complexes": 3254,
+      "geo_transactions": 39778
+    },
+    {
+      "region": "서울",
+      "year": 2016,
+      "transactions": 36790,
+      "complexes": 3209,
+      "geo_transactions": 36790
+    },
+    {
+      "region": "서울",
+      "year": 2017,
+      "transactions": 34032,
+      "complexes": 3112,
+      "geo_transactions": 34032
+    },
+    {
+      "region": "서울",
+      "year": 2018,
+      "transactions": 26213,
+      "complexes": 3091,
+      "geo_transactions": 26213
+    },
+    {
+      "region": "서울",
+      "year": 2019,
+      "transactions": 23830,
+      "complexes": 2936,
+      "geo_transactions": 23830
+    },
+    {
+      "region": "서울",
+      "year": 2020,
+      "transactions": 24258,
+      "complexes": 3131,
+      "geo_transactions": 24258
+    },
+    {
+      "region": "서울",
+      "year": 2021,
+      "transactions": 11588,
+      "complexes": 2634,
+      "geo_transactions": 11588
+    },
+    {
+      "region": "서울",
+      "year": 2022,
+      "transactions": 2644,
+      "complexes": 1313,
+      "geo_transactions": 2644
+    },
+    {
+      "region": "서울",
+      "year": 2023,
+      "transactions": 10444,
+      "complexes": 2074,
+      "geo_transactions": 10444
+    },
+    {
+      "region": "서울",
+      "year": 2024,
+      "transactions": 17877,
+      "complexes": 2507,
+      "geo_transactions": 17877
+    },
+    {
+      "region": "서울",
+      "year": 2025,
+      "transactions": 24253,
+      "complexes": 2794,
+      "geo_transactions": 24251
+    },
+    {
+      "region": "서울",
+      "year": 2026,
+      "transactions": 14102,
+      "complexes": 2686,
+      "geo_transactions": 14079
+    },
+    {
+      "region": "인천",
+      "year": 2006,
+      "transactions": 10636,
+      "complexes": 415,
+      "geo_transactions": 10569
+    },
+    {
+      "region": "인천",
+      "year": 2007,
+      "transactions": 7882,
+      "complexes": 429,
+      "geo_transactions": 7814
+    },
+    {
+      "region": "인천",
+      "year": 2008,
+      "transactions": 6657,
+      "complexes": 490,
+      "geo_transactions": 6629
+    },
+    {
+      "region": "인천",
+      "year": 2009,
+      "transactions": 6834,
+      "complexes": 461,
+      "geo_transactions": 6781
+    },
+    {
+      "region": "인천",
+      "year": 2010,
+      "transactions": 5389,
+      "complexes": 469,
+      "geo_transactions": 5323
+    },
+    {
+      "region": "인천",
+      "year": 2011,
+      "transactions": 6661,
+      "complexes": 503,
+      "geo_transactions": 6595
+    },
+    {
+      "region": "인천",
+      "year": 2012,
+      "transactions": 6393,
+      "complexes": 521,
+      "geo_transactions": 6340
+    },
+    {
+      "region": "인천",
+      "year": 2013,
+      "transactions": 11269,
+      "complexes": 568,
+      "geo_transactions": 11115
+    },
+    {
+      "region": "인천",
+      "year": 2014,
+      "transactions": 12437,
+      "complexes": 604,
+      "geo_transactions": 12262
+    },
+    {
+      "region": "인천",
+      "year": 2015,
+      "transactions": 14805,
+      "complexes": 612,
+      "geo_transactions": 14605
+    },
+    {
+      "region": "인천",
+      "year": 2016,
+      "transactions": 12560,
+      "complexes": 609,
+      "geo_transactions": 12395
+    },
+    {
+      "region": "인천",
+      "year": 2017,
+      "transactions": 10404,
+      "complexes": 594,
+      "geo_transactions": 10279
+    },
+    {
+      "region": "인천",
+      "year": 2018,
+      "transactions": 8940,
+      "complexes": 616,
+      "geo_transactions": 8827
+    },
+    {
+      "region": "인천",
+      "year": 2019,
+      "transactions": 10848,
+      "complexes": 624,
+      "geo_transactions": 10754
+    },
+    {
+      "region": "인천",
+      "year": 2020,
+      "transactions": 15213,
+      "complexes": 645,
+      "geo_transactions": 15023
+    },
+    {
+      "region": "인천",
+      "year": 2021,
+      "transactions": 9520,
+      "complexes": 645,
+      "geo_transactions": 9416
+    },
+    {
+      "region": "인천",
+      "year": 2022,
+      "transactions": 2970,
+      "complexes": 567,
+      "geo_transactions": 2943
+    },
+    {
+      "region": "인천",
+      "year": 2023,
+      "transactions": 8587,
+      "complexes": 653,
+      "geo_transactions": 8519
+    },
+    {
+      "region": "인천",
+      "year": 2024,
+      "transactions": 9356,
+      "complexes": 689,
+      "geo_transactions": 9271
+    },
+    {
+      "region": "인천",
+      "year": 2025,
+      "transactions": 8942,
+      "complexes": 708,
+      "geo_transactions": 8871
+    },
+    {
+      "region": "인천",
+      "year": 2026,
+      "transactions": 7560,
+      "complexes": 705,
+      "geo_transactions": 7460
+    }
+  ],
+  "annual_complexes": [
+    {
+      "year": 2006,
+      "complexes": 5200,
+      "geo_complexes": 5190,
+      "below_or_equal_1bn": 5173,
+      "single_trade_complexes": 616
+    },
+    {
+      "year": 2007,
+      "complexes": 4691,
+      "geo_complexes": 4682,
+      "below_or_equal_1bn": 4667,
+      "single_trade_complexes": 990
+    },
+    {
+      "year": 2008,
+      "complexes": 5061,
+      "geo_complexes": 5053,
+      "below_or_equal_1bn": 5036,
+      "single_trade_complexes": 1085
+    },
+    {
+      "year": 2009,
+      "complexes": 5504,
+      "geo_complexes": 5494,
+      "below_or_equal_1bn": 5474,
+      "single_trade_complexes": 887
+    },
+    {
+      "year": 2010,
+      "complexes": 5404,
+      "geo_complexes": 5394,
+      "below_or_equal_1bn": 5372,
+      "single_trade_complexes": 1073
+    },
+    {
+      "year": 2011,
+      "complexes": 5853,
+      "geo_complexes": 5840,
+      "below_or_equal_1bn": 5817,
+      "single_trade_complexes": 986
+    },
+    {
+      "year": 2012,
+      "complexes": 5571,
+      "geo_complexes": 5561,
+      "below_or_equal_1bn": 5554,
+      "single_trade_complexes": 1041
+    },
+    {
+      "year": 2013,
+      "complexes": 6150,
+      "geo_complexes": 6140,
+      "below_or_equal_1bn": 6136,
+      "single_trade_complexes": 912
+    },
+    {
+      "year": 2014,
+      "complexes": 6493,
+      "geo_complexes": 6480,
+      "below_or_equal_1bn": 6468,
+      "single_trade_complexes": 834
+    },
+    {
+      "year": 2015,
+      "complexes": 6911,
+      "geo_complexes": 6900,
+      "below_or_equal_1bn": 6869,
+      "single_trade_complexes": 737
+    },
+    {
+      "year": 2016,
+      "complexes": 6896,
+      "geo_complexes": 6884,
+      "below_or_equal_1bn": 6821,
+      "single_trade_complexes": 838
+    },
+    {
+      "year": 2017,
+      "complexes": 6751,
+      "geo_complexes": 6740,
+      "below_or_equal_1bn": 6610,
+      "single_trade_complexes": 883
+    },
+    {
+      "year": 2018,
+      "complexes": 6819,
+      "geo_complexes": 6808,
+      "below_or_equal_1bn": 6493,
+      "single_trade_complexes": 971
+    },
+    {
+      "year": 2019,
+      "complexes": 6786,
+      "geo_complexes": 6776,
+      "below_or_equal_1bn": 6244,
+      "single_trade_complexes": 954
+    },
+    {
+      "year": 2020,
+      "complexes": 7177,
+      "geo_complexes": 7166,
+      "below_or_equal_1bn": 6298,
+      "single_trade_complexes": 940
+    },
+    {
+      "year": 2021,
+      "complexes": 6682,
+      "geo_complexes": 6671,
+      "below_or_equal_1bn": 5344,
+      "single_trade_complexes": 1173
+    },
+    {
+      "year": 2022,
+      "complexes": 4697,
+      "geo_complexes": 4689,
+      "below_or_equal_1bn": 3938,
+      "single_trade_complexes": 1653
+    },
+    {
+      "year": 2023,
+      "complexes": 5981,
+      "geo_complexes": 5972,
+      "below_or_equal_1bn": 5073,
+      "single_trade_complexes": 1201
+    },
+    {
+      "year": 2024,
+      "complexes": 6648,
+      "geo_complexes": 6637,
+      "below_or_equal_1bn": 5456,
+      "single_trade_complexes": 1090
+    },
+    {
+      "year": 2025,
+      "complexes": 7069,
+      "geo_complexes": 7057,
+      "below_or_equal_1bn": 5584,
+      "single_trade_complexes": 1070
+    },
+    {
+      "year": 2026,
+      "complexes": 6970,
+      "geo_complexes": 6918,
+      "below_or_equal_1bn": 5324,
+      "single_trade_complexes": 1225
+    }
+  ]
+}

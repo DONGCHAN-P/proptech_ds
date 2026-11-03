@@ -1,0 +1,60 @@
+{
+  "zip_sha256": "fc8d9e959e2523f79254201827cff3f878907a8c677984c058469e36176cf2da",
+  "xlsx_sha256": "3ee5f1e160421bc461c01b59317a79d58a44d4a9716f2c2415f06822b9a35d4b",
+  "source_member": "02.주택_월간_아파트/01.매매가격지수/(월) 매매가격지수_아파트.xlsx",
+  "period_columns": 275,
+  "compared_cases": 41,
+  "selected_cases": "25 largest absolute baseline errors per administrative level",
+  "comparison_is_tail_selected": true,
+  "unmatched": [
+    {
+      "name": "경기 고양일산서구",
+      "origin": "2020-07-27 00:00:00",
+      "matching_rows": 0
+    },
+    {
+      "name": "경기 안산단원구",
+      "origin": "2022-07-27 00:00:00",
+      "matching_rows": 0
+    },
+    {
+      "name": "경기 고양일산동구",
+      "origin": "2020-07-27 00:00:00",
+      "matching_rows": 0
+    },
+    {
+      "name": "경기 고양덕양구",
+      "origin": "2020-07-27 00:00:00",
+      "matching_rows": 0
+    },
+    {
+      "name": "경기 수원영통구",
+      "origin": "2022-07-27 00:00:00",
+      "matching_rows": 0
+    },
+    {
+      "name": "경기 안산상록구",
+      "origin": "2021-01-27 00:00:00",
+      "matching_rows": 0
+    },
+    {
+      "name": "경기 안산단원구",
+      "origin": "2021-01-27 00:00:00",
+      "matching_rows": 0
+    },
+    {
+      "name": "광주",
+      "origin": "2022-07-27 00:00:00",
+      "matching_rows": 0
+    },
+    {
+      "name": "광주",
+      "origin": "2019-01-27 00:00:00",
+      "matching_rows": 0
+    }
+  ],
+  "target_replaced": false,
+  "source_measure": "REB apartment sales SURVEY price index, original unadjusted series",
+  "model_measure": "same complex/area matched trades; different estimand",
+  "role": "measurement sensitivity only; no official index treated as universal ground truth"
+}

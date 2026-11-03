@@ -1,0 +1,38 @@
+{
+  "streams": [
+    {
+      "codec_name": "mp3",
+      "sample_rate": "24000",
+      "channels": 1,
+      "bit_rate": "48000"
+    }
+  ],
+  "container_duration_s": 7.896,
+  "pcm": {
+    "duration_s": 7.896,
+    "pcm_frames": 189504,
+    "sample_rate": 24000,
+    "channels": 1,
+    "sample_width_bytes": 2,
+    "peak": 19035,
+    "rms_dbfs": -20.56109098335581,
+    "clipped_sample_count": 0,
+    "signal_first_above_minus60db_s": 0.285125,
+    "signal_last_above_minus60db_s": 6.81325,
+    "signal_boundary_note": "PCM 진폭 임계값; 실제 발화 경계 청취 아님"
+  },
+  "full_decode": "passed",
+  "listening": "not_performed",
+  "sha256": {
+    "sample.mp3": "18c35dbef4908047538e1ddc88df22f7542ce0d8e91747be7c722bd1d2600c97",
+    "sample.wav": "421981846f8b1bed99022072d78a56ed3ff161d43080a671d8674d21797d0614"
+  },
+  "status": "wordboundary_verified_not_listened",
+  "event_count": 7,
+  "normalized_text_coverage": "passed",
+  "max_native_overlap_s": 0,
+  "wordboundary_supported": true,
+  "full_script_generated": false,
+  "last_native_word_end_s": 6.813166,
+  "last_pcm_signal_end_s": 6.81325
+}

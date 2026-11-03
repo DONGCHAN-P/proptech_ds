@@ -1,0 +1,90 @@
+{
+  "task_id": "two-part-v4-script-v2",
+  "role": "writer",
+  "status": "v2_deliverables_self_verified_pending_new_script_gate_and_independent_QA",
+  "base_path": "writer/top20-split-v4/",
+  "input_revisions": {
+    "manifest": "scene_proposals_v2.json#/input_revisions",
+    "maps": "visual/top20-split-v4/map_assets.json displayed_detail_labels/displayed_overview_labels",
+    "final_lock": "input_lock_v2.json"
+  },
+  "outputs": [
+    {
+      "path": "part1_script_v2.md",
+      "sha256": "0ac3134f4f510853351276818b375d3a46861f4a31309b7d8077f2f4e4f7796a"
+    },
+    {
+      "path": "part2_script_v2.md",
+      "sha256": "6b181e20402acb1c337d60809405edac3bdd53171794ffba4b4fb45af0e3dcb9"
+    },
+    {
+      "path": "scene_proposals_v2.json",
+      "sha256": "5a2a098c23137d64fbc23fd861ca1eeff5a76554d397d22171dac54b091b8b3b"
+    },
+    {
+      "path": "validation_v2.json",
+      "sha256": "c064dbf8e8a21cc5d95897c7b4f32a7aad96af34cc0048b2796b7332ebbb6509"
+    },
+    {
+      "path": "preflight_writer_v2.json",
+      "sha256": "d1cc1d215d867db215c018a764c634ca85c21fd27532de8e8a7ffce9d699d05b"
+    },
+    {
+      "path": "input_freeze_validation_v2.json",
+      "sha256": "aeb3423df69afe1af0051f09924d21ecd3b207be45ce1b4b643ba373f4a049c9"
+    },
+    {
+      "path": "input_lock_v2.json",
+      "sha256": "c0a2dd474f701ded5545f71659c9aa391e1ab50f22f5431f710861c4a78be7d1"
+    }
+  ],
+  "preservation": "v1_preservation_manifest.json:13파일 보존. 기존 handoff.json도 보존.",
+  "counts": {
+    "parts": 2,
+    "regions": 20,
+    "scenes": 24,
+    "sentences": 174,
+    "selected_facility_labels_matched": 58,
+    "selected_price_comparisons": 20
+  },
+  "affected_scene_ids": [
+    "P01-INTRO",
+    "P01-R20~R11",
+    "P01-OUTRO",
+    "P02-INTRO",
+    "P02-R10~R01",
+    "P02-OUTRO"
+  ],
+  "estimate": {
+    "part1_s": 619.0,
+    "part2_s": 654.4,
+    "intro_s": [
+      41.3,
+      41.3
+    ],
+    "status": "estimate_only_no_new_TTS"
+  },
+  "checks": [
+    {
+      "check": "최신 요구·출처 필드·수치·표시명·v1 보존",
+      "result": "pass",
+      "evidence": "validation_v2.json; writer 자체207항목"
+    }
+  ],
+  "open_issue_ids": [
+    "W4V2-FEATURE-STATION-LABELS",
+    "W4V2-INDEPENDENT-QA-SCRIPT-GATE"
+  ],
+  "next_role": "director의 검토용 script 게이트 준비·독립QA 확인; 승인 후 narration",
+  "limits": "v2 원문 유지. 대표 상세58시설·특성역6곳 전체지도 표시명 대조. 특성역은 QA 확인 중. 픽셀/모션 재생·새TTS/본편 생성·독립QA 미실시.",
+  "issue_statuses": {
+    "W4V2-FEATURE-STATION-LABELS": "visual_fix_manifest_confirmed_QA_in_progress",
+    "W4V2-INDEPENDENT-QA-SCRIPT-GATE": "pending_independent_QA_and_new_script_gate"
+  },
+  "final_freeze": {
+    "scripts_unchanged": true,
+    "source_manifest_sha256": "ffa699de36ec7d2f7809ff5e8defce2dd8ef8a631364ac83580c923063fbdbb2",
+    "verification_sha256": "c064dbf8e8a21cc5d95897c7b4f32a7aad96af34cc0048b2796b7332ebbb6509",
+    "lock_sha256": "c0a2dd474f701ded5545f71659c9aa391e1ab50f22f5431f710861c4a78be7d1"
+  }
+}

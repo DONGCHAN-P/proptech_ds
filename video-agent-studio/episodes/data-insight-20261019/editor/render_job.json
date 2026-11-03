@@ -1,0 +1,68 @@
+{
+  "task_id": "data-insight-v1-final",
+  "inputs": [
+    "C:\\projects\\realestate_reco\\video\\src\\data-insight-v1\\data.json",
+    "C:\\projects\\realestate_reco\\video\\src\\data-insight-v1\\entry.tsx",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A01.png",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A02.jpg",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A03.jpg",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A04.jpg",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A05.gif",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A05_0.png",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A05_1.png",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A05_2.png",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A05_3.png",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A05_4.png",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A05_5.png",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A05_6.png",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A06.png",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A07.png",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A08.png",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A09.png",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A10.jpg",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A11.jpg",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A12.jpg",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\A13.png",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\bgm.wav",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\bold.woff2",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\office.mp4",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\pantry.mp4",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\regular.woff2",
+    "C:\\projects\\realestate_reco\\video\\public\\data-insight-v1\\team.mp4",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\data-insight-20261019\\scenes.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\data-insight-20261019\\script_v1_1.md",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\data-insight-20261019\\editor\\verify.py",
+    "C:\\projects\\realestate_reco\\video\\package-lock.json",
+    "C:\\projects\\realestate_reco\\video\\remotion.config.ts"
+  ],
+  "outputs": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\data-insight-20261019\\outputs\\v1\\data_insight_30s_v1.mp4",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\data-insight-20261019\\editor\\technical_verification.json"
+  ],
+  "steps": [
+    {
+      "argv": [
+        "C:/Program Files/nodejs/node.exe",
+        "C:\\projects\\realestate_reco\\video\\node_modules\\@remotion\\cli\\remotion-cli.js",
+        "render",
+        "C:\\projects\\realestate_reco\\video\\src\\data-insight-v1\\entry.tsx",
+        "DataInsightV1",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\data-insight-20261019\\outputs\\v1\\data_insight_30s_v1.mp4",
+        "--codec=h264",
+        "--crf=17",
+        "--concurrency=4",
+        "--log=error"
+      ],
+      "cwd": "C:\\projects\\realestate_reco\\video"
+    },
+    {
+      "argv": [
+        "C:\\projects\\realestate_reco\\tools\\python311\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\data-insight-20261019\\editor\\verify.py"
+      ],
+      "cwd": "C:\\projects\\realestate_reco"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C08P09",
+  "scene_id": "C08",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:07:54.763Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "0112504dd731d90153563b66688628bf60acc7643e7f680a8b170c3078e53a63",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "이 표에서 유용한 것은 자신이 생각하는 집값과 투자수익이 어느 칸에 있는지, 금리와 월세가 바뀌면 어느 방향으로 움직이는지입니다. 계산된 조건을 먼저 비교하고, 경계 주변을 더 촘촘하게 계산하면 판단에 필요한 범위를 좁힐 수 있습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 131,
+  "characters": 131,
+  "actual_credits": 52,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19183,
+    "character_limit": 40000,
+    "included_remaining": 20817,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:07:16.662Z",
+  "local_shadow_remaining_before": 20284,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "G09mGbLFGFNJrH3rsd4V",
+    "x-request-id": null,
+    "character-cost": "52",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:07:54 GMT"
+  },
+  "pcm_samples": 695016,
+  "pcm_duration_s": 15.76,
+  "provider_last_spoken_end_s": 15.84,
+  "artifact_sha256": {
+    "paragraphs/C08P09/audio.mp3": "c71acc6249ee8151483d783688ecf172b4a8f881d63ac279e7b4621453bda62b",
+    "paragraphs/C08P09/audio.wav": "9f388a3fffa34f59671874a917561a73da597b1c853c9247153c19c323e7efa5",
+    "paragraphs/C08P09/alignment.json": "f989268c18e73d22d3de4a93b7c47ddc13d62c7cb5dad73c4d93e466ec932acf",
+    "paragraphs/C08P09/normalized_alignment.json": "f989268c18e73d22d3de4a93b7c47ddc13d62c7cb5dad73c4d93e466ec932acf"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 20232,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:07:58.809Z"
+}

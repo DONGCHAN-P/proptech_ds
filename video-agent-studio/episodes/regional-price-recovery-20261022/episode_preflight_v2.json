@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0",
+  "status": "script_v2_preflight_filled_not_production_approval",
+  "episode_id": "regional-price-recovery-20261022",
+  "guide": "guides/제작_기본가이드.md",
+  "feedback_ledger": "guides/사용자_피드백_이력.md",
+  "baseline": {
+    "previous_video": {
+      "version": "gyosan-v5-jun",
+      "episode": "hanam-gyosan-20261019",
+      "video": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/production-v5-jun/gyosan_v5_jun.mp4",
+      "subtitles": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/production-v5-jun/gyosan_v5_jun.srt",
+      "script": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/script-review-v5/script_v5.md",
+      "voice": "ElevenLabs Jun",
+      "duration_seconds": 1075.7333333333333,
+      "youtube_url": "https://youtu.be/XWAWnSrz7FE",
+      "publication_status": "public",
+      "previous_video_url": "https://youtu.be/eLF3-1ZaraQ",
+      "report": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/release-prep-v5-jun/release_summary.json",
+      "sha256": "13abf7fc0b873036ad72c0b578251cb08e64ef514ecfe09fa636e26905ed214e"
+    },
+    "current_video": null,
+    "sha256": null,
+    "script_revision": "v2",
+    "audio_revision": null,
+    "brand_intro": null,
+    "brand_outro": null,
+    "bgm": null
+  },
+  "approvals": {
+    "topic": {
+      "decision_id": "regional-research-script-20261022",
+      "artifact_hashes": {},
+      "status": "authorized_research_and_draft_topic"
+    },
+    "script": {
+      "decision_id": null,
+      "artifact_hashes": {
+        "script_v2.md": "f4e006a65b69965e0e50728eecfeeebcc9ce3f3299e8647032c505b7384ccbfd"
+      },
+      "status": "draft_submitted_not_approved"
+    },
+    "budget": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "not_authorized_or_not_reached",
+      "credits_cap": null,
+      "cash_cap": null,
+      "automatic_retry_allowed": false
+    },
+    "completed": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "not_authorized_or_not_reached"
+    },
+    "pre_upload": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "not_authorized_or_not_reached",
+      "visibility": null
+    }
+  },
+  "story": {
+    "opening_question": "집값 다 올랐다는데, 왜 내 지역은 아직일까?",
+    "previous_episode_reference": "교산편 이후 독립 지역 데이터 분석; 기존 주거 방식 비교의 앞단",
+    "next_episode_promise": "고점 이후 공급·준공 후 미분양과 회복 속도의 관계 검증",
+    "order": [
+      "S001",
+      "S002",
+      "S003",
+      "S004",
+      "S005",
+      "S006",
+      "S007",
+      "S008",
+      "S009",
+      "S010",
+      "S011",
+      "S012"
+    ],
+    "each_section_answers": [
+      "reference_point",
+      "observed_path",
+      "recovery_distance",
+      "sample_limits"
+    ],
+    "candidate_scope": "not_applicable_no_complex_investment_ranking"
+  },
+  "visual_defaults": {
+    "dynamic_map_zoom": false,
+    "transient_location_insert": false,
+    "locator": "one_current_district_whole_plan_left_with_detail_rectangle",
+    "macro_block_pins": false,
+    "captions_white_box_body_continuous": true,
+    "caption_box_exceptions": [
+      "unvoiced_brand_intro",
+      "unvoiced_brand_outro",
+      "silent_CTA_hold"
+    ],
+    "time_explanations_horizontal_axis": true,
+    "map_labels_near_targets": true,
+    "ai_placeholder_requires_resolution_before_delivery": true,
+    "outro_gap_after_final_spoken_word_seconds": 3
+  },
+  "representative_previews": [
+    "7region_peak_chart",
+    "gyeonggi_threshold_change",
+    "sejong_period_window",
+    "supply_and_migration_source"
+  ],
+  "facts_required": [
+    "period_reference_peak_and_endpoint",
+    "same_complex_area_matching_and_cancelled_deal_filters",
+    "sample_count_and_sensitivity",
+    "sejong_start_and_gwangju_missing",
+    "price_vs_ownership_return",
+    "descriptive_factor_scope_and_source",
+    "official_index_crosscheck_before_public_release"
+  ],
+  "change_control": {
+    "issues": [],
+    "superseded_rules": [],
+    "unchanged_audio_reused": null,
+    "changed_scene_ids": [
+      "S001",
+      "S002",
+      "S003",
+      "S004",
+      "S005",
+      "S006",
+      "S007",
+      "S008",
+      "S009",
+      "S010",
+      "S011",
+      "S012"
+    ],
+    "single_timing_lock": null,
+    "package_frozen_before_hash": true
+  },
+  "qa": {
+    "timeline_font_bbox_and_stroke_all_cases": "unverified",
+    "actual_encoded_frames": "unverified",
+    "all_cut_boundaries_no_flash": "unverified",
+    "inset_matches_spoken_region": "unverified",
+    "station_locations": "unverified",
+    "leaders_do_not_cross": "unverified",
+    "semantic_caption_original_text_match": "unverified",
+    "protected_numbers_units_names": "unverified",
+    "caption_box_exceptions": "unverified",
+    "last_speech_plus_three_seconds": "unverified",
+    "full_decode": "unverified",
+    "continuous_playback_performed": false,
+    "actual_listening_performed": false,
+    "evidence_paths": [
+      "qa/script-v2/findings.json",
+      "qa/script-v2/recheck.json",
+      "qa/script-v2/claude_recheck.json",
+      "outputs/script-review-v2/package_checks.json",
+      "research/script-v2-factors/verified_examples.json"
+    ],
+    "required_open_issues": "Draft fixes closed as final scoped QA records; official-index public-release crosscheck remains open; no audio/video QA claimed",
+    "caption_display_mapping_and_numeric_value_match": "unverified",
+    "actual_block_plan_and_locator": "unverified",
+    "district_area_vs_planned_station_distinguished": "unverified"
+  },
+  "release": {
+    "longform": null,
+    "shorts": [],
+    "title_description_sources_chapters": "unverified",
+    "thumbnail": "unverified",
+    "actual_platform_privacy": "unverified",
+    "processing": "unverified",
+    "studio_copyright": "unverified",
+    "telegram_notice_receipt": "output/telegram_deliveries/regional_script_v2.json"
+  },
+  "retention": {
+    "keep": [
+      "final_uploaded_files",
+      "reproduction_source_and_dependencies",
+      "raw_research",
+      "rights_sources",
+      "approval_and_QA_records",
+      "reusable_brand_maps_audio_templates"
+    ],
+    "delete_candidates_manifest": null,
+    "dependency_audit_complete": false,
+    "deletion_executed": false
+  },
+  "vertical_video": {
+    "config": "config/vertical_video_safe_area.json",
+    "profile": "cross_platform_conservative",
+    "bounds_font_validation": "required_before_render",
+    "ui_simulation": "required_before_release",
+    "actual_device_playback": "unverified",
+    "old_burned_in_subtitle_position_reusable": false
+  },
+  "channel_style_contract": {
+    "guide": "video-agent-studio/guides/채널_톤앤매너와_복기루프.md",
+    "tokens": "config/channel_style_tokens.json",
+    "baseline_primary": "namyangju-wangsuk-20261014/readability-cta-v15",
+    "baseline_secondary": "video/out/newtown-v14-release.mp4",
+    "loop": [
+      "freeze_actual_reference_frames_once",
+      "compare_same_message_scene",
+      "fix_style_and_information_hierarchy",
+      "independent_QA_three_representative_scenes",
+      "expand_to_full",
+      "review_all_cut_boundaries_and_changed_scenes"
+    ],
+    "external_references": "explanation techniques supplement channel grammar",
+    "visual_review_v2_is_final_style": false
+  },
+  "representative_style_QA": "required_before_full_render",
+  "updated_at": "2026-10-22T11:57:46.519140+00:00"
+}

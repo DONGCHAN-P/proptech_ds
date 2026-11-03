@@ -1,0 +1,8 @@
+import React from 'react';
+import geo from '../../public/namyangju-map-led-v6/outside_geometry.json';
+import type {MapLedProject} from './types';
+export function PriceGeo({project,outside}:{project:MapLedProject;outside:boolean}){
+ const bounds=outside?geo.bounds:[127.145,37.608,127.193,37.705],scale=Math.min(850/((bounds[2]-bounds[0])*.791),550/(bounds[3]-bounds[1])),pr=(p:number[])=>[480+(p[0]-(bounds[0]+bounds[2])/2)*.791*scale,325+((bounds[1]+bounds[3])/2-p[1])*scale];
+ const pts=project.map.block_points.filter(p=>['W1-B17','W2-A1','W2-A3'].includes(p.id)).map(p=>({...p,color:'#2f6fed'}));if(outside)pts.push({id:'CN-S5',name:'창릉 S5',lon:126.8688334,lat:37.6231684,status:'guide point',color:'#698d70'});
+ return <div style={{position:'absolute',left:80,top:190,width:960,height:650,overflow:'hidden',borderRadius:16,background:'#eeece5'}}><svg width={960} height={650}>{(outside?geo.paths:project.map.paths).map((p,i)=><path key={i} d={p.points.map((pt,j)=>{const q=pr(pt);return `${j?'L':'M'}${q[0]},${q[1]}`}).join(' ')} fill="none" stroke={p.kind==='water'?'#a8cdd9':'#ccc6b7'} strokeWidth={p.kind==='water'?3:1}/>)}{pts.map((p,i)=>{const q=pr([p.lon,p.lat]),dy=p.id==='W2-A1'?-23:p.id==='W2-A3'?32:-15;return <g key={p.id}><circle cx={q[0]} cy={q[1]} r={7} fill={p.color} stroke="white" strokeWidth={2}/><text x={q[0]+(outside?-15:15)} y={q[1]+dy} textAnchor={outside?'end':'start'} fontSize={25} fontWeight={700} fill={p.color} stroke="#f6f4ef" strokeWidth={6} paintOrder="stroke">{p.name}</text></g>})}<text x={25} y={35} fontSize={23} fill="#646a6d">{outside?'서울 서북부 창릉 ↔ 동북부 왕숙':'왕숙1 남부 ↔ 왕숙2'}</text><text x={25} y={625} fontSize={18} fill="#646a6d">LH 공식 안내점 · 경계·출입구 아님 · © OpenStreetMap contributors</text></svg></div>
+}

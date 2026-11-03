@@ -1,0 +1,22 @@
+{
+  "task_id": "video-maintenance-20261027-retention-independent-qa",
+  "status": "approved",
+  "approved": true,
+  "required_open": 0,
+  "delete_manifest_sha256": "17036eee0bd0f5fcb1bbc49b712fdb5592d1a7c6d4fbce40a80ddbf164d53e40",
+  "execute_cleanup_ps1_sha256": "661fedd08b86a3d0610de617925c50d016e49604dd8959740074d8913a14c133",
+  "protected_hashes_sha256": "42aa8905f41267b39eac1ddf93f4a159c67e99db11fe7c873804a758137668c3",
+  "artifacts": {
+    "review": "C:/projects/realestate_reco/docs/video-maintenance-20261027/retention_review.json",
+    "handoff": "C:/projects/realestate_reco/docs/video-maintenance-20261027/retention_handoff.json"
+  },
+  "input_version": "delete_manifest 24,230 files / 14,397,437,441 logical bytes; protected 1,536 rows; authorized guide-only baseline update",
+  "validation": "삭제/CSV 구조·보호/참조/사본 원본·reparse 검증 통과. 보호목록 전량 실제 SHA 확인 후 가이드 단일 변경은 별도 재검증. 매니페스트와 실행코드 SHA 불변.",
+  "resolved_issue": "RET-001: 기본가이드 28,323→28,855 bytes 변경. 이전 보호목록 SHA 일치·정확히 1행 갱신·현재 SHA 일치 확인.",
+  "unresolved": [],
+  "affected_scenes": [],
+  "affected_scope": "공통 저장공간 정리",
+  "next_owner": "부모/총괄",
+  "next_actions": "검토된 코드/매니페스트/보호 기준을 사용. 실행 후 파일별 삭제·실패 로그, 갱신 보호목록 기준 보존 해시, shelf 진입점, 의도된 공통문서 변경을 확인. 논리 삭제량과 드라이브 여유공간 관측 차이를 분리.",
+  "boundaries": "본 담당은 삭제·이동·렌더·인터넷·유료 호출 없이 검토/핸드오프 두 JSON만 작성. 부모 dryrun은 부모 보고로 구분."
+}

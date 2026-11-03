@@ -1,0 +1,66 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": false,
+  "api_error_status": null,
+  "duration_ms": 330556,
+  "duration_api_ms": 330370,
+  "ttft_ms": 300515,
+  "ttft_stream_ms": 32399,
+  "time_to_request_ms": 182,
+  "num_turns": 2,
+  "result": "검수 완료. 제공된 범위(실제 인코딩 표본 프레임·변경기록·보존 영수증) 내에서 이번 자막 재분할 변경에 **필수 문제 없음**으로 판정하여 승인했습니다.\n\n- **artifact_sha256**: `28b2623a…273b8` (현재 MP4)\n- **승인**: true / 필수 이슈 0건\n- **권고 2건**: 어구 중간 분할점 정리, '매수→매매' 라벨 통일(둘 다 선택)\n- **범위 한계 명시**: 연속재생·직접청취·Studio/ContentID·독립 BBox 재측정은 미수행(했다고 주장하지 않음)",
+  "stop_reason": "end_turn",
+  "session_id": "a5b19bfe-a830-4b9e-a06a-067ce3fbd011",
+  "total_cost_usd": 1.2467859999999997,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 95544,
+    "cache_read_input_tokens": 68532,
+    "output_tokens": 24614,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 95544,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-4-8": {
+      "inputTokens": 4,
+      "outputTokens": 24614,
+      "cacheReadInputTokens": 68532,
+      "cacheCreationInputTokens": 95544,
+      "webSearchRequests": 0,
+      "costUSD": 1.2467859999999997,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000
+    }
+  },
+  "permission_denials": [],
+  "structured_output": {
+    "artifact_sha256": "28b2623aed5b74478a113ab453825cb809311c7bc46ce5f94b1c90cc009273b8",
+    "approved": true,
+    "required_issues": [],
+    "recommended": [
+      "[선택·줄바꿈] 몇몇 두 줄 분할이 어구 중간에서 끊깁니다(예: C05_P022V7Q003 '이자의|비중', C02_P007V7Q005 '4%,|6%', C09_P047V7Q001 '300만원|안에', C05_P023V7Q001 '매달|갚은'). 숫자·단위는 모두 보존되고 읽는 데 지장은 없으나, 이후 재렌더 시 분할점을 어절 경계로 옮기면 가독성이 더 올라감(필수 아님).",
+      "[선택·표기, 무변경 장면] 35.067s '비교 조건' 설정 카드 라벨 '매수'가 제목·썸네일·대출금리 차트의 '매매'와 다른 표기로 남아 있음(이전 검수 이월, 이번 변경 범위 밖). 의미·수치 영향은 없으나 자막을 재번인한 김에 다음 재렌더에서 '매매'로 통일하면 표기 일관성이 올라감."
+    ],
+    "coverage_notes": [
+      "[범위·방법] 제공된 실제 인코딩 표본 자막 크롭(변경 큐)과 전체해상도 네이티브 프레임 8장, 변경기록(342→206), source/producer/EDL 보존 영수증만 검토. 연속재생·직접청취·Studio/ContentID·독립 BBox 재측정·전체 모형 재계산은 미제공이며 수행하지 않음(했다고 주장하지 않음).",
+      "[큐 보존·타이밍·경계] 고립 서술어 짧은 큐 47개 제거(short_cues_after 0), 342→206큐로 재분할·병합. 자막 텍스트·어절 2272개 순서·54문단 보존, 순서 무중첩, SRT 반올림 최대 0.5ms, 총길이 1525.27s·오디오(바이트 동일, 재TTS 없음)·메타데이터·설명·썸네일 SHA 불변. video(자막 재번인)·SRT만 교체됨.",
+      "[의미 단위·숫자/단위] 표본 전 큐에서 고립 서술어 잔존 없음. 숫자는 단위와 함께 보존(2억5천만원·300만원·연 2%·4%/6%·3억6천만원·3억5천950만원·1.1×1.1=1.21배·7억1천300만원·5억2천500만원 등), 이미 승인된 대본·잠긴 모형과 일치하여 재산출 생략. 일부 분할점만 어구 중간(권고 사항).",
+      "[글자잘림·영역침범·두 줄·시점] 표본 크롭과 전체프레임 8장 모두 자막이 흰 띠 안쪽에 좌우 여백을 두고 최대 2줄로 표시—글자잘림·푸터/장면 충돌 미관찰. 짧은 큐 병합으로 체류시간이 개선되고 큐 시작 간격은 수초 수준. 단, 헤드리스 Range BBox 게이트(0.5px 공차·1600px)와 표본 프레임 근거이며 큐별 체류시간·독립 BBox 재측정은 미수행.",
+      "[장면 연결·이월] 표본 자막이 장면과 일치(비교 조건·대출잔액 흐름·환율 ×1.21·대출금리 막대·위험 타임라인·생활 계획). v6 어휘 교체(대출잔액·한국 돈으로 환산한 자산) 반영 확인. 무변경 영역의 이전 승인은 제공 범위 내에서만 재사용했고, '매수' 카드 라벨은 이월 사항(권고)으로 남김."
+    ]
+  },
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "uuid": "e6f1899c-f7ac-44a2-8964-d8ea56b24b08"
+}

@@ -1,0 +1,23 @@
+{
+  "issue_id": "FP59-USAGE",
+  "affected_scene_ids": [
+    "L004"
+  ],
+  "affected_claim_ids": [
+    "FP59-FIGURE",
+    "P2-59-EXCLUSIVE"
+  ],
+  "problem": "공간감 예시가 가락시영 원형 또는 논문 표본단지 평면도로 오해될 가능성, 논문 59㎡의 전용 정의 미확인.",
+  "evidence": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\regional-price-recovery-20261022\\research\\readable-v2\\floorplan_facts.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\regional-price-recovery-20261022\\research\\readable-v2\\paper59_check.json"
+  ],
+  "proposal": "caption의 보조 예시·논문 표본단지 아님 표시를 필수 유지. 논문 문장에는 전용을 덧붙이지 않음. 공급84.4583㎡를 전용84타입으로 표시하지 않음.",
+  "impact": "writer 문구 및 visual 평면도 캡션에만 반영. 같은 단지84 추가 없음. 재이용 권한 범위는 rights 필드의 미확인 상태를 승계.",
+  "recipients": [
+    "director",
+    "writer",
+    "visual"
+  ],
+  "delivery": "직접 에이전트 메시지 도구 없음; 담당 폴더 이슈 파일로 전달"
+}

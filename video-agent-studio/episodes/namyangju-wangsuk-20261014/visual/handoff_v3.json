@@ -1,0 +1,14 @@
+{
+  "role": "visual",
+  "revision": "visual-v3",
+  "input_versions": ["input-v1", "script-v2", "scenes-v2", "facts-v1", "visual-v2"],
+  "status": "regional_map_and_stage_card_ready",
+  "outputs": ["visual/assets_v3.json", "visual/source_plan_v3.md", "visual/regional_osm_v3.json", "visual/regional_meta_v3.json", "visual/outputs/S002_namyangju_regional_osm_v3.png", "visual/outputs/S005_jobs_stage_v3.svg", "visual/notification_v3.json"],
+  "validation": ["10개 실제 자산파일 실존 확인", "실제 OSM 요소 5615개·12지역명 좌표", "지역 투영 경도 cos 보정·북상향", "지역지도 실제 PNG 1920x1080 육안 확인", "OSM 원데이터와 출처 보존", "S005 facts-v1 진행단계 대조", "editor의 S001/S007/S008 대표PNG 렌더 확인 전달받음"],
+  "unresolved": ["모바일 축소 검수 미실시", "최신 법정경계 전수대조 미완료", "실제 장소사진 미확보", "S005 래스터 가독성 편집 검수 필요"],
+  "restrictions": ["공식 JPG 2개 KOGL3 출처표시·변경금지·전체원본정지표시", "지역지도는 생활권 경계·도보권·철도 운영상태 판정 근거 아님", "OSM 출처 레이어를 자막으로 가리지 않음"],
+  "notification": {"sent": true, "evidence": "visual/notification_v3.json", "message_type": "short_status_text_only"},
+  "next_owner": "director/editor",
+  "paid_services_used": false,
+  "common_files_modified": false
+}

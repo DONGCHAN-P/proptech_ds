@@ -1,0 +1,24 @@
+{
+  "issue_id": "MAP-CLEAN-V1-LISTENING-AND-INTEGRATION",
+  "scene_id": "P01-CRITERIA",
+  "problem": "실제 청취·독립 음성 검수 및 공통 시간표 반영은 미실시.",
+  "evidence": [
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/map-clean-v1/verification.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/map-clean-v1/timing_proposals.json"
+  ],
+  "proposal": "두 문장 전체와 자연 꼬리를 삽입. 숫자 2026·5·10·83~85·11월3일 및 마지막 구했습니다 발음을 청취 검수.",
+  "impact": {
+    "changed_scene_ids": [
+      "P01-CRITERIA"
+    ],
+    "new_length_s": 12.468730158730159,
+    "timing_delta_s": 12.468730158730159,
+    "delta_basis": "new_insert_only; final_placement_owned_by_director"
+  },
+  "next_roles": [
+    "director",
+    "editor",
+    "independent QA"
+  ],
+  "actual_listening": false
+}

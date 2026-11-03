@@ -1,0 +1,22 @@
+{
+  "task_id": "3-native-vertical-shorts-Jun-v1",
+  "status": "3_mp4s_technical_passed_handed_to_parent_QA",
+  "version": "native-v2",
+  "output_manifest": "outputs/top20-split-v4/jun-and-shorts-v1/shorts/shorts_delivery_manifest.json",
+  "source_manifest": "editor/top20-split-v4/jun-and-shorts-v1/shorts/source_manifest.json",
+  "projects": "editor/top20-split-v4/jun-and-shorts-v1/shorts/native-v2/<short_id>/",
+  "input_versions": "Per-project input_manifest.json freezes lock/approved script/chart facts/photo files/local fonts/GSAP/master WAV and exact render-source SHA256.",
+  "validation": "All3 1080x1920/30fps/SAR1:1/48k stereo; full A/V decode; audio PCM correlation >0.9998. 78 encoded proof frames. Native-v2 end-only check passed; unchanged 4820 glyphs/22 price anchors/84 cues independent source QA reused.",
+  "affected_scenes": [
+    "SHORT01-PROMO-CTA",
+    "SHORT02-R20-R16-CTA",
+    "SHORT03-R15-R11-CTA"
+  ],
+  "unresolved": [
+    "Parent independent encoded QA pending; actual listening and continuous playback not performed by editor."
+  ],
+  "next_owner": "parent director + independent QA",
+  "latest_instruction": "No further renders/video edits; handoff/source manifests complete.",
+  "paid_TTS_API_calls": 0,
+  "uploads": 0
+}

@@ -1,0 +1,74 @@
+{
+  "task_id": "shorts-ui-v2-20261104",
+  "max_parallel_jobs": 2,
+  "workers_per_job": 2,
+  "quality": "delivery",
+  "commands": [
+    {
+      "short_id": "SHORT01-PROMO",
+      "argv": [
+        "npx.cmd",
+        "--no-install",
+        "hyperframes",
+        "render",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\shorts-ui-v2-20261104\\SHORT01-PROMO",
+        "--workers",
+        "2",
+        "--quality",
+        "delivery",
+        "--fps",
+        "30",
+        "--output",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-split-v4\\shorts-ui-v2-20261104\\short01_promo_Jun_ui_v2.mp4"
+      ],
+      "cwd": "C:\\projects\\realestate_reco",
+      "lock_sha256": "7a10b6e36aff321ffae1664f30a934b843c2074284aa84dcd03745073b010e38",
+      "master_audio_sha256": "067b90a754133830681f5da8c16bc2442d245f41c0814b1c4491da9656050598",
+      "input_manifest": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\shorts-ui-v2-20261104\\SHORT01-PROMO\\input_manifest.json"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "argv": [
+        "npx.cmd",
+        "--no-install",
+        "hyperframes",
+        "render",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\shorts-ui-v2-20261104\\SHORT02-R20-R16",
+        "--workers",
+        "2",
+        "--quality",
+        "delivery",
+        "--fps",
+        "30",
+        "--output",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-split-v4\\shorts-ui-v2-20261104\\short02_ranks20_16_Jun_ui_v2.mp4"
+      ],
+      "cwd": "C:\\projects\\realestate_reco",
+      "lock_sha256": "b720a9cf0cb5ed317a047b5cbca617ea8189ca7e2332caccaa68c392fd92502b",
+      "master_audio_sha256": "ad1c619e89b98e068ea8ae8cdf577421a95f6e579898f7e29c3d019396e90e48",
+      "input_manifest": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\shorts-ui-v2-20261104\\SHORT02-R20-R16\\input_manifest.json"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "argv": [
+        "npx.cmd",
+        "--no-install",
+        "hyperframes",
+        "render",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\shorts-ui-v2-20261104\\SHORT03-R15-R11",
+        "--workers",
+        "2",
+        "--quality",
+        "delivery",
+        "--fps",
+        "30",
+        "--output",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-split-v4\\shorts-ui-v2-20261104\\short03_ranks15_11_Jun_ui_v2.mp4"
+      ],
+      "cwd": "C:\\projects\\realestate_reco",
+      "lock_sha256": "83d226229bb5f3e39e35eb990d139aea1bc205c89a6a4fde1cd0d4e9c1b7c524",
+      "master_audio_sha256": "b54d85e6f40ff5007b568ce5010d00aafbffe51844a71e1be9d004c30e35dca8",
+      "input_manifest": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\shorts-ui-v2-20261104\\SHORT03-R15-R11\\input_manifest.json"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "role": "visual",
+  "revision": "visual-v5",
+  "status": "mixed_media_manifest_integrated",
+  "input_versions": ["script-v2", "facts-v1", "visual-v4", "ROOT built-in image_gen gpt-generated-v1"],
+  "outputs": ["visual/assets_v5.json", "visual/citations_v5.json", "visual/gpt-generated-v1/AI_S004_commute_v1.png", "visual/gpt-generated-v1/AI_S005_workplace_v1.png", "visual/gpt-generated-v1/AI_S006_family_v1.png", "visual/gpt-generated-v1/prompts.json"],
+  "validation": ["22개 실제파일 경로 확인", "새 GPT3개 PNG 디코딩·1672x941 해상도·SHA256 확인", "실제 prompts.json 전문을 명세에 연결", "ROOT 육안검수는 전달받은 결과로 구분"],
+  "restrictions": ["AI 개념 이미지·실제 왕숙 촬영 아님 고정표시", "가상 출근·사무실·가족 장면이며 운영/개교/완공 증거 아님", "기존 사용자소유AI2개와 신규내장생성3개 출처 구분", "실제 다산초 사진은 왕숙신설학교/배정근거 아님", "공식 KOGL3 원본지도 전체정지무변형조건유지"],
+  "unresolved": ["최종 62샷 배치·연속재생·음성청취·모바일가독성 검수 별도", "미확보 사진은 v4 한계 유지"],
+  "new_notification_sent": false,
+  "notification_note": "총괄 지시대로 이번 통합에 중복 텔레그램 알림 없음",
+  "next_owner": "editor -> qa",
+  "new_image_generation_by_visual": false,
+  "common_files_modified": false
+}

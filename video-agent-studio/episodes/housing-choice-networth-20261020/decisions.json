@@ -1,0 +1,140 @@
+{
+  "episode_id": "housing-choice-networth-20261020",
+  "decisions": [
+    {
+      "id": "a94eaf787f23",
+      "gate": "topic",
+      "episode": "housing-choice-networth-20261020",
+      "status": "approved_for_research_and_script_draft",
+      "approval_basis": "Direct user request 2026-10-20: extensive research of housing choice with unavoidable residence cost, reference provided sheet, discuss with Claude and draft script. No production or paid generation authorization.",
+      "created_at": "2026-10-20T11:00:52.266120+00:00"
+    },
+    {
+      "id": "intro-motion-v1",
+      "gate": "script",
+      "episode": "housing-choice-networth-20261020",
+      "status": "intro_text_provided_by_user_motion_draft_rendered",
+      "approval_basis": "User 2026-10-20 in Claude Code: supplied 4-paragraph intro narration and said '이대로 작업 진행해줘' for intro motion graphics in channel tone. Scope = intro section only; not full script approval, no TTS/paid generation/upload.",
+      "output": "outputs/intro-motion-v1/intro_motion_v1.mp4",
+      "sha256": "6c126c580b256aa06748faf34372f0eccea8aa863b9cd616bde6a47005e8a923",
+      "timing_basis": "provisional: Jun 6.19 chars/s from gyosan v5 SRT; retime after real voice",
+      "created_at": "2026-10-20T14:36:56.990565+00:00"
+    },
+    {
+      "id": "motion-v1-ch02-10",
+      "gate": "script",
+      "episode": "housing-choice-networth-20261020",
+      "status": "user_directed_motion_graphics_from_script_v1_ch2_10",
+      "approval_basis": "User 2026-10-21: after intro approval ('마음에 들어'), asked where remaining motion work is, then '쭉 진행해줘' when offered to build from script v1 as-is. Scope = motion graphics for ch2-10 from script_v1.md text; no TTS/paid generation/upload.",
+      "output": "outputs/motion-v1/chNN/chNN_motion_v1.mp4",
+      "timing_basis": "provisional: 3s chapter card + Jun 6.19 chars/s; retime after real voice",
+      "created_at": "2026-10-20T16:11:50.389377+00:00"
+    },
+    {
+      "id": "returns-line-motion-v1-20261022",
+      "gate": "script",
+      "episode": "housing-choice-networth-20261020",
+      "status": "directly_requested_local_motion_insert_rendered",
+      "approval_basis": "User requested a motion-graphics video explaining 3/5/10 years using line charts, instead of an HTML deliverable. Prior direction: local housing data since 2006; US S&P index instead of domestic ETF. Scope = standalone silent insert; no paid narration or upload.",
+      "output": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/returns-motion-v1/returns_motion_v1.mp4",
+      "sha256": "d11527ba641f2847a4b916d273718ebc29a900e5327c7a3aaf24f976983afe55",
+      "created_at": "2026-10-22T03:01:48.217230+00:00"
+    },
+    {
+      "id": "regional-motion-v1-20261022",
+      "gate": "script",
+      "episode": "housing-choice-networth-20261020",
+      "status": "local_exploratory_review_rendered",
+      "approval_basis": "User requested regional views including the other cities whose collection completed, following the already authorized motion-graphics comparison. Local silent regional insert only; no paid generation or upload.",
+      "decision": "Include seven regions; Gwangju all-zero source excluded; common endpoint2026Q2; fixed Daegu boundary excluding Gunwi; retain sample-sensitivity caveat.",
+      "output": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/regional-motion-v1/regional_motion_v1.mp4",
+      "sha256": "0a22c3e1ef4d6c9919b7258cdde83cd14fb2db394f34f851bf6f72b7d7b231b5",
+      "created_at": "2026-10-22T03:28:14.053434+00:00",
+      "earlier_renders": [
+        {
+          "output": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/regional-motion-v1/regional_motion_v1_before_qa.mp4",
+          "sha256": "64d901f31f16fdd63615fcbd17998511c021f3c480a947c283cf6f1baa69cfd4",
+          "reason": "Before QA improved percent labels to two decimal places"
+        },
+        {
+          "output": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/regional-motion-v1/regional_motion_v1_labels_before_spacing.mp4",
+          "sha256": "dda89d405f44acbd2f2c14f1cb7c9fb2e57791d459cc6affa1883b9c4110d1bc",
+          "reason": "Earlier render before final percent label QA"
+        }
+      ],
+      "updated_at": "2026-10-22T03:34:42.221822+00:00"
+    },
+    {
+      "id": "private-production-preview-improvements-v1",
+      "gate": "internal_edit",
+      "status": "implementation_required",
+      "script_sha256": "babeb15213477f3f6dcb8e8ab958e1a4ccc691c53c1fca6ca9ceae99cc5f269b",
+      "issue_ids": [
+        "PVQA-001",
+        "PVQA-002",
+        "PVQA-003"
+      ],
+      "choice": "Show actual quarterly matched-complex count ranges; focus the 120-month principal endpoint and the currently spoken growth panel.",
+      "basis": "Independent inspection of source preview frames; current user guide requires sample scope and visual focus.",
+      "owner": "video_editor",
+      "independent_recheck": "video_qa",
+      "affected_scenes": [
+        "ch02/s2g",
+        "ch05/s5b",
+        "ch08/s8h"
+      ],
+      "narration_change": false,
+      "at_utc": "2026-10-25T17:43:04.265006+00:00"
+    },
+    {
+      "id": "CAPTION-MEANING-001",
+      "status": "required_open",
+      "evidence": [
+        "C09_P048Q007",
+        "C10_P052Q006",
+        "encoded contact_05.jpg"
+      ],
+      "finding": "Greedy caption length splitting leaves isolated predicates on screen.",
+      "decision": "Rebalance display cues at existing native word boundaries; preserve script, audio and all chapter durations.",
+      "input": "narration/free-tts-v1/final_timing.v6.json",
+      "output": "narration/free-tts-v1/caption-v7/final_timing.json",
+      "owner": "video_narration; integration video_editor; independent video_qa",
+      "paid_calls": 0,
+      "preservation": "Existing v6 audio, timing and final MP4 retained. Caption revision renders under private-production-v3.",
+      "at_utc": "2026-10-25T19:06:45.602515+00:00"
+    },
+    {
+      "id": "housing-choice-caption-v7-completed",
+      "gate": "completed",
+      "status": "approved",
+      "video_sha256": "28b2623aed5b74478a113ab453825cb809311c7bc46ce5f94b1c90cc009273b8",
+      "approval_basis": "Current direct user instruction authorizes private upload after both reviews pass. Exact-version evidence satisfies this condition; no later human viewing is asserted.",
+      "dual_review": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/private-release-v3/dual_media_review.json",
+      "at_utc": "2026-10-25T20:05:36.229750+00:00"
+    },
+    {
+      "id": "housing-choice-caption-v7-private-pre-upload",
+      "gate": "pre_upload",
+      "status": "approved",
+      "video_sha256": "28b2623aed5b74478a113ab453825cb809311c7bc46ce5f94b1c90cc009273b8",
+      "job_sha256": "5c57c4d6597c10699386d9bbadea1eb55e8179a8d08668c569a195ac3263b987",
+      "channel_id": "UCr_mTC0x_Uobv6MrIsOkrXw",
+      "privacy": "private",
+      "completed_decision_file": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/private-release-v3/completed_decision.json",
+      "current_direct_user_authorization": "video-agent-studio/episodes/housing-choice-networth-20261020/director/two-episode-production-v1/authorization.json",
+      "new_paid_generation_authorized": false,
+      "approval_basis": "Current direct user instruction authorizes private upload after both reviews pass. Exact-version evidence satisfies this condition; no later human viewing is asserted.",
+      "at_utc": "2026-10-25T20:05:36.229750+00:00"
+    },
+    {
+      "id": "CAPTION-MEANING-001-closed-caption-v7",
+      "gate": "qa",
+      "status": "closed",
+      "issue_id": "CAPTION-MEANING-001",
+      "video_sha256": "28b2623aed5b74478a113ab453825cb809311c7bc46ce5f94b1c90cc009273b8",
+      "subtitles_sha256": "23f177b22a24696f4d1889fc70506608de5ce343af463748061db94446d09aaf",
+      "dual_review": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/private-release-v3/dual_media_review.json",
+      "at_utc": "2026-10-25T20:07:56.281092+00:00"
+    }
+  ]
+}

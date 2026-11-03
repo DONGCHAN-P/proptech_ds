@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C06P04",
+  "scene_id": "C06",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:06:41.814Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "aa77b992b7d9dddecc5cf5b34b353c4627deaa1f95dca3389efe714642a6df2b",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "납입 시점도 통일했습니다. 월초에 있던 투자금에 그달 수익을 적용하고, 매달 남는 돈은 월말에 넣습니다. 월말에 새로 넣은 돈은 다음 달부터 수익을 얻습니다. 연 육 퍼센트는 월 영 점 오 퍼센트의 단순 배분과 구분해, 십이 개월을 복리로 연결했을 때 연 육 퍼센트가 되도록 바꿉니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 159,
+  "characters": 159,
+  "actual_credits": 64,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:26.698Z",
+  "local_shadow_remaining_before": 21303,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "k06MWQcomGdBiFQnAeuj",
+    "x-request-id": null,
+    "character-cost": "64",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:06:41 GMT"
+  },
+  "pcm_samples": 853776,
+  "pcm_duration_s": 19.36,
+  "provider_last_spoken_end_s": 19.44,
+  "artifact_sha256": {
+    "paragraphs/C06P04/audio.mp3": "7515fa9d3774219c27704ce89a0761fffacd163fc9b1325d88d633a8dfaac4cf",
+    "paragraphs/C06P04/audio.wav": "f02819fd8679c76960ffb89917632482433e44d197b36690ff8901c6a56fb027",
+    "paragraphs/C06P04/alignment.json": "517e39b40e802b46bbea3a8181d41538546d9943507aa78f54c82fd906c5f405",
+    "paragraphs/C06P04/normalized_alignment.json": "517e39b40e802b46bbea3a8181d41538546d9943507aa78f54c82fd906c5f405"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21239,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:06:45.884Z"
+}

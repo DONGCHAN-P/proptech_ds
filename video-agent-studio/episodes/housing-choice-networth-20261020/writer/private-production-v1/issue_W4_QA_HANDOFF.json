@@ -1,0 +1,25 @@
+{
+  "issue_id": "W4-QA-HANDOFF",
+  "status": "PQA-001 문구 반영 완료·QA 재확인 요청; 이슈 종결 아님",
+  "scene_ids": [
+    "W4-C02-P02",
+    "W4-C02-P03",
+    "W4-C08-P01",
+    "W4-C08-P03",
+    "W4-C10-P02"
+  ],
+  "problem": "기존 지역·기간 실거래 연결 수치와 조건별 결과의 최종 사용 범위는 진행 중인 별도 QA 결과에 연결해야 함.",
+  "evidence": "writer는 v3 해당 문단·숫자 출현을 그대로 보존. 원자료·지수·표본·수식을 새로 검수하지 않았으며 최종 미디어도 확인하지 않음.",
+  "proposal": "2장 2문단에 자체 지수·동일 단지/면적·두 분기 각각 2건 이상·연결 30단지 이상·분기별 표본 교체·민감도를 반영. 해당 문단과 지역 차트의 실제 표기만 우선 재확인. 2% 계획 가정·최근 10년 수치는 유지. 나머지 후보의 진행 중 QA 범위 유지.",
+  "impact": "QA에서 수정이 필요하면 해당 문단·차트·음성·자막만 영향 추적. 현재 후보에 새 수치·새 원인을 삽입하지 않음.",
+  "next_role": "director → 진행 중인 독립 QA; 이후 narration/visual/editor",
+  "communication": "peer 직접 메시지 도구 미제공으로 지정 폴더 이슈 파일로 전달",
+  "qa_reference": {
+    "path": "qa/private-production-v1/findings.json",
+    "sha256": "9db4b0ff96172b879f7ca8e9adf5e6b29b2b47e4dd210ac3fca312816d801db7",
+    "issue_id": "PQA-001",
+    "reviewed_revision": "script-cost-wording-v3",
+    "status": "문구 반영; 현 후보의 QA 재확인 대기"
+  },
+  "target_sha256": "62cf5fcf06a35f3c9984de405717718fb2694ace7e1addf839b0f047055ec48d"
+}

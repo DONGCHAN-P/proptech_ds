@@ -11,4 +11,4 @@ COPY . .
 
 EXPOSE 8080
 # Fly 프록시 뒤에서 https 를 제대로 알아보도록 forwarded 헤더를 믿는다
-CMD ["uvicorn", "web.main:app", "--host", "0.0.0.0", "--port", "8080", "--proxy-headers", "--forwarded-allow-ips", "*"]
+CMD ["uvicorn", "web.main:app", "--host", "0.0.0.0", "--port", "8080", "--proxy-headers", "--forwarded-allow-ips", "*", "--no-access-log"]

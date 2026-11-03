@@ -1,0 +1,23 @@
+{
+  "exit_code": 0,
+  "elapsed_seconds": 6.09,
+  "video_sha256": "14078d1309cb2e32e766a13d66b9aee278af083a14eb75806a21a2acfae2fc0b",
+  "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "argv": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\media-bin\\ffmpeg.exe",
+    "-hide_banner",
+    "-nostats",
+    "-v",
+    "info",
+    "-i",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v2\\renders\\measured-v6\\housing_choice_private_v2_injoon_v6.mp4",
+    "-vn",
+    "-af",
+    "ebur128=peak=true:framelog=verbose,astats=metadata=0:reset=0",
+    "-f",
+    "null",
+    "-"
+  ],
+  "actual_listening": false,
+  "source_audio_modified": false
+}

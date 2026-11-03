@@ -1,0 +1,67 @@
+{
+  "status": "plan_only_waiting_for_explicit_valid_response",
+  "generation_run": false,
+  "task_id": "top20-narration-prep-v1",
+  "input_script_revision": "top20-8min-v3",
+  "script_sha256": "4cc70ef2ae3cabda13b560104dd96ef0df0fe1f815a5f1372ac680e729d3be17",
+  "narration_manifest_sha256": "0bb9ef1465958b8e722b91b7ed1b74d64c623d638193c41a939bc7af701f024d",
+  "pending_choice": [
+    "Jun:6000 포함크레딧 최대상한·추가결제0·자동재시도없음 승인",
+    "무료 Windows Heami 별도 선택"
+  ],
+  "jun": {
+    "provider": "elevenlabs",
+    "model_id": "eleven_v4",
+    "voice_id": "4p6UA7mnodF5q7JFFrnW",
+    "generation_endpoint_proposal": "/v1/text-to-speech/{voice_id}/with-timestamps",
+    "request_text_source": "narration_manifest.json의 chunks 순서와 chunks/*.txt의 정확한 bytes",
+    "planned_initial_requests": 26,
+    "input_characters": 4281,
+    "max_chunk_characters": 302,
+    "live_model_maximum_text_length_per_request": 10000,
+    "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    },
+    "settings_policy": "승인 설정 보존. can_use_style=false 및 can_use_speaker_boost=false인 필드는 전송하지 않음. 임의 가속·감속 없음.",
+    "estimated_credits": 4281,
+    "plus20_reference_credits": 5138,
+    "pending_hard_credit_cap": 6000,
+    "additional_cash_cap_krw": 0,
+    "automatic_retries": false,
+    "topup": false,
+    "overage": false,
+    "approval_guard": "총괄이 유효한 사용자 응답을 해당 episode/원고SHA/manifestSHA/Jun/v4/6000상한에 연결한 뒤에만 실행.",
+    "pre_generation_checks": [
+      "원고·manifest·chunk hash·설정 버전 동일성",
+      "새 GET 잔액/배수·초과과금 비활성 상태",
+      "6000상한과 다른 작업 사용분을 고려한 실제 잔여 예산"
+    ],
+    "failure_policy": "실패·timeout·결과 불명 즉시 중단. 요청ID·안전한 영수증 보존; 사용량 확인 없이 재요청 금지. 여유 예산은 자동 재생성 권한 아님.",
+    "expected_outputs_after_future_approval": [
+      "장면별 음성 파일",
+      "제공자 원본/정규화 문자 정렬",
+      "요청별 크레딧·해시 영수증",
+      "실제 길이와 문장ID 시간표",
+      "숫자·고유명사 실제 청취 체크리스트"
+    ]
+  },
+  "free_fallback": {
+    "candidate": "Windows SAPI COM Microsoft Heami Desktop - Korean",
+    "api_cost": 0,
+    "installed_and_enumerated": true,
+    "synthesis_and_wav_export_tested": false,
+    "choice_required_before_generation": true,
+    "alignment": "제공자 문자 타임스탬프 없음. 실제 생성 후 로컬 정렬 또는 허용된 수동 검토 필요.",
+    "edge_tts": "현재 Python 미설치; 별도 네트워크 서비스. 설치·연결·이용조건 미검증."
+  },
+  "after_generation": [
+    "제공자 정렬 보존·실제 오디오 decode/길이 측정",
+    "문장 ID를 읽기문↔표시문 변환표로 연결",
+    "실제 청취 가능 시 숫자/고유명사/호흡 검수; 불가 범위 미확인",
+    "changed_scene_ids·새 길이·변경 문장·timing delta를 editor/총괄에 전달",
+    "본편 오디오에서 홍보/콘텐츠 Shorts2 문장 구간 재사용"
+  ],
+  "private_upload_scope": "최신 사용자 packet에서 3개 PRIVATE 범위 전달. 이 담당은 업로드를 실행하지 않으며 음성 예산 승인으로 업로드를 대체하지 않음."
+}

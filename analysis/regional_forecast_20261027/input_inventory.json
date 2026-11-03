@@ -1,0 +1,133 @@
+{
+  "sources": {
+    "master": {
+      "path": "master/trade_events.parquet",
+      "columns": [
+        "apt_id",
+        "area_m2_key",
+        "pyeong_bucket",
+        "deal_date",
+        "sigungu_code",
+        "sigungu_name",
+        "legal_dong_code",
+        "legal_dong_name",
+        "apt_name_raw",
+        "apt_name_norm",
+        "deal_amount",
+        "area_m2",
+        "floor",
+        "build_year",
+        "age_at_deal",
+        "price_per_m2",
+        "price_per_pyeong",
+        "is_canceled",
+        "cancel_date",
+        "road_address",
+        "deal_hash",
+        "first_seen_date",
+        "first_seen_is_estimate"
+      ],
+      "bytes": 217650236,
+      "regions": [
+        {
+          "region_code": "11",
+          "n": 1395943,
+          "first_date": "2006-01-01 00:00:00",
+          "last_date": "2026-10-09 00:00:00"
+        },
+        {
+          "region_code": "28",
+          "n": 663084,
+          "first_date": "2006-01-01 00:00:00",
+          "last_date": "2026-10-08 00:00:00"
+        },
+        {
+          "region_code": "41",
+          "n": 2866642,
+          "first_date": "2006-01-01 00:00:00",
+          "last_date": "2026-10-10 00:00:00"
+        }
+      ],
+      "availability": [
+        {
+          "first_seen_is_estimate": false,
+          "n": 4067,
+          "first_seen_min": "2026-10-06 00:00:00",
+          "first_seen_max": "2026-10-13 00:00:00"
+        },
+        {
+          "first_seen_is_estimate": true,
+          "n": 4921602,
+          "first_seen_min": "2026-04-30 00:00:00",
+          "first_seen_max": "2026-10-02 00:00:00"
+        }
+      ]
+    },
+    "expansion": {
+      "path": "analysis/housing_growth_2006/regional_expansion_v1/expansion_normalized.parquet",
+      "columns": [
+        "region",
+        "apt_id",
+        "area_m2_key",
+        "deal_date",
+        "sigungu_code",
+        "deal_amount",
+        "area_m2",
+        "is_canceled",
+        "deal_hash",
+        "parse_error",
+        "id_fallback"
+      ],
+      "bytes": 138842507,
+      "regions": [
+        {
+          "region_code": "26",
+          "n": 852267,
+          "first_date": "2006-01-01 00:00:00",
+          "last_date": "2026-09-30 00:00:00"
+        },
+        {
+          "region_code": "27",
+          "n": 581189,
+          "first_date": "2006-01-01 00:00:00",
+          "last_date": "2026-09-30 00:00:00"
+        },
+        {
+          "region_code": "30",
+          "n": 387049,
+          "first_date": "2006-01-02 00:00:00",
+          "last_date": "2026-09-30 00:00:00"
+        },
+        {
+          "region_code": "36",
+          "n": 62741,
+          "first_date": "2006-01-02 00:00:00",
+          "last_date": "2026-09-30 00:00:00"
+        }
+      ]
+    }
+  },
+  "additional_collection_status": {
+    "additional_20261023": {
+      "state": "completed",
+      "finished_groups": [
+        "gwangju",
+        "ulsan",
+        "chungbuk",
+        "chungnam"
+      ],
+      "current_group": "chungnam",
+      "updated": "2026-10-26T01:38:34.125969+09:00",
+      "reason": null
+    },
+    "additional_20261026": {
+      "state": "local_call_cap_reached",
+      "finished_groups": [
+        "chungnam"
+      ],
+      "current_group": "gyeongnam",
+      "updated": "2026-10-26T02:13:06.231680+09:00",
+      "reason": null
+    }
+  }
+}

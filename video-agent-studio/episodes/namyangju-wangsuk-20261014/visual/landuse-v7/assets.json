@@ -1,0 +1,3175 @@
+{
+  "revision": "visual-landuse-v7",
+  "assets": [
+    {
+      "asset_id": "W1_NORTH_LANDUSE_V7",
+      "scene_ids": [
+        "M001",
+        "M002",
+        "M003",
+        "M005"
+      ],
+      "type": "factual_spatial_diagram",
+      "source_or_prompt": {
+        "coordinate_system": "reference crop display coordinates",
+        "viewBox": [
+          0,
+          0,
+          1280,
+          1981
+        ],
+        "reference_image": "source_assets/w1_north_detail_reference.png",
+        "reference_image_actual_size": [
+          1860,
+          2880
+        ],
+        "source_pdf": "research/map-led-v5/w1_a1_pamphlet.pdf",
+        "source_page": 5,
+        "pdf_clip": [
+          930,
+          120,
+          1085,
+          360
+        ],
+        "transform_to_pdf": "x=930+x/1280*155; y=120+y/1981*240",
+        "features": [
+          {
+            "id": "w1_water",
+            "label": "왕숙천",
+            "kind": "water",
+            "polygon": [
+              [
+                215,
+                277
+              ],
+              [
+                247,
+                271
+              ],
+              [
+                273,
+                354
+              ],
+              [
+                317,
+                438
+              ],
+              [
+                355,
+                535
+              ],
+              [
+                365,
+                587
+              ],
+              [
+                350,
+                618
+              ],
+              [
+                344,
+                660
+              ],
+              [
+                362,
+                704
+              ],
+              [
+                414,
+                815
+              ],
+              [
+                446,
+                921
+              ],
+              [
+                482,
+                1014
+              ],
+              [
+                531,
+                1120
+              ],
+              [
+                574,
+                1211
+              ],
+              [
+                607,
+                1304
+              ],
+              [
+                616,
+                1376
+              ],
+              [
+                591,
+                1445
+              ],
+              [
+                559,
+                1528
+              ],
+              [
+                513,
+                1633
+              ],
+              [
+                455,
+                1735
+              ],
+              [
+                388,
+                1822
+              ],
+              [
+                341,
+                1939
+              ],
+              [
+                319,
+                1981
+              ],
+              [
+                284,
+                1981
+              ],
+              [
+                308,
+                1929
+              ],
+              [
+                361,
+                1810
+              ],
+              [
+                422,
+                1715
+              ],
+              [
+                483,
+                1619
+              ],
+              [
+                530,
+                1515
+              ],
+              [
+                562,
+                1434
+              ],
+              [
+                586,
+                1373
+              ],
+              [
+                578,
+                1308
+              ],
+              [
+                548,
+                1222
+              ],
+              [
+                503,
+                1137
+              ],
+              [
+                451,
+                1031
+              ],
+              [
+                415,
+                937
+              ],
+              [
+                385,
+                829
+              ],
+              [
+                335,
+                718
+              ],
+              [
+                315,
+                669
+              ],
+              [
+                321,
+                617
+              ],
+              [
+                335,
+                582
+              ],
+              [
+                327,
+                543
+              ],
+              [
+                285,
+                447
+              ],
+              [
+                245,
+                367
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_watergreen_west",
+            "label": "왕숙천 수변녹지",
+            "kind": "park",
+            "polygon": [
+              [
+                185,
+                277
+              ],
+              [
+                213,
+                277
+              ],
+              [
+                243,
+                368
+              ],
+              [
+                283,
+                448
+              ],
+              [
+                325,
+                543
+              ],
+              [
+                333,
+                582
+              ],
+              [
+                319,
+                617
+              ],
+              [
+                313,
+                669
+              ],
+              [
+                333,
+                719
+              ],
+              [
+                382,
+                829
+              ],
+              [
+                412,
+                938
+              ],
+              [
+                449,
+                1032
+              ],
+              [
+                501,
+                1138
+              ],
+              [
+                545,
+                1222
+              ],
+              [
+                575,
+                1309
+              ],
+              [
+                583,
+                1373
+              ],
+              [
+                559,
+                1433
+              ],
+              [
+                527,
+                1514
+              ],
+              [
+                480,
+                1618
+              ],
+              [
+                419,
+                1714
+              ],
+              [
+                358,
+                1809
+              ],
+              [
+                305,
+                1927
+              ],
+              [
+                281,
+                1981
+              ],
+              [
+                211,
+                1981
+              ],
+              [
+                247,
+                1889
+              ],
+              [
+                299,
+                1779
+              ],
+              [
+                353,
+                1684
+              ],
+              [
+                409,
+                1588
+              ],
+              [
+                447,
+                1482
+              ],
+              [
+                484,
+                1396
+              ],
+              [
+                493,
+                1343
+              ],
+              [
+                457,
+                1241
+              ],
+              [
+                413,
+                1169
+              ],
+              [
+                369,
+                1063
+              ],
+              [
+                336,
+                960
+              ],
+              [
+                308,
+                859
+              ],
+              [
+                257,
+                744
+              ],
+              [
+                238,
+                675
+              ],
+              [
+                244,
+                605
+              ],
+              [
+                267,
+                555
+              ],
+              [
+                249,
+                491
+              ],
+              [
+                214,
+                413
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_watergreen_east",
+            "label": "왕숙천 수변녹지",
+            "kind": "park",
+            "polygon": [
+              [
+                250,
+                270
+              ],
+              [
+                300,
+                254
+              ],
+              [
+                326,
+                347
+              ],
+              [
+                358,
+                436
+              ],
+              [
+                392,
+                525
+              ],
+              [
+                381,
+                593
+              ],
+              [
+                368,
+                623
+              ],
+              [
+                368,
+                657
+              ],
+              [
+                390,
+                702
+              ],
+              [
+                446,
+                800
+              ],
+              [
+                477,
+                909
+              ],
+              [
+                513,
+                1004
+              ],
+              [
+                565,
+                1111
+              ],
+              [
+                613,
+                1200
+              ],
+              [
+                645,
+                1298
+              ],
+              [
+                653,
+                1381
+              ],
+              [
+                627,
+                1459
+              ],
+              [
+                596,
+                1544
+              ],
+              [
+                548,
+                1649
+              ],
+              [
+                488,
+                1751
+              ],
+              [
+                422,
+                1839
+              ],
+              [
+                374,
+                1955
+              ],
+              [
+                356,
+                1981
+              ],
+              [
+                322,
+                1981
+              ],
+              [
+                344,
+                1941
+              ],
+              [
+                392,
+                1825
+              ],
+              [
+                459,
+                1738
+              ],
+              [
+                517,
+                1636
+              ],
+              [
+                563,
+                1531
+              ],
+              [
+                595,
+                1447
+              ],
+              [
+                620,
+                1377
+              ],
+              [
+                611,
+                1303
+              ],
+              [
+                578,
+                1210
+              ],
+              [
+                534,
+                1117
+              ],
+              [
+                486,
+                1011
+              ],
+              [
+                449,
+                918
+              ],
+              [
+                418,
+                812
+              ],
+              [
+                365,
+                701
+              ],
+              [
+                347,
+                659
+              ],
+              [
+                353,
+                619
+              ],
+              [
+                369,
+                587
+              ],
+              [
+                359,
+                535
+              ],
+              [
+                321,
+                437
+              ],
+              [
+                277,
+                352
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_mainroad_northsouth",
+            "label": "주요 도로 계획",
+            "kind": "road",
+            "polygon": [
+              [
+                455,
+                387
+              ],
+              [
+                516,
+                369
+              ],
+              [
+                540,
+                441
+              ],
+              [
+                575,
+                552
+              ],
+              [
+                607,
+                648
+              ],
+              [
+                641,
+                735
+              ],
+              [
+                665,
+                790
+              ],
+              [
+                695,
+                828
+              ],
+              [
+                706,
+                851
+              ],
+              [
+                681,
+                854
+              ],
+              [
+                648,
+                806
+              ],
+              [
+                619,
+                750
+              ],
+              [
+                583,
+                663
+              ],
+              [
+                554,
+                572
+              ],
+              [
+                519,
+                461
+              ],
+              [
+                502,
+                400
+              ],
+              [
+                471,
+                410
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_mainroad_northcross",
+            "label": "주요 도로 계획",
+            "kind": "road",
+            "polygon": [
+              [
+                458,
+                388
+              ],
+              [
+                840,
+                278
+              ],
+              [
+                845,
+                294
+              ],
+              [
+                466,
+                407
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_a1",
+            "label": "왕숙1 A1",
+            "kind": "housing",
+            "polygon": [
+              [
+                695,
+                337
+              ],
+              [
+                839,
+                293
+              ],
+              [
+                874,
+                421
+              ],
+              [
+                839,
+                469
+              ],
+              [
+                741,
+                495
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_a2",
+            "label": "왕숙1 A2",
+            "kind": "housing",
+            "polygon": [
+              [
+                589,
+                563
+              ],
+              [
+                747,
+                516
+              ],
+              [
+                763,
+                580
+              ],
+              [
+                641,
+                734
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_a3",
+            "label": "A3",
+            "kind": "housing",
+            "polygon": [
+              [
+                730,
+                678
+              ],
+              [
+                789,
+                569
+              ],
+              [
+                884,
+                589
+              ],
+              [
+                860,
+                706
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_s1",
+            "label": "S1",
+            "kind": "housing",
+            "polygon": [
+              [
+                539,
+                383
+              ],
+              [
+                693,
+                338
+              ],
+              [
+                739,
+                495
+              ],
+              [
+                589,
+                545
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_a6",
+            "label": "A6",
+            "kind": "housing",
+            "polygon": [
+              [
+                467,
+                233
+              ],
+              [
+                647,
+                181
+              ],
+              [
+                692,
+                319
+              ],
+              [
+                466,
+                388
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_d1",
+            "label": "단독주택 D1",
+            "kind": "housing_low",
+            "polygon": [
+              [
+                463,
+                399
+              ],
+              [
+                514,
+                387
+              ],
+              [
+                570,
+                564
+              ],
+              [
+                462,
+                598
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_high1",
+            "label": "고등학교 계획",
+            "kind": "school",
+            "polygon": [
+              [
+                476,
+                598
+              ],
+              [
+                548,
+                577
+              ],
+              [
+                611,
+                692
+              ],
+              [
+                517,
+                720
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_kindergarten1",
+            "label": "유치원 계획",
+            "kind": "school",
+            "polygon": [
+              [
+                526,
+                732
+              ],
+              [
+                615,
+                707
+              ],
+              [
+                632,
+                767
+              ],
+              [
+                542,
+                785
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_elementary1",
+            "label": "초등학교 계획",
+            "kind": "school",
+            "polygon": [
+              [
+                701,
+                712
+              ],
+              [
+                817,
+                741
+              ],
+              [
+                792,
+                844
+              ],
+              [
+                678,
+                812
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_middle1",
+            "label": "중학교 계획",
+            "kind": "school",
+            "polygon": [
+              [
+                351,
+                873
+              ],
+              [
+                420,
+                906
+              ],
+              [
+                442,
+                950
+              ],
+              [
+                390,
+                988
+              ],
+              [
+                290,
+                950
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_elementary2",
+            "label": "초등학교 계획",
+            "kind": "school",
+            "polygon": [
+              [
+                291,
+                980
+              ],
+              [
+                363,
+                1021
+              ],
+              [
+                380,
+                1068
+              ],
+              [
+                319,
+                1110
+              ],
+              [
+                232,
+                1072
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_park1",
+            "label": "근린공원 1",
+            "kind": "park",
+            "polygon": [
+              [
+                585,
+                548
+              ],
+              [
+                741,
+                499
+              ],
+              [
+                839,
+                470
+              ],
+              [
+                883,
+                424
+              ],
+              [
+                888,
+                583
+              ],
+              [
+                789,
+                568
+              ],
+              [
+                676,
+                737
+              ],
+              [
+                655,
+                781
+              ],
+              [
+                643,
+                738
+              ],
+              [
+                763,
+                580
+              ],
+              [
+                747,
+                516
+              ],
+              [
+                589,
+                563
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_park1_south",
+            "label": "근린공원 1",
+            "kind": "park",
+            "polygon": [
+              [
+                465,
+                599
+              ],
+              [
+                516,
+                722
+              ],
+              [
+                525,
+                786
+              ],
+              [
+                632,
+                768
+              ],
+              [
+                678,
+                812
+              ],
+              [
+                792,
+                845
+              ],
+              [
+                773,
+                868
+              ],
+              [
+                704,
+                852
+              ],
+              [
+                648,
+                1012
+              ],
+              [
+                600,
+                1130
+              ],
+              [
+                526,
+                1121
+              ],
+              [
+                449,
+                915
+              ],
+              [
+                389,
+                754
+              ],
+              [
+                352,
+                638
+              ],
+              [
+                384,
+                594
+              ],
+              [
+                414,
+                597
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_autonomous_north1",
+            "label": "자족시설 2",
+            "kind": "jobs",
+            "polygon": [
+              [
+                877,
+                109
+              ],
+              [
+                1017,
+                69
+              ],
+              [
+                1008,
+                188
+              ],
+              [
+                900,
+                185
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_autonomous_north2",
+            "label": "자족시설 4",
+            "kind": "jobs",
+            "polygon": [
+              [
+                1049,
+                61
+              ],
+              [
+                1137,
+                61
+              ],
+              [
+                1149,
+                79
+              ],
+              [
+                1111,
+                243
+              ],
+              [
+                1011,
+                198
+              ],
+              [
+                1028,
+                157
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_autonomous_north3",
+            "label": "자족시설 3",
+            "kind": "jobs",
+            "polygon": [
+              [
+                834,
+                214
+              ],
+              [
+                868,
+                203
+              ],
+              [
+                936,
+                202
+              ],
+              [
+                981,
+                221
+              ],
+              [
+                961,
+                277
+              ],
+              [
+                946,
+                318
+              ],
+              [
+                926,
+                364
+              ],
+              [
+                903,
+                363
+              ],
+              [
+                878,
+                293
+              ],
+              [
+                867,
+                278
+              ],
+              [
+                850,
+                275
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_autonomous_north4",
+            "label": "자족시설 5",
+            "kind": "jobs",
+            "polygon": [
+              [
+                982,
+                242
+              ],
+              [
+                1096,
+                272
+              ],
+              [
+                1076,
+                354
+              ],
+              [
+                950,
+                327
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_autonomous_north5",
+            "label": "자족시설 6",
+            "kind": "jobs",
+            "polygon": [
+              [
+                947,
+                391
+              ],
+              [
+                1037,
+                421
+              ],
+              [
+                1029,
+                604
+              ],
+              [
+                916,
+                604
+              ],
+              [
+                918,
+                455
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_b1",
+            "label": "B1",
+            "kind": "housing",
+            "polygon": [
+              [
+                915,
+                627
+              ],
+              [
+                1010,
+                625
+              ],
+              [
+                1004,
+                795
+              ],
+              [
+                985,
+                884
+              ],
+              [
+                880,
+                858
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_s2",
+            "label": "S2",
+            "kind": "housing",
+            "polygon": [
+              [
+                696,
+                860
+              ],
+              [
+                819,
+                883
+              ],
+              [
+                790,
+                1012
+              ],
+              [
+                760,
+                1144
+              ],
+              [
+                663,
+                1130
+              ],
+              [
+                657,
+                1040
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_b2",
+            "label": "B2",
+            "kind": "housing",
+            "polygon": [
+              [
+                876,
+                886
+              ],
+              [
+                984,
+                913
+              ],
+              [
+                963,
+                1194
+              ],
+              [
+                795,
+                1160
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_commerce1",
+            "label": "상업시설 1",
+            "kind": "commerce",
+            "polygon": [
+              [
+                55,
+                1364
+              ],
+              [
+                116,
+                1337
+              ],
+              [
+                146,
+                1381
+              ],
+              [
+                101,
+                1444
+              ],
+              [
+                18,
+                1410
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_commerce3",
+            "label": "상업시설 3",
+            "kind": "commerce",
+            "polygon": [
+              [
+                13,
+                1448
+              ],
+              [
+                92,
+                1476
+              ],
+              [
+                61,
+                1531
+              ],
+              [
+                0,
+                1515
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_mixed2",
+            "label": "주상복합 M2",
+            "kind": "mixed",
+            "polygon": [
+              [
+                115,
+                1438
+              ],
+              [
+                234,
+                1471
+              ],
+              [
+                196,
+                1571
+              ],
+              [
+                74,
+                1536
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_mixed3",
+            "label": "주상복합 M3",
+            "kind": "mixed",
+            "polygon": [
+              [
+                250,
+                1479
+              ],
+              [
+                355,
+                1508
+              ],
+              [
+                325,
+                1602
+              ],
+              [
+                205,
+                1583
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "source": "LH A1 pamphlet PDF p5 land-use plan",
+            "status": "approved_plan",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          }
+        ],
+        "rights_status": "factual_boundary_digitization_for_new_editorial_diagram; no_original_labels_typography_or_design_licensed; specific_map_reuse_permission_unverified",
+        "required_label": "LH 공개 계획자료를 바탕으로 재구성한 개략 배치도 · 정밀 경계/보행 경로 아님 · 계획 변경 가능"
+      },
+      "dimensions": [
+        1280,
+        1981
+      ],
+      "actual_file": "visual/landuse-v7/w1_north_board_unlabelled.svg",
+      "actual_place": "남양주 왕숙1 북부",
+      "AI": false,
+      "usage_conditions": "공개 계획자료의 사실 배치 직접 정리. 자체 색·글꼴. 원본 이미지 최종 크롭 사용 아님. 원본 재사용 허가 미확인.",
+      "geometry_status": "주요 용도별 도해 단순화; 정밀경계·측량·보행경로 아님; 일부 작은필지 생략",
+      "review_status": "원본 및 자체 PNG 실제 시각 확인, 최종 동영상 검수는 편집 후",
+      "motion": "still_motion; 같은 판 안에서 확대·이동 및 의미별 시설 강조",
+      "feature_count": 30
+    },
+    {
+      "asset_id": "W1_SOUTH_LANDUSE_V7",
+      "scene_ids": [
+        "M001",
+        "M002",
+        "M003",
+        "M005"
+      ],
+      "type": "factual_spatial_diagram",
+      "source_or_prompt": {
+        "viewBox": [
+          0,
+          0,
+          1654,
+          1504
+        ],
+        "reference_image": "source_assets/w1_south_detail_reference.png",
+        "reference_image_actual_size": [
+          2640,
+          2400
+        ],
+        "source_pdf": "research/map-led-v5/w1_a1_pamphlet.pdf",
+        "source_page": 5,
+        "pdf_clip": [
+          830,
+          500,
+          1160,
+          800
+        ],
+        "transform_to_pdf": "x=830+x/1654*330; y=500+y/1504*300",
+        "features": [
+          {
+            "id": "w1_a24",
+            "label": "왕숙1 A24",
+            "kind": "housing",
+            "polygon": [
+              [
+                892,
+                421
+              ],
+              [
+                978,
+                446
+              ],
+              [
+                963,
+                543
+              ],
+              [
+                879,
+                519
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_b17",
+            "label": "왕숙1 B17",
+            "kind": "housing",
+            "polygon": [
+              [
+                986,
+                401
+              ],
+              [
+                1049,
+                418
+              ],
+              [
+                1058,
+                550
+              ],
+              [
+                974,
+                530
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_middle6",
+            "label": "중학교 계획",
+            "kind": "school",
+            "polygon": [
+              [
+                749,
+                416
+              ],
+              [
+                820,
+                421
+              ],
+              [
+                809,
+                489
+              ],
+              [
+                754,
+                484
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_elementary11",
+            "label": "초등학교 계획",
+            "kind": "school",
+            "polygon": [
+              [
+                827,
+                421
+              ],
+              [
+                887,
+                432
+              ],
+              [
+                876,
+                501
+              ],
+              [
+                818,
+                490
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_kindergarten7",
+            "label": "유치원 계획",
+            "kind": "school",
+            "polygon": [
+              [
+                834,
+                363
+              ],
+              [
+                860,
+                372
+              ],
+              [
+                851,
+                408
+              ],
+              [
+                827,
+                403
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_park8",
+            "label": "문화공원 8",
+            "kind": "park",
+            "polygon": [
+              [
+                754,
+                486
+              ],
+              [
+                809,
+                492
+              ],
+              [
+                877,
+                504
+              ],
+              [
+                877,
+                520
+              ],
+              [
+                754,
+                506
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_a17",
+            "label": "A17",
+            "kind": "housing",
+            "polygon": [
+              [
+                718,
+                340
+              ],
+              [
+                822,
+                357
+              ],
+              [
+                817,
+                404
+              ],
+              [
+                729,
+                401
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_b8",
+            "label": "B8",
+            "kind": "housing",
+            "polygon": [
+              [
+                620,
+                430
+              ],
+              [
+                701,
+                421
+              ],
+              [
+                712,
+                499
+              ],
+              [
+                628,
+                503
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_a26",
+            "label": "A26",
+            "kind": "housing",
+            "polygon": [
+              [
+                329,
+                459
+              ],
+              [
+                412,
+                448
+              ],
+              [
+                432,
+                492
+              ],
+              [
+                328,
+                535
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_a23",
+            "label": "A23",
+            "kind": "housing",
+            "polygon": [
+              [
+                334,
+                547
+              ],
+              [
+                437,
+                505
+              ],
+              [
+                451,
+                557
+              ],
+              [
+                369,
+                612
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_a22",
+            "label": "A22",
+            "kind": "housing",
+            "polygon": [
+              [
+                247,
+                576
+              ],
+              [
+                284,
+                563
+              ],
+              [
+                333,
+                642
+              ],
+              [
+                255,
+                680
+              ],
+              [
+                227,
+                615
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_a21",
+            "label": "A21",
+            "kind": "housing",
+            "polygon": [
+              [
+                160,
+                620
+              ],
+              [
+                223,
+                598
+              ],
+              [
+                256,
+                683
+              ],
+              [
+                178,
+                721
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_a25",
+            "label": "A25",
+            "kind": "housing",
+            "polygon": [
+              [
+                861,
+                625
+              ],
+              [
+                967,
+                663
+              ],
+              [
+                1035,
+                718
+              ],
+              [
+                1057,
+                765
+              ],
+              [
+                1009,
+                797
+              ],
+              [
+                969,
+                761
+              ],
+              [
+                916,
+                730
+              ],
+              [
+                850,
+                703
+              ],
+              [
+                841,
+                663
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_park16",
+            "label": "근린공원 16",
+            "kind": "park",
+            "polygon": [
+              [
+                748,
+                666
+              ],
+              [
+                838,
+                667
+              ],
+              [
+                850,
+                704
+              ],
+              [
+                916,
+                730
+              ],
+              [
+                967,
+                762
+              ],
+              [
+                1006,
+                800
+              ],
+              [
+                973,
+                869
+              ],
+              [
+                911,
+                895
+              ],
+              [
+                725,
+                907
+              ],
+              [
+                734,
+                809
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_river_cross",
+            "label": "하천/수변공원",
+            "kind": "park",
+            "polygon": [
+              [
+                114,
+                433
+              ],
+              [
+                178,
+                394
+              ],
+              [
+                301,
+                376
+              ],
+              [
+                419,
+                325
+              ],
+              [
+                543,
+                287
+              ],
+              [
+                671,
+                270
+              ],
+              [
+                761,
+                271
+              ],
+              [
+                855,
+                294
+              ],
+              [
+                949,
+                322
+              ],
+              [
+                1054,
+                343
+              ],
+              [
+                1055,
+                411
+              ],
+              [
+                950,
+                386
+              ],
+              [
+                822,
+                355
+              ],
+              [
+                718,
+                340
+              ],
+              [
+                603,
+                365
+              ],
+              [
+                482,
+                424
+              ],
+              [
+                358,
+                449
+              ],
+              [
+                253,
+                463
+              ],
+              [
+                162,
+                478
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_park14",
+            "label": "근린공원 14",
+            "kind": "park",
+            "polygon": [
+              [
+                1071,
+                370
+              ],
+              [
+                1134,
+                386
+              ],
+              [
+                1202,
+                443
+              ],
+              [
+                1253,
+                507
+              ],
+              [
+                1293,
+                597
+              ],
+              [
+                1340,
+                691
+              ],
+              [
+                1391,
+                754
+              ],
+              [
+                1500,
+                794
+              ],
+              [
+                1560,
+                804
+              ],
+              [
+                1564,
+                836
+              ],
+              [
+                1453,
+                810
+              ],
+              [
+                1373,
+                785
+              ],
+              [
+                1318,
+                738
+              ],
+              [
+                1267,
+                650
+              ],
+              [
+                1226,
+                553
+              ],
+              [
+                1178,
+                484
+              ],
+              [
+                1143,
+                457
+              ],
+              [
+                1079,
+                450
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_mixed6",
+            "label": "주상복합 M6",
+            "kind": "mixed",
+            "polygon": [
+              [
+                424,
+                446
+              ],
+              [
+                487,
+                434
+              ],
+              [
+                507,
+                455
+              ],
+              [
+                521,
+                523
+              ],
+              [
+                463,
+                554
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_mixed7",
+            "label": "주상복합 M7",
+            "kind": "mixed",
+            "polygon": [
+              [
+                560,
+                378
+              ],
+              [
+                598,
+                364
+              ],
+              [
+                618,
+                500
+              ],
+              [
+                555,
+                515
+              ],
+              [
+                545,
+                443
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_mixed8",
+            "label": "주상복합 M8",
+            "kind": "mixed",
+            "polygon": [
+              [
+                425,
+                757
+              ],
+              [
+                559,
+                698
+              ],
+              [
+                593,
+                805
+              ],
+              [
+                465,
+                863
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_mixed9",
+            "label": "주상복합 M9",
+            "kind": "mixed",
+            "polygon": [
+              [
+                586,
+                689
+              ],
+              [
+                716,
+                641
+              ],
+              [
+                709,
+                766
+              ],
+              [
+                610,
+                777
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_commerce11",
+            "label": "상업시설 11",
+            "kind": "commerce",
+            "polygon": [
+              [
+                361,
+                641
+              ],
+              [
+                452,
+                581
+              ],
+              [
+                476,
+                629
+              ],
+              [
+                385,
+                677
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_commerce12",
+            "label": "상업시설 12",
+            "kind": "commerce",
+            "polygon": [
+              [
+                395,
+                712
+              ],
+              [
+                474,
+                670
+              ],
+              [
+                500,
+                711
+              ],
+              [
+                410,
+                749
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_commerce17_1",
+            "label": "상업시설 17",
+            "kind": "commerce",
+            "polygon": [
+              [
+                471,
+                579
+              ],
+              [
+                518,
+                547
+              ],
+              [
+                533,
+                597
+              ],
+              [
+                489,
+                621
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_commerce17_2",
+            "label": "상업시설 17",
+            "kind": "commerce",
+            "polygon": [
+              [
+                551,
+                531
+              ],
+              [
+                619,
+                522
+              ],
+              [
+                630,
+                558
+              ],
+              [
+                565,
+                584
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_commerce17_3",
+            "label": "상업시설 17",
+            "kind": "commerce",
+            "polygon": [
+              [
+                503,
+                663
+              ],
+              [
+                549,
+                645
+              ],
+              [
+                560,
+                692
+              ],
+              [
+                522,
+                713
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_commerce17_4",
+            "label": "상업시설 17",
+            "kind": "commerce",
+            "polygon": [
+              [
+                569,
+                625
+              ],
+              [
+                624,
+                607
+              ],
+              [
+                640,
+                647
+              ],
+              [
+                587,
+                672
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_jobs10",
+            "label": "자족시설 10",
+            "kind": "jobs",
+            "polygon": [
+              [
+                481,
+                884
+              ],
+              [
+                515,
+                873
+              ],
+              [
+                535,
+                924
+              ],
+              [
+                508,
+                946
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_jobs7",
+            "label": "자족시설 7",
+            "kind": "jobs",
+            "polygon": [
+              [
+                632,
+                827
+              ],
+              [
+                706,
+                817
+              ],
+              [
+                701,
+                914
+              ],
+              [
+                665,
+                916
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_jobs8",
+            "label": "자족시설 8",
+            "kind": "jobs",
+            "polygon": [
+              [
+                729,
+                821
+              ],
+              [
+                754,
+                808
+              ],
+              [
+                791,
+                825
+              ],
+              [
+                853,
+                853
+              ],
+              [
+                948,
+                880
+              ],
+              [
+                974,
+                871
+              ],
+              [
+                974,
+                884
+              ],
+              [
+                725,
+                913
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_industry1",
+            "label": "산업시설 1",
+            "kind": "industry",
+            "polygon": [
+              [
+                209,
+                980
+              ],
+              [
+                324,
+                943
+              ],
+              [
+                358,
+                1017
+              ],
+              [
+                252,
+                1071
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_industry2",
+            "label": "산업시설 2",
+            "kind": "industry",
+            "polygon": [
+              [
+                333,
+                941
+              ],
+              [
+                402,
+                922
+              ],
+              [
+                431,
+                955
+              ],
+              [
+                361,
+                974
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_industry3",
+            "label": "산업시설 3",
+            "kind": "industry",
+            "polygon": [
+              [
+                255,
+                1075
+              ],
+              [
+                366,
+                1027
+              ],
+              [
+                401,
+                1120
+              ],
+              [
+                341,
+                1190
+              ],
+              [
+                307,
+                1205
+              ],
+              [
+                283,
+                1168
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_industry4",
+            "label": "산업시설 4",
+            "kind": "industry",
+            "polygon": [
+              [
+                378,
+                1053
+              ],
+              [
+                448,
+                1018
+              ],
+              [
+                474,
+                1075
+              ],
+              [
+                411,
+                1115
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_industry5",
+            "label": "산업시설 5",
+            "kind": "industry",
+            "polygon": [
+              [
+                520,
+                968
+              ],
+              [
+                550,
+                958
+              ],
+              [
+                566,
+                1009
+              ],
+              [
+                547,
+                1015
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_industry6",
+            "label": "산업시설 6",
+            "kind": "industry",
+            "polygon": [
+              [
+                578,
+                1030
+              ],
+              [
+                654,
+                1004
+              ],
+              [
+                665,
+                1043
+              ],
+              [
+                576,
+                1065
+              ],
+              [
+                562,
+                1034
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_industry7",
+            "label": "산업시설 7",
+            "kind": "industry",
+            "polygon": [
+              [
+                561,
+                1007
+              ],
+              [
+                647,
+                982
+              ],
+              [
+                654,
+                1000
+              ],
+              [
+                576,
+                1027
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_industry8",
+            "label": "산업시설 8",
+            "kind": "industry",
+            "polygon": [
+              [
+                649,
+                949
+              ],
+              [
+                674,
+                942
+              ],
+              [
+                684,
+                978
+              ],
+              [
+                659,
+                983
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_industry9",
+            "label": "산업시설 9",
+            "kind": "industry",
+            "polygon": [
+              [
+                683,
+                938
+              ],
+              [
+                702,
+                935
+              ],
+              [
+                717,
+                998
+              ],
+              [
+                689,
+                1007
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_industry10",
+            "label": "산업시설 10",
+            "kind": "industry",
+            "polygon": [
+              [
+                721,
+                930
+              ],
+              [
+                756,
+                926
+              ],
+              [
+                768,
+                973
+              ],
+              [
+                737,
+                985
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_industry11",
+            "label": "산업시설 11",
+            "kind": "industry",
+            "polygon": [
+              [
+                855,
+                910
+              ],
+              [
+                878,
+                908
+              ],
+              [
+                884,
+                945
+              ],
+              [
+                856,
+                952
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_industry12",
+            "label": "산업시설 12",
+            "kind": "industry",
+            "polygon": [
+              [
+                1037,
+                881
+              ],
+              [
+                1160,
+                849
+              ],
+              [
+                1172,
+                919
+              ],
+              [
+                1128,
+                949
+              ],
+              [
+                1093,
+                940
+              ],
+              [
+                1069,
+                920
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_industry13",
+            "label": "산업시설 13",
+            "kind": "industry",
+            "polygon": [
+              [
+                299,
+                842
+              ],
+              [
+                399,
+                769
+              ],
+              [
+                447,
+                880
+              ],
+              [
+                334,
+                923
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_pm4",
+            "label": "공공복합 PM4",
+            "kind": "public_complex",
+            "polygon": [
+              [
+                605,
+                364
+              ],
+              [
+                649,
+                351
+              ],
+              [
+                661,
+                415
+              ],
+              [
+                616,
+                424
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          },
+          {
+            "id": "w1_rail",
+            "label": "철도 계획시설",
+            "kind": "rail_corridor",
+            "polygon": [
+              [
+                150,
+                810
+              ],
+              [
+                468,
+                634
+              ],
+              [
+                668,
+                546
+              ],
+              [
+                824,
+                537
+              ],
+              [
+                1046,
+                610
+              ],
+              [
+                1280,
+                735
+              ],
+              [
+                1446,
+                903
+              ],
+              [
+                1429,
+                914
+              ],
+              [
+                1269,
+                759
+              ],
+              [
+                1034,
+                631
+              ],
+              [
+                824,
+                556
+              ],
+              [
+                674,
+                567
+              ],
+              [
+                477,
+                654
+              ],
+              [
+                158,
+                834
+              ]
+            ],
+            "accuracy": "hand_digitized_published_schematic_boundary_not_survey",
+            "status": "approved_plan",
+            "source": "LH A1 pamphlet PDF p5",
+            "source_date": "2025-07",
+            "verified_date": "2026-10-15"
+          }
+        ],
+        "required_label": "LH 공개 계획자료를 바탕으로 재구성한 개략 배치도 · 정밀 경계/보행 경로 아님 · 계획 변경 가능",
+        "corporate_site_caution": "산업시설과 자족시설 계획윤곽이며 특정기업이 어느필지에 입주하는지까지 확인한자료아님. 기업CI는 산업단지계획 소개패널에만 연결."
+      },
+      "dimensions": [
+        1654,
+        1504
+      ],
+      "actual_file": "visual/landuse-v7/w1_south_board_unlabelled.svg",
+      "actual_place": "남양주 왕숙1 남부",
+      "AI": false,
+      "usage_conditions": "공개 계획자료의 사실 배치 직접 정리. 자체 색·글꼴. 원본 이미지 최종 크롭 사용 아님. 원본 재사용 허가 미확인.",
+      "geometry_status": "주요 용도별 도해 단순화; 정밀경계·측량·보행경로 아님; 일부 작은필지 생략",
+      "review_status": "원본 및 자체 PNG 실제 시각 확인, 최종 동영상 검수는 편집 후",
+      "motion": "still_motion; 같은 판 안에서 확대·이동 및 의미별 시설 강조",
+      "feature_count": 44
+    },
+    {
+      "asset_id": "W2_LANDUSE_V7",
+      "scene_ids": [
+        "M001",
+        "M002",
+        "M003",
+        "M005"
+      ],
+      "type": "factual_spatial_diagram",
+      "source_or_prompt": {
+        "file": "research/map-led-v5/w2_a3_pamphlet.pdf",
+        "page": 5,
+        "source_crop_pixels": [
+          839,
+          245,
+          1303,
+          680
+        ],
+        "source_render_scale": 1,
+        "trace_scale": 3,
+        "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=66836710"
+      },
+      "dimensions": [
+        1392,
+        1305
+      ],
+      "actual_file": "visual/landuse-v7/w2_board_unlabelled.svg",
+      "actual_place": "남양주 왕숙2",
+      "AI": false,
+      "usage_conditions": "공개 계획자료의 사실 배치 직접 정리. 자체 색·글꼴. 원본 이미지 최종 크롭 사용 아님. 원본 재사용 허가 미확인.",
+      "geometry_status": "주요 용도별 도해 단순화; 정밀경계·측량·보행경로 아님; 일부 작은필지 생략",
+      "review_status": "원본 및 자체 PNG 실제 시각 확인, 최종 동영상 검수는 편집 후",
+      "motion": "still_motion; 같은 판 안에서 확대·이동 및 의미별 시설 강조",
+      "feature_count": 40
+    },
+    {
+      "asset_id": "MACRO_LANDUSE_V7",
+      "scene_ids": [
+        "M001",
+        "M002",
+        "M003",
+        "M005"
+      ],
+      "type": "factual_spatial_diagram",
+      "source_or_prompt": {
+        "file": "research/landuse-v7/source_assets/city_business_p6.png",
+        "pdf": "research/landuse-v7/source_assets/city_business_pdf.pdf",
+        "page": 6,
+        "display_reference_dimensions": [
+          1888,
+          1333
+        ],
+        "display_crop": [
+          103,
+          270,
+          866,
+          880
+        ],
+        "actual_image_dimensions": [
+          2064,
+          1458
+        ],
+        "rights": "Original reuse permission unverified; this is a newly styled factual relationship reconstruction."
+      },
+      "dimensions": [
+        763,
+        610
+      ],
+      "actual_file": "visual/landuse-v7/macro_board_unlabelled.svg",
+      "actual_place": "남양주 왕숙1·왕숙2 권역 관계",
+      "AI": false,
+      "usage_conditions": "공개 계획자료의 사실 배치 직접 정리. 자체 색·글꼴. 원본 이미지 최종 크롭 사용 아님. 원본 재사용 허가 미확인.",
+      "geometry_status": "주요 용도별 도해 단순화; 정밀경계·측량·보행경로 아님; 일부 작은필지 생략",
+      "review_status": "원본 및 자체 PNG 실제 시각 확인, 최종 동영상 검수는 편집 후",
+      "motion": "still_motion; 같은 판 안에서 확대·이동 및 의미별 시설 강조",
+      "feature_count": 5
+    }
+  ]
+}

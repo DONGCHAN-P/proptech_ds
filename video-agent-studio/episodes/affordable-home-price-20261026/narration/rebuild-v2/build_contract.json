@@ -1,0 +1,141 @@
+{
+  "contract_revision": "rebuild-v2-narration-contract-v2-scene-once",
+  "status": "implementation_ready_offline_only_awaiting_parent_script_lock_and_execution_authorization",
+  "episode_id": "affordable-home-price-20261026",
+  "owner": "narration/rebuild-v2/**",
+  "entrypoint": "narration/rebuild-v2/build_narration.py",
+  "path_basis": "All *_path in outputs and script_path in approvals are forward-slash paths relative to C:/projects/realestate_reco, not episode-relative.",
+  "timeline_order": "The scenes ARRAY order is authoritative. Never sort scene IDs or chapters. IDs must be unique; R029-R033 can occur after R011. Chapter references must exist but need not be monotonic.",
+  "voice": "ko-KR-InJoonNeural",
+  "rate": "+0%",
+  "pitch": "+0Hz",
+  "provider": "edge-tts",
+  "dependency": "Existing readonly edge-tts 7.3.1 deps from housing-choice-networth-20261020/narration/free-tts-v1; no installation/authentication/key/billing.",
+  "reuse": {
+    "helpers": ["../production_v1.py: mapping position, protected_ranges, semantic spans, line breaks", "housing-choice-networth-20261020/narration/free-tts-v1/production_narration.py: exact spoken_position"],
+    "existing_audio_reuse_enabled": false,
+    "note": "No old paragraph audio is assumed equivalent. A future reuse feature would require exact approved source, spoken text, voice/rate, code/contract and file SHA matches."
+  },
+  "network": {
+    "prepare_calls": 0,
+    "allowed_only_after": "Both parent director script lock (Claude approved, exact SHA/revision) and free text-only Edge execution authorization matching prepared SHA, lock SHA, exact command argv and all scene IDs.",
+    "external_payload": "spoken text only; graphic, visual_notes, source_ids and files are never uploaded",
+    "max_stream_attempts": "One full paragraph stream per scene, bounded by authorization.max_network_attempts = scene count. Each scene must fit one provider text chunk. Edge internal HTTP403 retry disabled.",
+    "automatic_retries": 0,
+    "partial_failure": "Preserve partial MP3/WAV/WordBoundary and run_receipt.json; no final_timing.json on failure; fresh output and parent instruction needed for a new run."
+  },
+  "input_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "required": ["revision", "policy_as_of", "chapters", "scenes"],
+    "properties": {
+      "revision": {"type": "string", "minLength": 1},
+      "policy_as_of": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+      "chapters": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["id", "title"], "properties": {"id": {"type": "integer"}, "title": {"type": "string", "minLength": 1}}}},
+      "scenes": {
+        "type": "array", "minItems": 1,
+        "items": {
+          "type": "object",
+          "required": ["id", "chapter", "title", "narration", "graphic", "beats", "source_ids", "visual_notes"],
+          "properties": {
+            "id": {"type": "string", "pattern": "^R[0-9]{3,}$"},
+            "chapter": {"type": "integer"},
+            "title": {"type": "string", "minLength": 1},
+            "narration": {"type": "string", "minLength": 1},
+            "graphic": {},
+            "visual_notes": {},
+            "source_ids": {"type": "array"},
+            "beats": {"type": "array", "items": {"type": "object", "required": ["anchor", "action"], "properties": {"anchor": {"type": "string", "minLength": 1}, "action": {"type": "string", "minLength": 1}}}}
+          }
+        }
+      }
+    }
+  },
+  "text_contract": {
+    "display": "Original narration preserved byte-for-character within each source span; cue reassembly comparison ignores whitespace only.",
+    "spoken": "Normalize decimal/comma numerals and DSR/LTV/DTI only by default; ordinary integers and 6억/9억/12억 stay in their original form. Numeric amount is unchanged; decimal fractional digits including zeros are preserved.",
+    "dictionary_schema": {"transforms": [{"scene_id": "R001", "source_start": 0, "source_end": 1, "original": "원문", "spoken": "발음", "reason": "필요 근거"}]},
+    "mapping": "Contiguous literal/pronunciation atoms with source_start/source_end and spoken_start/spoken_end. Offsets are Python Unicode codepoints; half-open [start,end). No cue boundary inside a replacement atom. An anchor intersecting a replacement maps to the covering replacement, then covering actual word edges.",
+    "caption": "Semantic sentence/clause grouping, at most 2 display_lines, max 40 Unicode codepoints per line; inherited grammar score and protected number-unit spans. Actual glyph/renderer layout is editor/QA scope.",
+    "checks": ["full source-to-spoken literal/replacement mapping", "cue reassembly source and spoken", "every provider word used exactly once", "numeric/unit protection across cues and lines", "cue original source span equality"],
+    "anchor_policy": "Literal unique substring in original narration. Missing/duplicate anchors are errors. Map exact source span to spoken span and use first/last actual WordBoundary covering it, even if an anchor ends within a word. anchor_matches_word_edges discloses whether it exactly matches word edges. No fuzzy match, char-proportion interpolation or fabricated timing.",
+    "unicode_preflight": "Every narration and spoken text requires Hangul count >0; reject consecutive ? or three whitespace-separated ? marks, U+FFFD and surrogates. Numeric phonetic literals are compared with independently escaped Unicode expectations."
+  },
+  "timing_contract": {
+    "all_cues_beats_words": "Scene-local seconds from that scene audio24.wav/audio48.wav start, identical across sample rates.",
+    "scene_start_s_scene_end_s": "Proposed body timeline containing scene WAVs and explicit cut gaps. No brand intro, chapter cards or editor transitions added. Common EDL is locked by director.",
+    "internal_pauses": "Natural provider pauses preserved. WordBoundary gaps >=0.2s reported as natural_word_gaps; pauses longer than 0.35s do not fail. No sentence TTS calls, no PCM cuts, no pause enforcement.",
+    "cut_gap_s": 0.25,
+    "cut_gap_note": "Inserted by editor between scene WAVs, excluded from each duration_s. This is additional silence. Full original PCM is preserved; measured original tail and final delivered tail are reported per scene.",
+    "final_hold_from_last_speech_s": 3.0,
+    "last_speech_basis": "max actual provider last word end and measured PCM abs(sample)>=33 end; conservative unlistened bound",
+    "total_duration_s": "Sum(scene.duration_s) + sum(scene.gap_after_s). Final scene WAV already contains final 3s hold; do not add it twice.",
+    "actual_listening": false,
+    "subjective_naturalness": "unverified"
+  },
+  "output_layout": {
+    "prepare": ["<prepare-dir>/source.json", "<prepare-dir>/prepared.json", "<prepare-dir>/text_mapping_checks.json"],
+    "generation": ["<new-run-dir>/final_timing.json", "<new-run-dir>/mapping_checks.json", "<new-run-dir>/timing_proposals.json", "<new-run-dir>/changed_scenes.json", "<new-run-dir>/run_inputs.json", "<new-run-dir>/run_receipt.json"],
+    "scene": ["<new-run-dir>/R001/audio24.wav", "<new-run-dir>/R001/audio48.wav", "<new-run-dir>/R001/scene_timing.json"],
+    "original": ["<new-run-dir>/R001/original.mp3", "<new-run-dir>/R001/original.wav", "<new-run-dir>/R001/WordBoundary.json", "<new-run-dir>/R001/request.json"],
+    "audio": "One untouched provider MP3 and original decoded 24kHz mono PCM16 WAV per scene. audio24.wav preserves the complete original PCM prefix; append only silence needed for a provider edge beyond PCM (<=0.15s) or final 3s hold. audio48.wav is the 48kHz mono PCM16 conversion."
+  },
+  "final_timing_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "required": ["script_sha256", "script_revision", "voice", "rate", "scenes", "total_duration_s", "total_cut_silence_s", "cut_gap_s", "audio_revision", "actual_listening"],
+    "properties": {
+      "script_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+      "script_revision": {"type": "string"},
+      "voice": {"const": "ko-KR-InJoonNeural"},
+      "rate": {"const": "+0%"},
+      "total_duration_s": {"type": "number"},
+      "total_cut_silence_s": {"type": "number"},
+      "cut_gap_s": {"const": 0.25},
+      "audio_revision": {"type": "string"},
+      "actual_listening": {"const": false},
+      "scenes": {"type": "array", "items": {"$ref": "#/$defs/scene"}}
+    },
+    "$defs": {
+      "scene": {
+        "type": "object",
+        "required": ["id", "chapter", "title", "narration", "spoken_text", "audio_path", "audio_48k_path", "duration_s", "last_speech_end_s", "scene_start_s", "scene_end_s", "gap_after_s", "cues", "beats", "words", "segments"],
+        "properties": {
+          "id": {"type": "string"}, "chapter": {"type": "integer"}, "title": {"type": "string"},
+          "narration": {"type": "string"}, "spoken_text": {"type": "string"},
+          "audio_path": {"type": "string"}, "audio_48k_path": {"type": "string"},
+          "duration_s": {"type": "number"}, "last_speech_end_s": {"type": "number"},
+          "scene_start_s": {"type": "number"}, "scene_end_s": {"type": "number"}, "gap_after_s": {"type": "number"},
+          "cues": {"type": "array", "items": {"$ref": "#/$defs/cue"}},
+          "beats": {"type": "array", "items": {"$ref": "#/$defs/beat"}},
+          "words": {"type": "array", "items": {"$ref": "#/$defs/word"}},
+          "segments": {"type": "array"}
+        }
+      },
+      "cue": {
+        "type": "object", "required": ["id", "text", "spoken_text", "display_lines", "start_s", "end_s", "source_start", "source_end", "spoken_start", "spoken_end", "first_word_index", "last_word_index", "timing_basis"],
+        "properties": {
+          "id": {"type": "string"}, "text": {"type": "string"}, "spoken_text": {"type": "string"},
+          "display_lines": {"type": "array", "minItems": 1, "maxItems": 2, "items": {"type": "string", "maxLength": 40}},
+          "start_s": {"type": "number"}, "end_s": {"type": "number"},
+          "source_start": {"type": "integer"}, "source_end": {"type": "integer"},
+          "spoken_start": {"type": "integer"}, "spoken_end": {"type": "integer"},
+          "first_word_index": {"type": "integer"}, "last_word_index": {"type": "integer"}, "timing_basis": {"type": "string"}
+        }
+      },
+      "beat": {
+        "type": "object", "required": ["anchor", "action", "start_s", "end_s", "source_start", "source_end", "first_word_index", "last_word_index", "timing_basis"],
+        "properties": {"anchor": {"type": "string"}, "action": {"type": "string"}, "start_s": {"type": "number"}, "end_s": {"type": "number"}, "source_start": {"type": "integer"}, "source_end": {"type": "integer"}, "first_word_index": {"type": "integer"}, "last_word_index": {"type": "integer"}, "anchor_matches_word_edges": {"type": "boolean"}, "timing_basis": {"const": "actual_provider_WordBoundary_covering_anchor_no_interpolation"}}
+      },
+      "word": {
+        "type": "object", "required": ["text", "start_s", "end_s", "native_word_index", "timing_basis"],
+        "properties": {"text": {"type": "string"}, "start_s": {"type": "number"}, "end_s": {"type": "number"}, "native_word_index": {"type": "integer"}, "timing_basis": {"type": "string"}}
+      }
+    }
+  },
+  "parent_script_lock_required_fields": ["approved=true", "episode_id", "script_revision", "script_path", "script_sha256", "claude_approved=true", "review_reference"],
+  "parent_execution_authorization_required_fields": ["approved=true", "source=main_direct_instruction", "instruction_reference", "episode_id", "script_revision", "script_sha256", "prepared_sha256", "lock_sha256", "network_tts_authorized=true", "provider=edge-tts", "voice=ko-KR-InJoonNeural", "rate=+0%", "external_payload=text_only", "cash_cap_krw=0", "paid_calls_authorized=false", "credentials_allowed=false", "automatic_retries=0", "max_network_attempts=prepared.scenes.length", "allowed_scene_ids=all prepared scene IDs in order", "command_argv=build_narration.command_argv(...)"],
+  "approval_file_location": "Both lock and execution authorization must be under this episode/director; this worker never creates or edits actual approval files.",
+  "consumer": {"role": "editor", "name": "Tesla", "agent_id": "01a177dc-f802-78b3-8161-7f47b028d7b6", "direct_message_tool_available_in_this_session": false},
+  "handoff": "handoff.json and issue_NARRATION_CONTRACT_V2.json; director confirms shared timeline and forwards contract to Tesla."
+}

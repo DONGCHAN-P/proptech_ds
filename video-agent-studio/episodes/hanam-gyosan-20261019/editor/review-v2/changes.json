@@ -1,0 +1,19 @@
+{
+  "revision": "gyosan-review-v2-free-tts",
+  "baseline": "outputs/production-v1/gyosan_full_v1r3_free_tts.mp4",
+  "scope": "기존 대본·음성·원본자료 보존, 화면 편집 보완",
+  "changes": [
+    {"scene_id":"M000","issue":"전편 안내에 같은 지도 반복","resolution":"왕숙·창릉 실제 프레임 재사용, 시리즈 안내"},
+    {"scene_id":"M001","issue":"Annotations에서 value와unit 미출력","resolution":"36,669호·34.0%·8.8% 큰 수치카드"},
+    {"scene_id":"M002","issue":"외부 직장 발화와 내부 자족 지도 불일치","resolution":"132.6~196.3초 대표역 방향 지도, 이후 내부 자족면과556,665㎡"},
+    {"scene_id":"M003","issue":"운영 교통과 미래 계획 구분 약함","resolution":"운영5호선 지도 확대, 계획3호선은 공식 연결 개념도로 구분, 입주/철도 일정 카드"},
+    {"scene_id":"M004","issue":"기본/확장/합계 가격 오독 및51A 원문행 부재","resolution":"51A p6·59A p7·확장 p8 발화별 발췌, 기본금액 강조와 항목 분리"},
+    {"scene_id":"M005","issue":"긴 오른쪽 문구 한 글자 줄바꿈","resolution":"우측 문구 축약, 실제 상세도 확대와 locator 확대"},
+    {"scene_id":"M006","issue":"90초 전체지도와 연표 반복","resolution":"계획규모·서로 다른 일정·거래조건을 의미에 맞게 전환"},
+    {"scene_id":"M007","issue":"가격축과 단위 읽기 및 정렬","resolution":"15억원 고정축, 높은가격부터 내림차순, 발화 단지 순차 누적, 기간·면적·층·중위값 크게 병기"},
+    {"scene_id":"M008","issue":"후보 locator 작음과 중앙 권역의 임의 블록 라벨","resolution":"locator430px, C2/B2 실제 폴리곤 정확매칭·동시라벨, 권역 임의 블록 라벨 제거"},
+    {"scene_id":"M009","issue":"정적인 구독 안내와 별도 ending 지도","resolution":"CTA 안내 시45개 실제연속프레임으로 한 번 등장·정착, 마지막3초 같은 CTA 정지 유지"}
+  ],
+  "preserved": ["모든 audio_units와 음성파일", "모든 자막 문구·노출 시점", "총29,808프레임", "브랜드 인트로150프레임·아웃트로300프레임", "AI개념표시 포함6개90프레임 챕터", "실제 필지와 운영선 좌표·기하"],
+  "limitations": ["계획노선 정밀지리선이나 출입구를 발명하지 않음", "현재 기준 대표 출발점 통근 실측·예상시간은 자료조사와 대본 변경 후 별도 보강", "편집 담당 실제 청취·연속 재생 미수행"]
+}

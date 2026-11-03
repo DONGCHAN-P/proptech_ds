@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#173f37"><title>나는야 투자왕 · 다시 쓰는 나의 20년</title>
+  <link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="masthead"><a href="/" class="brand"><span class="brand-mark">↗</span> 나는야 투자왕<span class="edition">LOCAL ALPHA / 01</span></a><span class="mock-label">MOCK · 가상 시세</span><button id="new-run" class="quiet">새 인생 시작 ↗</button></header>
+  <main id="welcome" class="welcome">
+    <section><p class="eyebrow">A SECOND CHANCE, A DIFFERENT LIFE.</p><h1>20년 전으로<br>돌아간다면,<br><em>어떻게 살 건가요?</em></h1><p class="intro">2006년 가을. 스무 살의 나. 통장 속 100만 원.<br>흐릿한 기억을 안고, 부와 삶의 균형을 다시 찾아갑니다.</p>
+      <form id="start-form"><label for="seed">나의 인생 시드 <span>같은 시드와 선택은 같은 결과를 만듭니다</span></label><div class="start-row"><input id="seed" name="seed" maxlength="80" value="second-chance" required autocomplete="off"><button class="primary" type="submit">나의 2006년으로 →</button></div></form>
+      <p class="fineprint">80분기 · 분기마다 3번의 선택 · 돈과 삶을 절반씩 평가<br>현재는 가상 시세·가상 경제 수치를 사용하는 로컬 프로토타입입니다.</p>
+    </section><div class="cover-art" aria-hidden="true"><div class="orbit"></div><div class="year">2006<span>THE BEGINNING OF YOUR NEXT CHAPTER</span></div><div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div><div class="art-caption">₩ 1,000,000<br><span>작은 시작. 여든 번의 선택.</span></div><span class="spark">✳</span></div>
+  </main>
+  <main id="game" class="game" hidden>
+    <section class="chapter"><div><p class="eyebrow">YOUR LIFE, REWRITTEN</p><h1 id="quarter">2006년, 가을</h1><p id="chapter-info"></p></div><div class="progress-block"><span id="progress-text"></span><progress id="progress" max="80" value="0" aria-label="인생 진행률"></progress></div></section>
+    <section id="metrics" class="metrics" aria-label="나의 현재 상태"></section>
+    <div class="workspace"><div class="main-column"><nav class="tabs" aria-label="게임 메뉴"><button data-tab="life" class="active">내 삶</button><button data-tab="market">투자</button><button data-tab="property">부동산</button><button data-tab="memory">기억의 파편</button><button data-tab="records">내 기록</button></nav>
+      <section id="panel"></section>
+    </div><aside><section class="card plan-card"><div class="section-title"><h2>이번 분기의 선택</h2><span id="ap-badge" class="pill"></span></div><p class="muted">매일의 일상 밖, 나에게 주어진 시간.</p><ol id="action-queue" class="action-queue"></ol><div id="order-queue"></div><div class="plan-total"><span>기본 생활비 · 3개월</span><strong>450,000원</strong></div><p class="fineprint">행동 비용은 먼저 지출됩니다. 알바와 급여는 분기 결산 때 반영됩니다.</p><button id="advance" class="primary full">다음 3개월 →</button><p class="autosave">● 분기 확정 시 이 PC에 자동 저장</p></section>
+      <section class="small-note"><p class="eyebrow">REMEMBER</p><p>가장 부유한 삶과<br>가장 좋은 삶은<br>어디에서 만날까요?</p></section>
+    </aside></div>
+  </main>
+  <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+  <dialog id="confirm-dialog"><div class="dialog-content"><p class="eyebrow">BEFORE YOU MOVE ON</p><h2>다음 계절로 갈까요?</h2><div id="preview-content"></div><p class="fineprint">확정한 분기의 선택은 되돌릴 수 없습니다. 매수는 미래 체결가에 따라 거부될 수 있습니다.</p><div class="dialog-actions"><button id="cancel-commit" class="quiet">조금 더 생각하기</button><button id="confirm-commit" class="primary">이 선택으로 살아보기 →</button></div></div></dialog>
+  <footer>나는야 투자왕 <span>부와 삶, 두 개의 성적표.</span><span>로컬 알파 · 역사 시세/실거래 자료 미연결</span></footer>
+</body>
+</html>

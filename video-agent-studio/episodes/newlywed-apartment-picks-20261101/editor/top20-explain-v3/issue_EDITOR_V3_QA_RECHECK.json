@@ -1,0 +1,76 @@
+{
+  "issue_id": "EDITOR_V3_QA_RECHECK",
+  "related_issue_id": "QA-V3-REQ-001",
+  "status": "필수사진연결3개수정완료_독립QA최종확인요청",
+  "to": "QA LockE",
+  "peer_agent_id": "01a19d09-266e-7ab1-80d6-d2bdd28a026e",
+  "director_copy": true,
+  "direct_message_sent": false,
+  "delivery_basis": "직접 에이전트 메시지 도구가 제공되지 않아 담당 폴더의 파일 패킷으로 공유합니다.",
+  "scene_ids": [
+    "S005",
+    "S017",
+    "S022"
+  ],
+  "problem": "spec_final_review.json에서 유일하게 남은3특징장면의 실제사진 확정대기 문구를 해소했습니다.",
+  "evidence": {
+    "scene_json_sha256": "8beec59448e180617327f17913aaa25277b3152769a1815cbdc493351003803e",
+    "script_md_sha256": "4259f50a9c5cadbadd864d838559a16f85e07316818ddcb31ce40939fbccac38",
+    "frozen_inputs": "editor/top20-explain-v3/input_snapshot/",
+    "contactsheet": "editor/top20-explain-v3/evidence/contactsheet_final_v6.png",
+    "individual_pngs": "editor/top20-explain-v3/evidence/대표PNG/",
+    "caption_mapping": "editor/top20-explain-v3/spec/caption_mapping.json",
+    "caption_exact_comparison": "editor/top20-explain-v3/caption_integrity.json",
+    "input_manifest": "editor/top20-explain-v3/input_manifest.json",
+    "browser_check": "editor/top20-explain-v3/evidence/check-spec.json",
+    "text_bounds": "editor/top20-explain-v3/evidence/text_bounds.json",
+    "independent_static_price_html": "editor/top20-explain-v3/spec/price_panels/",
+    "photo_fix_contactsheet": "editor/top20-explain-v3/evidence/contactsheet_photo_fix_v1.png",
+    "photo_fix_validation": "editor/top20-explain-v3/evidence/photo-fix-v1/validation.json",
+    "photo_fix_browser_check": "editor/top20-explain-v3/evidence/photo-fix-v1/check.json",
+    "photo_binding": "editor/top20-explain-v3/photo_bindings.json"
+  },
+  "editor_verification": {
+    "local_checks_passed": 34,
+    "exact_display_text_sentences": 41,
+    "caption_cues": 68,
+    "browser_boundary_samples": 13,
+    "layout_findings": 0,
+    "png_files": 13,
+    "png_dimensions": [
+      1920,
+      1080
+    ],
+    "actual_listening_performed": false,
+    "continuous_video_playback_performed": false,
+    "editor_full_resolution_pngs_viewed": [
+      "O002_intro",
+      "S006_feature",
+      "S007_feature",
+      "S019_feature",
+      "S017_price",
+      "S005_price",
+      "S022_price"
+    ],
+    "photo_delta": {
+      "new_png": 3,
+      "browser_samples": 9,
+      "layout_findings": 0,
+      "unchanged_png": 10,
+      "caption_mapping_unchanged": true,
+      "editor_full_resolution_pngs_viewed": [
+        "S005_feature.png",
+        "S017_feature.png",
+        "S022_feature.png"
+      ]
+    }
+  },
+  "changes": [
+    "S005→PHOTO_R18 구성역5번출구(2026·CC0)",
+    "S017→PHOTO_R06_ALT01 양재천 교체본(2019·CC BY4.0/공공누리1)",
+    "S022→PHOTO_R01 청라호수공원(촬영연도미상·공공누리1)",
+    "기존 원본JPEG 바이트·전체귀속문·라이선스 유지. 사진은 특징 단계에만 표시하고 가격단지 전경으로 사용하지 않습니다."
+  ],
+  "proposal": "변경된 특징3장면 HTML과 새PNG3개 및 연결이미지만 최종재검수해 주십시오. 자막매핑과 나머지10개PNG는 SHA불변이므로 기존통과를 재사용합니다.",
+  "impact": "새 조사·이미지생성·음성·본편렌더·업로드 없음. 문장/가격/지도/타이밍 변경 없음. 편집자는 QA 이슈를 직접 닫지 않았습니다."
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "scene_id": "S01",
+    "message": "6지역 84㎡대 중위거래가의 시간 변화와 서울-경기 차이",
+    "start": 0,
+    "end": 23,
+    "subphases": {
+      "2006_hold": [
+        0,
+        2.4
+      ],
+      "quarter_timelapse": [
+        2.4,
+        19
+      ],
+      "2026Q2_hold": [
+        19,
+        23
+      ]
+    },
+    "narration_text": null,
+    "claim_ids": [
+      "C01",
+      "C02",
+      "C03"
+    ],
+    "asset_ids": [
+      "chart_data",
+      "original_data_pulse"
+    ],
+    "script_revision": "screen-v2",
+    "audio_revision": "original-data-pulse-v1",
+    "timing_basis": "frame-authored no-voice 30fps",
+    "status": "rendered_and_sampled_verified"
+  },
+  {
+    "scene_id": "S02",
+    "message": "차이 1.16억→4.90억을 읽고 다음 지역을 제안",
+    "start": 23,
+    "end": 30,
+    "narration_text": null,
+    "claim_ids": [
+      "C03"
+    ],
+    "asset_ids": [
+      "chart_data",
+      "original_data_pulse"
+    ],
+    "script_revision": "screen-v2",
+    "audio_revision": "original-data-pulse-v1",
+    "timing_basis": "frame-authored; conclusion hold7s; CTA4s",
+    "status": "rendered_and_sampled_verified"
+  }
+]

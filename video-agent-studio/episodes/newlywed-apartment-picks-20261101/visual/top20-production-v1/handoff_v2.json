@@ -1,0 +1,42 @@
+{
+  "task_id": "top20-thumbnail-v2-scope-fix",
+  "role": "visual",
+  "status": "필수 수정 반영·독립 재검수 대기",
+  "issue_id": "QA-T20P-TH-SCOPE-01",
+  "affected_scene_ids": [
+    "TH001"
+  ],
+  "outputs": [
+    "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/thumbnail/TH001_신혼부부_수도권TOP20_v2_1280x720.png",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/thumbnail/TH001_신혼부부_수도권TOP20_v2_mobile_320.png",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/thumbnail/artifact_manifest_v2.json"
+  ],
+  "input_revisions": {
+    "qa_findings_sha256": "99c86c3c9a43f8c7eaf92a773271e8c15707b6766463e3e4554d57942ec968dc",
+    "v1_manifest_sha256": "a59870438d5c7a35e1382cae051a854a465ebdf9fd7b245d87476cd724f078c5"
+  },
+  "previous_sha256": [
+    "773a483c341749547878500bbd0028efc617ea2a76147cb9afeb48af415bd571",
+    "50706f9b6f76476055dba604f3e52cf9761dd3e77c8811a2f050104b6b81bb81"
+  ],
+  "v2_sha256": [
+    "d669526af8537c36aeade8a35f79731fd5158b78dad723bad6d86c416c4a85bd",
+    "933e7be70fbc6401a3523c24d5cb1b442071f92b97ef55ebf55b85d11289fddc"
+  ],
+  "checks": [
+    {
+      "check": "1280/320 실제 열람",
+      "result": "self_checked",
+      "evidence": "visual_review_v2.json"
+    },
+    {
+      "check": "경계·겹침·변경영역·원본 보존",
+      "result": "passed",
+      "evidence": "technical_checks_v2.json"
+    }
+  ],
+  "scope_confirmation": "2024년 · 수도권 53개 구 기준",
+  "unresolved": "독립 재검수는 총괄이 재배정. QA 원본 finding 상태는 수정하지 않음.",
+  "next_role": "director → qa",
+  "note": "v1 PNG/manifest 및 기존 기록 보존. 본편·음성·공통 상태 변경, 외부 API·유료 호출 없음."
+}

@@ -1,0 +1,24 @@
+{
+  "issue_id": "ENHANCE-RESEARCH-01",
+  "task_id": "top20-enhance-research-v2",
+  "to": ["director", "writer", "visual"],
+  "affected_scene_ids": ["N001", "N002"],
+  "affected_claim_ids": ["ENH2-MEMBERSHIP", "ENH2-DONGAN", "ENH2-MAPO", "ENH2-NAMDONG", "ENH2-WONMI", "ENH2-MICHUHOL"],
+  "problem": "470.97초 본편에 기존 원고와 겹치지 않는 추가 분석이 필요함.",
+  "finding": "2024년 같은 수도권53개구를 초혼 수로 재정렬하면 안양시 동안구는 전체22위→초혼16위(6,510쌍), 마포구는21위→17위(6,487쌍)로 TOP20에 들어온다. 남동구는16위→27위(5,588쌍), 원미구는20위→24위(5,982쌍)로 빠진다. 미추홀구는10위→20위(6,162쌍). 1~4위는 동일함.",
+  "evidence": {
+    "source": "analysis/newlywed_region_2024/source/capital_rows.tsv",
+    "source_sha256": "debc058db6faa487931e44eac056c3d7976646320eb10656c292752a48a361e2",
+    "ranking_sha256": "275ce96232e523428bcea02aa3f11bd0f29ca70f2e8a13bbc55aa40b389d1d61",
+    "prior_independent_qa": "qa/ranking_source_review.json",
+    "source_reuse": "2024 원표·TSV·rankings의 독립 QA 대상 해시와 현행 입력의 일치를 확인. 새 53개구 재순위 계산은 이번 담당의 계산이며 독립 QA는 별도로 필요.",
+    "reference_date": "2024-11-01",
+    "formula": "rank=1+count(other_first_marriage_couples>this_first_marriage_couples)",
+    "denominator": "같은 53개구. TOP20 내부만 재정렬하지 않음."
+  },
+  "proposal": "총괄이 N001·N002로 채택. S022 뒤 C001 앞 추가. director/top20-enhance-v2/added_scenes.json의 10문장에 대해 숫자·범위 대조 완료.",
+  "impact": "지표에 따른 차이를 새로 설명하는 문단. ‘전체→초혼’ 축을 명시하며 연도별 상승·선호·이동을 뜻하지 않음.",
+  "status": "adopted_facts_and_chart_data_delivered_independent_qa_pending",
+  "outputs": ["verified_facts.json", "chart_data.json", "ranking_53_gu.csv", "top20_yoy.csv", "analyze_and_validate.py", "validation_receipt.json", "added_scenes_claim_review.json", "handoff.json"],
+  "peer_message_tool_available": false
+}

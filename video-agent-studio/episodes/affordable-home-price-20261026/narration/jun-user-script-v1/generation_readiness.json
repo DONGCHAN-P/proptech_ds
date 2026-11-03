@@ -1,0 +1,32 @@
+{
+  "status": "staged_not_authorized",
+  "source_doc_sha256": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "source_manifest_sha256": "19fceacda05c451df69103002ce6bd2cf23e53020383a6543b60cb03eec3a018",
+  "generation_input_sha256": "5290eff5c5724c807bc4062feab7be5889b8decea1316984e48f25b1fe32b9f5",
+  "body_sha256": "dd419a373dd5ace01aa88381d5b59ed0199b53547b3ae84e1c9373624b82378e",
+  "generator_sha256": "8cdb5882f730ca163cb8d850417fe800e05cb7a74db1e2ba0eaf66dcaea08c6f",
+  "template_source": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-production-v1/generate.mjs",
+  "template_sha256": "211f4d5f8b0895c46d5f6f06e4885fa0882c66c3baac2794e629776044233966",
+  "input_characters": 5797,
+  "chapter_requests": 7,
+  "included_cap": 7000,
+  "new_paid_calls": 0,
+  "requires": [
+    "exact current-episode budget reply",
+    "current material-fact clearance",
+    "fresh live balance/rate/access checks"
+  ],
+  "dependencies": [
+    {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/narration/production-v1/common.mjs",
+      "bytes": 10467,
+      "sha256": "99b63053e73a9414f129e59af50d574a1b1b44cf2064608b26b5c3264d593ed1"
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/private-production-v1/media-bin/ffmpeg.exe",
+      "bytes": 87638016,
+      "sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3"
+    }
+  ],
+  "ffmpeg_exists": true
+}

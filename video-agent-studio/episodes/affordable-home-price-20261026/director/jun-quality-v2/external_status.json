@@ -1,0 +1,127 @@
+{
+  "revision": "jun-quality-v2",
+  "claude": {
+    "destination": "Claude Desktop / Anthropic",
+    "selected_model_and_effort_observed": "Opus 5.5 / 최대",
+    "subscription_claim": "Max 구독 여부를 주장하지 않음",
+    "request_sent": true,
+    "conversation_title_observed": "영상 화면 품질 개선 검수",
+    "baseline_video_sha256": "0d73a746eee4e2eb1d2e46096a8012d756fd4a19f9f8bdce6c06af3f89a5abfa",
+    "actual_confirmed_attachments": [
+      "qa/jun-user-script-v1/full-film-v1/encoded_scenes_1.jpg"
+    ],
+    "request_scope": "화면 문제와 개선 판단·일반 사례 집계. 음성·개별 거래·자격증명 제외",
+    "thinking_screen_observed": true,
+    "response_read": false,
+    "final_revision_reviewed": false,
+    "approved": false,
+    "blocker": "Windows computer-use ended because current browser URL could not be determined with enough confidence for policy enforcement.",
+    "no_further_computer_use_after_stop": true,
+    "prior_home_draft_backup": "director/jun-quality-v2/preserved_home_draft.txt",
+    "prior_home_draft_restore_pending": true
+  },
+  "youtube": {
+    "requested_visibility": "public",
+    "current_direct_user_authorization": "director/jun-quality-v2/current_upload_authorization.json",
+    "existing_API_probe": "reauthenticated_same_existing_scopes_same_channel",
+    "error_code": null,
+    "error_description": null,
+    "browser_fallback": "not_used_for_this_release",
+    "uploads_performed": 3,
+    "new_video_ids": [
+      "0495J7FMmCk",
+      "PwqvBlxAoII",
+      "Y9lZk9PmNUA"
+    ],
+    "public_release_authorized": true,
+    "existing_uploads_deleted": true,
+    "next_step": "Published",
+    "verified_items": [
+      {
+        "id": "main",
+        "video_id": "0495J7FMmCk",
+        "url": "https://youtu.be/0495J7FMmCk",
+        "sha256": "e0a84d5a5893193c7b50431c0c5b60adb279a7817bd4e970b0e04bfe32dcb561",
+        "title": "현금 1억부터 5억까지, 얼마짜리 집을 살 수 있을까?｜대출·세금·월 부담 계산",
+        "privacy": "private",
+        "processing": "HD complete",
+        "caption": "Korean SRT saved",
+        "verification_method": "Chrome extension / visible YouTube Studio UI"
+      },
+      {
+        "id": "promo",
+        "video_id": "PwqvBlxAoII",
+        "url": "https://youtube.com/shorts/PwqvBlxAoII",
+        "sha256": "215968608a3a6d5159f35195e65378de4d6b9f8ed63f19e5d00bc97059997953",
+        "title": "돈은 모았는데, 어떤 집을 살 수 있을까? | 내 집 예산",
+        "privacy": "private",
+        "processing": "HD complete",
+        "caption": "Korean SRT saved",
+        "verification_method": "Chrome extension / visible YouTube Studio UI"
+      },
+      {
+        "id": "summary",
+        "video_id": "Y9lZk9PmNUA",
+        "url": "https://youtube.com/shorts/Y9lZk9PmNUA",
+        "sha256": "cd72bb6c827b6695c2f24d6ed2474f7c6901943114443fe639c33168bcc703c9",
+        "title": "현금 1억이면 집값은 얼마? 8천만 원에서 시작하는 계산",
+        "privacy": "private",
+        "processing": "HD complete",
+        "caption": "Korean SRT saved",
+        "verification_method": "Chrome extension / visible YouTube Studio UI"
+      }
+    ],
+    "verified_at": "2026-10-28T14:27:00.881596+00:00",
+    "upload_blocked": false,
+    "shorts_correction": {
+      "published_revision": "v5-ending-fix",
+      "new_uploads_performed": 2,
+      "blockers": [],
+      "report": "video-agent-studio/episodes/affordable-home-price-20261026/director/public-release-v5/completion.json"
+    },
+    "public_verified_items": [
+      {
+        "id": "main",
+        "video_id": "0495J7FMmCk",
+        "url": "https://youtu.be/0495J7FMmCk",
+        "title": "현금 1억부터 5억까지, 얼마짜리 집을 살 수 있을까?｜대출·세금·월 부담 계산",
+        "sha256": "e0a84d5a5893193c7b50431c0c5b60adb279a7817bd4e970b0e04bfe32dcb561",
+        "privacy": "public",
+        "processing": "succeeded",
+        "caption": "Korean serving",
+        "existing_public_video_reused": true
+      },
+      {
+        "id": "promo",
+        "video_id": "nYl1XSdyFAQ",
+        "url": "https://youtube.com/shorts/nYl1XSdyFAQ",
+        "title": "돈은 모았는데, 어떤 집을 살 수 있을까? | 내 집 예산",
+        "sha256": "6d05bd6a6cf70b8bbd897423d2092b8f07556ed9e5629e019c62526c3c5cabf8",
+        "video": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/jun-quality-v2/shorts/v5-ending-fix/01_promo_jun_v5.mp4",
+        "subtitles": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/jun-quality-v2/shorts/v5-ending-fix/01_promo_jun_v5.srt",
+        "privacy": "public",
+        "processing": "succeeded",
+        "caption": "Korean serving"
+      },
+      {
+        "id": "summary",
+        "video_id": "DnCBj7voUyY",
+        "url": "https://youtube.com/shorts/DnCBj7voUyY",
+        "title": "현금 1억이면 집값은 얼마? 8천만 원에서 시작하는 계산",
+        "sha256": "06ae5222b598867c07b8ceab91244afc1dfac79f433f38ae3abd7b97466a28c0",
+        "video": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/jun-quality-v2/shorts/v5-ending-fix/02_summary_jun_v5.mp4",
+        "subtitles": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/jun-quality-v2/shorts/v5-ending-fix/02_summary_jun_v5.srt",
+        "privacy": "public",
+        "processing": "succeeded",
+        "caption": "Korean serving"
+      }
+    ],
+    "old_private_ids_removed": [
+      "PwqvBlxAoII",
+      "Y9lZk9PmNUA",
+      "szSvG_2IehY"
+    ]
+  },
+  "additional_paid_generation_calls": 0,
+  "additional_cash_krw": 0
+}

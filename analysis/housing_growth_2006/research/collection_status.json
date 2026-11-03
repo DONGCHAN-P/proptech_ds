@@ -1,0 +1,124 @@
+{
+  "downloaded_files": 44,
+  "extracted_sheet_count": 104,
+  "supply_records": 5616,
+  "negative_source_supply_values": [
+    {
+      "measure": "completions",
+      "region": "인천",
+      "month": "2012-12",
+      "housing_units": "-3726.0",
+      "source_grid": "completions_01_sheet13.csv",
+      "scope": "all_housing_not_apartments_only"
+    },
+    {
+      "measure": "completions",
+      "region": "대구",
+      "month": "2012-12",
+      "housing_units": "-177.0",
+      "source_grid": "completions_01_sheet13.csv",
+      "scope": "all_housing_not_apartments_only"
+    },
+    {
+      "measure": "starts",
+      "region": "경기",
+      "month": "2010-12",
+      "housing_units": "-1179.0",
+      "source_grid": "starts_01_sheet15.csv",
+      "scope": "all_housing_not_apartments_only"
+    },
+    {
+      "measure": "permits",
+      "region": "인천",
+      "month": "2012-10",
+      "housing_units": "-454.0",
+      "source_grid": "permits_00_sheet13.csv",
+      "scope": "all_housing_not_apartments_only"
+    },
+    {
+      "measure": "permits",
+      "region": "대전",
+      "month": "2012-11",
+      "housing_units": "-10.0",
+      "source_grid": "permits_00_sheet13.csv",
+      "scope": "all_housing_not_apartments_only"
+    },
+    {
+      "measure": "permits",
+      "region": "대전",
+      "month": "2011-10",
+      "housing_units": "-938.0",
+      "source_grid": "permits_00_sheet14.csv",
+      "scope": "all_housing_not_apartments_only"
+    },
+    {
+      "measure": "permits",
+      "region": "대구",
+      "month": "2000-11",
+      "housing_units": "-6713.0",
+      "source_grid": "permits_00_sheet25.csv",
+      "scope": "all_housing_not_apartments_only"
+    },
+    {
+      "measure": "permits",
+      "region": "인천",
+      "month": "1991-12",
+      "housing_units": "-273.0",
+      "source_grid": "permits_00_sheet34.csv",
+      "scope": "all_housing_not_apartments_only"
+    },
+    {
+      "measure": "permits",
+      "region": "경기",
+      "month": "1991-11",
+      "housing_units": "-836.0",
+      "source_grid": "permits_00_sheet34.csv",
+      "scope": "all_housing_not_apartments_only"
+    },
+    {
+      "measure": "permits",
+      "region": "대전",
+      "month": "1991-12",
+      "housing_units": "-117.0",
+      "source_grid": "permits_00_sheet34.csv",
+      "scope": "all_housing_not_apartments_only"
+    },
+    {
+      "measure": "permits",
+      "region": "경기",
+      "month": "1990-12",
+      "housing_units": "-5871.0",
+      "source_grid": "permits_00_sheet35.csv",
+      "scope": "all_housing_not_apartments_only"
+    },
+    {
+      "measure": "permits",
+      "region": "부산",
+      "month": "1990-12",
+      "housing_units": "-10225.0",
+      "source_grid": "permits_00_sheet35.csv",
+      "scope": "all_housing_not_apartments_only"
+    },
+    {
+      "measure": "permits",
+      "region": "대전",
+      "month": "1990-12",
+      "housing_units": "-4492.0",
+      "source_grid": "permits_00_sheet35.csv",
+      "scope": "all_housing_not_apartments_only"
+    }
+  ],
+  "migration_records": 378,
+  "rate_changes": 43,
+  "limitations": [
+    "Supply is all housing, not apartment-only; completions/starts 2005-2025, permits 1990-2025",
+    "Negative permits appear in original workbook; retained, not interpreted as negative physical construction",
+    "Unsold headers contain numeric-date ambiguity (e.g. 13.1 vs 13.10); raw grids retained; no long-format date inference",
+    "Census 2024 is a snapshot, not a historical population/household panel",
+    "Migration 2005-2025 regional aggregate acquired; age-specific regional historical panel not yet acquired",
+    "Employment report acquired as PDF; machine-readable historical district employment still pending",
+    "KOSIS/ECOS credentials absent in config/secrets.json; direct public attachments used",
+    "Base rate chart begins 2008-08; policy rate is not mortgage rate; 2026-10-22 terminal chart point may repeat prior rate, not imply a rate decision",
+    "Source table geographic classification, revisions, and raw totals must be reconciled before causal/statistical analysis"
+  ]
+}

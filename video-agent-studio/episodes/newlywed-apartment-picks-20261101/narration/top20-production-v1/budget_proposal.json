@@ -1,0 +1,68 @@
+{
+  "task_id": "top20-narration-prep-v1",
+  "created_at_utc": "2026-11-01T14:51:05.033340+00:00",
+  "status": "prepared_awaiting_valid_budget_response",
+  "generation_authorized": false,
+  "generation_started": false,
+  "episode_id": "newlywed-apartment-picks-20261101",
+  "script_revision": "top20-8min-v3",
+  "script_sha256": "4cc70ef2ae3cabda13b560104dd96ef0df0fe1f815a5f1372ac680e729d3be17",
+  "narration_manifest_sha256": "0bb9ef1465958b8e722b91b7ed1b74d64c623d638193c41a939bc7af701f024d",
+  "account_snapshot": "account_readonly.json",
+  "provider": "elevenlabs",
+  "voice_id": "4p6UA7mnodF5q7JFFrnW",
+  "voice_name": "Jun - Clear Korean Lecturer",
+  "model": "eleven_v4",
+  "input_characters": 4281,
+  "paragraph_requests": 26,
+  "sentence_count": 116,
+  "character_count_method": "Unicode code points; chunks/*.txt 각 파일 전체·공백·문장 사이 LF 포함, BOM·말미 LF 없음. 요청 text에 ID·메모·제목·전체 합본의 장면 사이 빈 줄 제외.",
+  "model_character_cost_multiplier": 1,
+  "model_cost_discount_multiplier": 1,
+  "voice_rate": 1,
+  "effective_credits_per_character": "1",
+  "estimated_credits": 4281,
+  "headroom_percent": 20,
+  "estimated_plus_20_percent_cap": 5138,
+  "included_credit_cap": 6000,
+  "cap_basis": "최신 총괄 packet: 사용자에게 6000크레딧 상한으로 예산 질의함. 이 상한의 응답 대기; 20% 산술 상한과 구분.",
+  "budget_question_status": "총괄이 async 질의 전달; 응답 대기라고 통보받음. 본 담당이 응답·전송 원장을 직접 확인한 것은 아님.",
+  "rounding": "20% 산술 기준=ceil(estimated_credits × 1.20); 사용자 응답 대상 최대상한=6000",
+  "included_remaining": 16664,
+  "balance_checked_at_utc": "2026-11-01T14:45:44.588Z",
+  "cap_fits_included": true,
+  "remaining_after_estimate": 12383,
+  "remaining_after_full_cap": 10664,
+  "account_checks_passed": true,
+  "additional_cash_usd_estimate": 0,
+  "additional_cash_usd_cap": 0,
+  "additional_cash_krw_cap": 0,
+  "cash_basis": "기존 포함 크레딧만 사용 제안. 구독료 환산·새 결제·환율 추정 없음.",
+  "topup_or_overage_authorized": false,
+  "automatic_retry": false,
+  "paid_generation_calls_this_task": 0,
+  "scope": {
+    "main": "26개 본편 장면 읽기문 1회 생성 제안",
+    "promo_short": "본편 오디오 재사용 시 추가 생성 0",
+    "content_short": "본편 오디오 재사용 시 추가 생성 0",
+    "new_short_sentences": "미포함; 별도 확정 원고와 견적 필요",
+    "private_uploads": "사용자 지시 3개 PRIVATE 범위 확인; 업로드 실행은 담당 총괄·편집 범위"
+  },
+  "approval_requirements": [
+    "해당 episode·top20-8min-v3·script SHA·narration manifest SHA·Jun/eleven_v4·크레딧 상한·추가결제0에 연결된 유효한 사용자 예산 응답",
+    "무료 Heami/Edge 선택은 별도 명시. 미응답·대기·과거 타 편 승인은 Jun 생성 승인 아님",
+    "생성 직전 동일 원고/읽기문/voice 설정과 실제 잔액 재검증. 상한 초과·계정 조회 실패·요율 변경이면 중단",
+    "실패·시간초과·결과 불명은 자동 재시도 금지; 요청 영수증·사용량 확인 후 총괄 판단. 20% 여유도 자동 재생성 허가 아님",
+    "새 문장·설정 변경은 새 버전/견적으로 연결"
+  ],
+  "evidence_sources": [
+    {
+      "url": "https://elevenlabs.io/docs/help-center/product/voices/voice-library/what-are-custom-rates-and-credit-multipliers",
+      "usage": "음성별 배수 존재 설명; 실제 요율은 account_readonly.json GET 결과 우선"
+    },
+    {
+      "url": "https://elevenlabs.io/docs/overview/models",
+      "usage": "모델 공식 문서; 계정별 실측 GET 결과와 구분"
+    }
+  ]
+}

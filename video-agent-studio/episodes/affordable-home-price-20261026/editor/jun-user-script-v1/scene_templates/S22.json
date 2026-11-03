@@ -1,0 +1,76 @@
+{
+  "scene_id": "S22",
+  "chapter": 6,
+  "message": "LTV 70%와 40%",
+  "narration_text": "여기서 꼭 한 번 더 볼 게 있습니다. 오늘은 LTV 70퍼센트로 계산했죠. 그런데 내가 살 집에 40퍼센트가 적용되면 어떻게 될까요?\n\n다른 조건과 준비금은 그대로 두고 계산하면, 현금 1억 원은 약 1억 3천3백만 원, 2억 원은 약 2억 8천3백만 원, 3억 원은 약 4억 3천3백만 원, 4억 원은 약 5억 8천3백만 원, 5억 원은 약 7억 3천3백만 원으로 바뀝니다.",
+  "paragraph_ids": [
+    "P052",
+    "P053"
+  ],
+  "claim_ids": [
+    "DOC",
+    "FSC_LTV",
+    "CALC"
+  ],
+  "material_type": "현금별 두 곡선",
+  "asset_ids": [
+    "M22"
+  ],
+  "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "audio_revision": null,
+  "start": null,
+  "end": null,
+  "timing_basis": "UNLOCKED: awaiting actual Jun alignment",
+  "beats": [
+    {
+      "anchor": "40퍼센트가 적용되면",
+      "action": "70%·40% 두 시나리오 범례",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "현금 1억 원은",
+      "action": "1억의 2.66↔1.33억",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "2억 원은",
+      "action": "2억의 5.66↔2.83억",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "3억 원은",
+      "action": "현금3억의 LTV70%6.6억↔40%4.33억 관측점",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "4억 원은",
+      "action": "현금4억의 LTV70%7.5억↔40%5.83억 관측점",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "5억 원은",
+      "action": "현금5억의 LTV70%8.4억↔40%7.33억 관측점",
+      "start": null,
+      "end": null
+    }
+  ],
+  "status": "designed_not_rendered",
+  "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+  "fallback": "가로축 보유현금·세로축 집값 예산; 시간축처럼 연출하지 않음",
+  "template_status": "contract_only_not_authored",
+  "template": "S22",
+  "beat_ids": [
+    "S22.b01",
+    "S22.b02",
+    "S22.b03",
+    "S22.b04",
+    "S22.b05",
+    "S22.b06"
+  ],
+  "preview_seconds": null
+}

@@ -58,7 +58,7 @@ NEW_BUILD_YEARS = 5
 # 후보 안 상대 순위로 매기면 2005년 준공이 '신축' 1등이 되고 적합도가 부풀려진다.
 PRIORITIES: dict[str, tuple[str, str, bool]] = {
     "station": ("역세권", "walk_min", False),
-    "school": ("학군", "elem_school_cnt_1km", True),
+    "school": ("학교 접근", "elem_school_cnt_1km", True),
     "new": ("신축", "build_year", True),
     "green": ("녹지", "green_score", True),
     "active": ("거래 활발", "trade_1y", True),
@@ -80,6 +80,7 @@ PYEONG_CODES = ["10P", "15P", "20P", "25P", "30P", "35P", "40P", "50P", "60P+"]
 # ── 답변 ──────────────────────────────────────────────────────────────
 @dataclass
 class Answers:
+    objective: str = 'fit'  # Historical saved results keep their original scoring.
     household: str = "couple"
     budget: float | None = None                  # 만원
     pyeongs: list[str] = field(default_factory=list)
@@ -103,6 +104,7 @@ class Answers:
             work, work2 = work2, None
         budget = p.get("budget")
         return cls(
+            objective='fit' if p.get('objective') == 'fit' else 'long_term',
             household=str(p.get("household") or "couple"),
             budget=float(budget) if budget else None,
             pyeongs=[x for x in (p.get("pyeongs") or []) if x in PYEONG_CODES],
@@ -228,9 +230,9 @@ class Stations:
 
 # ── 점수 곡선 ─────────────────────────────────────────────────────────
 def budget_use_score(ratio):
-    """예산의 75~100% 를 쓰면 만점, 40% 이하면 0. 너무 작은 집을 위로 올리지 않는다."""
+    """선택 면적을 통과한 후보끼리 예산 여유를 평가한다."""
     r = np.asarray(ratio, dtype=float)
-    return np.clip((r - 0.40) / (0.75 - 0.40), 0, 1) * 100
+    return np.clip((1 - r) / .6, 0, 1) * 100
 
 
 def commute_limit(ans: "Answers") -> float | None:
@@ -311,6 +313,15 @@ def hard_filter(df: pd.DataFrame, ans: Answers, today: date,
 
 def weights(ans: Answers) -> dict[str, float]:
     prios = ans.priorities or ["station"]
+    if ans.objective == 'long_term':
+        w = dict(location=.35, value=.20, liquidity=.20, residential=.15)
+        if ans.work:
+            w['commute'] = .10
+            w['location'] -= .05
+            w['residential'] -= .05
+        for p in prios:
+            w[p] = .10 / len(prios)
+        return w
     w = {"price": W_PRICE}
     if ans.work:
         w["commute"] = W_COMMUTE
@@ -346,6 +357,10 @@ def score(df: pd.DataFrame, ans: Answers, today: date | None = None) -> pd.DataF
     today = today or date.today()
     df = df.copy()
     w = weights(ans)
+    if ans.objective == 'long_term':
+        for key in ('location','value','liquidity','residential'):
+            if f's_{key}' not in df:
+                df[f's_{key}'] = 50.0
     if ans.budget:
         use = budget_use_score(df["last_price"] / ans.budget)
     else:
@@ -395,6 +410,16 @@ def fmt_won(manwon: float) -> str:
 
 
 def reason_text(key: str, row: pd.Series, ans: Answers) -> str | None:
+    if key == 'location':
+        km = row.get('hub_distance_km')
+        return f"{row.get('nearest_hub')} 업무지 기준역 직선 {km:.1f}km" if pd.notna(km) else '업무지 접근 자료 부족 · 중립 점수'
+    if key == 'value':
+        ratio = row.get('peer_price_ratio')
+        return f"유사 조건 {int(row.get('peer_count',0))}개 평형 중간값의 {ratio*100:.0f}%" if pd.notna(ratio) else '유사 조건 비교 표본 부족 · 중립 점수'
+    if key == 'liquidity':
+        return f"같은 평형 최근 1년 거래 {int(row.get('trade_1y',0))}건"
+    if key == 'residential':
+        return f"{int(row['build_year'])}년 준공 · 생활시설 함께 비교" if pd.notna(row.get('build_year')) else '연식 자료 부족'
     if key == "price":
         pct = row.get("rel_price_pct")
         if pd.notna(pct) and pct <= 40:
@@ -452,7 +477,7 @@ ITEM_COLS = ["apt_id", "apt_name", "sigungu_name", "legal_dong_name", "road_addr
              "lat", "lng", "build_year", "pyeong_bucket", "area_m2", "last_price",
              "last_date", "last_ppy", "ppy_1y", "chg_1y", "vs_peak", "trade_1y",
              "walk_min", "nearest_station", "elem_school_cnt_1km", "rel_price_pct",
-             "commute_min", "commute2_min", "confidence", "score"]
+             "commute_min", "commute2_min", "confidence", "score", "peer_count", "peer_price_ratio"]
 
 
 def with_commute(df: pd.DataFrame, ans: Answers, stations: Stations | None,
@@ -475,16 +500,15 @@ def run_match(df: pd.DataFrame, ans: Answers, today: date,
               stations: Stations | None, n: int = 5,
               home: tuple[np.ndarray, np.ndarray] | None = None) -> dict:
     """답변 → Top n. df 는 prepare() 산출물 (commute_min 은 여기서 붙인다)."""
+    if ans.objective == 'long_term':
+        from web.investment import enrich
+        df = enrich(df, stations, today)
     df = with_commute(df, ans, stations, home)
     if "commute_min" not in df:
         ans = replace(ans, work=None, work2=None)
 
     stages: list[tuple[str, Answers]] = [("", ans)]
-    if ans.work and ans.commute_max is not None:
-        stages.append(("commute", replace(stages[-1][1], commute_max=ans.commute_max + 15,
-                                          commute_strict=False)))
-    if ans.budget:
-        stages.append(("budget", replace(stages[-1][1], budget=ans.budget * 1.1)))
+    # User constraints are not widened to manufacture five results.
 
     relaxed: list[str] = []
     eff, cand = ans, df.iloc[0:0]

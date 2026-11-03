@@ -1,0 +1,87 @@
+{
+  "role": "editor",
+  "revision": "shorts-leader-v2-full-frame",
+  "status": "local_review_render_ready_independent_qa_pending",
+  "title": "3기 신도시 창릉의 대장단지는 어디가 될까?",
+  "video_sha256": "6f44ee06f7594380275b1efd1da111e1836425197c9739729c33be377d2135ec",
+  "artifacts": {
+    "mp4": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\changneung_leader_short_v2.mp4",
+    "srt": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\changneung_leader_short_v2.srt",
+    "technical": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\technical.json",
+    "project": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\render_project.json",
+    "input_versions": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v2\\inputs_manifest.json",
+    "clip_plan": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v2\\clip_plan.json",
+    "layout_bounds": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v2\\layout_bounds.json",
+    "layout_validation": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v2\\layout_validation.json",
+    "text_overlap_validation": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v2\\text_overlap_validation.json",
+    "native_ui_proof": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\native_youtube_ui_proof.png",
+    "regression_evidence": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\regression_evidence.json",
+    "placement_guide": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v2\\placement_guide.md"
+  },
+  "input_version_basis": {
+    "source_script_sha256": "6ffc9fc4819460d4cf6f03fd3b28102e2864402b9965ca14e158230474963982",
+    "preserved_v1_sha256": "3ea14519772fb97f54d12505040f738292c4780238baaf5aae815e1dec8b3eeb",
+    "audio": "v1 voice.wav byte identical; existing Jun 8 approved-source excerpts; no new words or speed changes",
+    "captions": "22 exact existing cues; timing and text unchanged",
+    "design_authorization": "User direct full-screen correction; director reviewed actual map/price/CTA stills then instructed full render"
+  },
+  "validation": {
+    "duration_s": 45.333333,
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": "30/1",
+    "audio": "AAC 48000Hz stereo",
+    "whole_av_decode_exit": 0,
+    "source_pcm_units_exact": 8,
+    "encoded_audio_correlation": 0.9999773232768072,
+    "peak_dbfs": -6.323771095652799,
+    "measured_elements": 181,
+    "measured_frames": 34,
+    "text_overlap_count": 0,
+    "profile": "youtube_portrait_full_frame_v2",
+    "native_ui_examples": 9,
+    "actual_encoded_scene_samples": 9,
+    "actual_encoded_regression_samples": 20,
+    "final_cta_frames": [
+      1270,
+      1359
+    ],
+    "final_cta_duration_s": 3,
+    "actual_listening": false,
+    "continuous_playback": false,
+    "real_device_playback": false
+  },
+  "changes": [
+    "Compact central rounded card removed",
+    "Actual geographic field and price band use entire 1080px width",
+    "Title58px, captions54px, candidate/summary52..80px, price104px, sources26px independently overlaid",
+    "S1 code and Sangam labels have leaders at actual representative coordinates",
+    "Camera fixed; 0.8s geography emphasis; no zoom loops"
+  ],
+  "affected_scenes": [
+    "M009_002",
+    "M009_003",
+    "M009_006",
+    "M009_009",
+    "M009_010",
+    "M009_011",
+    "M009_014",
+    "M009_015",
+    "CTA"
+  ],
+  "unresolved": [
+    "Independent QA v2 final review pending",
+    "Actual listening/continuous playback not performed",
+    "Wide tablet cover and universal cross-platform clearance excluded",
+    "Publication and final-cut review gates remain with director"
+  ],
+  "next_role": [
+    "video_qa",
+    "video_director"
+  ],
+  "new_paid_calls": 0,
+  "upload": false,
+  "render_receipt": "C:\\projects\\realestate_reco\\output\\video_jobs\\changneung-leader-v2-final\\receipt.json"
+}

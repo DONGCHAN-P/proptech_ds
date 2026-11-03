@@ -1,0 +1,4 @@
+﻿import pyarrow.dataset as ds, json
+from pathlib import Path
+s=ds.dataset([str(p) for p in Path('staged/trade').rglob('*.parquet')],format='parquet'); t=s.to_table(columns=['apt_id','apt_seq','jibun','legal_dong_code','apt_name_norm','road_address'],filter=(ds.field('area_m2')>=83)&(ds.field('area_m2')<85)&(ds.field('is_canceled')==False));df=t.to_pandas().drop_duplicates();out=Path('analysis/billion_map_data_audit');df.to_parquet(out/'staged_identity_evidence.parquet',index=False);print('distinct identityrows',len(df));print('aptseq filled',df.apt_seq.fillna('').ne('').sum());print('ids',df.apt_id.nunique());q=df.groupby('apt_id').agg(seq_count=('apt_seq',lambda s:s.dropna().replace('',None).dropna().nunique()),jibun_count=('jibun','nunique'));q.to_csv(out/'identity_quality.csv');print('multi seq',int(q.seq_count.gt(1).sum()),'multi parcel',int(q.jibun_count.gt(1).sum()))
+

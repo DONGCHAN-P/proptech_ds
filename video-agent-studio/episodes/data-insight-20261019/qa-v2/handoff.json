@@ -1,0 +1,55 @@
+{
+  "task_id": "data-insight-v2-independent-qa",
+  "role": "qa",
+  "status": "sample_visual_and_technical_pass",
+  "input_revisions": {
+    "brief": "brief_v2.json",
+    "scenes": "v2-device-shots",
+    "script": "v2-device-shots-text-locked",
+    "final_mp4_sha256": "577c90cb37a8ddcb1b311d0d6044bf8a66d0af2c0dc847bba3431c77e9196b74"
+  },
+  "outputs": [
+    "qa-v2/findings.json",
+    "qa-v2/report.md",
+    "qa-v2/coverage.json",
+    "qa-v2/input_integrity.json",
+    "qa-v2/media_receipt.json",
+    "qa-v2/ffprobe.json",
+    "qa-v2/decode.log"
+  ],
+  "affected_scene_ids": [
+    "V2-S1",
+    "V2-S2",
+    "V2-S3a",
+    "V2-S3b",
+    "V2-S3c",
+    "V2-S3d",
+    "V2-S4",
+    "V2-S5",
+    "V2-S6"
+  ],
+  "checks": [
+    {
+      "check": "all_scene_cut_and_device_samples",
+      "result": "pass",
+      "evidence": "qa-v2/report.md"
+    },
+    {
+      "check": "independent_ffprobe_full_decode",
+      "result": "pass",
+      "evidence": "qa-v2/media_receipt.json"
+    },
+    {
+      "check": "continuous_playback_actual_listening",
+      "result": "unchecked",
+      "evidence": null
+    },
+    {
+      "check": "ZIP",
+      "result": "not_applicable",
+      "evidence": "not requested"
+    }
+  ],
+  "open_issue_ids": [],
+  "next_role": "director_for_delivery_and_authorized_Telegram"
+}

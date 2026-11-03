@@ -1,0 +1,45 @@
+{
+  "status": "complete_alignment_validated_listening_unverified",
+  "script_revision": "script-v4-hook-outside",
+  "audio_revision": "audio-v2",
+  "inputs": "writer/map-led-v4/narration_input/manifest.json",
+  "generator": "narration/generate_audio_v2.mjs",
+  "validation": {
+    "offline_test": "passed",
+    "chapters": 11,
+    "characters": 6879,
+    "hashes_match": true,
+    "mock_original_alignment_match_and_mismatch_tests": "passed",
+    "network_calls": 0
+  },
+  "changed_scene_ids": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M005",
+    "M006",
+    "M007",
+    "M007B",
+    "M008",
+    "M009"
+  ],
+  "unresolved": [
+    "Actual listening, numbers/proper-name pronunciation and naturalness unverified"
+  ],
+  "next_role": "director_then_editor_then_qa",
+  "paid_api_called": true,
+  "previous_audio_preserved": true,
+  "actual_credit_total": 2751,
+  "submitted_characters": 6879,
+  "additional_cash_usd": 0,
+  "total_pcm_duration_s": 865.76,
+  "actual_listening": false,
+  "outputs": [
+    "narration/audio-v2/",
+    "narration/alignment_manifest_v2.json",
+    "narration/timing_proposals_v2.json",
+    "narration/generation_ledger_v2.json"
+  ]
+}

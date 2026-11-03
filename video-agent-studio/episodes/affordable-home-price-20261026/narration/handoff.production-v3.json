@@ -1,0 +1,70 @@
+{
+  "task_id": "affordable-home-price-narration-v3-clarity-delta",
+  "status": "ACTUAL_V3_TECHNICAL_PASS_PENDING_KANT_AUDIO_QA",
+  "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "versioned_final_timing": "production-injoon-v3/final_timing.json",
+  "final_timing_sha256": "86a3c01e344f8c24da930404355b60d34eb9e1a0f49431cd299b5b38034939e7",
+  "root_final_timing": "unchanged v2 until main adopts approved v3",
+  "technical_checks": "production-injoon-v3/technical_validation.json",
+  "delta_summary": "production-injoon-v3/repair_summary.json",
+  "qa_packet": "production-injoon-v3/qa_packet.json",
+  "new_scene_paths": [
+    {
+      "scene_id": "S014",
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S014\\audio.wav",
+      "sha256": "51603d79db2752b3f49b908d5ef44d74ad6d339910b1cd59ef1bbb639b58cf15"
+    },
+    {
+      "scene_id": "S019",
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S019\\audio.wav",
+      "sha256": "4893a957b8311cfee4a2490861c13b005631b3547cda40839582253ac5501d3d"
+    },
+    {
+      "scene_id": "S024",
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S024\\audio.wav",
+      "sha256": "cc07fb36e603c7d9845a8cf925a7287e434fdcfe64a0fa8b12a5480cd5cc991a"
+    },
+    {
+      "scene_id": "S030",
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S030\\audio.wav",
+      "sha256": "9661fdf2618bf719c3033084de49a1c55f71c79bf3e51c1330fb935db737ef27"
+    }
+  ],
+  "scene_timing": "timing_proposals_v3.json",
+  "new_paragraphs": 4,
+  "rate_new": "-15%",
+  "reused_raw_paragraphs": 41,
+  "rate_reused": "-5%",
+  "voice": "ko-KR-InJoonNeural / edge-tts 7.3.1 / pitch +0Hz",
+  "meaning_cues": 150,
+  "native_words": 1647,
+  "total_seconds": 1171.0333333333335,
+  "delta_seconds": 17.5,
+  "unchanged_audio_chapters": [
+    1,
+    2,
+    3,
+    8,
+    9,
+    10
+  ],
+  "all45_original_PCM_samples_preserved": true,
+  "clip_30fps_CTA_checks": "pass",
+  "source_display_financial_values_unchanged": true,
+  "original_v2_and_first_film_preserved": true,
+  "generation_exit_code": 0,
+  "failures": 0,
+  "automatic_retry": false,
+  "paid_calls": 0,
+  "cash_spent_krw": 0,
+  "required_technical_errors": [],
+  "required_audio_QA_remaining": [
+    "ASR-A2-NUM-001",
+    "ASR-A2-TERM-001"
+  ],
+  "actual_listening": false,
+  "naturalness_verified": false,
+  "ASR_QA_performed_here": false,
+  "next_role": "main forwards actual4 SHA packet to Kant; main adopts v3 times only after audio evidence approval; Carson no full render before audio approval",
+  "direct_peer_message_tool_available": false
+}

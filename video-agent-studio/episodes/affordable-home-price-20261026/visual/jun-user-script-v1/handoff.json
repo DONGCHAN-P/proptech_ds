@@ -1,0 +1,20 @@
+{
+  "task_id": "FULL-JUN-US1-ASSETS",
+  "status": "assets_ready",
+  "summary": "7개 장별 1920×1080 PNG와 집·빈 예산 노트 투명 PNG 2개 준비. 사진 3개 재사용·2개 무문자 정리·2개 신규. 실제 파일·SHA·크기·용도·출처·프롬프트·AI 내부 기록 완료, 화면 배지 false. 최종 크기 컨택트·CH01/06 대표 구도·여백·두 배경 알파 합성 자체 검수 통과. 브랜드·BGM 승인 해시 3개 일치. 직접 메시지 도구가 없어 편집자 알림은 총괄 전달 필요.",
+  "outputs": [
+    "assets.json",
+    "editor_asset_packet.json",
+    "brand_audio_refs.json",
+    "review/visual_review.json",
+    "outputs/"
+  ],
+  "input_versions": "production_brief.json input_versions 참조; source DOCX f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73; scene plan user-recording-guide-v1-r2",
+  "validation": "PNG 9개 decode·SHA·크기, 7장 고유성/31장면 연결, 투명 알파, 기존 브랜드/BGM SHA·probe 확인.",
+  "unresolved": [
+    "직접 알림 도구 없음: issue_FULL-JUN-US1-ASSETS-READY.json을 편집자에게 전달."
+  ],
+  "affected_scene_ids": "S01~S31",
+  "next_owner": "Newton 01a17db2-40c1-7f73-a24b-236c89fd9d92 / 총괄",
+  "limitations": "이미지 자체 검수 범위. 독립 영상 QA·최종 MP4·실제 청취·연속 재생 미수행. 음성/오디오 변경 없음. 외부 유료 API·계정 자료 사용 없음."
+}

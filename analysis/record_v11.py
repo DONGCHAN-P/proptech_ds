@@ -1,0 +1,13 @@
+from pathlib import Path
+import json
+plan=json.loads(Path('video/public/pilot-v11/plan.json').read_text(encoding='utf8'));rows=plan['segments'];Path('video/out/newtown-v11-timing.json').write_text(json.dumps(rows,ensure_ascii=False,indent=2),encoding='utf8')
+def fmt(t):
+ ms=round(t*1000);return f'{ms//3600000:02}:{ms//60000%60:02}:{ms//1000%60:02},{ms%1000:03}'
+Path('video/out/newtown-v11.srt').write_text('\n\n'.join(f'{i+1}\n{fmt(r["start"]+.2)} --> {fmt(r["end"]-.1)}\n{r["text"]}' for i,r in enumerate(rows)),encoding='utf8')
+Path('docs/광교_동탄_v11_예고_대본.md').write_text('# 광교·동탄 v11 — 성공 사례에서 다음 신도시로\n\n'+ '\n\n'.join(f'## {int(r["start"]//60)}:{int(r["start"]%60):02} {r["title"]}\n\n{r["text"]}' for r in rows),encoding='utf8')
+sources=Path('video/out/newtown-v10-sources.md').read_text(encoding='utf8');sources+='\n\n## v11 예고·기관 마크·추가 기업\n\n'
+items=[('왕숙A1/A2·교산A2·창릉A4 공급 블록 확인,2025년 공식 공급 자료','https://www.lh.or.kr/boardDownload.es?bid=0066&list_no=731019&seq=1'),('LH 공사 현황: 왕숙 A1/A2·교산 A2 확인,2025.09','https://www.lh.or.kr/boardDownload.es?bid=0007&list_no=654682&seq=6'),('교산A2 공식 단지명 안내','https://apply.lh.or.kr/lhapply/apply/noti/an/view.do?bbsSn=9102430502&ccrCnntSysDsCd=02&mi=1079'),('ASML한국본사 공식 주소','https://www.asml.com/en/company/about-asml/locations'),('램리서치 동탄지성로86 공식 주소','https://www.lamresearch.com/company/locations/'),('경기도 상징','https://www.gg.go.kr/contents/contents.do?ciIdx=677&menuId=2455'),('대한민국 법원 마크 원본','https://www.scourt.go.kr/portal/common/images/logo.png'),('경찰 공식 상징','https://police.go.kr/www/agency/intro/intro02.jsp'),('SK하이닉스 CI','https://news.skhynix.co.kr/library/sk-hynix_ci_kr'),('LG전자 CI','https://www.lge.co.kr/company/info/brandIdentity')]
+sources+='\n'.join(f'- {name}: {url}' for name,url in items)+'\n\nASML은 공식 주소가 확인되지만 지도 좌표를 확정하지 못해 정확한 위치 핀을 새로 만들지 않고 주소 카드로 소개했다. 램리서치는 공식 주소와 OSM way726025999 좌표37.2073443,127.0653586을 대조했다. 신규 고용 규모나 집값 영향 수치는 주장하지 않는다.\n\n삼성·LG·경기도·ASML·램리서치는 공식 벡터 원형을 사용한다. 법원·경찰 마크는 공식 투명 PNG. SK하이닉스는 공식 JPG를 작은 예시 로고로 배치했다. 로고 자체를 생성하거나 재그리지 않았다.\n\n신도시 후보는 후속 조사 대상으로 언급한다. 기존2025년 공급·공사 자료로 블록의 존재를 확인한 것이며 현재 청약 가능,분양 예정일,입주일,가격을 확정하는 설명이 아니다.\n'
+Path('video/out/newtown-v11-sources.md').write_text(sources,encoding='utf8')
+manifest={'acquired':'2026-10-13','root':'video/public/brands-v11','sources':items,'files':['samsung.svg','gg.svg','court.png','police.png','lg.svg','sk.jpg','asml.svg','lam.svg'],'maps':{'lam':{'lat':37.2073443,'lon':127.0653586,'osm':'way/726025999','address':'동탄지성로86'},'asml':{'address':'동탄대로9가길47','pin_added':False}}}
+Path('video/public/brands-v11/manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf8')

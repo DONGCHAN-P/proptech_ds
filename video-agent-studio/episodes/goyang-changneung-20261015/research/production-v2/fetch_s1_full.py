@@ -1,0 +1,4 @@
+from pathlib import Path
+import sys,urllib.request,urllib.parse,json,hashlib
+P=Path(__file__).parent;sys.path.insert(0,str(P.parents[2]/'namyangju-wangsuk-20261014/research/map-led-v5/_pdfdeps'));import pymupdf
+u='https://gc.lynn.co.kr/fileview/1664/'+urllib.parse.quote('입주자모집공고.pdf'); b=urllib.request.urlopen(u,timeout=25).read();p=P/'raw/s1_full.pdf';p.write_bytes(b);d=pymupdf.open(p);p.with_suffix('.txt').write_text('\n'.join('=== PAGE '+str(i+1)+' ===\n'+pg.get_text()for i,pg in enumerate(d)),encoding='utf-8');m=json.loads((P/'download_manifest.json').read_text(encoding='utf-8'));m.append({'file':str(p),'url':u,'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b),'pages':len(d),'status':'downloaded','checked_on':'2026-10-16'});(P/'download_manifest.json').write_text(json.dumps(m,ensure_ascii=False,indent=2),encoding='utf-8');print('pages',len(d))

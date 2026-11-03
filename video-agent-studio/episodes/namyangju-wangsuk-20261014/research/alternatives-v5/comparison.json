@@ -1,0 +1,256 @@
+{
+  "revision": "alternatives-v5",
+  "facts": [
+    {
+      "claim_id": "ALT-001",
+      "sentence": "다산롯데캐슬의 조건 일치 수집표본 중위는 10.95억원이다.",
+      "source_url": "https://rt.molit.go.kr/",
+      "source_files": [
+        {
+          "path": "raw\\rtms_trade\\2026\\07\\41360_202607.xml",
+          "sha256": "73c74d7dcce93e31dc13e71a62dd2ae24e12b52d47fc98c7740d2af108ab74ce"
+        },
+        {
+          "path": "raw\\rtms_trade\\2026\\08\\41360_202608.xml",
+          "sha256": "c453ac0dbbbee209982de39a76d39368b8457e238a7ab635715f0f4d786cf5c1"
+        },
+        {
+          "path": "raw\\rtms_trade\\2026\\09\\41360_202609.xml",
+          "sha256": "610715f483510d0cf1a698bd0cd8338ce657d0174b9b9717a08c1c1e74c14c1e"
+        }
+      ],
+      "evidence_location": "raw_verified_rows.json transactions; aptNm exact match",
+      "reference_date": "2026-07-01~2026-09-30 계약일",
+      "checked_date": "2026-10-15",
+      "status": "qualified",
+      "statistic": "median",
+      "unit": "만원",
+      "scope": "다산롯데캐슬",
+      "transaction_type": "apartment_sale; 중개/직거래 혼합, raw transaction_type 개별 제공",
+      "area_m2": "83 <= area < 85",
+      "floor": ">=5",
+      "sample_count": 11,
+      "cancellations": "cdealDay nonblank or cdealType O/Y excluded",
+      "aggregation": "개별 계약 신고금액 단순 중위; floor/동/향/정확면적 미보정",
+      "collection_date": "2026-10-13",
+      "limits": [
+        "수집 XML의 원자료를 재집계했으나 10/15 API 갱신 조회를 수행하지 않음",
+        "계약/등기 또는 동일주택 중복성 독립대조 미실시",
+        "역 실제 보행거리 미검증",
+        "신축 분양과 구축 매매의 품질 차이 있음"
+      ],
+      "name": "다산롯데캐슬",
+      "n": 11,
+      "median_manwon": 109500,
+      "range_manwon": [
+        100000,
+        124500
+      ],
+      "build_year": 2017,
+      "dates": [
+        "2026-07-04",
+        "2026-08-21"
+      ]
+    },
+    {
+      "claim_id": "ALT-002",
+      "sentence": "별내푸르지오의 조건 일치 수집표본 중위는 6.775억원이다.",
+      "source_url": "https://rt.molit.go.kr/",
+      "source_files": [
+        {
+          "path": "raw\\rtms_trade\\2026\\07\\41360_202607.xml",
+          "sha256": "73c74d7dcce93e31dc13e71a62dd2ae24e12b52d47fc98c7740d2af108ab74ce"
+        },
+        {
+          "path": "raw\\rtms_trade\\2026\\08\\41360_202608.xml",
+          "sha256": "c453ac0dbbbee209982de39a76d39368b8457e238a7ab635715f0f4d786cf5c1"
+        },
+        {
+          "path": "raw\\rtms_trade\\2026\\09\\41360_202609.xml",
+          "sha256": "610715f483510d0cf1a698bd0cd8338ce657d0174b9b9717a08c1c1e74c14c1e"
+        }
+      ],
+      "evidence_location": "raw_verified_rows.json transactions; aptNm exact match",
+      "reference_date": "2026-07-01~2026-09-30 계약일",
+      "checked_date": "2026-10-15",
+      "status": "qualified",
+      "statistic": "median",
+      "unit": "만원",
+      "scope": "별내푸르지오",
+      "transaction_type": "apartment_sale; 중개/직거래 혼합, raw transaction_type 개별 제공",
+      "area_m2": "83 <= area < 85",
+      "floor": ">=5",
+      "sample_count": 16,
+      "cancellations": "cdealDay nonblank or cdealType O/Y excluded",
+      "aggregation": "개별 계약 신고금액 단순 중위; floor/동/향/정확면적 미보정",
+      "collection_date": "2026-10-13",
+      "limits": [
+        "수집 XML의 원자료를 재집계했으나 10/15 API 갱신 조회를 수행하지 않음",
+        "계약/등기 또는 동일주택 중복성 독립대조 미실시",
+        "역 실제 보행거리 미검증",
+        "신축 분양과 구축 매매의 품질 차이 있음"
+      ],
+      "name": "별내푸르지오",
+      "n": 16,
+      "median_manwon": 67750.0,
+      "range_manwon": [
+        60000,
+        76000
+      ],
+      "build_year": 2015,
+      "dates": [
+        "2026-07-18",
+        "2026-09-23"
+      ]
+    },
+    {
+      "claim_id": "ALT-003",
+      "sentence": "별내자이더스타의 조건 일치 수집표본 중위는 11.85억원이다.",
+      "source_url": "https://rt.molit.go.kr/",
+      "source_files": [
+        {
+          "path": "raw\\rtms_trade\\2026\\07\\41360_202607.xml",
+          "sha256": "73c74d7dcce93e31dc13e71a62dd2ae24e12b52d47fc98c7740d2af108ab74ce"
+        },
+        {
+          "path": "raw\\rtms_trade\\2026\\08\\41360_202608.xml",
+          "sha256": "c453ac0dbbbee209982de39a76d39368b8457e238a7ab635715f0f4d786cf5c1"
+        },
+        {
+          "path": "raw\\rtms_trade\\2026\\09\\41360_202609.xml",
+          "sha256": "610715f483510d0cf1a698bd0cd8338ce657d0174b9b9717a08c1c1e74c14c1e"
+        }
+      ],
+      "evidence_location": "raw_verified_rows.json transactions; aptNm exact match",
+      "reference_date": "2026-07-01~2026-09-30 계약일",
+      "checked_date": "2026-10-15",
+      "status": "qualified",
+      "statistic": "median",
+      "unit": "만원",
+      "scope": "별내자이더스타",
+      "transaction_type": "apartment_sale; 중개/직거래 혼합, raw transaction_type 개별 제공",
+      "area_m2": "83 <= area < 85",
+      "floor": ">=5",
+      "sample_count": 22,
+      "cancellations": "cdealDay nonblank or cdealType O/Y excluded",
+      "aggregation": "개별 계약 신고금액 단순 중위; floor/동/향/정확면적 미보정",
+      "collection_date": "2026-10-13",
+      "limits": [
+        "수집 XML의 원자료를 재집계했으나 10/15 API 갱신 조회를 수행하지 않음",
+        "계약/등기 또는 동일주택 중복성 독립대조 미실시",
+        "역 실제 보행거리 미검증",
+        "신축 분양과 구축 매매의 품질 차이 있음"
+      ],
+      "name": "별내자이더스타",
+      "n": 22,
+      "median_manwon": 118500.0,
+      "range_manwon": [
+        109000,
+        121000
+      ],
+      "build_year": 2023,
+      "dates": [
+        "2026-07-03",
+        "2026-09-20"
+      ]
+    }
+  ],
+  "wangsuk_sale": [
+    {
+      "claim_id": "ALT-SALE-A1",
+      "sentence": "왕숙2 A1 공식 안내 표시가격과 입주예정",
+      "block": "왕숙2 A1",
+      "area_m2": 84.67,
+      "price_manwon": 69363,
+      "price59_manwon": 49304,
+      "statistic": "타입별 기준층5층이상 표시가격",
+      "sample_count": null,
+      "unit": "만원",
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&panId=0000061080&uppAisTpCd=05",
+      "evidence_location": "주택형 안내 및 기준층 각주, 공급정보",
+      "reference_date": "2026-04-30",
+      "checked_date": "2026-10-15",
+      "status": "qualified",
+      "households": 812,
+      "move_in_target": "2029-02",
+      "project_status": "approved_plan",
+      "notes": [
+        "최종 계약 총액/확장/옵션/취득/대출비용 아님",
+        "59형은84㎡비교차트에 섞지 않음",
+        "청약접수는 종료됨; 현재 신청가능 상품으로 소개 금지",
+        "A1 정정 연결의 최종 계약표 미대조; A3 현재 정정본문은 확장면적/소득기준/녹지/도면 표기 수정"
+      ]
+    },
+    {
+      "claim_id": "ALT-SALE-A3",
+      "sentence": "왕숙2 A3 공식 안내 표시가격과 입주예정",
+      "block": "왕숙2 A3",
+      "area_m2": 84.75,
+      "price_manwon": 73245,
+      "price59_manwon": 52634,
+      "statistic": "타입별 기준층5층이상 표시가격",
+      "sample_count": null,
+      "unit": "만원",
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&panId=0000061086&uppAisTpCd=05",
+      "evidence_location": "주택형 안내 및 기준층 각주, 공급정보",
+      "reference_date": "2026-04-30",
+      "checked_date": "2026-10-15",
+      "status": "qualified",
+      "households": 686,
+      "move_in_target": "2030-05",
+      "project_status": "approved_plan",
+      "notes": [
+        "최종 계약 총액/확장/옵션/취득/대출비용 아님",
+        "59형은84㎡비교차트에 섞지 않음",
+        "청약접수는 종료됨; 현재 신청가능 상품으로 소개 금지",
+        "A1 정정 연결의 최종 계약표 미대조; A3 현재 정정본문은 확장면적/소득기준/녹지/도면 표기 수정"
+      ]
+    }
+  ],
+  "comparability": "부분 조건 통일; 준공/입지/향/계약조건/대기기간 통제 아님",
+  "supply": {
+    "verified_subset": [
+      {
+        "block": "왕숙2 A1",
+        "households": 812,
+        "move_in_target": "2029-02",
+        "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&panId=0000061080&uppAisTpCd=05",
+        "status": "approved_plan"
+      },
+      {
+        "block": "왕숙2 A3",
+        "households": 686,
+        "move_in_target": "2030-05",
+        "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&panId=0000061086&uppAisTpCd=05",
+        "status": "approved_plan"
+      }
+    ],
+    "year_sum_known_subset": {
+      "2029": 812,
+      "2030": 686
+    },
+    "not_annual_total": true,
+    "unknown": [
+      "왕숙1·2 전체 연도별 입주표",
+      "주변 다산/별내/진접의 같은기간 신규입주표",
+      "공급물량에 따른 가격효과"
+    ],
+    "do_not_say": "왕숙총80114세대를 특정연도 입주량으로 환산 금지"
+  },
+  "decision_matrix": [
+    {
+      "alternative": "다산롯데캐슬",
+      "meaning": "현실의 생활권을 갖춘 다산 가격보다 왕숙2 표시가격은 낮다. 이 차이를 신축과 대기기간·아직 미완성인 기반시설의 교환조건으로 설명한다.",
+      "do_not_say": "3~4억원 확정 안전마진"
+    },
+    {
+      "alternative": "별내푸르지오",
+      "meaning": "왕숙2 표시가격보다 낮은84㎡급 기축 대안이 존재한다. 신축을 원하고 기다릴 수 있는 사람과 지금 입주·운행철도를 원하는 사람의 선택이 갈린다."
+    },
+    {
+      "alternative": "별내자이더스타",
+      "meaning": "신축성과 역 결합 가치가 가격에 같이 들어간 높은 가격군의 대비 사례. 왕숙이 향후 같은 가격에 도달한다는 증거는 아니다."
+    }
+  ],
+  "writer_conclusion": "왕숙의 메리트는 주변 모든 집보다 싸다는 데 있지 않다. 다산·신축 별내의 높은 가격을 피하면서 새집을 기다릴 수 있는지, 그동안 철도·학교·일자리의 완성 시차를 감당할 수 있는지에 달린다. 현재 가격차는 조건부 선택의 단서이며 미래 수익을 의미하지 않는다."
+}

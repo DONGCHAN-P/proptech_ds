@@ -1,0 +1,14 @@
+{
+  "task_id": "efficiency-smoke",
+  "inputs": ["analysis/video_task_runner.py"],
+  "outputs": ["output/video_jobs/efficiency-smoke/result.json"],
+  "steps": [
+    {
+      "argv": [
+        "C:/projects/realestate_reco/tools/python311/python.exe",
+        "-c",
+        "from pathlib import Path; Path('output/video_jobs/efficiency-smoke/result.json').write_text('{\"local_check\": true}', encoding='utf8'); print('Local-only smoke check; no media generation')"
+      ]
+    }
+  ]
+}

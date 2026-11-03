@@ -1,0 +1,45 @@
+{
+  "revision": "map-led-v6-music-locked",
+  "audio_revision": "audio-v2",
+  "fps": 30,
+  "intro_lead_frames": 45,
+  "instrumental_tail_frames": 270,
+  "narration_volume": 0.9,
+  "regions": [
+    {
+      "id": "intro-music",
+      "from_frame": 0,
+      "duration_frames": 669,
+      "source_offset_frames": 0,
+      "gain": 0.55,
+      "duck_gain": 0.18,
+      "fade_in_frames": 20,
+      "fade_out_frames": 60,
+      "voice_ranges": [
+        [
+          45,
+          669
+        ]
+      ]
+    },
+    {
+      "id": "outro-music",
+      "from_frame": 25470,
+      "duration_frames": 822,
+      "source_offset_frames": 960,
+      "gain": 0.48,
+      "duck_gain": 0.18,
+      "fade_in_frames": 30,
+      "fade_out_frames": 75,
+      "voice_ranges": [
+        [
+          0,
+          552
+        ]
+      ]
+    }
+  ],
+  "ducking": "frame-driven smooth envelope with 6-frame pre-attack and 12-frame post-release",
+  "actual_listening": false,
+  "proof_objective_check": "qa/map-led-v6/proof_audio_check.json"
+}

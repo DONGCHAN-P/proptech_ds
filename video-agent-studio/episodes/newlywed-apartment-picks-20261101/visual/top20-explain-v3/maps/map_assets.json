@@ -1,0 +1,1346 @@
+{
+  "revision": "top20-explain-v3",
+  "source_price_panel_sha256": "844f0ee211dfc89094b8160558d72e0f8f001e8072d361123447e8c1ebfacdef",
+  "assets": [
+    {
+      "region_id": "R01",
+      "file": "visual/top20-explain-v3/maps/R01_price_map.svg",
+      "sha256": "19b85c906bf40e165d9884c55b90c456732757b76e60a54fd0439654c0a04766",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R01_서구_境界.geojson.gz",
+      "source_sha256": "af31dea0988f5aa5e85771efc876d0123bdd159530ecfedb0fed51080079acf6",
+      "boundary_version": "2024-10-01",
+      "feature_count": 23,
+      "marker": {
+        "x": 573.7336949893743,
+        "y": 212.04349545468227,
+        "lat": 37.58357956761464,
+        "lng": 126.71631451867724,
+        "apt_id": "a1e089016c833199",
+        "apt_name": "우미린파크뷰1단지",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R01",
+        "scene_id": "S022",
+        "rank": 1,
+        "region": "서구",
+        "province": "인천",
+        "median_manwon": 55000.0,
+        "display_price": "5억5,000만원",
+        "n": 1530,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R01",
+        "representative": {
+          "apt_id": "a1e089016c833199",
+          "api_apt_seq": "28260-4912",
+          "official_id": "28260120447122",
+          "apt_name": "우미린파크뷰1단지",
+          "legal_dong_name": "당하동",
+          "median_manwon": 56200.0,
+          "display_price": "5억6,200만원",
+          "n": 5,
+          "lat": 37.58357956761464,
+          "lng": 126.71631451867724,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "이음2로 89",
+          "claim_id": "V3_API_APT_R01",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R02",
+      "file": "visual/top20-explain-v3/maps/R02_price_map.svg",
+      "sha256": "7e0ee793029bc919e5dcc461df4207158d024f6fc25dee439c9617539217bcff",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R02_송파구_境界.geojson.gz",
+      "source_sha256": "c96fc74dbabfe4c95b32868edf719a472e8882e28cd389d1936648aa5c55c59e",
+      "boundary_version": "2024-10-01",
+      "feature_count": 27,
+      "marker": {
+        "x": 295.47819171542653,
+        "y": 266.89797635681066,
+        "lat": 37.50914898452511,
+        "lng": 127.09484365724681,
+        "apt_id": "c1603296f48ad1b7",
+        "apt_name": "레이크팰리스",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R02",
+        "scene_id": "S021",
+        "rank": 2,
+        "region": "송파구",
+        "province": "서울",
+        "median_manwon": 218500.0,
+        "display_price": "21억8,500만원",
+        "n": 513,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R02",
+        "representative": {
+          "apt_id": "c1603296f48ad1b7",
+          "api_apt_seq": "11710-5957",
+          "official_id": "11710120064707",
+          "apt_name": "레이크팰리스",
+          "legal_dong_name": "잠실동",
+          "median_manwon": 300000.0,
+          "display_price": "30억원",
+          "n": 9,
+          "lat": 37.50914898452511,
+          "lng": 127.09484365724681,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "잠실로 88",
+          "claim_id": "V3_API_APT_R02",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R03",
+      "file": "visual/top20-explain-v3/maps/R03_price_map.svg",
+      "sha256": "96d178dee425deabcb2dc18930551ac87ee7084e91a9c3f0ba457473318b345e",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R03_고양시_덕양구_境界.geojson.gz",
+      "source_sha256": "c27606f56ea674bce11eb11c9827db16839f7cce8987f40da29983fd16fc4d73",
+      "boundary_version": "2024-10-01",
+      "feature_count": 21,
+      "marker": {
+        "x": 267.7060656779737,
+        "y": 390.6507869122888,
+        "lat": 37.63080124464862,
+        "lng": 126.82854732327873,
+        "apt_id": "6116d5b168243754",
+        "apt_name": "별빛마을(건영)10",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R03",
+        "scene_id": "S020",
+        "rank": 3,
+        "region": "고양시 덕양구",
+        "province": "경기",
+        "median_manwon": 73000.0,
+        "display_price": "7억3,000만원",
+        "n": 1125,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R03",
+        "representative": {
+          "apt_id": "6116d5b168243754",
+          "api_apt_seq": "41281-71",
+          "official_id": "41281100007806",
+          "apt_name": "별빛마을(건영)10",
+          "legal_dong_name": "화정동",
+          "median_manwon": 62500.0,
+          "display_price": "6억2,500만원",
+          "n": 22,
+          "lat": 37.63080124464862,
+          "lng": 126.82854732327873,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "화신로 291",
+          "claim_id": "V3_API_APT_R03",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R04",
+      "file": "visual/top20-explain-v3/maps/R04_price_map.svg",
+      "sha256": "b7d2615961fa59808a547970142b03953b1b82ee19df580a09229a1febb908de",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R04_강서구_境界.geojson.gz",
+      "source_sha256": "b9bd82f2fef83ae6c037fd6b5003415f87812807871e5e24add74113ea2db57d",
+      "boundary_version": "2024-10-01",
+      "feature_count": 20,
+      "marker": {
+        "x": 688.3236161133799,
+        "y": 391.5838532958461,
+        "lat": 37.55235838275378,
+        "lng": 126.87532610343173,
+        "apt_id": "e4fd49b27f9236b5",
+        "apt_name": "현대1",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R04",
+        "scene_id": "S019",
+        "rank": 4,
+        "region": "강서구",
+        "province": "서울",
+        "median_manwon": 108000.0,
+        "display_price": "10억8,000만원",
+        "n": 579,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R04",
+        "representative": {
+          "apt_id": "e4fd49b27f9236b5",
+          "api_apt_seq": "11500-28",
+          "official_id": "11500100001770",
+          "apt_name": "현대1",
+          "legal_dong_name": "염창동",
+          "median_manwon": 121500.0,
+          "display_price": "12억1,500만원",
+          "n": 10,
+          "lat": 37.55235838275378,
+          "lng": 126.87532610343173,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "양천로75길 57",
+          "claim_id": "V3_API_APT_R04",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R05",
+      "file": "visual/top20-explain-v3/maps/R05_price_map.svg",
+      "sha256": "7882036d5c894e61549873ca0e20319d3be9d2208d8652b62d564c552c1e2d83",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R05_부평구_境界.geojson.gz",
+      "source_sha256": "f150578d090f3ee3d61bbebf982d8b54ad7dc17e3115253129e9a7e800563dbd",
+      "boundary_version": "2024-10-01",
+      "feature_count": 22,
+      "marker": {
+        "x": 240.5691833536344,
+        "y": 259.3751626657111,
+        "lat": 37.49892254476598,
+        "lng": 126.70342044142814,
+        "apt_id": "612dffb5f9e07eb8",
+        "apt_name": "한신휴",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R05",
+        "scene_id": "S018",
+        "rank": 5,
+        "region": "부평구",
+        "province": "인천",
+        "median_manwon": 43000.0,
+        "display_price": "4억3,000만원",
+        "n": 642,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R05",
+        "representative": {
+          "apt_id": "612dffb5f9e07eb8",
+          "api_apt_seq": "28237-170",
+          "official_id": "28237100051397",
+          "apt_name": "한신휴",
+          "legal_dong_name": "산곡동",
+          "median_manwon": 39000.0,
+          "display_price": "3억9,000만원",
+          "n": 9,
+          "lat": 37.49892254476598,
+          "lng": 126.70342044142814,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "마장로220번길 13",
+          "claim_id": "V3_API_APT_R05",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R06",
+      "file": "visual/top20-explain-v3/maps/R06_price_map.svg",
+      "sha256": "86d7fd9cfb5f81af0af0c69938c681dd999db3ef37045aff846fa3b0df5bb69c",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R06_강남구_境界.geojson.gz",
+      "source_sha256": "f5d90151107e8f81d572dbc5064f9bd624404bdcb6c380ecb0684747db422d00",
+      "boundary_version": "2024-10-01",
+      "feature_count": 22,
+      "marker": {
+        "x": 326.52168554613183,
+        "y": 427.30270901814345,
+        "lat": 37.47902969749812,
+        "lng": 127.05388788494834,
+        "apt_id": "1cc78230f2d8dd65",
+        "apt_name": "개포래미안포레스트",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R06",
+        "scene_id": "S017",
+        "rank": 6,
+        "region": "강남구",
+        "province": "서울",
+        "median_manwon": 303000.0,
+        "display_price": "30억3,000만원",
+        "n": 235,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R06",
+        "representative": {
+          "apt_id": "1cc78230f2d8dd65",
+          "api_apt_seq": "11680-4929",
+          "official_id": "11680120414794",
+          "apt_name": "개포래미안포레스트",
+          "legal_dong_name": "개포동",
+          "median_manwon": 319500.0,
+          "display_price": "31억9,500만원",
+          "n": 10,
+          "lat": 37.47902969749812,
+          "lng": 127.05388788494834,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "개포로 264",
+          "claim_id": "V3_API_APT_R06",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R07",
+      "file": "visual/top20-explain-v3/maps/R07_price_map.svg",
+      "sha256": "225d9161f96126fcb7c335ec1863032a1f6ba4fab400a4ddb4975f5b5ac00a4f",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R07_강동구_境界.geojson.gz",
+      "source_sha256": "f8b1907700418aa5c3fbd74cec2bd209535ec3ce29361ab69bfe9c50799b4129",
+      "boundary_version": "2024-10-01",
+      "feature_count": 19,
+      "marker": {
+        "x": 398.5717825907841,
+        "y": 425.3120777039545,
+        "lat": 37.53406045858132,
+        "lng": 127.14634496814314,
+        "apt_id": "f0dfdf97be86387d",
+        "apt_name": "둔촌푸르지오",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R07",
+        "scene_id": "S016",
+        "rank": 7,
+        "region": "강동구",
+        "province": "서울",
+        "median_manwon": 158000.0,
+        "display_price": "15억8,000만원",
+        "n": 539,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R07",
+        "representative": {
+          "apt_id": "f0dfdf97be86387d",
+          "api_apt_seq": "11740-2931",
+          "official_id": "11740120126613",
+          "apt_name": "둔촌푸르지오",
+          "legal_dong_name": "둔촌동",
+          "median_manwon": 166000.0,
+          "display_price": "16억6,000만원",
+          "n": 13,
+          "lat": 37.53406045858132,
+          "lng": 127.14634496814314,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "명일로 172",
+          "claim_id": "V3_API_APT_R07",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R08",
+      "file": "visual/top20-explain-v3/maps/R08_price_map.svg",
+      "sha256": "bf4e370b9707aa5c627f90baa22dbc2676c3c462963903c14f5be8ae277cc096",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R08_영등포구_境界.geojson.gz",
+      "source_sha256": "d2250bb0f75b443f5168f85e56c21f6e7ca3c440feada387a0282c66aaf900d9",
+      "boundary_version": "2024-10-01",
+      "feature_count": 18,
+      "marker": {
+        "x": 376.4709648156773,
+        "y": 494.62471362980835,
+        "lat": 37.49492726366529,
+        "lng": 126.90991061063461,
+        "apt_id": "88be671e66df3264",
+        "apt_name": "보라매경남아너스빌",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R08",
+        "scene_id": "S015",
+        "rank": 8,
+        "region": "영등포구",
+        "province": "서울",
+        "median_manwon": 142000.0,
+        "display_price": "14억2,000만원",
+        "n": 343,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R08",
+        "representative": {
+          "apt_id": "88be671e66df3264",
+          "api_apt_seq": "11560-1233",
+          "official_id": "11560120008680",
+          "apt_name": "보라매경남아너스빌",
+          "legal_dong_name": "신길동",
+          "median_manwon": 135250.0,
+          "display_price": "13억5,250만원",
+          "n": 10,
+          "lat": 37.49492726366529,
+          "lng": 126.90991061063461,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "여의대방로 25",
+          "claim_id": "V3_API_APT_R08",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R09",
+      "file": "visual/top20-explain-v3/maps/R09_price_map.svg",
+      "sha256": "fea622a0f3ae9dee28a667117b8ec14899af050b03be6203b8f8641f0905a250",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R09_성남시_분당구_境界.geojson.gz",
+      "source_sha256": "063ab52e1d9e158d3666feaab92e9b852dd99f7d8f4d3a8a704e719e4dca25b5",
+      "boundary_version": "2024-10-01",
+      "feature_count": 22,
+      "marker": {
+        "x": 559.4928603937649,
+        "y": 308.60619798557786,
+        "lat": 37.37388070503782,
+        "lng": 127.13448940932957,
+        "apt_id": "d78d8928286582b1",
+        "apt_name": "효자촌(삼환)",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R09",
+        "scene_id": "S014",
+        "rank": 9,
+        "region": "성남시 분당구",
+        "province": "경기",
+        "median_manwon": 180000.0,
+        "display_price": "18억원",
+        "n": 369,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R09",
+        "representative": {
+          "apt_id": "d78d8928286582b1",
+          "api_apt_seq": "41135-109",
+          "official_id": "41135100006304",
+          "apt_name": "효자촌(삼환)",
+          "legal_dong_name": "서현동",
+          "median_manwon": 168000.0,
+          "display_price": "16억8,000만원",
+          "n": 5,
+          "lat": 37.37388070503782,
+          "lng": 127.13448940932957,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "불정로 361",
+          "claim_id": "V3_API_APT_R09",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R10",
+      "file": "visual/top20-explain-v3/maps/R10_price_map.svg",
+      "sha256": "628dc0e5f4d5676fbe516ab7f1d6bb776c695204e48677a55be4804f887f41d2",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R10_미추홀구_境界.geojson.gz",
+      "source_sha256": "61e8530e1f3dc7e29941159ffbd18acc259647d2a858a45c986a4bcdb2374ed6",
+      "boundary_version": "2024-10-01",
+      "feature_count": 21,
+      "marker": {
+        "x": 143.33611302692373,
+        "y": 396.87624250611475,
+        "lat": 37.447469498837485,
+        "lng": 126.63376028507263,
+        "apt_id": "bf1b63122c64c817",
+        "apt_name": "용현2단지금호타운",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R10",
+        "scene_id": "S013",
+        "rank": 10,
+        "region": "미추홀구",
+        "province": "인천",
+        "median_manwon": 40000.0,
+        "display_price": "4억원",
+        "n": 363,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R10",
+        "representative": {
+          "apt_id": "bf1b63122c64c817",
+          "api_apt_seq": "28177-19",
+          "official_id": "28177100005496",
+          "apt_name": "용현2단지금호타운",
+          "legal_dong_name": "용현동",
+          "median_manwon": 32250.0,
+          "display_price": "3억2,250만원",
+          "n": 5,
+          "lat": 37.447469498837485,
+          "lng": 126.63376028507263,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "매소홀로 68",
+          "claim_id": "V3_API_APT_R10",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R11",
+      "file": "visual/top20-explain-v3/maps/R11_price_map.svg",
+      "sha256": "ffab75881045dda42ded630663d3501f6f7f7fa2cf7f75ba696b13e9d4ab35f8",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R11_노원구_境界.geojson.gz",
+      "source_sha256": "555db8d32c4377e23e4559fa8c93059349115c882bb3b933217ea6aa5eb65f36",
+      "boundary_version": "2024-10-01",
+      "feature_count": 19,
+      "marker": {
+        "x": 355.2290213961191,
+        "y": 300.34318335968186,
+        "lat": 37.65526235774189,
+        "lng": 127.06832847708449,
+        "apt_id": "794a23f22c73fd79",
+        "apt_name": "상계2차중앙하이츠",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R11",
+        "scene_id": "S012",
+        "rank": 11,
+        "region": "노원구",
+        "province": "서울",
+        "median_manwon": 85000.0,
+        "display_price": "8억5,000만원",
+        "n": 672,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R11",
+        "representative": {
+          "apt_id": "794a23f22c73fd79",
+          "api_apt_seq": "11350-16",
+          "official_id": "11350100002488",
+          "apt_name": "상계2차중앙하이츠",
+          "legal_dong_name": "상계동",
+          "median_manwon": 84500.0,
+          "display_price": "8억4,500만원",
+          "n": 5,
+          "lat": 37.65526235774189,
+          "lng": 127.06832847708449,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "노원로 428",
+          "claim_id": "V3_API_APT_R11",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R12",
+      "file": "visual/top20-explain-v3/maps/R12_price_map.svg",
+      "sha256": "5cafed91781186e1693d9d4678c3fea603e70175620530be445b595119af77af",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R12_수원시_영통구_境界.geojson.gz",
+      "source_sha256": "57bc6128b77479e0ad43f79f94f3e5f152c99669ff4de0e1bd7493372b1a3c34",
+      "boundary_version": "2024-10-01",
+      "feature_count": 12,
+      "marker": {
+        "x": 352.4877833178782,
+        "y": 500.6315600743959,
+        "lat": 37.24266318498334,
+        "lng": 127.05146159988865,
+        "apt_id": "cdf675ec9fa90c61",
+        "apt_name": "망포마을쌍용1차",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R12",
+        "scene_id": "S011",
+        "rank": 12,
+        "region": "수원시 영통구",
+        "province": "경기",
+        "median_manwon": 83000.0,
+        "display_price": "8억3,000만원",
+        "n": 855,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R12",
+        "representative": {
+          "apt_id": "cdf675ec9fa90c61",
+          "api_apt_seq": "41117-75",
+          "official_id": "41117100006152",
+          "apt_name": "망포마을쌍용1차",
+          "legal_dong_name": "망포동",
+          "median_manwon": 74000.0,
+          "display_price": "7억4,000만원",
+          "n": 9,
+          "lat": 37.24266318498334,
+          "lng": 127.05146159988865,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "영통로173번길 37",
+          "claim_id": "V3_API_APT_R12",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R13",
+      "file": "visual/top20-explain-v3/maps/R13_price_map.svg",
+      "sha256": "38eb61c54b86740c16cb790b6f75914f6ba9182b7e2b8cd4b9b92c2b86143d83",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R13_수원시_권선구_境界.geojson.gz",
+      "source_sha256": "26b92533c76416876eec95ae10383ef9153feef3fde63d0eb4372e4a2ef1e9b0",
+      "boundary_version": "2024-10-01",
+      "feature_count": 12,
+      "marker": {
+        "x": 155.6728188362573,
+        "y": 255.39222405090726,
+        "lat": 37.2702177074054,
+        "lng": 126.94004053724314,
+        "apt_id": "5c28f4d6d2585067",
+        "apt_name": "Y CITY(와이시티)",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R13",
+        "scene_id": "S010",
+        "rank": 13,
+        "region": "수원시 권선구",
+        "province": "경기",
+        "median_manwon": 58000.0,
+        "display_price": "5억8,000만원",
+        "n": 1148,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R13",
+        "representative": {
+          "apt_id": "5c28f4d6d2585067",
+          "api_apt_seq": "41113-1809",
+          "official_id": "41113120297350",
+          "apt_name": "Y CITY(와이시티)",
+          "legal_dong_name": "금곡동",
+          "median_manwon": 58000.0,
+          "display_price": "5억8,000만원",
+          "n": 22,
+          "lat": 37.2702177074054,
+          "lng": 126.94004053724314,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "금곡로 20",
+          "claim_id": "V3_API_APT_R13",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R14",
+      "file": "visual/top20-explain-v3/maps/R14_price_map.svg",
+      "sha256": "5f54988a4734173ae433e392dc412658393352c87d99602ce7397e4685bdbf1c",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R14_은평구_境界.geojson.gz",
+      "source_sha256": "72eb5be9accbff967a1f329fe13450c79f0168975ac9ee36b17350e16f1df420",
+      "boundary_version": "2024-10-01",
+      "feature_count": 16,
+      "marker": {
+        "x": 398.28261930771225,
+        "y": 423.2901875384528,
+        "lat": 37.598496575282994,
+        "lng": 126.92667993590068,
+        "apt_id": "e55ad927f66dce55",
+        "apt_name": "녹번역센트레빌",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R14",
+        "scene_id": "S009",
+        "rank": 14,
+        "region": "은평구",
+        "province": "서울",
+        "median_manwon": 94500.0,
+        "display_price": "9억4,500만원",
+        "n": 578,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R14",
+        "representative": {
+          "apt_id": "e55ad927f66dce55",
+          "api_apt_seq": "11380-9567",
+          "official_id": "11380120285080",
+          "apt_name": "녹번역센트레빌",
+          "legal_dong_name": "응암동",
+          "median_manwon": 93000.0,
+          "display_price": "9억3,000만원",
+          "n": 10,
+          "lat": 37.598496575282994,
+          "lng": 126.92667993590068,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "백련산로 160",
+          "claim_id": "V3_API_APT_R14",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R15",
+      "file": "visual/top20-explain-v3/maps/R15_price_map.svg",
+      "sha256": "2565c923d27f0e8ffa3df10daac14fc827c285b474f424a498537d83793cc039",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R15_구로구_境界.geojson.gz",
+      "source_sha256": "794f5293024467fdb289f8c72b2f45e1703e632bee06987e04623f43824778d3",
+      "boundary_version": "2024-10-01",
+      "feature_count": 16,
+      "marker": {
+        "x": 556.7491934884738,
+        "y": 327.7845132428846,
+        "lat": 37.49227780524133,
+        "lng": 126.87721912353024,
+        "apt_id": "445ea9149a6d5233",
+        "apt_name": "현대연예인",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R15",
+        "scene_id": "S008",
+        "rank": 15,
+        "region": "구로구",
+        "province": "서울",
+        "median_manwon": 82000.0,
+        "display_price": "8억2,000만원",
+        "n": 544,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R15",
+        "representative": {
+          "apt_id": "445ea9149a6d5233",
+          "api_apt_seq": "11530-39",
+          "official_id": "11530100002007",
+          "apt_name": "현대연예인",
+          "legal_dong_name": "구로동",
+          "median_manwon": 83500.0,
+          "display_price": "8억3,500만원",
+          "n": 7,
+          "lat": 37.49227780524133,
+          "lng": 126.87721912353024,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "구일로4길 46",
+          "claim_id": "V3_API_APT_R15",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R16",
+      "file": "visual/top20-explain-v3/maps/R16_price_map.svg",
+      "sha256": "fcd423233effc368e97f199952fcb529a77254ad2cdb3808a40f90e8495c5c15",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R16_남동구_境界.geojson.gz",
+      "source_sha256": "ac444c1dcd8e585a4684a4a209a98c92f1f1666637b078aba95f24dadad083cb",
+      "boundary_version": "2024-10-01",
+      "feature_count": 20,
+      "marker": {
+        "x": 341.9593645727156,
+        "y": 428.82088527448286,
+        "lat": 37.406833914520206,
+        "lng": 126.71046740153021,
+        "apt_id": "97fae08c84368ea4",
+        "apt_name": "논현 파크 포레",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R16",
+        "scene_id": "S007",
+        "rank": 16,
+        "region": "남동구",
+        "province": "인천",
+        "median_manwon": 42850.0,
+        "display_price": "4억2,850만원",
+        "n": 632,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R16",
+        "representative": {
+          "apt_id": "97fae08c84368ea4",
+          "api_apt_seq": "28200-4552",
+          "official_id": "28200120121451",
+          "apt_name": "논현 파크 포레",
+          "legal_dong_name": "논현동",
+          "median_manwon": 39000.0,
+          "display_price": "3억9,000만원",
+          "n": 20,
+          "lat": 37.406833914520206,
+          "lng": 126.71046740153021,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "은봉로165번길 24",
+          "claim_id": "V3_API_APT_R16",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R17",
+      "file": "visual/top20-explain-v3/maps/R17_price_map.svg",
+      "sha256": "9fb022629232af7bae0a3b67029f295d77210f73fa0c4ee6ad19c090668ac056",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R17_연수구_境界.geojson.gz",
+      "source_sha256": "b7af9474d257d466f6cc00770f624f13865625ddf89c0a63bacfd602460d8934",
+      "boundary_version": "2024-10-01",
+      "feature_count": 15,
+      "marker": {
+        "x": 248.28930098493018,
+        "y": 180.3177355671453,
+        "lat": 37.41217754988733,
+        "lng": 126.61715315621551,
+        "apt_id": "1585dfc5d4af2aa8",
+        "apt_name": "e편한세상송도",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R17",
+        "scene_id": "S006",
+        "rank": 17,
+        "region": "연수구",
+        "province": "인천",
+        "median_manwon": 67450.0,
+        "display_price": "6억7,450만원",
+        "n": 1152,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R17",
+        "representative": {
+          "apt_id": "1585dfc5d4af2aa8",
+          "api_apt_seq": "28185-805",
+          "official_id": "28185120380778",
+          "apt_name": "e편한세상송도",
+          "legal_dong_name": "송도동",
+          "median_manwon": 67275.0,
+          "display_price": "6억7,275만원",
+          "n": 16,
+          "lat": 37.41217754988733,
+          "lng": 126.61715315621551,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "랜드마크로 113",
+          "claim_id": "V3_API_APT_R17",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R18",
+      "file": "visual/top20-explain-v3/maps/R18_price_map.svg",
+      "sha256": "2e15143a0040369748cbf760f17550860a06a40e3ea346e8aa8b14ba3c618b16",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R18_용인시_기흥구_境界.geojson.gz",
+      "source_sha256": "77d1c6a9e3d8797f32a7ca44cd713d5db33a770c897fa34f05f05226a71efb70",
+      "boundary_version": "2024-10-01",
+      "feature_count": 15,
+      "marker": {
+        "x": 304.2030418438043,
+        "y": 329.9258402860793,
+        "lat": 37.26414531060684,
+        "lng": 127.09657213446636,
+        "apt_id": "29cdaa2760aeed53",
+        "apt_name": "용인기흥효성해링턴플레이스",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R18",
+        "scene_id": "S005",
+        "rank": 18,
+        "region": "용인시 기흥구",
+        "province": "경기",
+        "median_manwon": 62000.0,
+        "display_price": "6억2,000만원",
+        "n": 1381,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R18",
+        "representative": {
+          "apt_id": "29cdaa2760aeed53",
+          "api_apt_seq": "41463-952",
+          "official_id": "41463120385008",
+          "apt_name": "용인기흥효성해링턴플레이스",
+          "legal_dong_name": "영덕동",
+          "median_manwon": 66000.0,
+          "display_price": "6억6,000만원",
+          "n": 35,
+          "lat": 37.26414531060684,
+          "lng": 127.09657213446636,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "덕영대로2077번길 33",
+          "claim_id": "V3_API_APT_R18",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R19",
+      "file": "visual/top20-explain-v3/maps/R19_price_map.svg",
+      "sha256": "82fe6fdd6146f155508841050ed4787bfc9867c315b9dae920be7b57816db7ce",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R19_중랑구_境界.geojson.gz",
+      "source_sha256": "1288343ee3ff7211f65ce865ac3bbcbb32ea4e5a38e2cb6ca39851da89f76512",
+      "boundary_version": "2024-10-01",
+      "feature_count": 16,
+      "marker": {
+        "x": 367.6578357790686,
+        "y": 496.20095107111206,
+        "lat": 37.576568786998465,
+        "lng": 127.09012476171803,
+        "apt_id": "de0a07ad8d53c227",
+        "apt_name": "현대",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R19",
+        "scene_id": "S004",
+        "rank": 19,
+        "region": "중랑구",
+        "province": "서울",
+        "median_manwon": 79150.0,
+        "display_price": "7억9,150만원",
+        "n": 404,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R19",
+        "representative": {
+          "apt_id": "de0a07ad8d53c227",
+          "api_apt_seq": "11260-25",
+          "official_id": "11260100002400",
+          "apt_name": "현대",
+          "legal_dong_name": "면목동",
+          "median_manwon": 80250.0,
+          "display_price": "8억250만원",
+          "n": 8,
+          "lat": 37.576568786998465,
+          "lng": 127.09012476171803,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "용마산로 252",
+          "claim_id": "V3_API_APT_R19",
+          "label": "단지 사례"
+        }
+      }
+    },
+    {
+      "region_id": "R20",
+      "file": "visual/top20-explain-v3/maps/R20_price_map.svg",
+      "sha256": "783ca81150e13a713cf93f7f9b10db4a44da20b2226e685bdff08b8166af42a6",
+      "canvas": [
+        800,
+        600
+      ],
+      "projection": "EPSG:3857 equations with aspect-ratio preserved",
+      "source": "visual/top20-8min-v2/maps/R20_부천시_원미구_境界.geojson.gz",
+      "source_sha256": "122e42b0cb7a0efe78c11dd70cd8d51d1d6318e818f3baf57a2ee0868bc43521",
+      "boundary_version": "2024-10-01",
+      "feature_count": 20,
+      "marker": {
+        "x": 325.6591528996555,
+        "y": 346.83591672757746,
+        "lat": 37.498375327794605,
+        "lng": 126.77388711352721,
+        "apt_id": "a9d62eaf936b34a7",
+        "apt_name": "미리내마을(롯데2)",
+        "point_inside_real_region": true
+      },
+      "marker_status": "verified_coordinate_inside_region",
+      "attribution": "본 데이터는 통계청 통계지리정보서비스(SGIS, https://sgis.kostat.go.kr)에서 공공누리 제1유형으로 개방한 행정동 경계를 가공한 것이며(가공: vuski/admdongkor, https://github.com/vuski/admdongkor), CC BY 4.0으로 배포됩니다. 이번 영상용으로 지역별 그룹화·투영·색상·라벨을 가공했습니다.",
+      "price_panel": {
+        "region_id": "R20",
+        "scene_id": "S003",
+        "rank": 20,
+        "region": "부천시 원미구",
+        "province": "경기",
+        "median_manwon": 70500.0,
+        "display_price": "7억500만원",
+        "n": 699,
+        "contract_window": {
+          "start": "2026-05-01",
+          "end": "2026-10-31"
+        },
+        "as_of_date": "2026-11-03",
+        "area_range_m2": {
+          "minimum": 83,
+          "maximum": 85,
+          "endpoints_inclusive": true
+        },
+        "statistic": "아파트 매매 실거래 중위값",
+        "reporting_complete": false,
+        "october_reporting_ongoing": true,
+        "rounding": "none; exact aggregated median in ten-thousand KRW",
+        "claim_id": "V3_API_PRICE_R20",
+        "representative": {
+          "apt_id": "a9d62eaf936b34a7",
+          "api_apt_seq": "41192-228",
+          "official_id": "41192100007061",
+          "apt_name": "미리내마을(롯데2)",
+          "legal_dong_name": "중동",
+          "median_manwon": 70450.0,
+          "display_price": "7억450만원",
+          "n": 8,
+          "lat": 37.498375327794605,
+          "lng": 126.77388711352721,
+          "coordinate_status": "verified",
+          "coordinate_source": "한국부동산원 공동주택 단지 연계정보(2025) 공식 폴리곤 내부점; pyproj 독립 재변환",
+          "verified_address": "조마루로 271",
+          "claim_id": "V3_API_APT_R20",
+          "label": "단지 사례"
+        }
+      }
+    }
+  ]
+}

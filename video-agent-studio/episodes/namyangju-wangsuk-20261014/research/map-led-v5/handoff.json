@@ -1,0 +1,41 @@
+{
+  "role": "video_research",
+  "input_revision": "새지도중심구성요청v5",
+  "outputs": [
+    "analysis.json",
+    "facts.json",
+    "source_manifest.json",
+    "pdf_downloads.json",
+    "school_sections.json",
+    "environment_sections.json",
+    "price_page_rows.json"
+  ],
+  "validated": [
+    "공식6블록좌표HTML확인",
+    "공고11PDF원본다운로드무결성",
+    "팸플릿블록상대위치직접이미지대조",
+    "학교표2028rowspan직접확인",
+    "W1-B17가격웹평균과대표층가격차이확인"
+  ],
+  "unresolved": [
+    "지도원본2026최종고시전수대조미완료",
+    "정밀블록경계/역출입구/통학로",
+    "원본LH홍보물영상재사용권리",
+    "최종정정이력계약조건",
+    "신규상가/공원운영시작일"
+  ],
+  "next_roles": [
+    "video_writer",
+    "video_visual",
+    "video_qa"
+  ],
+  "affected_scenes": [
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M005",
+    "M008"
+  ],
+  "paid_generation": false
+}

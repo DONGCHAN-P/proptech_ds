@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C07P04",
+  "scene_id": "C07",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:07:04.954Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "f0febbc56c9d02b796773e1fa0e63c8381b81cbc830b63e6b8d9b91cb03675f6",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "이 숫자는 집에 계속 사는 상태에서 자산을 평가한 값입니다. 집 지분과 보증금은 모두 자산이지만 즉시 쓸 수 있는 투자계좌와 역할이 다릅니다. 매매 가구의 집값 상승분을 생활비로 쓰려면 매도나 추가 대출 같은 절차가 필요합니다. 전세보증금도 반환 시점과 다음 집의 보증금이 연결됩니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 159,
+  "characters": 159,
+  "actual_credits": 64,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19183,
+    "character_limit": 40000,
+    "included_remaining": 20817,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:51.452Z",
+  "local_shadow_remaining_before": 20643,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "mi1u6TRAp8wKSZqPV7RH",
+    "x-request-id": null,
+    "character-cost": "64",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:07:04 GMT"
+  },
+  "pcm_samples": 874944,
+  "pcm_duration_s": 19.84,
+  "provider_last_spoken_end_s": 19.92,
+  "artifact_sha256": {
+    "paragraphs/C07P04/audio.mp3": "917c6b0f675bdb6e9793f949f1a3d5971f5d256a7a1d99cdf0199aefb64acbfd",
+    "paragraphs/C07P04/audio.wav": "42318e919a1a3b60a4a76a5a94adc5e730b56ebf514ae5ec955d23594ee330b9",
+    "paragraphs/C07P04/alignment.json": "f1edec1a0b5c5e06eb603df24baf7d3e606ae9a4632babe6ff89c459728891e9",
+    "paragraphs/C07P04/normalized_alignment.json": "f1edec1a0b5c5e06eb603df24baf7d3e606ae9a4632babe6ff89c459728891e9"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 20579,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:07:09.684Z"
+}

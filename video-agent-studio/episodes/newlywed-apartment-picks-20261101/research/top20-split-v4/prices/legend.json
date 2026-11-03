@@ -1,0 +1,57 @@
+{
+  "unit": "만원",
+  "bands": [
+    {
+      "label": "5억 미만",
+      "min_manwon": 0,
+      "max_manwon": 50000,
+      "color": "#3E82BD"
+    },
+    {
+      "label": "5~7억",
+      "min_manwon": 50000,
+      "max_manwon": 70000,
+      "color": "#299D92"
+    },
+    {
+      "label": "7~10억",
+      "min_manwon": 70000,
+      "max_manwon": 100000,
+      "color": "#BEA52D"
+    },
+    {
+      "label": "10~15억",
+      "min_manwon": 100000,
+      "max_manwon": 150000,
+      "color": "#E3913D"
+    },
+    {
+      "label": "15~20억",
+      "min_manwon": 150000,
+      "max_manwon": 200000,
+      "color": "#D75B58"
+    },
+    {
+      "label": "20억 이상",
+      "min_manwon": 200000,
+      "max_manwon": null,
+      "color": "#954B87"
+    }
+  ],
+  "boundary_rule": "lower_inclusive_upper_exclusive",
+  "period": [
+    "2026-05-01",
+    "2026-10-31"
+  ],
+  "retrieved_date": "2026-11-03",
+  "area_m2": [
+    83,
+    85
+  ],
+  "statistic": "per-api-complex median of recorded uncancelled individual transactions",
+  "point": "one location-verified official complex internal point",
+  "sample_rule": "n>=1; selected labels show n",
+  "school_symbol": "square",
+  "station_symbol": "rounded_square",
+  "commerce_symbol": "diamond"
+}

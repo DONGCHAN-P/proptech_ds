@@ -1,0 +1,19 @@
+{
+  "issue_id": "EDGE-TIMING-01",
+  "scene_ids": [],
+  "sample_id": "injoon-20261026-v1",
+  "problem": "Edge 원시 문장 경계 50ms 겹침 및 서비스 경계와 신호 끝의 차이",
+  "evidence": {
+    "measured_file_duration_s": 7.896,
+    "native_first_end_s": 3.7717105,
+    "native_second_start_s": 3.7217105,
+    "native_second_end_s": 7.8921052,
+    "last_signal_above_minus60db_s": 6.813125,
+    "path": "samples/injoon-20261026-v1/validation.json"
+  },
+  "proposal": "원시 경계·원본 오디오는 보존. 표시용 cue는 첫 문장 끝을 다음 문장 시작으로 정리. 실제 청취 후 숫자·발음·문장 끝·무음 길이·차분함을 확인하고 최종 대본 생성 여부는 총괄 지시를 기다림.",
+  "impact": "샘플의 기술 검사만 완료. 본편 시간표·자막 검수 완료로 승계할 수 없음.",
+  "status": "표시 경계 정리 완료; 청취 검증 미확인",
+  "next_owner": "video_director/video_editor",
+  "peer_message_tool_available": false
+}

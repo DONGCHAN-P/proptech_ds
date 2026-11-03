@@ -1,0 +1,258 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 11,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 2 has 6 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v2\\ch10\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 3 has 6 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v2\\ch10\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 8 has 6 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v2\\ch10\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 9 has 35 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v2\\ch10\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"card\"> is a timeline element that contains nested <div id=\"card-w\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#card",
+        "dataAttributes": {},
+        "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v2\\ch10\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"card\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s10choice\"> is a timeline element that contains nested <div id=\"s10choice-w\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s10choice",
+        "dataAttributes": {},
+        "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v2\\ch10\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s10choice\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s10invest\"> is a timeline element that contains nested <div id=\"s10invest-w\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s10invest",
+        "dataAttributes": {},
+        "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v2\\ch10\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s10invest\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s10stable\"> is a timeline element that contains nested <div id=\"s10stable-w\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s10stable",
+        "dataAttributes": {},
+        "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v2\\ch10\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s10stable\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s10life\"> is a timeline element that contains nested <div id=\"s10life-w\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s10life",
+        "dataAttributes": {},
+        "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v2\\ch10\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s10life\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s10hold\"> is a timeline element that contains nested <div id=\"s10hold-w\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s10hold",
+        "dataAttributes": {},
+        "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v2\\ch10\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s10hold\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<section id=\"s10next\"> is a timeline element that contains nested <div id=\"s10next-w\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#s10next",
+        "dataAttributes": {},
+        "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v2\\ch10\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <section id=\"s10next\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 153.13333333333333,
+    "samples": [
+      18.244,
+      47.097,
+      74.734,
+      105.285,
+      127.25,
+      146.936
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      18.244,
+      47.097,
+      74.734,
+      105.285,
+      146.936
+    ],
+    "checked": 56,
+    "passed": 56
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "_meta": {
+    "version": "0.8.181",
+    "updateAvailable": false
+  }
+}

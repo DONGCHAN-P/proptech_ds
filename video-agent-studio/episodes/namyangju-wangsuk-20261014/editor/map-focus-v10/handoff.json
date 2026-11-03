@@ -1,0 +1,90 @@
+{
+  "revision": "map-focus-v10-label-fixed",
+  "status": "local_review_ready_independent_QA_passed",
+  "front_file": "outputs/map-focus-v10/map-focus_v10_front.mp4",
+  "front_sha256": "388ae849afb5d1ce098e4886b9a2cf7fb5f30c0d6d09409fcf0fbc58cd95c5cd",
+  "scope_original_seconds": [
+    0,
+    525
+  ],
+  "changed_original_seconds": [
+    165,
+    525
+  ],
+  "after_525_unchanged": true,
+  "video_frames": 15750,
+  "fps": 30,
+  "semantic_cue_count_front": 166,
+  "audio_source": "original full-v8 AAC streamcopy; 24610 interval-selected packet SHA matched",
+  "stage_intervals": {
+    "1": [
+      165,
+      273
+    ],
+    "2": [
+      273,
+      369
+    ],
+    "3": [
+      369,
+      525
+    ]
+  },
+  "parts": {
+    "1": {
+      "message_sent": true,
+      "file_sent": false,
+      "sha256": "5404dd3d6eea95adaa93018c478fc696bd8300636b08b2083f71c5594c2be255",
+      "stage": "1",
+      "original_interval_s": [
+        165,
+        273
+      ]
+    },
+    "2": {
+      "message_sent": true,
+      "file_sent": false,
+      "sha256": "f178368ae2ab345dc262e2cb133e2fde16857d8a2183ae25477b61478d4d9728",
+      "stage": "2",
+      "original_interval_s": [
+        273,
+        369
+      ]
+    },
+    "3": {
+      "message_sent": true,
+      "file_sent": false,
+      "sha256": "42cf7619536867a17f3255dda02c937c72960a62db45785960f56563950349b1",
+      "stage": "3",
+      "original_interval_s": [
+        369,
+        525
+      ]
+    },
+    "front": {
+      "message_sent": true,
+      "file_sent": false,
+      "sha256": "388ae849afb5d1ce098e4886b9a2cf7fb5f30c0d6d09409fcf0fbc58cd95c5cd",
+      "stage": "front",
+      "original_interval_s": [
+        0,
+        525
+      ]
+    }
+  },
+  "source_audio_caption_text_changes": 0,
+  "paid_generation_calls": 0,
+  "file_transmissions": 0,
+  "actual_listening": false,
+  "continuous_playback": false,
+  "label_fix_global_frames": [
+    11338,
+    11410
+  ],
+  "previous_artifacts": "editor/map-focus-v10/*_before_labelfix.* preserved",
+  "next_owner": "director user review; no upload authorized",
+  "required_open_count": 0,
+  "qa_report": "qa/map-focus-v10/front_review.json",
+  "white_caption_roi_all_frames_passed": 15750,
+  "root_completed_decision": "91a40cf0a547"
+}

@@ -1,0 +1,35 @@
+﻿{
+    "revision":  "channel-style-v1",
+    "outputs":  [
+                    "visual/channel-style-v1/style_tokens.json",
+                    "visual/channel-style-v1/audit.md",
+                    "visual/channel-style-v1/assets.json",
+                    "outputs/channel-style-v1/comparison_contactsheet.png",
+                    "../../guides/채널_톤앤매너와_복기루프.md"
+                ],
+    "input_versions":  [
+                           "왕숙 readability-cta-v15 actual MP4",
+                           "광교동탄 newtown-v14-release actual MP4",
+                           "창릉 visual-review-v2",
+                           "창릉 geographic-v1",
+                           "3 existing reference reports"
+                       ],
+    "validation":  [
+                       "8 W15 and 3 GD14 encoded frame extraction succeeded",
+                       "final contact sheet aspect 16:9 tiles and visually viewed",
+                       "source token values extracted",
+                       "no continuous playback or actual listening"
+                   ],
+    "unresolved":  [
+                       "새 production-v3 대표3종/본편 검수는 editor 담당"
+                   ],
+    "affected_scenes":  [
+                            "M003",
+                            "M004",
+                            "M005",
+                            "all shell reuse scenes"
+                        ],
+    "next_owner":  "changneung_editor_prep_v1",
+    "originals_preserved":  true,
+    "paid_calls":  0
+}

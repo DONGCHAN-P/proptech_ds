@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "revision": "vertical-profiles-v2",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "sar": "1:1",
+    "rotation": 0
+  },
+  "default_profile": "cross_platform_conservative",
+  "profiles": {
+    "cross_platform_conservative": {
+      "critical_rect": {
+        "left": 156,
+        "top": 448,
+        "right": 816,
+        "bottom": 1160
+      },
+      "background_may_bleed": true,
+      "critical_elements": [
+        "title",
+        "spoken_caption",
+        "price",
+        "sample_count",
+        "station_and_complex_label",
+        "plan_status",
+        "comparison_conditions",
+        "source_credit"
+      ],
+      "zones": {
+        "title": [
+          156,
+          448,
+          816,
+          568
+        ],
+        "map_or_chart": [
+          156,
+          580,
+          816,
+          882
+        ],
+        "caption": [
+          156,
+          894,
+          816,
+          1034
+        ],
+        "conditions_and_credit": [
+          156,
+          1044,
+          816,
+          1160
+        ]
+      },
+      "minimum_font_px": {
+        "title": 44,
+        "caption": 44,
+        "key_value": 36,
+        "conditions": 24
+      },
+      "render_policy": "Reflow and split into meaningful scenes; never shrink a completed full-frame layout to satisfy margins.",
+      "overlays": "Keep nonessential backgrounds outside; no essential text in app header, lower metadata/navigation area or right action rail.",
+      "series_label_enabled": false,
+      "optional_series_label": "Omit to preserve map and caption readability in compact cross-platform profile"
+    },
+    "youtube_portrait_full_frame_v2": {
+      "critical_rect": {
+        "left": 140,
+        "top": 260,
+        "right": 840,
+        "bottom": 1360
+      },
+      "background_may_bleed": true,
+      "critical_elements": [
+        "title",
+        "spoken_caption",
+        "price",
+        "sample_count",
+        "station_and_complex_label",
+        "plan_status",
+        "comparison_conditions",
+        "source_credit"
+      ],
+      "zones": {
+        "title": [
+          140,
+          260,
+          840,
+          430
+        ],
+        "map_or_chart": [
+          0,
+          440,
+          1080,
+          1090
+        ],
+        "caption": [
+          140,
+          1100,
+          840,
+          1250
+        ],
+        "conditions_and_credit": [
+          140,
+          1260,
+          840,
+          1360
+        ]
+      },
+      "minimum_font_px": {
+        "title": 56,
+        "caption": 54,
+        "key_value": 52,
+        "conditions": 26
+      },
+      "render_policy": "Full-frame geography/charts across1080x1920. Text overlays independently measured; no compact center card or shrinking finished landscape panels. Background geometry may bleed outside text bounds.",
+      "overlays": "YouTube portrait model: header0..240, footer1400..1920, right actionrail900..1080. Fullframe visuals allowed behind UI; all meaning-bearing text stays in critical_rect.",
+      "series_label_enabled": false,
+      "user_authorization": "2026-10-19 direct user correction: current small different-format Shorts must use full screen. Overrides compact cross-platform profile for this revision.",
+      "validation_scope": "Native9:16 YouTube portrait modeled overlay; inspect phone fit crops separately. Wide-tablet cover and cross-platform universal clearance are not guaranteed; do not shrink all content to pass them.",
+      "canvas_ui_clear_rect": [
+        64,
+        240,
+        900,
+        1400
+      ]
+    }
+  },
+  "validation": {
+    "require_measured_text_bboxes": true,
+    "fail_on_overflow_or_ui_overlap": true,
+    "phone_viewports_css": [
+      [
+        360,
+        640
+      ],
+      [
+        375,
+        812
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        393,
+        852
+      ],
+      [
+        412,
+        915
+      ],
+      [
+        384,
+        854
+      ],
+      [
+        390,
+        910
+      ]
+    ],
+    "tablet_viewports_css": [
+      [
+        768,
+        1024
+      ],
+      [
+        800,
+        1280
+      ]
+    ],
+    "fit_modes": [
+      "contain",
+      "cover"
+    ],
+    "feed_preview_crop_ratios": [
+      "4:5",
+      "3:4"
+    ],
+    "ui_masks": "Separate modeled platform overlays; these are simulations, not actual device playback.",
+    "excluded_from_guarantee": [
+      "manual pinch zoom",
+      "expanded descriptions/comments",
+      "accessibility or system magnification",
+      "future UI changes",
+      "square/profile preview crops without a separate cover"
+    ]
+  },
+  "evidence": {
+    "google_official": "https://support.google.com/google-ads/answer/13547298?hl=en",
+    "google_safe_zone_reference": "https://services.google.com/fh/files/misc/universalsafezones-youtube.pdf",
+    "meta_official_attempt": "https://www.facebook.com/business/help/980593475366490",
+    "meta_access_status": "Official page redirected to login; exact numerical margins not independently verified.",
+    "scope_note": "Official references cover ads. The conservative rect is an internal engineering policy informed also by user-provided organic Reels screenshot; it is not an official universal platform guarantee.",
+    "reason": "Prior templates placed title near y64 and captions y1608 / credits1773..1890, overlapping organic app UI.",
+    "tablet_adjustment": "Initial rect failed two wide-tablet cover models; moved top448/bottom1160 and reflowed layout without shrinking fonts."
+  }
+}

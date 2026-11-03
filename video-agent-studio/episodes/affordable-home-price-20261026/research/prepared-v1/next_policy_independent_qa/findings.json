@@ -1,0 +1,243 @@
+{
+  "task_id": "next-policy-independent-qa-v1",
+  "status": "approved_with_scope",
+  "scope": "research_preparation_only",
+  "summary": {
+    "critical": 0,
+    "required": 0,
+    "recommended": 5
+  },
+  "findings": [
+    {
+      "issue_id": "NQA-01",
+      "scene_id": "PREP_METADATA",
+      "timecode": null,
+      "severity": "recommended",
+      "claim_ids": [],
+      "case_ids": [
+        "A_*",
+        "B_*"
+      ],
+      "문제": "assumptions.json의 구성안 입력 해시가 현재 파일과 다릅니다.",
+      "evidence": [
+        {
+          "path": "next_case_engine_prep_v2/assumptions.json",
+          "location": "input_versions[next_episode_editorial_plan.json]",
+          "recorded_sha256": "7373effb61ed175bc242033614476998c3133076605634d6f3222f49b064ec1e",
+          "current_sha256": "c56710bd814678cc5d3df5cdfc17592dd3662a05416ac2bbb176cd84b9ddccfd"
+        },
+        {
+          "path": "next_episode_editorial_plan.json",
+          "location": "case_design_proposal",
+          "observation": "현재 현금·예비자금·A 인정소득·B 합산소득은 사례와 일치. 157검사 결과 해시는 현재v2와 일치."
+        }
+      ],
+      "수정안": "대본 입력 고정 때 현재 구성안 해시와 실제 변경 범위를 기록합니다. 수치가 같다는 이유로 옛 구성안 전체의 검수를 승계하지 않습니다.",
+      "owner": "director / future_writer / case_engine_owner",
+      "status": "open_metadata_refresh_before_script_lock",
+      "checked_revision": {
+        "case_engine": "v2_tax_fraction_rounding_correction",
+        "results_sha256": "fed428bb89b509e0ec4dcda657ce284740bcbbfd9f9dabc5dd91c300f1ebc6a8",
+        "policy_v2_sha256": "9f91f0bfad5ccb5884f4d2cf81f2814caf33b38c5bf652cf83b9b6d6b83bbfd3",
+        "editorial_sha256": "c56710bd814678cc5d3df5cdfc17592dd3662a05416ac2bbb176cd84b9ddccfd"
+      }
+    },
+    {
+      "issue_id": "NQA-02",
+      "scene_id": "PREP_CH03_CH06",
+      "timecode": null,
+      "severity": "recommended",
+      "claim_ids": [
+        "L01",
+        "L03",
+        "L04",
+        "L06",
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M08",
+        "M09"
+      ],
+      "case_ids": [
+        "A_ordinary_*",
+        "A_first_*",
+        "B_bogeum_P600000000_C0",
+        "B_newborn_P900000000_C55000000"
+      ],
+      "문제": "조건부 담보 상한을 일반 실행한도로 넓히지 않도록 전제를 유지해야 합니다.",
+      "evidence": [
+        {
+          "path": "next_case_engine_prep_v2/cases.json",
+          "location": "notes / profiles",
+          "observation": "서울 투과·V=P·기존부채/선순위/임대차0, A 인정·가구소득1억. 서민실수요 소득9천 이하 예외와 구분."
+        },
+        {
+          "path": "next_episode_research/evidence/v2/bogeum_2026_p31.png",
+          "location": "PDF31쪽/인쇄27쪽",
+          "observation": "아파트 방수공제 없음. 실제 임대차 있으면 임대보증금 반영 원문 직접 열람."
+        }
+      ],
+      "수정안": "A C0은 보증승인 등 조건부, C55는 미커버1방5500만원 가정으로 병기합니다. 보금자리 빈 아파트0은 자체규정입니다. 신생아9억 C0/보금자리 C55 반사실은 현재 후보에서 제외합니다. 6/9/12 상품·세금 문턱과 15/25 일반 총액 문턱을 구분합니다.",
+      "owner": "director / future_writer / case_engine_owner",
+      "status": "condition_already_recorded_preserve_at_script_gate",
+      "checked_revision": {
+        "case_engine": "v2_tax_fraction_rounding_correction",
+        "results_sha256": "fed428bb89b509e0ec4dcda657ce284740bcbbfd9f9dabc5dd91c300f1ebc6a8",
+        "policy_v2_sha256": "9f91f0bfad5ccb5884f4d2cf81f2814caf33b38c5bf652cf83b9b6d6b83bbfd3",
+        "editorial_sha256": "c56710bd814678cc5d3df5cdfc17592dd3662a05416ac2bbb176cd84b9ddccfd"
+      }
+    },
+    {
+      "issue_id": "NQA-03",
+      "scene_id": "PREP_CH07_CH08",
+      "timecode": null,
+      "severity": "recommended",
+      "claim_ids": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "B01",
+        "B02",
+        "B03",
+        "N01",
+        "N02",
+        "N03",
+        "N04",
+        "P01",
+        "P02",
+        "P03",
+        "P04",
+        "HFV2_01",
+        "HFV2_02",
+        "HFV2_03",
+        "HFV2_04",
+        "HFV2_05"
+      ],
+      "case_ids": [
+        "B_didim_*",
+        "B_bogeum_*",
+        "B_newborn_*"
+      ],
+      "문제": "가구B의 자격·거주·신혼 예외를 가구A 및 다른 상품에 자동 적용하지 않아야 합니다.",
+      "evidence": [
+        {
+          "path": "next_case_engine_prep_v2/cases.json",
+          "location": "common / B profiles",
+          "observation": "별도B 합산소득8000만·순자산2.5억·신혼/생초/최근2년출산·84㎡. 합산8500만 이하라 신혼1인소득 예외 미사용."
+        },
+        {
+          "path": "next_episode_research/evidence/v2/didim_20260618_p34.png",
+          "location": "PDF34쪽/인쇄31쪽",
+          "observation": "실행1개월내 전입·전입일부터2년 거주 원문 직접 열람."
+        },
+        {
+          "path": "next_episode_research/policy_facts_v2.json",
+          "location": "HFV2_01~05",
+          "observation": "10/19 현행FAQ는 총괄 직접열람 인계. 이번QA의 실시간 원문 재열람 아님."
+        }
+      ],
+      "수정안": "B 무주택·신혼·출산·자산·면적을 별도 표시합니다. 디딤돌/보금자리 주택6억, 신생아9억과 각3.2/4.2/4억 대출한도를 분리합니다. 정책신규 규제DSR 예외에도 DTI·신용·보증·거주 심사가 남습니다. 신혼 설명은 HFV2_01~05를 우선하고 1인소득/부채와 부부 확인항목을 섞지 않습니다.",
+      "owner": "director / future_writer / case_engine_owner",
+      "status": "condition_already_recorded_preserve_at_script_gate",
+      "checked_revision": {
+        "case_engine": "v2_tax_fraction_rounding_correction",
+        "results_sha256": "fed428bb89b509e0ec4dcda657ce284740bcbbfd9f9dabc5dd91c300f1ebc6a8",
+        "policy_v2_sha256": "9f91f0bfad5ccb5884f4d2cf81f2814caf33b38c5bf652cf83b9b6d6b83bbfd3",
+        "editorial_sha256": "c56710bd814678cc5d3df5cdfc17592dd3662a05416ac2bbb176cd84b9ddccfd"
+      }
+    },
+    {
+      "issue_id": "NQA-04",
+      "scene_id": "PREP_CH02_CH05",
+      "timecode": null,
+      "severity": "recommended",
+      "claim_ids": [
+        "T01",
+        "T02",
+        "T03",
+        "T04",
+        "T05",
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "case_ids": [
+        "A_*",
+        "B_*"
+      ],
+      "문제": "무감면 총비용과 감면후 확정세금, 기타 계획비를 구분해야 합니다.",
+      "evidence": [
+        {
+          "path": "next_case_engine_prep_v2/results.json",
+          "location": "transaction_costs / conditional_relief_table",
+          "observation": "6/9/12억 비용1074만/3615만/4902만원. 중개상한+일반과세VAT10%·기타150만 계획예산 포함. 감면 미차감·미합산·순납부세액null."
+        },
+        {
+          "path": "next_episode_research/gaps_v2.json",
+          "location": "G05~G08",
+          "observation": "감면후 교육세·실제비용 미확정은 정당한 조건부 입력."
+        }
+      ],
+      "수정안": "중과없는84㎡ 통상아파트·감면전·일반과세 중개사 상한 가정을 표시합니다. 생초200만/출산500만은 자격별 최대액이며 자동700만 합산이나 기본표 자동차감을 하지 않습니다. 기타150만은 견적이 아니며 예비3000만은 비용이 아닌 잔존현금입니다.",
+      "owner": "director / future_writer / case_engine_owner",
+      "status": "condition_already_recorded_preserve_at_script_gate",
+      "checked_revision": {
+        "case_engine": "v2_tax_fraction_rounding_correction",
+        "results_sha256": "fed428bb89b509e0ec4dcda657ce284740bcbbfd9f9dabc5dd91c300f1ebc6a8",
+        "policy_v2_sha256": "9f91f0bfad5ccb5884f4d2cf81f2814caf33b38c5bf652cf83b9b6d6b83bbfd3",
+        "editorial_sha256": "c56710bd814678cc5d3df5cdfc17592dd3662a05416ac2bbb176cd84b9ddccfd"
+      }
+    },
+    {
+      "issue_id": "NQA-05",
+      "scene_id": "PREP_CH04_CH08_CH09",
+      "timecode": null,
+      "severity": "recommended",
+      "claim_ids": [
+        "L02",
+        "S01",
+        "S03",
+        "N03"
+      ],
+      "case_ids": [
+        "A_first_P600000000_C0",
+        "B_newborn_P600000000_C0",
+        "A_first/C0/affordability"
+      ],
+      "문제": "심사금리·초기상품금리·계획금리와 월예산 역산의 의미를 유지해야 합니다.",
+      "evidence": [
+        {
+          "path": "next_episode_research/evidence/stress_page_1.png",
+          "location": "PDF1쪽",
+          "observation": "수도권/규제 스트레스하한3.0%p·변동형100% 직접 열람. A 심사7%는4%+3%p 가정."
+        },
+        {
+          "path": "next_case_engine_prep_v2/assumptions.json",
+          "location": "credit_assumptions",
+          "observation": "디딤돌/보금자리4% 계획가정. 신생아2.9%는 기본특례5년 초기금리, 이후 미확정."
+        },
+        {
+          "path": "next_episode_story_findings.json",
+          "location": "I07~I09",
+          "observation": "역산6억8019만/5억6586만원·월액은 현재v2와 일치."
+        }
+      ],
+      "수정안": "은행 월납부는4%, DSR 심사는7%로 나눕니다. 신생아2.9%를30년 고정이나 확정 총이자로 설명하지 않습니다. 4→6%는 동일 최초원금/360개월 민감도입니다. A 생초6억 C0의 필요대출 월액 약186.5만원은 목표170만원을 넘는다는 점도 분리합니다.",
+      "owner": "director / future_writer / case_engine_owner",
+      "status": "condition_already_recorded_preserve_at_script_gate",
+      "checked_revision": {
+        "case_engine": "v2_tax_fraction_rounding_correction",
+        "results_sha256": "fed428bb89b509e0ec4dcda657ce284740bcbbfd9f9dabc5dd91c300f1ebc6a8",
+        "policy_v2_sha256": "9f91f0bfad5ccb5884f4d2cf81f2814caf33b38c5bf652cf83b9b6d6b83bbfd3",
+        "editorial_sha256": "c56710bd814678cc5d3df5cdfc17592dd3662a05416ac2bbb176cd84b9ddccfd"
+      }
+    }
+  ]
+}

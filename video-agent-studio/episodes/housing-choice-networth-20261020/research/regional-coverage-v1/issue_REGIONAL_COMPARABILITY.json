@@ -1,0 +1,44 @@
+{
+  "issue_id": "REGIONAL_COMPARABILITY",
+  "role": "research",
+  "status": "open_for_director_review",
+  "verified_at": "2026-10-22T12:17:22.271539+09:00",
+  "affected_claim_ids": [],
+  "affected_scene_ids": [],
+  "scene_mapping": "지정된 claim/scene ID가 없으며 공통 scenes.json을 읽거나 수정하지 않음.",
+  "findings": [
+    {
+      "finding_id": "GWANGJU_ALL_ZERO",
+      "status": "qualified",
+      "city": "gwangju",
+      "problem": "광주 5코드×249개월의 메타가 모두 0건이다. 파일 수집 검사는 통과했지만 유효 가격 표본은 확인되지 않았다.",
+      "evidence": "coverage.json cities[city=gwangju], cells[city=gwangju]: totalCount=stored_rows=0, complete=true, page1 존재 1,245셀",
+      "proposal": "부모 담당이 원응답·조회조건·코드 매핑을 별도 확인할 때까지 광주의 가격·수익률 지역 비교를 보류한다. 실제 무거래라는 결론은 내리지 않는다.",
+      "impact": "광주 지역 비교에 사용할 비영 표본이 현재 메타에는 없음.",
+      "affected_claim_ids": [],
+      "affected_scene_ids": []
+    },
+    {
+      "finding_id": "GUNWI_CODE_BOUNDARY",
+      "status": "qualified",
+      "problem": "27720: 249개 메타 합계 333건, 양수 131개월(최초 200601·최후 202609). 47720: 249개 메타 전부 0건. 과거 코드 귀속·동일 경계·개별 거래 중복은 미확인.",
+      "evidence": "coverage.json boundary_risks 및 연결된 observed_monthly_metadata[].meta_path",
+      "proposal": "대구 수집기에는 군위 두 코드가 동시에 포함된다. 메타별 원시 합계이며 동일 거래 중복 또는 과거 행정구역 귀속 여부는 XML 미검토로 미확인이다. 동일 경계 시계열로 사용하기 전에 코드 전환·중복 정책이 필요하다.",
+      "impact": "장기 지역 비교의 경계·코드 처리 조건 확정 필요.",
+      "affected_claim_ids": [],
+      "affected_scene_ids": []
+    },
+    {
+      "finding_id": "SEJONG_2012_BOUNDARY",
+      "status": "qualified",
+      "problem": "36110: 249개월 모두 양수(200601~202609). 2012년 이전에도 메타가 있으므로 수집 연월 범위 자체를 세종의 동일 행정경계 과거 시계열로 해석할 수 없음.",
+      "evidence": "coverage.json boundary_risks 및 연결된 observed_monthly_metadata[].meta_path",
+      "proposal": "2012년 전후 메타의 양수/0건 분포는 아래 월별 목록과 코드별 범위로 확인한다. 요청 연월은 거래일의 직접 검증이나 당시 동일 행정경계의 증거가 아니다. 2012년 행정경계 연속성 검토 전 장기 지역 비교에 조건을 붙인다.",
+      "impact": "장기 지역 비교의 경계·코드 처리 조건 확정 필요.",
+      "affected_claim_ids": [],
+      "affected_scene_ids": []
+    }
+  ],
+  "next_owner": "director / parent (가격·원응답 검토 담당)",
+  "causal_conclusions": "없음; 관측된 메타와 파일 존재만 보고"
+}

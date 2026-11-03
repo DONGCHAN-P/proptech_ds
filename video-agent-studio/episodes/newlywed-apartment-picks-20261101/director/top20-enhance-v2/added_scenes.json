@@ -1,0 +1,33 @@
+{
+  "revision": "added-analysis-v1",
+  "source": "research/top20-enhance-v2/verified_facts.json",
+  "scope": "2024-11-01, same53capitalgu; total versus firstmarriage counts; not a time comparison",
+  "scenes": [
+    {
+      "scene_id": "N001",
+      "title": "초혼 부부만 세면, TOP20은 어떻게 달라질까",
+      "message": "같은53개구를 초혼수로 정렬하면 동안구와 마포구가 TOP20에 들어온다",
+      "claim_ids": ["ENH2-MEMBERSHIP", "ENH2-DONGAN", "ENH2-MAPO"],
+      "sentences": [
+        {"sentence_id":"N001-01", "text":"지금까지는 초혼과 재혼을 포함한 전체 신혼부부를 봤습니다.", "reading_text":"지금까지는 초혼과 재혼을 포함한 전체 신혼부부를 봤습니다.", "claim_ids":["SCOPE-53"]},
+        {"sentence_id":"N001-02", "text":"그런데 초혼 부부만 세면, 같은 수도권 53개 구의 순서는 어떻게 달라질까요?", "reading_text":"그런데 초혼 부부만 세면, 같은 수도권 오십삼 개 구의 순서는 어떻게 달라질까요?", "claim_ids":["ENH2-MEMBERSHIP"]},
+        {"sentence_id":"N001-03", "text":"1위부터 4위까지는 그대로지만, TOP20에 들어오는 지역은 달라집니다.", "reading_text":"일 위부터 사 위까지는 그대로지만, 상위 스무 곳에 들어오는 지역은 달라집니다.", "claim_ids":["ENH2-MEMBERSHIP"]},
+        {"sentence_id":"N001-04", "text":"안양시 동안구는 전체 22위에서 초혼 기준 16위로, 서울 마포구는 21위에서 17위로 바뀝니다.", "reading_text":"안양시 동안구는 전체 이십이 위에서 초혼 기준 십육 위로, 서울 마포구는 이십일 위에서 십칠 위로 바뀝니다.", "claim_ids":["ENH2-DONGAN","ENH2-MAPO"]},
+        {"sentence_id":"N001-05", "text":"초혼 부부는 동안구 6,510쌍, 마포구 6,487쌍입니다.", "reading_text":"초혼 부부는 동안구 육천오백십 쌍, 마포구 육천사백팔십칠 쌍입니다.", "claim_ids":["ENH2-DONGAN","ENH2-MAPO"]}
+      ]
+    },
+    {
+      "scene_id": "N002",
+      "title": "부부의 범위를 바꾸면, 살펴볼 지역도 달라진다",
+      "message": "전체와 초혼의 순위변화를 통해 지표를 먼저정의하고 지역목록을 읽는다",
+      "claim_ids": ["ENH2-NAMDONG", "ENH2-WONMI", "ENH2-MICHUHOL"],
+      "sentences": [
+        {"sentence_id":"N002-01", "text":"반대로 전체 16위였던 인천 남동구는 초혼 기준 27위, 전체 20위였던 부천 원미구는 24위입니다.", "reading_text":"반대로 전체 십육 위였던 인천 남동구는 초혼 기준 이십칠 위, 전체 이십 위였던 부천 원미구는 이십사 위입니다.", "claim_ids":["ENH2-NAMDONG","ENH2-WONMI"]},
+        {"sentence_id":"N002-02", "text":"인천 미추홀구도 전체 10위에서 초혼 기준 20위로 달라집니다.", "reading_text":"인천 미추홀구도 전체 십 위에서 초혼 기준 이십 위로 달라집니다.", "claim_ids":["ENH2-MICHUHOL"]},
+        {"sentence_id":"N002-03", "text":"같은 지역, 같은 기준일인데 비교하는 부부의 범위를 바꿨더니, 눈에 들어오는 동네 목록도 달라진 거예요.", "reading_text":"같은 지역, 같은 기준일인데 비교하는 부부의 범위를 바꿨더니, 눈에 들어오는 동네 목록도 달라진 거예요.", "claim_ids":["ENH2-MEMBERSHIP"]},
+        {"sentence_id":"N002-04", "text":"첫 결혼을 준비한다면 초혼 기준의 규모도 함께 보고, 재혼을 포함한 지역 전체를 살펴보려면 전체 수를 함께 볼 수 있겠죠.", "reading_text":"첫 결혼을 준비한다면 초혼 기준의 규모도 함께 보고, 재혼을 포함한 지역 전체를 살펴보려면 전체 수를 함께 볼 수 있겠죠.", "claim_ids":[], "statement_type":"editorial_application"},
+        {"sentence_id":"N002-05", "text":"순위표를 보기 전에 어떤 사람을 세고 있는지 확인하면, 내 상황에 더 가까운 비교 질문을 만들 수 있습니다.", "reading_text":"순위표를 보기 전에 어떤 사람을 세고 있는지 확인하면, 내 상황에 더 가까운 비교 질문을 만들 수 있습니다.", "claim_ids":[], "statement_type":"editorial_application"}
+      ]
+    }
+  ]
+}

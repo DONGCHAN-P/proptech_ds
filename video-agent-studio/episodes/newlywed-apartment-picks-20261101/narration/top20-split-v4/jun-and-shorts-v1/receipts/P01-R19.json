@@ -1,0 +1,69 @@
+{
+  "asset_id": "P01-R19",
+  "sentence_ids": [
+    "P01-R19-V2-01",
+    "P01-R19-V2-02",
+    "P01-R19-V2-03",
+    "P01-R19-V2-04",
+    "P01-R19-V2-05",
+    "P01-R19-V2-06",
+    "P01-R19-V2-07",
+    "P01-R19-V2-08"
+  ],
+  "status": "complete",
+  "started_at_utc": "2026-11-03T13:23:50.761Z",
+  "authorization_id": "9cde211f3073",
+  "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+  "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+  "input_file_sha256": "c2abfdc102b74dcdabae29c9ad18ca8c9fddc020e12d545b5209250ece877805",
+  "request_text_sha256": "d78f6b9a7129d1860ab7c291fa80ce7e8b3afda68259cb6bed16a8763c1e555b",
+  "characters": 498,
+  "reserved_credits": 498,
+  "actual_credits": 199,
+  "charge_known": true,
+  "request": {
+    "text": "십구 위는 서울 중랑구, 칠천오백사십칠 쌍입니다.\n\n신내동에는 택지개발로 조성된 아파트 주거지가 있고, 신내역에서는 경춘선과 육 호선을 이용할 수 있습니다.\n\n공식 주거정보는 주변 서울의료원과 청남공원도 안내해, 철도와 의료, 여가 시설을 함께 살펴볼 수 있습니다.\n\n신내역 일대의 자료사진에서는 철도와 버스가 만나는 생활 거점의 모습을 살펴보겠습니다.\n\n면목동 현대 단지 주변으로 옮기면 서울면남초등학교, 용마중학교와 칠 호선 용마산 용마폭포공원 역이 상세 지도의 기준점입니다.\n\n신내권의 경춘선, 육 호선과 면목권의 칠 호선 중 직장 방향에 맞는 연결을 먼저 고르면, 같은 중랑구 안에서도 비교 대상이 선명해집니다.\n\n두 생활권의 거래 중윗값은 신내동 칠 억 사천 만 원, 면목동 팔 억 사천 만 원으로, 예산과 철도 이용 방향을 함께 비교할 출발점이 됩니다.\n\n장보기와 공원 이용은 선택한 단지에서 출발하는 길로 이어 보고, 평일 이동과 주말 생활이 만나는 권역을 골라볼 수 있습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+  "local_shadow_remaining_before": 16252,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "Ute0TvJuFajxMuSQE49Z",
+    "x-request-id": null,
+    "character-cost": "199",
+    "content-type": "application/json",
+    "date": "Tue, 03 Nov 2026 13:23:53 GMT"
+  },
+  "pcm_samples": 2646000,
+  "pcm_duration_s": 60,
+  "provider_last_alignment_end_s": 60.08,
+  "complete_tail_after_alignment_s": -0.0799999999999983,
+  "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R19.wav",
+  "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R19/audio.mp3",
+  "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R19/alignment.json",
+  "pcm_sha256": "15aba78874fda378bfba1ef69d54da5813a6d9e2f127e1deeaed51a895707a7a",
+  "artifact_sha256": {
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R19/audio.mp3": "2a635c7c4839b211694726ff3de38bd456aa6ae3a38711f5f92c098ea479788d",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R19/alignment.json": "082b269b5bd68e9b9cc67b736f5740221b541f991418bec85cbf8d81343cf9e6",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R19/normalized_alignment.json": "082b269b5bd68e9b9cc67b736f5740221b541f991418bec85cbf8d81343cf9e6",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R19.wav": "747591461b2e29024b2ffacbf509fb2b32f7b1400169fd32fc4118df8c244e4d"
+  },
+  "processing": {
+    "sample_rate_hz": 44100,
+    "channels": 1,
+    "codec": "pcm_s16le",
+    "tempo_factor": 1,
+    "trimmed": false,
+    "tail_preserved": true,
+    "provider_speed": 0.97
+  },
+  "local_shadow_remaining_after": 16053,
+  "completed_at_utc": "2026-11-03T13:24:03.865Z"
+}

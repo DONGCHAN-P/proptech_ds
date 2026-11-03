@@ -1,0 +1,81 @@
+{
+  "status": "media_ready",
+  "outputs": {
+    "source": "C:\\projects\\realestate_reco\\video\\src\\gyosan-production-v1",
+    "renderer": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\editor\\production-v1\\render.cjs",
+    "representatives": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v1\\preflight",
+    "assets": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\visual\\assets.json",
+    "public": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\visual\\public",
+    "rendered_project": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v1\\rendered_project.json"
+  },
+  "input_versions": {
+    "reference": "changneung-production-v8-jun",
+    "LH": {
+      "district": "105176",
+      "name": "하남 교산",
+      "features": 759,
+      "crs": "EPSG:4326",
+      "projection": "local equirectangular, north up",
+      "source": "LH 내집어디 공개 토지이용계획 WFS",
+      "url": "https://wherehome.lh.or.kr/lhmap.do?mainTabNo=12",
+      "retrieved": "2026-10-18",
+      "approval_date": "원자료 미표기",
+      "sha256": "72c82f67914b2057a1b6015f30919ffc99356cc843fbaa70ce25b08f48e4fcb7"
+    },
+    "atlas_sha256": "e8ffaef861af601288fdd7900f74c6f39ba1c0b9052422ecd00637fd1a3f73fa",
+    "source_files": {
+      "C:\\projects\\realestate_reco\\video\\src\\gyosan-production-v1\\Board.tsx": "8c871864a338cceef5d1429b5ce4ec10685452e4374eb267882569648b005af7",
+      "C:\\projects\\realestate_reco\\video\\src\\gyosan-production-v1\\data.json": "96c18d705a4bdd5be5f555e69f324e5ffd77a4560dc7b677ae441de144ab2e03",
+      "C:\\projects\\realestate_reco\\video\\src\\gyosan-production-v1\\entry.tsx": "98b6c148647a18972ae343c2c492b033f79cf904e730fc82770a71813be01190",
+      "C:\\projects\\realestate_reco\\video\\src\\gyosan-production-v1\\regional.json": "b90a50ecb98a07a1388d7bf3fee241ee0c5164f9b983c19e0baff4d25a8bb5b3"
+    }
+  },
+  "validation": {
+    "guard_pass": true,
+    "guard_variants": 7,
+    "directly_viewed": [
+      "REP1_plan",
+      "REP2_jobs",
+      "REP3_rail",
+      "REP4_life",
+      "REP5_comparison",
+      "REP6_price",
+      "REP7_chapter",
+      "final preflight 008_price/014_comparison/012_supply/016_decision"
+    ],
+    "continuous_video_playback": false,
+    "audio_listened": false,
+    "known_limits": [
+      "고정 카메라, 강조선 5단계 상태의 still_motion",
+      "교통 계획역은 공식 연결 개념 재구성, 지리적 핀 아님",
+      "가격/날짜/출처는 최종 project props가 기준",
+      "A2 원문 p7/p8 화면은 표 일부 CSS viewport, 원본 보존",
+      "지도·자막의 전체 최종본 검수는 후속 QA 필요"
+    ],
+    "full_preflight": {
+      "input_digest": "8f1d7ac912b8cab673dc7cd0c72b798aecfbe0cd94637ef478106a98d8bbe82f",
+      "passed": true,
+      "distinct_variants": 20
+    },
+    "render_receipt": {
+      "completed": true,
+      "input_digest": "8f1d7ac912b8cab673dc7cd0c72b798aecfbe0cd94637ef478106a98d8bbe82f",
+      "project_sha256": "c70052f09c3e976d792f2983c080a3762ef6b55547983ef8b22b89390319e78a",
+      "actual_still_calls": 327,
+      "reused_verified_stills": 0,
+      "visual_intervals": 302,
+      "distinct_png": 300,
+      "layout_guard": "layout_guard.json",
+      "motion": "five discrete draw states over 44 frames, fixed camera"
+    }
+  },
+  "affected_scenes": [
+    "all modes plan/jobs/rail/price/comparison/life/supply/decision/previous/chapter/placeholder"
+  ],
+  "unresolved": [
+    "최종 MP4 연속 재생·실제 청취는 수행하지 않음",
+    "독립 QA 및 MP4 기술검증은 후속 담당",
+    "placeholder는 이미지 제공 시만 자료 준비 영역으로 사용"
+  ],
+  "next_owner": "director/editor; then independent QA"
+}

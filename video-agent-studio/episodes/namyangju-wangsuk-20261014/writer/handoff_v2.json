@@ -1,0 +1,65 @@
+{
+    "task_id":  "NYJ-WRITER-CONTINUITY-V2",
+    "role":  "writer",
+    "status":  "script_v2_ready_for_continuity_review",
+    "input_revisions":  {
+                            "brief":  "input-v1/latest_user_instruction",
+                            "workbook_extracted.md":  "input-v1",
+                            "writing-block.md":  "input-v1",
+                            "facts":  "research/facts.json normalized DEV/LIV IDs",
+                            "development":  "development-v1",
+                            "living":  "living-v1",
+                            "local_transactions":  "local_transactions_v1 exploratory; selected basis and dong entries reviewed, not used in narration",
+                            "prior_episode":  "config current v14; newtown-v14.srt; linked v11 script"
+                        },
+    "outputs":  [
+                    "writer/script_v2.md",
+                    "writer/scene_proposals_v2.json",
+                    "writer/continuity_notes_v2.md",
+                    "writer/handoff_v2.json"
+                ],
+    "affected_scene_ids":  [
+                               "S001",
+                               "S002",
+                               "S003",
+                               "S004",
+                               "S005",
+                               "S006",
+                               "S007",
+                               "S008"
+                           ],
+    "checks":  [
+                   {
+                       "check":  "전편기준확인",
+                       "result":  "passed",
+                       "evidence":  "config/current_video.json v14 및실제SRT31~34 확인"
+                   },
+                   {
+                       "check":  "전체내레이션장면연결",
+                       "result":  "passed",
+                       "evidence":  "8장면,5668자공백제외,초당8자709초가정,타이밍null"
+                   },
+                   {
+                       "check":  "대본내용연속성",
+                       "result":  "passed",
+                       "evidence":  "질문만전승,가격상승수치재사용없음,공급미완질문명시"
+                   },
+                   {
+                       "check":  "실제영상재생·청취",
+                       "result":  "unchecked",
+                       "evidence":  "이번작업텍스트검토만"
+                   }
+               ],
+    "open_issue_ids":  [
+                           "NYJ-CONTINUITY-QA-V2"
+                       ],
+    "next_role":  "director",
+    "notes":  "v1 보존. 실제v14 SRT31~34 및 전편텍스트 확인. 영상재생·청취안함. 다섯질문 도입/소결/결론 적용. 예고왕숙A1/A2 지구불명과 이번왕숙2A1/A3 단정연결금지. 새결정ID는총괄, 이전승인미전승.",
+    "narration_estimate":  {
+                               "nonwhitespace_characters":  5668,
+                               "assumed_characters_per_second":  8,
+                               "estimated_seconds":  709,
+                               "duration_status":  "provisional_not_recorded",
+                               "target_minutes":  "10~12 편집 목표, 실제와 달라질 수 있음"
+                           }
+}

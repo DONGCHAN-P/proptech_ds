@@ -1,0 +1,2 @@
+import fs from 'node:fs/promises';const names=['ASML Hwaseong','에이에스엠엘코리아'];
+for(const [i,q] of names.entries()){const u='https://nominatim.openstreetmap.org/search?format=jsonv2&limit=5&viewbox=127.03,37.26,127.15,37.14&bounded=1&q='+encodeURIComponent(q);const r=await fetch(u,{headers:{'User-Agent':'RealestateRecoVideo/1.0 (address verification)'},signal:AbortSignal.timeout(25000)});const d=await r.json();await fs.writeFile('video/public/maps-v11/asml-name-'+i+'.json',JSON.stringify(d,null,2));console.log(JSON.stringify(d));await new Promise(r=>setTimeout(r,1100));}

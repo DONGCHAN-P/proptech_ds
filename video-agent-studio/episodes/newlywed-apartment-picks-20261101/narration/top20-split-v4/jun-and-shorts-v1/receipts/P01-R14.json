@@ -1,0 +1,69 @@
+{
+  "asset_id": "P01-R14",
+  "sentence_ids": [
+    "P01-R14-V2-01",
+    "P01-R14-V2-02",
+    "P01-R14-V2-03",
+    "P01-R14-V2-04",
+    "P01-R14-V2-05",
+    "P01-R14-V2-06",
+    "P01-R14-V2-07",
+    "P01-R14-V2-08"
+  ],
+  "status": "complete",
+  "started_at_utc": "2026-11-03T13:25:00.497Z",
+  "authorization_id": "9cde211f3073",
+  "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+  "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+  "input_file_sha256": "bd06d2b4a9225df4990771f7e7eb1486021497bd5de20535664e1a48363d93e1",
+  "request_text_sha256": "a22ac1bc98b0f6a0fcb64713f14342d43dcf0e6dbf99bd8e8ab8f9bad7f7d54e",
+  "characters": 496,
+  "reserved_credits": 496,
+  "actual_credits": 198,
+  "charge_known": true,
+  "request": {
+    "text": "십사 위는 서울 은평구, 팔천이백육십칠 쌍입니다.\n\n진관동의 은평뉴타운은 상림마을과 우물골 등 마을 단위로 조성된 주거지입니다.\n\n우물골 단지 옆의 진관동 주민센터처럼, 공동주택과 일상 공공시설의 관계를 마을 이름과 함께 읽을 수 있습니다.\n\n은평뉴타운의 실제 사진에서는 마을 단위 주거지의 모습을 살펴보고, 상세 지도에서는 선택한 단지 주변으로 범위를 좁히겠습니다.\n\n예산의 대비를 보면 거래 중윗값은 신사동 육 억 삼천팔백 만 원, 진관동 구 억 사천 만 원으로, 구 안에서도 비교할 가격대가 넓습니다.\n\n그 예산에 맞는 단지를 추린 다음, 뉴타운의 마을 구성을 선호하는지 실제 이용할 역 주변을 우선하는지 살펴보는 방식입니다.\n\n응암동 녹번역센트레빌 주변에는 영락중학교, 서울녹번초등학교와 녹번역이 표시돼, 학교와 철도 위치를 함께 읽을 수 있습니다.\n\n진관동의 마을과 응암동의 대표단지를 오가며 출근 목적지, 학교, 장보기 동선을 겹쳐 보면, 실제로 비교할 생활권이 선명해집니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+  "local_shadow_remaining_before": 15262,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "GnT2NjytgBj2kWpzDzbV",
+    "x-request-id": null,
+    "character-cost": "198",
+    "content-type": "application/json",
+    "date": "Tue, 03 Nov 2026 13:25:03 GMT"
+  },
+  "pcm_samples": 2684808,
+  "pcm_duration_s": 60.88,
+  "provider_last_alignment_end_s": 60.96,
+  "complete_tail_after_alignment_s": -0.0799999999999983,
+  "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R14.wav",
+  "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R14/audio.mp3",
+  "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R14/alignment.json",
+  "pcm_sha256": "5cfb90a3ee8538893bd05cc81b275b80b824640fe3a39b2815fbf26659f1e46c",
+  "artifact_sha256": {
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R14/audio.mp3": "57c489323c0bb4d52dfcb3d5d57cc5a2e42b2ab7b41fa6908ba1c2c03eb530ec",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R14/alignment.json": "ddcfa33b8a4727661341e760a21ebe95fa765b2073d0144bb5771cf96bfb4449",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R14/normalized_alignment.json": "ddcfa33b8a4727661341e760a21ebe95fa765b2073d0144bb5771cf96bfb4449",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R14.wav": "5249ef16f3cbe851c4653c11243d4dfcd28a8b86304929d4ccb8befa970660db"
+  },
+  "processing": {
+    "sample_rate_hz": 44100,
+    "channels": 1,
+    "codec": "pcm_s16le",
+    "tempo_factor": 1,
+    "trimmed": false,
+    "tail_preserved": true,
+    "provider_speed": 0.97
+  },
+  "local_shadow_remaining_after": 15064,
+  "completed_at_utc": "2026-11-03T13:25:17.328Z"
+}

@@ -1,0 +1,662 @@
+{
+  "revision": "semantic-v5-missing-locations",
+  "results": [
+    {
+      "name": "창릉호반써밋",
+      "address": "경기도 고양시 덕양구 동산동 365",
+      "provider": "VWorld address getcoord",
+      "request_without_key": {
+        "address": "경기도 고양시 덕양구 동산동 365",
+        "type": "parcel",
+        "crs": "EPSG:4326"
+      },
+      "response": {
+        "response": {
+          "service": {
+            "name": "address",
+            "version": "2.0",
+            "operation": "getcoord",
+            "time": "15(ms)"
+          },
+          "status": "OK",
+          "input": {
+            "type": "parcel",
+            "address": "경기도 고양시 덕양구 동산동 365"
+          },
+          "refined": {
+            "text": "경기도 고양시 덕양구 동산동 365",
+            "structure": {
+              "level0": "대한민국",
+              "level1": "경기도",
+              "level2": "고양시 덕양구",
+              "level3": "",
+              "level4L": "동산동",
+              "level4LC": "4128111200103650000",
+              "level4A": "창릉동",
+              "level4AC": "4128158000",
+              "level5": "365",
+              "detail": "동산마을 22단지 호반베르디움 2210동"
+            }
+          },
+          "result": {
+            "crs": "EPSG:4326",
+            "point": {
+              "x": "126.88969554509904",
+              "y": "37.646405154969955"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "수색교",
+      "address": "서울특별시 은평구 수색교",
+      "provider": "VWorld address getcoord",
+      "request_without_key": {
+        "address": "서울특별시 은평구 수색교",
+        "type": "road",
+        "crs": "EPSG:4326"
+      },
+      "response": {
+        "response": {
+          "service": {
+            "name": "address",
+            "version": "2.0",
+            "operation": "getcoord",
+            "time": "15(ms)"
+          },
+          "status": "NOT_FOUND",
+          "record": {
+            "total": "0",
+            "current": "0"
+          },
+          "page": {
+            "total": "1",
+            "current": "1",
+            "size": "10"
+          }
+        }
+      }
+    }
+  ],
+  "bridge_place_search": {
+    "provider": "VWorld search",
+    "query": "수색교",
+    "response": {
+      "response": {
+        "service": {
+          "name": "search",
+          "version": "2.0",
+          "operation": "search",
+          "time": "18(ms)"
+        },
+        "status": "OK",
+        "record": {
+          "total": "31",
+          "current": "10"
+        },
+        "page": {
+          "total": "4",
+          "current": "1",
+          "size": "10"
+        },
+        "result": {
+          "crs": "EPSG:4326",
+          "type": "place",
+          "items": [
+            {
+              "id": "POI01000000NHXMI1",
+              "title": "수색교(버스정류장)",
+              "category": "도로시설 > 버스터미널/정류장 > 버스정류장",
+              "address": {
+                "road": "",
+                "parcel": "서울특별시 마포구 상암동 1756"
+              },
+              "point": {
+                "x": "126.88395979977454",
+                "y": "37.587081704044735"
+              }
+            },
+            {
+              "id": "POI01000000NI3UXV",
+              "title": "수색교(버스정류장)",
+              "category": "도로시설 > 버스터미널/정류장 > 버스정류장",
+              "address": {
+                "road": "",
+                "parcel": "서울특별시 마포구 상암동 1756"
+              },
+              "point": {
+                "x": "126.88398499956973",
+                "y": "37.58721700048946"
+              }
+            },
+            {
+              "id": "POI01000000M77L7O",
+              "title": "수색교",
+              "category": "도로시설 > 버스터미널/정류장",
+              "address": {
+                "road": "",
+                "parcel": "서울특별시 마포구 상암동 1756"
+              },
+              "point": {
+                "x": "126.88403416091327",
+                "y": "37.587047282379665"
+              }
+            },
+            {
+              "id": "POI01000000M77L8P",
+              "title": "수색교",
+              "category": "도로시설 > 버스터미널/정류장",
+              "address": {
+                "road": "",
+                "parcel": "서울특별시 마포구 상암동 1756"
+              },
+              "point": {
+                "x": "126.88402590614965",
+                "y": "37.587179781329496"
+              }
+            },
+            {
+              "id": "POI01000000M77IP3",
+              "title": "수색교",
+              "category": "도로시설 > 버스터미널/정류장",
+              "address": {
+                "road": "",
+                "parcel": "서울특별시 은평구 수색동 394"
+              },
+              "point": {
+                "x": "126.89031312191565",
+                "y": "37.58465599802012"
+              }
+            },
+            {
+              "id": "POI01000000NI04IN",
+              "title": "수색교(버스정류장)",
+              "category": "도로시설 > 버스터미널/정류장 > 버스정류장",
+              "address": {
+                "road": "",
+                "parcel": "서울특별시 은평구 수색동 395"
+              },
+              "point": {
+                "x": "126.89017999977293",
+                "y": "37.584697997824385"
+              }
+            },
+            {
+              "id": "POI01000000M77IO2",
+              "title": "수색교",
+              "category": "도로시설 > 버스터미널/정류장",
+              "address": {
+                "road": "",
+                "parcel": "서울특별시 은평구 수색동 395"
+              },
+              "point": {
+                "x": "126.89017465841216",
+                "y": "37.58473117561319"
+              }
+            },
+            {
+              "id": "POI01000000IW0NJG",
+              "title": "수색교(중)(버스정류장)",
+              "category": "도로시설 > 버스터미널/정류장 > 버스정류장",
+              "address": {
+                "road": "",
+                "parcel": "서울특별시 은평구 수색동 397"
+              },
+              "point": {
+                "x": "126.88920000046953",
+                "y": "37.5854000052314"
+              }
+            },
+            {
+              "id": "POI01000000NI0ACN",
+              "title": "수색교(버스정류장)",
+              "category": "도로시설 > 버스터미널/정류장 > 버스정류장",
+              "address": {
+                "road": "",
+                "parcel": "서울특별시 은평구 수색동 407-3"
+              },
+              "point": {
+                "x": "126.8886899995559",
+                "y": "37.58556300433487"
+              }
+            },
+            {
+              "id": "POI01000000M77IYC",
+              "title": "수색교",
+              "category": "도로시설 > 버스터미널/정류장",
+              "address": {
+                "road": "",
+                "parcel": "서울특별시 은평구 수색동 407-3"
+              },
+              "point": {
+                "x": "126.88868797773944",
+                "y": "37.58558184990318"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "bridge_search_page2": {
+    "response": {
+      "service": {
+        "name": "search",
+        "version": "2.0",
+        "operation": "search",
+        "time": "12(ms)"
+      },
+      "status": "OK",
+      "record": {
+        "total": "31",
+        "current": "10"
+      },
+      "page": {
+        "total": "4",
+        "current": "2",
+        "size": "10"
+      },
+      "result": {
+        "crs": "EPSG:4326",
+        "type": "place",
+        "items": [
+          {
+            "id": "POI01000000NHXP8U",
+            "title": "수색교(버스정류장)",
+            "category": "도로시설 > 버스터미널/정류장 > 버스정류장",
+            "address": {
+              "road": "",
+              "parcel": "서울특별시 은평구 수색동 411-4"
+            },
+            "point": {
+              "x": "126.888671999659",
+              "y": "37.58575899769425"
+            }
+          },
+          {
+            "id": "POI01000000M77IZD",
+            "title": "수색교",
+            "category": "도로시설 > 버스터미널/정류장",
+            "address": {
+              "road": "",
+              "parcel": "서울특별시 은평구 수색동 411-4"
+            },
+            "point": {
+              "x": "126.88860396335934",
+              "y": "37.58580557808745"
+            }
+          },
+          {
+            "id": "POI01000000M77J0F",
+            "title": "수색교",
+            "category": "도로시설 > 버스터미널/정류장",
+            "address": {
+              "road": "",
+              "parcel": "서울특별시 은평구 수색동 411-4"
+            },
+            "point": {
+              "x": "126.88848475240802",
+              "y": "37.585906163027154"
+            }
+          },
+          {
+            "id": "POI01000000IW0NIF",
+            "title": "수색교(중)(버스정류장)",
+            "category": "도로시설 > 버스터미널/정류장 > 버스정류장",
+            "address": {
+              "road": "",
+              "parcel": "서울특별시 은평구 수색동 411-4"
+            },
+            "point": {
+              "x": "126.88851670050607",
+              "y": "37.58586670562235"
+            }
+          },
+          {
+            "id": "POI01000000BW28YB",
+            "title": "수색교",
+            "category": "인공지명 > 기간시설 > 교통",
+            "address": {
+              "road": "",
+              "parcel": "서울특별시 마포구 상암동 1012-1철"
+            },
+            "point": {
+              "x": "126.88638604068102",
+              "y": "37.58641680210112"
+            }
+          },
+          {
+            "id": "POI01000000M283XS",
+            "title": "수색교버스정류장쉘터",
+            "category": "도로시설 > 버스터미널/정류장",
+            "address": {
+              "road": "",
+              "parcel": "서울특별시 은평구 수색동 394"
+            },
+            "point": {
+              "x": "126.89031307328754",
+              "y": "37.5846559887562"
+            }
+          },
+          {
+            "id": "POI01000000M283WR",
+            "title": "수색교버스정류장쉘터",
+            "category": "도로시설 > 버스터미널/정류장",
+            "address": {
+              "road": "",
+              "parcel": "서울특별시 은평구 수색동 395"
+            },
+            "point": {
+              "x": "126.89017454449129",
+              "y": "37.58473125614371"
+            }
+          },
+          {
+            "id": "POI01000000FAXMIM",
+            "title": "수색교버스정류장쉘터",
+            "category": "도로시설 > 버스터미널/정류장",
+            "address": {
+              "road": "",
+              "parcel": "서울특별시 은평구 수색동 407-3"
+            },
+            "point": {
+              "x": "126.88868829610661",
+              "y": "37.5855812837058"
+            }
+          },
+          {
+            "id": "POI01000000FAXALD",
+            "title": "수색교버스정류장쉘터",
+            "category": "도로시설 > 버스터미널/정류장",
+            "address": {
+              "road": "",
+              "parcel": "서울특별시 은평구 수색동 411-4"
+            },
+            "point": {
+              "x": "126.88848514621026",
+              "y": "37.58590828321817"
+            }
+          },
+          {
+            "id": "POI01000000BW289M",
+            "title": "수색교버스정류장쉘터",
+            "category": "도로시설 > 버스터미널/정류장",
+            "address": {
+              "road": "",
+              "parcel": "서울특별시 은평구 수색동 411-4도"
+            },
+            "point": {
+              "x": "126.88860466469599",
+              "y": "37.58580693373149"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "bridge_search_page3": {
+    "response": {
+      "service": {
+        "name": "search",
+        "version": "2.0",
+        "operation": "search",
+        "time": "14(ms)"
+      },
+      "status": "OK",
+      "record": {
+        "total": "31",
+        "current": "10"
+      },
+      "page": {
+        "total": "4",
+        "current": "3",
+        "size": "10"
+      },
+      "result": {
+        "crs": "EPSG:4326",
+        "type": "place",
+        "items": [
+          {
+            "id": "POI01000000LX1XU6",
+            "title": "수색교회가평수양관",
+            "category": "기타협회및단체 > 종교단체 >",
+            "address": {
+              "road": "경기도 가평군 북면 화악지암길 223-73",
+              "parcel": "경기도 가평군 북면 화악리 300"
+            },
+            "point": {
+              "x": "127.57235509747153",
+              "y": "37.942517989664786"
+            }
+          },
+          {
+            "id": "POI01000000LX1XBN",
+            "title": "수색교회가평수양관",
+            "category": "기타협회및단체 > 종교단체 >",
+            "address": {
+              "road": "",
+              "parcel": "경기도 가평군 북면 화악리 300-2"
+            },
+            "point": {
+              "x": "127.57232810463124",
+              "y": "37.94234673247382"
+            }
+          },
+          {
+            "id": "POI01000000JIWPGY",
+            "title": "수색교회가평수양관",
+            "category": "기타협회및단체 > 종교단체 >",
+            "address": {
+              "road": "경기도 가평군 북면 화악지암길 223-71",
+              "parcel": "경기도 가평군 북면 화악리 302"
+            },
+            "point": {
+              "x": "127.57200530373098",
+              "y": "37.94240230624575"
+            }
+          },
+          {
+            "id": "POI01000000JIWPFX",
+            "title": "수색교회가평수양관",
+            "category": "기타협회및단체 > 종교단체 >",
+            "address": {
+              "road": "경기도 가평군 북면 화악지암길 223-71",
+              "parcel": "경기도 가평군 북면 화악리 302"
+            },
+            "point": {
+              "x": "127.57203689686679",
+              "y": "37.94227360848941"
+            }
+          },
+          {
+            "id": "POI01000000FHVO8J",
+            "title": "수색교회가평수양관",
+            "category": "기타협회및단체 > 종교단체 >",
+            "address": {
+              "road": "경기도 가평군 북면 화악지암길 223-71",
+              "parcel": "경기도 가평군 북면 화악리 302"
+            },
+            "point": {
+              "x": "127.57220820610316",
+              "y": "37.942462947458935"
+            }
+          },
+          {
+            "id": "POI01000000FA87TT",
+            "title": "수색교회",
+            "category": "기타협회및단체 > 종교단체 > 기독교단체",
+            "address": {
+              "road": "",
+              "parcel": "서울특별시 은평구 수색동 417-3"
+            },
+            "point": {
+              "x": "126.89383835224245",
+              "y": "37.5839384977641"
+            }
+          },
+          {
+            "id": "POI01000000EL77Z8",
+            "title": "수색교회",
+            "category": "기타협회및단체 > 종교단체 >",
+            "address": {
+              "road": "서울특별시 은평구 수색동 수색로18길 5-0",
+              "parcel": "서울특별시 은평구 수색동 417-3 종"
+            },
+            "point": {
+              "x": "126.89378728524143",
+              "y": "37.583835735030355"
+            }
+          },
+          {
+            "id": "POI010000006H4JDJ",
+            "title": "천주교수색교회",
+            "category": "기타협회및단체 > 종교단체 >",
+            "address": {
+              "road": "서울특별시 은평구 증산서길 20",
+              "parcel": "서울특별시 은평구 증산동 221-1종"
+            },
+            "point": {
+              "x": "126.90195269206639",
+              "y": "37.579318531886585"
+            }
+          },
+          {
+            "id": "POI01000000K1N9DQ",
+            "title": "해병대교육훈련단상륙전교육대대수색교육대",
+            "category": "기초화학물질제조업 > 기초무기화학물질제조업 > 산업용가스제조업",
+            "address": {
+              "road": "경상북도 포항시 남구 동해면 일월로41번길 26",
+              "parcel": "경상북도 포항시 남구 동해면 도구리 621"
+            },
+            "point": {
+              "x": "129.4397005031192",
+              "y": "35.99035700425197"
+            }
+          },
+          {
+            "id": "POI01000000M7TQ3B",
+            "title": "수색교회",
+            "category": "면형구조시설 > 계단",
+            "address": {
+              "road": "",
+              "parcel": "서울특별시 은평구 수색동 136"
+            },
+            "point": {
+              "x": "126.89684697439318",
+              "y": "37.584621713157176"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "bridge_search_page4": {
+    "response": {
+      "service": {
+        "name": "search",
+        "version": "2.0",
+        "operation": "search",
+        "time": "14(ms)"
+      },
+      "status": "OK",
+      "record": {
+        "total": "31",
+        "current": "1"
+      },
+      "page": {
+        "total": "4",
+        "current": "4",
+        "size": "10"
+      },
+      "result": {
+        "crs": "EPSG:4326",
+        "type": "place",
+        "items": [
+          {
+            "id": "POI01000000M7TQ08",
+            "title": "수색교회",
+            "category": "면형구조시설 > 계단",
+            "address": {
+              "road": "",
+              "parcel": "서울특별시 은평구 수색동 136-18"
+            },
+            "point": {
+              "x": "126.89652606311428",
+              "y": "37.584558349084375"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "checked_on": "2026-10-16",
+  "crs": "EPSG:4326",
+  "locations": [
+    {
+      "id": "changneung_hoban_existing",
+      "name": "창릉호반써밋",
+      "aliases": [
+        "동산마을22단지 호반베르디움"
+      ],
+      "lon": 126.88969554509904,
+      "lat": 37.646405154969955,
+      "source_url": "https://api.vworld.kr/req/address",
+      "request": {
+        "service": "address",
+        "request": "getcoord",
+        "address": "경기도 고양시 덕양구 동산동 365",
+        "type": "parcel",
+        "crs": "EPSG:4326"
+      },
+      "identity_source": "research/prices-v2/methodology.md:동산동365 K-apt 확인; comparisons.json 동일 비교단지",
+      "identity_source_url": "https://www.k-apt.go.kr/cmmn/introMmentPop.do?bjdCode=41281112&searchOccuDate=201808&upYn=Y",
+      "coordinate_basis": "VWorld 정제 지번주소 대표점; 정제상세 동산마을22단지 호반베르디움2210동",
+      "display_label": "기존 동산동 · 창릉호반써밋",
+      "not_boundary": true,
+      "not_entrance": true,
+      "not_new_changneung_block": true,
+      "status": "verified_official_address_locator"
+    },
+    {
+      "id": "susaek_bridge",
+      "name": "수색교",
+      "lon": 126.88638604068102,
+      "lat": 37.58641680210112,
+      "source_url": "https://api.vworld.kr/req/search",
+      "request": {
+        "service": "search",
+        "request": "search",
+        "query": "수색교",
+        "type": "place",
+        "page": "2",
+        "size": "10",
+        "crs": "EPSG:4326"
+      },
+      "source_record_id": "POI01000000BW28YB",
+      "source_category": "인공지명 > 기간시설 > 교통",
+      "address": "서울특별시 마포구 상암동 1012-1철",
+      "coordinate_basis": "VWorld 교통시설 지명 대표점; 버스정류장 및 교회 제외",
+      "display_label": "수색교 · 위치 안내",
+      "not_construction_extent": true,
+      "status": "verified_official_place_locator"
+    }
+  ],
+  "excluded": [
+    "OSM 창릉호반써밋 정류장5289278981/5289278982는단지핀아님",
+    "수색교 버스정류장 다수결과는 교량점으로 대체하지 않음",
+    "수색교회·천주교수색교회·수양관 제외"
+  ],
+  "editor_rules": [
+    "화정~도내 확장의 미검증 선형을 수색교까지 이어 그리지 말 것",
+    "교량대표점은 위치 locator만; 7→9차로 확장사업의 정확한 경계·완공시점·최단동선 아님",
+    "호반 대표점은 주소 위치이며 단지면을 임의 제작하지 말 것"
+  ],
+  "validation": {
+    "official_vworld_address_success": true,
+    "official_vworld_place_success": true,
+    "secret_recorded": false,
+    "original_responses_preserved": true,
+    "no_new_paid_calls": true
+  }
+}

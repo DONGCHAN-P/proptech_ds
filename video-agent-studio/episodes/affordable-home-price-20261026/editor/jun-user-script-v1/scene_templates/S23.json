@@ -1,0 +1,46 @@
+{
+  "scene_id": "S23",
+  "chapter": 6,
+  "message": "적용 조건 확인",
+  "narration_text": "차이가 꽤 크죠. 그래서 내가 생애최초인지, 해당 지역과 주택에 어떤 규제가 적용되는지부터 확인해야 합니다. 서울 어디, 경기 어디라는 이름만 보고 같은 대출이 나온다고 생각하면 안 됩니다.",
+  "paragraph_ids": [
+    "P054"
+  ],
+  "claim_ids": [
+    "DOC",
+    "FSC_LTV"
+  ],
+  "material_type": "주택·차주 조건 가지",
+  "asset_ids": [
+    "M23"
+  ],
+  "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "audio_revision": null,
+  "start": null,
+  "end": null,
+  "timing_basis": "UNLOCKED: awaiting actual Jun alignment",
+  "beats": [
+    {
+      "anchor": "생애최초인지",
+      "action": "주택 이력 가지",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "해당 지역과 주택",
+      "action": "주소·담보·상품 조건 가지",
+      "start": null,
+      "end": null
+    }
+  ],
+  "status": "designed_not_rendered",
+  "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+  "fallback": "현행 지역 지도를 임의로 색칠하지 않고 확인 항목을 연결",
+  "template_status": "contract_only_not_authored",
+  "template": "S23",
+  "beat_ids": [
+    "S23.b01",
+    "S23.b02"
+  ],
+  "preview_seconds": null
+}

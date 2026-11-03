@@ -26,6 +26,8 @@
   --map-filter: grayscale(1) contrast(.92) brightness(1.06);
   color-scheme: light;
 }
+
+@media(max-width:600px){.top{height:100px!important;flex-direction:column;align-items:stretch!important;justify-content:center!important;gap:8px;padding:9px 15px!important;background:var(--surface-solid)}.brand{white-space:nowrap}.top-right{width:100%;justify-content:space-between;gap:3px}.top-right .ghost{font-size:12px!important;padding:7px 8px!important}.top-right .jg-account{font-size:12px;max-width:150px}.wizard{padding-top:118px!important}.result{top:100px!important}.top-right a:last-child{max-width:128px}.brand em{display:none!important}}
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0c0c14;
@@ -446,6 +448,9 @@ path.cand { fill: var(--dot); }
 .tag { padding: 5px 10px; border-radius: 8px; font-size: 12px; font-weight: 600; background: var(--surface-2); border: 1px solid var(--line); color: var(--ink-2); }
 .why { display: flex; flex-wrap: wrap; gap: 6px; margin: 18px 0 14px; }
 .why span { padding: 7px 12px; border-radius: 10px; font-size: 13px; font-weight: 600; background: var(--accent-soft); color: var(--accent-ink); }
+.explanation-tile p, .explanation-tile li { font-size: 14px; line-height: 1.8; overflow-wrap: anywhere; }
+.explanation-tile ul { padding-left: 20px; margin: 10px 0 20px; }
+.explanation-tile h3 { margin-bottom: 8px; }
 
 .bento { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
 .tile {

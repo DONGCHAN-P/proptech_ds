@@ -1,0 +1,41 @@
+{
+  "revision": "semantic-captions-v4",
+  "status": "ready_for_editor_integration",
+  "owner": "writer",
+  "input_versions": {
+    "script": "writer/script_v2.md",
+    "old_captions": "video/src/namyangju-v2/project.json",
+    "timing": "editor/render_v1/timing_actual.json",
+    "audio": "audio-v1 (unchanged, no generation)"
+  },
+  "outputs": [
+    "writer/semantic-captions-v4/captions.json",
+    "writer/semantic-captions-v4/semantic_qa.json",
+    "writer/semantic-captions-v4/editorial_review.md",
+    "writer/semantic-captions-v4/build_captions.py"
+  ],
+  "interface": {
+    "chapters": "Object keyed S001 through S008, each value an array of cues",
+    "start_s_end_s": "chapter-relative seconds",
+    "lines": "explicit editorial line breaks, preserve exactly; do not auto-split by character count"
+  },
+  "validation": {
+    "executed": "tools/python311/python.exe -X utf8 .../writer/semantic-captions-v4/build_captions.py",
+    "exit_code": 0,
+    "cue_count": 302,
+    "all_8_chapter_whitespace_normalized_text_exact": true,
+    "protected_number_unit_date_name_occurrences_unbroken": 80,
+    "maximum_lines_per_cue": 2,
+    "maximum_line_characters": 36,
+    "old_known_numeric_breaks_confirmed_and_fixed": ["1만 5천955세대", "8만 114세대", "8만 세대", "4억 9천304만 원"]
+  },
+  "limitations": [
+    "Timestamps are character-weight estimates within measured chapter durations, not word forced alignment.",
+    "Actual listening, continuous video playback, and encoded subtitle visual layout not performed by writer.",
+    "Editor must preserve explicit lines and verify actual pixel widths at final font and encoded frame output."
+  ],
+  "affected_scenes": ["S001", "S002", "S003", "S004", "S005", "S006", "S007", "S008"],
+  "next_owner": "rail_route_editor",
+  "script_rewritten": false,
+  "new_tts_requested": false
+}

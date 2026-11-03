@@ -1,0 +1,34 @@
+{
+  "task_id": "RPR-LIT-SOURCEFIX-001",
+  "issue_id": "RPR-LIT-SOURCEFIX-001",
+  "related_issue_id": "RPR-LIT-QA-001",
+  "recipients": [
+    "qa:01a167df-8e6f-7b12-95cf-10fcb4134813",
+    "parent_director"
+  ],
+  "affected_claim_ids": [
+    "ST-F08"
+  ],
+  "affected_scene_ids": [],
+  "problem": "ST-F08 학술지판 Granger 결과에 WP 기간·AR(1) 조건이 혼입됨",
+  "evidence": [
+    "video-agent-studio/episodes/regional-price-recovery-20261022/qa/literature-mechanisms-v1/issue_RPR-LIT-QA-001.json",
+    "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/sources.json#/sources/5/related_article",
+    "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations.md / S6 / 관련판"
+  ],
+  "exact_change": "/claims/7만 수정. source_id=S6.related_article 및 /sources/5/related_article에 결합; 2020 부동산연구 30(4),33–44, DOI10.35136/krer.30.4.3; read_scope=abstract_only; period=2009Q1-2019Q4; Granger는 가격 상승→전체 거래→외지인 거래의 예측 선행성으로 한정. WP AR(1)·2006–2019/2012Q1–2019Q4 조건 제거. 미확인 표본 수·지수 세부사항 등 null/unverified; qualified 유지. 나머지 11주장·sources.json·노트·공통 상태 변경 없음.",
+  "proposal": "QA는 수정 전 사본과 수정본 ST-F08 및 이 영수증만 대조하여 RPR-LIT-QA-001의 메타데이터 부분을 좁게 재검수·종결 판단. 다른 문헌 재감사 불필요. S4 계수·상승률·인과 headline 제외 유지.",
+  "impact": "외지인·기대·가격 전이 설명의 판본·기간·인과 경계 정확성; writer는 정정된 조건만 사용",
+  "receipt": "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/corrections_v1/change_receipt.json",
+  "prepatch_sha256": "ddfb4224d55f1364c4353404291f6bb63a306e82887c54accea04b9407f4093e",
+  "postpatch_sha256": "0536b7a98d9fa5167ae3635ce16d4849241084a4e0860b524e4072dec33fc5f5",
+  "status": "correction_verified_locally_pending_independent_qa",
+  "delivery": {
+    "mode": "local_issue_file_for_parent_routing",
+    "direct_message_tool_available": false,
+    "direct_peer_message_sent": false,
+    "parent_direct_message_sent": false,
+    "external_messages_sent": false
+  },
+  "next_owner": "parent_director가 지정 QA에게 전달; QA narrow closure 후 writer 반영"
+}

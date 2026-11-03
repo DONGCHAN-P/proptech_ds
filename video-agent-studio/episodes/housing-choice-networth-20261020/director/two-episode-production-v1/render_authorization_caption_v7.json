@@ -1,0 +1,22 @@
+{
+  "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+  "audio_revision": "production-injoon-v6",
+  "caption_revision": "caption-v7",
+  "output_revision": "private-production-v3",
+  "full_affected_render_authorized": true,
+  "authorization": "Current direct user instruction to finish, correct and independently review both videos before private upload.",
+  "scope": "Caption segmentation and explicit two-line display only. Preserve financial script, all audio bytes, choreography, assets, scene anchors and chapter durations.",
+  "conditions": [
+    "Narrator conservation, native-boundary timing and number/unit validation pass",
+    "Independent current source QA passes actual glyph bounds and caption meanings",
+    "CLI lint/check passes for current source hashes",
+    "No paid generation or new audio processing"
+  ],
+  "prior_source_qa": "qa/private-production-v1/source_v6_pass_receipt.json",
+  "audio_qa": "qa/private-production-v1/audio_v6_delta_handoff.json",
+  "required_current_source_qa": "qa/private-production-v1/source_v7_pass_receipt.json",
+  "private_upload": "Exact new final MP4 and SRT require both final media approvals",
+  "new_paid_generation_authorized": false,
+  "public_release_authorized": false,
+  "preserve_prior_versions": true
+}

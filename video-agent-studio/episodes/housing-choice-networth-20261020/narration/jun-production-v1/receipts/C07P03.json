@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C07P03",
+  "scene_id": "C07",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:07:00.358Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "0b54c86a948336bc501c8df2f5165f60e6c0a7bbce65a7be9016f1f8df0d158e",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "기본 조건에서 월세 가구는 매매 가구보다 약 칠천사백만 원, 전세 가구보다 약 삼천만 원 큰 평가 순자산으로 끝납니다. 월세를 내는 동안에도 더 큰 초기 투자금이 수익을 얻었고, 매달 차액이 적립됐기 때문입니다. 주거비를 낸 뒤 남은 금융자산까지 함께 보는 이유입니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 150,
+  "characters": 150,
+  "actual_credits": 60,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19183,
+    "character_limit": 40000,
+    "included_remaining": 20817,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:51.452Z",
+  "local_shadow_remaining_before": 20703,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "GngBzCceTIR3y21tWudU",
+    "x-request-id": null,
+    "character-cost": "60",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:06:59 GMT"
+  },
+  "pcm_samples": 814968,
+  "pcm_duration_s": 18.48,
+  "provider_last_spoken_end_s": 18.56,
+  "artifact_sha256": {
+    "paragraphs/C07P03/audio.mp3": "e4501a69f865c5580d8c8f20eece8ba606eb9f9e3f34b3f76fade2699b63b06e",
+    "paragraphs/C07P03/audio.wav": "65e3a86d200497e9587ac6174729fbe358a2ce88f5dda73eb214de5282bbbe06",
+    "paragraphs/C07P03/alignment.json": "c0060510ea6345d93b422bd67d70a759d645df39e32363dd0b32311caf891662",
+    "paragraphs/C07P03/normalized_alignment.json": "c0060510ea6345d93b422bd67d70a759d645df39e32363dd0b32311caf891662"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 20643,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:07:04.947Z"
+}

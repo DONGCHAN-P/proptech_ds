@@ -1,0 +1,6413 @@
+{
+  "status": "offline_prepared_NOT_synthesized",
+  "episode_id": "affordable-home-price-20261026",
+  "script_path": "video-agent-studio/episodes/affordable-home-price-20261026/director/rebuild-v2/frozen-script-v3-r2/scenes_v3_r2.json",
+  "script_sha256": "cc1ef7d80225e992e7e5d31faffbfb09a8f90c80fb5352e17c36eb8c90755b12",
+  "revision": "script-v3-r2",
+  "policy_as_of": "2026-10-26",
+  "chapters": [
+    {
+      "id": 1,
+      "title": "두 가지 집값"
+    },
+    {
+      "id": 2,
+      "title": "6억 원의 자금표"
+    },
+    {
+      "id": 3,
+      "title": "대출 심사"
+    },
+    {
+      "id": 4,
+      "title": "월 예산과 금리"
+    },
+    {
+      "id": 5,
+      "title": "가격별 추가 현금"
+    },
+    {
+      "id": 6,
+      "title": "정책대출"
+    },
+    {
+      "id": 7,
+      "title": "신생아 특례"
+    },
+    {
+      "id": 8,
+      "title": "다음 선택"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "R001",
+      "paragraph": 1,
+      "chapter": 1,
+      "title": "같은 돈, 두 가지 집값",
+      "text": "보유자금 2억 5천만 원으로 감당할 수 있는 집값을 계산하겠습니다. A가구의 현금과 은행 조건을 맞춘 상한은 약 6억 8천만 원입니다. 매달 대출을 170만 원씩 갚는 목표까지 넣으면 약 5억 7천만 원입니다. 서울에서 생애최초로 집을 사고, 보증 승인으로 공제를 보완한 사례입니다. 두 가격이 달라지는 이유를 6억 원짜리 집 한 채로 따라가겠습니다.",
+      "spoken_text": "보유자금 2억 5천만 원으로 감당할 수 있는 집값을 계산하겠습니다. A가구의 현금과 은행 조건을 맞춘 상한은 약 6억 8천만 원입니다. 매달 대출을 170만 원씩 갚는 목표까지 넣으면 약 5억 7천만 원입니다. 서울에서 생애최초로 집을 사고, 보증 승인으로 공제를 보완한 사례입니다. 두 가격이 달라지는 이유를 6억 원짜리 집 한 채로 따라가겠습니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 196,
+          "spoken_start": 0,
+          "spoken_end": 196,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [],
+      "protected_ranges": [
+        [
+          5,
+          13
+        ],
+        [
+          63,
+          71
+        ],
+        [
+          83,
+          89
+        ],
+        [
+          105,
+          113
+        ],
+        [
+          174,
+          178
+        ]
+      ],
+      "source_hangul_count": 131,
+      "spoken_hangul_count": 131,
+      "beats": [
+        {
+          "anchor": "보유자금 2억 5천만 원",
+          "action": "현금 원천 막대 하나만 생성한다. 두 집값 결과와 대출 총액은 아직 숨긴다.",
+          "source_start": 0,
+          "source_end": 13,
+          "spoken_start": 0,
+          "spoken_end": 13
+        },
+        {
+          "anchor": "약 6억 8천만 원",
+          "action": "현금·은행 기준 경로를 열고 요약 6억 8천만 원을 크게 표시한다. 정밀 계산값 6억 8,019만 원은 같은 경로 아래 작은 수치로 보존한다.",
+          "source_start": 61,
+          "source_end": 71,
+          "spoken_start": 61,
+          "spoken_end": 71
+        },
+        {
+          "anchor": "약 5억 7천만 원",
+          "action": "월 상환 목표 170만 원 경로를 추가해 요약 5억 7천만 원을 크게 표시한다. 정밀 계산값 5억 6,586만 원은 해당 경로 아래 작게 표시한다.",
+          "source_start": 103,
+          "source_end": 113,
+          "spoken_start": 103,
+          "spoken_end": 113
+        },
+        {
+          "anchor": "6억 원짜리 집 한 채",
+          "action": "예고 경로를 접고 6억 원 매물 한 개로 연결한다. 이후 계산의 답을 선표시하지 않는다.",
+          "source_start": 174,
+          "source_end": 186,
+          "spoken_start": 174,
+          "spoken_end": 186
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "보유자금 2억 5천만 원으로 감당할 수 있는 집값을 계산하겠습니다.",
+          "display_lines": [
+            "보유자금 2억 5천만 원으로",
+            "감당할 수 있는 집값을 계산하겠습니다."
+          ],
+          "source_start": 0,
+          "source_end": 37,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "A가구의 현금과 은행 조건을 맞춘 상한은 약 6억 8천만 원입니다.",
+          "display_lines": [
+            "A가구의 현금과 은행 조건을 맞춘",
+            "상한은 약 6억 8천만 원입니다."
+          ],
+          "source_start": 38,
+          "source_end": 75,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "매달 대출을 170만 원씩 갚는 목표까지 넣으면 약 5억 7천만 원입니다.",
+          "display_lines": [
+            "매달 대출을 170만 원씩 갚는 목표까지 넣으면",
+            "약 5억 7천만 원입니다."
+          ],
+          "source_start": 76,
+          "source_end": 117,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "서울에서 생애최초로 집을 사고, 보증 승인으로 공제를 보완한 사례입니다.",
+          "display_lines": [
+            "서울에서 생애최초로 집을 사고,",
+            "보증 승인으로 공제를 보완한 사례입니다."
+          ],
+          "source_start": 118,
+          "source_end": 158,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "두 가격이 달라지는 이유를 6억 원짜리 집 한 채로 따라가겠습니다.",
+          "display_lines": [
+            "두 가격이 달라지는 이유를 6억 원짜리",
+            "집 한 채로 따라가겠습니다."
+          ],
+          "source_start": 159,
+          "source_end": 196,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R002",
+      "paragraph": 2,
+      "chapter": 1,
+      "title": "전편의 돈으로 매수 예산 계산",
+      "text": "지난 주거 선택 편에서는 보유자금 2억 5천만 원과 월 300만 원을 비교했습니다. 이번에는 집을 살 때의 예산으로 연결합니다. 2026년 10월 26일 기준으로 계산합니다. A는 연소득 1억 원, 기존 부채 0원인 가구입니다. 서울의 전용 84㎡ 아파트를 사는 경우로 계산합니다.",
+      "spoken_text": "지난 주거 선택 편에서는 보유자금 2억 5천만 원과 월 300만 원을 비교했습니다. 이번에는 집을 살 때의 예산으로 연결합니다. 2026년 10월 26일 기준으로 계산합니다. A는 연소득 1억 원, 기존 부채 0원인 가구입니다. 서울의 전용 84㎡ 아파트를 사는 경우로 계산합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 157,
+          "spoken_start": 0,
+          "spoken_end": 157,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [],
+      "protected_ranges": [
+        [
+          19,
+          27
+        ],
+        [
+          31,
+          37
+        ],
+        [
+          72,
+          77
+        ],
+        [
+          72,
+          85
+        ],
+        [
+          78,
+          81
+        ],
+        [
+          82,
+          85
+        ],
+        [
+          105,
+          109
+        ],
+        [
+          117,
+          119
+        ],
+        [
+          135,
+          138
+        ]
+      ],
+      "source_hangul_count": 95,
+      "spoken_hangul_count": 95,
+      "beats": [
+        {
+          "anchor": "보유자금 2억 5천만 원과 월 300만 원",
+          "action": "전편에서 이어진 현금과 월 예산의 두 원천만 표시한다. 주담대 총액을 더하는 합산 경로는 만들지 않는다.",
+          "source_start": 14,
+          "source_end": 37,
+          "spoken_start": 14,
+          "spoken_end": 37
+        },
+        {
+          "anchor": "2026년 10월 26일",
+          "action": "정책 적용 기준일을 소스 영역에 표시한다.",
+          "source_start": 72,
+          "source_end": 85,
+          "spoken_start": 72,
+          "spoken_end": 85
+        },
+        {
+          "anchor": "연소득 1억 원, 기존 부채 0원",
+          "action": "가구 A의 소득과 부채만 차례로 나타낸다.",
+          "source_start": 101,
+          "source_end": 119,
+          "spoken_start": 101,
+          "spoken_end": 119
+        },
+        {
+          "anchor": "서울의 전용 84㎡",
+          "action": "현재 구입 조건을 매물 표식에 연결한다. 가구 조건과 현금의 공간을 분리한다.",
+          "source_start": 128,
+          "source_end": 138,
+          "spoken_start": 128,
+          "spoken_end": 138
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "지난 주거 선택 편에서는 보유자금 2억 5천만 원과 월 300만 원을 비교했습니다.",
+          "display_lines": [
+            "지난 주거 선택 편에서는 보유자금",
+            "2억 5천만 원과 월 300만 원을 비교했습니다."
+          ],
+          "source_start": 0,
+          "source_end": 46,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이번에는 집을 살 때의 예산으로 연결합니다.",
+          "display_lines": [
+            "이번에는 집을 살 때의 예산으로 연결합니다."
+          ],
+          "source_start": 47,
+          "source_end": 71,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "2026년 10월 26일 기준으로 계산합니다.",
+          "display_lines": [
+            "2026년 10월 26일 기준으로 계산합니다."
+          ],
+          "source_start": 72,
+          "source_end": 97,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "A는 연소득 1억 원, 기존 부채 0원인 가구입니다.",
+          "display_lines": [
+            "A는 연소득 1억 원, 기존 부채 0원인 가구입니다."
+          ],
+          "source_start": 98,
+          "source_end": 127,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "서울의 전용 84㎡ 아파트를 사는 경우로 계산합니다.",
+          "display_lines": [
+            "서울의 전용 84㎡ 아파트를 사는 경우로 계산합니다."
+          ],
+          "source_start": 128,
+          "source_end": 157,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R003",
+      "paragraph": 3,
+      "chapter": 2,
+      "title": "예비자금 3천만 원 분리",
+      "text": "먼저 보유자금 2억 5천만 원에서 3천만 원을 예비자금으로 남깁니다. 집을 사는 데 배정할 돈은 2억 2천만 원입니다. 주식이나 돌려받을 전세보증금이 있다면, 잔금일에 쓸 수 있도록 현금화 날짜도 맞춥니다. 계약금으로 이미 낸 돈은 이 자금표 안에 포함합니다. 이제 2억 2천만 원에서 거래비용을 빼겠습니다.",
+      "spoken_text": "먼저 보유자금 2억 5천만 원에서 3천만 원을 예비자금으로 남깁니다. 집을 사는 데 배정할 돈은 2억 2천만 원입니다. 주식이나 돌려받을 전세보증금이 있다면, 잔금일에 쓸 수 있도록 현금화 날짜도 맞춥니다. 계약금으로 이미 낸 돈은 이 자금표 안에 포함합니다. 이제 2억 2천만 원에서 거래비용을 빼겠습니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 172,
+          "spoken_start": 0,
+          "spoken_end": 172,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [],
+      "protected_ranges": [
+        [
+          8,
+          16
+        ],
+        [
+          19,
+          24
+        ],
+        [
+          54,
+          62
+        ],
+        [
+          149,
+          157
+        ]
+      ],
+      "source_hangul_count": 118,
+      "spoken_hangul_count": 118,
+      "beats": [
+        {
+          "anchor": "3천만 원을 예비자금으로",
+          "action": "전체 현금 막대에서 3천만 원 조각을 떼어 예비 통장에 옮긴다.",
+          "source_start": 19,
+          "source_end": 32,
+          "spoken_start": 19,
+          "spoken_end": 32
+        },
+        {
+          "anchor": "배정할 돈은 2억 2천만 원",
+          "action": "남은 구입자금만 집 쪽으로 이동한다.",
+          "source_start": 47,
+          "source_end": 62,
+          "spoken_start": 47,
+          "spoken_end": 62
+        },
+        {
+          "anchor": "계약금으로 이미 낸 돈",
+          "action": "구입자금 안에서 계약금과 잔금의 지급시점을 표시한다.",
+          "source_start": 116,
+          "source_end": 128,
+          "spoken_start": 116,
+          "spoken_end": 128
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "먼저 보유자금 2억 5천만 원에서 3천만 원을 예비자금으로 남깁니다.",
+          "display_lines": [
+            "먼저 보유자금 2억 5천만 원에서",
+            "3천만 원을 예비자금으로 남깁니다."
+          ],
+          "source_start": 0,
+          "source_end": 38,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "집을 사는 데 배정할 돈은 2억 2천만 원입니다.",
+          "display_lines": [
+            "집을 사는 데 배정할 돈은 2억 2천만 원입니다."
+          ],
+          "source_start": 39,
+          "source_end": 66,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "주식이나 돌려받을 전세보증금이 있다면, 잔금일에 쓸 수 있도록 현금화 날짜도 맞춥니다.",
+          "display_lines": [
+            "주식이나 돌려받을 전세보증금이 있다면,",
+            "잔금일에 쓸 수 있도록 현금화 날짜도 맞춥니다."
+          ],
+          "source_start": 67,
+          "source_end": 115,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "계약금으로 이미 낸 돈은 이 자금표 안에 포함합니다.",
+          "display_lines": [
+            "계약금으로 이미 낸 돈은 이 자금표 안에 포함합니다."
+          ],
+          "source_start": 116,
+          "source_end": 145,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이제 2억 2천만 원에서 거래비용을 빼겠습니다.",
+          "display_lines": [
+            "이제 2억 2천만 원에서 거래비용을 빼겠습니다."
+          ],
+          "source_start": 146,
+          "source_end": 172,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R004",
+      "paragraph": 4,
+      "chapter": 2,
+      "title": "거래비용 1,074만 원",
+      "text": "6억 원 집의 취득세와 지방교육세는 합쳐 660만 원입니다. 중개보수는 일반과세 중개사에게 상한보수와 부가세를 지급하는 경우 264만 원입니다. 채권의 즉시매도 부담과 등기수수료, 법무사보수, 인지 등은 계획용 예산 150만 원을 잡겠습니다. 합계는 1,074만 원입니다. 실제 매물에서는 중개보수를 협의하고, 채권과 등기 관련 비용을 견적으로 바꿉니다.",
+      "spoken_text": "6억 원 집의 취득세와 지방교육세는 합쳐 660만 원입니다. 중개보수는 일반과세 중개사에게 상한보수와 부가세를 지급하는 경우 264만 원입니다. 채권의 즉시매도 부담과 등기수수료, 법무사보수, 인지 등은 계획용 예산 150만 원을 잡겠습니다. 합계는 천칠십사만 원입니다. 실제 매물에서는 중개보수를 협의하고, 채권과 등기 관련 비용을 견적으로 바꿉니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 140,
+          "spoken_start": 0,
+          "spoken_end": 140,
+          "kind": "literal"
+        },
+        {
+          "source_start": 140,
+          "source_end": 145,
+          "spoken_start": 140,
+          "spoken_end": 144,
+          "kind": "pronunciation",
+          "original": "1,074",
+          "spoken": "천칠십사"
+        },
+        {
+          "source_start": 145,
+          "source_end": 198,
+          "spoken_start": 144,
+          "spoken_end": 197,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 140,
+          "source_end": 145,
+          "spoken_start": 140,
+          "spoken_end": 144,
+          "kind": "pronunciation",
+          "original": "1,074",
+          "spoken": "천칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          0,
+          4
+        ],
+        [
+          23,
+          29
+        ],
+        [
+          70,
+          76
+        ],
+        [
+          121,
+          127
+        ],
+        [
+          140,
+          145
+        ],
+        [
+          140,
+          148
+        ]
+      ],
+      "source_hangul_count": 134,
+      "spoken_hangul_count": 138,
+      "beats": [
+        {
+          "anchor": "660만 원",
+          "action": "영수증 첫 행에 취득세·지방교육세를 더한다.",
+          "source_start": 23,
+          "source_end": 29,
+          "spoken_start": 23,
+          "spoken_end": 29
+        },
+        {
+          "anchor": "264만 원",
+          "action": "중개보수·부가세 행을 추가한다.",
+          "source_start": 70,
+          "source_end": 76,
+          "spoken_start": 70,
+          "spoken_end": 76
+        },
+        {
+          "anchor": "150만 원",
+          "action": "기타 계획 예산을 마지막 행으로 추가한다.",
+          "source_start": 121,
+          "source_end": 127,
+          "spoken_start": 121,
+          "spoken_end": 127
+        },
+        {
+          "anchor": "1,074만 원",
+          "action": "세 행을 합산하고 2억 2천만 원에서 비용 조각을 떼어 지급한다.",
+          "source_start": 140,
+          "source_end": 148,
+          "spoken_start": 140,
+          "spoken_end": 147
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "6억 원 집의 취득세와 지방교육세는 합쳐 660만 원입니다.",
+          "display_lines": [
+            "6억 원 집의 취득세와 지방교육세는 합쳐 660만 원입니다."
+          ],
+          "source_start": 0,
+          "source_end": 33,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "중개보수는 일반과세 중개사에게 상한보수와 부가세를 지급하는 경우 264만 원입니다.",
+          "display_lines": [
+            "중개보수는 일반과세 중개사에게 상한보수와",
+            "부가세를 지급하는 경우 264만 원입니다."
+          ],
+          "source_start": 34,
+          "source_end": 80,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "채권의 즉시매도 부담과 등기수수료, 법무사보수, 인지 등은 계획용 예산 150만 원을 잡겠습니다.",
+          "display_lines": [
+            "채권의 즉시매도 부담과 등기수수료, 법무사보수,",
+            "인지 등은 계획용 예산 150만 원을 잡겠습니다."
+          ],
+          "source_start": 81,
+          "source_end": 135,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "합계는 1,074만 원입니다.",
+          "display_lines": [
+            "합계는 1,074만 원입니다."
+          ],
+          "source_start": 136,
+          "source_end": 152,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "실제 매물에서는 중개보수를 협의하고, 채권과 등기 관련 비용을 견적으로 바꿉니다.",
+          "display_lines": [
+            "실제 매물에서는 중개보수를 협의하고,",
+            "채권과 등기 관련 비용을 견적으로 바꿉니다."
+          ],
+          "source_start": 153,
+          "source_end": 198,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R005",
+      "paragraph": 5,
+      "chapter": 2,
+      "title": "필요대출 3억 9,074만 원",
+      "text": "2억 2천만 원에서 거래비용 1,074만 원을 빼면, 집값에 넣을 자기자금은 2억 926만 원입니다. 집값 6억 원에서 이 자기자금을 빼면 필요한 대출은 3억 9,074만 원입니다. 이 금액을 빌릴 수 있는지 확인하겠습니다. 돈을 마련하는 순서와 은행이 정하는 한도를 같은 자금표에서 비교합니다.",
+      "spoken_text": "2억 2천만 원에서 거래비용 천칠십사만 원을 빼면, 집값에 넣을 자기자금은 2억 926만 원입니다. 집값 6억 원에서 이 자기자금을 빼면 필요한 대출은 3억 구천칠십사만 원입니다. 이 금액을 빌릴 수 있는지 확인하겠습니다. 돈을 마련하는 순서와 은행이 정하는 한도를 같은 자금표에서 비교합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 16,
+          "spoken_start": 0,
+          "spoken_end": 16,
+          "kind": "literal"
+        },
+        {
+          "source_start": 16,
+          "source_end": 21,
+          "spoken_start": 16,
+          "spoken_end": 20,
+          "kind": "pronunciation",
+          "original": "1,074",
+          "spoken": "천칠십사"
+        },
+        {
+          "source_start": 21,
+          "source_end": 89,
+          "spoken_start": 20,
+          "spoken_end": 88,
+          "kind": "literal"
+        },
+        {
+          "source_start": 89,
+          "source_end": 94,
+          "spoken_start": 88,
+          "spoken_end": 93,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사"
+        },
+        {
+          "source_start": 94,
+          "source_end": 165,
+          "spoken_start": 93,
+          "spoken_end": 164,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 16,
+          "source_end": 21,
+          "spoken_start": 16,
+          "spoken_end": 20,
+          "kind": "pronunciation",
+          "original": "1,074",
+          "spoken": "천칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 89,
+          "source_end": 94,
+          "spoken_start": 88,
+          "spoken_end": 93,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          0,
+          8
+        ],
+        [
+          16,
+          21
+        ],
+        [
+          16,
+          24
+        ],
+        [
+          43,
+          52
+        ],
+        [
+          60,
+          64
+        ],
+        [
+          86,
+          97
+        ],
+        [
+          89,
+          94
+        ]
+      ],
+      "source_hangul_count": 104,
+      "spoken_hangul_count": 113,
+      "beats": [
+        {
+          "anchor": "2억 926만 원",
+          "action": "비용이 빠진 자기자금 잔액을 크게 고정한다.",
+          "source_start": 43,
+          "source_end": 52,
+          "spoken_start": 42,
+          "spoken_end": 51
+        },
+        {
+          "anchor": "집값 6억 원에서",
+          "action": "집값 눈금에 자기자금을 먼저 채운다.",
+          "source_start": 57,
+          "source_end": 66,
+          "spoken_start": 56,
+          "spoken_end": 65
+        },
+        {
+          "anchor": "3억 9,074만 원",
+          "action": "남은 빈 구간을 필요대출로 표시하고 은행 지급액과 구별한다.",
+          "source_start": 86,
+          "source_end": 97,
+          "spoken_start": 85,
+          "spoken_end": 96
+        }
+      ],
+      "sentence_count": 4,
+      "meaning_plan": [
+        {
+          "text": "2억 2천만 원에서 거래비용 1,074만 원을 빼면, 집값에 넣을 자기자금은 2억 926만 원입니다.",
+          "display_lines": [
+            "2억 2천만 원에서 거래비용 1,074만 원을 빼면,",
+            "집값에 넣을 자기자금은 2억 926만 원입니다."
+          ],
+          "source_start": 0,
+          "source_end": 56,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "집값 6억 원에서 이 자기자금을 빼면 필요한 대출은 3억 9,074만 원입니다.",
+          "display_lines": [
+            "집값 6억 원에서 이 자기자금을 빼면",
+            "필요한 대출은 3억 9,074만 원입니다."
+          ],
+          "source_start": 57,
+          "source_end": 101,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이 금액을 빌릴 수 있는지 확인하겠습니다.",
+          "display_lines": [
+            "이 금액을 빌릴 수 있는지 확인하겠습니다."
+          ],
+          "source_start": 102,
+          "source_end": 125,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "돈을 마련하는 순서와 은행이 정하는 한도를 같은 자금표에서 비교합니다.",
+          "display_lines": [
+            "돈을 마련하는 순서와 은행이 정하는 한도를",
+            "같은 자금표에서 비교합니다."
+          ],
+          "source_start": 126,
+          "source_end": 165,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R006",
+      "paragraph": 6,
+      "chapter": 3,
+      "title": "생애최초 담보 한도 4억 2천만 원",
+      "text": "은행은 우선 집의 담보가치를 봅니다. 그 가치에서 빌릴 수 있는 비율이 LTV입니다. 이 서울 사례에서 일반 무주택자의 LTV 40%를 적용하면 한도는 2억 4천만 원입니다. 필요한 대출과 비교해 현금 1억 5,074만 원을 더 마련해야 합니다. 생애최초 요건을 충족한 A에게 70%를 적용하면 담보 한도는 4억 2천만 원입니다. 여기에 소득 심사와 공제를 반영합니다.",
+      "spoken_text": "은행은 우선 집의 담보가치를 봅니다. 그 가치에서 빌릴 수 있는 비율이 엘 티 브이입니다. 이 서울 사례에서 일반 무주택자의 엘 티 브이 40%를 적용하면 한도는 2억 4천만 원입니다. 필요한 대출과 비교해 현금 1억 오천칠십사만 원을 더 마련해야 합니다. 생애최초 요건을 충족한 A에게 70%를 적용하면 담보 한도는 4억 2천만 원입니다. 여기에 소득 심사와 공제를 반영합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 40,
+          "spoken_start": 0,
+          "spoken_end": 40,
+          "kind": "literal"
+        },
+        {
+          "source_start": 40,
+          "source_end": 43,
+          "spoken_start": 40,
+          "spoken_end": 46,
+          "kind": "pronunciation",
+          "original": "LTV",
+          "spoken": "엘 티 브이"
+        },
+        {
+          "source_start": 43,
+          "source_end": 67,
+          "spoken_start": 46,
+          "spoken_end": 70,
+          "kind": "literal"
+        },
+        {
+          "source_start": 67,
+          "source_end": 70,
+          "spoken_start": 70,
+          "spoken_end": 76,
+          "kind": "pronunciation",
+          "original": "LTV",
+          "spoken": "엘 티 브이"
+        },
+        {
+          "source_start": 70,
+          "source_end": 116,
+          "spoken_start": 76,
+          "spoken_end": 122,
+          "kind": "literal"
+        },
+        {
+          "source_start": 116,
+          "source_end": 121,
+          "spoken_start": 122,
+          "spoken_end": 127,
+          "kind": "pronunciation",
+          "original": "5,074",
+          "spoken": "오천칠십사"
+        },
+        {
+          "source_start": 121,
+          "source_end": 206,
+          "spoken_start": 127,
+          "spoken_end": 212,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 40,
+          "source_end": 43,
+          "spoken_start": 40,
+          "spoken_end": 46,
+          "kind": "pronunciation",
+          "original": "LTV",
+          "spoken": "엘 티 브이",
+          "reason": "약어 명료 발음"
+        },
+        {
+          "source_start": 67,
+          "source_end": 70,
+          "spoken_start": 70,
+          "spoken_end": 76,
+          "kind": "pronunciation",
+          "original": "LTV",
+          "spoken": "엘 티 브이",
+          "reason": "약어 명료 발음"
+        },
+        {
+          "source_start": 116,
+          "source_end": 121,
+          "spoken_start": 122,
+          "spoken_end": 127,
+          "kind": "pronunciation",
+          "original": "5,074",
+          "spoken": "오천칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          40,
+          43
+        ],
+        [
+          67,
+          70
+        ],
+        [
+          71,
+          74
+        ],
+        [
+          85,
+          93
+        ],
+        [
+          113,
+          124
+        ],
+        [
+          116,
+          121
+        ],
+        [
+          155,
+          158
+        ],
+        [
+          172,
+          180
+        ]
+      ],
+      "source_hangul_count": 128,
+      "spoken_hangul_count": 141,
+      "beats": [
+        {
+          "anchor": "2억 4천만 원",
+          "action": "집값 6억 원의 40%를 담보 막대로 채운다.",
+          "source_start": 85,
+          "source_end": 93,
+          "spoken_start": 91,
+          "spoken_end": 99
+        },
+        {
+          "anchor": "1억 5,074만 원",
+          "action": "필요대출 선과의 빈 구간을 추가 현금으로 표시한다.",
+          "source_start": 113,
+          "source_end": 124,
+          "spoken_start": 119,
+          "spoken_end": 130
+        },
+        {
+          "anchor": "4억 2천만 원",
+          "action": "생애최초 70%로 담보 막대를 늘리며 이전 강조를 해제한다.",
+          "source_start": 172,
+          "source_end": 180,
+          "spoken_start": 178,
+          "spoken_end": 186
+        }
+      ],
+      "sentence_count": 6,
+      "meaning_plan": [
+        {
+          "text": "은행은 우선 집의 담보가치를 봅니다.",
+          "display_lines": [
+            "은행은 우선 집의 담보가치를 봅니다."
+          ],
+          "source_start": 0,
+          "source_end": 20,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "그 가치에서 빌릴 수 있는 비율이 LTV입니다.",
+          "display_lines": [
+            "그 가치에서 빌릴 수 있는 비율이 LTV입니다."
+          ],
+          "source_start": 21,
+          "source_end": 47,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이 서울 사례에서 일반 무주택자의 LTV 40%를 적용하면 한도는 2억 4천만 원입니다.",
+          "display_lines": [
+            "이 서울 사례에서 일반 무주택자의 LTV 40%를 적용하면",
+            "한도는 2억 4천만 원입니다."
+          ],
+          "source_start": 48,
+          "source_end": 97,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "필요한 대출과 비교해 현금 1억 5,074만 원을 더 마련해야 합니다.",
+          "display_lines": [
+            "필요한 대출과 비교해 현금",
+            "1억 5,074만 원을 더 마련해야 합니다."
+          ],
+          "source_start": 98,
+          "source_end": 137,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "생애최초 요건을 충족한 A에게 70%를 적용하면 담보 한도는 4억 2천만 원입니다.",
+          "display_lines": [
+            "생애최초 요건을 충족한 A에게 70%를 적용하면",
+            "담보 한도는 4억 2천만 원입니다."
+          ],
+          "source_start": 138,
+          "source_end": 184,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "여기에 소득 심사와 공제를 반영합니다.",
+          "display_lines": [
+            "여기에 소득 심사와 공제를 반영합니다."
+          ],
+          "source_start": 185,
+          "source_end": 206,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R007",
+      "paragraph": 7,
+      "chapter": 3,
+      "title": "소득으로 정하는 상환 한도",
+      "text": "집값과 함께 소득도 확인합니다. A의 은행 인정 연소득은 1억 원입니다. 은행권 일반대출의 DSR 40%를 적용하면, 심사에서 인정하는 한 해 원금과 이자의 예산은 4천만 원입니다. DSR은 모든 대출의 원리금을 소득과 비교하는 비율입니다. 신용대출의 원리금도 이 상환 예산에 함께 들어갑니다.",
+      "spoken_text": "집값과 함께 소득도 확인합니다. A의 은행 인정 연소득은 1억 원입니다. 은행권 일반대출의 디 에스 알 40%를 적용하면, 심사에서 인정하는 한 해 원금과 이자의 예산은 4천만 원입니다. 디 에스 알은 모든 대출의 원리금을 소득과 비교하는 비율입니다. 신용대출의 원리금도 이 상환 예산에 함께 들어갑니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 51,
+          "spoken_start": 0,
+          "spoken_end": 51,
+          "kind": "literal"
+        },
+        {
+          "source_start": 51,
+          "source_end": 54,
+          "spoken_start": 51,
+          "spoken_end": 57,
+          "kind": "pronunciation",
+          "original": "DSR",
+          "spoken": "디 에스 알"
+        },
+        {
+          "source_start": 54,
+          "source_end": 102,
+          "spoken_start": 57,
+          "spoken_end": 105,
+          "kind": "literal"
+        },
+        {
+          "source_start": 102,
+          "source_end": 105,
+          "spoken_start": 105,
+          "spoken_end": 111,
+          "kind": "pronunciation",
+          "original": "DSR",
+          "spoken": "디 에스 알"
+        },
+        {
+          "source_start": 105,
+          "source_end": 164,
+          "spoken_start": 111,
+          "spoken_end": 170,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 51,
+          "source_end": 54,
+          "spoken_start": 51,
+          "spoken_end": 57,
+          "kind": "pronunciation",
+          "original": "DSR",
+          "spoken": "디 에스 알",
+          "reason": "약어 명료 발음"
+        },
+        {
+          "source_start": 102,
+          "source_end": 105,
+          "spoken_start": 105,
+          "spoken_end": 111,
+          "kind": "pronunciation",
+          "original": "DSR",
+          "spoken": "디 에스 알",
+          "reason": "약어 명료 발음"
+        }
+      ],
+      "protected_ranges": [
+        [
+          32,
+          36
+        ],
+        [
+          51,
+          54
+        ],
+        [
+          55,
+          58
+        ],
+        [
+          92,
+          97
+        ],
+        [
+          102,
+          105
+        ]
+      ],
+      "source_hangul_count": 109,
+      "spoken_hangul_count": 117,
+      "beats": [
+        {
+          "anchor": "연소득은 1억 원",
+          "action": "인정소득을 연간 막대로 표시한다.",
+          "source_start": 27,
+          "source_end": 36,
+          "spoken_start": 27,
+          "spoken_end": 36
+        },
+        {
+          "anchor": "4천만 원",
+          "action": "40% 조각을 연간 원리금 심사 예산으로 옮긴다.",
+          "source_start": 92,
+          "source_end": 97,
+          "spoken_start": 95,
+          "spoken_end": 100
+        },
+        {
+          "anchor": "신용대출의 원리금",
+          "action": "전체 대출 원리금이 같은 연간 예산에 포함됨을 짧은 연결선으로 표시한다. 새 부채 금액을 만들지 않는다.",
+          "source_start": 135,
+          "source_end": 144,
+          "spoken_start": 141,
+          "spoken_end": 150
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "집값과 함께 소득도 확인합니다.",
+          "display_lines": [
+            "집값과 함께 소득도 확인합니다."
+          ],
+          "source_start": 0,
+          "source_end": 17,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "A의 은행 인정 연소득은 1억 원입니다.",
+          "display_lines": [
+            "A의 은행 인정 연소득은 1억 원입니다."
+          ],
+          "source_start": 18,
+          "source_end": 40,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "은행권 일반대출의 DSR 40%를 적용하면, 심사에서 인정하는 한 해 원금과 이자의 예산은 4천만 원입니다.",
+          "display_lines": [
+            "은행권 일반대출의 DSR 40%를 적용하면,",
+            "심사에서 인정하는 한 해 원금과 이자의 예산은 4천만 원입니다."
+          ],
+          "source_start": 41,
+          "source_end": 101,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "DSR은 모든 대출의 원리금을 소득과 비교하는 비율입니다.",
+          "display_lines": [
+            "DSR은 모든 대출의 원리금을 소득과 비교하는 비율입니다."
+          ],
+          "source_start": 102,
+          "source_end": 134,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "신용대출의 원리금도 이 상환 예산에 함께 들어갑니다.",
+          "display_lines": [
+            "신용대출의 원리금도 이 상환 예산에 함께 들어갑니다."
+          ],
+          "source_start": 135,
+          "source_end": 164,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R008",
+      "paragraph": 8,
+      "chapter": 3,
+      "title": "심사는 7%, 납부는 4%",
+      "text": "A는 변동금리 연 4%, 30년 원리금균등 대출을 가정합니다. 스트레스 DSR 심사에서는 금리 상승 가능성을 반영합니다. 수도권 변동형의 스트레스금리 하한 3%포인트를 더해 7%로 심사합니다. 이 조건에서 소득으로 정한 대출 한도는 약 5억 103만 원입니다. 실제 월 상환액은 계약금리 4%로 계산합니다.",
+      "spoken_text": "A는 변동금리 연 4%, 30년 원리금균등 대출을 가정합니다. 스트레스 디 에스 알 심사에서는 금리 상승 가능성을 반영합니다. 수도권 변동형의 스트레스금리 하한 3%포인트를 더해 7%로 심사합니다. 이 조건에서 소득으로 정한 대출 한도는 약 5억 103만 원입니다. 실제 월 상환액은 계약금리 4%로 계산합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 40,
+          "spoken_start": 0,
+          "spoken_end": 40,
+          "kind": "literal"
+        },
+        {
+          "source_start": 40,
+          "source_end": 43,
+          "spoken_start": 40,
+          "spoken_end": 46,
+          "kind": "pronunciation",
+          "original": "DSR",
+          "spoken": "디 에스 알"
+        },
+        {
+          "source_start": 43,
+          "source_end": 171,
+          "spoken_start": 46,
+          "spoken_end": 174,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 40,
+          "source_end": 43,
+          "spoken_start": 40,
+          "spoken_end": 46,
+          "kind": "pronunciation",
+          "original": "DSR",
+          "spoken": "디 에스 알",
+          "reason": "약어 명료 발음"
+        }
+      ],
+      "protected_ranges": [
+        [
+          10,
+          12
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          40,
+          43
+        ],
+        [
+          87,
+          92
+        ],
+        [
+          97,
+          99
+        ],
+        [
+          132,
+          141
+        ],
+        [
+          161,
+          163
+        ]
+      ],
+      "source_hangul_count": 109,
+      "spoken_hangul_count": 113,
+      "beats": [
+        {
+          "anchor": "연 4%, 30년",
+          "action": "실제 납부 경로에 계약금리와 기간을 표시한다.",
+          "source_start": 8,
+          "source_end": 17,
+          "spoken_start": 8,
+          "spoken_end": 17
+        },
+        {
+          "anchor": "7%로 심사",
+          "action": "심사 경로에서만 4%에 3%포인트 조각을 더한다.",
+          "source_start": 97,
+          "source_end": 103,
+          "spoken_start": 100,
+          "spoken_end": 106
+        },
+        {
+          "anchor": "약 5억 103만 원",
+          "action": "DSR 한도를 담보 한도 옆에 추가한다.",
+          "source_start": 130,
+          "source_end": 141,
+          "spoken_start": 133,
+          "spoken_end": 144
+        },
+        {
+          "anchor": "계약금리 4%",
+          "action": "실제 납부 경로로 강조를 돌린다.",
+          "source_start": 156,
+          "source_end": 163,
+          "spoken_start": 159,
+          "spoken_end": 166
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "A는 변동금리 연 4%, 30년 원리금균등 대출을 가정합니다.",
+          "display_lines": [
+            "A는 변동금리 연 4%, 30년 원리금균등 대출을 가정합니다."
+          ],
+          "source_start": 0,
+          "source_end": 34,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "스트레스 DSR 심사에서는 금리 상승 가능성을 반영합니다.",
+          "display_lines": [
+            "스트레스 DSR 심사에서는 금리 상승 가능성을 반영합니다."
+          ],
+          "source_start": 35,
+          "source_end": 67,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "수도권 변동형의 스트레스금리 하한 3%포인트를 더해 7%로 심사합니다.",
+          "display_lines": [
+            "수도권 변동형의 스트레스금리 하한",
+            "3%포인트를 더해 7%로 심사합니다."
+          ],
+          "source_start": 68,
+          "source_end": 107,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이 조건에서 소득으로 정한 대출 한도는 약 5억 103만 원입니다.",
+          "display_lines": [
+            "이 조건에서 소득으로 정한 대출",
+            "한도는 약 5억 103만 원입니다."
+          ],
+          "source_start": 108,
+          "source_end": 145,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "실제 월 상환액은 계약금리 4%로 계산합니다.",
+          "display_lines": [
+            "실제 월 상환액은 계약금리 4%로 계산합니다."
+          ],
+          "source_start": 146,
+          "source_end": 171,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R009",
+      "paragraph": 9,
+      "chapter": 3,
+      "title": "담보와 소득 중 작은 한도",
+      "text": "또 하나의 소득 기준인 DTI도 확인합니다. 주택담보대출 원리금과 다른 부채의 이자를 소득에 견주는 비율입니다. A가 사는 서울 투기과열지구에서는 일반 DTI 40%, 생애최초는 60%입니다. 담보와 DSR, DTI를 함께 계산해 가장 작은 한도를 적용합니다.",
+      "spoken_text": "또 하나의 소득 기준인 디 티 아이도 확인합니다. 주택담보대출 원리금과 다른 부채의 이자를 소득에 견주는 비율입니다. A가 사는 서울 투기과열지구에서는 일반 디 티 아이 40%, 생애최초는 60%입니다. 담보와 디 에스 알, 디 티 아이를 함께 계산해 가장 작은 한도를 적용합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 13,
+          "spoken_start": 0,
+          "spoken_end": 13,
+          "kind": "literal"
+        },
+        {
+          "source_start": 13,
+          "source_end": 16,
+          "spoken_start": 13,
+          "spoken_end": 19,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이"
+        },
+        {
+          "source_start": 16,
+          "source_end": 85,
+          "spoken_start": 19,
+          "spoken_end": 88,
+          "kind": "literal"
+        },
+        {
+          "source_start": 85,
+          "source_end": 88,
+          "spoken_start": 88,
+          "spoken_end": 94,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이"
+        },
+        {
+          "source_start": 88,
+          "source_end": 112,
+          "spoken_start": 94,
+          "spoken_end": 118,
+          "kind": "literal"
+        },
+        {
+          "source_start": 112,
+          "source_end": 115,
+          "spoken_start": 118,
+          "spoken_end": 124,
+          "kind": "pronunciation",
+          "original": "DSR",
+          "spoken": "디 에스 알"
+        },
+        {
+          "source_start": 115,
+          "source_end": 117,
+          "spoken_start": 124,
+          "spoken_end": 126,
+          "kind": "literal"
+        },
+        {
+          "source_start": 117,
+          "source_end": 120,
+          "spoken_start": 126,
+          "spoken_end": 132,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이"
+        },
+        {
+          "source_start": 120,
+          "source_end": 145,
+          "spoken_start": 132,
+          "spoken_end": 157,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 13,
+          "source_end": 16,
+          "spoken_start": 13,
+          "spoken_end": 19,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이",
+          "reason": "약어 명료 발음"
+        },
+        {
+          "source_start": 85,
+          "source_end": 88,
+          "spoken_start": 88,
+          "spoken_end": 94,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이",
+          "reason": "약어 명료 발음"
+        },
+        {
+          "source_start": 112,
+          "source_end": 115,
+          "spoken_start": 118,
+          "spoken_end": 124,
+          "kind": "pronunciation",
+          "original": "DSR",
+          "spoken": "디 에스 알",
+          "reason": "약어 명료 발음"
+        },
+        {
+          "source_start": 117,
+          "source_end": 120,
+          "spoken_start": 126,
+          "spoken_end": 132,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이",
+          "reason": "약어 명료 발음"
+        }
+      ],
+      "protected_ranges": [
+        [
+          13,
+          16
+        ],
+        [
+          85,
+          88
+        ],
+        [
+          89,
+          92
+        ],
+        [
+          100,
+          103
+        ],
+        [
+          112,
+          115
+        ],
+        [
+          117,
+          120
+        ]
+      ],
+      "source_hangul_count": 89,
+      "spoken_hangul_count": 105,
+      "beats": [
+        {
+          "anchor": "일반 DTI 40%, 생애최초는 60%",
+          "action": "해당 원문 두 행을 순서대로 보여주고 A의 생애최초 60%를 선택한다.",
+          "source_start": 82,
+          "source_end": 103,
+          "spoken_start": 85,
+          "spoken_end": 109
+        },
+        {
+          "anchor": "담보와 DSR, DTI를 함께 계산해",
+          "action": "같은 금액축에 담보 막대, DSR 막대, DTI 막대를 하나씩 생성한다. 막대 길이는 CASE_A6의 limits_krw 원값으로 그린다. 미래 결과와 최종 선택은 아직 숨긴다.",
+          "source_start": 108,
+          "source_end": 128,
+          "spoken_start": 114,
+          "spoken_end": 140
+        },
+        {
+          "anchor": "가장 작은 한도",
+          "action": "세 막대가 만들어진 뒤 담보 4억 2천만 원을 선택한다. DSR 약 5억 103만 원과 더 긴 DTI 막대는 낮은 대비로 남겨 선택 이유를 보여준다.",
+          "source_start": 129,
+          "source_end": 137,
+          "spoken_start": 141,
+          "spoken_end": 149
+        }
+      ],
+      "sentence_count": 4,
+      "meaning_plan": [
+        {
+          "text": "또 하나의 소득 기준인 DTI도 확인합니다.",
+          "display_lines": [
+            "또 하나의 소득 기준인 DTI도 확인합니다."
+          ],
+          "source_start": 0,
+          "source_end": 24,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "주택담보대출 원리금과 다른 부채의 이자를 소득에 견주는 비율입니다.",
+          "display_lines": [
+            "주택담보대출 원리금과 다른 부채의 이자를",
+            "소득에 견주는 비율입니다."
+          ],
+          "source_start": 25,
+          "source_end": 62,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "A가 사는 서울 투기과열지구에서는 일반 DTI 40%, 생애최초는 60%입니다.",
+          "display_lines": [
+            "A가 사는 서울 투기과열지구에서는 일반",
+            "DTI 40%, 생애최초는 60%입니다."
+          ],
+          "source_start": 63,
+          "source_end": 107,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "담보와 DSR, DTI를 함께 계산해 가장 작은 한도를 적용합니다.",
+          "display_lines": [
+            "담보와 DSR, DTI를 함께",
+            "계산해 가장 작은 한도를 적용합니다."
+          ],
+          "source_start": 108,
+          "source_end": 145,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R010",
+      "paragraph": 10,
+      "chapter": 3,
+      "title": "공제가 남으면 현금 2,574만 원",
+      "text": "담보 한도에는 임차인 보호를 위한 공제도 반영합니다. 흔히 방공제라고 부릅니다. A는 기존 임차인과 선순위 권리가 없는 집을 가정합니다. 서울 사례의 공제액 5,500만 원을 그대로 빼면, 담보 한도는 4억 2천만 원에서 3억 6,500만 원으로 내려갑니다. 그러면 필요한 대출에 현금 2,574만 원이 모자랍니다.",
+      "spoken_text": "담보 한도에는 임차인 보호를 위한 공제도 반영합니다. 흔히 방공제라고 부릅니다. A는 기존 임차인과 선순위 권리가 없는 집을 가정합니다. 서울 사례의 공제액 오천오백만 원을 그대로 빼면, 담보 한도는 4억 2천만 원에서 3억 육천오백만 원으로 내려갑니다. 그러면 필요한 대출에 현금 이천오백칠십사만 원이 모자랍니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 88,
+          "spoken_start": 0,
+          "spoken_end": 88,
+          "kind": "literal"
+        },
+        {
+          "source_start": 88,
+          "source_end": 93,
+          "spoken_start": 88,
+          "spoken_end": 92,
+          "kind": "pronunciation",
+          "original": "5,500",
+          "spoken": "오천오백"
+        },
+        {
+          "source_start": 93,
+          "source_end": 127,
+          "spoken_start": 92,
+          "spoken_end": 126,
+          "kind": "literal"
+        },
+        {
+          "source_start": 127,
+          "source_end": 132,
+          "spoken_start": 126,
+          "spoken_end": 130,
+          "kind": "pronunciation",
+          "original": "6,500",
+          "spoken": "육천오백"
+        },
+        {
+          "source_start": 132,
+          "source_end": 160,
+          "spoken_start": 130,
+          "spoken_end": 158,
+          "kind": "literal"
+        },
+        {
+          "source_start": 160,
+          "source_end": 165,
+          "spoken_start": 158,
+          "spoken_end": 165,
+          "kind": "pronunciation",
+          "original": "2,574",
+          "spoken": "이천오백칠십사"
+        },
+        {
+          "source_start": 165,
+          "source_end": 176,
+          "spoken_start": 165,
+          "spoken_end": 176,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 88,
+          "source_end": 93,
+          "spoken_start": 88,
+          "spoken_end": 92,
+          "kind": "pronunciation",
+          "original": "5,500",
+          "spoken": "오천오백",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 127,
+          "source_end": 132,
+          "spoken_start": 126,
+          "spoken_end": 130,
+          "kind": "pronunciation",
+          "original": "6,500",
+          "spoken": "육천오백",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 160,
+          "source_end": 165,
+          "spoken_start": 158,
+          "spoken_end": 165,
+          "kind": "pronunciation",
+          "original": "2,574",
+          "spoken": "이천오백칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          88,
+          93
+        ],
+        [
+          88,
+          96
+        ],
+        [
+          113,
+          121
+        ],
+        [
+          124,
+          135
+        ],
+        [
+          127,
+          132
+        ],
+        [
+          160,
+          165
+        ],
+        [
+          160,
+          168
+        ]
+      ],
+      "source_hangul_count": 111,
+      "spoken_hangul_count": 126,
+      "beats": [
+        {
+          "anchor": "공제액 5,500만 원",
+          "action": "담보 한도 4억 2천만 원에서 공제 조각을 뺀다.",
+          "source_start": 84,
+          "source_end": 96,
+          "spoken_start": 84,
+          "spoken_end": 95
+        },
+        {
+          "anchor": "3억 6,500만 원",
+          "action": "담보 막대를 필요대출 선 아래에서 멈춘다.",
+          "source_start": 124,
+          "source_end": 135,
+          "spoken_start": 123,
+          "spoken_end": 133
+        },
+        {
+          "anchor": "현금 2,574만 원",
+          "action": "필요대출과 담보 한도 사이의 부족 구간을 표시한다.",
+          "source_start": 157,
+          "source_end": 168,
+          "spoken_start": 155,
+          "spoken_end": 168
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "담보 한도에는 임차인 보호를 위한 공제도 반영합니다.",
+          "display_lines": [
+            "담보 한도에는 임차인 보호를 위한 공제도 반영합니다."
+          ],
+          "source_start": 0,
+          "source_end": 29,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "흔히 방공제라고 부릅니다.",
+          "display_lines": [
+            "흔히 방공제라고 부릅니다."
+          ],
+          "source_start": 30,
+          "source_end": 44,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "A는 기존 임차인과 선순위 권리가 없는 집을 가정합니다.",
+          "display_lines": [
+            "A는 기존 임차인과 선순위 권리가 없는 집을 가정합니다."
+          ],
+          "source_start": 45,
+          "source_end": 76,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "서울 사례의 공제액 5,500만 원을 그대로 빼면, 담보 한도는 4억 2천만 원에서 3억 6,500만 원으로 내려갑니다.",
+          "display_lines": [
+            "서울 사례의 공제액 5,500만 원을 그대로 빼면,",
+            "담보 한도는 4억 2천만 원에서 3억 6,500만 원으로 내려갑니다."
+          ],
+          "source_start": 77,
+          "source_end": 144,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "그러면 필요한 대출에 현금 2,574만 원이 모자랍니다.",
+          "display_lines": [
+            "그러면 필요한 대출에 현금 2,574만 원이 모자랍니다."
+          ],
+          "source_start": 145,
+          "source_end": 176,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R011",
+      "paragraph": 11,
+      "chapter": 3,
+      "title": "월 186.5만 원과 목표 170만 원",
+      "text": "보증 승인으로 공제를 보완한 A는 필요한 3억 9,074만 원을 담보 한도 안에서 마련할 수 있습니다. 금리가 유지되는 동안 매달 같은 원금과 이자 합계액을 갚는 원리금균등 방식입니다. 이 대출을 연 4%, 30년으로 갚으면 월 약 186.5만 원입니다. A의 월 300만 원은 주거와 저축에 배정한 돈입니다. 소유 관련 비용 30만 원과 저축 목표 100만 원을 남기면, 대출 상환 목표는 170만 원입니다. 6억 원 집의 월 상환액을 이 목표에 맞춰 조정할 지점이 생깁니다.",
+      "spoken_text": "보증 승인으로 공제를 보완한 A는 필요한 3억 구천칠십사만 원을 담보 한도 안에서 마련할 수 있습니다. 금리가 유지되는 동안 매달 같은 원금과 이자 합계액을 갚는 원리금균등 방식입니다. 이 대출을 연 4%, 30년으로 갚으면 월 약 백팔십육점오만 원입니다. A의 월 300만 원은 주거와 저축에 배정한 돈입니다. 소유 관련 비용 30만 원과 저축 목표 100만 원을 남기면, 대출 상환 목표는 170만 원입니다. 6억 원 집의 월 상환액을 이 목표에 맞춰 조정할 지점이 생깁니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 26,
+          "spoken_start": 0,
+          "spoken_end": 26,
+          "kind": "literal"
+        },
+        {
+          "source_start": 26,
+          "source_end": 31,
+          "spoken_start": 26,
+          "spoken_end": 31,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사"
+        },
+        {
+          "source_start": 31,
+          "source_end": 130,
+          "spoken_start": 31,
+          "spoken_end": 130,
+          "kind": "literal"
+        },
+        {
+          "source_start": 130,
+          "source_end": 135,
+          "spoken_start": 130,
+          "spoken_end": 136,
+          "kind": "pronunciation",
+          "original": "186.5",
+          "spoken": "백팔십육점오"
+        },
+        {
+          "source_start": 135,
+          "source_end": 267,
+          "spoken_start": 136,
+          "spoken_end": 268,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 26,
+          "source_end": 31,
+          "spoken_start": 26,
+          "spoken_end": 31,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 130,
+          "source_end": 135,
+          "spoken_start": 130,
+          "spoken_end": 136,
+          "kind": "pronunciation",
+          "original": "186.5",
+          "spoken": "백팔십육점오",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          23,
+          34
+        ],
+        [
+          26,
+          31
+        ],
+        [
+          112,
+          114
+        ],
+        [
+          116,
+          119
+        ],
+        [
+          130,
+          135
+        ],
+        [
+          130,
+          138
+        ],
+        [
+          148,
+          154
+        ],
+        [
+          183,
+          188
+        ],
+        [
+          196,
+          202
+        ],
+        [
+          219,
+          225
+        ],
+        [
+          230,
+          234
+        ]
+      ],
+      "source_hangul_count": 161,
+      "spoken_hangul_count": 172,
+      "beats": [
+        {
+          "anchor": "3억 9,074만 원",
+          "action": "자기자금과 필요한 대출을 합쳐 6억 원 구입자금을 채운다.",
+          "source_start": 23,
+          "source_end": 34,
+          "spoken_start": 23,
+          "spoken_end": 34
+        },
+        {
+          "anchor": "월 약 186.5만 원",
+          "action": "필요대출을 월별 납부 흐름으로 바꾼다.",
+          "source_start": 126,
+          "source_end": 138,
+          "spoken_start": 126,
+          "spoken_end": 139
+        },
+        {
+          "anchor": "30만 원과 저축 목표 100만 원",
+          "action": "월 300만 원에서 소유비와 저축 몫을 각각 뗀다.",
+          "source_start": 183,
+          "source_end": 202,
+          "spoken_start": 184,
+          "spoken_end": 203
+        },
+        {
+          "anchor": "170만 원",
+          "action": "남은 상환 목표 선과 186.5만 원 막대를 같은 눈금에서 비교한다.",
+          "source_start": 219,
+          "source_end": 225,
+          "spoken_start": 220,
+          "spoken_end": 226
+        }
+      ],
+      "sentence_count": 6,
+      "meaning_plan": [
+        {
+          "text": "보증 승인으로 공제를 보완한 A는 필요한 3억 9,074만 원을 담보 한도 안에서 마련할 수 있습니다.",
+          "display_lines": [
+            "보증 승인으로 공제를 보완한 A는 필요한 3억 9,074만 원을",
+            "담보 한도 안에서 마련할 수 있습니다."
+          ],
+          "source_start": 0,
+          "source_end": 57,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "금리가 유지되는 동안 매달 같은 원금과 이자 합계액을 갚는 원리금균등 방식입니다.",
+          "display_lines": [
+            "금리가 유지되는 동안 매달 같은 원금과",
+            "이자 합계액을 갚는 원리금균등 방식입니다."
+          ],
+          "source_start": 58,
+          "source_end": 103,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이 대출을 연 4%, 30년으로 갚으면 월 약 186.5만 원입니다.",
+          "display_lines": [
+            "이 대출을 연 4%, 30년으로 갚으면",
+            "월 약 186.5만 원입니다."
+          ],
+          "source_start": 104,
+          "source_end": 142,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "A의 월 300만 원은 주거와 저축에 배정한 돈입니다.",
+          "display_lines": [
+            "A의 월 300만 원은 주거와 저축에 배정한 돈입니다."
+          ],
+          "source_start": 143,
+          "source_end": 173,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "소유 관련 비용 30만 원과 저축 목표 100만 원을 남기면, 대출 상환 목표는 170만 원입니다.",
+          "display_lines": [
+            "소유 관련 비용 30만 원과 저축 목표 100만 원을 남기면,",
+            "대출 상환 목표는 170만 원입니다."
+          ],
+          "source_start": 174,
+          "source_end": 229,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "6억 원 집의 월 상환액을 이 목표에 맞춰 조정할 지점이 생깁니다.",
+          "display_lines": [
+            "6억 원 집의 월 상환액을 이 목표에",
+            "맞춰 조정할 지점이 생깁니다."
+          ],
+          "source_start": 230,
+          "source_end": 267,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R029",
+      "paragraph": 12,
+      "chapter": 4,
+      "title": "현금·은행 기준은 6억 8,019만 원",
+      "text": "이제 A의 조건으로 집값 상한을 역산하겠습니다. 생애최초로 사고 보증 승인으로 공제를 보완한 경우입니다. 현금과 거래비용, 은행 심사를 함께 넣으면 집값 상한은 약 6억 8,019만 원입니다. 집값을 높일수록 비용도 다시 계산하고, 필요한 대출과 담보·소득 한도를 맞춘 값입니다. 이 가격에서 월 상환액은 약 227만 원입니다. 자금을 마련한 뒤에는 매달 남길 저축을 이어서 확인합니다.",
+      "spoken_text": "이제 A의 조건으로 집값 상한을 역산하겠습니다. 생애최초로 사고 보증 승인으로 공제를 보완한 경우입니다. 현금과 거래비용, 은행 심사를 함께 넣으면 집값 상한은 약 6억 팔천십구만 원입니다. 집값을 높일수록 비용도 다시 계산하고, 필요한 대출과 담보·소득 한도를 맞춘 값입니다. 이 가격에서 월 상환액은 약 227만 원입니다. 자금을 마련한 뒤에는 매달 남길 저축을 이어서 확인합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 95,
+          "spoken_start": 0,
+          "spoken_end": 95,
+          "kind": "literal"
+        },
+        {
+          "source_start": 95,
+          "source_end": 100,
+          "spoken_start": 95,
+          "spoken_end": 99,
+          "kind": "pronunciation",
+          "original": "8,019",
+          "spoken": "팔천십구"
+        },
+        {
+          "source_start": 100,
+          "source_end": 216,
+          "spoken_start": 99,
+          "spoken_end": 215,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 95,
+          "source_end": 100,
+          "spoken_start": 95,
+          "spoken_end": 99,
+          "kind": "pronunciation",
+          "original": "8,019",
+          "spoken": "팔천십구",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          92,
+          103
+        ],
+        [
+          95,
+          100
+        ],
+        [
+          173,
+          179
+        ]
+      ],
+      "source_hangul_count": 147,
+      "spoken_hangul_count": 151,
+      "beats": [
+        {
+          "anchor": "약 6억 8,019만 원",
+          "action": "A의 현금과 대출을 집값 축에 합쳐 계산 상한까지 올린다.",
+          "source_start": 90,
+          "source_end": 103,
+          "spoken_start": 90,
+          "spoken_end": 102
+        },
+        {
+          "anchor": "비용도 다시 계산하고",
+          "action": "6억 원 비용 조각을 해당 가격에서 다시 계산한 비용으로 교체한다.",
+          "source_start": 117,
+          "source_end": 128,
+          "spoken_start": 116,
+          "spoken_end": 127
+        },
+        {
+          "anchor": "월 상환액은 약 227만 원",
+          "action": "가격 막대를 월 예산 구조로 넘겨 납부액을 표시한다.",
+          "source_start": 164,
+          "source_end": 179,
+          "spoken_start": 163,
+          "spoken_end": 178
+        }
+      ],
+      "sentence_count": 6,
+      "meaning_plan": [
+        {
+          "text": "이제 A의 조건으로 집값 상한을 역산하겠습니다.",
+          "display_lines": [
+            "이제 A의 조건으로 집값 상한을 역산하겠습니다."
+          ],
+          "source_start": 0,
+          "source_end": 26,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "생애최초로 사고 보증 승인으로 공제를 보완한 경우입니다.",
+          "display_lines": [
+            "생애최초로 사고 보증 승인으로 공제를 보완한 경우입니다."
+          ],
+          "source_start": 27,
+          "source_end": 58,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "현금과 거래비용, 은행 심사를 함께 넣으면 집값 상한은 약 6억 8,019만 원입니다.",
+          "display_lines": [
+            "현금과 거래비용, 은행 심사를 함께 넣으면",
+            "집값 상한은 약 6억 8,019만 원입니다."
+          ],
+          "source_start": 59,
+          "source_end": 107,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "집값을 높일수록 비용도 다시 계산하고, 필요한 대출과 담보·소득 한도를 맞춘 값입니다.",
+          "display_lines": [
+            "집값을 높일수록 비용도 다시 계산하고,",
+            "필요한 대출과 담보·소득 한도를 맞춘 값입니다."
+          ],
+          "source_start": 108,
+          "source_end": 156,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이 가격에서 월 상환액은 약 227만 원입니다.",
+          "display_lines": [
+            "이 가격에서 월 상환액은 약 227만 원입니다."
+          ],
+          "source_start": 157,
+          "source_end": 183,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "자금을 마련한 뒤에는 매달 남길 저축을 이어서 확인합니다.",
+          "display_lines": [
+            "자금을 마련한 뒤에는 매달 남길 저축을 이어서 확인합니다."
+          ],
+          "source_start": 184,
+          "source_end": 216,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R030",
+      "paragraph": 13,
+      "chapter": 4,
+      "title": "월 상환 목표 기준은 5억 6,586만 원",
+      "text": "월 300만 원 중 소유 관련 비용 30만 원, 저축 목표 100만 원을 남기면 상환에 쓸 돈은 170만 원입니다. 이 상환 목표와 은행 조건을 함께 넣어 집값을 거꾸로 구하면 약 5억 6,586만 원입니다. 소유비 30만 원은 실제 지출로 바꿀 계획값입니다. 생활비를 배정한 뒤 정한 월 예산이 집값의 범위를 한 번 더 좁힙니다.",
+      "spoken_text": "월 300만 원 중 소유 관련 비용 30만 원, 저축 목표 100만 원을 남기면 상환에 쓸 돈은 170만 원입니다. 이 상환 목표와 은행 조건을 함께 넣어 집값을 거꾸로 구하면 약 5억 육천오백팔십육만 원입니다. 소유비 30만 원은 실제 지출로 바꿀 계획값입니다. 생활비를 배정한 뒤 정한 월 예산이 집값의 범위를 한 번 더 좁힙니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 104,
+          "spoken_start": 0,
+          "spoken_end": 104,
+          "kind": "literal"
+        },
+        {
+          "source_start": 104,
+          "source_end": 109,
+          "spoken_start": 104,
+          "spoken_end": 111,
+          "kind": "pronunciation",
+          "original": "6,586",
+          "spoken": "육천오백팔십육"
+        },
+        {
+          "source_start": 109,
+          "source_end": 185,
+          "spoken_start": 111,
+          "spoken_end": 187,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 104,
+          "source_end": 109,
+          "spoken_start": 104,
+          "spoken_end": 111,
+          "kind": "pronunciation",
+          "original": "6,586",
+          "spoken": "육천오백팔십육",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          2,
+          8
+        ],
+        [
+          20,
+          25
+        ],
+        [
+          33,
+          39
+        ],
+        [
+          54,
+          60
+        ],
+        [
+          101,
+          112
+        ],
+        [
+          104,
+          109
+        ],
+        [
+          121,
+          126
+        ]
+      ],
+      "source_hangul_count": 110,
+      "spoken_hangul_count": 117,
+      "beats": [
+        {
+          "anchor": "30만 원, 저축 목표 100만 원",
+          "action": "월 300만 원에서 두 몫을 떼어 보존한다.",
+          "source_start": 20,
+          "source_end": 39,
+          "spoken_start": 20,
+          "spoken_end": 39
+        },
+        {
+          "anchor": "170만 원",
+          "action": "남은 몫을 대출 상환 한도로 고정한다.",
+          "source_start": 54,
+          "source_end": 60,
+          "spoken_start": 54,
+          "spoken_end": 60
+        },
+        {
+          "anchor": "약 5억 6,586만 원",
+          "action": "월액에서 대출원금·자기자금·비용을 거쳐 집값으로 역산하는 방향을 그린다.",
+          "source_start": 99,
+          "source_end": 112,
+          "spoken_start": 99,
+          "spoken_end": 114
+        }
+      ],
+      "sentence_count": 4,
+      "meaning_plan": [
+        {
+          "text": "월 300만 원 중 소유 관련 비용 30만 원, 저축 목표 100만 원을 남기면 상환에 쓸 돈은 170만 원입니다.",
+          "display_lines": [
+            "월 300만 원 중 소유 관련 비용 30만 원,",
+            "저축 목표 100만 원을 남기면 상환에 쓸 돈은 170만 원입니다."
+          ],
+          "source_start": 0,
+          "source_end": 64,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이 상환 목표와 은행 조건을 함께 넣어 집값을 거꾸로 구하면 약 5억 6,586만 원입니다.",
+          "display_lines": [
+            "이 상환 목표와 은행 조건을 함께",
+            "넣어 집값을 거꾸로 구하면 약 5억 6,586만 원입니다."
+          ],
+          "source_start": 65,
+          "source_end": 116,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "소유비 30만 원은 실제 지출로 바꿀 계획값입니다.",
+          "display_lines": [
+            "소유비 30만 원은 실제 지출로 바꿀 계획값입니다."
+          ],
+          "source_start": 117,
+          "source_end": 145,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "생활비를 배정한 뒤 정한 월 예산이 집값의 범위를 한 번 더 좁힙니다.",
+          "display_lines": [
+            "생활비를 배정한 뒤 정한 월 예산이",
+            "집값의 범위를 한 번 더 좁힙니다."
+          ],
+          "source_start": 146,
+          "source_end": 185,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R031",
+      "paragraph": 14,
+      "chapter": 4,
+      "title": "두 가격의 차이는 남길 저축",
+      "text": "은행 조건을 맞춘 가격에서는 월 상환액이 약 227만 원이고, 소유비를 뺀 저축 여유는 약 43만 원입니다. 월 목표에 맞춘 가격에서는 상환액 약 170만 원, 저축 여유 약 100만 원입니다. 은행이 인정한 소득은 대출 심사에 쓰입니다. 가구가 정한 월 300만 원은 생활비를 배정한 뒤 주거와 저축에 쓰는 예산입니다. 두 기준을 함께 놓아야 매수 뒤의 생활까지 비교할 수 있습니다.",
+      "spoken_text": "은행 조건을 맞춘 가격에서는 월 상환액이 약 227만 원이고, 소유비를 뺀 저축 여유는 약 43만 원입니다. 월 목표에 맞춘 가격에서는 상환액 약 170만 원, 저축 여유 약 100만 원입니다. 은행이 인정한 소득은 대출 심사에 쓰입니다. 가구가 정한 월 300만 원은 생활비를 배정한 뒤 주거와 저축에 쓰는 예산입니다. 두 기준을 함께 놓아야 매수 뒤의 생활까지 비교할 수 있습니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 215,
+          "spoken_start": 0,
+          "spoken_end": 215,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [],
+      "protected_ranges": [
+        [
+          25,
+          31
+        ],
+        [
+          51,
+          56
+        ],
+        [
+          82,
+          88
+        ],
+        [
+          98,
+          104
+        ],
+        [
+          143,
+          149
+        ]
+      ],
+      "source_hangul_count": 138,
+      "spoken_hangul_count": 138,
+      "beats": [
+        {
+          "anchor": "저축 여유는 약 43만 원",
+          "action": "높은 가격 월 예산에서 상환 227만 원·소유비 30만 원을 빼 저축 잔여 조각을 만든다.",
+          "source_start": 42,
+          "source_end": 56,
+          "spoken_start": 42,
+          "spoken_end": 56
+        },
+        {
+          "anchor": "저축 여유 약 100만 원",
+          "action": "목표 가격의 같은 월 예산을 아래에 만들어 저축을 비교한다.",
+          "source_start": 90,
+          "source_end": 104,
+          "spoken_start": 90,
+          "spoken_end": 104
+        },
+        {
+          "anchor": "두 기준을 함께",
+          "action": "소득 심사와 월 예산을 연결하고 저축 결과에만 강조를 둔다.",
+          "source_start": 180,
+          "source_end": 188,
+          "spoken_start": 180,
+          "spoken_end": 188
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "은행 조건을 맞춘 가격에서는 월 상환액이 약 227만 원이고, 소유비를 뺀 저축 여유는 약 43만 원입니다.",
+          "display_lines": [
+            "은행 조건을 맞춘 가격에서는 월 상환액이 약 227만 원이고,",
+            "소유비를 뺀 저축 여유는 약 43만 원입니다."
+          ],
+          "source_start": 0,
+          "source_end": 60,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "월 목표에 맞춘 가격에서는 상환액 약 170만 원, 저축 여유 약 100만 원입니다.",
+          "display_lines": [
+            "월 목표에 맞춘 가격에서는 상환액 약 170만 원,",
+            "저축 여유 약 100만 원입니다."
+          ],
+          "source_start": 61,
+          "source_end": 108,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "은행이 인정한 소득은 대출 심사에 쓰입니다.",
+          "display_lines": [
+            "은행이 인정한 소득은 대출 심사에 쓰입니다."
+          ],
+          "source_start": 109,
+          "source_end": 133,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "가구가 정한 월 300만 원은 생활비를 배정한 뒤 주거와 저축에 쓰는 예산입니다.",
+          "display_lines": [
+            "가구가 정한 월 300만 원은 생활비를 배정한 뒤",
+            "주거와 저축에 쓰는 예산입니다."
+          ],
+          "source_start": 134,
+          "source_end": 179,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "두 기준을 함께 놓아야 매수 뒤의 생활까지 비교할 수 있습니다.",
+          "display_lines": [
+            "두 기준을 함께 놓아야 매수 뒤의 생활까지 비교할 수 있습니다."
+          ],
+          "source_start": 180,
+          "source_end": 215,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R032",
+      "paragraph": 15,
+      "chapter": 4,
+      "title": "금리 6%에서 남는 돈",
+      "text": "금리 4%와 6%도 비교하겠습니다. 각 가격에서 필요한 최초 대출원금을 그대로 두고, 각각 새로 360개월을 갚는 조건입니다. 높은 가격의 월액은 약 227만 원에서 285만 원으로 늘어납니다. 소유비를 빼면 저축 여유 약 43만 원이 15만 원 부족으로 바뀝니다. 월 목표 가격은 상환액 170만 원이 213만 원으로 늘고, 저축 여유는 100만 원에서 57만 원으로 줄어듭니다.",
+      "spoken_text": "금리 4%와 6%도 비교하겠습니다. 각 가격에서 필요한 최초 대출원금을 그대로 두고, 각각 새로 360개월을 갚는 조건입니다. 높은 가격의 월액은 약 227만 원에서 285만 원으로 늘어납니다. 소유비를 빼면 저축 여유 약 43만 원이 15만 원 부족으로 바뀝니다. 월 목표 가격은 상환액 170만 원이 213만 원으로 늘고, 저축 여유는 100만 원에서 57만 원으로 줄어듭니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 213,
+          "spoken_start": 0,
+          "spoken_end": 213,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [],
+      "protected_ranges": [
+        [
+          3,
+          5
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          54,
+          59
+        ],
+        [
+          84,
+          90
+        ],
+        [
+          93,
+          99
+        ],
+        [
+          125,
+          130
+        ],
+        [
+          132,
+          137
+        ],
+        [
+          162,
+          168
+        ],
+        [
+          170,
+          176
+        ],
+        [
+          190,
+          196
+        ],
+        [
+          199,
+          204
+        ]
+      ],
+      "source_hangul_count": 127,
+      "spoken_hangul_count": 127,
+      "beats": [
+        {
+          "anchor": "각각 새로 360개월",
+          "action": "A의 두 최초원금을 고정하고 4%·6% 비교 경로를 연다.",
+          "source_start": 48,
+          "source_end": 59,
+          "spoken_start": 48,
+          "spoken_end": 59
+        },
+        {
+          "anchor": "285만 원",
+          "action": "높은 가격의 상환 몫을 늘려 남는 영역을 줄인다.",
+          "source_start": 93,
+          "source_end": 99,
+          "spoken_start": 93,
+          "spoken_end": 99
+        },
+        {
+          "anchor": "15만 원 부족",
+          "action": "소유비를 더해 월 예산을 넘는 구간을 바깥에 표시한다.",
+          "source_start": 132,
+          "source_end": 140,
+          "spoken_start": 132,
+          "spoken_end": 140
+        },
+        {
+          "anchor": "57만 원으로",
+          "action": "목표 가격 상환액도 213만 원으로 바꾸며 저축 몫을 57만 원으로 줄인다.",
+          "source_start": 199,
+          "source_end": 206,
+          "spoken_start": 199,
+          "spoken_end": 206
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "금리 4%와 6%도 비교하겠습니다.",
+          "display_lines": [
+            "금리 4%와 6%도 비교하겠습니다."
+          ],
+          "source_start": 0,
+          "source_end": 19,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "각 가격에서 필요한 최초 대출원금을 그대로 두고, 각각 새로 360개월을 갚는 조건입니다.",
+          "display_lines": [
+            "각 가격에서 필요한 최초 대출원금을 그대로 두고,",
+            "각각 새로 360개월을 갚는 조건입니다."
+          ],
+          "source_start": 20,
+          "source_end": 70,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "높은 가격의 월액은 약 227만 원에서 285만 원으로 늘어납니다.",
+          "display_lines": [
+            "높은 가격의 월액은 약 227만 원에서",
+            "285만 원으로 늘어납니다."
+          ],
+          "source_start": 71,
+          "source_end": 108,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "소유비를 빼면 저축 여유 약 43만 원이 15만 원 부족으로 바뀝니다.",
+          "display_lines": [
+            "소유비를 빼면 저축 여유 약 43만 원이",
+            "15만 원 부족으로 바뀝니다."
+          ],
+          "source_start": 109,
+          "source_end": 148,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "월 목표 가격은 상환액 170만 원이 213만 원으로 늘고, 저축 여유는 100만 원에서 57만 원으로 줄어듭니다.",
+          "display_lines": [
+            "월 목표 가격은 상환액 170만 원이 213만 원으로 늘고,",
+            "저축 여유는 100만 원에서 57만 원으로 줄어듭니다."
+          ],
+          "source_start": 149,
+          "source_end": 213,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R033",
+      "paragraph": 16,
+      "chapter": 4,
+      "title": "6억 원 사례에서 조정할 선택",
+      "text": "6억 원 집의 A도 월 상환액 약 186.5만 원을 목표 170만 원과 대조할 수 있습니다. 현금을 더 마련해 대출을 줄일지, 저축 목표를 바꿀지, 구입가격을 조정할지 비교합니다. 집을 살 때 들어가는 현금과 구입 후의 월 예산을 함께 바꾸어 보는 과정입니다. 금리가 달라졌을 때 남는 돈까지 놓으면, 매물을 고르는 기준이 더 구체적이 됩니다. 이제 다른 가격대와 정책상품에도 같은 자금표를 적용하겠습니다.",
+      "spoken_text": "6억 원 집의 A도 월 상환액 약 백팔십육점오만 원을 목표 170만 원과 대조할 수 있습니다. 현금을 더 마련해 대출을 줄일지, 저축 목표를 바꿀지, 구입가격을 조정할지 비교합니다. 집을 살 때 들어가는 현금과 구입 후의 월 예산을 함께 바꾸어 보는 과정입니다. 금리가 달라졌을 때 남는 돈까지 놓으면, 매물을 고르는 기준이 더 구체적이 됩니다. 이제 다른 가격대와 정책상품에도 같은 자금표를 적용하겠습니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 19,
+          "spoken_start": 0,
+          "spoken_end": 19,
+          "kind": "literal"
+        },
+        {
+          "source_start": 19,
+          "source_end": 24,
+          "spoken_start": 19,
+          "spoken_end": 25,
+          "kind": "pronunciation",
+          "original": "186.5",
+          "spoken": "백팔십육점오"
+        },
+        {
+          "source_start": 24,
+          "source_end": 227,
+          "spoken_start": 25,
+          "spoken_end": 228,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 19,
+          "source_end": 24,
+          "spoken_start": 19,
+          "spoken_end": 25,
+          "kind": "pronunciation",
+          "original": "186.5",
+          "spoken": "백팔십육점오",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          0,
+          4
+        ],
+        [
+          19,
+          24
+        ],
+        [
+          19,
+          27
+        ],
+        [
+          32,
+          38
+        ]
+      ],
+      "source_hangul_count": 152,
+      "spoken_hangul_count": 158,
+      "beats": [
+        {
+          "anchor": "월 상환액 약 186.5만 원",
+          "action": "6억 원 집과 170만 원 목표선을 다시 연결한다.",
+          "source_start": 11,
+          "source_end": 27,
+          "spoken_start": 11,
+          "spoken_end": 28
+        },
+        {
+          "anchor": "현금을 더 마련해 대출을 줄일지",
+          "action": "추가 현금이 들어오면 대출 몫이 줄어드는 방향을 새 숫자 없이 표시한다.",
+          "source_start": 52,
+          "source_end": 69,
+          "spoken_start": 53,
+          "spoken_end": 70
+        },
+        {
+          "anchor": "구입가격을 조정할지",
+          "action": "저축 목표·가격 조정 경로를 차례로 열어 현재 대상만 강조한다.",
+          "source_start": 83,
+          "source_end": 93,
+          "spoken_start": 84,
+          "spoken_end": 94
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "6억 원 집의 A도 월 상환액 약 186.5만 원을 목표 170만 원과 대조할 수 있습니다.",
+          "display_lines": [
+            "6억 원 집의 A도 월 상환액 약 186.5만 원을",
+            "목표 170만 원과 대조할 수 있습니다."
+          ],
+          "source_start": 0,
+          "source_end": 51,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "현금을 더 마련해 대출을 줄일지, 저축 목표를 바꿀지, 구입가격을 조정할지 비교합니다.",
+          "display_lines": [
+            "현금을 더 마련해 대출을 줄일지,",
+            "저축 목표를 바꿀지, 구입가격을 조정할지 비교합니다."
+          ],
+          "source_start": 52,
+          "source_end": 100,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "집을 살 때 들어가는 현금과 구입 후의 월 예산을 함께 바꾸어 보는 과정입니다.",
+          "display_lines": [
+            "집을 살 때 들어가는 현금과 구입 후의 월 예산을 함께",
+            "바꾸어 보는 과정입니다."
+          ],
+          "source_start": 101,
+          "source_end": 145,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "금리가 달라졌을 때 남는 돈까지 놓으면, 매물을 고르는 기준이 더 구체적이 됩니다.",
+          "display_lines": [
+            "금리가 달라졌을 때 남는 돈까지 놓으면,",
+            "매물을 고르는 기준이 더 구체적이 됩니다."
+          ],
+          "source_start": 146,
+          "source_end": 192,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이제 다른 가격대와 정책상품에도 같은 자금표를 적용하겠습니다.",
+          "display_lines": [
+            "이제 다른 가격대와 정책상품에도 같은 자금표를 적용하겠습니다."
+          ],
+          "source_start": 193,
+          "source_end": 227,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R012",
+      "paragraph": 17,
+      "chapter": 5,
+      "title": "9억 원 세금 2,970만 원",
+      "text": "집값을 올리면 거래비용부터 달라집니다. 취득세율은 6억 원 이하에서 1%입니다. 6억 원 초과부터 9억 원까지 점차 높아져 3%가 되고, 9억 원 초과도 3%입니다. 지방교육세를 더한 세금은 6억 원 집에서 660만 원, 9억 원에서 2,970만 원, 12억 원에서 3,960만 원입니다. 이 표는 국민주택규모 요건을 충족하는 전용 84㎡ 일반 아파트로, 농어촌특별세가 붙지 않는 경우입니다.",
+      "spoken_text": "집값을 올리면 거래비용부터 달라집니다. 취득세율은 6억 원 이하에서 1%입니다. 6억 원 초과부터 9억 원까지 점차 높아져 3%가 되고, 9억 원 초과도 3%입니다. 지방교육세를 더한 세금은 6억 원 집에서 660만 원, 9억 원에서 이천구백칠십만 원, 12억 원에서 삼천구백육십만 원입니다. 이 표는 국민주택규모 요건을 충족하는 전용 84㎡ 일반 아파트로, 농어촌특별세가 붙지 않는 경우입니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 131,
+          "spoken_start": 0,
+          "spoken_end": 131,
+          "kind": "literal"
+        },
+        {
+          "source_start": 131,
+          "source_end": 136,
+          "spoken_start": 131,
+          "spoken_end": 137,
+          "kind": "pronunciation",
+          "original": "2,970",
+          "spoken": "이천구백칠십"
+        },
+        {
+          "source_start": 136,
+          "source_end": 149,
+          "spoken_start": 137,
+          "spoken_end": 150,
+          "kind": "literal"
+        },
+        {
+          "source_start": 149,
+          "source_end": 154,
+          "spoken_start": 150,
+          "spoken_end": 156,
+          "kind": "pronunciation",
+          "original": "3,960",
+          "spoken": "삼천구백육십"
+        },
+        {
+          "source_start": 154,
+          "source_end": 219,
+          "spoken_start": 156,
+          "spoken_end": 221,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 131,
+          "source_end": 136,
+          "spoken_start": 131,
+          "spoken_end": 137,
+          "kind": "pronunciation",
+          "original": "2,970",
+          "spoken": "이천구백칠십",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 149,
+          "source_end": 154,
+          "spoken_start": 150,
+          "spoken_end": 156,
+          "kind": "pronunciation",
+          "original": "3,960",
+          "spoken": "삼천구백육십",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          28,
+          32
+        ],
+        [
+          38,
+          40
+        ],
+        [
+          45,
+          49
+        ],
+        [
+          55,
+          59
+        ],
+        [
+          69,
+          71
+        ],
+        [
+          77,
+          81
+        ],
+        [
+          86,
+          88
+        ],
+        [
+          107,
+          111
+        ],
+        [
+          116,
+          122
+        ],
+        [
+          124,
+          128
+        ],
+        [
+          131,
+          136
+        ],
+        [
+          131,
+          139
+        ],
+        [
+          141,
+          146
+        ],
+        [
+          149,
+          154
+        ],
+        [
+          149,
+          157
+        ],
+        [
+          186,
+          189
+        ]
+      ],
+      "source_hangul_count": 130,
+      "spoken_hangul_count": 142,
+      "beats": [
+        {
+          "anchor": "점차 높아져 3%",
+          "action": "집값 축 위 취득세율 곡선을 6억 원 이후 점차 올린다.",
+          "source_start": 62,
+          "source_end": 71,
+          "spoken_start": 62,
+          "spoken_end": 71
+        },
+        {
+          "anchor": "9억 원에서 2,970만 원",
+          "action": "6억 원 세금 막대 다음에 9억 원 세금을 쌓는다.",
+          "source_start": 124,
+          "source_end": 139,
+          "spoken_start": 124,
+          "spoken_end": 140
+        },
+        {
+          "anchor": "12억 원에서 3,960만 원",
+          "action": "12억 원의 세금을 마지막으로 쌓는다.",
+          "source_start": 141,
+          "source_end": 157,
+          "spoken_start": 142,
+          "spoken_end": 159
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "집값을 올리면 거래비용부터 달라집니다.",
+          "display_lines": [
+            "집값을 올리면 거래비용부터 달라집니다."
+          ],
+          "source_start": 0,
+          "source_end": 21,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "취득세율은 6억 원 이하에서 1%입니다.",
+          "display_lines": [
+            "취득세율은 6억 원 이하에서 1%입니다."
+          ],
+          "source_start": 22,
+          "source_end": 44,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "6억 원 초과부터 9억 원까지 점차 높아져 3%가 되고, 9억 원 초과도 3%입니다.",
+          "display_lines": [
+            "6억 원 초과부터 9억 원까지 점차 높아져 3%가 되고,",
+            "9억 원 초과도 3%입니다."
+          ],
+          "source_start": 45,
+          "source_end": 92,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "지방교육세를 더한 세금은 6억 원 집에서 660만 원, 9억 원에서 2,970만 원, 12억 원에서 3,960만 원입니다.",
+          "display_lines": [
+            "지방교육세를 더한 세금은 6억 원 집에서 660만 원,",
+            "9억 원에서 2,970만 원, 12억 원에서 3,960만 원입니다."
+          ],
+          "source_start": 93,
+          "source_end": 161,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이 표는 국민주택규모 요건을 충족하는 전용 84㎡ 일반 아파트로, 농어촌특별세가 붙지 않는 경우입니다.",
+          "display_lines": [
+            "이 표는 국민주택규모 요건을 충족하는 전용 84㎡ 일반 아파트로,",
+            "농어촌특별세가 붙지 않는 경우입니다."
+          ],
+          "source_start": 162,
+          "source_end": 219,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R013",
+      "paragraph": 18,
+      "chapter": 5,
+      "title": "총비용은 1,074·3,615·4,902만 원",
+      "text": "중개보수 상한 요율은 구간별로 바뀝니다. 정확히 6억 원은 0.4%, 9억 원은 0.5%, 12억 원은 0.6%입니다. 일반과세 중개사의 부가세 10%를 포함한 상한 예산은 각각 264만 원, 495만 원, 792만 원입니다. 앞의 세금과 기타 계획 예산 150만 원까지 합치면, 총비용은 6억 원 집에서 1,074만 원, 9억 원에서 3,615만 원, 12억 원에서 4,902만 원입니다.",
+      "spoken_text": "중개보수 상한 요율은 구간별로 바뀝니다. 정확히 6억 원은 영점사%, 9억 원은 영점오%, 12억 원은 영점육%입니다. 일반과세 중개사의 부가세 10%를 포함한 상한 예산은 각각 264만 원, 495만 원, 792만 원입니다. 앞의 세금과 기타 계획 예산 150만 원까지 합치면, 총비용은 6억 원 집에서 천칠십사만 원, 9억 원에서 삼천육백십오만 원, 12억 원에서 사천구백이만 원입니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 33,
+          "spoken_start": 0,
+          "spoken_end": 33,
+          "kind": "literal"
+        },
+        {
+          "source_start": 33,
+          "source_end": 36,
+          "spoken_start": 33,
+          "spoken_end": 36,
+          "kind": "pronunciation",
+          "original": "0.4",
+          "spoken": "영점사"
+        },
+        {
+          "source_start": 36,
+          "source_end": 45,
+          "spoken_start": 36,
+          "spoken_end": 45,
+          "kind": "literal"
+        },
+        {
+          "source_start": 45,
+          "source_end": 48,
+          "spoken_start": 45,
+          "spoken_end": 48,
+          "kind": "pronunciation",
+          "original": "0.5",
+          "spoken": "영점오"
+        },
+        {
+          "source_start": 48,
+          "source_end": 58,
+          "spoken_start": 48,
+          "spoken_end": 58,
+          "kind": "literal"
+        },
+        {
+          "source_start": 58,
+          "source_end": 61,
+          "spoken_start": 58,
+          "spoken_end": 61,
+          "kind": "pronunciation",
+          "original": "0.6",
+          "spoken": "영점육"
+        },
+        {
+          "source_start": 61,
+          "source_end": 171,
+          "spoken_start": 61,
+          "spoken_end": 171,
+          "kind": "literal"
+        },
+        {
+          "source_start": 171,
+          "source_end": 176,
+          "spoken_start": 171,
+          "spoken_end": 175,
+          "kind": "pronunciation",
+          "original": "1,074",
+          "spoken": "천칠십사"
+        },
+        {
+          "source_start": 176,
+          "source_end": 188,
+          "spoken_start": 175,
+          "spoken_end": 187,
+          "kind": "literal"
+        },
+        {
+          "source_start": 188,
+          "source_end": 193,
+          "spoken_start": 187,
+          "spoken_end": 193,
+          "kind": "pronunciation",
+          "original": "3,615",
+          "spoken": "삼천육백십오"
+        },
+        {
+          "source_start": 193,
+          "source_end": 206,
+          "spoken_start": 193,
+          "spoken_end": 206,
+          "kind": "literal"
+        },
+        {
+          "source_start": 206,
+          "source_end": 211,
+          "spoken_start": 206,
+          "spoken_end": 211,
+          "kind": "pronunciation",
+          "original": "4,902",
+          "spoken": "사천구백이"
+        },
+        {
+          "source_start": 211,
+          "source_end": 218,
+          "spoken_start": 211,
+          "spoken_end": 218,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 33,
+          "source_end": 36,
+          "spoken_start": 33,
+          "spoken_end": 36,
+          "kind": "pronunciation",
+          "original": "0.4",
+          "spoken": "영점사",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 45,
+          "source_end": 48,
+          "spoken_start": 45,
+          "spoken_end": 48,
+          "kind": "pronunciation",
+          "original": "0.5",
+          "spoken": "영점오",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 58,
+          "source_end": 61,
+          "spoken_start": 58,
+          "spoken_end": 61,
+          "kind": "pronunciation",
+          "original": "0.6",
+          "spoken": "영점육",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 171,
+          "source_end": 176,
+          "spoken_start": 171,
+          "spoken_end": 175,
+          "kind": "pronunciation",
+          "original": "1,074",
+          "spoken": "천칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 188,
+          "source_end": 193,
+          "spoken_start": 187,
+          "spoken_end": 193,
+          "kind": "pronunciation",
+          "original": "3,615",
+          "spoken": "삼천육백십오",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 206,
+          "source_end": 211,
+          "spoken_start": 206,
+          "spoken_end": 211,
+          "kind": "pronunciation",
+          "original": "4,902",
+          "spoken": "사천구백이",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          27,
+          31
+        ],
+        [
+          33,
+          36
+        ],
+        [
+          33,
+          37
+        ],
+        [
+          39,
+          43
+        ],
+        [
+          45,
+          48
+        ],
+        [
+          45,
+          49
+        ],
+        [
+          51,
+          56
+        ],
+        [
+          58,
+          61
+        ],
+        [
+          58,
+          62
+        ],
+        [
+          81,
+          84
+        ],
+        [
+          100,
+          106
+        ],
+        [
+          108,
+          114
+        ],
+        [
+          116,
+          122
+        ],
+        [
+          143,
+          149
+        ],
+        [
+          162,
+          166
+        ],
+        [
+          171,
+          176
+        ],
+        [
+          171,
+          179
+        ],
+        [
+          181,
+          185
+        ],
+        [
+          188,
+          193
+        ],
+        [
+          188,
+          196
+        ],
+        [
+          198,
+          203
+        ],
+        [
+          206,
+          211
+        ],
+        [
+          206,
+          214
+        ]
+      ],
+      "source_hangul_count": 107,
+      "spoken_hangul_count": 131,
+      "beats": [
+        {
+          "anchor": "0.4%, 9억 원은 0.5%, 12억 원은 0.6%",
+          "action": "세 경계값을 중개보수 요율 계단에 차례로 표시한다.",
+          "source_start": 33,
+          "source_end": 62,
+          "spoken_start": 33,
+          "spoken_end": 62
+        },
+        {
+          "anchor": "264만 원, 495만 원, 792만 원",
+          "action": "부가세 포함 중개보수 조각을 세금 막대에 더한다.",
+          "source_start": 100,
+          "source_end": 122,
+          "spoken_start": 100,
+          "spoken_end": 122
+        },
+        {
+          "anchor": "기타 계획 예산 150만 원",
+          "action": "각 가격대에 기타 비용 조각을 더한다.",
+          "source_start": 134,
+          "source_end": 149,
+          "spoken_start": 134,
+          "spoken_end": 149
+        },
+        {
+          "anchor": "4,902만 원",
+          "action": "각 가격의 최종 비용 합계를 완성하고 12억 원 합계를 마지막으로 강조한다.",
+          "source_start": 206,
+          "source_end": 214,
+          "spoken_start": 206,
+          "spoken_end": 214
+        }
+      ],
+      "sentence_count": 4,
+      "meaning_plan": [
+        {
+          "text": "중개보수 상한 요율은 구간별로 바뀝니다.",
+          "display_lines": [
+            "중개보수 상한 요율은 구간별로 바뀝니다."
+          ],
+          "source_start": 0,
+          "source_end": 22,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "정확히 6억 원은 0.4%, 9억 원은 0.5%, 12억 원은 0.6%입니다.",
+          "display_lines": [
+            "정확히 6억 원은 0.4%, 9억 원은 0.5%,",
+            "12억 원은 0.6%입니다."
+          ],
+          "source_start": 23,
+          "source_end": 66,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "일반과세 중개사의 부가세 10%를 포함한 상한 예산은 각각 264만 원, 495만 원, 792만 원입니다.",
+          "display_lines": [
+            "일반과세 중개사의 부가세 10%를 포함한 상한 예산은 각각 264만 원,",
+            "495만 원, 792만 원입니다."
+          ],
+          "source_start": 67,
+          "source_end": 126,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "앞의 세금과 기타 계획 예산 150만 원까지 합치면, 총비용은 6억 원 집에서 1,074만 원,",
+          "display_lines": [
+            "앞의 세금과 기타 계획 예산 150만 원까지 합치면,",
+            "총비용은 6억 원 집에서 1,074만 원,"
+          ],
+          "source_start": 127,
+          "source_end": 180,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "9억 원에서 3,615만 원, 12억 원에서 4,902만 원입니다.",
+          "display_lines": [
+            "9억 원에서 3,615만 원,",
+            "12억 원에서 4,902만 원입니다."
+          ],
+          "source_start": 181,
+          "source_end": 218,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R014",
+      "paragraph": 19,
+      "chapter": 5,
+      "title": "감면은 해당 조건에서 반영",
+      "text": "일부 가구는 취득세 감면도 받습니다. 12억 원 이하 보통 아파트라면 생애최초는 최대 200만 원, 출산가구는 최대 500만 원까지 덜 냅니다. 두 감면은 겹쳐도 합치지 않고 큰 쪽 하나만 적용합니다. 지금 자금표는 감면 전 비용으로 계산하고, 감면은 자격이 맞는 가구의 세액에서 따로 반영합니다.",
+      "spoken_text": "일부 가구는 취득세 감면도 받습니다. 12억 원 이하 보통 아파트라면 생애최초는 최대 200만 원, 출산가구는 최대 500만 원까지 덜 냅니다. 두 감면은 겹쳐도 합치지 않고 큰 쪽 하나만 적용합니다. 지금 자금표는 감면 전 비용으로 계산하고, 감면은 자격이 맞는 가구의 세액에서 따로 반영합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 166,
+          "spoken_start": 0,
+          "spoken_end": 166,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [],
+      "protected_ranges": [
+        [
+          21,
+          26
+        ],
+        [
+          48,
+          54
+        ],
+        [
+          65,
+          71
+        ]
+      ],
+      "source_hangul_count": 111,
+      "spoken_hangul_count": 111,
+      "beats": [
+        {
+          "anchor": "최대 200만 원",
+          "action": "취득세 감면 원문 생애최초 금액·가격 범위 행을 표시한다.",
+          "source_start": 45,
+          "source_end": 54,
+          "spoken_start": 45,
+          "spoken_end": 54
+        },
+        {
+          "anchor": "최대 500만 원",
+          "action": "출산가구 감면 상한을 하나씩 표시한다.",
+          "source_start": 62,
+          "source_end": 71,
+          "spoken_start": 62,
+          "spoken_end": 71
+        },
+        {
+          "anchor": "큰 쪽 하나만",
+          "action": "두 감면을 합산하지 않고 적용 대상 하나를 선택한다.",
+          "source_start": 98,
+          "source_end": 105,
+          "spoken_start": 98,
+          "spoken_end": 105
+        }
+      ],
+      "sentence_count": 4,
+      "meaning_plan": [
+        {
+          "text": "일부 가구는 취득세 감면도 받습니다.",
+          "display_lines": [
+            "일부 가구는 취득세 감면도 받습니다."
+          ],
+          "source_start": 0,
+          "source_end": 20,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "12억 원 이하 보통 아파트라면 생애최초는 최대 200만 원, 출산가구는 최대 500만 원까지 덜 냅니다.",
+          "display_lines": [
+            "12억 원 이하 보통 아파트라면 생애최초는 최대 200만 원,",
+            "출산가구는 최대 500만 원까지 덜 냅니다."
+          ],
+          "source_start": 21,
+          "source_end": 80,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "두 감면은 겹쳐도 합치지 않고 큰 쪽 하나만 적용합니다.",
+          "display_lines": [
+            "두 감면은 겹쳐도 합치지 않고 큰 쪽 하나만 적용합니다."
+          ],
+          "source_start": 81,
+          "source_end": 112,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "지금 자금표는 감면 전 비용으로 계산하고, 감면은 자격이 맞는 가구의 세액에서 따로 반영합니다.",
+          "display_lines": [
+            "지금 자금표는 감면 전 비용으로 계산하고,",
+            "감면은 자격이 맞는 가구의 세액에서 따로 반영합니다."
+          ],
+          "source_start": 113,
+          "source_end": 166,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R015",
+      "paragraph": 20,
+      "chapter": 5,
+      "title": "9억 원은 추가 현금 2억 1,512만 원",
+      "text": "A가 9억 원 집으로 옮겨 계산하면 필요한 대출은 7억 1,615만 원입니다. 비용이 늘어난 만큼 집값에 넣을 자기자금도 줄어듭니다. 생애최초 담보 한도와 대출 총액상한을 비교한 뒤, 소득 심사에서 대출이 약 5억 103만 원으로 제한됩니다. 필요한 대출과의 차이는 추가 현금 약 2억 1,512만 원입니다. 집값이 올라가면서 소득 한도가 자금표를 결정합니다.",
+      "spoken_text": "A가 9억 원 집으로 옮겨 계산하면 필요한 대출은 7억 천육백십오만 원입니다. 비용이 늘어난 만큼 집값에 넣을 자기자금도 줄어듭니다. 생애최초 담보 한도와 대출 총액상한을 비교한 뒤, 소득 심사에서 대출이 약 5억 103만 원으로 제한됩니다. 필요한 대출과의 차이는 추가 현금 약 2억 천오백십이만 원입니다. 집값이 올라가면서 소득 한도가 자금표를 결정합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 31,
+          "spoken_start": 0,
+          "spoken_end": 31,
+          "kind": "literal"
+        },
+        {
+          "source_start": 31,
+          "source_end": 36,
+          "spoken_start": 31,
+          "spoken_end": 36,
+          "kind": "pronunciation",
+          "original": "1,615",
+          "spoken": "천육백십오"
+        },
+        {
+          "source_start": 36,
+          "source_end": 160,
+          "spoken_start": 36,
+          "spoken_end": 160,
+          "kind": "literal"
+        },
+        {
+          "source_start": 160,
+          "source_end": 165,
+          "spoken_start": 160,
+          "spoken_end": 165,
+          "kind": "pronunciation",
+          "original": "1,512",
+          "spoken": "천오백십이"
+        },
+        {
+          "source_start": 165,
+          "source_end": 201,
+          "spoken_start": 165,
+          "spoken_end": 201,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 31,
+          "source_end": 36,
+          "spoken_start": 31,
+          "spoken_end": 36,
+          "kind": "pronunciation",
+          "original": "1,615",
+          "spoken": "천육백십오",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 160,
+          "source_end": 165,
+          "spoken_start": 160,
+          "spoken_end": 165,
+          "kind": "pronunciation",
+          "original": "1,512",
+          "spoken": "천오백십이",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          3,
+          7
+        ],
+        [
+          28,
+          39
+        ],
+        [
+          31,
+          36
+        ],
+        [
+          117,
+          126
+        ],
+        [
+          157,
+          168
+        ],
+        [
+          160,
+          165
+        ]
+      ],
+      "source_hangul_count": 130,
+      "spoken_hangul_count": 140,
+      "beats": [
+        {
+          "anchor": "7억 1,615만 원",
+          "action": "9억 원 집값에 비용 차감 후 자기자금을 먼저 채우고 필요대출을 드러낸다.",
+          "source_start": 28,
+          "source_end": 39,
+          "spoken_start": 28,
+          "spoken_end": 39
+        },
+        {
+          "anchor": "약 5억 103만 원",
+          "action": "DSR 한도에서 대출 채우기를 멈춘다.",
+          "source_start": 115,
+          "source_end": 126,
+          "spoken_start": 115,
+          "spoken_end": 126
+        },
+        {
+          "anchor": "약 2억 1,512만 원",
+          "action": "빈 구간을 추가 현금으로 표시한다.",
+          "source_start": 155,
+          "source_end": 168,
+          "spoken_start": 155,
+          "spoken_end": 168
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "A가 9억 원 집으로 옮겨 계산하면 필요한 대출은 7억 1,615만 원입니다.",
+          "display_lines": [
+            "A가 9억 원 집으로 옮겨 계산하면",
+            "필요한 대출은 7억 1,615만 원입니다."
+          ],
+          "source_start": 0,
+          "source_end": 43,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "비용이 늘어난 만큼 집값에 넣을 자기자금도 줄어듭니다.",
+          "display_lines": [
+            "비용이 늘어난 만큼 집값에 넣을 자기자금도 줄어듭니다."
+          ],
+          "source_start": 44,
+          "source_end": 74,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "생애최초 담보 한도와 대출 총액상한을 비교한 뒤, 소득 심사에서 대출이 약 5억 103만 원으로 제한됩니다.",
+          "display_lines": [
+            "생애최초 담보 한도와 대출 총액상한을 비교한 뒤,",
+            "소득 심사에서 대출이 약 5억 103만 원으로 제한됩니다."
+          ],
+          "source_start": 75,
+          "source_end": 135,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "필요한 대출과의 차이는 추가 현금 약 2억 1,512만 원입니다.",
+          "display_lines": [
+            "필요한 대출과의 차이는 추가 현금 약 2억 1,512만 원입니다."
+          ],
+          "source_start": 136,
+          "source_end": 172,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "집값이 올라가면서 소득 한도가 자금표를 결정합니다.",
+          "display_lines": [
+            "집값이 올라가면서 소득 한도가 자금표를 결정합니다."
+          ],
+          "source_start": 173,
+          "source_end": 201,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R016",
+      "paragraph": 21,
+      "chapter": 5,
+      "title": "12억 원은 추가 현금 5억 2,799만 원",
+      "text": "12억 원 집에서는 필요한 대출이 10억 2,902만 원으로 늘어납니다. A의 소득 조건은 그대로이므로 DSR 한도도 약 5억 103만 원입니다. 그 차이를 채우는 추가 현금은 약 5억 2,799만 원입니다. 같은 보유자금으로 집값만 높이면, 비용과 부족한 현금이 함께 늘어납니다. 6억 원, 9억 원, 12억 원의 자금표를 이 순서로 비교할 수 있습니다.",
+      "spoken_text": "12억 원 집에서는 필요한 대출이 10억 이천구백이만 원으로 늘어납니다. A의 소득 조건은 그대로이므로 디 에스 알 한도도 약 5억 103만 원입니다. 그 차이를 채우는 추가 현금은 약 5억 이천칠백구십구만 원입니다. 같은 보유자금으로 집값만 높이면, 비용과 부족한 현금이 함께 늘어납니다. 6억 원, 9억 원, 12억 원의 자금표를 이 순서로 비교할 수 있습니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 23,
+          "spoken_start": 0,
+          "spoken_end": 23,
+          "kind": "literal"
+        },
+        {
+          "source_start": 23,
+          "source_end": 28,
+          "spoken_start": 23,
+          "spoken_end": 28,
+          "kind": "pronunciation",
+          "original": "2,902",
+          "spoken": "이천구백이"
+        },
+        {
+          "source_start": 28,
+          "source_end": 58,
+          "spoken_start": 28,
+          "spoken_end": 58,
+          "kind": "literal"
+        },
+        {
+          "source_start": 58,
+          "source_end": 61,
+          "spoken_start": 58,
+          "spoken_end": 64,
+          "kind": "pronunciation",
+          "original": "DSR",
+          "spoken": "디 에스 알"
+        },
+        {
+          "source_start": 61,
+          "source_end": 104,
+          "spoken_start": 64,
+          "spoken_end": 107,
+          "kind": "literal"
+        },
+        {
+          "source_start": 104,
+          "source_end": 109,
+          "spoken_start": 107,
+          "spoken_end": 114,
+          "kind": "pronunciation",
+          "original": "2,799",
+          "spoken": "이천칠백구십구"
+        },
+        {
+          "source_start": 109,
+          "source_end": 199,
+          "spoken_start": 114,
+          "spoken_end": 204,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 23,
+          "source_end": 28,
+          "spoken_start": 23,
+          "spoken_end": 28,
+          "kind": "pronunciation",
+          "original": "2,902",
+          "spoken": "이천구백이",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 58,
+          "source_end": 61,
+          "spoken_start": 58,
+          "spoken_end": 64,
+          "kind": "pronunciation",
+          "original": "DSR",
+          "spoken": "디 에스 알",
+          "reason": "약어 명료 발음"
+        },
+        {
+          "source_start": 104,
+          "source_end": 109,
+          "spoken_start": 107,
+          "spoken_end": 114,
+          "kind": "pronunciation",
+          "original": "2,799",
+          "spoken": "이천칠백구십구",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          0,
+          5
+        ],
+        [
+          19,
+          31
+        ],
+        [
+          23,
+          28
+        ],
+        [
+          58,
+          61
+        ],
+        [
+          68,
+          77
+        ],
+        [
+          101,
+          112
+        ],
+        [
+          104,
+          109
+        ],
+        [
+          158,
+          162
+        ],
+        [
+          164,
+          168
+        ],
+        [
+          170,
+          175
+        ]
+      ],
+      "source_hangul_count": 116,
+      "spoken_hangul_count": 132,
+      "beats": [
+        {
+          "anchor": "10억 2,902만 원",
+          "action": "12억 원 필요대출 구간을 늘린다.",
+          "source_start": 19,
+          "source_end": 31,
+          "spoken_start": 19,
+          "spoken_end": 31
+        },
+        {
+          "anchor": "약 5억 103만 원",
+          "action": "소득 한도 선은 앞 장면과 같은 위치에 고정한다.",
+          "source_start": 66,
+          "source_end": 77,
+          "spoken_start": 69,
+          "spoken_end": 80
+        },
+        {
+          "anchor": "약 5억 2,799만 원",
+          "action": "차이를 추가 현금으로 채운 뒤 세 가격대를 축약해 비교한다.",
+          "source_start": 99,
+          "source_end": 112,
+          "spoken_start": 102,
+          "spoken_end": 117
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "12억 원 집에서는 필요한 대출이 10억 2,902만 원으로 늘어납니다.",
+          "display_lines": [
+            "12억 원 집에서는 필요한 대출이",
+            "10억 2,902만 원으로 늘어납니다."
+          ],
+          "source_start": 0,
+          "source_end": 40,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "A의 소득 조건은 그대로이므로 DSR 한도도 약 5억 103만 원입니다.",
+          "display_lines": [
+            "A의 소득 조건은 그대로이므로",
+            "DSR 한도도 약 5억 103만 원입니다."
+          ],
+          "source_start": 41,
+          "source_end": 81,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "그 차이를 채우는 추가 현금은 약 5억 2,799만 원입니다.",
+          "display_lines": [
+            "그 차이를 채우는 추가 현금은 약 5억 2,799만 원입니다."
+          ],
+          "source_start": 82,
+          "source_end": 116,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "같은 보유자금으로 집값만 높이면, 비용과 부족한 현금이 함께 늘어납니다.",
+          "display_lines": [
+            "같은 보유자금으로 집값만 높이면,",
+            "비용과 부족한 현금이 함께 늘어납니다."
+          ],
+          "source_start": 117,
+          "source_end": 157,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "6억 원, 9억 원, 12억 원의 자금표를 이 순서로 비교할 수 있습니다.",
+          "display_lines": [
+            "6억 원, 9억 원, 12억 원의 자금표를",
+            "이 순서로 비교할 수 있습니다."
+          ],
+          "source_start": 158,
+          "source_end": 199,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R017",
+      "paragraph": 22,
+      "chapter": 5,
+      "title": "총액상한은 15억·25억 경계",
+      "text": "앞의 6억 원, 9억 원, 12억 원은 세금이나 상품 자격을 살피는 가격대입니다. 수도권·규제지역 일반 구입 주담대의 총액상한은 시가 15억 원 이하에서 6억 원입니다. 15억 원 초과 25억 원 이하는 4억 원, 25억 원 초과는 2억 원입니다. 앞에서 계산한 세 집은 모두 첫 구간에 있습니다. 이 총액상한에 담보와 소득 심사를 함께 적용해 실제 대출 범위를 정합니다.",
+      "spoken_text": "앞의 6억 원, 9억 원, 12억 원은 세금이나 상품 자격을 살피는 가격대입니다. 수도권·규제지역 일반 구입 주담대의 총액상한은 시가 15억 원 이하에서 6억 원입니다. 15억 원 초과 25억 원 이하는 4억 원, 25억 원 초과는 2억 원입니다. 앞에서 계산한 세 집은 모두 첫 구간에 있습니다. 이 총액상한에 담보와 소득 심사를 함께 적용해 실제 대출 범위를 정합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 208,
+          "spoken_start": 0,
+          "spoken_end": 208,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [],
+      "protected_ranges": [
+        [
+          3,
+          7
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          15,
+          20
+        ],
+        [
+          75,
+          80
+        ],
+        [
+          86,
+          90
+        ],
+        [
+          95,
+          100
+        ],
+        [
+          104,
+          109
+        ],
+        [
+          114,
+          118
+        ],
+        [
+          120,
+          125
+        ],
+        [
+          130,
+          134
+        ]
+      ],
+      "source_hangul_count": 130,
+      "spoken_hangul_count": 130,
+      "beats": [
+        {
+          "anchor": "15억 원 이하에서 6억 원",
+          "action": "집 시가 축 첫 구간과 대출 상한 6억 원을 연결한다.",
+          "source_start": 75,
+          "source_end": 90,
+          "spoken_start": 75,
+          "spoken_end": 90
+        },
+        {
+          "anchor": "15억 원 초과 25억 원 이하는 4억 원",
+          "action": "두 번째 구간 상한을 4억 원으로 내린다.",
+          "source_start": 95,
+          "source_end": 118,
+          "spoken_start": 95,
+          "spoken_end": 118
+        },
+        {
+          "anchor": "25억 원 초과는 2억 원",
+          "action": "세 번째 구간의 상한을 2억 원으로 내린다.",
+          "source_start": 120,
+          "source_end": 134,
+          "spoken_start": 120,
+          "spoken_end": 134
+        },
+        {
+          "anchor": "모두 첫 구간",
+          "action": "6억·9억·12억 원 집의 점을 첫 구간에 차례로 놓는다.",
+          "source_start": 152,
+          "source_end": 159,
+          "spoken_start": 152,
+          "spoken_end": 159
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "앞의 6억 원, 9억 원, 12억 원은 세금이나 상품 자격을 살피는 가격대입니다.",
+          "display_lines": [
+            "앞의 6억 원, 9억 원,",
+            "12억 원은 세금이나 상품 자격을 살피는 가격대입니다."
+          ],
+          "source_start": 0,
+          "source_end": 45,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "수도권·규제지역 일반 구입 주담대의 총액상한은 시가 15억 원 이하에서 6억 원입니다.",
+          "display_lines": [
+            "수도권·규제지역 일반 구입 주담대의 총액상한은",
+            "시가 15억 원 이하에서 6억 원입니다."
+          ],
+          "source_start": 46,
+          "source_end": 94,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "15억 원 초과 25억 원 이하는 4억 원, 25억 원 초과는 2억 원입니다.",
+          "display_lines": [
+            "15억 원 초과 25억 원 이하는 4억 원,",
+            "25억 원 초과는 2억 원입니다."
+          ],
+          "source_start": 95,
+          "source_end": 138,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "앞에서 계산한 세 집은 모두 첫 구간에 있습니다.",
+          "display_lines": [
+            "앞에서 계산한 세 집은 모두 첫 구간에 있습니다."
+          ],
+          "source_start": 139,
+          "source_end": 166,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이 총액상한에 담보와 소득 심사를 함께 적용해 실제 대출 범위를 정합니다.",
+          "display_lines": [
+            "이 총액상한에 담보와 소득 심사를 함께",
+            "적용해 실제 대출 범위를 정합니다."
+          ],
+          "source_start": 167,
+          "source_end": 208,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R018",
+      "paragraph": 23,
+      "chapter": 6,
+      "title": "같은 현금으로 정책상품 비교",
+      "text": "정책대출은 별도의 B가구로 비교하겠습니다. 부부합산 연소득 8천만 원, 순자산 2억 5천만 원, 기존 부채 0원입니다. 혼인 7년 이내의 무주택 신혼가구이며 생애최초입니다. 대출 접수 전 2년 안에 출산한 자녀가 있습니다. 현금과 예비자금, 서울 전용 84㎡ 구입 조건은 A와 같습니다. B도 6억 원 집에 필요한 대출은 3억 9,074만 원에서 출발합니다.",
+      "spoken_text": "정책대출은 별도의 B가구로 비교하겠습니다. 부부합산 연소득 8천만 원, 순자산 2억 5천만 원, 기존 부채 0원입니다. 혼인 7년 이내의 무주택 신혼가구이며 생애최초입니다. 대출 접수 전 2년 안에 출산한 자녀가 있습니다. 현금과 예비자금, 서울 전용 84㎡ 구입 조건은 A와 같습니다. B도 6억 원 집에 필요한 대출은 3억 구천칠십사만 원에서 출발합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 183,
+          "spoken_start": 0,
+          "spoken_end": 183,
+          "kind": "literal"
+        },
+        {
+          "source_start": 183,
+          "source_end": 188,
+          "spoken_start": 183,
+          "spoken_end": 188,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사"
+        },
+        {
+          "source_start": 188,
+          "source_end": 200,
+          "spoken_start": 188,
+          "spoken_end": 200,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 183,
+          "source_end": 188,
+          "spoken_start": 183,
+          "spoken_end": 188,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          33,
+          38
+        ],
+        [
+          44,
+          52
+        ],
+        [
+          60,
+          62
+        ],
+        [
+          70,
+          72
+        ],
+        [
+          105,
+          107
+        ],
+        [
+          141,
+          144
+        ],
+        [
+          164,
+          168
+        ],
+        [
+          180,
+          191
+        ],
+        [
+          183,
+          188
+        ]
+      ],
+      "source_hangul_count": 125,
+      "spoken_hangul_count": 130,
+      "beats": [
+        {
+          "anchor": "B가구로 비교",
+          "action": "A의 소득 심사판을 접고 같은 현금 막대만 B로 넘긴다.",
+          "source_start": 10,
+          "source_end": 17,
+          "spoken_start": 10,
+          "spoken_end": 17
+        },
+        {
+          "anchor": "부부합산 연소득 8천만 원",
+          "action": "B의 소득·신혼·생애최초·출산 조건을 순서대로 표시한다.",
+          "source_start": 24,
+          "source_end": 38,
+          "spoken_start": 24,
+          "spoken_end": 38
+        },
+        {
+          "anchor": "3억 9,074만 원",
+          "action": "필요대출 눈금을 고정해 세 상품 비교의 출발선으로 삼는다.",
+          "source_start": 180,
+          "source_end": 191,
+          "spoken_start": 180,
+          "spoken_end": 191
+        }
+      ],
+      "sentence_count": 6,
+      "meaning_plan": [
+        {
+          "text": "정책대출은 별도의 B가구로 비교하겠습니다.",
+          "display_lines": [
+            "정책대출은 별도의 B가구로 비교하겠습니다."
+          ],
+          "source_start": 0,
+          "source_end": 23,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "부부합산 연소득 8천만 원, 순자산 2억 5천만 원, 기존 부채 0원입니다.",
+          "display_lines": [
+            "부부합산 연소득 8천만 원,",
+            "순자산 2억 5천만 원, 기존 부채 0원입니다."
+          ],
+          "source_start": 24,
+          "source_end": 66,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "혼인 7년 이내의 무주택 신혼가구이며 생애최초입니다.",
+          "display_lines": [
+            "혼인 7년 이내의 무주택 신혼가구이며 생애최초입니다."
+          ],
+          "source_start": 67,
+          "source_end": 96,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "대출 접수 전 2년 안에 출산한 자녀가 있습니다.",
+          "display_lines": [
+            "대출 접수 전 2년 안에 출산한 자녀가 있습니다."
+          ],
+          "source_start": 97,
+          "source_end": 124,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "현금과 예비자금, 서울 전용 84㎡ 구입 조건은 A와 같습니다.",
+          "display_lines": [
+            "현금과 예비자금, 서울 전용 84㎡ 구입 조건은 A와 같습니다."
+          ],
+          "source_start": 125,
+          "source_end": 160,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "B도 6억 원 집에 필요한 대출은 3억 9,074만 원에서 출발합니다.",
+          "display_lines": [
+            "B도 6억 원 집에 필요한 대출은",
+            "3억 9,074만 원에서 출발합니다."
+          ],
+          "source_start": 161,
+          "source_end": 200,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R019",
+      "paragraph": 24,
+      "chapter": 6,
+      "title": "디딤돌은 현금 7,074만 원 추가",
+      "text": "신혼가구 디딤돌은 합산소득 8,500만 원 이하, 순자산 5억 1,100만 원 이하를 확인합니다. 대상 주택은 6억 원 이하, 이 서울 사례의 전용면적은 85㎡ 이하입니다. B의 상품 한도는 3억 2천만 원입니다. 필요한 대출 3억 9,074만 원과 비교하면 현금 7,074만 원을 더 마련해야 합니다. 가구와 주택이 대상에 들어온 다음에는 상품 한도로 자금표를 맞춥니다.",
+      "spoken_text": "신혼가구 디딤돌은 합산소득 팔천오백만 원 이하, 순자산 5억 천백만 원 이하를 확인합니다. 대상 주택은 6억 원 이하, 이 서울 사례의 전용면적은 85㎡ 이하입니다. B의 상품 한도는 3억 2천만 원입니다. 필요한 대출 3억 구천칠십사만 원과 비교하면 현금 칠천칠십사만 원을 더 마련해야 합니다. 가구와 주택이 대상에 들어온 다음에는 상품 한도로 자금표를 맞춥니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 15,
+          "spoken_start": 0,
+          "spoken_end": 15,
+          "kind": "literal"
+        },
+        {
+          "source_start": 15,
+          "source_end": 20,
+          "spoken_start": 15,
+          "spoken_end": 19,
+          "kind": "pronunciation",
+          "original": "8,500",
+          "spoken": "팔천오백"
+        },
+        {
+          "source_start": 20,
+          "source_end": 35,
+          "spoken_start": 19,
+          "spoken_end": 34,
+          "kind": "literal"
+        },
+        {
+          "source_start": 35,
+          "source_end": 40,
+          "spoken_start": 34,
+          "spoken_end": 36,
+          "kind": "pronunciation",
+          "original": "1,100",
+          "spoken": "천백"
+        },
+        {
+          "source_start": 40,
+          "source_end": 130,
+          "spoken_start": 36,
+          "spoken_end": 126,
+          "kind": "literal"
+        },
+        {
+          "source_start": 130,
+          "source_end": 135,
+          "spoken_start": 126,
+          "spoken_end": 131,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사"
+        },
+        {
+          "source_start": 135,
+          "source_end": 148,
+          "spoken_start": 131,
+          "spoken_end": 144,
+          "kind": "literal"
+        },
+        {
+          "source_start": 148,
+          "source_end": 153,
+          "spoken_start": 144,
+          "spoken_end": 149,
+          "kind": "pronunciation",
+          "original": "7,074",
+          "spoken": "칠천칠십사"
+        },
+        {
+          "source_start": 153,
+          "source_end": 208,
+          "spoken_start": 149,
+          "spoken_end": 204,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 15,
+          "source_end": 20,
+          "spoken_start": 15,
+          "spoken_end": 19,
+          "kind": "pronunciation",
+          "original": "8,500",
+          "spoken": "팔천오백",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 35,
+          "source_end": 40,
+          "spoken_start": 34,
+          "spoken_end": 36,
+          "kind": "pronunciation",
+          "original": "1,100",
+          "spoken": "천백",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 130,
+          "source_end": 135,
+          "spoken_start": 126,
+          "spoken_end": 131,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 148,
+          "source_end": 153,
+          "spoken_start": 144,
+          "spoken_end": 149,
+          "kind": "pronunciation",
+          "original": "7,074",
+          "spoken": "칠천칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          15,
+          20
+        ],
+        [
+          15,
+          23
+        ],
+        [
+          32,
+          43
+        ],
+        [
+          35,
+          40
+        ],
+        [
+          62,
+          66
+        ],
+        [
+          86,
+          89
+        ],
+        [
+          107,
+          115
+        ],
+        [
+          127,
+          138
+        ],
+        [
+          130,
+          135
+        ],
+        [
+          148,
+          153
+        ],
+        [
+          148,
+          156
+        ]
+      ],
+      "source_hangul_count": 123,
+      "spoken_hangul_count": 139,
+      "beats": [
+        {
+          "anchor": "합산소득 8,500만 원 이하",
+          "action": "원문 신혼 행에서 B의 소득·자산·주택 조건을 하나씩 대조한다.",
+          "source_start": 10,
+          "source_end": 26,
+          "spoken_start": 10,
+          "spoken_end": 25
+        },
+        {
+          "anchor": "3억 2천만 원",
+          "action": "상품 대출 막대를 필요대출 눈금 아래에서 멈춘다.",
+          "source_start": 107,
+          "source_end": 115,
+          "spoken_start": 103,
+          "spoken_end": 111
+        },
+        {
+          "anchor": "7,074만 원",
+          "action": "필요대출과 상품 한도의 차이를 추가 현금으로 표시한다.",
+          "source_start": 148,
+          "source_end": 156,
+          "spoken_start": 144,
+          "spoken_end": 152
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "신혼가구 디딤돌은 합산소득 8,500만 원 이하, 순자산 5억 1,100만 원 이하를 확인합니다.",
+          "display_lines": [
+            "신혼가구 디딤돌은 합산소득 8,500만 원 이하,",
+            "순자산 5억 1,100만 원 이하를 확인합니다."
+          ],
+          "source_start": 0,
+          "source_end": 54,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "대상 주택은 6억 원 이하, 이 서울 사례의 전용면적은 85㎡ 이하입니다.",
+          "display_lines": [
+            "대상 주택은 6억 원 이하,",
+            "이 서울 사례의 전용면적은 85㎡ 이하입니다."
+          ],
+          "source_start": 55,
+          "source_end": 96,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "B의 상품 한도는 3억 2천만 원입니다.",
+          "display_lines": [
+            "B의 상품 한도는 3억 2천만 원입니다."
+          ],
+          "source_start": 97,
+          "source_end": 119,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "필요한 대출 3억 9,074만 원과 비교하면 현금 7,074만 원을 더 마련해야 합니다.",
+          "display_lines": [
+            "필요한 대출 3억 9,074만 원과 비교하면",
+            "현금 7,074만 원을 더 마련해야 합니다."
+          ],
+          "source_start": 120,
+          "source_end": 169,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "가구와 주택이 대상에 들어온 다음에는 상품 한도로 자금표를 맞춥니다.",
+          "display_lines": [
+            "가구와 주택이 대상에 들어온 다음에는",
+            "상품 한도로 자금표를 맞춥니다."
+          ],
+          "source_start": 170,
+          "source_end": 208,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R020",
+      "paragraph": 25,
+      "chapter": 6,
+      "title": "보금자리론 한도 4억 2천만 원",
+      "text": "생애최초 보금자리론의 상품 한도는 4억 2천만 원입니다. B는 부부합산 소득 8천만 원으로 신혼 소득 기준 안에서 신청합니다. 주택은 시세와 감정가, 실제 매매가 중 하나라도 6억 원을 넘는지 확인합니다. 임대차 없는 아파트는 보금자리론 자체 기준에서 방수공제가 0입니다. 이 조건에서 필요한 대출 3억 9,074만 원을 한도 안에서 검토할 수 있습니다. 상품 한도와 함께 DTI와 신용 등 실행 조건을 확인합니다.",
+      "spoken_text": "생애최초 보금자리론의 상품 한도는 4억 2천만 원입니다. B는 부부합산 소득 8천만 원으로 신혼 소득 기준 안에서 신청합니다. 주택은 시세와 감정가, 실제 매매가 중 하나라도 6억 원을 넘는지 확인합니다. 임대차 없는 아파트는 보금자리론 자체 기준에서 방수공제가 0입니다. 이 조건에서 필요한 대출 3억 구천칠십사만 원을 한도 안에서 검토할 수 있습니다. 상품 한도와 함께 디 티 아이와 신용 등 실행 조건을 확인합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 170,
+          "spoken_start": 0,
+          "spoken_end": 170,
+          "kind": "literal"
+        },
+        {
+          "source_start": 170,
+          "source_end": 175,
+          "spoken_start": 170,
+          "spoken_end": 175,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사"
+        },
+        {
+          "source_start": 175,
+          "source_end": 209,
+          "spoken_start": 175,
+          "spoken_end": 209,
+          "kind": "literal"
+        },
+        {
+          "source_start": 209,
+          "source_end": 212,
+          "spoken_start": 209,
+          "spoken_end": 215,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이"
+        },
+        {
+          "source_start": 212,
+          "source_end": 232,
+          "spoken_start": 215,
+          "spoken_end": 235,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 170,
+          "source_end": 175,
+          "spoken_start": 170,
+          "spoken_end": 175,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 209,
+          "source_end": 212,
+          "spoken_start": 209,
+          "spoken_end": 215,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이",
+          "reason": "약어 명료 발음"
+        }
+      ],
+      "protected_ranges": [
+        [
+          19,
+          27
+        ],
+        [
+          43,
+          48
+        ],
+        [
+          98,
+          102
+        ],
+        [
+          147,
+          148
+        ],
+        [
+          167,
+          178
+        ],
+        [
+          170,
+          175
+        ],
+        [
+          209,
+          212
+        ]
+      ],
+      "source_hangul_count": 154,
+      "spoken_hangul_count": 163,
+      "beats": [
+        {
+          "anchor": "4억 2천만 원",
+          "action": "디딤돌 비교를 축약하고 보금자리론 한도 막대를 필요대출 선 위로 늘린다.",
+          "source_start": 19,
+          "source_end": 27,
+          "spoken_start": 19,
+          "spoken_end": 27
+        },
+        {
+          "anchor": "시세와 감정가, 실제 매매가",
+          "action": "6억 원 기준선에 세 평가값 확인 지점을 순서대로 연결한다.",
+          "source_start": 75,
+          "source_end": 90,
+          "spoken_start": 75,
+          "spoken_end": 90
+        },
+        {
+          "anchor": "3억 9,074만 원",
+          "action": "필요한 금액만 구입자금에 채우고 최대 한도와 구분한다.",
+          "source_start": 167,
+          "source_end": 178,
+          "spoken_start": 167,
+          "spoken_end": 178
+        }
+      ],
+      "sentence_count": 6,
+      "meaning_plan": [
+        {
+          "text": "생애최초 보금자리론의 상품 한도는 4억 2천만 원입니다.",
+          "display_lines": [
+            "생애최초 보금자리론의 상품 한도는 4억 2천만 원입니다."
+          ],
+          "source_start": 0,
+          "source_end": 31,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "B는 부부합산 소득 8천만 원으로 신혼 소득 기준 안에서 신청합니다.",
+          "display_lines": [
+            "B는 부부합산 소득 8천만 원으로",
+            "신혼 소득 기준 안에서 신청합니다."
+          ],
+          "source_start": 32,
+          "source_end": 70,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "주택은 시세와 감정가, 실제 매매가 중 하나라도 6억 원을 넘는지 확인합니다.",
+          "display_lines": [
+            "주택은 시세와 감정가,",
+            "실제 매매가 중 하나라도 6억 원을 넘는지 확인합니다."
+          ],
+          "source_start": 71,
+          "source_end": 114,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "임대차 없는 아파트는 보금자리론 자체 기준에서 방수공제가 0입니다.",
+          "display_lines": [
+            "임대차 없는 아파트는 보금자리론",
+            "자체 기준에서 방수공제가 0입니다."
+          ],
+          "source_start": 115,
+          "source_end": 152,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이 조건에서 필요한 대출 3억 9,074만 원을 한도 안에서 검토할 수 있습니다.",
+          "display_lines": [
+            "이 조건에서 필요한 대출 3억 9,074만 원을",
+            "한도 안에서 검토할 수 있습니다."
+          ],
+          "source_start": 153,
+          "source_end": 198,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "상품 한도와 함께 DTI와 신용 등 실행 조건을 확인합니다.",
+          "display_lines": [
+            "상품 한도와 함께 DTI와 신용 등 실행 조건을 확인합니다."
+          ],
+          "source_start": 199,
+          "source_end": 232,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R021",
+      "paragraph": 26,
+      "chapter": 6,
+      "title": "필요대출과 세 상품 한도 비교",
+      "text": "B의 6억 원 집에서 필요한 대출은 3억 9,074만 원입니다. 신혼 디딤돌의 상품 한도는 3억 2천만 원, 생애최초 보금자리론은 4억 2천만 원입니다. 신생아 특례의 상품 한도는 4억 원입니다. 세 상품의 한도를 필요한 대출과 나란히 비교합니다. 이어서 B의 출산 조건을 넣어 신생아 특례의 자금과 월 상환액을 계산하겠습니다.",
+      "spoken_text": "B의 6억 원 집에서 필요한 대출은 3억 구천칠십사만 원입니다. 신혼 디딤돌의 상품 한도는 3억 2천만 원, 생애최초 보금자리론은 4억 2천만 원입니다. 신생아 특례의 상품 한도는 4억 원입니다. 세 상품의 한도를 필요한 대출과 나란히 비교합니다. 이어서 B의 출산 조건을 넣어 신생아 특례의 자금과 월 상환액을 계산하겠습니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 23,
+          "spoken_start": 0,
+          "spoken_end": 23,
+          "kind": "literal"
+        },
+        {
+          "source_start": 23,
+          "source_end": 28,
+          "spoken_start": 23,
+          "spoken_end": 28,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사"
+        },
+        {
+          "source_start": 28,
+          "source_end": 183,
+          "spoken_start": 28,
+          "spoken_end": 183,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 23,
+          "source_end": 28,
+          "spoken_start": 23,
+          "spoken_end": 28,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          3,
+          7
+        ],
+        [
+          20,
+          31
+        ],
+        [
+          23,
+          28
+        ],
+        [
+          51,
+          59
+        ],
+        [
+          73,
+          81
+        ],
+        [
+          101,
+          105
+        ]
+      ],
+      "source_hangul_count": 119,
+      "spoken_hangul_count": 124,
+      "beats": [
+        {
+          "anchor": "3억 9,074만 원",
+          "action": "B의 필요대출 기준선만 먼저 생성한다. 세 상품의 한도와 통과 표시는 아직 숨긴다.",
+          "source_start": 20,
+          "source_end": 31,
+          "spoken_start": 20,
+          "spoken_end": 31
+        },
+        {
+          "anchor": "상품 한도는 3억 2천만 원",
+          "action": "디딤돌 한도 막대를 그려 필요대출 선 아래에서 멈춘다. 부족한 현금 구간이 드러나게 한다.",
+          "source_start": 44,
+          "source_end": 59,
+          "spoken_start": 44,
+          "spoken_end": 59
+        },
+        {
+          "anchor": "생애최초 보금자리론은 4억 2천만 원",
+          "action": "보금자리론 막대를 새로 그려 필요대출 선과 비교한다. 앞 상품은 낮은 대비로 축약한다.",
+          "source_start": 61,
+          "source_end": 81,
+          "spoken_start": 61,
+          "spoken_end": 81
+        },
+        {
+          "anchor": "상품 한도는 4억 원",
+          "action": "신생아 상품 막대를 추가한다. 상품상한의 비교로 표시하고 보증·DTI·담보 심사에 대한 승인 표시는 넣지 않는다.",
+          "source_start": 94,
+          "source_end": 105,
+          "spoken_start": 94,
+          "spoken_end": 105
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "B의 6억 원 집에서 필요한 대출은 3억 9,074만 원입니다.",
+          "display_lines": [
+            "B의 6억 원 집에서 필요한 대출은 3억 9,074만 원입니다."
+          ],
+          "source_start": 0,
+          "source_end": 35,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "신혼 디딤돌의 상품 한도는 3억 2천만 원, 생애최초 보금자리론은 4억 2천만 원입니다.",
+          "display_lines": [
+            "신혼 디딤돌의 상품 한도는 3억 2천만 원,",
+            "생애최초 보금자리론은 4억 2천만 원입니다."
+          ],
+          "source_start": 36,
+          "source_end": 85,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "신생아 특례의 상품 한도는 4억 원입니다.",
+          "display_lines": [
+            "신생아 특례의 상품 한도는 4억 원입니다."
+          ],
+          "source_start": 86,
+          "source_end": 109,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "세 상품의 한도를 필요한 대출과 나란히 비교합니다.",
+          "display_lines": [
+            "세 상품의 한도를 필요한 대출과 나란히 비교합니다."
+          ],
+          "source_start": 110,
+          "source_end": 138,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이어서 B의 출산 조건을 넣어 신생아 특례의 자금과 월 상환액을 계산하겠습니다.",
+          "display_lines": [
+            "이어서 B의 출산 조건을 넣어 신생아",
+            "특례의 자금과 월 상환액을 계산하겠습니다."
+          ],
+          "source_start": 139,
+          "source_end": 183,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R022",
+      "paragraph": 27,
+      "chapter": 6,
+      "title": "정책대출도 입주 일정 확인",
+      "text": "정책대출은 DSR 규제의 예외지만 DTI와 신용·보증은 심사합니다. 디딤돌과 B의 생애최초 보금자리론, 신생아 특례의 DTI는 60%입니다. B는 상품 선택에 맞춰 입주 일정도 준비합니다. 현행 신규 신청 디딤돌과 신생아 특례는 실행 후 1개월 안에 전입하고, 전입일부터 2년 실거주합니다. 수도권 보금자리론은 실행 후 6개월 안에 전입하고 입증서류를 제출합니다.",
+      "spoken_text": "정책대출은 디 에스 알 규제의 예외지만 디 티 아이와 신용·보증은 심사합니다. 디딤돌과 B의 생애최초 보금자리론, 신생아 특례의 디 티 아이는 60%입니다. B는 상품 선택에 맞춰 입주 일정도 준비합니다. 현행 신규 신청 디딤돌과 신생아 특례는 실행 후 1개월 안에 전입하고, 전입일부터 2년 실거주합니다. 수도권 보금자리론은 실행 후 6개월 안에 전입하고 입증서류를 제출합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 6,
+          "spoken_start": 0,
+          "spoken_end": 6,
+          "kind": "literal"
+        },
+        {
+          "source_start": 6,
+          "source_end": 9,
+          "spoken_start": 6,
+          "spoken_end": 12,
+          "kind": "pronunciation",
+          "original": "DSR",
+          "spoken": "디 에스 알"
+        },
+        {
+          "source_start": 9,
+          "source_end": 19,
+          "spoken_start": 12,
+          "spoken_end": 22,
+          "kind": "literal"
+        },
+        {
+          "source_start": 19,
+          "source_end": 22,
+          "spoken_start": 22,
+          "spoken_end": 28,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이"
+        },
+        {
+          "source_start": 22,
+          "source_end": 66,
+          "spoken_start": 28,
+          "spoken_end": 72,
+          "kind": "literal"
+        },
+        {
+          "source_start": 66,
+          "source_end": 69,
+          "spoken_start": 72,
+          "spoken_end": 78,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이"
+        },
+        {
+          "source_start": 69,
+          "source_end": 203,
+          "spoken_start": 78,
+          "spoken_end": 212,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 6,
+          "source_end": 9,
+          "spoken_start": 6,
+          "spoken_end": 12,
+          "kind": "pronunciation",
+          "original": "DSR",
+          "spoken": "디 에스 알",
+          "reason": "약어 명료 발음"
+        },
+        {
+          "source_start": 19,
+          "source_end": 22,
+          "spoken_start": 22,
+          "spoken_end": 28,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이",
+          "reason": "약어 명료 발음"
+        },
+        {
+          "source_start": 66,
+          "source_end": 69,
+          "spoken_start": 72,
+          "spoken_end": 78,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이",
+          "reason": "약어 명료 발음"
+        }
+      ],
+      "protected_ranges": [
+        [
+          6,
+          9
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          66,
+          69
+        ],
+        [
+          71,
+          74
+        ],
+        [
+          133,
+          136
+        ],
+        [
+          152,
+          154
+        ],
+        [
+          179,
+          182
+        ]
+      ],
+      "source_hangul_count": 134,
+      "spoken_hangul_count": 146,
+      "beats": [
+        {
+          "anchor": "DTI는 60%",
+          "action": "세 상품의 해당 DTI 행을 차례로 확인해 같은 기준선에 둔다.",
+          "source_start": 66,
+          "source_end": 74,
+          "spoken_start": 72,
+          "spoken_end": 83
+        },
+        {
+          "anchor": "1개월 안에 전입",
+          "action": "실행일에서 디딤돌·신생아 전입 마감으로 시간축을 잇는다.",
+          "source_start": 133,
+          "source_end": 142,
+          "spoken_start": 142,
+          "spoken_end": 151
+        },
+        {
+          "anchor": "전입일부터 2년",
+          "action": "실거주 기간의 시작점을 전입일에 놓는다.",
+          "source_start": 146,
+          "source_end": 154,
+          "spoken_start": 155,
+          "spoken_end": 163
+        },
+        {
+          "anchor": "6개월 안에 전입",
+          "action": "보금자리론 전입·서류 마감을 시간축 아래에 추가한다.",
+          "source_start": 179,
+          "source_end": 188,
+          "spoken_start": 188,
+          "spoken_end": 197
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "정책대출은 DSR 규제의 예외지만 DTI와 신용·보증은 심사합니다.",
+          "display_lines": [
+            "정책대출은 DSR 규제의 예외지만",
+            "DTI와 신용·보증은 심사합니다."
+          ],
+          "source_start": 0,
+          "source_end": 37,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "디딤돌과 B의 생애최초 보금자리론, 신생아 특례의 DTI는 60%입니다.",
+          "display_lines": [
+            "디딤돌과 B의 생애최초 보금자리론,",
+            "신생아 특례의 DTI는 60%입니다."
+          ],
+          "source_start": 38,
+          "source_end": 78,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "B는 상품 선택에 맞춰 입주 일정도 준비합니다.",
+          "display_lines": [
+            "B는 상품 선택에 맞춰 입주 일정도 준비합니다."
+          ],
+          "source_start": 79,
+          "source_end": 105,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "현행 신규 신청 디딤돌과 신생아 특례는 실행 후 1개월 안에 전입하고, 전입일부터 2년 실거주합니다.",
+          "display_lines": [
+            "현행 신규 신청 디딤돌과 신생아 특례는 실행 후 1개월 안에 전입하고,",
+            "전입일부터 2년 실거주합니다."
+          ],
+          "source_start": 106,
+          "source_end": 162,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "수도권 보금자리론은 실행 후 6개월 안에 전입하고 입증서류를 제출합니다.",
+          "display_lines": [
+            "수도권 보금자리론은 실행 후 6개월",
+            "안에 전입하고 입증서류를 제출합니다."
+          ],
+          "source_start": 163,
+          "source_end": 203,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R023",
+      "paragraph": 28,
+      "chapter": 7,
+      "title": "B는 신생아 소득·자산 기준 충족",
+      "text": "B는 대출 접수 전 2년 안에 아이를 낳은 가구입니다. 부부합산 소득 8천만 원과 순자산 2억 5천만 원으로 신생아 특례의 소득·자산 기준 안에 듭니다. 이 가구가 같은 6억 원 집을 살 때, 필요한 대출과 매달 갚는 돈을 이어서 계산하겠습니다.",
+      "spoken_text": "B는 대출 접수 전 2년 안에 아이를 낳은 가구입니다. 부부합산 소득 8천만 원과 순자산 2억 5천만 원으로 신생아 특례의 소득·자산 기준 안에 듭니다. 이 가구가 같은 6억 원 집을 살 때, 필요한 대출과 매달 갚는 돈을 이어서 계산하겠습니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 137,
+          "spoken_start": 0,
+          "spoken_end": 137,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [],
+      "protected_ranges": [
+        [
+          11,
+          13
+        ],
+        [
+          39,
+          44
+        ],
+        [
+          50,
+          58
+        ],
+        [
+          95,
+          99
+        ]
+      ],
+      "source_hangul_count": 89,
+      "spoken_hangul_count": 89,
+      "beats": [
+        {
+          "anchor": "접수 전 2년 안에 아이를 낳은",
+          "action": "B의 출산일을 접수일 기준 달력에 연결하고 해당 조건을 확인한다. 전체 출산·입양 자격표는 띄우지 않는다.",
+          "source_start": 6,
+          "source_end": 23,
+          "spoken_start": 6,
+          "spoken_end": 23
+        },
+        {
+          "anchor": "부부합산 소득 8천만 원",
+          "action": "B의 소득을 원문 소득 기준의 해당 행과 대조한다. 다른 소득구간은 숨긴다.",
+          "source_start": 31,
+          "source_end": 44,
+          "spoken_start": 31,
+          "spoken_end": 44
+        },
+        {
+          "anchor": "순자산 2억 5천만 원",
+          "action": "B의 자산을 해당 상한과 대조한다. 낭독에 없는 일반요건은 참고 사전에 보존한다.",
+          "source_start": 46,
+          "source_end": 58,
+          "spoken_start": 46,
+          "spoken_end": 58
+        },
+        {
+          "anchor": "같은 6억 원 집",
+          "action": "확인된 B 조건을 현재 6억 원 자금표로 넘긴다. 대출과 월 상환 답은 아직 숨긴다.",
+          "source_start": 92,
+          "source_end": 101,
+          "spoken_start": 92,
+          "spoken_end": 101
+        }
+      ],
+      "sentence_count": 3,
+      "meaning_plan": [
+        {
+          "text": "B는 대출 접수 전 2년 안에 아이를 낳은 가구입니다.",
+          "display_lines": [
+            "B는 대출 접수 전 2년 안에 아이를 낳은 가구입니다."
+          ],
+          "source_start": 0,
+          "source_end": 30,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "부부합산 소득 8천만 원과 순자산 2억 5천만 원으로 신생아 특례의 소득·자산 기준 안에 듭니다.",
+          "display_lines": [
+            "부부합산 소득 8천만 원과 순자산 2억 5천만 원으로",
+            "신생아 특례의 소득·자산 기준 안에 듭니다."
+          ],
+          "source_start": 31,
+          "source_end": 85,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이 가구가 같은 6억 원 집을 살 때, 필요한 대출과 매달 갚는 돈을 이어서 계산하겠습니다.",
+          "display_lines": [
+            "이 가구가 같은 6억 원 집을 살 때,",
+            "필요한 대출과 매달 갚는 돈을 이어서 계산하겠습니다."
+          ],
+          "source_start": 86,
+          "source_end": 137,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R024",
+      "paragraph": 29,
+      "chapter": 7,
+      "title": "6억 원의 필요대출은 상품 한도 안",
+      "text": "신생아 특례의 대상 주택은 9억 원 이하입니다. 서울 사례의 면적은 전용 85㎡ 이하, 상품 대출 한도는 4억 원입니다. B가 6억 원 집에서 보증 요건을 충족하고 가입 승인을 받아 공제를 보완하면, 필요한 3억 9,074만 원이 상품 한도 안에 들어옵니다. DTI 60%와 담보·신용 조건을 함께 확인합니다.",
+      "spoken_text": "신생아 특례의 대상 주택은 9억 원 이하입니다. 서울 사례의 면적은 전용 85㎡ 이하, 상품 대출 한도는 4억 원입니다. B가 6억 원 집에서 보증 요건을 충족하고 가입 승인을 받아 공제를 보완하면, 필요한 3억 구천칠십사만 원이 상품 한도 안에 들어옵니다. 디 티 아이 60%와 담보·신용 조건을 함께 확인합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 119,
+          "spoken_start": 0,
+          "spoken_end": 119,
+          "kind": "literal"
+        },
+        {
+          "source_start": 119,
+          "source_end": 124,
+          "spoken_start": 119,
+          "spoken_end": 124,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사"
+        },
+        {
+          "source_start": 124,
+          "source_end": 145,
+          "spoken_start": 124,
+          "spoken_end": 145,
+          "kind": "literal"
+        },
+        {
+          "source_start": 145,
+          "source_end": 148,
+          "spoken_start": 145,
+          "spoken_end": 151,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이"
+        },
+        {
+          "source_start": 148,
+          "source_end": 173,
+          "spoken_start": 151,
+          "spoken_end": 176,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 119,
+          "source_end": 124,
+          "spoken_start": 119,
+          "spoken_end": 124,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 145,
+          "source_end": 148,
+          "spoken_start": 145,
+          "spoken_end": 151,
+          "kind": "pronunciation",
+          "original": "DTI",
+          "spoken": "디 티 아이",
+          "reason": "약어 명료 발음"
+        }
+      ],
+      "protected_ranges": [
+        [
+          15,
+          19
+        ],
+        [
+          41,
+          44
+        ],
+        [
+          59,
+          63
+        ],
+        [
+          71,
+          75
+        ],
+        [
+          116,
+          127
+        ],
+        [
+          119,
+          124
+        ],
+        [
+          145,
+          148
+        ],
+        [
+          149,
+          152
+        ]
+      ],
+      "source_hangul_count": 104,
+      "spoken_hangul_count": 113,
+      "beats": [
+        {
+          "anchor": "대상 주택은 9억 원 이하",
+          "action": "상품의 주택가격 범위를 열고 현재 6억 원 매물을 놓는다.",
+          "source_start": 8,
+          "source_end": 22,
+          "spoken_start": 8,
+          "spoken_end": 22
+        },
+        {
+          "anchor": "대출 한도는 4억 원",
+          "action": "상품 한도 선을 필요대출 눈금 위에 표시한다.",
+          "source_start": 52,
+          "source_end": 63,
+          "spoken_start": 52,
+          "spoken_end": 63
+        },
+        {
+          "anchor": "3억 9,074만 원",
+          "action": "보증 승인 조건을 확인한 뒤 필요한 금액만 채워 자기자금과 합친다.",
+          "source_start": 116,
+          "source_end": 127,
+          "spoken_start": 116,
+          "spoken_end": 127
+        }
+      ],
+      "sentence_count": 4,
+      "meaning_plan": [
+        {
+          "text": "신생아 특례의 대상 주택은 9억 원 이하입니다.",
+          "display_lines": [
+            "신생아 특례의 대상 주택은 9억 원 이하입니다."
+          ],
+          "source_start": 0,
+          "source_end": 26,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "서울 사례의 면적은 전용 85㎡ 이하, 상품 대출 한도는 4억 원입니다.",
+          "display_lines": [
+            "서울 사례의 면적은 전용 85㎡ 이하,",
+            "상품 대출 한도는 4억 원입니다."
+          ],
+          "source_start": 27,
+          "source_end": 67,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "B가 6억 원 집에서 보증 요건을 충족하고 가입 승인을 받아 공제를 보완하면, 필요한 3억 9,074만 원이 상품 한도 안에 들어옵니다.",
+          "display_lines": [
+            "B가 6억 원 집에서 보증 요건을 충족하고 가입 승인을 받아 공제를",
+            "보완하면, 필요한 3억 9,074만 원이 상품 한도 안에 들어옵니다."
+          ],
+          "source_start": 68,
+          "source_end": 144,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "DTI 60%와 담보·신용 조건을 함께 확인합니다.",
+          "display_lines": [
+            "DTI 60%와 담보·신용 조건을 함께 확인합니다."
+          ],
+          "source_start": 145,
+          "source_end": 173,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R025",
+      "paragraph": 30,
+      "chapter": 7,
+      "title": "첫 5년은 월 162.6만 원",
+      "text": "B의 30년 대출은 기본 초기금리 2.9%에서 출발합니다. 필요한 3억 9,074만 원을 갚는 금액은 월 약 162.6만 원입니다. 이 기본 특례금리를 처음 5년간 적용합니다. B도 월 300만 원의 주거·저축 예산에서 상환 목표를 170만 원으로 정하면, 초기 상환액은 목표 안에 들어옵니다. 다음으로 특례기간이 끝난 뒤 남은 대출을 보겠습니다.",
+      "spoken_text": "B의 30년 대출은 기본 초기금리 이점구%에서 출발합니다. 필요한 3억 구천칠십사만 원을 갚는 금액은 월 약 백육십이점육만 원입니다. 이 기본 특례금리를 처음 5년간 적용합니다. B도 월 300만 원의 주거·저축 예산에서 상환 목표를 170만 원으로 정하면, 초기 상환액은 목표 안에 들어옵니다. 다음으로 특례기간이 끝난 뒤 남은 대출을 보겠습니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 19,
+          "spoken_start": 0,
+          "spoken_end": 19,
+          "kind": "literal"
+        },
+        {
+          "source_start": 19,
+          "source_end": 22,
+          "spoken_start": 19,
+          "spoken_end": 22,
+          "kind": "pronunciation",
+          "original": "2.9",
+          "spoken": "이점구"
+        },
+        {
+          "source_start": 22,
+          "source_end": 40,
+          "spoken_start": 22,
+          "spoken_end": 40,
+          "kind": "literal"
+        },
+        {
+          "source_start": 40,
+          "source_end": 45,
+          "spoken_start": 40,
+          "spoken_end": 45,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사"
+        },
+        {
+          "source_start": 45,
+          "source_end": 61,
+          "spoken_start": 45,
+          "spoken_end": 61,
+          "kind": "literal"
+        },
+        {
+          "source_start": 61,
+          "source_end": 66,
+          "spoken_start": 61,
+          "spoken_end": 67,
+          "kind": "pronunciation",
+          "original": "162.6",
+          "spoken": "백육십이점육"
+        },
+        {
+          "source_start": 66,
+          "source_end": 194,
+          "spoken_start": 67,
+          "spoken_end": 195,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 19,
+          "source_end": 22,
+          "spoken_start": 19,
+          "spoken_end": 22,
+          "kind": "pronunciation",
+          "original": "2.9",
+          "spoken": "이점구",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 40,
+          "source_end": 45,
+          "spoken_start": 40,
+          "spoken_end": 45,
+          "kind": "pronunciation",
+          "original": "9,074",
+          "spoken": "구천칠십사",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 61,
+          "source_end": 66,
+          "spoken_start": 61,
+          "spoken_end": 67,
+          "kind": "pronunciation",
+          "original": "162.6",
+          "spoken": "백육십이점육",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          3,
+          6
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          19,
+          23
+        ],
+        [
+          37,
+          48
+        ],
+        [
+          40,
+          45
+        ],
+        [
+          61,
+          66
+        ],
+        [
+          61,
+          69
+        ],
+        [
+          88,
+          90
+        ],
+        [
+          104,
+          110
+        ],
+        [
+          130,
+          136
+        ]
+      ],
+      "source_hangul_count": 116,
+      "spoken_hangul_count": 130,
+      "beats": [
+        {
+          "anchor": "기본 초기금리 2.9%",
+          "action": "30년 시간축의 첫 구간에만 금리를 얹는다.",
+          "source_start": 11,
+          "source_end": 23,
+          "spoken_start": 11,
+          "spoken_end": 23
+        },
+        {
+          "anchor": "월 약 162.6만 원",
+          "action": "170만 원 목표선 아래에서 초기 납부 막대를 세운다.",
+          "source_start": 57,
+          "source_end": 69,
+          "spoken_start": 57,
+          "spoken_end": 70
+        },
+        {
+          "anchor": "처음 5년간",
+          "action": "첫 5년 구간만 채우고 이후는 아직 열지 않는다.",
+          "source_start": 85,
+          "source_end": 91,
+          "spoken_start": 86,
+          "spoken_end": 92
+        }
+      ],
+      "sentence_count": 5,
+      "meaning_plan": [
+        {
+          "text": "B의 30년 대출은 기본 초기금리 2.9%에서 출발합니다.",
+          "display_lines": [
+            "B의 30년 대출은 기본 초기금리 2.9%에서 출발합니다."
+          ],
+          "source_start": 0,
+          "source_end": 32,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "필요한 3억 9,074만 원을 갚는 금액은 월 약 162.6만 원입니다.",
+          "display_lines": [
+            "필요한 3억 9,074만 원을 갚는 금액은",
+            "월 약 162.6만 원입니다."
+          ],
+          "source_start": 33,
+          "source_end": 73,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이 기본 특례금리를 처음 5년간 적용합니다.",
+          "display_lines": [
+            "이 기본 특례금리를 처음 5년간 적용합니다."
+          ],
+          "source_start": 74,
+          "source_end": 98,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "B도 월 300만 원의 주거·저축 예산에서 상환 목표를 170만 원으로 정하면, 초기 상환액은 목표 안에 들어옵니다.",
+          "display_lines": [
+            "B도 월 300만 원의 주거·저축 예산에서 상환 목표를",
+            "170만 원으로 정하면, 초기 상환액은 목표 안에 들어옵니다."
+          ],
+          "source_start": 99,
+          "source_end": 164,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "다음으로 특례기간이 끝난 뒤 남은 대출을 보겠습니다.",
+          "display_lines": [
+            "다음으로 특례기간이 끝난 뒤 남은 대출을 보겠습니다."
+          ],
+          "source_start": 165,
+          "source_end": 194,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R026",
+      "paragraph": 31,
+      "chapter": 7,
+      "title": "남은 300개월은 월 176.4만 원",
+      "text": "신규 합산소득 8,500만 원 이하인 B는 접수일 기준 산식으로 이후 금리를 정합니다. 생애최초 신혼 디딤돌의 최저기본금리와 신생아 최저특례금리의 차이를 더합니다. 2026년 10월 19일 표의 가산폭은 0.75%포인트입니다. 이를 적용한 기본금리는 3.65%입니다. 60회 상환 뒤 잔액 약 3억 4,676만 원을 남은 300개월 동안 갚으면 월 약 176.4만 원입니다. B는 첫 5년과 그 뒤의 부담을 함께 비교합니다.",
+      "spoken_text": "신규 합산소득 팔천오백만 원 이하인 B는 접수일 기준 산식으로 이후 금리를 정합니다. 생애최초 신혼 디딤돌의 최저기본금리와 신생아 최저특례금리의 차이를 더합니다. 2026년 10월 19일 표의 가산폭은 영점칠오%포인트입니다. 이를 적용한 기본금리는 삼점육오%입니다. 60회 상환 뒤 잔액 약 3억 사천육백칠십육만 원을 남은 300개월 동안 갚으면 월 약 백칠십육점사만 원입니다. B는 첫 5년과 그 뒤의 부담을 함께 비교합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 8,
+          "spoken_start": 0,
+          "spoken_end": 8,
+          "kind": "literal"
+        },
+        {
+          "source_start": 8,
+          "source_end": 13,
+          "spoken_start": 8,
+          "spoken_end": 12,
+          "kind": "pronunciation",
+          "original": "8,500",
+          "spoken": "팔천오백"
+        },
+        {
+          "source_start": 13,
+          "source_end": 114,
+          "spoken_start": 12,
+          "spoken_end": 113,
+          "kind": "literal"
+        },
+        {
+          "source_start": 114,
+          "source_end": 118,
+          "spoken_start": 113,
+          "spoken_end": 117,
+          "kind": "pronunciation",
+          "original": "0.75",
+          "spoken": "영점칠오"
+        },
+        {
+          "source_start": 118,
+          "source_end": 140,
+          "spoken_start": 117,
+          "spoken_end": 139,
+          "kind": "literal"
+        },
+        {
+          "source_start": 140,
+          "source_end": 144,
+          "spoken_start": 139,
+          "spoken_end": 143,
+          "kind": "pronunciation",
+          "original": "3.65",
+          "spoken": "삼점육오"
+        },
+        {
+          "source_start": 144,
+          "source_end": 167,
+          "spoken_start": 143,
+          "spoken_end": 166,
+          "kind": "literal"
+        },
+        {
+          "source_start": 167,
+          "source_end": 172,
+          "spoken_start": 166,
+          "spoken_end": 173,
+          "kind": "pronunciation",
+          "original": "4,676",
+          "spoken": "사천육백칠십육"
+        },
+        {
+          "source_start": 172,
+          "source_end": 197,
+          "spoken_start": 173,
+          "spoken_end": 198,
+          "kind": "literal"
+        },
+        {
+          "source_start": 197,
+          "source_end": 202,
+          "spoken_start": 198,
+          "spoken_end": 204,
+          "kind": "pronunciation",
+          "original": "176.4",
+          "spoken": "백칠십육점사"
+        },
+        {
+          "source_start": 202,
+          "source_end": 237,
+          "spoken_start": 204,
+          "spoken_end": 239,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 8,
+          "source_end": 13,
+          "spoken_start": 8,
+          "spoken_end": 12,
+          "kind": "pronunciation",
+          "original": "8,500",
+          "spoken": "팔천오백",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 114,
+          "source_end": 118,
+          "spoken_start": 113,
+          "spoken_end": 117,
+          "kind": "pronunciation",
+          "original": "0.75",
+          "spoken": "영점칠오",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 140,
+          "source_end": 144,
+          "spoken_start": 139,
+          "spoken_end": 143,
+          "kind": "pronunciation",
+          "original": "3.65",
+          "spoken": "삼점육오",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 167,
+          "source_end": 172,
+          "spoken_start": 166,
+          "spoken_end": 173,
+          "kind": "pronunciation",
+          "original": "4,676",
+          "spoken": "사천육백칠십육",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 197,
+          "source_end": 202,
+          "spoken_start": 198,
+          "spoken_end": 204,
+          "kind": "pronunciation",
+          "original": "176.4",
+          "spoken": "백칠십육점사",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          8,
+          13
+        ],
+        [
+          8,
+          16
+        ],
+        [
+          92,
+          97
+        ],
+        [
+          92,
+          105
+        ],
+        [
+          98,
+          101
+        ],
+        [
+          102,
+          105
+        ],
+        [
+          114,
+          118
+        ],
+        [
+          114,
+          122
+        ],
+        [
+          140,
+          144
+        ],
+        [
+          140,
+          145
+        ],
+        [
+          150,
+          153
+        ],
+        [
+          164,
+          175
+        ],
+        [
+          167,
+          172
+        ],
+        [
+          180,
+          185
+        ],
+        [
+          197,
+          202
+        ],
+        [
+          197,
+          205
+        ],
+        [
+          215,
+          217
+        ]
+      ],
+      "source_hangul_count": 136,
+      "spoken_hangul_count": 161,
+      "beats": [
+        {
+          "anchor": "0.75%포인트",
+          "action": "접수일 기준 산식의 가산폭을 초기금리에 더한다.",
+          "source_start": 114,
+          "source_end": 122,
+          "spoken_start": 113,
+          "spoken_end": 121
+        },
+        {
+          "anchor": "3.65%",
+          "action": "5년 이후 금리 구간을 열어 표시한다.",
+          "source_start": 140,
+          "source_end": 145,
+          "spoken_start": 139,
+          "spoken_end": 144
+        },
+        {
+          "anchor": "잔액 약 3억 4,676만 원",
+          "action": "60회 상환 경과에 따라 원금 막대를 해당 잔액으로 줄인다.",
+          "source_start": 159,
+          "source_end": 175,
+          "spoken_start": 158,
+          "spoken_end": 176
+        },
+        {
+          "anchor": "월 약 176.4만 원",
+          "action": "잔액을 남은 300개월 경로에 보내 월액을 만들고 170만 원 선과 비교한다.",
+          "source_start": 193,
+          "source_end": 205,
+          "spoken_start": 194,
+          "spoken_end": 207
+        }
+      ],
+      "sentence_count": 6,
+      "meaning_plan": [
+        {
+          "text": "신규 합산소득 8,500만 원 이하인 B는 접수일 기준 산식으로 이후 금리를 정합니다.",
+          "display_lines": [
+            "신규 합산소득 8,500만 원 이하인 B는",
+            "접수일 기준 산식으로 이후 금리를 정합니다."
+          ],
+          "source_start": 0,
+          "source_end": 48,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "생애최초 신혼 디딤돌의 최저기본금리와 신생아 최저특례금리의 차이를 더합니다.",
+          "display_lines": [
+            "생애최초 신혼 디딤돌의 최저기본금리와",
+            "신생아 최저특례금리의 차이를 더합니다."
+          ],
+          "source_start": 49,
+          "source_end": 91,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "2026년 10월 19일 표의 가산폭은 0.75%포인트입니다.",
+          "display_lines": [
+            "2026년 10월 19일 표의 가산폭은 0.75%포인트입니다."
+          ],
+          "source_start": 92,
+          "source_end": 126,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이를 적용한 기본금리는 3.65%입니다.",
+          "display_lines": [
+            "이를 적용한 기본금리는 3.65%입니다."
+          ],
+          "source_start": 127,
+          "source_end": 149,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "60회 상환 뒤 잔액 약 3억 4,676만 원을 남은 300개월 동안 갚으면 월 약 176.4만 원입니다.",
+          "display_lines": [
+            "60회 상환 뒤 잔액 약 3억 4,676만 원을",
+            "남은 300개월 동안 갚으면 월 약 176.4만 원입니다."
+          ],
+          "source_start": 150,
+          "source_end": 209,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "B는 첫 5년과 그 뒤의 부담을 함께 비교합니다.",
+          "display_lines": [
+            "B는 첫 5년과 그 뒤의 부담을 함께 비교합니다."
+          ],
+          "source_start": 210,
+          "source_end": 237,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R027",
+      "paragraph": 32,
+      "chapter": 7,
+      "title": "9억 원 집도 대출 상한은 4억 원",
+      "text": "신생아 특례로 9억 원 집을 사는 경우입니다. 이 사례의 대출 상한은 4억 원입니다. 담보 한도와 상품 한도를 비교하면 상품 한도가 더 작습니다. 대출로 채우고 남은 집값에 예비자금과 거래비용을 더해, 필요한 현금을 계산하겠습니다.",
+      "spoken_text": "신생아 특례로 9억 원 집을 사는 경우입니다. 이 사례의 대출 상한은 4억 원입니다. 담보 한도와 상품 한도를 비교하면 상품 한도가 더 작습니다. 대출로 채우고 남은 집값에 예비자금과 거래비용을 더해, 필요한 현금을 계산하겠습니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 129,
+          "spoken_start": 0,
+          "spoken_end": 129,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [],
+      "protected_ranges": [
+        [
+          8,
+          12
+        ],
+        [
+          39,
+          43
+        ]
+      ],
+      "source_hangul_count": 91,
+      "spoken_hangul_count": 91,
+      "beats": [
+        {
+          "anchor": "9억 원 집",
+          "action": "집값 9억 원 막대 하나만 생성한다. 공제 차감 애니메이션은 반복하지 않는다.",
+          "source_start": 8,
+          "source_end": 14,
+          "spoken_start": 8,
+          "spoken_end": 14
+        },
+        {
+          "anchor": "대출 상한은 4억 원",
+          "action": "대출 4억 원 조각을 채우고 나머지 집값은 빈 공간으로 남긴다.",
+          "source_start": 32,
+          "source_end": 43,
+          "spoken_start": 32,
+          "spoken_end": 43
+        },
+        {
+          "anchor": "상품 한도가 더 작습니다",
+          "action": "상품 한도 4억 원이 적용됐다는 짧은 라벨을 표시한다. 담보 산정 조건은 소스 작은 주석으로만 유지한다.",
+          "source_start": 67,
+          "source_end": 80,
+          "spoken_start": 67,
+          "spoken_end": 80
+        },
+        {
+          "anchor": "예비자금과 거래비용을 더해",
+          "action": "남은 집값 아래에 예비·비용 항목의 자리를 연다. 합계는 다음 R028의 해당 발화 때 계산한다.",
+          "source_start": 97,
+          "source_end": 111,
+          "spoken_start": 97,
+          "spoken_end": 111
+        }
+      ],
+      "sentence_count": 4,
+      "meaning_plan": [
+        {
+          "text": "신생아 특례로 9억 원 집을 사는 경우입니다.",
+          "display_lines": [
+            "신생아 특례로 9억 원 집을 사는 경우입니다."
+          ],
+          "source_start": 0,
+          "source_end": 25,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "이 사례의 대출 상한은 4억 원입니다.",
+          "display_lines": [
+            "이 사례의 대출 상한은 4억 원입니다."
+          ],
+          "source_start": 26,
+          "source_end": 47,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "담보 한도와 상품 한도를 비교하면 상품 한도가 더 작습니다.",
+          "display_lines": [
+            "담보 한도와 상품 한도를 비교하면 상품 한도가 더 작습니다."
+          ],
+          "source_start": 48,
+          "source_end": 81,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "대출로 채우고 남은 집값에 예비자금과 거래비용을 더해, 필요한 현금을 계산하겠습니다.",
+          "display_lines": [
+            "대출로 채우고 남은 집값에 예비자금과 거래비용을 더해,",
+            "필요한 현금을 계산하겠습니다."
+          ],
+          "source_start": 82,
+          "source_end": 129,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R028",
+      "paragraph": 33,
+      "chapter": 7,
+      "title": "9억 원 집은 현금 5억 6,615만 원",
+      "text": "9억 원 집값에서 대출 4억 원을 빼고, 예비자금과 거래비용까지 더하면 필요한 현금은 5억 6,615만 원입니다. 지금 보유한 2억 5천만 원과 비교하면 현금 3억 1,615만 원을 더 마련해야 합니다. 신생아 특례를 선택할 때도 금리 혜택과 구입에 필요한 현금을 함께 맞춥니다. 같은 상품 안에서도 실제 선택할 가격대는 자금표에서 좁혀집니다.",
+      "spoken_text": "9억 원 집값에서 대출 4억 원을 빼고, 예비자금과 거래비용까지 더하면 필요한 현금은 5억 육천육백십오만 원입니다. 지금 보유한 2억 5천만 원과 비교하면 현금 3억 천육백십오만 원을 더 마련해야 합니다. 신생아 특례를 선택할 때도 금리 혜택과 구입에 필요한 현금을 함께 맞춥니다. 같은 상품 안에서도 실제 선택할 가격대는 자금표에서 좁혀집니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 51,
+          "spoken_start": 0,
+          "spoken_end": 51,
+          "kind": "literal"
+        },
+        {
+          "source_start": 51,
+          "source_end": 56,
+          "spoken_start": 51,
+          "spoken_end": 57,
+          "kind": "pronunciation",
+          "original": "6,615",
+          "spoken": "육천육백십오"
+        },
+        {
+          "source_start": 56,
+          "source_end": 92,
+          "spoken_start": 57,
+          "spoken_end": 93,
+          "kind": "literal"
+        },
+        {
+          "source_start": 92,
+          "source_end": 97,
+          "spoken_start": 93,
+          "spoken_end": 98,
+          "kind": "pronunciation",
+          "original": "1,615",
+          "spoken": "천육백십오"
+        },
+        {
+          "source_start": 97,
+          "source_end": 192,
+          "spoken_start": 98,
+          "spoken_end": 193,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 51,
+          "source_end": 56,
+          "spoken_start": 51,
+          "spoken_end": 57,
+          "kind": "pronunciation",
+          "original": "6,615",
+          "spoken": "육천육백십오",
+          "reason": "소수/쉼표 숫자 발음층"
+        },
+        {
+          "source_start": 92,
+          "source_end": 97,
+          "spoken_start": 93,
+          "spoken_end": 98,
+          "kind": "pronunciation",
+          "original": "1,615",
+          "spoken": "천육백십오",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          0,
+          4
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          48,
+          59
+        ],
+        [
+          51,
+          56
+        ],
+        [
+          71,
+          79
+        ],
+        [
+          89,
+          100
+        ],
+        [
+          92,
+          97
+        ]
+      ],
+      "source_hangul_count": 125,
+      "spoken_hangul_count": 136,
+      "beats": [
+        {
+          "anchor": "대출 4억 원을 빼고",
+          "action": "9억 원 집값에서 대출 충당 부분을 분리한다.",
+          "source_start": 10,
+          "source_end": 21,
+          "spoken_start": 10,
+          "spoken_end": 21
+        },
+        {
+          "anchor": "예비자금과 거래비용까지 더하면",
+          "action": "남은 집값에 예비자금 3천만 원·비용 3,615만 원을 더해 현금 5억 6,615만 원을 만든다.",
+          "source_start": 23,
+          "source_end": 39,
+          "spoken_start": 23,
+          "spoken_end": 39
+        },
+        {
+          "anchor": "3억 1,615만 원",
+          "action": "필요 현금에서 보유 2억 5천만 원을 빼 추가 현금만 남긴다.",
+          "source_start": 89,
+          "source_end": 100,
+          "spoken_start": 90,
+          "spoken_end": 101
+        }
+      ],
+      "sentence_count": 4,
+      "meaning_plan": [
+        {
+          "text": "9억 원 집값에서 대출 4억 원을 빼고, 예비자금과 거래비용까지 더하면 필요한 현금은 5억 6,615만 원입니다.",
+          "display_lines": [
+            "9억 원 집값에서 대출 4억 원을 빼고,",
+            "예비자금과 거래비용까지 더하면 필요한 현금은 5억 6,615만 원입니다."
+          ],
+          "source_start": 0,
+          "source_end": 63,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "지금 보유한 2억 5천만 원과 비교하면 현금 3억 1,615만 원을 더 마련해야 합니다.",
+          "display_lines": [
+            "지금 보유한 2억 5천만 원과 비교하면",
+            "현금 3억 1,615만 원을 더 마련해야 합니다."
+          ],
+          "source_start": 64,
+          "source_end": 113,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "신생아 특례를 선택할 때도 금리 혜택과 구입에 필요한 현금을 함께 맞춥니다.",
+          "display_lines": [
+            "신생아 특례를 선택할 때도 금리 혜택과",
+            "구입에 필요한 현금을 함께 맞춥니다."
+          ],
+          "source_start": 114,
+          "source_end": 156,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "같은 상품 안에서도 실제 선택할 가격대는 자금표에서 좁혀집니다.",
+          "display_lines": [
+            "같은 상품 안에서도 실제 선택할 가격대는 자금표에서 좁혀집니다."
+          ],
+          "source_start": 157,
+          "source_end": 192,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    },
+    {
+      "scene_id": "R034",
+      "paragraph": 34,
+      "chapter": 8,
+      "title": "현금·은행·월 예산을 한 자금표에",
+      "text": "매물을 보기 전 세 숫자를 정리합니다. 예비자금과 거래비용을 분리한 자기자금, 은행이 그 집과 가구에 확인해 준 대출 범위, 매달 유지할 상환액입니다. 정책상품의 소득과 자산, 출산과 입주 조건도 같은 자금표에 연결합니다. 세 숫자가 만나는 가격 범위에서 매물 검색을 시작할 수 있습니다. 다음 편에서는 이 예산 안의 지역과 단지를 가격, 일자리 접근성, 교통과 생활 여건으로 비교하겠습니다. 구독과 좋아요를 부탁드립니다. 시청해 주셔서 감사합니다.",
+      "spoken_text": "매물을 보기 전 세 숫자를 정리합니다. 예비자금과 거래비용을 분리한 자기자금, 은행이 그 집과 가구에 확인해 준 대출 범위, 매달 유지할 상환액입니다. 정책상품의 소득과 자산, 출산과 입주 조건도 같은 자금표에 연결합니다. 세 숫자가 만나는 가격 범위에서 매물 검색을 시작할 수 있습니다. 다음 편에서는 이 예산 안의 지역과 단지를 가격, 일자리 접근성, 교통과 생활 여건으로 비교하겠습니다. 구독과 좋아요를 부탁드립니다. 시청해 주셔서 감사합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 251,
+          "spoken_start": 0,
+          "spoken_end": 251,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [],
+      "protected_ranges": [],
+      "source_hangul_count": 180,
+      "spoken_hangul_count": 180,
+      "beats": [
+        {
+          "anchor": "자기자금",
+          "action": "배경사진 위에 현금에서 예비·비용이 분리되는 자금 흐름을 회수한다.",
+          "source_start": 38,
+          "source_end": 42,
+          "spoken_start": 38,
+          "spoken_end": 42
+        },
+        {
+          "anchor": "매달 유지할 상환액",
+          "action": "은행 대출 범위 다음에 월 상환 목표를 연결한다.",
+          "source_start": 70,
+          "source_end": 80,
+          "spoken_start": 70,
+          "spoken_end": 80
+        },
+        {
+          "anchor": "지역과 단지를",
+          "action": "자금표를 접고 부모 조달 주거 배경사진과 다음 분석 주제를 보여준다.",
+          "source_start": 178,
+          "source_end": 185,
+          "spoken_start": 178,
+          "spoken_end": 185
+        }
+      ],
+      "sentence_count": 7,
+      "meaning_plan": [
+        {
+          "text": "매물을 보기 전 세 숫자를 정리합니다.",
+          "display_lines": [
+            "매물을 보기 전 세 숫자를 정리합니다."
+          ],
+          "source_start": 0,
+          "source_end": 21,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "예비자금과 거래비용을 분리한 자기자금, 은행이 그 집과 가구에 확인해 준 대출 범위, 매달 유지할 상환액입니다.",
+          "display_lines": [
+            "예비자금과 거래비용을 분리한 자기자금,",
+            "은행이 그 집과 가구에 확인해 준 대출 범위, 매달 유지할 상환액입니다."
+          ],
+          "source_start": 22,
+          "source_end": 84,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "정책상품의 소득과 자산, 출산과 입주 조건도 같은 자금표에 연결합니다.",
+          "display_lines": [
+            "정책상품의 소득과 자산,",
+            "출산과 입주 조건도 같은 자금표에 연결합니다."
+          ],
+          "source_start": 85,
+          "source_end": 124,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "세 숫자가 만나는 가격 범위에서 매물 검색을 시작할 수 있습니다.",
+          "display_lines": [
+            "세 숫자가 만나는 가격 범위에서 매물 검색을 시작할 수 있습니다."
+          ],
+          "source_start": 125,
+          "source_end": 161,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "다음 편에서는 이 예산 안의 지역과 단지를 가격, 일자리 접근성, 교통과 생활 여건으로 비교하겠습니다.",
+          "display_lines": [
+            "다음 편에서는 이 예산 안의 지역과 단지를 가격,",
+            "일자리 접근성, 교통과 생활 여건으로 비교하겠습니다."
+          ],
+          "source_start": 162,
+          "source_end": 219,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "구독과 좋아요를 부탁드립니다.",
+          "display_lines": [
+            "구독과 좋아요를 부탁드립니다."
+          ],
+          "source_start": 220,
+          "source_end": 236,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "시청해 주셔서 감사합니다.",
+          "display_lines": [
+            "시청해 주셔서 감사합니다."
+          ],
+          "source_start": 237,
+          "source_end": 251,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    }
+  ],
+  "voice": "ko-KR-InJoonNeural",
+  "rate": "+0%",
+  "internal_pauses": "provider_natural_measured_only",
+  "cut_gap_s": 0.25,
+  "inputs": {
+    "video-agent-studio/episodes/affordable-home-price-20261026/director/rebuild-v2/frozen-script-v3-r2/scenes_v3_r2.json": "cc1ef7d80225e992e7e5d31faffbfb09a8f90c80fb5352e17c36eb8c90755b12"
+  },
+  "pipeline_inputs": {
+    "video-agent-studio/episodes/affordable-home-price-20261026/narration/rebuild-v2/build_narration.py": "364ea929707983ee0b786a5b1fbf085e609ca04402267e29c5c677726af2c8d7",
+    "video-agent-studio/episodes/affordable-home-price-20261026/narration/rebuild-v2/build_contract.json": "e23f8f4cb8a2cd933c32114ce05b1e25e255d60c18068df17c5cfed9f0cc2bf4",
+    "video-agent-studio/episodes/affordable-home-price-20261026/narration/production_v1.py": "77cc23a640a1d0c6298ba5a3cc2da6996f3012c476225b7fa844226235b95c3c",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/production_narration.py": "009e85a92892002c54de3236395e76f0ee12af3fc3a874e9089b60fe02fc4a36"
+  },
+  "dependencies": {
+    "edge_tts": "7.3.1",
+    "deps_path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/deps",
+    "ffmpeg_path": "video/node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe",
+    "ffmpeg_sha256": "5d1aa3706022b2f1814993c7108ca689a0a2e6fe9af91ec15dbf0bc05d6d39e4",
+    "python": "3.11.9",
+    "WordBoundary_supported": true,
+    "network_calls": 0,
+    "installation_performed": false
+  },
+  "dictionary": [],
+  "network_calls": 0,
+  "audio_measured": false,
+  "actual_listening": false
+}

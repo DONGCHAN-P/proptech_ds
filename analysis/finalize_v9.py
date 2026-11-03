@@ -1,0 +1,7 @@
+from pathlib import Path
+import json
+qa=json.loads(Path('video/out/qa-v9/technical.json').read_text(encoding='utf8'));assert abs(float(qa['streams']['format']['duration'])-600)<.1
+p=Path('config/current_video.json');c=json.loads(p.read_text(encoding='utf-8-sig'));c.update(version='v9',entry='video/src/PilotV9.tsx',composition='NewtownV9',video='video/out/newtown-v9-assets-10min.mp4',subtitles='video/out/newtown-v9.srt',timing='video/out/newtown-v9-timing.json',report='docs/영상_v9_사용자소재_반영_2026-10-13.md',sources='video/out/newtown-v9-sources.md',qa='video/out/qa-v9/technical.json',asset_pack='video/public/asset-pack-v9/placements.json',photos='4 source photographs + 10 user-supplied concept PNG cuts, static')
+p.write_text(json.dumps(c,ensure_ascii=False,indent=2),encoding='utf8')
+p=Path('video/package.json');c=json.loads(p.read_text(encoding='utf-8-sig'));c['scripts'].update({'studio:v9':'remotion studio src/PilotV9.tsx','render:v9':'remotion render src/PilotV9.tsx NewtownV9 out/newtown-v9-assets-10min.mp4 --codec=h264 --crf=18 --concurrency=4'});p.write_text(json.dumps(c,ensure_ascii=False,indent=2),encoding='utf8')
+p=Path('docs/영상_제작방향_v2_2026-10-13.md');s=p.read_text(encoding='utf-8-sig');s+='\n\nv9 사용자 이미지 반영 완료: video/out/newtown-v9-assets-10min.mp4. newtown_asset_pack PNG10장을 대본 문맥에 맞춰 고정 삽입. 확대 MP4는 사용하지 않음. Jun 음성·600초 유지. 상세 배치 docs/영상_v9_사용자소재_반영_2026-10-13.md, 최종 MP4 샘플 검수 video/out/qa-v9.\n';p.write_text(s,encoding='utf8')

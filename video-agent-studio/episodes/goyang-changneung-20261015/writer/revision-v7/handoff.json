@@ -1,0 +1,52 @@
+{
+  "task_id": "writer-v7",
+  "role": "writer",
+  "status": "draft_needs_review",
+  "input_revisions": {
+    "script": "v6",
+    "research": "production-v2/prices-v2/script-v4-addendum/commute-v6/revision-v7"
+  },
+  "outputs": [
+    "outputs/script-review-v7/script_v7.md",
+    "writer/revision-v7/scene_proposals.json",
+    "writer/revision-v7/narration_packet.json",
+    "writer/revision-v7/input_manifest.json",
+    "writer/revision-v7/validation.json",
+    "outputs/script-review-v7/changes_v7.md"
+  ],
+  "affected_scene_ids": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M007",
+    "M006",
+    "M005",
+    "M009",
+    "M008"
+  ],
+  "checks": [
+    {
+      "check": "text structure/character count/estimate",
+      "result": "pass",
+      "evidence": "writer/revision-v7/validation.json"
+    },
+    {
+      "check": "independent content review/user script approval",
+      "result": "pending",
+      "evidence": null
+    }
+  ],
+  "open_issue_ids": [],
+  "resolved_issue_ids": [
+    "V7-HOBAN-COORD"
+  ],
+  "next_role": "director_then_independent_qa",
+  "limits": [
+    "No state/scenes/decisions changed",
+    "No paid generation/render",
+    "No inherited approval",
+    "Hoban uses official address locator, not centroid/boundary/entrance"
+  ]
+}

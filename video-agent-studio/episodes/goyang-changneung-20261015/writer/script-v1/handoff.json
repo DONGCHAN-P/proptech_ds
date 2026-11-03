@@ -1,0 +1,78 @@
+{
+  "revision": "script-v1",
+  "outputs": [
+    "writer/script-v1/script_v1.md",
+    "writer/script-v1/scene_proposals.json",
+    "writer/script-v1/narration_input/",
+    "writer/script-v1/narration_joined.txt",
+    "writer/script-v1/manifest.json",
+    "writer/script-v1/pronunciation.json",
+    "outputs/script-review-v1/review_summary.md"
+  ],
+  "inputs": [
+    {
+      "path": "brief.json",
+      "sha256": "b72bf1134df50ceabce33d01ae501949b1d289d92af913bb01bdc1dc73c5e414"
+    },
+    {
+      "path": "preflight.json",
+      "sha256": "884570f327ecd9a037e84e49918c52808e77424dbeb846028b5d9b7737c67fa8"
+    },
+    {
+      "path": "research/facts.json",
+      "sha256": "2bd76ab09771f7d49dcd3bb002c085ed058efd63fdf108502da36513f897833a"
+    },
+    {
+      "path": "research/production-v2/facts.json",
+      "sha256": "b046de0cb6079fe1b304c9f7914315717b221f86752d915b3612416ae169d74c"
+    },
+    {
+      "path": "research/production-v2/calendar.json",
+      "sha256": "7eb606d652717888ffab15bfca60b0b9e11c8589c7ca885fc006677c8652d96d"
+    },
+    {
+      "path": "research/production-v2/landuse_blocks.json",
+      "sha256": "9e6a72c92cb4646fb84179889dc598e1557fd3a7a4fdb259a063a1dd422e6a09"
+    },
+    {
+      "path": "research/prices-v2/comparisons.json",
+      "sha256": "0869a9c46e2a2ff9335c8a4e89562c98ec4fd0748f6cf27fac624eb26c4855eb"
+    },
+    {
+      "path": "research/prices-v2/facts.json",
+      "sha256": "cbc3216bdfb2120cf64992b4a34ee5623f1650e904346d5e91fa7bbf12f1f0be"
+    },
+    {
+      "path": "visual/production-v1/scene_visual_plan.json",
+      "sha256": "8f6092422ea9be17f0f9d5bf90cbeb7f1184ea7ba33f22c4e2dc66bfe742cacc"
+    },
+    {
+      "path": "research/map-clearance-v1/handoff.md",
+      "sha256": "bb1e6a1ed94008a9787a7bb1895cca2bf3c536e154a3a8efa24510bed69d2ed3"
+    }
+  ],
+  "validation": "verification.json passed; only M001 narration hash changed compared to history/before-map-clearance/manifest.json",
+  "unresolved": [
+    "script approval",
+    "budget approval",
+    "post-2025.12.24 changes and map crop/derivative rights",
+    "planned station precise location",
+    "education authority dates",
+    "S1 occupancy obligation"
+  ],
+  "affected_scenes": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M005",
+    "M006",
+    "M007",
+    "M008",
+    "M009"
+  ],
+  "next_owner": "director: script gate and scenes mapping; narration only after script+budget approval",
+  "paid_calls": 0,
+  "change_history": "history/map_clearance_change.json"
+}

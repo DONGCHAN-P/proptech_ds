@@ -1,0 +1,2843 @@
+{
+  "script_revision_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+  "script": "# 매매·전세·월세, 같은 집에서 10년을 비교합니다\n\n버전: script-final-v5 · 최종영상용 재검수본 · 작성일 2026-10-26\n길이와 장면별 시간은 estimate입니다. 실제 음성 생성·청취·시간 정렬 전입니다. 본문 소제목 아래 문단만 낭독합니다. 화면 주석은 scene_outline.json에 분리했습니다. 익명 가정 모형 illustrative-v1을 유지합니다.\n\n## 1. 선택\n\n같은 아파트에서 같은 기간을 살아도, 집을 산 가구와 전세로 산 가구, 월세로 산 가구의 자산은 다르게 남습니다. 집값 상승률과 주식 수익률만 나란히 놓으면 이 차이를 설명하기 어렵습니다. 세 가구 모두 매달 살 집이 필요하고, 그 집을 마련하는 데 들어가는 돈이 다르기 때문입니다.\n\n이번 비교에서는 초기 순자산이 2억5천만원이고 매달 주거와 저축에 쓸 수 있는 돈이 300만원인 세 가구를 놓겠습니다. 같은 수준의 6억원 집에서 10년을 사는 설정입니다. 한 가구는 집을 사고, 한 가구는 전세를, 다른 가구는 월세를 선택합니다. 남은 돈은 세 가구 모두 같은 투자 규칙을 적용합니다.\n\n그 결과 기본 가정에서는 10년 후 순자산이 매매 약 6억1천만원, 전세 약 6억6천만원, 월세 약 6억9천만원으로 계산됩니다. 여기서 집값과 투자수익 가정을 바꾸면 매매가 가장 크게 남는 경우도, 전세가 가장 크게 남는 경우도 나옵니다. 오늘 살펴볼 것은 이 순서가 바뀌는 이유입니다.\n\n지난 교산편에서는 지역의 입지와 가격을 살펴봤습니다. 이번부터는 그다음 선택으로 이어갑니다. 좋은 지역을 찾은 뒤 집을 어떤 방식으로 마련할지, 얼마까지 감당할 수 있을지, 그 예산에서 어떤 단지를 고를지를 차례로 연결하겠습니다. 오늘은 그 첫 단계인 주거 방식과 순자산 비교입니다.\n\n## 2. 기준\n\n먼저 비교의 출발선을 맞추겠습니다. 세 가구는 집의 면적과 위치, 생활 편의가 같은 것으로 둡니다. 공통 생활비를 지출한 뒤 주거비와 저축에 쓸 수 있는 돈이 매달 300만원입니다. 전기나 수도처럼 같은 집에 살면 공통으로 드는 돈은 동일하게 처리합니다. 집주인과 임차인이 다르게 부담하는 비용만 따로 넣습니다.\n\n집값은 먼저 짚고 가겠습니다. 최근에 집을 알아보셨다면 연 2%라는 숫자가 작게 느껴질 수 있습니다. 2006년부터 모은 실거래로 같은 단지·같은 전용면적에서 두 분기 각각 2건 이상 거래된 표본을 연결한 자체 지수를 만들었습니다. 각 분기는 30단지 이상을 연결하며, 포함되는 표본은 분기마다 바뀝니다. 이 지수로 본 2016년 2분기부터 2026년 2분기까지의 연평균 상승률은 서울 약 11.7%, 경기 6.6%, 인천 4.0%였습니다. 표본 선택 기준에 따라 상승률도 달라집니다.\n\n다만 앞으로 감당할 집을 정할 때는, 가격이 얼마나 오를지를 보수적으로 잡는 편이 합리적이라고 생각합니다. 높은 상승률을 기대해서 예산을 늘리기보다, 상승폭이 작아도 대출을 갚고 저축을 이어갈 수 있는지부터 확인하려는 겁니다. 그래서 첫 계산은 집값 연 2%에서 출발하겠습니다. 6억원 집이 10년 뒤 약 7억3천만원이 되는 조건입니다. 이후에는 상승률을 4%, 6%로 바꿨을 때의 차이도 함께 보겠습니다.\n\n투자계좌는 배당과 환율 효과를 포함한 원화 총수익 연 6%, 금리는 연 4%로 계산합니다. 월세와 보증금은 10년 동안 같은 금액으로 둡니다. 취득세나 중개보수처럼 계약할 때 한 번 드는 초기 부대비용과 매달 드는 유지비는 뒤에서 설명할 가정 금액을 적용하겠습니다. 집과 보증금, 금융자산에서 남은 빚을 뺀 금액을 비교하며, 실제 상품별 세금과 운용비용을 추가로 반영하기 전의 명목 평가 순자산입니다.\n\n이렇게 조건을 먼저 고정하면 집값이 얼마나 올랐는지와 매달 얼마를 저축했는지를 분리할 수 있습니다. 같은 집과 같은 예산을 맞춰 주거 방식에 따른 차이를 보겠습니다.\n\n비교 기간도 같습니다. 매매는 10년, 투자는 20년으로 늘리거나 한쪽에 유리한 종료 시점을 고르면 결과의 의미가 달라집니다. 이번에는 세 가구 모두 120개월이 지난 같은 시점에서 집과 금융자산, 보증금, 남은 빚을 확인합니다.\n\n## 3. 출발 자금\n\n집을 사는 가구부터 보겠습니다. 6억원 가운데 자기자금 2억4천만원을 넣고 3억6천만원을 빌립니다. 집을 살 때는 집값 외에 취득세와 부동산 중개보수, 등기 관련 비용도 듭니다. 이번 비교의 약 600만원은 이런 항목을 묶은 설명용 가정 금액입니다. 실제 거래의 항목별 비용은 거래 조건에 따라 따로 산정합니다. 초기 순자산 2억5천만원 중 집에 들어간 돈과 비용을 빼면 투자계좌에 남는 돈은 400만원입니다.\n\n이때 집값 6억원은 대출을 포함한 자산입니다. 집과 투자계좌를 더한 뒤 대출 3억6천만원을 빼야 합니다. 거래비용을 낸 직후 순자산은 2억4천400만원입니다. 출발 전 순자산은 같아도 실제로 지출한 비용이 다르면 거래 직후 잔액에 차이가 생깁니다.\n\n전세 가구는 보증금 4억원인 집에 들어갑니다. 자기자금 2억원과 전세대출 2억원을 합칩니다. 전세도 중개보수 등 계약 과정에 드는 초기 부대비용이 있습니다. 이 비용 묶음에 설명용 가정 약 100만원을 적용하면 투자계좌에는 4천900만원이 남습니다. 보증금 4억원은 돌려받을 자산으로 기록하고, 대출 2억원은 별도의 빚으로 기록합니다.\n\n월세 가구는 보증금 1억원에 월세 100만원인 조건입니다. 보증금에는 자기자금 8천만원과 대출 2천만원이 들어갑니다. 월세도 중개보수 등 초기 부대비용 묶음에 설명용 가정 약 100만원을 적용하겠습니다. 이 비용을 내고 나면 투자계좌의 출발 금액은 1억6천900만원입니다. 월세 가구가 더 큰 투자계좌로 시작하는 이유는 주거 보증금에 묶인 자기자금이 적기 때문입니다.\n\n전세와 월세의 대출은 매달 이자만 내고 원금은 그대로 남는 설정입니다. 만기에 보증금을 돌려받으면 대출을 갚습니다. 보증금 전액을 정상적으로 돌려받는 조건도 여기에 포함됩니다. 초기 금융자산은 세 가구 모두 즉시 투자하고, 이후에는 매달 남는 예산을 같은 방식으로 넣습니다.\n\n## 4. 매달 나가는 돈\n\n이제 같은 300만원이 어떻게 나뉘는지 보겠습니다. 매매 가구의 3억6천만원 대출은 30년 동안 원금과 이자를 합친 같은 금액을 갚는 방식입니다. 연 4%에서 월 상환액은 약 172만원입니다. 여기에 보유세와 수선비 등 집을 보유하면서 드는 비용을 월평균 30만원으로 묶어 가정하면 주거 관련 현금지출은 약 202만원입니다.\n\n따라서 투자계좌에는 매달 약 98만원이 들어갑니다. 집을 산 가구도 남는 돈을 투자합니다. 세 가구 모두 주거 자산과 투자계좌를 함께 보유하고 같은 투자수익률을 적용합니다.\n\n전세 가구는 대출 2억원의 이자로 월 약 67만원을 냅니다. 임차인 추가비용을 월 5만원으로 가정하면 월 주거 지출은 약 72만원, 투자금은 약 228만원입니다. 월세 가구는 월세 100만원에 보증금대출 이자 약 7만원, 추가비용 5만원을 냅니다. 총지출은 약 112만원이고 투자금은 약 188만원입니다.\n\n전세는 이 설정에서 매달 투자할 돈이 가장 많습니다. 월세는 처음 투자할 돈이 가장 많습니다. 어느 쪽이 더 크게 남는지는 초기 투자금과 월 적립금, 그리고 투자수익이 함께 결정합니다.\n\n월 30만원과 5만원은 설명을 위한 비용 묶음이며, 매매와 임차의 비용 가정 차이는 25만원입니다. 현실에서는 보유세와 수선, 보증료, 계약 갱신비용을 각각 확인해야 합니다. 같은 관리비를 양쪽에 공통으로 두고, 실제 부담이 다른 항목을 구분하면 매달 투자할 수 있는 돈을 더 정확하게 계산할 수 있습니다.\n\n## 5. 원금과 보증금\n\n매매 가구가 낸 월 172만원을 조금 더 나눠보겠습니다. 첫 달 이자는 120만원이고 원금은 약 52만원입니다. 이자는 그달의 비용으로 나갑니다. 원금 52만원은 현금에서 빠지는 동시에 대출잔액을 줄입니다. 통장에서 나간 돈이라는 점은 같지만 순자산에 남기는 결과가 다릅니다.\n\n첫 달이 지나면 대출은 3억6천만원에서 약 3억5천950만원으로 줄어듭니다. 다음 달 이자는 줄어든 대출잔액을 기준으로 계산합니다. 상환액이 같으므로 시간이 갈수록 이자의 비중은 줄고 원금의 비중은 늘어납니다. 10년 동안 갚은 원금은 약 7천600만원이고, 남은 대출은 약 2억8천400만원입니다.\n\n처음 빌린 3억6천만원에서 매달 갚은 원금을 차감해 대출잔액을 계산합니다. 마지막 순자산에서는 그 잔액을 한 번 뺍니다. 원금 상환의 효과는 줄어든 대출잔액에 반영합니다.\n\n보증금도 같은 원리로 연결합니다. 전세보증금 4억원을 맡기는 순간 현금은 줄지만 돌려받을 권리가 생깁니다. 계약이 끝나 정상 반환되면 그 권리가 현금으로 바뀝니다. 보증금 반환은 자산의 형태가 현금으로 바뀌는 과정입니다. 대출로 마련한 부분은 반환된 돈으로 갚아야 하므로 순자산에서 빚을 함께 뺍니다.\n\n보증금에 묶인 돈의 기회비용은 처음 투자계좌가 작아지는 데 이미 반영돼 있습니다. 이번 모형은 그 작은 계좌에서 실제로 쌓이는 투자수익을 계산합니다. 집에 들어간 자기자금도 같은 방식으로 처리합니다.\n\n## 6. 투자수익\n\n투자 대안은 S&P500을 따라가는 ETF를 떠올릴 수 있습니다. 이때 가격 상승과 배당을 합친 총수익, 실제 ETF의 수익, 한국 가구가 원화로 손에 쥐는 수익을 구분해야 합니다. S&P의 총수익지수는 배당 재투자를 포함합니다. 이 총수익으로 배당 효과까지 함께 계산합니다.\n\n환율도 같은 방식입니다. 달러 자산이 10% 오르고 원·달러 환율도 10% 오르면, 한국 돈으로 환산한 자산은 1.1배에 1.1배를 곱한 1.21배가 됩니다. 원화 수익률은 원금을 제외한 21%입니다. 이미 원화로 계산한 ETF 수익률에는 환율 효과가 들어 있습니다. 이 원화 수익률로 환율 효과까지 함께 반영합니다.\n\n이번 계산은 배당과 환율 효과를 포함한 원화 총수익을 연 6%로 가정합니다. 6%는 10년간 주거 방식에 따른 차이를 보기 위한 비교 조건입니다. 세 가구의 투자계좌에 이 원화 수익 6%를 같이 적용합니다. 배당의 세금과 매도 시 과세, 환전비용, 운용보수는 추가 반영 전이며, 실제 상품별 계산에서는 포함 범위를 맞춰야 합니다.\n\n납입 시점도 통일했습니다. 월초에 있던 투자금에 그달 수익을 적용하고, 매달 남는 돈은 월말에 넣습니다. 월말에 새로 넣은 돈은 다음 달부터 수익을 얻습니다. 연 6%는 월 0.5%의 단순 배분과 구분해, 12개월을 복리로 연결했을 때 연 6%가 되도록 바꿉니다.\n\n집값에는 가격 상승만 넣습니다. 실거주 가구가 월세를 내지 않는 효과는 매달 지출표에 이미 들어 있습니다. 주거 혜택은 이 지출표에서 한 번 반영합니다. 집과 투자계좌 각각에 무엇이 포함됐는지를 맞추는 것이 수익률 숫자 자체만큼 중요합니다.\n\n## 7. 10년 후\n\n이 조건으로 120개월을 계산한 뒤 세 가구의 자산을 펼쳐보겠습니다. 매매 가구의 집은 연 2%씩 올라 약 7억3천100만원이 됩니다. 금융자산은 약 1억6천700만원입니다. 여기서 남은 대출 약 2억8천400만원을 빼면 순자산은 약 6억1천400만원입니다.\n\n전세 가구는 보증금 4억원과 금융자산 약 4억5천900만원을 보유합니다. 전세대출 2억원을 빼면 순자산은 약 6억5천900만원입니다. 월세 가구는 보증금 1억원, 금융자산 약 6억900만원에서 대출 2천만원을 빼 약 6억8천900만원이 남습니다.\n\n기본 조건에서 월세 가구는 매매 가구보다 약 7천400만원, 전세 가구보다 약 3천만원 큰 평가 순자산으로 끝납니다. 월세를 내는 동안에도 더 큰 초기 투자금이 수익을 얻었고, 매달 차액이 적립됐기 때문입니다. 주거비를 낸 뒤 남은 금융자산까지 함께 보는 이유입니다.\n\n이 숫자는 집에 계속 사는 상태에서 자산을 평가한 값입니다. 집 지분과 보증금은 모두 자산이지만 즉시 쓸 수 있는 투자계좌와 역할이 다릅니다. 매매 가구의 집값 상승분을 생활비로 쓰려면 매도나 추가 대출 같은 절차가 필요합니다. 전세보증금도 반환 시점과 다음 집의 보증금이 연결됩니다.\n\n모두 같은 날 자산을 정리해 현금으로 바꾸는 비교도 따로 만들 수 있습니다. 이 경우 집 매도비용과 조건에 맞는 세금, ETF 매도세금과 비용을 반영해야 합니다. 청산 후에도 계속 거주할 집이 필요하므로 그다음 주거비도 동일한 기준으로 연결해야 합니다. 오늘의 기본 그래프는 매각을 가정한 현금액 대신 계속거주 평가 순자산을 보여줍니다.\n\n## 8. 조건의 변화\n\n집값이 결과를 얼마나 움직이는지부터 보겠습니다. 투자수익은 연 6%, 대출금리는 연 4%에 그대로 두겠습니다. 월세와 보증금도 유지하고 집값 상승률만 바꿉니다.\n\n집값이 연 2% 오르면 매매 가구의 10년 후 순자산은 약 6억1천만원입니다. 연 4%로 바꾸면 약 7억7천만원, 연 6%라면 약 9억6천만원이 됩니다. 같은 조건에서 전세는 약 6억6천만원, 월세는 약 6억9천만원입니다. 집값을 어떻게 놓느냐에 따라 세 가구의 순서가 달라집니다.\n\n여기에는 대출의 효과가 들어 있습니다. 집을 살 때 넣은 자기자금은 2억4천만원이지만, 가격이 움직이는 대상은 대출을 합친 6억원 집 전체입니다. 처음 1년에 집값이 2% 오르면 집의 평가액은 1천200만원 늘어납니다. 집에 넣은 자기자금과 비교하면 5%에 해당하는 금액입니다. 여기에 이자와 보유비용, 원금 상환을 연결해야 최종 순자산이 나옵니다. 가격이 내려갈 때도 집 전체에서 손실이 생기기 때문에, 대출을 감당하면서 오래 보유할 수 있는지가 중요합니다.\n\n이어서 집값과 투자수익을 함께 바꿔보겠습니다. 집값이 연 4% 오르고 투자수익은 연 2%인 조건에서는 매매가 약 7억4천만원, 전세가 약 5억6천200만원, 월세가 약 5억3천600만원입니다. 집값의 상승이 커지고 투자계좌의 성장이 작아지면서 순서가 바뀝니다.\n\n반대로 집값 상승을 0%, 투자수익을 연 8%로 두면 매매는 약 5억200만원, 전세는 약 7억1천700만원, 월세는 약 7억8천400만원입니다. 집값도 투자수익도 낮게 둔 연 0%와 2% 조합에서는 전세가 가장 크게 남습니다. 조건에 따라 가장 크게 남는 방식도 달라집니다.\n\n월세 수준만 바꿔도 결과가 달라집니다. 같은 보증금에서 월세를 100만원 대신 120만원으로 높이면 월세 가구의 순자산은 약 6억5천600만원으로 줄어, 전세의 약 6억5천900만원보다 작아집니다. 실제 같은 집에서 가능한 계약 조건인지는 시장 자료로 확인해야 하며, 이 비교는 임대료 가정의 영향을 보여줍니다.\n\n금리도 경계를 움직입니다. 전세대출은 연 2%, 매매대출은 연 6%로 놓으면 전세 순자산은 약 7억1천300만원, 매매는 약 5억2천500만원으로 계산됩니다. 반대로 전세대출은 연 6%, 매매대출은 연 2%이면 매매가 약 6억9천800만원으로 커집니다. 이때 월세 보증금대출 금리는 계속 연 4%입니다.\n\n각 화면은 처음부터 서로 다른 고정금리를 적용한 별도 조건입니다. 실제 변동금리 대출은 금리가 바뀌는 시점마다 이자와 남은 투자금이 달라집니다. 따라서 대출금리 한 숫자뿐 아니라 언제, 어떤 잔액에 적용됐는지도 확인해야 합니다.\n\n이 표에서 유용한 것은 자신이 생각하는 집값과 투자수익이 어느 칸에 있는지, 금리와 월세가 바뀌면 어느 방향으로 움직이는지입니다. 계산된 조건을 먼저 비교하고, 경계 주변을 더 촘촘하게 계산하면 판단에 필요한 범위를 좁힐 수 있습니다.\n\n## 9. 실행\n\n차액을 투자한다는 조건도 실제 행동과 연결됩니다. 매달 남는 돈을 전부 ETF에 넣던 가정에서 절반만 넣고 나머지는 수익이 없는 현금으로 쌓으면, 기본 조건의 10년 후 순자산은 매매 약 5억9천400만원, 전세 약 6억1천만원, 월세 약 6억4천900만원입니다.\n\n여기서는 투자하지 않은 돈도 현금으로 남아 저축 원금에 포함됩니다. 매달 남는 돈을 소비하면 저축 원금까지 줄어드는 별도 계산이 필요합니다. 임차의 차액투자와 매매의 원금상환을 비교할 때는 수익률 차이와 저축 실행의 차이를 구분해야 합니다.\n\n기본 모형은 매달 주거 지출이 300만원 안에 들어오는지도 확인합니다. 현금지출이 예산을 넘으면 기존 ETF를 팔거나 추가로 빌리는 방식 없이 그 경로를 멈추도록 정했습니다. 현실에서는 비상자금이나 자산 매각으로 대응할 수 있지만, 그 경우에는 세금과 매각 시점, 추가 대출금리를 별도로 계산해야 합니다.\n\n전세 갱신 때 보증금이 오르거나, 월세가 인상되거나, 투자시장이 하락한 시기에 이사해야 하는 경우도 같은 장부에 넣을 수 있습니다. 전세·월세는 계약이 끝날 때 보증금을 돌려받을 수 있는지도 함께 확인해야 합니다. 수익률이 높아도 필요한 시점에 돈을 꺼내기 어려우면 주거 계획이 바뀝니다. 집 한 채에 자금이 집중되는 매매와 시장가격이 매일 움직이는 투자계좌는 서로 다른 형태의 위험을 가집니다.\n\n## 10. 다음 선택\n\n매매와 전세, 월세를 고를 때는 내가 가진 돈과 매달 감당할 수 있는 지출, 앞으로 얼마나 오래 살지를 함께 봐야 합니다. 같은 돈으로 시작해도 집에 묶이는 돈과 매달 투자할 수 있는 돈이 달라지고, 그 돈을 어떻게 운용하느냐에 따라 결과도 달라집니다.\n\n이번 계산에서 투자수익은 연 6%로 놓았고, 앞에서 본 기본 조건에서는 전세와 월세의 순자산이 매매보다 크게 계산됐습니다. 전월세 주거비를 내면서 차액을 계속 투자하고, 이보다 높은 성과를 꾸준히 낼 수 있다면 같은 집값과 계약 조건에서 임차의 순자산 우위가 더 커질 수 있습니다. 투자 역량과 실제로 이어갈 수 있는 저축 습관까지 내 상황에 맞춰 넣어봐야 합니다.\n\n한편 실거주 매매에는 자산을 키우는 기회와 살 집을 안정적으로 확보하는 가치가 함께 있습니다. 종자돈에 대출을 더해 집을 보유하고, 오랜 기간 가격 상승을 기대하면서 원금을 갚아가는 구조입니다. 저는 한국에서 내 집 마련을 선호하는 배경에도 이런 자산 형성과 주거 안정에 대한 기대가 함께 있다고 봅니다.\n\n제 관점에서는 어느 정도 종자돈이 모였고, 대출을 갚으면서 생활비와 비상자금을 유지할 수 있다면 실거주 매매는 자산 격차를 만들 수 있는 중요한 선택이라고 생각합니다. 특히 한 지역에서 오래 살 계획이고 가족의 생활 터전을 안정시키는 일이 중요하다면, 전월세보다 매매에 더 큰 가치를 둘 수 있습니다. 그 가치는 가격 상승으로 남는 돈과 함께, 같은 집에서 생활 계획을 이어갈 수 있다는 데에도 있습니다.\n\n그래서 집값이 크게 오를 거라는 기대보다 먼저 확인할 것은 내가 보유를 이어갈 수 있는 가격입니다. 소득이 줄거나 금리가 높아지는 상황까지 생각했을 때, 매달 얼마를 갚을 수 있는지가 출발점이 됩니다.\n\n다음 시간에는 내 종자돈과 월소득을 기준으로 매매하기에 적절한 금액대를 계산해보겠습니다. 집을 살 때 필요한 추가 비용과 남겨둘 비상자금, 매달 감당할 상환액을 차례로 넣어 내가 살 수 있는 집의 가격 범위를 정해보겠습니다.\n",
+  "verified_aggregate": {
+    "data_cutoff": "2026Q2",
+    "regional": [
+      {
+        "region": "서울",
+        "periods": [
+          {
+            "start": "2023Q2",
+            "end": "2026Q2",
+            "years": 3.0,
+            "cagr_pct": 11.651319919906399
+          },
+          {
+            "start": "2021Q2",
+            "end": "2026Q2",
+            "years": 5.0,
+            "cagr_pct": 6.441922588340532
+          },
+          {
+            "start": "2016Q2",
+            "end": "2026Q2",
+            "years": 10.0,
+            "cagr_pct": 11.726146074493847
+          },
+          {
+            "start": "2006Q1",
+            "end": "2026Q2",
+            "years": 20.25,
+            "cagr_pct": 8.618828023279912
+          }
+        ]
+      },
+      {
+        "region": "경기",
+        "periods": [
+          {
+            "start": "2023Q2",
+            "end": "2026Q2",
+            "years": 3.0,
+            "cagr_pct": 3.7208583866054745
+          },
+          {
+            "start": "2021Q2",
+            "end": "2026Q2",
+            "years": 5.0,
+            "cagr_pct": 2.136829209083091
+          },
+          {
+            "start": "2016Q2",
+            "end": "2026Q2",
+            "years": 10.0,
+            "cagr_pct": 6.5879171890363075
+          },
+          {
+            "start": "2006Q1",
+            "end": "2026Q2",
+            "years": 20.25,
+            "cagr_pct": 6.455565153948073
+          }
+        ]
+      },
+      {
+        "region": "인천",
+        "periods": [
+          {
+            "start": "2023Q2",
+            "end": "2026Q2",
+            "years": 3.0,
+            "cagr_pct": 1.5614365516164463
+          },
+          {
+            "start": "2021Q2",
+            "end": "2026Q2",
+            "years": 5.0,
+            "cagr_pct": 0.2987248687733146
+          },
+          {
+            "start": "2016Q2",
+            "end": "2026Q2",
+            "years": 10.0,
+            "cagr_pct": 3.958217306769818
+          },
+          {
+            "start": "2006Q1",
+            "end": "2026Q2",
+            "years": 20.25,
+            "cagr_pct": 4.9780004846130765
+          }
+        ]
+      },
+      {
+        "region": "부산",
+        "periods": [
+          {
+            "start": "2023Q2",
+            "end": "2026Q2",
+            "years": 3.0,
+            "cagr_pct": 0.2778301387922788
+          },
+          {
+            "start": "2021Q2",
+            "end": "2026Q2",
+            "years": 5.0,
+            "cagr_pct": -0.3503475461579697
+          },
+          {
+            "start": "2016Q2",
+            "end": "2026Q2",
+            "years": 10.0,
+            "cagr_pct": 3.517095503475809
+          },
+          {
+            "start": "2006Q1",
+            "end": "2026Q2",
+            "years": 20.25,
+            "cagr_pct": 5.0857404130009165
+          }
+        ]
+      },
+      {
+        "region": "대구",
+        "periods": [
+          {
+            "start": "2023Q2",
+            "end": "2026Q2",
+            "years": 3.0,
+            "cagr_pct": -0.015616087550218705
+          },
+          {
+            "start": "2021Q2",
+            "end": "2026Q2",
+            "years": 5.0,
+            "cagr_pct": -3.5789535255326466
+          },
+          {
+            "start": "2016Q2",
+            "end": "2026Q2",
+            "years": 10.0,
+            "cagr_pct": 1.9597039962790497
+          },
+          {
+            "start": "2006Q1",
+            "end": "2026Q2",
+            "years": 20.25,
+            "cagr_pct": 3.560531864721006
+          }
+        ]
+      },
+      {
+        "region": "대전",
+        "periods": [
+          {
+            "start": "2023Q2",
+            "end": "2026Q2",
+            "years": 3.0,
+            "cagr_pct": 0.9518478973250977
+          },
+          {
+            "start": "2021Q2",
+            "end": "2026Q2",
+            "years": 5.0,
+            "cagr_pct": -0.12810840734281959
+          },
+          {
+            "start": "2016Q2",
+            "end": "2026Q2",
+            "years": 10.0,
+            "cagr_pct": 5.3086802657708265
+          },
+          {
+            "start": "2006Q1",
+            "end": "2026Q2",
+            "years": 20.25,
+            "cagr_pct": 4.329315890084073
+          }
+        ]
+      },
+      {
+        "region": "세종",
+        "periods": [
+          {
+            "start": "2023Q2",
+            "end": "2026Q2",
+            "years": 3.0,
+            "cagr_pct": 0.9622830783440506
+          },
+          {
+            "start": "2021Q2",
+            "end": "2026Q2",
+            "years": 5.0,
+            "cagr_pct": -3.409113937149988
+          },
+          {
+            "start": "2016Q2",
+            "end": "2026Q2",
+            "years": 10.0,
+            "cagr_pct": 5.88032757581296
+          },
+          {
+            "start": "2015Q1",
+            "end": "2026Q2",
+            "years": 11.25,
+            "cagr_pct": 5.669191100580573
+          }
+        ]
+      }
+    ],
+    "sensitivity": [
+      {
+        "house_growth_pct": 0,
+        "house_end_krw": 600000000.0,
+        "networth_krw": {
+          "매매": 482977128.7005266,
+          "전세": 658732564.0074978,
+          "월세": 688644910.6215053
+        }
+      },
+      {
+        "house_growth_pct": 2.0,
+        "house_end_krw": 731396651.9968585,
+        "networth_krw": {
+          "매매": 614373780.6973852,
+          "전세": 658732564.0074978,
+          "월세": 688644910.6215053
+        }
+      },
+      {
+        "house_growth_pct": 4.0,
+        "house_end_krw": 888146570.9510114,
+        "networth_krw": {
+          "매매": 771123699.651538,
+          "전세": 658732564.0074978,
+          "월세": 688644910.6215053
+        }
+      },
+      {
+        "house_growth_pct": 6.0,
+        "house_end_krw": 1074508617.9257138,
+        "networth_krw": {
+          "매매": 957485746.6262404,
+          "전세": 658732564.0074978,
+          "월세": 688644910.6215053
+        }
+      }
+    ],
+    "constant_model_inputs": {
+      "initial_wealth": 250000000,
+      "house": 600000000,
+      "budget": 3000000,
+      "months": 120,
+      "loan_months": 360,
+      "house_growth": 0.02,
+      "stock_return": 0.06,
+      "rate": 0.04,
+      "owner_cost": 300000,
+      "rent_cost": 50000,
+      "entry_buy": 6000000,
+      "entry_rent": 1000000,
+      "monthly_rent": 1000000,
+      "jeonse_loan_rate": 0.04,
+      "rent_loan_rate": 0.04,
+      "execution": 1.0,
+      "hypothetical_house_disposal_rate": 0.01,
+      "hypothetical_investment_disposal_rate": 0.005
+    },
+    "leverage_example": {
+      "house_krw": 600000000,
+      "own_equity_krw": 240000000,
+      "loan_krw": 360000000,
+      "price_change_pct": 2,
+      "asset_value_change_krw": 12000000,
+      "equity_change_before_costs_pct": 5
+    }
+  },
+  "scope": "자체 설명 모형. 비용600/100/100만원 및 월30/5만원은 비용항목 묶음의 설명용 가정. 실거래연결집계는 단지·면적별각분기2건,연결30단지기준이며표본교체됨. 최근10년서울연결단지43~1976개; 경기10년CAGR2/3/5건기준6.59/7.39/8.78%. 강화문턱서울장기경로단절. 과거숫자로미래예측·공식시장평균을주장하지않음.",
+  "user_direction": "기존영상최대보존. 상황별매매/전세/월세선택. 집값2%보수적인계획조건·투자원화총수익6%가정. 감당가능대출매매의레버리지·주거안정성은화자관점. 다음편감당가능매매가격. 사진/차트반복금지,글자잘림금지,불필요한~아님/AI개념배지제거,의미자막,숫자발음검수.",
+  "authority": "사용자2026-10-26직접승인:동일대본v6의Jun음성포함10739크레딧상한·추가결제0·Claude검수후YouTube비공개업로드및기존비공개exEGpjcqdF0교체. 개인거래/자격증명전달금지.",
+  "media_status": "첨부된 실제 인코딩 표본 프레임과 검수 보고서에 한해 미디어 검토. 미제공 재생/청취를 했다고 쓰지 않음.",
+  "media_report": {
+    "revision": "jun-production-v1",
+    "change_scope": "All narration replaced with approved Jun; exact original script/visual assets retained. Actual cue and motion timing, fresh BGM mix, title and thumbnail updated.",
+    "video": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/housing_choice_jun_v1.mp4",
+    "video_sha256": "136a20c43ba3a99a138ba7282c1fb1a8532fc3aa92695c57ca2f904d011b1079",
+    "subtitles": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/captions_measured.srt",
+    "subtitles_sha256": "8aae8aa974108c22ff297f9a0619baecf56cd7264ec29a8cdf557cc2b88038ce",
+    "metadata": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-release-v1/metadata_measured.json",
+    "metadata_sha256": "b8dfac55eec16165355916e9addcafb1b8a2a47cef0d8d173621938684e8af63",
+    "description": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-release-v1/description_measured.md",
+    "description_sha256": "deb8f20fa95094b1c6367f27b134170a11fe4bf8e78cbdea3e3b94c27576a593",
+    "thumbnail": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-release-v1/thumbnail.png",
+    "thumbnail_sha256": "ddeae250181103ca29b5f2c81461cd222d75875f8f3ad97e014ab8a07bc0b085",
+    "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+    "timing_sha256": "6336849ba8fd0e422a5f8a6140db9ff485226c7f8dad7a2951fae80b37638f95",
+    "actual_seconds": 1192.4333333333332,
+    "image_manifest": [
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/director/launch-and-jun-v1/claude_media_input_v1/encoded_scene_contact_01.png",
+        "sha256": "6ce7e9d9b89db1c6d345159148abef04519301b77fcff9325f7e763200d6cda6",
+        "role": "actual encoded 50-scene representatives contact sheet",
+        "source_sha256": "26d0e31dde551bb5a6d8c614f46ac315a5f9d8ce2060466d4c03024375b6c717"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/director/launch-and-jun-v1/claude_media_input_v1/encoded_scene_contact_02.png",
+        "sha256": "5bb303af0b433f805bde10cc2808197d093e56315754dd0896659888fefc7e1e",
+        "role": "actual encoded 50-scene representatives contact sheet",
+        "source_sha256": "74bf5727bc6e936a7e5a84ccdb99bd9565013af7abf9c56b21fad2c92c4594e8"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/director/launch-and-jun-v1/claude_media_input_v1/encoded_scene_contact_03.png",
+        "sha256": "4a297b0e011df6548ee137aaa666cb8a7e1c1e065a1e0920986ecd0173a9e5c4",
+        "role": "actual encoded 50-scene representatives contact sheet",
+        "source_sha256": "be94e8ea5d9b90a93b4656760f2e10f21142bb7dcec6bf82e565f38edcf5057e"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/director/launch-and-jun-v1/claude_media_input_v1/encoded_scene_contact_04.png",
+        "sha256": "ce67aca1cae0adc933c0880e6cd528c352d4c515f7db98bffae233d6011b36db",
+        "role": "actual encoded 50-scene representatives contact sheet",
+        "source_sha256": "3f18e187e2bf9a912e7d3d80c1c6ee93afb85ee0da3a0ca086692e7de5d3e0ff"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/director/launch-and-jun-v1/claude_media_input_v1/encoded_scene_contact_05.png",
+        "sha256": "e783a1db070b140f6bd5db0a800c6b036f3765a5d2be11f6447cb4d5ebeffd9f",
+        "role": "actual encoded 50-scene representatives contact sheet",
+        "source_sha256": "d24ac9de9050ffb7f396ae37883e9e7d028c19867debb6750969e44672af7cbd"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/encoded-evidence/00014.png",
+        "sha256": "9751074e573c429275513286ce5bfe13486dbcbb27e16ba22d863b287eb8b35c",
+        "role": "full resolution current chapter long caption",
+        "global_time_s": 28.933333333333334,
+        "scene_id": "C01_P002V7Q001"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/encoded-evidence/00036.png",
+        "sha256": "6d7c4d6619e538d83f34767388920eb482493615a44652faf391088644f49988",
+        "role": "full resolution current chapter long caption",
+        "global_time_s": 203.4,
+        "scene_id": "C02_P008V7Q004"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/encoded-evidence/00052.png",
+        "sha256": "48edd6ac8f086858913daac8d4038dce35ece246a371c0e26f6da0ad949a8e03",
+        "role": "full resolution current chapter long caption",
+        "global_time_s": 298.0,
+        "scene_id": "C03_P013Q003"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/encoded-evidence/00067.png",
+        "sha256": "20b4d076d87649eef624eb5ca35a310c894f953198d6b06a3105e83fa22f5b74",
+        "role": "full resolution current chapter long caption",
+        "global_time_s": 408.8333333333333,
+        "scene_id": "C04_P018V7Q002"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/encoded-evidence/00081.png",
+        "sha256": "40ab4bfc5bdb80636a7dbb9731197f965705005279ba84a84ba187f2070dbe48",
+        "role": "full resolution current chapter long caption",
+        "global_time_s": 476.8666666666667,
+        "scene_id": "C05_P021Q004"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/encoded-evidence/00107.png",
+        "sha256": "045a4500583c5c8ab95577e2edafbd241e39588bea213d49442770ed76f24201",
+        "role": "full resolution current chapter long caption",
+        "global_time_s": 624.9,
+        "scene_id": "C06_P028V7Q004"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/encoded-evidence/00118.png",
+        "sha256": "1fe348f4401e76faba611c573e4d43a57862f71c75cee60f2389301d6d1c2835",
+        "role": "full resolution current chapter long caption",
+        "global_time_s": 678.2666666666667,
+        "scene_id": "C07_P031Q003"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/encoded-evidence/00144.png",
+        "sha256": "a5a6fb5a3faf70b47de6958b3c48e74fdc9adfe7120ff3b947d888a660c5461e",
+        "role": "full resolution current chapter long caption",
+        "global_time_s": 904.6666666666666,
+        "scene_id": "C08_P041V7Q004"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/encoded-evidence/00166.png",
+        "sha256": "09968aca6168690e4a85770460af73e0dbd221b0c279e77902a7bbfdf8c0cd71",
+        "role": "full resolution current chapter long caption",
+        "global_time_s": 1024.0666666666666,
+        "scene_id": "C09_P047V7Q003"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/encoded-evidence/00178.png",
+        "sha256": "0f74fdfd9092e9a13cc9a6bf2f08c70e7f89962554383c5b87e4623eaaf30411",
+        "role": "full resolution current chapter long caption",
+        "global_time_s": 1093.3333333333333,
+        "scene_id": "C10_P050V7Q003"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/encoded-evidence/00007.png",
+        "sha256": "b1eafc5af611ac6517f2251c1a711c7e40f954ac8c4111b4cf4b036b58558a2c",
+        "role": "actual encoded brand/join boundary",
+        "global_time_s": 19.5,
+        "scene_id": "clean_brand_intro"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/encoded-evidence/00010.png",
+        "sha256": "c352f7aed9db88e32ca55df92a71156a276a8c18bb87d62c2a8852be1210257d",
+        "role": "actual encoded brand/join boundary",
+        "global_time_s": 24.5,
+        "scene_id": "chapter_1_after_hook"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/encoded-evidence/00197.png",
+        "sha256": "ce18f59666efde6df9daac1d18092c96ab92c282a0a6e04fd8fafd47572666ba",
+        "role": "actual encoded brand/join boundary",
+        "global_time_s": 1182.4333333333334,
+        "scene_id": "clean_brand_outro"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-release-v1/thumbnail.png",
+        "sha256": "ddeae250181103ca29b5f2c81461cd222d75875f8f3ad97e014ab8a07bc0b085",
+        "role": "user-selected TH003 thumbnail"
+      }
+    ],
+    "source_static_checks": {
+      "status": "pass",
+      "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+      "caption_timing_sha256": "6336849ba8fd0e422a5f8a6140db9ff485226c7f8dad7a2951fae80b37638f95",
+      "chapters": [
+        {
+          "chapter": 1,
+          "html_sha256": "99c653ed31d47e916638ba1fce0c6c74111b49c972412327ecf64be5273f7db5",
+          "timing_sha256": "726d5028cc85047b015f5d0593ebe056afb51fe8db897e337960e2b81ce0857e",
+          "anchors": 23,
+          "captions": 15,
+          "all_caption_source_points_checked": true,
+          "frozen_non_timing_picture_preserved": true,
+          "voice_PCM_identical_to_narrator": true
+        },
+        {
+          "chapter": 2,
+          "html_sha256": "d5c25770992f24c8f5fc7914266a177c13a7b1e9635c1876d6a540ab44e20567",
+          "timing_sha256": "925d8d05ccca675613e565897bae1b26dfd8ba2513c1b1e28cae33fc858c8fb5",
+          "anchors": 33,
+          "captions": 26,
+          "all_caption_source_points_checked": true,
+          "frozen_non_timing_picture_preserved": true,
+          "voice_PCM_identical_to_narrator": true
+        },
+        {
+          "chapter": 3,
+          "html_sha256": "dfdb9fb21d63c2b84fe51bf117f134e56e1f5022eb1b777c6d5d55734f74ae7b",
+          "timing_sha256": "dc1ca2e5fa92f5cdf3a138acbd67cd37593ab0ab8f3f38088a36ecfbee661cc5",
+          "anchors": 32,
+          "captions": 24,
+          "all_caption_source_points_checked": true,
+          "frozen_non_timing_picture_preserved": true,
+          "voice_PCM_identical_to_narrator": true
+        },
+        {
+          "chapter": 4,
+          "html_sha256": "514dde71acc07fbc06c843d4fd0b964db83e3e8de8f3e8750ee81a3201ff9965",
+          "timing_sha256": "11e0827e01c4c48d7ca5ea56b7fff99f0e6337a0587b30f028825dded388fe67",
+          "anchors": 33,
+          "captions": 17,
+          "all_caption_source_points_checked": true,
+          "frozen_non_timing_picture_preserved": true,
+          "voice_PCM_identical_to_narrator": true
+        },
+        {
+          "chapter": 5,
+          "html_sha256": "226161a568fbb469dd45d26116d4242dee4c75664a06d3a6819f712bf3e92406",
+          "timing_sha256": "d131a4664e6f4d23a1c0959f5867aecaf0bba614c88f0cde3c3e182467cc4228",
+          "anchors": 37,
+          "captions": 20,
+          "all_caption_source_points_checked": true,
+          "frozen_non_timing_picture_preserved": true,
+          "voice_PCM_identical_to_narrator": true
+        },
+        {
+          "chapter": 6,
+          "html_sha256": "a92a60f966cc5de1bd074b0fd57a0ef58a7e322f29164aa964bedc0e327d7260",
+          "timing_sha256": "1ed93ebfe3f57986fec9cb8bc76b644e52db61eefc07e32ef9498512580ebed3",
+          "anchors": 30,
+          "captions": 22,
+          "all_caption_source_points_checked": true,
+          "frozen_non_timing_picture_preserved": true,
+          "voice_PCM_identical_to_narrator": true
+        },
+        {
+          "chapter": 7,
+          "html_sha256": "9afcf734e1c0aa3772738771448608a40c7d5ffe666f2281a83d4c822bcefcf3",
+          "timing_sha256": "39b191a8175be62e338af5dd95609106cef10e9ed73d234f1ed2b8ef63a296c3",
+          "anchors": 39,
+          "captions": 18,
+          "all_caption_source_points_checked": true,
+          "frozen_non_timing_picture_preserved": true,
+          "voice_PCM_identical_to_narrator": true
+        },
+        {
+          "chapter": 8,
+          "html_sha256": "4a867e1a10cf49a31557fb56749c9f2411a7db35472d3ae3a1823e6564ddb5e0",
+          "timing_sha256": "6fa64423138f0f8372351e00cb59ec17f0d132f93a18a7e9ddc865bff4e00528",
+          "anchors": 32,
+          "captions": 34,
+          "all_caption_source_points_checked": true,
+          "frozen_non_timing_picture_preserved": true,
+          "voice_PCM_identical_to_narrator": true
+        },
+        {
+          "chapter": 9,
+          "html_sha256": "c494caff98945ea393d41fe15c8e280a0f071fc2d6426ec0274d94a406d9ae66",
+          "timing_sha256": "a6eb28efe038c683fc1daddad84833649b7924737b043b8a73e88df885946bc0",
+          "anchors": 20,
+          "captions": 13,
+          "all_caption_source_points_checked": true,
+          "frozen_non_timing_picture_preserved": true,
+          "voice_PCM_identical_to_narrator": true
+        },
+        {
+          "chapter": 10,
+          "html_sha256": "f33cd105629622d56a4f5446da3a33a5dd77f1033dd7eb297cc640635813c96b",
+          "timing_sha256": "567c7dabe55fc937bd5783ade286c84c627c1ceda7238c88d093e6b96a8d3a4c",
+          "anchors": 12,
+          "captions": 17,
+          "all_caption_source_points_checked": true,
+          "frozen_non_timing_picture_preserved": true,
+          "voice_PCM_identical_to_narrator": true
+        }
+      ],
+      "cue_count": 206,
+      "scope": "all source cue points and frozen content/geometry/PCM; not encoded visual quality or listening",
+      "required_issues": []
+    },
+    "layout_check_summary": {
+      "scope": "headless Chrome sampled DOM/glyph BBox and static PNG; no continuous playback, audio listening or encoded media review",
+      "timing_basis": "measured_audio_units",
+      "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+      "tool": {
+        "playwright": "1.58.2",
+        "chrome": "155.0.8059.86"
+      },
+      "errors": [],
+      "findings": [],
+      "snapshots": [
+        {
+          "chapter": 1,
+          "scene_id": "s1",
+          "time_s": 5.858999999999999,
+          "file": "preview/ch01_s1_5.86s.png",
+          "sha256": "11da8361ea2173e086b2e9f1cd23350580556ead1815328c00e48292450a4240"
+        },
+        {
+          "chapter": 1,
+          "scene_id": "s2",
+          "time_s": 16.287,
+          "file": "preview/ch01_s2_16.29s.png",
+          "sha256": "d22e36c980503c1425b36fb45e04eadf8439532421d66cf97c08b7229afc7331"
+        },
+        {
+          "chapter": 1,
+          "scene_id": "s3",
+          "time_s": 34.317,
+          "file": "preview/ch01_s3_34.32s.png",
+          "sha256": "7fbeff6ac22b6f9d64c846904a185521507bb347a9c5e37311e50e5f97b91ffd"
+        },
+        {
+          "chapter": 1,
+          "scene_id": "s4",
+          "time_s": 55.395,
+          "file": "preview/ch01_s4_55.40s.png",
+          "sha256": "641fc45b1c1585f6bbfee9eefe0b99d5406fb116519c9c648e88a67e08c98c3e"
+        },
+        {
+          "chapter": 1,
+          "scene_id": "s5",
+          "time_s": 76.762,
+          "file": "preview/ch01_s5_76.76s.png",
+          "sha256": "8e707f17b735ef315290216e4c93b62251fa0c2a208d282e3877326787d10db1"
+        },
+        {
+          "chapter": 2,
+          "scene_id": "s2a",
+          "time_s": 18.33,
+          "file": "preview/ch02_s2a_18.33s.png",
+          "sha256": "522176c5a6ff6f03ae68c7b3e1a0700e579c19b21b68bbdb6cc977e6cd225191"
+        },
+        {
+          "chapter": 2,
+          "scene_id": "s2g",
+          "time_s": 50.569,
+          "file": "preview/ch02_s2g_50.57s.png",
+          "sha256": "43799128de0d056d58037880a2e6c1d6104dd6eafc91464d89664ccef8f4db83"
+        },
+        {
+          "chapter": 2,
+          "scene_id": "s2p",
+          "time_s": 81.80699999999999,
+          "file": "preview/ch02_s2p_81.81s.png",
+          "sha256": "9a3b7204223925623dff810d7a47157499a67904f1b30e5f52cc70cead6fa090"
+        },
+        {
+          "chapter": 2,
+          "scene_id": "s2b",
+          "time_s": 111.27699999999999,
+          "file": "preview/ch02_s2b_111.28s.png",
+          "sha256": "bba8bcb4038ee9f76c35975b79d1c171a8e8c8cc3310cae930d24ed43671cf89"
+        },
+        {
+          "chapter": 2,
+          "scene_id": "s2c",
+          "time_s": 128.499,
+          "file": "preview/ch02_s2c_128.50s.png",
+          "sha256": "08d27a0c46b7555e1f14be857bb99e341caed77feed4a2e652ee2b3c6d12a5c9"
+        },
+        {
+          "chapter": 2,
+          "scene_id": "s2d",
+          "time_s": 144.43133333333333,
+          "file": "preview/ch02_s2d_144.43s.png",
+          "sha256": "6e1cc00ec7648a78e27b877a321bb3d94459765df6b3b9a711b87da36c76f893"
+        },
+        {
+          "chapter": 3,
+          "scene_id": "s3a",
+          "time_s": 36.55101587301587,
+          "file": "preview/ch03_s3a_36.55s.png",
+          "sha256": "85a0371570167b5373a0a610e8b54ba7f404ce401b18082179fa28a12f820323"
+        },
+        {
+          "chapter": 3,
+          "scene_id": "s3b",
+          "time_s": 67.63902267573695,
+          "file": "preview/ch03_s3b_67.64s.png",
+          "sha256": "3792fbc7815c16a31b399fdbbae6380b1a7e010111ede120d9691bbbe33a5a86"
+        },
+        {
+          "chapter": 3,
+          "scene_id": "s3c",
+          "time_s": 92.96502267573695,
+          "file": "preview/ch03_s3c_92.97s.png",
+          "sha256": "d046abe361629c1c0b32d949735b4c7b367b75768a2ef73a5536a0cfc8d537ef"
+        },
+        {
+          "chapter": 3,
+          "scene_id": "s3d",
+          "time_s": 115.15834013605442,
+          "file": "preview/ch03_s3d_115.16s.png",
+          "sha256": "14cd22b65e4ea83d06744db5d6d6d5915752adc3eb5a037ada176521b30262af"
+        },
+        {
+          "chapter": 4,
+          "scene_id": "s4a",
+          "time_s": 29.383000000000003,
+          "file": "preview/ch04_s4a_29.38s.png",
+          "sha256": "6e25cc2d05bcbbf59f91c1c3241cd661d6f3e2119529e95231bac6eb59a2df34"
+        },
+        {
+          "chapter": 4,
+          "scene_id": "s4b",
+          "time_s": 57.398999999999994,
+          "file": "preview/ch04_s4b_57.40s.png",
+          "sha256": "4e1ea586695fa7196d9dbc62f8ade872b7124febfd4c625c241e4db7af3434b8"
+        },
+        {
+          "chapter": 4,
+          "scene_id": "s4c",
+          "time_s": 74.26899999999999,
+          "file": "preview/ch04_s4c_74.27s.png",
+          "sha256": "31ba77e814fe5669a2a47a987d05168c578e2ec151fdcda7d9e62050cf9bd43b"
+        },
+        {
+          "chapter": 4,
+          "scene_id": "s4d",
+          "time_s": 94.11233333333332,
+          "file": "preview/ch04_s4d_94.11s.png",
+          "sha256": "f58bb6753f0052d0dc87485954b46f9b365621abbeaeaf764fe79ad7279951d5"
+        },
+        {
+          "chapter": 5,
+          "scene_id": "s5a",
+          "time_s": 17.658,
+          "file": "preview/ch05_s5a_17.66s.png",
+          "sha256": "5c1f590ee9f7e7e7d644f290f2b2f8d98689af3fe6a72a80c72c0e2bb385017f"
+        },
+        {
+          "chapter": 5,
+          "scene_id": "s5b",
+          "time_s": 39.52901587301588,
+          "file": "preview/ch05_s5b_39.53s.png",
+          "sha256": "fc2b178b3e5adf2c298346a2b6c6edfb972806a4df1a37b7f0922e402d7ede69"
+        },
+        {
+          "chapter": 5,
+          "scene_id": "s5c",
+          "time_s": 55.247022675736964,
+          "file": "preview/ch05_s5c_55.25s.png",
+          "sha256": "63feb80d0468ee94c1bb82466efb92f35786d280be039b2290f5c95ce8e9e9f4"
+        },
+        {
+          "chapter": 5,
+          "scene_id": "s5d",
+          "time_s": 74.54102267573695,
+          "file": "preview/ch05_s5d_74.54s.png",
+          "sha256": "eaf4f181c6dc41ffed8a06de0ac71051452725937d5f8229b7ba4aa7f411edbc"
+        },
+        {
+          "chapter": 5,
+          "scene_id": "s5e",
+          "time_s": 91.52167346938775,
+          "file": "preview/ch05_s5e_91.52s.png",
+          "sha256": "61f1acdd772af9e08f9f778347fdb1faa2dfe4391a82012f926ddd287a61df2f"
+        },
+        {
+          "chapter": 6,
+          "scene_id": "s6a",
+          "time_s": 17.938,
+          "file": "preview/ch06_s6a_17.94s.png",
+          "sha256": "3dcd6c630b102a167970004b588dcf112f035149dd59f214a091e533c13b3f8d"
+        },
+        {
+          "chapter": 6,
+          "scene_id": "s6b",
+          "time_s": 41.441,
+          "file": "preview/ch06_s6b_41.44s.png",
+          "sha256": "88fd73f6e2028a92bf366b669d10650f918583530ea48b3c5b985637e7093650"
+        },
+        {
+          "chapter": 6,
+          "scene_id": "s6c",
+          "time_s": 65.871,
+          "file": "preview/ch06_s6c_65.87s.png",
+          "sha256": "9a8f106d527ac8ecf7e975474da7133d176a8cef9e7c2ea09d86dfc50de8cc11"
+        },
+        {
+          "chapter": 6,
+          "scene_id": "s6d",
+          "time_s": 87.053,
+          "file": "preview/ch06_s6d_87.05s.png",
+          "sha256": "31c5151e2ffb954b14a79d28ca90135acf960c9de0514d595b60cc877ac20d50"
+        },
+        {
+          "chapter": 6,
+          "scene_id": "s6e",
+          "time_s": 105.99366666666666,
+          "file": "preview/ch06_s6e_105.99s.png",
+          "sha256": "8e77a49bae061f15c23cf32440a105494107a96488d0871134809fa4ac796682"
+        },
+        {
+          "chapter": 7,
+          "scene_id": "s7a",
+          "time_s": 30.278999999999996,
+          "file": "preview/ch07_s7a_30.28s.png",
+          "sha256": "88fa2f725ae09498ab28fa273b5306bbf8c4330359ce5fb534996eb1350ed99d"
+        },
+        {
+          "chapter": 7,
+          "scene_id": "s7b",
+          "time_s": 55.207,
+          "file": "preview/ch07_s7b_55.21s.png",
+          "sha256": "a0ad3a3a5e3697ed0dfeabfb0eed8fc66b2966d09b81edc36641016c8fb87ac8"
+        },
+        {
+          "chapter": 7,
+          "scene_id": "s7c",
+          "time_s": 75.06901587301587,
+          "file": "preview/ch07_s7c_75.07s.png",
+          "sha256": "6c013576f196e3573740e0da7a4ab43c72f6f92c1d062dd13a0227510149d2da"
+        },
+        {
+          "chapter": 7,
+          "scene_id": "s7d",
+          "time_s": 98.00834013605441,
+          "file": "preview/ch07_s7d_98.01s.png",
+          "sha256": "761a0cac0fef4a9d2972c902972d269c122267a41d200d0bcf9e644f25febbf4"
+        },
+        {
+          "chapter": 8,
+          "scene_id": "s8h",
+          "time_s": 27.535015873015873,
+          "file": "preview/ch08_s8h_27.54s.png",
+          "sha256": "863ad2b022ee31a991b93523e59bf31fcb8c972e90d071964bfd04c895a65c4c"
+        },
+        {
+          "chapter": 8,
+          "scene_id": "s8l",
+          "time_s": 60.63902267573695,
+          "file": "preview/ch08_s8l_60.64s.png",
+          "sha256": "8816c1236e7e867e09a54db1dd0c92de88aea69d99b58b933b9104f1ddbf0564"
+        },
+        {
+          "chapter": 8,
+          "scene_id": "s8a",
+          "time_s": 100.71402267573694,
+          "file": "preview/ch08_s8a_100.71s.png",
+          "sha256": "9aad64650fc9f6056f3c5b58345c8b40d16b1fee9f23fa2260472639b4e5d739"
+        },
+        {
+          "chapter": 8,
+          "scene_id": "s8b",
+          "time_s": 129.04902267573695,
+          "file": "preview/ch08_s8b_129.05s.png",
+          "sha256": "e7ed5bba404ba0c10ad8cbe055cd93f77aafbf8495f29ed39da976ae18811ebc"
+        },
+        {
+          "chapter": 8,
+          "scene_id": "s8c",
+          "time_s": 152.87902267573696,
+          "file": "preview/ch08_s8c_152.88s.png",
+          "sha256": "7630a8e5ca1997a04190276c33c86b920dbe3f63d8552b973896a8e80d97ace3"
+        },
+        {
+          "chapter": 8,
+          "scene_id": "s8d",
+          "time_s": 171.89302267573694,
+          "file": "preview/ch08_s8d_171.89s.png",
+          "sha256": "35811e5f461b4929044a2d4e7b917b885bfffcd7b3d0a5fd4160e3d5cca6dee1"
+        },
+        {
+          "chapter": 8,
+          "scene_id": "s8e",
+          "time_s": 188.90767346938776,
+          "file": "preview/ch08_s8e_188.91s.png",
+          "sha256": "c6f09cd04e4313b4b413b7aa11bc63d899f30b041940b95abb10348cc27a6ac6"
+        },
+        {
+          "chapter": 9,
+          "scene_id": "s9a",
+          "time_s": 17.266,
+          "file": "preview/ch09_s9a_17.27s.png",
+          "sha256": "64598fffc742e80aca7f1c1df9745a3fc17b2ad1d3b4b30bcfa94854c6e7e5f9"
+        },
+        {
+          "chapter": 9,
+          "scene_id": "s9b",
+          "time_s": 35.329,
+          "file": "preview/ch09_s9b_35.33s.png",
+          "sha256": "0ff4957ed4989877f3fbacca4e13c6ed729f7253235833ae774ce0ee9e6a82c1"
+        },
+        {
+          "chapter": 9,
+          "scene_id": "s9c",
+          "time_s": 55.311,
+          "file": "preview/ch09_s9c_55.31s.png",
+          "sha256": "48d84c8c03ca1dadee11ac0dbe44552f97d264de06a44aabb14c99b8d0dc2b94"
+        },
+        {
+          "chapter": 9,
+          "scene_id": "s9d",
+          "time_s": 81.294,
+          "file": "preview/ch09_s9d_81.29s.png",
+          "sha256": "9e6403b3785639e4e25e28dd9ed735d7a688f80bbc60e64123e4ca1da768ad4a"
+        },
+        {
+          "chapter": 10,
+          "scene_id": "s10choice",
+          "time_s": 15.418000000000001,
+          "file": "preview/ch10_s10choice_15.42s.png",
+          "sha256": "4f61a838e2d04941ea71646dfcdb57bb4d23931c72a669ea654b57354a51297c"
+        },
+        {
+          "chapter": 10,
+          "scene_id": "s10invest",
+          "time_s": 38.233000000000004,
+          "file": "preview/ch10_s10invest_38.23s.png",
+          "sha256": "3d1acac6319cae3bc28ebf0e10d24affb07ad4b3f5d282f312b9be1c1649bd59"
+        },
+        {
+          "chapter": 10,
+          "scene_id": "s10stable",
+          "time_s": 60.367000000000004,
+          "file": "preview/ch10_s10stable_60.37s.png",
+          "sha256": "28dd0f650038fb260b4f7e38cb48e658971b201a21424ecdb601e76dfa038a14"
+        },
+        {
+          "chapter": 10,
+          "scene_id": "s10life",
+          "time_s": 85.701,
+          "file": "preview/ch10_s10life_85.70s.png",
+          "sha256": "66914eeace083045dd8a2ea01937b678beaac6879fa8a542e4de1549fbe8712e"
+        },
+        {
+          "chapter": 10,
+          "scene_id": "s10hold",
+          "time_s": 103.579,
+          "file": "preview/ch10_s10hold_103.58s.png",
+          "sha256": "c14e91dce3f640811e1139212572170e2dd475ae04b3e0fd493c4ac0c46a8cd7"
+        },
+        {
+          "chapter": 10,
+          "scene_id": "s10next",
+          "time_s": 120.38199999999999,
+          "file": "preview/ch10_s10next_120.38s.png",
+          "sha256": "236b63d8c4ebccff5f9707a95c0db0a23791579c15447b3076117cf91fbdf5c1"
+        }
+      ],
+      "changed_caption_snapshots": [],
+      "external_requests": [],
+      "longest_labels": [
+        {
+          "chapter": 1,
+          "labels": [
+            {
+              "id": "s3-c3",
+              "text": "같은 수준의 집 · 기간",
+              "length": 13
+            },
+            {
+              "id": "title-s1",
+              "text": "같은 집 · 세 가구",
+              "length": 11
+            },
+            {
+              "id": "s3-c2",
+              "text": "매달 주거·저축 예산",
+              "length": 11
+            },
+            {
+              "id": "title-s2",
+              "text": "매달 드는 주거비",
+              "length": 9
+            },
+            {
+              "id": "title-s4",
+              "text": "10년 후 순자산",
+              "length": 9
+            },
+            {
+              "id": "s3-c3",
+              "text": "6억원 · 10년",
+              "length": 9
+            },
+            {
+              "id": "s1-c2",
+              "text": "전세로 산 가구",
+              "length": 8
+            },
+            {
+              "id": "s1-c3",
+              "text": "월세로 산 가구",
+              "length": 8
+            }
+          ]
+        },
+        {
+          "chapter": 2,
+          "labels": [
+            {
+              "id": "s2g-note",
+              "text": "동일 단지·면적 / 분기별 각 2건 이상 / 연결 30단지 이상 · 세종 2015Q1 시작",
+              "length": 50
+            },
+            {
+              "id": "s2b-l",
+              "text": "돈이 움직이는 구조를 비교하는 동일 조건의 가정 모형",
+              "length": 29
+            },
+            {
+              "id": "title-s2g",
+              "text": "2006년부터 본 집값 · 강조 구간은 최근 10년",
+              "length": 28
+            },
+            {
+              "id": "s2g-unit",
+              "text": "자체 실거래 연결지수 · 지역별 시작분기 = 100",
+              "length": 28
+            },
+            {
+              "id": "title-s2p",
+              "text": "보수적인 예산 계획 · 집값 연 2%에서 출발",
+              "length": 25
+            },
+            {
+              "id": "s2a-k3",
+              "text": "집주인·임차인 부담이 다른 항목",
+              "length": 17
+            },
+            {
+              "id": "s2g-period",
+              "text": "연평균 · 분기 연결 단지 수",
+              "length": 16
+            },
+            {
+              "id": "s2a-k1",
+              "text": "면적·위치·생활 편의",
+              "length": 11
+            }
+          ]
+        },
+        {
+          "chapter": 3,
+          "labels": [
+            {
+              "id": "s3a-sm",
+              "text": "거래비용 600만원 · 투자계좌 400만원 →",
+              "length": 25
+            },
+            {
+              "id": "s3c-k1",
+              "text": "보증금 1억원 · 월 100만원",
+              "length": 17
+            },
+            {
+              "id": "s3c-k3",
+              "text": "보증금에 묶인 자기자금이 적음",
+              "length": 16
+            },
+            {
+              "id": "s3b-fee",
+              "text": "초기 계약비용 100만원",
+              "length": 13
+            },
+            {
+              "id": "s3a-l1",
+              "text": "자기자금 2억5천만원",
+              "length": 11
+            },
+            {
+              "id": "title-s3a",
+              "text": "매매 · 출발 자금",
+              "length": 10
+            },
+            {
+              "id": "title-s3b",
+              "text": "전세 · 출발 자금",
+              "length": 10
+            },
+            {
+              "id": "title-s3c",
+              "text": "월세 · 출발 자금",
+              "length": 10
+            }
+          ]
+        },
+        {
+          "chapter": 4,
+          "labels": [
+            {
+              "id": "s4a-n",
+              "text": "대출 3억6천만원 · 30년 원리금균등 상환 · 연 4%",
+              "length": 31
+            },
+            {
+              "id": "s4b-lg",
+              "text": "막대 전체 = 월 300만원 · 진한 남색 = 투자금",
+              "length": 29
+            },
+            {
+              "id": "s4c-m",
+              "text": "초기 투자금과 월 적립금을 함께 계산",
+              "length": 20
+            },
+            {
+              "id": "s4a-bl",
+              "text": "주거 관련 현금지출 약 202만원",
+              "length": 18
+            },
+            {
+              "id": "s4a-m",
+              "text": "집을 산 가구도 남는 돈을 투자",
+              "length": 17
+            },
+            {
+              "id": "s4a-pl",
+              "text": "세 가구 모두 같은 투자수익률",
+              "length": 16
+            },
+            {
+              "id": "title-s4b",
+              "text": "세 가구 · 월 300만원",
+              "length": 14
+            },
+            {
+              "id": "title-s4c",
+              "text": "처음 투자금과 매달 투자금",
+              "length": 14
+            }
+          ]
+        },
+        {
+          "chapter": 5,
+          "labels": [
+            {
+              "id": "s5a-k3",
+              "text": "통장에서 나간 돈은 같아도 결과가 다름",
+              "length": 21
+            },
+            {
+              "id": "title-s5c",
+              "text": "상환한 원금은 줄어든 대출잔액에 반영",
+              "length": 20
+            },
+            {
+              "id": "s5e-k2",
+              "text": "작은 계좌에서 실제로 쌓이는 수익",
+              "length": 18
+            },
+            {
+              "id": "s5b-t1",
+              "text": "1개월 후 약 3억5,950만원",
+              "length": 17
+            },
+            {
+              "id": "s5b-t2",
+              "text": "10년 후 약 2억8,400만원",
+              "length": 17
+            },
+            {
+              "id": "s5d-m",
+              "text": "보증금 반환 = 자산 형태 전환",
+              "length": 17
+            },
+            {
+              "id": "s5e-m",
+              "text": "작은 계좌에서 실제 수익 계산",
+              "length": 16
+            },
+            {
+              "id": "s5e-k1",
+              "text": "작아진 출발 계좌에 이미 반영",
+              "length": 16
+            }
+          ]
+        },
+        {
+          "chapter": 6,
+          "labels": [
+            {
+              "id": "s6a-m",
+              "text": "총수익 = 가격 변화 + 배당 재투자",
+              "length": 20
+            },
+            {
+              "id": "s6b-m",
+              "text": "원화 ETF 수익률에 환율 효과 포함",
+              "length": 20
+            },
+            {
+              "id": "s6d-p",
+              "text": "12개월 복리로 연결 → 연 6%",
+              "length": 18
+            },
+            {
+              "id": "s6e-k",
+              "text": "집과 투자계좌 각각에 포함된 항목",
+              "length": 18
+            },
+            {
+              "id": "s6c-k2",
+              "text": "환전비용 · 운용보수 포함 여부",
+              "length": 17
+            },
+            {
+              "id": "s6d-m0",
+              "text": "월말 적립 → 다음 달부터 수익",
+              "length": 17
+            },
+            {
+              "id": "s6a-pl",
+              "text": "S&P500을 따라가는 ETF",
+              "length": 16
+            },
+            {
+              "id": "s6d-m1",
+              "text": "월 약 0.487% 복리 적용",
+              "length": 16
+            }
+          ]
+        },
+        {
+          "chapter": 7,
+          "labels": [
+            {
+              "id": "s7d-n",
+              "text": "집에 계속 사는 상태에서 집 지분·보증금·투자계좌를 평가",
+              "length": 31
+            },
+            {
+              "id": "s7b-c2",
+              "text": "월세 누적표 + 금융자산표를 함께 볼 때 설명됨",
+              "length": 26
+            },
+            {
+              "id": "s7c-k",
+              "text": "집에 계속 사는 상태의 평가 순자산",
+              "length": 19
+            },
+            {
+              "id": "s7d-i3",
+              "text": "그다음 주거비 · 계속 거주할 집",
+              "length": 18
+            },
+            {
+              "id": "s7b-tA",
+              "text": "매매보다 약 7,400만원",
+              "length": 14
+            },
+            {
+              "id": "s7b-tB",
+              "text": "전세보다 약 3,000만원",
+              "length": 14
+            },
+            {
+              "id": "s7b-c0",
+              "text": "더 큰 초기 투자금의 수익",
+              "length": 14
+            },
+            {
+              "id": "s7d-i2",
+              "text": "ETF 매도세금과 비용",
+              "length": 12
+            }
+          ]
+        },
+        {
+          "chapter": 8,
+          "labels": [
+            {
+              "id": "s8l-note",
+              "text": "이자·보유비용·원금 상환까지 연결해 최종 순자산 계산 · 하락도 집 전체에 작용",
+              "length": 44
+            },
+            {
+              "id": "s8h-unit",
+              "text": "10년 후 평가 순자산 · 억원 · 바뀌는 입력은 집값 상승률 한 가지",
+              "length": 39
+            },
+            {
+              "id": "s8h-fixed",
+              "text": "고정: 투자 연 6% · 대출 연 4% · 월세·보증금 유지",
+              "length": 33
+            },
+            {
+              "id": "s8d-vl",
+              "text": "금리가 바뀌는 시점마다 이자와 남은 투자금이 달라짐",
+              "length": 28
+            },
+            {
+              "id": "title-s8h",
+              "text": "집값만 0% · 2% · 4% · 6%로 변경",
+              "length": 25
+            },
+            {
+              "id": "s8b-k2",
+              "text": "같은 집에서 가능한 계약인지 시장 자료로 확인",
+              "length": 25
+            },
+            {
+              "id": "s8d-p",
+              "text": "확인할 것: 언제, 어떤 잔액에 적용됐는지",
+              "length": 23
+            },
+            {
+              "id": "title-s8l",
+              "text": "대출을 더하면 집 전체 가격이 움직입니다",
+              "length": 22
+            }
+          ]
+        },
+        {
+          "chapter": 9,
+          "labels": [
+            {
+              "id": "s9a-lg",
+              "text": "옅은 막대: 전부 투자(기본) · 진한 막대: 절반만 투자",
+              "length": 32
+            },
+            {
+              "id": "s9b-p",
+              "text": "매달 남는 돈을 소비하면 저축 원금도 줄어드는 별도 계산",
+              "length": 31
+            },
+            {
+              "id": "s9b-l",
+              "text": "10년 후 금융자산 구성 (절반만 투자)",
+              "length": 22
+            },
+            {
+              "id": "s9b-t0",
+              "text": "ETF 0.87억 · 현금 0.59억",
+              "length": 20
+            },
+            {
+              "id": "s9b-t1",
+              "text": "ETF 2.73억 · 현금 1.37억",
+              "length": 20
+            },
+            {
+              "id": "s9b-t2",
+              "text": "ETF 4.56억 · 현금 1.13억",
+              "length": 20
+            },
+            {
+              "id": "s9b-k2",
+              "text": "수익률 차이 · 저축 실행의 차이",
+              "length": 18
+            },
+            {
+              "id": "s9c-m1",
+              "text": "예산 초과 시 경로 계산 종료",
+              "length": 16
+            }
+          ]
+        },
+        {
+          "chapter": 10,
+          "labels": [
+            {
+              "id": "title-s10next",
+              "text": "다음 편 · 내 돈과 소득으로 가격 범위 계산",
+              "length": 25
+            },
+            {
+              "id": "title-s10stable",
+              "text": "실거주 매매 · 자산 형성과 주거 안정",
+              "length": 21
+            },
+            {
+              "id": "s10next-heading",
+              "text": "다음 편 · 감당 가능한 매매 가격",
+              "length": 19
+            },
+            {
+              "id": "title-s10invest",
+              "text": "기본 결과와 추가 투자성과의 조건",
+              "length": 18
+            },
+            {
+              "id": "title-s10choice",
+              "text": "내 상황에 맞추는 세 가지 입력",
+              "length": 17
+            },
+            {
+              "id": "title-s10hold",
+              "text": "보유를 이어갈 수 있는 가격",
+              "length": 15
+            },
+            {
+              "id": "title-s10life",
+              "text": "오래 유지할 생활 계획",
+              "length": 12
+            },
+            {
+              "id": "card-t",
+              "text": "10. 다음 선택",
+              "length": 9
+            }
+          ]
+        }
+      ],
+      "seek_safe_checks": [
+        {
+          "chapter": 1,
+          "time_s": 34.317,
+          "backward_seek_pixel_identical": true
+        },
+        {
+          "chapter": 2,
+          "time_s": 111.27699999999999,
+          "backward_seek_pixel_identical": true
+        },
+        {
+          "chapter": 3,
+          "time_s": 92.96502267573695,
+          "backward_seek_pixel_identical": true
+        },
+        {
+          "chapter": 4,
+          "time_s": 74.26899999999999,
+          "backward_seek_pixel_identical": true
+        },
+        {
+          "chapter": 5,
+          "time_s": 55.247022675736964,
+          "backward_seek_pixel_identical": true
+        },
+        {
+          "chapter": 6,
+          "time_s": 65.871,
+          "backward_seek_pixel_identical": true
+        },
+        {
+          "chapter": 7,
+          "time_s": 75.06901587301587,
+          "backward_seek_pixel_identical": true
+        },
+        {
+          "chapter": 8,
+          "time_s": 129.04902267573695,
+          "backward_seek_pixel_identical": true
+        },
+        {
+          "chapter": 9,
+          "time_s": 55.311,
+          "backward_seek_pixel_identical": true
+        },
+        {
+          "chapter": 10,
+          "time_s": 85.701,
+          "backward_seek_pixel_identical": true
+        }
+      ],
+      "motion_windows": [
+        {
+          "chapter": 1,
+          "clipped_tweens": []
+        },
+        {
+          "chapter": 2,
+          "clipped_tweens": []
+        },
+        {
+          "chapter": 3,
+          "clipped_tweens": []
+        },
+        {
+          "chapter": 4,
+          "clipped_tweens": []
+        },
+        {
+          "chapter": 5,
+          "clipped_tweens": []
+        },
+        {
+          "chapter": 6,
+          "clipped_tweens": []
+        },
+        {
+          "chapter": 7,
+          "clipped_tweens": []
+        },
+        {
+          "chapter": 8,
+          "clipped_tweens": []
+        },
+        {
+          "chapter": 9,
+          "clipped_tweens": []
+        },
+        {
+          "chapter": 10,
+          "clipped_tweens": []
+        }
+      ],
+      "status": "sampled_bbox_pass"
+    },
+    "signal_measurements": {
+      "status": "signal_measurement_complete_human_audio_review_pending",
+      "final_sha256": "136a20c43ba3a99a138ba7282c1fb1a8532fc3aa92695c57ca2f904d011b1079",
+      "measurements": {
+        "integrated_LUFS": -17.2,
+        "true_peak_dBFS": -2.0,
+        "RMS_level_dBFS": -19.796045,
+        "peak_level_dBFS": -1.9995,
+        "number_of_samples": 57237504.0
+      },
+      "logs": {
+        "loudness": {
+          "argv": [
+            "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\media-bin\\ffmpeg.exe",
+            "-hide_banner",
+            "-nostdin",
+            "-i",
+            "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\jun-production-v1\\renders\\measured-jun-v1\\housing_choice_jun_v1.mp4",
+            "-map",
+            "0:a:0",
+            "-vn",
+            "-af",
+            "ebur128=peak=true",
+            "-f",
+            "null",
+            "-"
+          ],
+          "returncode": 0,
+          "log": "qa_signal/loudness.log",
+          "log_sha256": "b09969a1bfba387a0cc653db7d1510cbf3f2ff75b374870b5345144d9023fe98"
+        },
+        "activity": {
+          "argv": [
+            "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\media-bin\\ffmpeg.exe",
+            "-hide_banner",
+            "-nostdin",
+            "-i",
+            "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\jun-production-v1\\renders\\measured-jun-v1\\housing_choice_jun_v1.mp4",
+            "-map",
+            "0:a:0",
+            "-vn",
+            "-af",
+            "astats=metadata=0:reset=0,silencedetect=noise=-60dB:d=0.5",
+            "-f",
+            "null",
+            "-"
+          ],
+          "returncode": 0,
+          "log": "qa_signal/activity.log",
+          "log_sha256": "44bbc9ed14c1d84395ee415b31f9a2efbb4e540d21327a8a1d56f3a867f85f4a"
+        }
+      },
+      "actual_listening": false,
+      "pronunciation_naturalness": "unverified; ASR/alignment/signal cannot establish listening",
+      "continuous_playback": false
+    },
+    "narration_technical_validation": {
+      "status": "passed_technical_only_not_listened",
+      "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+      "final_timing_sha256": "6336849ba8fd0e422a5f8a6140db9ff485226c7f8dad7a2951fae80b37638f95",
+      "chapters": 10,
+      "paragraphs": 54,
+      "cues": 206,
+      "body_seconds": 1177.4333333333334,
+      "body_audio_sha256": "e6c79d11ddde9febc4a02bee0009c6090aee64c65ffb6b719ad1122d7e09c2fa",
+      "all206_segmentation_preserved": true,
+      "saturated_samples": 0,
+      "actual_listening": false,
+      "ASR_performed": true,
+      "ASR_scope": [
+        "C02P02",
+        "C06P02",
+        "C07P02"
+      ],
+      "full_episode_ASR": false,
+      "warnings": [
+        "공급자 character-cost 비용과 계정 사용량 즉시 반영은 다를 수 있어 별도 원장으로 보존.",
+        "자막은 공급자 문자 정렬 기반이며 음향 정답/자연스러움 검증을 뜻하지 않음."
+      ],
+      "code_sha256": "c1bc3816957ac7d0df6ac3800bf56e5282df00d9a6d991162acb4defce9637ec"
+    },
+    "prior_exact_script_content_approval": {
+      "script_path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/script-final-v6/script_v6.md",
+      "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+      "status": "exact_unchanged_content_approval_reused_for_current_Jun_revision",
+      "codex_content_pass": true,
+      "claude_content_pass": true,
+      "codex_receipt": "video-agent-studio/episodes/housing-choice-networth-20261020/qa/private-production-v1/content_v6_review.json",
+      "claude_receipt": "video-agent-studio/episodes/housing-choice-networth-20261020/director/two-episode-production-v1/claude/script-v6-terminology-round1/receipt.json",
+      "review_receipt_sha256": {
+        "video-agent-studio/episodes/housing-choice-networth-20261020/qa/private-production-v1/content_v6_review.json": "6972d17f98eae798a8306524637f001a2f11a7c34fc94515bb39daa8836ca15b",
+        "video-agent-studio/episodes/housing-choice-networth-20261020/director/two-episode-production-v1/claude/script-v6-terminology-round1/receipt.json": "26e4053d95650f7f7261538ba3f58c628f11c306e87110f5ceaf774ce1aedd53"
+      },
+      "free_tts_authorized": true,
+      "paid_tts_authorized": true,
+      "paid_tts_current_authorization": "video-agent-studio/episodes/housing-choice-networth-20261020/director/launch-and-jun-v1/authorization.json",
+      "historical_content_approval_basis": "director/two-episode-production-v1/locked_script.json; only exact body SHA and content reviews reused",
+      "final_media_approval": "pending"
+    },
+    "previous_final_media_approval_scope": "Old approvals support unchanged script/visual design only; old audio/timing checks not inherited.",
+    "producer_full_AV_decode_returncode": 0,
+    "encoded_unique_frames": 199,
+    "actual_listening": false,
+    "continuous_playback": false,
+    "Studio_ContentID_review": false,
+    "user_guide": "No clipped text, no repetitive unrelated charts/photos, protect numeric semantic captions, no AI badges or unnecessary negative disclaimers, highlight currently spoken target, actual +3s end hold.",
+    "independent_audio_review": {
+      "role": "video_qa",
+      "revision": "jun-production-v1-audio-review",
+      "approved": true,
+      "status": "pass_with_explicit_ASR_and_listening_limits",
+      "approval_scope": "확정 SHA Jun 원본 PCM·전체206 문자정렬/고정본문 및 선택34문단의 로컬ASR 보조 검수. 실제 청취·자연스러움·최종 인코딩 믹스 승인은 포함하지 않음.",
+      "checked_at": "2026-10-26T06:16:26.883043+00:00",
+      "required_issues": [],
+      "critical_issues": [],
+      "recommended_issues": [
+        {
+          "paragraph_id": "C04P01",
+          "raw_paragraph_interval_s": [
+            22.72,
+            23.94
+          ],
+          "approved_display": "202만원",
+          "approved_spoken": "이백이만 원",
+          "small_recognition": "220만 원",
+          "medium_recognition": "220만원",
+          "independent_Vosk_recognition": "[2] 백 [2] 만원",
+          "Vosk_no_grammar": true,
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C04P01\\medium.json",
+              "sha256": "f83aa2ed9ae496560ba184ef5bf6494ee9d55dae873ced9f2ea1327b40fc6c03",
+              "bytes": 10428
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C04P01\\small.json",
+              "sha256": "0ad1cd602999bf6697585b3264f4eea22bbe386b778b2256a1725612df3d0b4f",
+              "bytes": 11070
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C04P01\\vosk.json",
+              "sha256": "f3e89b5176fc72dd6f422809857e301aa87dfdcec5334fc00040a83548e55fd5",
+              "bytes": 12557
+            }
+          ],
+          "assessment": "Whisper 두 크기의 공통 숫자 정규화 불일치. 다른 계열 Vosk가202만원을 지지하여 실제 발음 오류로 확정하지 않음. 실제청취는 미확인으로 유지하며 최종 청취 때 우선 확인 권장. 자동 유료 재생성 근거로 쓰지 않음."
+        }
+      ],
+      "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+      "audio_revision": "jun-production-v1",
+      "audio_sha256": "e6c79d11ddde9febc4a02bee0009c6090aee64c65ffb6b719ad1122d7e09c2fa",
+      "body_audio": {
+        "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\body_mono.wav",
+        "sha256": "e6c79d11ddde9febc4a02bee0009c6090aee64c65ffb6b719ad1122d7e09c2fa",
+        "bytes": 103849664
+      },
+      "timing_sha256": "6336849ba8fd0e422a5f8a6140db9ff485226c7f8dad7a2951fae80b37638f95",
+      "final_timing": {
+        "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\final_timing.json",
+        "sha256": "6336849ba8fd0e422a5f8a6140db9ff485226c7f8dad7a2951fae80b37638f95",
+        "bytes": 350589
+      },
+      "chapter_audio": [
+        {
+          "chapter": 1,
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\chapter_01.wav",
+          "sha256": "cff67f7568c66b535652607aa69b04fab486187fa9369cb17ec5d4c43f45f034",
+          "bytes": 7338284
+        },
+        {
+          "chapter": 2,
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\chapter_02.wav",
+          "sha256": "e353d7109e59d0a2c85842832a722cd79d1d07268b26216ebba5eeb9b189dd4e",
+          "bytes": 13206524
+        },
+        {
+          "chapter": 3,
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\chapter_03.wav",
+          "sha256": "aea81c09a3e1ca4af1f1d2f66e5afcafdd84f8982e5dcb8027cdd91f6686b6fa",
+          "bytes": 10701644
+        },
+        {
+          "chapter": 4,
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\chapter_04.wav",
+          "sha256": "fae73cd337c8c183d24324c18cd50e4e8ec151659b510b736fc39ed8290f6282",
+          "bytes": 8893544
+        },
+        {
+          "chapter": 5,
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\chapter_05.wav",
+          "sha256": "731855ea011ea9a1443b505db293df6456e5849a298220a044cb61f06ad5a90c",
+          "bytes": 8464304
+        },
+        {
+          "chapter": 6,
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\chapter_06.wav",
+          "sha256": "bd313bc946c7dc56999934164ad81c35d5e5df7311219c968231b985d0b82c2d",
+          "bytes": 9840224
+        },
+        {
+          "chapter": 7,
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\chapter_07.wav",
+          "sha256": "0b18306fe7d5c85ebcb3f7991737facb30daf0a474f1ed9f4a20190f7a4b8088",
+          "bytes": 9281624
+        },
+        {
+          "chapter": 8,
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\chapter_08.wav",
+          "sha256": "5c9e6650fde680df43cf33a663113198cd5d6727b240f32faa174c682a5cc0ee",
+          "bytes": 17116724
+        },
+        {
+          "chapter": 9,
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\chapter_09.wav",
+          "sha256": "0f772363cf21f240d31f508746cbac2327c46bde75667fc0fe8a1beaef9ed2f7",
+          "bytes": 7911584
+        },
+        {
+          "chapter": 10,
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\chapter_10.wav",
+          "sha256": "704e628e71683115cb9af4a6ba156ae71e1f1794eec7918f65a2f1f6ac8acaec",
+          "bytes": 11095604
+        }
+      ],
+      "raw_paragraph_audio": [
+        {
+          "paragraph_id": "C01P01",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C01P01\\audio.wav",
+          "sha256": "d253a535940e8c72725e5bdd9340a8b82e2148d82c6a4fd260b99f3bf5bf57eb",
+          "bytes": 1658238
+        },
+        {
+          "paragraph_id": "C01P02",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C01P02\\audio.wav",
+          "sha256": "f60a30279014d89ddb90f17fe11fa1570e4b6309d89a07a00732b18dbfbd17da",
+          "bytes": 1806414
+        },
+        {
+          "paragraph_id": "C01P03",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C01P03\\audio.wav",
+          "sha256": "e6542883664e93c26453fc795bd56939a198ec7695865d4567951f519c5f33d9",
+          "bytes": 1827582
+        },
+        {
+          "paragraph_id": "C01P04",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C01P04\\audio.wav",
+          "sha256": "df44b76f5371f2132b8238c37b1daef8e51130730521fd0367ac2191798e6463",
+          "bytes": 1764078
+        },
+        {
+          "paragraph_id": "C02P01",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C02P01\\audio.wav",
+          "sha256": "640626fa2ee13179ae4125be1fec9275d65cb12e4f4d5241cf3aff929b7dae32",
+          "bytes": 1862862
+        },
+        {
+          "paragraph_id": "C02P02",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C02P02\\audio.wav",
+          "sha256": "97296d524e3417abc4f54fb6a74e29e93709716064e60d7b0664af4565060957",
+          "bytes": 3196446
+        },
+        {
+          "paragraph_id": "C02P03",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C02P03\\audio.wav",
+          "sha256": "16245097451c44bbbe5210f3342dc0ee4d0da5c9aabb23c61c2bf4c790bf7f27",
+          "bytes": 2512014
+        },
+        {
+          "paragraph_id": "C02P04",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C02P04\\audio.wav",
+          "sha256": "321fcb2f42f89774952d081226b5db475f48ef3688f4156de75e9e3f878a8556",
+          "bytes": 2582574
+        },
+        {
+          "paragraph_id": "C02P05",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C02P05\\audio.wav",
+          "sha256": "a70e4f22fdf348755f054bc3c4cede6965489e872190dcc8e4bc3282d3d69787",
+          "bytes": 1009086
+        },
+        {
+          "paragraph_id": "C02P06",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C02P06\\audio.wav",
+          "sha256": "33a747741a5efc954cbf0d079ea799a11a8b466d14fcb3288e54281561f33c49",
+          "bytes": 1432446
+        },
+        {
+          "paragraph_id": "C03P01",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C03P01\\audio.wav",
+          "sha256": "9feb5dbc68fadb3e912cd7283e20d17e14217ca939dc5366e6d247e9b8fe7d96",
+          "bytes": 2547294
+        },
+        {
+          "paragraph_id": "C03P02",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C03P02\\audio.wav",
+          "sha256": "74adba220fd42c652f88b637dc093a79216c0521fe6c1b7722128852f498195f",
+          "bytes": 1573566
+        },
+        {
+          "paragraph_id": "C03P03",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C03P03\\audio.wav",
+          "sha256": "14bfa15ec2ac25bc1308ee47cee8db916c3d0d5fe78602d891ed70c661771988",
+          "bytes": 2067486
+        },
+        {
+          "paragraph_id": "C03P04",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C03P04\\audio.wav",
+          "sha256": "3c54a73ecd0d48ceacb6775240da81f85f4a733104573c79714c37f647809b5c",
+          "bytes": 2250942
+        },
+        {
+          "paragraph_id": "C03P05",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C03P05\\audio.wav",
+          "sha256": "8923238672ea3207b39d678f21c957a9ff79a8e67f6dd5ffa136e7d096609226",
+          "bytes": 1686462
+        },
+        {
+          "paragraph_id": "C04P01",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C04P01\\audio.wav",
+          "sha256": "850c8e9f83d3ddeda36796c9e09e1c39213fd985812ac894563c992eb9daf906",
+          "bytes": 2130990
+        },
+        {
+          "paragraph_id": "C04P02",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C04P02\\audio.wav",
+          "sha256": "0f225c40802ebb01ecd5840e8f655ab58a19dd185586b7ea38c3ce939d6d300e",
+          "bytes": 1086702
+        },
+        {
+          "paragraph_id": "C04P03",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C04P03\\audio.wav",
+          "sha256": "6b0e3c2afa6e00de90f2d96235d8db816626c2be01a275e74ca7ed308d3492f6",
+          "bytes": 2067486
+        },
+        {
+          "paragraph_id": "C04P04",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C04P04\\audio.wav",
+          "sha256": "b143f99830d0e76886b36696cf5295ebd6eda528ead20bd21efcd8aab6b79a0f",
+          "bytes": 1185486
+        },
+        {
+          "paragraph_id": "C04P05",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C04P05\\audio.wav",
+          "sha256": "f56b333e213fb9460e52ed6694c24849ac14c5af8c9e113b9ce5dd10c63122be",
+          "bytes": 1848750
+        },
+        {
+          "paragraph_id": "C05P01",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C05P01\\audio.wav",
+          "sha256": "f4cdac2d6437dd83cc24017be05c2384850384a1898318d756d3e68543d12939",
+          "bytes": 1778190
+        },
+        {
+          "paragraph_id": "C05P02",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C05P02\\audio.wav",
+          "sha256": "d54d59230156910ec211beeeca43c0f3fa2c1a2d192e43e0530e9673a7df396a",
+          "bytes": 1926366
+        },
+        {
+          "paragraph_id": "C05P03",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C05P03\\audio.wav",
+          "sha256": "f21af81e2637bd2436da2b5789b51aea5f4e21c299a6a314539e678e152bdb6b",
+          "bytes": 1100814
+        },
+        {
+          "paragraph_id": "C05P04",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C05P04\\audio.wav",
+          "sha256": "949a8eff7ae7f5728b03360c42939664fb1de0dd528962586c31a719ec8e57b6",
+          "bytes": 1905198
+        },
+        {
+          "paragraph_id": "C05P05",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C05P05\\audio.wav",
+          "sha256": "41356fa3e72f443cc6883031a37409703912e07ba400be052c281c485f2ae257",
+          "bytes": 1178430
+        },
+        {
+          "paragraph_id": "C06P01",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C06P01\\audio.wav",
+          "sha256": "11cc7b0069bf93bd4df4fa3fd6bfded12b300bc7c8858f60e5b04cd520027787",
+          "bytes": 1813470
+        },
+        {
+          "paragraph_id": "C06P02",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C06P02\\audio.wav",
+          "sha256": "22b5be4104297628055afc1e29300b29ca534bbc790adda23e9a015e680f9989",
+          "bytes": 2116878
+        },
+        {
+          "paragraph_id": "C06P03",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C06P03\\audio.wav",
+          "sha256": "e46b117ce815b5936d755579a6a918df675bdcb3934d934904c7812dd1c0c338",
+          "bytes": 2116878
+        },
+        {
+          "paragraph_id": "C06P04",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C06P04\\audio.wav",
+          "sha256": "f02819fd8679c76960ffb89917632482433e44d197b36690ff8901c6a56fb027",
+          "bytes": 1707630
+        },
+        {
+          "paragraph_id": "C06P05",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C06P05\\audio.wav",
+          "sha256": "15216fa5c34e99c13c7f847edcb291253c16d44f034a7ffeba67282b40ed4c6a",
+          "bytes": 1510062
+        },
+        {
+          "paragraph_id": "C07P01",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C07P01\\audio.wav",
+          "sha256": "1903ad8ff1c079187d36da70fb8f5e4a728b49c42db2c10b8c5366c2730512fe",
+          "bytes": 1658238
+        },
+        {
+          "paragraph_id": "C07P02",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C07P02\\audio.wav",
+          "sha256": "5003fff075810b5c5da762aa8199343db112bd6a0a31977d7b20b96fb9f8ae89",
+          "bytes": 1672350
+        },
+        {
+          "paragraph_id": "C07P03",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C07P03\\audio.wav",
+          "sha256": "65e3a86d200497e9587ac6174729fbe358a2ce88f5dda73eb214de5282bbbe06",
+          "bytes": 1630014
+        },
+        {
+          "paragraph_id": "C07P04",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C07P04\\audio.wav",
+          "sha256": "42318e919a1a3b60a4a76a5a94adc5e730b56ebf514ae5ec955d23594ee330b9",
+          "bytes": 1749966
+        },
+        {
+          "paragraph_id": "C07P05",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C07P05\\audio.wav",
+          "sha256": "4d6290e717c528d32155a8405267344013d7069b55409dd806560cc58d9a65ad",
+          "bytes": 1996926
+        },
+        {
+          "paragraph_id": "C08P01",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P01\\audio.wav",
+          "sha256": "8c0e08ff3bc5368968bbe6acd5d1251f25c322b8c17b8507e9d98d46bb22ca77",
+          "bytes": 1072590
+        },
+        {
+          "paragraph_id": "C08P02",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P02\\audio.wav",
+          "sha256": "c0ad4fbe370a921b5da12701f7ee50c520967d30a1a4c25a29aebd885179d3b4",
+          "bytes": 1912254
+        },
+        {
+          "paragraph_id": "C08P03",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P03\\audio.wav",
+          "sha256": "5ea951e3e9cd3a5502fd303a3e693d870e00c2eeceaa9585d713f9a544d5bcb6",
+          "bytes": 2808366
+        },
+        {
+          "paragraph_id": "C08P04",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P04\\audio.wav",
+          "sha256": "e8e30b50b78389257b2ca2db8e6d4428e76b3ef674126358e9831f90b37b4078",
+          "bytes": 1820526
+        },
+        {
+          "paragraph_id": "C08P05",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P05\\audio.wav",
+          "sha256": "aa97516be7fd703ad766d4910ceac057eb7e55a02c74ae459d35878634cfe016",
+          "bytes": 1940478
+        },
+        {
+          "paragraph_id": "C08P06",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P06\\audio.wav",
+          "sha256": "f39bddebd87f86e399cb771a6ab60802d388249bc1ab0b4ca01b1a263d010362",
+          "bytes": 1891086
+        },
+        {
+          "paragraph_id": "C08P07",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P07\\audio.wav",
+          "sha256": "70ad2659e80f996f2b8f995dee5b2c6a88bb39511a4967624671cba0c84ef502",
+          "bytes": 2138046
+        },
+        {
+          "paragraph_id": "C08P08",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P08\\audio.wav",
+          "sha256": "19b8872baf31b9f8fb98833a393f18f582c532386d05a9499360acdcd0604383",
+          "bytes": 1425390
+        },
+        {
+          "paragraph_id": "C08P09",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P09\\audio.wav",
+          "sha256": "9f388a3fffa34f59671874a917561a73da597b1c853c9247153c19c323e7efa5",
+          "bytes": 1390110
+        },
+        {
+          "paragraph_id": "C09P01",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C09P01\\audio.wav",
+          "sha256": "005129b32c4e2126cd971819dc2b7159b6acd2f6cc757a3a759cb83be7b1fd30",
+          "bytes": 1728798
+        },
+        {
+          "paragraph_id": "C09P02",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C09P02\\audio.wav",
+          "sha256": "e23d559664f571289e5c52a2b8ce5ead3da1ca297ab1d63bfbce42e62ce8c790",
+          "bytes": 1467726
+        },
+        {
+          "paragraph_id": "C09P03",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C09P03\\audio.wav",
+          "sha256": "7d5fa2ac12e398ab397a010c5a362010cd189533fe136a1ed3938973853ba7ed",
+          "bytes": 1834638
+        },
+        {
+          "paragraph_id": "C09P04",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C09P04\\audio.wav",
+          "sha256": "6e451f78f69535bd187f09412faf4cf05a2de59cd537e21ee21e0ce0cc41691e",
+          "bytes": 2342670
+        },
+        {
+          "paragraph_id": "C10P01",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C10P01\\audio.wav",
+          "sha256": "ee220eeb0d05d63f2e7df44d0b896c9bf1324e7c13dd7aa56fd85a8dc16ed0c5",
+          "bytes": 1495950
+        },
+        {
+          "paragraph_id": "C10P02",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C10P02\\audio.wav",
+          "sha256": "cb9f6d6e12de36b60a69acbfcf19aa579889f01aba6dc1187585487c12f8cdcb",
+          "bytes": 2166270
+        },
+        {
+          "paragraph_id": "C10P03",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C10P03\\audio.wav",
+          "sha256": "0f1dc124676ffc5feaa145b659d9fb86c3e700b666374b62abf27e3ee417904a",
+          "bytes": 1806414
+        },
+        {
+          "paragraph_id": "C10P04",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C10P04\\audio.wav",
+          "sha256": "0e13cddff3aafed32a0fb2e3d37bf2b0e74da66a51311f99517a894f1bcbb16f",
+          "bytes": 2363838
+        },
+        {
+          "paragraph_id": "C10P05",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C10P05\\audio.wav",
+          "sha256": "8d37236fb948f57148a52cacf616e143b1b4a35991ba935dc6909b6dd7131e6f",
+          "bytes": 1185486
+        },
+        {
+          "paragraph_id": "C10P06",
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C10P06\\audio.wav",
+          "sha256": "c194df7cbcc7a18632a511bee0709d4efd9400377d77ae4022da1b85fd4f00d8",
+          "bytes": 1305438
+        }
+      ],
+      "sampled_ids": [
+        "C01P02",
+        "C01P03",
+        "C01P04",
+        "C02P02",
+        "C02P03",
+        "C02P04",
+        "C02P06",
+        "C03P01",
+        "C03P02",
+        "C03P03",
+        "C03P04",
+        "C04P01",
+        "C04P02",
+        "C04P03",
+        "C04P05",
+        "C05P01",
+        "C05P02",
+        "C06P01",
+        "C06P02",
+        "C06P03",
+        "C06P04",
+        "C07P01",
+        "C07P02",
+        "C07P03",
+        "C08P02",
+        "C08P03",
+        "C08P04",
+        "C08P05",
+        "C08P06",
+        "C08P07",
+        "C09P01",
+        "C09P03",
+        "C10P02",
+        "C10P06"
+      ],
+      "sampled_paragraphs": 34,
+      "ASR_engines": [
+        {
+          "name": "faster-whisper-small",
+          "runs": 34
+        },
+        {
+          "name": "faster-whisper-medium",
+          "runs": 6
+        },
+        {
+          "name": "Vosk-small-ko-0.22",
+          "runs": 7
+        }
+      ],
+      "ASR_runs": 47,
+      "ASR_unique_input_seconds": 755.7600000000001,
+      "numericchecks": [
+        {
+          "paragraph_id": "C01P02",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small",
+            "vosk"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C01P02\\audio.wav",
+            "sha256": "f60a30279014d89ddb90f17fe11fa1570e4b6309d89a07a00732b18dbfbd17da",
+            "bytes": 1806414
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C01P02\\small.json",
+              "sha256": "d6a966ef3d58e002a45dd9fada0fd751891c9b933f9f995ec5930e247f985713",
+              "bytes": 10477
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C01P02\\vosk.json",
+              "sha256": "5d6b93ba85a3a2aa084e126d86148a1397c078367d8a94a37284f3f7f2083512",
+              "bytes": 10377
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C01P03",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small",
+            "vosk"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C01P03\\audio.wav",
+            "sha256": "e6542883664e93c26453fc795bd56939a198ec7695865d4567951f519c5f33d9",
+            "bytes": 1827582
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C01P03\\small.json",
+              "sha256": "f17018b0ae4492d9ff1544f558c78c2ca6c4405dc4881dfb92c938756d2ffc81",
+              "bytes": 10170
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C01P03\\vosk.json",
+              "sha256": "ce3c223d2a6f3353ebb6376530cd4eb87a8f2350804eeff379ad3d4202e07f1e",
+              "bytes": 11573
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C01P04",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C01P04\\audio.wav",
+            "sha256": "df44b76f5371f2132b8238c37b1daef8e51130730521fd0367ac2191798e6463",
+            "bytes": 1764078
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C01P04\\small.json",
+              "sha256": "c5f951162e591da0644e7c6c014f18766967170576ebd2bfb0e9912a08802375",
+              "bytes": 9313
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C02P02",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "medium",
+            "small",
+            "vosk"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C02P02\\audio.wav",
+            "sha256": "97296d524e3417abc4f54fb6a74e29e93709716064e60d7b0664af4565060957",
+            "bytes": 3196446
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C02P02\\medium.json",
+              "sha256": "d6617ac226a9f489583d530d95916b8a9be87dc4cfbe1cee26d6d9fe37d806bf",
+              "bytes": 15417
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C02P02\\small.json",
+              "sha256": "30f1a4dc938405d07eac6678032c69ad19a631b912d21bd318cf11ac37962393",
+              "bytes": 14734
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C02P02\\vosk.json",
+              "sha256": "1224d7d4ef399bc729f26dd4a8d7b312d1835556db39cf7e117b1effeda437cb",
+              "bytes": 17753
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C02P03",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small",
+            "vosk"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C02P03\\audio.wav",
+            "sha256": "16245097451c44bbbe5210f3342dc0ee4d0da5c9aabb23c61c2bf4c790bf7f27",
+            "bytes": 2512014
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C02P03\\small.json",
+              "sha256": "aa785d868aab0980336cd1c1159c74fd6b9f6b254a99ed0775714845b73d8829",
+              "bytes": 13598
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C02P03\\vosk.json",
+              "sha256": "3414888f929fb66c88a26490352583ed2c8b7c1d94b9ecac3d3e0c0ee373b22e",
+              "bytes": 13643
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C02P04",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C02P04\\audio.wav",
+            "sha256": "321fcb2f42f89774952d081226b5db475f48ef3688f4156de75e9e3f878a8556",
+            "bytes": 2582574
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C02P04\\small.json",
+              "sha256": "950b07d24b2f3bbc752f9098548f4328a4bbcadbff0f4ae39a7533318dccc897",
+              "bytes": 12733
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C02P06",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C02P06\\audio.wav",
+            "sha256": "33a747741a5efc954cbf0d079ea799a11a8b466d14fcb3288e54281561f33c49",
+            "bytes": 1432446
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C02P06\\small.json",
+              "sha256": "728c4a73feb17818e4287a64b509f4e1bdb74cf71bc83a142271186b89a58874",
+              "bytes": 7086
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C03P01",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small",
+            "vosk"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C03P01\\audio.wav",
+            "sha256": "9feb5dbc68fadb3e912cd7283e20d17e14217ca939dc5366e6d247e9b8fe7d96",
+            "bytes": 2547294
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C03P01\\small.json",
+              "sha256": "28c4e7971902a101dd1a33f4ab8e29e134840aff0ff75a39b074c55e57195f1b",
+              "bytes": 13008
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C03P01\\vosk.json",
+              "sha256": "5bd386068f54f8bd2ab1bce8cea15f9dca69661055ddd8a330092a7c15b05b6d",
+              "bytes": 13811
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C03P02",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small",
+            "vosk"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C03P02\\audio.wav",
+            "sha256": "74adba220fd42c652f88b637dc093a79216c0521fe6c1b7722128852f498195f",
+            "bytes": 1573566
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C03P02\\small.json",
+              "sha256": "1f711020d3654ecb97a5475d15d927aa98dc63fed9933a0d024065980d840df5",
+              "bytes": 8397
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C03P02\\vosk.json",
+              "sha256": "9870bd02c5ab3ffadd852cefb41dfdc896dd4a88b87940d219bcda1a10c3c799",
+              "bytes": 9846
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C03P03",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C03P03\\audio.wav",
+            "sha256": "14bfa15ec2ac25bc1308ee47cee8db916c3d0d5fe78602d891ed70c661771988",
+            "bytes": 2067486
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C03P03\\small.json",
+              "sha256": "42268f6bee7c229133e6566d951c44ced79fbc09bc165f1e3b72629211fc1188",
+              "bytes": 11486
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C03P04",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "medium",
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C03P04\\audio.wav",
+            "sha256": "3c54a73ecd0d48ceacb6775240da81f85f4a733104573c79714c37f647809b5c",
+            "bytes": 2250942
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C03P04\\medium.json",
+              "sha256": "1311f7455a15127c090c80983e7ff5ab9bacdf1f5020b8709af8884aa56df0d5",
+              "bytes": 10544
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C03P04\\small.json",
+              "sha256": "c6189afce28d88d51f5439078ca167f6f87b232f2eb108997d1390ba65932ae1",
+              "bytes": 10533
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C04P01",
+          "status": "ASR_supports_approved_values_with_retained_cross_engine_disagreement",
+          "engines": [
+            "medium",
+            "small",
+            "vosk"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C04P01\\audio.wav",
+            "sha256": "850c8e9f83d3ddeda36796c9e09e1c39213fd985812ac894563c992eb9daf906",
+            "bytes": 2130990
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C04P01\\medium.json",
+              "sha256": "f83aa2ed9ae496560ba184ef5bf6494ee9d55dae873ced9f2ea1327b40fc6c03",
+              "bytes": 10428
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C04P01\\small.json",
+              "sha256": "0ad1cd602999bf6697585b3264f4eea22bbe386b778b2256a1725612df3d0b4f",
+              "bytes": 11070
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C04P01\\vosk.json",
+              "sha256": "f3e89b5176fc72dd6f422809857e301aa87dfdcec5334fc00040a83548e55fd5",
+              "bytes": 12557
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C04P02",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C04P02\\audio.wav",
+            "sha256": "0f225c40802ebb01ecd5840e8f655ab58a19dd185586b7ea38c3ce939d6d300e",
+            "bytes": 1086702
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C04P02\\small.json",
+              "sha256": "ccf23753d5b36312af2ef3481adce5f5cacb4ce76e83145c750878e3e8559ddf",
+              "bytes": 6896
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C04P03",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C04P03\\audio.wav",
+            "sha256": "6b0e3c2afa6e00de90f2d96235d8db816626c2be01a275e74ca7ed308d3492f6",
+            "bytes": 2067486
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C04P03\\small.json",
+              "sha256": "e2b52d517dde841da2d90b2499910b16902452274f8d26d2ad9a0204a1f085f4",
+              "bytes": 9344
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C04P05",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C04P05\\audio.wav",
+            "sha256": "f56b333e213fb9460e52ed6694c24849ac14c5af8c9e113b9ce5dd10c63122be",
+            "bytes": 1848750
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C04P05\\small.json",
+              "sha256": "e4a541d871e2b7fd7837560b3e47131b5d5cde9a0ad0bbb8dff5ee7342b5a56f",
+              "bytes": 9441
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C05P01",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C05P01\\audio.wav",
+            "sha256": "f4cdac2d6437dd83cc24017be05c2384850384a1898318d756d3e68543d12939",
+            "bytes": 1778190
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C05P01\\small.json",
+              "sha256": "208383b7bf02ab4b742477bd5ad9e27a8d493afdb760e2101d4af3857384a9b5",
+              "bytes": 8927
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C05P02",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C05P02\\audio.wav",
+            "sha256": "d54d59230156910ec211beeeca43c0f3fa2c1a2d192e43e0530e9673a7df396a",
+            "bytes": 1926366
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C05P02\\small.json",
+              "sha256": "381189405e54b403354cb37cc27812b4456343271c61c5b4df70ce7f7c47bfc9",
+              "bytes": 9325
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C06P01",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C06P01\\audio.wav",
+            "sha256": "11cc7b0069bf93bd4df4fa3fd6bfded12b300bc7c8858f60e5b04cd520027787",
+            "bytes": 1813470
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C06P01\\small.json",
+              "sha256": "2c952eb3e2c9672a0a6468a0b07ea6ec0e76826a7b2ad0315f1ac5711f21d36e",
+              "bytes": 9356
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C06P02",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C06P02\\audio.wav",
+            "sha256": "22b5be4104297628055afc1e29300b29ca534bbc790adda23e9a015e680f9989",
+            "bytes": 2116878
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C06P02\\small.json",
+              "sha256": "63efcb5c68e1715efb6654438d1363ed7226a3b98189917766992b1fc1f99ebe",
+              "bytes": 10641
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C06P03",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C06P03\\audio.wav",
+            "sha256": "e46b117ce815b5936d755579a6a918df675bdcb3934d934904c7812dd1c0c338",
+            "bytes": 2116878
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C06P03\\small.json",
+              "sha256": "cca120d650569edb000efed95588f9bb5473875c14cd1585448280b9b4ecccb4",
+              "bytes": 10913
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C06P04",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C06P04\\audio.wav",
+            "sha256": "f02819fd8679c76960ffb89917632482433e44d197b36690ff8901c6a56fb027",
+            "bytes": 1707630
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C06P04\\small.json",
+              "sha256": "16442ffc62b49d6955e1ab65ae839bd35153541ebb51357b3a9e5b29a4753c43",
+              "bytes": 9634
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C07P01",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "medium",
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C07P01\\audio.wav",
+            "sha256": "1903ad8ff1c079187d36da70fb8f5e4a728b49c42db2c10b8c5366c2730512fe",
+            "bytes": 1658238
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C07P01\\medium.json",
+              "sha256": "afb5d922a2c3aed2b93c4af210bac925804335843426d0c724a40dd6ba2e2671",
+              "bytes": 9062
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C07P01\\small.json",
+              "sha256": "7cdd1e5310e63704183e1aeb8260f413bdbf602fd0322ffd5452b3844131f9ae",
+              "bytes": 9059
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C07P02",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C07P02\\audio.wav",
+            "sha256": "5003fff075810b5c5da762aa8199343db112bd6a0a31977d7b20b96fb9f8ae89",
+            "bytes": 1672350
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C07P02\\small.json",
+              "sha256": "6f6d31cb936923e84264bfadadef3c7854642d404a9abfbb4b05cb188b313af0",
+              "bytes": 7845
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C07P03",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C07P03\\audio.wav",
+            "sha256": "65e3a86d200497e9587ac6174729fbe358a2ce88f5dda73eb214de5282bbbe06",
+            "bytes": 1630014
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C07P03\\small.json",
+              "sha256": "8f5f0238cbde9e3be324e7424fb8710cb343a33e028e8abb3b19db8600b7cfaf",
+              "bytes": 8866
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C08P02",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P02\\audio.wav",
+            "sha256": "c0ad4fbe370a921b5da12701f7ee50c520967d30a1a4c25a29aebd885179d3b4",
+            "bytes": 1912254
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C08P02\\small.json",
+              "sha256": "5d0a05f37582b81ecf6fedbb0dfd00c6e5141dfdb135fe00d293244cb515491c",
+              "bytes": 9670
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C08P03",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P03\\audio.wav",
+            "sha256": "5ea951e3e9cd3a5502fd303a3e693d870e00c2eeceaa9585d713f9a544d5bcb6",
+            "bytes": 2808366
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C08P03\\small.json",
+              "sha256": "b398f905f2b98a62adea9a69c970666c91e3dc30db4bd78a6ca5b9a052c1ceb0",
+              "bytes": 14704
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C08P04",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "medium",
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P04\\audio.wav",
+            "sha256": "e8e30b50b78389257b2ca2db8e6d4428e76b3ef674126358e9831f90b37b4078",
+            "bytes": 1820526
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C08P04\\medium.json",
+              "sha256": "8b3baba49d7b911633b409f9c4cc532e651f42dea1f49fb311387c95f382ebfa",
+              "bytes": 9055
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C08P04\\small.json",
+              "sha256": "a044363e44d1ec5c88fda23c573a4821d7df7200d63b7811deb7c0707f8d7a4c",
+              "bytes": 9384
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C08P05",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "medium",
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P05\\audio.wav",
+            "sha256": "aa97516be7fd703ad766d4910ceac057eb7e55a02c74ae459d35878634cfe016",
+            "bytes": 1940478
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C08P05\\medium.json",
+              "sha256": "fe802aa843bc35ddaae6a9d92cdea71aebd499fe25b0dc0c5031d4045c5425c6",
+              "bytes": 10316
+            },
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C08P05\\small.json",
+              "sha256": "20996d885949b63114257362bddf484f6b9525ea8ad6dcee60867285e4db2e32",
+              "bytes": 9593
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C08P06",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P06\\audio.wav",
+            "sha256": "f39bddebd87f86e399cb771a6ab60802d388249bc1ab0b4ca01b1a263d010362",
+            "bytes": 1891086
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C08P06\\small.json",
+              "sha256": "314ff5127844f0246bae0b769dab2b2f037c9f0cc65baa7479861dff99cafe0f",
+              "bytes": 9931
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C08P07",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C08P07\\audio.wav",
+            "sha256": "70ad2659e80f996f2b8f995dee5b2c6a88bb39511a4967624671cba0c84ef502",
+            "bytes": 2138046
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C08P07\\small.json",
+              "sha256": "99856c08afc02e8738774209de85a68349d04a94fddfc2e8e2f555e948ccb22d",
+              "bytes": 11146
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C09P01",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C09P01\\audio.wav",
+            "sha256": "005129b32c4e2126cd971819dc2b7159b6acd2f6cc757a3a759cb83be7b1fd30",
+            "bytes": 1728798
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C09P01\\small.json",
+              "sha256": "81f8cc35148a4b423b12a270539622fd8763bc41ebac4c7616aa5d3f2dba0ad4",
+              "bytes": 9475
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C09P03",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C09P03\\audio.wav",
+            "sha256": "7d5fa2ac12e398ab397a010c5a362010cd189533fe136a1ed3938973853ba7ed",
+            "bytes": 1834638
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C09P03\\small.json",
+              "sha256": "7ccfcfd94ba625c2dda81f24fc73235fece8d2ecfcb12794222a45c8d6051f11",
+              "bytes": 9732
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C10P02",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C10P02\\audio.wav",
+            "sha256": "cb9f6d6e12de36b60a69acbfcf19aa579889f01aba6dc1187585487c12f8cdcb",
+            "bytes": 2166270
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C10P02\\small.json",
+              "sha256": "6020d90cb047fa315b7926bec95ecf513b70b0bb23b9ac9fe3c69115a7c4e13e",
+              "bytes": 12251
+            }
+          ]
+        },
+        {
+          "paragraph_id": "C10P06",
+          "status": "reviewed_ASR_supporting_evidence_no_confirmed_numeric_error",
+          "engines": [
+            "small"
+          ],
+          "audio": {
+            "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\jun-production-v1\\paragraphs\\C10P06\\audio.wav",
+            "sha256": "c194df7cbcc7a18632a511bee0709d4efd9400377d77ae4022da1b85fd4f00d8",
+            "bytes": 1305438
+          },
+          "evidence": [
+            {
+              "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr\\C10P06\\small.json",
+              "sha256": "a020407361df8c585dc5b4a41b43279135d517031f8f39b1d358f0ef1c3edd9c",
+              "bytes": 8117
+            }
+          ]
+        }
+      ],
+      "source_pronunciation_substitutions": 171,
+      "all_source_numeric_mapping_values_preserved": true,
+      "all206_cue_text_segmentation_and_native_bounds_preserved": true,
+      "all54_rawPCM_retained_without_clipping": true,
+      "alignment_overhang_handled": "원본 공급자 시각 유지. ~80ms 정렬 초과는 장 결합의 명시적 무음으로만 확보; 원발화 절삭·속도조정 없음.",
+      "credits_not_a_quality_evidence": true,
+      "first_ASR_receipts_preserved": true,
+      "expected_grammars_or_hotwords": false,
+      "new_downloads": 0,
+      "paid_ASR_calls": 0,
+      "evidencepaths": [
+        {
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\asr_review.json",
+          "sha256": "bd6ebba2f45aaadd776081095d2ceb2a7c4285ec29fc50f522b7e802966b80fe",
+          "bytes": 62662
+        },
+        {
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\timing_review.json",
+          "sha256": "99776378604db2606ad34e5275638d21ce3536ddf073d5f0923aac86de42cd14",
+          "bytes": 195067
+        },
+        {
+          "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\qa\\jun-production-v1\\text_precheck.json",
+          "sha256": "8172513b7126c5209aaf113054924e94db38faa87979272452bb314dc9899213",
+          "bytes": 113380
+        }
+      ],
+      "actual_listening": false,
+      "continuous_playback": false,
+      "actual_number_pronunciation_verified_by_listening": false,
+      "speech_naturalness": "unchecked",
+      "final_encoded_audio_mix_verified": false,
+      "coverage": {
+        "raw_PCM_all54_paragraphs_and_10chapter_concatenation": true,
+        "native_cues_checked": 206,
+        "independent_timing_checks": 791,
+        "independent_text_checks": 933,
+        "ASR_full_54_paragraph_transcription": false,
+        "ASR_inputs_all_samples_processed": true
+      },
+      "remaining": "최종 MP4 전체AV decode·믹스 신호·인코딩 프레임과 최종 SHA 별도 검수 필요. C04P01 202만원의 Whisper220/Vosk202 차이는 비차단 ASR 불일치로 보존하며 청취 확인으로 닫았다고 주장하지 않음."
+    },
+    "independent_audio_review_sha256": "27bb629641feae0012487941fdd7e61d3008fee3d784002c08238d396de22b4b"
+  },
+  "media_binding": {
+    "video_sha256": "136a20c43ba3a99a138ba7282c1fb1a8532fc3aa92695c57ca2f904d011b1079",
+    "subtitles_sha256": "8aae8aa974108c22ff297f9a0619baecf56cd7264ec29a8cdf557cc2b88038ce",
+    "media_report_sha256": "30cd9be87ec544839b4c115b489ff046939cab37f84cbd9b98f5d17bdbce7931",
+    "metadata_sha256": "b8dfac55eec16165355916e9addcafb1b8a2a47cef0d8d173621938684e8af63",
+    "description_sha256": "deb8f20fa95094b1c6367f27b134170a11fe4bf8e78cbdea3e3b94c27576a593",
+    "thumbnail_sha256": "ddeae250181103ca29b5f2c81461cd222d75875f8f3ad97e014ab8a07bc0b085"
+  },
+  "previous_script_review": {
+    "artifact_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+    "approved": true,
+    "required_issues": [],
+    "recommended": [
+      "[발음 확정, 선택] 두 교체는 텍스트상 동음이의(빚/빛)·'원화 자산' 모호성을 해소하고 인접 문맥과 일치함. 발음 명료성은 텍스트로 최종 확정되지 않으므로, 이후 TTS 생성 시 해당 두 지점과 문맥상 덜 모호한 나머지 '빚'(3·5장) 발음만 실제 음성으로 확인하면 충분하며 추가 텍스트 수정은 불필요."
+    ],
+    "coverage_notes": [
+      "[변경1 해결·모순없음] Ch5 '줄어든 빚'→'줄어든 대출잔액': '빚'[빋]은 '빛'과 동음이의로 ASR/청취 모호성이 있었음. 교체어가 같은 문단의 '대출잔액을 계산합니다·그 잔액을 한 번 뺍니다'와 일치해 용어 일관성을 높임. 첫달 원금 약52만원·10년 원금 약7천600만원·잔액 약2억8천400만원 등 금액 불변.",
+      "[변경2 해결·모순없음] Ch6 '원화 자산'→'한국 돈으로 환산한 자산': 달러 자산의 환산값임을 명확히 해 모호성 해소. 1.1×1.1=1.21배, 뒤 '원화 수익률 21%'와 정합. '원·달러 환율'·'원화 수익률'·Ch2·6 '원화 총수익 6%'와 충돌 없음(한국 돈=원화 동의어).",
+      "[새 필수 이슈 없음] 두 변경 모두 용어·발음 명료성 교체에 한정. 숫자·모형입력·600/100/100만원 및 월30/5만원 비용묶음·민감도·지역CAGR·상환 수치 unchanged. 새 시장 수치·규정·상품·법정 비용 추가 없음. 이전 독립 재계산 수치는 변경 없어 재검증 생략, 이전 판정 범위 유지.",
+      "[범위] 무변경 부분(타 '빚' 표현 포함)은 이전 판정 범위로 유지. scene_outline.json·실제 음성·완성 영상 미첨부로 자막 의미·글자 잘림·사진/차트 반복·최종 발음은 텍스트 검수 범위 밖. 본 승인은 대본 텍스트 한정, TTS·비공개 업로드 등 음성·완성 영상 승인으로 확대하지 않음(tts_started=false, final_media_approved=false)."
+    ]
+  }
+}

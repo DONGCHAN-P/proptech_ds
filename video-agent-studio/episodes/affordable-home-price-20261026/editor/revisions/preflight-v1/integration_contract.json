@@ -1,0 +1,106 @@
+{
+  "phase": "template_source_preflight_only",
+  "script": {
+    "current_provisional_path": "writer/script_v2.md",
+    "current_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+    "content_approved": false,
+    "future_truth": "director/production-v1/locked_script.json or exact main-provided lock path",
+    "recheck_before_measured_build": true
+  },
+  "timing": {
+    "final_duration_s": null,
+    "timeline_basis": "actual new InJoon audio plus native WordBoundary, never previous episode audio",
+    "hook": "first measured narration paragraph, whole paragraph end; insert exactly 5s clean intro afterward",
+    "outro": "10s clean outro begins 3s after actual final voice end",
+    "no_literal_fallback_to_zero": true,
+    "scene_mapping": "scene/paragraph IDs + exact text, fail closed and audit any alignment substitution",
+    "caption_rules": {
+      "font_size_px": 40,
+      "line_height_px": 50,
+      "max_explicit_lines": 2,
+      "safe_line_width_px": 1600,
+      "caption_box": [
+        96,
+        876,
+        1728,
+        124
+      ],
+      "caption_text": [
+        140,
+        876,
+        1640,
+        124
+      ],
+      "source_top_px": 1020,
+      "continuous_box_during_body_gaps": true,
+      "text_visible_only_current_native_cue": true,
+      "caption_hold_across_brand_forbidden": true,
+      "brand_resume": "hard-clear cue text at end and throughout brand; next cue starts on actual native boundary; 70ms blank reset only if silent margin supports it",
+      "balance_meaning_cues_at_narration_stage": true,
+      "protected_numbers_units_dates": true
+    }
+  },
+  "audio": {
+    "new_voice_required": true,
+    "reuse_old_body_audio": false,
+    "BGM_manifest": "director/production-v1/media_assets.json",
+    "carve": "canonical hyperframes-audio carve, spectral + level envelopes; level duck alone fails",
+    "argv_template": [
+      "node",
+      "C:/Users/e2ken/.agents/skills/hyperframes-audio/scripts/carve.mjs",
+      "--comp",
+      "<measured_new_HTML>",
+      "--bed",
+      "music-bed",
+      "--voice",
+      "narration",
+      "--strength",
+      "0.8",
+      "--core",
+      "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\audio-deps"
+    ],
+    "FFmpeg_process_PATH_prepend": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\media-bin",
+    "BGM_offset": "derive each chapter music source offset from NEW measured global EDL; no old chapter bed copy",
+    "join_processing": "8ms preventive in/out fade after final atrim at assembly joins; preserve measured durations and tail margins",
+    "first_v3_AAC_copy_branch": "NOT reusable for this episode; assemble from new voice + newly carved Thinking Music",
+    "actual_mix_executed": false
+  },
+  "shared_readonly_inputs": [
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/private-production-v1/audio-deps/node_modules/@hyperframes/core/package.json",
+      "sha256": "1d29bfbe33d57a07558f4f59c8a6331172fc1857b77f28f906006763be365b77"
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/private-production-v1/media-bin/ffmpeg.exe",
+      "sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3"
+    },
+    {
+      "path": "video/node_modules/@remotion/compositor-win32-x64-msvc/ffprobe.exe",
+      "sha256": "66468651d02cec1beac8003fcb4aec42363390810ca4435165ef3cf1439c7261"
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v1/prepare_mix.py",
+      "sha256": "8b1b36327ebdc82afa30525c0098735a951e9ffdf0aa30d98630f32fd9244d65"
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v2/render_pipeline.py",
+      "sha256": "fdd003de7de9c84a0c9a6cb12c9f2df4cc1fffb6cd9879b821bdd71b3b33f986"
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v3/encoded_evidence.py",
+      "sha256": "ac74e353b40cbe4378aa0d17fa19dff1bd5fa2efc50b03bf36ec3adead85435d"
+    }
+  ],
+  "gates": [
+    "main script lock + dual content pass",
+    "new voice technical/audio QA + measured timing + balanced meaning cue handoff",
+    "canonical carve with exact new audio",
+    "exact current source CLI/BBox/independent representative QA",
+    "full film render authorization at that phase",
+    "encoded frame/decode/audio QA and exact release gate"
+  ],
+  "full_film_render_allowed_now": false,
+  "new_paid_calls": 0,
+  "global_install_or_upgrade": false,
+  "collector_process_touched": false
+}

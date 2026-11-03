@@ -1,0 +1,27 @@
+{
+  "fetched_at_kst": "2026-10-29T00:05:52.972053+09:00",
+  "channel_id": "UCr_mTC0x_Uobv6MrIsOkrXw",
+  "range_start": "2026-10-02",
+  "coherent_end_date": "2026-10-25",
+  "snapshot_fetched_at": "2026-10-29T00:04:23.644444+09:00",
+  "read_only": true,
+  "api_reports": 31,
+  "failures": {
+    "retention_ETXkCHF4Si0": {
+      "request": {
+        "ids": "channel==MINE",
+        "startDate": "2026-10-02",
+        "endDate": "2026-10-25",
+        "metrics": "audienceWatchRatio,relativeRetentionPerformance",
+        "dimensions": "elapsedVideoTimeRatio",
+        "filters": "video==ETXkCHF4Si0",
+        "sort": "elapsedVideoTimeRatio",
+        "maxResults": 200
+      },
+      "http_status": 500,
+      "error_status": "INTERNAL",
+      "message": "Internal error encountered."
+    }
+  },
+  "external_transmission": "Google owner-channel read-only API requests only; credentials excluded from artifacts"
+}

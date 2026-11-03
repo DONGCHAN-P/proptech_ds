@@ -1,0 +1,2532 @@
+{
+  "schema_version": "1.0",
+  "episode_id": "newlywed-apartment-picks-20261101",
+  "revision": "top20-8min-v2",
+  "role": "research",
+  "scope": "수도권53개구 신혼부부 전체 수 TOP20 중 rank1~10만",
+  "created_checked_date": "2026-11-01",
+  "input": {
+    "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+    "sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+    "upstream_source_sha256": "275ce96232e523428bcea02aa3f11bd0f29ca70f2e8a13bbc55aa40b389d1d61",
+    "source_revision": "top20-8min-v2",
+    "qa_reuse": "2024 전체 수는 사용자가 지시한 기존 독립QA 통과 입력을 재사용. 이번 담당의 독립QA 통과 주장 없음."
+  },
+  "statistical_contract": {
+    "unit": "쌍",
+    "basis": "신혼부부 전체 수; 아파트 선택·아파트 거주·매수 건수·비율 순위가 아님.",
+    "reference_dates": [
+      "2023-11-01",
+      "2024-11-01"
+    ],
+    "comparison_formula": "(2024 전체-2023 전체)/2023 전체*100",
+    "display_rounding": "변화율 소수1자리",
+    "rank_scope": "2024 수도권53개구 안에서의 순위. 전국·모든 시군구·추천 적합도 순위로 확장 금지.",
+    "stock_vs_flow": "시점별 대상 부부 수; 동일 부부 패널이나 순유입 통계가 아님.",
+    "same_area_caution": "옛 인천 서구는 분구 전 전체 영역으로 비교; 2026년 현재 두 구의 개별 수치로 표시 금지."
+  },
+  "preflight_application": {
+    "workflow_brief_state_read": true,
+    "master_guide_research_sections_applied": true,
+    "preflight_template_read": true,
+    "applied_items": [
+      "주장별 원출처·위치·날짜·상태",
+      "시설/지명의 구역 일치",
+      "현재 행정명과 통계구역 구분",
+      "직접 계산과 인과 해석 구분",
+      "사진 권리·확보 상태 구분"
+    ],
+    "not_applicable": [
+      "유료생성",
+      "음성/타이밍",
+      "영상렌더",
+      "업로드"
+    ],
+    "current_user_scope": "자료조사·실제 장소 사진 후보 준비만",
+    "shared_state_mutated": false
+  },
+  "verification_scope": {
+    "web_batches": 12,
+    "regions": 10,
+    "original_2023_rows_transcribed": 10,
+    "comparisons_calculated": 10,
+    "local_feature_claims": 15,
+    "all_claim_records": 45,
+    "image_place_candidates": 13,
+    "pdf_text_review_performed": true,
+    "pdf_page_image_review_performed": false,
+    "photo_files_downloaded": 0,
+    "photo_pixel_review_performed": false,
+    "independent_qa_performed": false
+  },
+  "research_gaps": [
+    {
+      "issue_id": "G-PDF-VISUAL",
+      "affected_claim_ids": [
+        "R01-COUNT2023",
+        "R02-COUNT2023",
+        "R03-COUNT2023",
+        "R04-COUNT2023",
+        "R05-COUNT2023",
+        "R06-COUNT2023",
+        "R07-COUNT2023",
+        "R08-COUNT2023",
+        "R09-COUNT2023",
+        "R10-COUNT2023"
+      ],
+      "affected_scene_ids": [
+        "S022",
+        "S021",
+        "S020",
+        "S019",
+        "S018",
+        "S017",
+        "S016",
+        "S015",
+        "S014",
+        "S013"
+      ],
+      "issue": "공식 PDF 텍스트 원표와 표 머리글·주석은 확인했지만 페이지 화상 대조는 미완료.",
+      "evidence": "웹 screenshot 32쪽은 이미지가 검토 가능한 형태로 반환되지 않았고33쪽은 cache miss. 로컬 requests는 네트워크 WinError10013, 로컬 PDF 판독 모듈도 없음.",
+      "proposal": "독립QA 담당이 원 PDF32~33쪽의 전체 열 10행을 실제 화상으로 한 번 대조.",
+      "impact": "현재 수치는 원문 텍스트 전사값이며 이미지 대조까지 완료했다는 표현 금지."
+    },
+    {
+      "issue_id": "G-ADM-R01",
+      "affected_claim_ids": [
+        "R01-ADM",
+        "R01-COUNT2023",
+        "R01-COUNT2024",
+        "R01-YOY"
+      ],
+      "affected_scene_ids": [
+        "S022"
+      ],
+      "issue": "옛 서구 전체와 현재 서해구·검단구의 경계 차이.",
+      "evidence": "인천시 공식 개편 안내 2026-07-01 분구 및 관할동 표.",
+      "proposal": "라벨은 인천 옛 서구(2024 기준), 지도는 옛 구역 외곽과 현재 두 구를 함께 구분.",
+      "impact": "순위·숫자는 유지하고 행정명/지도 설명 반영 필요."
+    },
+    {
+      "issue_id": "G-IMAGE-RIGHTS",
+      "affected_claim_ids": [],
+      "affected_scene_ids": [
+        "S022",
+        "S021",
+        "S020",
+        "S019",
+        "S018",
+        "S017",
+        "S016",
+        "S015",
+        "S014",
+        "S013"
+      ],
+      "issue": "후보13곳의 개별 사진 상업영상 권리·픽셀 동일성·원본URL 미확인.",
+      "evidence": "research는 사진 다운로드를 하지 않았으며 공식 후보 페이지·라이선스 표시만 기록.",
+      "proposal": "visual이 별도 공용라이선스 사진을 확보하고 파일별 검증.",
+      "impact": "이 패킷의 공식 페이지 사진을 곧바로 편집 소스로 승격하지 않음."
+    }
+  ],
+  "regions": [
+    {
+      "region_id": "R01",
+      "rank": 1,
+      "scene_id": "S022",
+      "province": "인천",
+      "region_2024": "서구",
+      "administration": {
+        "statistical_area_year": 2024,
+        "statistical_area_name": "인천 서구",
+        "current_name_as_of_2026_11_01": "인천광역시 서해구·검단구(2024년 옛 서구 구역)",
+        "changed_since_2024": true,
+        "change_date": "2026-07-01",
+        "source_id": "ADM2026",
+        "display_label": "인천 옛 서구(2024 기준·현재 서해구+검단구)",
+        "scope_note": "15,737쌍을 현재 서해구 또는 검단구 단독 수치로 표시 금지. 두 구의 현재 개별 신혼부부 수는 이번 작업에서 조사하지 않음."
+      },
+      "facts": [
+        {
+          "claim_id": "R01-F01",
+          "statement": "청라호수공원은 공단 안내상 상시 개방하는 생활 여가 공간이다.",
+          "source_id": "R01_PARK",
+          "source_url": "https://www.insiseol.or.kr/park/cheongna/bbs/bbsMsgDetail.do?bcd=cheongna_faq&msg_seq=1&pgno=2",
+          "source_file": null,
+          "evidence_location": "FAQ 제목·작성일·개방 안내; 조회 텍스트 L771~781",
+          "reference_date": "2025-07-18",
+          "publication_date": "2025-07-18",
+          "checked_date": "2026-11-01",
+          "status": "verified",
+          "evidence_type": "공식 기관 자료에 기재된 사실",
+          "facility_status": "operating",
+          "status_checked_date": "2026-11-01"
+        },
+        {
+          "claim_id": "R01-ADM",
+          "statement": "2024년 서구는 2026년7월1일 아라뱃길 남부의 서해구와 북부의 검단구로 나뉘었다.",
+          "source_id": "ADM2026",
+          "source_url": "https://www.incheon.go.kr/IC010701",
+          "source_file": null,
+          "evidence_location": "행정체제 개편 개요 본문 및 개편 후 서해구/검단구 표; 조회 텍스트 L255~257, L308~319, 현재 구청 링크 L506~507",
+          "reference_date": "2026-07-01",
+          "publication_date": null,
+          "checked_date": "2026-11-01",
+          "status": "verified",
+          "evidence_type": "행정구역 개편 공식 안내"
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "STAT2023",
+          "title": "2023년 신혼부부통계 결과",
+          "institution": "통계청",
+          "url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "evidence_location": "PDF 32~33쪽(0기준 31~32), 인쇄 25~26쪽, 6. 시군구별 신혼부부 수, 전체 열",
+          "publication_date": "2024-12-10",
+          "observation_date": "2023-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "PDF 3쪽 일러두기의 대상·반올림, 인쇄25쪽 표 제목·열·거처가 다른 부부 0.5 가중치 주석도 열람. 원표 화상은 확인하지 못함."
+        },
+        {
+          "source_id": "R01_STAT2024_REUSE",
+          "title": "2024년 신혼부부통계 전체 수: 기존 독립QA 통과 입력 재사용",
+          "institution": "입력 top20.json / 통계 원출처",
+          "url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+          "evidence_location": "top20.json regions의 R01; 원자료 PDF 32쪽 전체 열",
+          "publication_date": null,
+          "observation_date": "2024-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "사용자가 지정한 QA 통과 입력값 재사용; 2024 원표 재검수 미실행",
+          "access_status": "승계 입력 확인",
+          "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+          "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+          "prior_qa_reference": "episode/qa/ranking_source_review.json (state가 지시한 참조; 이번 작업에서는 파일을 다시 열거나 독립 검수를 실행하지 않음)"
+        },
+        {
+          "source_id": "ADM2026",
+          "title": "인천형 행정체제 개편 개요",
+          "institution": "인천광역시",
+          "url": "https://www.incheon.go.kr/IC010701",
+          "evidence_location": "행정체제 개편 개요 본문 및 개편 후 서해구/검단구 표; 조회 텍스트 L255~257, L308~319, 현재 구청 링크 L506~507",
+          "publication_date": null,
+          "observation_date": null,
+          "last_updated_date": "2026-06-17",
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "effective_date": "2026-07-01",
+          "rights_observed": "본문 하단 출처표시·상업용금지·변경금지 표시. 페이지 도해를 상업 영상에 자동 재사용할 수 없음."
+        },
+        {
+          "source_id": "R01_PLACE",
+          "title": "청라호수공원 관광시설 안내",
+          "institution": "인천경제자유구역청(IFEZ)",
+          "url": "https://www.ifez.go.kr/main/tour/view.do?tour_fclt_sn=10",
+          "evidence_location": "본문 청라호수공원 제목·소재지 및 사진 링크; 조회 텍스트 L71~79",
+          "publication_date": null,
+          "observation_date": null,
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "소재지는 구 명칭 갱신 전인 인천광역시 서구 청라동106-2로 표시. 행정명은 ADM2026으로 보정하고 원문 주소도 보존."
+        },
+        {
+          "source_id": "R01_PARK",
+          "title": "청라호수공원 이용시간과 요금, 교통편과 주차장 FAQ",
+          "institution": "인천시설공단 청라공원사업단",
+          "url": "https://www.insiseol.or.kr/park/cheongna/bbs/bbsMsgDetail.do?bcd=cheongna_faq&msg_seq=1&pgno=2",
+          "evidence_location": "FAQ 제목·작성일·개방 안내; 조회 텍스트 L771~781",
+          "publication_date": "2025-07-18",
+          "observation_date": "2025-07-18",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "상시 개방 안내만 채택. 게시 시점과 다른 현재 요금·버스노선은 단정하지 않음."
+        }
+      ],
+      "image_suggestions": [
+        {
+          "image_id": "R01-I01",
+          "place_name": "청라호수공원",
+          "address": "인천광역시 서해구 청라동106-2",
+          "source_address": "원문 표기: 인천광역시 서구 청라동106-2",
+          "place_source_id": "R01_PLACE",
+          "place_source_url": "https://www.ifez.go.kr/main/tour/view.do?tour_fclt_sn=10",
+          "official_image_page_url": "https://www.ifez.go.kr/main/tour/view.do?tour_fclt_sn=10",
+          "official_original_image_url": null,
+          "image_url_note": "원문에 표시된 사진/첨부 후보 페이지이며 원본 이미지 URL은 이번 작업에서 별도 추출하지 않음.",
+          "why_relevant": "옛 서구 안 청라 생활권의 실제 수변 여가 환경을 보여준다. 옛 서구 전체를 청라로 대표하거나 검단을 같은 장소로 처리하지 않는다.",
+          "suggested_composition": "호수·산책로·주변 도시 경관을 함께 담은 고정 원경",
+          "location_match_basis": "공식 자료의 장소명·주소 확인; 사진 픽셀 자체의 동일성 검수는 미실행",
+          "image_pixels_reviewed": false,
+          "download_performed": false,
+          "rights_status": "미확인",
+          "commercial_reuse_permission": "미확인",
+          "license_observed": "개별 사진의 공용/상업 이용허락 표시를 확인하지 못함.",
+          "visual_next_action": "장소·구역을 대조한 공용라이선스 사진을 확보하고 원저작자·원본URL·라이선스·크레딧을 파일별 확인",
+          "people_note": "지나가는 사람·가족·연인이 있어도 구민/신혼부부의 정체나 비율을 암시하지 않음.",
+          "administrative_name_correction_source_id": "ADM2026",
+          "observed_official_photo_label": "청라호수공원(사진)"
+        }
+      ],
+      "count2023": {
+        "claim_id": "R01-COUNT2023",
+        "statement": "인천 서구의 2023년 신혼부부 전체 수는 15,941쌍이다.",
+        "source_id": "STAT2023",
+        "source_url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+        "source_file": null,
+        "evidence_location": "PDF 32쪽/인쇄 25쪽, 오른쪽 인천광역시 묶음, 서구 행, 전체 열",
+        "reference_date": "2023-11-01",
+        "publication_date": "2024-12-10",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "공식 기관 자료에 기재된 사실",
+        "value": 15941,
+        "unit": "쌍",
+        "pdf_page": 32,
+        "printed_page": 25,
+        "column": "전체",
+        "transcription": {
+          "region_label": "서구",
+          "province_context": "인천",
+          "whole": 15941,
+          "first_marriage": 12811,
+          "remarriage": 2964,
+          "column_order": [
+            "전체",
+            "초혼",
+            "재혼"
+          ],
+          "selected_column": "전체",
+          "method": "공식 PDF 텍스트 추출 결과에서 상위 시도/시와 행 이름·열 머리글을 대조해 직접 전사",
+          "full_page_image_reviewed": false
+        },
+        "notes": "초혼·재혼 열 합으로 전체를 재구성하지 않음. 표 표시값을 그대로 비교에 사용."
+      },
+      "count2024": {
+        "claim_id": "R01-COUNT2024",
+        "statement": "인천 서구의 2024년 신혼부부 전체 수는 15,737쌍이다.",
+        "source_id": "R01_STAT2024_REUSE",
+        "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "evidence_location": "top20.json regions의 R01; 원자료 PDF 32쪽 전체 열",
+        "reference_date": "2024-11-01",
+        "publication_date": null,
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "기존 독립QA 통과 입력 재사용",
+        "value": 15737,
+        "unit": "쌍",
+        "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+        "verification_scope": "입력값·해시 확인; 원표·독립QA 재실행 아님"
+      },
+      "comparison": {
+        "claim_id": "R01-YOY",
+        "statement": "2023년 대비 2024년 신혼부부 전체 수 204쌍 감소, 1.3% 감소.",
+        "source_url": [
+          "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32"
+        ],
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "source_claim_ids": [
+          "R01-COUNT2023",
+          "R01-COUNT2024"
+        ],
+        "evidence_location": "2023 원표 전체 열과 top20.json의 2024 전체 열을 연결한 직접 계산",
+        "reference_date": "2023-11-01 → 2024-11-01",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "직접 계산",
+        "count2023": 15941,
+        "count2024": 15737,
+        "change_couples": -204,
+        "change_percent": -1.2797189636785646,
+        "change_percent_display": -1.3,
+        "unit": "쌍 / %",
+        "formula": "(count2024-count2023)/count2023*100",
+        "rounding": "입력은 보도자료의 표시 정수; 표시 변화율은 소수 첫째 자리 반올림. 비반올림 원집계의 정확한 변화율과 차이가 날 수 있음.",
+        "same_statistical_area": true,
+        "area_basis": "2023·2024 모두 분구 전 인천 서구 전체. 2026년 서해구 단독·검단구 단독 수치가 아님.",
+        "population_definition": "매년11월1일 기준 혼인신고 후5년 미경과·혼인관계 유지·부부 중1명 이상 국내거주 신혼부부 전체",
+        "weighting": "부부의 거처가 다르면 각 시군구에 0.5 가중치(2023 원표 주석).",
+        "interpretation": "시점별 거주 신혼부부 수의 차이. 새 혼인 진입·5년 경과에 따른 범위 이탈·이동 등이 함께 작용할 수 있어 선택 이유·순유입·수요 증가로 단정하지 않음."
+      },
+      "interpretation": {
+        "verified_context": "옛 서구는 현재 두 구에 걸쳐 있어 청라 사진 한 장으로 검단 생활환경까지 일반화할 수 없다.",
+        "verification_hypothesis": "청라·검단 등 생활권별 주거지에서 여가시설·직장까지의 실제 동선을 따로 검증할 필요가 있다.",
+        "causal_conclusion": "미확인. 해당 시설·상권이 신혼부부의 선택 이유 또는 수 변화의 원인이라는 조사를 실행하지 않음.",
+        "housing": "아파트 구입·임차·가격·입주 수치는 이번 원표의 집계 대상이 아니며 이번 자료에서는 검증하지 않음.",
+        "employment": "기업별 고용 수·고용 증가 수치 미채택.",
+        "transport": "신규 개통계획·미개통 교통시설의 이용 효과 미채택. 실제 통근시간 미검증.",
+        "living": "확인한 고정 장소의 존재·위치를 생활환경의 사례로만 제시."
+      },
+      "script_suggestion": {
+        "sentences": [
+          "인천 옛 서구는 15,737쌍으로, 2023년보다 1.3% 줄었습니다.",
+          "청라호수공원은 실제 수변 생활환경을 보여주며, 이 순위의 구역은 현재 서해구와 검단구를 합친 옛 서구입니다."
+        ],
+        "claim_ids": [
+          "R01-COUNT2024",
+          "R01-YOY",
+          "R01-F01",
+          "R01-ADM"
+        ],
+        "status": "검증 사실에 근거한 짧은 설명 제안",
+        "approval_status": "새 대본 승인 아님"
+      },
+      "gaps": [
+        {
+          "gap": "개별 사진 파일·원본URL·상업영상 재사용권리·픽셀 장소 일치는 visual 담당 확인 대기."
+        }
+      ]
+    },
+    {
+      "region_id": "R02",
+      "rank": 2,
+      "scene_id": "S021",
+      "province": "서울",
+      "region_2024": "송파구",
+      "administration": {
+        "statistical_area_year": 2024,
+        "statistical_area_name": "서울 송파구",
+        "current_name_as_of_2026_11_01": "서울특별시 송파구",
+        "changed_since_2024": false,
+        "change_date": null,
+        "source_id": null,
+        "display_label": "서울 송파구",
+        "scope_note": "통계지역 명칭을 유지. 세부 동 경계·법령 전수 감사는 이번 범위에 포함하지 않음."
+      },
+      "facts": [
+        {
+          "claim_id": "R02-F01",
+          "statement": "송파나루근린공원(석촌호수)은 동호·서호와 산책로가 있는 도심 호수공원이다.",
+          "source_id": "R02_PARK",
+          "source_url": "https://parks.seoul.go.kr/park/detailView.do?key=2604070019&pIdx=118&tabTarget=1",
+          "source_file": null,
+          "evidence_location": "공원소개 및 공원위치; 조회 텍스트 L147~155, L167~191",
+          "reference_date": null,
+          "publication_date": null,
+          "checked_date": "2026-11-01",
+          "status": "verified",
+          "evidence_type": "공식 기관 자료에 기재된 사실",
+          "facility_status": "operating",
+          "status_checked_date": "2026-11-01"
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "STAT2023",
+          "title": "2023년 신혼부부통계 결과",
+          "institution": "통계청",
+          "url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "evidence_location": "PDF 32~33쪽(0기준 31~32), 인쇄 25~26쪽, 6. 시군구별 신혼부부 수, 전체 열",
+          "publication_date": "2024-12-10",
+          "observation_date": "2023-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "PDF 3쪽 일러두기의 대상·반올림, 인쇄25쪽 표 제목·열·거처가 다른 부부 0.5 가중치 주석도 열람. 원표 화상은 확인하지 못함."
+        },
+        {
+          "source_id": "R02_STAT2024_REUSE",
+          "title": "2024년 신혼부부통계 전체 수: 기존 독립QA 통과 입력 재사용",
+          "institution": "입력 top20.json / 통계 원출처",
+          "url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+          "evidence_location": "top20.json regions의 R02; 원자료 PDF 32쪽 전체 열",
+          "publication_date": null,
+          "observation_date": "2024-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "사용자가 지정한 QA 통과 입력값 재사용; 2024 원표 재검수 미실행",
+          "access_status": "승계 입력 확인",
+          "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+          "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+          "prior_qa_reference": "episode/qa/ranking_source_review.json (state가 지시한 참조; 이번 작업에서는 파일을 다시 열거나 독립 검수를 실행하지 않음)"
+        },
+        {
+          "source_id": "R02_PARK",
+          "title": "송파나루근린공원(석촌호수)",
+          "institution": "서울특별시 서울의 공원",
+          "url": "https://parks.seoul.go.kr/park/detailView.do?key=2604070019&pIdx=118&tabTarget=1",
+          "evidence_location": "공원소개 및 공원위치; 조회 텍스트 L147~155, L167~191",
+          "publication_date": null,
+          "observation_date": null,
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "동호·서호, 산책로와 공원 주소를 채택. 표의 기타 수치·세부 운영정보는 인용하지 않음."
+        }
+      ],
+      "image_suggestions": [
+        {
+          "image_id": "R02-I01",
+          "place_name": "송파나루근린공원(석촌호수)",
+          "address": "서울특별시 송파구 잠실로148(잠실동)",
+          "source_address": "서울특별시 송파구 잠실로148(잠실동)",
+          "place_source_id": "R02_PARK",
+          "place_source_url": "https://parks.seoul.go.kr/park/detailView.do?key=2604070019&pIdx=118&tabTarget=1",
+          "official_image_page_url": "https://parks.seoul.go.kr/park/detailView.do?key=2604070019&pIdx=118&tabTarget=1",
+          "official_original_image_url": null,
+          "image_url_note": "원문에 표시된 사진/첨부 후보 페이지이며 원본 이미지 URL은 이번 작업에서 별도 추출하지 않음.",
+          "why_relevant": "잠실권의 수변 산책 환경을 실제 장소로 보여준다. 타워만 크게 잡은 관광사진보다 공원과 도시가 함께 보이는 구도가 설명에 맞다.",
+          "suggested_composition": "호수 산책로를 전경에 두고 잠실 도시 경관을 배경에 배치",
+          "location_match_basis": "공식 자료의 장소명·주소 확인; 사진 픽셀 자체의 동일성 검수는 미실행",
+          "image_pixels_reviewed": false,
+          "download_performed": false,
+          "rights_status": "미확인",
+          "commercial_reuse_permission": "미확인",
+          "license_observed": "개별 사진의 공용/상업 이용허락 표시를 확인하지 못함.",
+          "visual_next_action": "장소·구역을 대조한 공용라이선스 사진을 확보하고 원저작자·원본URL·라이선스·크레딧을 파일별 확인",
+          "people_note": "지나가는 사람·가족·연인이 있어도 구민/신혼부부의 정체나 비율을 암시하지 않음.",
+          "observed_official_photo_label": "송파나루근린공원(석촌호수)"
+        }
+      ],
+      "count2023": {
+        "claim_id": "R02-COUNT2023",
+        "statement": "서울 송파구의 2023년 신혼부부 전체 수는 12,490쌍이다.",
+        "source_id": "STAT2023",
+        "source_url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+        "source_file": null,
+        "evidence_location": "PDF 32쪽/인쇄 25쪽, 왼쪽 서울특별시 묶음, 송파구 행, 전체 열",
+        "reference_date": "2023-11-01",
+        "publication_date": "2024-12-10",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "공식 기관 자료에 기재된 사실",
+        "value": 12490,
+        "unit": "쌍",
+        "pdf_page": 32,
+        "printed_page": 25,
+        "column": "전체",
+        "transcription": {
+          "region_label": "송파구",
+          "province_context": "서울",
+          "whole": 12490,
+          "first_marriage": 11065,
+          "remarriage": 1383,
+          "column_order": [
+            "전체",
+            "초혼",
+            "재혼"
+          ],
+          "selected_column": "전체",
+          "method": "공식 PDF 텍스트 추출 결과에서 상위 시도/시와 행 이름·열 머리글을 대조해 직접 전사",
+          "full_page_image_reviewed": false
+        },
+        "notes": "초혼·재혼 열 합으로 전체를 재구성하지 않음. 표 표시값을 그대로 비교에 사용."
+      },
+      "count2024": {
+        "claim_id": "R02-COUNT2024",
+        "statement": "서울 송파구의 2024년 신혼부부 전체 수는 11,752쌍이다.",
+        "source_id": "R02_STAT2024_REUSE",
+        "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "evidence_location": "top20.json regions의 R02; 원자료 PDF 32쪽 전체 열",
+        "reference_date": "2024-11-01",
+        "publication_date": null,
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "기존 독립QA 통과 입력 재사용",
+        "value": 11752,
+        "unit": "쌍",
+        "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+        "verification_scope": "입력값·해시 확인; 원표·독립QA 재실행 아님"
+      },
+      "comparison": {
+        "claim_id": "R02-YOY",
+        "statement": "2023년 대비 2024년 신혼부부 전체 수 738쌍 감소, 5.9% 감소.",
+        "source_url": [
+          "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32"
+        ],
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "source_claim_ids": [
+          "R02-COUNT2023",
+          "R02-COUNT2024"
+        ],
+        "evidence_location": "2023 원표 전체 열과 top20.json의 2024 전체 열을 연결한 직접 계산",
+        "reference_date": "2023-11-01 → 2024-11-01",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "직접 계산",
+        "count2023": 12490,
+        "count2024": 11752,
+        "change_couples": -738,
+        "change_percent": -5.908726981585268,
+        "change_percent_display": -5.9,
+        "unit": "쌍 / %",
+        "formula": "(count2024-count2023)/count2023*100",
+        "rounding": "입력은 보도자료의 표시 정수; 표시 변화율은 소수 첫째 자리 반올림. 비반올림 원집계의 정확한 변화율과 차이가 날 수 있음.",
+        "same_statistical_area": true,
+        "area_basis": "2023 원표와 2024 입력의 같은 이름 시/구 행을 연결. 2026년 통계값으로 대체하지 않음.",
+        "population_definition": "매년11월1일 기준 혼인신고 후5년 미경과·혼인관계 유지·부부 중1명 이상 국내거주 신혼부부 전체",
+        "weighting": "부부의 거처가 다르면 각 시군구에 0.5 가중치(2023 원표 주석).",
+        "interpretation": "시점별 거주 신혼부부 수의 차이. 새 혼인 진입·5년 경과에 따른 범위 이탈·이동 등이 함께 작용할 수 있어 선택 이유·순유입·수요 증가로 단정하지 않음."
+      },
+      "interpretation": {
+        "verified_context": "석촌호수는 송파의 생활환경 사례 하나이며 송파 전체의 주거 조건을 대신하지 않는다.",
+        "verification_hypothesis": "각 후보 주거지에서 호수·철도·직장까지 동선과 비용을 별도로 대조하면 생활 조건을 구체화할 수 있다.",
+        "causal_conclusion": "미확인. 해당 시설·상권이 신혼부부의 선택 이유 또는 수 변화의 원인이라는 조사를 실행하지 않음.",
+        "housing": "아파트 구입·임차·가격·입주 수치는 이번 원표의 집계 대상이 아니며 이번 자료에서는 검증하지 않음.",
+        "employment": "기업별 고용 수·고용 증가 수치 미채택.",
+        "transport": "신규 개통계획·미개통 교통시설의 이용 효과 미채택. 실제 통근시간 미검증.",
+        "living": "확인한 고정 장소의 존재·위치를 생활환경의 사례로만 제시."
+      },
+      "script_suggestion": {
+        "sentences": [
+          "서울 송파구는 11,752쌍으로, 2023년보다 5.9% 줄었습니다.",
+          "지역의 생활환경은 동호와 서호를 따라 산책로가 이어지는 석촌호수에서 살펴볼 수 있습니다."
+        ],
+        "claim_ids": [
+          "R02-COUNT2024",
+          "R02-YOY",
+          "R02-F01"
+        ],
+        "status": "검증 사실에 근거한 짧은 설명 제안",
+        "approval_status": "새 대본 승인 아님"
+      },
+      "gaps": [
+        {
+          "gap": "개별 사진 파일·원본URL·상업영상 재사용권리·픽셀 장소 일치는 visual 담당 확인 대기."
+        }
+      ]
+    },
+    {
+      "region_id": "R03",
+      "rank": 3,
+      "scene_id": "S020",
+      "province": "경기",
+      "region_2024": "고양시 덕양구",
+      "administration": {
+        "statistical_area_year": 2024,
+        "statistical_area_name": "경기 고양시 덕양구",
+        "current_name_as_of_2026_11_01": "경기도 고양시 덕양구",
+        "changed_since_2024": false,
+        "change_date": null,
+        "source_id": null,
+        "display_label": "경기 고양시 덕양구",
+        "scope_note": "통계지역 명칭을 유지. 세부 동 경계·법령 전수 감사는 이번 범위에 포함하지 않음."
+      },
+      "facts": [
+        {
+          "claim_id": "R03-F01",
+          "statement": "고양시 근린공원현황 표는 화정중앙공원을 덕양구 화정동985의 공원으로 기재한다.",
+          "source_id": "R03_LOCAL_PARK",
+          "source_url": "https://www.goyang.go.kr/www/www03/www03_9/www03_9_3.jsp",
+          "source_file": null,
+          "evidence_location": "근린공원 일반현황 1)덕양구 표, 화정중앙공원 행",
+          "reference_date": null,
+          "publication_date": null,
+          "checked_date": "2026-11-01",
+          "status": "qualified",
+          "evidence_type": "공식 기관 자료에 기재된 사실",
+          "qualification": "공식 검색 색인의 표 행을 확인했으며 원문 직접 열람은 시간초과. 최신 시설 현황·세부 도면은 미확인."
+        },
+        {
+          "claim_id": "R03-F02",
+          "statement": "행주산성 역사공원은 덕양구 한강변의 잔디·전망 공간으로 공식 관광자료에 소개된다.",
+          "source_id": "R03_RIVER_PARK",
+          "source_url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=7c9ce79b-874b-4ee6-8c88-2556067dad10",
+          "source_file": null,
+          "evidence_location": "관광지 기본정보: 행주산성 역사공원 소개 및 주소",
+          "reference_date": "2026-09-29",
+          "publication_date": "2021-05-07",
+          "checked_date": "2026-11-01",
+          "status": "qualified",
+          "evidence_type": "공식 기관 자료에 기재된 사실",
+          "qualification": "2026-09-29 수정일이 있는 공식 검색 색인 본문 확인. 별도 원문 open·현장 확인 미실행.",
+          "facility_status": "operating",
+          "status_checked_date": "2026-11-01"
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "STAT2023",
+          "title": "2023년 신혼부부통계 결과",
+          "institution": "통계청",
+          "url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "evidence_location": "PDF 32~33쪽(0기준 31~32), 인쇄 25~26쪽, 6. 시군구별 신혼부부 수, 전체 열",
+          "publication_date": "2024-12-10",
+          "observation_date": "2023-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "PDF 3쪽 일러두기의 대상·반올림, 인쇄25쪽 표 제목·열·거처가 다른 부부 0.5 가중치 주석도 열람. 원표 화상은 확인하지 못함."
+        },
+        {
+          "source_id": "R03_STAT2024_REUSE",
+          "title": "2024년 신혼부부통계 전체 수: 기존 독립QA 통과 입력 재사용",
+          "institution": "입력 top20.json / 통계 원출처",
+          "url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=33",
+          "evidence_location": "top20.json regions의 R03; 원자료 PDF 33쪽 전체 열",
+          "publication_date": null,
+          "observation_date": "2024-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "사용자가 지정한 QA 통과 입력값 재사용; 2024 원표 재검수 미실행",
+          "access_status": "승계 입력 확인",
+          "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+          "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+          "prior_qa_reference": "episode/qa/ranking_source_review.json (state가 지시한 참조; 이번 작업에서는 파일을 다시 열거나 독립 검수를 실행하지 않음)"
+        },
+        {
+          "source_id": "R03_LOCAL_PARK",
+          "title": "근린공원현황: 덕양구",
+          "institution": "고양특례시",
+          "url": "https://www.goyang.go.kr/www/www03/www03_9/www03_9_3.jsp",
+          "evidence_location": "근린공원 일반현황 1)덕양구 표, 화정중앙공원 행",
+          "publication_date": null,
+          "observation_date": null,
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 URL 검색 색인에 표시된 표의 행 열람",
+          "access_status": "검색 색인 확인; 원문 직접 열람 시간초과",
+          "notes": "고양시 공식 색인에서 화정동985와 12,215㎡를 읽음. 전체 원문·갱신일은 미확인. 정밀 지도·최신 시설 수에는 추가 확인 필요."
+        },
+        {
+          "source_id": "R03_RIVER_PARK",
+          "title": "행주산성 역사공원",
+          "institution": "한국관광공사 열린관광 모두의 여행",
+          "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=7c9ce79b-874b-4ee6-8c88-2556067dad10",
+          "evidence_location": "관광지 기본정보: 행주산성 역사공원 소개 및 주소",
+          "publication_date": "2021-05-07",
+          "observation_date": null,
+          "last_updated_date": "2026-09-29",
+          "checked_date": "2026-11-01",
+          "access_method": "공식 관광지 페이지 검색 색인 본문 열람",
+          "access_status": "공식 검색 색인 본문 확인; 별도 open은 미실행",
+          "notes": "행주외동140-8, 한강변 잔디·전망 공간을 채택. 주차·차박·누리길 소요시간은 이번 설명에서 제외."
+        }
+      ],
+      "image_suggestions": [
+        {
+          "image_id": "R03-I01",
+          "place_name": "화정중앙공원",
+          "address": "경기도 고양시 덕양구 화정동985",
+          "source_address": "경기도 고양시 덕양구 화정동985",
+          "place_source_id": "R03_LOCAL_PARK",
+          "place_source_url": "https://www.goyang.go.kr/www/www03/www03_9/www03_9_3.jsp",
+          "official_image_page_url": null,
+          "official_original_image_url": null,
+          "image_url_note": "공원현황 표는 위치 근거이며 사진 원문은 확보하지 않음.",
+          "why_relevant": "화정 생활권의 고정 공원이라는 지역 특징을 보여준다. 인접한 일산호수공원 사진으로 바꾸면 통계 구역이 달라진다.",
+          "suggested_composition": "공원 표지·산책 공간과 주변 실제 시가지를 함께 담은 구도",
+          "location_match_basis": "공식 자료의 장소명·주소 확인; 사진 픽셀 자체의 동일성 검수는 미실행",
+          "image_pixels_reviewed": false,
+          "download_performed": false,
+          "rights_status": "미확인",
+          "commercial_reuse_permission": "미확인",
+          "license_observed": "개별 사진의 공용/상업 이용허락 표시를 확인하지 못함.",
+          "visual_next_action": "장소·구역을 대조한 공용라이선스 사진을 확보하고 원저작자·원본URL·라이선스·크레딧을 파일별 확인",
+          "people_note": "지나가는 사람·가족·연인이 있어도 구민/신혼부부의 정체나 비율을 암시하지 않음.",
+          "place_verification_status": "qualified"
+        },
+        {
+          "image_id": "R03-I02",
+          "place_name": "행주산성 역사공원",
+          "address": "경기도 고양시 덕양구 행주외동140-8",
+          "source_address": "경기도 고양시 덕양구 행주외동140-8",
+          "place_source_id": "R03_RIVER_PARK",
+          "place_source_url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=7c9ce79b-874b-4ee6-8c88-2556067dad10",
+          "official_image_page_url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=7c9ce79b-874b-4ee6-8c88-2556067dad10",
+          "official_original_image_url": null,
+          "image_url_note": "공식 관광지 페이지의 장소 설명만 확인; 개별 사진URL·픽셀·재사용권리는 미확인.",
+          "why_relevant": "덕양구의 한강변 여가 공간을 보여준다. 산 정상의 행주산성과 강변의 역사공원은 서로 다른 촬영 지점이다.",
+          "suggested_composition": "강변 잔디·산책 구간과 한강이 함께 보이는 고정 원경",
+          "location_match_basis": "공식 자료의 장소명·주소 확인; 사진 픽셀 자체의 동일성 검수는 미실행",
+          "image_pixels_reviewed": false,
+          "download_performed": false,
+          "rights_status": "미확인",
+          "commercial_reuse_permission": "미확인",
+          "license_observed": "개별 사진의 공용/상업 이용허락 표시를 확인하지 못함.",
+          "visual_next_action": "장소·구역을 대조한 공용라이선스 사진을 확보하고 원저작자·원본URL·라이선스·크레딧을 파일별 확인",
+          "people_note": "지나가는 사람·가족·연인이 있어도 구민/신혼부부의 정체나 비율을 암시하지 않음.",
+          "place_verification_status": "qualified"
+        }
+      ],
+      "count2023": {
+        "claim_id": "R03-COUNT2023",
+        "statement": "경기 고양시 덕양구의 2023년 신혼부부 전체 수는 12,190쌍이다.",
+        "source_id": "STAT2023",
+        "source_url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+        "source_file": null,
+        "evidence_location": "PDF 33쪽/인쇄 26쪽, 왼쪽 경기도/고양시 묶음, 고양시 덕양구 행, 전체 열",
+        "reference_date": "2023-11-01",
+        "publication_date": "2024-12-10",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "공식 기관 자료에 기재된 사실",
+        "value": 12190,
+        "unit": "쌍",
+        "pdf_page": 33,
+        "printed_page": 26,
+        "column": "전체",
+        "transcription": {
+          "region_label": "고양시 덕양구",
+          "province_context": "경기",
+          "whole": 12190,
+          "first_marriage": 10343,
+          "remarriage": 1769,
+          "column_order": [
+            "전체",
+            "초혼",
+            "재혼"
+          ],
+          "selected_column": "전체",
+          "method": "공식 PDF 텍스트 추출 결과에서 상위 시도/시와 행 이름·열 머리글을 대조해 직접 전사",
+          "full_page_image_reviewed": false
+        },
+        "notes": "초혼·재혼 열 합으로 전체를 재구성하지 않음. 표 표시값을 그대로 비교에 사용."
+      },
+      "count2024": {
+        "claim_id": "R03-COUNT2024",
+        "statement": "경기 고양시 덕양구의 2024년 신혼부부 전체 수는 11,452쌍이다.",
+        "source_id": "R03_STAT2024_REUSE",
+        "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=33",
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "evidence_location": "top20.json regions의 R03; 원자료 PDF 33쪽 전체 열",
+        "reference_date": "2024-11-01",
+        "publication_date": null,
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "기존 독립QA 통과 입력 재사용",
+        "value": 11452,
+        "unit": "쌍",
+        "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+        "verification_scope": "입력값·해시 확인; 원표·독립QA 재실행 아님"
+      },
+      "comparison": {
+        "claim_id": "R03-YOY",
+        "statement": "2023년 대비 2024년 신혼부부 전체 수 738쌍 감소, 6.1% 감소.",
+        "source_url": [
+          "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=33"
+        ],
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "source_claim_ids": [
+          "R03-COUNT2023",
+          "R03-COUNT2024"
+        ],
+        "evidence_location": "2023 원표 전체 열과 top20.json의 2024 전체 열을 연결한 직접 계산",
+        "reference_date": "2023-11-01 → 2024-11-01",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "직접 계산",
+        "count2023": 12190,
+        "count2024": 11452,
+        "change_couples": -738,
+        "change_percent": -6.0541427399507795,
+        "change_percent_display": -6.1,
+        "unit": "쌍 / %",
+        "formula": "(count2024-count2023)/count2023*100",
+        "rounding": "입력은 보도자료의 표시 정수; 표시 변화율은 소수 첫째 자리 반올림. 비반올림 원집계의 정확한 변화율과 차이가 날 수 있음.",
+        "same_statistical_area": true,
+        "area_basis": "2023 원표와 2024 입력의 같은 이름 시/구 행을 연결. 2026년 통계값으로 대체하지 않음.",
+        "population_definition": "매년11월1일 기준 혼인신고 후5년 미경과·혼인관계 유지·부부 중1명 이상 국내거주 신혼부부 전체",
+        "weighting": "부부의 거처가 다르면 각 시군구에 0.5 가중치(2023 원표 주석).",
+        "interpretation": "시점별 거주 신혼부부 수의 차이. 새 혼인 진입·5년 경과에 따른 범위 이탈·이동 등이 함께 작용할 수 있어 선택 이유·순유입·수요 증가로 단정하지 않음."
+      },
+      "interpretation": {
+        "verified_context": "화정의 시가지 공원과 행주외동의 한강변 공원은 같은 덕양구 안의 서로 다른 생활·여가 공간이다.",
+        "verification_hypothesis": "덕양구 내 생활권마다 직장 방향과 역 접근성·주거 비용이 다른지는 후보 지점별 자료로 확인해야 한다.",
+        "causal_conclusion": "미확인. 해당 시설·상권이 신혼부부의 선택 이유 또는 수 변화의 원인이라는 조사를 실행하지 않음.",
+        "housing": "아파트 구입·임차·가격·입주 수치는 이번 원표의 집계 대상이 아니며 이번 자료에서는 검증하지 않음.",
+        "employment": "기업별 고용 수·고용 증가 수치 미채택.",
+        "transport": "신규 개통계획·미개통 교통시설의 이용 효과 미채택. 실제 통근시간 미검증.",
+        "living": "확인한 고정 장소의 존재·위치를 생활환경의 사례로만 제시."
+      },
+      "script_suggestion": {
+        "sentences": [
+          "경기 고양시 덕양구는 11,452쌍으로, 2023년보다 6.1% 줄었습니다.",
+          "덕양구의 여가 공간으로는 화정중앙공원과 한강변의 행주산성 역사공원을 짚어볼 수 있습니다."
+        ],
+        "claim_ids": [
+          "R03-COUNT2024",
+          "R03-YOY",
+          "R03-F01",
+          "R03-F02"
+        ],
+        "status": "검증 범위 표기를 유지한 제안; 대본 확정 전 해당 한정조건 확인",
+        "approval_status": "새 대본 승인 아님"
+      },
+      "gaps": [
+        {
+          "claim_id": "R03-F01",
+          "gap": "공식 검색 색인의 표 행을 확인했으며 원문 직접 열람은 시간초과. 최신 시설 현황·세부 도면은 미확인."
+        },
+        {
+          "claim_id": "R03-F02",
+          "gap": "2026-09-29 수정일이 있는 공식 검색 색인 본문 확인. 별도 원문 open·현장 확인 미실행."
+        },
+        {
+          "gap": "개별 사진 파일·원본URL·상업영상 재사용권리·픽셀 장소 일치는 visual 담당 확인 대기."
+        }
+      ]
+    },
+    {
+      "region_id": "R04",
+      "rank": 4,
+      "scene_id": "S019",
+      "province": "서울",
+      "region_2024": "강서구",
+      "administration": {
+        "statistical_area_year": 2024,
+        "statistical_area_name": "서울 강서구",
+        "current_name_as_of_2026_11_01": "서울특별시 강서구",
+        "changed_since_2024": false,
+        "change_date": null,
+        "source_id": null,
+        "display_label": "서울 강서구",
+        "scope_note": "통계지역 명칭을 유지. 세부 동 경계·법령 전수 감사는 이번 범위에 포함하지 않음."
+      },
+      "facts": [
+        {
+          "claim_id": "R04-F01",
+          "statement": "강서구 마곡동로161의 서울식물원에는 열대·지중해 기후를 주제로 한 온실 전시가 있다.",
+          "source_id": "R04_CONSERVATORY",
+          "source_url": "https://botanicpark.seoul.go.kr/front/wbook/upload/12_SBP.pdf",
+          "source_file": null,
+          "evidence_location": "PDF 1쪽 온실 안내·열대관·지중해관, PDF 2쪽 하단 주소; 조회 텍스트 L19~38, L118~127, L322~329",
+          "reference_date": null,
+          "publication_date": null,
+          "checked_date": "2026-11-01",
+          "status": "verified",
+          "evidence_type": "공식 기관 자료에 기재된 사실",
+          "facility_status": "operating",
+          "status_checked_date": "2026-11-01"
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "STAT2023",
+          "title": "2023년 신혼부부통계 결과",
+          "institution": "통계청",
+          "url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "evidence_location": "PDF 32~33쪽(0기준 31~32), 인쇄 25~26쪽, 6. 시군구별 신혼부부 수, 전체 열",
+          "publication_date": "2024-12-10",
+          "observation_date": "2023-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "PDF 3쪽 일러두기의 대상·반올림, 인쇄25쪽 표 제목·열·거처가 다른 부부 0.5 가중치 주석도 열람. 원표 화상은 확인하지 못함."
+        },
+        {
+          "source_id": "R04_STAT2024_REUSE",
+          "title": "2024년 신혼부부통계 전체 수: 기존 독립QA 통과 입력 재사용",
+          "institution": "입력 top20.json / 통계 원출처",
+          "url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+          "evidence_location": "top20.json regions의 R04; 원자료 PDF 32쪽 전체 열",
+          "publication_date": null,
+          "observation_date": "2024-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "사용자가 지정한 QA 통과 입력값 재사용; 2024 원표 재검수 미실행",
+          "access_status": "승계 입력 확인",
+          "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+          "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+          "prior_qa_reference": "episode/qa/ranking_source_review.json (state가 지시한 참조; 이번 작업에서는 파일을 다시 열거나 독립 검수를 실행하지 않음)"
+        },
+        {
+          "source_id": "R04_CONSERVATORY",
+          "title": "서울식물원 온실 가이드맵",
+          "institution": "서울특별시 서울식물원",
+          "url": "https://botanicpark.seoul.go.kr/front/wbook/upload/12_SBP.pdf",
+          "evidence_location": "PDF 1쪽 온실 안내·열대관·지중해관, PDF 2쪽 하단 주소; 조회 텍스트 L19~38, L118~127, L322~329",
+          "publication_date": null,
+          "observation_date": null,
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "주소와 열대·지중해 기후별 전시를 채택. 날짜 미표기. 식물 종수·입장료 등 변동 숫자는 인용하지 않음."
+        }
+      ],
+      "image_suggestions": [
+        {
+          "image_id": "R04-I01",
+          "place_name": "서울식물원 식물문화센터 온실",
+          "address": "서울특별시 강서구 마곡동로161",
+          "source_address": "서울특별시 강서구 마곡동로161",
+          "place_source_id": "R04_CONSERVATORY",
+          "place_source_url": "https://botanicpark.seoul.go.kr/front/wbook/upload/12_SBP.pdf",
+          "official_image_page_url": "https://botanicpark.seoul.go.kr/front/wbook/upload/12_SBP.pdf",
+          "official_original_image_url": null,
+          "image_url_note": "온실 공식 가이드맵 PDF는 구조·장소 참고자료. 상업영상에 PDF 도안/사진을 그대로 쓰는 권리는 미확인.",
+          "why_relevant": "마곡의 실제 여가·문화 시설을 설명하는 사진이다. 온실 모습으로 기업 입주나 고용 증가를 증명하지 않는다.",
+          "suggested_composition": "온실 외관과 주변 공개 공간을 함께 담거나 식물 전시 통로가 읽히는 구도",
+          "location_match_basis": "공식 자료의 장소명·주소 확인; 사진 픽셀 자체의 동일성 검수는 미실행",
+          "image_pixels_reviewed": false,
+          "download_performed": false,
+          "rights_status": "미확인",
+          "commercial_reuse_permission": "미확인",
+          "license_observed": "개별 사진의 공용/상업 이용허락 표시를 확인하지 못함.",
+          "visual_next_action": "장소·구역을 대조한 공용라이선스 사진을 확보하고 원저작자·원본URL·라이선스·크레딧을 파일별 확인",
+          "people_note": "지나가는 사람·가족·연인이 있어도 구민/신혼부부의 정체나 비율을 암시하지 않음.",
+          "shooting_note": "공식 리플릿은 사진·영상 촬영용 삼각대 사용 불가를 안내하므로 현장 촬영 담당은 최신 시설규칙을 별도 확인."
+        }
+      ],
+      "count2023": {
+        "claim_id": "R04-COUNT2023",
+        "statement": "서울 강서구의 2023년 신혼부부 전체 수는 11,527쌍이다.",
+        "source_id": "STAT2023",
+        "source_url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+        "source_file": null,
+        "evidence_location": "PDF 32쪽/인쇄 25쪽, 왼쪽 서울특별시 묶음, 강서구 행(부산 강서구와 구별), 전체 열",
+        "reference_date": "2023-11-01",
+        "publication_date": "2024-12-10",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "공식 기관 자료에 기재된 사실",
+        "value": 11527,
+        "unit": "쌍",
+        "pdf_page": 32,
+        "printed_page": 25,
+        "column": "전체",
+        "transcription": {
+          "region_label": "강서구",
+          "province_context": "서울",
+          "whole": 11527,
+          "first_marriage": 9915,
+          "remarriage": 1447,
+          "column_order": [
+            "전체",
+            "초혼",
+            "재혼"
+          ],
+          "selected_column": "전체",
+          "method": "공식 PDF 텍스트 추출 결과에서 상위 시도/시와 행 이름·열 머리글을 대조해 직접 전사",
+          "full_page_image_reviewed": false
+        },
+        "notes": "초혼·재혼 열 합으로 전체를 재구성하지 않음. 표 표시값을 그대로 비교에 사용."
+      },
+      "count2024": {
+        "claim_id": "R04-COUNT2024",
+        "statement": "서울 강서구의 2024년 신혼부부 전체 수는 10,724쌍이다.",
+        "source_id": "R04_STAT2024_REUSE",
+        "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "evidence_location": "top20.json regions의 R04; 원자료 PDF 32쪽 전체 열",
+        "reference_date": "2024-11-01",
+        "publication_date": null,
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "기존 독립QA 통과 입력 재사용",
+        "value": 10724,
+        "unit": "쌍",
+        "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+        "verification_scope": "입력값·해시 확인; 원표·독립QA 재실행 아님"
+      },
+      "comparison": {
+        "claim_id": "R04-YOY",
+        "statement": "2023년 대비 2024년 신혼부부 전체 수 803쌍 감소, 7.0% 감소.",
+        "source_url": [
+          "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32"
+        ],
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "source_claim_ids": [
+          "R04-COUNT2023",
+          "R04-COUNT2024"
+        ],
+        "evidence_location": "2023 원표 전체 열과 top20.json의 2024 전체 열을 연결한 직접 계산",
+        "reference_date": "2023-11-01 → 2024-11-01",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "직접 계산",
+        "count2023": 11527,
+        "count2024": 10724,
+        "change_couples": -803,
+        "change_percent": -6.9662531447904925,
+        "change_percent_display": -7,
+        "unit": "쌍 / %",
+        "formula": "(count2024-count2023)/count2023*100",
+        "rounding": "입력은 보도자료의 표시 정수; 표시 변화율은 소수 첫째 자리 반올림. 비반올림 원집계의 정확한 변화율과 차이가 날 수 있음.",
+        "same_statistical_area": true,
+        "area_basis": "2023 원표와 2024 입력의 같은 이름 시/구 행을 연결. 2026년 통계값으로 대체하지 않음.",
+        "population_definition": "매년11월1일 기준 혼인신고 후5년 미경과·혼인관계 유지·부부 중1명 이상 국내거주 신혼부부 전체",
+        "weighting": "부부의 거처가 다르면 각 시군구에 0.5 가중치(2023 원표 주석).",
+        "interpretation": "시점별 거주 신혼부부 수의 차이. 새 혼인 진입·5년 경과에 따른 범위 이탈·이동 등이 함께 작용할 수 있어 선택 이유·순유입·수요 증가로 단정하지 않음."
+      },
+      "interpretation": {
+        "verified_context": "마곡의 문화·여가 시설 사례가 확인되며, 강서구는 서울 강서구로 표기해 부산 강서구와 구별한다.",
+        "verification_hypothesis": "마곡권 업무지와 주거지 사이의 실제 통근 동선이 어떤지 확인할 수 있으나 이번 자료만으로 거주 선택 이유를 확정할 수 없다.",
+        "causal_conclusion": "미확인. 해당 시설·상권이 신혼부부의 선택 이유 또는 수 변화의 원인이라는 조사를 실행하지 않음.",
+        "housing": "아파트 구입·임차·가격·입주 수치는 이번 원표의 집계 대상이 아니며 이번 자료에서는 검증하지 않음.",
+        "employment": "기업별 고용 수·고용 증가 수치 미채택.",
+        "transport": "신규 개통계획·미개통 교통시설의 이용 효과 미채택. 실제 통근시간 미검증.",
+        "living": "확인한 고정 장소의 존재·위치를 생활환경의 사례로만 제시."
+      },
+      "script_suggestion": {
+        "sentences": [
+          "서울 강서구는 10,724쌍으로, 2023년보다 7.0% 줄었습니다.",
+          "마곡의 서울식물원은 열대·지중해 온실을 갖춘 실제 문화·여가 공간입니다."
+        ],
+        "claim_ids": [
+          "R04-COUNT2024",
+          "R04-YOY",
+          "R04-F01"
+        ],
+        "status": "검증 사실에 근거한 짧은 설명 제안",
+        "approval_status": "새 대본 승인 아님"
+      },
+      "gaps": [
+        {
+          "gap": "개별 사진 파일·원본URL·상업영상 재사용권리·픽셀 장소 일치는 visual 담당 확인 대기."
+        }
+      ]
+    },
+    {
+      "region_id": "R05",
+      "rank": 5,
+      "scene_id": "S018",
+      "province": "인천",
+      "region_2024": "부평구",
+      "administration": {
+        "statistical_area_year": 2024,
+        "statistical_area_name": "인천 부평구",
+        "current_name_as_of_2026_11_01": "인천광역시 부평구",
+        "changed_since_2024": false,
+        "change_date": null,
+        "source_id": null,
+        "display_label": "인천 부평구",
+        "scope_note": "통계지역 명칭을 유지. 세부 동 경계·법령 전수 감사는 이번 범위에 포함하지 않음."
+      },
+      "facts": [
+        {
+          "claim_id": "R05-F01",
+          "statement": "부평공원은 부평역과 백운역 사이에 있으며 운동·친수·산책 공간을 갖춘 공원으로 안내된다.",
+          "source_id": "R05_PARK",
+          "source_url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21121613074055886",
+          "source_file": null,
+          "evidence_location": "주소·관광지소개; 조회 텍스트 L64~69, L89~100",
+          "reference_date": "2022-01-25",
+          "publication_date": "2021-12-16",
+          "checked_date": "2026-11-01",
+          "status": "verified",
+          "evidence_type": "공식 기관 자료에 기재된 사실",
+          "additional_source_ids": [
+            "R05_PARK_KTO"
+          ],
+          "facility_status": "operating",
+          "status_checked_date": "2026-11-01"
+        },
+        {
+          "claim_id": "R05-F02",
+          "statement": "부평문화의거리는 지하상가와 전통시장 등 주변 상권이 연결되는 보행 중심의 상업 공간이다.",
+          "source_id": "R05_STREET",
+          "source_url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21122714272330866",
+          "source_file": null,
+          "evidence_location": "주소·갱신일·관광지소개·이용 협의 안내; 조회 텍스트 L64~69, L91~102, L280~282",
+          "reference_date": "2026-08-14",
+          "publication_date": "2021-12-27",
+          "checked_date": "2026-11-01",
+          "status": "verified",
+          "evidence_type": "공식 기관 자료에 기재된 사실"
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "STAT2023",
+          "title": "2023년 신혼부부통계 결과",
+          "institution": "통계청",
+          "url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "evidence_location": "PDF 32~33쪽(0기준 31~32), 인쇄 25~26쪽, 6. 시군구별 신혼부부 수, 전체 열",
+          "publication_date": "2024-12-10",
+          "observation_date": "2023-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "PDF 3쪽 일러두기의 대상·반올림, 인쇄25쪽 표 제목·열·거처가 다른 부부 0.5 가중치 주석도 열람. 원표 화상은 확인하지 못함."
+        },
+        {
+          "source_id": "R05_STAT2024_REUSE",
+          "title": "2024년 신혼부부통계 전체 수: 기존 독립QA 통과 입력 재사용",
+          "institution": "입력 top20.json / 통계 원출처",
+          "url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+          "evidence_location": "top20.json regions의 R05; 원자료 PDF 32쪽 전체 열",
+          "publication_date": null,
+          "observation_date": "2024-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "사용자가 지정한 QA 통과 입력값 재사용; 2024 원표 재검수 미실행",
+          "access_status": "승계 입력 확인",
+          "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+          "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+          "prior_qa_reference": "episode/qa/ranking_source_review.json (state가 지시한 참조; 이번 작업에서는 파일을 다시 열거나 독립 검수를 실행하지 않음)"
+        },
+        {
+          "source_id": "R05_PARK",
+          "title": "부평공원",
+          "institution": "인천광역시·인천관광공사 인천투어",
+          "url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21121613074055886",
+          "evidence_location": "주소·관광지소개; 조회 텍스트 L64~69, L89~100",
+          "publication_date": "2021-12-16",
+          "observation_date": null,
+          "last_updated_date": "2022-01-25",
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "공식 지번 부평동271을 채택. 부평동299라는 검색 가정은 사용하지 않음. 요금·개원연도는 사용하지 않음."
+        },
+        {
+          "source_id": "R05_PARK_KTO",
+          "title": "부평공원",
+          "institution": "한국관광공사 열린관광 모두의 여행",
+          "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=51cac2ad-899f-4778-a39c-2e89cad5f751",
+          "evidence_location": "기본정보: 부평역·백운역 사이, 운동·친수시설; 조회 텍스트 L60~67",
+          "publication_date": null,
+          "observation_date": null,
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "인천투어의 시설 설명과 교차 대조. 해당 페이지 주소는 부평공원로(부평동) 수준이므로 건물번호를 만들지 않음."
+        },
+        {
+          "source_id": "R05_STREET",
+          "title": "부평문화의거리",
+          "institution": "인천광역시·인천관광공사 인천투어",
+          "url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21122714272330866",
+          "evidence_location": "주소·갱신일·관광지소개·이용 협의 안내; 조회 텍스트 L64~69, L91~102, L280~282",
+          "publication_date": "2021-12-27",
+          "observation_date": null,
+          "last_updated_date": "2026-08-14",
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "rights_observed": "자료 이용 시 공공저작물 관리책임관 및 실무담당자와 사전 협의하도록 본문 하단 안내. 상업영상 재사용 허락은 미확인."
+        }
+      ],
+      "image_suggestions": [
+        {
+          "image_id": "R05-I01",
+          "place_name": "부평공원",
+          "address": "인천광역시 부평구 부평동271",
+          "source_address": "인천광역시 부평구 부평동271",
+          "place_source_id": "R05_PARK",
+          "place_source_url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21121613074055886",
+          "official_image_page_url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21121613074055886",
+          "official_original_image_url": null,
+          "image_url_note": "원문에 표시된 사진/첨부 후보 페이지이며 원본 이미지 URL은 이번 작업에서 별도 추출하지 않음.",
+          "why_relevant": "공원과 주변 도시의 실제 관계를 보여주는 생활환경 자료다. 공원 부지는 캠프마켓과 혼동하지 않는다.",
+          "suggested_composition": "공원 산책로·중앙광장·주변 시가지를 함께 담은 구도",
+          "location_match_basis": "공식 자료의 장소명·주소 확인; 사진 픽셀 자체의 동일성 검수는 미실행",
+          "image_pixels_reviewed": false,
+          "download_performed": false,
+          "rights_status": "미확인",
+          "commercial_reuse_permission": "미확인",
+          "license_observed": "개별 사진의 공용/상업 이용허락 표시를 확인하지 못함.",
+          "visual_next_action": "장소·구역을 대조한 공용라이선스 사진을 확보하고 원저작자·원본URL·라이선스·크레딧을 파일별 확인",
+          "people_note": "지나가는 사람·가족·연인이 있어도 구민/신혼부부의 정체나 비율을 암시하지 않음.",
+          "observed_official_photo_label": "부평공원1~7"
+        },
+        {
+          "image_id": "R05-I02",
+          "place_name": "부평문화의거리",
+          "address": "인천광역시 부평구 부평문화로78-2",
+          "source_address": "인천광역시 부평구 부평문화로78-2",
+          "place_source_id": "R05_STREET",
+          "place_source_url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21122714272330866",
+          "official_image_page_url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21122714272330866",
+          "official_original_image_url": null,
+          "image_url_note": "원문에 표시된 사진/첨부 후보 페이지이며 원본 이미지 URL은 이번 작업에서 별도 추출하지 않음.",
+          "why_relevant": "상권·보행 공간이라는 두 번째 특징을 직접 보여준다. 군중 장면을 신혼부부 거주 비율의 증거로 사용하지 않는다.",
+          "suggested_composition": "거리 표지와 보행 가로가 읽히는 원경",
+          "location_match_basis": "공식 자료의 장소명·주소 확인; 사진 픽셀 자체의 동일성 검수는 미실행",
+          "image_pixels_reviewed": false,
+          "download_performed": false,
+          "rights_status": "미확인",
+          "commercial_reuse_permission": "미확인",
+          "license_observed": "자료 이용 시 공공저작물 관리책임관 및 실무담당자와 사전 협의하도록 본문 하단 안내. 상업영상 재사용 허락은 미확인.",
+          "visual_next_action": "장소·구역을 대조한 공용라이선스 사진을 확보하고 원저작자·원본URL·라이선스·크레딧을 파일별 확인",
+          "people_note": "지나가는 사람·가족·연인이 있어도 구민/신혼부부의 정체나 비율을 암시하지 않음.",
+          "observed_official_photo_label": "부평문화의거리1~8",
+          "rights_followup": "공식 페이지는 자료 이용 전 담당자 협의를 요구. 현재는 다운로드·연락하지 않음."
+        }
+      ],
+      "count2023": {
+        "claim_id": "R05-COUNT2023",
+        "statement": "인천 부평구의 2023년 신혼부부 전체 수는 9,901쌍이다.",
+        "source_id": "STAT2023",
+        "source_url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+        "source_file": null,
+        "evidence_location": "PDF 32쪽/인쇄 25쪽, 오른쪽 인천광역시 묶음, 부평구 행, 전체 열",
+        "reference_date": "2023-11-01",
+        "publication_date": "2024-12-10",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "공식 기관 자료에 기재된 사실",
+        "value": 9901,
+        "unit": "쌍",
+        "pdf_page": 32,
+        "printed_page": 25,
+        "column": "전체",
+        "transcription": {
+          "region_label": "부평구",
+          "province_context": "인천",
+          "whole": 9901,
+          "first_marriage": 7726,
+          "remarriage": 2144,
+          "column_order": [
+            "전체",
+            "초혼",
+            "재혼"
+          ],
+          "selected_column": "전체",
+          "method": "공식 PDF 텍스트 추출 결과에서 상위 시도/시와 행 이름·열 머리글을 대조해 직접 전사",
+          "full_page_image_reviewed": false
+        },
+        "notes": "초혼·재혼 열 합으로 전체를 재구성하지 않음. 표 표시값을 그대로 비교에 사용."
+      },
+      "count2024": {
+        "claim_id": "R05-COUNT2024",
+        "statement": "인천 부평구의 2024년 신혼부부 전체 수는 10,204쌍이다.",
+        "source_id": "R05_STAT2024_REUSE",
+        "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "evidence_location": "top20.json regions의 R05; 원자료 PDF 32쪽 전체 열",
+        "reference_date": "2024-11-01",
+        "publication_date": null,
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "기존 독립QA 통과 입력 재사용",
+        "value": 10204,
+        "unit": "쌍",
+        "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+        "verification_scope": "입력값·해시 확인; 원표·독립QA 재실행 아님"
+      },
+      "comparison": {
+        "claim_id": "R05-YOY",
+        "statement": "2023년 대비 2024년 신혼부부 전체 수 303쌍 증가, 3.1% 증가.",
+        "source_url": [
+          "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32"
+        ],
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "source_claim_ids": [
+          "R05-COUNT2023",
+          "R05-COUNT2024"
+        ],
+        "evidence_location": "2023 원표 전체 열과 top20.json의 2024 전체 열을 연결한 직접 계산",
+        "reference_date": "2023-11-01 → 2024-11-01",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "직접 계산",
+        "count2023": 9901,
+        "count2024": 10204,
+        "change_couples": 303,
+        "change_percent": 3.0602969397030604,
+        "change_percent_display": 3.1,
+        "unit": "쌍 / %",
+        "formula": "(count2024-count2023)/count2023*100",
+        "rounding": "입력은 보도자료의 표시 정수; 표시 변화율은 소수 첫째 자리 반올림. 비반올림 원집계의 정확한 변화율과 차이가 날 수 있음.",
+        "same_statistical_area": true,
+        "area_basis": "2023 원표와 2024 입력의 같은 이름 시/구 행을 연결. 2026년 통계값으로 대체하지 않음.",
+        "population_definition": "매년11월1일 기준 혼인신고 후5년 미경과·혼인관계 유지·부부 중1명 이상 국내거주 신혼부부 전체",
+        "weighting": "부부의 거처가 다르면 각 시군구에 0.5 가중치(2023 원표 주석).",
+        "interpretation": "시점별 거주 신혼부부 수의 차이. 새 혼인 진입·5년 경과에 따른 범위 이탈·이동 등이 함께 작용할 수 있어 선택 이유·순유입·수요 증가로 단정하지 않음."
+      },
+      "interpretation": {
+        "verified_context": "공원과 기존 상권이라는 고정 공간이 확인된다. 이를 인구 변화의 원인으로 연결하는 증거는 별도다.",
+        "verification_hypothesis": "기존 상권 이용과 경인선 역 접근성을 주거지별 동선·예산으로 대조하는 검증이 필요하다.",
+        "causal_conclusion": "미확인. 해당 시설·상권이 신혼부부의 선택 이유 또는 수 변화의 원인이라는 조사를 실행하지 않음.",
+        "housing": "아파트 구입·임차·가격·입주 수치는 이번 원표의 집계 대상이 아니며 이번 자료에서는 검증하지 않음.",
+        "employment": "기업별 고용 수·고용 증가 수치 미채택.",
+        "transport": "신규 개통계획·미개통 교통시설의 이용 효과 미채택. 실제 통근시간 미검증.",
+        "living": "확인한 고정 장소의 존재·위치를 생활환경의 사례로만 제시."
+      },
+      "script_suggestion": {
+        "sentences": [
+          "인천 부평구는 10,204쌍으로, 2023년보다 3.1% 늘었습니다.",
+          "부평공원과 부평문화의거리는 공원과 기존 상권이라는 서로 다른 생활환경을 보여줍니다."
+        ],
+        "claim_ids": [
+          "R05-COUNT2024",
+          "R05-YOY",
+          "R05-F01",
+          "R05-F02"
+        ],
+        "status": "검증 사실에 근거한 짧은 설명 제안",
+        "approval_status": "새 대본 승인 아님"
+      },
+      "gaps": [
+        {
+          "gap": "개별 사진 파일·원본URL·상업영상 재사용권리·픽셀 장소 일치는 visual 담당 확인 대기."
+        }
+      ]
+    },
+    {
+      "region_id": "R06",
+      "rank": 6,
+      "scene_id": "S017",
+      "province": "서울",
+      "region_2024": "강남구",
+      "administration": {
+        "statistical_area_year": 2024,
+        "statistical_area_name": "서울 강남구",
+        "current_name_as_of_2026_11_01": "서울특별시 강남구",
+        "changed_since_2024": false,
+        "change_date": null,
+        "source_id": null,
+        "display_label": "서울 강남구",
+        "scope_note": "통계지역 명칭을 유지. 세부 동 경계·법령 전수 감사는 이번 범위에 포함하지 않음."
+      },
+      "facts": [
+        {
+          "claim_id": "R06-F01",
+          "statement": "강남구는 양재천 영동6교~대치교 소단길 연결 공사를 2022년12월 완료했다고 발표했다.",
+          "source_id": "R06_PATH",
+          "source_url": "https://www.gangnam.go.kr/board/B_000031/1072866/view.do?mid=ID01_0313",
+          "source_file": null,
+          "evidence_location": "보도자료 첫 문단·완공 설명 및 사진 첨부·공공누리; 조회 텍스트 L1108~1129, L1147",
+          "reference_date": "2022-12",
+          "publication_date": "2023-01-12",
+          "checked_date": "2026-11-01",
+          "status": "verified",
+          "evidence_type": "공식 기관 자료에 기재된 사실",
+          "facility_status": "operating",
+          "status_basis": "2023-01-12 공식 보도자료의 2022-12 완공 발표",
+          "status_checked_date": "2026-11-01",
+          "qualification": "현재 임시 통제 여부는 별도 미확인. 완공 발표 시점과 현재 실측을 구별."
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "STAT2023",
+          "title": "2023년 신혼부부통계 결과",
+          "institution": "통계청",
+          "url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "evidence_location": "PDF 32~33쪽(0기준 31~32), 인쇄 25~26쪽, 6. 시군구별 신혼부부 수, 전체 열",
+          "publication_date": "2024-12-10",
+          "observation_date": "2023-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "PDF 3쪽 일러두기의 대상·반올림, 인쇄25쪽 표 제목·열·거처가 다른 부부 0.5 가중치 주석도 열람. 원표 화상은 확인하지 못함."
+        },
+        {
+          "source_id": "R06_STAT2024_REUSE",
+          "title": "2024년 신혼부부통계 전체 수: 기존 독립QA 통과 입력 재사용",
+          "institution": "입력 top20.json / 통계 원출처",
+          "url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+          "evidence_location": "top20.json regions의 R06; 원자료 PDF 32쪽 전체 열",
+          "publication_date": null,
+          "observation_date": "2024-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "사용자가 지정한 QA 통과 입력값 재사용; 2024 원표 재검수 미실행",
+          "access_status": "승계 입력 확인",
+          "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+          "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+          "prior_qa_reference": "episode/qa/ranking_source_review.json (state가 지시한 참조; 이번 작업에서는 파일을 다시 열거나 독립 검수를 실행하지 않음)"
+        },
+        {
+          "source_id": "R06_PATH",
+          "title": "강남구, 영동6교~대치교 끊어진 양재천 소단길 연결",
+          "institution": "서울특별시 강남구 치수과",
+          "url": "https://www.gangnam.go.kr/board/B_000031/1072866/view.do?mid=ID01_0313",
+          "evidence_location": "보도자료 첫 문단·완공 설명 및 사진 첨부·공공누리; 조회 텍스트 L1108~1129, L1147",
+          "publication_date": "2023-01-12",
+          "observation_date": "2022-12",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "observation_date_precision": "월",
+          "rights_observed": "공공누리 제2유형(출처표시+상업적 이용금지). 별도 허락 없이 해당 보도사진의 상업영상 이용 불가."
+        }
+      ],
+      "image_suggestions": [
+        {
+          "image_id": "R06-I01",
+          "place_name": "양재천 영동6교~대치교 소단길",
+          "address": "서울특별시 강남구 양재천 영동6교~대치교 구간",
+          "source_address": "서울특별시 강남구 양재천 영동6교~대치교 구간",
+          "place_source_id": "R06_PATH",
+          "place_source_url": "https://www.gangnam.go.kr/board/B_000031/1072866/view.do?mid=ID01_0313",
+          "official_image_page_url": "https://www.gangnam.go.kr/board/B_000031/1072866/view.do?mid=ID01_0313",
+          "official_original_image_url": null,
+          "image_url_note": "원문에 표시된 사진/첨부 후보 페이지이며 원본 이미지 URL은 이번 작업에서 별도 추출하지 않음.",
+          "why_relevant": "강남의 수변 보행환경을 실제 구간으로 보여준다. 강남역 번화가나 서초구 양재천 구간을 이 구간 사진으로 대신하지 않는다.",
+          "suggested_composition": "하천·데크길·교량 식별점이 함께 보이는 고정 원경",
+          "location_match_basis": "공식 자료의 장소명·주소 확인; 사진 픽셀 자체의 동일성 검수는 미실행",
+          "image_pixels_reviewed": false,
+          "download_performed": false,
+          "rights_status": "미확인",
+          "commercial_reuse_permission": "공공누리 제2유형은 상업 이용을 허용하지 않음. 별도 허락 미확인; 해당 첨부는 상업영상 사용 보류.",
+          "license_observed": "공공누리 제2유형(출처표시+상업적 이용금지). 별도 허락 없이 해당 보도사진의 상업영상 이용 불가.",
+          "visual_next_action": "장소·구역을 대조한 공용라이선스 사진을 확보하고 원저작자·원본URL·라이선스·크레딧을 파일별 확인",
+          "people_note": "지나가는 사람·가족·연인이 있어도 구민/신혼부부의 정체나 비율을 암시하지 않음.",
+          "address_precision": "공식 보도자료가 특정한 교량 사이 구간; 도로명 건물번호·정밀 핀은 미확인",
+          "observed_official_photo_label": "첨부 양재천소단길 조성 완료1.JPG 등 3장"
+        }
+      ],
+      "count2023": {
+        "claim_id": "R06-COUNT2023",
+        "statement": "서울 강남구의 2023년 신혼부부 전체 수는 8,523쌍이다.",
+        "source_id": "STAT2023",
+        "source_url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+        "source_file": null,
+        "evidence_location": "PDF 32쪽/인쇄 25쪽, 왼쪽 서울특별시 묶음, 강남구 행, 전체 열",
+        "reference_date": "2023-11-01",
+        "publication_date": "2024-12-10",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "공식 기관 자료에 기재된 사실",
+        "value": 8523,
+        "unit": "쌍",
+        "pdf_page": 32,
+        "printed_page": 25,
+        "column": "전체",
+        "transcription": {
+          "region_label": "강남구",
+          "province_context": "서울",
+          "whole": 8523,
+          "first_marriage": 7412,
+          "remarriage": 1027,
+          "column_order": [
+            "전체",
+            "초혼",
+            "재혼"
+          ],
+          "selected_column": "전체",
+          "method": "공식 PDF 텍스트 추출 결과에서 상위 시도/시와 행 이름·열 머리글을 대조해 직접 전사",
+          "full_page_image_reviewed": false
+        },
+        "notes": "초혼·재혼 열 합으로 전체를 재구성하지 않음. 표 표시값을 그대로 비교에 사용."
+      },
+      "count2024": {
+        "claim_id": "R06-COUNT2024",
+        "statement": "서울 강남구의 2024년 신혼부부 전체 수는 9,321쌍이다.",
+        "source_id": "R06_STAT2024_REUSE",
+        "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "evidence_location": "top20.json regions의 R06; 원자료 PDF 32쪽 전체 열",
+        "reference_date": "2024-11-01",
+        "publication_date": null,
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "기존 독립QA 통과 입력 재사용",
+        "value": 9321,
+        "unit": "쌍",
+        "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+        "verification_scope": "입력값·해시 확인; 원표·독립QA 재실행 아님"
+      },
+      "comparison": {
+        "claim_id": "R06-YOY",
+        "statement": "2023년 대비 2024년 신혼부부 전체 수 798쌍 증가, 9.4% 증가.",
+        "source_url": [
+          "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32"
+        ],
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "source_claim_ids": [
+          "R06-COUNT2023",
+          "R06-COUNT2024"
+        ],
+        "evidence_location": "2023 원표 전체 열과 top20.json의 2024 전체 열을 연결한 직접 계산",
+        "reference_date": "2023-11-01 → 2024-11-01",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "직접 계산",
+        "count2023": 8523,
+        "count2024": 9321,
+        "change_couples": 798,
+        "change_percent": 9.36290038718761,
+        "change_percent_display": 9.4,
+        "unit": "쌍 / %",
+        "formula": "(count2024-count2023)/count2023*100",
+        "rounding": "입력은 보도자료의 표시 정수; 표시 변화율은 소수 첫째 자리 반올림. 비반올림 원집계의 정확한 변화율과 차이가 날 수 있음.",
+        "same_statistical_area": true,
+        "area_basis": "2023 원표와 2024 입력의 같은 이름 시/구 행을 연결. 2026년 통계값으로 대체하지 않음.",
+        "population_definition": "매년11월1일 기준 혼인신고 후5년 미경과·혼인관계 유지·부부 중1명 이상 국내거주 신혼부부 전체",
+        "weighting": "부부의 거처가 다르면 각 시군구에 0.5 가중치(2023 원표 주석).",
+        "interpretation": "시점별 거주 신혼부부 수의 차이. 새 혼인 진입·5년 경과에 따른 범위 이탈·이동 등이 함께 작용할 수 있어 선택 이유·순유입·수요 증가로 단정하지 않음."
+      },
+      "interpretation": {
+        "verified_context": "수변 보행환경의 실제 조성 사례만 확인했으며 업무·고용 수나 주택가격을 이번 자료에 넣지 않았다.",
+        "verification_hypothesis": "강남 안에서도 직장 위치·주거비·생활 동선의 차이를 비교해야 주거 후보를 평가할 수 있다.",
+        "causal_conclusion": "미확인. 해당 시설·상권이 신혼부부의 선택 이유 또는 수 변화의 원인이라는 조사를 실행하지 않음.",
+        "housing": "아파트 구입·임차·가격·입주 수치는 이번 원표의 집계 대상이 아니며 이번 자료에서는 검증하지 않음.",
+        "employment": "기업별 고용 수·고용 증가 수치 미채택.",
+        "transport": "신규 개통계획·미개통 교통시설의 이용 효과 미채택. 실제 통근시간 미검증.",
+        "living": "확인한 고정 장소의 존재·위치를 생활환경의 사례로만 제시."
+      },
+      "script_suggestion": {
+        "sentences": [
+          "서울 강남구는 9,321쌍으로, 2023년보다 9.4% 늘었습니다.",
+          "강남구는 양재천 영동6교에서 대치교 사이의 소단길을 2022년12월 완성했다고 발표했습니다."
+        ],
+        "claim_ids": [
+          "R06-COUNT2024",
+          "R06-YOY",
+          "R06-F01"
+        ],
+        "status": "검증 사실에 근거한 짧은 설명 제안",
+        "approval_status": "새 대본 승인 아님"
+      },
+      "gaps": [
+        {
+          "gap": "개별 사진 파일·원본URL·상업영상 재사용권리·픽셀 장소 일치는 visual 담당 확인 대기."
+        }
+      ]
+    },
+    {
+      "region_id": "R07",
+      "rank": 7,
+      "scene_id": "S016",
+      "province": "서울",
+      "region_2024": "강동구",
+      "administration": {
+        "statistical_area_year": 2024,
+        "statistical_area_name": "서울 강동구",
+        "current_name_as_of_2026_11_01": "서울특별시 강동구",
+        "changed_since_2024": false,
+        "change_date": null,
+        "source_id": null,
+        "display_label": "서울 강동구",
+        "scope_note": "통계지역 명칭을 유지. 세부 동 경계·법령 전수 감사는 이번 범위에 포함하지 않음."
+      },
+      "facts": [
+        {
+          "claim_id": "R07-F01",
+          "statement": "둔촌동 일자산 자연공원에는 잔디광장과 놀이터·운동시설 등 생활 여가 공간이 있다.",
+          "source_id": "R07_PARKS",
+          "source_url": "https://www.gangdong.go.kr/web/dongrenew/contents/dunchon2_030_020",
+          "source_file": null,
+          "evidence_location": "일자산 자연공원 및 위치; 조회 텍스트 L118~154",
+          "reference_date": null,
+          "publication_date": null,
+          "checked_date": "2026-11-01",
+          "status": "verified",
+          "evidence_type": "공식 기관 자료에 기재된 사실",
+          "facility_status": "operating",
+          "status_checked_date": "2026-11-01"
+        },
+        {
+          "claim_id": "R07-F02",
+          "statement": "허브천문공원은 길동 배수지 위에 허브원·전망데크·산책 공간을 둔 공원이다.",
+          "source_id": "R07_PARKS",
+          "source_url": "https://www.gangdong.go.kr/web/dongrenew/contents/dunchon2_030_020",
+          "source_file": null,
+          "evidence_location": "허브천문공원 소개 및 위치; 조회 텍스트 L187~196",
+          "reference_date": null,
+          "publication_date": null,
+          "checked_date": "2026-11-01",
+          "status": "verified",
+          "evidence_type": "공식 기관 자료에 기재된 사실",
+          "facility_status": "operating",
+          "status_checked_date": "2026-11-01"
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "STAT2023",
+          "title": "2023년 신혼부부통계 결과",
+          "institution": "통계청",
+          "url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "evidence_location": "PDF 32~33쪽(0기준 31~32), 인쇄 25~26쪽, 6. 시군구별 신혼부부 수, 전체 열",
+          "publication_date": "2024-12-10",
+          "observation_date": "2023-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "PDF 3쪽 일러두기의 대상·반올림, 인쇄25쪽 표 제목·열·거처가 다른 부부 0.5 가중치 주석도 열람. 원표 화상은 확인하지 못함."
+        },
+        {
+          "source_id": "R07_STAT2024_REUSE",
+          "title": "2024년 신혼부부통계 전체 수: 기존 독립QA 통과 입력 재사용",
+          "institution": "입력 top20.json / 통계 원출처",
+          "url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+          "evidence_location": "top20.json regions의 R07; 원자료 PDF 32쪽 전체 열",
+          "publication_date": null,
+          "observation_date": "2024-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "사용자가 지정한 QA 통과 입력값 재사용; 2024 원표 재검수 미실행",
+          "access_status": "승계 입력 확인",
+          "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+          "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+          "prior_qa_reference": "episode/qa/ranking_source_review.json (state가 지시한 참조; 이번 작업에서는 파일을 다시 열거나 독립 검수를 실행하지 않음)"
+        },
+        {
+          "source_id": "R07_PARKS",
+          "title": "둔촌2동 명소안내: 일자산 자연공원·허브천문공원",
+          "institution": "서울특별시 강동구 둔촌2동",
+          "url": "https://www.gangdong.go.kr/web/dongrenew/contents/dunchon2_030_020",
+          "evidence_location": "일자산 자연공원·위치 및 이용정보·허브천문공원; 조회 텍스트 L118~154, L187~196",
+          "publication_date": null,
+          "observation_date": null,
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "고정 시설·주소만 채택. 예전 역명과 교통 소요시간, 프로그램 일정·조명 개수는 채택하지 않음."
+        }
+      ],
+      "image_suggestions": [
+        {
+          "image_id": "R07-I01",
+          "place_name": "일자산 자연공원",
+          "address": "서울특별시 강동구 동남로660 일대(둔촌동 산140 일대)",
+          "source_address": "서울특별시 강동구 동남로660 일대(둔촌동 산140 일대)",
+          "place_source_id": "R07_PARKS",
+          "place_source_url": "https://www.gangdong.go.kr/web/dongrenew/contents/dunchon2_030_020",
+          "official_image_page_url": "https://www.gangdong.go.kr/web/dongrenew/contents/dunchon2_030_020",
+          "official_original_image_url": null,
+          "image_url_note": "원문에 표시된 사진/첨부 후보 페이지이며 원본 이미지 URL은 이번 작업에서 별도 추출하지 않음.",
+          "why_relevant": "둔촌 생활권의 공원·산책 환경을 설명한다. 아파트 입주 실적이나 주민 구성의 증거로 쓰지 않는다.",
+          "suggested_composition": "잔디광장·산책로와 수목이 이어지는 고정 원경",
+          "location_match_basis": "공식 자료의 장소명·주소 확인; 사진 픽셀 자체의 동일성 검수는 미실행",
+          "image_pixels_reviewed": false,
+          "download_performed": false,
+          "rights_status": "미확인",
+          "commercial_reuse_permission": "미확인",
+          "license_observed": "개별 사진의 공용/상업 이용허락 표시를 확인하지 못함.",
+          "visual_next_action": "장소·구역을 대조한 공용라이선스 사진을 확보하고 원저작자·원본URL·라이선스·크레딧을 파일별 확인",
+          "people_note": "지나가는 사람·가족·연인이 있어도 구민/신혼부부의 정체나 비율을 암시하지 않음.",
+          "observed_official_photo_label": "일자산 자연공원 사진"
+        },
+        {
+          "image_id": "R07-I02",
+          "place_name": "허브천문공원",
+          "address": "서울특별시 강동구 둔촌동 산86 일대",
+          "source_address": "서울특별시 강동구 둔촌동 산86 일대",
+          "place_source_id": "R07_PARKS",
+          "place_source_url": "https://www.gangdong.go.kr/web/dongrenew/contents/dunchon2_030_020",
+          "official_image_page_url": "https://www.gangdong.go.kr/web/dongrenew/contents/dunchon2_030_020",
+          "official_original_image_url": null,
+          "image_url_note": "원문에 표시된 사진/첨부 후보 페이지이며 원본 이미지 URL은 이번 작업에서 별도 추출하지 않음.",
+          "why_relevant": "허브원과 전망데크라는 별도 여가시설을 구체적으로 보여준다. 일자산 정상 사진과 위치를 혼동하지 않는다.",
+          "suggested_composition": "허브원·전망데크 중 식별 가능한 고정 시설 중심",
+          "location_match_basis": "공식 자료의 장소명·주소 확인; 사진 픽셀 자체의 동일성 검수는 미실행",
+          "image_pixels_reviewed": false,
+          "download_performed": false,
+          "rights_status": "미확인",
+          "commercial_reuse_permission": "미확인",
+          "license_observed": "개별 사진의 공용/상업 이용허락 표시를 확인하지 못함.",
+          "visual_next_action": "장소·구역을 대조한 공용라이선스 사진을 확보하고 원저작자·원본URL·라이선스·크레딧을 파일별 확인",
+          "people_note": "지나가는 사람·가족·연인이 있어도 구민/신혼부부의 정체나 비율을 암시하지 않음.",
+          "observed_official_photo_label": "허브천문공원 사진"
+        }
+      ],
+      "count2023": {
+        "claim_id": "R07-COUNT2023",
+        "statement": "서울 강동구의 2023년 신혼부부 전체 수는 9,688쌍이다.",
+        "source_id": "STAT2023",
+        "source_url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+        "source_file": null,
+        "evidence_location": "PDF 32쪽/인쇄 25쪽, 왼쪽 서울특별시 묶음, 강동구 행, 전체 열",
+        "reference_date": "2023-11-01",
+        "publication_date": "2024-12-10",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "공식 기관 자료에 기재된 사실",
+        "value": 9688,
+        "unit": "쌍",
+        "pdf_page": 32,
+        "printed_page": 25,
+        "column": "전체",
+        "transcription": {
+          "region_label": "강동구",
+          "province_context": "서울",
+          "whole": 9688,
+          "first_marriage": 8431,
+          "remarriage": 1237,
+          "column_order": [
+            "전체",
+            "초혼",
+            "재혼"
+          ],
+          "selected_column": "전체",
+          "method": "공식 PDF 텍스트 추출 결과에서 상위 시도/시와 행 이름·열 머리글을 대조해 직접 전사",
+          "full_page_image_reviewed": false
+        },
+        "notes": "초혼·재혼 열 합으로 전체를 재구성하지 않음. 표 표시값을 그대로 비교에 사용."
+      },
+      "count2024": {
+        "claim_id": "R07-COUNT2024",
+        "statement": "서울 강동구의 2024년 신혼부부 전체 수는 9,287쌍이다.",
+        "source_id": "R07_STAT2024_REUSE",
+        "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "evidence_location": "top20.json regions의 R07; 원자료 PDF 32쪽 전체 열",
+        "reference_date": "2024-11-01",
+        "publication_date": null,
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "기존 독립QA 통과 입력 재사용",
+        "value": 9287,
+        "unit": "쌍",
+        "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+        "verification_scope": "입력값·해시 확인; 원표·독립QA 재실행 아님"
+      },
+      "comparison": {
+        "claim_id": "R07-YOY",
+        "statement": "2023년 대비 2024년 신혼부부 전체 수 401쌍 감소, 4.1% 감소.",
+        "source_url": [
+          "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32"
+        ],
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "source_claim_ids": [
+          "R07-COUNT2023",
+          "R07-COUNT2024"
+        ],
+        "evidence_location": "2023 원표 전체 열과 top20.json의 2024 전체 열을 연결한 직접 계산",
+        "reference_date": "2023-11-01 → 2024-11-01",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "직접 계산",
+        "count2023": 9688,
+        "count2024": 9287,
+        "change_couples": -401,
+        "change_percent": -4.139141205615194,
+        "change_percent_display": -4.1,
+        "unit": "쌍 / %",
+        "formula": "(count2024-count2023)/count2023*100",
+        "rounding": "입력은 보도자료의 표시 정수; 표시 변화율은 소수 첫째 자리 반올림. 비반올림 원집계의 정확한 변화율과 차이가 날 수 있음.",
+        "same_statistical_area": true,
+        "area_basis": "2023 원표와 2024 입력의 같은 이름 시/구 행을 연결. 2026년 통계값으로 대체하지 않음.",
+        "population_definition": "매년11월1일 기준 혼인신고 후5년 미경과·혼인관계 유지·부부 중1명 이상 국내거주 신혼부부 전체",
+        "weighting": "부부의 거처가 다르면 각 시군구에 0.5 가중치(2023 원표 주석).",
+        "interpretation": "시점별 거주 신혼부부 수의 차이. 새 혼인 진입·5년 경과에 따른 범위 이탈·이동 등이 함께 작용할 수 있어 선택 이유·순유입·수요 증가로 단정하지 않음."
+      },
+      "interpretation": {
+        "verified_context": "둔촌 일대의 녹지·생활 여가 공간을 확인한 것이며 강동 전역의 동일 접근성을 뜻하지 않는다.",
+        "verification_hypothesis": "선택한 단지에서 공원·역·업무지까지 이동 조건을 별도로 비교할 필요가 있다.",
+        "causal_conclusion": "미확인. 해당 시설·상권이 신혼부부의 선택 이유 또는 수 변화의 원인이라는 조사를 실행하지 않음.",
+        "housing": "아파트 구입·임차·가격·입주 수치는 이번 원표의 집계 대상이 아니며 이번 자료에서는 검증하지 않음.",
+        "employment": "기업별 고용 수·고용 증가 수치 미채택.",
+        "transport": "신규 개통계획·미개통 교통시설의 이용 효과 미채택. 실제 통근시간 미검증.",
+        "living": "확인한 고정 장소의 존재·위치를 생활환경의 사례로만 제시."
+      },
+      "script_suggestion": {
+        "sentences": [
+          "서울 강동구는 9,287쌍으로, 2023년보다 4.1% 줄었습니다.",
+          "둔촌동 일자산 자연공원과 허브천문공원은 지역의 녹지·여가 공간을 보여줍니다."
+        ],
+        "claim_ids": [
+          "R07-COUNT2024",
+          "R07-YOY",
+          "R07-F01",
+          "R07-F02"
+        ],
+        "status": "검증 사실에 근거한 짧은 설명 제안",
+        "approval_status": "새 대본 승인 아님"
+      },
+      "gaps": [
+        {
+          "gap": "개별 사진 파일·원본URL·상업영상 재사용권리·픽셀 장소 일치는 visual 담당 확인 대기."
+        }
+      ]
+    },
+    {
+      "region_id": "R08",
+      "rank": 8,
+      "scene_id": "S015",
+      "province": "서울",
+      "region_2024": "영등포구",
+      "administration": {
+        "statistical_area_year": 2024,
+        "statistical_area_name": "서울 영등포구",
+        "current_name_as_of_2026_11_01": "서울특별시 영등포구",
+        "changed_since_2024": false,
+        "change_date": null,
+        "source_id": null,
+        "display_label": "서울 영등포구",
+        "scope_note": "통계지역 명칭을 유지. 세부 동 경계·법령 전수 감사는 이번 범위에 포함하지 않음."
+      },
+      "facts": [
+        {
+          "claim_id": "R08-F01",
+          "statement": "서울시 생활체육포털은 여의동로330 여의도한강공원의 공공 체육시설을 운영 상태로 안내한다.",
+          "source_id": "R08_SPORTS",
+          "source_url": "https://sports.seoul.go.kr/main/facilities/facilities_view.do?ft_idx=1448",
+          "source_file": null,
+          "evidence_location": "시설안내의 위치·관리기관·운영상태; 조회 텍스트 L63~72",
+          "reference_date": null,
+          "publication_date": null,
+          "checked_date": "2026-11-01",
+          "status": "verified",
+          "evidence_type": "공식 기관 자료에 기재된 사실",
+          "facility_status": "operating",
+          "status_checked_date": "2026-11-01"
+        },
+        {
+          "claim_id": "R08-F02",
+          "statement": "미래한강본부는 여의도한강공원을 금융·언론 기능이 모인 여의도에 위치한 수변 휴식공간으로 소개한다.",
+          "source_id": "R08_PARK",
+          "source_url": "https://hangang.seoul.go.kr/www/contents/669.do?mid=431",
+          "source_file": null,
+          "evidence_location": "검색 색인 본문: 여의도 소재·공원 소개·주소·구역",
+          "reference_date": null,
+          "publication_date": null,
+          "checked_date": "2026-11-01",
+          "status": "qualified",
+          "evidence_type": "공식 기관 자료에 기재된 사실",
+          "qualification": "공식 검색 색인 본문 확인; 직접 원문 open 시간초과. 본문은 여의도를 명시하나 메뉴 경로에 광나루 오표기가 있어 주의."
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "STAT2023",
+          "title": "2023년 신혼부부통계 결과",
+          "institution": "통계청",
+          "url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "evidence_location": "PDF 32~33쪽(0기준 31~32), 인쇄 25~26쪽, 6. 시군구별 신혼부부 수, 전체 열",
+          "publication_date": "2024-12-10",
+          "observation_date": "2023-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "PDF 3쪽 일러두기의 대상·반올림, 인쇄25쪽 표 제목·열·거처가 다른 부부 0.5 가중치 주석도 열람. 원표 화상은 확인하지 못함."
+        },
+        {
+          "source_id": "R08_STAT2024_REUSE",
+          "title": "2024년 신혼부부통계 전체 수: 기존 독립QA 통과 입력 재사용",
+          "institution": "입력 top20.json / 통계 원출처",
+          "url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+          "evidence_location": "top20.json regions의 R08; 원자료 PDF 32쪽 전체 열",
+          "publication_date": null,
+          "observation_date": "2024-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "사용자가 지정한 QA 통과 입력값 재사용; 2024 원표 재검수 미실행",
+          "access_status": "승계 입력 확인",
+          "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+          "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+          "prior_qa_reference": "episode/qa/ranking_source_review.json (state가 지시한 참조; 이번 작업에서는 파일을 다시 열거나 독립 검수를 실행하지 않음)"
+        },
+        {
+          "source_id": "R08_SPORTS",
+          "title": "여의도한강공원 축구장 시설정보",
+          "institution": "서울특별시 서울생활체육포털",
+          "url": "https://sports.seoul.go.kr/main/facilities/facilities_view.do?ft_idx=1448",
+          "evidence_location": "시설안내의 위치·관리기관·운영상태; 조회 텍스트 L63~72",
+          "publication_date": null,
+          "observation_date": null,
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "주소·미래한강본부 관리·운영 표시만 채택. 페이지 자체가 정보는 참고용이라고 명시하며 현장 확인은 미실행."
+        },
+        {
+          "source_id": "R08_PARK",
+          "title": "여의도한강공원 소개",
+          "institution": "서울특별시 미래한강본부",
+          "url": "https://hangang.seoul.go.kr/www/contents/669.do?mid=431",
+          "evidence_location": "검색 색인 본문: 여의도 소재·공원 소개·주소·구역",
+          "publication_date": null,
+          "observation_date": null,
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 페이지 검색 색인 본문 열람",
+          "access_status": "검색 색인 확인; 직접 open 시간초과",
+          "notes": "메뉴 경로는 광나루 주차정보로 잘못 표시되나 실제 본문은 여의도한강공원 제목·여의동로330·영등포구를 명시. 소재지는 R08_SPORTS로 별도 대조. 금융 중심지라는 설명을 고용 숫자로 확대하지 않음."
+        }
+      ],
+      "image_suggestions": [
+        {
+          "image_id": "R08-I01",
+          "place_name": "여의도한강공원",
+          "address": "서울특별시 영등포구 여의동로330(여의도동8)",
+          "source_address": "서울특별시 영등포구 여의동로330(여의도동8)",
+          "place_source_id": "R08_PARK",
+          "place_source_url": "https://hangang.seoul.go.kr/www/contents/669.do?mid=431",
+          "official_image_page_url": "https://hangang.seoul.go.kr/www/contents/669.do?mid=431",
+          "official_original_image_url": null,
+          "image_url_note": "공식 검색 색인의 공원 본문을 확인했으며 원본 사진URL은 미추출. 광나루한강공원 사진과 혼동 금지.",
+          "why_relevant": "수변 여가 공간과 여의도 도시 경관의 관계를 보여준다. 업무빌딩을 근거로 신혼부부의 직장이나 선택 이유를 추정하지 않는다.",
+          "suggested_composition": "공원·한강과 여의도 건물군을 함께 담은 원경",
+          "location_match_basis": "공식 자료의 장소명·주소 확인; 사진 픽셀 자체의 동일성 검수는 미실행",
+          "image_pixels_reviewed": false,
+          "download_performed": false,
+          "rights_status": "미확인",
+          "commercial_reuse_permission": "미확인",
+          "license_observed": "개별 사진의 공용/상업 이용허락 표시를 확인하지 못함.",
+          "visual_next_action": "장소·구역을 대조한 공용라이선스 사진을 확보하고 원저작자·원본URL·라이선스·크레딧을 파일별 확인",
+          "people_note": "지나가는 사람·가족·연인이 있어도 구민/신혼부부의 정체나 비율을 암시하지 않음.",
+          "additional_place_source_id": "R08_SPORTS"
+        }
+      ],
+      "count2023": {
+        "claim_id": "R08-COUNT2023",
+        "statement": "서울 영등포구의 2023년 신혼부부 전체 수는 9,014쌍이다.",
+        "source_id": "STAT2023",
+        "source_url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+        "source_file": null,
+        "evidence_location": "PDF 32쪽/인쇄 25쪽, 왼쪽 서울특별시 묶음, 영등포구 행, 전체 열",
+        "reference_date": "2023-11-01",
+        "publication_date": "2024-12-10",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "공식 기관 자료에 기재된 사실",
+        "value": 9014,
+        "unit": "쌍",
+        "pdf_page": 32,
+        "printed_page": 25,
+        "column": "전체",
+        "transcription": {
+          "region_label": "영등포구",
+          "province_context": "서울",
+          "whole": 9014,
+          "first_marriage": 7995,
+          "remarriage": 995,
+          "column_order": [
+            "전체",
+            "초혼",
+            "재혼"
+          ],
+          "selected_column": "전체",
+          "method": "공식 PDF 텍스트 추출 결과에서 상위 시도/시와 행 이름·열 머리글을 대조해 직접 전사",
+          "full_page_image_reviewed": false
+        },
+        "notes": "초혼·재혼 열 합으로 전체를 재구성하지 않음. 표 표시값을 그대로 비교에 사용."
+      },
+      "count2024": {
+        "claim_id": "R08-COUNT2024",
+        "statement": "서울 영등포구의 2024년 신혼부부 전체 수는 9,036쌍이다.",
+        "source_id": "R08_STAT2024_REUSE",
+        "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "evidence_location": "top20.json regions의 R08; 원자료 PDF 32쪽 전체 열",
+        "reference_date": "2024-11-01",
+        "publication_date": null,
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "기존 독립QA 통과 입력 재사용",
+        "value": 9036,
+        "unit": "쌍",
+        "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+        "verification_scope": "입력값·해시 확인; 원표·독립QA 재실행 아님"
+      },
+      "comparison": {
+        "claim_id": "R08-YOY",
+        "statement": "2023년 대비 2024년 신혼부부 전체 수 22쌍 증가, 0.2% 증가.",
+        "source_url": [
+          "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32"
+        ],
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "source_claim_ids": [
+          "R08-COUNT2023",
+          "R08-COUNT2024"
+        ],
+        "evidence_location": "2023 원표 전체 열과 top20.json의 2024 전체 열을 연결한 직접 계산",
+        "reference_date": "2023-11-01 → 2024-11-01",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "직접 계산",
+        "count2023": 9014,
+        "count2024": 9036,
+        "change_couples": 22,
+        "change_percent": 0.24406478810738852,
+        "change_percent_display": 0.2,
+        "unit": "쌍 / %",
+        "formula": "(count2024-count2023)/count2023*100",
+        "rounding": "입력은 보도자료의 표시 정수; 표시 변화율은 소수 첫째 자리 반올림. 비반올림 원집계의 정확한 변화율과 차이가 날 수 있음.",
+        "same_statistical_area": true,
+        "area_basis": "2023 원표와 2024 입력의 같은 이름 시/구 행을 연결. 2026년 통계값으로 대체하지 않음.",
+        "population_definition": "매년11월1일 기준 혼인신고 후5년 미경과·혼인관계 유지·부부 중1명 이상 국내거주 신혼부부 전체",
+        "weighting": "부부의 거처가 다르면 각 시군구에 0.5 가중치(2023 원표 주석).",
+        "interpretation": "시점별 거주 신혼부부 수의 차이. 새 혼인 진입·5년 경과에 따른 범위 이탈·이동 등이 함께 작용할 수 있어 선택 이유·순유입·수요 증가로 단정하지 않음."
+      },
+      "interpretation": {
+        "verified_context": "여의도는 영등포구의 한 생활·업무 권역이다. 영등포구 전체를 여의도와 같은 주거 조건으로 묘사하지 않는다.",
+        "verification_hypothesis": "여의도 근무 여부와 환승·주거비를 실제 후보별로 대조할 수 있으나 일자리 증가나 유입 효과는 이번 자료로 판단하지 않는다.",
+        "causal_conclusion": "미확인. 해당 시설·상권이 신혼부부의 선택 이유 또는 수 변화의 원인이라는 조사를 실행하지 않음.",
+        "housing": "아파트 구입·임차·가격·입주 수치는 이번 원표의 집계 대상이 아니며 이번 자료에서는 검증하지 않음.",
+        "employment": "기업별 고용 수·고용 증가 수치 미채택.",
+        "transport": "신규 개통계획·미개통 교통시설의 이용 효과 미채택. 실제 통근시간 미검증.",
+        "living": "확인한 고정 장소의 존재·위치를 생활환경의 사례로만 제시."
+      },
+      "script_suggestion": {
+        "sentences": [
+          "서울 영등포구는 9,036쌍으로, 2023년보다 0.2% 늘었습니다.",
+          "여의도한강공원은 영등포구 여의도의 실제 수변 여가 공간입니다."
+        ],
+        "claim_ids": [
+          "R08-COUNT2024",
+          "R08-YOY",
+          "R08-F01",
+          "R08-F02"
+        ],
+        "status": "검증 범위 표기를 유지한 제안; 대본 확정 전 해당 한정조건 확인",
+        "approval_status": "새 대본 승인 아님"
+      },
+      "gaps": [
+        {
+          "claim_id": "R08-F02",
+          "gap": "공식 검색 색인 본문 확인; 직접 원문 open 시간초과. 본문은 여의도를 명시하나 메뉴 경로에 광나루 오표기가 있어 주의."
+        },
+        {
+          "gap": "개별 사진 파일·원본URL·상업영상 재사용권리·픽셀 장소 일치는 visual 담당 확인 대기."
+        }
+      ]
+    },
+    {
+      "region_id": "R09",
+      "rank": 9,
+      "scene_id": "S014",
+      "province": "경기",
+      "region_2024": "성남시 분당구",
+      "administration": {
+        "statistical_area_year": 2024,
+        "statistical_area_name": "경기 성남시 분당구",
+        "current_name_as_of_2026_11_01": "경기도 성남시 분당구",
+        "changed_since_2024": false,
+        "change_date": null,
+        "source_id": null,
+        "display_label": "경기 성남시 분당구",
+        "scope_note": "통계지역 명칭을 유지. 세부 동 경계·법령 전수 감사는 이번 범위에 포함하지 않음."
+      },
+      "facts": [
+        {
+          "claim_id": "R09-F01",
+          "statement": "성남시 시정소식지는 분당중앙공원의 분당호와 수내동 가옥을 소개하고 있다.",
+          "source_id": "R09_PARK_HISTORY",
+          "source_url": "https://snvision.seongnam.go.kr/2102",
+          "source_file": null,
+          "evidence_location": "기사입력·한산이씨 수내동가옥/분당호 소개; 조회 텍스트 L55~67",
+          "reference_date": "2012-04-24",
+          "publication_date": "2012-04-24",
+          "checked_date": "2026-11-01",
+          "status": "qualified",
+          "evidence_type": "공식 기관 자료에 기재된 사실",
+          "qualification": "2012년 공식 소개의 고정 지명이며 2024년 시 사진 기록으로 공원 소재지를 대조. 2026년 현장 상태·시설 변경은 미확인.",
+          "additional_source_ids": [
+            "R09_LOCATION"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "STAT2023",
+          "title": "2023년 신혼부부통계 결과",
+          "institution": "통계청",
+          "url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "evidence_location": "PDF 32~33쪽(0기준 31~32), 인쇄 25~26쪽, 6. 시군구별 신혼부부 수, 전체 열",
+          "publication_date": "2024-12-10",
+          "observation_date": "2023-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "PDF 3쪽 일러두기의 대상·반올림, 인쇄25쪽 표 제목·열·거처가 다른 부부 0.5 가중치 주석도 열람. 원표 화상은 확인하지 못함."
+        },
+        {
+          "source_id": "R09_STAT2024_REUSE",
+          "title": "2024년 신혼부부통계 전체 수: 기존 독립QA 통과 입력 재사용",
+          "institution": "입력 top20.json / 통계 원출처",
+          "url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=33",
+          "evidence_location": "top20.json regions의 R09; 원자료 PDF 33쪽 전체 열",
+          "publication_date": null,
+          "observation_date": "2024-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "사용자가 지정한 QA 통과 입력값 재사용; 2024 원표 재검수 미실행",
+          "access_status": "승계 입력 확인",
+          "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+          "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+          "prior_qa_reference": "episode/qa/ranking_source_review.json (state가 지시한 참조; 이번 작업에서는 파일을 다시 열거나 독립 검수를 실행하지 않음)"
+        },
+        {
+          "source_id": "R09_PARK_HISTORY",
+          "title": "성남 100배 즐기기 - 중앙공원 거닐며",
+          "institution": "성남시 시정소식지 비전성남",
+          "url": "https://snvision.seongnam.go.kr/2102",
+          "evidence_location": "기사입력·한산이씨 수내동가옥/분당호 소개; 조회 텍스트 L55~67",
+          "publication_date": "2012-04-24",
+          "observation_date": "2012-04-24",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "rights_observed": "저작권자 비전성남, 무단전재 및 재배포 금지 표시. 사진의 상업영상 사용 허락 미확인.",
+          "notes": "오래된 설명이므로 분당호와 수내동 가옥이라는 고정 지명만 사용. 당시 최대 규모 표현·공연예정 등은 제외."
+        },
+        {
+          "source_id": "R09_LOCATION",
+          "title": "중앙공원 주차장 사진 기록",
+          "institution": "성남시 시정소식지 비전성남",
+          "url": "https://snvision.seongnam.go.kr/ins_photo.html?f_uid=8461&mode=view&psc=1170309755",
+          "evidence_location": "촬영일·장소·분당중앙공원 주차장 리모델링 설명; 조회 텍스트 L35~54",
+          "publication_date": null,
+          "observation_date": "2024-07-11",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "장소 성남대로550을 확인. 주차장 사진만으로 호수 장면을 확보했다고 기록하지 않음."
+        }
+      ],
+      "image_suggestions": [
+        {
+          "image_id": "R09-I01",
+          "place_name": "분당중앙공원 분당호 주변",
+          "address": "경기도 성남시 분당구 성남대로550(수내동)",
+          "source_address": "경기도 성남시 분당구 성남대로550(수내동)",
+          "place_source_id": "R09_LOCATION",
+          "place_source_url": "https://snvision.seongnam.go.kr/ins_photo.html?f_uid=8461&mode=view&psc=1170309755",
+          "official_image_page_url": "https://snvision.seongnam.go.kr/2102",
+          "official_original_image_url": null,
+          "image_url_note": "2012년 소개의 사진 링크와 2024년 주차장 사진 기록은 확인. 호수 사진 원본 픽셀·URL·권리는 미확인이며 주차장 이미지를 호수 사진으로 제출하지 않음.",
+          "why_relevant": "분당의 기존 공원·호수 여가환경을 보여준다. 성남시 전체나 판교 업무지 사진으로 대체하지 않는다.",
+          "suggested_composition": "호수·산책로가 주가 되는 원경; 가능하면 수내동 가옥 식별 컷을 보조로 사용",
+          "location_match_basis": "공식 자료의 장소명·주소 확인; 사진 픽셀 자체의 동일성 검수는 미실행",
+          "image_pixels_reviewed": false,
+          "download_performed": false,
+          "rights_status": "미확인",
+          "commercial_reuse_permission": "미확인",
+          "license_observed": "개별 사진의 공용/상업 이용허락 표시를 확인하지 못함.",
+          "visual_next_action": "장소·구역을 대조한 공용라이선스 사진을 확보하고 원저작자·원본URL·라이선스·크레딧을 파일별 확인",
+          "people_note": "지나가는 사람·가족·연인이 있어도 구민/신혼부부의 정체나 비율을 암시하지 않음.",
+          "additional_place_source_id": "R09_PARK_HISTORY"
+        }
+      ],
+      "count2023": {
+        "claim_id": "R09-COUNT2023",
+        "statement": "경기 성남시 분당구의 2023년 신혼부부 전체 수는 8,515쌍이다.",
+        "source_id": "STAT2023",
+        "source_url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+        "source_file": null,
+        "evidence_location": "PDF 33쪽/인쇄 26쪽, 왼쪽 경기도/성남시 묶음, 성남시 분당구 행, 전체 열",
+        "reference_date": "2023-11-01",
+        "publication_date": "2024-12-10",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "공식 기관 자료에 기재된 사실",
+        "value": 8515,
+        "unit": "쌍",
+        "pdf_page": 33,
+        "printed_page": 26,
+        "column": "전체",
+        "transcription": {
+          "region_label": "성남시 분당구",
+          "province_context": "경기",
+          "whole": 8515,
+          "first_marriage": 7577,
+          "remarriage": 930,
+          "column_order": [
+            "전체",
+            "초혼",
+            "재혼"
+          ],
+          "selected_column": "전체",
+          "method": "공식 PDF 텍스트 추출 결과에서 상위 시도/시와 행 이름·열 머리글을 대조해 직접 전사",
+          "full_page_image_reviewed": false
+        },
+        "notes": "초혼·재혼 열 합으로 전체를 재구성하지 않음. 표 표시값을 그대로 비교에 사용."
+      },
+      "count2024": {
+        "claim_id": "R09-COUNT2024",
+        "statement": "경기 성남시 분당구의 2024년 신혼부부 전체 수는 8,587쌍이다.",
+        "source_id": "R09_STAT2024_REUSE",
+        "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=33",
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "evidence_location": "top20.json regions의 R09; 원자료 PDF 33쪽 전체 열",
+        "reference_date": "2024-11-01",
+        "publication_date": null,
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "기존 독립QA 통과 입력 재사용",
+        "value": 8587,
+        "unit": "쌍",
+        "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+        "verification_scope": "입력값·해시 확인; 원표·독립QA 재실행 아님"
+      },
+      "comparison": {
+        "claim_id": "R09-YOY",
+        "statement": "2023년 대비 2024년 신혼부부 전체 수 72쌍 증가, 0.8% 증가.",
+        "source_url": [
+          "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=33"
+        ],
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "source_claim_ids": [
+          "R09-COUNT2023",
+          "R09-COUNT2024"
+        ],
+        "evidence_location": "2023 원표 전체 열과 top20.json의 2024 전체 열을 연결한 직접 계산",
+        "reference_date": "2023-11-01 → 2024-11-01",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "직접 계산",
+        "count2023": 8515,
+        "count2024": 8587,
+        "change_couples": 72,
+        "change_percent": 0.8455666470933647,
+        "change_percent_display": 0.8,
+        "unit": "쌍 / %",
+        "formula": "(count2024-count2023)/count2023*100",
+        "rounding": "입력은 보도자료의 표시 정수; 표시 변화율은 소수 첫째 자리 반올림. 비반올림 원집계의 정확한 변화율과 차이가 날 수 있음.",
+        "same_statistical_area": true,
+        "area_basis": "2023 원표와 2024 입력의 같은 이름 시/구 행을 연결. 2026년 통계값으로 대체하지 않음.",
+        "population_definition": "매년11월1일 기준 혼인신고 후5년 미경과·혼인관계 유지·부부 중1명 이상 국내거주 신혼부부 전체",
+        "weighting": "부부의 거처가 다르면 각 시군구에 0.5 가중치(2023 원표 주석).",
+        "interpretation": "시점별 거주 신혼부부 수의 차이. 새 혼인 진입·5년 경과에 따른 범위 이탈·이동 등이 함께 작용할 수 있어 선택 이유·순유입·수요 증가로 단정하지 않음."
+      },
+      "interpretation": {
+        "verified_context": "고정된 중앙공원 지명·소재지를 확인했다. 오래된 소개의 공연 일정·시설 최대 규모 표현은 현재 사실로 쓰지 않는다.",
+        "verification_hypothesis": "분당 안의 후보 주거지별 직장 방향·공원 접근성·주거 비용을 비교해야 하며 판교 기업 존재를 이번 증가의 원인으로 연결할 수 없다.",
+        "causal_conclusion": "미확인. 해당 시설·상권이 신혼부부의 선택 이유 또는 수 변화의 원인이라는 조사를 실행하지 않음.",
+        "housing": "아파트 구입·임차·가격·입주 수치는 이번 원표의 집계 대상이 아니며 이번 자료에서는 검증하지 않음.",
+        "employment": "기업별 고용 수·고용 증가 수치 미채택.",
+        "transport": "신규 개통계획·미개통 교통시설의 이용 효과 미채택. 실제 통근시간 미검증.",
+        "living": "확인한 고정 장소의 존재·위치를 생활환경의 사례로만 제시."
+      },
+      "script_suggestion": {
+        "sentences": [
+          "경기 성남시 분당구는 8,587쌍으로, 2023년보다 0.8% 늘었습니다.",
+          "성남시 자료에 소개된 중앙공원의 분당호는 분당의 공원 생활환경을 보여주는 장소입니다."
+        ],
+        "claim_ids": [
+          "R09-COUNT2024",
+          "R09-YOY",
+          "R09-F01"
+        ],
+        "status": "검증 범위 표기를 유지한 제안; 대본 확정 전 해당 한정조건 확인",
+        "approval_status": "새 대본 승인 아님"
+      },
+      "gaps": [
+        {
+          "claim_id": "R09-F01",
+          "gap": "2012년 공식 소개의 고정 지명이며 2024년 시 사진 기록으로 공원 소재지를 대조. 2026년 현장 상태·시설 변경은 미확인."
+        },
+        {
+          "gap": "개별 사진 파일·원본URL·상업영상 재사용권리·픽셀 장소 일치는 visual 담당 확인 대기."
+        }
+      ]
+    },
+    {
+      "region_id": "R10",
+      "rank": 10,
+      "scene_id": "S013",
+      "province": "인천",
+      "region_2024": "미추홀구",
+      "administration": {
+        "statistical_area_year": 2024,
+        "statistical_area_name": "인천 미추홀구",
+        "current_name_as_of_2026_11_01": "인천광역시 미추홀구",
+        "changed_since_2024": false,
+        "change_date": null,
+        "source_id": null,
+        "display_label": "인천 미추홀구",
+        "scope_note": "통계지역 명칭을 유지. 세부 동 경계·법령 전수 감사는 이번 범위에 포함하지 않음."
+      },
+      "facts": [
+        {
+          "claim_id": "R10-F01",
+          "statement": "수봉공원은 미추홀구 수봉산 자락에 자연학습·체육시설과 문화예술시설을 갖춘 공원이다.",
+          "source_id": "R10_PARK",
+          "source_url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21121615505259129",
+          "source_file": null,
+          "evidence_location": "주소·등록/갱신일·관광지소개; 조회 텍스트 L64~69, L101~112",
+          "reference_date": "2026-04-16",
+          "publication_date": "2021-12-16",
+          "checked_date": "2026-11-01",
+          "status": "verified",
+          "evidence_type": "공식 기관 자료에 기재된 사실",
+          "facility_status": "operating",
+          "status_checked_date": "2026-11-01"
+        }
+      ],
+      "sources": [
+        {
+          "source_id": "STAT2023",
+          "title": "2023년 신혼부부통계 결과",
+          "institution": "통계청",
+          "url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "evidence_location": "PDF 32~33쪽(0기준 31~32), 인쇄 25~26쪽, 6. 시군구별 신혼부부 수, 전체 열",
+          "publication_date": "2024-12-10",
+          "observation_date": "2023-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "PDF 3쪽 일러두기의 대상·반올림, 인쇄25쪽 표 제목·열·거처가 다른 부부 0.5 가중치 주석도 열람. 원표 화상은 확인하지 못함."
+        },
+        {
+          "source_id": "R10_STAT2024_REUSE",
+          "title": "2024년 신혼부부통계 전체 수: 기존 독립QA 통과 입력 재사용",
+          "institution": "입력 top20.json / 통계 원출처",
+          "url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+          "evidence_location": "top20.json regions의 R10; 원자료 PDF 32쪽 전체 열",
+          "publication_date": null,
+          "observation_date": "2024-11-01",
+          "last_updated_date": null,
+          "checked_date": "2026-11-01",
+          "access_method": "사용자가 지정한 QA 통과 입력값 재사용; 2024 원표 재검수 미실행",
+          "access_status": "승계 입력 확인",
+          "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+          "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+          "prior_qa_reference": "episode/qa/ranking_source_review.json (state가 지시한 참조; 이번 작업에서는 파일을 다시 열거나 독립 검수를 실행하지 않음)"
+        },
+        {
+          "source_id": "R10_PARK",
+          "title": "수봉공원",
+          "institution": "인천광역시·인천관광공사 인천투어",
+          "url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21121615505259129",
+          "evidence_location": "주소·등록/갱신일·관광지소개; 조회 텍스트 L64~69, L101~112",
+          "publication_date": "2021-12-16",
+          "observation_date": null,
+          "last_updated_date": "2026-04-16",
+          "checked_date": "2026-11-01",
+          "access_method": "공식 원문 웹 텍스트 열람",
+          "access_status": "원문 텍스트 확인",
+          "notes": "수봉산 자락, 자연학습·체육·문화예술 시설의 존재를 채택. 별도 조사하지 않은 스카이워크 개통·조망점은 포함하지 않음."
+        }
+      ],
+      "image_suggestions": [
+        {
+          "image_id": "R10-I01",
+          "place_name": "수봉공원",
+          "address": "인천광역시 미추홀구 수봉안길84",
+          "source_address": "인천광역시 미추홀구 수봉안길84",
+          "place_source_id": "R10_PARK",
+          "place_source_url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21121615505259129",
+          "official_image_page_url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21121615505259129",
+          "official_original_image_url": null,
+          "image_url_note": "원문에 표시된 사진/첨부 후보 페이지이며 원본 이미지 URL은 이번 작업에서 별도 추출하지 않음.",
+          "why_relevant": "수봉산 자락의 실제 여가·문화 환경을 보여준다. 수봉공원 사진으로 새 아파트 입주나 인구 유입을 증명하지 않는다.",
+          "suggested_composition": "공원 입구·산책 공간·주변 원도심을 담되 서로 다른 시점의 미완공 시설을 섞지 않는 구도",
+          "location_match_basis": "공식 자료의 장소명·주소 확인; 사진 픽셀 자체의 동일성 검수는 미실행",
+          "image_pixels_reviewed": false,
+          "download_performed": false,
+          "rights_status": "미확인",
+          "commercial_reuse_permission": "미확인",
+          "license_observed": "개별 사진의 공용/상업 이용허락 표시를 확인하지 못함.",
+          "visual_next_action": "장소·구역을 대조한 공용라이선스 사진을 확보하고 원저작자·원본URL·라이선스·크레딧을 파일별 확인",
+          "people_note": "지나가는 사람·가족·연인이 있어도 구민/신혼부부의 정체나 비율을 암시하지 않음.",
+          "observed_official_photo_label": "수봉공원1~6",
+          "excluded_unverified_elements": "스카이워크 개통상태·신규 시설 공정은 이 조사에서 검증하지 않아 설명·이미지 선택 근거에서 제외"
+        }
+      ],
+      "count2023": {
+        "claim_id": "R10-COUNT2023",
+        "statement": "인천 미추홀구의 2023년 신혼부부 전체 수는 8,063쌍이다.",
+        "source_id": "STAT2023",
+        "source_url": "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+        "source_file": null,
+        "evidence_location": "PDF 32쪽/인쇄 25쪽, 오른쪽 인천광역시 묶음, 미추홀구 행, 전체 열",
+        "reference_date": "2023-11-01",
+        "publication_date": "2024-12-10",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "공식 기관 자료에 기재된 사실",
+        "value": 8063,
+        "unit": "쌍",
+        "pdf_page": 32,
+        "printed_page": 25,
+        "column": "전체",
+        "transcription": {
+          "region_label": "미추홀구",
+          "province_context": "인천",
+          "whole": 8063,
+          "first_marriage": 5789,
+          "remarriage": 2226,
+          "column_order": [
+            "전체",
+            "초혼",
+            "재혼"
+          ],
+          "selected_column": "전체",
+          "method": "공식 PDF 텍스트 추출 결과에서 상위 시도/시와 행 이름·열 머리글을 대조해 직접 전사",
+          "full_page_image_reviewed": false
+        },
+        "notes": "초혼·재혼 열 합으로 전체를 재구성하지 않음. 표 표시값을 그대로 비교에 사용."
+      },
+      "count2024": {
+        "claim_id": "R10-COUNT2024",
+        "statement": "인천 미추홀구의 2024년 신혼부부 전체 수는 8,483쌍이다.",
+        "source_id": "R10_STAT2024_REUSE",
+        "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32",
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "evidence_location": "top20.json regions의 R10; 원자료 PDF 32쪽 전체 열",
+        "reference_date": "2024-11-01",
+        "publication_date": null,
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "기존 독립QA 통과 입력 재사용",
+        "value": 8483,
+        "unit": "쌍",
+        "source_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+        "verification_scope": "입력값·해시 확인; 원표·독립QA 재실행 아님"
+      },
+      "comparison": {
+        "claim_id": "R10-YOY",
+        "statement": "2023년 대비 2024년 신혼부부 전체 수 420쌍 증가, 5.2% 증가.",
+        "source_url": [
+          "https://sri.kostat.go.kr/boardDownload.es?bid=11815&list_no=434122&seq=3",
+          "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32"
+        ],
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+        "source_claim_ids": [
+          "R10-COUNT2023",
+          "R10-COUNT2024"
+        ],
+        "evidence_location": "2023 원표 전체 열과 top20.json의 2024 전체 열을 연결한 직접 계산",
+        "reference_date": "2023-11-01 → 2024-11-01",
+        "checked_date": "2026-11-01",
+        "status": "verified",
+        "evidence_type": "직접 계산",
+        "count2023": 8063,
+        "count2024": 8483,
+        "change_couples": 420,
+        "change_percent": 5.208979288106164,
+        "change_percent_display": 5.2,
+        "unit": "쌍 / %",
+        "formula": "(count2024-count2023)/count2023*100",
+        "rounding": "입력은 보도자료의 표시 정수; 표시 변화율은 소수 첫째 자리 반올림. 비반올림 원집계의 정확한 변화율과 차이가 날 수 있음.",
+        "same_statistical_area": true,
+        "area_basis": "2023 원표와 2024 입력의 같은 이름 시/구 행을 연결. 2026년 통계값으로 대체하지 않음.",
+        "population_definition": "매년11월1일 기준 혼인신고 후5년 미경과·혼인관계 유지·부부 중1명 이상 국내거주 신혼부부 전체",
+        "weighting": "부부의 거처가 다르면 각 시군구에 0.5 가중치(2023 원표 주석).",
+        "interpretation": "시점별 거주 신혼부부 수의 차이. 새 혼인 진입·5년 경과에 따른 범위 이탈·이동 등이 함께 작용할 수 있어 선택 이유·순유입·수요 증가로 단정하지 않음."
+      },
+      "interpretation": {
+        "verified_context": "수봉공원은 미추홀구의 고정 여가 장소다. 통계는 구 전체이며 특정 단지나 수봉동 한정 수치가 아니다.",
+        "verification_hypothesis": "원도심 내 단지별 주택 형태·교통·주거비 조건을 비교하는 것은 후속 검증 주제이며 증가 원인으로 단정하지 않는다.",
+        "causal_conclusion": "미확인. 해당 시설·상권이 신혼부부의 선택 이유 또는 수 변화의 원인이라는 조사를 실행하지 않음.",
+        "housing": "아파트 구입·임차·가격·입주 수치는 이번 원표의 집계 대상이 아니며 이번 자료에서는 검증하지 않음.",
+        "employment": "기업별 고용 수·고용 증가 수치 미채택.",
+        "transport": "신규 개통계획·미개통 교통시설의 이용 효과 미채택. 실제 통근시간 미검증.",
+        "living": "확인한 고정 장소의 존재·위치를 생활환경의 사례로만 제시."
+      },
+      "script_suggestion": {
+        "sentences": [
+          "인천 미추홀구는 8,483쌍으로, 2023년보다 5.2% 늘었습니다.",
+          "수봉공원은 수봉산 자락의 자연학습·체육·문화시설을 함께 보여주는 장소입니다."
+        ],
+        "claim_ids": [
+          "R10-COUNT2024",
+          "R10-YOY",
+          "R10-F01"
+        ],
+        "status": "검증 사실에 근거한 짧은 설명 제안",
+        "approval_status": "새 대본 승인 아님"
+      },
+      "gaps": [
+        {
+          "gap": "개별 사진 파일·원본URL·상업영상 재사용권리·픽셀 장소 일치는 visual 담당 확인 대기."
+        }
+      ]
+    }
+  ]
+}

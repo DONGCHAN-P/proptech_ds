@@ -1,0 +1,68 @@
+{
+  "checked_on": "2026-10-15",
+  "scope": "front visual revision v7; no script/audio regeneration",
+  "coordinate_accuracy": "published schematic, hand digitized; not cadastral/survey/WGS84 georegistered",
+  "assets": [
+    {
+      "asset_id": "woori_bank_logo",
+      "file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\research\\landuse-v7\\source_assets\\woori_bank_logo.png",
+      "source_url": "https://simg.wooribank.com/img/intro/header/h1_01.png",
+      "owner": "우리은행",
+      "sha256": "3b4ae639ac79facfb78064f2cd6185b655c9b45eca145375c1626d1bccfd6776",
+      "bytes": 4120,
+      "reuse_basis": "official homepage header image; company identification only",
+      "usage_scope": "editorial company identification, preserve ratio/color/design; no endorsement/sponsorship implication",
+      "open_license": "not established; not a general redistribution license",
+      "verified_date": "2026-10-15"
+    },
+    {
+      "asset_id": "shinhan_logo",
+      "file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\research\\landuse-v7\\source_assets\\shinhan_logo.svg",
+      "source_url": "https://www.shinhangroup.com/resources/publish/kr/images/common/logo.svg",
+      "owner": "신한금융그룹",
+      "sha256": "d999bd300a3a32c13f9b66cd76be02f65eadb16a54ff12030d03b41145d11029",
+      "bytes": 7768,
+      "reuse_basis": "official homepage header SVG; official CI downloadable at /kr/about/identity/ci",
+      "usage_scope": "editorial company identification, preserve ratio/color/design; no endorsement/sponsorship implication",
+      "open_license": "not established; not a general redistribution license",
+      "verified_date": "2026-10-15"
+    },
+    {
+      "asset_id": "shinhan_ci_png",
+      "file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\research\\landuse-v7\\source_assets\\shinhan_ci_png.zip",
+      "source_url": "https://www.shinhangroup.com/resources/publish/kr/resource/signature_PNG.zip",
+      "owner": "신한금융그룹",
+      "sha256": "c16012d6665759262fc849ccc39a57e7223061a5524694fc9f53a6085b4db201",
+      "bytes": 142021,
+      "reuse_basis": "official CI page explicit PNG download",
+      "usage_scope": "editorial company identification, preserve ratio/color/design; no endorsement/sponsorship implication",
+      "open_license": "not established; not a general redistribution license",
+      "verified_date": "2026-10-15"
+    }
+  ],
+  "map_sources": [
+    {
+      "source": "LH A1/A2/A24/B17/A3 pamphlets",
+      "access": "official public PDFs downloaded and inspected",
+      "direct_raster_crop_license": "not established; no KOGL3 transfer from separate municipal page",
+      "use": "reference for independently drawn factual simplified plan relationships; original typography/decorative layout excluded"
+    },
+    {
+      "source": "Namyangju city cts3039_img01b/img02b",
+      "license": "KOGL3 on associated municipal content",
+      "use": "unchanged full-source display only under existing policy; not used as modified texture"
+    },
+    {
+      "source": "new north/south JSON geometry",
+      "use": "independent simplified factual reconstruction, new styles; schematic label mandatory",
+      "restrictions": "not a precise legal parcel map; not georegistered; no walking travel times or exact station entrances inferred"
+    }
+  ],
+  "unresolved": [
+    "Kakao corporate logo not delivered; use company name panel instead of unofficial/subsidiary KakaoTalk/KakaoBank logo.",
+    "Woori Financial holding homepage SSL failed; delivered Woori BANK official logo aligns with actual operator/company table.",
+    "Exact W1/W2 GIS legal extents not acquired. Macro must be labeled relationship map and tied to actual detailed plan board.",
+    "Exact individual corporate plots not verified; do not pin CI onto particular industry parcel.",
+    "W2 unclear single-character school polygon: label educational facility, not guaranteed kindergarten."
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "task_id": "writer-photo-sync-v3",
+  "role": "writer",
+  "revision": "top20-8min-v3",
+  "status": "review_draft_pending_new_user_script_approval",
+  "summary": "v2 보존. 사진 v2 원장20행 연결. 불일치 시설명은 실제 지명·생활권 질문으로 수정하고 CTA1문장 추가. 낭독 4101자(공백 포함). 20→1·수치·구역·지도 상태 유지. 480초 estimate·오디오 미확정. 새 대본 승인 대기.",
+  "input_revisions": {
+    "writer/top20-8min-v2/scene_proposals.json": {
+      "sha256": "c6b7b660774ce6c69e2786aab28eb9c7f44c7441154af0a678cc60a98188e0f6",
+      "usage": "v2 원고·연결 재사용"
+    },
+    "writer/top20-8min-v2/script_v2.md": {
+      "sha256": "9fab0db4d964439d9bc2152b94f82144c7995344c4fb07fa32a3173965bd4194",
+      "usage": "v2 원고·연결 재사용"
+    },
+    "writer/top20-8min-v2/claim_map.json": {
+      "sha256": "6683039f4782d1d8dbdf959adda616bdda9597f2f7b0b29f51cb4568cee0a4e2",
+      "usage": "v2 원고·연결 재사용"
+    },
+    "writer/top20-8min-v2/verification.json": {
+      "sha256": "084ed5442be5f9a6770842a5eb55d103d01bf76a51286f14ec932dc78f6b2bd9",
+      "usage": "v2 원고·연결 재사용"
+    },
+    "writer/top20-8min-v2/handoff.json": {
+      "sha256": "af2a3e8776d0e3e482a5592856c1d26119a745deae8156ae6691a1da91865bba",
+      "usage": "v2 원고·연결 재사용"
+    },
+    "brief.json": {
+      "sha256": "719bde90dbdc79afff1383d47feffb4f019959855ef676e82d6abae0fcd9f534",
+      "usage": "동시 갱신 가능한 공통파일의 해시 스냅샷만; 수치 입력으로 사용하지 않음"
+    },
+    "state.json": {
+      "sha256": "56734362e401d3555b007de91e686977e0f514a57639b603281ac2d8a33afd7c",
+      "usage": "동시 갱신 가능한 공통파일의 해시 스냅샷만; 수치 입력으로 사용하지 않음"
+    },
+    "visual/top20-8min-v2/photo_assets_v2.json": {
+      "sha256": "aedc96c581c397828a5a0a1b464138da6cef8cd54792ff663b900b4292baa1c1",
+      "photo_revision": "photo_assets_v2",
+      "usage": "갱신된20행 actual_place·출처메타 연결"
+    }
+  },
+  "immutable_statistical_inputs": {
+    "research/top20-8min-v2/top20.json": {
+      "sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+      "usage": "기존 검증 수치 재사용; 재전사·새 집계 없음"
+    },
+    "research/top20-8min-v2/ranks01_10_facts.json": {
+      "sha256": "a436794713cb97290701a909d6702aa2108311b0174d4168d9bbd2769c316c8d",
+      "usage": "기존 검증 수치 재사용; 재전사·새 집계 없음"
+    },
+    "research/top20-8min-v2/ranks11_20_facts.json": {
+      "sha256": "68b9c675fb41d91c0bb4216666c063b655523b615c678c33d235c28c2c5e4c84",
+      "usage": "기존 검증 수치 재사용; 재전사·새 집계 없음"
+    }
+  },
+  "outputs": [
+    {
+      "path": "writer/top20-8min-v2/script_v3.md",
+      "sha256": "4cc70ef2ae3cabda13b560104dd96ef0df0fe1f815a5f1372ac680e729d3be17",
+      "bytes": 20445
+    },
+    {
+      "path": "writer/top20-8min-v2/scene_proposals_v3.json",
+      "sha256": "5ff7d0fc9c414aaf1bc6085039db68ac3d6f11498d00ed271896e70da6941443",
+      "bytes": 148290
+    },
+    {
+      "path": "writer/top20-8min-v2/claim_map_v3.json",
+      "sha256": "f205425756657aeeec0533105fc0a71d752e6f36cc9eae9bb05ae291ed480fb5",
+      "bytes": 658712
+    },
+    {
+      "path": "writer/top20-8min-v2/verification_v3.json",
+      "sha256": "2520b43710086bb77e6829e14f938720b7838825117d41a4bc63b01d96a30682",
+      "bytes": 9899
+    },
+    {
+      "path": "writer/top20-8min-v2/build_v3.py",
+      "sha256": "72a9258250549fb8381393345c5968330a7bdfaca02ac19e495d608c58ca2a79",
+      "bytes": 23818
+    }
+  ],
+  "affected_scene_ids": [
+    "S003",
+    "S012",
+    "S016",
+    "S018",
+    "S014",
+    "S009",
+    "S008",
+    "S020",
+    "S019",
+    "C001"
+  ],
+  "photo_metadata_synced_scene_ids": [
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012",
+    "S013",
+    "S014",
+    "S015",
+    "S016",
+    "S017",
+    "S018",
+    "S019",
+    "S020",
+    "S021",
+    "S022"
+  ],
+  "checks": [
+    {
+      "check": "수정문장·삭제된시설claim·사진20행·CTA1문장·v2보존·480초합계",
+      "result": "passed_scoped_self_check",
+      "evidence": "writer/top20-8min-v2/verification_v3.json"
+    }
+  ],
+  "unresolved": [
+    "이 v3 대본의 사용자 승인",
+    "visual 담당의 교체사진 최종·독립 검수 상태 확인",
+    "승인 후 실제 음성에 따른 타임록"
+  ],
+  "photo_asset_id_policy": "PHOTO_Rxx를 최종 연결ID로 유지; 원장 ALT01 교체ID·파일·actual_place는 photo_binding에 보존",
+  "verification_reuse": "2024값·19지역증감·구성 계산은 불변 입력 SHA 일치로 v2 자체점검 재사용; 전체 원문 재검수 미실시",
+  "next_role": "director: v3 검토초안 전달 및 새 script 결정; visual: 실제 사진라벨/연도·교체본 확인",
+  "shared_files_written": false,
+  "existing_v2_files_written": false,
+  "authorization": {
+    "audio": false,
+    "paid_generation": false,
+    "external_transfer": false,
+    "render": false,
+    "upload": false
+  }
+}

@@ -272,52 +272,148 @@ ARTICLES = [
     # (파일, 눈표, 우리 제목, 출처 한 줄)
     ("GTX3.png", "2025.09.30 · 서울시 미디어허브",
      'GTX-A, <b>남북이 이어집니다</b>',
-     "서울시 미디어허브 기사 캡처 · mediahub.seoul.go.kr"),
+     "서울시 미디어허브 기사 캡처 · mediahub.seoul.go.kr",
+     {"hi": (16, 3, 94, 13), "num": "17분",
+      "label": "개통 뒤 소요 시간", "cap": "대치역 → 서울역"}),
     ("GTX4.jpg", "GTX-A 구간별 개통 일정",
      '운정에서 <b>동탄</b>까지 한 노선',
-     "자료: 서울시 미디어허브"),
+     "자료: 서울시 미디어허브",
+     {"num": "운정 ~ 동탄", "label": "GTX-A 전 구간",
+      "cap": "한 노선이 남북을 가릅니다"}),
     ("GTX.png", "2025.03.02 · 뉴시스",
      '삼성역은 <em>아직</em>입니다',
-     "뉴시스 기사 캡처 · newsis.com"),
+     "뉴시스 기사 캡처 · newsis.com",
+     {"num": "2028", "label": "삼성역 정차 예정",
+      "cap": "지금은 무정차 통과"}),
     ("GTX2.jpg", "GTX A~F 계획 노선",
      '운정은 <em>서울역</em>, 동탄은 <b>삼성역</b>',
-     "자료: 뉴시스 · D/E/F 노선은 확정 전 계획입니다"),
+     "자료: 뉴시스 · D/E/F 노선은 확정 전 계획입니다",
+     {"num": "서울역", "label": "운정 GTX-A 의 종착",
+      "cap": "강북 도심이지 강남이 아닙니다"}),
     ("신도시관련.png", "2026.04.13 · 헤럴드경제",
      '<b>강남 가까운 곳만</b> 올랐습니다',
-     "헤럴드경제 기사 캡처 · heraldk.com"),
+     "헤럴드경제 기사 캡처 · 제목과 부제만 인용",
+     {"crop": (0, 0, 100, 38),
+      "hi": (3.2, 2, 96, 4.6), "num": "4억+",
+      "label": "같은 2기, 벌어진 폭", "cap": "위례는 급등 · 김포는 제자리"}),
+    # 사진은 쓰지 않는다. 연합뉴스가 따로 권리를 가진 보도사진이고,
+    # 집회 참가자 수십 명의 얼굴이 알아볼 수 있게 담겨 있다. 화면에
+    # "제목·매체·날짜만 인용"이라 적어 놓고 사진을 띄우고 있었다.
+    # 기자 이메일은 헤드라인과 부제 사이에 끼어 있어 가림막으로 덮는다.
     ("신도시 결사반대.png", "2019.05.12 · 경기일보",
      '옆에 신도시가 생긴다고 하자 <em>집회</em>가 열렸습니다',
-     "경기일보 기사 캡처 · 사진 연합뉴스"),
+     "경기일보 기사 캡처 · 제목과 부제만 인용",
+     {"crop": (0, 0, 100, 51), "mask": [(21.5, 0, 100, 11)],
+      "hi": (2.4, 1.5, 97, 5.8), "num": "500여 명",
+      "label": "운정 행정복지센터 앞", "cap": "3기 발표 뒤 첫 반대 집회"}),
     ("양주옥정 미달.png", "아시아경제",
      "3기 사전청약에 <em>2기가 밀렸습니다</em>",
-     "아시아경제 기사 캡처"),
+     "아시아경제 기사 캡처",
+     {"hi": (32.6, 4, 93, 5.6), "num": "70%",
+      "label": "2순위 청약까지 열고도", "cap": "노블랜드 에듀포레 미달률"}),
     ("입주 카운트다운.png", "2026.03.17 · 이투데이",
      '3기는 <b>2026~2029년</b>에 걸쳐 들어옵니다',
-     "이투데이 기사 캡처 · 표 출처 한국토지주택공사"),
+     "이투데이 기사 캡처 · 표 출처 한국토지주택공사",
+     {"num": "4년", "label": "3기 입주가 걸리는 기간",
+      "cap": "2026 ~ 2029년에 나눠 들어옵니다"}),
     ("송파하남선.png", "2025.07.21 · 한국경제",
      '하남~강남 <b>40분</b>, 2032년 목표',
-     "한국경제 기사 캡처 · hankyung.com"),
+     "한국경제 기사 캡처 · hankyung.com",
+     # 오른쪽 '많이 본 뉴스' 썸네일도 남의 사진이다. 다만 헤드라인이
+     # 그 칼럼과 가로로 겹쳐서 세로로 자르면 제목이 잘린다 — 덮는다.
+     {"mask": [(24, 65, 36, 76)],
+      "hi": (2.4, 1.5, 95, 16), "num": "40분",
+      "label": "2032년 개통 목표", "cap": "하남 교산 → 강남"}),
     ("용인 반도체.png", "2026.10.01 · CBS노컷뉴스",
      '용인 국가산단, <b>10월 착공</b>',
-     "노컷뉴스 기사 캡처 · 조감도 LH 제공"),
+     "노컷뉴스 기사 캡처 · 조감도 LH 제공",
+     {"num": "2030", "label": "첫 입주 목표",
+      "cap": "삼성 반도체 국가산단 배후"}),
 ]
 
 
-def clip_card(fname: str, kick: str, ttl: str, src: str) -> tuple[str, str]:
-    """캡처 한 장을 판 안에 앉힌다. 비율이 제각각이라 contain 으로 맞춘다."""
+def clip_card(fname: str, kick: str, ttl: str, src: str,
+              extra: dict | None = None) -> tuple[str, str]:
+    """캡처 한 장을 판 안에 앉힌다.
+
+    그냥 띄우기만 하면 "기사가 있었다"는 사실만 남는다. 참고한 포맷
+    (위즈덤투쓰)은 같은 캡처를 세 겹으로 쓴다 — **어느 줄을 봐야 하는지**
+    형광으로 긋고, **거기서 뽑은 수치 하나**를 옆에 크게 세우고, 캡처를
+    살짝 기울여 "증거물"처럼 놓는다. 보는 사람이 작은 본문을 읽을 필요가
+    없어진다. 1080p 에서 기사 본문은 어차피 안 읽힌다.
+
+    extra
+        hi   (위%, 왼%, 너비%, 높이%) — 캡처 안에서 그을 자리
+        num  옆에 세울 수치 한 덩어리
+        label / cap  그 수치의 머리말과 꼬리말
+    """
     import base64
+
+    from PIL import Image
     p = CLIP_DIR / fname
     if not p.exists():
         raise FileNotFoundError(p)
     mime = "jpeg" if p.suffix.lower() in (".jpg", ".jpeg") else "png"
     b64 = base64.b64encode(p.read_bytes()).decode()
-    body = (
-        f'<div style="display:flex;justify-content:center;align-items:center;'
-        f'height:532px">'
-        f'<img src="data:image/{mime};base64,{b64}" '
-        f'style="max-height:532px;max-width:1420px;object-fit:contain;'
-        f'border-radius:10px;border:1px solid {D.LINE};'
-        f'box-shadow:0 14px 36px rgba(0,0,0,.16)" alt=""></div>')
+    ex = extra or {}
+    num = ex.get("num")
+
+    # 크기를 **직접 계산**한다. object-fit 에 맡기면 실제로 그려진 상자가
+    # 몇 px 인지 모르고, 그러면 형광 띠를 비율로 얹을 수가 없다.
+    w0, h0 = Image.open(p).size
+    ct, cl, cw, ch = ex.get("crop") or (0, 0, 100, 100)
+    # 잘라 낸 뒤 보이는 크기에 맞춘다. 원본 기준으로 맞추면 잘라 낸 만큼
+    # 작게 들어간다.
+    k = min((898 if num else 1388) / (w0 * cw / 100),
+            470 / (h0 * ch / 100))
+    fw, fh = round(w0 * k), round(h0 * k)      # 원본 전체를 그린 크기
+    w, h = round(fw * cw / 100), round(fh * ch / 100)   # 보일 크기
+
+    over = ""
+    if ex.get("hi"):
+        t, l, bw, bh = ex["hi"]
+        # multiply 로 깔아야 글자가 띠 밑에서 살아남는다.
+        over += (f'<div style="position:absolute;top:{t}%;left:{l}%;'
+                 f'width:{bw}%;height:{bh}%;background:{D.ACCENT};'
+                 f'opacity:.58;border-radius:5px;'
+                 f'mix-blend-mode:multiply"></div>')
+    # 가려야 할 자리 — 기자 이메일처럼 자르기만으로는 안 빠지는 것들.
+    for t, l, bw, bh in ex.get("mask") or []:
+        over += (f'<div style="position:absolute;top:{t}%;left:{l}%;'
+                 f'width:{bw}%;height:{bh}%;background:#FFFFFF"></div>')
+
+    # 좌표는 전부 **원본 기준 %** 다. 그래서 원본을 통째로 그린 층을 만들고
+    # 그 위에 띠와 가림막을 얹은 뒤, 바깥 상자로 잘라 낸다.
+    inner = (f'<div style="position:absolute;width:{fw}px;height:{fh}px;'
+             f'top:{-round(fh * ct / 100)}px;'
+             f'left:{-round(fw * cl / 100)}px">'
+             f'<img src="data:image/{mime};base64,{b64}" '
+             f'style="width:{fw}px;height:{fh}px;display:block" alt="">'
+             f'{over}</div>')
+    shot = (f'<div style="position:relative;width:{w}px;height:{h}px;'
+            f'flex:none;overflow:hidden;transform:rotate(-1.2deg);'
+            f'border-radius:8px;border:3px solid #FFFFFF;'
+            f'box-shadow:0 18px 44px rgba(0,0,0,.45)">{inner}</div>')
+
+    panel = ""
+    if num:
+        # 「500여 명」처럼 긴 수치는 88px 로 두면 두 줄로 터진다.
+        fs = 88 if len(num) <= 4 else (70 if len(num) <= 6 else 58)
+        panel = (
+            f'<div style="flex:none;width:372px;padding-left:38px">'
+            f'<div style="font-size:25px;font-weight:700;letter-spacing:.02em;'
+            f'color:rgba(255,255,255,.60)">{ex.get("label", "")}</div>'
+            f'<div style="font-size:{fs}px;font-weight:800;color:{D.ACCENT};'
+            f'letter-spacing:-.04em;line-height:1.08;margin-top:6px">'
+            f'{num}</div>'
+            f'<div style="width:64px;height:7px;background:{D.ACCENT};'
+            f'border-radius:4px;margin:20px 0"></div>'
+            f'<div style="font-size:26px;line-height:1.5;'
+            f'color:rgba(255,255,255,.78)">{ex.get("cap", "")}</div></div>')
+
+    body = (f'<div style="height:532px;border-radius:16px;'
+            f'background:#23252B;display:flex;justify-content:center;'
+            f'align-items:center;overflow:hidden">{shot}{panel}</div>')
     name = "C_" + p.stem.replace(" ", "_")
     return name, page(kick, ttl, body, src)
 

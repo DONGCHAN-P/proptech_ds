@@ -1,0 +1,17 @@
+@font-face{font-family:Pretendard;font-weight:400;src:url(assets/fonts/Pretendard-Regular.woff2) format('woff2')}
+@font-face{font-family:Pretendard;font-weight:600;src:url(assets/fonts/Pretendard-SemiBold.woff2) format('woff2')}
+@font-face{font-family:Pretendard;font-weight:700;src:url(assets/fonts/Pretendard-Bold.woff2) format('woff2')}
+@font-face{font-family:Pretendard;font-weight:800;src:url(assets/fonts/Pretendard-ExtraBold.woff2) format('woff2')}
+:root{--canvas:#f6f4ef;--ink:#173348;--muted:#546973;--panel:#ecebe4;--blue:#286cda;--gold:#c29a44;--gold-ink:#94702a;--green:#3f8f7f}
+*{box-sizing:border-box;margin:0;padding:0}html,body{width:1920px;height:1080px;overflow:hidden;background:var(--canvas)}
+#root{position:relative;width:100%;height:100%;overflow:hidden;background:var(--canvas);font-family:Pretendard,sans-serif;color:var(--ink)}
+#brand{position:absolute;left:88px;top:28px;font-size:22px;font-weight:400}#tag{position:absolute;right:80px;top:30px;font-size:20px;color:var(--muted)}
+#message{position:absolute;left:80px;top:142px;width:1740px;font-size:43px;font-weight:700;line-height:58px;white-space:nowrap}
+#graphic{position:absolute;left:80px;top:225px;width:1740px;height:585px;border-radius:16px;background:var(--panel);overflow:hidden}
+.semantic{position:absolute;inset:0;opacity:0}.opening-context{position:absolute;inset:0;opacity:1}.label{position:absolute;line-height:1.4;white-space:nowrap}
+.amount{position:absolute;display:flex;align-items:baseline;gap:12px;white-space:nowrap;font-weight:700;line-height:1.4}.unit{font-size:28px;font-weight:400}
+.bar{position:absolute;height:48px;transform-origin:left center}.divider{position:absolute;left:1160px;top:40px;width:1px;height:510px;background:#c8ccc6}
+#capbox{position:absolute;left:96px;top:876px;width:1728px;height:124px;border-radius:16px;background:white}
+.cue{position:absolute;left:140px;top:876px;width:1640px;height:124px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:40px;line-height:50px;font-weight:400;opacity:0}
+.caption-lines{display:block;white-space:pre}
+#source{position:absolute;left:96px;top:1020px;width:1728px;height:30px;font-size:20px;line-height:28px;color:var(--muted);white-space:nowrap}

@@ -1,0 +1,69 @@
+{
+  "revision": "map-preview-v1",
+  "accepted_packet": {
+    "meta": {
+      "collection_date": "필수 YYYY-MM-DD",
+      "area_gte": 83,
+      "area_lt": 85,
+      "threshold_krw": 1000000000,
+      "coordinate_crs": "EPSG:4326",
+      "preview_only": true
+    },
+    "complexes": [
+      {
+        "complex_id": "실제 단지 ID",
+        "name": "실제 단지명",
+        "lon": "number",
+        "lat": "number",
+        "coord_quality": "candidate_unverified 또는 reviewed",
+        "build_year": "int|null",
+        "first_valid_trade_year": "int",
+        "years": {
+          "YYYY": {
+            "status": "observed|no_trade|not_built",
+            "median_manwon": "number|null",
+            "median_krw": "optional integer",
+            "n": "int"
+          }
+        }
+      }
+    ],
+    "year_stats": {
+      "YYYY": {
+        "observed_complexes_all": "int",
+        "at_or_below_all": "int",
+        "above_all": "int",
+        "coordinate_excluded_observed": "int"
+      }
+    }
+  },
+  "rules": [
+    "가격 원화/만원 명시, 10억원=100000만원",
+    "정확히 10억원 포함, 초과 완전 숨김",
+    "해당연도 관측 n>0와 실제 중위값만 사용",
+    "미거래는 최초관측 이후 회색, 최초관측 전 미표시; 실제 존재 거래를 준공연도로 삭제하지 않음",
+    "역채움·전년 가격 carry-forward 금지",
+    "재하락하면 파랑 재등장",
+    "좌표불명/중복의심은 제외수 별도, 후보좌표는 시안 전용",
+    "전체통계 분모와 지도표시가능 분모 분리",
+    "2026은 수집일까지 부분연도"
+  ],
+  "render_gate": "실제 packet 3PNG 및6초시안만. script gate전 전체영상 렌더 금지",
+  "actual_adapter": {
+    "schema": "annual_apartment_dots_v1",
+    "prototype_only": true,
+    "threshold_manwon": 100000,
+    "coordinate_provenance": "candidate_unverified",
+    "years": "2006..2026",
+    "complexes": "accepted_packet과 동일 필드",
+    "year_statuses": [
+      "under",
+      "over",
+      "no_trade",
+      "not_yet_observed"
+    ],
+    "coverage": "연도별 observed_complexes/under/over/map_observed/map_under/map_over 배열",
+    "date_policy": "2026부분연도; 수집일과최대계약일 구분 확인 전 날짜 확정문구 없음",
+    "construction_policy": "build_year로 실제 거래 삭제 금지; first_valid_trade_year 이전만 미표시"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "task_id": "case-engine-tax-rounding-correction-v2",
+  "role": "research_case_calculation",
+  "as_of_kst": "2026-10-26",
+  "revision": "v2",
+  "status": "세율버그수정_연구용_독립QA대기",
+  "outputs": [
+    "engine.py",
+    "tests/test_engine.py",
+    "cases.json",
+    "results.json",
+    "assumptions.json",
+    "handoff.json"
+  ],
+  "input_versions": "원본v1 여섯파일SHA: assumptions.parent_v1_files_sha256; 공식URL/SHA/함수행·현행법 근거: assumptions.new_primary_checks",
+  "changes": [
+    "fractional rate 소수4자리 HALF_UP;기존%4자리 해석폐기",
+    "세목별10원미만절사 후 합산;교육세는 절사전취득세×10%",
+    "CE_G06 닫음.감면중복시큰것하나 원칙만메타추가;G05감면후교육세/총액자동적용안함",
+    "30사례보존;반사실/상품부적격 제외18사례에 conditional_illustration_review_pending 라벨"
+  ],
+  "verification": {
+    "tests": 23,
+    "failures": 0,
+    "errors": 0,
+    "red": "수정전23테스트중6실패(하위assert포함);기존오류기대값1정정+새회귀3",
+    "green": "전체23통과;독립송파수치7건;solver8개±1만원;JSON/SHA/금융가정격자동일검증",
+    "preservation": "v1 여섯파일 SHA 모두 동일;main송파증거SHA 일치"
+  },
+  "headline_6_9_12_unchanged": true,
+  "solver_changes": [
+    {
+      "profile": "A_first",
+      "deduction_krw": 0,
+      "condition": "bank_assumptions_max",
+      "v1_krw": 680100000,
+      "v2_krw": 680190000,
+      "delta_krw": 90000
+    }
+  ],
+  "remaining_gaps": [
+    "G05감면후교육세",
+    "CE_G01보증실행",
+    "CE_G02정책심사금리",
+    "CE_G03실견적",
+    "CE_G04기타자격",
+    "CE_G05독립QA"
+  ],
+  "affected_scene_ids": [],
+  "next_role": "director → 독립수치·정책QA; 첫privateupload후 다음편 확정",
+  "paid_api_calls": 0,
+  "boundaries": "새v2폴더6파일만 수정.새episode/대본/미디어/TTS/upload/state/기존모형 변경없음."
+}

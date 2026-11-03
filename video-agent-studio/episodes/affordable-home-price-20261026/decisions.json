@@ -1,0 +1,122 @@
+{
+  "episode_id": "affordable-home-price-20261026",
+  "decisions": [
+    {
+      "id": "affordable-price-topic-direct-20261026",
+      "gate": "topic",
+      "status": "authorized",
+      "approval_basis": "Current direct user request explicitly commissions this episode after first private upload.",
+      "at_utc": "2026-10-25T20:07:58.619501+00:00"
+    },
+    {
+      "id": "affordable-price-free-budget-20261026",
+      "gate": "budget",
+      "status": "authorized_free_only",
+      "cash_cap_krw": 0,
+      "paid_TTS_authorized": false,
+      "at_utc": "2026-10-25T20:07:58.619501+00:00"
+    },
+    {
+      "id": "affordable-price-script-v2-9658fc12dc",
+      "gate": "script",
+      "status": "approved_condition_satisfied",
+      "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+      "codex_review": "video-agent-studio/episodes/affordable-home-price-20261026/qa/content_v2_review.json",
+      "claude_review": "video-agent-studio/episodes/affordable-home-price-20261026/director/production-v1/claude/script-v2-round1/receipt.json",
+      "approval_basis": "Current direct user request; exact-version Codex and Claude content conditions now satisfied.",
+      "at_utc": "2026-10-25T21:02:14.437366+00:00"
+    },
+    {
+      "id": "affordable-price-audio-clarity-v3",
+      "gate": "internal_QA",
+      "status": "targeted_revision_preparation",
+      "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+      "affected_scene_ids": [
+        "S014",
+        "S019",
+        "S024",
+        "S030"
+      ],
+      "issue_ids": [
+        "ASR-A2-NUM-001",
+        "ASR-A2-TERM-001"
+      ],
+      "basis": "Two-model local ASR leaves three amounts and two DSR uses ambiguous. No actual hearing error is asserted. Preserve approved display text, financial meaning and values; clarify reading only.",
+      "prior_audio": "narration/production-injoon-v2",
+      "planned_audio": "narration/production-injoon-v3",
+      "reuse_unchanged_paragraphs": 41,
+      "new_free_TTS_calls_cap": 4,
+      "paid_TTS_authorized": false,
+      "cash_cap_krw": 0,
+      "automatic_retry": false,
+      "generation_status": "requires_main_exact_prepared_plan_instruction",
+      "review_path": "qa/audio-v1/review.json",
+      "review_sha256": "dc66a7ba1be6557f5e603a3227528193de30f2317bd6891fdb0a9401c87b7a43",
+      "at_utc": "2026-10-25T21:24:21.775385+00:00"
+    },
+    {
+      "id": "affordable-price-voice-v3-visual-v4-completed",
+      "gate": "completed",
+      "status": "approved",
+      "video_sha256": "ad9df5989c019395e9ea9eb7877c81300cf78e9ab611536ebcc7431c8fc3609a",
+      "approval_basis": "Current direct user instruction authorizes private upload after both reviews pass. Exact-version evidence satisfies this condition; no later human viewing is asserted.",
+      "dual_review": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/private-release-v2/dual_media_review.json",
+      "at_utc": "2026-10-25T22:32:16.839107+00:00"
+    },
+    {
+      "id": "affordable-price-voice-v3-visual-v4-private-pre-upload",
+      "gate": "pre_upload",
+      "status": "approved",
+      "video_sha256": "ad9df5989c019395e9ea9eb7877c81300cf78e9ab611536ebcc7431c8fc3609a",
+      "job_sha256": "3800d5f0c5f0bbd8de47a82939865179d5b0d5b05f9c18061b30f695c9c3ac4e",
+      "channel_id": "UCr_mTC0x_Uobv6MrIsOkrXw",
+      "privacy": "private",
+      "completed_decision_file": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/private-release-v2/completed_decision.json",
+      "current_direct_user_authorization": "video-agent-studio/episodes/affordable-home-price-20261026/director/production-v1/authorization.json",
+      "new_paid_generation_authorized": false,
+      "approval_basis": "Current direct user instruction authorizes private upload after both reviews pass. Exact-version evidence satisfies this condition; no later human viewing is asserted.",
+      "at_utc": "2026-10-25T22:32:16.839107+00:00"
+    },
+    {
+      "id": "affordable-price-audio-clarity-v3-closed",
+      "gate": "internal_QA",
+      "status": "closed",
+      "issue_ids": [
+        "ASR-A2-NUM-001",
+        "ASR-A2-TERM-001"
+      ],
+      "evidence": "video-agent-studio/episodes/affordable-home-price-20261026/qa/audio-v1/audio_gate_v3.json",
+      "evidence_sha256": "52b3c4284925f68225974aebcde9aa77ae1838d4c8ca32d1925897829164b639",
+      "final_dual_review": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/private-release-v2/dual_media_review.json",
+      "at_utc": "2026-10-25T22:37:59.416585+00:00"
+    },
+    {
+      "id": "shorts-ending-fix-20261028-v5",
+      "gate": "internal_correction",
+      "status": "local_corrected_private_upload_blocked",
+      "user_feedback": "쇼츠 영상 봤는데 뒷부분에 갑자기 영상 잘리는데?",
+      "changed_scope": "Two Shorts outgoing audio cuts and 0.35s closing transition",
+      "report": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/jun-quality-v2/shorts/v5-ending-fix/completion.json",
+      "new_paid_calls": 0,
+      "new_uploads": 0,
+      "at_utc": "2026-10-28T13:31:46.234386+00:00"
+    },
+    {
+      "id": "PUBLIC-REPLACE-20261028-V5",
+      "status": "executed_verified",
+      "authorization": "video-agent-studio/episodes/affordable-home-price-20261026/director/public-release-v5/authorization.json",
+      "report": "video-agent-studio/episodes/affordable-home-price-20261026/director/public-release-v5/completion.json",
+      "public_ids": [
+        "0495J7FMmCk",
+        "nYl1XSdyFAQ",
+        "DnCBj7voUyY"
+      ],
+      "removed_old_private_ids": [
+        "PwqvBlxAoII",
+        "Y9lZk9PmNUA",
+        "szSvG_2IehY"
+      ],
+      "at_utc": "2026-10-28T14:27:00.881596+00:00"
+    }
+  ]
+}

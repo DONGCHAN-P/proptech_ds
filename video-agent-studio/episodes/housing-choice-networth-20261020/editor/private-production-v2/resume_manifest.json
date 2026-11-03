@@ -1,0 +1,26 @@
+{
+  "task_id": "editor-v6-measured-final-production",
+  "source_version": "private-production-v1",
+  "target_version": "private-production-v2",
+  "preserved_v1": true,
+  "dependencies_reused_readonly": [
+    "outputs/private-production-v1/audio-deps",
+    "outputs/private-production-v1/media-bin"
+  ],
+  "retained_exact_chapters": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "rebuilt_chapters": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "rebuild_reason": "5/6 speech/caption timing; 7+ music content clock shifted by actual duration delta",
+  "new_installations": 0
+}

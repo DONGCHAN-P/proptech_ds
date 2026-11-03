@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C07P02",
+  "scene_id": "C07",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:06:56.201Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "3f674ef0a8defa22d2e995d66d31a0497bf1c6be0a5be092b28d27552c4d1d74",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "전세 가구는 보증금 사억 원과 금융자산 약 사억오천구백만 원을 보유합니다. 전세대출 이억 원을 빼면 순자산은 약 육억오천구백만 원입니다. 월세 가구는 보증금 일억 원, 금융자산 약 육억구백만 원에서 대출 이천만 원을 빼 약 육억팔천구백만 원이 남습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 141,
+  "characters": 141,
+  "actual_credits": 56,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19183,
+    "character_limit": 40000,
+    "included_remaining": 20817,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:51.452Z",
+  "local_shadow_remaining_before": 20759,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "IxdLNfNon9DVuZ2vwx79",
+    "x-request-id": null,
+    "character-cost": "56",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:06:55 GMT"
+  },
+  "pcm_samples": 836136,
+  "pcm_duration_s": 18.96,
+  "provider_last_spoken_end_s": 19.04,
+  "artifact_sha256": {
+    "paragraphs/C07P02/audio.mp3": "134d9084a0bb16234f2d0cd11ba582672797fe35f28d43c55a43fbf1cd552bd8",
+    "paragraphs/C07P02/audio.wav": "5003fff075810b5c5da762aa8199343db112bd6a0a31977d7b20b96fb9f8ae89",
+    "paragraphs/C07P02/alignment.json": "251e297f3e12192bf1512dc9346c34f8d179569e1d4a8a000429faffe000982f",
+    "paragraphs/C07P02/normalized_alignment.json": "251e297f3e12192bf1512dc9346c34f8d179569e1d4a8a000429faffe000982f"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 20703,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:07:00.348Z"
+}

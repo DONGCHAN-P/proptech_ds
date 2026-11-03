@@ -1,0 +1,854 @@
+{
+  "status": "four_numeric_dense_scenes_locally_transcribed",
+  "scene_ids": [
+    "S13",
+    "S15",
+    "S21",
+    "S26"
+  ],
+  "seconds": 105.0,
+  "rows": [
+    {
+      "scene_id": "S13",
+      "audio_sha256": "18b90887c9ef8d8aabd5707d1306b0ba337621a7f3ef0f7d987c317a51865f3f",
+      "reference": "자, 현금 1억 원부터 보겠습니다. 준비금 2천만 원을 빼면 집값에 넣을 돈이 8천만 원 남습니다. LTV 70퍼센트라면 내 돈이 집값의 30퍼센트는 있어야 하잖아요. 그래서 8천만 원을 30퍼센트로 나누면, 계산상으로는 약 2억 6천6백만 원대가 나옵니다. 오늘은 조금 내려서 2억 6천6백만 원짜리 집을 예로 들게요.",
+      "transcript": "자 현금 1억원부터 보겠습니다. 준비금 2천만원을 빼면 집값에 넣을 돈이 8천만원 남습니다. ltv 70%라면 내 돈이 집값에 30%는 있어야 하잖아요. 그래서 8천만원을 30%로 나누면 계산상으로는 약 2억 6천만원 때가 나옵니다. 오늘은 조금 내려서 2억 6천만원 짜리 집을 예로 들게요.",
+      "comparison": {
+        "normalized_text_equal": false,
+        "normalized_reference": "자현금숫자100000000원부터보겠습니다준비금숫자20000000원을빼면집값에넣을돈숫자80000000원남습니다ltv숫자70퍼센트라면내돈이집값의숫자30퍼센트는있어야하잖아요그래서숫자80000000원을숫자30퍼센트로나누면계산상으로는약숫자266000000원대가나옵니다오늘은조금내려서숫자266000000원짜리집을예로들게요",
+        "normalized_transcript": "자현금숫자100000000원부터보겠습니다준비금숫자20000000원을빼면집값에넣을돈숫자80000000원남습니다ltv숫자70퍼센트라면내돈이집값에숫자30퍼센트는있어야하잖아요그래서숫자80000000원을숫자30퍼센트로나누면계산상으로는약숫자260000000원때가나옵니다오늘은조금내려서숫자260000000원짜리집을예로들게요",
+        "reference_numbers": [
+          {
+            "raw": "1억 원",
+            "value": 100000000,
+            "unit": "원",
+            "start": 6,
+            "end": 10
+          },
+          {
+            "raw": "2천만 원",
+            "value": 20000000,
+            "unit": "원",
+            "start": 24,
+            "end": 29
+          },
+          {
+            "raw": "이 8천만 원",
+            "value": 80000000,
+            "unit": "원",
+            "start": 42,
+            "end": 49
+          },
+          {
+            "raw": "70퍼센트",
+            "value": 70,
+            "unit": "%",
+            "start": 60,
+            "end": 65
+          },
+          {
+            "raw": "30퍼센트",
+            "value": 30,
+            "unit": "%",
+            "start": 77,
+            "end": 82
+          },
+          {
+            "raw": "8천만 원",
+            "value": 80000000,
+            "unit": "원",
+            "start": 98,
+            "end": 103
+          },
+          {
+            "raw": "30퍼센트",
+            "value": 30,
+            "unit": "%",
+            "start": 105,
+            "end": 110
+          },
+          {
+            "raw": "2억 6천6백만 원",
+            "value": 266000000,
+            "unit": "원",
+            "start": 126,
+            "end": 136
+          },
+          {
+            "raw": "2억 6천6백만 원",
+            "value": 266000000,
+            "unit": "원",
+            "start": 156,
+            "end": 166
+          }
+        ],
+        "recognized_numbers": [
+          {
+            "raw": "1억원",
+            "value": 100000000,
+            "unit": "원",
+            "start": 5,
+            "end": 8
+          },
+          {
+            "raw": "2천만원",
+            "value": 20000000,
+            "unit": "원",
+            "start": 22,
+            "end": 26
+          },
+          {
+            "raw": "이 8천만원",
+            "value": 80000000,
+            "unit": "원",
+            "start": 39,
+            "end": 45
+          },
+          {
+            "raw": "70%",
+            "value": 70,
+            "unit": "%",
+            "start": 56,
+            "end": 59
+          },
+          {
+            "raw": "30%",
+            "value": 30,
+            "unit": "%",
+            "start": 71,
+            "end": 74
+          },
+          {
+            "raw": "8천만원",
+            "value": 80000000,
+            "unit": "원",
+            "start": 90,
+            "end": 94
+          },
+          {
+            "raw": "30%",
+            "value": 30,
+            "unit": "%",
+            "start": 96,
+            "end": 99
+          },
+          {
+            "raw": "2억 6천만원",
+            "value": 260000000,
+            "unit": "원",
+            "start": 114,
+            "end": 121
+          },
+          {
+            "raw": "2억 6천만원",
+            "value": 260000000,
+            "unit": "원",
+            "start": 142,
+            "end": 149
+          }
+        ],
+        "numeric_differences": [
+          {
+            "operation": "replace",
+            "expected": [
+              {
+                "raw": "2억 6천6백만 원",
+                "value": 266000000,
+                "unit": "원",
+                "start": 126,
+                "end": 136
+              },
+              {
+                "raw": "2억 6천6백만 원",
+                "value": 266000000,
+                "unit": "원",
+                "start": 156,
+                "end": 166
+              }
+            ],
+            "recognized": [
+              {
+                "raw": "2억 6천만원",
+                "value": 260000000,
+                "unit": "원",
+                "start": 114,
+                "end": 121
+              },
+              {
+                "raw": "2억 6천만원",
+                "value": 260000000,
+                "unit": "원",
+                "start": 142,
+                "end": 149
+              }
+            ]
+          }
+        ],
+        "text_similarity_ratio": 0.976879,
+        "sentences": [
+          {
+            "reference": "자, 현금 1억 원부터 보겠습니다.",
+            "matched_character_fraction": 1.0,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "준비금 2천만 원을 빼면 집값에 넣을 돈이 8천만 원 남습니다.",
+            "matched_character_fraction": 1.0,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "LTV 70퍼센트라면 내 돈이 집값의 30퍼센트는 있어야 하잖아요.",
+            "matched_character_fraction": 0.9697,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "그래서 8천만 원을 30퍼센트로 나누면, 계산상으로는 약 2억 6천6백만 원대가 나옵니다.",
+            "matched_character_fraction": 0.9608,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "오늘은 조금 내려서 2억 6천6백만 원짜리 집을 예로 들게요.",
+            "matched_character_fraction": 0.9655,
+            "possible_omission_or_misrecognition": false
+          }
+        ],
+        "method": "한자어/아라비아 숫자와 단위 정규화 후 순서·개수 대조; 문장별 문자 정렬 휴리스틱"
+      },
+      "seconds": 21.92,
+      "elapsed_s": 3.235000000000582,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " 자 현금 1억원부터 보겠습니다.",
+          "avg_logprob": -0.17631288433074951
+        },
+        {
+          "start": 2.4,
+          "end": 6.36,
+          "text": " 준비금 2천만원을 빼면 집값에 넣을 돈이 8천만원 남습니다.",
+          "avg_logprob": -0.17631288433074951
+        },
+        {
+          "start": 6.8,
+          "end": 10.92,
+          "text": " ltv 70%라면 내 돈이 집값에 30%는 있어야 하잖아요.",
+          "avg_logprob": -0.17631288433074951
+        },
+        {
+          "start": 11.36,
+          "end": 13.84,
+          "text": " 그래서 8천만원을 30%로 나누면",
+          "avg_logprob": -0.17631288433074951
+        },
+        {
+          "start": 13.84,
+          "end": 17.38,
+          "text": " 계산상으로는 약 2억 6천만원 때가 나옵니다.",
+          "avg_logprob": -0.17631288433074951
+        },
+        {
+          "start": 17.74,
+          "end": 21.4,
+          "text": " 오늘은 조금 내려서 2억 6천만원 짜리 집을 예로 들게요.",
+          "avg_logprob": -0.17631288433074951
+        }
+      ],
+      "actual_listening": false,
+      "naturalness_verified": false,
+      "external_upload": false
+    },
+    {
+      "scene_id": "S15",
+      "audio_sha256": "f30b8f15d3c86059da85fbca7b3411e08dc6185b6a1b00bd24b696123813ee36",
+      "reference": "다음은 현금 2억 원입니다. 준비금 3천만 원을 빼면 집에 넣을 돈은 1억 7천만 원입니다. 같은 방식으로 계산하면 약 5억 6천6백만 원짜리 집을 볼 수 있습니다. 내 돈 1억 7천만 원에 대출 3억 9천6백만 원을 더하는 구조입니다. 오늘 가정한 개인별 대출한도 4억 원 안에도 들어오죠. 다만 월 원리금이 약 201만 원으로 올라갑니다.",
+      "transcript": "다음은 현금 2억원입니다. 준비금 3천만원을 빼면 집에 넣을 또는 1억 7천만원입니다. 같은 방식으로 계산하면 약 5억 6천만원짜리 집을 볼 수 있습니다. 내돈 1억 7천만원에 대출 3억 9천만원을 더하는 구조입니다. 오늘 가정한 개인별 대출 한도 4억원 안에도 들어오죠. 다만 월 월리금이 약 201만원으로 올라갑니다.",
+      "comparison": {
+        "normalized_text_equal": false,
+        "normalized_reference": "다음은현금숫자200000000원입니다준비금숫자30000000원을빼면집에넣을돈은숫자170000000원입니다같은방식으로계산하면약숫자566000000원짜리집을볼수있습니다내돈숫자170000000원에대출숫자396000000원을더하는구조입니다오늘가정한개인별대출한도숫자400000000원안에도들어오죠다만월원리금이약숫자2010000원으로올라갑니다",
+        "normalized_transcript": "다음은현금숫자200000000원입니다준비금숫자30000000원을빼면집에넣을또는숫자170000000원입니다같은방식으로계산하면약숫자560000000원짜리집을볼수있습니다내돈숫자170000000원에대출숫자390000000원을더하는구조입니다오늘가정한개인별대출한도숫자400000000원안에도들어오죠다만월월리금이약숫자2010000원으로올라갑니다",
+        "reference_numbers": [
+          {
+            "raw": "2억 원",
+            "value": 200000000,
+            "unit": "원",
+            "start": 7,
+            "end": 11
+          },
+          {
+            "raw": "3천만 원",
+            "value": 30000000,
+            "unit": "원",
+            "start": 20,
+            "end": 25
+          },
+          {
+            "raw": "1억 7천만 원",
+            "value": 170000000,
+            "unit": "원",
+            "start": 39,
+            "end": 47
+          },
+          {
+            "raw": "5억 6천6백만 원",
+            "value": 566000000,
+            "unit": "원",
+            "start": 67,
+            "end": 77
+          },
+          {
+            "raw": "1억 7천만 원",
+            "value": 170000000,
+            "unit": "원",
+            "start": 97,
+            "end": 105
+          },
+          {
+            "raw": "3억 9천6백만 원",
+            "value": 396000000,
+            "unit": "원",
+            "start": 110,
+            "end": 120
+          },
+          {
+            "raw": "4억 원",
+            "value": 400000000,
+            "unit": "원",
+            "start": 149,
+            "end": 153
+          },
+          {
+            "raw": "201만 원",
+            "value": 2010000,
+            "unit": "원",
+            "start": 176,
+            "end": 182
+          }
+        ],
+        "recognized_numbers": [
+          {
+            "raw": "2억원",
+            "value": 200000000,
+            "unit": "원",
+            "start": 7,
+            "end": 10
+          },
+          {
+            "raw": "3천만원",
+            "value": 30000000,
+            "unit": "원",
+            "start": 19,
+            "end": 23
+          },
+          {
+            "raw": "1억 7천만원",
+            "value": 170000000,
+            "unit": "원",
+            "start": 37,
+            "end": 44
+          },
+          {
+            "raw": "5억 6천만원",
+            "value": 560000000,
+            "unit": "원",
+            "start": 64,
+            "end": 71
+          },
+          {
+            "raw": "1억 7천만원",
+            "value": 170000000,
+            "unit": "원",
+            "start": 90,
+            "end": 97
+          },
+          {
+            "raw": "3억 9천만원",
+            "value": 390000000,
+            "unit": "원",
+            "start": 102,
+            "end": 109
+          },
+          {
+            "raw": "4억원",
+            "value": 400000000,
+            "unit": "원",
+            "start": 139,
+            "end": 142
+          },
+          {
+            "raw": "201만원",
+            "value": 2010000,
+            "unit": "원",
+            "start": 165,
+            "end": 170
+          }
+        ],
+        "numeric_differences": [
+          {
+            "operation": "replace",
+            "expected": [
+              {
+                "raw": "5억 6천6백만 원",
+                "value": 566000000,
+                "unit": "원",
+                "start": 67,
+                "end": 77
+              }
+            ],
+            "recognized": [
+              {
+                "raw": "5억 6천만원",
+                "value": 560000000,
+                "unit": "원",
+                "start": 64,
+                "end": 71
+              }
+            ]
+          },
+          {
+            "operation": "replace",
+            "expected": [
+              {
+                "raw": "3억 9천6백만 원",
+                "value": 396000000,
+                "unit": "원",
+                "start": 110,
+                "end": 120
+              }
+            ],
+            "recognized": [
+              {
+                "raw": "3억 9천만원",
+                "value": 390000000,
+                "unit": "원",
+                "start": 102,
+                "end": 109
+              }
+            ]
+          }
+        ],
+        "text_similarity_ratio": 0.972973,
+        "sentences": [
+          {
+            "reference": "다음은 현금 2억 원입니다.",
+            "matched_character_fraction": 1.0,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "준비금 3천만 원을 빼면 집에 넣을 돈은 1억 7천만 원입니다.",
+            "matched_character_fraction": 0.9474,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "같은 방식으로 계산하면 약 5억 6천6백만 원짜리 집을 볼 수 있습니다.",
+            "matched_character_fraction": 0.9697,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "내 돈 1억 7천만 원에 대출 3억 9천6백만 원을 더하는 구조입니다.",
+            "matched_character_fraction": 0.9737,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "오늘 가정한 개인별 대출한도 4억 원 안에도 들어오죠.",
+            "matched_character_fraction": 1.0,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "다만 월 원리금이 약 201만 원으로 올라갑니다.",
+            "matched_character_fraction": 0.96,
+            "possible_omission_or_misrecognition": false
+          }
+        ],
+        "method": "한자어/아라비아 숫자와 단위 정규화 후 순서·개수 대조; 문장별 문자 정렬 휴리스틱"
+      },
+      "seconds": 22.68,
+      "elapsed_s": 3.4210000000002765,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 1.62,
+          "text": " 다음은 현금 2억원입니다.",
+          "avg_logprob": -0.1743764633679912
+        },
+        {
+          "start": 2.0,
+          "end": 5.76,
+          "text": " 준비금 3천만원을 빼면 집에 넣을 또는 1억 7천만원입니다.",
+          "avg_logprob": -0.1743764633679912
+        },
+        {
+          "start": 6.18,
+          "end": 10.42,
+          "text": " 같은 방식으로 계산하면 약 5억 6천만원짜리 집을 볼 수 있습니다.",
+          "avg_logprob": -0.1743764633679912
+        },
+        {
+          "start": 10.88,
+          "end": 15.0,
+          "text": " 내돈 1억 7천만원에 대출 3억 9천만원을 더하는 구조입니다.",
+          "avg_logprob": -0.1743764633679912
+        },
+        {
+          "start": 15.48,
+          "end": 18.6,
+          "text": " 오늘 가정한 개인별 대출 한도 4억원 안에도 들어오죠.",
+          "avg_logprob": -0.1743764633679912
+        },
+        {
+          "start": 18.96,
+          "end": 22.14,
+          "text": " 다만 월 월리금이 약 201만원으로 올라갑니다.",
+          "avg_logprob": -0.1743764633679912
+        }
+      ],
+      "actual_listening": false,
+      "naturalness_verified": false,
+      "external_upload": false
+    },
+    {
+      "scene_id": "S21",
+      "audio_sha256": "5a3e293a5f6cd73e9229f63cd3028e10e6f20c205c0f3427813473ee3c85f3cd",
+      "reference": "아까 빼놓은 준비금도 한번 확인해볼게요. 예를 들어 6억 6천만 원짜리 집을 일반적인 1주택 취득, 전용 85제곱미터 이하, 감면이 없는 경우로 계산하면 취득세와 지방교육세가 합쳐서 약 1천16만 원입니다. 중개보수는 이 가격 구간에서 상한요율 0.4퍼센트로 잡고, 일반과세 중개사의 부가세까지 가정하면 약 290만 원이고요. 두 항목만 약 1천307만 원입니다. 준비금 4천만 원을 잡았다고 해서 전부 세금으로 나가는 게 아닙니다. 남은 약 2천693만 원 안에서 등기 관련 비용, 이사, 가전과 가구, 비상금 등을 배분하는 거예요. 집의 면적이나 취득 조건이 달라지면 세금도 달라질 수 있고, 중개보수는 상한 안에서 협의할 수 있습니다. 그러니까 오늘 준비금 숫자를 그대로 복사하지 마시고, 내 집에 맞는 견적으로 다시 채워보시면 됩니다.",
+      "transcript": "아까 빼놓은 준비금도 한번 확인해 볼게요. 예를 들어 6억 6000만원짜리 집을 일반적인 일주택 취득, 전용 85제곱미터 이하, 감면이 없는 경우로 계산하면 취득세와 지방교육세가 합쳐서 약 1116만원입니다. 중계보수는 이 가격 구간에서 상한 요율 0.4%로 잡고 일반과세 중계사의 부가세까지 가정하면 약 290만원이고요. 두 항목만 약 1370만원입니다. 준비금 4000만원을 잡았다고 해서 전부 세금으로 나가는 게 아닙니다. 남은 약 2693만원 안에서 등기 관련 비용, 이사, 가전과 가구, 비상금 등을 배분하는 거예요. 집에 면적이나 취득 조건이 달라지면 세금도 달라질 수 있고 중계보수는 상한 안에서 협의할 수 있습니다. 그러니까 오늘 준비금 숫자를 그대로 복사하지 마시고 내 집에 맞는 견적으로 다시 채워보시면 됩니다.",
+      "comparison": {
+        "normalized_text_equal": false,
+        "normalized_reference": "아까빼놓은준비금도한번확인해볼게요예를들어숫자660000000원짜리집을일반적인1주택취득전용85제곱미터이하감면이없는경우로계산하면취득세와지방교육세가합쳐서약숫자10160000원입니다중개보수는이가격구간에서상한요율숫자0소수점4퍼센트로잡고일반과세중개사의부가세까지가정하면약숫자2900000원이고요두항목만약숫자13070000원입니다준비금숫자40000000원을잡았다고해서전부세금으로나가는게아닙니다남은약숫자26930000원안에서등기관련비용이사가전과가구비상금등을배분하는거예요집의면적이나취득조건이달라지면세금도달라질수있고중개보수는상한안에서협의할수있습니다그러니까오늘준비금숫자를그대로복사하지마시고내집에맞는견적으로다시채워보시면됩니다",
+        "normalized_transcript": "아까빼놓은준비금도한번확인해볼게요예를들어숫자660000000원짜리집을일반적인일주택취득전용85제곱미터이하감면이없는경우로계산하면취득세와지방교육세가합쳐서약숫자11160000원입니다중계보수는이가격구간에서상한요율숫자0소수점4퍼센트로잡고일반과세중계사의부가세까지가정하면약숫자2900000원이고요두항목만약숫자13700000원입니다준비금숫자40000000원을잡았다고해서전부세금으로나가는게아닙니다남은약숫자26930000원안에서등기관련비용이사가전과가구비상금등을배분하는거예요집에면적이나취득조건이달라지면세금도달라질수있고중계보수는상한안에서협의할수있습니다그러니까오늘준비금숫자를그대로복사하지마시고내집에맞는견적으로다시채워보시면됩니다",
+        "reference_numbers": [
+          {
+            "raw": "6억 6천만 원",
+            "value": 660000000,
+            "unit": "원",
+            "start": 29,
+            "end": 37
+          },
+          {
+            "raw": "1천16만 원",
+            "value": 10160000,
+            "unit": "원",
+            "start": 104,
+            "end": 111
+          },
+          {
+            "raw": "0.4퍼센트",
+            "value": 0.4,
+            "unit": "%",
+            "start": 137,
+            "end": 143
+          },
+          {
+            "raw": "290만 원",
+            "value": 2900000,
+            "unit": "원",
+            "start": 172,
+            "end": 178
+          },
+          {
+            "raw": "1천307만 원",
+            "value": 13070000,
+            "unit": "원",
+            "start": 191,
+            "end": 199
+          },
+          {
+            "raw": "4천만 원",
+            "value": 40000000,
+            "unit": "원",
+            "start": 208,
+            "end": 213
+          },
+          {
+            "raw": "2천693만 원",
+            "value": 26930000,
+            "unit": "원",
+            "start": 248,
+            "end": 256
+          }
+        ],
+        "recognized_numbers": [
+          {
+            "raw": "6억 6000만원",
+            "value": 660000000,
+            "unit": "원",
+            "start": 30,
+            "end": 39
+          },
+          {
+            "raw": "1116만원",
+            "value": 11160000,
+            "unit": "원",
+            "start": 106,
+            "end": 112
+          },
+          {
+            "raw": "0.4%",
+            "value": 0.4,
+            "unit": "%",
+            "start": 139,
+            "end": 143
+          },
+          {
+            "raw": "290만원",
+            "value": 2900000,
+            "unit": "원",
+            "start": 171,
+            "end": 176
+          },
+          {
+            "raw": "1370만원",
+            "value": 13700000,
+            "unit": "원",
+            "start": 189,
+            "end": 195
+          },
+          {
+            "raw": "4000만원",
+            "value": 40000000,
+            "unit": "원",
+            "start": 204,
+            "end": 210
+          },
+          {
+            "raw": "2693만원",
+            "value": 26930000,
+            "unit": "원",
+            "start": 245,
+            "end": 251
+          }
+        ],
+        "numeric_differences": [
+          {
+            "operation": "replace",
+            "expected": [
+              {
+                "raw": "1천16만 원",
+                "value": 10160000,
+                "unit": "원",
+                "start": 104,
+                "end": 111
+              }
+            ],
+            "recognized": [
+              {
+                "raw": "1116만원",
+                "value": 11160000,
+                "unit": "원",
+                "start": 106,
+                "end": 112
+              }
+            ]
+          },
+          {
+            "operation": "replace",
+            "expected": [
+              {
+                "raw": "1천307만 원",
+                "value": 13070000,
+                "unit": "원",
+                "start": 191,
+                "end": 199
+              }
+            ],
+            "recognized": [
+              {
+                "raw": "1370만원",
+                "value": 13700000,
+                "unit": "원",
+                "start": 189,
+                "end": 195
+              }
+            ]
+          }
+        ],
+        "text_similarity_ratio": 0.979104,
+        "sentences": [
+          {
+            "reference": "아까 빼놓은 준비금도 한번 확인해볼게요.",
+            "matched_character_fraction": 1.0,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "예를 들어 6억 6천만 원짜리 집을 일반적인 1주택 취득, 전용 85제곱미터 이하, 감면이 없는 경우로 계산하면 취득세와 지방교육세가 합쳐서 약 1천16만 원입니다.",
+            "matched_character_fraction": 0.9747,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "중개보수는 이 가격 구간에서 상한요율 0.4퍼센트로 잡고, 일반과세 중개사의 부가세까지 가정하면 약 290만 원이고요.",
+            "matched_character_fraction": 0.9667,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "두 항목만 약 1천307만 원입니다.",
+            "matched_character_fraction": 0.9474,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "준비금 4천만 원을 잡았다고 해서 전부 세금으로 나가는 게 아닙니다.",
+            "matched_character_fraction": 1.0,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "남은 약 2천693만 원 안에서 등기 관련 비용, 이사, 가전과 가구, 비상금 등을 배분하는 거예요.",
+            "matched_character_fraction": 1.0,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "집의 면적이나 취득 조건이 달라지면 세금도 달라질 수 있고, 중개보수는 상한 안에서 협의할 수 있습니다.",
+            "matched_character_fraction": 0.9524,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "그러니까 오늘 준비금 숫자를 그대로 복사하지 마시고, 내 집에 맞는 견적으로 다시 채워보시면 됩니다.",
+            "matched_character_fraction": 1.0,
+            "possible_omission_or_misrecognition": false
+          }
+        ],
+        "method": "한자어/아라비아 숫자와 단위 정규화 후 순서·개수 대조; 문장별 문자 정렬 휴리스틱"
+      },
+      "seconds": 49.28,
+      "elapsed_s": 7.015999999999622,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.1,
+          "text": " 아까 빼놓은 준비금도 한번 확인해 볼게요.",
+          "avg_logprob": -0.1975122467946198
+        },
+        {
+          "start": 2.56,
+          "end": 7.74,
+          "text": " 예를 들어 6억 6000만원짜리 집을 일반적인 일주택 취득, 전용 85제곱미터",
+          "avg_logprob": -0.1975122467946198
+        },
+        {
+          "start": 7.74,
+          "end": 12.06,
+          "text": " 이하, 감면이 없는 경우로 계산하면 취득세와 지방교육세가 합쳐서",
+          "avg_logprob": -0.1975122467946198
+        },
+        {
+          "start": 12.06,
+          "end": 13.62,
+          "text": " 약 1116만원입니다.",
+          "avg_logprob": -0.1975122467946198
+        },
+        {
+          "start": 14.06,
+          "end": 18.84,
+          "text": " 중계보수는 이 가격 구간에서 상한 요율 0.4%로 잡고 일반과세",
+          "avg_logprob": -0.1975122467946198
+        },
+        {
+          "start": 18.84,
+          "end": 22.06,
+          "text": " 중계사의 부가세까지 가정하면 약 290만원이고요.",
+          "avg_logprob": -0.1975122467946198
+        },
+        {
+          "start": 22.52,
+          "end": 24.98,
+          "text": " 두 항목만 약 1370만원입니다.",
+          "avg_logprob": -0.1975122467946198
+        },
+        {
+          "start": 25.48,
+          "end": 28.78,
+          "text": " 준비금 4000만원을 잡았다고 해서 전부 세금으로 나가는 게",
+          "avg_logprob": -0.1975122467946198
+        },
+        {
+          "start": 28.78,
+          "end": 29.24,
+          "text": " 아닙니다.",
+          "avg_logprob": -0.1975122467946198
+        },
+        {
+          "start": 29.24,
+          "end": 36.26,
+          "text": " 남은 약 2693만원 안에서 등기 관련 비용, 이사, 가전과 가구, 비상금 등을 배분하는 거예요.",
+          "avg_logprob": -0.15370304203991378
+        },
+        {
+          "start": 36.74,
+          "end": 40.18,
+          "text": " 집에 면적이나 취득 조건이 달라지면 세금도 달라질 수 있고",
+          "avg_logprob": -0.15370304203991378
+        },
+        {
+          "start": 40.18,
+          "end": 42.78,
+          "text": " 중계보수는 상한 안에서 협의할 수 있습니다.",
+          "avg_logprob": -0.15370304203991378
+        },
+        {
+          "start": 43.24,
+          "end": 46.3,
+          "text": " 그러니까 오늘 준비금 숫자를 그대로 복사하지 마시고",
+          "avg_logprob": -0.15370304203991378
+        },
+        {
+          "start": 46.3,
+          "end": 48.88,
+          "text": " 내 집에 맞는 견적으로 다시 채워보시면 됩니다.",
+          "avg_logprob": -0.15370304203991378
+        }
+      ],
+      "actual_listening": false,
+      "naturalness_verified": false,
+      "external_upload": false
+    },
+    {
+      "scene_id": "S26",
+      "audio_sha256": "82ce99a9a02a217273b36872fcd174e0b9a3be4333ba663dcb56848427ebbd38",
+      "reference": "금리가 올라가거나 소득이 잠시 줄어도 버틸 수 있는지도 한번 보세요. 집값이 오를 거라는 기대를 빼고, 지금 소득으로 이 집을 유지할 수 있는가를 먼저 계산해보셨으면 좋겠습니다.",
+      "transcript": "정리가 올라가거나 소득이 잠시 줄어도 버틸 수 있는지도 한번 보세요 집값이 오를 거라는 기대를 빼고 지금 소득으로 이 집을 유지할 수 있는가를 먼저 계산해 보셨으면 좋겠습니다",
+      "comparison": {
+        "normalized_text_equal": false,
+        "normalized_reference": "금리가올라가거나소득이잠시줄어도버틸수있는지도한번보세요집값이오를거라는기대를빼고지금소득으로이집을유지할수있는가를먼저계산해보셨으면좋겠습니다",
+        "normalized_transcript": "정리가올라가거나소득이잠시줄어도버틸수있는지도한번보세요집값이오를거라는기대를빼고지금소득으로이집을유지할수있는가를먼저계산해보셨으면좋겠습니다",
+        "reference_numbers": [],
+        "recognized_numbers": [],
+        "numeric_differences": [],
+        "text_similarity_ratio": 0.986111,
+        "sentences": [
+          {
+            "reference": "금리가 올라가거나 소득이 잠시 줄어도 버틸 수 있는지도 한번 보세요.",
+            "matched_character_fraction": 0.9643,
+            "possible_omission_or_misrecognition": false
+          },
+          {
+            "reference": "집값이 오를 거라는 기대를 빼고, 지금 소득으로 이 집을 유지할 수 있는가를 먼저 계산해보셨으면 좋겠습니다.",
+            "matched_character_fraction": 1.0,
+            "possible_omission_or_misrecognition": false
+          }
+        ],
+        "method": "한자어/아라비아 숫자와 단위 정규화 후 순서·개수 대조; 문장별 문자 정렬 휴리스틱"
+      },
+      "seconds": 11.12,
+      "elapsed_s": 2.0159999999996217,
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.86,
+          "text": " 정리가 올라가거나 소득이 잠시 줄어도 버틸 수 있는지도 한번 보세요",
+          "avg_logprob": -0.18074421728810958
+        },
+        {
+          "start": 3.86,
+          "end": 10.72,
+          "text": " 집값이 오를 거라는 기대를 빼고 지금 소득으로 이 집을 유지할 수 있는가를 먼저 계산해 보셨으면 좋겠습니다",
+          "avg_logprob": -0.18074421728810958
+        }
+      ],
+      "actual_listening": false,
+      "naturalness_verified": false,
+      "external_upload": false
+    }
+  ],
+  "model_sha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+  "alignment_sha256": "4ddb5d4a619928dc3967fabdc6b07f8e8ca5b4a024c1f4abf361a04deee23202",
+  "actual_listening": false,
+  "full_episode_ASR": false,
+  "external_upload": false
+}

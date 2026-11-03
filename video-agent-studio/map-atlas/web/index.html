@@ -1,0 +1,28 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>수도권 단지 지도 · 데이터로 보는 부동산</title><link rel="stylesheet" href="assets/styles.css?v=7905a3c8d79e0df0">
+<canvas id="map" aria-label="수도권 단지·학교·철도역 지도"></canvas>
+<div id="loading" role="status" aria-live="polite">수도권 단지 지도를 불러오고 있습니다…</div>
+<div id="mobile"><button id="toggle-search" aria-expanded="false" aria-controls="left">검색·필터</button><button id="toggle-detail" aria-expanded="false" aria-controls="right">선택 정보</button></div>
+<nav id="map-modes" aria-label="지도 화면"><button id="mode-complex" class="active" aria-pressed="true">단지 지도</button><button id="mode-plan" aria-pressed="false">토지계획도</button></nav><aside id="left">
+ <header class="brand"><div class="brand-symbol">▥</div><div><h1>수도권 단지 지도</h1><small>데이터로 보는 부동산</small></div><span class="live-badge">ATLAS</span></header>
+ <section id="plan-tools"><h2>3기신도시 토지이용계획</h2><p class="muted">LH 공개 계획 용지를 지도에서 살펴보세요.</p><select id="plan-district" aria-label="계획 지구"><option value="105142">고양 창릉</option><option value="105175">남양주 왕숙1</option><option value="105311">남양주 왕숙2</option><option value="105176">하남 교산</option><option value="105232">부천 대장</option><option value="105130">인천 계양</option></select><button id="plan-fit">지구 전체 보기</button><p id="plan-status" class="muted"></p><div id="plan-selection">지도에서 용지를 클릭하면 이름이 나옵니다.</div><h3>토지 이용 범례</h3><div id="plan-legend"></div><p class="muted">LH 내집어디 · 2026.10.18 조회<br>계획 승인 기준일 원자료 미표기<br>주택·학교·상업·공원은 계획 용도이며 현재 운영 상태를 뜻하지 않습니다.</p><a href="https://wherehome.lh.or.kr/lhmap.do?mainTabNo=12" target="_blank" rel="noopener">LH 원문 지도 ↗</a></section>
+ <div class="search-wrap"><span>⌕</span><input id="search" placeholder="아파트 이름 또는 주소 검색" aria-label="단지 검색"><button id="clear-search" aria-label="검색어 지우기">×</button></div>
+ <div class="filter-row"><select id="region" aria-label="지역"><option value="">수도권 전체</option><option value="11">서울</option><option value="41">경기</option><option value="28">인천</option></select><select id="district" aria-label="시군구"><option value="">모든 시군구</option></select></div>
+ <nav class="layer-chips" aria-label="지도 레이어"><button data-layer="complex-labels">단지</button><button data-layer="education-schools">학교</button><button data-layer="transit-stations">지하철</button><button data-layer="education-zones">학군</button></nav>
+ <div class="filter-actions"><label><input type="checkbox" id="basemap"> 도로 배경지도</label><button id="advanced-toggle" aria-expanded="false">상세 설정 ⌄</button></div>
+ <small id="basemap-note" class="muted"></small>
+ <div id="advanced-filters" hidden>
+  <label class="toggle"><input type="checkbox" id="boundary" checked> 시군구 경계</label><label class="toggle"><input type="checkbox" id="complex-labels" checked> 단지명·세대수</label><label class="toggle"><input type="checkbox" id="education-schools" checked> 학교 위치</label>
+  <select id="education-grade" aria-label="학교급"><option value="">초·중·고 전체</option><option>초등학교</option><option>중학교</option><option>고등학교</option></select>
+  <label class="toggle"><input type="checkbox" id="education-zones"> 통학구역·학군</label><select id="education-zone-kind" aria-label="학교 구역"><option value="elementary_zones">초등 통학구역</option><option value="middle_zones">중학교 학구·학군</option><option value="high_zones">고등학교 학교군</option></select>
+  <label class="toggle"><input type="checkbox" id="transit-routes" checked> 노선 색상·경로</label><label class="toggle"><input type="checkbox" id="transit-stations" checked> 철도역 위치</label><select id="transit-line" aria-label="철도 노선"><option value="">수록 노선 전체</option></select><small id="education-status"></small>
+  <p class="muted">학교 2026.10 · 학구도 2026.09<br>역 자료 묶음 2026.06 · 행별 시점 다름<br>선로: OSM 경로 · 일부 노선/구간 누락 가능<br>계획역 및 일부 역 미수록</p>
+ </div>
+ <div class="result-heading"><h2>단지 둘러보기</h2><button id="viewport-list">이 지도에서 찾기 ↗</button></div><p id="found" class="muted"></p><div id="results"></div>
+ <footer class="panel-footer">단지 20,058개 · 학교 4,439개<br>공식 원자료를 좌표로 연결한 지도입니다.</footer>
+</aside>
+<aside id="right"><header class="detail-top"><button id="back-to-list">← 목록</button><span class="chip">단지·시설 정보</span></header><h2 id="title">단지를 선택하세요</h2><div id="details"><p>지도의 단지 또는 검색 결과를 선택하세요.</p></div></aside>
+<div id="zoom-tools"><button id="zoom-in" aria-label="확대">＋</button><button id="zoom-out" aria-label="축소">−</button></div><div id="scale"></div>
+<div id="bar"><button id="reset">전체 보기</button><button id="capture">화면 촬영 모드</button><button id="export">화면 좌표 저장</button><span id="status"></span></div>
+<div id="credit">단지: 한국부동산원 · 학교·학구도: 한국교육시설안전원 · 역: 철도산업정보센터 · 토지계획: LH 내집어디 · 경계: SGIS / statgarten · <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a></div>
+<script>window.ATLAS_CONFIG={"schema_version":"1.0.0","revision":"7905a3c8d79e0df0","dataUrl":"assets/data/atlas.json.gz?v=7905a3c8d79e0df0"};</script>
+<script src="assets/app.js?v=7905a3c8d79e0df0" defer></script></html>

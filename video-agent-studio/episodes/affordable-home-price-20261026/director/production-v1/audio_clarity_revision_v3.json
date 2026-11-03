@@ -1,0 +1,32 @@
+{
+  "id": "affordable-price-audio-clarity-v3",
+  "gate": "internal_QA",
+  "status": "closed_by_independent_current_voice_evidence",
+  "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "affected_scene_ids": [
+    "S014",
+    "S019",
+    "S024",
+    "S030"
+  ],
+  "issue_ids": [
+    "ASR-A2-NUM-001",
+    "ASR-A2-TERM-001"
+  ],
+  "basis": "Two-model local ASR leaves three amounts and two DSR uses ambiguous. No actual hearing error is asserted. Preserve approved display text, financial meaning and values; clarify reading only.",
+  "prior_audio": "narration/production-injoon-v2",
+  "planned_audio": "narration/production-injoon-v3",
+  "reuse_unchanged_paragraphs": 41,
+  "new_free_TTS_calls_cap": 4,
+  "paid_TTS_authorized": false,
+  "cash_cap_krw": 0,
+  "automatic_retry": false,
+  "generation_status": "requires_main_exact_prepared_plan_instruction",
+  "review_path": "qa/audio-v1/review.json",
+  "review_sha256": "dc66a7ba1be6557f5e603a3227528193de30f2317bd6891fdb0a9401c87b7a43",
+  "at_utc": "2026-10-25T21:24:21.775385+00:00",
+  "evidence": "video-agent-studio/episodes/affordable-home-price-20261026/qa/audio-v1/audio_gate_v3.json",
+  "evidence_sha256": "52b3c4284925f68225974aebcde9aa77ae1838d4c8ca32d1925897829164b639",
+  "final_timing_sha256": "86a3c01e344f8c24da930404355b60d34eb9e1a0f49431cd299b5b38034939e7",
+  "actual_listening": false
+}

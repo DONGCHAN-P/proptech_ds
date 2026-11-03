@@ -1,0 +1,21 @@
+const fs=require('fs'),path=require('path'),crypto=require('crypto');
+const E=__dirname,EP=path.resolve(E,'../..'),R=path.resolve(EP,'../../..'),NM=path.join(R,'video/node_modules'),O=path.join(EP,'outputs/production-v2');
+const {bundle}=require(path.join(NM,'@remotion/bundler')),{openBrowser,selectComposition,renderStill}=require(path.join(NM,'@remotion/renderer'));
+const hash=x=>crypto.createHash('sha256').update(x).digest('hex');
+const onlyKind=process.argv.includes('--only-compare')?'compare':process.argv.includes('--only-decision')?'decision':process.argv.includes('--only-cta')?'series':null;const p=JSON.parse(fs.readFileSync(path.join(O,onlyKind?'rendered_project.json':'project.json'))),proof=path.join(O,'representatives'),cache=path.join(E,'cache'),stills=path.join(cache,'stills');
+if(process.argv.includes('--only-cta')){const last=p.visual_intervals.find(x=>x.unit_id==='M009_010');const rows=[];for(const x of p.visual_intervals){if(x.scene_id==='ending')x.props={...last.props,caption:x.props.caption,source:x.props.source,phase:'cta'};if(x.unit_id==='M009_009'&&x.duration_frames>45){for(let i=0;i<45;i++)rows.push({...x,start_frame:x.start_frame+i,end_frame:x.start_frame+i+1,duration_frames:1,props:{...x.props,motionFrame:i}});rows.push({...x,start_frame:x.start_frame+45,duration_frames:x.duration_frames-45});}else rows.push(x);}p.visual_intervals=rows;}
+for(const x of [proof,cache,stills])fs.mkdirSync(x,{recursive:true});
+(async()=>{const source=fs.readdirSync(path.join(E,'source')).sort().map(n=>[n,hash(fs.readFileSync(path.join(E,'source',n)))]);const digest=hash(JSON.stringify(source));
+const serveUrl=await bundle({entryPoint:path.join(E,'source/entry.tsx'),outDir:path.join(cache,'bundle'),publicDir:path.join(EP,'visual/review-v2/public'),webpackOverride:c=>({...c,resolve:{...c.resolve,modules:[NM,'node_modules']}})});
+const browser=await openBrowser('chrome',{browserExecutable:path.join(NM,'.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe')});let calls=0;const checks=[];
+try{const base=await selectComposition({serveUrl,puppeteerInstance:browser,id:'GyosanReviewV2'});
+async function still(props,out){let guard;await renderStill({logLevel:'error',serveUrl,puppeteerInstance:browser,composition:{...base,props},frame:0,output:out,onBrowserLog:l=>{if(l.text.startsWith('V7_LAYOUT '))guard=JSON.parse(l.text.slice(10));}});if(!guard?.passed)throw Error('Missing/failed guard '+out);checks.push({out,passed:true,kind:props.reviewKind});calls++;}
+const reps=new Map();for(const x of p.visual_intervals){if(!x.props?.reviewKind||(onlyKind&&x.props.reviewKind!==onlyKind))continue;const q=x.props,key=q.reviewKind+'_'+(q.phase||q.active||'')+(q.reviewKind==='price'?'_'+q.priceStage:'');if(!reps.has(key)||(q.caption||'').length>(reps.get(key).caption||'').length)reps.set(key,q);}
+for(const [name,q] of reps)await still({...q,motionFrame:44},path.join(proof,name+'.png'));
+fs.writeFileSync(path.join(proof,'guard.json'),JSON.stringify({passed:true,digest,checks},null,2));console.log('REPRESENTATIVES_READY '+reps.size);
+if(!process.argv.includes('--render'))return;
+const jobs=new Map();let reused=0;
+for(const x of p.visual_intervals){if(!x.props?.reviewKind||(onlyKind&&x.props.reviewKind!==onlyKind)){reused++;continue;}const props={...x.props};delete props.reviewUnit;const dest=path.join(stills,hash(digest+JSON.stringify(props)).slice(0,24)+'.png');x.source_file=dest;if(!fs.existsSync(dest))jobs.set(dest,props);}
+const queue=[...jobs];let next=0;async function worker(){while(next<queue.length){const [dest,props]=queue[next++];await still(props,dest);if(next%40===0)console.log('rendered '+next+'/'+queue.length);}}
+await Promise.all([worker(),worker(),worker()]);fs.writeFileSync(path.join(O,'rendered_project.json'),JSON.stringify(p,null,2));fs.writeFileSync(path.join(O,onlyKind?'render_receipt_'+onlyKind+'.json':'render_receipt.json'),JSON.stringify({completed:true,input_digest:digest,source,changed_png:jobs.size,reused_intervals:reused,actual_still_calls:calls,checks},null,2));console.log('CHANGED_RENDER_COMPLETE '+jobs.size);
+}finally{await browser.close({silent:true});}})().catch(e=>{console.error(e.stack);process.exitCode=1;});

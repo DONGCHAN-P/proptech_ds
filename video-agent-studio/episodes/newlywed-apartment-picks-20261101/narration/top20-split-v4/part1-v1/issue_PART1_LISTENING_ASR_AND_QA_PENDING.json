@@ -1,0 +1,26 @@
+{
+  "issue_id": "PART1_LISTENING_ASR_AND_QA_PENDING",
+  "scene_ids": [
+    "P01-INTRO",
+    "P01-R20",
+    "P01-R19",
+    "P01-R18",
+    "P01-R17",
+    "P01-R16",
+    "P01-R15",
+    "P01-R14",
+    "P01-R13",
+    "P01-R12",
+    "P01-R11",
+    "P01-OUTRO"
+  ],
+  "problem": "전체 음성의 실제 청취·ASR·독립검수 미수행. atempo 음소 경계 오차 미측정.",
+  "evidence": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/part1-v1/verification.json",
+  "proposal": "총괄이 로컬ASR·청취·독립QA를 이어 수행하고 시간표 확정. 편집은 문장별 global 시점 사용.",
+  "impact": "전체 발음·자연스러움 및 마지막 발화 청각 확인 보류. 기술·커버리지 검사를 청취 통과로 확대하지 않음.",
+  "next_role": [
+    "director",
+    "editor",
+    "qa"
+  ]
+}

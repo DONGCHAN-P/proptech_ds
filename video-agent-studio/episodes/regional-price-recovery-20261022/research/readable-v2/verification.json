@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checked_date": "2026-10-25",
+  "checks": [
+    {
+      "check": "PNG decode and size",
+      "result": "passed",
+      "size": [
+        2720,
+        2720
+      ]
+    },
+    {
+      "check": "source/image SHA256",
+      "result": "passed"
+    },
+    {
+      "check": "image visual inspection",
+      "result": "passed",
+      "scope": "opened full PDF9 spread, finalsource59.png, notice PDF4 image; humanlike model visual review only, no independent peer QA"
+    },
+    {
+      "check": "owner scope",
+      "result": "passed",
+      "scope": "all writes in research/readable-v2; shared state/script files untouched"
+    }
+  ],
+  "schema_required_fields_present": true,
+  "same_complex84": "not in official release",
+  "rights": "unverified reuse permission"
+}

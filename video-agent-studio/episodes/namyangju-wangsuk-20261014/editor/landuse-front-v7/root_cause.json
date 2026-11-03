@@ -1,0 +1,73 @@
+{
+  "old_renderer": "NamyangjuMapLedV6.tsx Captions: return c ? white_box : null",
+  "caption_blink": "Provider-aligned semantic cues contain natural inter-cue silence; hiding whole container during gaps makes white box blink. Per-chapter mounting also omits lead-in.",
+  "fixed_renderer": "PersistentCaptions always mounts one global constant-height white container; only its text changes or is cleared. No caption timing or approved text changed.",
+  "front_end_frame": 13087,
+  "front_duration_s": 436.23333333333335,
+  "cue_gap_count": 130,
+  "example_gaps": [
+    {
+      "scene_id": "M000",
+      "global_start_frame": 110,
+      "global_end_frame": 112,
+      "frames": 2
+    },
+    {
+      "scene_id": "M000",
+      "global_start_frame": 170,
+      "global_end_frame": 173,
+      "frames": 3
+    },
+    {
+      "scene_id": "M000",
+      "global_start_frame": 278,
+      "global_end_frame": 280,
+      "frames": 2
+    },
+    {
+      "scene_id": "M000",
+      "global_start_frame": 331,
+      "global_end_frame": 333,
+      "frames": 2
+    },
+    {
+      "scene_id": "M000",
+      "global_start_frame": 417,
+      "global_end_frame": 419,
+      "frames": 2
+    },
+    {
+      "scene_id": "M000",
+      "global_start_frame": 509,
+      "global_end_frame": 510,
+      "frames": 1
+    },
+    {
+      "scene_id": "M001",
+      "global_start_frame": 763,
+      "global_end_frame": 765,
+      "frames": 2
+    },
+    {
+      "scene_id": "M001",
+      "global_start_frame": 857,
+      "global_end_frame": 861,
+      "frames": 4
+    },
+    {
+      "scene_id": "M001",
+      "global_start_frame": 965,
+      "global_end_frame": 969,
+      "frames": 4
+    },
+    {
+      "scene_id": "M001",
+      "global_start_frame": 1094,
+      "global_end_frame": 1096,
+      "frames": 2
+    }
+  ],
+  "repeated_zoom": "v6 lock_timeline camera_keys resets every shot from overview to focused points; each semantic cut repeats same map movement. v7 camera will be continuous/held per board and reveal only message-related layers.",
+  "bad_context": "v6 MapStage uses official guide points without landuse boundaries; CandidateContext replaces landuse with compass relation boxes. Both are removed from active v7 board scenes.",
+  "visual_assets_status": "awaiting verified rights and plan plate/camera interface from visual/research peers"
+}

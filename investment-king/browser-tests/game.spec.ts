@@ -1,0 +1,65 @@
+import { test,expect } from '@playwright/test';
+import { mkdirSync } from 'node:fs';
+test('start, plan, reserve buy, settle, reload, end and download life card',async({page},info)=>{
+  const errors:string[]=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  await page.goto('/');
+  await expect(page.getByRole('heading',{name:/20년 전으로/})).toBeVisible();
+  mkdirSync('reports/screenshots',{recursive:true});
+  await page.screenshot({path:`reports/screenshots/${info.project.name}-welcome.png`,fullPage:true});
+  await page.getByLabel('나의 인생 시드').fill('browser-qa');
+  await page.getByRole('button',{name:'나의 2006년으로 →'}).click();
+  await expect(page.getByRole('heading',{name:'2006년, 가을'})).toBeVisible();
+  await page.getByRole('button',{name:/단기 알바.*40만/}).click();
+  await page.getByRole('button',{name:/금융 책 읽기.*지식 성장/}).click();
+  await page.getByRole('button',{name:/운동과 휴식.*건강/}).click();
+  await expect(page.locator('#ap-badge')).toHaveText('0 / 3 AP');
+  await page.getByRole('button',{name:'투자',exact:true}).click();
+  await page.locator('#order-quantity').fill('2');
+  await page.locator('#order-budget').fill('180000');
+  await page.getByRole('button',{name:'이번 분기에 주문 예약 +'}).click();
+  await expect(page.locator('#order-queue')).toContainText('MOCK_A 매수 2');
+  await page.getByRole('button',{name:'다음 3개월 →'}).click();
+  await expect(page.getByRole('dialog')).toBeVisible();
+  await page.getByRole('button',{name:'이 선택으로 살아보기 →'}).click();
+  await expect(page.getByRole('heading',{name:'2007년, 겨울'})).toBeVisible();
+  await expect(page.locator('#panel')).toContainText('MOCK_A · 2 단위');
+  await page.reload();
+  await expect(page.getByRole('heading',{name:'2007년, 겨울'})).toBeVisible();
+  await page.getByRole('button',{name:'내 삶',exact:true}).click();
+  await expect(page.locator('#ap-badge')).toHaveText('3 / 3 AP');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+  await page.screenshot({path:`reports/screenshots/${info.project.name}-dashboard.png`,fullPage:true});
+  const id=new URL(page.url()).searchParams.get('run');
+  let s=await (await page.request.get(`/api/v1/runs/${id}`)).json();
+  while(s.turnIndex<80) {
+    const response=await page.request.post(`/api/v1/runs/${id}/commit`,{data:{turnIndex:s.turnIndex,stateHash:s.stateHash,idempotencyKey:`browser-${s.turnIndex}`,actions:['PART_TIME','PART_TIME','EXERCISE'],orders:[]}});
+    expect(response.ok()).toBe(true);
+    s=await (await page.request.get(`/api/v1/runs/${id}`)).json();
+  }
+  await page.reload();
+  await expect(page.getByRole('heading',{name:/돈 너머에 남은/})).toBeVisible();
+  const downloadPromise=page.waitForEvent('download');
+  await page.getByRole('button',{name:'나의 인생 카드 저장 ↓'}).click();
+  const download=await downloadPromise;
+  expect(download.suggestedFilename()).toBe('나의_두번째_20년.svg');
+  await page.screenshot({path:`reports/screenshots/${info.project.name}-ending.png`,fullPage:true});
+  expect(errors).toEqual([]);
+});
+
+test('slow order validation cannot change a plan during turn confirmation',async({page})=>{
+  await page.goto('/');
+  await page.getByRole('button',{name:'나의 2006년으로 →'}).click();
+  await expect(page.getByRole('heading',{name:'2006년, 가을'})).toBeVisible();
+  await page.getByRole('button',{name:'투자',exact:true}).click();
+  let unblock:()=>void=()=>{},started:()=>void=()=>{};
+  const waiting=new Promise<void>(resolve=>started=resolve);
+  const gate=new Promise<void>(resolve=>unblock=resolve);
+  await page.route('**/preview',async route=>{started();await gate;await route.continue();});
+  await page.getByRole('button',{name:'이번 분기에 주문 예약 +'}).click();
+  await waiting;
+  await expect(page.locator('#advance')).toBeDisabled();
+  unblock();
+  await expect(page.locator('#order-queue')).toContainText('MOCK_A 매수 1');
+  await expect(page.locator('#advance')).toBeEnabled();
+});

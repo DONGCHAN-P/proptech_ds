@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <title>주거 방식 비교 인트로</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      @font-face { font-family: "Pretendard"; font-weight: 400; src: url("assets/fonts/Pretendard-Regular.woff2") format("woff2"); }
+      @font-face { font-family: "Pretendard"; font-weight: 600; src: url("assets/fonts/Pretendard-SemiBold.woff2") format("woff2"); }
+      @font-face { font-family: "Pretendard"; font-weight: 700; src: url("assets/fonts/Pretendard-Bold.woff2") format("woff2"); }
+      @font-face { font-family: "Pretendard"; font-weight: 800; src: url("assets/fonts/Pretendard-ExtraBold.woff2") format("woff2"); }
+      :root {
+        --canvas: #f6f4ef; --ink: #173348; --muted: #546973; --panel: #ecebe4; --card: #fbfbf8;
+        --primary: #286cda; --buy: #286cda; --jeonse: #c29a44; --wolse: #3f8f7f; --line: #d9d6cc; --jeonse-ink: #94702a;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--canvas); }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--canvas);
+              font-family: "Pretendard", sans-serif; color: var(--ink); }
+      .abs { position: absolute; }
+
+      /* 채널 셸: 교산 v5 실측 좌표 */
+      #brand { left: 88px; top: 28px; font-size: 22px; font-weight: 400; color: var(--ink); display: flex; gap: 14px; }
+      #brand i { font-style: normal; font-weight: 600; }
+      #tag { right: 80px; top: 30px; font-size: 20px; color: var(--muted); }
+      .title { position: absolute; left: 80px; top: 142px; font-size: 43px; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); }
+      #capbox { left: 96px; top: 876px; width: 1728px; height: 124px; background: #fff; border-radius: 16px; }
+      .cue { position: absolute; left: 140px; width: 1640px; top: 876px; height: 124px; display: flex; align-items: center;
+             justify-content: center; text-align: center; font-size: 40px; font-weight: 400; line-height: 1.25; color: var(--ink); }
+      .source { position: absolute; left: 96px; top: 1018px; font-size: 19px; color: #5a666d; white-space: nowrap; }
+
+      .scene { position: absolute; inset: 0; }
+      .wrap { position: absolute; inset: 0; }
+      .panel { position: absolute; left: 80px; top: 225px; width: 1080px; height: 540px; background: var(--panel); border-radius: 14px; overflow: hidden; }
+      .panel.wide { width: 1740px; }
+      .card { position: absolute; left: 1250px; width: 570px; background: var(--card); border-left: 5px solid var(--primary);
+              border-radius: 0 10px 10px 0; padding: 22px 26px; }
+      .card .k { font-size: 25px; font-weight: 600; color: #4b5d68; }
+      .card .v { font-size: 50px; font-weight: 700; color: var(--primary); margin-top: 4px; letter-spacing: -0.01em; }
+      .card .s { font-size: 23px; color: var(--ink); margin-top: 6px; }
+      .dot { display: inline-block; width: 16px; height: 16px; border-radius: 50%; margin-right: 10px; vertical-align: 2px; }
+
+      /* s1 */
+      .hh-k { display: flex; align-items: center; }
+      .bar1 { position: absolute; bottom: 0; width: 92px; border-radius: 6px 6px 0 0; transform-origin: 50% 100%; }
+
+      /* s2 */
+      .chip { position: absolute; top: 34px; height: 72px; padding: 0 30px; display: flex; align-items: center; background: #fff;
+              border-radius: 36px; font-size: 30px; font-weight: 700; }
+      .row { position: absolute; left: 60px; width: 1620px; height: 92px; }
+      .row .lab { position: absolute; left: 0; top: 0; width: 170px; height: 92px; display: flex; align-items: center; font-size: 30px; font-weight: 700; }
+      .row .track { position: absolute; left: 190px; top: 22px; width: 900px; height: 48px; border-radius: 8px; overflow: hidden;
+                    background: repeating-linear-gradient(135deg, #f7f6f1 0 10px, #eeede6 10px 20px); border: 1px solid var(--line); }
+      .row .fill { position: absolute; left: 0; top: 0; height: 100%; transform-origin: 0 50%; }
+      .row .desc { position: absolute; left: 1120px; top: 0; height: 92px; display: flex; align-items: center; font-size: 25px; color: var(--ink); white-space: nowrap; }
+      .legend-rest { position: absolute; font-size: 21px; color: var(--muted); }
+
+      /* s3 */
+      .col { position: absolute; top: 40px; width: 300px; height: 330px; background: #fff; border-radius: 12px; }
+      .col .h { position: absolute; left: 0; right: 0; top: 24px; text-align: center; font-size: 34px; font-weight: 700; }
+      .col svg { position: absolute; left: 75px; top: 92px; }
+      .col .p { position: absolute; left: 0; right: 0; top: 262px; text-align: center; font-size: 24px; color: var(--muted); }
+      .rule { position: absolute; left: 60px; top: 432px; width: 960px; height: 76px; background: #fff; border: 2px solid var(--primary);
+              border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 700; color: var(--primary); }
+      .arrow { position: absolute; top: 372px; width: 4px; height: 58px; background: var(--primary); transform-origin: 50% 0; }
+      .arrow::after { content: ""; position: absolute; left: -8px; bottom: -4px; border: 10px solid transparent; border-top: 12px solid var(--primary); border-bottom: 0; }
+
+      /* s4 */
+      .chart { position: absolute; top: 0; width: 500px; height: 540px; }
+      .chart .hd { position: absolute; left: 0; right: 0; top: 22px; text-align: center; font-size: 25px; font-weight: 700; }
+      .chart .hd.base { color: var(--primary); }
+      .chart .barwrap { position: absolute; top: 0; width: 110px; height: 100%; }
+      .chart .bar { position: absolute; left: 0; bottom: 0; width: 110px; border-radius: 6px 6px 0 0; transform-origin: 50% 100%; }
+      .chart .val { position: absolute; left: -30px; width: 170px; text-align: center; font-size: 20px; font-weight: 700; white-space: nowrap; }
+      .chart .xl { position: absolute; top: 432px; width: 110px; text-align: center; font-size: 24px; font-weight: 600; }
+      .chart .order { position: absolute; left: 40px; right: 40px; top: 478px; height: 44px; border-radius: 22px; background: #fff;
+                      display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; color: var(--ink); }
+      .grid { position: absolute; left: 70px; width: 1640px; height: 1px; background: #d3d0c6; }
+      .ylab { position: absolute; left: 14px; width: 48px; text-align: right; font-size: 18px; color: var(--muted); }
+
+      /* s5 */
+      .shot { position: absolute; left: 0; top: 0; width: 1080px; height: 540px; }
+      .shotlabel { position: absolute; left: 28px; top: 26px; background: #fff; border-radius: 10px; padding: 14px 22px; }
+      .shotlabel .a { font-size: 21px; color: var(--muted); }
+      .shotlabel .b { font-size: 30px; font-weight: 700; margin-top: 2px; }
+      .step { position: absolute; left: 1250px; width: 570px; height: 160px; background: var(--card); border-left: 5px solid #b9c3c8;
+              border-radius: 0 10px 10px 0; padding: 0 28px; display: flex; flex-direction: column; justify-content: center; }
+      .step .t { font-size: 34px; font-weight: 700; color: var(--ink); }
+      .step .badge { align-self: flex-start; margin-top: 12px; padding: 6px 16px; border-radius: 18px; background: var(--primary); color: #fff; font-size: 21px; font-weight: 700; }
+      .link { position: absolute; left: 1166px; top: 493px; width: 72px; height: 4px; background: var(--primary); transform-origin: 0 50%; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{TOTAL}}" data-width="1920" data-height="1080">
+      <div id="brand" class="abs clip" data-start="0" data-duration="{{TOTAL}}" data-track-index="0"><i>|</i><span>데이터로 보는 부동산</span></div>
+      <div id="tag" class="abs clip" data-start="0" data-duration="{{TOTAL}}" data-track-index="0">주거 방식 비교</div>
+{{TITLES}}
+
+      <!-- s1 같은 집 · 세 가구 -->
+      <section id="s1" class="scene clip" data-start="{{s1_START}}" data-duration="{{s1_DUR}}" data-track-index="3">
+        <div class="wrap" id="s1-w">
+          <div class="panel">
+            <svg id="s1-bld" class="abs" style="left:150px;top:40px" width="380" height="500" viewBox="0 0 380 500">
+              <rect x="20" y="20" width="340" height="480" rx="6" fill="#f9f8f4" stroke="#c9c5b8" stroke-width="2"/>
+              <rect x="20" y="20" width="340" height="26" fill="#dedbd0"/>
+              <g id="s1-wins" fill="#dcd9cf"></g>
+              <rect id="s1-w-buy" x="56" y="250" width="64" height="40" rx="3" fill="#286cda"/>
+              <rect id="s1-w-jeonse" x="158" y="250" width="64" height="40" rx="3" fill="#c29a44"/>
+              <rect id="s1-w-wolse" x="260" y="250" width="64" height="40" rx="3" fill="#3f8f7f"/>
+            </svg>
+            <div class="abs" id="s1-axis" style="left:620px;top:470px;width:400px;height:2px;background:#9aa4a8"></div>
+            <div class="abs" id="s1-axl" style="left:620px;top:482px;width:400px;font-size:22px;color:#546973;display:flex;justify-content:space-between"><span>입주</span><span>10년 후 자산</span></div>
+            <div class="abs" style="left:650px;top:70px;width:360px;height:400px">
+              <div class="bar1" id="s1-b1" style="left:0;height:338px;background:#286cda"></div>
+              <div class="bar1" id="s1-b2" style="left:134px;height:362px;background:#c29a44"></div>
+              <div class="bar1" id="s1-b3" style="left:268px;height:379px;background:#3f8f7f"></div>
+            </div>
+          </div>
+          <div class="card" id="s1-c1" style="top:240px;border-left-color:var(--buy)"><div class="k hh-k"><span class="dot" style="background:var(--buy)"></span>매매</div><div class="s">집을 산 가구</div></div>
+          <div class="card" id="s1-c2" style="top:420px;border-left-color:var(--jeonse)"><div class="k hh-k"><span class="dot" style="background:var(--jeonse)"></span>전세</div><div class="s">전세로 산 가구</div></div>
+          <div class="card" id="s1-c3" style="top:600px;border-left-color:var(--wolse)"><div class="k hh-k"><span class="dot" style="background:var(--wolse)"></span>월세</div><div class="s">월세로 산 가구</div></div>
+        </div>
+      </section>
+
+      <!-- s2 매달 드는 주거비 -->
+      <section id="s2" class="scene clip" data-start="{{s2_START}}" data-duration="{{s2_DUR}}" data-track-index="3">
+        <div class="wrap" id="s2-w">
+          <div class="panel wide">
+            <div class="chip" id="s2-ch1" style="left:450px">집값 상승률</div>
+            <div class="abs" id="s2-vs" style="left:688px;top:52px;font-size:30px;font-weight:700;color:#546973">vs</div>
+            <div class="chip" id="s2-ch2" style="left:752px">주식 수익률</div>
+            <div class="legend-rest" id="s2-leg" style="left:250px;top:150px">월 예산 300만원 중 <b style="color:var(--ink)">주거에 드는 돈</b> · 빗금은 남는 돈</div>
+            <div class="row" id="s2-r1" style="top:196px">
+              <div class="lab" style="color:var(--buy)">매매</div>
+              <div class="track"><div class="fill" id="s2-f1" style="width:605px;background:var(--buy)"></div></div>
+              <div class="desc">대출 원리금 + 보유비</div>
+            </div>
+            <div class="row" id="s2-r2" style="top:300px">
+              <div class="lab" style="color:var(--jeonse-ink)">전세</div>
+              <div class="track"><div class="fill" id="s2-f2" style="width:215px;background:var(--jeonse)"></div></div>
+              <div class="desc">전세대출 이자 + 관리비용</div>
+            </div>
+            <div class="row" id="s2-r3" style="top:404px">
+              <div class="lab" style="color:var(--wolse)">월세</div>
+              <div class="track"><div class="fill" id="s2-f3" style="width:335px;background:var(--wolse)"></div></div>
+              <div class="desc">월세 + 보증금 대출 이자 + 관리비용</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- s3 비교 조건 -->
+      <section id="s3" class="scene clip" data-start="{{s3_START}}" data-duration="{{s3_DUR}}" data-track-index="3">
+        <div class="wrap" id="s3-w">
+          <div class="panel">
+            <div class="col" id="s3-k1" style="left:60px"><div class="h" style="color:var(--buy)">매수</div>
+              <svg width="150" height="150" viewBox="0 0 150 150"><path d="M15 70 L75 18 L135 70 V138 H15 Z" fill="#f4f2ec" stroke="#173348" stroke-width="5" stroke-linejoin="round"/><rect x="58" y="92" width="34" height="46" fill="#173348"/></svg>
+              <div class="p">6억원 집 · 10년</div></div>
+            <div class="col" id="s3-k2" style="left:390px"><div class="h" style="color:var(--jeonse-ink)">전세</div>
+              <svg width="150" height="150" viewBox="0 0 150 150"><path d="M15 70 L75 18 L135 70 V138 H15 Z" fill="#f4f2ec" stroke="#173348" stroke-width="5" stroke-linejoin="round"/><rect x="58" y="92" width="34" height="46" fill="#173348"/></svg>
+              <div class="p">6억원 집 · 10년</div></div>
+            <div class="col" id="s3-k3" style="left:720px"><div class="h" style="color:var(--wolse)">월세</div>
+              <svg width="150" height="150" viewBox="0 0 150 150"><path d="M15 70 L75 18 L135 70 V138 H15 Z" fill="#f4f2ec" stroke="#173348" stroke-width="5" stroke-linejoin="round"/><rect x="58" y="92" width="34" height="46" fill="#173348"/></svg>
+              <div class="p">6억원 집 · 10년</div></div>
+            <div class="arrow" id="s3-a1" style="left:208px"></div>
+            <div class="arrow" id="s3-a2" style="left:538px"></div>
+            <div class="arrow" id="s3-a3" style="left:868px"></div>
+            <div class="rule" id="s3-rule">남은 돈 → 세 가구 모두 같은 투자 규칙</div>
+          </div>
+          <div class="card" id="s3-c1" style="top:240px"><div class="k">초기 순자산</div><div class="v">2억5천만원</div></div>
+          <div class="card" id="s3-c2" style="top:420px"><div class="k">매달 주거·저축 예산</div><div class="v">300만원</div></div>
+          <div class="card" id="s3-c3" style="top:600px"><div class="k">같은 수준의 집 · 기간</div><div class="v">6억원 · 10년</div></div>
+        </div>
+      </section>
+
+      <!-- s4 10년 후 순자산 (공통 세로축 0~8억, 1억=40px, 기준선 y=410) -->
+      <section id="s4" class="scene clip" data-start="{{s4_START}}" data-duration="{{s4_DUR}}" data-track-index="3">
+        <div class="wrap" id="s4-w">
+          <div class="panel wide" id="s4-panel">
+            <div class="grid" style="top:410px;background:#9aa4a8"></div>
+            <div class="grid g" style="top:330px"></div><div class="grid g" style="top:250px"></div><div class="grid g" style="top:170px"></div><div class="grid g" style="top:90px"></div>
+            <div class="ylab" style="top:398px">0</div><div class="ylab" style="top:318px">2억</div><div class="ylab" style="top:238px">4억</div><div class="ylab" style="top:158px">6억</div><div class="ylab" style="top:78px">8억</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- s5 시리즈 순서 -->
+      <section id="s5" class="scene clip" data-start="{{s5_START}}" data-duration="{{s5_DUR}}" data-track-index="3">
+        <div class="wrap" id="s5-w">
+          <div class="panel" id="s5-panel">
+            <img class="shot" id="s5-img" src="assets/gyosan_landuse_panel.png" alt="" />
+            <div class="shotlabel" id="s5-lab"><div class="a">지난 편</div><div class="b">하남 교산 · 입지와 가격</div></div>
+          </div>
+          <div class="link" id="s5-link"></div>
+          <div class="step" id="s5-p1" style="top:240px"><div class="t">1. 주거 방식과 순자산</div><div class="badge" id="s5-today">오늘</div></div>
+          <div class="step" id="s5-p2" style="top:420px"><div class="t">2. 감당 가능한 예산</div></div>
+          <div class="step" id="s5-p3" style="top:600px"><div class="t">3. 예산 안의 단지 선택</div></div>
+        </div>
+      </section>
+
+      <div id="capbox" class="abs clip" data-start="0" data-duration="{{TOTAL}}" data-track-index="7"></div>
+{{SOURCES}}
+{{CUES}}
+    </div>
+
+    <script>
+      const C = {{CUE_JSON}};          // 큐 시작 시각(초, provisional)
+      const S = {{SCENE_JSON}};        // 장면 [start, dur]
+      const tl = gsap.timeline({ paused: true });
+      const IN = { opacity: 0, y: 14 }, ON = { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" };
+      const enter = (sel, t) => tl.fromTo(sel, IN, { ...ON }, t);
+      const grow = (sel, t, d = 1.6, axis = "scaleY") => tl.fromTo(sel, { [axis]: 0 }, { [axis]: 1, duration: d, ease: "power2.inOut" }, t);
+      const dim = (sel, t, o = 0.35) => tl.to(sel, { opacity: o, duration: 0.4, ease: "power1.out" }, t);
+      const lit = (sel, t) => tl.to(sel, { opacity: 1, duration: 0.4, ease: "power1.out" }, t);
+      // 장면 경계: 안쪽 래퍼만 짧게 페이드
+      for (const id of Object.keys(S)) {
+        const [s, d] = S[id];
+        if (s > 0) tl.fromTo(`#${id}-w`, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power1.out" }, s);
+        tl.to(`#${id}-w`, { opacity: 0, duration: 0.3, ease: "power1.in" }, s + d - 0.3);
+      }
+
+      // s1 창 격자 생성(결정적)
+      const wins = document.getElementById("s1-wins");
+      for (let r = 0; r < 8; r++) for (let c = 0; c < 3; c++) {
+        if (r === 4) continue;
+        const el = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+        el.setAttribute("x", 56 + c * 102); el.setAttribute("y", 70 + r * 45 + (r > 4 ? 0 : 0));
+        el.setAttribute("width", 64); el.setAttribute("height", 30); el.setAttribute("rx", 3);
+        wins.appendChild(el);
+      }
+      enter("#s1-bld", 0.3);
+      ["#s1-w-buy", "#s1-w-jeonse", "#s1-w-wolse"].forEach((s, i) => tl.fromTo(s, { opacity: 0.15 }, { opacity: 1, duration: 0.45 }, C[0] + 0.6 + i * 0.35));
+      enter("#s1-c1", C[1] + 0.1); enter("#s1-c2", C[1] + 0.9); enter("#s1-c3", C[1] + 1.7);
+      enter("#s1-axis", C[1] + 2.4); enter("#s1-axl", C[1] + 2.4);
+      ["#s1-b1", "#s1-b2", "#s1-b3"].forEach((s) => grow(s, C[1] + 2.7, 1.8));
+
+      // s2
+      enter("#s2-ch1", C[2] + 0.2); enter("#s2-vs", C[2] + 0.8); enter("#s2-ch2", C[2] + 1.2);
+      dim("#s2-ch1, #s2-ch2, #s2-vs", C[3] + 0.6, 0.45);
+      enter("#s2-leg", C[4]);
+      ["#s2-r1", "#s2-r2", "#s2-r3"].forEach((s, i) => enter(s, C[4] + 0.3 + i * 0.4));
+      ["#s2-f1", "#s2-f2", "#s2-f3"].forEach((s) => grow(s, C[5] + 0.2, 1.6, "scaleX"));
+
+      // s3
+      enter("#s3-c1", C[6] + 0.8); enter("#s3-c2", C[7] + 0.8); enter("#s3-c3", C[8] + 0.6);
+      ["#s3-k1", "#s3-k2", "#s3-k3"].forEach((s, i) => tl.fromTo(s, { opacity: 0, y: 14 }, { opacity: 0.45, y: 0, duration: 0.5, ease: "power2.out" }, C[6] + 0.2 + i * 0.2));
+      lit("#s3-k1", C[9] + 0.3); lit("#s3-k2", C[9] + 1.6); lit("#s3-k3", C[10] + 0.4);
+      ["#s3-a1", "#s3-a2", "#s3-a3"].forEach((s, i) => grow(s, C[11] + 0.4 + i * 0.15, 0.6));
+      enter("#s3-rule", C[11] + 1.0);
+
+      // s4 차트 3개 생성 (값: 억원, illustrative_results.json cases)
+      const charts = [
+        { hd: "기본 가정 · 집값 연 2% · 투자 연 6%", base: true, v: [6.144, 6.587, 6.886], lab: ["약 6억1천만원", "약 6억6천만원", "약 6억9천만원"], order: "월세 > 전세 > 매매" },
+        { hd: "집값 연 4% · 투자 연 2%", v: [7.395, 5.625, 5.357], lab: ["약 7억4천만원", "약 5억6천만원", "약 5억4천만원"], order: "매매 > 전세 > 월세" },
+        { hd: "집값 연 0% · 투자 연 2%", v: [4.514, 5.625, 5.357], lab: ["약 4억5천만원", "약 5억6천만원", "약 5억4천만원"], order: "전세 > 월세 > 매매" },
+      ];
+      const col = ["#286cda", "#c29a44", "#3f8f7f"], ink = ["#286cda", "#94702a", "#3f8f7f"], nm = ["매매", "전세", "월세"];
+      const panel = document.getElementById("s4-panel");
+      charts.forEach((ch, k) => {
+        const el = document.createElement("div");
+        el.className = "chart"; el.id = `s4-ch${k}`; el.style.left = `${100 + k * 560}px`;
+        let h = `<div class="hd${ch.base ? " base" : ""}">${ch.hd}</div>`;
+        ch.v.forEach((v, i) => {
+          const px = Math.round(v * 40), x = 45 + i * 145;
+          h += `<div class="barwrap" style="left:${x}px"><div class="bar" id="s4-b${k}${i}" style="height:${px}px;bottom:${540 - 410}px;background:${col[i]}"></div>` +
+               `<div class="val" id="s4-v${k}${i}" style="top:${410 - px - 34}px;color:${ink[i]}">${ch.lab[i]}</div></div>` +
+               `<div class="xl" style="left:${x}px;color:${ink[i]}">${nm[i]}</div>`;
+        });
+        h += `<div class="order" id="s4-o${k}">${ch.order}</div>`;
+        el.innerHTML = h; panel.appendChild(el);
+      });
+      const topIdx = (k) => charts[k].v.indexOf(Math.max(...charts[k].v));
+      enter("#s4-ch0 .hd", C[12] + 0.3);
+      for (let i = 0; i < 3; i++) { grow(`#s4-b0${i}`, C[13] + i * 1.6, 1.4); enter(`#s4-v0${i}`, C[13] + i * 1.6 + 1.2); }
+      tl.fromTo("#s4-ch1, #s4-ch2", { opacity: 0 }, { opacity: 1, duration: 0.4 }, C[14]);
+      tl.set("#s4-ch1 .bar, #s4-ch2 .bar", { scaleY: 0 }, 0);
+      tl.set("#s4-ch1 .val, #s4-ch2 .val, #s4-ch1 .hd, #s4-ch2 .hd, .chart .order", { opacity: 0 }, 0);
+      enter("#s4-ch1 .hd", C[14] + 0.2); enter("#s4-ch2 .hd", C[14] + 0.6);
+      [1, 2].forEach((k) => { for (let i = 0; i < 3; i++) grow(`#s4-b${k}${i}`, C[14] + 0.8 + (k - 1) * 0.3, 1.6); });
+      [1, 2].forEach((k) => { for (let i = 0; i < 3; i++) enter(`#s4-v${k}${i}`, C[14] + 2.3); });
+      // 가장 큰 값만 남기고 나머지 흐리게: 기본(월세) → 매매(4%/2%) → 전세(0%/2%) 발화 순서
+      const focus = (k, t) => { for (let i = 0; i < 3; i++) if (i !== topIdx(k)) { dim(`#s4-b${k}${i}`, t, 0.3); dim(`#s4-v${k}${i}`, t, 0.3); } };
+      focus(1, C[15] + 0.2); focus(2, C[15] + 2.4);
+      ["#s4-o0", "#s4-o1", "#s4-o2"].forEach((s, i) => enter(s, C[16] + 0.4 + i * 0.3));
+      for (let k = 1; k < 3; k++) for (let i = 0; i < 3; i++) lit(`#s4-b${k}${i}, #s4-v${k}${i}`, C[16] + 0.4);
+
+      // s5
+      tl.set("#s5-p1, #s5-p2, #s5-p3", { opacity: 0 }, 0);
+      enter("#s5-lab", C[17] + 0.6);
+      grow("#s5-link", C[18] + 0.2, 0.6, "scaleX");
+      tl.set("#s5-today", { opacity: 0 }, 0);
+      [["#s5-p1", 19], ["#s5-p2", 20], ["#s5-p3", 21]].forEach(([s, c]) => {
+        enter(s, C[c] + 0.2);
+        tl.to(s, { borderLeftColor: "#286cda", duration: 0.4 }, C[c] + 0.2);
+      });
+      dim("#s5-panel", C[19], 0.55);
+      dim("#s5-p2, #s5-p3", C[22] + 0.2, 0.4);
+      enter("#s5-today", C[22] + 0.4);
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

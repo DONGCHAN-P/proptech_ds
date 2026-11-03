@@ -1,0 +1,115 @@
+{
+  "status": "actual_full_film_render_decode_and_encoded_evidence_complete_independent_media_QA_pending",
+  "next_roles": [
+    "main",
+    "Bernoulli",
+    "Claude via main media packet utility"
+  ],
+  "final_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\renders\\measured-v3-visual-v4-r1\\affordable_home_price_private_voice_v3_visual_v4.mp4",
+  "final_sha256": "ad9df5989c019395e9ea9eb7877c81300cf78e9ab611536ebcc7431c8fc3609a",
+  "final_bytes": 58010976,
+  "captions_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\captions_measured.srt",
+  "captions_sha256": "070ae5624c211f8aaa6b862079d068820bf7e6ad84013e628b7bb40d6718120b",
+  "duration_s": 1186.033333,
+  "expected_duration_s": 1186.0333333333335,
+  "final_video_frames": 35581,
+  "ffprobe_streams": [
+    {
+      "codec_type": "video",
+      "codec_name": "h264",
+      "width": 1920,
+      "height": 1080,
+      "r_frame_rate": "30/1",
+      "sample_rate": null,
+      "channels": null,
+      "nb_frames": "35581"
+    },
+    {
+      "codec_type": "audio",
+      "codec_name": "aac",
+      "width": null,
+      "height": null,
+      "r_frame_rate": "0/0",
+      "sample_rate": "48000",
+      "channels": 2,
+      "nb_frames": "55597"
+    }
+  ],
+  "decode_returncode": 0,
+  "decode_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "render_receipt": "editor/render_receipt.json",
+  "render_receipt_sha256": "2ca1e0c7674223d15482916ce20c96ba2362172720ff1372fa3c13eddf3c4462",
+  "encoded_frame_plan": "outputs/private-production-v1/encoded_frame_plan.json",
+  "encoded_frame_plan_sha256": "1926d39ddd32523e980ee580b45860218f468bea5a3130b1e165b023e5e0b3e3",
+  "encoded_unique_frames": 185,
+  "encoded_scene_representatives": 45,
+  "assembly_joins": 12,
+  "encoded_critical_frames": "outputs/private-production-v1/encoded_critical_frames.json",
+  "encoded_critical_frames_sha256": "6c991028a231c332630e3fb8f4f698f6f4353121a476936bc03e29a0027aa0f7",
+  "critical_fullres_frames": 16,
+  "encoded_review_image_list": "editor/encoded_review_image_list.json",
+  "encoded_review_image_list_sha256": "38b7d9472eecb098c22165e2754b2bb70425c0fdd172bcdfe890eab7d1d765d1",
+  "image_list_count": 17,
+  "contact_overview": {
+    "file": "renders/measured-v3-visual-v4-r1/encoded-evidence/contact_overview.png",
+    "sha256": "04372af56d396c94eb35d28f3c332d843552086a3695f297ba37b9021ab2c927",
+    "role": "45_scene_encoded_overview_only"
+  },
+  "contact_sheets": [
+    {
+      "file": "renders/measured-v3-visual-v4-r1/encoded-evidence/contact_01.png",
+      "sha256": "6fb224388e9d0fb81046ff6da22aaf633028d1f881f70ac38ecc36f8dc39e6d5",
+      "role": "encoded_scene_contact_sheet"
+    },
+    {
+      "file": "renders/measured-v3-visual-v4-r1/encoded-evidence/contact_02.png",
+      "sha256": "ab00ca530358f38ad521e49aa8e56f8a295e8542d2e2878af856e3fb4620c30d",
+      "role": "encoded_scene_contact_sheet"
+    },
+    {
+      "file": "renders/measured-v3-visual-v4-r1/encoded-evidence/contact_03.png",
+      "sha256": "e59b09159bda35e7f078751c15ca3c300f4608e8b414f750832683cd65ffcc33",
+      "role": "encoded_scene_contact_sheet"
+    },
+    {
+      "file": "renders/measured-v3-visual-v4-r1/encoded-evidence/contact_04.png",
+      "sha256": "ec1a71a4fc36c57c55a1329262b882d518a2f002e5b97ea1db1592f2204cfa48",
+      "role": "encoded_scene_contact_sheet"
+    },
+    {
+      "file": "renders/measured-v3-visual-v4-r1/encoded-evidence/contact_05.png",
+      "sha256": "ab1d7a20804468602a4d796d98692a323c6d7771b8b8af8f06fb1b391061f6c9",
+      "role": "encoded_scene_contact_sheet"
+    }
+  ],
+  "input_manifest": "editor/render_input_manifest.json",
+  "input_manifest_sha256": "fdb10e110929e63618960434dd3dfa36e83c984253510304b1d99578d6e7869d",
+  "all_455_pinned_inputs_unchanged_after_render": true,
+  "input_file_count": 455,
+  "source_HTML_EDL_SRT_audio_immutable": true,
+  "authorization": {
+    "authorization": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\director\\production-v1\\render_authorization_v1.json",
+    "authorization_sha256": "12465262ca73cc463f983a9ec90b669b7aa840d22e795166f05329805a72294b",
+    "independent_evidence": {
+      "source_qa": {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/qa/source-media-v1/source_approval_v4.json",
+        "sha256": "db133b230bfd29280d307e2ffa2007753543a2589ce55b3a77d8a688a32ac04d"
+      },
+      "audio_qa": {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/qa/audio-v1/audio_gate_v3.json",
+        "sha256": "52b3c4284925f68225974aebcde9aa77ae1838d4c8ca32d1925897829164b639"
+      },
+      "edl_review": {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/director/production-v1/edl_review_v3.json",
+        "sha256": "93346857a473e8f074634a5285c703b8b19f3d8e862135efc1a802dd5623dfd7"
+      }
+    }
+  },
+  "actual_editor_encoded_frame_viewing": "pending targeted pixel inspection; all PNG dimensions/hashes already verified",
+  "actual_listening": false,
+  "continuous_playback": false,
+  "release_or_upload_approval": false,
+  "external_upload_performed": false,
+  "paid_calls": 0,
+  "other_owner_writes": false
+}

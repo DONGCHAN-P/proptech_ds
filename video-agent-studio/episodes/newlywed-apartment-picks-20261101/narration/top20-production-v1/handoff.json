@@ -1,0 +1,271 @@
+{
+  "task_id": "top20-narration-prep-v1",
+  "role": "narration",
+  "status": "prepared_budget_response_pending_no_generation",
+  "input_revisions": {
+    "writer/top20-8min-v2/script_v3.md": {
+      "sha256": "4cc70ef2ae3cabda13b560104dd96ef0df0fe1f815a5f1372ac680e729d3be17",
+      "revision": "top20-8min-v3"
+    },
+    "writer/top20-8min-v2/scene_proposals_v3.json": {
+      "sha256": "5ff7d0fc9c414aaf1bc6085039db68ac3d6f11498d00ed271896e70da6941443",
+      "revision": "top20-8min-v3"
+    },
+    "config/tts.json": {
+      "sha256": "773b2a6eabf306a251f560137a88e56db761865954c6089e0900e76d6f27934c",
+      "usage": "Jun 예산 후보 설정"
+    }
+  },
+  "outputs": [
+    {
+      "path": "narration/top20-production-v1/account_readonly.json",
+      "sha256": "119997e46c6965cd54c87833407a8005222c5a0e59e917da9810d1a593e07fc6"
+    },
+    {
+      "path": "narration/top20-production-v1/budget_prompt.txt",
+      "sha256": "6e7b7f32a5eca57016d5fe2f9bd314a5e2dbc092eb86ccb4b933f28e2888178a"
+    },
+    {
+      "path": "narration/top20-production-v1/budget_proposal.json",
+      "sha256": "b7098c603ab1b5f9ba15a22779ac906979e31aca27eced7556df44ae42eb8185"
+    },
+    {
+      "path": "narration/top20-production-v1/check_local.ps1",
+      "sha256": "743a68a36ab36fee6e0983849ad80722a4cc29620881cb4943fb36fe141235db"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/C001.txt",
+      "sha256": "207dc3ad01997b5588b3d65ef0fca33dab5e56961582c5d46d9aa6b375d6f7b9"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/I001.txt",
+      "sha256": "3f6cf6297ad8cfae2a8bb54641382656314916e3dd097608cd13f6fc0af3a512"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/I002.txt",
+      "sha256": "bb113c42a1dcd7d0c3c549816168edeefcb43453c95a62ba1142382af8657057"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/I003.txt",
+      "sha256": "20c05cc9f09aecda0859b0bc69215199127b1807c48920027f4ddfbf7469535d"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/O001.txt",
+      "sha256": "5170943e2cb264e1d8479f281d108e1d4fa8908c22129c24a4005d874b38a3ef"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/O002.txt",
+      "sha256": "e2dfa159c08d00bdb5056671880c9761a4c7cfa9cf1fefa61bb7fe1a78613002"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S003.txt",
+      "sha256": "27e4ca48ceb795438ffdbf728898f36383502bb6be92db6e3ede4b568d108822"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S004.txt",
+      "sha256": "ff454aa59f7099575e85135cb99e8da28afb7ef75dd90d5b49e0e72234058e92"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S005.txt",
+      "sha256": "b5a5d769b654e80e7f0076c11874d697c5ff1923b898138cb601627682cc48d3"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S006.txt",
+      "sha256": "03f1926babce1a1ee9f3d512d872bdc05d2534a6b7808410a617bfb1efd9f1e1"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S007.txt",
+      "sha256": "cd9e9f94ee11d1370db623b2ded3ce91090e8b75d08ebb726f0921e6a5cdc2ed"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S008.txt",
+      "sha256": "be8f90f95c7048a5d8dceb1d424d1463ed162819440e5c480d41770f2012bfb7"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S009.txt",
+      "sha256": "b8f2e7297aa74b5ffb739b5d2484b1c7dfce242b0aa0d9ade9f51d3678969029"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S010.txt",
+      "sha256": "de4b8e9765deab0ada324a9a60666a33c5261ecd529274e7689a72939aa9d092"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S011.txt",
+      "sha256": "0b3c743c8f53e8d81e946a93997627ff1d78b719f5ba2af67b19818671cf069a"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S012.txt",
+      "sha256": "aecb89e72e90e5a835f90dd23b030ac634ae8b421adf02e1f42bac10e957055e"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S013.txt",
+      "sha256": "afabbf86da357874934d9544076624f4e758857c49c39133eb44681367008afe"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S014.txt",
+      "sha256": "66e773b5906a36ea11cbb38407ee81713a49b0f3f2000a8b21e5b3a89cfd32ca"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S015.txt",
+      "sha256": "87ad69633101b165cdfb4d4cf4faa3e740fa4b70177dc48db2fa115579de37c5"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S016.txt",
+      "sha256": "6df227b33cba88ce2601392dab79dba66ece7bfc9fbff17cc14db82dc7e29a42"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S017.txt",
+      "sha256": "e58f1b2f199b201da7897532f2d1891c2bc43d67e3cef04f3f94f0a1a58a0b46"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S018.txt",
+      "sha256": "632066cb98322b60e4f39220f1a8b4db732cb37d4b83708228253da5cf92bd45"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S019.txt",
+      "sha256": "b98aabd4d0474e25435c6263420cf55d55c458938afdd68328001a227241996a"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S020.txt",
+      "sha256": "dbe1878911f9abeddd27721532d9dc4bf1fd45fbaefd3a278f3b6bd2945adcc7"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S021.txt",
+      "sha256": "9721cea17393c75e7d58d0c9c1bffe8d376081aa79336af555d71191b562dab9"
+    },
+    {
+      "path": "narration/top20-production-v1/chunks/S022.txt",
+      "sha256": "c083dffde06c9b7b66742d8ada6a64303965e1e3f00cfda5a54514f5b41090d8"
+    },
+    {
+      "path": "narration/top20-production-v1/display_sentences.txt",
+      "sha256": "36b91b8c76cd4f648c85b7a4140517ee588b20d46fd46f59326887c1f660035b"
+    },
+    {
+      "path": "narration/top20-production-v1/execution_audit.json",
+      "sha256": "ce45ef3aecd2c06b2fea0bc841c82afb7e6525c3b4832485e11262934b678785"
+    },
+    {
+      "path": "narration/top20-production-v1/free_fallback_availability.json",
+      "sha256": "c2d20dcabfe12bd1e788b3dd3e2b5c1aeb11ed0aed31158c53b76027fd58c798"
+    },
+    {
+      "path": "narration/top20-production-v1/issue_TOP20-BUDGET-GATE.json",
+      "sha256": "d1818134c8fcef28e07083c46e5de94f4e3f04635d4b079d7d88bc4acb090dba"
+    },
+    {
+      "path": "narration/top20-production-v1/local_windows_voices.json",
+      "sha256": "da0db8e5869ca31f8ac6c6ab622d6360a3e10768536808741000fc440f91d15b"
+    },
+    {
+      "path": "narration/top20-production-v1/narration_manifest.json",
+      "sha256": "0bb9ef1465958b8e722b91b7ed1b74d64c623d638193c41a939bc7af701f024d"
+    },
+    {
+      "path": "narration/top20-production-v1/narration_reading.md",
+      "sha256": "66c6d2fa1847b3d192fb3ce7126ff1d1b007944922cd052492bcbe836e9f0350"
+    },
+    {
+      "path": "narration/top20-production-v1/preflight.json",
+      "sha256": "8052b6a32b26786fa48e1943a394fd19c7c8c64d7e218c7124d436714dd534c0"
+    },
+    {
+      "path": "narration/top20-production-v1/prepare.py",
+      "sha256": "23df6068bc70be4516e575036fa47a08fbad2ccc176412167b49628ca5db0a89"
+    },
+    {
+      "path": "narration/top20-production-v1/pronunciation_dictionary.json",
+      "sha256": "dda5cc9aaffc4a11bd6363e235705a6ebd66dc2062a4f15ef9843fcee618ace1"
+    },
+    {
+      "path": "narration/top20-production-v1/provider_plan.json",
+      "sha256": "a9d73864379e6738eca9156d3694fe61aff96b99cbed73c4a8e2cebfc141ebae"
+    },
+    {
+      "path": "narration/top20-production-v1/read_account.mjs",
+      "sha256": "90b4a6df7133ed3b63649f180878d94190483763f7bc8d844933994b71d1f85c"
+    },
+    {
+      "path": "narration/top20-production-v1/reading_text.txt",
+      "sha256": "0c030874d9b0d49270abd07e158cf53cfcf939dcddd03494a736e36f468d6fe4"
+    },
+    {
+      "path": "narration/top20-production-v1/sentences.json",
+      "sha256": "d888e45610e5bbdc71e67e5892898970bf7481fc09a85efe671dd3bf1291f9c5"
+    },
+    {
+      "path": "narration/top20-production-v1/timing_proposals.json",
+      "sha256": "e1eb0a94ad38d9d34bd4947b4d4b685582623030856148c0e42a193a82017e2c"
+    },
+    {
+      "path": "narration/top20-production-v1/verification.json",
+      "sha256": "052733951552f46d57b445edc786e04dced23c0de90ccaeac98f58a792e3cf32"
+    }
+  ],
+  "affected_scene_ids": [
+    "O001",
+    "O002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "I001",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012",
+    "I002",
+    "S013",
+    "S014",
+    "S015",
+    "S016",
+    "S017",
+    "I003",
+    "S018",
+    "S019",
+    "S020",
+    "S021",
+    "S022",
+    "C001",
+    "E001"
+  ],
+  "checks": [
+    {
+      "check": "원문/문장 ID·숫자 값·입력 파일별 문자수",
+      "result": "passed",
+      "evidence": "verification.json"
+    },
+    {
+      "check": "계정 잔액·요율 GET 조회",
+      "result": "read_only_checks_passed",
+      "evidence": "account_readonly.json"
+    },
+    {
+      "check": "실제 음성·길이·청취·독립 QA",
+      "result": "not_performed",
+      "evidence": null
+    }
+  ],
+  "budget_summary": {
+    "input_characters": 4281,
+    "estimated_credits": 4281,
+    "included_credit_cap": 6000,
+    "included_remaining": 16664,
+    "additional_cash_krw_cap": 0,
+    "automatic_retry": false
+  },
+  "open_issue_ids": [
+    "TOP20-BUDGET-GATE"
+  ],
+  "next_role": "director→예산 응답 확인→narration→editor/qa",
+  "changed_scene_ids": [],
+  "new_audio_duration_s": null,
+  "timing_delta_s": null,
+  "unresolved": [
+    "이번 버전 유효한 예산 응답/무료 음성 선택",
+    "Shorts 새 발화가 필요하면 별도 확정 입력과 예산",
+    "실제 음성·타임록·청취·독립 검수"
+  ]
+}

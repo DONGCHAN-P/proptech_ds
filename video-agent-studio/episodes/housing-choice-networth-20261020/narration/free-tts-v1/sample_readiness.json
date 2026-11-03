@@ -1,0 +1,87 @@
+{
+  "task_id": "free-korean-tts-injoon-sample-v1",
+  "status": "sample_technically_verified_with_boundary_adjustment_not_listened",
+  "authorization": {
+    "source": "현재 사용자 후속 지시",
+    "scope": "edge-tts를 narration/free-tts-v1/deps에만 설치; 지정 두 문장 샘플 1개 온라인 생성; 무료 경로만",
+    "full_script_tts_authorized": false,
+    "paid_api_authorized": false,
+    "global_install_authorized": false,
+    "common_state_or_qa_modified": false,
+    "dotenv_used": false
+  },
+  "installation": {
+    "version": "edge-tts 7.3.1",
+    "target": "narration/free-tts-v1/deps",
+    "dependency_count": 13,
+    "manifest": "dependency_manifest.json",
+    "lockfile": "requirements.lock.txt",
+    "reproduction": "사용법.md의 target 전용 pip 명령과 tts_pipeline.py의 명시적 sys.path bootstrap 사용"
+  },
+  "sample": {
+    "sample_id": "injoon-20261026-v1",
+    "original_text": "육억원 집에서 십년을 비교합니다. 초기 순자산은 이억오천만원입니다.",
+    "spoken_text": "육억원 집에서 십년을 비교합니다. 초기 순자산은 이억오천만원입니다.",
+    "voice": "ko-KR-InJoonNeural",
+    "locale": "ko-KR",
+    "gender": "Male",
+    "voice_gender_evidence": "samples/injoon-20261026-v1/voice_metadata.json",
+    "rate": "-5%",
+    "pitch": "+0Hz",
+    "selection_basis": "사용자 지정 InJoon 한국어 남성. 차분한 전달을 의도해 속도를 5% 낮춤. 실제 자연스러움·발음 청취는 미확인",
+    "selection_status": "technical_candidate; final_listening_pending",
+    "application_synthesis_invocations": 1,
+    "resynthesized_after_validation_failure": false,
+    "mp3": "samples/injoon-20261026-v1/sample.mp3",
+    "wav": "samples/injoon-20261026-v1/sample.wav",
+    "srt": "samples/injoon-20261026-v1/sample.srt",
+    "measured_duration_s": 7.896,
+    "format": "MP3 24000Hz mono 48000bps; 파생 PCM16 mono WAV 24000Hz",
+    "pcm_frames": 189504,
+    "full_decode": "passed",
+    "clipped_sample_count": 0,
+    "rms_dbfs": -20.574691930947665,
+    "actual_listening": false,
+    "pronunciation_verified_by_listening": false
+  },
+  "timing": {
+    "raw_events": "samples/injoon-20261026-v1/boundaries.json",
+    "display_events": "samples/injoon-20261026-v1/cue_boundaries.json",
+    "timemap": "samples/injoon-20261026-v1/timemap.json",
+    "native_sentence_count": 2,
+    "normalized_text_coverage": "passed",
+    "within_measured_file_duration": true,
+    "native_overlap_s": 0.05,
+    "display_overlap_s": 0,
+    "adjustment": "표시용 첫 문장 끝을 두 번째 문장 시작 3.7217105초로 제한. 원시 경계와 원본 오디오 보존",
+    "last_native_boundary_end_s": 7.8921052,
+    "last_signal_above_minus60db_s": 6.813125,
+    "signal_tail_s": 1.082875,
+    "limits": "서비스 경계·표시용 조정·PCM 신호 임계값은 서로 다른 근거. 실제 발화 경계 청취 및 내부 단어 정렬은 미검증. 본편 자막 통과로 승계 금지"
+  },
+  "reusable_foundation": {
+    "code": "tts_pipeline.py",
+    "prepare": "낭독 TXT+확정 발음 사전+script_revision에서 문단·문장별 원문/읽기표기/meaningcue/null timing 준비. 온라인 합성 없음",
+    "measure": "이후 승인 생성된 문장별 PCM WAV의 frames/rate로 실제 길이와 누적 타임맵 생성. 원문·script/audio_revision·SHA 추적",
+    "sample_only_synthesis_lock": true,
+    "missing_before_full_production": ["양측 검수 통과한 확정 대본", "전체 대본 TTS에 대한 후속 지시", "이번 편 발음 사전", "장면ID 연결", "실제 청취·자막 검증"],
+    "demonstration": "prepare-sample-v1/units.json",
+    "tests": "test_tts_pipeline.py; 5 contracts passed",
+    "instructions": "사용법.md"
+  },
+  "sapi": {
+    "fallback_needed": false,
+    "reason": "Edge InJoon 온라인 생성 및 오디오 기술 검사 성공",
+    "sample_generated": false,
+    "historical_registration_only": "이전 점검에서 SAPI COM Heami 등록 확인; 실제 합성 성공으로 승계하지 않음"
+  },
+  "preservation": {
+    "prior_handoff": "handoff.tool-readiness-v1.json",
+    "prior_checks": "checks.tool-readiness-v1.json",
+    "first_local_validation_failure": "samples/injoon-20261026-v1/failure.json",
+    "resolution": "동일 샘플을 로컬 재검증해 경계 정리. 최초 실패 기록은 역사로 보존",
+    "old_director_tool_readiness": "이전 메타 점검 시점 기록으로 유지; 무료 TTS 상태는 본 파일이 후속 근거"
+  },
+  "open_issue_ids": ["EDGE-TIMING-01"],
+  "next_owner": "video_director"
+}

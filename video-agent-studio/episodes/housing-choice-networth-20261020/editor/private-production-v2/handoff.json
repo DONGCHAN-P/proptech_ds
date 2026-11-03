@@ -1,0 +1,40 @@
+{
+  "task_id": "editor-v6-measured-final-production",
+  "role": "editor",
+  "status": "render_complete_technical_pass_final_media_QA_pending",
+  "summary": "v1 보존. ch01~03 불변 증거로 재사용, ch04~10 새 렌더·브랜드 합본·전체 decode 완료. 50장면 대표/경계 등 175개 fullres PNG와 contact 5장 전달. 청취/연속 재생/최종 미디어 승인은 후속.",
+  "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+  "final_mp4": "outputs/private-production-v2/renders/measured-v6/housing_choice_private_v2_injoon_v6.mp4",
+  "final_sha256": "14078d1309cb2e32e766a13d66b9aee278af083a14eb75806a21a2acfae2fc0b",
+  "duration_s": 1525.266667,
+  "bytes": 69017743,
+  "validation": {
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": 30,
+    "audio": "AAC 48kHz stereo",
+    "full_decode": "pass",
+    "source_CLI_BBox_carve_ASR_EDL": "pass",
+    "producer_overview_scenes": 50,
+    "producer_fullres_final_samples": 6,
+    "actual_listening": false,
+    "continuous_playback": false
+  },
+  "artifacts": [
+    "outputs/private-production-v2/encoded_frame_plan.json",
+    "editor/private-production-v2/render_receipt.json",
+    "editor/private-production-v2/prefix_reuse_receipt.json",
+    "editor/private-production-v2/producer_frame_review.json",
+    "editor/private-production-v2/placement_guide.md",
+    "outputs/private-production-v2/captions_measured.srt"
+  ],
+  "open": [
+    "main/QA independent encoded-media review and listening/continuous scope",
+    "main final release packaging and private-upload decision"
+  ],
+  "next_owner": "main / video_qa; release-v2 is main-owned",
+  "new_paid_calls": 0,
+  "upload_performed": false
+}

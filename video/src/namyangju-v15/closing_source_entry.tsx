@@ -1,0 +1,6 @@
+import React from 'react';
+import {registerRoot,Composition,staticFile} from 'remotion';
+import {ClosingOverview,ClosingSummary} from './ClosingSummary';
+import {ClosingVisuals} from './ClosingVisuals';
+function Movie({region,a1,southSchool,mode}:{region:'north'|'south'|'w2';a1?:boolean;southSchool?:boolean;mode?:string}){return <div style={{fontFamily:'Pretendard'}}><style>{`@font-face{font-family:Pretendard;src:url('${staticFile('namyangju-map-led-v6/Pretendard-Regular.woff2')}')}@font-face{font-family:Pretendard;font-weight:700;src:url('${staticFile('namyangju-map-led-v6/Pretendard-Bold.woff2')}')}`}</style>{mode==='overview'?<ClosingOverview/>:mode==='summary'?<ClosingSummary/>:<ClosingVisuals region={region} a1={a1} southSchool={southSchool}/>}</div>}
+registerRoot(()=> <>{[{id:'ClosingNorth',region:'north'},{id:'ClosingSouth',region:'south'},{id:'ClosingA3',region:'w2'},{id:'ClosingA1',region:'w2',a1:true},{id:'ClosingSouthSchool',region:'south',southSchool:true},{id:'ClosingOverview',region:'north',mode:'overview'},{id:'ClosingSummary',region:'north',mode:'summary'}].map(x=><Composition key={x.id} id={x.id} component={Movie} defaultProps={x as any} durationInFrames={30} fps={30} width={1920} height={1080}/>)}</>);

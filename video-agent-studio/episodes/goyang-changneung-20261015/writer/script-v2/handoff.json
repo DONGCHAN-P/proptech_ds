@@ -1,0 +1,48 @@
+{
+  "revision": "script-v2",
+  "status": "draft_for_script_and_budget_review",
+  "outputs": [
+    "script_v2.md",
+    "scene_proposals.json",
+    "narration_input",
+    "narration_joined.txt",
+    "pronunciation.json",
+    "manifest.json",
+    "changes.json",
+    "verification.json",
+    "claim_basis.json",
+    "qa_response.json"
+  ],
+  "input_revisions": [
+    "script-v1",
+    "production-v2",
+    "prices-v2",
+    "price-stage-v3",
+    "commute-v3",
+    "reference-direction-v1"
+  ],
+  "affected_scenes": [
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M005",
+    "M006",
+    "M007",
+    "M008"
+  ],
+  "next_owner": "director→script/budget gate→narration/visual/editor",
+  "unresolved": [
+    "새 버전 대본·예산 승인",
+    "실제 음성 길이·원문정렬",
+    "S1/S5 거주의무 미확인",
+    "최종 지도·사진 권리/위치검수"
+  ],
+  "actual_listening": false,
+  "paid_calls": 0,
+  "validation": {
+    "verification": "verification.json",
+    "scope": "장별낭독·문자수·해시·claim존재·입력해시·브랜드CTA 지시; 실행결과는 verification.json 참조",
+    "audio_video_validation": false
+  }
+}

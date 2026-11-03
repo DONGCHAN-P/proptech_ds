@@ -1,0 +1,20 @@
+{
+  "methods": [
+    "baseline",
+    "symmetric",
+    "volatility_scaled"
+  ],
+  "past_error_lookback_months": 60,
+  "minimum_mature_origins": 3,
+  "label_maturity_months": 3,
+  "point_model": "v3_hgb",
+  "source_release": "releases\\6297866c5207816ec85c",
+  "source_release_manifest_sha256": "93c649b6a3066fb10de3395b1be8f6265af4f9bb5942f5527d65e3305ce73331",
+  "volatility_scale": "max(100*sqrt(6)*observed_volatility_6,1pp); missing1pp",
+  "symmetric_quantile": "min(1,ceil((n+1)*coverage)/n), higher empirical quantile",
+  "gate": "both levels all-regimes coverage80>=.75, score<=baseline,width<=1.25baseline",
+  "historical_first_vintage_verified": false,
+  "new_blind_evaluation": false,
+  "operating_change": false,
+  "role": "frozen research candidates; point forecasts unchanged"
+}

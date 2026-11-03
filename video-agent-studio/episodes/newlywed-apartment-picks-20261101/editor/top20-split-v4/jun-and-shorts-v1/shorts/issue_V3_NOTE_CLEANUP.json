@@ -1,0 +1,14 @@
+{
+  "issue_id": "V3-NOTE-CLEANUP",
+  "scene_ids": [
+    "SHORT01-PROMO",
+    "SHORT02-R20-R16",
+    "SHORT03-R15-R11"
+  ],
+  "status": "reported_to_parent_after_render_started",
+  "problem": "Requested on-screen note suffix cleanup was not applied before the v3 render chain started; cue-owned caption visibility fix is applied and source/HF checks passed.",
+  "evidence": "Inline PowerShell-to-Python literal replacement assertion failed; source still includes the old suffix.",
+  "proposal": "Preserve the in-progress render and its frozen inputs. Prepare a separate cleanup generator; do not mutate a running project. Parent requested a status report before the next decision.",
+  "impact": "Pending note cleanup only; audio, locks, CTA, all price values and geometry unchanged.",
+  "paid_TTS_API_calls": 0
+}

@@ -1,0 +1,49 @@
+{
+  "revision": "revision-v7",
+  "input_versions": [
+    "price-stage-v3",
+    "prices-v2",
+    "production-v2",
+    "script-v4-addendum",
+    "visual/semantic-v5/verified_missing_locations.json"
+  ],
+  "outputs": [
+    "facts.json",
+    "price_table_descending.json",
+    "resale_map.geojson",
+    "online_checks.json",
+    "report.txt",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\source-review-v7"
+  ],
+  "validation": [
+    "보존 공식PDF 3개 SHA 기존 다운로드기록 일치",
+    "기본가격표3개·발코니표3개 실제 이미지 열람",
+    "6개 중위값 및n verified_rows.csv 재계산 전부 일치",
+    "LH2026-07-03 공식페이지 실제 웹 열람"
+  ],
+  "unresolved": [
+    "새PDF 다운로드 실패; 최신 정정본 동일성 새 검증 안됨",
+    "원문이미지 영상재사용 허락/공공누리 유형 미확인",
+    "S1/S5 공식 사전청약 경쟁률 미확보",
+    "S4 경쟁률 분자분모/주택형/접수일 미확보",
+    "호반주소대표점은 단지경계centroid 아님"
+  ],
+  "affected_claim_ids": [
+    "PST3-S1-STAGE",
+    "PST3-S4-STAGE",
+    "PST3-S5-STAGE",
+    "CN7-S4-PRECOMP",
+    "CN7-ACCESS"
+  ],
+  "affected_scene_ids": [
+    "M004",
+    "M006",
+    "M007",
+    "M008"
+  ],
+  "next_owner": [
+    "writer_v7",
+    "editor_v6",
+    "director"
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "task_id": "housing-choice-jun-replacement-v1-preparation",
+  "status": "prepared_for_director_budget_review_generation_not_authorized",
+  "at_utc": "2026-10-26T05:47:08.214Z",
+  "scope": "Jun 교체 준비만. 마케팅 제안 작업과 승인 순서는 총괄 담당.",
+  "script_revision": "script-final-v6",
+  "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+  "narration_manifest_sha256": "e2452530e6ce66cb4256dc4ed4e12c2b9d13913e8a76fba4149eea04665191e8",
+  "pronunciation_proposal_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "inputs": {
+    "script": {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/script-final-v6/script_v6.md",
+      "sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7"
+    },
+    "free_tts_v6_manifest": {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+      "sha256": "0d6ee138f77121b8091f82c930fc6432094904219469accc1dc00168078d1e4e"
+    },
+    "pronunciation_dictionary": {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/pronunciation_dictionary.json",
+      "sha256": "8a1c4f37c26f0ef8139e7a49a42057f6386f926b849297fcb922577107dfa638"
+    },
+    "previous_audio_timing": {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/production-injoon-v6/final_timing.json",
+      "sha256": "b1fdcb5025e326df80b7b0c6296e89d0fa526007427c69e5688205f579d0493b"
+    },
+    "previous_run_inputs": {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/production-injoon-v6/run_inputs.json",
+      "sha256": "2745acdb7e4dbc4fbe6d8e35fc1260a7c7f4218be74f8ed78d3de79ec9dd27cc"
+    },
+    "tts_config": {
+      "path": "config/tts.json",
+      "sha256": "773b2a6eabf306a251f560137a88e56db761865954c6089e0900e76d6f27934c"
+    },
+    "brief": {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/brief.json",
+      "sha256": "e2595699a29e53295fe141c5f2724ae3af12603b2e1e3814154beb7a14fbcd2f"
+    },
+    "state_snapshot": {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/state.json",
+      "sha256": "b6189fc9034083ed5d675ab089b238ecb594929f82b5d84223760147c3be4082"
+    },
+    "account_snapshot": {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/account_readonly.json",
+      "sha256": "e7cc7b9b4f97398d8e623d7becfe62d0c3a54603c2daa43913e18862c89f6dfb"
+    }
+  },
+  "voice": {
+    "provider": "elevenlabs",
+    "voice_id": "4p6UA7mnodF5q7JFFrnW",
+    "voice_name": "Jun - Clear Korean Lecturer",
+    "model": "eleven_v4",
+    "approved_style": "친근한 데이터 해설",
+    "observed_stored_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "style": 1,
+      "speed": 0.97,
+      "use_speaker_boost": true
+    },
+    "settings_provenance": "2026-10-26 GET 현재 저장값. 선택된 모델/voice 승인과 구분하며 설정 변경은 실행하지 않음."
+  },
+  "input_characters": 8715,
+  "proposed_expanded_input_characters": 8949,
+  "paragraph_requests": 54,
+  "text_variant_selected_for_generation": null,
+  "scenarios": [
+    {
+      "variant": "exact_locked_body",
+      "manifest": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/narration_manifest.json",
+        "sha256": "e2452530e6ce66cb4256dc4ed4e12c2b9d13913e8a76fba4149eea04665191e8"
+      },
+      "input_characters": 8715,
+      "paragraph_requests": 54,
+      "revision_reserve_ratio": 0.2,
+      "revision_reserve_characters": 1743,
+      "character_cap": 10458,
+      "estimated_first_pass_credits": 8715,
+      "proposed_included_credit_cap": 10458,
+      "max_paragraph_characters": 271,
+      "generation_authorized": false
+    },
+    {
+      "variant": "proposed_v6_pronunciation_expansion",
+      "manifest": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/pronunciation_proposal.json",
+        "sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7"
+      },
+      "input_characters": 8949,
+      "paragraph_requests": 54,
+      "revision_reserve_ratio": 0.2,
+      "revision_reserve_characters": 1790,
+      "character_cap": 10739,
+      "estimated_first_pass_credits": 8949,
+      "proposed_included_credit_cap": 10739,
+      "max_paragraph_characters": 296,
+      "generation_authorized": false
+    }
+  ],
+  "account_checked_at_utc": "2026-10-26T05:43:54.129Z",
+  "included_remaining": 22558,
+  "credit_limit": 40000,
+  "used_credits": 17442,
+  "model_rates": {
+    "character_cost_multiplier": 1,
+    "cost_discount_multiplier": 1
+  },
+  "voice_rate": 1,
+  "estimated_credits_per_character": 1,
+  "estimate_basis": "현재 조회 배수1×1 및 voice rate1에 한해 1자=1크레딧 추정. 실제 청구를 측정한 값이 아님. 두 텍스트 후보 예산은 합산하지 않음.",
+  "proposed_cap": 10739,
+  "proposed_included_credit_cap": 10739,
+  "proposed_cap_basis": "두 후보 중 큰 값에 ceil(20%) 수정 글자 예비분을 더한 검토 상한. 확장안 채택 승인을 뜻하지 않음.",
+  "proposed_revision_reserve_characters": 1790,
+  "cap_fits_included": true,
+  "included_headroom_after_proposed_cap": 11819,
+  "additionalcash0": true,
+  "additional_cash_usd_cap": 0,
+  "topup_or_overage_authorized": false,
+  "recharge_allowed": false,
+  "automatic_retry": false,
+  "shared_account_reservation_made": false,
+  "snapshot_not_a_reservation": true,
+  "generation_started": false,
+  "generation_authorized": false,
+  "sample_generated": false,
+  "tts_post_calls": 0,
+  "paid_generation_calls": 0,
+  "upload_calls": 0,
+  "delete_calls": 0,
+  "readiness_checks": {
+    "authenticated_gets_http_200": true,
+    "active_subscription": true,
+    "approved_model_found": true,
+    "model_supports_tts": true,
+    "model_supports_korean": true,
+    "voice_get_accessible": true,
+    "voice_model_fine_tuned": true,
+    "all_paragraphs_within_model_limit": true,
+    "overage_disabled": true,
+    "cap_fits_included": true
+  },
+  "account_checks_passed": true,
+  "caveats": [
+    "GET 접근·fine_tuned·high_quality_base_model_ids에서 v4를 확인했으나 TTS 호출 성공은 미검증.",
+    "모델 응답 serves_pro_voices=false와 Jun category=professional은 기록상 차이. 지원 모델 목록/fine_tuned는 일치하므로 자동 교체하지 않고 실제 실행 전 담당이 검토.",
+    "v4 can_use_style=false, can_use_speaker_boost=false. 저장 style1/boost true를 지원되는 요청 파라미터로 간주하지 않음. 속도0.97을 변경하거나 다른 모델로 자동 우회하지 않음.",
+    "잔여 크레딧은 조회 시점 스냅샷이며 다른 작업 소비로 달라질 수 있음. 상한은 실제 실행 전 다시 확인.",
+    "확장안은 기존 free-TTS 표기 제안이며 Jun 발음 품질 검증 결과가 아님.",
+    "파일의 머리말은 script-final-v5로 남아 있으나 사용자 지정 v6 경로/확정 SHA가 일치함. 본문이나 머리말 수정 없음."
+  ],
+  "network_evidence": {
+    "initial_sandbox_block": "EACCES, 세 GET 모두 HTTP 응답 전 실패",
+    "initial_attempt": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/account_readonly.sandbox-blocked.json",
+    "resolution": "명시 승인된 GET 세 건만 제한 해제 실행하여 모두 HTTP200. TTS POST 없음."
+  },
+  "api_docs_checked_at_utc": "2026-10-26T05:47:08.214Z",
+  "api_docs": [
+    {
+      "url": "https://elevenlabs.io/docs/api-reference/user/subscription/get",
+      "checked": true,
+      "used_for": "사용량/한도 필드와 max_credit_limit_extension=0 의미"
+    },
+    {
+      "url": "https://elevenlabs.io/docs/api-reference/models/list",
+      "checked": true,
+      "used_for": "모델 지원·언어·요율·최대 요청 길이 필드"
+    },
+    {
+      "url": "https://elevenlabs.io/docs/api-reference/voices/get",
+      "checked": true,
+      "used_for": "음성 GET·현재 settings·sharing.rate 필드"
+    },
+    {
+      "url": "https://elevenlabs.io/docs/eleven-creative/voices/voice-library/",
+      "checked": true,
+      "used_for": "공식 검색 결과의 custom rate 크레딧 배수 설명; 전체 페이지 정독 아님"
+    },
+    {
+      "url": "https://elevenlabs.io/docs/api-reference/text-to-speech/convert-with-timestamps",
+      "checked": true,
+      "used_for": "승인 후 문자별 alignment/normalized_alignment 계획; POST 실행 없음"
+    }
+  ],
+  "timing_readiness": {
+    "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/timing_proposals.json",
+    "sha256": "3f074156f73209f12b1aa0286e8e1c3cfe88ccb71f3ad1d477e484c18d7174ed"
+  }
+}

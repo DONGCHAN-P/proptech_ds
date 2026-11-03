@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C07P05",
+  "scene_id": "C07",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:07:09.695Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "f2e25d5056417192c077809ed1155c0a85ed7d005639fcd547a8a8b29f600c16",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "모두 같은 날 자산을 정리해 현금으로 바꾸는 비교도 따로 만들 수 있습니다. 이 경우 집 매도비용과 조건에 맞는 세금, 이 티 에프 매도세금과 비용을 반영해야 합니다. 청산 후에도 계속 거주할 집이 필요하므로 그다음 주거비도 동일한 기준으로 연결해야 합니다. 오늘의 기본 그래프는 매각을 가정한 현금액 대신 계속거주 평가 순자산을 보여줍니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 191,
+  "characters": 191,
+  "actual_credits": 76,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19183,
+    "character_limit": 40000,
+    "included_remaining": 20817,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:51.452Z",
+  "local_shadow_remaining_before": 20579,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "Zx9g6Iv0hU4WJ3sm6rit",
+    "x-request-id": null,
+    "character-cost": "76",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:07:08 GMT"
+  },
+  "pcm_samples": 998424,
+  "pcm_duration_s": 22.64,
+  "provider_last_spoken_end_s": 22.72,
+  "artifact_sha256": {
+    "paragraphs/C07P05/audio.mp3": "e26e6b379f3e68e8d0486fac68770038677826f2aac2dc2b12b5bdd390004393",
+    "paragraphs/C07P05/audio.wav": "4d6290e717c528d32155a8405267344013d7069b55409dd806560cc58d9a65ad",
+    "paragraphs/C07P05/alignment.json": "9e05f7e3ec2b6eca3172a56b007d00e0b6d1ee64555fe6d1f82fab23bd43842a",
+    "paragraphs/C07P05/normalized_alignment.json": "9e05f7e3ec2b6eca3172a56b007d00e0b6d1ee64555fe6d1f82fab23bd43842a"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 20503,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:07:15.306Z"
+}

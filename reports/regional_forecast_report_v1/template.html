@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="2006년 이후 지역별 아파트 실거래로 만든 6개월 가격 예측. 데이터 구성, 3차 반복 실험, 지역별 오차와 향후 검증 계획을 정리한 연구 보고서.">
+<title>지역별 집값 예측 · 분석 과정과 반복 검증</title>
+<style>
+:root{--bg:#f5f6f8;--paper:#fff;--ink:#172a3a;--muted:#5b6d7d;--line:#e0e5ec;--blue:#2659d9;--pale:#edf2ff;--teal:#087566;--amber:#956100;--red:#b13d43;--mono:Consolas,monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.75 'Malgun Gothic','Apple SD Gothic Neo',system-ui,sans-serif;word-break:keep-all;overflow-wrap:anywhere}a{color:var(--blue);text-underline-offset:4px}button,select,input{font:inherit}button,select{cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #efad34;outline-offset:4px}button{border:1px solid var(--line);border-radius:8px;padding:8px 13px;background:white;color:var(--ink)}button:hover{background:var(--pale)}h1,h2,h3,p{margin:0}h1{font-size:clamp(33px,4vw,56px);line-height:1.3;letter-spacing:-2px}h2{font-size:clamp(24px,2.5vw,31px);line-height:1.4;letter-spacing:-.8px}h3{font-size:18px;line-height:1.5}small,.small{font-size:12px}code{font:12px/1.6 var(--mono);overflow-wrap:anywhere}.muted{color:var(--muted)}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;text-transform:uppercase}.positive{color:var(--teal)}.negative{color:var(--red)}.wrap{max-width:1460px;margin:auto;display:grid;grid-template-columns:214px minmax(0,1fr);gap:48px;padding:0 38px}.sidebar{position:sticky;top:0;height:100vh;padding:35px 0;display:flex;flex-direction:column;gap:26px}.brand{font-weight:800;font-size:17px;letter-spacing:-.5px}.brand:before{content:'';display:inline-block;width:11px;height:18px;background:var(--blue);margin-right:9px;border-radius:2px}.sidebar nav{display:grid;gap:4px}.sidebar nav a{display:flex;gap:12px;padding:9px 10px;border-radius:8px;text-decoration:none;color:var(--muted);font-size:13px}.sidebar nav a:hover,.sidebar nav a.active{background:#e7ecf8;color:var(--blue);font-weight:700}.sidebar nav span{font:11px/2 var(--mono);opacity:.65}.side-bottom{margin-top:auto;font-size:12px;color:var(--muted)}main{min-width:0;padding:35px 0 50px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:25px}.topbar p{font-size:12px;color:var(--muted)}.hero{padding:42px 42px 35px;background:#142b43;color:#fff;border-radius:16px;position:relative;overflow:hidden}.hero:after{content:'';position:absolute;right:-50px;top:-80px;width:360px;height:360px;border:1px solid #ffffff16;border-radius:50%;box-shadow:0 0 0 45px #ffffff06,0 0 0 90px #ffffff04;pointer-events:none}.hero>*{position:relative;z-index:1}.hero .eyebrow{color:#9bb9f7;margin-bottom:20px}.hero .lead{max-width:690px;color:#d6e0ec;margin-top:23px;font-size:16px;line-height:1.95}.hero .decision{display:inline-flex;align-items:center;gap:9px;background:#ffffff12;border:1px solid #ffffff28;padding:8px 13px;border-radius:7px;margin-top:25px;font-size:13px}.dot{width:7px;height:7px;background:#f4be60;border-radius:50%;flex-shrink:0}.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 40px}.kpi{background:var(--paper);border:1px solid var(--line);padding:20px 19px;border-radius:11px}.kpi strong{font-size:28px;line-height:1.4;letter-spacing:-1px;display:block;font-variant-numeric:tabular-nums}.kpi span{font-size:12px;color:var(--muted)}.kpi em{font-style:normal;color:var(--blue);font-size:12px}.section{padding-top:16px;margin-bottom:42px;scroll-margin-top:20px}.section-head{margin-bottom:21px}.section-head .eyebrow{color:var(--blue);margin-bottom:8px}.section-head p{color:var(--muted);margin-top:9px;max-width:820px}.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:26px;margin-top:16px;min-width:0}.card p+p{margin-top:12px}.card h3+p{margin-top:10px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.grid2>.card,.grid3>.card{margin-top:0}.finding{border-top:3px solid var(--blue)}.finding .tag{font-size:11px;letter-spacing:1px;font-weight:700;color:var(--blue);margin-bottom:13px}.finding p{font-size:13px;color:var(--muted);margin-top:11px}.finding strong{display:block;font-size:21px;line-height:1.55}.callout{border-left:3px solid var(--blue);background:var(--pale);padding:16px 19px;font-size:13px;line-height:1.85;margin-top:18px;border-radius:0 8px 8px 0}.callout.amber{border-color:#ca942b;background:#fff7e5}.callout strong{color:var(--ink)}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;list-style:none;padding:0;margin:22px 0}.flow li{position:relative;background:#f6f8fc;border:1px solid var(--line);border-radius:9px;padding:18px 15px}.flow li b{display:block;font-size:14px;margin-bottom:8px}.flow li p{font-size:12px;color:var(--muted);line-height:1.8}.flow .num{font:11px var(--mono);color:var(--blue);display:block;margin-bottom:13px}.flow li:not(:last-child):after{content:'→';position:absolute;right:-14px;top:42%;z-index:1;color:#7185a2}.coverage-strip{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.chip{font-size:12px;border:1px solid var(--line);background:#f9fafc;border-radius:5px;padding:3px 9px}.table-wrap{overflow:auto;max-width:100%;margin-top:16px}table{border-collapse:collapse;width:100%;font-size:12px;line-height:1.65}th,td{padding:12px 10px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums;vertical-align:middle;white-space:nowrap}thead th{background:#f6f8fb;color:var(--muted);font-size:11px;font-weight:700}th:first-child,td:first-child{text-align:left}tbody th{font-weight:600}tbody tr:hover{background:#f8faff}td.wrap-cell,th.wrap-cell{white-space:normal;min-width:180px;max-width:310px}.note{font-size:12px;color:var(--muted);line-height:1.8;margin-top:14px}.source{font-size:11px;color:var(--muted);margin-top:15px}.legend{display:flex;flex-wrap:wrap;gap:15px;font-size:12px;color:var(--muted);margin:10px 0}.legend i{display:inline-block;width:17px;height:3px;margin-right:6px;vertical-align:middle;background:#75859b}.legend i.blue{background:var(--blue)}.legend i.dashed{height:0;border-top:2px dashed #bd8326;background:transparent}.chart{width:100%;display:block;overflow:visible}.chart text{font-family:'Malgun Gothic','Apple SD Gothic Neo',system-ui,sans-serif}.chart .axis{fill:#5b6d7d;font-size:11px}.chart .grid{stroke:#e9edf3;stroke-width:1}.chart .label{fill:#23374b;font-size:12px}.chart .value{font:600 12px 'Malgun Gothic',sans-serif;fill:#23374b}.chart-scroll{overflow:auto;margin-top:15px}.chart-scroll svg{min-width:580px}.mini-title{font-size:12px;font-weight:700;color:var(--muted);margin:17px 0 9px}.correlation{display:grid;gap:14px;margin-top:20px}.corr-row{display:grid;grid-template-columns:180px 1fr 60px;gap:15px;align-items:center;font-size:12px}.corr-track{height:9px;background:#edf0f5;border-radius:3px;position:relative}.corr-track:before{content:'';position:absolute;height:15px;width:1px;background:#bcc8d8;left:50%;top:-3px}.corr-fill{position:absolute;height:9px;background:var(--blue);border-radius:3px}.corr-row strong{font-variant-numeric:tabular-nums;text-align:right}.time-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:23px}.time-grid>div{border-top:3px solid #91a2bb;padding:15px;background:#f7f9fc;border-radius:0 0 8px 8px}.time-grid .now{border-color:var(--blue);background:var(--pale)}.time-grid .later{border-color:var(--teal)}.time-grid strong{display:block;font-size:20px;margin:5px 0}.time-grid p{font-size:12px;color:var(--muted)}.time-grid .label{font-size:11px;color:var(--blue);font-weight:700}.round{display:grid;grid-template-columns:80px 1fr 110px;gap:15px;padding:23px 0;border-bottom:1px solid var(--line);align-items:center}.round:last-child{border-bottom:0}.round .round-no{font:13px var(--mono);color:var(--blue)}.round h3{font-size:15px}.round p{font-size:12px;color:var(--muted);margin-top:7px}.round .gain{font-size:25px;font-weight:800;letter-spacing:-1px;text-align:right}.round .gain small{display:block;font-size:10px;color:var(--muted);font-weight:400;letter-spacing:0}.gate{display:flex;gap:12px;flex-wrap:wrap;padding-top:20px;font-size:12px}.gate span{border:1px solid var(--line);border-radius:6px;padding:9px 12px}.gate .miss{background:#fff7e6;color:var(--amber);border-color:#ead9b4}.toolbar{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin:17px 0 20px}.toolbar label{display:grid;gap:5px;font-size:11px;color:var(--muted)}select,input{height:39px;border:1px solid #cbd4e0;border-radius:7px;background:#fff;color:var(--ink);padding:6px 10px;max-width:100%;min-width:140px}input{width:220px}.toolbar .spacer{margin-left:auto}.tag-model{font-size:10px;border:1px solid #d6e0f6;color:var(--blue);background:var(--pale);padding:1px 5px;border-radius:4px;white-space:nowrap;margin-left:5px}.rank-row{display:grid;grid-template-columns:190px 1fr 64px;gap:15px;align-items:center;margin:15px 0;font-size:12px}.rank-row .track{height:19px;background:#f0f3f7;border-radius:3px}.rank-row .fill{height:100%;background:#b6c6e7;border-radius:3px;min-width:1px}.rank-row .fill.base{background:#788ba7}.rank-row .fill.candidate{background:var(--blue)}.rank-row .num{text-align:right;font:600 13px var(--mono)}.stats-brief{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}.stats-brief span{background:#f5f8fc;padding:8px 12px;font-size:12px;border-radius:6px}.pagination{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:15px;font-size:12px;color:var(--muted)}.pagination button{padding:5px 11px}.region-names{font-size:12px;line-height:1.9;color:var(--muted)}details{border-top:1px solid var(--line);padding:14px 0}summary{cursor:pointer;font-size:13px;font-weight:600}details p{font-size:12px;color:var(--muted);margin-top:12px}ul.clean{padding-left:18px;margin:12px 0 0}ul.clean li{font-size:13px;color:var(--muted);margin:8px 0}.sources{display:grid;grid-template-columns:1fr 1fr;gap:20px}.sources ol{padding-left:20px;margin:12px 0;font-size:12px}.sources li{margin:10px 0}.footer{padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.footer p+p{margin-top:7px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.noscript{padding:20px;background:#fff5dc}.print-only{display:none}
+@media(min-width:1450px){.wrap{gap:65px}}@media(max-width:1100px){.wrap{grid-template-columns:170px 1fr;gap:26px;padding:0 25px}.hero{padding:34px 28px}.kpi{padding:15px 13px}.kpi strong{font-size:24px}.grid3{gap:10px}.finding{padding:20px}.flow{grid-template-columns:repeat(2,1fr)}.flow li:after{display:none}.card{padding:23px}.rank-row{grid-template-columns:170px 1fr 55px}}@media(max-width:800px){.wrap{display:block;padding:0 20px}.sidebar{position:static;height:auto;padding:20px 0 0;gap:13px}.sidebar nav{display:flex;overflow:auto;gap:5px;padding-bottom:7px}.sidebar nav a{flex-shrink:0;padding:6px 9px}.sidebar nav span{display:none}.side-bottom{display:none}main{padding-top:16px}.topbar{margin-bottom:17px}.kpis{grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:30px}.grid3,.grid2,.sources{grid-template-columns:1fr}.card{padding:23px}.grid3{gap:12px}.section{margin-bottom:30px}.hero{padding:31px 25px}.hero .lead{font-size:14px}.hero:after{width:260px;height:260px}.time-grid{grid-template-columns:1fr 1fr}.rank-row{grid-template-columns:170px 1fr 55px}.corr-row{grid-template-columns:165px 1fr 48px}.round{grid-template-columns:60px 1fr 85px}.toolbar .spacer{margin-left:0}.toolbar{gap:10px}.topbar p{font-size:11px}}@media(max-width:450px){.wrap{padding:0 14px}body{font-size:14px}.hero{padding:27px 21px}h1{font-size:33px;letter-spacing:-1.4px}.hero .decision{font-size:11px;padding:7px 10px}.kpi strong{font-size:25px}.card{padding:20px 17px}.flow{gap:10px}.flow li{padding:15px 12px}.rank-row{grid-template-columns:145px 1fr 49px;gap:8px;font-size:11px}.corr-row{grid-template-columns:142px 1fr 42px;gap:8px;font-size:11px}.round{grid-template-columns:48px 1fr 67px;gap:10px}.round .gain{font-size:22px}.round .round-no{font-size:11px}.time-grid>div{padding:13px 11px}.topbar{align-items:flex-start}.topbar button{font-size:11px;padding:6px 10px}.toolbar label{flex:1;min-width:125px}.toolbar input,.toolbar select{width:100%}.pagination{align-items:flex-start}.tag-model{display:inline-block;margin-top:3px}.chart-scroll{margin-left:0;margin-right:0}}
+@media print{html{scroll-behavior:auto}body{background:white;font-size:10pt;line-height:1.65}.wrap{display:block;max-width:none;padding:0}.sidebar,.topbar button,.toolbar button,.pagination button,.no-print{display:none!important}main{padding:0}.topbar{margin-bottom:12px}.hero{padding:25px;border-radius:0;print-color-adjust:exact;-webkit-print-color-adjust:exact}.hero h1{font-size:30pt}.hero .lead{font-size:11pt}.hero:after{display:none}.kpis{margin:15px 0 25px}.kpi strong{font-size:20pt}.section{break-before:auto;margin-bottom:25px}.section-head{break-after:avoid}.card,.kpi,.round,.flow li,.time-grid>div{break-inside:avoid}.card{padding:18px}.grid2,.grid3{display:block}.grid2>.card,.grid3>.card{margin-top:12px}.chart-scroll,.table-wrap{overflow:visible}.chart-scroll svg{min-width:0}.rank-row{margin:10px 0}.toolbar{margin:12px 0}.time-grid{gap:8px}.sources{display:block}.section h2{font-size:20pt}.note,.source{font-size:9pt}table{font-size:8.5pt}th,td{padding:7px 5px}.print-only{display:block}.footer{margin-top:20px}a{color:inherit}details{display:block}details>*{display:block}button{display:none}@page{size:A4;margin:14mm}}
+</style>
+</head>
+<body>
+<a class="sr-only" href="#main">본문 바로가기</a>
+<div class="wrap">
+<aside class="sidebar" aria-label="보고서 목차">
+  <div class="brand">데이터로 보는 부동산</div>
+  <div class="eyebrow muted">Research / 2026.10</div>
+  <nav>
+    <a href="#summary"><span>00</span>핵심 판단</a><a href="#data"><span>01</span>데이터와 가격 측정</a>
+    <a href="#variables"><span>02</span>변수 조사</a><a href="#validation"><span>03</span>검증 설계</a>
+    <a href="#trials"><span>04</span>반복 실험</a><a href="#performance"><span>05</span>성능 비교</a>
+    <a href="#regions"><span>06</span>지역별 차이</a><a href="#intervals"><span>07</span>예측 범위</a>
+    <a href="#next"><span>08</span>판단과 다음 단계</a><a href="#sources"><span>09</span>출처와 검수</a>
+  </nav>
+  <div class="side-bottom">분석 기준일<br><strong>2026년 10월 27일</strong><br><br>2006년 이후 실거래<br>향후 6개월 누적변화 예측</div>
+</aside>
+<main id="main">
+<div class="topbar"><p>지역별 집값 6개월 예측 연구 · 반복 검증 v1</p><button id="print-btn" type="button">인쇄 / PDF 저장</button></div>
+<header class="hero">
+  <p class="eyebrow">Regional housing forecast · research report</p>
+  <h1>지역별 집값 예측<br>분석 과정과 반복 검증</h1>
+  <p class="lead">835만 건의 실거래에서 지역별 가격 변화를 만들고, 과거의 같은 시점으로 돌아가 6개월 뒤를 예측했습니다. 입력·모델·평가 방법을 바꿔가며 확인한 개선 폭과 남은 과제를 정리합니다.</p>
+  <div class="decision"><span class="dot"></span>현재 판단: 기존 HGB 유지 · 입력 갱신 후보는 후속 검증</div>
+</header>
+<div class="kpis" aria-label="연구 규모와 결론">
+ <div class="kpi"><span>2006년 이후 유효 실거래</span><strong>8,353,538</strong><em>11개 시도 · 아파트 거래</em></div>
+ <div class="kpi"><span>주 실험 + 별도 시차 실험</span><strong>26 + 4 + 2</strong><em>후보 모델 / 결합 규칙 / 시차 대안</em></div>
+ <div class="kpi"><span>동일 조건에서 채점한 예측 시점</span><strong>19개</strong><em>2017.01 ~ 2026.01 · 반기별</em></div>
+ <div class="kpi"><span>조건부 후보의 전체 균형 오차 개선</span><strong>__GAIN__%</strong><em>교체 기준: 최소 5% 개선</em></div>
+</div>
+
+<section class="section" id="summary">
+ <div class="section-head"><p class="eyebrow">00 / Findings</p><h2>현재 확인한 세 가지</h2></div>
+ <div class="grid3">
+  <article class="card finding"><p class="tag">01 · 입력 시점</p><strong>입력 시차와 학습창을<br>조정한 후보가 앞섰습니다.</strong><p>최근 구간의 평균오차는 시도 1.77→1.62%p, 시군구 3.17→2.99%p. 당시 공개값을 근사한다는 가정에서 얻은 결과입니다.</p></article>
+  <article class="card finding"><p class="tag">02 · 모델 선택</p><strong>복잡한 모델의 우위는<br>아직 충분하지 않습니다.</strong><p>학습 기간·손실함수·지역 분리·온라인 결합을 비교했습니다. 입력 시차를 고정한 정적 최선의 균형 오차 개선은 약 0.60%였습니다.</p></article>
+  <article class="card finding"><p class="tag">03 · 급변 국면</p><strong>급등·급락기 대응이<br>가장 큰 과제입니다.</strong><p>최근 안정 구간보다 2020~2021년과 2022~2023년 오차가 컸습니다. 명목 80% 예측 범위의 전체 실제 포함률도 약 67~70%였습니다.</p></article>
+ </div>
+ <div class="callout"><strong>핵심 판단의 기준</strong>　전체 기간의 균형 MAE를 주 지표로 사용합니다. 최근 성적과 전체 성적을 함께 확인하고, 최소 개선 폭·지역별 악화·큰 오차를 모두 점검한 뒤 모델을 교체합니다.</div>
+</section>
+
+<section class="section" id="data">
+ <div class="section-head"><p class="eyebrow">01 / Data construction</p><h2>거래에서 지역의 가격 변화까지</h2><p>원자료는 2006년 이후를 포함합니다. 거래되는 단지와 면적이 달라질 때 생기는 구성 효과를 줄이기 위해 같은 단지·면적을 이어 붙였습니다.</p></div>
+ <div class="card">
+  <ol class="flow">
+   <li><span class="num">STEP 01</span><b>유효 실거래 정리</b><p>835만 건의 아파트 거래를 고정 행정권역과 월별 자료로 정리합니다.</p></li>
+   <li><span class="num">STEP 02</span><b>같은 단지·면적 매칭</b><p>동일 단지·면적의 월별 중위 ㎡당 가격을 전월과 비교합니다.</p></li>
+   <li><span class="num">STEP 03</span><b>단지별 변화 집계</b><p>단지 내부 평균 로그변화를 구한 뒤, 단지 간 양끝 10%씩 절사해 평균합니다.</p></li>
+   <li><span class="num">STEP 04</span><b>6개월 목표 생성</b><p>정확한 달력 기준으로 다음 6개월 로그변화를 합치고 누적 변화율로 환산합니다.</p></li>
+  </ol>
+  <div class="grid2">
+   <div><h3>가격을 비교할 수 있는 범위</h3><div class="coverage-strip"><span class="chip">원자료: 11개 시도</span><span class="chip">고정 시군구 통합권: 141개</span><span class="chip">현재 예측 적격: 11 + 119개</span></div><p class="region-names" style="margin-top:13px">서울 · 부산 · 대구 · 인천 · 광주 · 대전 · 울산 · 세종 · 경기 · 충북 · 충남</p></div>
+   <div><h3>표본 품질 조건</h3><p class="small muted" style="margin-top:10px">최근 12개월 매칭 단지 수의 월별 최솟값 5개 이상, 월평균 10개 이상, 거래 200건 이상, 이용 가능한 학습월 60개 이상 등을 적용했습니다. 지역별 시작 시점과 채점 가능한 수는 다릅니다.</p></div>
+  </div>
+  <p class="note">같은 단지·면적에서도 층, 수리 상태, 개별 주택 구성의 차이는 남습니다. 이 추정량이 측정하는 범위를 감안해 결과를 해석합니다.</p>
+  <p class="source">근거: <a href="../analysis/regional_forecast_20261027/panel_audit.json">자료 감사</a> · <a href="../analysis/regional_forecast_20261027/forecast.py">매칭·목표 생성 코드</a></p>
+ </div>
+ <div class="card">
+  <h3>이번 반복 실험에서 보완한 공급자료</h3>
+  <div class="stats-brief"><span>공식 XLS <b>24개</b></span><span>2026.01~08 <b>426관측</b></span><span>기존 6개 지역에 <b>144관측 결합</b></span><span>현재 결측 <b>54칸 → 0칸</b></span></div>
+  <p class="small muted">준공·착공·인허가는 전체 주택 기준입니다. 장기 이력이 있는 서울·부산·대구·인천·대전·경기에 먼저 결합했습니다. 현재 입력 공백은 메웠고, 2026년 1월까지의 평가 특징량 36,460행은 보완 전후 동일하게 유지됐습니다.</p>
+  <div class="callout amber"><strong>효과를 구분해서 봅니다.</strong> 공급자료 추가는 현재 예측 입력을 복구했습니다. 이 자료가 들어가지 않은 과거 평가 기간의 정확도 향상은 모델·학습창·입력 시차 실험에서 나온 변화입니다.</div>
+ </div>
+</section>
+
+<section class="section" id="variables">
+ <div class="section-head"><p class="eyebrow">02 / Variable research</p><h2>무엇을 설명 변수로 조사했나</h2><p>금리뿐 아니라 거래 활동, 공급, 가구·인구, 순이동, 지역별 정책 노출을 검토했습니다. 상관 조사로 후보를 찾고, 실제 예측력은 시간 순서 검증에서 확인했습니다.</p></div>
+ <div class="card">
+  <h3>미래 6개월 변화와의 상관: 탐색의 출발점</h3><p class="small muted">개발 자료에서 계산한 시도별 Spearman 상관계수의 중앙값입니다. 막대는 부호와 크기를 보여줍니다.</p>
+  <div id="correlation-chart" class="correlation" aria-label="변수별 상관계수"></div>
+  <p class="note" id="corr-note">변수별 관측 기간과 지역별 표본 수가 달라 계수의 크기는 각 자료창과 함께 확인해야 합니다.</p>
+  <div class="callout"><strong>상관 조사 → 예측 실험</strong>　공통 경기와 가격 변화에 반응한 정책이 함께 움직일 수 있습니다. 후보 변수의 필요성은 해당 시점에 알려진 자료만 투입한 예측 오차로 판단했습니다.</div>
+  <details><summary>변수별 상관의 표본 수와 기간 보기</summary><div class="table-wrap"><table><thead><tr><th>변수</th><th>중앙 ρ</th><th>지역 수</th><th>지역별 N</th><th>전체 자료창</th></tr></thead><tbody id="corr-table"></tbody></table></div><p>표의 전체 자료창은 지역별 기간의 최솟값~최댓값입니다. 일부 지역은 더 늦게 시작합니다.</p></details>
+ </div>
+ <div class="card">
+  <h3>모델에 넣은 정보와 확장이 필요한 정보</h3>
+  <div class="table-wrap"><table><thead><tr><th>정보 묶음</th><th class="wrap-cell">반영한 내용</th><th class="wrap-cell">해석·수집 범위</th></tr></thead><tbody>
+   <tr><th>가격 · 거래량</th><td class="wrap-cell">1·3·6·12개월 변화, 변동성, 거래량 증감, 상위 지역 흐름</td><td class="wrap-cell">기준 3개월 지연. 별도 실험에서 2020.05부터 2개월 지연을 가정</td></tr>
+   <tr><th>금리 · 금융</th><td class="wrap-cell">기준금리, 신규 주담대 금리, 변화율과 지역별 상호작용</td><td class="wrap-cell">발표일 기준 결합. 미래 금리 경로는 입력 시점의 정보로 제한</td></tr>
+   <tr><th>공급</th><td class="wrap-cell">준공, 착공, 인허가, 미분양과 증감</td><td class="wrap-cell">지역별 장기 이력과 공개일 확인. 오래된 입력은 결측 처리</td></tr>
+   <tr><th>인구 · 수요</th><td class="wrap-cell">주민등록 가구·인구, 연간 순이동과 지역 차이</td><td class="wrap-cell">순이동은 6개 지역 연간 이력. 장기 고용·청장년 이동은 후속 보완</td></tr>
+   <tr><th>정책 · 지역 특성</th><td class="wrap-cell">발표 후 6개월 정책 패키지 수·긴축/완화 코드, 지역·행정 수준</td><td class="wrap-cell">같은 정책 패키지 중복 집계 방지. 일부 세부 지역의 적용 비중은 미해결</td></tr>
+  </tbody></table></div>
+  <p class="note">기존 HGB의 수치 특징량은 가격 18개·외생 58개·정책 2개, 총 78개입니다. 추가 후보에서는 축소된 변수, 시장 공통 흐름, 금리 상호작용 등을 비교했습니다.</p>
+  <p class="source">근거: <a href="../analysis/regional_forecast_20261027/results_v3/feature_contract.json">특징량 명세</a> · <a href="../analysis/regional_forecast_20261027/results_v3/feature_correlations_by_region.csv">지역별 상관 원표</a></p>
+ </div>
+</section>
+
+<section class="section" id="validation">
+ <div class="section-head"><p class="eyebrow">03 / Evaluation design</p><h2>그 시점에 알 수 있었던 정보로 예측</h2><p>23개 반기 시점을 순서대로 재생했습니다. 처음 4개 시점은 준비 구간으로 두고, 2017년 이후 같은 19개 시점에서 모델을 비교했습니다.</p></div>
+ <div class="card">
+  <h3>예측 한 건이 학습용 정답이 되기까지</h3>
+  <div class="time-grid">
+   <div><span class="label">t−3월까지</span><strong>가격 입력</strong><p>기준 모델에 쓰는 관측월. 조건부 후보는 t−2월까지 갱신합니다.</p></div>
+   <div class="now"><span class="label">t월 27일</span><strong>예측 발행</strong><p>입력과 모델을 고정하고 다음 6개월 누적변화를 예측합니다.</p></div>
+   <div><span class="label">t+6월</span><strong>목표 기간 종료</strong><p>실제 가격 변화가 관측되는 기간의 끝입니다.</p></div>
+   <div class="later"><span class="label">t+9월 이후</span><strong>오차 사용 가능</strong><p>3개월 성숙 가정까지 지난 정답만 학습·선택·범위 보정에 씁니다.</p></div>
+  </div>
+  <div class="grid2" style="margin-top:22px"><div><h3>공정한 비교를 위한 고정 항목</h3><ul class="clean"><li>같은 시점·지역·6개월 목표로 모든 후보 비교</li><li>전처리와 모형 학습은 각 과거 학습 구간 내부에서 수행</li><li>입력 품질이 부족한 지역은 기존 예측으로 대체하고 기록</li><li>정답이 부족한 81행도 발행 기록에 보존</li></ul></div><div><h3>주 지표: 균형 MAE</h3><p class="small muted" style="margin-top:10px">시군구 오차는 시도 내부에서 평균한 뒤 시도와 예측 시점에 동일 가중치를 줍니다. 마지막으로 시도·시군구 각각의 기존 대비 오차비를 평균합니다. 거래나 지역 수가 많은 곳이 전체 결정을 독점하는 영향을 줄입니다.</p></div></div>
+  <div class="stats-brief"><span>시도 채점 <b>203 / 203건</b></span><span>시군구 채점 <b>1,938 / 2,019건</b></span><span>정답 부족 <b>81건 보존</b></span></div>
+  <details><summary>지표를 읽는 법</summary><p><b>MAE:</b> 평균적으로 몇 %p 틀렸는지. 예측 3%, 실제 5%면 오차는 2%p입니다. <b>p90:</b> 절대오차의 90분위. <b>편향:</b> 예측−실제이며 음수면 과소예측입니다. <b>방향 균형 정확도:</b> ±1%를 보합으로 둔 하락·보합·상승 각 클래스의 재현율 평균입니다. <b>순위상관:</b> 같은 시점의 지역 간 예측 순서와 실제 순서가 얼마나 비슷한지 측정합니다.</p></details>
+ </div>
+</section>
+
+<section class="section" id="trials">
+ <div class="section-head"><p class="eyebrow">04 / Iteration log</p><h2>세 번의 실험, 같은 교체 기준</h2><p>실패한 후보도 이력에 남겼습니다. 과거 성적을 보고 추가한 대안은 탐색 결과로 구분했습니다.</p></div>
+ <div class="card">
+  <div class="round"><div class="round-no">ROUND 1</div><div><h3>학습창·축소 변수·모멘텀 비교</h3><p>18개 후보와 4개 결합 규칙. 최근 6·10년 학습, 시간 감쇠, 가격 흐름 기준을 비교했습니다. 가장 나은 결과는 기존 HGB였습니다.</p></div><div class="gain">0.00%<small>최선의 균형 개선</small></div></div>
+  <div class="round"><div class="round-no">ROUND 2</div><div><h3>전체 변수·손실함수·지역별 학습 확장</h3><p>26개 후보로 확대. 정적 최선은 최근 120개월 전체 변수 HGB. 과거 오차를 따라가는 온라인 전략은 약 18~34% 악화됐습니다.</p></div><div class="gain">0.60%<small>탐색상 최선의 개선</small></div></div>
+  <div class="round"><div class="round-no">ROUND 3</div><div><h3>가격 입력을 한 달 더 최근으로 갱신</h3><p>기존 HGB와 120개월 HGB의 시차 대안 2개. 정답의 성숙 지연과 평가 지역은 유지했습니다. 당시 수정 전 공개값의 복원이 필요한 조건부 결과입니다.</p></div><div class="gain positive">__GAIN__%<small>조건부 균형 개선</small></div></div>
+  <div class="gate"><span class="miss">평균 균형 오차 5% 개선: 미달</span><span>두 행정 수준 각각 오차 비악화: 충족</span><span>p90 증가 10% 이내: 충족</span></div>
+  <p class="note">하단 두 안전 조건은 마지막 120개월 시차 후보에 대한 판정입니다. 세 조건을 모두 충족해야 교체합니다. 이 후보는 입력 시차와 120개월 학습창을 함께 변경했습니다. 시차만 바꾼 기존 HGB의 전체 일반 MAE는 시도 4.369%p·시군구 5.105%p였습니다.</p>
+  <div class="callout amber"><strong>입력 시차 실험의 근거와 전제</strong>　2020년 2월 21일부터 거래 신고기한이 60일에서 30일로 단축됐습니다. 첫 온전한 계약월인 2020년 3월을 활용하는 2020년 5월 원점부터 t−2 입력을 시험했습니다. 신고기한과 실제 자료의 완결성은 다르므로, 당시 최초 공개본을 확보한 후 성능을 추가 확인해야 합니다.</div>
+ </div>
+</section>
+
+<section class="section" id="performance">
+ <div class="section-head"><p class="eyebrow">05 / Model performance</p><h2>어떤 기간에서 얼마나 틀렸나</h2><p>기간과 지역 수준을 바꾸면 같은 조건에서 계산한 성능을 볼 수 있습니다. 오차 단위는 6개월 누적변화율의 %p입니다.</p></div>
+ <div class="card">
+  <div class="toolbar"><label>평가 기간<select id="period"><option value="all_regimes">전체 · 2017~2026</option><option value="boom">상승기 · 2020~2021</option><option value="turn">전환기 · 2022~2023</option><option value="recent">최근 · 2024~2026</option></select></label><label>지역 수준<select id="level"><option value="province">시도</option><option value="district">시군구 통합권</option></select></label><label>비교 지표<select id="metric"><option value="mae_pp">일반 MAE</option><option value="balanced_mae_pp">균형 MAE</option><option value="p90_ae_pp">p90 절대오차</option></select></label><button class="spacer" id="download-scores" type="button">선택 성적표 CSV</button></div>
+  <h3 id="rank-title">전체 · 시도 · 일반 MAE</h3><p class="small muted" id="rank-subtitle"></p>
+  <div id="model-bars" aria-live="polite"></div>
+  <p class="note">짙은 회색은 기존 HGB, 파란색은 입력 갱신 후보입니다. ‘조건부’ 후보는 역사 공개값을 근사한 시차 가정이 포함됩니다. 일반 MAE와 균형 MAE는 집계 방식이 다르며, 모델 교체 판정에는 균형 MAE를 사용합니다.</p>
+  <details><summary>현재 기간의 모든 후보 보기</summary><div class="table-wrap"><table><thead><tr><th>모델</th><th>일반 MAE</th><th>균형 MAE</th><th>p90</th><th>채점 / 발행</th></tr></thead><tbody id="all-models"></tbody></table></div></details>
+ </div>
+ <div class="card"><h3>기존 HGB와 입력 갱신·120개월 후보</h3><p class="small muted" id="metrics-caption">선택한 평가 기간·지역 수준의 세부 지표</p><div class="table-wrap"><table><thead><tr><th>지표</th><th>기존 HGB</th><th>입력 갱신·120개월</th><th>변화 해석</th></tr></thead><tbody id="metrics-table">__STATIC_ROWS__</tbody></table></div><noscript><p class="noscript">JavaScript를 켜면 기간·지역 선택과 전체 모델·지역별 표를 사용할 수 있습니다. 위 표는 전체 기간 시도 성적입니다.</p></noscript></div>
+ <div class="card"><h3>반기별 평균오차의 흐름</h3><p class="small muted">각 점은 반기별 예측 시점의 일반 MAE입니다. 19개 채점 시점을 모두 표시합니다.</p><div class="legend"><span><i></i>기존 HGB</span><span><i class="blue"></i>입력 갱신·120개월</span><span>배경: 상승기 / 전환기</span></div><div class="chart-scroll"><svg id="error-line" class="chart" viewBox="0 0 880 285" role="img" aria-label="반기별 평균오차 비교"></svg></div><p id="line-readout" class="small muted" aria-live="polite">점에 마우스를 올리거나 키보드로 이동해 시점별 값을 확인하세요.</p><p class="note">최근 구간의 개선 폭과 별개로, 급변기에는 6개월 변화율 예측의 오차 자체가 커졌습니다.</p></div>
+</section>
+
+<section class="section" id="regions">
+ <div class="section-head"><p class="eyebrow">06 / Regional diagnostics</p><h2>지역마다 개선 폭이 다릅니다</h2><p>위에서 선택한 기간·지역 수준을 그대로 사용합니다. 지역명이나 시도명으로 검색해 기존과 새 후보의 오차를 비교할 수 있습니다.</p></div>
+ <div class="card"><div class="toolbar"><label>지역 검색<input id="region-search" type="search" placeholder="예: 서울, 경기, 수원" autocomplete="off"></label><label>정렬<select id="region-sort"><option value="gain">개선 폭 큰 순</option><option value="worse">악화 폭 큰 순</option><option value="error">후보 오차 큰 순</option><option value="name">지역명 순</option></select></label><button id="download-regions" class="spacer" type="button">지역 성적 CSV</button></div><p class="small muted" id="regions-caption" aria-live="polite"></p>
+ <div class="table-wrap"><table><thead><tr><th>지역</th><th>기존 MAE</th><th>후보 MAE</th><th>개선율</th><th>후보 p90</th><th>채점 / 발행</th></tr></thead><tbody id="region-table"></tbody></table></div>
+ <div class="pagination"><span id="page-caption"></span><div><button id="prev-page" type="button" aria-label="지역 표 이전 페이지">← 이전</button> <button id="next-page" type="button" aria-label="지역 표 다음 페이지">다음 →</button></div></div>
+ <p class="note">개선율 = 100 × (기존 MAE−후보 MAE) / 기존 MAE. 음수면 후보 오차가 커졌습니다. 지역별 채점 횟수가 달라 작은 표본의 순위를 일반화할 때 주의가 필요합니다. 같은 시도의 통합·분할 행정권역은 고정 통합권 단위로 비교했습니다.</p></div>
+</section>
+
+<section class="section" id="intervals">
+ <div class="section-head"><p class="eyebrow">07 / Uncertainty</p><h2>예측 범위의 실제 포함률도 평가</h2><p>과거에 공개가 끝난 같은 규칙의 예측 잔차로 80%·95% 범위를 만듭니다. 급변기와 안정기의 포함률·폭을 함께 평가해야 합니다.</p></div>
+ <div class="card"><h3 id="coverage-title">80% 범위의 실제 포함률 · 시도</h3><div class="legend"><span><i></i>기존 HGB</span><span><i class="blue"></i>입력 갱신·120개월</span><span><i class="dashed"></i>명목 80%</span></div><div class="chart-scroll"><svg id="coverage-chart" class="chart" viewBox="0 0 880 285" role="img" aria-label="국면별 80% 예측 범위 포함률"></svg></div>
+ <div class="grid2"><div><h3>급변기에 범위를 벗어난 사례가 많았습니다</h3><p class="small muted" style="margin-top:10px">전체 실제 포함률은 약 67~70%. 특히 상승기·전환기의 포함률이 낮았습니다. 과거 잔차만으로 보정해도 국면이 바뀌면 다음 구간의 오차 분포가 달라집니다.</p></div><div><h3>최근의 높은 포함률은 폭과 함께 봅니다</h3><p class="small muted" style="margin-top:10px">최근 포함률은 약 96.5~100%였습니다. 이전 급변기의 오차가 반영된 넓은 범위가 영향을 줬습니다. 범위 폭과 범위를 벗어난 정도를 함께 벌점화하는 구간점수도 저장했습니다.</p></div></div>
+ <details><summary>구간점수 계산식</summary><p>80% 범위 [L,U]와 실제 y에 대해 U−L + 10×max(L−y,0) + 10×max(y−U,0)를 계산합니다. 폭이 불필요하게 넓거나 실제가 범위를 크게 벗어나면 점수가 커지며 낮을수록 좋습니다. 지역들은 공통 충격을 공유하므로 지역 행 수를 독립 실험 횟수로 해석하지 않습니다.</p></details>
+ </div>
+</section>
+
+<section class="section" id="next">
+ <div class="section-head"><p class="eyebrow">08 / Interpretation & next steps</p><h2>현재 판단과 다음 검증</h2></div>
+ <div class="grid2"><article class="card"><h3>현재 판단</h3><ul class="clean"><li><b>기준 모델 유지.</b> 전체 균형 오차 2.14% 개선은 5% 교체 기준에 못 미쳤습니다.</li><li><b>입력 갱신 후보 보존.</b> 최근 MAE는 시도 약 8.33%, 시군구 약 5.43% 줄었습니다. 전체 기간에서는 방향 균형 정확도와 과소예측 편향이 악화돼 함께 추적합니다.</li><li><b>해석 범위 고정.</b> 결과는 최신 수정 자료로 재구성한 과거 검증입니다. 반복 사용한 평가 기간과 실제 최초 공개본 사이의 차이를 감안합니다.</li></ul></article><article class="card"><h3>개선에 필요한 다음 자료</h3><ul class="clean"><li><b>당시 공개본 이력.</b> 늦은 신고·정정·해제까지 반영한 최초 공개값과 갱신 경로를 복원합니다.</li><li><b>지역 수요의 장기 이력.</b> 청장년 이동, 고용·일자리, 전세 수급 등으로 지역 차이를 보완합니다.</li><li><b>급변기와 범위 보정.</b> 평균오차·큰 오차·포함률을 동시에 개선하는지 신규 관측에서 확인합니다.</li></ul></article></div>
+ <div class="card"><h3>현재 고정한 시도별 6개월 전망</h3><p class="small muted" style="margin-top:10px">2026년 10월 기준월 대비 2027년 4월의 누적변화율입니다. 기준 HGB와 조건부 입력 갱신 후보를 나란히 보존했습니다.</p><div class="table-wrap"><table><thead><tr><th>지역</th><th>기준 HGB</th><th>조건부 후보</th><th>기준의 80% 경험적 범위</th></tr></thead><tbody id="forecast-table">__FORECAST_ROWS__</tbody></table></div><p class="note">기준 HGB의 가격 입력은 7월, 조건부 후보의 정상 입력은 8월까지입니다. 10월 실제 가격은 아직 관측되지 않았으며, 위 값은 10월을 상대 기준으로 삼은 변화율 전망입니다. 범위의 실제 포함률은 앞 절에서 평가한 대로 국면에 따라 달랐습니다.</p><button id="download-forecasts" type="button" style="margin-top:13px">130개 지역 전망 CSV</button></div>
+ <div class="card"><h3>발행 예측을 고정하고, 실제 결과가 쌓이면 채점</h3><div class="time-grid"><div class="now"><span class="label">2026.10.27</span><strong>예측 고정</strong><p>입력·모델·과거 오차·예측을 해시와 함께 보존</p></div><div><span class="label">2026.11 ~ 2027.04</span><strong>6개월 관측</strong><p>향후 거래 수집과 목표 누적변화 계산</p></div><div class="later"><span class="label">2027.07경</span><strong>성숙 확인</strong><p>같은 3개월 지연 가정과 실제 공개 상태 확인</p></div><div><span class="label">그 이후</span><strong>교체 재판단</strong><p>발행 당시 평가 대상을 유지하고 신규 성적 비교</p></div></div><p class="note">현재 실제 결과 채점 상태는 <code>pending_mature_actuals</code>입니다. 신규 관측을 수집한 뒤 고정한 예측과 비교합니다.</p></div>
+</section>
+
+<section class="section" id="sources">
+ <div class="section-head"><p class="eyebrow">09 / Sources & reproducibility</p><h2>출처, 검수, 재현 기록</h2><p>화면의 숫자는 실험 CSV와 고정 예측 기록에서 읽었습니다. 이 HTML 한 파일에 차트와 계산용 집계를 내장해 오프라인에서도 볼 수 있습니다.</p></div>
+ <div class="card"><div class="sources"><div><h3>원표와 연구 기록</h3><ol><li><a href="./지역별%20집값%20예측%20반복%20검증.md">반복 검증 원문 보고서</a> · <a href="./지역별%20집값%206개월%20예측%20연구.md">최초 연구</a></li><li><a href="../analysis/regional_forecast_iteration_20261027/results/scorecard.csv">주 실험 성적표</a> · <a href="../analysis/regional_forecast_iteration_20261027/results_timeliness/scorecard.csv">시차 실험 성적표</a></li><li><a href="../analysis/regional_forecast_iteration_20261027/results/promotion_decisions.csv">주 실험 교체 판정</a> · <a href="../analysis/regional_forecast_iteration_20261027/results/trial_history.csv">반복 이력</a></li><li><a href="../research_notes/지역별%20집값%20예측%20반복%20검증/official_update.md">공식 공급자료 보완</a> · <a href="../research_notes/지역별%20집값%20예측%20반복%20검증/timeliness.md">시차 조사</a></li><li><a href="../analysis/regional_forecast_iteration_20261027/README.md">재실행·향후 채점 방법</a></li></ol></div><div><h3>외부 1차 근거</h3><ol><li><a href="https://www.korea.kr/news/policyNewsView.do?newsId=148869388" target="_blank" rel="noreferrer">국토교통부 · 거래 신고기한 단축 안내</a></li><li><a href="https://rt.molit.go.kr/pt/bbs/faqList.do?mobileAt=&amp;qnaProcessSttusCode=1" target="_blank" rel="noreferrer">국토교통부 · 실거래 공개 FAQ</a></li><li><a href="https://stat.molit.go.kr/portal/cate/statMetaView.do?hRsId=468" target="_blank" rel="noreferrer">국토교통부 · 주택 공급 통계</a></li><li><a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html" target="_blank" rel="noreferrer">scikit-learn · 시간 순서 검증</a></li><li><a href="https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf" target="_blank" rel="noreferrer">Gneiting & Raftery (2007) · 구간점수, §6.2</a></li></ol></div></div>
+ <details><summary>검수 범위와 고정본 식별자</summary><p>기존 분석의 회귀 테스트 41개 통과. 모델·입력으로 주 실험 3,900건과 조건부 후보 260건의 예측 및 범위를 재현했습니다. 598개 후보·원점 묶음의 동일 평가 대상과 정답, 가중치·정보 시점, 대체 예측 14행의 실제 학습 정보, 기존 고정본 해시도 검증했습니다. 해당 검수는 코드·산출물의 일치 범위를 다룹니다.</p><p>주 실험: <code id="main-id">6297866c5207816ec85c</code><br>시차 후보: <code id="timing-id">2a61ece4c818ecf30e49</code></p><p><a href="../analysis/regional_forecast_iteration_20261027/delivery_verification.json">자동 검증 기록</a> · <a href="../analysis/regional_forecast_iteration_20261027/review3.md">핵심 독립 검수</a> · <a href="../analysis/regional_forecast_iteration_20261027/review_timeliness_followup.md">시차 수정 검수</a> · <a href="./regional_forecast_report_v1/source_manifest.json">HTML 보고서 입력 해시</a></p></details>
+ </div>
+</section>
+<footer class="footer"><p><b>데이터로 보는 부동산</b> · 지역별 집값 6개월 예측 연구</p><p>분석 기준일 2026.10.27 · 오차 단위 %p · 전체 평가 19개 반기 시점 · 입력 갱신 성적에는 역사 공개본을 근사하는 가정 포함</p></footer>
+</main></div>
+<script type="application/json" id="report-data">__REPORT_DATA__</script>
+<script>
+'use strict';
+const D=JSON.parse(document.getElementById('report-data').textContent);
+const $=id=>document.getElementById(id),fmt=(x,n=2)=>x==null||!Number.isFinite(Number(x))?'—':Number(x).toFixed(n);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const names={v3_hgb:'기존 HGB',zero:'가격 유지',damped_momentum:'감쇠 모멘텀',momentum6:'6개월 모멘텀',momentum3:'3개월 모멘텀',momentum_blend:'3·6개월 모멘텀 결합',hgb_full_120m:'전체 변수 HGB · 120개월',hgb_full_72m:'전체 변수 HGB · 72개월',hgb_price_120m:'가격 HGB · 120개월',fixed_blend:'기존 + 감쇠 모멘텀 50:50',online_best:'과거 오차 기반 최선 선택',online_ensemble:'과거 오차 기반 앙상블',online_bias_corrected:'앙상블 + 편향 보정',hgb_t2_law:'입력 갱신 · 기존 HGB',hgb_t2_120m:'입력 갱신 · 120개월 HGB',hgb_full_mae:'전체 HGB · 절대오차 학습',hgb_full_context:'전체 HGB + 시장 흐름',hgb_full_context_mae:'전체 HGB + 시장 흐름 · 절대오차',hgb_full_separate:'시도·시군구 분리 HGB',lgbm_full_mae:'전체 LightGBM · 절대오차',lgbm_full_mse:'전체 LightGBM · 제곱오차'};
+function modelName(key){if(names[key])return names[key];const s=D.model_specs[key];if(!s)return key;return(s.kind==='ridge'?'Ridge':s.kind==='lgbm'?'LightGBM':'HGB')+' · '+(key.includes('price')?'가격':key.includes('interaction')?'상호작용':key.includes('full')?'전체 변수':'축소 변수')+' · '+(s.window?s.window+'개월':s.half_life?'시간 감쇠':'누적 학습');}
+const periodNames={all_regimes:'전체 · 2017~2026',boom:'상승기 · 2020~2021',turn:'전환기 · 2022~2023',recent:'최근 · 2024~2026'};
+const levelNames={province:'시도',district:'시군구 통합권'};
+const models=['v3_hgb','zero','damped_momentum','hgb_price_120m','hgb_full_120m','fixed_blend','online_ensemble','hgb_t2_law','hgb_t2_120m'];
+let page=0,currentRegions=[];
+const state=()=>({window:$('period').value,level:$('level').value,metric:$('metric').value});
+function rowsForState(){const s=state();return D.scores.filter(r=>r.window===s.window&&r.level===s.level);}
+function modelCell(r){return esc(modelName(r.model))+(r.model.startsWith('hgb_t2')?'<span class="tag-model">조건부</span>':'');}
+function renderScores(){
+ const s=state(),rows=rowsForState(),visible=models.map(m=>rows.find(r=>r.model===m)).filter(Boolean),metricLabel=$('metric').selectedOptions[0].textContent;
+ const max=Math.max(...visible.map(r=>r[s.metric]||0))*1.04;
+ $('rank-title').textContent=periodNames[s.window]+' · '+levelNames[s.level]+' · '+metricLabel;
+ $('rank-subtitle').textContent=rows.length?rows[0].origins+'개 예측 시점 · 낮을수록 오차가 작음 · 단위 %p':'';
+ $('model-bars').innerHTML=visible.map(r=>`<div class="rank-row"><div>${modelCell(r)}</div><div class="track"><div class="fill ${r.model==='v3_hgb'?'base':r.model.startsWith('hgb_t2')?'candidate':''}" style="width:${100*r[s.metric]/max}%"></div></div><div class="num">${fmt(r[s.metric])}</div></div>`).join('');
+ $('all-models').innerHTML=[...rows].sort((a,b)=>a.balanced_mae_pp-b.balanced_mae_pp).map(r=>`<tr><th class="wrap-cell">${modelCell(r)}</th><td>${fmt(r.mae_pp,3)}</td><td>${fmt(r.balanced_mae_pp,3)}</td><td>${fmt(r.p90_ae_pp,3)}</td><td>${r.scored_n} / ${r.forecast_n}</td></tr>`).join('');
+ const a=rows.find(r=>r.model==='v3_hgb'),b=rows.find(r=>r.model==='hgb_t2_120m');
+ const metrics=[['mae_pp','일반 MAE (%p)',1,'low'],['balanced_mae_pp','균형 MAE (%p)',1,'low'],['rmse_pp','RMSE (%p)',1,'low'],['p90_ae_pp','p90 절대오차 (%p)',1,'low'],['tail_mae_pp','상위 10% 꼬리 MAE (%p)',1,'low'],['bias_pp','편향 (%p)',1,'bias'],['balanced_direction_accuracy','방향 균형 정확도 (%)',100,'high'],['rank_spearman','지역 순위상관',1,'high'],['interval_coverage_80','80% 범위 포함률 (%)',100,'coverage'],['interval_width_80_pp','80% 범위 폭 (%p)',1,'width'],['interval_score_80','80% 구간점수',1,'low']];
+ $('metrics-caption').textContent=periodNames[s.window]+' · '+levelNames[s.level]+' · 같은 평가 대상 비교';
+ $('metrics-table').innerHTML=metrics.map(([k,l,f,kind])=>{let text='폭·포함률 함께 확인',color='';if(kind==='low'){const delta=(a[k]-b[k])/a[k]*100;text=(delta>=0?'감소 ':'증가 ')+fmt(Math.abs(delta))+'%';color=delta>=0?'positive':'negative';}else if(kind==='high'){const delta=(b[k]-a[k])*f;text=(delta>=0?'+':'')+fmt(delta,2)+(f===100?'%p':'');color=delta>=0?'positive':'negative';}else if(kind==='bias'){text=Math.abs(b[k])<=Math.abs(a[k])?'절대 편향 감소':'절대 편향 증가';color=Math.abs(b[k])<=Math.abs(a[k])?'positive':'negative';}else if(kind==='coverage'){text='명목 목표 80%와 비교';}return `<tr><th>${l}</th><td>${fmt(a[k]*f,3)}</td><td>${fmt(b[k]*f,3)}</td><td class="${color}">${text}</td></tr>`;}).join('');
+ renderLine(s.level);renderCoverage(s.level);renderRegions();
+}
+function svgText(x,y,text,cls='axis',anchor='start'){return `<text x="${x}" y="${y}" class="${cls}" text-anchor="${anchor}">${esc(text)}</text>`;}
+function renderLine(level){
+ const a=D.time.filter(r=>r.level===level&&r.model==='v3_hgb'),b=D.time.filter(r=>r.level===level&&r.model==='hgb_t2_120m');
+ const w=880,h=285,l=44,r=19,t=22,bt=42,ys=Math.max(2,Math.ceil(Math.max(...a.map(d=>d.mae_pp),...b.map(d=>d.mae_pp))/2)*2);
+ const x=i=>l+i*(w-l-r)/(a.length-1),y=v=>h-bt-v*(h-t-bt)/ys;
+ let svg='<title>2017년 이후 반기별 평균오차 · '+levelNames[level]+'</title>';
+ for(const [start,end,color]of[['2020','2021','#fff1df'],['2022','2023','#eaf1ff']]){const first=a.findIndex(d=>d.origin.startsWith(start)),last=a.map(d=>d.origin.slice(0,4)).lastIndexOf(end);if(first>=0&&last>=0)svg+=`<rect x="${x(first)-10}" y="${t}" width="${x(last)-x(first)+20}" height="${h-t-bt}" fill="${color}"/>`;}
+ for(let i=0;i<=ys;i+=2)svg+=`<line class="grid" x1="${l}" x2="${w-r}" y1="${y(i)}" y2="${y(i)}"/>`+svgText(l-10,y(i)+4,i,'axis','end');
+ [a,b].forEach((rows,j)=>{const color=j?'#2659d9':'#788ba7';svg+=`<polyline points="${rows.map((d,i)=>x(i)+','+y(d.mae_pp)).join(' ')}" fill="none" stroke="${color}" stroke-width="2.6"/>`;rows.forEach((d,i)=>{const label=d.origin.slice(0,7)+' · '+(j?'입력 갱신 후보':'기존 HGB')+': '+fmt(d.mae_pp,3)+'%p';svg+=`<circle cx="${x(i)}" cy="${y(d.mae_pp)}" r="4" fill="${color}" tabindex="0" aria-label="${esc(label)}"><title>${esc(label)}</title></circle>`;});});
+ a.forEach((d,i)=>{if(i%4===0||i===a.length-1)svg+=svgText(x(i),h-14,d.origin.slice(0,4),'axis','middle');});
+ svg+=svgText(l,t-7,'MAE (%p)');$('error-line').innerHTML=svg;
+ $('line-readout').textContent='점에 마우스를 올리거나 키보드로 이동해 시점별 값을 확인하세요.';
+ $('error-line').querySelectorAll('circle').forEach(point=>{for(const event of ['mouseenter','focus'])point.addEventListener(event,()=>{$('line-readout').textContent=point.getAttribute('aria-label');});});
+}
+function renderCoverage(level){
+ $('coverage-title').textContent='80% 범위의 실제 포함률 · '+levelNames[level];
+ const windows=['all_regimes','boom','turn','recent'],labels=['전체','상승기','전환기','최근'],w=880,h=285,l=42,r=18,t=25,bt=42,y=v=>h-bt-v*(h-t-bt)/110;
+ let svg='<title>국면별 80% 예측 범위의 실제 포함률</title>';
+ for(let v=0;v<=100;v+=20)svg+=`<line class="grid" x1="${l}" x2="${w-r}" y1="${y(v)}" y2="${y(v)}"/>`+svgText(l-10,y(v)+4,v,'axis','end');
+ windows.forEach((win,i)=>{const cx=l+(i+.5)*(w-l-r)/4;['v3_hgb','hgb_t2_120m'].forEach((model,j)=>{const d=D.scores.find(r=>r.window===win&&r.level===level&&r.model===model),v=d.interval_coverage_80*100,x=cx+(j?4:-45);svg+=`<rect x="${x}" y="${y(v)}" width="41" height="${y(0)-y(v)}" rx="2" fill="${j?'#2659d9':'#97a8bf'}"><title>${labels[i]} · ${modelName(model)}: ${fmt(v)}% (구간 채점 ${d.interval_n_80}건)</title></rect>`+svgText(x+20.5,y(v)-8,fmt(v,1)+'%','value','middle');});svg+=svgText(cx,h-16,labels[i],'label','middle');});
+ svg+=`<line x1="${l}" x2="${w-r}" y1="${y(80)}" y2="${y(80)}" stroke="#bd8326" stroke-dasharray="5 4" stroke-width="1.5"/>`;$('coverage-chart').innerHTML=svg;
+}
+function renderRegions(){
+ const s=state(),q=$('region-search').value.trim().toLowerCase(),selected=D.regional.filter(r=>r.window===s.window&&r.level===s.level),base=new Map(selected.filter(r=>r.model==='v3_hgb').map(r=>[r.series_id,r]));
+ let rows=selected.filter(r=>r.model==='hgb_t2_120m').map(b=>{const a=base.get(b.series_id);return{...b,base_mae:a?.mae_pp,gain:a?.mae_pp>0&&b.mae_pp!=null?(a.mae_pp-b.mae_pp)/a.mae_pp*100:null};}).filter(r=>r.name.toLowerCase().includes(q));
+ const order=$('region-sort').value;rows.sort((a,b)=>order==='name'?a.name.localeCompare(b.name,'ko'):order==='error'?(b.mae_pp??-Infinity)-(a.mae_pp??-Infinity):order==='worse'?(a.gain??Infinity)-(b.gain??Infinity):(b.gain??-Infinity)-(a.gain??-Infinity));currentRegions=rows;
+ const size=20,totalPages=Math.max(1,Math.ceil(rows.length/size));page=Math.min(page,totalPages-1);
+ $('regions-caption').textContent=periodNames[s.window]+' · '+levelNames[s.level]+' · '+rows.length+'개 지역';
+ $('region-table').innerHTML=rows.slice(page*size,(page+1)*size).map(r=>`<tr><th>${esc(r.name)}</th><td>${fmt(r.base_mae)}</td><td>${fmt(r.mae_pp)}</td><td class="${r.gain==null?'':r.gain>=0?'positive':'negative'}">${r.gain==null?'—':(r.gain>0?'+':'')+fmt(r.gain)+'%'}</td><td>${fmt(r.p90_ae_pp)}</td><td>${r.scored_n} / ${r.forecast_n}</td></tr>`).join('')||'<tr><td colspan="6" style="text-align:center;padding:30px">검색 결과가 없습니다.</td></tr>';
+ $('page-caption').textContent=rows.length?`${page*size+1}–${Math.min((page+1)*size,rows.length)} / ${rows.length}개 지역`:'0개 지역';$('prev-page').disabled=page===0;$('next-page').disabled=page>=totalPages-1;
+}
+function downloadCsv(rows,filename){if(!rows.length)return;const columns=Object.keys(rows[0]),cell=v=>'"'+String(v??'').replaceAll('"','""')+'"',content='\ufeff'+[columns.map(cell).join(','),...rows.map(r=>columns.map(c=>cell(r[c])).join(','))].join('\r\n'),url=URL.createObjectURL(new Blob([content],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),5000);}
+function init(){
+ $('correlation-chart').innerHTML=D.correlations.map(d=>`<div class="corr-row"><span>${esc(d.label)}</span><div class="corr-track"><div class="corr-fill" style="left:${d.rho<0?50-Math.abs(d.rho)*80:50}%;width:${Math.abs(d.rho)*80}%;background:${d.rho<0?'#788ba7':'#2659d9'}"></div></div><strong>${d.rho>0?'+':''}${fmt(d.rho,3)}</strong></div>`).join('');
+ $('corr-table').innerHTML=D.correlations.map(d=>`<tr><th>${esc(d.label)}</th><td>${fmt(d.rho,3)}</td><td>${d.regions}</td><td>${d.n_min}–${d.n_max}</td><td>${esc(d.first.slice(0,7))} ~ ${esc(d.last.slice(0,7))}</td></tr>`).join('');
+ $('main-id').textContent=D.main_release;$('timing-id').textContent=D.timeliness_release;
+ for(const id of ['period','level','metric'])$(id).addEventListener('change',()=>{page=0;renderScores();});
+ $('region-search').addEventListener('input',()=>{page=0;renderRegions();});$('region-sort').addEventListener('change',()=>{page=0;renderRegions();});
+ $('prev-page').addEventListener('click',()=>{page--;renderRegions();});$('next-page').addEventListener('click',()=>{page++;renderRegions();});
+ $('download-scores').addEventListener('click',()=>downloadCsv(rowsForState(),`forecast_scores_${state().window}_${state().level}.csv`));$('download-regions').addEventListener('click',()=>downloadCsv(currentRegions,`regional_scores_${state().window}_${state().level}.csv`));$('download-forecasts').addEventListener('click',()=>downloadCsv(D.forecasts,'forecasts_20261027_target_202704.csv'));$('print-btn').addEventListener('click',()=>window.print());
+ const observer=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){document.querySelectorAll('.sidebar nav a').forEach(a=>a.classList.toggle('active',a.hash==='#'+entry.target.id));}},{rootMargin:'-5% 0px -72% 0px'});document.querySelectorAll('section[id]').forEach(s=>observer.observe(s));
+ renderScores();document.body.dataset.ready='true';
+}
+init();
+</script>
+</body>
+</html>

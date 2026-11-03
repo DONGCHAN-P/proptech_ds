@@ -1,0 +1,98 @@
+{
+  "id": "S13",
+  "duration": 10,
+  "title": "4. 현금 1억원을 집값으로 바꾸면",
+  "condition": "사례 가정  LTV 70% · 개인 대출한도 4억원 · 준비금 2000만원",
+  "events": [
+    {
+      "at": 0.15,
+      "show": [
+        "cash-equity"
+      ],
+      "fills": [
+        "equity"
+      ]
+    },
+    {
+      "at": 1.1,
+      "show": [
+        "reserve"
+      ],
+      "move": [
+        {
+          "id": "reserve-bar",
+          "y": 70
+        }
+      ]
+    },
+    {
+      "at": 2.4,
+      "show": [
+        "eq-value"
+      ]
+    },
+    {
+      "at": 4.0,
+      "show": [
+        "formula"
+      ]
+    },
+    {
+      "at": 6.2,
+      "show": [
+        "house-result"
+      ],
+      "fills": [
+        "house-eq",
+        "house-loan"
+      ]
+    }
+  ],
+  "cues": [
+    [
+      0,
+      "자, 현금 1억 원부터 보겠습니다."
+    ],
+    [
+      1.1,
+      "준비금 2천만 원을 빼면 집값에\n넣을 돈이 8천만 원 남습니다."
+    ],
+    [
+      3.1,
+      "LTV 70퍼센트라면 내 돈이\n집값의 30퍼센트는 있어야 하잖아요."
+    ],
+    [
+      4,
+      "그래서 8천만 원을 30퍼센트로 나누면,\n계산상으로는 약 2억 6천6백만 원대가 나옵니다."
+    ],
+    [
+      6.2,
+      "오늘은 조금 내려서\n2억 6천6백만 원짜리 집을 예로 들게요."
+    ]
+  ],
+  "anchor_events": {
+    "S13.b01": 1.1,
+    "S13.b02": 2.4,
+    "S13.b03": 4.0,
+    "S13.b04": 6.2
+  },
+  "source": "계산: 사용자 원고의 가상 사례 · 현금과 주택가격은 준비금을 분리해 표시",
+  "samples": [
+    0,
+    1.6,
+    2.9,
+    4.6,
+    6.7,
+    9.5
+  ],
+  "cue_ids": [
+    "P032Q01",
+    "P032Q02",
+    "P033Q01",
+    "P033Q02",
+    "P033Q03"
+  ],
+  "caption_policy": "Exact supplied display_lines, selected cues only. Preview seconds are NOT narration synchronization.",
+  "timing_basis": "preview_only_unlocked",
+  "audio": null
+}

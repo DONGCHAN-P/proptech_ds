@@ -1,0 +1,46 @@
+{
+  "revision": "landuse-front-v7-final",
+  "inputs": {
+    "script": "script-v4-hook-outside",
+    "audio": "audio-v2 unchanged6chapters",
+    "source_script_sha256": "d816c5ba4341ddaafd4f3f3db6585873a519e1577d865dbf332d183925d4c2da"
+  },
+  "outputs": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\outputs\\front-review-v7",
+  "delivery": {
+    "status": "front_local_review_ready",
+    "video": {
+      "file": "namyangju-landuse_front_v7.mp4",
+      "bytes": 31858781,
+      "sha256": "387aedd0f3152dd0347f9d4bdcfae1bfbc5bff1d484b1c5087643d6843837ce6",
+      "frames": 13087,
+      "fps": 30,
+      "duration_s": 436.23333333333335
+    },
+    "zip": {
+      "file": "namyangju-landuse_front_v7_delivery.zip",
+      "bytes": 32173339,
+      "sha256": "a6870c25eb0f3a53382b2231245fb8b18c8bc06ac4032fe2931a0999cce1ed21",
+      "entries": 18,
+      "integrity": "CRC pass; stored; MP4 not re-encoded for ZIP"
+    },
+    "front_only": true,
+    "full14minute_merge": false,
+    "new_paid_calls": 0,
+    "actual_listening": false,
+    "continuous_playback": false,
+    "upload_or_external_file_send": false
+  },
+  "validated": [
+    "whole decode",
+    "13,087video frames 1080p30/AAC",
+    "pre/post label-fix AAC packet hashes identical",
+    "map ROI patch exactly8804..9305; original preserved",
+    "independent final QA and persistent white bar checks",
+    "ZIP CRC"
+  ],
+  "open_checks": [
+    "actual listening/continuous playback not performed",
+    "user review and any full merge handled by director"
+  ],
+  "next_owner": "video_director"
+}

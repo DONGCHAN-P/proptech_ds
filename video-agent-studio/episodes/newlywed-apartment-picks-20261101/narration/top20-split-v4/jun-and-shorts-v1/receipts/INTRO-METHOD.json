@@ -1,0 +1,63 @@
+{
+  "asset_id": "INTRO-METHOD",
+  "sentence_ids": [
+    "P01-INTRO-V3-07",
+    "P01-INTRO-V3-08"
+  ],
+  "status": "complete",
+  "started_at_utc": "2026-11-03T13:23:31.877Z",
+  "authorization_id": "9cde211f3073",
+  "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+  "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+  "input_file_sha256": "1b1b56620bd4831af00ecb1769376b59c21cda139247ee7a5aebf4fef8aa0c24",
+  "request_text_sha256": "4ad2877100320c81843fac560373ea8b4db006bf7fd528566a94da6c236f1292",
+  "characters": 72,
+  "reserved_credits": 72,
+  "actual_credits": 29,
+  "charge_known": true,
+  "request": {
+    "text": "지도의 점 하나는 아파트 한 단지이고, 색은 그 단지의 거래 중위가격 구간입니다.\n\n그럼 이십 위 부천 원미구부터 시작하겠습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+  "local_shadow_remaining_before": 16492,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "DtTWhNTrZVbURDlYqFnQ",
+    "x-request-id": null,
+    "character-cost": "29",
+    "content-type": "application/json",
+    "date": "Tue, 03 Nov 2026 13:23:34 GMT"
+  },
+  "pcm_samples": 402192,
+  "pcm_duration_s": 9.12,
+  "provider_last_alignment_end_s": 9.2,
+  "complete_tail_after_alignment_s": -0.08000000000000007,
+  "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-METHOD.wav",
+  "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-METHOD/audio.mp3",
+  "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-METHOD/alignment.json",
+  "pcm_sha256": "4556c130b93c4959bc15475ecd75684fae1cac6e1f1d7b9b981ccd993994715f",
+  "artifact_sha256": {
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-METHOD/audio.mp3": "e805e55bd32835ff857bad2846a5c0f27216224a44cbf489c3d9645d6c45adce",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-METHOD/alignment.json": "a221e560f102cd31433920adb2d73df22eae786fa3a6def4f5d67623f0b27d27",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-METHOD/normalized_alignment.json": "a221e560f102cd31433920adb2d73df22eae786fa3a6def4f5d67623f0b27d27",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-METHOD.wav": "f6af70d4716e5f4c4c97586f6a0ede78e80d60c679c1fa2bcfc55070b9dfc1bd"
+  },
+  "processing": {
+    "sample_rate_hz": 44100,
+    "channels": 1,
+    "codec": "pcm_s16le",
+    "tempo_factor": 1,
+    "trimmed": false,
+    "tail_preserved": true,
+    "provider_speed": 0.97
+  },
+  "local_shadow_remaining_after": 16463,
+  "completed_at_utc": "2026-11-03T13:23:34.654Z"
+}

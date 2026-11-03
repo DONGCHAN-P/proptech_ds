@@ -1,0 +1,17 @@
+{
+  "issue_id": "TOOL-READINESS-01",
+  "scene_ids": [],
+  "scope": "본편 전체 제작 도구 연결; 장면별 변경 없음",
+  "problem": "도구 메타 점검은 가능하지만 이번 편용 실행 연결과 실제 결과 검증은 아직 완료되지 않음",
+  "evidence": [
+    "Claude CLI 2.1.168 auth status: loggedIn=true, authMethod=claude.ai, subscriptionType=pro. 잔여 한도·추가 사용 과금 설정은 외부 확인하지 않음.",
+    "SAPI COM에 Microsoft Heami Desktop - Korean 등록. Speak 호출은 하지 않음. System.Speech.GetInstalledVoices는 NullReferenceException 발생.",
+    "edge-tts는 활성 로컬 Python에 미설치. 기존 SAPI 생성/측정 코드는 과거 편 경로·대본·속도에 고정.",
+    "YouTube OAuth 업로드/조회 scope와 refresh token 존재. access token은 로컬 만료 판정이며 갱신·채널 조회는 하지 않음.",
+    "private 전용 기존 업로더는 교산 편 경로에 고정. 범용 youtube_release.py는 공통 토큰을 수정하며 public도 지원하므로 이번 편 실행 전에 private·버전 검증 연결 필요."
+  ],
+  "proposal": "총괄이 최신 승인에 맞춰 확정 script_revision·무료 음성 설정·발음 사전을 전달하고, 이번 편 경로의 SAPI/PCM 측정 및 private 전용 업로드 어댑터를 연결한다. Claude는 API 환경변수 제거·도구/MCP/hooks 비활성·구독 포함 한도만 사용하고 추가 사용 과금 경로를 금지한다.",
+  "impact": "본 작업에서는 음성·자막 시간표·외부 검수·업로드 완료를 주장할 수 없음. 추후 생성 후 실제 길이·숫자/고유명사 발음·자막 경계 청취와 업로드 후 private 및 publishAt 부재 확인 필요.",
+  "next_owner": "video_director",
+  "peer_message_tool_available": false
+}

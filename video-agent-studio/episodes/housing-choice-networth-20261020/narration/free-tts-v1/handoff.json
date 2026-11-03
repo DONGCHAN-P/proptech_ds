@@ -1,0 +1,23 @@
+{
+  "task_id": "narration-v6-two-paragraph-repair",
+  "role": "video_narration",
+  "status": "기술 검사 통과; 슬롯 반환",
+  "input_revisions": {
+    "script_revision": "script-final-v6",
+    "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+    "audio_revision": "production-injoon-v6"
+  },
+  "outputs": ["narration/free-tts-v1/production-injoon-v6/technical_validation.json", "narration/free-tts-v1/production-injoon-v6/qa_repair_packet.json", "narration/free-tts-v1/production-injoon-v6/repair_summary.json", "narration/free-tts-v1/final_timing.json", "narration/free-tts-v1/final_timing.v5.json", "narration/free-tts-v1/final_timing.v6.json"],
+  "affected_scene_ids": ["C05", "C06"],
+  "changed_scene_ids": ["C05", "C06"],
+  "checks": [
+    {"check": "생성/재사용", "result": "신규2·재사용52; 원문/읽기표기/voice/SHA 대조 통과"},
+    {"check": "변경 범위", "result": "1~4·7~10장 WAV SHA 동일; 5장+0.633333초·6장+0.733333초"},
+    {"check": "PCM/원문/시간", "result": "1510.266667초·54문단·cue342·WordBoundary2272; 비겹침·클리핑0·tail/30fps 통과"},
+    {"check": "보존", "result": "v5 원본296파일 SHA 보존 및 루트v5 타임맵 아카이브 검증"}
+  ],
+  "required_open_count": 0,
+  "open_issue_ids": [],
+  "unresolved": "실제 청취 미확인. 신규2문단 ASR은 QA Kant 담당이며 총괄이 전달 완료. 소스/렌더 폴더 수정 없음. 유료호출0·무료TTS2회·자동재시도0.",
+  "next_role": "QA Kant → editor Carson / video_director"
+}

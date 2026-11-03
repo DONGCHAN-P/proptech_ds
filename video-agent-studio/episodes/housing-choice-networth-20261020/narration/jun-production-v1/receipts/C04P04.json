@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C04P04",
+  "scene_id": "C04",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:05:54.500Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "cbdd9b9105ce641ca0de9e4685bd901b886f6330ab2a5ccc659e04770430b2cf",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "전세는 이 설정에서 매달 투자할 돈이 가장 많습니다. 월세는 처음 투자할 돈이 가장 많습니다. 어느 쪽이 더 크게 남는지는 초기 투자금과 월 적립금, 그리고 투자수익이 함께 결정합니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 103,
+  "characters": 103,
+  "actual_credits": 41,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:05:40.002Z",
+  "local_shadow_remaining_before": 21338,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "UnsTtRSIMrfHvLPRrTsK",
+    "x-request-id": null,
+    "character-cost": "41",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:05:53 GMT"
+  },
+  "pcm_samples": 592704,
+  "pcm_duration_s": 13.44,
+  "provider_last_spoken_end_s": 13.52,
+  "artifact_sha256": {
+    "paragraphs/C04P04/audio.mp3": "61e4f1537d301ca28d438110557aebce3d1f59ce01f6559cee7598a4f74d4523",
+    "paragraphs/C04P04/audio.wav": "b143f99830d0e76886b36696cf5295ebd6eda528ead20bd21efcd8aab6b79a0f",
+    "paragraphs/C04P04/alignment.json": "48f6ac94b07d6f3634bf25f27bf18988d632cad6e0d9aaba3041d9d9493f5032",
+    "paragraphs/C04P04/normalized_alignment.json": "48f6ac94b07d6f3634bf25f27bf18988d632cad6e0d9aaba3041d9d9493f5032"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21297,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:05:57.828Z"
+}

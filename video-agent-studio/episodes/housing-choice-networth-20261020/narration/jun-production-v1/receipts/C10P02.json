@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C10P02",
+  "scene_id": "C10",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:08:24.851Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "abe1732dd3e82e8744cc814eef981eef050ad2bfe700bb28a3818a8f5afb896a",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "이번 계산에서 투자수익은 연 육 퍼센트로 놓았고, 앞에서 본 기본 조건에서는 전세와 월세의 순자산이 매매보다 크게 계산됐습니다. 전월세 주거비를 내면서 차액을 계속 투자하고, 이보다 높은 성과를 꾸준히 낼 수 있다면 같은 집값과 계약 조건에서 임차의 순자산 우위가 더 커질 수 있습니다. 투자 역량과 실제로 이어갈 수 있는 저축 습관까지 내 상황에 맞춰 넣어봐야 합니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 207,
+  "characters": 207,
+  "actual_credits": 83,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19983,
+    "character_limit": 40000,
+    "included_remaining": 20017,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:08:20.529Z",
+  "local_shadow_remaining_before": 19961,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "qocw2iQIeaj5NGa9cD1R",
+    "x-request-id": null,
+    "character-cost": "83",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:08:24 GMT"
+  },
+  "pcm_samples": 1083096,
+  "pcm_duration_s": 24.56,
+  "provider_last_spoken_end_s": 24.64,
+  "artifact_sha256": {
+    "paragraphs/C10P02/audio.mp3": "aea98c899bf5395df35b10bbc4ca9211dc450485eb71ed00d4395f957ff34423",
+    "paragraphs/C10P02/audio.wav": "cb9f6d6e12de36b60a69acbfcf19aa579889f01aba6dc1187585487c12f8cdcb",
+    "paragraphs/C10P02/alignment.json": "fedb71355a57cc4c0e13338d1d9f3e8650e68420e1eeb198d0587a80062aa9a2",
+    "paragraphs/C10P02/normalized_alignment.json": "fedb71355a57cc4c0e13338d1d9f3e8650e68420e1eeb198d0587a80062aa9a2"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 19878,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:08:30.829Z"
+}

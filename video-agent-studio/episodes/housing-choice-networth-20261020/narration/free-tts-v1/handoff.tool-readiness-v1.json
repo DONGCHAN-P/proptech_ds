@@ -1,0 +1,46 @@
+{
+  "task_id": "housing-choice-tool-readiness-free-tts-v1",
+  "role": "video_narration",
+  "status": "준비 점검 완료; 실제 실행 미검증",
+  "input_revisions": {
+    "authorization": "director/two-episode-production-v1/authorization.json",
+    "authorization_sha256": "922090f8612003b9cfcf51e3dbdd006166dc94f7548b7194bf080d620cbec7ef",
+    "script_revision": "총괄 확정 대기; 원문 수정 없음"
+  },
+  "outputs": [
+    "director/two-episode-production-v1/tool_readiness.json",
+    "narration/free-tts-v1/local_probe.py",
+    "narration/free-tts-v1/issue_TOOL-READINESS-01.json",
+    "narration/free-tts-v1/handoff.json",
+    "narration/free-tts-v1/checks.json"
+  ],
+  "affected_scene_ids": [],
+  "checks": [
+    {
+      "check": "Claude CLI 로컬 메타",
+      "result": "2.1.168 / claude.ai Pro 로그인 확인; 실제 검수·잔여 한도·추가 과금 미확인"
+    },
+    {
+      "check": "무료 TTS",
+      "result": "SAPI COM 한국어 Heami 등록; 생성하지 않음. edge-tts 미설치. .NET 음성 열거 실패"
+    },
+    {
+      "check": "YouTube",
+      "result": "의존성 import·OAuth 파일/refresh/scope 존재 확인. access token 만료; 갱신·접속·업로드 안 함"
+    },
+    {
+      "check": "음성/자막",
+      "result": "미생성; 길이·발음·타임스탬프·청취 검증 전"
+    },
+    {
+      "check": "JSON?Python ?? ? ?? ???",
+      "result": "passed",
+      "evidence": "narration/free-tts-v1/checks.json"
+    }
+  ],
+  "open_issue_ids": [
+    "TOOL-READINESS-01"
+  ],
+  "unresolved": "기존 코드의 과거 편 경로를 이번 편에 연결하고 확정 대본·무료 음성/발음 사전·최종 QA/승인 SHA 입력 필요. 명령/경로/제한은 tool_readiness.json 참조. 비밀 출력·외부 payload·유료 호출·설치 없음.",
+  "next_role": "video_director"
+}

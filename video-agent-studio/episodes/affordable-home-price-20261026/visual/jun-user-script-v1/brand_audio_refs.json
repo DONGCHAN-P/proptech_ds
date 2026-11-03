@@ -1,0 +1,127 @@
+{
+  "scope": "read-only identification; no audio changes",
+  "assets": [
+    {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/reusable_assets/brand_intro_clean_v7.mp4",
+      "sha256": "4b3a5d468a1f8dc62c6e24a78ebd9649a71b634d99d5b568d765a622827e0ecc",
+      "bytes": 3818822,
+      "asset_id": "channel_brand_intro_clean_v7",
+      "expected_sha256": "4b3a5d468a1f8dc62c6e24a78ebd9649a71b634d99d5b568d765a622827e0ecc",
+      "matches_existing_approved_hash": true,
+      "license": "existing approved clean channel brand asset",
+      "approval_evidence": "video-agent-studio/episodes/affordable-home-price-20261026/director/production-v1/media_assets.json",
+      "review_scope": "read-only path/hash/probe and existing approval ledger; not newly listened or continuously played",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "5.013000"
+        }
+      }
+    },
+    {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/reusable_assets/brand_outro_clean_v7.mp4",
+      "sha256": "a60dfb4e37f2e292fe52acc00cb4f679ff37a07bc9cb8f0b4e14d4527f067310",
+      "bytes": 3480156,
+      "asset_id": "channel_brand_outro_clean_v7",
+      "expected_sha256": "a60dfb4e37f2e292fe52acc00cb4f679ff37a07bc9cb8f0b4e14d4527f067310",
+      "matches_existing_approved_hash": true,
+      "license": "existing approved clean channel brand asset",
+      "approval_evidence": "video-agent-studio/episodes/affordable-home-price-20261026/director/production-v1/media_assets.json",
+      "review_scope": "read-only path/hash/probe and existing approval ledger; not newly listened or continuously played",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "10.005000"
+        }
+      }
+    },
+    {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/reusable_assets/thinking_music.mp3",
+      "sha256": "891d3ea47e443e590a6562a1e2bff37c8830817b3cdf604091f92bfe87e5cc4f",
+      "bytes": 6270785,
+      "asset_id": "existing_channel_bgm",
+      "expected_sha256": "891d3ea47e443e590a6562a1e2bff37c8830817b3cdf604091f92bfe87e5cc4f",
+      "matches_existing_approved_hash": true,
+      "license": {
+        "title": "Thinking Music",
+        "artist": "Kevin MacLeod",
+        "source": "incompetech.com",
+        "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Thinking%20Music.mp3",
+        "license": "Creative Commons Attribution 4.0 (CC BY 4.0)",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution_required": true,
+        "credit": "Thinking Music by Kevin MacLeod | incompetech.com | Licensed under Creative Commons: By Attribution 4.0",
+        "note": "CC BY 는 상업적 이용이 되지만 **출처 표기가 의무**다. 영상 설명란에 credit 문구를 그대로 넣어야 한다. 빼면 라이선스 위반이다.",
+        "acquired": "2026-10-12"
+      },
+      "approval_evidence": "video-agent-studio/episodes/affordable-home-price-20261026/director/production-v1/media_assets.json",
+      "review_scope": "read-only path/hash/probe and existing approval ledger; not newly listened or continuously played",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "195.892250"
+        }
+      }
+    }
+  ],
+  "license_reference": {
+    "path": "assets/music/thinking_music.license.json",
+    "sha256": "d316f66a62f8aa2ee8bdd4f92f1c91bd0fec78838964e9358f3e2ef5f920e817",
+    "bytes": 683
+  },
+  "existing_music_credit": "Thinking Music by Kevin MacLeod | incompetech.com | Licensed under Creative Commons: By Attribution 4.0",
+  "placement_notes": {
+    "intro": "P008 / S02 question after actual pause; existing 5-second clean intro",
+    "outro": "after final actual spoken word +3seconds, including audio tail silence; existing 10-second clean outro",
+    "captions": "hide rail only on unvoiced brands and silent CTA hold",
+    "audio": "editor to retain licensed BGM, avoid doubling brand embedded soundtrack; listening and mix QA remain unperformed by visual"
+  },
+  "new_voice": false,
+  "actual_listening": false,
+  "continuous_playback": false
+}

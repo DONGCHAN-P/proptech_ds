@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C05P02",
+  "scene_id": "C05",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:06:09.294Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "5955ec184d9958bc1da031ca5cdedc26fca5f8bd46d7c5cbd361b7ee56f6cd24",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "첫 달이 지나면 대출은 삼억육천만 원에서 약 삼억오천구백오십만 원으로 줄어듭니다. 다음 달 이자는 줄어든 대출잔액을 기준으로 계산합니다. 상환액이 같으므로 시간이 갈수록 이자의 비중은 줄고 원금의 비중은 늘어납니다. 십 년 동안 갚은 원금은 약 칠천육백만 원이고, 남은 대출은 약 이억팔천사백만 원입니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 170,
+  "characters": 170,
+  "actual_credits": 68,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:04.412Z",
+  "local_shadow_remaining_before": 21462,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "nNfpGFwCT7ZY8K1SKsww",
+    "x-request-id": null,
+    "character-cost": "68",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:06:08 GMT"
+  },
+  "pcm_samples": 963144,
+  "pcm_duration_s": 21.84,
+  "provider_last_spoken_end_s": 21.92,
+  "artifact_sha256": {
+    "paragraphs/C05P02/audio.mp3": "eb61a6cd5d8863d1e0fb54eaaec20192bd6550fc78ee523ce0f68c238f7ac03d",
+    "paragraphs/C05P02/audio.wav": "d54d59230156910ec211beeeca43c0f3fa2c1a2d192e43e0530e9673a7df396a",
+    "paragraphs/C05P02/alignment.json": "ae8f1d339db06e4f4a1981db981d42583d1cf27046858c91ea4df8811e27562d",
+    "paragraphs/C05P02/normalized_alignment.json": "ae8f1d339db06e4f4a1981db981d42583d1cf27046858c91ea4df8811e27562d"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21394,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:06:14.099Z"
+}

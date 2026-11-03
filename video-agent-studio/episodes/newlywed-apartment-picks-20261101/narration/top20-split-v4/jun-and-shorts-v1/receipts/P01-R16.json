@@ -1,0 +1,69 @@
+{
+  "asset_id": "P01-R16",
+  "sentence_ids": [
+    "P01-R16-V2-01",
+    "P01-R16-V2-02",
+    "P01-R16-V2-03",
+    "P01-R16-V2-04",
+    "P01-R16-V2-05",
+    "P01-R16-V2-06",
+    "P01-R16-V2-07",
+    "P01-R16-V2-08"
+  ],
+  "status": "complete",
+  "started_at_utc": "2026-11-03T13:24:33.790Z",
+  "authorization_id": "9cde211f3073",
+  "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+  "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+  "input_file_sha256": "af2b16a03b8a0c1b382312a88f97edf8f25586ebf80392e165bdc02a5cda73d1",
+  "request_text_sha256": "8fdb992bcd6b1d9233005d623f6efb7dcb728b5f1524f7b70236fb35f3b42f48",
+  "characters": 512,
+  "reserved_credits": 512,
+  "actual_credits": 205,
+  "charge_known": true,
+  "request": {
+    "text": "십육 위는 인천 남동구, 칠천구백구십칠 쌍입니다.\n\n남동구 논현동에는 논현 웰카운티처럼 이천 년대에 입주한 아파트가 있어, 기존 주택의 상태와 주변 생활을 함께 비교할 수 있습니다.\n\n소래습지생태공원은 갯벌, 습지와 탐방데크가 있는 공간이며, 사진에서는 해안 생태환경을 활용한 여가 모습을 읽을 수 있습니다.\n\n옛 염전을 활용한 학습장도 안내돼 있어, 산책과 생태 학습을 함께 생각해 볼 장소입니다.\n\n대표 사례인 논현 파크 포레 주변에는 인천논곡초등학교와 인천금융고등학교의 위치를 표시합니다.\n\n이 상세 지도에서는 학교와 단지 사이의 도로 연결을 읽고, 장보기와 출근 목적지를 더해 평일 생활의 범위를 잡아볼 수 있습니다.\n\n지도에 연결된 칠십칠 개 단지 가운데 육십일 곳은 중윗값이 오 억 원 미만이고, 나머지 십육 곳은 오 억 원 이상 칠 억 원 미만에 놓입니다.\n\n이 가격 분포에서 예산에 맞는 점을 고른 뒤 학교 주변의 주거 환경과 주택 상태를 비교하면, 구 안에서 볼 단지를 구체적으로 추릴 수 있습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+  "local_shadow_remaining_before": 15663,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "nlC8HJCt2pZOgNeW1jGv",
+    "x-request-id": null,
+    "character-cost": "205",
+    "content-type": "application/json",
+    "date": "Tue, 03 Nov 2026 13:24:36 GMT"
+  },
+  "pcm_samples": 2642472,
+  "pcm_duration_s": 59.92,
+  "provider_last_alignment_end_s": 60,
+  "complete_tail_after_alignment_s": -0.0799999999999983,
+  "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R16.wav",
+  "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R16/audio.mp3",
+  "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R16/alignment.json",
+  "pcm_sha256": "bba56047b1fdfd9b76f17ecdebbef7705a65d39389f87d490620d43cee535ead",
+  "artifact_sha256": {
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R16/audio.mp3": "00b383d1d4fdaf335490a45fbc53fb02b42bfc4fab3d94ebfc78c8fb6edc4a00",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R16/alignment.json": "f3c6012bfeb5e14609d3e094991779777426a69f7bbe5e2f66a57736cba43845",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R16/normalized_alignment.json": "f3c6012bfeb5e14609d3e094991779777426a69f7bbe5e2f66a57736cba43845",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R16.wav": "fd196250b807c9003bcf07a11c9964b7c5598fb464bf918c7e9879629b7cf428"
+  },
+  "processing": {
+    "sample_rate_hz": 44100,
+    "channels": 1,
+    "codec": "pcm_s16le",
+    "tempo_factor": 1,
+    "trimmed": false,
+    "tail_preserved": true,
+    "provider_speed": 0.97
+  },
+  "local_shadow_remaining_after": 15458,
+  "completed_at_utc": "2026-11-03T13:24:47.411Z"
+}

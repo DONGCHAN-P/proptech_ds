@@ -1,0 +1,75 @@
+{
+  "scene_id": "S07",
+  "chapter": 2,
+  "message": "다섯 준비금",
+  "narration_text": "오늘은 계산을 쉽게 보여드리려고 현금 1억이면 2천만 원, 2억이면 3천만 원, 3억이면 4천만 원, 4억이면 5천만 원, 5억이면 6천만 원을 먼저 빼놓겠습니다. 여기에는 세금과 각종 비용, 이사와 가전 예산, 남겨둘 비상금을 함께 넣은 겁니다.\n\n이 금액이 실제 평균 비용이라는 뜻은 아닙니다. 집 상태가 좋고 기존 가전을 그대로 쓰면 덜 들 수 있고, 큰 수리가 필요하면 더 들 수 있어요. 오늘은 이 준비금을 제외한 돈만 집값에 넣는다고 생각하시면 됩니다.",
+  "paragraph_ids": [
+    "P018",
+    "P019"
+  ],
+  "claim_ids": [
+    "DOC",
+    "CALC"
+  ],
+  "material_type": "현금 분리 막대",
+  "asset_ids": [
+    "M07"
+  ],
+  "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "audio_revision": null,
+  "start": null,
+  "end": null,
+  "timing_basis": "UNLOCKED: awaiting actual Jun alignment",
+  "beats": [
+    {
+      "anchor": "현금 1억이면 2천만 원",
+      "action": "1억−2000만원→8000만원",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "2억이면 3천만 원",
+      "action": "2억−3000만원→1억7000만원",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "3억이면 4천만 원",
+      "action": "3억−4000만원→집값 투입2억6000만원",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "4억이면 5천만 원",
+      "action": "4억−5000만원→집값 투입3억5000만원",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "5억이면 6천만 원",
+      "action": "5억−6000만원→집값 투입4억4000만원",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "준비금을 제외한 돈만 집값에",
+      "action": "주택 투입금 0.8·1.7·2.6·3.5·4.4억만 남김",
+      "start": null,
+      "end": null
+    }
+  ],
+  "status": "designed_not_rendered",
+  "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+  "fallback": "금액을 실제 길이에 맞춘 가로 막대로 제작",
+  "template_status": "contract_only_not_authored",
+  "template": "S07",
+  "beat_ids": [
+    "S07.b01",
+    "S07.b02",
+    "S07.b03",
+    "S07.b04",
+    "S07.b05",
+    "S07.b06"
+  ],
+  "preview_seconds": null
+}

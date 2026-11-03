@@ -1,0 +1,29 @@
+{
+  "gate": {
+    "script_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\script-final-v6\\script_v6.md",
+    "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+    "lock_sha256": "5b0a95f7897536f3d0311bfa4e4524804c3010f43f83298d412ee41fd0cad7ac",
+    "receipts": {
+      "codex": {
+        "path": "qa\\private-production-v1\\content_v6_review.json",
+        "sha256": "6972d17f98eae798a8306524637f001a2f11a7c34fc94515bb39daa8836ca15b"
+      },
+      "claude": {
+        "path": "director\\two-episode-production-v1\\claude\\script-v6-terminology-round1\\receipt.json",
+        "sha256": "26e4053d95650f7f7261538ba3f58c628f11c306e87110f5ceaf774ce1aedd53"
+      }
+    }
+  },
+  "manifest_sha256": "6e82837d7e0a7900242a2c5873be084128025da14c2fec6e8afac5c2f5b069c5",
+  "prepared_sha256": "0d6ee138f77121b8091f82c930fc6432094904219469accc1dc00168078d1e4e",
+  "task_id": "narration-v6-two-paragraph-repair",
+  "new_tts_call_limit": 2,
+  "voice": {
+    "name": "ko-KR-InJoonNeural",
+    "rate": "-5%",
+    "pitch": "+0Hz",
+    "provider": "edge-tts",
+    "version": "7.3.1"
+  },
+  "at": "2026-10-25T18:15:40.262143+00:00"
+}

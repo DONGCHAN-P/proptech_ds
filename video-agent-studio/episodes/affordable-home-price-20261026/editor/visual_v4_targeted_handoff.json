@@ -1,0 +1,355 @@
+{
+  "status": "pass_targeted_visual_v4_source_checks_independent_closure_pending",
+  "issues": [
+    "SOURCE-FOCUS-003",
+    "SOURCE-BRAND-004"
+  ],
+  "script_audio_captions_EDL_unchanged": true,
+  "canonical_carve_rerun": false,
+  "actual_encoded_film_frames": false,
+  "chapters": [
+    {
+      "chapter": 1,
+      "html_sha256": "0d1b88dcb824dedf1d388a0b41ef012a150e0a9948f16646c2f7de280e99b7d9"
+    },
+    {
+      "chapter": 7,
+      "html_sha256": "cea987b4c189f3c49e2831da82146e5b664d085648e1212daa7c8ebd668d88fc"
+    },
+    {
+      "chapter": 9,
+      "html_sha256": "c5af17689b8fc5e482dc7fc809f3512725096126d2bf26831f44ed742ef959ed"
+    }
+  ],
+  "checks": [
+    {
+      "cue_id": "C07_S031Q001",
+      "expected": {
+        "textIDs": [
+          "S031_text000",
+          "S031_text004"
+        ],
+        "groupIDs": [
+          "S031_didim",
+          "S031_bogeum"
+        ]
+      },
+      "actual": {
+        "textIDs": [
+          "S031_text000",
+          "S031_text004"
+        ],
+        "groupIDs": [
+          "S031_didim",
+          "S031_bogeum"
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "cue_id": "C07_S031Q002",
+      "expected": {
+        "textIDs": [
+          "S031_text002",
+          "S031_text003"
+        ],
+        "groupIDs": [
+          "S031_didim"
+        ]
+      },
+      "actual": {
+        "textIDs": [
+          "S031_text002",
+          "S031_text003"
+        ],
+        "groupIDs": [
+          "S031_didim"
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "cue_id": "C07_S031Q003",
+      "expected": {
+        "textIDs": [
+          "S031_text004",
+          "S031_text006"
+        ],
+        "groupIDs": [
+          "S031_bogeum"
+        ]
+      },
+      "actual": {
+        "textIDs": [
+          "S031_text004",
+          "S031_text006"
+        ],
+        "groupIDs": [
+          "S031_bogeum"
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "cue_id": "C07_S031Q004",
+      "expected": {
+        "textIDs": [
+          "S031_text007"
+        ],
+        "groupIDs": [
+          "S031_plan"
+        ]
+      },
+      "actual": {
+        "textIDs": [
+          "S031_text007"
+        ],
+        "groupIDs": [
+          "S031_plan"
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "cue_id": "C09_S040Q001",
+      "expected": {
+        "textIDs": [
+          "S040_text000",
+          "S040_text007",
+          "S040_text002"
+        ],
+        "groupIDs": [
+          "S040_scope"
+        ]
+      },
+      "actual": {
+        "textIDs": [
+          "S040_text000",
+          "S040_text002",
+          "S040_text007"
+        ],
+        "groupIDs": [
+          "S040_scope"
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "cue_id": "C09_S040Q002",
+      "expected": {
+        "textIDs": [
+          "S040_text011",
+          "S040_text000"
+        ],
+        "groupIDs": [
+          "S040_scope"
+        ]
+      },
+      "actual": {
+        "textIDs": [
+          "S040_text000",
+          "S040_text011"
+        ],
+        "groupIDs": [
+          "S040_scope"
+        ]
+      },
+      "status": "pass"
+    },
+    {
+      "cue_id": "C09_S040Q003",
+      "expected": {
+        "textIDs": [
+          "S040_text003",
+          "S040_text004",
+          "S040_text008",
+          "S040_text009"
+        ],
+        "groupIDs": []
+      },
+      "actual": {
+        "textIDs": [
+          "S040_text003",
+          "S040_text004",
+          "S040_text008",
+          "S040_text009"
+        ],
+        "groupIDs": []
+      },
+      "status": "pass"
+    },
+    {
+      "cue_id": "C09_S040Q004",
+      "expected": {
+        "textIDs": [
+          "S040_text005",
+          "S040_text010"
+        ],
+        "groupIDs": []
+      },
+      "actual": {
+        "textIDs": [
+          "S040_text005",
+          "S040_text010"
+        ],
+        "groupIDs": []
+      },
+      "status": "pass"
+    },
+    {
+      "role": "before_intro_hook_last_frame",
+      "status": "pass",
+      "scenes": [
+        "S001"
+      ],
+      "cues": [
+        "실제 범위는 담보, 소득,\n거래비용과 매달 남길 돈을 반영해 구하겠습니다."
+      ]
+    },
+    {
+      "role": "after_intro_first_body_frame",
+      "status": "pass",
+      "scenes": [
+        "S002"
+      ],
+      "cues": []
+    },
+    {
+      "role": "before_S002_actual_voice_caption_blank",
+      "status": "pass",
+      "scenes": [
+        "S002"
+      ],
+      "cues": []
+    }
+  ],
+  "frames": [
+    {
+      "chapter": 7,
+      "scene_id": "S031",
+      "cue_id": "C07_S031Q001",
+      "role": "actual_native_cue_focus",
+      "local_time_s": 148.496416,
+      "global_time_s": 778.3297493333334,
+      "file": "preview-visual-v4-delta/C07_S031Q001.png",
+      "sha256": "242f8a3490337db2703fe326bb06b220de1bd56c9a6fcce6d12f6aa71ef6254a"
+    },
+    {
+      "chapter": 7,
+      "scene_id": "S031",
+      "cue_id": "C07_S031Q002",
+      "role": "actual_native_cue_focus",
+      "local_time_s": 155.714854,
+      "global_time_s": 785.5481873333333,
+      "file": "preview-visual-v4-delta/C07_S031Q002.png",
+      "sha256": "15bfb777cd867107d51102f8cfcdd50b00daef84c552fbcda89dda6b629655e4"
+    },
+    {
+      "chapter": 7,
+      "scene_id": "S031",
+      "cue_id": "C07_S031Q003",
+      "role": "actual_native_cue_focus",
+      "local_time_s": 163.0898325,
+      "global_time_s": 792.9231658333333,
+      "file": "preview-visual-v4-delta/C07_S031Q003.png",
+      "sha256": "1a555531b692bacee7faeda07e1e6a1c6c2ed76349e2ac8da5b6cc7a67303cdd"
+    },
+    {
+      "chapter": 7,
+      "scene_id": "S031",
+      "cue_id": "C07_S031Q004",
+      "role": "actual_native_cue_focus",
+      "local_time_s": 168.5753745,
+      "global_time_s": 798.4087078333334,
+      "file": "preview-visual-v4-delta/C07_S031Q004.png",
+      "sha256": "564ce922f97278458cbedffac6a4921eafb592a3ec0e3024afd3aa2c7a018cc9"
+    },
+    {
+      "chapter": 9,
+      "scene_id": "S040",
+      "cue_id": "C09_S040Q001",
+      "role": "actual_native_cue_focus",
+      "local_time_s": 84.35579100000001,
+      "global_time_s": 1054.6891243333334,
+      "file": "preview-visual-v4-delta/C09_S040Q001.png",
+      "sha256": "67bdfbb27b973abaaa9fa60614b5a733258889792cd4364fe3f14fea925fb4ba"
+    },
+    {
+      "chapter": 9,
+      "scene_id": "S040",
+      "cue_id": "C09_S040Q002",
+      "role": "actual_native_cue_focus",
+      "local_time_s": 91.07027,
+      "global_time_s": 1061.4036033333334,
+      "file": "preview-visual-v4-delta/C09_S040Q002.png",
+      "sha256": "339a794f29b36c90cb9d74ca1221d5f6d9319902826db93b5a6dbc9d53b27b55"
+    },
+    {
+      "chapter": 9,
+      "scene_id": "S040",
+      "cue_id": "C09_S040Q003",
+      "role": "actual_native_cue_focus",
+      "local_time_s": 100.7880205,
+      "global_time_s": 1071.1213538333334,
+      "file": "preview-visual-v4-delta/C09_S040Q003.png",
+      "sha256": "13d04a9e7ad830aab7c8eef5831ab35e0d621dfbe9bfa240fa0a0dc12ed71f2c"
+    },
+    {
+      "chapter": 9,
+      "scene_id": "S040",
+      "cue_id": "C09_S040Q004",
+      "role": "actual_native_cue_focus",
+      "local_time_s": 110.9584165,
+      "global_time_s": 1081.2917498333336,
+      "file": "preview-visual-v4-delta/C09_S040Q004.png",
+      "sha256": "c6d4e450ddc92a85c477b0eb2de2f35d9499062e4a27d69cc30e9cad1bfac760"
+    },
+    {
+      "chapter": 1,
+      "scene_id": "S001",
+      "role": "before_intro_hook_last_frame",
+      "local_time_s": 23,
+      "global_time_s": 23,
+      "file": "preview-visual-v4-delta/before_intro_hook_last_frame.png",
+      "sha256": "64a39289c088e575eed021b51cdf62d4eef2b743162ef756e5c8ab1bce9cb0d0"
+    },
+    {
+      "chapter": 1,
+      "scene_id": "S002",
+      "role": "after_intro_first_body_frame",
+      "local_time_s": 23.033333333333335,
+      "global_time_s": 28.033333333333335,
+      "file": "preview-visual-v4-delta/after_intro_first_body_frame.png",
+      "sha256": "bf8d40b1066d9f8cf9025bac21e09082694d1e2a6bb9351d6ca038f73ab70bd0"
+    },
+    {
+      "chapter": 1,
+      "scene_id": "S002",
+      "role": "before_S002_actual_voice_caption_blank",
+      "local_time_s": 24.537332999999997,
+      "global_time_s": 29.537332999999997,
+      "file": "preview-visual-v4-delta/before_S002_actual_voice_caption_blank.png",
+      "sha256": "e2825795e6582f7a8670a26a88add0b109a223c52f69d305151e3fe92dc7c0fe"
+    },
+    {
+      "chapter": null,
+      "scene_id": "clean_brand_intro",
+      "role": "intro_first_frame",
+      "local_time_s": 0,
+      "global_time_s": 23.033333333333335,
+      "file": "preview-visual-v4-delta/intro_first_frame.png",
+      "sha256": "77b890c3ac2302a390b0039e533026854db9d3ae66c88ef2fe8d98c31dab1a54",
+      "scope": "frame from unchanged approved brand MP4; final assembly not encoded yet"
+    },
+    {
+      "chapter": null,
+      "scene_id": "clean_brand_intro",
+      "role": "intro_last_frame",
+      "local_time_s": 4.966666666666667,
+      "global_time_s": 28,
+      "file": "preview-visual-v4-delta/intro_last_frame.png",
+      "sha256": "778edcb74d329aa66ca6b9a617b4c06e355be3c34fd382cc22cbe361d80c0839",
+      "scope": "frame from unchanged approved brand MP4; final assembly not encoded yet"
+    }
+  ]
+}

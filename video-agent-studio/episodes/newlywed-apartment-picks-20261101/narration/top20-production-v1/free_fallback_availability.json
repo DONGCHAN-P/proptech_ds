@@ -1,0 +1,64 @@
+{
+  "checked_at_utc": "2026-11-01T14:51:05.033340+00:00",
+  "python_executable": "C:\\projects\\realestate_reco\\tools\\python311\\python.exe",
+  "python_modules": {
+    "edge_tts": false,
+    "pyttsx3": false,
+    "kokoro": false,
+    "TTS": false,
+    "piper": false,
+    "torch": false
+  },
+  "executables": {
+    "edge-tts": null,
+    "piper": null,
+    "espeak": null
+  },
+  "windows": {
+    "checked_at_utc": "2026-11-01T14:45:32.1317982Z",
+    "generation_invoked": false,
+    "network_requests": 0,
+    "system_speech": {
+      "status": "failed",
+      "exception": "MethodInvocationException",
+      "reason": "Installed voice enumeration failed; no synthesis attempted"
+    },
+    "sapi_com": {
+      "status": "enumerated",
+      "voices": [
+        {
+          "name": "Microsoft Zira Desktop - English (United States)",
+          "language_hex": "409"
+        },
+        {
+          "name": "Microsoft Heami Desktop - Korean",
+          "language_hex": "412"
+        }
+      ]
+    },
+    "registry_voices": [
+      {
+        "key": "TTS_MS_EN-US_ZIRA_11.0",
+        "registry": "HKLM:/SOFTWARE/Microsoft/Speech/Voices/Tokens"
+      },
+      {
+        "key": "TTS_MS_KO-KR_HEAMI_11.0",
+        "registry": "HKLM:/SOFTWARE/Microsoft/Speech/Voices/Tokens"
+      },
+      {
+        "key": "MSTTS_V110_koKR_HeamiM",
+        "registry": "HKLM:/SOFTWARE/Microsoft/Speech_OneCore/Voices/Tokens"
+      }
+    ]
+  },
+  "assessment": "SAPI COM에서 Microsoft Heami Desktop 한국어 음성 열거 성공. 추가 API 비용 없는 오프라인 대안 후보. 실제 합성·파일 출력·청취 품질 미검증.",
+  "edge_tts": {
+    "available_in_checked_python": false,
+    "network_required": true,
+    "service_endpoint_tested": false,
+    "installation_performed": false,
+    "assessment": "현재 확인한 Python에 미설치. 설치 후 연결·이용조건 확인 필요; 오프라인 엔진으로 표시하지 않음."
+  },
+  "generation_invoked": false,
+  "paid_endpoints_invoked": false
+}

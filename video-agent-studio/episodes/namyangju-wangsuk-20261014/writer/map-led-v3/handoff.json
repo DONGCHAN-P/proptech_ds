@@ -1,0 +1,67 @@
+{
+  "role": "video_writer",
+  "revision": "script-v3-map-led",
+  "status": "review_package_ready_pending_independent_qa",
+  "input_revision": "map-led-rebuild-v5",
+  "inputs": [
+    "brief.json editorial_direction",
+    "research/facts.json",
+    "research/map-led-v5/analysis.json",
+    "research/map-led-v5/facts.json",
+    "research/map-led-v5/handoff.json",
+    "research/alternatives-v5/comparison.json",
+    "research/alternatives-v5/handoff.json",
+    "video-agent-studio/guides/지역_상세지도와_의미단위_자막.md"
+  ],
+  "outputs": [
+    "writer/map-led-v3/script_v3.md",
+    "writer/map-led-v3/scene_plan.json",
+    "writer/map-led-v3/map_storyboard.md",
+    "writer/map-led-v3/candidate_logic.md",
+    "writer/map-led-v3/image_gap_requests.json",
+    "writer/map-led-v3/editorial_change_summary.md",
+    "writer/map-led-v3/captions_semantic_v3.json",
+    "writer/map-led-v3/source_claims.json",
+    "writer/map-led-v3/validation.json",
+    "outputs/story-review-v3/README.md"
+  ],
+  "review_package": "outputs/story-review-v3",
+  "validation": {
+    "command": "tools/python311/python.exe -X utf8 .../writer/map-led-v3/build_review.py",
+    "exit_code": 0,
+    "scenes": 9,
+    "narration_characters_including_spaces": 7066,
+    "semantic_caption_units": 274,
+    "all_scene_whitespace_normalized_text_exact": true,
+    "all_claim_ids_resolved": true,
+    "protected_number_unit_date_name_occurrences_unbroken": 98,
+    "all_caption_start_end_null": true,
+    "maximum_lines_per_caption": 2,
+    "maximum_characters_per_line": 36
+  },
+  "editorial_decisions": [
+    "왕숙 전체 계획도부터 시작해 일자리→교통→가격→생활→공급→대체가격→후보로 이어감",
+    "왕숙1 B17·왕숙2 A3는 계획도 기준 조건부 입지 대장 후보",
+    "왕숙2 A1은 실생활 경쟁후보, 왕숙1 A2·A24는 작은면적 신혼가구 대안",
+    "B17 84A기준층6.4411억을사용,웹84주택형평균6.40068억배제",
+    "A24 55A1 · 5층~최상층4.5953억사용, A2는웹주택형평균별도표시",
+    "전체계획8만114와6블록연도별부분입주표를구분",
+    "주변84㎡급표본은원XML 재집계49행3단지만사용,진접삼부master탐색값배제"
+  ],
+  "unresolved": [
+    "사용자 새 대본 검토·승인",
+    "새 음성 예상비용·상한 확인과 승인",
+    "실제 음성 길이·단어별 싱크·청취",
+    "정밀지도 등록·역출입구·통학로·시설운영일",
+    "실거래 최신취소·신고갱신과최종정정공고대조",
+    "LH홍보물 영상재사용권 확인; 현재 자체 관계도와 원본KOGL3전체표시 전략",
+    "이미지 요청 장면 필요성 조율"
+  ],
+  "affected_scenes": ["M001", "M002", "M003", "M004", "M005", "M006", "M007", "M008", "M009"],
+  "next_roles": ["video_director", "video_qa", "video_visual", "video_narration"],
+  "new_paid_generation": false,
+  "new_images_generated": false,
+  "new_video_rendered": false,
+  "old_script_or_audio_approval_reused": false,
+  "common_state_modified_by_writer": false
+}

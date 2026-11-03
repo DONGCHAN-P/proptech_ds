@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>THE AI HOUSING ENGINE · v2</title>
+<title>집고리즘 — 데이터로 고르는 집</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,10 +38,10 @@
       var(--bg);
   }
   .nav { height:64px; border-bottom:1px solid var(--line); background:rgba(8,12,12,.85); backdrop-filter:blur(12px); display:flex; align-items:center; padding:0 24px; gap:28px; z-index:1000; position:relative; }
-  .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.04em; }
+  .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:-.01em; }
   .brand-mark { width:28px; height:28px; border-radius:8px; background:linear-gradient(135deg,var(--cyan),var(--lime)); position:relative; }
   .brand-mark::after { content:""; position:absolute; inset:6px; background:#000; border-radius:4px; }
-  .brand-text { font-size:14px; }
+  .brand-text { font-size:17px; }
   .brand-text .accent { color:var(--lime); }
   .brand-tag { margin-left:6px; font-size:10px; letter-spacing:.18em; color:var(--cyan); padding:3px 8px; border:1px solid var(--cyan-dim); border-radius:999px; }
   .search { flex:1; max-width:520px; height:40px; display:flex; align-items:center; gap:10px; background:var(--bg-card); border:1px solid var(--line); border-radius:999px; padding:0 16px; transition:border-color .15s; }
@@ -281,15 +281,15 @@
 
 <div class="loader" id="loader">
   <div class="ring"></div>
-  <div class="lbl">LOADING HOUSING ENGINE</div>
+  <div class="lbl">집고리즘 여는 중</div>
   <div class="sub" id="loaderSub">전국 매물 데이터 로드 중...</div>
 </div>
 
 <nav class="nav">
   <div class="brand">
     <div class="brand-mark"></div>
-    <div class="brand-text">THE AI <span class="accent">HOUSING ENGINE</span></div>
-    <span class="brand-tag">v2 INTUITIVE SCORING</span>
+    <div class="brand-text">집<span class="accent">고리즘</span></div>
+    <span class="brand-tag">기준이 보이는 점수</span>
   </div>
   <div class="search">
     <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-3.5-3.5"/></svg>

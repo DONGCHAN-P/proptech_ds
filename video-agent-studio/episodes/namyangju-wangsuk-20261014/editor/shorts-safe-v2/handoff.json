@@ -1,0 +1,35 @@
+{
+  "revision": "shorts-safe-v2",
+  "status": "rendered_technical_pass_independent_QA_pending",
+  "affected_scenes": [
+    "M003",
+    "M007",
+    "M008"
+  ],
+  "outputs": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\outputs\\shorts-safe-v2",
+  "input_versions": "v1 released shorts/audio/SRT; main v15 source ranges preserved",
+  "input_manifest": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\outputs\\shorts-safe-v2\\input_manifest.json",
+  "safe_profile": "cross-platform-safe-v1 x156..816 y448..1160",
+  "validation": [
+    "all measured text bboxes within critical rect",
+    "all 3 MP4 frame counts and durations identical to v1",
+    "AAC packet SHA256 identical",
+    "SRT bytes identical",
+    "whole-file decode errors 0",
+    "actual longest frames inspected: all 3"
+  ],
+  "unresolved": [
+    "independent QA phone/UI simulations pending",
+    "actual listening and continuous playback not performed",
+    "small embedded map labels are auxiliary; key values repeated at 36~38px"
+  ],
+  "next_owner": "shorts_safe_qa; director final integration",
+  "external_upload": false,
+  "paid_generation": false,
+  "qa_fixes": [
+    "SAFE-QA-01: A1 map replaced by accurate A1 school/occupancy condition card; no invented geography",
+    "SAFE-QA-02: A1 basic-price and extra-cost conditions persist in four measured 24px lines",
+    "rail operating key labels raised from 34 to36px"
+  ],
+  "independent_qa": "first pass technical/model checks passed; revised rail/choice final visual recheck in progress"
+}

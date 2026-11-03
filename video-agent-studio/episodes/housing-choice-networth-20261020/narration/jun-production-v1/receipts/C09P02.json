@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C09P02",
+  "scene_id": "C09",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:08:04.935Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "18e44327d9ed74d3901829f64c9af072c144485a416fc950e79a6c06418a6592",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "여기서는 투자하지 않은 돈도 현금으로 남아 저축 원금에 포함됩니다. 매달 남는 돈을 소비하면 저축 원금까지 줄어드는 별도 계산이 필요합니다. 임차의 차액투자와 매매의 원금상환을 비교할 때는 수익률 차이와 저축 실행의 차이를 구분해야 합니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 134,
+  "characters": 134,
+  "actual_credits": 54,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19983,
+    "character_limit": 40000,
+    "included_remaining": 20017,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:08:00.235Z",
+  "local_shadow_remaining_before": 19957,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "pYZE26xxcPXTDw6TKPXs",
+    "x-request-id": null,
+    "character-cost": "54",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:08:04 GMT"
+  },
+  "pcm_samples": 733824,
+  "pcm_duration_s": 16.64,
+  "provider_last_spoken_end_s": 16.72,
+  "artifact_sha256": {
+    "paragraphs/C09P02/audio.mp3": "c24f69c36a085cdf9a078187216e7625ca4396628e9b772fba022ed4fa1d176d",
+    "paragraphs/C09P02/audio.wav": "e23d559664f571289e5c52a2b8ce5ead3da1ca297ab1d63bfbce42e62ce8c790",
+    "paragraphs/C09P02/alignment.json": "ccb24bac384cdb601b11867b14a20bdd31c721f8e4944291b5859ee0895a0806",
+    "paragraphs/C09P02/normalized_alignment.json": "ccb24bac384cdb601b11867b14a20bdd31c721f8e4944291b5859ee0895a0806"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 19903,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:08:09.175Z"
+}

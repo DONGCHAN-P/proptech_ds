@@ -1,0 +1,26 @@
+{
+  "brand": [
+    {
+      "path": "video/public/namyangju-v13/brand_intro_no_caption.mp4",
+      "exists": true,
+      "sha256": "926fbbfd453ef2bb00ed7f723ba254ecb45977f815847227eef5f60844789baf"
+    },
+    {
+      "path": "video-agent-studio/episodes/namyangju-wangsuk-20261014/outputs/caption-station-v13/brand_outro_v13_no_caption.mp4",
+      "exists": true,
+      "sha256": "8be8e438d6d9cd217bace576176d79dde1995fbcfb63cd126db8dd5a350c8742"
+    },
+    {
+      "path": "video/public/namyangju-map-led-v6/data_city_ambient_v1.wav",
+      "exists": true,
+      "sha256": "dc8d803fec0f8b11d043f11a89406a2ecf4a9af495f6c17a67c4f48236b65911"
+    }
+  ],
+  "durations": {
+    "intro": "150frames/30fps = 5초, brand_entry.tsx 정의",
+    "outro": "300frames/30fps = 10초, brand_entry.tsx 정의"
+  },
+  "verification": "파일 존재와 해시 및 소스 정의 확인; 미디어 probe/재생/청취 미실시",
+  "bgm": "project_v15.json BGM_DATA_CITY_AMBIENT_V1; local original synthesis 이용조건 기록 재사용",
+  "brand_label": "기존 AI 개념 도시. 왕숙 고유 문구가 포함된 BrandReuse는 그대로 재사용 금지; 창릉 실제 모습 오인 방지"
+}

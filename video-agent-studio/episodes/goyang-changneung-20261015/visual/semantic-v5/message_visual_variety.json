@@ -1,0 +1,190 @@
+{
+  "revision": "semantic-v5",
+  "input": "script-v3",
+  "policy": [
+    "기존 크림/Pretendard 채널 셸 계승",
+    "자료 기능이 바뀔 때 컷, 문장마다 임의 교체하지 않음",
+    "발화 대상만 색·외곽선·근처 라벨로 강조; 동일지도 자막만교체 금지",
+    "좌표관계선을 통근노선처럼 그리지 않음",
+    "새 유료 이미지·음성·API 0; AI 개념도 추가 필요 없음"
+  ],
+  "scenes": [
+    {
+      "scene_id": "M000",
+      "message": "선택의 시작",
+      "visual_forms": [
+        "지리 위치도→현재 생활권 대 신도시 비교",
+        "도입의 설명 대상만 선명히 표시"
+      ],
+      "data_source": [
+        "CN2-S1-TYPE",
+        "CN2-S4-TYPE",
+        "CN2-S5-PRICE"
+      ]
+    },
+    {
+      "scene_id": "M001",
+      "message": "전체 계획을 읽는 순서",
+      "visual_forms": [
+        "공식 토지이용 전체도+독립 범례",
+        "주거·자족·공원 발화에 해당 폴리곤 순차 강조"
+      ],
+      "data_source": [
+        "CN-PLAN-VERSION",
+        "CN2-S1-SURROUNDINGS",
+        "CN2-S1-SCHOOL",
+        "CN-S34-LIFE"
+      ]
+    },
+    {
+      "scene_id": "M002",
+      "message": "일자리: 땅과 직장은 다릅니다",
+      "visual_forms": [
+        "1:38.233 기업이전 계획 도식→5업무지 위치도→열차 비교→통근 단계판",
+        "강남역 기준 권역안내와 교대49분 사례 분리"
+      ],
+      "data_source": [
+        "CN2-JOBS-RELOCATION",
+        "CN-JOBS-LAND",
+        "CN3-BUS-WONHEUNG",
+        "CN3-BUS-7728",
+        "CN3-TT-DMC-HONGDAE",
+        "CN3-TT-DMC-GONGDEOK",
+        "CN3-TT-DMC-GIMPO",
+        "CN3-ILS-GYEONGBOK",
+        "CN3-ILS-JONGNO",
+        "CN3-ILS-GYODAE"
+      ]
+    },
+    {
+      "scene_id": "M003",
+      "message": "교통: 노선보다 달력",
+      "visual_forms": [
+        "운영 철도와 미래 철도 2행 달력+구간도",
+        "원흥역 실사 사진은 2015년 자료임을 유지; 정지 줌은 still_motion"
+      ],
+      "data_source": [
+        "CN-RAIL-GTX",
+        "CN-RAIL-GE",
+        "CN-ROAD-PLAN",
+        "CN2-S5-MOVE",
+        "CN2-S1-MOVE",
+        "CN2-S4-MOVE",
+        "CN3-BUS-WONHEUNG",
+        "CN3-BUS-7728",
+        "CN3-ROAD-PLAN",
+        "CN3-RAIL-FUTURE"
+      ]
+    },
+    {
+      "scene_id": "M004",
+      "message": "분양가: 같은 표 안의 다른 조건",
+      "visual_forms": [
+        "조건 동일 가격 막대+별도 비용 항목",
+        "원문 값 재사용, 높이·길이 정확 비례"
+      ],
+      "data_source": [
+        "CN2-S5-PRICE",
+        "CN2-S1-PRICE",
+        "CN2-S4-PRICE",
+        "CN2-S5-MOVE",
+        "CN2-S1-MOVE",
+        "CN2-S4-MOVE",
+        "PST3-S1-STAGE",
+        "PST3-S4-STAGE",
+        "PST3-S5-STAGE",
+        "PST3-CURRENT-COMPARISON"
+      ]
+    },
+    {
+      "scene_id": "M005",
+      "message": "생활: 학교와 상가의 빈칸",
+      "visual_forms": [
+        "전체도 locator+학교/공원 생활 상세",
+        "학교 계획발화의 실제 시설영역 강조, 다른 지역 학교 사진 금지"
+      ],
+      "data_source": [
+        "CN2-S5-SCHOOL",
+        "CN2-S1-SCHOOL",
+        "CN2-S1-SURROUNDINGS",
+        "CN2-S4-SCHOOL",
+        "CN-S34-LIFE",
+        "CN-LIFE-GAP"
+      ]
+    },
+    {
+      "scene_id": "M006",
+      "message": "공급: 입주와 거래 가능은 별개",
+      "visual_forms": [
+        "청약 조건/공급 일정의 순차 캘린더",
+        "시행·예정·목표 상태를 색+문자로 구별"
+      ],
+      "data_source": [
+        "CN2-S5-MOVE",
+        "CN2-S1-MOVE",
+        "CN2-S4-MOVE",
+        "CN2-S4-TYPE",
+        "CN2-S1-TYPE",
+        "CN-S3-TYPE",
+        "PST3-S1-RESALE",
+        "PST3-S4-RESALE",
+        "PST3-S4-RESIDENCE"
+      ]
+    },
+    {
+      "scene_id": "M007",
+      "message": "기존 생활권의 실제 거래",
+      "visual_forms": [
+        "삼송·원흥·지축 현재 생활권 위치+동일조건 비교표",
+        "위치가 바뀔 때 해당 단지 또는 권역 현재대상만 강조"
+      ],
+      "data_source": [
+        "CN-PRICE-6b9e26142b9eb6a3",
+        "CN-PRICE-b0b97f17ddc24cb6",
+        "CN-PRICE-17bae9021d8588e6",
+        "CN-PRICE-6d132d1b88760197",
+        "CN-PRICE-db26aa7d99fb32df",
+        "CN-PRICE-14f487c544ee4871"
+      ]
+    },
+    {
+      "scene_id": "M008",
+      "message": "누가 기다리고 누가 지금 고를까",
+      "visual_forms": [
+        "S1/S4/S5 비교 체크리스트와 생활 상세",
+        "세 블록 각각 위치지도와 입주/학교 조건 연결"
+      ],
+      "data_source": [
+        "CN-EXISTING-RAIL",
+        "CN2-S5-MOVE",
+        "CN2-S1-MOVE",
+        "CN2-S4-MOVE",
+        "CN-RAIL-GTX",
+        "CN-RAIL-GE"
+      ]
+    },
+    {
+      "scene_id": "M009",
+      "message": "권역별 후보와 조건부 첫 선택",
+      "visual_forms": [
+        "우선순위3요소 정리→기존CTA",
+        "새 전망 도시이미지 추가 없이 실제 조건을 회수"
+      ],
+      "data_source": [
+        "CN2-S4-PRICE",
+        "CN2-S4-MOVE",
+        "CN2-S4-SCHOOL",
+        "CN-S34-LIFE",
+        "CN2-S5-PRICE",
+        "CN2-S5-MOVE",
+        "CN2-S5-SCHOOL",
+        "CN2-S1-PRICE",
+        "CN2-S1-MOVE",
+        "CN2-S1-SCHOOL",
+        "CN2-S1-SURROUNDINGS",
+        "CN2-S4-TYPE",
+        "CN2-S1-TYPE"
+      ]
+    }
+  ]
+}

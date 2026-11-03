@@ -1,0 +1,2495 @@
+{
+  "schema_version": "1.0",
+  "episode_id": "newlywed-apartment-picks-20261101",
+  "revision": "top20-8min-v2",
+  "owner": "writer",
+  "title": "신혼부부가 많이 사는 수도권 TOP20",
+  "status": "review_draft_pending_new_user_script_approval",
+  "input_versions": {
+    "brief.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "719bde90dbdc79afff1383d47feffb4f019959855ef676e82d6abae0fcd9f534"
+    },
+    "state.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "56734362e401d3555b007de91e686977e0f514a57639b603281ac2d8a33afd7c"
+    },
+    "research/top20-8min-v2/top20.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b"
+    },
+    "research/top20-8min-v2/ranks01_10_facts.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "a436794713cb97290701a909d6702aa2108311b0174d4168d9bbd2769c316c8d"
+    },
+    "research/top20-8min-v2/ranks11_20_facts.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "68b9c675fb41d91c0bb4216666c063b655523b615c678c33d235c28c2c5e4c84"
+    },
+    "research/top20-8min-v2/supplemental_facts.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "12b8bde1a9230b8056cb858f4cb0348d4065dcfc66c470d89b526c1e013e5ca8"
+    },
+    "visual/top20-8min-v2/maps/map_assets.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "dc3c9b07d3be714cc1bc962433e1ef96079239072dace536a194e9e54ff2261a"
+    },
+    "visual/top20-8min-v2/data_cards/data_card_assets.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "27cba8c9c90b158967b70e65bb076f84d4436159035b6d2e32ef42d10efcf4d8"
+    }
+  },
+  "target_duration_s": 480,
+  "total_estimated_duration_s": 480,
+  "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+  "audio_confirmed": false,
+  "audio_revision": null,
+  "timing_locked": false,
+  "duration_is_actual": false,
+  "duration_method": "낭독문 문자량에 비례해477초 배분, 마지막 무발화3초. 실제 호흡·숫자 읽기·오디오 길이 미측정.",
+  "scene_id_policy": "R20~R01의 입력 scene_id=S003~S022 유지; 서두O001/O002, 인사이트I001~I003, 맺음C001, 여백E001 별도제안.",
+  "shared_scenes_action": "총괄 병합 제안만; 현 공통 scenes.json의 planning-v1을 직접 수정하지 않음.",
+  "pronunciation_dictionary": {
+    "TOP20": "톱 트웬티(제목 표시), 낭독에서는 스무 곳",
+    "2024년 11월 1일": "이천이십사 년 십일 월 일 일",
+    "2023년": "이천이십삼 년",
+    "53개 구": "쉰세 개 구",
+    "1만 204쌍": "일만 이백사 쌍",
+    "1만 724쌍": "일만 칠백이십사 쌍",
+    "1만 1,452쌍": "일만 천사백오십이 쌍",
+    "1만 1,752쌍": "일만 천칠백오십이 쌍",
+    "1만 5,737쌍": "일만 오천칠백삼십칠 쌍",
+    "1만 5,941쌍": "일만 오천구백사십일 쌍",
+    "9.4퍼센트": "구 점 사 퍼센트",
+    "1.3퍼센트": "일 점 삼 퍼센트",
+    "3.1퍼센트": "삼 점 일 퍼센트",
+    "7.0퍼센트": "칠 점 영 퍼센트",
+    "5.3퍼센트": "오 점 삼 퍼센트",
+    "3.8퍼센트": "삼 점 팔 퍼센트",
+    "5.2퍼센트": "오 점 이 퍼센트",
+    "0.2퍼센트": "영 점 이 퍼센트",
+    "고양대로 1955": "고양대로 천구백오십오",
+    "G밸리": "지 밸리",
+    "원미구": "원미구",
+    "미추홀구": "미추홀구",
+    "서해구": "서해구",
+    "검단구": "검단구",
+    "서수원칠보체육관": "서수원 / 칠보 / 체육관(기관명은 한 덩어리로 표시)"
+  },
+  "emphasis_words": [
+    "전체 수",
+    "단위는 쌍",
+    "당시 구역",
+    "열 쌍 차이",
+    "59쌍",
+    "초혼",
+    "재혼",
+    "여섯 곳",
+    "열세 곳",
+    "9.4퍼센트",
+    "1.3퍼센트",
+    "현재 서해구와 검단구를 합친 범위"
+  ],
+  "scenes": [
+    {
+      "scene_id": "O001",
+      "region_id": null,
+      "rank": null,
+      "title": "신혼부부는 어디에 많이 살까",
+      "message": "신혼부부 거주 규모를 질문한다",
+      "sentences": [
+        {
+          "sentence_id": "O001-01",
+          "text": "신혼부부가 많이 사는 수도권 지역, 어디가 떠오르세요?",
+          "claim_ids": [],
+          "statement_type": "viewer_comparison_question"
+        },
+        {
+          "sentence_id": "O001-02",
+          "text": "오늘은 수도권 53개 구 가운데 신혼부부가 많이 사는 스무 곳을, 20위부터 거꾸로 만나보겠습니다.",
+          "claim_ids": [
+            "SCOPE-53"
+          ],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "O001-03",
+          "text": "이름만 줄 세우면 놓치는 게 있어요.",
+          "claim_ids": [],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "O001-04",
+          "text": "바로 옆 순위의 차이가 겨우 열 쌍인 곳도 있고, 비슷한 규모인데 부부의 구성이 다른 곳도 있거든요.",
+          "claim_ids": [
+            "DIFF-R10-R11",
+            "COMPOSITION-PAIR"
+          ],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "O001-05",
+          "text": "그 차이를 따라가면서, 우리에게 필요한 지역 비교 질문도 함께 찾아보죠.",
+          "claim_ids": [],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "수도권 지도에서 질문 제시 → 아직 순위를 밝히지 않은 20개 지역 윤곽. 열 쌍 차이는 숫자 10만 예고하고 지역명은 R10에서 공개.",
+      "requested_photo_places": [],
+      "material_types": [
+        "map",
+        "editorial_card"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [],
+      "start_s": 0,
+      "end_s": 24,
+      "duration_s": 24,
+      "narration_text": "신혼부부가 많이 사는 수도권 지역, 어디가 떠오르세요?\n오늘은 수도권 53개 구 가운데 신혼부부가 많이 사는 스무 곳을, 20위부터 거꾸로 만나보겠습니다.\n이름만 줄 세우면 놓치는 게 있어요.\n바로 옆 순위의 차이가 겨우 열 쌍인 곳도 있고, 비슷한 규모인데 부부의 구성이 다른 곳도 있거든요.\n그 차이를 따라가면서, 우리에게 필요한 지역 비교 질문도 함께 찾아보죠.",
+      "claim_ids": [
+        "SCOPE-53",
+        "DIFF-R10-R11",
+        "COMPOSITION-PAIR"
+      ],
+      "asset_ids": [],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": []
+    },
+    {
+      "scene_id": "O002",
+      "region_id": null,
+      "rank": null,
+      "title": "숫자의 기준",
+      "message": "2024년 당시 구역·전체 부부 수·단위 쌍을 정한다",
+      "sentences": [
+        {
+          "sentence_id": "O002-01",
+          "text": "기준은 2024년 11월 1일, 당시 구역별로 집계한 거주 신혼부부 수입니다.",
+          "claim_ids": [
+            "DEF-2024",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "O002-02",
+          "text": "혼인신고 후 5년이 지나지 않았고, 혼인관계를 유지하면서 부부 중 적어도 한 명이 국내에 사는 부부가 대상이에요.",
+          "claim_ids": [
+            "DEF-2024"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "O002-03",
+          "text": "초혼과 재혼을 포함한 전체 수를 보며, 단위는 쌍입니다.",
+          "claim_ids": [
+            "DEF-2024"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "O002-04",
+          "text": "먼저 기준일에 얼마나 많이 살고 있었는지 보고, 중간중간 1년 사이의 변화도 짚어볼게요.",
+          "claim_ids": [
+            "DEF-2024"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "2024.11.1 / 수도권 53개 구 / 신혼부부 전체 / 단위 쌍을 순차 강조. 혼인 후 5년 미경과는 짧은 가로 구간으로 설명.",
+      "requested_photo_places": [],
+      "material_types": [
+        "editorial_card",
+        "map"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [],
+      "start_s": 24,
+      "end_s": 46,
+      "duration_s": 22,
+      "narration_text": "기준은 2024년 11월 1일, 당시 구역별로 집계한 거주 신혼부부 수입니다.\n혼인신고 후 5년이 지나지 않았고, 혼인관계를 유지하면서 부부 중 적어도 한 명이 국내에 사는 부부가 대상이에요.\n초혼과 재혼을 포함한 전체 수를 보며, 단위는 쌍입니다.\n먼저 기준일에 얼마나 많이 살고 있었는지 보고, 중간중간 1년 사이의 변화도 짚어볼게요.",
+      "claim_ids": [
+        "DEF-2024",
+        "SCOPE-53"
+      ],
+      "asset_ids": [],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": []
+    },
+    {
+      "scene_id": "S003",
+      "region_id": "R20",
+      "rank": 20,
+      "title": "20위 부천시 원미구",
+      "message": "2024년 복원된 원미구부터 출발한다",
+      "sentences": [
+        {
+          "sentence_id": "S003-01",
+          "text": "20위는 부천시 원미구, 7,365쌍입니다.",
+          "claim_ids": [
+            "T2024-R20-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S003-02",
+          "text": "원미구는 2024년에 다시 설치된 구예요.",
+          "claim_ids": [
+            "R20-F02"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S003-03",
+          "text": "중동신도시와 함께 조성된 부천중앙공원이 있는 지역이기도 하죠.",
+          "claim_ids": [
+            "R20-F01"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S003-04",
+          "text": "오늘 순위의 출발점은 이 7천 쌍대 중반입니다.",
+          "claim_ids": [
+            "T2024-R20-TOTAL"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R20에 20위와7,365쌍. 부천중앙공원은 확보된 실제 사진이 해당 장소일 때만 연결. 2023 비교 칸은 null 유지·낭독 생략.",
+      "requested_photo_places": [
+        "부천중앙공원"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_20_16"
+      ],
+      "start_s": 46,
+      "end_s": 59,
+      "duration_s": 13,
+      "narration_text": "20위는 부천시 원미구, 7,365쌍입니다.\n원미구는 2024년에 다시 설치된 구예요.\n중동신도시와 함께 조성된 부천중앙공원이 있는 지역이기도 하죠.\n오늘 순위의 출발점은 이 7천 쌍대 중반입니다.",
+      "claim_ids": [
+        "T2024-R20-TOTAL",
+        "SCOPE-53",
+        "R20-F02",
+        "R20-F01"
+      ],
+      "asset_ids": [
+        "MAP_R20",
+        "RANK_GROUP_20_16"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R20"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S003_1",
+          "place_name": "부천중앙공원",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "설명: 문장에 나온 실제 장소·기능 확인",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S004",
+      "region_id": "R19",
+      "rank": 19,
+      "title": "19위 서울 중랑구",
+      "message": "원미구와 중랑구는 182쌍 차이다",
+      "sentences": [
+        {
+          "sentence_id": "S004-01",
+          "text": "서울 중랑구가 7,547쌍으로 19위입니다.",
+          "claim_ids": [
+            "T2024-R19-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S004-02",
+          "text": "원미구보다 182쌍 많아요.",
+          "claim_ids": [
+            "DIFF-R19-R20"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S004-03",
+          "text": "경기도 부천에서 서울 중랑으로 자리는 바뀌었지만, 거주 규모는 서로 가깝습니다.",
+          "claim_ids": [
+            "DIFF-R19-R20"
+          ],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "S004-04",
+          "text": "이 정도 차이라면 등수만 기억하기보다, 두 지역을 같은 규모대에 놓고 보는 편이 이해하기 쉽겠죠.",
+          "claim_ids": [
+            "DIFF-R19-R20"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "R20·R19 두 지도 고정 비교와 182쌍 연결선. 중랑 실사는 장소 확인된 지역 전경을 짧게 사용하며 시설 효용 자막은 붙이지 않음.",
+      "requested_photo_places": [
+        "중랑구 내 촬영지 확인된 실제 전경"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_20_16"
+      ],
+      "start_s": 59,
+      "end_s": 75,
+      "duration_s": 16,
+      "narration_text": "서울 중랑구가 7,547쌍으로 19위입니다.\n원미구보다 182쌍 많아요.\n경기도 부천에서 서울 중랑으로 자리는 바뀌었지만, 거주 규모는 서로 가깝습니다.\n이 정도 차이라면 등수만 기억하기보다, 두 지역을 같은 규모대에 놓고 보는 편이 이해하기 쉽겠죠.",
+      "claim_ids": [
+        "T2024-R19-TOTAL",
+        "SCOPE-53",
+        "DIFF-R19-R20"
+      ],
+      "asset_ids": [
+        "MAP_R19",
+        "RANK_GROUP_20_16"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R19"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S004_1",
+          "place_name": "중랑구 내 촬영지 확인된 실제 전경",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "분위기: 해당 구의 실제 전경",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S005",
+      "region_id": "R18",
+      "rank": 18,
+      "title": "18위 용인시 기흥구",
+      "message": "수치가 가까워도 비교할 생활권은 달라진다",
+      "sentences": [
+        {
+          "sentence_id": "S005-01",
+          "text": "18위는 용인시 기흥구, 7,686쌍이에요.",
+          "claim_ids": [
+            "T2024-R18-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S005-02",
+          "text": "중랑구와의 차이는 139쌍입니다.",
+          "claim_ids": [
+            "DIFF-R18-R19"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S005-03",
+          "text": "지금은 수가 가까운 지역들을 차례로 보고 있는 거예요.",
+          "claim_ids": [
+            "T2024-R20-TOTAL",
+            "T2024-R18-TOTAL"
+          ],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "S005-04",
+          "text": "이 목록에서 집을 알아볼 곳을 추린다면, 지역 이름 옆에 두 사람의 출퇴근 목적지를 먼저 적어볼 수 있겠죠.",
+          "claim_ids": [],
+          "statement_type": "viewer_comparison_question"
+        }
+      ],
+      "screen_memo": "MAP_R18의 기흥구 윤곽과139쌍 차이. 기흥구 실제 전경은 위치를 떠올리는 분위기 자료로 사용. 미검증 통근 경로나 이동시간을 그리지 않음.",
+      "requested_photo_places": [
+        "기흥구 내 촬영지 확인된 실제 전경"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_20_16"
+      ],
+      "start_s": 75,
+      "end_s": 91,
+      "duration_s": 16,
+      "narration_text": "18위는 용인시 기흥구, 7,686쌍이에요.\n중랑구와의 차이는 139쌍입니다.\n지금은 수가 가까운 지역들을 차례로 보고 있는 거예요.\n이 목록에서 집을 알아볼 곳을 추린다면, 지역 이름 옆에 두 사람의 출퇴근 목적지를 먼저 적어볼 수 있겠죠.",
+      "claim_ids": [
+        "T2024-R18-TOTAL",
+        "SCOPE-53",
+        "DIFF-R18-R19",
+        "T2024-R20-TOTAL"
+      ],
+      "asset_ids": [
+        "MAP_R18",
+        "RANK_GROUP_20_16"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R18"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S005_1",
+          "place_name": "기흥구 내 촬영지 확인된 실제 전경",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "분위기: 해당 구의 실제 전경",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S006",
+      "region_id": "R17",
+      "rank": 17,
+      "title": "17위 인천 연수구",
+      "message": "인천 연수구가 7천 쌍대 후반에 등장한다",
+      "sentences": [
+        {
+          "sentence_id": "S006-01",
+          "text": "다음은 인천 연수구입니다.",
+          "claim_ids": [
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S006-02",
+          "text": "7,875쌍으로 17위예요.",
+          "claim_ids": [
+            "T2024-R17-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S006-03",
+          "text": "기흥구보다 189쌍 더 많은데, 잠시 뒤 두 지역의 전년 변화도 나란히 볼게요.",
+          "claim_ids": [
+            "DIFF-R17-R18"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S006-04",
+          "text": "같은 7천 쌍대 안에서도 부천, 서울, 용인, 인천이 차례로 등장하네요.",
+          "claim_ids": [
+            "T2024-R20-TOTAL",
+            "T2024-R19-TOTAL",
+            "T2024-R18-TOTAL",
+            "T2024-R17-TOTAL"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R17·R18과189쌍 차이. 송도 센트럴파크 등 장소 확인된 연수구 실사는 분위기 컷으로만 연결. 20~17위의 시도색을 순차 표시.",
+      "requested_photo_places": [
+        "연수구 내 촬영지 확인된 실제 전경"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_20_16"
+      ],
+      "start_s": 91,
+      "end_s": 104,
+      "duration_s": 13,
+      "narration_text": "다음은 인천 연수구입니다.\n7,875쌍으로 17위예요.\n기흥구보다 189쌍 더 많은데, 잠시 뒤 두 지역의 전년 변화도 나란히 볼게요.\n같은 7천 쌍대 안에서도 부천, 서울, 용인, 인천이 차례로 등장하네요.",
+      "claim_ids": [
+        "SCOPE-53",
+        "T2024-R17-TOTAL",
+        "DIFF-R17-R18",
+        "T2024-R20-TOTAL",
+        "T2024-R19-TOTAL",
+        "T2024-R18-TOTAL"
+      ],
+      "asset_ids": [
+        "MAP_R17",
+        "RANK_GROUP_20_16"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R17"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S006_1",
+          "place_name": "연수구 내 촬영지 확인된 실제 전경",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "분위기: 해당 구의 실제 전경",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S007",
+      "region_id": "R16",
+      "rank": 16,
+      "title": "16위 인천 남동구",
+      "message": "8천 쌍 직전인 남동구까지 첫 묶음을 닫는다",
+      "sentences": [
+        {
+          "sentence_id": "S007-01",
+          "text": "16위 남동구는 7,997쌍, 8천 쌍 바로 아래입니다.",
+          "claim_ids": [
+            "T2024-R16-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S007-02",
+          "text": "앞선 연수구보다 122쌍 많습니다.",
+          "claim_ids": [
+            "DIFF-R16-R17"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S007-03",
+          "text": "남동구는 2023년 8,595쌍에서 598쌍 줄어, 감소율은 7.0퍼센트였어요.",
+          "claim_ids": [
+            "CALC-R16-YOY"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S007-04",
+          "text": "여기까지 다섯 곳을 봤는데, 이번에는 순서에서 잠깐 벗어나 변화도 보겠습니다.",
+          "claim_ids": [],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R16·122쌍 차이 → 남동8,595→7,997 변화. 소래습지생태공원 등 확인된 실제 전경은 짧은 분위기 컷으로만 사용. 뒤이어 첫5개 막대를 모두 보여줌.",
+      "requested_photo_places": [
+        "남동구 내 촬영지 확인된 실제 전경"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_20_16"
+      ],
+      "start_s": 104,
+      "end_s": 120,
+      "duration_s": 16,
+      "narration_text": "16위 남동구는 7,997쌍, 8천 쌍 바로 아래입니다.\n앞선 연수구보다 122쌍 많습니다.\n남동구는 2023년 8,595쌍에서 598쌍 줄어, 감소율은 7.0퍼센트였어요.\n여기까지 다섯 곳을 봤는데, 이번에는 순서에서 잠깐 벗어나 변화도 보겠습니다.",
+      "claim_ids": [
+        "T2024-R16-TOTAL",
+        "SCOPE-53",
+        "DIFF-R16-R17",
+        "CALC-R16-YOY"
+      ],
+      "asset_ids": [
+        "MAP_R16",
+        "RANK_GROUP_20_16"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R16"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S007_1",
+          "place_name": "남동구 내 촬영지 확인된 실제 전경",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "분위기: 해당 구의 실제 전경",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "I001",
+      "region_id": null,
+      "rank": null,
+      "title": "같은 출발점, 다른 변화",
+      "message": "규모와 전년 변화는 구분해서 읽는다",
+      "sentences": [
+        {
+          "sentence_id": "I001-01",
+          "text": "방금 본 기흥구와 연수구는 2023년에 똑같이 7,797쌍이었어요.",
+          "claim_ids": [
+            "R18-C2023",
+            "R17-C2023"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "I001-02",
+          "text": "1년 뒤에는 기흥구가 111쌍 줄고, 연수구는 78쌍 늘었습니다.",
+          "claim_ids": [
+            "CALC-R18-YOY",
+            "CALC-R17-YOY"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "I001-03",
+          "text": "출발점이 같아도 다음 해의 방향은 달라질 수 있는 거죠.",
+          "claim_ids": [
+            "CALC-R18-YOY",
+            "CALC-R17-YOY"
+          ],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "I001-04",
+          "text": "이번 스무 곳 가운데 같은 범위로 비교할 수 있는 열아홉 곳을 세면, 여섯 곳이 늘고 열세 곳이 줄었어요.",
+          "claim_ids": [
+            "DIRECTION-19"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "I001-05",
+          "text": "해마다 새로 혼인한 부부가 들어오고, 혼인 5년이 지난 부부는 집계 대상에서 빠지는 변화도 함께 생깁니다.",
+          "claim_ids": [
+            "STOCK-MECHANISM"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "I001-06",
+          "text": "그래서 현재 규모와 1년간의 변화는 따로 놓고 읽어야 해요.",
+          "claim_ids": [
+            "DIRECTION-19",
+            "STOCK-MECHANISM"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "새 비교 도표 제안: 동일한7,797에서 기흥7,686·연수7,875로 갈라지는 두 선. 뒤이어 증가6·감소13을 지역개수로 표시. 원미의2023 칸은 빈값으로 보존.",
+      "requested_photo_places": [],
+      "material_types": [
+        "data_chart"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [],
+      "start_s": 120,
+      "end_s": 150,
+      "duration_s": 30,
+      "narration_text": "방금 본 기흥구와 연수구는 2023년에 똑같이 7,797쌍이었어요.\n1년 뒤에는 기흥구가 111쌍 줄고, 연수구는 78쌍 늘었습니다.\n출발점이 같아도 다음 해의 방향은 달라질 수 있는 거죠.\n이번 스무 곳 가운데 같은 범위로 비교할 수 있는 열아홉 곳을 세면, 여섯 곳이 늘고 열세 곳이 줄었어요.\n해마다 새로 혼인한 부부가 들어오고, 혼인 5년이 지난 부부는 집계 대상에서 빠지는 변화도 함께 생깁니다.\n그래서 현재 규모와 1년간의 변화는 따로 놓고 읽어야 해요.",
+      "claim_ids": [
+        "R18-C2023",
+        "R17-C2023",
+        "CALC-R18-YOY",
+        "CALC-R17-YOY",
+        "DIRECTION-19",
+        "STOCK-MECHANISM"
+      ],
+      "asset_ids": [],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": []
+    },
+    {
+      "scene_id": "S008",
+      "region_id": "R15",
+      "rank": 15,
+      "title": "15위 서울 구로구",
+      "message": "남동구와 19쌍 차이로 8천 쌍을 넘는다",
+      "sentences": [
+        {
+          "sentence_id": "S008-01",
+          "text": "15위는 서울 구로구, 8,016쌍입니다.",
+          "claim_ids": [
+            "T2024-R15-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S008-02",
+          "text": "남동구와는 겨우 19쌍 차이로, 여기서 8천 쌍을 넘어요.",
+          "claim_ids": [
+            "DIFF-R15-R16",
+            "T2024-R15-TOTAL"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S008-03",
+          "text": "구로동과 금천구 가산동에 걸친 산업지역이 G밸리죠.",
+          "claim_ids": [
+            "R15-F01"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S008-04",
+          "text": "직장 주변을 관심 있게 본다면, 구 이름에 더해 실제 근무지와 주거지를 함께 놓고 비교해보세요.",
+          "claim_ids": [],
+          "statement_type": "viewer_comparison_question"
+        }
+      ],
+      "screen_memo": "MAP_R15·R16과19쌍 차이 강조. G밸리 자료는 구로·가산에 걸친 범위를 명시한 원자료만 사용. 신도림 사진에 G밸리 자막 부착 금지.",
+      "requested_photo_places": [
+        "구로구 구로동 G밸리 구간"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_15_11"
+      ],
+      "start_s": 150,
+      "end_s": 166,
+      "duration_s": 16,
+      "narration_text": "15위는 서울 구로구, 8,016쌍입니다.\n남동구와는 겨우 19쌍 차이로, 여기서 8천 쌍을 넘어요.\n구로동과 금천구 가산동에 걸친 산업지역이 G밸리죠.\n직장 주변을 관심 있게 본다면, 구 이름에 더해 실제 근무지와 주거지를 함께 놓고 비교해보세요.",
+      "claim_ids": [
+        "T2024-R15-TOTAL",
+        "SCOPE-53",
+        "DIFF-R15-R16",
+        "R15-F01"
+      ],
+      "asset_ids": [
+        "MAP_R15",
+        "RANK_GROUP_15_11"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R15"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S008_1",
+          "place_name": "구로구 구로동 G밸리 구간",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "설명: 문장에 나온 실제 장소·기능 확인",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S009",
+      "region_id": "R14",
+      "rank": 14,
+      "title": "14위 서울 은평구",
+      "message": "숫자에서 실제 동네 질문으로 연결한다",
+      "sentences": [
+        {
+          "sentence_id": "S009-01",
+          "text": "14위 은평구에는 8,267쌍이 살고 있습니다.",
+          "claim_ids": [
+            "T2024-R14-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S009-02",
+          "text": "구로구보다 251쌍 많아요.",
+          "claim_ids": [
+            "DIFF-R14-R15"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S009-03",
+          "text": "은평한옥마을은 이 구의 진관동에 있습니다.",
+          "claim_ids": [
+            "R14-F02"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S009-04",
+          "text": "관심 지역이 생겼다면, 지역 전체 이름에서 한 걸음 더 들어가 어느 동네를 볼지도 정해보면 좋겠죠.",
+          "claim_ids": [],
+          "statement_type": "viewer_comparison_question"
+        }
+      ],
+      "screen_memo": "MAP_R14와 은평한옥마을 실사. 관광지 사진은 장소 설명·분위기에 한정하고 일반 주거 대표 사진으로 취급하지 않음.",
+      "requested_photo_places": [
+        "은평한옥마을"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_15_11"
+      ],
+      "start_s": 166,
+      "end_s": 180,
+      "duration_s": 14,
+      "narration_text": "14위 은평구에는 8,267쌍이 살고 있습니다.\n구로구보다 251쌍 많아요.\n은평한옥마을은 이 구의 진관동에 있습니다.\n관심 지역이 생겼다면, 지역 전체 이름에서 한 걸음 더 들어가 어느 동네를 볼지도 정해보면 좋겠죠.",
+      "claim_ids": [
+        "T2024-R14-TOTAL",
+        "SCOPE-53",
+        "DIFF-R14-R15",
+        "R14-F02"
+      ],
+      "asset_ids": [
+        "MAP_R14",
+        "RANK_GROUP_15_11"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R14"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S009_1",
+          "place_name": "은평한옥마을",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "설명: 문장에 나온 실제 장소·기능 확인",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S010",
+      "region_id": "R13",
+      "rank": 13,
+      "title": "13위 수원시 권선구",
+      "message": "권선·영통을 나란히 비교할 기준을 만든다",
+      "sentences": [
+        {
+          "sentence_id": "S010-01",
+          "text": "13위는 수원시 권선구, 8,329쌍입니다.",
+          "claim_ids": [
+            "T2024-R13-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S010-02",
+          "text": "다음 지역도 같은 수원이라 두 곳을 나란히 보겠습니다.",
+          "claim_ids": [
+            "SCOPE-53"
+          ],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "S010-03",
+          "text": "권선구는 2023년 8,792쌍에서 463쌍 줄어, 감소율은 5.3퍼센트였습니다.",
+          "claim_ids": [
+            "CALC-R13-YOY"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S010-04",
+          "text": "현재의 크기와 그사이 달라진 정도를 같이 적어두면 비교할 때 도움이 되겠죠.",
+          "claim_ids": [
+            "CALC-R13-YOY"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R13의 권선 윤곽과8,792→8,329. 다음 영통 장면까지 같은 막대축을 유지하고 실제 전경은 위치 소개의 분위기 자료로 한정.",
+      "requested_photo_places": [
+        "권선구 내 촬영지 확인된 실제 전경"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_15_11"
+      ],
+      "start_s": 180,
+      "end_s": 197,
+      "duration_s": 17,
+      "narration_text": "13위는 수원시 권선구, 8,329쌍입니다.\n다음 지역도 같은 수원이라 두 곳을 나란히 보겠습니다.\n권선구는 2023년 8,792쌍에서 463쌍 줄어, 감소율은 5.3퍼센트였습니다.\n현재의 크기와 그사이 달라진 정도를 같이 적어두면 비교할 때 도움이 되겠죠.",
+      "claim_ids": [
+        "T2024-R13-TOTAL",
+        "SCOPE-53",
+        "CALC-R13-YOY"
+      ],
+      "asset_ids": [
+        "MAP_R13",
+        "RANK_GROUP_15_11"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R13"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S010_1",
+          "place_name": "권선구 내 촬영지 확인된 실제 전경",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "분위기: 해당 구의 실제 전경",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S011",
+      "region_id": "R12",
+      "rank": 12,
+      "title": "12위 수원시 영통구",
+      "message": "권선·영통 전체 수는 59쌍 차이다",
+      "sentences": [
+        {
+          "sentence_id": "S011-01",
+          "text": "12위는 수원시 영통구, 8,388쌍이에요.",
+          "claim_ids": [
+            "T2024-R12-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S011-02",
+          "text": "바로 앞 권선구와는 59쌍 차이입니다.",
+          "claim_ids": [
+            "DIFF-R12-R13"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S011-03",
+          "text": "같은 도시 안에서 신혼부부 전체 수가 아주 가까운 두 구를 만난 셈이죠.",
+          "claim_ids": [
+            "DIFF-R12-R13"
+          ],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "S011-04",
+          "text": "잠시 뒤에 이 숫자 안에 담긴 부부의 구성도 나눠볼게요.",
+          "claim_ids": [
+            "COMPOSITION-PAIR"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R12·R13을 나란히 고정하고8,329→8,388 차이59만 강조. 시설 사진 낭독을 추가하지 않고 비교 화면을 충분히 유지.",
+      "requested_photo_places": [
+        "영통구 내 촬영지 확인된 주거 전경"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_15_11"
+      ],
+      "start_s": 197,
+      "end_s": 211,
+      "duration_s": 14,
+      "narration_text": "12위는 수원시 영통구, 8,388쌍이에요.\n바로 앞 권선구와는 59쌍 차이입니다.\n같은 도시 안에서 신혼부부 전체 수가 아주 가까운 두 구를 만난 셈이죠.\n잠시 뒤에 이 숫자 안에 담긴 부부의 구성도 나눠볼게요.",
+      "claim_ids": [
+        "T2024-R12-TOTAL",
+        "SCOPE-53",
+        "DIFF-R12-R13",
+        "COMPOSITION-PAIR"
+      ],
+      "asset_ids": [
+        "MAP_R12",
+        "RANK_GROUP_15_11"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R12"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S011_1",
+          "place_name": "영통구 내 촬영지 확인된 주거 전경",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "분위기: 해당 구의 실제 전경",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S012",
+      "region_id": "R11",
+      "rank": 11,
+      "title": "11위 서울 노원구",
+      "message": "상위10위 경계의 작은 차이를 예고한다",
+      "sentences": [
+        {
+          "sentence_id": "S012-01",
+          "text": "11위는 서울 노원구로, 8,473쌍입니다.",
+          "claim_ids": [
+            "T2024-R11-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S012-02",
+          "text": "화랑대 철도공원 안에는 전시실과 야외무대를 갖춘 경춘선숲길 갤러리가 있어요.",
+          "claim_ids": [
+            "R11-F01"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S012-03",
+          "text": "이제 상위 열 곳을 앞두고 있습니다.",
+          "claim_ids": [],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "S012-04",
+          "text": "등수로는 경계가 딱 나뉘지만, 다음 지역과의 숫자 차이를 눈여겨봐 주세요.",
+          "claim_ids": [
+            "DIFF-R10-R11"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R11 → 경춘선숲길 갤러리 실사. 순위 카드11위 막대 끝에10위 자리만 예고. 이탈리아 모형 건축물을 실제 노원 전경으로 사용 금지.",
+      "requested_photo_places": [
+        "화랑대 철도공원 내 경춘선숲길 갤러리"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_15_11"
+      ],
+      "start_s": 211,
+      "end_s": 226,
+      "duration_s": 15,
+      "narration_text": "11위는 서울 노원구로, 8,473쌍입니다.\n화랑대 철도공원 안에는 전시실과 야외무대를 갖춘 경춘선숲길 갤러리가 있어요.\n이제 상위 열 곳을 앞두고 있습니다.\n등수로는 경계가 딱 나뉘지만, 다음 지역과의 숫자 차이를 눈여겨봐 주세요.",
+      "claim_ids": [
+        "T2024-R11-TOTAL",
+        "SCOPE-53",
+        "R11-F01",
+        "DIFF-R10-R11"
+      ],
+      "asset_ids": [
+        "MAP_R11",
+        "RANK_GROUP_15_11"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R11"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S012_1",
+          "place_name": "화랑대 철도공원 내 경춘선숲길 갤러리",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "설명: 문장에 나온 실제 장소·기능 확인",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "I002",
+      "region_id": null,
+      "rank": null,
+      "title": "비슷한 전체, 다른 구성",
+      "message": "영통·권선의 초혼과 재혼 수를 각각 비교한다",
+      "sentences": [
+        {
+          "sentence_id": "I002-01",
+          "text": "그전에, 방금 본 수원의 두 구를 한 번 더 보죠.",
+          "claim_ids": [],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "I002-02",
+          "text": "전체 수 차이는 59쌍이었는데, 초혼 부부는 영통구 7,634쌍, 권선구 6,746쌍입니다.",
+          "claim_ids": [
+            "DIFF-R12-R13",
+            "T2024-R12-FIRST",
+            "T2024-R13-FIRST"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "I002-03",
+          "text": "초혼만 놓으면 영통구가 888쌍 더 많아요.",
+          "claim_ids": [
+            "COMPOSITION-PAIR"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "I002-04",
+          "text": "재혼 부부는 영통구 733쌍, 권선구 1,563쌍으로 방향이 바뀝니다.",
+          "claim_ids": [
+            "T2024-R12-REMARRIED",
+            "T2024-R13-REMARRIED"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "I002-05",
+          "text": "이번에는 권선구가 830쌍 더 많습니다.",
+          "claim_ids": [
+            "COMPOSITION-PAIR"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "I002-06",
+          "text": "전체 규모가 비슷해도 통계에 담긴 부부의 구성은 이렇게 달라집니다.",
+          "claim_ids": [
+            "COMPOSITION-PAIR"
+          ],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "I002-07",
+          "text": "지역을 이해할 때 전체 수와 그 안의 구성을 함께 살펴볼 이유예요.",
+          "claim_ids": [
+            "COMPOSITION-PAIR"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "NEWLYWED_COMPOSITION의 원값 검토 후 영통·권선 행만 확대. 전체/초혼/재혼은 독립 막대3쌍으로 제시하고 초혼+재혼 누적합을 전체와 같게 맞추지 않음.",
+      "requested_photo_places": [],
+      "material_types": [
+        "data_chart"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "NEWLYWED_COMPOSITION"
+      ],
+      "start_s": 226,
+      "end_s": 254,
+      "duration_s": 28,
+      "narration_text": "그전에, 방금 본 수원의 두 구를 한 번 더 보죠.\n전체 수 차이는 59쌍이었는데, 초혼 부부는 영통구 7,634쌍, 권선구 6,746쌍입니다.\n초혼만 놓으면 영통구가 888쌍 더 많아요.\n재혼 부부는 영통구 733쌍, 권선구 1,563쌍으로 방향이 바뀝니다.\n이번에는 권선구가 830쌍 더 많습니다.\n전체 규모가 비슷해도 통계에 담긴 부부의 구성은 이렇게 달라집니다.\n지역을 이해할 때 전체 수와 그 안의 구성을 함께 살펴볼 이유예요.",
+      "claim_ids": [
+        "DIFF-R12-R13",
+        "T2024-R12-FIRST",
+        "T2024-R13-FIRST",
+        "COMPOSITION-PAIR",
+        "T2024-R12-REMARRIED",
+        "T2024-R13-REMARRIED"
+      ],
+      "asset_ids": [
+        "NEWLYWED_COMPOSITION"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": []
+    },
+    {
+      "scene_id": "S013",
+      "region_id": "R10",
+      "rank": 10,
+      "title": "10위 인천 미추홀구",
+      "message": "노원과 열 쌍 차이로10위에 들어온다",
+      "sentences": [
+        {
+          "sentence_id": "S013-01",
+          "text": "10위는 인천 미추홀구, 8,483쌍입니다.",
+          "claim_ids": [
+            "T2024-R10-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S013-02",
+          "text": "11위 노원구와 불과 열 쌍 차이예요.",
+          "claim_ids": [
+            "DIFF-R10-R11"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S013-03",
+          "text": "순위 한 칸이 실제 규모에서는 이만큼 가까울 수도 있습니다.",
+          "claim_ids": [
+            "DIFF-R10-R11"
+          ],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "S013-04",
+          "text": "그런데 전년보다 노원구는 3.8퍼센트 줄었고, 미추홀구는 5.2퍼센트 늘었어요.",
+          "claim_ids": [
+            "CALC-R11-YOY",
+            "CALC-R10-YOY"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S013-05",
+          "text": "현재 수가 거의 같아도, 1년 사이에 움직인 방향은 서로 달랐습니다.",
+          "claim_ids": [
+            "CALC-R11-YOY",
+            "CALC-R10-YOY"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R10·R11 두 막대를 동일축으로 놓고8,483-8,473=10 표시 → 노원-3.8%·미추홀+5.2%를 독립 변화 도표로 비교. 지역 전경에 인과 자막을 붙이지 않음.",
+      "requested_photo_places": [
+        "미추홀구 내 촬영지 확인된 실제 전경"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_10_6"
+      ],
+      "start_s": 254,
+      "end_s": 273,
+      "duration_s": 19,
+      "narration_text": "10위는 인천 미추홀구, 8,483쌍입니다.\n11위 노원구와 불과 열 쌍 차이예요.\n순위 한 칸이 실제 규모에서는 이만큼 가까울 수도 있습니다.\n그런데 전년보다 노원구는 3.8퍼센트 줄었고, 미추홀구는 5.2퍼센트 늘었어요.\n현재 수가 거의 같아도, 1년 사이에 움직인 방향은 서로 달랐습니다.",
+      "claim_ids": [
+        "T2024-R10-TOTAL",
+        "SCOPE-53",
+        "DIFF-R10-R11",
+        "CALC-R11-YOY",
+        "CALC-R10-YOY"
+      ],
+      "asset_ids": [
+        "MAP_R10",
+        "RANK_GROUP_10_6"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R10"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S013_1",
+          "place_name": "미추홀구 내 촬영지 확인된 실제 전경",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "분위기: 해당 구의 실제 전경",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S014",
+      "region_id": "R09",
+      "rank": 9,
+      "title": "9위 성남시 분당구",
+      "message": "분당 내 확인된 창업지원시설을 사례로 쓴다",
+      "sentences": [
+        {
+          "sentence_id": "S014-01",
+          "text": "9위는 성남시 분당구, 8,587쌍입니다.",
+          "claim_ids": [
+            "T2024-R09-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S014-02",
+          "text": "분당구 삼평동에는 창업지원시설인 판교 스타트업 캠퍼스가 있어요.",
+          "claim_ids": [
+            "R09-F02"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S014-03",
+          "text": "앞서 구로에서는 산업지역을, 여기서는 창업지원시설을 짚어봤습니다.",
+          "claim_ids": [
+            "R15-F01",
+            "R09-F02"
+          ],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "S014-04",
+          "text": "업무 환경이 관심 요소라면, 내 근무지가 정확히 어디인지와 살 집까지의 동선을 추가로 비교해보세요.",
+          "claim_ids": [],
+          "statement_type": "viewer_comparison_question"
+        }
+      ],
+      "screen_memo": "MAP_R09와 스타트업 캠퍼스의 공식 위치 원문. 삼평동 해당 시설 사진만 요청. 판교제2테크노밸리 전경으로 시설 소재지 설명 대체 금지.",
+      "requested_photo_places": [
+        "판교 스타트업 캠퍼스, 분당구 판교로289번길20"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_10_6"
+      ],
+      "start_s": 273,
+      "end_s": 291,
+      "duration_s": 18,
+      "narration_text": "9위는 성남시 분당구, 8,587쌍입니다.\n분당구 삼평동에는 창업지원시설인 판교 스타트업 캠퍼스가 있어요.\n앞서 구로에서는 산업지역을, 여기서는 창업지원시설을 짚어봤습니다.\n업무 환경이 관심 요소라면, 내 근무지가 정확히 어디인지와 살 집까지의 동선을 추가로 비교해보세요.",
+      "claim_ids": [
+        "T2024-R09-TOTAL",
+        "SCOPE-53",
+        "R09-F02",
+        "R15-F01"
+      ],
+      "asset_ids": [
+        "MAP_R09",
+        "RANK_GROUP_10_6"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R09"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S014_1",
+          "place_name": "판교 스타트업 캠퍼스, 분당구 판교로289번길20",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "설명: 문장에 나온 실제 장소·기능 확인",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S015",
+      "region_id": "R08",
+      "rank": 8,
+      "title": "8위 서울 영등포구",
+      "message": "9천 쌍대로 올라간다",
+      "sentences": [
+        {
+          "sentence_id": "S015-01",
+          "text": "8위 서울 영등포구부터는 9천 쌍대입니다.",
+          "claim_ids": [
+            "T2024-R08-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S015-02",
+          "text": "전체 수는 9,036쌍이에요.",
+          "claim_ids": [
+            "T2024-R08-TOTAL"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S015-03",
+          "text": "2023년 9,014쌍과 비교하면 22쌍 늘어, 변화율은 0.2퍼센트입니다.",
+          "claim_ids": [
+            "CALC-R08-YOY"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S015-04",
+          "text": "이번에는 전년과 거의 비슷한 규모를 유지한 지역을 만났네요.",
+          "claim_ids": [
+            "CALC-R08-YOY"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R08과9천 기준선 →9,014·9,036 두 막대. 영등포 실제 전경은 분위기 컷으로만 사용. 금융 일자리 수·출퇴근시간은 화면에도 추가하지 않음.",
+      "requested_photo_places": [
+        "영등포구 내 촬영지 확인된 실제 전경"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_10_6"
+      ],
+      "start_s": 291,
+      "end_s": 305,
+      "duration_s": 14,
+      "narration_text": "8위 서울 영등포구부터는 9천 쌍대입니다.\n전체 수는 9,036쌍이에요.\n2023년 9,014쌍과 비교하면 22쌍 늘어, 변화율은 0.2퍼센트입니다.\n이번에는 전년과 거의 비슷한 규모를 유지한 지역을 만났네요.",
+      "claim_ids": [
+        "T2024-R08-TOTAL",
+        "SCOPE-53",
+        "CALC-R08-YOY"
+      ],
+      "asset_ids": [
+        "MAP_R08",
+        "RANK_GROUP_10_6"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R08"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S015_1",
+          "place_name": "영등포구 내 촬영지 확인된 실제 전경",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "분위기: 해당 구의 실제 전경",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S016",
+      "region_id": "R07",
+      "rank": 7,
+      "title": "7위 서울 강동구",
+      "message": "가까운 순위에서 보이는 생활환경 사례",
+      "sentences": [
+        {
+          "sentence_id": "S016-01",
+          "text": "7위 강동구는 9,287쌍입니다.",
+          "claim_ids": [
+            "T2024-R07-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S016-02",
+          "text": "둔촌동 일자산 자연공원에는 잔디광장과 놀이터, 운동시설이 있어요.",
+          "claim_ids": [
+            "R07-F01"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S016-03",
+          "text": "앞선 영등포의 숫자에 이어, 이곳의 실제 생활 공간도 잠깐 떠올려볼 수 있겠죠.",
+          "claim_ids": [],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "S016-04",
+          "text": "그리고 바로 다음 6위와는 숫자 차이가 다시 작아집니다.",
+          "claim_ids": [
+            "DIFF-R06-R07"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R07 → 일자산 자연공원 해당 시설 실사. 반복 줌 없이 구 지도 고정. 다음 강남과34쌍 차이를 담을 비교 영역 확보.",
+      "requested_photo_places": [
+        "둔촌동 일자산 자연공원"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_10_6"
+      ],
+      "start_s": 305,
+      "end_s": 320,
+      "duration_s": 15,
+      "narration_text": "7위 강동구는 9,287쌍입니다.\n둔촌동 일자산 자연공원에는 잔디광장과 놀이터, 운동시설이 있어요.\n앞선 영등포의 숫자에 이어, 이곳의 실제 생활 공간도 잠깐 떠올려볼 수 있겠죠.\n그리고 바로 다음 6위와는 숫자 차이가 다시 작아집니다.",
+      "claim_ids": [
+        "T2024-R07-TOTAL",
+        "SCOPE-53",
+        "R07-F01",
+        "DIFF-R06-R07"
+      ],
+      "asset_ids": [
+        "MAP_R07",
+        "RANK_GROUP_10_6"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R07"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S016_1",
+          "place_name": "둔촌동 일자산 자연공원",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "설명: 문장에 나온 실제 장소·기능 확인",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S017",
+      "region_id": "R06",
+      "rank": 6,
+      "title": "6위 서울 강남구",
+      "message": "강동과34쌍 차이지만 전년 변화도 함께 본다",
+      "sentences": [
+        {
+          "sentence_id": "S017-01",
+          "text": "6위는 강남구, 9,321쌍입니다.",
+          "claim_ids": [
+            "T2024-R06-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S017-02",
+          "text": "강동구보다 34쌍 많아요.",
+          "claim_ids": [
+            "DIFF-R06-R07"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S017-03",
+          "text": "그런데 전년을 보면 8,523쌍에서 798쌍 늘었고, 증가율은 9.4퍼센트입니다.",
+          "claim_ids": [
+            "CALC-R06-YOY"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S017-04",
+          "text": "2024년의 순위 옆에 1년간의 변화를 붙이면, 같은 지역도 다른 면이 보이는 거죠.",
+          "claim_ids": [
+            "CALC-R06-YOY"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R06·R07의34쌍 차이 → 강남8,523→9,321 독립 변화 막대. 증가율9.4%는 직접 계산값으로 출처 기록. 공원 연혁 낭독 생략.",
+      "requested_photo_places": [
+        "강남구 내 촬영지 확인된 실제 전경"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_10_6"
+      ],
+      "start_s": 320,
+      "end_s": 335,
+      "duration_s": 15,
+      "narration_text": "6위는 강남구, 9,321쌍입니다.\n강동구보다 34쌍 많아요.\n그런데 전년을 보면 8,523쌍에서 798쌍 늘었고, 증가율은 9.4퍼센트입니다.\n2024년의 순위 옆에 1년간의 변화를 붙이면, 같은 지역도 다른 면이 보이는 거죠.",
+      "claim_ids": [
+        "T2024-R06-TOTAL",
+        "SCOPE-53",
+        "DIFF-R06-R07",
+        "CALC-R06-YOY"
+      ],
+      "asset_ids": [
+        "MAP_R06",
+        "RANK_GROUP_10_6"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R06"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S017_1",
+          "place_name": "강남구 내 촬영지 확인된 실제 전경",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "분위기: 해당 구의 실제 전경",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "I003",
+      "region_id": null,
+      "rank": null,
+      "title": "세 시도의 서로 다른 지역들",
+      "message": "TOP20에 든 구는 서울9·경기6·인천5곳이다",
+      "sentences": [
+        {
+          "sentence_id": "I003-01",
+          "text": "상위 다섯 곳으로 가기 전에, 스무 곳의 지도를 한 번 펼쳐볼까요?",
+          "claim_ids": [],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "I003-02",
+          "text": "이번 TOP20에 든 구의 개수는 서울 아홉 곳, 경기 여섯 곳, 인천 다섯 곳입니다.",
+          "claim_ids": [
+            "PROVINCE-COUNTS"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "I003-03",
+          "text": "세 시도의 여러 지역이 같은 목록에 들어와 있어요.",
+          "claim_ids": [
+            "PROVINCE-COUNTS"
+          ],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "I003-04",
+          "text": "그럼 우리 부부는 이 중 어디를 더 자세히 비교해볼까요?",
+          "claim_ids": [],
+          "statement_type": "viewer_comparison_question"
+        },
+        {
+          "sentence_id": "I003-05",
+          "text": "두 사람의 직장 위치, 예산, 필요한 집 크기를 함께 놓으면 조사할 질문을 좁혀갈 수 있습니다.",
+          "claim_ids": [],
+          "statement_type": "viewer_comparison_question"
+        },
+        {
+          "sentence_id": "I003-06",
+          "text": "이제 1만 쌍을 넘는 상위 다섯 곳으로 가보죠.",
+          "claim_ids": [
+            "SCOPE-53",
+            "T2024-R05-TOTAL"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "TOP20_PROVINCE_COUNTS와20개 구 경계 지도 병렬.9·6·5는 구 개수만 표시하며 인구·가구 비중처럼 원형 점유율로 표시하지 않음.",
+      "requested_photo_places": [],
+      "material_types": [
+        "map",
+        "data_chart"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "TOP20_PROVINCE_COUNTS"
+      ],
+      "start_s": 335,
+      "end_s": 361,
+      "duration_s": 26,
+      "narration_text": "상위 다섯 곳으로 가기 전에, 스무 곳의 지도를 한 번 펼쳐볼까요?\n이번 TOP20에 든 구의 개수는 서울 아홉 곳, 경기 여섯 곳, 인천 다섯 곳입니다.\n세 시도의 여러 지역이 같은 목록에 들어와 있어요.\n그럼 우리 부부는 이 중 어디를 더 자세히 비교해볼까요?\n두 사람의 직장 위치, 예산, 필요한 집 크기를 함께 놓으면 조사할 질문을 좁혀갈 수 있습니다.\n이제 1만 쌍을 넘는 상위 다섯 곳으로 가보죠.",
+      "claim_ids": [
+        "PROVINCE-COUNTS",
+        "SCOPE-53",
+        "T2024-R05-TOTAL"
+      ],
+      "asset_ids": [
+        "TOP20_PROVINCE_COUNTS"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": []
+    },
+    {
+      "scene_id": "S018",
+      "region_id": "R05",
+      "rank": 5,
+      "title": "5위 인천 부평구",
+      "message": "1만 쌍을 넘으며 규모와 증가를 함께 소개한다",
+      "sentences": [
+        {
+          "sentence_id": "S018-01",
+          "text": "5위 인천 부평구는 1만 204쌍입니다.",
+          "claim_ids": [
+            "T2024-R05-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S018-02",
+          "text": "2023년 9,901쌍에서 303쌍 늘어, 증가율은 3.1퍼센트예요.",
+          "claim_ids": [
+            "CALC-R05-YOY"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S018-03",
+          "text": "부평문화의거리는 지하상가와 전통시장 등 주변 상권이 연결되는 보행 중심 공간입니다.",
+          "claim_ids": [
+            "R05-F02"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S018-04",
+          "text": "관심이 있다면 집에서 장보는 곳까지 어떤 동선을 비교할지 질문을 더해보세요.",
+          "claim_ids": [],
+          "statement_type": "viewer_comparison_question"
+        }
+      ],
+      "screen_memo": "MAP_R05에1만 기준선과303쌍 증가. 부평문화의거리 실사는 정확한 장소 캡션과 함께 사용하고 공원 사진으로 상권 설명 대체 금지.",
+      "requested_photo_places": [
+        "부평문화의거리"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_5_1"
+      ],
+      "start_s": 361,
+      "end_s": 379,
+      "duration_s": 18,
+      "narration_text": "5위 인천 부평구는 1만 204쌍입니다.\n2023년 9,901쌍에서 303쌍 늘어, 증가율은 3.1퍼센트예요.\n부평문화의거리는 지하상가와 전통시장 등 주변 상권이 연결되는 보행 중심 공간입니다.\n관심이 있다면 집에서 장보는 곳까지 어떤 동선을 비교할지 질문을 더해보세요.",
+      "claim_ids": [
+        "T2024-R05-TOTAL",
+        "SCOPE-53",
+        "CALC-R05-YOY",
+        "R05-F02"
+      ],
+      "asset_ids": [
+        "MAP_R05",
+        "RANK_GROUP_5_1"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R05"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S018_1",
+          "place_name": "부평문화의거리",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "설명: 문장에 나온 실제 장소·기능 확인",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S019",
+      "region_id": "R04",
+      "rank": 4,
+      "title": "4위 서울 강서구",
+      "message": "부평보다520쌍 많은 서울 강서구",
+      "sentences": [
+        {
+          "sentence_id": "S019-01",
+          "text": "4위는 서울 강서구, 1만 724쌍입니다.",
+          "claim_ids": [
+            "T2024-R04-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S019-02",
+          "text": "부평구보다 520쌍 많아요.",
+          "claim_ids": [
+            "DIFF-R04-R05"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S019-03",
+          "text": "강서구 마곡동로의 서울식물원에는 열대와 지중해 기후를 주제로 한 온실 전시가 있습니다.",
+          "claim_ids": [
+            "R04-F01"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S019-04",
+          "text": "지역을 떠올릴 구체적인 장소를 지도 위에 하나씩 놓고 있는 셈이죠.",
+          "claim_ids": [],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R04에서 서울 강서구 확인 후 서울식물원 온실 사진. 부산 강서와 혼동 금지. 현재 지도에 시설 핀을 추가하려면 실제 좌표 확인 필요.",
+      "requested_photo_places": [
+        "서울식물원 온실"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_5_1"
+      ],
+      "start_s": 379,
+      "end_s": 394,
+      "duration_s": 15,
+      "narration_text": "4위는 서울 강서구, 1만 724쌍입니다.\n부평구보다 520쌍 많아요.\n강서구 마곡동로의 서울식물원에는 열대와 지중해 기후를 주제로 한 온실 전시가 있습니다.\n지역을 떠올릴 구체적인 장소를 지도 위에 하나씩 놓고 있는 셈이죠.",
+      "claim_ids": [
+        "T2024-R04-TOTAL",
+        "SCOPE-53",
+        "DIFF-R04-R05",
+        "R04-F01"
+      ],
+      "asset_ids": [
+        "MAP_R04",
+        "RANK_GROUP_5_1"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R04"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S019_1",
+          "place_name": "서울식물원 온실",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "설명: 문장에 나온 실제 장소·기능 확인",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S020",
+      "region_id": "R03",
+      "rank": 3,
+      "title": "3위 고양시 덕양구",
+      "message": "1만1천 쌍대로 올라가며 실제 상업시설을 짚는다",
+      "sentences": [
+        {
+          "sentence_id": "S020-01",
+          "text": "3위는 고양시 덕양구, 1만 1,452쌍이에요.",
+          "claim_ids": [
+            "T2024-R03-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S020-02",
+          "text": "스타필드 고양도 덕양구에 있으며, 공식 주소는 고양대로 1955입니다.",
+          "claim_ids": [
+            "R03-F03"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S020-03",
+          "text": "이런 상업시설이 관심 요소라면, 실제 거주 후보지에서 어떻게 오갈지를 추가로 비교해볼 수 있겠죠.",
+          "claim_ids": [],
+          "statement_type": "viewer_comparison_question"
+        },
+        {
+          "sentence_id": "S020-04",
+          "text": "이제 남은 두 지역과 얼마나 차이가 나는지 보겠습니다.",
+          "claim_ids": [],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R03 → 스타필드 고양 공식 주소 행·해당 점포 실사. 기존qualified 공원2개는 미채택. 사진 권리·촬영지 확인은 visual 인계.",
+      "requested_photo_places": [
+        "스타필드 고양, 덕양구 고양대로1955"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_5_1"
+      ],
+      "start_s": 394,
+      "end_s": 412,
+      "duration_s": 18,
+      "narration_text": "3위는 고양시 덕양구, 1만 1,452쌍이에요.\n스타필드 고양도 덕양구에 있으며, 공식 주소는 고양대로 1955입니다.\n이런 상업시설이 관심 요소라면, 실제 거주 후보지에서 어떻게 오갈지를 추가로 비교해볼 수 있겠죠.\n이제 남은 두 지역과 얼마나 차이가 나는지 보겠습니다.",
+      "claim_ids": [
+        "T2024-R03-TOTAL",
+        "SCOPE-53",
+        "R03-F03"
+      ],
+      "asset_ids": [
+        "MAP_R03",
+        "RANK_GROUP_5_1"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R03"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S020_1",
+          "place_name": "스타필드 고양, 덕양구 고양대로1955",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "설명: 문장에 나온 실제 장소·기능 확인",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S021",
+      "region_id": "R02",
+      "rank": 2,
+      "title": "2위 서울 송파구",
+      "message": "덕양과300쌍 차이로2위다",
+      "sentences": [
+        {
+          "sentence_id": "S021-01",
+          "text": "2위는 서울 송파구, 1만 1,752쌍입니다.",
+          "claim_ids": [
+            "T2024-R02-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S021-02",
+          "text": "3위 덕양구보다 정확히 300쌍 많아요.",
+          "claim_ids": [
+            "DIFF-R02-R03"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S021-03",
+          "text": "송파의 석촌호수는 동호와 서호, 산책로가 있는 도심 호수공원입니다.",
+          "claim_ids": [
+            "R02-F01"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S021-04",
+          "text": "두 지역의 전체 수는 가까운데, 다음 1위와는 간격이 더 벌어집니다.",
+          "claim_ids": [
+            "DIFF-R02-R03",
+            "DIFF-R01-R02"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R02·R03과300쌍 차이. 석촌호수 실제 사진 뒤 동일 막대축을 유지해1위 간격을 예고.",
+      "requested_photo_places": [
+        "석촌호수"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_5_1"
+      ],
+      "start_s": 412,
+      "end_s": 426,
+      "duration_s": 14,
+      "narration_text": "2위는 서울 송파구, 1만 1,752쌍입니다.\n3위 덕양구보다 정확히 300쌍 많아요.\n송파의 석촌호수는 동호와 서호, 산책로가 있는 도심 호수공원입니다.\n두 지역의 전체 수는 가까운데, 다음 1위와는 간격이 더 벌어집니다.",
+      "claim_ids": [
+        "T2024-R02-TOTAL",
+        "SCOPE-53",
+        "DIFF-R02-R03",
+        "R02-F01",
+        "DIFF-R01-R02"
+      ],
+      "asset_ids": [
+        "MAP_R02",
+        "RANK_GROUP_5_1"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R02"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S021_1",
+          "place_name": "석촌호수",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "설명: 문장에 나온 실제 장소·기능 확인",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "S022",
+      "region_id": "R01",
+      "rank": 1,
+      "title": "1위 인천 옛 서구",
+      "message": "1위의 큰 규모와 감소를 동시에 읽는다",
+      "sentences": [
+        {
+          "sentence_id": "S022-01",
+          "text": "1위는 2024년 당시 인천 서구, 1만 5,737쌍입니다.",
+          "claim_ids": [
+            "T2024-R01-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S022-02",
+          "text": "송파구보다 3,985쌍 많습니다.",
+          "claim_ids": [
+            "DIFF-R01-R02"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S022-03",
+          "text": "이때의 서구는 현재 서해구와 검단구를 합친 범위예요.",
+          "claim_ids": [
+            "R01-ADM"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S022-04",
+          "text": "청라호수공원도 이 구역 안의 실제 생활 여가 공간 중 하나입니다.",
+          "claim_ids": [
+            "R01-F01",
+            "R01-ADM"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S022-05",
+          "text": "다만 1년 전 1만 5,941쌍과 비교하면 204쌍, 1.3퍼센트 줄었어요.",
+          "claim_ids": [
+            "CALC-R01-YOY"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "S022-06",
+          "text": "가장 큰 거주 규모와, 전년보다 줄었다는 변화가 한 지역에 함께 나타납니다.",
+          "claim_ids": [
+            "T2024-R01-TOTAL",
+            "SCOPE-53",
+            "CALC-R01-YOY"
+          ],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "MAP_R01의2024 옛 서구 경계를 기본으로 유지. 현재 서해+검단은 명칭 연결만 제안하고 새 경계 폴리곤을 임의 작성하지 않음.1위 막대 뒤15,941→15,737 독립 비교.",
+      "requested_photo_places": [
+        "청라호수공원"
+      ],
+      "material_types": [
+        "map",
+        "data_chart",
+        "real_photo"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [
+        "RANK_GROUP_5_1"
+      ],
+      "start_s": 426,
+      "end_s": 450,
+      "duration_s": 24,
+      "narration_text": "1위는 2024년 당시 인천 서구, 1만 5,737쌍입니다.\n송파구보다 3,985쌍 많습니다.\n이때의 서구는 현재 서해구와 검단구를 합친 범위예요.\n청라호수공원도 이 구역 안의 실제 생활 여가 공간 중 하나입니다.\n다만 1년 전 1만 5,941쌍과 비교하면 204쌍, 1.3퍼센트 줄었어요.\n가장 큰 거주 규모와, 전년보다 줄었다는 변화가 한 지역에 함께 나타납니다.",
+      "claim_ids": [
+        "T2024-R01-TOTAL",
+        "SCOPE-53",
+        "DIFF-R01-R02",
+        "R01-ADM",
+        "R01-F01",
+        "CALC-R01-YOY"
+      ],
+      "asset_ids": [
+        "MAP_R01",
+        "RANK_GROUP_5_1"
+      ],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [
+          "R01"
+        ],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": [
+        {
+          "request_id": "PHOTO_REQ_S022_1",
+          "place_name": "청라호수공원",
+          "asset_id": null,
+          "status": "visual_owner_selection_pending",
+          "purpose": "설명: 문장에 나온 실제 장소·기능 확인",
+          "constraints": "장소·촬영시점·권리·픽셀 확인 후 채택; 정밀 동선·선택 이유·구 전체 대표성의 근거로 확대하지 않음"
+        }
+      ]
+    },
+    {
+      "scene_id": "C001",
+      "region_id": null,
+      "rank": null,
+      "title": "순위에서 비교 질문으로",
+      "message": "규모·변화·구성을 지역 비교의 출발점으로 삼는다",
+      "sentences": [
+        {
+          "sentence_id": "C001-01",
+          "text": "오늘 순위를 읽는 데 필요한 세 가지가 모였네요.",
+          "claim_ids": [],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "C001-02",
+          "text": "강남구는 9.4퍼센트 늘었고, 규모 1위인 옛 서구는 1.3퍼센트 줄었습니다.",
+          "claim_ids": [
+            "CALC-R06-YOY",
+            "CALC-R01-YOY",
+            "SCOPE-53"
+          ],
+          "statement_type": "fact_or_calculation"
+        },
+        {
+          "sentence_id": "C001-03",
+          "text": "얼마나 많이 사는지와 얼마나 늘었는지는 따로 봐야 해요.",
+          "claim_ids": [
+            "CALC-R06-YOY",
+            "CALC-R01-YOY"
+          ],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "C001-04",
+          "text": "수원의 두 구처럼 전체가 가까워도 부부의 구성은 다를 수 있었죠.",
+          "claim_ids": [
+            "COMPOSITION-PAIR"
+          ],
+          "statement_type": "editorial_connection"
+        },
+        {
+          "sentence_id": "C001-05",
+          "text": "눈에 들어온 지역이 있다면, 두 사람의 직장과 예산, 필요한 집 크기를 옆에 적어보세요.",
+          "claim_ids": [],
+          "statement_type": "viewer_comparison_question"
+        },
+        {
+          "sentence_id": "C001-06",
+          "text": "그 지역에서 무엇을 더 알아봐야 할지, 이제 질문이 좀 더 구체적으로 보일 겁니다.",
+          "claim_ids": [],
+          "statement_type": "editorial_connection"
+        }
+      ],
+      "screen_memo": "강남+9.4%·옛 서구-1.3%를 나란히 보이고 영통·권선 구성 비교를 짧게 회수. 마지막은 실제 수도권 지도에 비교 질문3개만 남김.",
+      "requested_photo_places": [],
+      "material_types": [
+        "data_chart",
+        "map"
+      ],
+      "visual_purpose": "explanation",
+      "cards": [],
+      "start_s": 450,
+      "end_s": 477,
+      "duration_s": 27,
+      "narration_text": "오늘 순위를 읽는 데 필요한 세 가지가 모였네요.\n강남구는 9.4퍼센트 늘었고, 규모 1위인 옛 서구는 1.3퍼센트 줄었습니다.\n얼마나 많이 사는지와 얼마나 늘었는지는 따로 봐야 해요.\n수원의 두 구처럼 전체가 가까워도 부부의 구성은 다를 수 있었죠.\n눈에 들어온 지역이 있다면, 두 사람의 직장과 예산, 필요한 집 크기를 옆에 적어보세요.\n그 지역에서 무엇을 더 알아봐야 할지, 이제 질문이 좀 더 구체적으로 보일 겁니다.",
+      "claim_ids": [
+        "CALC-R06-YOY",
+        "CALC-R01-YOY",
+        "SCOPE-53",
+        "COMPOSITION-PAIR"
+      ],
+      "asset_ids": [],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": []
+    },
+    {
+      "scene_id": "E001",
+      "region_id": null,
+      "rank": null,
+      "title": "마지막 발화 뒤 여백",
+      "message": "마지막 발화 이후3초를 남긴다",
+      "sentences": [],
+      "screen_memo": "C001의 마지막 지도 화면 유지3초. 신규 CTA 발화 없음. 실제 음성 정렬 뒤 마지막 발화+3초로 재산정.",
+      "requested_photo_places": [],
+      "material_types": [
+        "map"
+      ],
+      "visual_purpose": "breathing_room",
+      "cards": [],
+      "start_s": 477,
+      "end_s": 480,
+      "duration_s": 3,
+      "narration_text": "",
+      "claim_ids": [],
+      "asset_ids": [],
+      "script_revision": "top20-8min-v2",
+      "audio_revision": null,
+      "timing_basis": "estimate_text_length_allocation_not_audio_aligned",
+      "timing_status": "provisional_audio_unconfirmed",
+      "status": "proposed_pending_user_script_approval",
+      "asset_status": "map_and_cards_manifest_read_photo_selection_pending",
+      "map_requirements": {
+        "region_ids": [],
+        "boundary_reference": "2024년 통계구역",
+        "precise_pins": "공식 주소만으로 정밀 핀 생성 금지; 좌표 확인 후 visual이 제안"
+      },
+      "photo_requirements": []
+    }
+  ]
+}

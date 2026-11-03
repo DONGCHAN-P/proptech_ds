@@ -1,0 +1,64 @@
+{
+  "short_id": "SHORT02-R20-R16",
+  "version": "native-v2",
+  "passed": true,
+  "change": "JUN-CAPTION-RAIL-01: hide caption background at last native utterance end only; intersentence gaps preserved",
+  "latest_user_scope": "end interval only; first-frame rail unchanged per latest explicit request",
+  "changed_render_files": [
+    "compositions\\captions.html"
+  ],
+  "caption_text_and_timing_unchanged": true,
+  "all_other_render_sources_identical": true,
+  "source_lock_sha256": "d5556ea22ebe3df5cd0e2570a4b8972c2c8de220a670bcdbac0b5654bcaf6c8d",
+  "master_audio_sha256": "41f6a7c9e8cd82ef3cf78332569e746b9d72ed62ede2f4a70325614185a33d70",
+  "reused_geometry_review": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v1\\SHORT02-R20-R16\\source_measurement_receipt.json",
+  "independent_QA_issue": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\qa\\top20-split-v4\\jun-and-shorts-v1\\issue_JUN-CAPTION-RAIL-01.json",
+  "independent_QA_issue_sha256": "0f689c94906c61000e3f3d6bdf8f13b0574127074d7094e0075b9695dbd8e38c",
+  "unchanged_layout_and_price_checks_reused": true,
+  "results": [
+    {
+      "name": "intersentence_gap",
+      "time_s": 4.640000000000001,
+      "rail_opacity": 1.0,
+      "expected_opacity": 1,
+      "passed": true,
+      "visible_captions": [],
+      "frame": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v2\\SHORT02-R20-R16\\end_fix_proofs\\intersentence_gap.png",
+      "sha256": "056b6a2270db176ee4c52ad2ea706499c9416b152b749d056bb07c958be3653d"
+    },
+    {
+      "name": "last_native_word",
+      "time_s": 74.62999999999998,
+      "rail_opacity": 1.0,
+      "expected_opacity": 1,
+      "passed": true,
+      "visible_captions": [
+        "본편에서 이어집니다."
+      ],
+      "frame": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v2\\SHORT02-R20-R16\\end_fix_proofs\\last_native_word.png",
+      "sha256": "fe17d56fcd8bfb5480b78b9cd2ed16e3c7a67008f57687fbe6eee95e2c1d5d75"
+    },
+    {
+      "name": "after_last_word",
+      "time_s": 74.64999999999999,
+      "rail_opacity": 0.0,
+      "expected_opacity": 0,
+      "passed": true,
+      "visible_captions": [],
+      "frame": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v2\\SHORT02-R20-R16\\end_fix_proofs\\after_last_word.png",
+      "sha256": "f268bd52ba4069553272d7f6c2ace81eaa80a3ba6251021ddc9f3f51f975cc4f"
+    },
+    {
+      "name": "last_frame",
+      "time_s": 75.66666666666667,
+      "rail_opacity": 0.0,
+      "expected_opacity": 0,
+      "passed": true,
+      "visible_captions": [],
+      "frame": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v2\\SHORT02-R20-R16\\end_fix_proofs\\last_frame.png",
+      "sha256": "45ed5072a1234c05707f55af7277024aca2a445cded954221dae7901aa86c7d0"
+    }
+  ],
+  "actual_listening": false,
+  "continuous_playback": false
+}

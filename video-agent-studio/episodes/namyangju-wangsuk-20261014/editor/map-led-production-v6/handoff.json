@@ -1,0 +1,42 @@
+{
+  "revision": "map-led-production-v6-final",
+  "outputs": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\outputs\\video-review-v6",
+  "delivery": {
+    "status": "rendered_technical_and_sampled_independent_review_complete",
+    "mp4": {
+      "file": "namyangju-map-led_v6.mp4",
+      "sha256": "f5a90deb175727b756b423a8be48733fd8c80aad661fe63b9b2ab1a0ede50161"
+    },
+    "zip": {
+      "file": "namyangju-map-led_v6_delivery.zip",
+      "bytes": 73444335,
+      "sha256": "fa18581d089d3890d9675705509b38847eba3c8e0cadc83c4ed8a768a20a9aca",
+      "entries": 18,
+      "integrity_test": "pass",
+      "compression": "stored; no MP4 re-encoding"
+    },
+    "actual_listening": false,
+    "continuous_playback": false,
+    "uploaded": false,
+    "external_file_transmission": false
+  },
+  "inputs": {
+    "script_revision": "script-v4-hook-outside",
+    "audio_revision": "audio-v2",
+    "source_script_sha256": "d816c5ba4341ddaafd4f3f3db6585873a519e1577d865dbf332d183925d4c2da"
+  },
+  "validated": [
+    "whole MP4 decode",
+    "1080p30 H264/AAC",
+    "269 exact-span semantic captions",
+    "48 contiguous shots",
+    "11 PCM-preserving narration sequences",
+    "independent sampled review",
+    "ZIP CRC integrity"
+  ],
+  "open_checks": [
+    "actual listening and continuous playback not performed",
+    "user final review / pre-upload decision handled by director"
+  ],
+  "next_owner": "video_director"
+}

@@ -1,0 +1,27 @@
+{
+  "task_id": "NYJ-WRITER-SHOT-QUALITY-V2",
+  "role": "writer",
+  "status": "full_shot_plan_ready_for_visual_editor_not_rendered",
+  "input_revisions": {
+    "script": "script-v2 preserved",
+    "audio": "audio-v1 preserved, measured MP3 sequential total913.188571s",
+    "facts": "facts-v1",
+    "prior_episode": "config/current_video.json actual v14; PilotV11/AssetCutsV11/MediaV11/QuarterChartsV11/EndingV11 source read",
+    "anchors": "editor/render_v1/caption_estimates.json character-weight estimate only"
+  },
+  "outputs": ["writer/shot_plan_video_v2.json", "writer/quality_brief_video_v2.md", "writer/build_shot_plan_video_v2.cjs"],
+  "affected_scene_ids": ["S001", "S002", "S003", "S004", "S005", "S006", "S007", "S008"],
+  "checks": [
+    {"check": "full coverage", "result": "passed", "evidence": "62 shots, 8 chapters,0~913.189s,gaps0,negative durations0"},
+    {"check": "semantic anchor cue exists", "result": "passed", "evidence": "all cue phrases found in approved narration text; issues0"},
+    {"check": "real video quality inheritance cause", "result": "passed", "evidence": "actual v14 source dependency structure versus build_video_v1.py raster PNG equal split code compared"},
+    {"check": "actual listening and playback", "result": "unchecked", "evidence": "not performed; chapter lengths measured, editorial anchors heuristic NOT word alignment"},
+    {"check": "media acquisition", "result": "pending", "evidence": "existing owned AI candidates enumerated, photos/maps/license binding visual peer responsibility"}
+  ],
+  "open_issue_ids": ["NYJ-SHOT-ALIGNMENT-V2", "NYJ-PHOTO-ASSET-BINDING-V4"],
+  "next_role": "editor_prepare",
+  "additional_cash_usd": 0,
+  "new_paid_generation_authorized": false,
+  "representative_scope": "0~90s continuous preview of full shot system, full video remains delivery scope",
+  "notes": "Actualv14 user requested reference; unapproved30sec styleproposal not inherited as approval. Script/audio untouched, writer ownership only. Shared processJSON unchanged. Peer visual/editor source requests sent."
+}

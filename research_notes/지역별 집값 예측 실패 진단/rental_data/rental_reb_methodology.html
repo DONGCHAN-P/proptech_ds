@@ -1,0 +1,3270 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+		<title>
+		한국부동산원-전국주택가격동향조사
+		</title>
+		<meta name="keywords" content="한국부동산원">
+		<meta name="description" content="한국부동산원-전국주택가격동향조사">
+		<meta name="referrer" content="no-referrer-when-downgrade" />
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="한국부동산원-전국주택가격동향조사">
+		<meta property="og:description" content="한국부동산원-전국주택가격동향조사">
+		<meta property="og:url" content="https://www.reb.or.kr/reb/main.do">
+		<link rel="shortcut icon" href="/images/favicon/reb.ico">
+		<link rel="icon" href="/images/favicon/reb.ico">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+		
+		
+		<link rel="stylesheet" href="/css/com/jquery/jquery-ui.min.css" media="all">
+		<link rel="stylesheet" href="/css/com/jquery/jquery-confirm.min.css" media="all">
+		<link rel="stylesheet" href="/css/co/na/ntt.css">
+		<link rel="stylesheet" href="/resources/js/mCustomScrollbar/jquery.mCustomScrollbar.css" media="all">		
+		<link rel="stylesheet" href="/css/web/reb/sub.css?ver=20230906-1" media="all">		
+		
+		<script src="/resources/js/html5shiv.js"></script>	
+		<script src="/resources/js/jquery.min.js"></script>
+		<script src="/resources/js/jquery-ui.min.js"></script>
+		<script src="/resources/js/jquery.form.min.js"></script>
+		<script src="/resources/js/jquery-confirm.min.js"></script>
+		<script src="/resources/js/modernizr-2.6.2.min.js"></script>
+		<script src="/resources/js/slick.min.js"></script>		
+		<script src="/resources/js/mCustomScrollbar/jquery.mCustomScrollbar.js"></script>
+		<script src="/resources/js/jquery.mousewheel.min.js"></script>
+		<script src="/resources/js/ScrollMagic.min.js"></script>	
+		<script src="/js/common/common.js"></script>
+		
+		<script src="/js/web/reb/layout.js"></script>
+		<script src="/js/web/reb/sub.js"></script>
+		<script src="/resources/js/con_com.js"></script>
+		<!-- 웹로그 -->
+		<script src="/js/xtractor/UserScriptConf.js"></script>
+		<script>
+		  if(1033=="1299"){
+				location.href = "/";
+			}
+
+		  if(1033=="1277"){
+				location.href = "/reb/na/ntt/selectNttList.do?mi=9666&bbsId=1175";
+			}
+		</script>
+	</head>
+	<body>
+		
+		
+
+
+
+
+<script>
+$(function () {
+	//리스트 팝업 : 보기, 취소
+	$(".viewPopListBtn").click(function(){
+		var btnTy = $(this).attr("id");
+		
+		if ( btnTy == "close" ) {
+				//팝업 목록 닫기
+				$(".pop_header").hide();				
+		} else {			
+			$("#listPopup").dialog({
+			    autoOpen: true,
+			    modal: false,
+			    resizeable : false,
+			    title: "한국부동산원 팝업 목록",
+			    width: 380,
+			    height: 350,
+			    show:{
+			  		effect:"blind",
+			  		duration: 100
+			    },
+			    hide:{
+			   	 	effect:"blind",
+			   	 	duration: 100
+			    },						    
+			    position: {my:'left+50 top+50', at: 'left top' }
+			}).dialog('open');				
+		}		
+	});
+	
+	//리스트 팝업 : 팝업 보기 
+	$(".viewPopupBtn").click(function(){
+		var popupSn = $(this).attr("data-seq");
+		var popupTitle = $(this).attr("title"); 
+		var popupWidth = $("#popupData"+popupSn).attr("data-width");
+		var popupHeight = $("#popupData"+popupSn).attr("data-height");
+		var popupWidthLc = $("#popupData"+popupSn).attr("data-widthLc");
+		var popupHeightLc = $("#popupData"+popupSn).attr("data-heightLc");
+		var popupFileId = $("#popupData"+popupSn).attr("data-fileId");
+		var popupFileList = $("#popupData"+popupSn).attr("data-fileList");
+		
+		
+		var fileHeight = "";
+		if( popupFileId != "" && popupFileList != "" ) {
+			fileHeight = popupFileList.split("},").length;
+			popupHeight = parseInt(popupHeight) + parseInt(fileHeight)*20;
+			popupWidth = parseInt(popupWidth) + parseInt(fileHeight)*5;
+			
+		}
+	
+		$("#popupNormal"+popupSn).dialog({
+		    autoOpen: true,
+		    modal: false,
+		    resizeable : false,
+		    title: popupTitle,
+		    width: popupWidth,
+		    height: popupHeight,
+		    show:{
+		  		effect:"blind",
+		  		duration: 100
+		    },
+		    hide:{
+		   	 	effect:"blind",
+		   	 	duration: 100
+		    },						    
+		    position: {my:'left+'+popupWidthLc+' top+'+popupHeightLc+'', at: 'left top'}
+		}).dialog('open');	
+		
+	});
+});
+	
+$(document).ready(function(){
+	var cnt = 0;	
+	popupStart();
+});
+
+function popupStart() {
+	var width = $(window).width();
+	var height = $(window).height();
+	
+	
+	
+	
+	
+}
+
+//새창팝업 
+function popPList(){
+	var width = $(window).width();
+	var height = $(window).height();
+	
+	
+} 
+
+
+//팝업리스트
+function popUpListViewCall(){
+	var width = $(window).width();
+	var height = $(window).height();
+	
+	
+	
+	
+	
+	//팝업 사이즈 조정(모바일시)
+	var popWidth = '450';
+	var popHeight = 'auto';
+	
+	if(width < popWidth){
+		popWidth = width;
+	}
+	
+	if(height < popHeight){
+		popHeight = height;
+	}
+	
+	var popupWidthLc = 100;
+	var popupheightLc = 150;
+	
+	var usePopYN = getCookie("popCookiePopUpList_reb");
+	if(usePopYN != "hide") {
+		$("#popUpList").dialog({
+		    autoOpen: true,
+		    modal: false,
+		    resizeable : false,
+		    title: "팝업리스트",
+		    width: popWidth,
+		    height: popHeight,
+		    show:{
+		  		effect:"blind",
+		  		duration: 100
+		    },
+		    hide:{
+		   	 	effect:"blind",
+		   	 	duration: 100
+		    },						    
+		    position: {my:'left+'+popupWidthLc+' top+'+popupheightLc+'', at: 'left top' }
+		}).dialog('open');		
+	}
+}
+
+function getPopupCnt() {
+	var cnt = 0;
+	var usePopYN = "";
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	return cnt;
+}
+
+
+//팝업리스트 상세보기
+function popUpListCall(sysId, popupSn){
+
+	$.ajax({
+		type : "POST",
+		datatype : "json",
+		data : {
+			sysId : sysId,
+			popupSn : popupSn
+		},
+		url : "/"+sysId+"/ap/pm/view/selectPopUpListInfo.do",
+		success : function(result){
+			var result = JSON.parse(result);
+						
+			//조회된 기관 리스트 추가		 		
+			if ( result.resultAt == 'Y'){
+				
+				var popUpListInfo = result.popUpListInfo
+				var width = $(window).width();
+				var height = $(window).height();
+				
+				
+				var popWidth = parseInt(popUpListInfo.popupWidth) + 30;
+				var popHeight = parseInt(popUpListInfo.popupHeight) + 100;
+				if(popUpListInfo.atchmnflId != null && popUpListInfo.atchFileList != null){
+					var fileCnt = popUpListInfo.atchFileList.length;
+					var fileHeight = fileCnt*20;
+					popHeight = popHeight + fileHeight;
+				}
+				
+				//팝업 사이즈 조정(모바일시)
+				if(width < popWidth){
+					popWidth = width;
+				}
+				
+				if(height < popHeight){
+					popHeight = height;
+				}
+				
+				var popupWidthLc = parseInt(popUpListInfo.widthLc);
+				var popupheightLc = parseInt(popUpListInfo.heightLc);
+				popHeight = "auto";
+				var usePopYN = getCookie("popCookie"+popUpListInfo.popupInsttSn);
+				if(usePopYN != "hide") {
+					$("#"+"popupNormal"+popUpListInfo.popupInsttSn).dialog({
+					    autoOpen: true,
+					    modal: false,
+					    resizeable : false,
+					    title: popUpListInfo.popupTitle,
+					    width: popWidth,
+					    height: popHeight,
+					    show:{
+					  		effect:"blind",
+					  		duration: 100
+					    },
+					    hide:{
+					   	 	effect:"blind",
+					   	 	duration: 100
+					    },						    
+					    position: {my:'left+'+popupWidthLc+' top+'+popupheightLc+'', at: 'left top' }
+					}).dialog('open');		
+				}
+					
+			} else {
+				alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");	
+			}
+		},
+		error : function(data) {   
+			alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+		}
+	});
+	
+}
+
+$(window).load(function(){
+	setTimeout(function(){
+		popPList();
+	}, 0);
+});
+</script>
+		
+		<!-- 바로가기 -->
+		<div id="skipArea">
+			<a href="#gnb" class="skip-link">메인메뉴 바로가기</a> <a href="#contents"
+				class="skip-link">본문으로 바로가기</a>
+		</div>
+
+		
+		<!-- wrap -->
+		<div id="wrap">
+
+			<!-- header  -->
+			
+
+
+
+
+
+<!-- 상단 팝업 -->
+
+
+
+
+
+<!-- //상단 팝업 -->
+
+
+<div class="utilWrap" id="topUtil">
+	<div class="utilArea">
+		<p>국민의 삶에 안심과 가치를 더하는 부동산 파트너, 한국부동산원</p>
+		<div>
+		
+			
+			<p class="num-cs">고객센터 <a href="tel:1644-2828">1644-2828</a></p>
+			<p class="num-cs" style="padding: 0 5px;"><a href="/reb/cm/cntnts/cntntsView.do?mi=9975&cntntsId=1291">개인정보처리방침</a></p>
+			<div class="selectWrap lang">
+				<button type="button" class="selectBtn" aria-expanded="false"
+					aria-controls="langList" aria-label="언어 선택">KOR</button>
+				<ul id="langList" class="list-select" hidden>
+					<li><a href="/rebEng/main.do" target="_blank" rel="noopener"
+						lang="en">ENG</a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+<header>
+	<div id="header">
+		<h1>
+			<a href="/reb/main.do"><span class="hid">REB 한국부동산원</span></a>
+		</h1>
+		<div class="search">
+			<a class="btn-search searchOpen" aria-expanded="false"
+				aria-controls="searchWrap" href="#searchFull">통합검색</a>
+		</div>
+	</div>
+	<div id="gnb">
+		<div>
+			<ul class="main">
+				<!--START-->
+				<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9776&cntntsId=1164"  >주요사업</a>
+					<div class="sub">
+						<ul>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9776&cntntsId=1164"  >부동산 가격공시</a>
+								<div class="detail">
+								<strong class="txt-title">공동주택가격 공시전담</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9776&cntntsId=1164"  >공동주택가격 공시전담</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9773&cntntsId=1161"  >단독주택가격 공시전담</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9771&cntntsId=1168"  >토지가격 공시총괄</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10333&cntntsId=1033&statId=S234820263"  >부동산조사·통계</a>
+								<div class="detail">
+								<strong class="txt-title">전국주택가격동향조사</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10333&cntntsId=1033&statId=S234820263"  >전국주택가격동향조사</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10334&cntntsId=1027&statId=S227720243"  >전국지가변동률조사</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10335&cntntsId=1049&statId=S237220284"  >상업용부동산 임대동향조사</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10336&cntntsId=1055&statId=S235920285"  >오피스텔가격동향조사</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10337&cntntsId=1193&statId=S231520283"  >공동주택 실거래가격지수</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10338&cntntsId=1061&statId=S234220286"  >부동산거래현황</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10339&cntntsId=1515&statId=S237120287"  >외국인주택소유현황</a></li>
+									<li><a href="http://www.rtech.or.kr/"  >시세정보</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9821&cntntsId=1202"  >부동산 시장관리</a>
+								<div class="detail">
+								<strong class="txt-title">부동산거래관리시스템</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9821&cntntsId=1202"  >부동산거래관리시스템</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10293&cntntsId=1522"  >부동산거래질서교란행위 신고센터</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10222&cntntsId=1460"  >중개대상물 인터넷 표시·광고 모니터링 업무</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9911&cntntsId=1205"  >부동산거래 전자계약시스템</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9825&cntntsId=1207"  >부동산거래 신고내용 조사 업무</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10254&cntntsId=1479"  >임대차분쟁조정위원회</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10277&cntntsId=1508"  >주택공급통계정보시스템</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10278&cntntsId=1509"  >주택시장 분석 및 연구조사</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9830&cntntsId=1210"  >부동산 소비자보호</a>
+								<div class="detail">
+								<strong class="txt-title">리츠 심사·감독지원 업무</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9822&cntntsId=1203"  >리츠 심사·감독지원 업무</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9823&cntntsId=1204"  >공동주택관리정보(K-apt)</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9830&cntntsId=1210"  >타당성 기초조사</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9831&cntntsId=1211"  >감정평가 표본조사</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9833&cntntsId=1212"  >보상평가서 검토</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9841&cntntsId=1218"  >사전표본 기준가격조사</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10170&cntntsId=1416"  >택지비평가서 검토</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9849&cntntsId=1224"  >보상수탁</a>
+								<div class="detail">
+								<strong class="txt-title">보상수탁업무</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9849&cntntsId=1224"  >보상수탁업무</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9854&cntntsId=1229"  >손실보상의 종류</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9757&cntntsId=1156"  >고객마당</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9750&cntntsId=1158"  >조직 및 연락처</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9867&cntntsId=1234"  >도시정비사업</a>
+								<div class="detail">
+								<strong class="txt-title">소규모주택정비사업</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10326&cntntsId=1553"  >소규모주택정비사업</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10341&cntntsId=1571"  >노후주거지정비 지원사업</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9870&cntntsId=1237"  >빈집정비사업</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10262&cntntsId=1485"  >공사중단 건축물 정비사업</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9875&cntntsId=1242"  >관리처분계획 타당성 검증</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9881&cntntsId=1248"  >재개발·재건축 사업성 검증</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10318&cntntsId=1547"  >재건축부담금 검증</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9886&cntntsId=1253"  >정비사업 공사비 검증</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10347&cntntsId=1597"  >신규 정비구역 지정 지원 컨설팅</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10342&cntntsId=1572"  >정비사업 조합운영 실태점검 지원</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9890&cntntsId=1257"  >공공지원민간임대 연계형 정비사업</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9866&cntntsId=1260"  >자료실</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9894&cntntsId=1261"  >녹색건축</a>
+								<div class="detail">
+								<strong class="txt-title">녹색건축업무 소개</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9894&cntntsId=1261"  >녹색건축업무 소개</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9895&cntntsId=1262"  >건축물 에너지·온실가스 정보체계 운영</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10090&cntntsId=1398"  >녹색건축 인증·검토 업무</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10343&cntntsId=1573"  >건축행정시스템(세움터) 운영</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10344&cntntsId=1574"  >건축서비스산업 정보체계(건축HUB) 운영</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10345&cntntsId=1575"  >그린리모델링 창조센터 운영</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10356&cntntsId=1592"  >공공건축지원센터 운영</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9906&cntntsId=1272"  >부동산R&D</a>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9910&cntntsId=1276"  >청약업무</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="/reb/na/ntt/selectNttList.do?mi=9564&bbsId=1134"  >알림마당</a>
+					<div class="sub">
+						<ul>
+							<li><a href="/reb/na/ntt/selectNttList.do?mi=9564&bbsId=1134"  >공지사항</a>
+							</li>
+							<li><a href="/reb/na/ntt/selectNttList.do?mi=9565&bbsId=1154"  >보도자료</a>
+							</li>
+							<li><a href="/reb/na/ntt/selectNttList.do?mi=9576&bbsId=1138"  >계약정보</a>
+								<div class="detail">
+								<strong class="txt-title">입찰정보 사전공개</strong>
+								<ul>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9576&bbsId=1138"  >입찰정보 사전공개</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9577&bbsId=1139"  >입찰정보</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9578&bbsId=1243"  >수의계약내역 공개</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9579&bbsId=1141"  >계약관련 자료실</a></li>
+									<li><a href="/reb/es/estiSmtList.do?mi=9580"  >수의계약 견적제출</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/na/ntt/selectNttList.do?mi=9582&bbsId=1142"  >보상정보</a>
+								<div class="detail">
+								<strong class="txt-title">감정평가법인등 선정 공고</strong>
+								<ul>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9582&bbsId=1142"  >감정평가법인등 선정 공고</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9583&bbsId=1143"  >보상계획 공고</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9584&bbsId=1144"  >협의 공고</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9585&bbsId=1145"  >분묘개장 공고</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/na/ntt/selectNttList.do?mi=9587&bbsId=1210"  >직원마당</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10190&cntntsId=1432"  >열린경영</a>
+					<div class="sub">
+						<ul>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10190&cntntsId=1432"  >윤리준법경영</a>
+								<div class="detail">
+								<strong class="txt-title">윤리준법경영소개</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10190&cntntsId=1432"  >윤리준법경영소개</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10193&cntntsId=1434"  >윤리준법경영시스템</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10197&cntntsId=1437"  >제도 및 규범</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10201&cntntsId=1440"  >윤리준법경영활동</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9594&cntntsId=1099"  >반부패·청렴시책</a>
+								<div class="detail">
+								<strong class="txt-title">추진조직</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9594&cntntsId=1099"  >추진조직</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9593&bbsId=1146"  >반부패·청렴 행동기준</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9592&cntntsId=1098"  >실천프로그램</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9595&bbsId=1147"  >반부패·청렴 추진활동</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10206&cntntsId=1443"  >인권경영</a>
+								<div class="detail">
+								<strong class="txt-title">인권경영 소개</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10206&cntntsId=1443"  >인권경영 소개</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10209&cntntsId=1445"  >제도 및 규범</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10212&cntntsId=1447"  >인권경영활동</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10242&cntntsId=1468"  >안전경영</a>
+								<div class="detail">
+								<strong class="txt-title">안전경영 소개</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10242&cntntsId=1468"  >안전경영 소개</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10243&cntntsId=1469"  >안전보건경영시스템</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10245&cntntsId=1471"  >재난안전시스템</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10217&cntntsId=1450"  >신고센터</a>
+								<div class="detail">
+								<strong class="txt-title">비윤리행위·이해충돌행위 신고</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10217&cntntsId=1450"  >비윤리행위·이해충돌행위 신고</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9597&cntntsId=1100"  >반부패·청렴센터</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10219&cntntsId=1452"  >인권침해신고</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10331&cntntsId=1559"  >소극행정 신고</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9748&cntntsId=1155"  >공정거래 자율준수 프로그램</a>
+								<div class="detail">
+								<strong class="txt-title">CEO 선언문</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9748&cntntsId=1155"  >CEO 선언문</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9637&cntntsId=1120"  >CP 소개</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9639&bbsId=1151"  >CP 자료실</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9640&cntntsId=1122"  >CP 신고</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10230&cntntsId=1429"  >REB 동반성장</a>
+								<div class="detail">
+								<strong class="txt-title">동반성장 추진전략</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10230&cntntsId=1429"  >동반성장 추진전략</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10232&cntntsId=1431"  >조직도</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10233&cntntsId=1506"  >중소기업 지원제도</a></li>
+								</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9643&cntntsId=1123"  >국민소통</a>
+					<div class="sub">
+						<ul>
+							<li><a href="#?mi=10349"  >고객헌장</a>
+								<div class="detail">
+								<strong class="txt-title">고객헌장 전문</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9643&cntntsId=1123"  >고객헌장 전문</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10350&cntntsId=1584"  >핵심서비스 이행표준</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10351&cntntsId=1585"  >고객응대서비스 이행표준</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/na/ntt/selectNttList.do?mi=9665&bbsId=1152"  >고객의 소리</a>
+								<div class="detail">
+								<strong class="txt-title">자주묻는질문</strong>
+								<ul>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9665&bbsId=1152"  >자주묻는질문</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9666&bbsId=1175"  >고객상담</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10183&cntntsId=1422"  >기업성장응답센터</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10268&cntntsId=1493"  >안전보건소통게시판</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10285&cntntsId=1514"  >작업중지 요청 게시판</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9940&cntntsId=1279"  >규제개선 목소리</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9633&cntntsId=1119"  >공공시설개방</a>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9648&cntntsId=1127"  >시장관리 관련</a>
+								<div class="detail">
+								<strong class="txt-title">부동산거래질서 교란행위 신고센터</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9648&cntntsId=1127"  >부동산거래질서 교란행위 신고센터</a></li>
+									<li><a href="/reb/rtemInfo/info.do?mi=9649"  >실거래 조사 소명자료 제출</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10305&cntntsId=1535"  >도시정비 관련</a>
+								<div class="detail">
+								<strong class="txt-title">미래도시지원센터</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10305&cntntsId=1535"  >미래도시지원센터</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10367&cntntsId=1618"  >범정부 주택공급 현장 애로해소 지원센터</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9652&cntntsId=1552"  >소규모주택정비사업 통합지원센터</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cr/calcCropFarm.do?mi=9654"  >보상관련</a>
+								<div class="detail">
+								<strong class="txt-title">공익보상 지원센터</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10332&cntntsId=1569"  >공익보상 지원센터</a></li>
+									<li><a href="/reb/cr/calcCropFarm.do?mi=9654"  >농업손실</a></li>
+									<li><a href="/reb/rm/calcResideMps.do?mi=9655"  >주거이전비</a></li>
+									<li><a href="/reb/hm/calcHouseMps.do?mi=9656"  >이사비</a></li>
+									<li><a href="/reb/er/EndReward.do?mi=9657"  >폐업보상</a></li>
+									<li><a href="/reb/sr/calcSssReward.do?mi=9658"  >휴업보상</a></li>
+									<li><a href="/reb/nb/calcNrtBsn.do?mi=9659"  >무허가영업보상</a></li>
+									<li><a href="/reb/fr/calcFarmReward.do?mi=9660"  >이농·이어비보상</a></li>
+									<li><a href="/reb/lr/LsindReward.do?mi=9661"  >축산보상</a></li>
+									<li><a href="/reb/or/OffReward.do?mi=9662"  >휴직·실직보상</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10119&cntntsId=1414"  >자료실</a>
+								<div class="detail">
+								<strong class="txt-title">발간도서 안내</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10119&cntntsId=1414"  >발간도서 안내</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10360&cntntsId=1601"  >도시정비 발간도서</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9754&bbsId=1093"  >책자 정오표</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=10352&bbsId=1288"  >기타</a></li>
+								</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9672&cntntsId=1130"  >ESG경영</a>
+					<div class="sub">
+						<ul>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9672&cntntsId=1130"  >개요</a>
+								<div class="detail">
+								<strong class="txt-title">추진체계</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9672&cntntsId=1130"  >추진체계</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9761&cntntsId=1437"  >공동선언문</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9676&cntntsId=1134"  >위원회</a>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9674&cntntsId=1132"  >일자리창출</a>
+								<div class="detail">
+								<strong class="txt-title">일자리창출 소개</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9674&cntntsId=1132"  >일자리창출 소개</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9675&cntntsId=1133"  >지역상생</a>
+								<div class="detail">
+								<strong class="txt-title">지역상생 소개</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9675&cntntsId=1133"  >지역상생 소개</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9678&bbsId=1176"  >주요 지역상생활동</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=10273&bbsId=1273"  >사회공헌 영상</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9677&cntntsId=1324"  >수상실적</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9682&cntntsId=1138"  >기관소개</a>
+					<div class="sub">
+						<ul>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9682&cntntsId=1138"  >설립목적 및 연혁</a>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9683&cntntsId=1140"  >미션과 비전</a>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9687&cntntsId=1141"  >원장실</a>
+								<div class="detail">
+								<strong class="txt-title">인사말</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9687&cntntsId=1141"  >인사말</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10045&cntntsId=1143"  >임원현황</a>
+								<div class="detail">
+								<strong class="txt-title">임원현황</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10045&cntntsId=1143"  >임원현황</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=10027&bbsId=1296"  >이사회</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9694&cntntsId=1146"  >조직안내</a>
+								<div class="detail">
+								<strong class="txt-title">조직도</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9694&cntntsId=1146"  >조직도</a></li>
+									<li><a href="/reb/jo/jobshare/selectJobShareView.do?mi=10023"  >부서소개</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/lm/location/locationMapView.do?mi=9699"  >본지사안내</a>
+								<div class="detail">
+								<strong class="txt-title">본사 안내</strong>
+								<ul>
+									<li><a href="/reb/lm/location/locationMapView.do?mi=9699"  >본사 안내</a></li>
+									<li><a href="/reb/bg/brffcguidance.do?mi=9698"  >지사 안내</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9700&cntntsId=1148"  >기관 상징(CI) 소개</a>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10270&cntntsId=1494"  >마스코트·전용서체 안내</a>
+								<div class="detail">
+								<strong class="txt-title">마스코트</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10270&cntntsId=1494"  >마스코트</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10329&cntntsId=1555"  >전용서체</a></li>
+								</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9614&cntntsId=1109"  >정보공개</a>
+					<div class="sub">
+						<ul>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9614&cntntsId=1109"  >정보공개</a>
+								<div class="detail">
+								<strong class="txt-title">정보공개제도 안내</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9614&cntntsId=1109"  >정보공개제도 안내</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9623&cntntsId=1154"  >정보공개청구</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9621&cntntsId=1113"  >정보목록공개</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10303&cntntsId=1526"  >관련법령 서식</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10302&cntntsId=1525"  >비공개세부기준</a></li>
+									<li><a href="/reb/ad/bs/beffatinfosport/view/selectBeffatinfoList.do?mi=9624"  >사전정보공표</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9626&cntntsId=1114"  >공공데이터개방</a>
+								<div class="detail">
+								<strong class="txt-title">공공데이터 개방 소개</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9626&cntntsId=1114"  >공공데이터 개방 소개</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=10251&bbsId=1268"  >공공데이터 자료실</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9627&cntntsId=1500"  >공공데이터 설문조사 </a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9741&bbsId=1173"  >공공데이터 품질오류 신고센터</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10272&cntntsId=1501"  >공공데이터 소통 창구</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9608&cntntsId=1108"  >결산공고</a>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9589&cntntsId=1096"  >경영공시</a>
+							</li>
+							<li><a href="/reb/na/ntt/selectNttList.do?mi=9610&bbsId=1244"  >내규</a>
+								<div class="detail">
+								<strong class="txt-title">내규공개</strong>
+								<ul>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9610&bbsId=1244"  >내규공개</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9611&bbsId=1245"  >내규제개정사전예고</a></li>
+								</ul>
+								</div>
+							</li>
+							<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9629&cntntsId=1115"  >사업실명제</a>
+								<div class="detail">
+								<strong class="txt-title">사업실명제 개요</strong>
+								<ul>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9629&cntntsId=1115"  >사업실명제 개요</a></li>
+									<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9630&cntntsId=1116"  >선정기준 및 현황</a></li>
+									<li><a href="/reb/na/ntt/selectNttList.do?mi=9631&bbsId=1150"  >대상사업 리스트</a></li>
+								</ul>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<!--END-->
+			</ul>
+
+			<button type="button" class="btn-sitemap" aria-expanded="false"
+				aria-controls="gnb" aria-label="전체메뉴 열기">전체메뉴</button>
+			<button type="button" class="btn-gnb-close" aria-label="전체메뉴 닫기"
+				hidden>
+				<span class="hid">닫기</span>
+			</button>
+		</div>
+	</div>
+</header>
+
+<div class="searchWrap" id="searchWrap" hidden>
+	<form name="srchForm" id="searchForm" method="post" action="https://www.reb.or.kr/search/front/Search.jsp" class="clearfix" onsubmit="return searchGo(this);" target="_blank" rel="noopener">
+	<input type="hidden" name="divId" value="reb">
+	<input type="hidden" name="sysName" value="한국부동산원">
+	<div class="box-search" style="margin: auto;">
+		<label for="siteSearch" class="hid">검색어</label> <input
+			type="text" name="qt" id="total_search" title="검색어 입력 폼" placeholder="검색어를 입력하세요">
+		<button type="button" class="search" onclick="searchGo2();">
+			<span class="hid">검색</span>
+		</button>
+	</div>
+	</form>
+</div>
+<div id="shadowWrap" hidden></div>
+<!--//header-->
+
+
+			<!-- //header  -->
+			
+			<!-- contents -->
+			<div id="contents">
+				<!-- sub_content_wrap -->
+				<div class="sub_content_wrap">
+					<!-- 서브 비주얼 -->
+					<div class="sub_visual">
+						<!-- 서브페이지 이미지 노출 css 이미지 제외하고 작업해야함 -->
+						
+							
+							<img alt="" src="/reb/common/si/img/imgFileDownload.do?fileKey=1007"/>
+							
+						
+						<div class="inner">
+							<h2>주요사업</h2>
+						</div>
+					</div>
+					<!-- //서브 비주얼 -->
+					<!-- container --> 				
+					<div id="container">
+						<!-- left -->
+						
+
+
+
+<nav id="snb">
+<!--START-->
+	
+		<h2><a href="/reb/cm/cntnts/cntntsView.do?mi=9776&cntntsId=1164">주요사업</a></h2>
+		<ul class="dep02">
+			<li id="9769"><a href="/reb/cm/cntnts/cntntsView.do?mi=9776&cntntsId=1164"  >부동산 가격공시</a>
+				<ul class="dep03">
+					<li id="9770"><a href="/reb/cm/cntnts/cntntsView.do?mi=9776&cntntsId=1164"  ><span>공동주택가격 공시전담</span></a></li>
+					<li id="9772"><a href="/reb/cm/cntnts/cntntsView.do?mi=9773&cntntsId=1161"  ><span>단독주택가격 공시전담</span></a></li>
+					<li id="9771"><a href="/reb/cm/cntnts/cntntsView.do?mi=9771&cntntsId=1168"  ><span>토지가격 공시총괄</span></a></li>
+				</ul>
+			</li>
+			<li id="9780"><a href="/reb/cm/cntnts/cntntsView.do?mi=10333&cntntsId=1033&statId=S234820263"  >부동산조사·통계</a>
+				<ul class="dep03">
+					<li id="10333"><a href="/reb/cm/cntnts/cntntsView.do?mi=10333&cntntsId=1033&statId=S234820263"  ><span>전국주택가격동향조사</span></a></li>
+					<li id="10334"><a href="/reb/cm/cntnts/cntntsView.do?mi=10334&cntntsId=1027&statId=S227720243"  ><span>전국지가변동률조사</span></a></li>
+					<li id="10335"><a href="/reb/cm/cntnts/cntntsView.do?mi=10335&cntntsId=1049&statId=S237220284"  ><span>상업용부동산 임대동향조사</span></a></li>
+					<li id="10336"><a href="/reb/cm/cntnts/cntntsView.do?mi=10336&cntntsId=1055&statId=S235920285"  ><span>오피스텔가격동향조사</span></a></li>
+					<li id="10337"><a href="/reb/cm/cntnts/cntntsView.do?mi=10337&cntntsId=1193&statId=S231520283"  ><span>공동주택 실거래가격지수</span></a></li>
+					<li id="10338"><a href="/reb/cm/cntnts/cntntsView.do?mi=10338&cntntsId=1061&statId=S234220286"  ><span>부동산거래현황</span></a></li>
+					<li id="10339"><a href="/reb/cm/cntnts/cntntsView.do?mi=10339&cntntsId=1515&statId=S237120287"  ><span>외국인주택소유현황</span></a></li>
+					<li id="9826"><a href="http://www.rtech.or.kr/"  ><span>시세정보</span></a>
+						<ul class="dep04">
+							<li class="link" id="9827"><a href="http://www.rtech.or.kr/"   target="_blank" ><span>아파트 가격정보</span></a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li id="9820"><a href="/reb/cm/cntnts/cntntsView.do?mi=9821&cntntsId=1202"  >부동산 시장관리</a>
+				<ul class="dep03">
+					<li id="9821"><a href="/reb/cm/cntnts/cntntsView.do?mi=9821&cntntsId=1202"  ><span>부동산거래관리시스템</span></a></li>
+					<li id="9824"><a href="/reb/cm/cntnts/cntntsView.do?mi=10293&cntntsId=1522"  ><span>부동산거래질서교란행위 신고센터</span></a></li>
+					<li id="10222"><a href="/reb/cm/cntnts/cntntsView.do?mi=10222&cntntsId=1460"  ><span>중개대상물 인터넷 표시·광고 모니터링 업무</span></a></li>
+					<li id="9911"><a href="/reb/cm/cntnts/cntntsView.do?mi=9911&cntntsId=1205"  ><span>부동산거래 전자계약시스템</span></a></li>
+					<li id="9825"><a href="/reb/cm/cntnts/cntntsView.do?mi=9825&cntntsId=1207"  ><span>부동산거래 신고내용 조사 업무</span></a></li>
+					<li id="10174"><a href="/reb/cm/cntnts/cntntsView.do?mi=10254&cntntsId=1479"  ><span>임대차분쟁조정위원회</span></a></li>
+					<li id="10277"><a href="/reb/cm/cntnts/cntntsView.do?mi=10277&cntntsId=1508"  ><span>주택공급통계정보시스템</span></a></li>
+					<li id="10278"><a href="/reb/cm/cntnts/cntntsView.do?mi=10278&cntntsId=1509"  ><span>주택시장 분석 및 연구조사</span></a></li>
+				</ul>
+			</li>
+			<li id="9829"><a href="/reb/cm/cntnts/cntntsView.do?mi=9830&cntntsId=1210"  >부동산 소비자보호</a>
+				<ul class="dep03">
+					<li id="9822"><a href="/reb/cm/cntnts/cntntsView.do?mi=9822&cntntsId=1203"  ><span>리츠 심사·감독지원 업무</span></a></li>
+					<li id="9823"><a href="/reb/cm/cntnts/cntntsView.do?mi=9823&cntntsId=1204"  ><span>공동주택관리정보(K-apt)</span></a></li>
+					<li id="9830"><a href="/reb/cm/cntnts/cntntsView.do?mi=9830&cntntsId=1210"  ><span>타당성 기초조사</span></a></li>
+					<li id="9831"><a href="/reb/cm/cntnts/cntntsView.do?mi=9831&cntntsId=1211"  ><span>감정평가 표본조사</span></a></li>
+					<li id="9832"><a href="/reb/cm/cntnts/cntntsView.do?mi=9833&cntntsId=1212"  ><span>보상평가서 검토</span></a></li>
+					<li id="9840"><a href="/reb/cm/cntnts/cntntsView.do?mi=9841&cntntsId=1218"  ><span>사전표본 기준가격조사</span></a></li>
+					<li id="9846"><a href="/reb/cm/cntnts/cntntsView.do?mi=10170&cntntsId=1416"  ><span>택지비평가서 검토</span></a></li>
+				</ul>
+			</li>
+			<li id="9847"><a href="/reb/cm/cntnts/cntntsView.do?mi=9849&cntntsId=1224"  >보상수탁</a>
+				<ul class="dep03">
+					<li id="9848"><a href="/reb/cm/cntnts/cntntsView.do?mi=9849&cntntsId=1224"  ><span>보상수탁업무</span></a></li>
+					<li id="10091"><a href="/reb/cm/cntnts/cntntsView.do?mi=9854&cntntsId=1229"  ><span>손실보상의 종류</span></a></li>
+					<li id="9749"><a href="/reb/cm/cntnts/cntntsView.do?mi=9757&cntntsId=1156"  ><span>고객마당</span></a></li>
+					<li id="9750"><a href="/reb/cm/cntnts/cntntsView.do?mi=9750&cntntsId=1158"  ><span>조직 및 연락처</span></a></li>
+				</ul>
+			</li>
+			<li id="9859"><a href="/reb/cm/cntnts/cntntsView.do?mi=9867&cntntsId=1234"  >도시정비사업</a>
+				<ul class="dep03">
+					<li id="9860"><a href="/reb/cm/cntnts/cntntsView.do?mi=10326&cntntsId=1553"  ><span>소규모주택정비사업</span></a></li>
+					<li id="10341"><a href="/reb/cm/cntnts/cntntsView.do?mi=10341&cntntsId=1571"  ><span>노후주거지정비 지원사업</span></a></li>
+					<li id="9861"><a href="/reb/cm/cntnts/cntntsView.do?mi=9870&cntntsId=1237"  ><span>빈집정비사업</span></a></li>
+					<li id="10260"><a href="/reb/cm/cntnts/cntntsView.do?mi=10262&cntntsId=1485"  ><span>공사중단 건축물 정비사업</span></a></li>
+					<li id="9862"><a href="/reb/cm/cntnts/cntntsView.do?mi=9875&cntntsId=1242"  ><span>관리처분계획 타당성 검증</span></a></li>
+					<li id="9863"><a href="/reb/cm/cntnts/cntntsView.do?mi=9881&cntntsId=1248"  ><span>재개발·재건축 사업성 검증</span></a></li>
+					<li id="10317"><a href="/reb/cm/cntnts/cntntsView.do?mi=10318&cntntsId=1547"  ><span>재건축부담금 검증</span></a></li>
+					<li id="9864"><a href="/reb/cm/cntnts/cntntsView.do?mi=9886&cntntsId=1253"  ><span>정비사업 공사비 검증</span></a></li>
+					<li id="10346"><a href="/reb/cm/cntnts/cntntsView.do?mi=10347&cntntsId=1597"  ><span>신규 정비구역 지정 지원 컨설팅</span></a></li>
+					<li id="10342"><a href="/reb/cm/cntnts/cntntsView.do?mi=10342&cntntsId=1572"  ><span>정비사업 조합운영 실태점검 지원</span></a></li>
+					<li id="9865"><a href="/reb/cm/cntnts/cntntsView.do?mi=9890&cntntsId=1257"  ><span>공공지원민간임대 연계형 정비사업</span></a></li>
+					<li id="9866"><a href="/reb/cm/cntnts/cntntsView.do?mi=9866&cntntsId=1260"  ><span>자료실</span></a></li>
+				</ul>
+			</li>
+			<li id="9893"><a href="/reb/cm/cntnts/cntntsView.do?mi=9894&cntntsId=1261"  >녹색건축</a>
+				<ul class="dep03">
+					<li id="9894"><a href="/reb/cm/cntnts/cntntsView.do?mi=9894&cntntsId=1261"  ><span>녹색건축업무 소개</span></a></li>
+					<li id="9895"><a href="/reb/cm/cntnts/cntntsView.do?mi=9895&cntntsId=1262"  ><span>건축물 에너지·온실가스 정보체계 운영</span></a></li>
+					<li id="10090"><a href="/reb/cm/cntnts/cntntsView.do?mi=10090&cntntsId=1398"  ><span>녹색건축 인증·검토 업무</span></a></li>
+					<li id="10343"><a href="/reb/cm/cntnts/cntntsView.do?mi=10343&cntntsId=1573"  ><span>건축행정시스템(세움터) 운영</span></a></li>
+					<li id="10344"><a href="/reb/cm/cntnts/cntntsView.do?mi=10344&cntntsId=1574"  ><span>건축서비스산업 정보체계(건축HUB) 운영</span></a></li>
+					<li id="10345"><a href="/reb/cm/cntnts/cntntsView.do?mi=10345&cntntsId=1575"  ><span>그린리모델링 창조센터 운영</span></a></li>
+					<li id="10356"><a href="/reb/cm/cntnts/cntntsView.do?mi=10356&cntntsId=1592"  ><span>공공건축지원센터 운영</span></a></li>
+				</ul>
+			</li>
+			<li id="9905"><a href="/reb/cm/cntnts/cntntsView.do?mi=9906&cntntsId=1272"  >부동산R&D</a></li>
+			<li id="9910"><a href="/reb/cm/cntnts/cntntsView.do?mi=9910&cntntsId=1276"  >청약업무</a></li>
+		</ul>
+	
+	
+	
+	
+	
+	
+	
+<!--END-->
+
+	<!-- 열린경영, 사회적가치실현 일 경우 링크 추가 -->
+	
+	<!-- <div class="often">
+		<h3>자주찾는정보</h3>
+		<ul class="list_st1">
+			<li><a href="">보상평가서 검토</a></li>
+			<li><a href="">법규보상액 산정</a></li>
+			<li><a href="">사업지역별, 지목별 연간평균보상단가</a></li>
+			<li><a href="">보상수탁사업 조직도 및 인원</a></li>
+			<li><a href="">보상관련 각종 서식</a></li>
+			<li><a href="">손실보상 절차 및 기준</a></li>
+		</ul>
+	</div> -->
+</nav>
+
+						<!-- //left -->
+						<!-- 서브콘텐츠 -->
+						<div id="sub_content">
+							<!-- location -->
+							
+
+
+
+
+
+
+
+<ul class="location">
+	<li class="home"><a href="/reb/main.do">홈</a></li>
+	
+		<li>주요사업</li>
+	
+		<li>부동산조사·통계</li>
+	
+	<li>전국주택가격동향조사</li>
+</ul>
+<span id="menuTitle" style="display:none;">전국주택가격동향조사</span>
+<span id="currMenuId" style="display:none;">10333</span>
+<span id="tabBaseId" style="display:none;">10333</span>
+							<!-- //location -->
+							<div class="titleWrap">
+								<!-- title -->
+								<h3 class="pageTitle">전국주택가격동향조사</h3>
+								<!-- //title -->
+								<!-- sns -->
+								
+
+
+<script>
+function goPrint() {
+	var popW = 1000;  // 팝업창 넓이
+	var popH = 900;  // 팝업창 높이
+	var popX  = (document.body.clientWidth / 2) - (popW / 2) + window.screenLeft; // 팝업창 X 좌표 계산
+	var popY  = (document.body.clientHeight / 2) - (popH) + window.screenTop; // 팝업창 Y 좌표 계산
+	var referer = encodeURIComponent(location.href); 
+	var popUrl = "/reb/pr/printPage.do?referer="+referer;
+	var popup = window.open('', "printPage",'noopener.noreferrer,top='+popY+',left='+popX+',width='+popW+',height='+popH+',scrollbars=yes');
+	popup.location = popUrl;
+	return popup;
+}
+
+function goSns(shareTy){ 
+	var htmlTitle = '한국부동산원';
+	var title = ''; // 메뉴타이틀의 경우 스크립트 추가되어 오류  <span>주요사업</span><span>부동산조사·통계</span>;
+	var menuTitle = '전국주택가격동향조사';
+	var mi = '10333';
+	var _br2  = encodeURIComponent('\n'); 
+	var linkUrl = location.href;
+	
+	if(linkUrl.indexOf('?') > -1) {
+		if(linkUrl.indexOf('mi=') < 0) {
+			linkUrl = linkUrl + '&mi=' +mi	
+		}
+	} else {
+		if(linkUrl.indexOf('mi=') < 0) {
+			linkUrl = linkUrl + '?mi=' +mi	
+		}
+	}
+	
+	linkUrl = encodeURIComponent(linkUrl);
+	
+	if(menuTitle != '메뉴명없음') {
+		title = htmlTitle + ' : ' + menuTitle;
+	} else {
+		title = htmlTitle;
+	}
+	
+	title = encodeURIComponent(title);
+
+	if(shareTy == "fbook") {
+		var popUrl = 'https://www.facebook.com/sharer/sharer.php?u='+ linkUrl;
+		var popup = window.open('', 'facebook', 'width=626,height=436');
+	} else if(shareTy == "twt") {
+		var popUrl = 'https://twitter.com/intent/tweet?url='+ linkUrl + '&text=' + title + '&original_referer=' + linkUrl;
+		var popup = window.open('', 'twitter', 'width=626,height=436');
+	} else if(shareTy == "kkot") {
+		var popUrl = 'https://story.kakao.com/s/share?url='+ linkUrl + '&text=' + title;
+		var popup = window.open('', 'kakaostory', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600');
+	} else if(shareTy == "band") {
+		var popUrl = 'http://band.us/plugin/share?body='+ title + _br2 + linkUrl + '&route=' + linkUrl;
+		var popup = window.open('', 'band', 'width=410, height=540, resizable=no');
+	} else if(shareTy == "blog") {
+		var popUrl = 'https://share.naver.com/web/shareView.nhn?url='+ linkUrl + '&title='+title;
+		var popup = window.open('', 'blog', 'width=410, height=540, resizable=no');
+	}
+	
+	popup.opener = null;
+	popup.location = popUrl;
+	return popup;
+	
+	/* SNS공유 이력 등록 */
+	$.ajax({
+		type : "post",
+		datatype : "json",
+		data : {
+			shareUrl : location.href,
+			snsTy : shareTy,
+			//cntntsNm : $('#location').children('span').text() + '>' + $('#location').children('strong').text()
+			cntntsNm : menuTitle
+		},
+		url : "/reb/st/Sns/insertSnsInfo.do",
+		success : function(data){
+		},
+		error : function(data){
+			//alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+   		}	
+	});
+}
+
+</script>
+<!-- 웹접근성 2025 : aria-expanded 사용자 선택에 따라 변화하는 기능 설명 -->
+<ul class="shareWrap">
+	<li><a href="#shareList" class="hashToggleClass" id="hashToggleClass" title="공유 열기" aria-expanded="false" aria-controls="shareList"><span class="hid">공유 열기</span><i class="xi-share-alt-o" aria-hidden="true"></i></a>
+		<ul id="shareList">
+			<li><a href="javascript:" onclick="goSns('fbook');" title="페이스북 바로가기 새창 열림" rel="noopener"><span class="hid">페이스북 바로가기</span><i class="xi-facebook" aria-hidden="true"></i></a></li>
+			<li><a href="javascript:" onclick="goSns('twt');" title="트위터 바로가기 새창 열림" rel="noopener"><span class="hid">트위터 바로가기</span><i class="xi-twitter" aria-hidden="true"></i></a></li>
+			<li><a href="javascript:" onclick="goSns('kkot');" title="카카오스토리 바로가기 새창 열림" rel="noopener"><span class="hid">카카오스토리 바로가기</span><i class="xi-kakaostory" aria-hidden="true"></i></a></li>
+		</ul>
+	</li>
+	<li><a href="javascript:" onclick="goPrint();" title="인쇄 새창 열림" rel="noopener"><span class="hid">인쇄</span><i class="xi-print" aria-hidden="true"></i></a></li>
+</ul>
+
+<script>
+$('#hashToggleClass').on('click', function (e) {
+	e.preventDefault();
+	const $btn = $(this);
+	const expanded = $btn.attr('aria-expanded')==='true';
+	$btn.attr('aria-expanded', !expanded);	
+})
+</script>
+								<!-- //sns -->
+							</div>
+							<div id="contView">
+								<!-- tab -->
+								
+
+
+
+
+
+
+<!--START-->										
+<!-- 9770 UPPER TAB START-->
+
+<!-- 9770 UPPER TAB END-->
+										
+<!-- 9772 UPPER TAB START-->
+
+<!-- 9772 UPPER TAB END-->
+										
+<!-- 9824 UPPER TAB START-->
+
+<!-- 9824 UPPER TAB END-->
+										
+<!-- 10174 UPPER TAB START-->
+
+<!-- 10174 UPPER TAB END-->
+										
+<!-- 9832 UPPER TAB START-->
+
+<!-- 9832 UPPER TAB END-->
+										
+<!-- 9840 UPPER TAB START-->
+
+<!-- 9840 UPPER TAB END-->
+										
+<!-- 9846 UPPER TAB START-->
+
+<!-- 9846 UPPER TAB END-->
+										
+<!-- 9848 UPPER TAB START-->
+
+<!-- 9848 UPPER TAB END-->
+										
+<!-- 10091 UPPER TAB START-->
+
+<!-- 10091 UPPER TAB END-->
+										
+<!-- 9749 UPPER TAB START-->
+
+<!-- 9749 UPPER TAB END-->
+										
+<!-- 9860 UPPER TAB START-->
+
+<!-- 9860 UPPER TAB END-->
+										
+<!-- 9861 UPPER TAB START-->
+
+<!-- 9861 UPPER TAB END-->
+										
+<!-- 10260 UPPER TAB START-->
+
+<!-- 10260 UPPER TAB END-->
+										
+<!-- 9862 UPPER TAB START-->
+
+<!-- 9862 UPPER TAB END-->
+										
+<!-- 9863 UPPER TAB START-->
+
+<!-- 9863 UPPER TAB END-->
+										
+<!-- 10317 UPPER TAB START-->
+
+<!-- 10317 UPPER TAB END-->
+										
+<!-- 9864 UPPER TAB START-->
+
+<!-- 9864 UPPER TAB END-->
+										
+<!-- 10346 UPPER TAB START-->
+
+<!-- 10346 UPPER TAB END-->
+										
+<!-- 9865 UPPER TAB START-->
+
+<!-- 9865 UPPER TAB END-->
+										
+<!-- 9905 UPPER TAB START-->
+
+<!-- 9905 UPPER TAB END-->
+										
+<!-- 10192 UPPER TAB START-->
+
+<!-- 10192 UPPER TAB END-->
+										
+<!-- 10196 UPPER TAB START-->
+
+<!-- 10196 UPPER TAB END-->
+										
+<!-- 10200 UPPER TAB START-->
+
+<!-- 10200 UPPER TAB END-->
+										
+<!-- 10205 UPPER TAB START-->
+
+<!-- 10205 UPPER TAB END-->
+										
+<!-- 10208 UPPER TAB START-->
+
+<!-- 10208 UPPER TAB END-->
+										
+<!-- 10211 UPPER TAB START-->
+
+<!-- 10211 UPPER TAB END-->
+										
+<!-- 10239 UPPER TAB START-->
+
+<!-- 10239 UPPER TAB END-->
+										
+<!-- 10240 UPPER TAB START-->
+
+<!-- 10240 UPPER TAB END-->
+										
+<!-- 9601 UPPER TAB START-->
+
+<!-- 9601 UPPER TAB END-->
+										
+<!-- 10229 UPPER TAB START-->
+
+<!-- 10229 UPPER TAB END-->
+										
+<!-- 10182 UPPER TAB START-->
+
+<!-- 10182 UPPER TAB END-->
+										
+<!-- 9753 UPPER TAB START-->
+
+<!-- 9753 UPPER TAB END-->
+										
+<!-- 9690 UPPER TAB START-->
+
+<!-- 9690 UPPER TAB END-->
+										
+<!-- 9693 UPPER TAB START-->
+
+<!-- 9693 UPPER TAB END-->
+										
+<!-- 9613 UPPER TAB START-->
+
+<!-- 9613 UPPER TAB END-->
+										
+<!-- 9620 UPPER TAB START-->
+
+<!-- 9620 UPPER TAB END-->
+										
+<!--END-->
+
+								<!-- //tab -->
+								<!-- 서브페이지 -->
+								
+
+
+
+<!-- 개별 홈페이지 소스 분리 -->
+
+
+
+
+<script>
+/* 페이지 리로드 없는 탭 */
+$(function() {
+    $(".tabcontent > div").hide();
+    $(".tabnav a").click(function () {
+        $(".tabcontent > div").hide().filter(this.hash).fadeIn();
+        $(".tabnav > li").removeClass("on");
+        $(this).parent().addClass("on");
+        var number = Number(this.hash.slice(4));
+        
+        console.log("number : "+ number);
+        if(number>=26){
+            $("#tabselect1").val(this.hash);
+        }else{
+            $("#tabselect").val(this.hash);
+        }
+        return false;
+    }).filter(":eq(0)").click();
+    
+ 	//개인정보처리방침 라벨링 마우스오버 효과
+    $(".tabcontent2 > div").hide();
+    $(".tabnav2 li").mouseover(function () {
+        $(".tabcontent2 > div").hide();
+        $(".tabcontent2 > div:nth-child("+$(this).attr("data-id")+")").show()
+        return false;
+    });
+    $(".tabnav2 li").mouseout(function () {
+        $(".tabcontent2 > div").hide();
+        return false;
+    });
+    
+    //R-one 고도화 이후 아코디언 기능
+    /* contents accordion */
+    $("#cntntsView h2 a").eq(0).addClass('on');
+    $("#cntntsView h2 a .arrow").eq(0).html("내용닫기");
+    $(".meta-inforamtion-area").eq(0).show();
+
+
+    $("#cntntsView h2 a").click(function () {
+        if ($(this).parent().next(".meta-inforamtion-area").css("display") == "none") {
+            $(this).addClass('on');
+            $(this).parent().next(".meta-inforamtion-area").slideDown(150);
+            $(this).children(".arrow").html("내용닫기");
+        } else {
+            $(this).removeClass('on');
+            $(this).parent().next(".meta-inforamtion-area").slideUp(150);
+            $(this).children(".arrow").html("내용열기");
+        }
+    });
+});
+//개인정보처리방침
+function linkEvent() {
+	var keyValue = $("#historyList").val().split(",");
+	window.open("/reb/cm/cntnts/previewCntnts.do?mi=9975&cntntsId="+keyValue[0], "", "noopener.noreferrer");
+}
+function downEvent() {
+	var keyValue = $("#historyList").val().split(",");
+    location.href="/reb/cf/fileDownload.do?fileKey="+keyValue[1];
+}
+
+function btnDisplay(value) {
+	var keyValue = value.split(",");
+	//다운로드 키가 있을경우
+	if(keyValue.length==2){
+		$("#dirLinkBtn").show();
+		$("#dirDownBtn").show();
+	}else{
+
+        $("#dirLinkBtn").hide();
+        $("#dirDownBtn").hide();
+		//전체일때
+	   if(value!=0){
+		   $("#dirLinkBtn").show();
+		}
+	}
+}
+//개인정보처리방침
+
+/* 페이지 리로드 없는 탭 모바일에서 너무 길어서 셀렉트로 변경 후 이벤트가 PC형일때도 적용되도록 변경 */
+function tabMove(value) {
+    $(".tabcontent > div").hide().filter(value).fadeIn();
+    $(".tabnav > li").removeClass("on");
+    var number = Number(value.slice(-2));
+    $(".tabnav > li:nth-child("+number+")").addClass("on");
+}
+
+
+/* 페이지 리로드 없는 탭 모바일에서 너무 길어서 셀렉트로 변경 후 이벤트가 PC형일때도 적용되도록 변경 */
+function tabMove1(value) {
+    $(".tabcontent > div").hide().filter(value).fadeIn();    
+    $(".tabnav > li").removeClass("on");
+    var number = Number(value.slice(-2));
+    $(".tabnav > li:nth-child("+number+")").addClass("on");
+}
+
+/* 미래도식센터 정비사업 버튼 드롭다운기능 형성 */
+function onlyShowHide(id) {
+    $("#"+id).toggle('show');
+    
+}
+</script>
+<link rel="stylesheet" href="/css/ad/kogl/kogl.css">
+<script>
+	$(document).on("click",".popupCntnts",function(){
+		var popW = $(this).attr("data-popw");  // 팝업창 넓이
+		var popH = $(this).attr("data-poph");  // 팝업창 높이
+		var popX  = (document.body.clientWidth / 2) - (popW / 2) + window.screenLeft; // 팝업창 X 좌표 계산
+		var popY  = (document.body.clientHeight / 2) - (popH) + window.screenTop; // 팝업창 Y 좌표 계산		
+	 	window.open("/reb/cm/cntnts/previewCntnts.do?cntntsId="+$(this).attr("data-id"),$(this).attr("title"),'noopener.noreferrer,top='+popY+',left='+popX+',width='+popW+',height='+popH+',scrollbars=yes, resizable=yes');		
+	})
+</script>
+	
+
+
+
+	<link href="/css/web/reb/roneStyle.css" rel="stylesheet">
+
+<div id="cntntsView">	
+	
+	
+		
+			<!-- 해당경로를 절대경로로 변경 -->
+			
+			<div class="info02more">
+    			<div id="div-sect" class="meta-inforamtion-wrapper">
+		
+		<h2 class="text-title2">
+    <a href="#title" class="on">
+    <span class="title">조사개요</span>
+    <span class="arrow">내용닫기</span>
+    </a>
+ </h2>
+ <div class="meta-inforamtion-area" style="display: block;">
+    <div class="rone_tbl_st">
+       <table>
+          <caption>
+             전국주택가격동향조사 조사개요
+          </caption>
+          <colgroup>
+             <col style="width: 175px;">
+             <col>
+          </colgroup>
+          <tbody>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">통계명</h4>
+                </th>
+                <td>전국주택가격동향조사</td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">최초작성연도</h4>
+                </th>
+                <td>1986년</td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">통계종류</h4>
+                </th>
+                <td><span class="r1_line_bgB"><a href="#" target="_self" title="*국가 또는 지방자치단체의 인구,사회,경제 기타 정책의 수립 및 평가에 널리 활용되는 통계로 통계청장이 지정하여 고시하는 통계">지정</a></span>·<span class="r1_line_bgB"><a href="#" target="_self" title="통계작성을 주목적으로 조사를 실시하여 얻은통계를 말하며, 제 1의 통계라고도 한다.">조사통계</a></span></td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">법적근거</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>국가통계 승인번호 : 제304004호</li>
+                      <li>국가통계 승인일자 : 1985년 9월 10일</li>
+                      <li>「주택법」제88조 1항 및 제89조 제2항 제4호 동법 시행령 제91조 제2항 제3호</li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">조사목적</h4>
+                </th>
+                <td>전국 주택시장의 매매, 전세, 월세가격을 조사하여 주택시장의 평균적인 가격변화를 측정, 주택시장 판단지표 또는 주택정책수립의 참고자료 제공</td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">유의사항</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>전국주택가격동향조사는 주택가격지수를 산출하여 제공하는 것이 주된 목적이며, 조사항목, 표본추출방법, 지수산출방법 등이 이에 맞게 설계되었음</li>
+                      <li>본 조사는 주택가격 지수산출에 맞게 설계되었기 때문에 평균/중위 주택가격 결과는 참고 사항으로 이용하기 바람</li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">조사주기</h4>
+                </th>
+                <td>
+                   <ol class="list_ol2">
+                      <li><span class="num">01</span>월간 (아파트, 단독, 연립주택)</li>
+                      <li><span class="num">02</span>주간 (아파트)</li>
+                   </ol>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">조사대상</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>대상객체 : 아파트, 연립주택, 단독주택&nbsp;</li>
+                      <li>조사범위 : 전국 268개 시군구의 거래 가능한 아파트, 연립주택, 단독주택</li>
+                      <li>조사단위 : 전국 268개 시·군·구 (비자치구, 비자치시 포함)</li>
+                      <li>조사지역
+                         <ul class="list_st2">
+                            <li>아파트 : 78시 31군 109구</li>
+                            <li>연립 및 단독주택: 78시 81군 109구</li>
+                         </ul>
+                      </li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">조사주체</h4>
+                </th>
+                <td>전국 30개 지사 전문조사자(정규직원)</td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">조사방법</h4>
+                </th>
+                <td><span class="r1_line_bgB"><a href="#" target="_self" title="어느 특정집단의 특성을 알고자할 때 집단의 일부를 조사함으로써 집단 전체의 특성을 추정하는 방법">표본조사</a></span></td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">조사체계</h4>
+                </th>
+                <td>
+                   <div class="rsp_img"><img alt="전국주택가격동향조사 조사개요 조사체계: 국토교통부(조사·산정의뢰) → 한국부동산원(조사·산정수행,통계작성)" src="/r-one/images/rone/portal/img0202_tab01_01.png"></div>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">조사기간</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>조사대상기간
+                         <ul class="list_st2">
+                            <li>월간 : 해당 월</li>
+                            <li>주간 : 전주 화요일부터 금주 월요일(기준일)까지</li>
+                         </ul>
+                      </li>
+                      <li>조사기준시점
+                         <ul class="list_st2">
+                            <li>월간 : 익월 1일</li>
+                            <li>주간 : 매주 월요일</li>
+                         </ul>
+                      </li>
+                      <li>조사기간
+                         <ul class="list_st2">
+                            <li>월간 : 해당 월의 말일을 포함한 전후 5일간(단, 해당 월의 말일이 휴일인 경우, 익월 첫 영업일을 포함한 전후 5일간)</li>
+                            <li>주간 : 조사기준일 포함 영업일 2일간</li>
+                         </ul>
+                      </li>
+                   </ul>
+                </td>
+             </tr>
+             <tr class="rone_row">
+                <th scope="row">
+                   <h4 class="rone_tit1">주요연혁</h4>
+                </th>
+                <td>
+                   <ul>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">1986년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            37개 도시 표본주택 2,498호에 대한 조사결과를 일반통계로 공표
+                         </div>
+                         <div class="row_right">
+                            (85.9.10 경제기획원 승인 제305-21-03호)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">1989년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            39개 도시 표본주택 3,111호로 확대
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">1991년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            모집단 확대, 표본추출방법 변경, 표본주택 전면교체 및 3,999개로 확대, 지수산출방법 변경, 표본사후관리지침 마련등 편제 개편
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">1992년 2월</span>
+                         </div>
+                         <div class="row_right">
+                            가중값 및 전국주택유형별 지수추정식 변경
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">1992년 7월</span>
+                         </div>
+                         <div class="row_right">
+                            표본주택 4,119개로 확대 (9개 중소도시 아파트표본 120개 증가)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">1996년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            조사대상도시 41개로 확대 [고양(일산), 군포(산본)2개 도시 추가], 표본주택 4,310개로 확대 [5개 신도시 및 제주지역 표본주택 191개 추가], 기준시점 및 가중값 변경 등
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">1999년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            표본개편 (조사대상도시 28개, 표본주택 3,260개)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">1999년 6월</span>
+                         </div>
+                         <div class="row_right">
+                            조사방법 변경 (전화 및 팩스 병행조사)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2001년 8월</span>
+                         </div>
+                         <div class="row_right">
+                            조사항목 추가 (지역의 평균 월세이율(%), 전세의 월세전환요구율과 월세전환계약률, 주택임대차계약 구성분포)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2001년 12월</span>
+                         </div>
+                         <div class="row_right">
+                            지정기관 변경승인 (통계청 승인번호 : 제 30404호)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2003년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            APT표본 1차 확대개편 [APT조사도시 8개 추가, APT조사 區별 세분화(서울, 인천, 고양, 성남)]
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2003년 7월</span>
+                         </div>
+                         <div class="row_right">
+                            APT표본 2차 확대개편 [조사지역 확대 및 세분화(5개 광역시, 39개 시, 6개 군, 49개 구), 가중값 변경 등]
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2003년 10월</span>
+                         </div>
+                         <div class="row_right">
+                            단독 및 연립주택 표본 확대개편 [조사지역 확대 및 세분화]
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2004년 3월</span>
+                         </div>
+                         <div class="row_right">
+                            조사지역 추가 및 변경 (진해시, 계룡시, 영통구)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2004년 8월</span>
+                         </div>
+                         <div class="row_right">
+                            조사지역 추가 (연기군)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2004년 11월</span>
+                         </div>
+                         <div class="row_right">
+                            지정통계로 변경
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2006년 3월</span>
+                         </div>
+                         <div class="row_right">
+                            표본보정 및 표본수 확대
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2007년 12월</span>
+                         </div>
+                         <div class="row_right">
+                            조사공표단위 추가[기타지방,5개 광역시(인천 제외)]
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2008년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            가중값 변경 및 기준시점 변경(2007.12 = 100.0)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2008년 4월</span>
+                         </div>
+                         <div class="row_right">
+                            규모별 지수 지역 세분화
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2009년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            가중값 변경 및 기준시점 변경(2008.12 = 100.0)
+                         </div>
+                         <div class="row_right">
+                            조사지역 추가(천안시 동남구ㆍ서북구, 여수시)
+                         </div>
+                         <div class="row_right">
+                            조사항목 추가(평균주택가격, 중위주택가격, 5분위 평균주택가격, 주택가격 5분위배율, 주택가격 및 소득 분위별 PIR, 주택구매력지수(HAI), KB선도아파트50지수)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2010년 6월</span>
+                         </div>
+                         <div class="row_right">
+                            국가통계위원회 「전국 주택가격동향조사」한국부동산원 으로 이관결정
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2011년 6월</span>
+                         </div>
+                         <div class="row_right">
+                            가중값 변경 및 기준시점 변경(2011.6 = 100.0)
+                         </div>
+                         <div class="row_right">
+                            조사지역 추가(창원시 마산합포구, 마산회원구, 성산구, 의창구, 진해구)
+                         </div>
+                         <div class="row_right">
+                            조사항목 추가(평균주택 전세가격, 주택동향심리지수, 계절조정지수)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2013년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            국민은행에서 한국부동산원 으로 작성기관 변경
+                         </div>
+                         <div class="row_right">
+                            2012년 「전국주택가격동향조사 표본 및 통계 개편 방안 연구」 결과반영
+                         </div>
+                         <div class="row_right">
+                            표본 전면 개편 및 지수작성방법 변경으로 통계 변경승인
+                         </div>
+                         <div class="row_right">
+                            아파트 공표지역은 2개 특별시, 6개 광역시, 189개 시군구 확대(77개 시, 10개 군, 102개 구)
+                         </div>
+                         <div class="row_right">
+                            단독/연립 공표지역 전국, 수도권, 지방, 6대/5대 광역시, 8개/9개 도, 강남/강북권역, 생활권역(서울, 경기, 부산의 도시기본계획)
+                         </div>
+                         <div class="row_right">
+                            기준시점 : 월간 2012.11 = 100.0,주간 2012.11.26 = 100.0
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2014년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경 승인
+                         </div>
+                         <div class="row_right">
+                            추출틀 변경(주택가격 정보체계 DB(2013.1.1. 기준, 국토교통부)
+                         </div>
+                         <div class="row_right">
+                            표본규모(월간 19,207호(아파트 14,334호, 연립 2,646호, 단독 2,227호) → 월간 19,697호(아파트 14,742호, 연립 2,243호, 단독 2,712호), 주간 6,232호→ 6,228호)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2014년 12월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경승인(통계청 고시 제2014-366호, 2014.12.15)
+                         </div>
+                         <div class="row_right">
+                            모집단 변경(2014년7월 통합청주시 행정구역 개편 반영: 청주시(흥덕구, 상당구), 청원군 → 청주시(흥덕구, 상당구, 서원구, 청원구)
+                         </div>
+                         <div class="row_right">
+                            추출틀 변경(주택가격 정보체계 DB(2014.1.1.기준, 국토교통부)
+                         </div>
+                         <div class="row_right">
+                            표본규모(월간 : 19,697호(아파트 14,742호,연립 2,243호,단독 2,712호) → 월간 : 20,045호(아파트 14,976호,연립 2,756호,단독 2,313호), 주간 아파트6,228호 동일
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2015년 7월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경승인(통계청 고시 제2015-211호, 2015.07.13)
+                         </div>
+                         <div class="row_right">
+                            월세통계 개편 및 통합조사
+                         </div>
+                         <div class="row_right">
+                            조사지역 확대 : (연립 및 단독 78시 30군 99구 → 78시 33군 104구)
+                         </div>
+                         <div class="row_right">
+                            표본수 확대 : 월간 20,045호(아파트 14,976호,연립 2,756호,단독 2,313호) → 월간 25,260호(아파트 15,194호, 연립 5,566호, 단독 4,500호) 주간 아파트 : 6,228호 → 7,004호
+                         </div>
+                         <div class="row_right">
+                            기준시점 : 월간 2015.6 = 100.0, 주간 2015.6.29 = 100.0
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2016년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경승인(통계청 고시 제2016-15호, 2016.01.28)
+                         </div>
+                         <div class="row_right">
+                            전월세통합지수(2016.2 첫 공표) 항목 추가
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2016년 8월</span>
+                         </div>
+                         <div class="row_right">
+                            승인번호 변경(30404 -> 304004,2016.8.28. 승인번호 체계 변경)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2016년 9월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경승인(통계청 고시 제2016-313호, 2016.09.12)
+                         </div>
+                         <div class="row_right">
+                            모집단 변경(2016년7월 부천시 행정구역 개편 반영 : 3개구 통합)
+                         </div>
+                         <div class="row_right">
+                            추출틀 변경(주택가격 정보체계 DB(2016.1.1. 기준, 국토교통부)
+                         </div>
+                         <div class="row_right">
+                            표본규모(월간 25,260호 (아파트 15,194호, 연립 5,566호, 단독 4,500호) → 월간 26,343호(아파트 15,588호, 연립 5,950호, 단독 4,805호), 주간 7,004호 → 7,192호)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2017년 11월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경승인
+                         </div>
+                         <div class="row_right">
+                            추출틀 변경(주택가격 정보체계 DB(2017.1.1. 기준, 국토교통부)
+                         </div>
+                         <div class="row_right">
+                            표본규모(월간 26,343호(아파트 15,588호, 연립 5,950호, 단독 4,805호) → 월간 26,674호(아파트 15,886호, 연립 5,978호, 단독 4,810호)), 주간 7,192호 → 7,400호
+                         </div>
+                         <div class="row_right">
+                            소형주택 규모구분 세분화(60㎡ 이하 → 40㎡ 이하, 40㎡ 초과~60㎡ 이하)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2019년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경승인(통계청 고시 제2019-5호, 2019.1.14)
+                         </div>
+                         <div class="row_right">
+                            추출틀 변경(주택가격 정보체계 DB(2018.1.1. 기준, 국토교통부)
+                         </div>
+                         <div class="row_right">
+                            표본규모(월간 26,674호(아파트 15,886호, 연립 5,978호, 단독 4,810호) → 월간 27,502호(아파트 16,480호, 연립 6,202호, 단독 4,820호), 주간 7,400호 → 8,008호)
+                         </div>
+                         <div class="row_right">
+                            거래동향 작성지표 삭제
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2020년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경승인(통계청 고시 제2020-10호, 2020.1.13)
+                         </div>
+                         <div class="row_right">
+                            추출틀 변경(주택가격 정보체계 DB(2019.1.1. 기준, 국토교통부)
+                         </div>
+                         <div class="row_right">
+                            표본 규모(월간 27,502호(아파트 16,480호, 연립 6,202호, 단독 4,820호) → 월간 28,360호(아파트 17,190호, 연립 6,350호, 단독 4,820호), 주간 8,008호 → 9,400호)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2021년 6월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경 승인(통계청 고시 제2021-202호, 2021.6.28)
+                         </div>
+                         <div class="row_right">
+                            추출틀 변경(공시가격 정보체계 DB(2020.1.1. 기준, 국토교통부)
+                         </div>
+                         <div class="row_right">
+                            표본 규모(월간 28,360호(아파트 17,190호, 연립 6,350호, 단독 4,820호) → 월간 46,170호(아파트 35,000호, 연립 6,350호, 단독 4,820호), 주간 9,400호 → 32,000호)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2023년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경 승인(통계청 고시 제 2022-677호, 2022.12.28)
+                         </div>
+                         <div class="row_right">
+                            추출틀 변경(공시가격정보체계 DB(2022.1.1. 기준, 국토교통부)
+                         </div>
+                         <div class="row_right">
+                            조사지역 변경(아파트 78시 28군 101구 → 78시 30군 101구), (연립 및 단독 78시 82군 101구 → 78시 81군 101구)
+                         </div>
+                         <div class="row_right">
+                            표본규모(월간 46,170호(아파트 35,000호, 연립 6,350호, 단독 4,820호) → 월간 47,300호(아파트 36,000호, 연립 6,480호, 단독 4,820호), 주간 32,000호→ 32,900호)
+                         </div>
+                         <div class="row_right">
+                            공표주기(주간) 변경(매주 금요일 → 매주 목요일)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2023년 7월</span>
+                         </div>
+                         <div class="row_right">
+                            군위군 행정구역 개편 반영(경상북도 군위군 → 대구광역시 군위군)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2024년 1월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경 승인(통계청 고시 제 2023-675호, 2023.12.28)
+                         </div>
+                         <div class="row_right">
+                            추출틀 변경(공시가격정보체계DB(2023.1.1. 기준, 국토교통부)
+                         </div>
+                         <div class="row_right">
+                            조사지역 변경(아파트 78시 30군 101구 → 78시 31군 104구), (연립 및 단독 78시 81군 101구 → 78시 81군 104구)
+                         </div>
+                         <div class="row_right">
+                            표본규모(월간 47,300호(아파트 36,000호, 연립 6,480호, 단독4,820호) → 월간 48,170호(아파트 36,800호, 연립 6,550호, 단독4,820호), 주간(32,900호 → 33,500호)
+                         </div>
+                         <div class="row_right">
+                            조사시기(주간) 변경 (월, 화 → 조사기준일 포함 영업일 2일간)
+                         </div>
+                         <div class="row_right">
+                            부천시 행정구역 개편 반영(3개 구, 37개 일반동 신설)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2025년 4월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경 승인(통계청 고시 제 2025-136호, 2025.03.20)
+                         </div>
+                         <div class="row_right">
+                            추출틀 변경(공시가격정보체계DB(2024년 기준, 국토교통부)
+                         </div>
+                         <div class="row_right">
+                            표본규모(월간 48,170호(아파트 36,800호, 연립 6,550호, 단독4,820호) → 월간 48,170호(아파트 37,619호, 연립 6,626호, 단독3,925호), 주간(33,500호 → 33,500호)
+                         </div>
+                         <div class="row_right">
+                            추출틀 변경(한국부동산원에서 관리하는 공시가격 정보체계 DB (2023년 기준)) → (한국부동산원에서 관리하는 공시가격 정보체계 DB (2024년 기준))
+                         </div>
+                         <div class="row_right">
+                            지수기준시점 변경 (월간 2021.6=100.0, 주간 2021.6.28.=100.0) → (월간 2025.3=100.0, 주간 2025.3.31.=100.0)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2026년 2월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경 승인(국가데이터처 고시 제 2026-49호, 2026.01.29)
+                         </div>
+                         <div class="row_right">
+                            최신 모집단 가중치 반영(공시가격정보체계DB(2025년 기준))
+                         </div>
+                         <div class="row_right">
+                            지수기준시점 변경 (월간 2025.3=100.0, 주간 2025.3.31.=100.0 → 월간 2026.1=100.0, 주간 2026.2.2.=100.0)
+                         </div>
+                         <div class="row_right">
+                            화성시 행정구역 개편 반영(4개 구 신설)
+                         </div>
+                      </li>
+                      <li>
+                         <div class="row_left">
+                            <span class="impactColor1">2026년 7월</span>
+                         </div>
+                         <div class="row_right">
+                            통계작성변경 승인(국가데이터처 고시 제 2026-398호, 2026.07.02)
+                         </div>
+                         <div class="row_right">
+                            지수기준시점 변경 (월간 2026.1=100.0, 주간 2026.2.2.=100.0 → 월간 2026.6=100.0, 주간 2026.7.6.=100.0)
+                         </div>
+                         <div class="row_right">
+                            인천광역시 행정구역 개편 및 전남광주통합 반영
+                         </div>
+                      </li>
+                   </ul>
+                </td>
+             </tr>
+          </tbody>
+       </table>
+    </div>
+ </div>
+ <h2 class="text-title2">
+    <a href="#title">
+       <span class="title">조사방법</span>
+       <span class="arrow">내용열기</span>
+    </a>
+ </h2>
+ <div class="meta-inforamtion-area" style="display:none;">
+    <div class="rone_tbl_st">
+       <table>
+          <caption>
+             전국주택가격동향조사 조사방법
+          </caption>
+          <colgroup>
+             <col style="width: 175px;">
+             <col style="width: px;">
+          </colgroup>
+          <tbody>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">조사표 설계</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>조사표 형태 : 전산입력</li>
+                      <li>질문의 형태 : <span class="r1_line_bgB"><a href="#" target="_self" title="미리 정해진 문항 중에서 선택하는 질문 형태">폐쇄형 질문(Closed question)</a></span></li>
+                      <li>조사표 사전시험 : <span class="r1_line_bgB"><a href="#" target="_self" title="조사 실시를 위하여 본 조사와 똑같은 조건 하에서 소규모에 걸쳐 구체적인 실제자료를 수집하는 조사 ">사전조사</a></span>는 시행하지 않음</li>
+                      <li>조사표 개편확정일 : 2013.01.(통계청 고시 제2013-03호)</li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">표본설계</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>모집단
+                         <ul class="list_st2">
+                            <li>아파트
+                               <ul class="list_st3">
+                                  <li>목표모집단 : 전국의 재고 아파트(공시가격 정보체계 DB에 등록된 모든 주택)</li>
+                                  <li>조사모집단 : 공시가격 정보체계 DB에 등재되어 있는 아파트 중 218개 조사지역(시군구)</li>
+                               </ul>
+                               <div class="box_st2 wnrn">
+                                  <p class="type2">*사원용, 임대용, 전매제한, 건축물양성화 및 오류데이터 등을 제외</p>
+                                  <p class="type2">*아파트 재고량이 5,000세대 미만인 시군구 제외(단,강원도 및 전라남도(고흥군은 공표지역에 포함됨)는 3,000세대 미만)</p>
+                               </div>
+                            </li>
+                            <li>연립다세대
+                               <ul class="list_st3">
+                                  <li>목표모집단 : 전국의 거래 가능한 연립다세대</li>
+                                  <li>조사모집단 : 도서지역, 임대용, 국공유, 전매제한, 건축물양성화 등을 제외한 정상 거래 가능한 연립다세대</li>
+                               </ul>
+                            </li>
+                            <li>단독주택
+                               <ul class="list_st3">
+                                  <li>목표모집단 : 전국의 거래 가능한 단독주택</li>
+                                  <li>조사모집단 : 도서지역, 공가, 국공유 등을 제외한 정상거래 가능한 단독주택</li>
+                               </ul>
+                            </li>
+                         </ul>
+                      </li>
+                      <li>추출틀
+                         <p>주택가격정보체계 DB</p>
+                      </li>
+                      <li>추출단위
+                         <p>주택(개별 호)</p>
+                      </li>
+                      <li>층화
+                         <ul class="list_st2">
+                            <li>아파트 - <span class="r1_line_bgB"><a href="#" target="_self" title="전국의 아파트를 203개 시군구로 1단계 층화">지역구분</a></span>및 <span class="r1_line_bgB"><a href="#" target="_self" title="각 시군구 내의 아파트를 주택규모에 따라 7개 층으로 구분하여 2단계 층화">주택규모</a></span></li>
+                            <li>단독, 연립다세대 - <span class="r1_line_bgB"><a href="#" target="_self" title="17개 시도로 1단계 층화 후 추출단위 정렬하여 2차 층화">지역구분</a></span></li>
+                         </ul>
+                      </li>
+                      <li>표본추출법
+                         <p><span class="r1_line_bgB"><a href="#" target="_self" title="전체 주택을 지역별, 주택규모별, 주택건축연령별로 층화한 후, 각 층별로 표본을 배정하고 읍ㆍ면ㆍ동 또는 아파트와 연립주택 단지를 기준으로 집락을 추출하는 방식으로 표본을 추출">층화 2단계 확률비례 집락추출법</a></span></p>
+                      </li>
+                      <li>표본규모
+                         <ul class="list_st2">
+                            <li>월간 - 48,170호(아파트 37,619호, 연립 6,626호, 단독 3,925호)</li>
+                            <li>주간 - 33,500호</li>
+                         </ul>
+                      </li>
+                      <li>표본오차
+                         <p>상대표준오차 CV(%)=표준오차/추정값 * 100</p>
+                      </li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">상세조사방법</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>주택가격동향 상세산정방법
+                         <ul class="list_st2">
+                            <li>당해 월 조사대상(표본) 실거래 사례 및 가격형성요인이 유사한 인근 지역의 실거래 사례를 기반으로 매물정보, 시세정보, 부동산중개업소 의견 등을 종합적으로 참고하여 표본가격 산정<br>
+                               <ol class="list_ol2">
+                                  <li><span class="num">01</span>조사대상(표본)의 당해 월 실거래 사례가 있는 경우, 실거래가격 적정성 검토 후 표본가격으로 산정</li>
+                                  <li><span class="num">02</span>조사대상(표본)의 당해 월 실거래 사례가 없는 경우, 동일 단지 유사거래 사례 및 매물 가격 등을 활용하여 표본가격으로 산정</li>
+                                  <li><span class="num">03</span>조사대상(표본)의 당해 월 유사거래 사례가 없는 경우, 인근 단지 최근 거래 사례 및 매물 가격 등을 활용하여 표본가격으로 산정</li>
+                               </ol>
+                            </li>
+                         </ul>
+                      </li>
+                   </ul>
+                </td>
+             </tr>
+          </tbody>
+       </table>
+    </div>
+ </div>
+ <h2 class="text-title2">
+    <a href="#title">
+       <span class="title">지수 산정 및 편제</span>
+       <span class="arrow">내용열기</span>
+    </a>
+ </h2>
+ <div class="meta-inforamtion-area" style="display:none;">
+    <div class="rone_tbl_st">
+       <table>
+          <caption>
+             전국주택가격동향조사 지수 산정 및 편제
+          </caption>
+          <colgroup>
+             <col style="width: 175px;">
+             <col>
+          </colgroup>
+          <tbody>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">지수분류</h4>
+                </th>
+                <td>가격지수</td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">기준시점</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>월간 : 2026.6 = 100</li>
+                      <li>주간 : 2026.7.6. = 100</li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">지수산식</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>매매가격지수, 전세가격지수, 월세가격지수
+                         <ul class="list_st2">
+                            <li>Jevons index 방법론 적용</li>
+                            <li>최소공표단위지수(아파트, 종합 : 시군구별지수 | 단독, 연립 : 시도 생활권역별 지수</li>
+                         </ul>
+                         <div class="box_st2 rsp_img"><img alt="Ij = (∏i=1^nj (xi)^(1/nj)), 
+ 단, 
+ Ij: j지역 지수, 
+ xi = (Pt_i / P0_i), 
+ P0_i: i표본의 기준시점 조사가격, 
+ Pt_i: i표본의 t시점(비교시점) 조사가격, 
+ nj: j지역 표본수" src="/r-one/images/rone/portal/img0202_tab03_01.png"></div>
+                      </li>
+                      <li>광역단위 지수 : 최소공표단위지수를 결합하여 작성하는 상위 지역별 지수(시도/전국/수도권/지방 등) 예를 들어, d라는 광역단위 지역 내 d1,d2 의 최소 공표단위지역이 포함되어 있는 경우
+                         <div class="box_st2 rsp_img"><img alt="Id = (Id1^h1 × Id2^h2),
+ 단,
+ Id: d광역지역 지수,
+ Id1, Id2: d광역지역에 포함된 최소 공표지역 지수들,
+ h1, h2: 최소 공표지역별 가중치" src="/r-one/images/rone/portal/img0202_tab03_02.png"></div>
+                      </li>
+                      <li>(매매/전세/월세) 수급동향
+                         <ul class="list_st2">
+                            <li>조사자들을 대상으로 표본이 속한 단지별 동향을 5점척도 설문응답 형식으로 조사함</li>
+                            <li>수급동향 5점척도(1.매도문의많음 2.매도문의다소있음 3.비슷 4.매수문의다소있음 5.매수문의많음)</li>
+                            <li>각 응답별 백분율(%) 계산 후<br>
+                            수급동향 = 100-1*(1) - 0.5*(2) + 0.5*(4) + 1*(5)</li>
+                         </ul>
+                      </li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">가중치</h4>
+                </th>
+                <td>2025년 기준 주택재고량</td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">변동률 산식</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>전월비
+                         <ul class="list_st2">
+                            <li>{(당월지수 - 전월지수) / 전월지수} * 100</li>
+                         </ul>
+                      </li>
+                      <li>전년말비
+                         <ul class="list_st2">
+                            <li>{(당월지수 - 전년말지수) / 전년말 지수} * 100</li>
+                         </ul>
+                      </li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">편제방법</h4>
+                </th>
+                <td>
+                   <div class="rsp_img ac"><img alt="기준시점 대비 조사시점 가격비의 기하평균 방식으로 → 주탁가격지수 산출(월간, 주간)" src="/r-one/images/rone/portal/img0202_tab03_03.png"></div>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">대표품목</h4>
+                </th>
+                <td>
+                   <ul class="list_st2">
+                      <li>주택매매/전세/월세지수</li>
+                      <li>주택가격</li>
+                      <li>매매가격 대비 전세가격 비율, 전세가격 대비 보증금 비율</li>
+                      <li>소득 대비 주택가격비(PIR)</li>
+                      <li>주택구매력 지수(HAI)</li>
+                      <li>주택시장 수급동향</li>
+                      <li>전월세전환율</li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">기준물량(가격)</h4>
+                </th>
+                <td>2026.6월(2026.6 지수 = 100.0)</td>
+             </tr>
+          </tbody>
+       </table>
+    </div>
+ </div>
+ <h2 class="text-title2">
+    <a href="#title">
+       <span class="title">자료제공</span>
+       <span class="arrow">내용열기</span>
+    </a>
+ </h2>
+ <div class="meta-inforamtion-area" style="display:none;">
+    <div class="rone_tbl_st">
+       <table>
+          <caption>
+             전국주택가격동향조사 자료제공
+          </caption>
+          <colgroup>
+             <col style="width: 175px;">
+             <col style="width: px;">
+          </colgroup>
+          <tbody>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">공표방법</h4>
+                </th>
+                <td>
+                   <ul class="rone_inbox01">
+                      <li>언론(보도자료)</li>
+                      <li>전산망(인터넷)</li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">공표범위</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>주택 종합 및 아파트 : 195개 시군구(78시, 8군, 109구)</li>
+                      <li>연립 및 단독주택 :16개 시도 및 생활권역</li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">공표주기</h4>
+                </th>
+                <td>월간 및 주간</td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">공표시기</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>월간 - 익월 15일(발표일이 휴일인 경우 그 다음날)</li>
+                      <li>주간 - 매주 목요일(공표일이 휴일 등의 사유로 변경될 경우에는 그 익일)</li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">간행물명</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>월간 - 주택가격동향</li>
+                      <li>주간 - 주간 아파트가격동향</li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">자료검색</h4>
+                </th>
+                <td>
+                   <p>주간아파트가격동향(매주), 전국주택가격동향(매월)</p>
+                   <ul class="list_st1">
+                      <li>보도자료
+                         <ul class="list_st2">
+                            <li>주간 및 월간 공표시 R-ONE 홈페이지에 게시</li>
+                            <li>부동산정책 → 보도자료 → 주간아파트가격동향조사(주간)</li>
+                            <li>부동산정책 → 보도자료 → 전국주택가격동향조사(월간)</li>
+                         </ul>
+                      </li>
+                      <li>R-ONE
+                         <ul class="list_st2">
+                            <li><span class="impactColor1"><a class="bu_link" href="/r-one/main.do" rel="noopener" target="_blank" title="새 창 열림(부동산통계정보시스템 홈페이지)">http://www.reb.or.kr/r-one/main.do</a></span></li>
+                            <li>부동산통계돋보기 → 전국주택가격동향조사(지수 및 변동률 조회)</li>
+                            <li>공개자료실 → 공표 및 분석보고서 → 전국주택가격동향조사(월간·주간 엑셀파일 다운)</li>
+                         </ul>
+                      </li>
+                      <li>통계누리
+                         <ul class="list_st2">
+                            <li><span class="impactColor1"><a class="bu_link" href="http://stat.molit.go.kr/" rel="noopener" target="_blank" title="새 창 열림(통계누리 홈페이지)">http://stat.molit.go.kr/</a></span></li>
+                            <li>주택 > 승인통계 > 전국주택가격동향조사</li>
+                         </ul>
+                      </li>
+                      <li>KOSIS
+                         <ul class="list_st2">
+                            <li><span class="impactColor1"><a class="bu_link" href="http://www.kosis.kr/" rel="noopener" target="_blank" title="새 창 열림(KOSIS 홈페이지)">http://www.kosis.kr/</a></span></li>
+                            <li>국내통계 > 주제별통계 > 건설·주택·토지 > 주택 > 전국주택가격동향조사</li>
+                         </ul>
+                      </li>
+                   </ul>
+                </td>
+             </tr>
+          </tbody>
+       </table>
+    </div>
+ </div>
+ <h2 class="text-title2">
+    <a href="#title">
+       <span class="title">용어해설</span>
+       <span class="arrow">내용열기</span>
+    </a>
+ </h2>
+ <div class="meta-inforamtion-area" style="display:none;">
+    <div class="rone_tbl_st">
+       <table>
+          <caption>
+             전국주택가격동향조사 용어해설
+          </caption>
+          <colgroup>
+             <col style="width: 175px;">
+             <col style="width: px;">
+          </colgroup>
+          <tbody>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">용어해설</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>
+                         <span class="impactColor1">지수 변동률</span>
+                         <p>기준시점에 대한 비교시점의 증감률을 의미하며, 아래의 산식으로 구할 수 있음<br>
+			 변동률(%) = (비교시점 - 기준시점) / 기준시점 X 100 <br>
+			※ 지수 변동률은 주택가격이 아닌 주택가격지수를 활용하여 변동률을 계산</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">평균 및 중위 주택가격</span>
+                         <p>평균 주택가격 : 표본 가격을 산술평균하여 산정(단위 : 천원)</p>
+                         <p>중위 주택가격 : 표본 가격을 크기순으로 배열했을 때 중앙에 위치하는 가격으로 산정(단위 : 천원)</p>
+                         <p>평균 단위가격 : 표본 평균가격을 전용면적(m²)으로 나누어 m²당 가격으로 산정(단위 : 천원/m²)</p>
+                         <p>중위 단위가격 : 표본 중위가격을 전용면적(m²)으로 나누어 m²당 가격으로 산정(단위 : 천원/m²)<br>
+                         ※ 평균 및 중위가격 등은 표본분포에 민감하게 반응하는 지표이므로 표본 전면 개편(확대, 보정) 시 지수의 변동률과 다를 수 있어 시계열적 해석에 유의</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">매매가격 대비 전세가격</span>
+                         <p>평균 매매가격 대비 전세가격 : 표본 전세가격 / 매매가격 값을 구한 뒤, 지역별로 산술평균 산출</p>
+                         <p>중위 매매가격 대비 전세가격 : 표본 전세가격 / 매매가격 값을 구한 뒤, 지역별로 중위값 산출</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">전세가격 대비 월세보증금</span>
+                         <p>평균 전세가격 대비 월세보증금 : 표본 월세보증금 / 전세가격 값을 구한 뒤, 지역별로 산술평균 산출</p>
+                         <p>중위 전세가격 대비 월세보증금 : 표본 월세보증금 / 전세가격 값을 구한 뒤, 지역별로 중위값 산출</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">전월세전환율</span>
+                         <p>1) 전월세 전환율 정의 : 전월세전환율이란 보증금을 월세로 전환시 적용되는 비율로 임대인은 요구수익률, 임차인은 전월세 선택 및 월세 계약시 기회비용 계산하는 지표로 활용</p>
+                         <img alt="전월세 전환율 계산식_261001" src="/r-one/images/rone/portal/img0202_tab05_01.png">
+                         <p>2) 아파트의 경우 139개 시군구 공표, 비아파트의 경우 16개 시도 및 생활권역 공표</p>
+                         <p>3) 규모구분(전용면적기준)</p>
+                         <img alt="전월세 전환율 규모구분_261006" src="/r-one/images/rone/portal/img0202_tab05_02.png">
+                      </li>
+                      <li>
+                         <span class="impactColor1">CV(상대표준오차)</span>
+                         <p>해당 지역 내 표본 가격이 얼마나 고르게 분포하고 있는지를 나타내는 지표</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">5분위 평균주택가격</span>
+                         <p>주택가격을 가격 순으로 5등분한 5개 분위별 평균 주택 가격</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">주택가격 5분위 배율</span>
+                         <p>주택가격 상위 20% 평균(5분위 가격)을 주택가격 하위20% 평균(1분위 가격)으로 나눈 값이며, 고가주택과 저가 주택 간의 가격격차를 나타내는 것으로 배율이 높을수록 가격 격차가 심하다는 것을 의미</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">연소득대비 주택 가격 비율 (PIR:Price to Income Ratio)</span>
+                         <p>연소득대비 주택가격비율인 PIR은 주택 구매능력을 나타내는 주요 지표로 주택가격을 가구당 연소득으로 나눈 배수이며,몇 년치 소득을 저축해야만 대출을 받지 않고 자력으로 주택을 구입할 수 있는지를 알 수 있음</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">주택구매력지수(HAI:Housing Affordability Index)</span>
+                         <p>중간 정도의 소득을 가진 가구가 금융기관의 대출을 받아 중간가격 정도의 주택을 구입한다고 가정할 때,현재의 소득으로 대출 원리금 상환에 필요한 금액을 부담할 수 있는 능력을 의미<br>
+                         HAI가 100보다 크면 중간 정도의 소득을 가진 가구가 중간가격 정도의 주택을 큰 무리 없이 구입할 수 있다는 것을 나타내며,HAI가 상승하면 주택구매력이 증가한다는 것을 나타냄</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">단독주택</span>
+                         <p>원칙적으로 1가구만이 단독으로 거주할 수 있도록 건축된 독립주택</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">다가구주택</span>
+                         <p>다세대주택처럼 여러 세대가 독립적으로 거주할 수 있으나 현행법상 세대구분 등기가 불가능한 일종의 단독주택</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">다세대주택</span>
+                         <p>1동당 건물면적이 660제곱미터 이하이며 2세대 이상 거주할 수있는 주택으로 보통 지하1층, 지상3층 이하로 되어 있고 지하도 독립된 주거생활을 할 수 있으며, 다가구주택과 다른 점은 구분등기가 가능</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">연립주택</span>
+                         <p>대지,복도,계단 및 설비 등의 일부 또는 전부를 공동으로 사용하는 하나의 건축물 안에 각 가구마다 독립된 주거생활을 영위할 수 있는 4층 이하의 공동주택</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">아파트</span>
+                         <p>5개 층 이상의 공동주택</p>
+                      </li>
+                      <li>
+                         <span class="impactColor1">시도권역</span>
+                         <p>수도권 : 서울, 경기, 인천</p>
+                         <p>지방 : 수도권을 제외한 전 지역</p>
+                         <p>5대광역시 : 부산, 대구, 대전, 울산, 인천</p>
+                         <p>4대광역시 : 부산, 대구, 대전, 울산</p>
+                         <p>8개 도 : 경기, 강원, 충북, 충남, 전북, 경북, 경남, 제주</p>
+                         <p>7개 도 : 강원, 충북, 충남, 전북, 경북, 경남, 제주</p>
+                         <p>&nbsp;</p>
+                         <p><span style="font-weight:bold;">(서울)</span> 강북권역, 도심권, 동북권, 서북권, 강남권역, 서남권, 동남권</p>
+                         <p>강북권역</p>
+                         <p>도심권 (종로, 중, 용산)</p>
+                         <p>동북권 (성동, 광진, 동대문, 중랑, 성북, 강북, 도봉, 노원)</p>
+                         <p>서북권 (은평, 서대문, 마포)</p>
+                         <p>강남권역</p>
+                         <p>서남권 (양천, 강서, 구로, 금천, 영등포, 동작, 관악)</p>
+                         <p>동남권 (서초, 강남, 송파, 강동)</p>
+                         <p>&nbsp;</p>
+                         <p><span style="font-weight:bold;">(경기)</span> 경부1,2권, 서해안권, 동부1,2권, 경의권, 경원권</p>
+                         <p>경부1권 : 과천, 안양, 성남, 군포, 의왕</p>
+                         <p>경부2권 : 안성, 용인, 수원</p>
+                         <p>서해안권 : 부천, 안산, 시흥, 광명, 화성, 오산, 평택</p>
+                         <p>동부1권 : 남양주, 구리, 하남, 광주</p>
+                         <p>동부2권 : 이천, 여주</p>
+                         <p>경의권 : 김포, 고양, 파주</p>
+                         <p>경원권 : 포천, 동두천, 양주, 의정부</p>
+                         <p>&nbsp;</p>
+                         <p><span style="font-weight:bold;">(부산)</span> 중부산권/동부산권/서부산권</p>
+                         <p>중부산권 : 중, 서, 동, 영도, 부산진, 남, 연제, 수영</p>
+                         <p>동부산권 : 해운대, 금정, 동래, 기장</p>
+                         <p>서부산권 : 북, 강서, 사상, 사하</p>
+                      </li>
+                   </ul>
+                </td>
+             </tr>
+          </tbody>
+       </table>
+    </div>
+ </div>
+ <h2 class="text-title2">
+    <a href="#title">
+       <span class="title">기타</span>
+       <span class="arrow">내용열기</span>
+    </a>
+ </h2>
+ <div class="meta-inforamtion-area" style="display:none;">
+    <div class="rone_tbl_st">
+       <table>
+          <caption>
+             전국주택가격동향조사 기타
+          </caption>
+          <colgroup>
+             <col style="width: 175px;">
+             <col>
+          </colgroup>
+          <tbody>
+             <!-- <tr><th scope="row"><h4 class="rone_tit1">이용시 유의점</h4></th><td><p>주간표본은 월간표본과 동일하지 않고, 조사기간 등이 상이하므로 주간조사의 결과는 월간조사와 상이할 수 있음</p></td></tr>-->
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">연락처</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>정책문의
+                         <p>국토교통부 주택정책과(☎ 044-201-3324/3328, <span class="impactColor1"><a class="bu_link" href="http://www.molit.go.kr" target="_blank" rel="noopener" title="새 창 열림(국토교통부 홈페이지)">http://www.molit.go.kr</a></span> )</p>
+                      </li>
+                      <li>조사·통계문의
+                         <p>한국부동산원 부동산통계처 주택통계부(☎ 053-663-8505/8510, <span class="impactColor1"><a class="bu_link" href="/reb/main.do" target="_blank" rel="noopener" title="새 창 열림(한국부동산원 홈페이지)">http://www.reb.or.kr/reb/main.do</a></span>)</p>
+                      </li>
+                   </ul>
+                </td>
+             </tr>
+             <tr>
+                <th scope="row">
+                   <h4 class="rone_tit1">해외사례</h4>
+                </th>
+                <td>
+                   <ul class="list_st1">
+                      <li>미국
+                         <div class="box_st6">
+                            <div class="clearfix">
+                               <div class="fl">
+                                  <ul class="list_st2">
+                                     <li><span class="impactColor1"><a class="bu_link" href="https://fhfa.gov" rel="noopener" target="_blank" title="새 창 열림(연방주택기업감독청 홈페이지)">케이스-쉴러 지수</a></span></li>
+                                  </ul>
+                               </div>
+                               <p class="btns ar">
+                                  <a class="btn navy sml icon" href="/r-one/portal/compose/downloadStatMetaFile.do?fName=house_example1" target="_self" title="S&P CORELOGIC CASE-SHILLER 10-CITY COMPOSITE HOME PRICE NSA INDEX 내려받기">내려받기<i aria-hidden="true" class="xi-arrow-bottom"></i></a>
+                                  <a class="btn navy sml icon" href="/r-one/portal/compose/downloadStatMetaFile.do?fName=house_example2" target="_self" title="S&P CORELOGIC CASE-SHILLER 20-CITY COMPOSITE HOME PRICE NSA INDEX 내려받기">내려받기<i aria-hidden="true" class="xi-arrow-bottom"></i></a>
+                                  <a class="btn navy sml icon" href="/r-one/portal/compose/downloadStatMetaFile.do?fName=house_example3" target="_self" title="S&P CORELOGIC CASE-SHILLER U.S. NATIONAL HOME PRICE NSA INDEX 내려받기">내려받기<i aria-hidden="true" class="xi-arrow-bottom"></i></a>
+                               </p>
+                            </div>
+                            <div class="clearfix">
+                               <div class="fl InpSel_w60">
+                                  <ul class="list_st2">
+                                     <li><span class="impactColor1"><a class="bu_link" href="http://www.nahb.org/en/research/housing-economics/housing-indexes/housing-market-index.aspx" target="_blank" rel="noopener" title="새 창 열림(전미주택건설업협회 홈페이지)">주택시장지수</a></span></li>
+                                  </ul>
+                               </div>
+                            </div>
+                         </div>
+                      </li>
+                      <li>영국
+                         <div class="box_st6">
+                            <div class="clearfix">
+                               <div class="fl InpSel_w60">
+                                  <ul class="list_st2">
+                                     <li><span class="impactColor1"><a class="bu_link" href="http://landregistry.data.gov.uk/app/hpi" rel="noopener" target="_blank" title="새 창 열림(토지등록청(Land-Registry) 주택가격지수)">토지등록청(Land-Registry) 주택가격지수</a></span></li>
+                                  </ul>
+                               </div>
+                               <p class="btns fr InpSel_w40 ar"><a class="btn navy sml icon" href="/r-one/portal/compose/downloadStatMetaFile.do?fName=house_example4" target="_self" title="UK House Price Index summary 내려받기">내려받기<i aria-hidden="true" class="xi-arrow-bottom"></i></a></p>
+                               <div class="fl InpSel_w60">
+                                  <ul class="list_st2">
+                                     <li><span class="impactColor1"><a class="bu_link" href="http://landregistry.data.gov.uk" rel="noopener" target="_blank" title="새 창 열림(토지등록청(Land-Registry) 주택가격지수 보고서)">토지등록청(Land-Registry) 주택가격지수 보고서</a></span></li>
+                                  </ul>
+                               </div>
+                            </div>
+                         </div>
+                      </li>
+                      <li>일본
+                         <div class="box_st6">
+                            <div class="clearfix">
+                               <div class="fl InpSel_w60">
+                                  <ul class="list_st2">
+                                     <li><span class="impactColor1"><a class="bu_link" href="economy.com/japan/house-price-index" rel="noopener" target="_blank" title="새 창 열림(주택가격지수(일본))">주택가격지수</a></span></li>
+                                  </ul>
+                               </div>
+                               <p class="btns fr InpSel_w40 ar"><a class="btn navy sml icon" href="/r-one/portal/compose/downloadStatMetaFile.do?fName=house_example5" target="_self" title="Property Price Index 내려받기">내려받기<i aria-hidden="true" class="xi-arrow-bottom"></i></a></p>
+                            </div>
+                         </div>
+                      </li>
+                      <li>중국
+                         <div class="box_st6">
+                            <ul class="list_st2">
+                               <li><span class="impactColor1"><a class="bu_link" href="http://fdc.fang.com/index/baichengindex.aspx" rel="noopener" target="_blank" title="새 창 열림(중국지수연구원 100개도시 주택가격지수)">중국지수연구원 100개도시 주택가격지수</a></span></li>
+                               <li><span class="impactColor1"><a class="bu_link" href="http://fdc.fang.com/index/XinFangIndex.aspx" rel="noopener" target="_blank" title="새 창 열림(중국지수연구원 신규주택가격지수)">중국지수연구원 신규주택가격지수</a></span></li>
+                               <li><span class="impactColor1"><a class="bu_link" href="http://fdc.fang.com/index/ErShouFangIndex.aspx" rel="noopener" target="_blank" title="새 창 열림(중국지수연구원 중고주택가격지수)">중국지수연구원 중고주택가격지수</a></span></li>
+                            </ul>
+                         </div>
+                      </li>
+                      <li>캐나다
+                         <div class="box_st6">
+                            <ul class="list_st2">
+                               <li><span class="impactColor1"><a class="bu_link" href="https://housepriceindex.ca" rel="noopener" target="_blank" title="새 창 열림(주택가격지수)">주택가격지수</a></span></li>
+                            </ul>
+                         </div>
+                      </li>
+                   </ul>
+                </td>
+             </tr>
+          </tbody>
+       </table>
+ <div class="meta_infoarea_new">
+                             <div class="title"><h4>기타참고자료</h4></div>
+                             <div class="content">
+<h4 class="tit2"> 지수별 특성 비교 </h4>
+                                 <div class="tbl_st">
+                                     <table>
+                                         <caption>
+                                             지수별 특성 비교
+                                         </caption>
+                                         <colgroup>
+                                             <col span="4" style="width: 25%;">
+                                         </colgroup>
+                                         <thead>
+                                         <tr>
+                                             <th rowspan="2" scope="col">구분</th>
+                                             <th colspan="3" scope="col">지수 유형</th>
+                                         </tr>
+                                         <tr>
+                                             <th scope="col">제본스지수</th>
+                                             <th scope="col">칼리지수</th>
+                                             <th scope="col">듀토지수</th>
+                                         </tr>
+                                         </thead>
+                                         <tbody>
+                                         <tr>
+                                             <th scope="row">사용 기관</th>
+                                             <td>한국부동산원<br>
+                                                 전국주택가격동향조사</td>
+                                             <td>KB<br>
+                                                 주택가격동향조사</td>
+                                             <td>듀토지수<br>
+                                                 주택가격 조사</td>
+                                         </tr>
+                                         <tr>
+                                             <th scope="row">기본 산식</th>
+                                             <td><img alt="IJ = (∏i=1^n (pti / p0i))^(1/n)" src="/r-one/images/rone/portal/img0202_t06_01.png"></td>
+                                             <td><img alt="IC = Σi=1^n (1/n) × (pti / p0i) = (1/n) × Σi=1^n (pti / p0i)" src="/r-one/images/rone/portal/img0202_t06_02.png"></td>
+                                             <td><img alt="ID = (Σi=1^n pti) / (Σi=1^n p0i) = Σi=1^n (pti / p0i) × (p0i / Σi=1^n p0i)" src="/r-one/images/rone/portal/img0202_t06_03.png"></td>
+                                         </tr>
+                                         <tr>
+                                             <th scope="row">의미</th>
+                                             <td class="al">
+                                                 <ul class="list_st1">
+                                                     <li>두 시점 가격비율의 기하평균</li>
+                                                 </ul>
+                                             </td>
+                                             <td class="al">
+                                                 <ul class="list_st1">
+                                                     <li>두 시점 가격비율의 산술평균</li>
+                                                     <li>산술평균은 기하평균보다 크거나 같기 때문에 칼리 지수는 제본스 지수보다 크거나 같게 나타나게 됨</li>
+                                                 </ul>
+                                             </td>
+                                             <td class="al">
+                                                 <ul class="list_st1">
+                                                     <li>표본주택가격 총 합계의 두 시점 비율이므로 고가주택의 가격 변동률에 영향을 더욱 많이 받는 지수</li>
+                                                 </ul>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <th scope="row">비교 특성</th>
+                                             <td class="al" colspan="3">
+                                                 <ul class="list_st1">
+                                                     <li>지수 이론에서는 동등추출확률방법에 의한 지수 중에서 제본스 지수가 가장 이상적인 지수로 알려져 있으며, 이에 따라 ILO 등에서는 동등추출확률방법을 사용할 경우 제본스 지수를 사용할 것을 권고하고 있음</li>
+                                                     <li>지수의 다른 조건(표본, 동일주택가정, 조사방법)이 모두 동일하다고 하고 지수산출식만 다르다고 가정했을 때, 변동성은 듀토지수가 가장 클 가능성이 높고 이어 칼리 지수, 제본스 지수 순으로 변동성이 크게 나타날 것임</li>
+                                                 </ul>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <th rowspan="3" scope="row">예시</th>
+                                             <td class="al" colspan="3">
+                                                 <ul class="list_st1">
+                                                     <li>주택 A,B,C,D의 ‘20년 가격이 10,000 / 10,000 / 10,000 / 20,000 이고 ‘21년 가격이 10,000 / 10,000 / 10,000 / 50,000 라고 할 때, 각 지수별 변동률 계산</li>
+                                                 </ul>
+                                             </td>
+                                         </tr>
+                                         <tr>
+                                             <td>기하평균 변동률<br>
+                                                 (주택가격동향)</td>
+                                             <td>산술평균 변동률<br>
+                                                 (KB)</td>
+                                             <td>시가총액 변동률<br>
+                                                 (R114,공시가격)</td>
+                                         </tr>
+                                         <tr>
+                                             <td>(1.0 × 1.0 × 1.0 × 2.5)<sup>1/4</sup><br>
+                                                 = <u>1.257</u><br>
+                                                 가격 변동률: 25.7%</td>
+                                             <td>(1.0 + 1.0 + 1.0 + 2.5) / 4<br>
+                                                 = <u>1.375</u><br>
+                                                 가격 변동률: 37.5%</td>
+                                             <td>(8.0 / 5.0)<br>
+                                                 = <u>1.600</u><br>
+                                                 가격 변동률: 60.0%</td>
+                                         </tr>
+                                         </tbody>
+                                     </table>
+                                 </div>
+                             </div>                             
+			     <div class="content">    
+<h4 class="tit2"> 전국주택가격동향조사 표본수(아파트) </h4>
+<div class="tbl_st">
+	<table>
+		<caption>월간 주간 표본수</caption>
+		<colgroup>
+			<col style="width: 30%;">
+				<col style="width: 35%;">
+					<col style="width: 35%;">
+		</colgroup>
+		<thead>
+			<tr>
+				<th scope="col">구분</th>
+				<th scope="col">주간</th>
+				<th scope="col">월간</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">전국</th>
+				<td class="center">33,500</td>
+				<td class="center">37,619</td>
+			</tr>
+			<tr>
+				<th scope="row">수도권</th>
+				<td class="center">16,075</td>
+				<td class="center">17,893</td>
+			</tr>
+			<tr>
+				<th scope="row">지방</th>
+				<td class="center">17,425</td>
+				<td class="center">19,726</td>
+			</tr>
+			<tr>
+				<th scope="row">서울</th>
+				<td class="center">4,958</td>
+				<td class="center">5,513</td>
+			</tr>
+			<tr>
+				<th scope="row">경기</th>
+				<td class="center">9,061</td>
+				<td class="center">10,094</td>
+			</tr>
+			<tr>
+				<th scope="row">인천</th>
+				<td class="center">2,056</td>
+				<td class="center">2,286</td>
+			</tr>
+			<tr>
+				<th scope="row">부산</th>
+				<td class="center">2,579</td>
+				<td class="center">2,868</td>
+			</tr>
+			<tr>
+				<th scope="row">대구</th>
+				<td class="center">1,787</td>
+				<td class="center">1,986</td>
+			</tr>
+			<tr>
+				<th scope="row">광주</th>
+				<td class="center">1,220</td>
+				<td class="center">1,357</td>
+			</tr>
+			<tr>
+				<th scope="row">대전</th>
+				<td class="center">1,074</td>
+				<td class="center">1,194</td>
+			</tr>
+			<tr>
+				<th scope="row">울산</th>
+				<td class="center">877</td>
+				<td class="center">975</td>
+			</tr>
+			<tr>
+				<th scope="row">세종</th>
+				<td class="center">334</td>
+				<td class="center">372</td>
+			</tr>
+			<tr>
+				<th scope="row">강원</th>
+				<td class="center">959</td>
+				<td class="center">1,155</td>
+			</tr>
+			<tr>
+				<th scope="row">충북</th>
+				<td class="center">1,061</td>
+				<td class="center">1,233</td>
+			</tr>
+			<tr>
+				<th scope="row">충남</th>
+				<td class="center">1,419</td>
+				<td class="center">1,610</td>
+			</tr>
+			<tr>
+				<th scope="row">전북</th>
+				<td class="center">1,120</td>
+				<td class="center">1,282</td>
+			</tr>
+			<tr>
+				<th scope="row">전남</th>
+				<td class="center">911</td>
+				<td class="center">1,088</td>
+			</tr>
+			<tr>
+				<th scope="row">경북</th>
+				<td class="center">1,551</td>
+				<td class="center">1,741</td>
+			</tr>
+			<tr>
+				<th scope="row">경남</th>
+				<td class="center">2,325</td>
+				<td class="center">2,634</td>
+			</tr>
+			<tr>
+				<th scope="row">제주</th>
+				<td class="center">208</td>
+				<td class="center">231</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+			     </div>       
+                         </div>
+    </div>
+ </div>
+		
+			</div></div>
+		
+		
+	
+</div>
+<!-- 공공누리 -->
+
+	
+
+								<!-- //서브페이지 -->
+								
+								<!-- 페이지 만족도 및 담당자 -->
+								<div id="charge-satisfy">
+									<div class="satisfaction">
+										
+										
+
+
+
+
+
+									</div>
+								</div>
+								<!-- //페이지 만족도 및 담당자 -->
+							</div>
+							<!-- //서브콘텐츠 -->
+						</div>
+						<!-- //서브 우측 -->
+					</div>
+					<!-- //container -->
+				</div>
+				<!-- //sub_content_wrap -->
+			</div>
+			<!-- //contents -->
+			
+			<!-- 퀵메뉴 -->     
+            
+
+
+	
+
+
+
+	<div class="Quickmn">
+		<h2 class="hid">바로가기</h2>
+		<ul id="quickList">
+		</ul>
+		<a href="#none" title="상단으로 이동하기" class="top"><span class="hid">상단으로 이동하기</span><i class="xi-long-arrow-up"></i></a>
+	</div>
+	<script>
+	$(function(){
+		selectAutoChViewList();
+		function selectAutoChViewList(){
+			var quickListHtml= "";
+			var optionPtrn = "<li><a href='%URL'%TARGET%TITLE>%DATA</a></li>";
+			$.ajax({
+				type : "POST",
+				url : "/reb/gl/link/selectLinkList.do",
+				success : function(result){
+					for(var i=0;i<result.length;i++){
+						 
+						var glanWordsInfo1 = result[i].aTitle;
+						var glanWordsInfo2 = result[i].glanWordsInfo;
+						
+						var glanLinkInfo = result[i].glanLinkInfo;
+						
+						var glanLinkUseAt = result[i].glanLinkUseAt;
+						
+						var newWinAt = result[i].newWinAt;
+						if(glanLinkUseAt == "Y"){
+							
+							var targetInfo = "";
+							var titleAddMsg = "";
+							if(newWinAt == "Y"){
+								targetInfo = " target='_blank' ";
+								titleAddMsg ="(새창)";
+							}
+							
+							if(glanLinkInfo.indexOf("http://") < 0 && glanLinkInfo.indexOf("https://") < 0){
+								glanLinkInfo = glanLinkInfo;
+							} 
+							
+							quickListHtml += optionPtrn.replace('%URL', glanLinkInfo).replace('%TARGET',targetInfo).replace('%TITLE', ' title="'+glanWordsInfo1+" 바로가기"+titleAddMsg+'"').replace('%DATA',glanWordsInfo2);
+						}
+ 					}
+					$('#quickList').append(quickListHtml);
+				},
+				error : function(result){   
+					alert("오류가 발생하였습니다.\n관리자에게 문의하세요.");
+				}	
+			});
+		}
+				
+	})		
+ 	</script>
+               
+            <!-- 퀵메뉴 -->
+
+			<!-- footer -->
+			
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+<!--footer-->
+<footer>
+	<div class="familyWrap">
+		<div>
+			<ul class="link-family">
+				
+					
+						
+							
+								
+								<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9614&amp;cntntsId=1109" onclick="mainLinkStats('정보공개', '/reb/cm/cntnts/cntntsView.do?mi=9614&amp;cntntsId=1109', 'reb', 'N');" >정보공개</a></li>
+								
+							
+						
+							
+								
+								<li><a href="/reb/na/ntt/selectNttList.do?mi=9665&amp;bbsId=1152" onclick="mainLinkStats('고객의 소리', '/reb/na/ntt/selectNttList.do?mi=9665&amp;bbsId=1152', 'reb', 'N');" >고객의 소리</a></li>
+								
+							
+						
+							
+								
+								<li><a href="javascript:void(0)" onclick="return app_link();">부동산정보앱</a></li>
+								
+							
+						
+							
+								
+								<li><a href="https://rms.reb.or.kr/main/rmsLogin.do" onclick="mainLinkStats('협력공인중개사', 'https://rms.reb.or.kr/main/rmsLogin.do', 'reb', 'Y');" target="_blank" title="새창 이동">협력공인중개사</a></li>
+								
+							
+							
+					
+				
+			</ul>
+			<div class="select-family">
+				
+					
+						
+							<div class="selectWrap related">
+								<button type="button" class="selectBtn" aria-expanded="false"
+									aria-controls="relatedSiteList">관련사이트</button>
+								<ul id="relatedSiteList" class="list-select" hidden>
+									
+										<li><a href="https://www.clean.go.kr/index.es?sid=a1"
+											target="_blank" title="새창 이동">국민권익위원회 운영 청렴포털 부패공익신고</a></li>
+									
+										<li><a href="https://plus.gov.kr/"
+											target="_blank" title="새창 이동">정부24</a></li>
+									
+										<li><a href="https://data.iros.go.kr/"
+											target="_blank" title="새창 이동">대한민국 법원 등기정보광장</a></li>
+									
+										<li><a href="https://www.molit.go.kr/"
+											target="_blank" title="새창 이동">국토교통부</a></li>
+									
+										<li><a href="http://rebp.co.kr/"
+											target="_blank" title="새창 이동">REB파트너스(주)</a></li>
+									
+								</ul>
+							</div>
+						
+						
+					
+						
+						
+							<div class="selectWrap partner">
+								<button type="button" class="selectBtn" aria-expanded="false"
+									aria-controls="partnerSiteList">협력사이트</button>
+								<ul id="partnerSiteList" class="list-select" hidden>
+									
+										<li><a href="https://www.kais.kr/login/login.htm"
+											target="_blank" title="새창 이동">감정평가 정보체계</a></li>
+									
+										<li><a href="https://eapt.reb.or.kr:448/eapt/index.jsp?"
+											target="_blank" title="새창 이동">부동산 공시업무 지원시스템</a></li>
+									
+								</ul>
+							</div>
+						
+					
+				
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div>
+			<div class="infoWrap">
+				<h2>
+					<a href="/reb/main.do"><span class="hid">REB 한국부동산원</span></a>
+				</h2>
+				<p class="address">(우)41068 대구광역시 동구 이노밸리로 291(신서동)</p>
+				<div class="cs">
+					<p>
+						<a href="tel:1644-2828"><span>한국부동산원 콜센터</span><span>1644-2828</span></a>
+					</p>
+					<p>
+						<a href="tel:1644-7445"><span>청약홈 콜센터</span><span>1644-7445</span></a>
+					</p>
+				</div>
+			</div>
+			<nav>
+				<h3 class="hid">SNS 채널</h3>
+				<ul class="snsWrap">
+					<li><a href="https://www.instagram.com/reb_kr_pr" target="blank" rel="noopener" title="새창 열기"><span class="hid">인스타</span></a></li>
+	                <li><a href="https://www.youtube.com/channel/UCXiDk1r8MDRqTD0j2BxNWWQ" target="blank" rel="noopener" title="새창 열기"><span class="hid">유튜브</span></a></li>
+	                <li><a href="https://pf.kakao.com/_DpKwb" target="blank" rel="noopener" title="새창 열기"><span class="hid">카카오채널</span></a></li>
+	                <li><a href="https://www.facebook.com/kabforu" target="blank" rel="noopener" title="새창 열기"><span class="hid">페이스북</span></a></li>
+				</ul>
+			</nav>
+		</div>
+		<div>
+			<div class="policyWrap">
+				<h3 class="hid">이용약관</h3>
+				<ul>
+					
+						
+							
+								<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9975&cntntsId=1291" >개인정보처리방침</a></li>
+							
+								<li><a href="/reb/cm/cntnts/cntntsView.do?mi=10267&cntntsId=1332" >고정형 영상정보처리기기 운영·방침</a></li>
+							
+								<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9976&cntntsId=1292" >공공데이터 이용정책</a></li>
+							
+								<li><a href="/reb/cm/cntnts/cntntsView.do?mi=9977&cntntsId=1293" >저작권정책</a></li>
+							
+						
+					
+				</ul>
+				<p>&copy; KOREA REAL ESTATE BOARD. ALL RIGHTS RESERVED.</p>
+			</div>
+			<div class="markWrap">
+				<a title="새창" href="http://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank" rel="noopener"><img alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)" src="/images/web/reb/layout/mark.png"></a>				
+			</div>
+		</div>
+	</div>
+</footer>
+<!--//footer-->
+<script>
+window.onload = function(){
+	var os = mobileChk();
+	var item = document.querySelector(".shareWrap > li + li");
+	if(os==="nomobile"){
+		item.style.display = "block";
+	}
+
+	var btnItem = document.querySelector(".btns2");
+	if(os!=="nomobile"){
+		btnItem.style.display = "block";
+	}
+}
+
+
+function app_link(){
+	var os = mobileChk();
+	if(os==="android"){		
+		alert("플레이스토어로 이동합니다.");
+		location.href="https://play.google.com/store/apps/details?id=kr.co.kba";
+	}else if(os==="ios"){
+		alert("앱스토어로 이동합니다.");
+		location.href="https://apps.apple.com/app/id961500660";
+	}else if(os==="nomobile"){
+		alert("모바일에서 이용가능합니다.");
+	}
+}
+
+
+function mobileChk(){
+   var mobile = (/iphone|ipad|ipod|android/i.test(navigator.userAgent.toLowerCase()));
+   if (mobile) {// 유저에이전트를 불러와서 OS를 구분합니다.
+      var userAgent = navigator.userAgent.toLowerCase();
+      if (userAgent.search("android") > -1)
+         currentOS = "android";
+      else if ((userAgent.search("iphone") > -1) || (userAgent.search("ipod") > -1) || (userAgent.search("ipad") > -1))
+         currentOS = "ios";
+      else currentOS = "nomobile";
+   } else {// 모바일이 아닐 때
+      currentOS = "nomobile";
+   }
+   return currentOS;
+}
+
+</script>
+
+
+   
+			<!-- // footer -->
+			
+		</div>
+		<!-- //wrap -->
+    	    	
+		<!-- menuForm -->
+		
+
+
+<!--공통 메뉴 Form -->
+<form name="mainMenuForm" id="mainMenuForm" method="post">
+	<input type="hidden" name="mi" id="nowMenuId" value="" />
+	<input type="hidden" name="paramNm" id="paramNm" value=""/>
+	<input type="hidden" name="paramVal" id="paramVal" value=""/>
+</form>
+<!--/공통 메뉴 Form -->
+	
+<script>
+$(function() {	
+	//공통 submit
+	$(".menuFormBtn").click(function(){
+		var paramVal = $(this).attr('data-param'); 
+		var paramNm = $(this).attr('data-nm');
+		var paramUrl = $(this).attr('data-url');
+		$("#paramVal").val(paramVal);
+		$("#paramNm").val(paramNm);
+		setTrimMenuId();
+		$("#mainMenuForm").attr('action', paramUrl).submit();
+	});	
+});
+
+//파라미터 페이지 이동 
+function goParamPage( setVal, setNm, setUrl ) {
+	$("#paramNm").val(setNm);
+	$("#paramVal").val(setVal);
+	setTrimMenuId();
+	$("#mainMenuForm").attr('action', setUrl).submit();
+};
+
+//메뉴 아이디 공백제거
+function setTrimMenuId(){
+	var nowMenuId = $.trim($("#nowMenuId").val());
+	$("nowMenuId").val(nowMenuId);
+};
+</script>
+		<!-- /menuForm -->
+    	
+    	
+		
+
+
+
+<!-- 개별 홈페이지 소스 분리 -->
+
+
+
+
+
+<script>
+
+$(document).ready(function(){
+	
+	//팝업 사이즈 조정(모바일시)
+	var width = $(window).width();
+	var height = $(window).height();
+	
+	
+	
+	
+	var widthPopUpList = $(window).width();
+	var heightPopUpList = $(window).height();
+	
+	
+	
+});
+</script>
+
+<!-- 일반팝업 리스트 -->
+
+
+<!-- //일반팝업리스트 -->
+
+
+<!-- 팝업 리스트 -->
+
+<div id="popUpList" style="display:none;">
+	<div style="background:url('/images/ap/cm/popupBg.png') no-repeat; background-size:100% 100%; width:100%; height:100%;">
+		<div style="position:relative; padding:15px 15px;">
+			<div style="background:#fff;">
+				
+			</div>
+		</div>
+	</div>
+	<div style="background-color:#3b568f; height:20px; text-align:right; width:100%"><a href="javascript:" class="popupCookieSet" data-expiredays="1" style="color:#fff" data-seq="popCookiePopUpList_reb" >하루동안 열지 않음 [ 클릭 ] </a></div>
+</div>
+<!-- //팝업 리스트 -->
+
+<!-- 팝업 리스트 상세보기 -->
+
+
+<!-- //팝업 리스트 상세보기 -->
+    </body>
+    <!-- 웹접근성 2025 : aria-expanded 사용자 선택에 따라 변화하는 기능 설명 -->
+    
+    <script src="/js/common/common_main.js"></script>
+</html>
+
+

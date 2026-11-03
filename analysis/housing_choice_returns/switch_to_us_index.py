@@ -1,0 +1,4 @@
+﻿from pathlib import Path
+O=Path('analysis/housing_choice_returns')
+p=O/'calculate.py';s=p.read_text(encoding='utf8').replace('for start in [2006,2015,2020]:','for start in [2006,2015,2020,2022]:');p.write_text(s,encoding='utf8')
+p=O/'build_chart.py';s=p.read_text(encoding='utf8').replace('for(let y of [2006,2015,2020])','for(let y of [2022,2020,2015,2006])').replace('draw(2015);','draw(2006);').replace('<h1>S&P500과 수도권 아파트, 얼마나 올랐을까?</h1>','<h1>2006년 이후 수도권 집값과 미국 S&P500</h1><p>국내 ETF 대신 미국 달러 기준 지표로 비교합니다. 최근 완료연도인 2025년 기준 · 3년 / 5년 / 10년 / 최장 19년</p>').replace('파랑: 수도권 아파트 · 회색: S&P500 가격 · 초록: S&P500 배당 포함','파랑: 수도권 아파트 · 회색: 미국 S&P500 가격지수 · 초록: 배당 포함 참고계열').replace('<b>비교 조건을 확인해 주세요.</b>','<b>비교 조건</b><p>부동산 자료는 2006년부터 시작합니다. 2006→2025년은 19년이며 20년 수익률로 표기하지 않습니다. S&P500 가격지수 상승률을 주 비교로 보고, 배당 포함 참고계열을 함께 제공합니다.</p>');p.write_text(s,encoding='utf8')

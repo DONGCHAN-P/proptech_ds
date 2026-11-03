@@ -1,0 +1,125 @@
+{
+  "status": "blocked_missing_f32le_muxer",
+  "scope": "0.25s local codec smoke only; no TTS, voice listening, full render or actual mix",
+  "sample_rate": 48000,
+  "channels": 1,
+  "format": "f32le",
+  "media_lock_sha256": "e31a9736fa079d83da74987dabda67c7ae22b49c5c04f844f50619b9d4bf4259",
+  "checks": [
+    {
+      "asset_id": "channel_brand_intro_clean_v7",
+      "sha256": "4b3a5d468a1f8dc62c6e24a78ebd9649a71b634d99d5b568d765a622827e0ecc",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "5.013000"
+        }
+      }
+    },
+    {
+      "asset_id": "channel_brand_outro_clean_v7",
+      "sha256": "a60dfb4e37f2e292fe52acc00cb4f679ff37a07bc9cb8f0b4e14d4527f067310",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1920,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "10.005000"
+        }
+      }
+    },
+    {
+      "asset_id": "existing_channel_bgm",
+      "sha256": "891d3ea47e443e590a6562a1e2bff37c8830817b3cdf604091f92bfe87e5cc4f",
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "mp3",
+            "codec_type": "audio",
+            "sample_rate": "44100",
+            "channels": 2,
+            "r_frame_rate": "0/0"
+          }
+        ],
+        "format": {
+          "duration": "195.892250"
+        }
+      }
+    },
+    {
+      "source": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/reusable_assets/thinking_music.mp3",
+      "argv": [
+        "C:\\projects\\realestate_reco\\video\\node_modules\\@remotion\\compositor-win32-x64-msvc\\ffmpeg.exe",
+        "-v",
+        "error",
+        "-i",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\regional-price-recovery-20261022\\outputs\\production-v1-jun\\reusable_assets\\thinking_music.mp3",
+        "-vn",
+        "-t",
+        "0.25",
+        "-ac",
+        "1",
+        "-ar",
+        "48000",
+        "-f",
+        "f32le",
+        "pipe:1"
+      ],
+      "returncode": 4294967274,
+      "stderr": "[AVFormatContext @ 0000022cafc88800] Requested output format 'f32le' is not known.\r\n[out#0 @ 0000022cafc87280] Error initializing the muxer for pipe:1: Invalid argument\r\nError opening output file pipe:1.\r\nError opening output files: Invalid argument\r\n",
+      "pipe_decode_pass": false
+    }
+  ],
+  "external_calls": 0,
+  "core_installed": true,
+  "core_version": "0.8.181",
+  "core_package_sha256": "1d29bfbe33d57a07558f4f59c8a6331172fc1857b77f28f906006763be365b77",
+  "ffmpeg_sha256": "5d1aa3706022b2f1814993c7108ca689a0a2e6fe9af91ec15dbf0bc05d6d39e4",
+  "ffprobe_sha256": "66468651d02cec1beac8003fcb4aec42363390810ca4435165ef3cf1439c7261",
+  "carve_runtime_tested": false
+}

@@ -1,0 +1,16 @@
+{
+  "episode_id": "apartment-top20-race-20261029",
+  "request": "기존 지역별 쇼츠 대신 단지 중위가격 전체 TOP20을 보여주고 순위가 바뀌면 단지 위치가 바뀌도록 재제작. 새로운 단지 진입과 추월 강조.",
+  "studio_root": "C:/projects/realestate_reco/video-agent-studio",
+  "baseline_episode": "search-to-choice-shorts-20261029",
+  "format": "9:16 data-driven ranking race",
+  "area_basis": "previous 84 <= exclusive area < 85 square meters retained",
+  "period_candidate": "2006Q4 to 2026Q2, rolling 4-quarter transaction median",
+  "eligibility_candidate": "at least 5 valid trades in the trailing 4 quarters per complex",
+  "scope": "all identifiable collected apartment complexes; explicitly label collected regions, do not claim nationwide complete coverage",
+  "duration_candidate_seconds": 45,
+  "audio": "reuse prior original local BGM; no new paid voice/image/music generation",
+  "approval_basis": "current remake request and prior continuing delegation, no intermediate approval questions",
+  "upload_requested": false,
+  "guides": ["guides/영상제작_마스터가이드.md", "config/vertical_video_safe_area.json"]
+}

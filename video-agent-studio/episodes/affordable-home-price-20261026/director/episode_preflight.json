@@ -1,0 +1,210 @@
+{
+  "schema_version": "1.0",
+  "status": "private_upload_complete_with_declared_review_coverage",
+  "episode_id": "affordable-home-price-20261026",
+  "guide": "guides/제작_기본가이드.md",
+  "feedback_ledger": "guides/사용자_피드백_이력.md",
+  "baseline": {
+    "previous_video": "https://www.youtube.com/watch?v=exEGpjcqdF0",
+    "current_video": "config/current_video.json",
+    "sha256": "28b2623aed5b74478a113ab453825cb809311c7bc46ce5f94b1c90cc009273b8",
+    "script_revision": "v2",
+    "audio_revision": "production-injoon-v3",
+    "brand_intro": "director/production-v1/media_assets.json",
+    "brand_outro": "director/production-v1/media_assets.json",
+    "bgm": "Thinking Music / Kevin MacLeod / CC BY 4.0",
+    "public_baseline_snapshot": {
+      "version": "gyosan-v5-jun",
+      "episode": "hanam-gyosan-20261019",
+      "video": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/production-v5-jun/gyosan_v5_jun.mp4",
+      "subtitles": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/production-v5-jun/gyosan_v5_jun.srt",
+      "script": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/script-review-v5/script_v5.md",
+      "voice": "ElevenLabs Jun",
+      "duration_seconds": 1075.7333333333333,
+      "youtube_url": "https://youtu.be/XWAWnSrz7FE",
+      "publication_status": "public",
+      "previous_video_url": "https://youtu.be/eLF3-1ZaraQ",
+      "report": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/release-prep-v5-jun/release_summary.json",
+      "sha256": "13abf7fc0b873036ad72c0b578251cb08e64ef514ecfe09fa636e26905ed214e"
+    }
+  },
+  "approvals": {
+    "topic": {
+      "decision_id": "affordable-price-topic-direct-20261026",
+      "artifact_hashes": {},
+      "status": "authorized_by_direct_user_request"
+    },
+    "script": {
+      "decision_id": "affordable-price-script-v2-9658fc12dc",
+      "artifact_hashes": {
+        "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3"
+      },
+      "status": "dual_content_approved"
+    },
+    "budget": {
+      "decision_id": "affordable-price-free-budget-20261026",
+      "artifact_hashes": {},
+      "status": "authorized_free_only",
+      "credits_cap": 0,
+      "cash_cap": 0,
+      "automatic_retry_allowed": false
+    },
+    "completed": {
+      "decision_id": "affordable-price-voice-v3-visual-v4-completed",
+      "artifact_hashes": {
+        "video_sha256": "ad9df5989c019395e9ea9eb7877c81300cf78e9ab611536ebcc7431c8fc3609a",
+        "subtitles_sha256": "070ae5624c211f8aaa6b862079d068820bf7e6ad84013e628b7bb40d6718120b"
+      },
+      "status": "current_version_condition_satisfied"
+    },
+    "pre_upload": {
+      "decision_id": "affordable-price-voice-v3-visual-v4-private-pre-upload",
+      "artifact_hashes": {
+        "video_sha256": "ad9df5989c019395e9ea9eb7877c81300cf78e9ab611536ebcc7431c8fc3609a",
+        "subtitles_sha256": "070ae5624c211f8aaa6b862079d068820bf7e6ad84013e628b7bb40d6718120b"
+      },
+      "status": "current_version_condition_satisfied",
+      "visibility": "private"
+    }
+  },
+  "story": {
+    "opening_question": "보유자금 2억5천만원에 주담대 총액상한 6억원을 더하면 8억5천만원 집을 살 수 있을까요?",
+    "previous_episode_reference": "https://www.youtube.com/watch?v=exEGpjcqdF0",
+    "next_episode_promise": "정한 예산 안에서 지역과 단지를 데이터로 비교하는 단계",
+    "order": [
+      "같은 2억5천만원으로도 살 수 있는 집은 왜 달라질까?",
+      "보유자산 중 잔금에 쓸 돈은 얼마인가?",
+      "LTV는 무엇을 제한하나?",
+      "DSR과 스트레스 DSR은 무엇을 제한하나?",
+      "집값 외 세금과 복비는 얼마인가?",
+      "6억·9억·12억 주택의 한도는 어디서 막히나?",
+      "정책대출은 어떤 가구와 주택에 열려 있나?",
+      "신생아 특례의 장점과 필요한 자기자금은?",
+      "은행 한도를 다 쓰는 것과 내가 감당하는 것은 어떻게 다른가?",
+      "매물 보기 전에 무엇을 확정해야 하나?"
+    ],
+    "each_section_answers": [
+      "용어의 뜻",
+      "대상과 조건",
+      "계산 근거",
+      "막히는 제약",
+      "필요 현금과 월 부담"
+    ],
+    "candidate_scope": "synthetic_affordability_cases"
+  },
+  "visual_defaults": {
+    "dynamic_map_zoom": false,
+    "transient_location_insert": false,
+    "locator": "not_applicable_financial_episode",
+    "macro_block_pins": false,
+    "captions_white_box_body_continuous": true,
+    "caption_box_exceptions": [
+      "unvoiced_brand_intro",
+      "unvoiced_brand_outro",
+      "silent_CTA_hold"
+    ],
+    "time_explanations_horizontal_axis": true,
+    "map_labels_near_targets": true,
+    "ai_placeholder_requires_resolution_before_delivery": true,
+    "outro_gap_after_final_spoken_word_seconds": 3
+  },
+  "representative_previews": [
+    "cash_waterfall",
+    "LTV_DSR_constraint",
+    "tax_curve_and_broker_step",
+    "6_9_12_case_table",
+    "policy_and_newborn_timeline",
+    "monthly_budget_shock",
+    "CTA_outro_boundary"
+  ],
+  "facts_required": [
+    "official_effective_dates",
+    "household_income_debt_assets",
+    "region_firstbuyer_and_collateral",
+    "DSR_DTI_stress_vs_contract_rate",
+    "price_product_tax_fee_thresholds",
+    "guarantee_room_deduction",
+    "relief_conditions",
+    "source_rights_credit"
+  ],
+  "change_control": {
+    "issues": [],
+    "superseded_rules": [],
+    "unchanged_audio_reused": false,
+    "changed_scene_ids": [],
+    "single_timing_lock": "narration/production-injoon-v3/final_timing.json",
+    "package_frozen_before_hash": true
+  },
+  "qa": {
+    "timeline_font_bbox_and_stroke_all_cases": "passed_exact_source_and_declared_encoded_samples",
+    "actual_encoded_frames": "passed_declared_samples",
+    "all_cut_boundaries_no_flash": "passed_declared_boundary_samples",
+    "inset_matches_spoken_region": "not_applicable_financial_case_episode",
+    "station_locations": "not_applicable_financial_case_episode",
+    "leaders_do_not_cross": "not_applicable_financial_case_episode",
+    "semantic_caption_original_text_match": "passed_all150",
+    "protected_numbers_units_names": "passed_all150",
+    "caption_box_exceptions": "passed_brand_and_CTA_samples",
+    "last_speech_plus_three_seconds": "passed_verified_EDL_3.020208s",
+    "full_decode": "passed_audio_and_video",
+    "continuous_playback_performed": false,
+    "actual_listening_performed": false,
+    "evidence_paths": [
+      "video-agent-studio/episodes/affordable-home-price-20261026/outputs/private-release-v2/dual_media_review.json",
+      "video-agent-studio/episodes/affordable-home-price-20261026/outputs/private-release-v2/release_validation.json"
+    ],
+    "required_open_issues": 0,
+    "caption_display_mapping_and_numeric_value_match": "passed_all_source_SRT_and_declared_encoded_samples",
+    "actual_block_plan_and_locator": "not_applicable_financial_case_episode",
+    "district_area_vs_planned_station_distinguished": "not_applicable_financial_case_episode"
+  },
+  "release": {
+    "longform": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/private-production-v1/renders/measured-v3-visual-v4-r1/affordable_home_price_private_voice_v3_visual_v4.mp4",
+    "shorts": [],
+    "title_description_sources_chapters": "dual_review_passed",
+    "thumbnail": "dual_review_passed",
+    "actual_platform_privacy": "private_verified",
+    "processing": "succeeded",
+    "studio_copyright": "unchecked",
+    "telegram_notice_receipt": null,
+    "Korean_caption_track": "serving_verified"
+  },
+  "retention": {
+    "keep": [
+      "final_uploaded_files",
+      "reproduction_source_and_dependencies",
+      "raw_research",
+      "rights_sources",
+      "approval_and_QA_records",
+      "reusable_brand_maps_audio_templates"
+    ],
+    "delete_candidates_manifest": null,
+    "dependency_audit_complete": false,
+    "deletion_executed": false
+  },
+  "vertical_video": {
+    "config": "config/vertical_video_safe_area.json",
+    "profile": "cross_platform_conservative",
+    "bounds_font_validation": "required_before_render",
+    "ui_simulation": "required_before_release",
+    "actual_device_playback": "unverified",
+    "old_burned_in_subtitle_position_reusable": false
+  },
+  "channel_style_contract": {
+    "guide": "video-agent-studio/guides/채널_톤앤매너와_복기루프.md",
+    "tokens": "config/channel_style_tokens.json",
+    "baseline_primary": "namyangju-wangsuk-20261014/readability-cta-v15",
+    "baseline_secondary": "video/out/newtown-v14-release.mp4",
+    "loop": [
+      "freeze_actual_reference_frames_once",
+      "compare_same_message_scene",
+      "fix_style_and_information_hierarchy",
+      "independent_QA_three_representative_scenes",
+      "expand_to_full",
+      "review_all_cut_boundaries_and_changed_scenes"
+    ],
+    "external_references": "explanation techniques supplement channel grammar",
+    "visual_review_v2_is_final_style": false
+  },
+  "representative_style_QA": "required_before_full_render"
+}

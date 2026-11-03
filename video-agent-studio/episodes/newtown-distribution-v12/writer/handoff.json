@@ -1,0 +1,16 @@
+{
+  "task_id": "distribution-v12-writer",
+  "role": "writer",
+  "status": "proposal_ready",
+  "input_revisions": {"script": "v11", "timing": "v12", "thumbnail": "v11"},
+  "outputs": ["writer/proposal.md"],
+  "affected_scene_ids": ["intro-0", "intro-5", "after-8", "return", "timing", "after-9"],
+  "checks": [
+    {"check": "대본 및 시간표 읽기", "result": "passed", "evidence": "docs/광교_동탄_v11_예고_대본.md; video/out/newtown-v12-timing.json"},
+    {"check": "현재 썸네일 직접 확인", "result": "passed", "evidence": "video/out/newtown-thumbnail-v11.png"},
+    {"check": "research/qa와 실제 의견 교환", "result": "passed", "evidence": "PACK-01 / HOOK-01 messages"},
+    {"check": "연속 재생·음성 청취·시청 유지율", "result": "unchecked", "evidence": null}
+  ],
+  "open_issue_ids": ["22.25억 원자료 대조", "공개 게시 여부 사용자 결정", "인트로 유지/단축 선택 가설"],
+  "next_role": "director"
+}

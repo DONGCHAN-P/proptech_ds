@@ -1,0 +1,20 @@
+{
+  "role": "editor",
+  "status": "rendered_pending_independent_qa",
+  "input_versions": {"script":"script-v2","audio":"audio-v1","visual":"visual-v3","director_timing":"timing-v1","previous_episode":"v14"},
+  "final_video": "editor/render_v1/namyangju-wangsuk_v1.mp4",
+  "bytes": 32124651,
+  "actual_container_duration_s": 912.988,
+  "actual_video_duration_s": 912.966667,
+  "video": {"codec":"h264","profile":"High","width":1920,"height":1080,"fps":"30/1","pixel_format":"yuv420p","frames":27389},
+  "audio": {"codec":"aac","profile":"LC","sample_rate":48000,"channels":2},
+  "evidence": ["editor/render_v1/technical.json","editor/render_v1/decode_check.json","editor/render_v1/timing_actual.json","editor/render_v1/inputs_verified.json","editor/render_v1/caption_estimates.json","editor/render_v1/decoded_audio_duration_check.json"],
+  "project": "editor/build_video_v1.py",
+  "commands": "editor/render_v1/S001_command.json through S008_command.json",
+  "verification": {"full_mp4_decode_rechecked":true,"decode_exit_code":0,"decode_error_output":"","audio_text_hash_matches":8,"paid_regeneration":false,"existing_mp4_preserved":true,"audio_listened":false,"continuous_playback":false,"platform_upload":false},
+  "caption_basis":"Character-weight estimates within measured scene durations; no forced alignment or listening verification. Korean ASS burned in. Scene boundaries follow timing_actual.json.",
+  "timing_difference": {"director_lock_s":913.3,"actual_video_s":912.966667,"difference_s":-0.333333,"reason":"All 8 decoded PCM sample durations exactly match render audio duration basis; MP3 container encoder padding differs from decoded speech duration.","action":"Every video segment is at least as long as decoded speech; no negative speech-duration margin. Actual listening and transition QA still required."},
+  "unresolved": ["Independent full visual QA","Actual audio listening and speech/caption sync","Mobile-scale text readability","Long static card holds and scene-cut relevance review"],
+  "next_role": "director and qa",
+  "telegram_notice": "No additional notice sent; director coordinates delivery notice to avoid duplicates. MP4 upload not authorized."
+}

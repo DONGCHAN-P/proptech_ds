@@ -1,0 +1,135 @@
+{
+  "episode_id": "newlywed-apartment-picks-20261101",
+  "revision": "planning-v1",
+  "decisions": [
+    {
+      "id": "D001",
+      "choice": "신혼부부 수 순위와 아파트 선택 시리즈 착수",
+      "basis": "current user instruction",
+      "status": "authorized"
+    },
+    {
+      "id": "D002",
+      "choice": "2024 수도권 구53개 주표 및 시군자치구66개/세부79개 별도 보존",
+      "basis": "prevent parent-child double counts and keep city-only regions",
+      "status": "director_research_method"
+    },
+    {
+      "id": "D003",
+      "choice": "한 권역에서 같은 예산·면적의 후보 비교",
+      "basis": "channel predecessor outro and observed data contrasts",
+      "status": "proposal_not_user_confirmed"
+    },
+    {
+      "id": "D004",
+      "choice": "현재 매물·평면·통근 검증 후 추천 문장과 화면 확정",
+      "basis": "historical transaction prices and 2024 stock counts serve different purposes",
+      "status": "required_before_production"
+    },
+    {
+      "id": "D005",
+      "choice": "음성·렌더·업로드와 외부 Claude 전송 단계는 미실행",
+      "basis": "new script/voice/budget/release scope not yet decided",
+      "status": "current_boundary"
+    },
+    {
+      "id": "D006",
+      "choice": "TOP20 ranking film, target480seconds",
+      "basis": "latest direct user revision",
+      "status": "authorized",
+      "supersedes": "D003 three-neighborhood first-film proposal"
+    },
+    {
+      "id": "D007",
+      "choice": "official research and real-place photo/map materials for all20 regions",
+      "basis": "latest direct user research/image request",
+      "status": "prepared"
+    },
+    {
+      "id": "D008",
+      "choice": "new TOP20 script is a review draft; audio timing/render follow later",
+      "basis": "AGENTS.md script stage and no current voice/budget selection",
+      "status": "pending_script_review"
+    },
+    {
+      "id": "D009",
+      "choice": "produce latest TOP20 script v3",
+      "script_sha256": "4cc70ef2ae3cabda13b560104dd96ef0df0fe1f815a5f1372ac680e729d3be17",
+      "basis": "latest direct production request",
+      "status": "authorized"
+    },
+    {
+      "id": "D010",
+      "choice": "main and two Shorts private upload after QA",
+      "basis": "latest direct user scope",
+      "status": "authorized",
+      "visibility": "private",
+      "delete_existing_videos": false
+    },
+    {
+      "id": "D011",
+      "choice": "remove13 repetitive editorial sentences to fit roughly8minutes; all20ranks and coreinsights preserved",
+      "basis": "eight-minute production request and guide against repetition",
+      "owner": "director",
+      "status": "producer_editorial_decision",
+      "artifact": "director/top20-production-v1/editorial_cut_plan.json"
+    },
+    {
+      "id": "D012",
+      "choice": "free TTS and actual PCM timing; question hook before clean5sbrand, lastword+3s then10soutro",
+      "basis": "user free TTS selection and existing channel guide",
+      "status": "timing_locked"
+    },
+    {
+      "id": "D013",
+      "choice": "Director assumes local render/assembly after editor project handoff; preserve frozen passing projects",
+      "owner": "director",
+      "paths": [
+        "editor/top20-production-v1/local_jobs.py",
+        "outputs/top20-production-v1/main",
+        "outputs/top20-production-v1/shorts"
+      ],
+      "basis": "Editor completed project/checks; old render PID22416 no longer running, receipt v1 preserved; parent starts explicit v2 render",
+      "render_version": "v2",
+      "local_runner_change": "stream stdout/stderr and persist active PID instead of buffering until exit",
+      "new_paid_generation": false
+    },
+    {
+      "id": "D020",
+      "choice": "enhance main visual hierarchy and add verified analytical content >480seconds; keep original voice and prior uploads",
+      "basis": "latest explicit user request 2026-11-02",
+      "revision": "top20-enhance-v2",
+      "owner": "director",
+      "authorization": "director/top20-enhance-v2/authorization.json"
+    },
+    {
+      "id": "D021",
+      "revision": "top20-enhance-v2",
+      "choice": "deliver8m48enhancedlocalmain with57.345s new firstmarriage comparison; keep three prior private uploads",
+      "evidence": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-enhance-v2/completion.json",
+      "status": "delivered_local_review",
+      "owner": "director"
+    },
+    {
+      "id": "D022",
+      "revision": "top20-enhance-v2",
+      "choice": "latest user authorizes private upload of enhanced free-TTS main; one Telegram notification after verified completion",
+      "authorization": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-enhance-v2/upload_authorization.json",
+      "video_id": "qu18qr0bIQw",
+      "privacy": "private",
+      "status": "uploaded_verified",
+      "source_requests": [
+        "완성된거 무료 TTS 작업해서 유튜브 비공개업로드해줘",
+        "올리면 텔레그램 메시지 하나 보내줘"
+      ]
+    },
+    {
+      "id": "D023",
+      "revision": "top20-explain-v3",
+      "source": "Telegram718066312",
+      "choice": "apply five user revision requirements; preserve current private release; verify current trade evidence before using price claims",
+      "status": "research_and_script_work_authorized",
+      "owner": "director"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "source": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-quality-v2\\shorts\\01_promo_jun_v1.mp4",
+    "source_sha256": "4086242002942ac1b0d4073e0dde4525eef0e921ee68346edec62a8180571e8b",
+    "output": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-quality-v2\\shorts\\01_promo_jun_v2.mp4",
+    "sha256": "e85ef81eab3fdc6172abbdaa331f26435f2946cc61bf2d4a4c420c745c2be132",
+    "argv": [
+      "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\media-bin\\ffmpeg.exe",
+      "-v",
+      "error",
+      "-n",
+      "-i",
+      "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-quality-v2\\shorts\\01_promo_jun_v1.mp4",
+      "-map",
+      "0",
+      "-c",
+      "copy",
+      "-bsf:v",
+      "h264_metadata=sample_aspect_ratio=1/1",
+      "-aspect",
+      "9:16",
+      "-movflags",
+      "+faststart",
+      "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-quality-v2\\shorts\\01_promo_jun_v2.mp4"
+    ],
+    "video_and_audio_reencoded": false
+  },
+  {
+    "source": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-quality-v2\\shorts\\02_summary_jun_v1.mp4",
+    "source_sha256": "2880c868eb867d4af0b8b20f6106f2a75fdb1b89ef733e652265c0fe397ced5d",
+    "output": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-quality-v2\\shorts\\02_summary_jun_v2.mp4",
+    "sha256": "a21bff1fc9162caa70dcf7db5f44ac463954c5874472926870d2058e4ca0acf0",
+    "argv": [
+      "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\media-bin\\ffmpeg.exe",
+      "-v",
+      "error",
+      "-n",
+      "-i",
+      "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-quality-v2\\shorts\\02_summary_jun_v1.mp4",
+      "-map",
+      "0",
+      "-c",
+      "copy",
+      "-bsf:v",
+      "h264_metadata=sample_aspect_ratio=1/1",
+      "-aspect",
+      "9:16",
+      "-movflags",
+      "+faststart",
+      "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-quality-v2\\shorts\\02_summary_jun_v2.mp4"
+    ],
+    "video_and_audio_reencoded": false
+  }
+]

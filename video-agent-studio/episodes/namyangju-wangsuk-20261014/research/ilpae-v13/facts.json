@@ -1,0 +1,34 @@
+{
+  "claims": [
+    {
+      "claim_id": "V13-CROP",
+      "sentence": "공식팸플릿p5와native판은회전0도,동일crop[8392451303680],3배좌표계로대응한다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=66836710",
+      "source_file": "research/map-led-v5/w2_a3_pamphlet.pdf",
+      "evidence_location": "p5; source_w2_same_board_crop.png and build_w2_board.py",
+      "reference_date": "2026-04",
+      "verified_on": "2026-10-15",
+      "status": "verified"
+    },
+    {
+      "claim_id": "V13-OMISSION",
+      "sentence": "현재native판은역기호바탕의업무시설띠와인접철도시설·철도선표시를생략하여역기호가상업시설뒤빈공간에떠보인다.",
+      "source_file": "research/ilpae-v13/actual_v12_205s.png",
+      "source_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=66836710",
+      "evidence_location": "actual205sec vs officialp5 identicalcrop; source_joint_comparison.png",
+      "reference_date": "v12/2026-04source",
+      "verified_on": "2026-10-15",
+      "status": "verified"
+    },
+    {
+      "claim_id": "V13-SYMBOL",
+      "sentence": "원도상일패역가칭예정표시기호는[606848]부근이며실제역중심이나출입구좌표를확정하지않는다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=66836710",
+      "source_file": "research/map-led-v5/w2_a3_pamphlet.pdf",
+      "evidence_location": "p5 stationcircle; transform recorded in joint_geometry.json",
+      "reference_date": "2026-04",
+      "verified_on": "2026-10-15",
+      "status": "qualified"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+import fs from 'node:fs/promises';
+const query='[out:json][timeout:25];nwr(37.19,127.09,37.21,127.11)["name"~"롯데|동탄"];out center tags;';
+const r=await fetch('https://overpass-api.de/api/interpreter',{method:'POST',body:new URLSearchParams({data:query}),headers:{'User-Agent':'RealestateRecoVideo/1.0 (editorial location research)'},signal:AbortSignal.timeout(40000)});if(!r.ok)throw Error('Overpass HTTP '+r.status);const d=await r.json();await fs.writeFile('video/public/detail-maps/dongtan-osm-places.json',JSON.stringify(d,null,2));console.log(JSON.stringify(d.elements.map(p=>({id:p.id,name:p.tags?.name,lat:p.lat||p.center?.lat,lon:p.lon||p.center?.lon})),null,2));

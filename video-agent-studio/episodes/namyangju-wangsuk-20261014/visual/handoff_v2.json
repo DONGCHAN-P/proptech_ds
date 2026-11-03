@@ -1,0 +1,16 @@
+{
+  "role": "visual",
+  "revision": "visual-v2",
+  "input_versions": ["input-v1", "script-v2", "scenes-v2", "facts-v1", "visual-v1"],
+  "status": "official_district_maps_acquired",
+  "outputs": ["visual/assets_v2.json", "visual/citations_v2.json", "visual/source_retry_v2.md", "visual/nyj_3039_source.html", "visual/nyj_3317_source.html", "visual/outputs/S003_wangsuk1_official_plan.jpg", "visual/outputs/S003_wangsuk2_official_plan.jpg", "visual/outputs/S008_five_questions_review.svg"],
+  "validation": ["공개 HTTPS GET 정상 종료", "원본 JPG 실존·해상도·바이트 확인", "지도 2장 실제 이미지 육안 확인", "페이지 공공누리 제3유형 증거 저장", "기존 v1 파일 보존"],
+  "restrictions": ["지도 출처표시·변경금지, 원본 전체 정지 표시", "최신 고시 전수대조 미완료", "원본 지도에 임의 경계·노선·출입구 추가 금지"],
+  "unresolved": ["남양주 전체 개요지도·운영철도 지도 미확보", "실제 장소 사진 미확보", "편집 SVG 렌더 가독성 검수 진행", "timing lock 미완료"],
+  "notification": {"status": "requested_from_director", "direct_sent": false, "reason": "기존 notify.telegram.send 호출경로 미발견"},
+  "affected_scene_ids": ["S001", "S002", "S003", "S004", "S005", "S008"],
+  "next_owner": "director/editor",
+  "paid_services_used": false,
+  "external_files_uploaded": false,
+  "common_files_modified": false
+}

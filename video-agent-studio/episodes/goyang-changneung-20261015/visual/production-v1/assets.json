@@ -1,0 +1,66 @@
+{
+  "revision": "visual-plan-v1-update2",
+  "assets": [
+    {
+      "asset_id": "CN-VIS-S010",
+      "scene_ids": [
+        "S010"
+      ],
+      "type": "official_raster_layout_review",
+      "source_or_prompt": "research/raw/s5_landuse_20250131.jpg",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "actual_file": "outputs/visual-review-v1/S010_whole_locator_review.png",
+      "actual_place": "고양 창릉 공고 첨부 계획도",
+      "AI": false,
+      "usage_conditions": "내부 시안; 본편 배포 자산 아님",
+      "review_status": "PNG 직접 view 확인; 글자/여백/원본 전체 fit 확인; 실제 지도 위치·일정 최신성은 별도 검증 필요",
+      "upscaled": false,
+      "sha256": "24be956c140b1e98e2649c46cb5ed6b8026a140c7b972043e2223661896e1494"
+    },
+    {
+      "asset_id": "CN-VIS-S030",
+      "scene_ids": [
+        "S030"
+      ],
+      "type": "data_layout_review",
+      "source_or_prompt": "research/production-v2/calendar.json; S5학교 최신미확인 caveat",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "actual_file": "outputs/visual-review-v1/S030_calendar_review.png",
+      "actual_place": null,
+      "AI": false,
+      "usage_conditions": "내부 시안; 본편 배포 자산 아님",
+      "review_status": "갱신 PNG 직접 view 확인: 글자·날짜·비율·표본수·여백 확인; 내부 설계판으로 최종화면 승인 대상 아님",
+      "upscaled": false,
+      "sha256": "f4ee89588f580b39f7d16348d00cd504d9f4d537382454e88f33f3abcf6836fe",
+      "previous_internal_version": "outputs/visual-review-v1/S030_calendar_review_internal-v1.png",
+      "design_status": "내부 설계판; Malgun Gothic Regular/Bold 사용; 최종 v15 Pretendard 표현 통합은 편집 담당 단계"
+    },
+    {
+      "asset_id": "CN-VIS-S050",
+      "scene_ids": [
+        "S050"
+      ],
+      "type": "data_layout_review",
+      "source_or_prompt": "research/prices-v2/comparisons.json; 2026Q3 10.16조회 RTMS fresh rows",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "actual_file": "outputs/visual-review-v1/S050_comparison_review.png",
+      "actual_place": null,
+      "AI": false,
+      "usage_conditions": "내부 시안; 본편 배포 자산 아님",
+      "review_status": "갱신 PNG 직접 view 확인: 글자·날짜·비율·표본수·여백 확인; 내부 설계판으로 최종화면 승인 대상 아님",
+      "upscaled": false,
+      "sha256": "2d261bb614677dfcbd37d96ec3650cb75c63f580cf8e060a40e6ae0452e6079c",
+      "previous_internal_version": "outputs/visual-review-v1/S050_comparison_review_internal-v1.png",
+      "design_status": "내부 설계판; Malgun Gothic Regular/Bold 사용; 최종 v15 Pretendard 표현 통합은 편집 담당 단계"
+    }
+  ]
+}

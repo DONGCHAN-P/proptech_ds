@@ -1,0 +1,38 @@
+[
+  {
+    "id": "D01",
+    "choice": "candidate_B",
+    "basis": "사용자가 주제와 판단 위임. 4개 참고의 차트/순위 문법, 기존 실거래 자료. Claude concept_v1 논의 반영."
+  },
+  {
+    "id": "D02",
+    "choice": "fixed_rows_not_rank_crossing",
+    "basis": "지역명/가격 교차 겹침 방지, 최종 인사이트는 절대 가격 차이."
+  },
+  {
+    "id": "D03",
+    "choice": "silent_narration_original_local_BGM",
+    "basis": "사용자 지정 참고 형식과 맞춤. 새 유료 API0원."
+  },
+  {
+    "id": "D04",
+    "choice": "no_external_private_Analytics",
+    "basis": "Claude에는 공개 참고물 관찰·지역 집계·제작안만 전송."
+  },
+  {
+    "id": "D05",
+    "choice": "rounded_prices_half_up_0.01_eok",
+    "basis": "Claude revision_v2 지적. 1.275억→1.28억. 최종 차이는 반올림 전 원자료로 계산."
+  },
+  {
+    "id": "D06",
+    "choice": "separate_difference_panel",
+    "basis": "인천 중위값4.90억과 서울-경기차이4.90억 혼동을 막도록 독립된 진한 카드·명시적 제목 사용."
+  },
+  {
+    "id": "D07",
+    "choice": "quarter_range_labels_during_interpolation",
+    "basis": "타임랩스는 두 분기의 범위와 관측값을 연결한 흐름으로 표시. 거래 표본 수는 실제 시작·종점 홀드에서 표시.",
+    "revision": "v2"
+  }
+]

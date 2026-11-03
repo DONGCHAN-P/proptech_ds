@@ -1,0 +1,58 @@
+{
+  "issue_id": "SHORTS-V4-SAGAN",
+  "assigned_to": "Sagan",
+  "scene_ids": [
+    "S02",
+    "S03",
+    "S13",
+    "S14"
+  ],
+  "problem": "최종 독립 QA 대상이 v3에서 v4로 변경됨. 이전 v3 파일을 최종으로 검수/업로드하지 않도록 전달 필요.",
+  "evidence": {
+    "final_files": [
+      {
+        "id": "promo",
+        "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-quality-v2\\shorts\\01_promo_jun_v4.mp4",
+        "sha256": "215968608a3a6d5159f35195e65378de4d6b9f8ed63f19e5d00bc97059997953",
+        "duration_s": 38.166666666666664
+      },
+      {
+        "id": "summary",
+        "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-quality-v2\\shorts\\02_summary_jun_v4.mp4",
+        "sha256": "cd72bb6c827b6695c2f24d6ed2474f7c6901943114443fe639c33168bcc703c9",
+        "duration_s": 51.46666666666667
+      }
+    ],
+    "changed_asset": {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\visual\\jun-user-script-v1\\outputs\\S02_house_cutout_AI.png",
+      "sha256": "b77e9bc6e1d6c50c92bcfad81cc3477212c96e1c4d22a142c6d9f30995d35ae1",
+      "source_mode": "RGBA",
+      "source_dimensions": [
+        1347,
+        1167
+      ],
+      "alpha_bbox": [
+        0,
+        0,
+        1327,
+        1143
+      ],
+      "fixed_container_px": [
+        270,
+        208
+      ],
+      "fixed_marker_px": [
+        241,
+        208
+      ],
+      "behavior": "Same asset, displayed size and orientation at all price markers; centers stay in their v3 slots"
+    },
+    "regression": "editor/jun-quality-v2/shorts/v4_regression.json",
+    "frames": "editor/jun-quality-v2/shorts/qa/portrait-shorts-v4-wood-house/v4_changed_markers_sheet.jpg"
+  },
+  "proposal": "Sagan은 현재 v4 두 MP4와 동명 SRT를 최종 검수. 목재 표식의 본편 톤 일치·크기 고정·가림을 중점 확인하고 실제 청취/연속 재생 범위를 별도로 기록.",
+  "impact": "음성 AAC·WAV·SRT는 v3와 바이트 동일. 타이밍/막대/안전영역 유지. 공개 홍보 설명에서 내부 제작 문구만 제거.",
+  "delivery_method": "peer 직접 메시지 도구가 없어 editor 파일로 알림을 준비하고 parent에 경로 전달",
+  "direct_message_sent": false,
+  "status": "ready_for_parent_relay_to_Sagan"
+}

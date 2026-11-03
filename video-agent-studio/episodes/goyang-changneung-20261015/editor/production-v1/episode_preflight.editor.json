@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "status": "editor_preparation_only_not_approval",
+  "episode_id": "goyang-changneung-20261015",
+  "guide": "guides/제작_기본가이드.md",
+  "feedback_ledger": "guides/사용자_피드백_이력.md",
+  "baseline": {
+    "previous_video": "video-agent-studio/episodes/namyangju-wangsuk-20261014/outputs/readability-cta-v15/namyangju_readability_cta_full_v15.mp4",
+    "current_video": null,
+    "sha256": "1eb3bee44b4c5953adddfc42f1663afd7da758778bc832000fb155720216c43e",
+    "script_revision": "script-v2 draft unapproved",
+    "audio_revision": null,
+    "brand_intro": "outputs/editor-preflight-v1/brand_intro_generic_v1.mp4",
+    "brand_outro": "outputs/editor-preflight-v1/brand_outro_generic_v1.mp4",
+    "bgm": "video/public/namyangju-map-led-v6/data_city_ambient_v1.wav"
+  },
+  "approvals": {
+    "topic": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "unverified"
+    },
+    "script": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "unverified"
+    },
+    "budget": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "unverified",
+      "credits_cap": null,
+      "cash_cap": null,
+      "automatic_retry_allowed": false
+    },
+    "completed": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "unverified"
+    },
+    "pre_upload": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "unverified",
+      "visibility": null
+    }
+  },
+  "story": {
+    "opening_question": null,
+    "previous_episode_reference": null,
+    "next_episode_promise": null,
+    "order": [
+      "whole_landuse",
+      "jobs",
+      "transport",
+      "price",
+      "daily_facilities",
+      "nearby_supply",
+      "outside_alternatives",
+      "regional_candidates"
+    ],
+    "each_section_answers": [
+      "where",
+      "resident_benefit",
+      "usable_date",
+      "move_in_gap",
+      "suitable_household"
+    ],
+    "candidate_scope": "conditional_ordinary_market_by_region"
+  },
+  "visual_defaults": {
+    "dynamic_map_zoom": false,
+    "transient_location_insert": false,
+    "locator": "one_current_district_whole_plan_left_with_detail_rectangle",
+    "macro_block_pins": false,
+    "captions_white_box_body_continuous": true,
+    "caption_box_exceptions": [
+      "unvoiced_brand_intro",
+      "unvoiced_brand_outro",
+      "silent_CTA_hold"
+    ],
+    "time_explanations_horizontal_axis": true,
+    "map_labels_near_targets": true,
+    "ai_placeholder_requires_resolution_before_delivery": true,
+    "outro_gap_after_final_spoken_word_seconds": 3
+  },
+  "representative_previews": [
+    "whole_to_detail_locator",
+    "rail_station",
+    "longest_timeline",
+    "price_comparison",
+    "candidate_leaders",
+    "CTA_outro_boundary"
+  ],
+  "facts_required": [
+    "official_geometry_and_plan_date",
+    "station_status_and_location_certainty",
+    "block_use_and_housing_type",
+    "price_area_floor_period_cancellation_sample_statistic",
+    "resale_and_occupancy_conditions",
+    "source_rights_credit"
+  ],
+  "change_control": {
+    "issues": [],
+    "superseded_rules": [],
+    "unchanged_audio_reused": null,
+    "changed_scene_ids": [],
+    "single_timing_lock": null,
+    "package_frozen_before_hash": false
+  },
+  "qa": {
+    "timeline_font_bbox_and_stroke_all_cases": "unverified",
+    "actual_encoded_frames": "unverified",
+    "all_cut_boundaries_no_flash": "unverified",
+    "inset_matches_spoken_region": "unverified",
+    "station_locations": "unverified",
+    "leaders_do_not_cross": "unverified",
+    "semantic_caption_original_text_match": "unverified",
+    "protected_numbers_units_names": "unverified",
+    "caption_box_exceptions": "unverified",
+    "last_speech_plus_three_seconds": "unverified",
+    "full_decode": "unverified",
+    "continuous_playback_performed": false,
+    "actual_listening_performed": false,
+    "evidence_paths": [],
+    "required_open_issues": null
+  },
+  "release": {
+    "longform": null,
+    "shorts": [],
+    "title_description_sources_chapters": "unverified",
+    "thumbnail": "unverified",
+    "actual_platform_privacy": "unverified",
+    "processing": "unverified",
+    "studio_copyright": "unverified",
+    "telegram_notice_receipt": null
+  },
+  "retention": {
+    "keep": [
+      "final_uploaded_files",
+      "reproduction_source_and_dependencies",
+      "raw_research",
+      "rights_sources",
+      "approval_and_QA_records",
+      "reusable_brand_maps_audio_templates"
+    ],
+    "delete_candidates_manifest": null,
+    "dependency_audit_complete": false,
+    "deletion_executed": false
+  },
+  "vertical_video": {
+    "config": "config/vertical_video_safe_area.json",
+    "profile": "cross_platform_conservative",
+    "bounds_font_validation": "required_before_render",
+    "ui_simulation": "required_before_release",
+    "actual_device_playback": "unverified",
+    "old_burned_in_subtitle_position_reusable": false
+  },
+  "editor_scope": {
+    "guide_applied": true,
+    "originals_preserved": true,
+    "geography_required": true,
+    "previews_are_final": false,
+    "brand_only_rendered": true,
+    "full_rendered": false,
+    "paid_calls": 0,
+    "actual_listening": false,
+    "continuous_playback": false
+  }
+}

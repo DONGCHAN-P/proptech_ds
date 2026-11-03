@@ -1,0 +1,31 @@
+{
+  "episode_id": "newtown-reference",
+  "decisions": [
+    {
+      "decision_id": "D001",
+      "issue_id": null,
+      "scene_ids": [],
+      "decision": "7역할을 준비하고 요청에 필요한 역할만 실행한다.",
+      "reason": "기존 영상 소스팩과 썸네일 단독 요청에 전체 제작 흐름을 강제하지 않음.",
+      "status": "configured"
+    },
+    {
+      "decision_id": "D002",
+      "issue_id": null,
+      "scene_ids": [],
+      "decision": "시각자료/음성 준비는 병렬, 최종 시간 파일명은 timing lock 이후.",
+      "reason": "음성 길이 변경에 따른 재생성과 파일명 재작업 감소.",
+      "status": "configured"
+    },
+    {
+      "decision_id": "D003",
+      "issue_id": null,
+      "scene_ids": [
+        "S005"
+      ],
+      "decision": "산업단지 AI는 경기도청 실제 사진의 대체로 사용하지 않는다.",
+      "reason": "03:43 원본 장소와 AI 소스의 용도 구분.",
+      "status": "configured"
+    }
+  ]
+}

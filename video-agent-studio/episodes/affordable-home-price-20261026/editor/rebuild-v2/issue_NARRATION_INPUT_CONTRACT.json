@@ -1,0 +1,24 @@
+{
+  "issue_id":"REBUILD_V2_NARRATION_INPUT_CONTRACT",
+  "scene_ids":["R 장면 전체; 정확한 ID는 부모 대본 잠금 후 연결"],
+  "to":"director → narration Feynman (직접 메시지 도구 없음)",
+  "status":"ready_for_parent_relay",
+  "problem":"발화에 맞춘 차감·분할 모션에는 실제 장면 음성과 writer beat의 정확한 시간/원문 연결이 필요합니다.",
+  "evidence":["부모가 전달한 schema 초안 scene별 audio_path/duration_s/last_speech_end_s/cues/beatanchors", "비교 QA C01·C03: 완성도표/테두리 강조와 집아이콘↔라벨 겹침 결함"],
+  "proposal":{
+    "schema":"editor/rebuild-v2/voice_input.schema.json",
+    "top_level":["status=timing_locked", "clock=scene_local_seconds", "script_sha256", "audio_revision", "voice", "rate=0%", "scenes"],
+    "scene":["scene_id", "audio_path", "audio_sha256", "duration_s", "last_speech_end_s", "cues", "beatanchors"],
+    "audio":"scene별 실제 PCM WAV 권장. 48kHz mono/stereo; 음성 원속도 유지. duration_s는 실제 파일 duration, 마지막 음성 뒤 PCM 꼬리 보존. 장/연속 파일만 가능하면 원본 경로와 source_in_s/out_s를 먼저 전달하여 어댑터 범위 협의.",
+    "cue":["id", "text (표시 원문)", "spoken_text (발음층, 가능하면)", "display_lines (1~2줄)", "start_s", "end_s"],
+    "beatanchor":["beat_index (writer beats 0-based)", "anchor (writer literal)", "char_start", "char_end", "start_s", "end_s", "cue_ids", "timing_basis"],
+    "span":"승인 narration의 Unicode codepoint [start,end). 같은 구절 반복 시 span으로 구분. 화면 숫자와 발음층의 span 변환표가 있으면 함께 제공.",
+    "timing_basis":["native_word_boundary", "forced_alignment", "manual_audio_verified"],
+    "no_estimated_fallback":true,
+    "tail":"editor가 마지막 정보 정지 후 최소1.2초 hold를 필요시 무음으로 추가. 전체 outro는 실제 최종발화 종료+3초 기준으로 별도 배치.",
+    "first_delivery":"승인된 6억집 자금/LTVvsDSR/월예산 대표3장면의 실제 파일+timing을 먼저 받으면 실제렌더·비교 검수 가능"
+  },
+  "impact":"실제 타이밍 입력 전에는 template check만 가능. 새로운 본편·빈대본 렌더·TTS 호출을 시작하지 않음.",
+  "questions_for_parent_relay":["이 schema로 scene별 WAV와 실제 cue/beatanchor를 받을 수 있는지 확인. 차이가 있으면 실출력 예시 한 장면만 전달해 주면 editor가 어댑트."],
+  "next_owner":"director/narration Feynman"
+}

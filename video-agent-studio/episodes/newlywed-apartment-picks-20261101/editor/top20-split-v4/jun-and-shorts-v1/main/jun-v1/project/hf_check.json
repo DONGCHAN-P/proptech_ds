@@ -1,0 +1,109 @@
+{
+  "command": [
+    "npx.cmd",
+    "--no-install",
+    "hyperframes",
+    "check",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\main\\jun-v1\\project",
+    "--at",
+    "2.000000,7.030000,44.890000,669.730000,676.730000,72.150000",
+    "--json",
+    "--snapshots",
+    "--timeout",
+    "20000"
+  ],
+  "exit_code": 0,
+  "result": {
+    "ok": true,
+    "strict": false,
+    "browserSkipped": false,
+    "lint": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "filesScanned": 1
+    },
+    "runtime": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": []
+    },
+    "layout": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "duration": 681.733333333,
+      "samples": [
+        2,
+        7.03,
+        44.89,
+        72.15,
+        669.73,
+        676.73
+      ],
+      "transitionSamples": [],
+      "transitionSamplesDropped": 0,
+      "tolerance": 2,
+      "totalIssueCount": 0,
+      "truncated": false
+    },
+    "motion": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "enabled": false,
+      "samples": 0
+    },
+    "contrast": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "enabled": true,
+      "samples": [
+        2,
+        7.03,
+        44.89,
+        72.15,
+        676.73
+      ],
+      "checked": 2,
+      "passed": 2
+    },
+    "hdr": {
+      "autoPromotion": null,
+      "inspection": "available"
+    },
+    "snapshots": {
+      "enabled": true,
+      "files": [
+        ".hyperframes\\artifacts\\snapshots\\adf6b2f1-bf40-411d-ada9-4a3958230c1d\\frame-00-at-2.0s.png",
+        ".hyperframes\\artifacts\\snapshots\\adf6b2f1-bf40-411d-ada9-4a3958230c1d\\frame-01-at-7.0s.png",
+        ".hyperframes\\artifacts\\snapshots\\adf6b2f1-bf40-411d-ada9-4a3958230c1d\\frame-02-at-44.9s.png",
+        ".hyperframes\\artifacts\\snapshots\\adf6b2f1-bf40-411d-ada9-4a3958230c1d\\frame-03-at-72.2s.png",
+        ".hyperframes\\artifacts\\snapshots\\adf6b2f1-bf40-411d-ada9-4a3958230c1d\\frame-04-at-676.7s.png"
+      ],
+      "times": [
+        2,
+        7.03,
+        44.89,
+        72.15,
+        676.73
+      ],
+      "findingFiles": []
+    },
+    "_meta": {
+      "version": "0.8.181",
+      "updateAvailable": false
+    }
+  }
+}

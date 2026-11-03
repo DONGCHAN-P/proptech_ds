@@ -1,0 +1,25 @@
+{
+  "approved": true,
+  "network_tts_authorized": true,
+  "source": "main_direct_instruction",
+  "episode_id": "affordable-home-price-20261026",
+  "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "prepared_sha256": "0c371115cbd7dfe9de40de7e1ef6f03c738bd52e974c217117878a659554ed6a",
+  "generator_sha256": "ada0c8d185fe7c120c71fb8684b7911dc3dad593f9d22adefdb29f31573c11b8",
+  "delta_manifest_sha256": "e4278ea5cc65aefab0821c186905c996db26f794eba26ac8d5d42835fb89a265",
+  "target_scenes": [
+    "S014",
+    "S019",
+    "S024",
+    "S030"
+  ],
+  "new_network_calls_max": 4,
+  "cash_cap_krw": 0,
+  "paid_calls_authorized": false,
+  "automatic_retry": false,
+  "instruction_reference": "video-agent-studio/episodes/affordable-home-price-20261026/director/production-v1/audio_generation_authorization_v3.json",
+  "instruction": "Generate exactly four clarified paragraphs with the frozen free InJoon plan. Preserve all approved display text and values, reuse41 exact raw paragraphs, stop first failure. Actual post-generation ASR and timing QA remain required.",
+  "reviewed_spoken_diff_sha256": "310807406e42db8bce3683eb70f8101fa864571dc4834251418ac90206300bac",
+  "reviewed_tests": "Producer executed test_repair_v3.py:5passed, no network calls",
+  "at_utc": "2026-10-25T21:29:06.316649+00:00"
+}

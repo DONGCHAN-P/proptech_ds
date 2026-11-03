@@ -1,0 +1,223 @@
+{
+  "revision": "commute-v3",
+  "checked_on": "2026-10-16",
+  "checked_at": "2026-10-16T01:30:00+09:00",
+  "actual_measurement": false,
+  "facts": [
+    {
+      "claim_id": "CN3-BUS-WONHEUNG",
+      "statement": "LX 교통안내는 원흥역2번출구95번→도래울마을5·6단지,3번출구046·075B·024A·024B→2·3단지,행신역1번출구024A·024B→5·6단지를 안내한다.",
+      "source_url": "https://lx.or.kr/ngyeonggi/sub04.do",
+      "evidence_location": "교통안내 버스 항목",
+      "as_of": "조회시점;안내작성일미표시",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "caution": "주변생활권연계안내이며S1/S4/S5현관앞정차와입주시노선확정아님"
+    },
+    {
+      "claim_id": "CN3-BUS-7728",
+      "statement": "7728은 도래울권역·새절역·신촌을 연결하는 서울지선버스다.",
+      "source_url": [
+        "https://bis.goyang.go.kr/",
+        "https://m.map.kakao.com/actions/busDetailInfo?busId=1100071675&busOrder=23&busStopId=31101511024"
+      ],
+      "evidence_location": "BIS노선목록/카카오노선검색색인 도래울2단지상가·원흥도래울마을·새절역",
+      "as_of": "색인작성일불명",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "caution": "광역버스아님;일자별배차·전체정류장직접결과미확보"
+    },
+    {
+      "claim_id": "CN3-TT-SEOUL-DMC",
+      "statement": "공식평일시각표 첫두열차 순서대응 산출 서울역→DMC 약12분.",
+      "source_url": [
+        "https://www.airportrailroad.com/train/normal/info/010/0",
+        "https://www.airportrailroad.com/train/normal/info/040/0"
+      ],
+      "evidence_location": "평일공항방면 서울05:20/05:40,DMC05:32/05:52",
+      "as_of": "공개현행표;시행일미표시",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "minutes": [
+        12,
+        12
+      ],
+      "method": "분단위발차차이;열차번호미표시순서대응",
+      "excludes": [
+        "접근",
+        "대기",
+        "환승",
+        "마지막보행"
+      ],
+      "caution": "서울→DMC방향;역방향자동전용금지;실측아님"
+    },
+    {
+      "claim_id": "CN3-TT-DMC-HONGDAE",
+      "statement": "공식평일시각표 첫세열차 순서대응 산출 DMC→홍대입구 약4분.",
+      "source_url": [
+        "https://www.airportrailroad.com/train/normal/info/040/0",
+        "https://www.airportrailroad.com/train/normal/info/030/0"
+      ],
+      "evidence_location": "서울방면DMC05:30/42/53→홍대05:34/46/57",
+      "as_of": "공개현행표;시행일미표시",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "minutes": [
+        4,
+        4
+      ],
+      "method": "분단위발차차이;열차번호미표시순서대응",
+      "caution": "실측아님;접근대기환승보행별도"
+    },
+    {
+      "claim_id": "CN3-TT-DMC-GONGDEOK",
+      "statement": "공식평일시각표 첫세열차 순서대응 산출 DMC→공덕 약7~8분.",
+      "source_url": [
+        "https://www.airportrailroad.com/train/normal/info/040/0",
+        "https://www.airportrailroad.com/train/normal/info/020/0"
+      ],
+      "evidence_location": "서울방면DMC05:30/42/53→공덕05:37/49/06:01",
+      "as_of": "공개현행표;시행일미표시",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "minutes": [
+        7,
+        8
+      ],
+      "method": "분단위발차차이;열차번호미표시순서대응",
+      "caution": "여의도5호선환승시간포함아님;실측아님"
+    },
+    {
+      "claim_id": "CN3-TT-DMC-GIMPO",
+      "statement": "공식평일시각표 첫세열차 순서대응 산출 DMC→김포공항 약10~11분.",
+      "source_url": [
+        "https://www.airportrailroad.com/train/normal/info/040/0",
+        "https://www.airportrailroad.com/train/normal/info/050"
+      ],
+      "evidence_location": "공항방면DMC05:32/52/06:01→김포05:43/06:02/12",
+      "as_of": "공개현행표;시행일미표시",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "minutes": [
+        10,
+        11
+      ],
+      "method": "분단위발차차이;열차번호미표시순서대응",
+      "caution": "마곡최적경로주장아님;실측아님"
+    },
+    {
+      "claim_id": "CN3-DAEGOK-GIMPO",
+      "statement": "고양시2023개통안내는 서해선대곡→김포공항9분을 제시한다.",
+      "source_url": "https://gy1pick.kr/_NBoard/board.php?bo_table=snsCont&skin=&wr_id=62",
+      "evidence_location": "소요시간항목;검색색인본문",
+      "as_of": "2023-07개통당시",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "caution": "직접열기403;최신표동일성미확인;단지접근김포환승9호선별도"
+    },
+    {
+      "claim_id": "CN3-RAIL-FUTURE",
+      "statement": "LH2026-09-30보도는고양은평선2027.01착공·2031.12개통목표,GTX-A창릉역2030개통예정을안내한다.",
+      "source_url": "https://www.xn--3-3u6ey6lv7rsa.kr/kor/CMS/Board/Board.do?board_seq=516&mCode=MN024&mgr_seq=12&mode=view",
+      "evidence_location": "본문사업일정및환승망전망",
+      "as_of": "2026-09-30",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "approved_plan",
+      "caution": "현행승차역아님;강남도심30분대는미래전망·단지현관통근보장아님"
+    },
+    {
+      "claim_id": "CN3-ROAD-PLAN",
+      "statement": "LH광역교통계획은중앙로~통일로BRT연계,버스운영지원·회차공간,광역버스체계개선,화전역환승시설,화정~도내확장,수색교확장등을제시한다.",
+      "source_url": "https://www.xn--3-3u6ey6lv7rsa.kr/kor/CMS/Contents/Contents.do?mCode=MN101",
+      "evidence_location": "주요내용A~E/도로2·4/하단유의문",
+      "as_of": "안내작성일미표시",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "approved_plan",
+      "caution": "세부노선위치설계과정확정예정;각노선번호정류장개통일근거아님"
+    },
+    {
+      "claim_id": "CN3-ILS-YEONSIN",
+      "statement": "코레일 공개 일산선 평일표의 원흥07~09시출발18편 동일열차번호 대조 결과 연신내까지 11분이다.",
+      "source_url": "https://www.korail.com/file/cubedata/COMMON/jfile/202508/06/202508061987eaed712820.xlsx",
+      "source_list_url": "https://www.korail.com/com/userBoard.do?mode=list&schBcid=ticketTable",
+      "source_file": "ilsan_official.xlsx",
+      "evidence_location": "일산(3호)선 평일_하행 원흥출발21행/목적지도착행; 열차별주소 ilsan_calculation.json",
+      "as_of": "2022-08-01 시행/2025-08-06 등록된 공개표",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "minutes": 11.0,
+      "sample_size": 18,
+      "method": "같은 열차번호 열(column)의 원흥 출발(row21)부터 목적지 도착(row40/44/66) 차감; 07:00~08:59 출발 전 열차",
+      "caution": "공식현재목록에공개된표.변경공지전수확인없음.단지접근·열차대기·목적지역출구회사이동미포함.실측아님"
+    },
+    {
+      "claim_id": "CN3-ILS-GYEONGBOK",
+      "statement": "코레일 공개 일산선 평일표의 원흥07~09시출발18편 동일열차번호 대조 결과 경복궁까지 24분이다.",
+      "source_url": "https://www.korail.com/file/cubedata/COMMON/jfile/202508/06/202508061987eaed712820.xlsx",
+      "source_list_url": "https://www.korail.com/com/userBoard.do?mode=list&schBcid=ticketTable",
+      "source_file": "ilsan_official.xlsx",
+      "evidence_location": "일산(3호)선 평일_하행 원흥출발21행/목적지도착행; 열차별주소 ilsan_calculation.json",
+      "as_of": "2022-08-01 시행/2025-08-06 등록된 공개표",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "minutes": 24.0,
+      "sample_size": 18,
+      "method": "같은 열차번호 열(column)의 원흥 출발(row21)부터 목적지 도착(row40/44/66) 차감; 07:00~08:59 출발 전 열차",
+      "caution": "공식현재목록에공개된표.변경공지전수확인없음.단지접근·열차대기·목적지역출구회사이동미포함.실측아님"
+    },
+    {
+      "claim_id": "CN3-ILS-JONGNO",
+      "statement": "코레일 공개 일산선 평일표의 원흥07~09시출발18편 동일열차번호 대조 결과 종로3가까지 28분이다.",
+      "source_url": "https://www.korail.com/file/cubedata/COMMON/jfile/202508/06/202508061987eaed712820.xlsx",
+      "source_list_url": "https://www.korail.com/com/userBoard.do?mode=list&schBcid=ticketTable",
+      "source_file": "ilsan_official.xlsx",
+      "evidence_location": "일산(3호)선 평일_하행 원흥출발21행/목적지도착행; 열차별주소 ilsan_calculation.json",
+      "as_of": "2022-08-01 시행/2025-08-06 등록된 공개표",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "minutes": 28.0,
+      "sample_size": 18,
+      "method": "같은 열차번호 열(column)의 원흥 출발(row21)부터 목적지 도착(row40/44/66) 차감; 07:00~08:59 출발 전 열차",
+      "caution": "공식현재목록에공개된표.변경공지전수확인없음.단지접근·열차대기·목적지역출구회사이동미포함.실측아님"
+    },
+    {
+      "claim_id": "CN3-ILS-GYODAE",
+      "statement": "코레일 공개 일산선 평일표의 원흥07~09시출발18편 동일열차번호 대조 결과 교대까지 49분이다.",
+      "source_url": "https://www.korail.com/file/cubedata/COMMON/jfile/202508/06/202508061987eaed712820.xlsx",
+      "source_list_url": "https://www.korail.com/com/userBoard.do?mode=list&schBcid=ticketTable",
+      "source_file": "ilsan_official.xlsx",
+      "evidence_location": "일산(3호)선 평일_하행 원흥출발21행/목적지도착행; 열차별주소 ilsan_calculation.json",
+      "as_of": "2022-08-01 시행/2025-08-06 등록된 공개표",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "minutes": 49.0,
+      "sample_size": 18,
+      "method": "같은 열차번호 열(column)의 원흥 출발(row21)부터 목적지 도착(row40/44/66) 차감; 07:00~08:59 출발 전 열차",
+      "caution": "공식현재목록에공개된표.변경공지전수확인없음.단지접근·열차대기·목적지역출구회사이동미포함.실측아님"
+    }
+  ],
+  "excluded_from_script": [
+    "단지별임의총시간범위",
+    "최다통근지순위",
+    "현재GTX서울역이남직결가정",
+    "원흥역차량10분을버스시간으로전용",
+    "현재지도최단시간확보했다는주장"
+  ],
+  "affected_scene_ids": [
+    "M002",
+    "M003"
+  ]
+}

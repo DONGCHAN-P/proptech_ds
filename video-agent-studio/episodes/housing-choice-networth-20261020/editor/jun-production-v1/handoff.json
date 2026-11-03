@@ -1,0 +1,50 @@
+{
+  "task_id": "housing-choice-Jun-v1-editor",
+  "role": "video_editor",
+  "status": "Jun_source_checks_passed_rendering",
+  "input_revisions": {
+    "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+    "caption_timing_sha256": "6336849ba8fd0e422a5f8a6140db9ff485226c7f8dad7a2951fae80b37638f95",
+    "audio_revision": "jun-production-v1",
+    "CLI_pin": "0.8.181"
+  },
+  "outputs": [
+    "outputs/jun-production-v1/assembly_edl.json",
+    "outputs/jun-production-v1/scene_starts.json",
+    "outputs/jun-production-v1/metadata_chapters.txt",
+    "outputs/jun-production-v1/captions_measured.srt"
+  ],
+  "checks": [
+    {
+      "check": "current source and206 cues",
+      "result": "pass",
+      "evidence": "editor/jun-production-v1/static_checks.json"
+    },
+    {
+      "check": "fresh Jun spectral carve/duck",
+      "result": "pass",
+      "evidence": "editor/jun-production-v1/mix_receipt.json"
+    },
+    {
+      "check": "all-caption glyph bounds / longest text / motion / seek",
+      "result": "pass,995 samples,15588 text checks,zero findings",
+      "evidence": "outputs/jun-production-v1/preview/bbox_report.json"
+    },
+    {
+      "check": "CLI0.8.181 ten chapters",
+      "result": "pass",
+      "evidence": "editor/jun-production-v1/checks/summary.json"
+    }
+  ],
+  "open_issue_ids": [],
+  "next_role": "editor render/technical QA; main may consume EDL for release metadata",
+  "actual_listening": false,
+  "continuous_playback": false,
+  "upload_performed": false,
+  "delete_performed": false,
+  "unresolved": [
+    "new MP4 rendering and actual encoded QA pending",
+    "main exact-final Codex/Claude review pending"
+  ],
+  "expected_film_seconds": 1192.4333333333332
+}

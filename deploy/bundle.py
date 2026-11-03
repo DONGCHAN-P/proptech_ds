@@ -24,7 +24,7 @@ HERE = Path(__file__).resolve().parent
 OUT = HERE / "build"
 
 CACHE_FILES = ["apt_index.parquet", "apt_pyeong.parquet", "trades.parquet",
-               "region_index.parquet", "apt_geo.parquet"]
+               "region_index.parquet", "apt_geo.parquet", "complex_facts.parquet"]
 DB_TABLES = ["subway_stations", "schools", "parks"]
 EXPORT_PATTERNS = ["undervalue_top5_*.parquet", "new_trades_notable_*.csv"]
 

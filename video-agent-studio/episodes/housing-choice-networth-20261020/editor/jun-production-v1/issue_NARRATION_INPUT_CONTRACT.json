@@ -1,0 +1,59 @@
+{
+  "issue_id": "NARRATION_INPUT_CONTRACT",
+  "scene_ids": [
+    "ch01",
+    "ch02",
+    "ch03",
+    "ch04",
+    "ch05",
+    "ch06",
+    "ch07",
+    "ch08",
+    "ch09",
+    "ch10"
+  ],
+  "to": "narration agent01a176ba-5fe5-7b40-b112-59e16fcfcbbb; director relay required",
+  "status": "closed_formal_Jun_delivery_received",
+  "problem": "직접 에이전트 메시지 도구가 노출되지 않아 파일로 입력 형식을 전달합니다. 실제 Jun timing lock 전에는 최종 편집/렌더를 시작하지 않습니다.",
+  "evidence": "기존 caption-v7 final_timing.json 및 editor/private-production-v2/build.py의 measured_audio_units 입력 형식",
+  "proposal": {
+    "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+    "required_top_level": [
+      "script_path",
+      "script_sha256",
+      "audio_revision",
+      "voice",
+      "chapters"
+    ],
+    "required_chapter_fields": [
+      "chapter",
+      "audio_file",
+      "total_seconds",
+      "last_speech_end_s",
+      "paragraphs",
+      "cues"
+    ],
+    "paragraph_fields": [
+      "paragraph",
+      "start_s",
+      "end_s"
+    ],
+    "cue_fields": [
+      "id",
+      "paragraph",
+      "text",
+      "spoken_text",
+      "display_lines",
+      "start_s",
+      "end_s",
+      "timing_basis"
+    ],
+    "caption_policy": "기존 206개 의미 단위와 display_lines, 문단 순서를 보존하고 실제 문자 정렬로 시간만 갱신. 문단/음성/문자 정렬 SHA와 실제 speech start/end를 제공.",
+    "clock_policy": "장별 PCM과 cue는 같은 local clock; ch01 약 0.6초 선행 여백, ch02..10 3.5초 장표 여백; 장별 total_seconds는 30fps 경계. 마지막 장 total_seconds는 actual last speech end + 3초 이상 최소 프레임 올림.",
+    "natural_voice": "Jun 자연 속도 보존. InJoon 길이에 맞추는 speedstretch 금지.",
+    "delivery": "최종 manifest, final_timing.json, PCM, alignment 경로/해시와 handoff에서 required 미해결 및 실제 청취 여부를 구분. 기존 형식과 차이가 있으면 새 스키마를 명시하면 editor가 어댑트."
+  },
+  "impact": "10개 장면 프로젝트와 206개 자막, EDL, 모션 앵커, 새 Jun 기반 BGM carve/ducking, 새 MP4",
+  "next_owner": "director → narration → editor",
+  "response_evidence": "Formal narrator handoff and director timing lock exact hashes verified; actual measured build complete"
+}

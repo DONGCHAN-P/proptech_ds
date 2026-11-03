@@ -1,0 +1,8 @@
+﻿from pathlib import Path
+import json,hashlib,re
+E=Path('video-agent-studio/episodes/goyang-changneung-20261015');Q=E/'qa/production-v6-ui-r5';O=E/'outputs/production-v6-ui-r5';P=E/'outputs/production-v6-preview';h=json.loads((E/'editor/production-v6-ui-r5/handoff.json').read_text(encoding='utf-8'));checks=[]
+for f in h['files']:
+ p=E/f['file'];checks.append({'file':f['file'],'exists':p.is_file(),'bytes_match':p.stat().st_size==f['bytes'],'sha_match':hashlib.sha256(p.read_bytes()).hexdigest()==f['sha256']})
+a=json.loads((P/'project_r4.json').read_text(encoding='utf-8'));b=json.loads((O/'project_r5.json').read_text(encoding='utf-8'));norm=lambda t:re.sub(r'\s+','',t);text=lambda p:''.join(x['props'].get('caption','') for x in p['intervals']);srt=(O/'changneung_v6_ui_r5.srt').read_text(encoding='utf-8-sig');st=''.join(''.join(x.splitlines()[2:]) for x in re.split(r'\n\s*\n',srt.strip()))
+r={'handoff_file_checks':checks,'all_pass':all(x['exists'] and x['bytes_match'] and x['sha_match'] for x in checks),'normalized_display_equal_r4':norm(text(a))==norm(text(b)),'srt_display_equal_project':norm(st)==norm(text(b)),'srt_cues':len(re.split(r'\n\s*\n',srt.strip())),'total_frames_equal':a['duration_frames']==b['duration_frames'],'scene_timing_equal':a['scenes']==b['scenes'],'brand_boundaries_equal':all(a[k]==b[k] for k in ['intro_at','intro_frames','outro_start','outro_frames','signal_end_frame']),'original_mix_sha256':hashlib.sha256((P/'full_mix_r2.m4a').read_bytes()).hexdigest()}
+(Q/'final_integrity.json').write_text(json.dumps(r,ensure_ascii=False,indent=2),encoding='utf-8');print(json.dumps(r,ensure_ascii=False))

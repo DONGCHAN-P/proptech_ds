@@ -1,0 +1,65 @@
+{
+  "task_id": "part1-Jun-shorts-3way-content-plan",
+  "role": "writer",
+  "status": "writer_handoff_complete",
+  "summary": "홍보1·20→16위1·15→11위1. 새 화면 팩트10지역20행과 값·표본수·정의 일치. 53개 구는 모집단, 소개는20~11위10지역. R16은77단지의61/16 구간 분포. 계획·문구 변경 없음.",
+  "input_revisions": {
+    "manifest": "source_manifest.json",
+    "sha256": "c24ccabdba9e6808a478ea3091d763086f37d13e23ceb41ba7696f5daccd5b2c",
+    "main": "map-clean-v1 body80 + intro-v3 8 + criteria2",
+    "accepted_visual_facts": {
+      "path": "director/top20-split-v4/part1-jun-and-shorts-v1/shorts_visual_facts.json",
+      "sha256": "b0c20437e57f98dd99c7e6a57104090b234e289d8f7f8ba156f507f473b5bf49"
+    }
+  },
+  "outputs": [
+    "shorts_plan.json",
+    "shorts_plan.md",
+    "short01_promo.json",
+    "short02_ranks20_16.json",
+    "short03_ranks15_11.json",
+    "common_cta.json",
+    "source_manifest.json",
+    "checks.json",
+    "issue_DEFINITIONS_AND_LINKS.json",
+    "handoff_final_check.json"
+  ],
+  "affected_scene_ids": [
+    "P01-INTRO",
+    "P01-R20",
+    "P01-R19",
+    "P01-R18",
+    "P01-R17",
+    "P01-R16",
+    "P01-R15",
+    "P01-R14",
+    "P01-R13",
+    "P01-R12",
+    "P01-R11",
+    "SHORT01-PROMO",
+    "SHORT02-R20-R16",
+    "SHORT03-R15-R11",
+    "P01-SHORTS-CTA-01",
+    "P01-SHORTS-CTA-02"
+  ],
+  "checks": [
+    {
+      "check": "기존 원문·가격·SHA",
+      "result": "pass",
+      "evidence": "checks.json"
+    },
+    {
+      "check": "새 화면팩트·소개범위·R16정의·CTA별칭",
+      "result": "pass",
+      "evidence": "handoff_final_check.json"
+    }
+  ],
+  "open_issue_ids": [
+    "DEF-R20-BOUNDARY",
+    "DEF-AGGREGATION-UNIT",
+    "DEF-CUTOFF-AND-DEDUP",
+    "LINKS-PENDING"
+  ],
+  "limits": "총괄 보고:92문장 생성 완료(actual2208), CTA1회 생성. writer 미청취·프레임 미확인. CTA별칭은 exacttext로 SHORTS-CTA-01/02에 연결. 실제 Jun 타이밍·독립 미디어 QA는 후속 담당.",
+  "next_role": "총괄 → editor → 독립 QA"
+}

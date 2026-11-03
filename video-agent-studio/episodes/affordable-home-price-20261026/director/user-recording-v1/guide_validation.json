@@ -1,0 +1,101 @@
+{
+  "status": "guide_delivered_pending_user_recording",
+  "completed_at_utc": "2026-10-26T15:13:56.561827+00:00",
+  "scope": "DOCX extraction, arithmetic verification and text/visual planning only.",
+  "source_sha256": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "source_original_unchanged": true,
+  "counts": {
+    "chapters": 7,
+    "scenes": 31,
+    "source_narration_paragraphs": 48,
+    "literal_anchors": 101
+  },
+  "independent_guide_review": {
+    "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\qa\\user-recording-v1\\review_r2.json",
+    "status": "document_review_available",
+    "approved": true,
+    "required_open": 0
+  },
+  "parent_document_validation": {
+    "source_and_snapshot_sha": "pass",
+    "all_48_paragraphs_exactly_once": "pass",
+    "all_101_literal_anchors_present": "pass",
+    "measured_timing_not_invented": "pass",
+    "recording_sheet_source_verbatim": "pass",
+    "case_payment_and_cost_arithmetic": "pass"
+  },
+  "media_QA_performed": false,
+  "actual_listening_performed": false,
+  "continuous_playback_performed": false,
+  "audio_received": false,
+  "measured_duration_s": null,
+  "paid_generation_calls": 0,
+  "render_performed": false,
+  "new_upload_executed": false,
+  "prior_video_alias_sha256": "55d8626a5eff6ea43da064a44d9999133e09dc635a6b3f6e67a6f5025b64b761",
+  "existing_chapter_asset_candidates": [
+    {
+      "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\visual\\hero-budget-v1.png",
+      "sha256": "308e784f63bd86c7782e90c241678634813d3e1e6dedb49167aeeb60b72bb798",
+      "review_status": "existence_only_for_this_new_guide"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\visual\\rebuild-v2\\transaction-costs.png",
+      "sha256": "92c3ade0651a82d4061e7904fb068ad80435bc40bc9bbc17885e1ef09393bbbc",
+      "review_status": "existence_only_for_this_new_guide"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\visual\\rebuild-v2\\bank-limits.png",
+      "sha256": "74c413b1a5e4fc245794f3d67dc79c2932f986b81adbc3e901cfd943589d69ed",
+      "review_status": "existence_only_for_this_new_guide"
+    },
+    {
+      "path": "video-agent-studio\\assets\\chapter-backgrounds\\v1\\price.png",
+      "sha256": "11cc1523e03712c54b92544d27d48a992c7ac93490e1db8f69ea9c15d60d4bee",
+      "review_status": "existence_only_for_this_new_guide"
+    },
+    {
+      "path": "video-agent-studio\\assets\\chapter-backgrounds\\v1\\comparison.png",
+      "sha256": "1b8bb25f91db083c0ac6cf509a4ad1c085d4b51b8feedbb62d7eef867c6b6294",
+      "review_status": "existence_only_for_this_new_guide"
+    }
+  ],
+  "files": [
+    {
+      "path": "영상\\매매가격계산\\영상가이드_직접녹음_v1.md",
+      "sha256": "fd55d5ea241d45dcf06688966297a54dfc15427653f1de517cd806570be22fcb"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\director\\user-recording-v1\\녹음용_문단표.md",
+      "sha256": "394469d39978c51651ced13ac89dd3517b654278763b129a4224b0d4a1ad2193"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\director\\user-recording-v1\\source\\현금_1억부터_5억까지_내집마련_유튜브_대본.docx",
+      "sha256": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\director\\user-recording-v1\\source_extracted.json",
+      "sha256": "8c725e38c2274c14daa80201d0413e678deead1019c8d20afdb489a17afec7bf"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\director\\user-recording-v1\\calculation_check.json",
+      "sha256": "ef4a531bc3ec1f75da6f5cc97cdefb08f7be85b1d860e22748e00bb3e527ac5f"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\director\\user-recording-v1\\scene_plan.json",
+      "sha256": "4dab2711b570621a5f5dbe6b03e9ae83e94030fd149cf8e43d9e1b74ba6d836e"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\director\\user-recording-v1\\source_checks_final.json",
+      "sha256": "a188d895dbd1b47bc336143737425a28441185c02a45f696fc5e49d3b091ce1f"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\director\\user-recording-v1\\episode_preflight.json",
+      "sha256": "91d808e7df4a51087bf7ab4524a56260d2089cb260f51a143545421f79dcaffc"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\affordable-home-price-20261026\\qa\\user-recording-v1\\review_r2.json",
+      "sha256": "c30e0674e634f5ca98ef98e5ff9074f0f552e138057e92fab397e7b54fcb7b4f"
+    }
+  ]
+}

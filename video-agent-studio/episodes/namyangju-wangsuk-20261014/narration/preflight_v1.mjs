@@ -1,0 +1,9 @@
+import fs from 'node:fs/promises';
+const root=new URL('./',import.meta.url);
+const env={};for(const l of(await fs.readFile('.env','utf8')).split(/\r?\n/)){const m=l.match(/^\s*([A-Z_0-9]+)\s*=\s*(.*?)\s*$/);if(m)env[m[1]]=m[2].replace(/^(['"])(.*)\1$/,'$2');}
+if(!env.ELEVENLABS_API_KEY)throw Error('Missing API key');
+async function get(p){const r=await fetch('https://api.elevenlabs.io'+p,{headers:{'xi-api-key':env.ELEVENLABS_API_KEY},signal:AbortSignal.timeout(30000)});const j=await r.json();if(!r.ok)throw Error(p+' HTTP '+r.status+' '+(j.detail?.status??'rejected'));return j;}
+const results=await Promise.allSettled([get('/v1/user/subscription'),get('/v1/voices/4p6UA7mnodF5q7JFFrnW'),get('/v1/models')]);
+const [s,v,models]=results.map((r,i)=>r.status==='fulfilled'?r.value:(i===2?[]:{}));
+const out={verified_at:new Date().toISOString(),generation_started:false,subscription_fields:Object.keys(s),subscription:Object.fromEntries(Object.entries(s).filter(([k])=>/^(tier|status|character_count|character_limit|credit_count|credit_limit|can_extend_character_limit|allowed_to_extend_character_limit|can_extend_credit_limit|allowed_to_extend_credit_limit|use_character_count|use_credit_count|max_character_limit_extension|max_credit_limit_extension|next_character_count_reset_unix|next_credit_count_reset_unix)$/.test(k))),voice_fields:Object.keys(v),voice:{name:v.name,voice_id:v.voice_id,category:v.category,settings:v.settings,sharing:v.sharing?Object.fromEntries(Object.entries(v.sharing).filter(([k])=>/rate|credit|permission|status|enabled/.test(k))):null,rate:v.rate,credit_multiplier:v.credit_multiplier},model:models.find(m=>m.model_id==='eleven_v4')??null};
+out.errors=results.filter(r=>r.status==='rejected').map(r=>r.reason.message);out.status=out.errors.length?'blocked_preflight':'read_checks_complete';await fs.writeFile(new URL('preflight_v1.json',root),JSON.stringify(out,null,2));console.log(JSON.stringify(out));

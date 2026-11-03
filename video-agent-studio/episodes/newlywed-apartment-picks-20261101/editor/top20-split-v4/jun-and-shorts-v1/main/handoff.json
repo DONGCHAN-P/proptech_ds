@@ -1,0 +1,41 @@
+{
+  "task_id": "accepted-main-Jun-conform-v3-caption-cue-union",
+  "role": "editor",
+  "status": "v3_ready_for_parent_previews_and_QA",
+  "input_revisions": {
+    "lock_sha256": "96e04175f2b44f54fec4b966954684253dbda42cd8803d702b94e5be6e1ed675",
+    "picture_sha256": "61783250ccde6f4d10042ad2414216a52cd2316c96b77adc8aad25bae8f6a2b1",
+    "master_sha256": "0d8037977a4fb50af64f1645e13d38aabd2ad0c1bed171523192581fbc792511"
+  },
+  "outputs": [
+    "outputs/top20-split-v4/jun-and-shorts-v1/main/part1_Jun_conform_jun-v3.mp4",
+    "jun-v3/project/index.html",
+    "jun-v3/input_manifest.json",
+    "jun-v3/render_receipt.json",
+    "jun-v3/verification.json",
+    "jun-v3/pixel_review.json",
+    "outputs/top20-split-v4/jun-and-shorts-v1/main/jun-v3-proofs/ending_caption_box.mp4"
+  ],
+  "affected_scene_ids": [
+    "P01-ALL-caption-rail-only"
+  ],
+  "checks": [
+    {
+      "check": "same 1080p30/20452 frames; strict decode; AAC bit identical; native cues unchanged",
+      "result": "passed",
+      "evidence": "jun-v3/render_receipt.json"
+    },
+    {
+      "check": "actual encoded inactive 0.1/5.0/232.4/448.033/669.53 and 5 native HF snapshots",
+      "result": "passed",
+      "evidence": "jun-v3/verification.json"
+    }
+  ],
+  "open_issue_ids": [
+    "QAREVIEW"
+  ],
+  "next_role": "director: regenerate main previews and Q evidence",
+  "new_paid_calls": 0,
+  "actual_listening": false,
+  "continuous_playback": false
+}

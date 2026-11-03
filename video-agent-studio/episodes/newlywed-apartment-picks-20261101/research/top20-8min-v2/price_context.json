@@ -1,0 +1,853 @@
+{
+  "revision": "top20-8min-v2",
+  "contract_window": [
+    "2026-04-01",
+    "2026-09-30"
+  ],
+  "cache_max_contract_date": "2026-10-05",
+  "area_bands": [
+    "59<=exclusive_m2<60",
+    "84<=exclusive_m2<85"
+  ],
+  "floor": ">=3",
+  "unit": "만원",
+  "minimum_display_n": 20,
+  "meaning": "단지·연식·층 등 구성이 섞인 지역 내 관측 거래 분포. 신혼부부 실제 매입가격·현재 광고호가·동일주택 가격상승률과 별개로 활용.",
+  "cancellations": "cache built from master WHERE NOT is_canceled; late cancellations require refresh before final publication",
+  "type_filter": "brokered/direct flag not present in cache; no direct-transfer exclusion claimed",
+  "source_snapshots": [
+    {
+      "path": "web\\cache\\apt_index.parquet",
+      "sha256": "4d1600f3def279f549147fbe08c69d6990e9bd7e998c86dbeb74607c299d15ab"
+    },
+    {
+      "path": "web\\cache\\trades.parquet",
+      "sha256": "0a1788ddcd1ad70179ade38650de8c77dd43b7876ac4edad296c6abc10cfb1b0"
+    }
+  ],
+  "geography_crosswalk": [
+    {
+      "region_id": "R01",
+      "province": "인천",
+      "region": "서구",
+      "statistical_region_code_2024": "28260",
+      "current_cache_codes": [
+        "28275",
+        "28290"
+      ]
+    },
+    {
+      "region_id": "R02",
+      "province": "서울",
+      "region": "송파구",
+      "statistical_region_code_2024": "11710",
+      "current_cache_codes": [
+        "11710"
+      ]
+    },
+    {
+      "region_id": "R03",
+      "province": "경기",
+      "region": "고양시 덕양구",
+      "statistical_region_code_2024": "41281",
+      "current_cache_codes": [
+        "41281"
+      ]
+    },
+    {
+      "region_id": "R04",
+      "province": "서울",
+      "region": "강서구",
+      "statistical_region_code_2024": "11500",
+      "current_cache_codes": [
+        "11500"
+      ]
+    },
+    {
+      "region_id": "R05",
+      "province": "인천",
+      "region": "부평구",
+      "statistical_region_code_2024": "28237",
+      "current_cache_codes": [
+        "28237"
+      ]
+    },
+    {
+      "region_id": "R06",
+      "province": "서울",
+      "region": "강남구",
+      "statistical_region_code_2024": "11680",
+      "current_cache_codes": [
+        "11680"
+      ]
+    },
+    {
+      "region_id": "R07",
+      "province": "서울",
+      "region": "강동구",
+      "statistical_region_code_2024": "11740",
+      "current_cache_codes": [
+        "11740"
+      ]
+    },
+    {
+      "region_id": "R08",
+      "province": "서울",
+      "region": "영등포구",
+      "statistical_region_code_2024": "11560",
+      "current_cache_codes": [
+        "11560"
+      ]
+    },
+    {
+      "region_id": "R09",
+      "province": "경기",
+      "region": "성남시 분당구",
+      "statistical_region_code_2024": "41135",
+      "current_cache_codes": [
+        "41135"
+      ]
+    },
+    {
+      "region_id": "R10",
+      "province": "인천",
+      "region": "미추홀구",
+      "statistical_region_code_2024": "28177",
+      "current_cache_codes": [
+        "28177"
+      ]
+    },
+    {
+      "region_id": "R11",
+      "province": "서울",
+      "region": "노원구",
+      "statistical_region_code_2024": "11350",
+      "current_cache_codes": [
+        "11350"
+      ]
+    },
+    {
+      "region_id": "R12",
+      "province": "경기",
+      "region": "수원시 영통구",
+      "statistical_region_code_2024": "41117",
+      "current_cache_codes": [
+        "41117"
+      ]
+    },
+    {
+      "region_id": "R13",
+      "province": "경기",
+      "region": "수원시 권선구",
+      "statistical_region_code_2024": "41113",
+      "current_cache_codes": [
+        "41113"
+      ]
+    },
+    {
+      "region_id": "R14",
+      "province": "서울",
+      "region": "은평구",
+      "statistical_region_code_2024": "11380",
+      "current_cache_codes": [
+        "11380"
+      ]
+    },
+    {
+      "region_id": "R15",
+      "province": "서울",
+      "region": "구로구",
+      "statistical_region_code_2024": "11530",
+      "current_cache_codes": [
+        "11530"
+      ]
+    },
+    {
+      "region_id": "R16",
+      "province": "인천",
+      "region": "남동구",
+      "statistical_region_code_2024": "28200",
+      "current_cache_codes": [
+        "28200"
+      ]
+    },
+    {
+      "region_id": "R17",
+      "province": "인천",
+      "region": "연수구",
+      "statistical_region_code_2024": "28185",
+      "current_cache_codes": [
+        "28185"
+      ]
+    },
+    {
+      "region_id": "R18",
+      "province": "경기",
+      "region": "용인시 기흥구",
+      "statistical_region_code_2024": "41463",
+      "current_cache_codes": [
+        "41463"
+      ]
+    },
+    {
+      "region_id": "R19",
+      "province": "서울",
+      "region": "중랑구",
+      "statistical_region_code_2024": "11260",
+      "current_cache_codes": [
+        "11260"
+      ]
+    },
+    {
+      "region_id": "R20",
+      "province": "경기",
+      "region": "부천시 원미구",
+      "statistical_region_code_2024": "41192",
+      "current_cache_codes": [
+        "41192"
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "rank": 1,
+      "province": "인천",
+      "region": "서구",
+      "region_id": "R01",
+      "area_band": "59",
+      "n": 508,
+      "complex_count": 93,
+      "median_manwon": 35000.0,
+      "p25_manwon": 23800.0,
+      "p75_manwon": 49700.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 1,
+      "province": "인천",
+      "region": "서구",
+      "region_id": "R01",
+      "area_band": "84",
+      "n": 1357,
+      "complex_count": 176,
+      "median_manwon": 57000.0,
+      "p25_manwon": 36800.0,
+      "p75_manwon": 65500.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 2,
+      "province": "서울",
+      "region": "송파구",
+      "region_id": "R02",
+      "area_band": "59",
+      "n": 201,
+      "complex_count": 48,
+      "median_manwon": 184000.0,
+      "p25_manwon": 135000.0,
+      "p75_manwon": 267000.0,
+      "first_contract": "2026-04-02",
+      "last_contract": "2026-09-22",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 2,
+      "province": "서울",
+      "region": "송파구",
+      "region_id": "R02",
+      "area_band": "84",
+      "n": 437,
+      "complex_count": 103,
+      "median_manwon": 245000.0,
+      "p25_manwon": 170000.0,
+      "p75_manwon": 313000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-23",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 3,
+      "province": "경기",
+      "region": "고양시 덕양구",
+      "region_id": "R03",
+      "area_band": "59",
+      "n": 484,
+      "complex_count": 45,
+      "median_manwon": 39000.0,
+      "p25_manwon": 34000.0,
+      "p75_manwon": 63750.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 3,
+      "province": "경기",
+      "region": "고양시 덕양구",
+      "region_id": "R03",
+      "area_band": "84",
+      "n": 980,
+      "complex_count": 107,
+      "median_manwon": 73000.0,
+      "p25_manwon": 56225.0,
+      "p75_manwon": 87000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 4,
+      "province": "서울",
+      "region": "강서구",
+      "region_id": "R04",
+      "area_band": "59",
+      "n": 281,
+      "complex_count": 81,
+      "median_manwon": 100000.0,
+      "p25_manwon": 78000.0,
+      "p75_manwon": 123800.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-23",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 4,
+      "province": "서울",
+      "region": "강서구",
+      "region_id": "R04",
+      "area_band": "84",
+      "n": 473,
+      "complex_count": 161,
+      "median_manwon": 109500.0,
+      "p25_manwon": 86000.0,
+      "p75_manwon": 136000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 5,
+      "province": "인천",
+      "region": "부평구",
+      "region_id": "R05",
+      "area_band": "59",
+      "n": 758,
+      "complex_count": 81,
+      "median_manwon": 38100.0,
+      "p25_manwon": 30000.0,
+      "p75_manwon": 51800.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-29",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 5,
+      "province": "인천",
+      "region": "부평구",
+      "region_id": "R05",
+      "area_band": "84",
+      "n": 529,
+      "complex_count": 93,
+      "median_manwon": 43000.0,
+      "p25_manwon": 36400.0,
+      "p75_manwon": 62500.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 6,
+      "province": "서울",
+      "region": "강남구",
+      "region_id": "R06",
+      "area_band": "59",
+      "n": 124,
+      "complex_count": 43,
+      "median_manwon": 262500.0,
+      "p25_manwon": 190125.0,
+      "p75_manwon": 280000.0,
+      "first_contract": "2026-04-03",
+      "last_contract": "2026-09-22",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 6,
+      "province": "서울",
+      "region": "강남구",
+      "region_id": "R06",
+      "area_band": "84",
+      "n": 179,
+      "complex_count": 72,
+      "median_manwon": 303000.0,
+      "p25_manwon": 232250.0,
+      "p75_manwon": 350000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-19",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 7,
+      "province": "서울",
+      "region": "강동구",
+      "region_id": "R07",
+      "area_band": "59",
+      "n": 242,
+      "complex_count": 63,
+      "median_manwon": 148150.0,
+      "p25_manwon": 118250.0,
+      "p75_manwon": 174325.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-28",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 7,
+      "province": "서울",
+      "region": "강동구",
+      "region_id": "R07",
+      "area_band": "84",
+      "n": 328,
+      "complex_count": 122,
+      "median_manwon": 155500.0,
+      "p25_manwon": 115225.0,
+      "p75_manwon": 190000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 8,
+      "province": "서울",
+      "region": "영등포구",
+      "region_id": "R08",
+      "area_band": "59",
+      "n": 223,
+      "complex_count": 71,
+      "median_manwon": 130000.0,
+      "p25_manwon": 105500.0,
+      "p75_manwon": 148750.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-23",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 8,
+      "province": "서울",
+      "region": "영등포구",
+      "region_id": "R08",
+      "area_band": "84",
+      "n": 315,
+      "complex_count": 97,
+      "median_manwon": 136900.0,
+      "p25_manwon": 100500.0,
+      "p75_manwon": 166000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-22",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 9,
+      "province": "경기",
+      "region": "성남시 분당구",
+      "region_id": "R09",
+      "area_band": "59",
+      "n": 124,
+      "complex_count": 38,
+      "median_manwon": 150000.0,
+      "p25_manwon": 134925.0,
+      "p75_manwon": 162250.0,
+      "first_contract": "2026-04-04",
+      "last_contract": "2026-09-22",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 9,
+      "province": "경기",
+      "region": "성남시 분당구",
+      "region_id": "R09",
+      "area_band": "84",
+      "n": 315,
+      "complex_count": 95,
+      "median_manwon": 183500.0,
+      "p25_manwon": 155350.0,
+      "p75_manwon": 200000.0,
+      "first_contract": "2026-04-02",
+      "last_contract": "2026-09-23",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 10,
+      "province": "인천",
+      "region": "미추홀구",
+      "region_id": "R10",
+      "area_band": "59",
+      "n": 355,
+      "complex_count": 64,
+      "median_manwon": 37000.0,
+      "p25_manwon": 27000.0,
+      "p75_manwon": 45300.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 10,
+      "province": "인천",
+      "region": "미추홀구",
+      "region_id": "R10",
+      "area_band": "84",
+      "n": 354,
+      "complex_count": 71,
+      "median_manwon": 39800.0,
+      "p25_manwon": 30312.5,
+      "p75_manwon": 55375.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-29",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 11,
+      "province": "서울",
+      "region": "노원구",
+      "region_id": "R11",
+      "area_band": "59",
+      "n": 574,
+      "complex_count": 111,
+      "median_manwon": 64000.0,
+      "p25_manwon": 54000.0,
+      "p75_manwon": 78500.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-22",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 11,
+      "province": "서울",
+      "region": "노원구",
+      "region_id": "R11",
+      "area_band": "84",
+      "n": 543,
+      "complex_count": 134,
+      "median_manwon": 85000.0,
+      "p25_manwon": 69950.0,
+      "p75_manwon": 101000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-16",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 12,
+      "province": "경기",
+      "region": "수원시 영통구",
+      "region_id": "R12",
+      "area_band": "59",
+      "n": 1042,
+      "complex_count": 44,
+      "median_manwon": 52500.0,
+      "p25_manwon": 47050.0,
+      "p75_manwon": 62000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 12,
+      "province": "경기",
+      "region": "수원시 영통구",
+      "region_id": "R12",
+      "area_band": "84",
+      "n": 789,
+      "complex_count": 76,
+      "median_manwon": 81500.0,
+      "p25_manwon": 60000.0,
+      "p75_manwon": 108000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-29",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 13,
+      "province": "경기",
+      "region": "수원시 권선구",
+      "region_id": "R13",
+      "area_band": "59",
+      "n": 759,
+      "complex_count": 67,
+      "median_manwon": 45000.0,
+      "p25_manwon": 34000.0,
+      "p75_manwon": 55000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 13,
+      "province": "경기",
+      "region": "수원시 권선구",
+      "region_id": "R13",
+      "area_band": "84",
+      "n": 934,
+      "complex_count": 103,
+      "median_manwon": 58400.0,
+      "p25_manwon": 43800.0,
+      "p75_manwon": 67500.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 14,
+      "province": "서울",
+      "region": "은평구",
+      "region_id": "R14",
+      "area_band": "59",
+      "n": 334,
+      "complex_count": 71,
+      "median_manwon": 90650.0,
+      "p25_manwon": 70000.0,
+      "p75_manwon": 113000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-29",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 14,
+      "province": "서울",
+      "region": "은평구",
+      "region_id": "R14",
+      "area_band": "84",
+      "n": 474,
+      "complex_count": 124,
+      "median_manwon": 94000.0,
+      "p25_manwon": 76350.0,
+      "p75_manwon": 118000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 15,
+      "province": "서울",
+      "region": "구로구",
+      "region_id": "R15",
+      "area_band": "59",
+      "n": 380,
+      "complex_count": 77,
+      "median_manwon": 68000.0,
+      "p25_manwon": 58675.0,
+      "p75_manwon": 91200.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-23",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 15,
+      "province": "서울",
+      "region": "구로구",
+      "region_id": "R15",
+      "area_band": "84",
+      "n": 426,
+      "complex_count": 124,
+      "median_manwon": 81000.0,
+      "p25_manwon": 70000.0,
+      "p75_manwon": 100000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-23",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 16,
+      "province": "인천",
+      "region": "남동구",
+      "region_id": "R16",
+      "area_band": "59",
+      "n": 309,
+      "complex_count": 53,
+      "median_manwon": 34500.0,
+      "p25_manwon": 24800.0,
+      "p75_manwon": 42200.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 16,
+      "province": "인천",
+      "region": "남동구",
+      "region_id": "R16",
+      "area_band": "84",
+      "n": 477,
+      "complex_count": 76,
+      "median_manwon": 42500.0,
+      "p25_manwon": 35000.0,
+      "p75_manwon": 51500.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 17,
+      "province": "인천",
+      "region": "연수구",
+      "region_id": "R17",
+      "area_band": "59",
+      "n": 235,
+      "complex_count": 36,
+      "median_manwon": 45000.0,
+      "p25_manwon": 26200.0,
+      "p75_manwon": 67800.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-29",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 17,
+      "province": "인천",
+      "region": "연수구",
+      "region_id": "R17",
+      "area_band": "84",
+      "n": 1009,
+      "complex_count": 118,
+      "median_manwon": 67000.0,
+      "p25_manwon": 55000.0,
+      "p75_manwon": 81000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 18,
+      "province": "경기",
+      "region": "용인시 기흥구",
+      "region_id": "R18",
+      "area_band": "59",
+      "n": 327,
+      "complex_count": 44,
+      "median_manwon": 45600.0,
+      "p25_manwon": 34500.0,
+      "p75_manwon": 63550.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-29",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 18,
+      "province": "경기",
+      "region": "용인시 기흥구",
+      "region_id": "R18",
+      "area_band": "84",
+      "n": 1277,
+      "complex_count": 140,
+      "median_manwon": 61000.0,
+      "p25_manwon": 46000.0,
+      "p75_manwon": 82800.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 19,
+      "province": "서울",
+      "region": "중랑구",
+      "region_id": "R19",
+      "area_band": "59",
+      "n": 225,
+      "complex_count": 58,
+      "median_manwon": 62000.0,
+      "p25_manwon": 55000.0,
+      "p75_manwon": 75700.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 19,
+      "province": "서울",
+      "region": "중랑구",
+      "region_id": "R19",
+      "area_band": "84",
+      "n": 392,
+      "complex_count": 98,
+      "median_manwon": 76750.0,
+      "p25_manwon": 69375.0,
+      "p75_manwon": 86712.5,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 20,
+      "province": "경기",
+      "region": "부천시 원미구",
+      "region_id": "R20",
+      "area_band": "59",
+      "n": 384,
+      "complex_count": 58,
+      "median_manwon": 51900.0,
+      "p25_manwon": 41800.0,
+      "p75_manwon": 60000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-29",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    },
+    {
+      "rank": 20,
+      "province": "경기",
+      "region": "부천시 원미구",
+      "region_id": "R20",
+      "area_band": "84",
+      "n": 610,
+      "complex_count": 76,
+      "median_manwon": 70500.0,
+      "p25_manwon": 60550.0,
+      "p75_manwon": 79000.0,
+      "first_contract": "2026-04-01",
+      "last_contract": "2026-09-30",
+      "publishable_sample_threshold_passed": true,
+      "evidence_type": "historical_regional_transaction_distribution"
+    }
+  ]
+}

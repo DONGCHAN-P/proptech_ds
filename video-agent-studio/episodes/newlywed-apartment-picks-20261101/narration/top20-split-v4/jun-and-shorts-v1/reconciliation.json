@@ -1,0 +1,41 @@
+{
+  "status": "reconciled",
+  "verified_at_utc": "2026-11-03T13:31:56.345337+00:00",
+  "authorization_id": "9cde211f3073",
+  "expected_input_characters": 5520,
+  "actual_header_credit_sum": 2208,
+  "account_character_count_before": 23336,
+  "account_character_count_after": 25544,
+  "actual_account_credit_delta": 2208,
+  "included_remaining": 14456,
+  "authorized_cap": 6500,
+  "unused_authorized_cap": 4292,
+  "cash_spent_krw": 0,
+  "post_calls_total": 16,
+  "additional_post_calls_after_generation": 0,
+  "automatic_retries": 0,
+  "topup_calls": 0,
+  "overage_calls": 0,
+  "initial_final_account_snapshot_was_delayed": true,
+  "account_check_count_for_delayed_reconciliation": 1,
+  "resolved_local_guard_issue": "예상5520과 실제 비용의 동일액을 요구한 로컬 검사 제거. 실제 헤더 합계와 지연 반영 후 계정 차분2208 일치.",
+  "evidence": [
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/generation_ledger.json",
+      "sha256": "d61578f241603fc1391d39b945b3a40ed8b86dc7b9cb2b86fe5a9e7819174ba1"
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/account_preflight.json",
+      "sha256": "382780eceff18313180c3371a16e551127aeb839f301b4437abbb90974b27eae"
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/account_final_immediate.json",
+      "sha256": "061eed8f7ad1021e0d280c718bcce2e2cbaf5822aeb482d90275a6599df74327"
+    },
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/account_final.json",
+      "sha256": "49c366a6a1c2bf230de1a3941de2176f13abd76ddb5fbd5f91e09831d94b1076"
+    }
+  ],
+  "generation_not_retried": true
+}

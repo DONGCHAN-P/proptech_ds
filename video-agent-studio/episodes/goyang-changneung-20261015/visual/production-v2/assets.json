@@ -1,0 +1,85 @@
+{
+  "revision": "visual-production-v2",
+  "status": "representative_previews_reviewed",
+  "assets": [
+    {
+      "asset_id": "CN-V2-M003",
+      "scene_ids": [
+        "M003"
+      ],
+      "type": "independent_connection_diagram_and_calendar",
+      "source_or_prompt": [
+        "research/commute-v3/report.md",
+        "research/production-v2/calendar.json"
+      ],
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "actual_file": "outputs/visual-review-v2/M003_transport.png",
+      "reproducible_source": "visual/production-v2/M003_transport.svg",
+      "actual_place": "고양 창릉 통근 연결 개략도; 비축척",
+      "AI": false,
+      "usage_conditions": "직접 작성 사실 도식. M005 포함 원도면은 국토교통부 고시2025-813호(2025.12.24), 토지이음 공공누리3유형: 출처표시/변경금지. 전체 비례fit, 표제/범례 보존, 덧칠/크롭/트레이싱 없음. 내부 시안 조건부 채택후보.",
+      "review_status": "PNG 직접 view 확인. 해상도/텍스트 경계/출처/자료 구분 점검. 최종 영상 승인/실제 음성 정렬 아님",
+      "upscaled": false,
+      "sha256": "d51aab3c488b1a6cbbef0eb191d5a2b5933d6205179e1756c249f0dc275299d4"
+    },
+    {
+      "asset_id": "CN-V2-M004",
+      "scene_ids": [
+        "M004"
+      ],
+      "type": "fact_price_table",
+      "source_or_prompt": [
+        "research/price-stage-v3/facts.json"
+      ],
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "actual_file": "outputs/visual-review-v2/M004_price.png",
+      "reproducible_source": "visual/production-v2/M004_price.svg",
+      "actual_place": "고양 창릉 S5/S1/S4 및 주변 비교단지",
+      "AI": false,
+      "usage_conditions": "직접 작성 사실 도식. M005 포함 원도면은 국토교통부 고시2025-813호(2025.12.24), 토지이음 공공누리3유형: 출처표시/변경금지. 전체 비례fit, 표제/범례 보존, 덧칠/크롭/트레이싱 없음. 내부 시안 조건부 채택후보.",
+      "review_status": "PNG 직접 view 확인. 해상도/텍스트 경계/출처/자료 구분 점검. 최종 영상 승인/실제 음성 정렬 아님",
+      "upscaled": false,
+      "sha256": "367ee17aa7231af1114dd4a4200ff8a1075659e2427a2482fa1872ae5eb8399d"
+    },
+    {
+      "asset_id": "CN-V2-M005",
+      "scene_ids": [
+        "M005"
+      ],
+      "type": "official_whole_fit_and_independent_relation_diagram",
+      "source_or_prompt": [
+        "research/map-clearance-v1/raw/eum_lots_overall_20251224.jpg",
+        "research/facts.json:CN-S34-LIFE",
+        "research/production-v2/facts.json:CN2-S4-SCHOOL"
+      ],
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "actual_file": "outputs/visual-review-v2/M005_life.png",
+      "reproducible_source": "visual/production-v2/M005_life.svg",
+      "actual_place": "고양 창릉 본단지 전체 원도면 및 S4 생활 관계도",
+      "AI": false,
+      "usage_conditions": "직접 작성 사실 도식. M005 포함 원도면은 국토교통부 고시2025-813호(2025.12.24), 토지이음 공공누리3유형: 출처표시/변경금지. 전체 비례fit, 표제/범례 보존, 덧칠/크롭/트레이싱 없음. 내부 시안 조건부 채택후보.",
+      "review_status": "PNG 직접 view 확인. 해상도/텍스트 경계/출처/자료 구분 점검. 최종 영상 승인/실제 음성 정렬 아님",
+      "upscaled": false,
+      "sha256": "c7521fbc0544bec6f9f91adf3f2358919383f6e22bd683721ce7b07a8fb2728d"
+    }
+  ],
+  "input_sha256": {
+    "research/commute-v3/report.md": "a245ea9ac6e63f2d64581f634ba0bbb10e62a45c9167cc9fed4ea65703c894d0",
+    "research/price-stage-v3/facts.json": "dd78eeacdf8c1906b54f08dde72789414797dd6168c25ba6bf2c28a5268c4cc6",
+    "research/production-v2/calendar.json": "7eb606d652717888ffab15bfca60b0b9e11c8589c7ca885fc006677c8652d96d",
+    "research/production-v2/facts.json": "b046de0cb6079fe1b304c9f7914315717b221f86752d915b3612416ae169d74c",
+    "research/facts.json": "2bd76ab09771f7d49dcd3bb002c085ed058efd63fdf108502da36513f897833a",
+    "research/map-clearance-v1/handoff.md": "bb1e6a1ed94008a9787a7bb1895cca2bf3c536e154a3a8efa24510bed69d2ed3",
+    "research/map-clearance-v1/raw/eum_lots_overall_20251224.jpg": "79ef5d327327bfc6900e78f301f3ab03b905f0ce2122145d89affb487857ab58",
+    "outputs/reference-direction-v1/창릉_레퍼런스_적용안.md": "3912f692f44418eb923c6daf9548f2c6ad5c2f99eca1cbc4ecefc79ef8d772fe"
+  }
+}

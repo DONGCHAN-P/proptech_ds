@@ -1,0 +1,25 @@
+{
+  "issue_id": "RPR-P1-REQ-01",
+  "scene_ids": [
+    "S001",
+    "S006",
+    "S007",
+    "S008",
+    "S012"
+  ],
+  "problem": "shared episode price index lacked supported-history basis",
+  "evidence": [
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/incheon2008-2016recovery_provisional_v3.mp4",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/representative_contactsheet_v3.png",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/technical.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/text_bounds.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/scope_and_units.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/visual_review_v3.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/hyperframes_check_units.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/selected_previews.json"
+  ],
+  "proposal": "QA independently recheck selected Incheon v3 and affected12beat unit/bounds receipt; close REQ01 and REC01 if satisfied",
+  "impact": "only Incheon rerendered; REC02 recommended remains open",
+  "handoff": "video-agent-studio/episodes/regional-price-recovery-20261022/editor/production-v1/handoff_fix.json",
+  "next_owner": "director/QA"
+}

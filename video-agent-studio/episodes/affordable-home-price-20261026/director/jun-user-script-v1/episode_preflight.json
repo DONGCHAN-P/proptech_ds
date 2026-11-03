@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0",
+  "status": "Jun_preproduction_pending_current_episode_budget",
+  "episode_id": "affordable-home-price-20261026",
+  "guide": "guides/영상제작_마스터가이드.md",
+  "feedback_ledger": "guides/사용자_피드백_이력.md",
+  "baseline": {
+    "previous_video": "housing-choice-networth-20261020/outputs/jun-production-v1/renders/measured-jun-v1/housing_choice_jun_v1.mp4",
+    "current_video": "outputs/rebuild-v2/full-film-r2-v1/affordable_home_price_rebuild_r2_v1.mp4",
+    "sha256": "55d8626a5eff6ea43da064a44d9999133e09dc635a6b3f6e67a6f5025b64b761",
+    "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+    "audio_revision": null,
+    "brand_intro": null,
+    "brand_outro": null,
+    "bgm": null
+  },
+  "approvals": {
+    "topic": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "authorized_current_user_request"
+    },
+    "script": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "user_requested_film_to_exact_user_authored_script"
+    },
+    "budget": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "pending_current_episode_cap_answer",
+      "credits_cap": 7000,
+      "cash_cap": 0,
+      "automatic_retry_allowed": false
+    },
+    "completed": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "not_created"
+    },
+    "pre_upload": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "not_authorized_by_current_request",
+      "visibility": null
+    }
+  },
+  "story": {
+    "opening_question": "현금1억~5억으로 어느 가격대의 집을 볼 수 있을까",
+    "previous_episode_reference": "매매·전세·월세의 자산 비교 다음 선택",
+    "next_episode_promise": "예산 안에서 실제 지역·단지 비교",
+    "order": [
+      "돈을 모은 다음의 질문",
+      "집값 밖의 비용",
+      "대출의 기준",
+      "현금 1억과 2억",
+      "현금 3억부터 5억",
+      "지역과 월 상환",
+      "내 예산 정리"
+    ],
+    "each_section_answers": [
+      "주택 투입금",
+      "적용 대출한도",
+      "월 원리금",
+      "생활 선택"
+    ],
+    "candidate_scope": "hypothetical_cash_scenarios_not_apartment_recommendations"
+  },
+  "visual_defaults": {
+    "dynamic_map_zoom": false,
+    "transient_location_insert": false,
+    "locator": "one_current_district_whole_plan_left_with_detail_rectangle",
+    "macro_block_pins": false,
+    "captions_white_box_body_continuous": true,
+    "caption_box_exceptions": [
+      "unvoiced_brand_intro",
+      "unvoiced_brand_outro",
+      "silent_CTA_hold"
+    ],
+    "time_explanations_horizontal_axis": true,
+    "map_labels_near_targets": true,
+    "ai_placeholder_requires_resolution_before_delivery": true,
+    "outro_gap_after_final_spoken_word_seconds": 3
+  },
+  "representative_previews": [
+    "S13_cash_to_house_price",
+    "S18_S19_personal_cap_binds",
+    "S21_exact_cost_receipt"
+  ],
+  "facts_required": [
+    "scenario_vs_policy_limits",
+    "current_LTV_scope",
+    "purchase_tax_assumptions",
+    "broker_ceiling_and_VAT",
+    "reserve_as_budget",
+    "all_payment_calculations"
+  ],
+  "change_control": {
+    "issues": [],
+    "superseded_rules": [
+      "This episode uses Jun per current user instruction; voice choice replaces direct recording for this episode only.",
+      "Previous approved audio/timing/paid-budget caps are not inherited.",
+      "Exact source wording preserved; reading-only digit and abbreviation expansions remain mapped."
+    ],
+    "unchanged_audio_reused": null,
+    "changed_scene_ids": [
+      "S01",
+      "S02",
+      "S03",
+      "S04",
+      "S05",
+      "S06",
+      "S07",
+      "S08",
+      "S09",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "S14",
+      "S15",
+      "S16",
+      "S17",
+      "S18",
+      "S19",
+      "S20",
+      "S21",
+      "S22",
+      "S23",
+      "S24",
+      "S25",
+      "S26",
+      "S27",
+      "S28",
+      "S29",
+      "S30",
+      "S31"
+    ],
+    "single_timing_lock": null,
+    "package_frozen_before_hash": false
+  },
+  "qa": {
+    "timeline_font_bbox_and_stroke_all_cases": "unverified",
+    "actual_encoded_frames": "unverified",
+    "all_cut_boundaries_no_flash": "unverified",
+    "inset_matches_spoken_region": "unverified",
+    "station_locations": "not_applicable_no_geographic_map_planned",
+    "leaders_do_not_cross": "unverified",
+    "semantic_caption_original_text_match": "unverified",
+    "protected_numbers_units_names": "unverified",
+    "caption_box_exceptions": "unverified",
+    "last_speech_plus_three_seconds": "unverified",
+    "full_decode": "unverified",
+    "continuous_playback_performed": false,
+    "actual_listening_performed": false,
+    "evidence_paths": [],
+    "required_open_issues": "independent_preproduction_QA_in_progress",
+    "caption_display_mapping_and_numeric_value_match": "unverified",
+    "actual_block_plan_and_locator": "not_applicable",
+    "district_area_vs_planned_station_distinguished": "not_applicable"
+  },
+  "release": {
+    "longform": null,
+    "shorts": [],
+    "title_description_sources_chapters": "unverified",
+    "thumbnail": "unverified",
+    "actual_platform_privacy": "unverified",
+    "processing": "unverified",
+    "studio_copyright": "unverified",
+    "telegram_notice_receipt": null
+  },
+  "retention": {
+    "keep": [
+      "final_uploaded_files",
+      "reproduction_source_and_dependencies",
+      "raw_research",
+      "rights_sources",
+      "approval_and_QA_records",
+      "reusable_brand_maps_audio_templates"
+    ],
+    "delete_candidates_manifest": null,
+    "dependency_audit_complete": false,
+    "deletion_executed": false
+  },
+  "vertical_video": {
+    "config": "config/vertical_video_safe_area.json",
+    "profile": "cross_platform_conservative",
+    "bounds_font_validation": "required_before_render",
+    "ui_simulation": "required_before_release",
+    "actual_device_playback": "unverified",
+    "old_burned_in_subtitle_position_reusable": false,
+    "status": "not_applicable_16_9_longform_guide"
+  },
+  "channel_style_contract": {
+    "guide": "video-agent-studio/guides/채널_톤앤매너와_복기루프.md",
+    "tokens": "config/channel_style_tokens.json",
+    "baseline_primary": "namyangju-wangsuk-20261014/readability-cta-v15",
+    "baseline_secondary": "video/out/newtown-v14-release.mp4",
+    "loop": [
+      "freeze_actual_reference_frames_once",
+      "compare_same_message_scene",
+      "fix_style_and_information_hierarchy",
+      "independent_QA_three_representative_scenes",
+      "expand_to_full",
+      "review_all_cut_boundaries_and_changed_scenes"
+    ],
+    "external_references": "explanation techniques supplement channel grammar",
+    "visual_review_v2_is_final_style": false
+  },
+  "representative_style_QA": "3silent_prototypes_rendered_independent_review_in_progress",
+  "request_ledger": "guides/영상제작_요청추적표.md",
+  "voice_choice": {
+    "name": "Jun",
+    "provider": "ElevenLabs",
+    "basis": "latest_user_request_2026-10-27_this_episode",
+    "user_microphone_not_arrived": true,
+    "future_direct_recording_preference_preserved": true
+  },
+  "narration_preparation": {
+    "manifest": "narration/jun-user-script-v1/narration_manifest.json",
+    "spoken_payload_characters": 5797,
+    "chapter_requests": 7,
+    "semantic_cues": 156,
+    "timing_locked": false,
+    "generation_calls": 0,
+    "material_fact_corrections_required": 0,
+    "verification": "director/jun-user-script-v1/input_verification.json"
+  },
+  "template_basis": "templates/episode_preflight.json adapted for current cash-scenario topic"
+}

@@ -1,0 +1,26 @@
+{
+  "task_id":"top20-hf-production-v1",
+  "role":"editor",
+  "status":"actual_v2_projects_built_waiting_bounded_I002_audio_patch_before_render",
+  "outputs":{
+    "main_project":"main/index.html",
+    "promo_project":"shorts/promo/index.html",
+    "analysis_project":"shorts/analysis/index.html",
+    "representative_images":"evidence/representative3/",
+    "brief":"BRIEF.md",
+    "storyboard":"STORYBOARD.md",
+    "design":"design.md",
+    "generator":"build.py",
+    "caption_mapping":"main/caption_mapping.json",
+    "shorts_cuts":"shorts_clips_locked.json",
+    "commands":"local_jobs.py",
+    "placement_guide":"placement_guide.md",
+    "source_versions":"input_manifest.json"
+  },
+  "input_versions":{"script":"director/top20-production-v1/scene_proposals_v4.json","timing":"director/top20-production-v1/locked_timing.json","audio_revision":"free-edge-injoon-atempo135-sentencecut-v2","photos":"photo_assets_v2","map":"2024 actual SVG geometry"},
+  "verification":{"representative_three_snapshots":true,"initial_provisional_27_midpoint_layout_checks":true,"actual_final_checks":"pending_I002_patch","full_render":false,"actual_listening":false,"continuous_playback":false,"peer_QA":"parent reports representative3 required0; final independent QA pending"},
+  "tools":{"HyperFrames":"0.8.181","Node":"24.16.0","GSAP":"3.14.2","ffprobe":"n7.1","usage":"unknown/usage_request_failed"},
+  "unresolved":["I002-only reading fix/new director lock pending","canonical carve requires missing @hyperframes/core; permitted voice-focused body fallback documented","render/encoded decode/actual all-cut frames/final independent QA pending"],
+  "affected_scene_ids":["I002","subsequent_timing","shorts_source_offsets"],
+  "next_role":"director audio lock -> editor actual checks/render -> independent QA -> director private upload"
+}

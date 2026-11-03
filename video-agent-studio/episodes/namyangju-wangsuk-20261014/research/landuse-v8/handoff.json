@@ -1,0 +1,38 @@
+{
+  "status": "ready",
+  "input_revision": "script-v4-hook-outside/audio-v2 + landuse-v7 boards",
+  "outputs": [
+    "block_dictionary.json",
+    "geographic_linkage.json",
+    "facts.json"
+  ],
+  "entry_count": 114,
+  "main_block_count": 6,
+  "affected_scene_ids": [
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M005",
+    "M006",
+    "M007",
+    "M007B",
+    "M008"
+  ],
+  "validation": [
+    "All3 board feature IDs mapped.",
+    "Main6 matched official notice supply summaries and existing verified analysis.",
+    "B17 official p1 supply summary re-read:74㎡128 +84㎡363 =491.",
+    "No guessed brand/program for contextual plots.",
+    "GIS location areas explicitly illustrative; exact registration unavailable."
+  ],
+  "next_assignees": [
+    "/root/rail_route_editor",
+    "/root/fact_review"
+  ],
+  "unresolved": [
+    "Legal district GIS boundary unavailable",
+    "Contextual developer/supply date unverified; display land use only"
+  ],
+  "scope": "visual data only; unchanged narration/script, no paid calls"
+}

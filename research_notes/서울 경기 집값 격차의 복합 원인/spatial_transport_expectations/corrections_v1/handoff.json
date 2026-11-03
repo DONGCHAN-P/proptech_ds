@@ -1,0 +1,58 @@
+{
+  "task_id": "RPR-LIT-SOURCEFIX-001",
+  "role": "research",
+  "status": "metadata_corrected_pending_independent_qa",
+  "summary": "ST-F08만 2020 학술지 초록·2009Q1–2019Q4·Granger 예측 선행성으로 분리했다. WP AR(1)·타 기간을 제거하고 미확인 값은 null/unverified로 유지했다. qualified 유지, 다른 11주장과 출처 목록 불변.",
+  "input_revisions": {
+    "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/sources.json": "839fcc66bf6938d8a97f4c70a81f4fd905d87b889c667014d78e66e084bdaa1a",
+    "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations.md": "02b17e95739d337964707e48debf04d1a73386a89ce955ae6713594053c5fb9b",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/qa/literature-mechanisms-v1/issue_RPR-LIT-QA-001.json": "36366881c6d69a71a9fc989dfeac415f5069be9c754a0be89f86a37c0e284a3f",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/brief.json": "03a343f203f6aa324ea95dffa2bc48e042a6b10b80a120c5c86a5fc72caae03a",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/state.json": "b4ab65a31adbe00d670e75e6bc822e6355f9ded7b3d4ded211310a9b9e69c8df",
+    "prepatch_facts_sha256": "ddfb4224d55f1364c4353404291f6bb63a306e82887c54accea04b9407f4093e"
+  },
+  "outputs": [
+    "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/facts.json",
+    "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/corrections_v1/facts.prepatch.json",
+    "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/corrections_v1/change_receipt.json",
+    "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/corrections_v1/issue_RPR-LIT-SOURCEFIX-001.json",
+    "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/corrections_v1/verification.json"
+  ],
+  "postpatch_facts_sha256": "0536b7a98d9fa5167ae3635ce16d4849241084a4e0860b524e4072dec33fc5f5",
+  "change_receipt_sha256": "5391bdd06a150ffd5f1d00a0395d92ebe58ec408a00d84c0a32432eaba2c5b87",
+  "affected_claim_ids": [
+    "ST-F08"
+  ],
+  "affected_scene_ids": [],
+  "checks": [
+    {
+      "check": "변경 범위·JSON·사본·SHA·출처 결합",
+      "result": "locally_verified",
+      "evidence": "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/corrections_v1/change_receipt.json"
+    },
+    {
+      "check": "기록 산출물 재열기 검증",
+      "result": "see_verification",
+      "evidence": "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/corrections_v1/verification.json"
+    },
+    {
+      "check": "독립 QA 종결",
+      "result": "pending",
+      "evidence": "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/corrections_v1/issue_RPR-LIT-SOURCEFIX-001.json"
+    }
+  ],
+  "open_issue_ids": [
+    "RPR-LIT-QA-001"
+  ],
+  "unresolved": [
+    "지정 QA의 ST-F08 한정 종결 판단 미실행",
+    "학술지 전문·원표·관측 수·지수 세부사항 미확인 유지"
+  ],
+  "next_role": "parent_director → qa:01a167df-8e6f-7b12-95cf-10fcb4134813 → writer",
+  "communication": {
+    "direct_message_tool_available": false,
+    "direct_peer_message_sent": false,
+    "fallback_issue": "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/corrections_v1/issue_RPR-LIT-SOURCEFIX-001.json"
+  },
+  "scope": "literature_only; voice_held; 새 검색/대본/렌더/TTS/유료/수집기/공통 상태 변경 없음"
+}

@@ -1,0 +1,9 @@
+import fs from 'node:fs';import {execFileSync} from 'node:child_process';
+const dir='video/out/qa-v9',input='video/out/newtown-v9-assets-10min.mp4',bin='video/node_modules/@remotion/compositor-win32-x64-msvc/';fs.mkdirSync(dir,{recursive:true});
+const timing=JSON.parse(fs.readFileSync('video/out/newtown-v9-timing.json','utf8'));
+const times=[...new Set([2,91,93,181,183,184,200,202,219,221,246,248,299,301,482,484,541,543,571,573,5.5,96.2,187,204.7,222.7,251.3,303.8,487.3,546.3,576.3,599,...timing.map(r=>Math.round((r.start+Math.min(r.end,r.start+8))/2))])].sort((a,b)=>a-b);
+for(const t of times)execFileSync(bin+'ffmpeg.exe',['-v','error','-ss',String(t),'-i',input,'-frames:v','1','-y',dir+'/frame-'+t+'.png']);
+const streams=JSON.parse(execFileSync(bin+'ffprobe.exe',['-v','error','-show_entries','stream=codec_name,width,height,duration,r_frame_rate','-show_entries','format=duration,size','-of','json',input],{encoding:'utf8'}));if(Math.abs(Number(streams.format.duration)-600)>.1)throw Error('Duration not 600 seconds');
+execFileSync(bin+'ffmpeg.exe',['-v','error','-i',input,'-vn','-ac','1','-ar','16000','-c:a','pcm_s16le','-f','wav','-y',dir+'/audio.wav']);
+const wav=fs.readFileSync(dir+'/audio.wav');let at=12,data;while(at+8<wav.length){const size=wav.readUInt32LE(at+4);if(wav.toString('ascii',at,at+4)==='data'){data=wav.subarray(at+8,at+8+size);break;}at+=8+size+(size%2);}if(!data)throw Error('No audio data');let sum=0,peak=0,active=0;for(let i=0;i+1<data.length;i+=2){const v=data.readInt16LE(i)/32768;sum+=v*v;peak=Math.max(peak,Math.abs(v));if(Math.abs(v)>.001)active++;}
+const report={streams,frames_extracted:times,audio:{rms:Math.sqrt(sum/(data.length/2)),peak,active_fraction:active/(data.length/2)},listening_verified:false,continuous_playback_verified:false,voice_plan:'unchanged from v8'};fs.writeFileSync(dir+'/technical.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report));

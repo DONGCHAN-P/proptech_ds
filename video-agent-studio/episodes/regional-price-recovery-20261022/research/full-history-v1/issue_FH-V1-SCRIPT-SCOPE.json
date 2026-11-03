@@ -1,0 +1,31 @@
+{
+  "issue_id": "FH-V1-SCRIPT-SCOPE",
+  "scene_ids": [],
+  "scene_id_status": "v3 공통 장면표 미배정; 총괄 매핑 필요",
+  "affected_claim_ids": [
+    "FH-V1-01",
+    "FH-V1-02",
+    "FH-V1-03",
+    "FH-V1-04",
+    "FH-V1-05",
+    "FH-V1-06",
+    "FH-V1-07",
+    "FH-V1-VOLUME"
+  ],
+  "affected_scene_ids": [],
+  "problem": "v3는 2020년 이후 한 주기에서 전체 가용 이력으로 범위를 확대해야 함. 최신 고점 대비 0%를 과거 하락 부재로 읽으면 오류.",
+  "evidence": [
+    "analysis/housing_growth_2006/full_history_v1/summary.csv",
+    "analysis/housing_growth_2006/full_history_v1/episodes.csv",
+    "analysis/housing_growth_2006/full_history_v1/report.md"
+  ],
+  "proposal": "6개 지역 2006Q1~, 세종 2015Q1~를 분리하고 전체 누적·최대낙폭·모든 과거 회복구간을 설명. 거래량 전체와 가격 매칭 표본을 분리.",
+  "impact": "v3 장기 가격·회복 설명 및 그래프. v1/v2 원본과 공통 상태를 수정하지 않음. 인과·향후 회복 예측 근거로 확대 금지.",
+  "to": [
+    "director",
+    "writer",
+    "visual",
+    "qa"
+  ],
+  "status": "proposed_for_parent_integration"
+}

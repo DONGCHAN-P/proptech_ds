@@ -1,0 +1,46 @@
+{
+  "scene_id": "S16",
+  "chapter": 4,
+  "message": "집값 증가의 구성",
+  "narration_text": "현금 1억 원을 더 모으니까 볼 수 있는 집값이 많이 올라갔죠. 그런데 그 차이의 상당 부분은 대출이 더 늘어나서 생긴 겁니다. 이 부분을 빼고 집값만 보면, 자산이 갑자기 훨씬 커진 것처럼 착각하기 쉽습니다.",
+  "paragraph_ids": [
+    "P038"
+  ],
+  "claim_ids": [
+    "DOC",
+    "CALC"
+  ],
+  "material_type": "증가분 분해",
+  "asset_ids": [
+    "M16"
+  ],
+  "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "audio_revision": null,
+  "start": null,
+  "end": null,
+  "timing_basis": "UNLOCKED: awaiting actual Jun alignment",
+  "beats": [
+    {
+      "anchor": "집값이 많이 올라갔죠",
+      "action": "주택 예산 증가 3억",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "대출이 더 늘어나서",
+      "action": "자기자금 증가 9000만원·대출 증가 2억1000만원으로 분해",
+      "start": null,
+      "end": null
+    }
+  ],
+  "status": "designed_not_rendered",
+  "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+  "fallback": "3억 증가 막대를 0.9:2.1로 분할; 보유 순자산 증가로 표기하지 않음",
+  "template_status": "contract_only_not_authored",
+  "template": "S16",
+  "beat_ids": [
+    "S16.b01",
+    "S16.b02"
+  ],
+  "preview_seconds": null
+}

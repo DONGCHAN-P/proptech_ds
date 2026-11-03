@@ -1,0 +1,85 @@
+{
+  "request_type": "enhance_video",
+  "status": "completed_local_review_version",
+  "design": "한 가구의 6억 집 매수 자금 흐름을 중심으로 초반 결론→현금·비용→은행 한도→월 예산→가격·정책 조건 변화→결론으로 구성",
+  "approaches_considered": [
+    {
+      "approach": "기존45장면을 유지한 시각 패치",
+      "decision": "서술 지연·반복의 원인을 남기므로 제외"
+    },
+    {
+      "approach": "검증된 수치·정책을 보존한 사례 중심 재구성",
+      "decision": "이번 요청에 맞춰 채택"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "S1",
+      "owner": "writer + director/Claude",
+      "outputs": [
+        "writer/rebuild-v2/script_v3.md",
+        "writer/rebuild-v2/scenes_v3.json"
+      ],
+      "gate": "초반 결론·가구A/B·기존 검증값 보존·Claude 필수 이슈0",
+      "status": "complete_in_declared_scope"
+    },
+    {
+      "id": "S2",
+      "owner": "narration",
+      "outputs": [
+        "narration/rebuild-v2/final_timing.json"
+      ],
+      "gate": "잠금SHA·실제 WordBoundary·문자/숫자/단위 보존·새 유료 호출0",
+      "status": "complete_in_declared_scope"
+    },
+    {
+      "id": "S3",
+      "owner": "editor",
+      "outputs": [
+        "editor/rebuild-v2",
+        "outputs/rebuild-v2"
+      ],
+      "gate": "세 대표 장면의 인코딩 비교와 가독성·순차 노출·겹침0",
+      "status": "complete_in_declared_scope"
+    },
+    {
+      "id": "S4",
+      "owner": "independent QA + director/Claude",
+      "outputs": [
+        "qa/rebuild-v2",
+        "director/rebuild-v2/claude"
+      ],
+      "gate": "전체 장면·컷·자막·ASR/신호 확인 범위별 판정; 미적 반복을 필수 검수",
+      "status": "complete_in_declared_scope"
+    },
+    {
+      "id": "S5",
+      "owner": "director",
+      "outputs": [
+        "outputs/rebuild-v2/completion.json",
+        "config/video_shelf.json"
+      ],
+      "gate": "정확한 해시·검수 범위·기존본 보존·로컬 검토본 연결",
+      "status": "complete_in_declared_scope"
+    }
+  ],
+  "review_focus": [
+    "단계별 정보가 발화 전에 전부 노출되지 않을 것",
+    "글자↔도형 충돌 포함",
+    "화면마다 핵심 결과와 조건의 위계",
+    "가구·대출상품·금리기간 불일치 방지",
+    "최신 Jun 게시본과 같은 메시지 유형별 실제 비교"
+  ],
+  "voice": "무료 InJoon 0%로 검토본 제작; 새 유료 Jun은 별도 예산 범위 필요",
+  "runtime": "기존 HyperFrames 0.8.181 재현 환경; usage status unknown",
+  "preserve": [
+    "기존 MP4/원본 대본/정책·계산 원장/음성/브랜드/출처·승인·검수 기록"
+  ],
+  "no_unrequested_remote_changes": true,
+  "final_outputs": [
+    "video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/full-film-r2-v1/affordable_home_price_rebuild_r2_v1.mp4",
+    "video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/full-film-r2-v1/captions_global.srt",
+    "video-agent-studio/episodes/affordable-home-price-20261026/director/rebuild-v2/frozen-script-v3-r2/script_v3_r2.md",
+    "video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/completion.json"
+  ]
+}

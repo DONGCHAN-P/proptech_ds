@@ -1,0 +1,2466 @@
+{
+  "revision": "jun-replacement-v1-phonetics-candidate",
+  "created_at_utc": "2026-10-26T05:47:08.214Z",
+  "status": "proposed_not_applied_not_authorized_for_generation",
+  "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+  "raw_manifest": {
+    "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/narration_manifest.json",
+    "sha256": "e2452530e6ce66cb4256dc4ed4e12c2b9d13913e8a76fba4149eea04665191e8"
+  },
+  "grounding": {
+    "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+    "sha256": "0d6ee138f77121b8091f82c930fc6432094904219469accc1dc00168078d1e4e"
+  },
+  "dictionary": {
+    "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/pronunciation_dictionary.json",
+    "sha256": "8a1c4f37c26f0ef8139e7a49a42057f6386f926b849297fcb922577107dfa638"
+  },
+  "policy": "기존 무료 TTS v6 spoken_text와 발음 대응을 그대로 후보로 제시. 원문·표시 자막·확정 대본은 변경하지 않음. 실제 Jun 청취로 검증하지 않음.",
+  "aliases": {
+    "S&P500": "에스 앤드 피 오백",
+    "S&P": "에스 앤드 피",
+    "ETF": "이 티 에프"
+  },
+  "overrides": {
+    "2억5천만원": "이억 오천만 원",
+    "1.21배": "일 점 이일 배",
+    "2건": "두 건",
+    "30단지": "서른 단지"
+  },
+  "observed_entries": {
+    "0%": "영 퍼센트",
+    "0.5%": "영 점 오 퍼센트",
+    "1.1배": "일 점 일 배",
+    "1.21배": "일 점 이일 배",
+    "10%": "십 퍼센트",
+    "100만원": "백만 원",
+    "10년": "십 년",
+    "11.7%": "십일 점 칠 퍼센트",
+    "112만원": "백십이만 원",
+    "120개월": "백이십 개월",
+    "120만원": "백이십만 원",
+    "12개월": "십이 개월",
+    "172만원": "백칠십이만 원",
+    "188만원": "백팔십팔만 원",
+    "1년": "일 년",
+    "1억6천700만원": "일억육천칠백만 원",
+    "1억6천900만원": "일억육천구백만 원",
+    "1억원": "일억 원",
+    "1천200만원": "천이백만 원",
+    "2%": "이 퍼센트",
+    "2006년": "이천육 년",
+    "2016년": "이천십육 년",
+    "2026년": "이천이십육 년",
+    "202만원": "이백이만 원",
+    "20년": "이십 년",
+    "21%": "이십일 퍼센트",
+    "228만원": "이백이십팔만 원",
+    "25만원": "이십오만 원",
+    "2건": "두 건",
+    "2분기": "이 분기",
+    "2억4천400만원": "이억사천사백만 원",
+    "2억4천만원": "이억사천만 원",
+    "2억5천만원": "이억 오천만 원",
+    "2억8천400만원": "이억팔천사백만 원",
+    "2억원": "이억 원",
+    "2천만원": "이천만 원",
+    "300만원": "삼백만 원",
+    "30년": "삼십 년",
+    "30단지": "서른 단지",
+    "30만원": "삼십만 원",
+    "3억5천950만원": "삼억오천구백오십만 원",
+    "3억6천만원": "삼억육천만 원",
+    "3천만원": "삼천만 원",
+    "4%": "사 퍼센트",
+    "4.0%": "사 점 영 퍼센트",
+    "400만원": "사백만 원",
+    "4억5천900만원": "사억오천구백만 원",
+    "4억원": "사억 원",
+    "4천900만원": "사천구백만 원",
+    "5%": "오 퍼센트",
+    "52만원": "오십이만 원",
+    "5만원": "오만 원",
+    "5억200만원": "오억이백만 원",
+    "5억2천500만원": "오억이천오백만 원",
+    "5억3천600만원": "오억삼천육백만 원",
+    "5억6천200만원": "오억육천이백만 원",
+    "5억9천400만원": "오억구천사백만 원",
+    "6%": "육 퍼센트",
+    "6.6%": "육 점 육 퍼센트",
+    "600만원": "육백만 원",
+    "67만원": "육십칠만 원",
+    "6억1천400만원": "육억천사백만 원",
+    "6억1천만원": "육억천만 원",
+    "6억4천900만원": "육억사천구백만 원",
+    "6억5천600만원": "육억오천육백만 원",
+    "6억5천900만원": "육억오천구백만 원",
+    "6억6천만원": "육억육천만 원",
+    "6억8천900만원": "육억팔천구백만 원",
+    "6억900만원": "육억구백만 원",
+    "6억9천800만원": "육억구천팔백만 원",
+    "6억9천만원": "육억구천만 원",
+    "6억원": "육억 원",
+    "72만원": "칠십이만 원",
+    "7만원": "칠만 원",
+    "7억1천300만원": "칠억천삼백만 원",
+    "7억1천700만원": "칠억천칠백만 원",
+    "7억3천100만원": "칠억삼천백만 원",
+    "7억3천만원": "칠억삼천만 원",
+    "7억4천만원": "칠억사천만 원",
+    "7억7천만원": "칠억칠천만 원",
+    "7억8천400만원": "칠억팔천사백만 원",
+    "7천400만원": "칠천사백만 원",
+    "7천600만원": "칠천육백만 원",
+    "8%": "팔 퍼센트",
+    "8천만원": "팔천만 원",
+    "98만원": "구십팔만 원",
+    "9억6천만원": "구억육천만 원",
+    "ETF": "이 티 에프",
+    "S&P": "에스 앤드 피",
+    "S&P500": "에스 앤드 피 오백"
+  },
+  "rules": {
+    "money": "한자 수사+금액 단위; 원문 숫자/단위 한 덩어리 보호",
+    "decimal": "정수 한자 수사, 점 이하 각 자리 영/일/이… 유지",
+    "year": "2006년=이천육 년; 2016년=이천십육 년",
+    "percent": "퍼센트; 4.0%는 영을 생략하지 않음"
+  },
+  "paragraph_count": 54,
+  "characters": 8949,
+  "character_delta": 234,
+  "actual_listening": false,
+  "paragraphs": [
+    {
+      "paragraph_id": "C01P01",
+      "scene_id": "C01",
+      "source_text_sha256": "ee290a994aa4bb67fe1f68b8e4bf88785c7564d74dc2af71c250f81eb52cbcc5",
+      "proposed_spoken_text": "같은 아파트에서 같은 기간을 살아도, 집을 산 가구와 전세로 산 가구, 월세로 산 가구의 자산은 다르게 남습니다. 집값 상승률과 주식 수익률만 나란히 놓으면 이 차이를 설명하기 어렵습니다. 세 가구 모두 매달 살 집이 필요하고, 그 집을 마련하는 데 들어가는 돈이 다르기 때문입니다.",
+      "proposed_spoken_text_sha256": "ee290a994aa4bb67fe1f68b8e4bf88785c7564d74dc2af71c250f81eb52cbcc5",
+      "characters": 158,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C01P01"
+      }
+    },
+    {
+      "paragraph_id": "C01P02",
+      "scene_id": "C01",
+      "source_text_sha256": "642f0396c08dd7bcebb8b6cc3689f1537f26d063f8c50e526ebd4d8672f9da9f",
+      "proposed_spoken_text": "이번 비교에서는 초기 순자산이 이억 오천만 원이고 매달 주거와 저축에 쓸 수 있는 돈이 삼백만 원인 세 가구를 놓겠습니다. 같은 수준의 육억 원 집에서 십 년을 사는 설정입니다. 한 가구는 집을 사고, 한 가구는 전세를, 다른 가구는 월세를 선택합니다. 남은 돈은 세 가구 모두 같은 투자 규칙을 적용합니다.",
+      "proposed_spoken_text_sha256": "7cb5468a086c365d30b3a8038158b78779332ab44af92940410cef99cda43130",
+      "characters": 172,
+      "character_delta": 3,
+      "substitutions": [
+        {
+          "source_start": 17,
+          "source_end": 23,
+          "spoken_start": 17,
+          "spoken_end": 25,
+          "original": "2억5천만원",
+          "spoken": "이억 오천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 47,
+          "source_end": 52,
+          "spoken_start": 49,
+          "spoken_end": 54,
+          "original": "300만원",
+          "spoken": "삼백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 74,
+          "source_end": 77,
+          "spoken_start": 76,
+          "spoken_end": 80,
+          "original": "6억원",
+          "spoken": "육억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 82,
+          "source_end": 85,
+          "spoken_start": 85,
+          "spoken_end": 88,
+          "original": "10년",
+          "spoken": "십 년",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C01P02"
+      }
+    },
+    {
+      "paragraph_id": "C01P03",
+      "scene_id": "C01",
+      "source_text_sha256": "0f72a5eae4393170294c3c8d069f193cfa3cd0c81745a6b1bf9eb81fcd65856b",
+      "proposed_spoken_text": "그 결과 기본 가정에서는 십 년 후 순자산이 매매 약 육억천만 원, 전세 약 육억육천만 원, 월세 약 육억구천만 원으로 계산됩니다. 여기서 집값과 투자수익 가정을 바꾸면 매매가 가장 크게 남는 경우도, 전세가 가장 크게 남는 경우도 나옵니다. 오늘 살펴볼 것은 이 순서가 바뀌는 이유입니다.",
+      "proposed_spoken_text_sha256": "cfda1c8ff3ae80a0bdabbaae4f49f9eb114abd90a1653bc88b15a1312e5f0fae",
+      "characters": 162,
+      "character_delta": 2,
+      "substitutions": [
+        {
+          "source_start": 14,
+          "source_end": 17,
+          "spoken_start": 14,
+          "spoken_end": 17,
+          "original": "10년",
+          "spoken": "십 년",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 30,
+          "source_end": 36,
+          "spoken_start": 30,
+          "spoken_end": 36,
+          "original": "6억1천만원",
+          "spoken": "육억천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 43,
+          "source_end": 49,
+          "spoken_start": 43,
+          "spoken_end": 50,
+          "original": "6억6천만원",
+          "spoken": "육억육천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 56,
+          "source_end": 62,
+          "spoken_start": 57,
+          "spoken_end": 64,
+          "original": "6억9천만원",
+          "spoken": "육억구천만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C01P03"
+      }
+    },
+    {
+      "paragraph_id": "C01P04",
+      "scene_id": "C01",
+      "source_text_sha256": "9f67c0dea5a3b07c43c7efdc330045726dda6a6d30237479a72cbadb11386d94",
+      "proposed_spoken_text": "지난 교산편에서는 지역의 입지와 가격을 살펴봤습니다. 이번부터는 그다음 선택으로 이어갑니다. 좋은 지역을 찾은 뒤 집을 어떤 방식으로 마련할지, 얼마까지 감당할 수 있을지, 그 예산에서 어떤 단지를 고를지를 차례로 연결하겠습니다. 오늘은 그 첫 단계인 주거 방식과 순자산 비교입니다.",
+      "proposed_spoken_text_sha256": "9f67c0dea5a3b07c43c7efdc330045726dda6a6d30237479a72cbadb11386d94",
+      "characters": 158,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C01P04"
+      }
+    },
+    {
+      "paragraph_id": "C02P01",
+      "scene_id": "C02",
+      "source_text_sha256": "7f9044fe6d6cec2fb6bdd11e7020f51ab948de637769d578ac064425b2bd4b8c",
+      "proposed_spoken_text": "먼저 비교의 출발선을 맞추겠습니다. 세 가구는 집의 면적과 위치, 생활 편의가 같은 것으로 둡니다. 공통 생활비를 지출한 뒤 주거비와 저축에 쓸 수 있는 돈이 매달 삼백만 원입니다. 전기나 수도처럼 같은 집에 살면 공통으로 드는 돈은 동일하게 처리합니다. 집주인과 임차인이 다르게 부담하는 비용만 따로 넣습니다.",
+      "proposed_spoken_text_sha256": "3dbe4fbbd9493cb69f4834b72e4dc6e3639001a09f33a06c7f33d4967f9b2c27",
+      "characters": 174,
+      "character_delta": 0,
+      "substitutions": [
+        {
+          "source_start": 92,
+          "source_end": 97,
+          "spoken_start": 92,
+          "spoken_end": 97,
+          "original": "300만원",
+          "spoken": "삼백만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C02P01"
+      }
+    },
+    {
+      "paragraph_id": "C02P02",
+      "scene_id": "C02",
+      "source_text_sha256": "d67b69c9f48ef29e93fc8b22c6a2e9c90ba7580828320f26bb5180c8092a3ed3",
+      "proposed_spoken_text": "집값은 먼저 짚고 가겠습니다. 최근에 집을 알아보셨다면 연 이 퍼센트라는 숫자가 작게 느껴질 수 있습니다. 이천육 년부터 모은 실거래로 같은 단지·같은 전용면적에서 두 분기 각각 두 건 이상 거래된 표본을 연결한 자체 지수를 만들었습니다. 각 분기는 서른 단지 이상을 연결하며, 포함되는 표본은 분기마다 바뀝니다. 이 지수로 본 이천십육 년 이 분기부터 이천이십육 년 이 분기까지의 연평균 상승률은 서울 약 십일 점 칠 퍼센트, 경기 육 점 육 퍼센트, 인천 사 점 영 퍼센트였습니다. 표본 선택 기준에 따라 상승률도 달라집니다.",
+      "proposed_spoken_text_sha256": "ca3798fbb360251b165a1019e46327fbf6ee908a1108015e4309ab3d9bba9cf9",
+      "characters": 296,
+      "character_delta": 25,
+      "substitutions": [
+        {
+          "source_start": 33,
+          "source_end": 35,
+          "spoken_start": 33,
+          "spoken_end": 38,
+          "original": "2%",
+          "spoken": "이 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 57,
+          "source_end": 62,
+          "spoken_start": 60,
+          "spoken_end": 65,
+          "original": "2006년",
+          "spoken": "이천육 년",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 97,
+          "source_end": 99,
+          "spoken_start": 100,
+          "spoken_end": 103,
+          "original": "2건",
+          "spoken": "두 건",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 136,
+          "source_end": 140,
+          "spoken_start": 140,
+          "spoken_end": 145,
+          "original": "30단지",
+          "spoken": "서른 단지",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 179,
+          "source_end": 184,
+          "spoken_start": 184,
+          "spoken_end": 190,
+          "original": "2016년",
+          "spoken": "이천십육 년",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 185,
+          "source_end": 188,
+          "spoken_start": 191,
+          "spoken_end": 195,
+          "original": "2분기",
+          "spoken": "이 분기",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 191,
+          "source_end": 196,
+          "spoken_start": 198,
+          "spoken_end": 205,
+          "original": "2026년",
+          "spoken": "이천이십육 년",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 197,
+          "source_end": 200,
+          "spoken_start": 206,
+          "spoken_end": 210,
+          "original": "2분기",
+          "spoken": "이 분기",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 218,
+          "source_end": 223,
+          "spoken_start": 228,
+          "spoken_end": 238,
+          "original": "11.7%",
+          "spoken": "십일 점 칠 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 228,
+          "source_end": 232,
+          "spoken_start": 243,
+          "spoken_end": 252,
+          "original": "6.6%",
+          "spoken": "육 점 육 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 237,
+          "source_end": 241,
+          "spoken_start": 257,
+          "spoken_end": 266,
+          "original": "4.0%",
+          "spoken": "사 점 영 퍼센트",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C02P02"
+      }
+    },
+    {
+      "paragraph_id": "C02P03",
+      "scene_id": "C02",
+      "source_text_sha256": "9373d76d78383e9bccd5b1470aaaadc3727a7bf2dd4276148847600c29ab9fd2",
+      "proposed_spoken_text": "다만 앞으로 감당할 집을 정할 때는, 가격이 얼마나 오를지를 보수적으로 잡는 편이 합리적이라고 생각합니다. 높은 상승률을 기대해서 예산을 늘리기보다, 상승폭이 작아도 대출을 갚고 저축을 이어갈 수 있는지부터 확인하려는 겁니다. 그래서 첫 계산은 집값 연 이 퍼센트에서 출발하겠습니다. 육억 원 집이 십 년 뒤 약 칠억삼천만 원이 되는 조건입니다. 이후에는 상승률을 사 퍼센트, 육 퍼센트로 바꿨을 때의 차이도 함께 보겠습니다.",
+      "proposed_spoken_text_sha256": "dfb4fcc64fff675ebc00931fb3a5122116e3e028c54e56e0b0f56017c1d4ee28",
+      "characters": 238,
+      "character_delta": 11,
+      "substitutions": [
+        {
+          "source_start": 142,
+          "source_end": 144,
+          "spoken_start": 142,
+          "spoken_end": 147,
+          "original": "2%",
+          "spoken": "이 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 156,
+          "source_end": 159,
+          "spoken_start": 159,
+          "spoken_end": 163,
+          "original": "6억원",
+          "spoken": "육억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 163,
+          "source_end": 166,
+          "spoken_start": 167,
+          "spoken_end": 170,
+          "original": "10년",
+          "spoken": "십 년",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 171,
+          "source_end": 177,
+          "spoken_start": 175,
+          "spoken_end": 182,
+          "original": "7억3천만원",
+          "spoken": "칠억삼천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 199,
+          "source_end": 201,
+          "spoken_start": 204,
+          "spoken_end": 209,
+          "original": "4%",
+          "spoken": "사 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 203,
+          "source_end": 205,
+          "spoken_start": 211,
+          "spoken_end": 216,
+          "original": "6%",
+          "spoken": "육 퍼센트",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C02P03"
+      }
+    },
+    {
+      "paragraph_id": "C02P04",
+      "scene_id": "C02",
+      "source_text_sha256": "fb3da8fa8eb26a1cce07b7117476535c9e844eda828cf8a07ca2cbde190d4768",
+      "proposed_spoken_text": "투자계좌는 배당과 환율 효과를 포함한 원화 총수익 연 육 퍼센트, 금리는 연 사 퍼센트로 계산합니다. 월세와 보증금은 십 년 동안 같은 금액으로 둡니다. 취득세나 중개보수처럼 계약할 때 한 번 드는 초기 부대비용과 매달 드는 유지비는 뒤에서 설명할 가정 금액을 적용하겠습니다. 집과 보증금, 금융자산에서 남은 빚을 뺀 금액을 비교하며, 실제 상품별 세금과 운용비용을 추가로 반영하기 전의 명목 평가 순자산입니다.",
+      "proposed_spoken_text_sha256": "ec94a419866986f663042243d26cad88df9756f74430ea8182694d7566ca9fff",
+      "characters": 230,
+      "character_delta": 6,
+      "substitutions": [
+        {
+          "source_start": 30,
+          "source_end": 32,
+          "spoken_start": 30,
+          "spoken_end": 35,
+          "original": "6%",
+          "spoken": "육 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 40,
+          "source_end": 42,
+          "spoken_start": 43,
+          "spoken_end": 48,
+          "original": "4%",
+          "spoken": "사 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 60,
+          "source_end": 63,
+          "spoken_start": 66,
+          "spoken_end": 69,
+          "original": "10년",
+          "spoken": "십 년",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C02P04"
+      }
+    },
+    {
+      "paragraph_id": "C02P05",
+      "scene_id": "C02",
+      "source_text_sha256": "be8c0a1dfc1c69f30434432008a652bffa193e456992b3811109e9d5cc22f6c8",
+      "proposed_spoken_text": "이렇게 조건을 먼저 고정하면 집값이 얼마나 올랐는지와 매달 얼마를 저축했는지를 분리할 수 있습니다. 같은 집과 같은 예산을 맞춰 주거 방식에 따른 차이를 보겠습니다.",
+      "proposed_spoken_text_sha256": "be8c0a1dfc1c69f30434432008a652bffa193e456992b3811109e9d5cc22f6c8",
+      "characters": 92,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C02P05"
+      }
+    },
+    {
+      "paragraph_id": "C02P06",
+      "scene_id": "C02",
+      "source_text_sha256": "c7c91ed22e9dd709451c5b183bfbba288d8287ac54d7e4077d2f444dde3d1598",
+      "proposed_spoken_text": "비교 기간도 같습니다. 매매는 십 년, 투자는 이십 년으로 늘리거나 한쪽에 유리한 종료 시점을 고르면 결과의 의미가 달라집니다. 이번에는 세 가구 모두 백이십 개월이 지난 같은 시점에서 집과 금융자산, 보증금, 남은 빚을 확인합니다.",
+      "proposed_spoken_text_sha256": "aeee3ee8c71ebd72087c698d62ab8b93aa3627422c971da98b4a025eb823893f",
+      "characters": 130,
+      "character_delta": 2,
+      "substitutions": [
+        {
+          "source_start": 17,
+          "source_end": 20,
+          "spoken_start": 17,
+          "spoken_end": 20,
+          "original": "10년",
+          "spoken": "십 년",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 26,
+          "source_end": 29,
+          "spoken_start": 26,
+          "spoken_end": 30,
+          "original": "20년",
+          "spoken": "이십 년",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 84,
+          "source_end": 89,
+          "spoken_start": 85,
+          "spoken_end": 91,
+          "original": "120개월",
+          "spoken": "백이십 개월",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C02P06"
+      }
+    },
+    {
+      "paragraph_id": "C03P01",
+      "scene_id": "C03",
+      "source_text_sha256": "d2c40f82136c9f9cdc87f84c3e8501b2d4d2a32ff29bd17a858b5c379eb0d676",
+      "proposed_spoken_text": "집을 사는 가구부터 보겠습니다. 육억 원 가운데 자기자금 이억사천만 원을 넣고 삼억육천만 원을 빌립니다. 집을 살 때는 집값 외에 취득세와 부동산 중개보수, 등기 관련 비용도 듭니다. 이번 비교의 약 육백만 원은 이런 항목을 묶은 설명용 가정 금액입니다. 실제 거래의 항목별 비용은 거래 조건에 따라 따로 산정합니다. 초기 순자산 이억 오천만 원 중 집에 들어간 돈과 비용을 빼면 투자계좌에 남는 돈은 사백만 원입니다.",
+      "proposed_spoken_text_sha256": "ff090959a0cab36c32ca0b2c66c59b4d62ffc3ddbf3001302d928ba700f90519",
+      "characters": 234,
+      "character_delta": 5,
+      "substitutions": [
+        {
+          "source_start": 18,
+          "source_end": 21,
+          "spoken_start": 18,
+          "spoken_end": 22,
+          "original": "6억원",
+          "spoken": "육억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 31,
+          "source_end": 37,
+          "spoken_start": 32,
+          "spoken_end": 39,
+          "original": "2억4천만원",
+          "spoken": "이억사천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 42,
+          "source_end": 48,
+          "spoken_start": 44,
+          "spoken_end": 51,
+          "original": "3억6천만원",
+          "spoken": "삼억육천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 109,
+          "source_end": 114,
+          "spoken_start": 112,
+          "spoken_end": 117,
+          "original": "600만원",
+          "spoken": "육백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 182,
+          "source_end": 188,
+          "spoken_start": 185,
+          "spoken_end": 193,
+          "original": "2억5천만원",
+          "spoken": "이억 오천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 220,
+          "source_end": 225,
+          "spoken_start": 225,
+          "spoken_end": 230,
+          "original": "400만원",
+          "spoken": "사백만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C03P01"
+      }
+    },
+    {
+      "paragraph_id": "C03P02",
+      "scene_id": "C03",
+      "source_text_sha256": "32847c896304a3d4e223e941ff817abba3ee5209991af3d5e4282a19bb408210",
+      "proposed_spoken_text": "이때 집값 육억 원은 대출을 포함한 자산입니다. 집과 투자계좌를 더한 뒤 대출 삼억육천만 원을 빼야 합니다. 거래비용을 낸 직후 순자산은 이억사천사백만 원입니다. 출발 전 순자산은 같아도 실제로 지출한 비용이 다르면 거래 직후 잔액에 차이가 생깁니다.",
+      "proposed_spoken_text_sha256": "787f254104423c25e675c896c3a13ea5b19af5e2dbe56a7cf9a33caf4c6a7b38",
+      "characters": 140,
+      "character_delta": 2,
+      "substitutions": [
+        {
+          "source_start": 6,
+          "source_end": 9,
+          "spoken_start": 6,
+          "spoken_end": 10,
+          "original": "6억원",
+          "spoken": "육억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 43,
+          "source_end": 49,
+          "spoken_start": 44,
+          "spoken_end": 51,
+          "original": "3억6천만원",
+          "spoken": "삼억육천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 75,
+          "source_end": 84,
+          "spoken_start": 77,
+          "spoken_end": 86,
+          "original": "2억4천400만원",
+          "spoken": "이억사천사백만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C03P02"
+      }
+    },
+    {
+      "paragraph_id": "C03P03",
+      "scene_id": "C03",
+      "source_text_sha256": "f2d942fbd49d43d8425a253abfaabf654fbc125f9c223e9ecd37433e3876c93b",
+      "proposed_spoken_text": "전세 가구는 보증금 사억 원인 집에 들어갑니다. 자기자금 이억 원과 전세대출 이억 원을 합칩니다. 전세도 중개보수 등 계약 과정에 드는 초기 부대비용이 있습니다. 이 비용 묶음에 설명용 가정 약 백만 원을 적용하면 투자계좌에는 사천구백만 원이 남습니다. 보증금 사억 원은 돌려받을 자산으로 기록하고, 대출 이억 원은 별도의 빚으로 기록합니다.",
+      "proposed_spoken_text_sha256": "7f602800ea196151f64e6f09649d8a28bb6d96e812fd8ea11310ca4d5e1c4a9c",
+      "characters": 191,
+      "character_delta": 4,
+      "substitutions": [
+        {
+          "source_start": 11,
+          "source_end": 14,
+          "spoken_start": 11,
+          "spoken_end": 15,
+          "original": "4억원",
+          "spoken": "사억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 31,
+          "source_end": 34,
+          "spoken_start": 32,
+          "spoken_end": 36,
+          "original": "2억원",
+          "spoken": "이억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 41,
+          "source_end": 44,
+          "spoken_start": 43,
+          "spoken_end": 47,
+          "original": "2억원",
+          "spoken": "이억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 106,
+          "source_end": 111,
+          "spoken_start": 109,
+          "spoken_end": 113,
+          "original": "100만원",
+          "spoken": "백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 125,
+          "source_end": 132,
+          "spoken_start": 127,
+          "spoken_end": 134,
+          "original": "4천900만원",
+          "spoken": "사천구백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 144,
+          "source_end": 147,
+          "spoken_start": 146,
+          "spoken_end": 150,
+          "original": "4억원",
+          "spoken": "사억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 168,
+          "source_end": 171,
+          "spoken_start": 171,
+          "spoken_end": 175,
+          "original": "2억원",
+          "spoken": "이억 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C03P03"
+      }
+    },
+    {
+      "paragraph_id": "C03P04",
+      "scene_id": "C03",
+      "source_text_sha256": "deb09b7764a713abafe684647407f2e4e0a47dfd9fb97f288a9a3aa3995ee3c8",
+      "proposed_spoken_text": "월세 가구는 보증금 일억 원에 월세 백만 원인 조건입니다. 보증금에는 자기자금 팔천만 원과 대출 이천만 원이 들어갑니다. 월세도 중개보수 등 초기 부대비용 묶음에 설명용 가정 약 백만 원을 적용하겠습니다. 이 비용을 내고 나면 투자계좌의 출발 금액은 일억육천구백만 원입니다. 월세 가구가 더 큰 투자계좌로 시작하는 이유는 주거 보증금에 묶인 자기자금이 적기 때문입니다.",
+      "proposed_spoken_text_sha256": "d04dd7f472c811eead4d1c65ad257d8c9acb096ea36f017180877d313c0418ed",
+      "characters": 206,
+      "character_delta": 1,
+      "substitutions": [
+        {
+          "source_start": 11,
+          "source_end": 14,
+          "spoken_start": 11,
+          "spoken_end": 15,
+          "original": "1억원",
+          "spoken": "일억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 19,
+          "source_end": 24,
+          "spoken_start": 20,
+          "spoken_end": 24,
+          "original": "100만원",
+          "spoken": "백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 44,
+          "source_end": 48,
+          "spoken_start": 44,
+          "spoken_end": 49,
+          "original": "8천만원",
+          "spoken": "팔천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 53,
+          "source_end": 57,
+          "spoken_start": 54,
+          "spoken_end": 59,
+          "original": "2천만원",
+          "spoken": "이천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 98,
+          "source_end": 103,
+          "spoken_start": 100,
+          "spoken_end": 104,
+          "original": "100만원",
+          "spoken": "백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 139,
+          "source_end": 148,
+          "spoken_start": 140,
+          "spoken_end": 149,
+          "original": "1억6천900만원",
+          "spoken": "일억육천구백만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C03P04"
+      }
+    },
+    {
+      "paragraph_id": "C03P05",
+      "scene_id": "C03",
+      "source_text_sha256": "9b6d85ad49ac3a6c2bb3cc05e7b29a4cecf67e5450b42781e3729701f9c2cc2b",
+      "proposed_spoken_text": "전세와 월세의 대출은 매달 이자만 내고 원금은 그대로 남는 설정입니다. 만기에 보증금을 돌려받으면 대출을 갚습니다. 보증금 전액을 정상적으로 돌려받는 조건도 여기에 포함됩니다. 초기 금융자산은 세 가구 모두 즉시 투자하고, 이후에는 매달 남는 예산을 같은 방식으로 넣습니다.",
+      "proposed_spoken_text_sha256": "9b6d85ad49ac3a6c2bb3cc05e7b29a4cecf67e5450b42781e3729701f9c2cc2b",
+      "characters": 153,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C03P05"
+      }
+    },
+    {
+      "paragraph_id": "C04P01",
+      "scene_id": "C04",
+      "source_text_sha256": "807f6e057a530bcc3bfba42882d76b0900df0d3f5182ecccee04c91665e4851e",
+      "proposed_spoken_text": "이제 같은 삼백만 원이 어떻게 나뉘는지 보겠습니다. 매매 가구의 삼억육천만 원 대출은 삼십 년 동안 원금과 이자를 합친 같은 금액을 갚는 방식입니다. 연 사 퍼센트에서 월 상환액은 약 백칠십이만 원입니다. 여기에 보유세와 수선비 등 집을 보유하면서 드는 비용을 월평균 삼십만 원으로 묶어 가정하면 주거 관련 현금지출은 약 이백이만 원입니다.",
+      "proposed_spoken_text_sha256": "c0e04108f9ba91582a8a669b191380eb09de2b860f707ea226994128d9ed5b72",
+      "characters": 190,
+      "character_delta": 9,
+      "substitutions": [
+        {
+          "source_start": 6,
+          "source_end": 11,
+          "spoken_start": 6,
+          "spoken_end": 11,
+          "original": "300만원",
+          "spoken": "삼백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 36,
+          "source_end": 42,
+          "spoken_start": 36,
+          "spoken_end": 43,
+          "original": "3억6천만원",
+          "spoken": "삼억육천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 47,
+          "source_end": 50,
+          "spoken_start": 48,
+          "spoken_end": 52,
+          "original": "30년",
+          "spoken": "삼십 년",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 84,
+          "source_end": 86,
+          "spoken_start": 86,
+          "spoken_end": 91,
+          "original": "4%",
+          "spoken": "사 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 98,
+          "source_end": 103,
+          "spoken_start": 103,
+          "spoken_end": 110,
+          "original": "172만원",
+          "spoken": "백칠십이만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 143,
+          "source_end": 147,
+          "spoken_start": 150,
+          "spoken_end": 155,
+          "original": "30만원",
+          "spoken": "삼십만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 172,
+          "source_end": 177,
+          "spoken_start": 180,
+          "spoken_end": 186,
+          "original": "202만원",
+          "spoken": "이백이만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C04P01"
+      }
+    },
+    {
+      "paragraph_id": "C04P02",
+      "scene_id": "C04",
+      "source_text_sha256": "0f2a05c98166b476388d07e1e4fde8d985380299d09b9c4d491cb96673e01d76",
+      "proposed_spoken_text": "따라서 투자계좌에는 매달 약 구십팔만 원이 들어갑니다. 집을 산 가구도 남는 돈을 투자합니다. 세 가구 모두 주거 자산과 투자계좌를 함께 보유하고 같은 투자수익률을 적용합니다.",
+      "proposed_spoken_text_sha256": "2480f5ad2b01e9d3b9d8030581f5cb6821352936dd100c8b7487432129fa04af",
+      "characters": 98,
+      "character_delta": 2,
+      "substitutions": [
+        {
+          "source_start": 16,
+          "source_end": 20,
+          "spoken_start": 16,
+          "spoken_end": 22,
+          "original": "98만원",
+          "spoken": "구십팔만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C04P02"
+      }
+    },
+    {
+      "paragraph_id": "C04P03",
+      "scene_id": "C04",
+      "source_text_sha256": "1ce4d901f2e0a5b96e3ab4d2ebfdd3521c5b05b7aa2662f1b506db6b6f2929d3",
+      "proposed_spoken_text": "전세 가구는 대출 이억 원의 이자로 월 약 육십칠만 원을 냅니다. 임차인 추가비용을 월 오만 원으로 가정하면 월 주거 지출은 약 칠십이만 원, 투자금은 약 이백이십팔만 원입니다. 월세 가구는 월세 백만 원에 보증금대출 이자 약 칠만 원, 추가비용 오만 원을 냅니다. 총지출은 약 백십이만 원이고 투자금은 약 백팔십팔만 원입니다.",
+      "proposed_spoken_text_sha256": "05974e597d0c5728f037b808c1749bfa3294ecf6174672ede56d6d58b398e2e1",
+      "characters": 183,
+      "character_delta": 13,
+      "substitutions": [
+        {
+          "source_start": 10,
+          "source_end": 13,
+          "spoken_start": 10,
+          "spoken_end": 14,
+          "original": "2억원",
+          "spoken": "이억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 23,
+          "source_end": 27,
+          "spoken_start": 24,
+          "spoken_end": 30,
+          "original": "67만원",
+          "spoken": "육십칠만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 46,
+          "source_end": 49,
+          "spoken_start": 49,
+          "spoken_end": 53,
+          "original": "5만원",
+          "spoken": "오만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 68,
+          "source_end": 72,
+          "spoken_start": 72,
+          "spoken_end": 78,
+          "original": "72만원",
+          "spoken": "칠십이만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 81,
+          "source_end": 86,
+          "spoken_start": 87,
+          "spoken_end": 95,
+          "original": "228만원",
+          "spoken": "이백이십팔만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 101,
+          "source_end": 106,
+          "spoken_start": 110,
+          "spoken_end": 114,
+          "original": "100만원",
+          "spoken": "백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 119,
+          "source_end": 122,
+          "spoken_start": 127,
+          "spoken_end": 131,
+          "original": "7만원",
+          "spoken": "칠만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 129,
+          "source_end": 132,
+          "spoken_start": 138,
+          "spoken_end": 142,
+          "original": "5만원",
+          "spoken": "오만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 146,
+          "source_end": 151,
+          "spoken_start": 156,
+          "spoken_end": 162,
+          "original": "112만원",
+          "spoken": "백십이만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 161,
+          "source_end": 166,
+          "spoken_start": 172,
+          "spoken_end": 179,
+          "original": "188만원",
+          "spoken": "백팔십팔만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C04P03"
+      }
+    },
+    {
+      "paragraph_id": "C04P04",
+      "scene_id": "C04",
+      "source_text_sha256": "cbdd9b9105ce641ca0de9e4685bd901b886f6330ab2a5ccc659e04770430b2cf",
+      "proposed_spoken_text": "전세는 이 설정에서 매달 투자할 돈이 가장 많습니다. 월세는 처음 투자할 돈이 가장 많습니다. 어느 쪽이 더 크게 남는지는 초기 투자금과 월 적립금, 그리고 투자수익이 함께 결정합니다.",
+      "proposed_spoken_text_sha256": "cbdd9b9105ce641ca0de9e4685bd901b886f6330ab2a5ccc659e04770430b2cf",
+      "characters": 103,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C04P04"
+      }
+    },
+    {
+      "paragraph_id": "C04P05",
+      "scene_id": "C04",
+      "source_text_sha256": "1515ec7750a5448dd570b7a01cf0542de52089b580d3ad90cf778990eaa02c48",
+      "proposed_spoken_text": "월 삼십만 원과 오만 원은 설명을 위한 비용 묶음이며, 매매와 임차의 비용 가정 차이는 이십오만 원입니다. 현실에서는 보유세와 수선, 보증료, 계약 갱신비용을 각각 확인해야 합니다. 같은 관리비를 양쪽에 공통으로 두고, 실제 부담이 다른 항목을 구분하면 매달 투자할 수 있는 돈을 더 정확하게 계산할 수 있습니다.",
+      "proposed_spoken_text_sha256": "d81d07772d9d190bde89abf38622d8ac0b2669af7d42340be4a736ad2c461be1",
+      "characters": 175,
+      "character_delta": 4,
+      "substitutions": [
+        {
+          "source_start": 2,
+          "source_end": 6,
+          "spoken_start": 2,
+          "spoken_end": 7,
+          "original": "30만원",
+          "spoken": "삼십만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 8,
+          "source_end": 11,
+          "spoken_start": 9,
+          "spoken_end": 13,
+          "original": "5만원",
+          "spoken": "오만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 47,
+          "source_end": 51,
+          "spoken_start": 49,
+          "spoken_end": 55,
+          "original": "25만원",
+          "spoken": "이십오만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C04P05"
+      }
+    },
+    {
+      "paragraph_id": "C05P01",
+      "scene_id": "C05",
+      "source_text_sha256": "99832fb1024a6a2b06d38177dd6684fab943618acb31bd6c2b4a916257324c82",
+      "proposed_spoken_text": "매매 가구가 낸 월 백칠십이만 원을 조금 더 나눠보겠습니다. 첫 달 이자는 백이십만 원이고 원금은 약 오십이만 원입니다. 이자는 그달의 비용으로 나갑니다. 원금 오십이만 원은 현금에서 빠지는 동시에 대출잔액을 줄입니다. 통장에서 나간 돈이라는 점은 같지만 순자산에 남기는 결과가 다릅니다.",
+      "proposed_spoken_text_sha256": "14de4a6df7aceede3337123a66b43f3a07f2240658795154fd15d3d19a660498",
+      "characters": 161,
+      "character_delta": 7,
+      "substitutions": [
+        {
+          "source_start": 11,
+          "source_end": 16,
+          "spoken_start": 11,
+          "spoken_end": 18,
+          "original": "172만원",
+          "spoken": "백칠십이만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 40,
+          "source_end": 45,
+          "spoken_start": 42,
+          "spoken_end": 48,
+          "original": "120만원",
+          "spoken": "백이십만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 54,
+          "source_end": 58,
+          "spoken_start": 57,
+          "spoken_end": 63,
+          "original": "52만원",
+          "spoken": "오십이만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 85,
+          "source_end": 89,
+          "spoken_start": 90,
+          "spoken_end": 96,
+          "original": "52만원",
+          "spoken": "오십이만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C05P01"
+      }
+    },
+    {
+      "paragraph_id": "C05P02",
+      "scene_id": "C05",
+      "source_text_sha256": "25982cb968abf3874dcb0b2bf3bcecabfb101f82ac3272b8d51301ec71feb92a",
+      "proposed_spoken_text": "첫 달이 지나면 대출은 삼억육천만 원에서 약 삼억오천구백오십만 원으로 줄어듭니다. 다음 달 이자는 줄어든 대출잔액을 기준으로 계산합니다. 상환액이 같으므로 시간이 갈수록 이자의 비중은 줄고 원금의 비중은 늘어납니다. 십 년 동안 갚은 원금은 약 칠천육백만 원이고, 남은 대출은 약 이억팔천사백만 원입니다.",
+      "proposed_spoken_text_sha256": "5955ec184d9958bc1da031ca5cdedc26fca5f8bd46d7c5cbd361b7ee56f6cd24",
+      "characters": 170,
+      "character_delta": 3,
+      "substitutions": [
+        {
+          "source_start": 13,
+          "source_end": 19,
+          "spoken_start": 13,
+          "spoken_end": 20,
+          "original": "3억6천만원",
+          "spoken": "삼억육천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 24,
+          "source_end": 33,
+          "spoken_start": 25,
+          "spoken_end": 36,
+          "original": "3억5천950만원",
+          "spoken": "삼억오천구백오십만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 118,
+          "source_end": 121,
+          "spoken_start": 121,
+          "spoken_end": 124,
+          "original": "10년",
+          "spoken": "십 년",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 134,
+          "source_end": 141,
+          "spoken_start": 137,
+          "spoken_end": 144,
+          "original": "7천600만원",
+          "spoken": "칠천육백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 154,
+          "source_end": 163,
+          "spoken_start": 157,
+          "spoken_end": 166,
+          "original": "2억8천400만원",
+          "spoken": "이억팔천사백만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C05P02"
+      }
+    },
+    {
+      "paragraph_id": "C05P03",
+      "scene_id": "C05",
+      "source_text_sha256": "7e3921eabf9b650c3bbabafbc5d12304f6e6f19e0e259dc70528e5f9254df84f",
+      "proposed_spoken_text": "처음 빌린 삼억육천만 원에서 매달 갚은 원금을 차감해 대출잔액을 계산합니다. 마지막 순자산에서는 그 잔액을 한 번 뺍니다. 원금 상환의 효과는 줄어든 대출잔액에 반영합니다.",
+      "proposed_spoken_text_sha256": "d369a21b1fbe558266b1af2d6184d72e0f7c6d006ff2982ef063b70b29bb7842",
+      "characters": 96,
+      "character_delta": 1,
+      "substitutions": [
+        {
+          "source_start": 6,
+          "source_end": 12,
+          "spoken_start": 6,
+          "spoken_end": 13,
+          "original": "3억6천만원",
+          "spoken": "삼억육천만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C05P03"
+      }
+    },
+    {
+      "paragraph_id": "C05P04",
+      "scene_id": "C05",
+      "source_text_sha256": "b99f4e9f8bd20e45f0215b4652b8db35cf770623ab21a07d09fe8e9bd732126f",
+      "proposed_spoken_text": "보증금도 같은 원리로 연결합니다. 전세보증금 사억 원을 맡기는 순간 현금은 줄지만 돌려받을 권리가 생깁니다. 계약이 끝나 정상 반환되면 그 권리가 현금으로 바뀝니다. 보증금 반환은 자산의 형태가 현금으로 바뀌는 과정입니다. 대출로 마련한 부분은 반환된 돈으로 갚아야 하므로 순자산에서 빚을 함께 뺍니다.",
+      "proposed_spoken_text_sha256": "5a06b7c8f9f55e953c4d8ea8ee8927cdcb928a96449428e990420f90320e8da6",
+      "characters": 169,
+      "character_delta": 1,
+      "substitutions": [
+        {
+          "source_start": 25,
+          "source_end": 28,
+          "spoken_start": 25,
+          "spoken_end": 29,
+          "original": "4억원",
+          "spoken": "사억 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C05P04"
+      }
+    },
+    {
+      "paragraph_id": "C05P05",
+      "scene_id": "C05",
+      "source_text_sha256": "ad00f459a9e81e1d1c44a5f454e7351cbe69044cbcc0b9e494a7a3cb2cdfb620",
+      "proposed_spoken_text": "보증금에 묶인 돈의 기회비용은 처음 투자계좌가 작아지는 데 이미 반영돼 있습니다. 이번 모형은 그 작은 계좌에서 실제로 쌓이는 투자수익을 계산합니다. 집에 들어간 자기자금도 같은 방식으로 처리합니다.",
+      "proposed_spoken_text_sha256": "ad00f459a9e81e1d1c44a5f454e7351cbe69044cbcc0b9e494a7a3cb2cdfb620",
+      "characters": 111,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C05P05"
+      }
+    },
+    {
+      "paragraph_id": "C06P01",
+      "scene_id": "C06",
+      "source_text_sha256": "0d756c5180d0c9d6a134d2738ec33df772e282327c418f4feb27b58c22b48340",
+      "proposed_spoken_text": "투자 대안은 에스 앤드 피 오백을 따라가는 이 티 에프를 떠올릴 수 있습니다. 이때 가격 상승과 배당을 합친 총수익, 실제 이 티 에프의 수익, 한국 가구가 원화로 손에 쥐는 수익을 구분해야 합니다. 에스 앤드 피의 총수익지수는 배당 재투자를 포함합니다. 이 총수익으로 배당 효과까지 함께 계산합니다.",
+      "proposed_spoken_text_sha256": "aea32b6f2e5edac3e715cd9765e2164a20cba7f9db21bd4c7d5cb391700a1b68",
+      "characters": 168,
+      "character_delta": 14,
+      "substitutions": [
+        {
+          "source_start": 7,
+          "source_end": 13,
+          "spoken_start": 7,
+          "spoken_end": 17,
+          "original": "S&P500",
+          "spoken": "에스 앤드 피 오백",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 20,
+          "source_end": 23,
+          "spoken_start": 24,
+          "spoken_end": 30,
+          "original": "ETF",
+          "spoken": "이 티 에프",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 62,
+          "source_end": 65,
+          "spoken_start": 69,
+          "spoken_end": 75,
+          "original": "ETF",
+          "spoken": "이 티 에프",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 102,
+          "source_end": 105,
+          "spoken_start": 112,
+          "spoken_end": 119,
+          "original": "S&P",
+          "spoken": "에스 앤드 피",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C06P01"
+      }
+    },
+    {
+      "paragraph_id": "C06P02",
+      "scene_id": "C06",
+      "source_text_sha256": "ffcdcef030145af85959bf333402058887fa4ab0d85d8103ae42c3e1d7156a0c",
+      "proposed_spoken_text": "환율도 같은 방식입니다. 달러 자산이 십 퍼센트 오르고 원·달러 환율도 십 퍼센트 오르면, 한국 돈으로 환산한 자산은 일 점 일 배에 일 점 일 배를 곱한 일 점 이일 배가 됩니다. 원화 수익률은 원금을 제외한 이십일 퍼센트입니다. 이미 원화로 계산한 이 티 에프 수익률에는 환율 효과가 들어 있습니다. 이 원화 수익률로 환율 효과까지 함께 반영합니다.",
+      "proposed_spoken_text_sha256": "4b6186dc69485252ded6e20fed7c170ccf75d1027c63ac0e7de7dfa9d21335b2",
+      "characters": 197,
+      "character_delta": 20,
+      "substitutions": [
+        {
+          "source_start": 21,
+          "source_end": 24,
+          "spoken_start": 21,
+          "spoken_end": 26,
+          "original": "10%",
+          "spoken": "십 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 38,
+          "source_end": 41,
+          "spoken_start": 40,
+          "spoken_end": 45,
+          "original": "10%",
+          "spoken": "십 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 62,
+          "source_end": 66,
+          "spoken_start": 66,
+          "spoken_end": 73,
+          "original": "1.1배",
+          "spoken": "일 점 일 배",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 68,
+          "source_end": 72,
+          "spoken_start": 75,
+          "spoken_end": 82,
+          "original": "1.1배",
+          "spoken": "일 점 일 배",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 77,
+          "source_end": 82,
+          "spoken_start": 87,
+          "spoken_end": 95,
+          "original": "1.21배",
+          "spoken": "일 점 이일 배",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 105,
+          "source_end": 108,
+          "spoken_start": 118,
+          "spoken_end": 125,
+          "original": "21%",
+          "spoken": "이십일 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 124,
+          "source_end": 127,
+          "spoken_start": 141,
+          "spoken_end": 147,
+          "original": "ETF",
+          "spoken": "이 티 에프",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C06P02"
+      }
+    },
+    {
+      "paragraph_id": "C06P03",
+      "scene_id": "C06",
+      "source_text_sha256": "6fe4f6347a9bfb0e10084b98e07a0b115bf4158ae53a6ca82041696fd81b13df",
+      "proposed_spoken_text": "이번 계산은 배당과 환율 효과를 포함한 원화 총수익을 연 육 퍼센트로 가정합니다. 육 퍼센트는 십 년간 주거 방식에 따른 차이를 보기 위한 비교 조건입니다. 세 가구의 투자계좌에 이 원화 수익 육 퍼센트를 같이 적용합니다. 배당의 세금과 매도 시 과세, 환전비용, 운용보수는 추가 반영 전이며, 실제 상품별 계산에서는 포함 범위를 맞춰야 합니다.",
+      "proposed_spoken_text_sha256": "1a37f4df40283bae66029e5c5f44150e4018d4ce5b8a066dd04ccbe13dc8ea04",
+      "characters": 193,
+      "character_delta": 9,
+      "substitutions": [
+        {
+          "source_start": 32,
+          "source_end": 34,
+          "spoken_start": 32,
+          "spoken_end": 37,
+          "original": "6%",
+          "spoken": "육 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 43,
+          "source_end": 45,
+          "spoken_start": 46,
+          "spoken_end": 51,
+          "original": "6%",
+          "spoken": "육 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 47,
+          "source_end": 50,
+          "spoken_start": 53,
+          "spoken_end": 56,
+          "original": "10년",
+          "spoken": "십 년",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 102,
+          "source_end": 104,
+          "spoken_start": 108,
+          "spoken_end": 113,
+          "original": "6%",
+          "spoken": "육 퍼센트",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C06P03"
+      }
+    },
+    {
+      "paragraph_id": "C06P04",
+      "scene_id": "C06",
+      "source_text_sha256": "6ecffbf10cd54693061ee0266a98915a4f2245568510aafaee8e50616710fb48",
+      "proposed_spoken_text": "납입 시점도 통일했습니다. 월초에 있던 투자금에 그달 수익을 적용하고, 매달 남는 돈은 월말에 넣습니다. 월말에 새로 넣은 돈은 다음 달부터 수익을 얻습니다. 연 육 퍼센트는 월 영 점 오 퍼센트의 단순 배분과 구분해, 십이 개월을 복리로 연결했을 때 연 육 퍼센트가 되도록 바꿉니다.",
+      "proposed_spoken_text_sha256": "aa77b992b7d9dddecc5cf5b34b353c4627deaa1f95dca3389efe714642a6df2b",
+      "characters": 159,
+      "character_delta": 12,
+      "substitutions": [
+        {
+          "source_start": 91,
+          "source_end": 93,
+          "spoken_start": 91,
+          "spoken_end": 96,
+          "original": "6%",
+          "spoken": "육 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 97,
+          "source_end": 101,
+          "spoken_start": 100,
+          "spoken_end": 109,
+          "original": "0.5%",
+          "spoken": "영 점 오 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 115,
+          "source_end": 119,
+          "spoken_start": 123,
+          "spoken_end": 128,
+          "original": "12개월",
+          "spoken": "십이 개월",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 134,
+          "source_end": 136,
+          "spoken_start": 143,
+          "spoken_end": 148,
+          "original": "6%",
+          "spoken": "육 퍼센트",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C06P04"
+      }
+    },
+    {
+      "paragraph_id": "C06P05",
+      "scene_id": "C06",
+      "source_text_sha256": "8a7a7ca30c2a4950601ffbb3039f6cbfb12ceffdb2f5ba1e43ab29005bab880a",
+      "proposed_spoken_text": "집값에는 가격 상승만 넣습니다. 실거주 가구가 월세를 내지 않는 효과는 매달 지출표에 이미 들어 있습니다. 주거 혜택은 이 지출표에서 한 번 반영합니다. 집과 투자계좌 각각에 무엇이 포함됐는지를 맞추는 것이 수익률 숫자 자체만큼 중요합니다.",
+      "proposed_spoken_text_sha256": "8a7a7ca30c2a4950601ffbb3039f6cbfb12ceffdb2f5ba1e43ab29005bab880a",
+      "characters": 134,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C06P05"
+      }
+    },
+    {
+      "paragraph_id": "C07P01",
+      "scene_id": "C07",
+      "source_text_sha256": "b9954e2a486e5943c203260c8c90ff6afccfdf1599e0909b75d5da227acb3ac5",
+      "proposed_spoken_text": "이 조건으로 백이십 개월을 계산한 뒤 세 가구의 자산을 펼쳐보겠습니다. 매매 가구의 집은 연 이 퍼센트씩 올라 약 칠억삼천백만 원이 됩니다. 금융자산은 약 일억육천칠백만 원입니다. 여기서 남은 대출 약 이억팔천사백만 원을 빼면 순자산은 약 육억천사백만 원입니다.",
+      "proposed_spoken_text_sha256": "22f7636fd124a0165f40b07028833e9e5d7100b6262700b874d545a5d9ed9a52",
+      "characters": 146,
+      "character_delta": 2,
+      "substitutions": [
+        {
+          "source_start": 7,
+          "source_end": 12,
+          "spoken_start": 7,
+          "spoken_end": 13,
+          "original": "120개월",
+          "spoken": "백이십 개월",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 51,
+          "source_end": 53,
+          "spoken_start": 52,
+          "spoken_end": 57,
+          "original": "2%",
+          "spoken": "이 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 60,
+          "source_end": 69,
+          "spoken_start": 64,
+          "spoken_end": 72,
+          "original": "7억3천100만원",
+          "spoken": "칠억삼천백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 84,
+          "source_end": 93,
+          "spoken_start": 87,
+          "spoken_end": 96,
+          "original": "1억6천700만원",
+          "spoken": "일억육천칠백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 110,
+          "source_end": 119,
+          "spoken_start": 113,
+          "spoken_end": 122,
+          "original": "2억8천400만원",
+          "spoken": "이억팔천사백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 131,
+          "source_end": 140,
+          "spoken_start": 134,
+          "spoken_end": 142,
+          "original": "6억1천400만원",
+          "spoken": "육억천사백만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C07P01"
+      }
+    },
+    {
+      "paragraph_id": "C07P02",
+      "scene_id": "C07",
+      "source_text_sha256": "a02ff70a42fbfb29f63f5453d11e3b2345e056c7935c83f1fadbda85a2ccb3f0",
+      "proposed_spoken_text": "전세 가구는 보증금 사억 원과 금융자산 약 사억오천구백만 원을 보유합니다. 전세대출 이억 원을 빼면 순자산은 약 육억오천구백만 원입니다. 월세 가구는 보증금 일억 원, 금융자산 약 육억구백만 원에서 대출 이천만 원을 빼 약 육억팔천구백만 원이 남습니다.",
+      "proposed_spoken_text_sha256": "3f674ef0a8defa22d2e995d66d31a0497bf1c6be0a5be092b28d27552c4d1d74",
+      "characters": 141,
+      "character_delta": 4,
+      "substitutions": [
+        {
+          "source_start": 11,
+          "source_end": 14,
+          "spoken_start": 11,
+          "spoken_end": 15,
+          "original": "4억원",
+          "spoken": "사억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 23,
+          "source_end": 32,
+          "spoken_start": 24,
+          "spoken_end": 33,
+          "original": "4억5천900만원",
+          "spoken": "사억오천구백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 46,
+          "source_end": 49,
+          "spoken_start": 47,
+          "spoken_end": 51,
+          "original": "2억원",
+          "spoken": "이억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 61,
+          "source_end": 70,
+          "spoken_start": 63,
+          "spoken_end": 72,
+          "original": "6억5천900만원",
+          "spoken": "육억오천구백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 86,
+          "source_end": 89,
+          "spoken_start": 88,
+          "spoken_end": 92,
+          "original": "1억원",
+          "spoken": "일억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 98,
+          "source_end": 105,
+          "spoken_start": 101,
+          "spoken_end": 108,
+          "original": "6억900만원",
+          "spoken": "육억구백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 111,
+          "source_end": 115,
+          "spoken_start": 114,
+          "spoken_end": 119,
+          "original": "2천만원",
+          "spoken": "이천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 121,
+          "source_end": 130,
+          "spoken_start": 125,
+          "spoken_end": 134,
+          "original": "6억8천900만원",
+          "spoken": "육억팔천구백만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C07P02"
+      }
+    },
+    {
+      "paragraph_id": "C07P03",
+      "scene_id": "C07",
+      "source_text_sha256": "f2c7ea3761d07a344443216b74d5b9dca00a1bb014bc26b12b45d66934e95e96",
+      "proposed_spoken_text": "기본 조건에서 월세 가구는 매매 가구보다 약 칠천사백만 원, 전세 가구보다 약 삼천만 원 큰 평가 순자산으로 끝납니다. 월세를 내는 동안에도 더 큰 초기 투자금이 수익을 얻었고, 매달 차액이 적립됐기 때문입니다. 주거비를 낸 뒤 남은 금융자산까지 함께 보는 이유입니다.",
+      "proposed_spoken_text_sha256": "0b54c86a948336bc501c8df2f5165f60e6c0a7bbce65a7be9016f1f8df0d158e",
+      "characters": 150,
+      "character_delta": 1,
+      "substitutions": [
+        {
+          "source_start": 25,
+          "source_end": 32,
+          "spoken_start": 25,
+          "spoken_end": 32,
+          "original": "7천400만원",
+          "spoken": "칠천사백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 44,
+          "source_end": 48,
+          "spoken_start": 44,
+          "spoken_end": 49,
+          "original": "3천만원",
+          "spoken": "삼천만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C07P03"
+      }
+    },
+    {
+      "paragraph_id": "C07P04",
+      "scene_id": "C07",
+      "source_text_sha256": "f0febbc56c9d02b796773e1fa0e63c8381b81cbc830b63e6b8d9b91cb03675f6",
+      "proposed_spoken_text": "이 숫자는 집에 계속 사는 상태에서 자산을 평가한 값입니다. 집 지분과 보증금은 모두 자산이지만 즉시 쓸 수 있는 투자계좌와 역할이 다릅니다. 매매 가구의 집값 상승분을 생활비로 쓰려면 매도나 추가 대출 같은 절차가 필요합니다. 전세보증금도 반환 시점과 다음 집의 보증금이 연결됩니다.",
+      "proposed_spoken_text_sha256": "f0febbc56c9d02b796773e1fa0e63c8381b81cbc830b63e6b8d9b91cb03675f6",
+      "characters": 159,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C07P04"
+      }
+    },
+    {
+      "paragraph_id": "C07P05",
+      "scene_id": "C07",
+      "source_text_sha256": "0a6ae5b65a1381609423373baed25f83d96c5847f5f4d6bd0951fcef7642a785",
+      "proposed_spoken_text": "모두 같은 날 자산을 정리해 현금으로 바꾸는 비교도 따로 만들 수 있습니다. 이 경우 집 매도비용과 조건에 맞는 세금, 이 티 에프 매도세금과 비용을 반영해야 합니다. 청산 후에도 계속 거주할 집이 필요하므로 그다음 주거비도 동일한 기준으로 연결해야 합니다. 오늘의 기본 그래프는 매각을 가정한 현금액 대신 계속거주 평가 순자산을 보여줍니다.",
+      "proposed_spoken_text_sha256": "f2e25d5056417192c077809ed1155c0a85ed7d005639fcd547a8a8b29f600c16",
+      "characters": 191,
+      "character_delta": 3,
+      "substitutions": [
+        {
+          "source_start": 67,
+          "source_end": 70,
+          "spoken_start": 67,
+          "spoken_end": 73,
+          "original": "ETF",
+          "spoken": "이 티 에프",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C07P05"
+      }
+    },
+    {
+      "paragraph_id": "C08P01",
+      "scene_id": "C08",
+      "source_text_sha256": "7ef2fe8709c55ec5c638265020eb07a9b9f9efbabc1c987322f71cc6dea6b4e6",
+      "proposed_spoken_text": "집값이 결과를 얼마나 움직이는지부터 보겠습니다. 투자수익은 연 육 퍼센트, 대출금리는 연 사 퍼센트에 그대로 두겠습니다. 월세와 보증금도 유지하고 집값 상승률만 바꿉니다.",
+      "proposed_spoken_text_sha256": "6480892d9c6e6048a1abb98ff17038be9b3a5791504509a045e076d03ec0f8e2",
+      "characters": 95,
+      "character_delta": 6,
+      "substitutions": [
+        {
+          "source_start": 35,
+          "source_end": 37,
+          "spoken_start": 35,
+          "spoken_end": 40,
+          "original": "6%",
+          "spoken": "육 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 47,
+          "source_end": 49,
+          "spoken_start": 50,
+          "spoken_end": 55,
+          "original": "4%",
+          "spoken": "사 퍼센트",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C08P01"
+      }
+    },
+    {
+      "paragraph_id": "C08P02",
+      "scene_id": "C08",
+      "source_text_sha256": "cbfe930f4d02dccb715d59c55fe00c37a7cab408a4ff5301c3e3b33be59deae9",
+      "proposed_spoken_text": "집값이 연 이 퍼센트 오르면 매매 가구의 십 년 후 순자산은 약 육억천만 원입니다. 연 사 퍼센트로 바꾸면 약 칠억칠천만 원, 연 육 퍼센트라면 약 구억육천만 원이 됩니다. 같은 조건에서 전세는 약 육억육천만 원, 월세는 약 육억구천만 원입니다. 집값을 어떻게 놓느냐에 따라 세 가구의 순서가 달라집니다.",
+      "proposed_spoken_text_sha256": "76b4c87191e914be3afc53ea79cbfdcf127da0d26c37139c004f176985108ece",
+      "characters": 170,
+      "character_delta": 13,
+      "substitutions": [
+        {
+          "source_start": 6,
+          "source_end": 8,
+          "spoken_start": 6,
+          "spoken_end": 11,
+          "original": "2%",
+          "spoken": "이 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 20,
+          "source_end": 23,
+          "spoken_start": 23,
+          "spoken_end": 26,
+          "original": "10년",
+          "spoken": "십 년",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 33,
+          "source_end": 39,
+          "spoken_start": 36,
+          "spoken_end": 42,
+          "original": "6억1천만원",
+          "spoken": "육억천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 46,
+          "source_end": 48,
+          "spoken_start": 49,
+          "spoken_end": 54,
+          "original": "4%",
+          "spoken": "사 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 56,
+          "source_end": 62,
+          "spoken_start": 62,
+          "spoken_end": 69,
+          "original": "7억7천만원",
+          "spoken": "칠억칠천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 66,
+          "source_end": 68,
+          "spoken_start": 73,
+          "spoken_end": 78,
+          "original": "6%",
+          "spoken": "육 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 73,
+          "source_end": 79,
+          "spoken_start": 83,
+          "spoken_end": 90,
+          "original": "9억6천만원",
+          "spoken": "구억육천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 100,
+          "source_end": 106,
+          "spoken_start": 111,
+          "spoken_end": 118,
+          "original": "6억6천만원",
+          "spoken": "육억육천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 114,
+          "source_end": 120,
+          "spoken_start": 126,
+          "spoken_end": 133,
+          "original": "6억9천만원",
+          "spoken": "육억구천만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C08P02"
+      }
+    },
+    {
+      "paragraph_id": "C08P03",
+      "scene_id": "C08",
+      "source_text_sha256": "0b2b6364590f921c1231e543bf96991f1b03c3abda279d049ffb7225393c8955",
+      "proposed_spoken_text": "여기에는 대출의 효과가 들어 있습니다. 집을 살 때 넣은 자기자금은 이억사천만 원이지만, 가격이 움직이는 대상은 대출을 합친 육억 원 집 전체입니다. 처음 일 년에 집값이 이 퍼센트 오르면 집의 평가액은 천이백만 원 늘어납니다. 집에 넣은 자기자금과 비교하면 오 퍼센트에 해당하는 금액입니다. 여기에 이자와 보유비용, 원금 상환을 연결해야 최종 순자산이 나옵니다. 가격이 내려갈 때도 집 전체에서 손실이 생기기 때문에, 대출을 감당하면서 오래 보유할 수 있는지가 중요합니다.",
+      "proposed_spoken_text_sha256": "ac7b2ab67dba72f6baabbf800f2c2ed30fb6763a3c5ac36fe00ab9d38b6d3188",
+      "characters": 265,
+      "character_delta": 8,
+      "substitutions": [
+        {
+          "source_start": 38,
+          "source_end": 44,
+          "spoken_start": 38,
+          "spoken_end": 45,
+          "original": "2억4천만원",
+          "spoken": "이억사천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 69,
+          "source_end": 72,
+          "spoken_start": 70,
+          "spoken_end": 74,
+          "original": "6억원",
+          "spoken": "육억 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 85,
+          "source_end": 87,
+          "spoken_start": 87,
+          "spoken_end": 90,
+          "original": "1년",
+          "spoken": "일 년",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 93,
+          "source_end": 95,
+          "spoken_start": 96,
+          "spoken_end": 101,
+          "original": "2%",
+          "spoken": "이 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 108,
+          "source_end": 115,
+          "spoken_start": 114,
+          "spoken_end": 120,
+          "original": "1천200만원",
+          "spoken": "천이백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 140,
+          "source_end": 142,
+          "spoken_start": 145,
+          "spoken_end": 150,
+          "original": "5%",
+          "spoken": "오 퍼센트",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C08P03"
+      }
+    },
+    {
+      "paragraph_id": "C08P04",
+      "scene_id": "C08",
+      "source_text_sha256": "2d8c4b0b25da524d45ea6a26a4d9b7e145f23e8a04ccfe3fe4f02d9031464dae",
+      "proposed_spoken_text": "이어서 집값과 투자수익을 함께 바꿔보겠습니다. 집값이 연 사 퍼센트 오르고 투자수익은 연 이 퍼센트인 조건에서는 매매가 약 칠억사천만 원, 전세가 약 오억육천이백만 원, 월세가 약 오억삼천육백만 원입니다. 집값의 상승이 커지고 투자계좌의 성장이 작아지면서 순서가 바뀝니다.",
+      "proposed_spoken_text_sha256": "485628ce89ae4afade07e2fa0f9468c08977ddb3589cca67507165d834af40fb",
+      "characters": 152,
+      "character_delta": 7,
+      "substitutions": [
+        {
+          "source_start": 32,
+          "source_end": 34,
+          "spoken_start": 32,
+          "spoken_end": 37,
+          "original": "4%",
+          "spoken": "사 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 47,
+          "source_end": 49,
+          "spoken_start": 50,
+          "spoken_end": 55,
+          "original": "2%",
+          "spoken": "이 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 63,
+          "source_end": 69,
+          "spoken_start": 69,
+          "spoken_end": 76,
+          "original": "7억4천만원",
+          "spoken": "칠억사천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 77,
+          "source_end": 86,
+          "spoken_start": 84,
+          "spoken_end": 93,
+          "original": "5억6천200만원",
+          "spoken": "오억육천이백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 94,
+          "source_end": 103,
+          "spoken_start": 101,
+          "spoken_end": 110,
+          "original": "5억3천600만원",
+          "spoken": "오억삼천육백만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C08P04"
+      }
+    },
+    {
+      "paragraph_id": "C08P05",
+      "scene_id": "C08",
+      "source_text_sha256": "a2aad3bcb03f47438068da40bc67c6c9167b03825757cdd2f8c9da8468083df8",
+      "proposed_spoken_text": "반대로 집값 상승을 영 퍼센트, 투자수익을 연 팔 퍼센트로 두면 매매는 약 오억이백만 원, 전세는 약 칠억천칠백만 원, 월세는 약 칠억팔천사백만 원입니다. 집값도 투자수익도 낮게 둔 연 영 퍼센트와 이 퍼센트 조합에서는 전세가 가장 크게 남습니다. 조건에 따라 가장 크게 남는 방식도 달라집니다.",
+      "proposed_spoken_text_sha256": "8b057a0c2cd482759d3a13fedbe78ed68c577ac7c6109d0e93e85d0c2ba71ca7",
+      "characters": 165,
+      "character_delta": 11,
+      "substitutions": [
+        {
+          "source_start": 11,
+          "source_end": 13,
+          "spoken_start": 11,
+          "spoken_end": 16,
+          "original": "0%",
+          "spoken": "영 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 23,
+          "source_end": 25,
+          "spoken_start": 26,
+          "spoken_end": 31,
+          "original": "8%",
+          "spoken": "팔 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 36,
+          "source_end": 43,
+          "spoken_start": 42,
+          "spoken_end": 49,
+          "original": "5억200만원",
+          "spoken": "오억이백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 51,
+          "source_end": 60,
+          "spoken_start": 57,
+          "spoken_end": 65,
+          "original": "7억1천700만원",
+          "spoken": "칠억천칠백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 68,
+          "source_end": 77,
+          "spoken_start": 73,
+          "spoken_end": 82,
+          "original": "7억8천400만원",
+          "spoken": "칠억팔천사백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 99,
+          "source_end": 101,
+          "spoken_start": 104,
+          "spoken_end": 109,
+          "original": "0%",
+          "spoken": "영 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 103,
+          "source_end": 105,
+          "spoken_start": 111,
+          "spoken_end": 116,
+          "original": "2%",
+          "spoken": "이 퍼센트",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C08P05"
+      }
+    },
+    {
+      "paragraph_id": "C08P06",
+      "scene_id": "C08",
+      "source_text_sha256": "5c2f501850b1266aad3f3adcf75258214cd8c0f199efcac05adee605459d33a4",
+      "proposed_spoken_text": "월세 수준만 바꿔도 결과가 달라집니다. 같은 보증금에서 월세를 백만 원 대신 백이십만 원으로 높이면 월세 가구의 순자산은 약 육억오천육백만 원으로 줄어, 전세의 약 육억오천구백만 원보다 작아집니다. 실제 같은 집에서 가능한 계약 조건인지는 시장 자료로 확인해야 하며, 이 비교는 임대료 가정의 영향을 보여줍니다.",
+      "proposed_spoken_text_sha256": "5433b87d2128c8c242f7dc67022cba040d10250ee7ddab79d413c3c3ba6cae33",
+      "characters": 174,
+      "character_delta": 0,
+      "substitutions": [
+        {
+          "source_start": 35,
+          "source_end": 40,
+          "spoken_start": 35,
+          "spoken_end": 39,
+          "original": "100만원",
+          "spoken": "백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 44,
+          "source_end": 49,
+          "spoken_start": 43,
+          "spoken_end": 49,
+          "original": "120만원",
+          "spoken": "백이십만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 70,
+          "source_end": 79,
+          "spoken_start": 70,
+          "spoken_end": 79,
+          "original": "6억5천600만원",
+          "spoken": "육억오천육백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 92,
+          "source_end": 101,
+          "spoken_start": 92,
+          "spoken_end": 101,
+          "original": "6억5천900만원",
+          "spoken": "육억오천구백만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C08P06"
+      }
+    },
+    {
+      "paragraph_id": "C08P07",
+      "scene_id": "C08",
+      "source_text_sha256": "7e95f6a12f6c4a3b15d273c11ba5222ef01adceeb2d0ad0439fb9768e0b3d95c",
+      "proposed_spoken_text": "금리도 경계를 움직입니다. 전세대출은 연 이 퍼센트, 매매대출은 연 육 퍼센트로 놓으면 전세 순자산은 약 칠억천삼백만 원, 매매는 약 오억이천오백만 원으로 계산됩니다. 반대로 전세대출은 연 육 퍼센트, 매매대출은 연 이 퍼센트이면 매매가 약 육억구천팔백만 원으로 커집니다. 이때 월세 보증금대출 금리는 계속 연 사 퍼센트입니다.",
+      "proposed_spoken_text_sha256": "ebdea417eb21f836373fb15bfebe865d26e1c51ae1fbf27ed7f0c1c02bb80e97",
+      "characters": 183,
+      "character_delta": 14,
+      "substitutions": [
+        {
+          "source_start": 23,
+          "source_end": 25,
+          "spoken_start": 23,
+          "spoken_end": 28,
+          "original": "2%",
+          "spoken": "이 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 35,
+          "source_end": 37,
+          "spoken_start": 38,
+          "spoken_end": 43,
+          "original": "6%",
+          "spoken": "육 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 53,
+          "source_end": 62,
+          "spoken_start": 59,
+          "spoken_end": 67,
+          "original": "7억1천300만원",
+          "spoken": "칠억천삼백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 70,
+          "source_end": 79,
+          "spoken_start": 75,
+          "spoken_end": 84,
+          "original": "5억2천500만원",
+          "spoken": "오억이천오백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 101,
+          "source_end": 103,
+          "spoken_start": 106,
+          "spoken_end": 111,
+          "original": "6%",
+          "spoken": "육 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 113,
+          "source_end": 115,
+          "spoken_start": 121,
+          "spoken_end": 126,
+          "original": "2%",
+          "spoken": "이 퍼센트",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 124,
+          "source_end": 133,
+          "spoken_start": 135,
+          "spoken_end": 144,
+          "original": "6억9천800만원",
+          "spoken": "육억구천팔백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 163,
+          "source_end": 165,
+          "spoken_start": 174,
+          "spoken_end": 179,
+          "original": "4%",
+          "spoken": "사 퍼센트",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C08P07"
+      }
+    },
+    {
+      "paragraph_id": "C08P08",
+      "scene_id": "C08",
+      "source_text_sha256": "684d90c2dc007eb531ebb338a860a3840d7497a9ea5398d6034727c7770ad85d",
+      "proposed_spoken_text": "각 화면은 처음부터 서로 다른 고정금리를 적용한 별도 조건입니다. 실제 변동금리 대출은 금리가 바뀌는 시점마다 이자와 남은 투자금이 달라집니다. 따라서 대출금리 한 숫자뿐 아니라 언제, 어떤 잔액에 적용됐는지도 확인해야 합니다.",
+      "proposed_spoken_text_sha256": "684d90c2dc007eb531ebb338a860a3840d7497a9ea5398d6034727c7770ad85d",
+      "characters": 127,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C08P08"
+      }
+    },
+    {
+      "paragraph_id": "C08P09",
+      "scene_id": "C08",
+      "source_text_sha256": "0112504dd731d90153563b66688628bf60acc7643e7f680a8b170c3078e53a63",
+      "proposed_spoken_text": "이 표에서 유용한 것은 자신이 생각하는 집값과 투자수익이 어느 칸에 있는지, 금리와 월세가 바뀌면 어느 방향으로 움직이는지입니다. 계산된 조건을 먼저 비교하고, 경계 주변을 더 촘촘하게 계산하면 판단에 필요한 범위를 좁힐 수 있습니다.",
+      "proposed_spoken_text_sha256": "0112504dd731d90153563b66688628bf60acc7643e7f680a8b170c3078e53a63",
+      "characters": 131,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C08P09"
+      }
+    },
+    {
+      "paragraph_id": "C09P01",
+      "scene_id": "C09",
+      "source_text_sha256": "baebc05d5f5804617e2f9640a7e2d5d1934ee95e5c0ab618bb909d811088dea2",
+      "proposed_spoken_text": "차액을 투자한다는 조건도 실제 행동과 연결됩니다. 매달 남는 돈을 전부 이 티 에프에 넣던 가정에서 절반만 넣고 나머지는 수익이 없는 현금으로 쌓으면, 기본 조건의 십 년 후 순자산은 매매 약 오억구천사백만 원, 전세 약 육억천만 원, 월세 약 육억사천구백만 원입니다.",
+      "proposed_spoken_text_sha256": "39fe8aa091969d659ecc2ea4ec3f84ebadd558215a6b69ce89cd5fbf6ea0f860",
+      "characters": 150,
+      "character_delta": 3,
+      "substitutions": [
+        {
+          "source_start": 40,
+          "source_end": 43,
+          "spoken_start": 40,
+          "spoken_end": 46,
+          "original": "ETF",
+          "spoken": "이 티 에프",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 89,
+          "source_end": 92,
+          "spoken_start": 92,
+          "spoken_end": 95,
+          "original": "10년",
+          "spoken": "십 년",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 105,
+          "source_end": 114,
+          "spoken_start": 108,
+          "spoken_end": 117,
+          "original": "5억9천400만원",
+          "spoken": "오억구천사백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 121,
+          "source_end": 127,
+          "spoken_start": 124,
+          "spoken_end": 130,
+          "original": "6억1천만원",
+          "spoken": "육억천만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 134,
+          "source_end": 143,
+          "spoken_start": 137,
+          "spoken_end": 146,
+          "original": "6억4천900만원",
+          "spoken": "육억사천구백만 원",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C09P01"
+      }
+    },
+    {
+      "paragraph_id": "C09P02",
+      "scene_id": "C09",
+      "source_text_sha256": "18e44327d9ed74d3901829f64c9af072c144485a416fc950e79a6c06418a6592",
+      "proposed_spoken_text": "여기서는 투자하지 않은 돈도 현금으로 남아 저축 원금에 포함됩니다. 매달 남는 돈을 소비하면 저축 원금까지 줄어드는 별도 계산이 필요합니다. 임차의 차액투자와 매매의 원금상환을 비교할 때는 수익률 차이와 저축 실행의 차이를 구분해야 합니다.",
+      "proposed_spoken_text_sha256": "18e44327d9ed74d3901829f64c9af072c144485a416fc950e79a6c06418a6592",
+      "characters": 134,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C09P02"
+      }
+    },
+    {
+      "paragraph_id": "C09P03",
+      "scene_id": "C09",
+      "source_text_sha256": "f97d0c3c8f30c60b1783465c2c00d6d9e06a3f2f481c8c79c73f37e32e197d28",
+      "proposed_spoken_text": "기본 모형은 매달 주거 지출이 삼백만 원 안에 들어오는지도 확인합니다. 현금지출이 예산을 넘으면 기존 이 티 에프를 팔거나 추가로 빌리는 방식 없이 그 경로를 멈추도록 정했습니다. 현실에서는 비상자금이나 자산 매각으로 대응할 수 있지만, 그 경우에는 세금과 매각 시점, 추가 대출금리를 별도로 계산해야 합니다.",
+      "proposed_spoken_text_sha256": "638b0b7ee8b8d8ffba6eefed27dadfc0b8060552a4815be414407108de381ab9",
+      "characters": 173,
+      "character_delta": 3,
+      "substitutions": [
+        {
+          "source_start": 17,
+          "source_end": 22,
+          "spoken_start": 17,
+          "spoken_end": 22,
+          "original": "300만원",
+          "spoken": "삼백만 원",
+          "kind": "pronunciation"
+        },
+        {
+          "source_start": 57,
+          "source_end": 60,
+          "spoken_start": 57,
+          "spoken_end": 63,
+          "original": "ETF",
+          "spoken": "이 티 에프",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C09P03"
+      }
+    },
+    {
+      "paragraph_id": "C09P04",
+      "scene_id": "C09",
+      "source_text_sha256": "431e6cd9d777a86e798d7b29a345455e4bce98e736d22475c9ea7ddac68bce7a",
+      "proposed_spoken_text": "전세 갱신 때 보증금이 오르거나, 월세가 인상되거나, 투자시장이 하락한 시기에 이사해야 하는 경우도 같은 장부에 넣을 수 있습니다. 전세·월세는 계약이 끝날 때 보증금을 돌려받을 수 있는지도 함께 확인해야 합니다. 수익률이 높아도 필요한 시점에 돈을 꺼내기 어려우면 주거 계획이 바뀝니다. 집 한 채에 자금이 집중되는 매매와 시장가격이 매일 움직이는 투자계좌는 서로 다른 형태의 위험을 가집니다.",
+      "proposed_spoken_text_sha256": "431e6cd9d777a86e798d7b29a345455e4bce98e736d22475c9ea7ddac68bce7a",
+      "characters": 221,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C09P04"
+      }
+    },
+    {
+      "paragraph_id": "C10P01",
+      "scene_id": "C10",
+      "source_text_sha256": "3be501b1b7e20f28f2b9c2eb7c8204d9f9161071f84584655da7dbe1bf455dbb",
+      "proposed_spoken_text": "매매와 전세, 월세를 고를 때는 내가 가진 돈과 매달 감당할 수 있는 지출, 앞으로 얼마나 오래 살지를 함께 봐야 합니다. 같은 돈으로 시작해도 집에 묶이는 돈과 매달 투자할 수 있는 돈이 달라지고, 그 돈을 어떻게 운용하느냐에 따라 결과도 달라집니다.",
+      "proposed_spoken_text_sha256": "3be501b1b7e20f28f2b9c2eb7c8204d9f9161071f84584655da7dbe1bf455dbb",
+      "characters": 141,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C10P01"
+      }
+    },
+    {
+      "paragraph_id": "C10P02",
+      "scene_id": "C10",
+      "source_text_sha256": "8e43463ec475e6ef928d6c2d7952dba9e10569b2d824a94d92c2d08ee203f19c",
+      "proposed_spoken_text": "이번 계산에서 투자수익은 연 육 퍼센트로 놓았고, 앞에서 본 기본 조건에서는 전세와 월세의 순자산이 매매보다 크게 계산됐습니다. 전월세 주거비를 내면서 차액을 계속 투자하고, 이보다 높은 성과를 꾸준히 낼 수 있다면 같은 집값과 계약 조건에서 임차의 순자산 우위가 더 커질 수 있습니다. 투자 역량과 실제로 이어갈 수 있는 저축 습관까지 내 상황에 맞춰 넣어봐야 합니다.",
+      "proposed_spoken_text_sha256": "abe1732dd3e82e8744cc814eef981eef050ad2bfe700bb28a3818a8f5afb896a",
+      "characters": 207,
+      "character_delta": 3,
+      "substitutions": [
+        {
+          "source_start": 16,
+          "source_end": 18,
+          "spoken_start": 16,
+          "spoken_end": 21,
+          "original": "6%",
+          "spoken": "육 퍼센트",
+          "kind": "pronunciation"
+        }
+      ],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C10P02"
+      }
+    },
+    {
+      "paragraph_id": "C10P03",
+      "scene_id": "C10",
+      "source_text_sha256": "c88d053e34a9307349f76a55a22ccc05ad0fb323335b48c9fcdc29b465bb28b4",
+      "proposed_spoken_text": "한편 실거주 매매에는 자산을 키우는 기회와 살 집을 안정적으로 확보하는 가치가 함께 있습니다. 종자돈에 대출을 더해 집을 보유하고, 오랜 기간 가격 상승을 기대하면서 원금을 갚아가는 구조입니다. 저는 한국에서 내 집 마련을 선호하는 배경에도 이런 자산 형성과 주거 안정에 대한 기대가 함께 있다고 봅니다.",
+      "proposed_spoken_text_sha256": "c88d053e34a9307349f76a55a22ccc05ad0fb323335b48c9fcdc29b465bb28b4",
+      "characters": 170,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C10P03"
+      }
+    },
+    {
+      "paragraph_id": "C10P04",
+      "scene_id": "C10",
+      "source_text_sha256": "31e1908d0354d667acc5ade14d1838cd5281d435c1fab03609492eae751a01cf",
+      "proposed_spoken_text": "제 관점에서는 어느 정도 종자돈이 모였고, 대출을 갚으면서 생활비와 비상자금을 유지할 수 있다면 실거주 매매는 자산 격차를 만들 수 있는 중요한 선택이라고 생각합니다. 특히 한 지역에서 오래 살 계획이고 가족의 생활 터전을 안정시키는 일이 중요하다면, 전월세보다 매매에 더 큰 가치를 둘 수 있습니다. 그 가치는 가격 상승으로 남는 돈과 함께, 같은 집에서 생활 계획을 이어갈 수 있다는 데에도 있습니다.",
+      "proposed_spoken_text_sha256": "31e1908d0354d667acc5ade14d1838cd5281d435c1fab03609492eae751a01cf",
+      "characters": 226,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C10P04"
+      }
+    },
+    {
+      "paragraph_id": "C10P05",
+      "scene_id": "C10",
+      "source_text_sha256": "8dff065e489c6ad64c11070dde4888c2515f9db6b34c8b604da4e76ce23b5df2",
+      "proposed_spoken_text": "그래서 집값이 크게 오를 거라는 기대보다 먼저 확인할 것은 내가 보유를 이어갈 수 있는 가격입니다. 소득이 줄거나 금리가 높아지는 상황까지 생각했을 때, 매달 얼마를 갚을 수 있는지가 출발점이 됩니다.",
+      "proposed_spoken_text_sha256": "8dff065e489c6ad64c11070dde4888c2515f9db6b34c8b604da4e76ce23b5df2",
+      "characters": 112,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C10P05"
+      }
+    },
+    {
+      "paragraph_id": "C10P06",
+      "scene_id": "C10",
+      "source_text_sha256": "1063553f1a31f553170998156f5778a310374650cf4a72fc95c8b2f638865d3a",
+      "proposed_spoken_text": "다음 시간에는 내 종자돈과 월소득을 기준으로 매매하기에 적절한 금액대를 계산해보겠습니다. 집을 살 때 필요한 추가 비용과 남겨둘 비상자금, 매달 감당할 상환액을 차례로 넣어 내가 살 수 있는 집의 가격 범위를 정해보겠습니다.",
+      "proposed_spoken_text_sha256": "1063553f1a31f553170998156f5778a310374650cf4a72fc95c8b2f638865d3a",
+      "characters": 125,
+      "character_delta": 0,
+      "substitutions": [],
+      "display_mapping_grounding": {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/prepare-v6/prepared.json",
+        "paragraph_id": "C10P06"
+      }
+    }
+  ]
+}

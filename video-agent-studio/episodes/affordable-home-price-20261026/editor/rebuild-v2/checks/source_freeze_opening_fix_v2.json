@@ -1,0 +1,76 @@
+{
+  "status": "opening_fix_frozen_parent_v2_ready",
+  "script_sha256": "cc1ef7d80225e992e7e5d31faffbfb09a8f90c80fb5352e17c36eb8c90755b12",
+  "files": [
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\scene_render.py",
+      "sha256": "8670f8963b3de5e0c579ffe93cf7badc7417771d09f115cd0c89a691c6da3806"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\pipeline.py",
+      "sha256": "f09efb07b0cc1c50df7a2982e3f17417728bd24c67f56874bf0048d99b2e902c"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\opening_context.py",
+      "sha256": "89642ddaaeaffede75a92d29b34a4c80c4ad432adaf3ea1e64d99c2c1f1c1548"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\frozen_graphics.py",
+      "sha256": "f95d783542042322be4402dcac84b8a7fe967f8280f076cc581d22c5d6f15654"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\graphics.py",
+      "sha256": "fea1a0fa4bf71fb6b7e56561b5afac698fbc56b0016d07accbcd40eab6ec3ea4"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\runtime.js",
+      "sha256": "2219655fe30e41d37e58020a21b56b00334b0a9298151af289d1bb83722de8c9"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\shell.css",
+      "sha256": "2cd82ed2a0194708632303a6831eb46bb96ec3a1275552315b0d5ba868c6c7d9"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\voice_adapter.py",
+      "sha256": "3309aabd9c5e9c6eadd202a2ceca6d8ffc499cd0d3851064b2ed43b09218a02a"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\verify_templates.cjs",
+      "sha256": "bc2f63dcf44ceb0883160d7e152df50548b31c1d0ce6e912dcf7b9c672b95d63"
+    }
+  ],
+  "actual_representative_source_geometry": {
+    "status": "pass",
+    "scene_ids": [
+      "R005",
+      "R009",
+      "R030"
+    ],
+    "findings": 0,
+    "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\rebuild-v2\\actual-scenes-r2-v1\\geometry_receipt.json",
+    "encoded_media": false
+  },
+  "entrypoint": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\scene_render.py",
+  "parent_run": "actual-scenes-r2-parent-v2",
+  "commands": [
+    "tools/python311/python.exe -B -X utf8 C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\scene_render.py prepare --run actual-scenes-r2-parent-v2",
+    "tools/python311/python.exe -B -X utf8 C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\scene_render.py render --run actual-scenes-r2-parent-v2 --scene R005 --scene R009 --scene R030"
+  ],
+  "render_executed_by_editor": false,
+  "opening_contract": "pipeline.emit_project automatically attaches known-input opening for actual first anchor >=1.5s; no writer beats added/retimed; hidden one frame before first anchor",
+  "source_footer": "human-readable institutions and basis date only; full source_ids retained in scene.json",
+  "numeric_fixes": [
+    "R011 186.5 exact decimal monthly",
+    "R025/R026 162.6/176.4 monthly",
+    "R017 common proportional base 6/4/2",
+    "R029/R030 hide value and label as semantic group",
+    "R006 hide ordinary-gap at first-time stage"
+  ],
+  "next_owner": "Parent render orchestration; Lovelace global assembly",
+  "edits_until_actual_QA": "frozen",
+  "revision": "opening-fix-v2",
+  "regression_receipt": {
+    "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\rebuild-v2\\opening-fix-v1\\regression_receipt.json",
+    "sha256": "a3217364a8041a56eff4b43c19ea8c0f9d7ca14ed07ebcb4ed0e5dae0298bc4b"
+  }
+}

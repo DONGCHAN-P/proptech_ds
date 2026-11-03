@@ -1,0 +1,1 @@
+﻿const fs=require('fs'),P=__dirname;let j=JSON.parse(fs.readFileSync(P+'/raw/landfeatures.geojson','utf8'));console.log([...new Set(j.features.map(f=>f.properties.bl_type))].sort().join('\n'));console.log(j.features.filter(x=>/S-[145]\)/.test(x.properties.bl_type)).map(x=>({id:x.id,p:x.properties,geometry_type:x.geometry.type})));console.log('crs',j.crs);

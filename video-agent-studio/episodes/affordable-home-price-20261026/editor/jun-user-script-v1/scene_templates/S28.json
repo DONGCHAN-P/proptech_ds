@@ -1,0 +1,52 @@
+{
+  "scene_id": "S28",
+  "chapter": 7,
+  "message": "시청자가 적을 세 숫자",
+  "narration_text": "이 숫자 자체보다 중요한 건 계산 순서입니다. 현금에서 준비금을 빼고, 내게 실제로 가능한 대출을 확인하고, 그 대출을 매달 갚을 수 있는지 보는 겁니다. 그래야 부동산 앱에 있는 가격들이 내 상황하고 연결됩니다.",
+  "paragraph_ids": [
+    "P062"
+  ],
+  "claim_ids": [
+    "DOC"
+  ],
+  "material_type": "빈 예산 작성지",
+  "asset_ids": [
+    "M28"
+  ],
+  "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "audio_revision": null,
+  "start": null,
+  "end": null,
+  "timing_basis": "UNLOCKED: awaiting actual Jun alignment",
+  "beats": [
+    {
+      "anchor": "현금에서 준비금을 빼고",
+      "action": "잔금현금−준비금 입력칸",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "실제로 가능한 대출",
+      "action": "확인한 대출칸",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "매달 갚을 수 있는지",
+      "action": "월 상환 여력칸",
+      "start": null,
+      "end": null
+    }
+  ],
+  "status": "designed_not_rendered",
+  "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+  "fallback": "시청자 자신의 숫자를 적도록 빈칸3개만 남김",
+  "template_status": "contract_only_not_authored",
+  "template": "S28",
+  "beat_ids": [
+    "S28.b01",
+    "S28.b02",
+    "S28.b03"
+  ],
+  "preview_seconds": null
+}

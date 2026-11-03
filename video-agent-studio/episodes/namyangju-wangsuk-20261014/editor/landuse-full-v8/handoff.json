@@ -1,0 +1,42 @@
+{
+  "revision": "landuse-full-v8-series-hook-v6",
+  "status": "local_review_ready_independent_QA_passed",
+  "video": "outputs/video-review-v8/namyangju-landuse_full_v8.mp4",
+  "sha256": "94b6d04aa780c93509203b705ce02fa12085d57a0faef23a0629769db0549ba4",
+  "bytes": 75120354,
+  "frames": 26720,
+  "fps": 30,
+  "duration_video_s": 890.6666666666666,
+  "duration_container_s": 890.688,
+  "subtitles": "outputs/video-review-v8/namyangju-landuse_full_v8.srt",
+  "cue_count": 275,
+  "inputs": {
+    "new_hook_script_revision": "script-v6-series-cta",
+    "new_hook_script_sha256": "428d0e0325097d6d146e358a4f92f2fcfd3337ab12bff7b77e4e7e57ca40ca41",
+    "body_audio": "audio-v2 M001..M009 including M007B exact reused",
+    "new_hook_audio": "series-hook-v6",
+    "map_research": "landuse-v8 and original landuse-v7 114 faces",
+    "source_entry": "video/src/NamyangjuLanduseV8.tsx",
+    "final_project": "video/src/namyangju-landuse-v8/project_final.json",
+    "timing_lock": "editor/landuse-full-v8/timing_lock_final.json"
+  },
+  "verified": [
+    "whole video/audio decode no errors",
+    "1920x1080 30fps 26720frames",
+    "actual audio hash checks 11 files; 10 body files and captions preserved",
+    "275 ordered no-overlap semantic cues",
+    "43 actual encoded samples generated",
+    "full decoded audio peak -7.396447 dBFS"
+  ],
+  "independent_qa": "qa/landuse-full-v8/final_review.json",
+  "unverified": [
+    "actual listening",
+    "continuous playback"
+  ],
+  "affected_scenes": "all M000-M009 including M007B; full episode",
+  "next_owner": "director exact artifact completed decision, then editor ZIP",
+  "upload_authorized": false,
+  "required_open_count": 0,
+  "white_bar_roi_all_frames_passed": 26720,
+  "independent_actual_samples": 77
+}

@@ -1,0 +1,81 @@
+{
+  "task_id": "affordable-home-price-narration-local-v1",
+  "status": "local_preparation_passed_waiting_main",
+  "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "prepared_sha256": "bc4414e6822013ff0fd677d84620bd997d90e17ecc9ac0d3cdf399c8ac3b17bd",
+  "pipeline_sha256": "77cc23a640a1d0c6298ba5a3cc2da6996f3012c476225b7fa844226235b95c3c",
+  "script_body_only": true,
+  "chapters": 10,
+  "paragraph_scene_pairs": 45,
+  "extra_scene": "S034R",
+  "display_body_characters": 6550,
+  "with_headings_and_linebreaks_estimate_characters": 6765,
+  "meaning_units_PROVISIONAL": 150,
+  "two_line_units_PROVISIONAL": 90,
+  "maximum_line_characters": 40,
+  "actual_font_metrics_or_render_bounds_checked": false,
+  "protected_writer_occurrences": 187,
+  "writer_pronunciation_transforms": 259,
+  "all_display_spoken_transform_ranges_exact": true,
+  "source_whitespace_and_order_preserved": true,
+  "estimate_only": {
+    "narration_seconds": 1155.2,
+    "minutes_with_estimated_chapters": 19.75
+  },
+  "dependencies": {
+    "edge_tts_version": "7.3.1",
+    "shared_deps_readonly": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\free-tts-v1\\deps",
+    "WordBoundary_parameter_supported": true,
+    "new_episode_WordBoundary_measured": false,
+    "python": "3.11.9",
+    "ffmpeg": "C:\\projects\\realestate_reco\\video\\node_modules\\@remotion\\compositor-win32-x64-msvc\\ffmpeg.exe",
+    "global_install": false,
+    "network_calls": 0,
+    "helper_source": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\narration\\free-tts-v1\\production_narration.py",
+    "helper_sha256": "009e85a92892002c54de3236395e76f0ee12af3fc3a874e9089b60fe02fc4a36"
+  },
+  "unit_tests": {
+    "passed": 6,
+    "failures": 0,
+    "evidence": "tests_v1.log",
+    "scope": "offline synthetic WordBoundary/PCM/reviewer fixtures, exact real writer text; no voice synthesis"
+  },
+  "gate_probe": {
+    "exit_code": 2,
+    "result": {
+      "status": "blocked_or_failed_NO_automatic_retry",
+      "error_type": "GateError",
+      "reason": "Main explicit TTS instruction not recorded; local preparation only"
+    },
+    "approved_lock_file_exists": false,
+    "main_instruction_receipt_exists": false
+  },
+  "critical_reading_checks": {
+    "DSR": "디에스알",
+    "LTV": "엘티브이",
+    "DTI": "디티아이",
+    "0.75%포인트": "영점칠오 퍼센트 포인트",
+    "3.65%": "삼점육오 퍼센트",
+    "5억 103만 원": "오억 백삼만 원",
+    "B_reset": "60회 뒤 잔액 3억 4,676만 원, 남은 300개월, 월 176.4만 원; A 최초원금/신규360개월과 분리"
+  },
+  "measured_audio_created": false,
+  "new_episode_actual_native_events": 0,
+  "actual_listening": false,
+  "new_TTS_calls": 0,
+  "network_calls": 0,
+  "paid_calls": 0,
+  "cash_spent_krw": 0,
+  "global_installs": 0,
+  "first_episode_mutations": 0,
+  "cross_episode_audio_reuse_planned": 0,
+  "new_paragraph_generation_planned_AFTER_gate": 45,
+  "required_local_implementation_errors": [],
+  "pending": [
+    "main explicit instruction and approved canonical exact-SHA dual lock",
+    "45 fresh online paragraph syntheses",
+    "actual native WordBoundary coverage and meaning-cue regrouping",
+    "measured PCM duration/clipping/speech-end/tail/30fps checks",
+    "independent pronunciation/ASR/listening scope and editor actual Pretendard Range BBox/render QA"
+  ]
+}

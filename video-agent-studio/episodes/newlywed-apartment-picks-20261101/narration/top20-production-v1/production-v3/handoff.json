@@ -1,0 +1,54 @@
+{
+  "task_id": "top20-I002-free-pronunciation-clarity-v3",
+  "role": "narration",
+  "status": "I002_patch_audio_and_provider_mapping_passed_actual_listening_unverified",
+  "audio_revision": "free-edge-injoon-atempo135-i002clarity-v3",
+  "input_revisions": {
+    "source_v2_timing_sha256": "81ab992bb5a5ee40311290936b439f2a4504c717801ad80ba9ee45c49b0acd34",
+    "reading_inputs_sha256": "5f7b7fa238857bd9e242acf438db4f690a51c8cfbbe0e55128b28854f1281084",
+    "script_v4_sha256": "f1ff6dcd71283335cd8a675f1446f56557f4c81718dab59e8f641588334dbed2"
+  },
+  "outputs": [
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/timing_proposals_v3.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v3/narration_body_v3.wav",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v3/I002.wav",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v3/I002_raw.wav",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v3/I002_provider_boundaries_raw.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v3/I002_sentence_times_local.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v3/reading_inputs_v3.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v3/words_v3.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v3/verification.json"
+  ],
+  "affected_scene_ids": [
+    "I002"
+  ],
+  "changed_reading_sentence_ids": [
+    "I002-02",
+    "I002-03",
+    "I002-04",
+    "I002-05"
+  ],
+  "new_length_s": 35.41514739229025,
+  "timing_delta_s": 2.9518820861677995,
+  "proposed_full_length_s": 470.9550566893424,
+  "checks": [
+    {
+      "check": "7 numeric values / 7 provider-mapped sentences / 25 cached audio hashes / prior files immutable / full PCM decode",
+      "result": "passed",
+      "evidence": "verification.json"
+    },
+    {
+      "check": "patched actual listening / parent ASR",
+      "result": "not_performed_by_narration",
+      "evidence": null
+    }
+  ],
+  "open_issue_ids": [
+    "I002_PRONUNCIATION_LISTENING_UNVERIFIED"
+  ],
+  "next_role": "director reruns hook-before-brand clean-v7 timing lock and ASR once, then editor/qa",
+  "unresolved": "ASR difference not proof of speech error. New native-provider map is exact to reading text, actual sound unlistened. No second regeneration cycle.",
+  "cash_cost_krw": 0,
+  "new_free_TTS_chunks": 1,
+  "new_paid_api_calls": 0
+}

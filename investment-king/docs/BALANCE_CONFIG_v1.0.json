@@ -1,0 +1,141 @@
+{
+  "$schema_note": "Initial hypothetical GAME BALANCE numbers, NOT verified 2006 economic statistics. Confirm licensing and historical periods before publishing data-driven markets.",
+  "config_version": "balance-1.0.0-draft",
+  "game": {
+    "title": "나는야 투자왕",
+    "start_quarter": "2006Q4",
+    "end_quarter": "2026Q3",
+    "turn_count": 80,
+    "months_per_turn": 3,
+    "starting_age_years": 20,
+    "starting_cash_krw": 1000000,
+    "starting_housing": "FAMILY",
+    "starting_employment": "UNEMPLOYED",
+    "future_memory_mode": "FRAGMENT",
+    "primary_goal": "BALANCED_WEALTH_AND_LIFE",
+    "action_points_per_turn": 3
+  },
+  "starting_stats": {
+    "financial_knowledge": 20,
+    "career_skill": 25,
+    "execution": 45,
+    "health": 80,
+    "relationship": 55,
+    "credit": 40
+  },
+  "starting_wellbeing": {
+    "stress": 15,
+    "happiness": 60,
+    "autonomy": 40,
+    "stability": 45
+  },
+  "starting_household": {
+    "monthly_essential_living_cost_krw": 150000,
+    "monthly_housing_cost_krw": 0,
+    "annual_inflation_adjustment": "USE_VERIFIED_CPI_DATA",
+    "cash_shortfall_policy": "ACCRUE_ARREARS_NOT_AUTO_SELL"
+  },
+  "actions": {
+    "PART_TIME": {
+      "ap_cost": 1,
+      "max_per_turn": 2,
+      "income_krw_per_action": 400000,
+      "stress_delta": 4,
+      "health_delta": -1,
+      "execution_delta": 1
+    },
+    "READ_BOOK": {
+      "ap_cost": 1,
+      "max_per_turn": 2,
+      "book_purchase_price_krw": 25000,
+      "financial_knowledge_base_delta": 6,
+      "stress_delta": 1
+    },
+    "STUDY_CAREER": {
+      "ap_cost": 1,
+      "max_per_turn": 2,
+      "career_skill_base_delta": 6,
+      "stress_delta": 2
+    },
+    "EXERCISE": {
+      "ap_cost": 1,
+      "max_per_turn": 2,
+      "health_delta": 6,
+      "stress_delta": -7,
+      "happiness_delta": 1
+    },
+    "SOCIALIZE": {
+      "ap_cost": 1,
+      "max_per_turn": 2,
+      "cost_krw": 20000,
+      "relationship_delta": 5,
+      "happiness_delta": 3
+    },
+    "APPLY_JOB": {
+      "ap_cost": 1,
+      "max_per_turn": 2,
+      "career_skill_minimum": 30,
+      "offer_probability_model": "LOGISTIC_SKILL_EVENT_ADJUSTED",
+      "salary_effective_from": "NEXT_MONTH_AFTER_ACCEPTED"
+    }
+  },
+  "memory": {
+    "fragments_at_start": 2,
+    "additional_fragments_max": 3,
+    "exact_future_prices_allowed": false,
+    "exact_future_event_dates_allowed": false,
+    "knowledge_access_required": true
+  },
+  "events": {
+    "major_personal_events_per_turn_max": 1,
+    "minor_personal_events_per_turn_max": 2,
+    "rng_model": "SEEDED_DETERMINISTIC",
+    "event_result_auditable": true
+  },
+  "investment": {
+    "allow_short_selling": false,
+    "allow_margin_trade": false,
+    "allow_negative_buying_cash": false,
+    "equity_fractional_shares": false,
+    "crypto_precision_digits": 8,
+    "fees_mode": "HISTORIC_PERIOD_RULE_WITH_SIMPLIFIED_FALLBACK",
+    "illiquid_without_verified_volume": "DO_NOT_FILL",
+    "missing_price": "DO_NOT_FILL",
+    "market_data_mode": "HISTORICAL_REPLAY_POINT_IN_TIME"
+  },
+  "property": {
+    "prototype_synthetic_listing_count": 6,
+    "data_model": "REGION_AREA_PRICE_SCENARIO",
+    "price_provenance_label": "실거래 기반 가상 매물",
+    "allow_infinite_inventory": false,
+    "ltv_model": "POLICY_BY_ERA_REGION",
+    "debt_service_model": "POLICY_BY_ERA_AND_INCOME"
+  },
+  "scoring": {
+    "wealth_score_share": 0.5,
+    "life_score_share": 0.5,
+    "wealth_score_soft_cap_krw": 3000000000,
+    "wealth_score_reference_krw": 1000000,
+    "life_metric_weights": {
+      "health": 0.3,
+      "relationship": 0.25,
+      "autonomy": 0.2,
+      "happiness": 0.15,
+      "stability": 0.1
+    },
+    "financial_freedom_metric_weights": {
+      "nonlabor_income_coverage": 0.5,
+      "liquid_runway": 0.25,
+      "debt_safety": 0.25
+    },
+    "liquid_runway_full_credit_months": 120,
+    "debt_safety_denominator_factor": 0.6
+  },
+  "quality_gates": {
+    "run_is_deterministic": true,
+    "no_future_info_leak": true,
+    "no_duplicate_commit": true,
+    "data_licenses_approved_before_public_release": true,
+    "must_finish_exactly_80_turns": true
+  }
+}

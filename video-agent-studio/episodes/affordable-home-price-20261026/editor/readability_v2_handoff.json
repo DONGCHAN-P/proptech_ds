@@ -1,0 +1,84 @@
+{
+  "status": "readability_v2_static_previews_ready",
+  "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "changes": [
+    "Large cash/loan/shortfall amounts grouped by eok and manwon; fees remain manwon",
+    "Loan column headings shortened",
+    "Reset balance displayed rounded to nearest manwon with approximate qualifier; exact underlying value preserved",
+    "CH05 fee-only default and separate CH06 loan renderer; combined specimen only for static worst-case style preview"
+  ],
+  "changed_sources": [
+    {
+      "scene": "cash",
+      "old_html_sha256": "318da086dbe9c6c22823a8ed45a5c5e485211c42e09f636a2e789fd1aecbd818",
+      "new_html_sha256": "dd2b665593b654ffd28d42c2bbd35579e1faefb69d745e281752e333e12c60c0",
+      "font_sizes_unchanged": true,
+      "caption_text_and_provisional_times_unchanged": true
+    },
+    {
+      "scene": "fees_cases",
+      "old_html_sha256": "37e818cb1d30331c13fdf663fec897897918ac64bf2ad644eaf5aaa66ff86c1e",
+      "new_html_sha256": "3058515412713f24886679400f625561e7c3e0ae2589040772efdbeb8ce679bd",
+      "font_sizes_unchanged": true,
+      "caption_text_and_provisional_times_unchanged": true
+    },
+    {
+      "scene": "reset_budget",
+      "old_html_sha256": "57cb69e2aad9e5ea758309001180f07c34998da179d77dbcd9c69b45cfca27d4",
+      "new_html_sha256": "ccc80595c9b96a3e68eec024f27fdda6ba699d6d5a7c8e70a1e9bb3f88e41a42",
+      "font_sizes_unchanged": true,
+      "caption_text_and_provisional_times_unchanged": true
+    }
+  ],
+  "source_data_sha256_unchanged_from_writer_v2": {
+    "research/facts_v2.json": "e778c2145e14c34a034795c40e3e47caa2e7db58b8556b50cfaaf3b66e3eb321",
+    "research/verified_case_packet.json": "8945667612772beab586c7e9e5f9eba295b8731ce0a4103a63cffe1e3d82b02d",
+    "research/newborn_policy_addendum_v2.json": "daa99c4fad76c9f3361425b2110899f64827564f1eba1c3e2fc99fa10432d61b"
+  },
+  "original_4_PNG_JPG_SHA_preserved": true,
+  "previous_source_archive": "outputs/private-production-v1/source-archive/preflight-v1",
+  "preview_files": [
+    {
+      "file": "preview-v2/cash.png",
+      "sha256": "8300eb4026f43340f5656493f34ef04cc724038fd5ace2d0d965ca37840b0018",
+      "width": 1920,
+      "height": 1080,
+      "at_s": 6,
+      "time_status": "PROVISIONAL"
+    },
+    {
+      "file": "preview-v2/fees_cases.png",
+      "sha256": "4e66a92d89cbdcae62930cc7a970d2e52a43b213430511648e9c03f95f8fae2d",
+      "width": 1920,
+      "height": 1080,
+      "at_s": 6,
+      "time_status": "PROVISIONAL"
+    },
+    {
+      "file": "preview-v2/reset_budget.png",
+      "sha256": "bcc20298b4ce32ae89e26bc04c65f549af55895428860284d97ce9b22415a1ae",
+      "width": 1920,
+      "height": 1080,
+      "at_s": 6,
+      "time_status": "PROVISIONAL"
+    }
+  ],
+  "style_comparison": "outputs/private-production-v1/preview-v2/style_comparison.jpg",
+  "style_comparison_sha256": "ad601fb6e50912e4c298846f5e5885a5f50d9255f54526a96c2bdf1a45452659",
+  "CLI_status": "pass",
+  "CLI_receipt_sha256": "d6f6fb98e276c258ed3d88c41f9fc58a09784bb5c008ca95218792b590dbe2f3",
+  "BBox_status": "pass",
+  "BBox_text_checks": 1272,
+  "BBox_findings": 0,
+  "BBox_receipt_sha256": "7ad2c47693f72f2b008e5807f9b0895d9360ea6f649f22948fdec94c2b4a7f3a",
+  "no_font_shrink": true,
+  "semantic_template_separation_verified": true,
+  "monthly_budget_rows_and_60_300_ratio_unchanged": true,
+  "producer_fullres_3_frames_actually_viewed": true,
+  "comparison_sheet_actually_viewed": true,
+  "independent_v2_review": "pending main",
+  "all_times": "PROVISIONAL",
+  "full_film_rendered": false,
+  "TTS_generated": false,
+  "actual_voice_or_timing_assigned": false
+}

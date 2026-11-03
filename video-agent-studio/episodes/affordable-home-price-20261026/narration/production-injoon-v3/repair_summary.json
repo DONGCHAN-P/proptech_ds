@@ -1,0 +1,204 @@
+{
+  "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "generator_sha256": "ada0c8d185fe7c120c71fb8684b7911dc3dad593f9d22adefdb29f31573c11b8",
+  "prepared_sha256": "0c371115cbd7dfe9de40de7e1ef6f03c738bd52e974c217117878a659554ed6a",
+  "gate": {
+    "script_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\script-final-v2\\script_v2.md",
+    "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+    "lock_sha256": "b0b1ae715ee013ca40c1c7803c1d7b80aeefc5079498fc85d34178590e0e193d",
+    "receipts": {
+      "codex": {
+        "path": "qa\\content_v2_review.json",
+        "sha256": "fc7597ee56fe39e0ba9384d8b4ec5e1c9ba1f316d976814770967587fc90e961"
+      },
+      "claude": {
+        "path": "director\\production-v1\\claude\\script-v2-round1\\receipt.json",
+        "sha256": "541a7e6c0d2732df8abf57b7eb504c245cea8a911d581462ba45524596e64151"
+      }
+    },
+    "v3_main_instruction_sha256": "a69cc6e28a8e111df9cc7bcb4b67460ba33b02c311cbde8564fa494077ce25f0",
+    "v3_prepared_sha256": "0c371115cbd7dfe9de40de7e1ef6f03c738bd52e974c217117878a659554ed6a",
+    "v3_generator_sha256": "ada0c8d185fe7c120c71fb8684b7911dc3dad593f9d22adefdb29f31573c11b8",
+    "v3_delta_manifest_sha256": "e4278ea5cc65aefab0821c186905c996db26f794eba26ac8d5d42835fb89a265"
+  },
+  "new_calls_completed": 4,
+  "reused_paragraphs": 41,
+  "total_seconds": 1171.0333333333335,
+  "previous_seconds": 1153.5333333333335,
+  "delta_seconds": 17.5,
+  "meaning_cues_before": 150,
+  "meaning_cues_after": 150,
+  "word_events_before": 1633,
+  "word_events_after": 1647,
+  "chapter_diffs": [
+    {
+      "chapter": 1,
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_01.wav",
+      "sha256": "537b3531b503a7d8da56aaf34f4a272f52ef95e4ea26033d96cde4e4b47c9c78",
+      "previous_sha256": "537b3531b503a7d8da56aaf34f4a272f52ef95e4ea26033d96cde4e4b47c9c78",
+      "unchanged_audio": true,
+      "total_seconds": 60.833333333333336,
+      "previous_seconds": 60.833333333333336,
+      "delta_seconds": 0.0,
+      "frames_30fps": 1825,
+      "clipped_samples": 0,
+      "cues": 8,
+      "tail_from_conservative_speech_end_s": 1.228084333333335
+    },
+    {
+      "chapter": 2,
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_02.wav",
+      "sha256": "a01eba931f99f766d3feb6bc32e9407db2606924b610616f3dd9957f553019dd",
+      "previous_sha256": "a01eba931f99f766d3feb6bc32e9407db2606924b610616f3dd9957f553019dd",
+      "unchanged_audio": true,
+      "total_seconds": 60.333333333333336,
+      "previous_seconds": 60.333333333333336,
+      "delta_seconds": 0.0,
+      "frames_30fps": 1810,
+      "clipped_samples": 0,
+      "cues": 9,
+      "tail_from_conservative_speech_end_s": 1.2214593333333355
+    },
+    {
+      "chapter": 3,
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_03.wav",
+      "sha256": "03849e0624787643bc623099a05fb2863726670656b3c48e0a3e54cf501d472a",
+      "previous_sha256": "03849e0624787643bc623099a05fb2863726670656b3c48e0a3e54cf501d472a",
+      "unchanged_audio": true,
+      "total_seconds": 90.93333333333334,
+      "previous_seconds": 90.93333333333334,
+      "delta_seconds": 0.0,
+      "frames_30fps": 2728,
+      "clipped_samples": 0,
+      "cues": 12,
+      "tail_from_conservative_speech_end_s": 1.2276673333333292
+    },
+    {
+      "chapter": 4,
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_04.wav",
+      "sha256": "26c6cb2f3ca986e34e41ec57404f2330da60754d9f7c0985d7e4d34ae52ddf08",
+      "previous_sha256": "c51bdc64a85616cb8e4f49dff66e16f232f836825a2604591ae389e20d6a3fd2",
+      "unchanged_audio": false,
+      "total_seconds": 98.56666666666666,
+      "previous_seconds": 94.6,
+      "delta_seconds": 3.9666666666666686,
+      "frames_30fps": 2957,
+      "clipped_samples": 0,
+      "cues": 13,
+      "tail_from_conservative_speech_end_s": 1.2034586666666627
+    },
+    {
+      "chapter": 5,
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_05.wav",
+      "sha256": "38c0ff2a89e6864e9941fe81e926f77db20165a0928091dcb23b2db2389e63d3",
+      "previous_sha256": "224bd8267a69e27b0b601e48c621a9e4b548adede54156f14b9c9bd6c3310ca8",
+      "unchanged_audio": false,
+      "total_seconds": 170.83333333333334,
+      "previous_seconds": 167.46666666666667,
+      "delta_seconds": 3.3666666666666742,
+      "frames_30fps": 5125,
+      "clipped_samples": 0,
+      "cues": 19,
+      "tail_from_conservative_speech_end_s": 1.2229173333333563
+    },
+    {
+      "chapter": 6,
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_06.wav",
+      "sha256": "9aa6f2f9362caa928d37ff98f4f08ae78c5c2207848eb7f306424f7773f43f6a",
+      "previous_sha256": "28be0b15b0f3e3c2701ac6c1e79062134f97d5eeb09c65e804482f5bf21db6b2",
+      "unchanged_audio": false,
+      "total_seconds": 143.33333333333334,
+      "previous_seconds": 138.1,
+      "delta_seconds": 5.2333333333333485,
+      "frames_30fps": 4300,
+      "clipped_samples": 0,
+      "cues": 18,
+      "tail_from_conservative_speech_end_s": 1.2091253333333327
+    },
+    {
+      "chapter": 7,
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_07.wav",
+      "sha256": "66ca7e32d3602b0a5f5169dea390f53c71cb7a3ff38b98134cb5b23613ae4462",
+      "previous_sha256": "f02e7a51f724398f0dc878109993089ecfde06e40ca2c14070cc9dac5878ef29",
+      "unchanged_audio": false,
+      "total_seconds": 171.3,
+      "previous_seconds": 166.36666666666667,
+      "delta_seconds": 4.933333333333337,
+      "frames_30fps": 5139,
+      "clipped_samples": 0,
+      "cues": 23,
+      "tail_from_conservative_speech_end_s": 1.2114590000000192
+    },
+    {
+      "chapter": 8,
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_08.wav",
+      "sha256": "c3115182ea886b7b4f79dff68cd12c589118445b066be5ca424318b2024c2794",
+      "previous_sha256": "c3115182ea886b7b4f79dff68cd12c589118445b066be5ca424318b2024c2794",
+      "unchanged_audio": true,
+      "total_seconds": 169.2,
+      "previous_seconds": 169.2,
+      "delta_seconds": 0.0,
+      "frames_30fps": 5076,
+      "clipped_samples": 0,
+      "cues": 20,
+      "tail_from_conservative_speech_end_s": 1.220000999999968
+    },
+    {
+      "chapter": 9,
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_09.wav",
+      "sha256": "5baa2a578c108fd3482650de7a9a40f93a371407c6cddb231512c9cfa0ccfc90",
+      "previous_sha256": "5baa2a578c108fd3482650de7a9a40f93a371407c6cddb231512c9cfa0ccfc90",
+      "unchanged_audio": true,
+      "total_seconds": 133.26666666666668,
+      "previous_seconds": 133.26666666666668,
+      "delta_seconds": 0.0,
+      "frames_30fps": 3998,
+      "clipped_samples": 0,
+      "cues": 17,
+      "tail_from_conservative_speech_end_s": 1.217958666666675
+    },
+    {
+      "chapter": 10,
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_10.wav",
+      "sha256": "46b1a00be82bd094493c56f26c4075fbf18808fea7391eb674118ba133d9f63b",
+      "previous_sha256": "46b1a00be82bd094493c56f26c4075fbf18808fea7391eb674118ba133d9f63b",
+      "unchanged_audio": true,
+      "total_seconds": 72.43333333333334,
+      "previous_seconds": 72.43333333333334,
+      "delta_seconds": 0.0,
+      "frames_30fps": 2173,
+      "clipped_samples": 0,
+      "cues": 11,
+      "tail_from_conservative_speech_end_s": 3.020208333333329
+    }
+  ],
+  "new_paragraph_audio": [
+    {
+      "scene_id": "S014",
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S014\\audio.wav",
+      "sha256": "51603d79db2752b3f49b908d5ef44d74ad6d339910b1cd59ef1bbb639b58cf15"
+    },
+    {
+      "scene_id": "S019",
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S019\\audio.wav",
+      "sha256": "4893a957b8311cfee4a2490861c13b005631b3547cda40839582253ac5501d3d"
+    },
+    {
+      "scene_id": "S024",
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S024\\audio.wav",
+      "sha256": "cc07fb36e603c7d9845a8cf925a7287e434fdcfe64a0fa8b12a5480cd5cc991a"
+    },
+    {
+      "scene_id": "S030",
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S030\\audio.wav",
+      "sha256": "9661fdf2618bf719c3033084de49a1c55f71c79bf3e51c1330fb935db737ef27"
+    }
+  ],
+  "root_v2_final_timing_sha256": "67d7e97351b9a6b9ef4ae71410cfab798d1ab120b792ff924ccc3c11051c16a4",
+  "versioned_v2_preserved": true,
+  "raw_45_source_metadata_preserved": true,
+  "required_technical_errors": [],
+  "actual_listening": false,
+  "cash_spent_krw": 0,
+  "automatic_retry": false
+}

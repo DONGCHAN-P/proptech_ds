@@ -1,0 +1,19 @@
+{
+  "issue_id": "ED-CN-TIMING-002",
+  "scene_ids": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M005",
+    "M006",
+    "M007",
+    "M008",
+    "M009"
+  ],
+  "problem": "Real voice, original-text alignment and timing lock not available.",
+  "proposal": "Obtain script-v2 approval + bounded budget before narration; M000 hook character/sample split and M009 last spoken character are required.",
+  "impact": "Do not substitute estimated durations; no full render.",
+  "next_owner": "director → narration → director → editor"
+}

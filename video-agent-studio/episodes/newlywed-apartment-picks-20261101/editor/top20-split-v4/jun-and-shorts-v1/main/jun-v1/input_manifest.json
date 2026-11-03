@@ -1,0 +1,128 @@
+{
+  "task_id": "accepted-main-Jun-conform-v1",
+  "lock": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\director\\top20-split-v4\\part1-jun-and-shorts-v1\\locked_timing.json",
+  "lock_sha256": "96e04175f2b44f54fec4b966954684253dbda42cd8803d702b94e5be6e1ed675",
+  "source_video": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-split-v4\\map-clean-v1\\part1_map_clean_photo_v1.mp4",
+  "source_video_sha256": "a8d7771668848fe406d76e429db85026f1b300e634d6096b0a780390a9a2a064",
+  "master_audio": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\director\\top20-split-v4\\part1-jun-and-shorts-v1\\media\\master_audio.wav",
+  "master_audio_sha256": "0d8037977a4fb50af64f1645e13d38aabd2ad0c1bed171523192581fbc792511",
+  "anchor_count": 389,
+  "main_sentences": 90,
+  "caption_count": 181,
+  "total_s": 681.7333333333333,
+  "mask_windows": [
+    [
+      0.0,
+      5.03
+    ],
+    [
+      10.030000000000001,
+      671.73
+    ]
+  ],
+  "checks": [
+    {
+      "check": "brand_intro_unit_rate",
+      "max_error_s": 0.0
+    },
+    {
+      "check": "brand_outro_unit_rate",
+      "max_error_s": 0.0
+    },
+    {
+      "check": "R20_entry_fixed",
+      "length_s": 0.519999999999996
+    },
+    {
+      "check": "R20_exit_fixed",
+      "length_s": 0.5499999999999972
+    },
+    {
+      "check": "R19_entry_fixed",
+      "length_s": 0.5200000000000102
+    },
+    {
+      "check": "R19_exit_fixed",
+      "length_s": 0.5500000000000114
+    },
+    {
+      "check": "R18_entry_fixed",
+      "length_s": 0.5200000000000102
+    },
+    {
+      "check": "R18_exit_fixed",
+      "length_s": 0.5500000000000114
+    },
+    {
+      "check": "R17_entry_fixed",
+      "length_s": 0.5200000000000102
+    },
+    {
+      "check": "R17_exit_fixed",
+      "length_s": 0.5500000000000114
+    },
+    {
+      "check": "R16_entry_fixed",
+      "length_s": 0.5199999999999818
+    },
+    {
+      "check": "R16_exit_fixed",
+      "length_s": 0.5500000000000114
+    },
+    {
+      "check": "R15_entry_fixed",
+      "length_s": 0.5199999999999818
+    },
+    {
+      "check": "R15_exit_fixed",
+      "length_s": 0.5500000000000114
+    },
+    {
+      "check": "R14_entry_fixed",
+      "length_s": 0.5199999999999818
+    },
+    {
+      "check": "R14_exit_fixed",
+      "length_s": 0.5500000000000114
+    },
+    {
+      "check": "R13_entry_fixed",
+      "length_s": 0.5199999999999818
+    },
+    {
+      "check": "R13_exit_fixed",
+      "length_s": 0.5500000000000114
+    },
+    {
+      "check": "R12_entry_fixed",
+      "length_s": 0.5199999999999818
+    },
+    {
+      "check": "R12_exit_fixed",
+      "length_s": 0.5499999999999545
+    },
+    {
+      "check": "R11_entry_fixed",
+      "length_s": 0.5199999999999818
+    },
+    {
+      "check": "R11_exit_fixed",
+      "length_s": 0.5499999999999545
+    }
+  ],
+  "render_route": "whole_source_frames_piecewise_parent_anchors_shared_raw_YUV_two_encodes",
+  "not_rendered_yet": false,
+  "actual_listening": false,
+  "continuous_playback": false,
+  "video": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-split-v4\\jun-and-shorts-v1\\main\\part1_Jun_conform_jun-v1.mp4",
+  "video_sha256": "f6cbb829dc988333398d3317c7aba8e4c06a561457a93ea9cecd793d9e4dab18",
+  "picture_sha256": "61783250ccde6f4d10042ad2414216a52cd2316c96b77adc8aad25bae8f6a2b1",
+  "code_versions": {
+    "conform.py": "0fa7b9bd3b49b523eba6aaf9408b6a0379796a0a46d69d69f06545cd2d26272a",
+    "verify.py": "8273818a24e59027482b0cea1eb85593fe5083e793d455c6a8b5784af866917d"
+  },
+  "caption_geometry": "jun-v1/caption_geometry.json",
+  "reproducibility": "jun-v1/reproducibility.json",
+  "render_receipt": "jun-v1/render_receipt.json",
+  "quality_reference": "source-smoke-v2/picture_quality.json"
+}

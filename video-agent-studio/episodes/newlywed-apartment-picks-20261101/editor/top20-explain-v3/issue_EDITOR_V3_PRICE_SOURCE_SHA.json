@@ -1,0 +1,28 @@
+{
+  "issue_id": "EDITOR_V3_PRICE_SOURCE_SHA",
+  "status": "해소_부모입력갱신후SHA일치확인",
+  "to": [
+    "director",
+    "research"
+  ],
+  "scene_ids": [
+    "가격20지역"
+  ],
+  "problem": "정상행 보존v2 원팩이 가격패널 정규화 이후 변경되어 source_sha256이 현재 바이트와 다릅니다.",
+  "evidence": {
+    "panel": "director/top20-explain-v3/price_panel_data.json",
+    "panel_sha256": "7310953062adbedf0bba8b30872baf97377e0105001a46ce631c9aa4208568a6",
+    "source": "research/top20-explain-v3/prices/final-api-20261103-v2/map_price_inputs.json",
+    "recorded_source_sha256": "cfdfc558414e67a25dcbe6ff87c922902dcaddccc3870b8d702bbe436ea519df",
+    "actual_source_sha256": "81aee59e4da0ad53656af908469280645a011b0d6c7fed39563ddb7ef4c93178",
+    "qa_panel_sha_matches": true,
+    "map_panel_sha_matches": true
+  },
+  "proposal": "원팩 후속 변경 내용을 확인하고 가격/좌표/구역 변화가 없으면 총괄이 정규화 원본SHA 및 지도/QA 연결을 갱신해 주십시오. 값이 바뀌었으면 해당 값·검수·지도까지 새 버전으로 연결해 주십시오.",
+  "impact": "가격이 없는 시안·앵커 로직 검증은 계속합니다. 이슈 해소 또는 일치하는 승인 입력 수신 후 실값 대표 PNG를 만듭니다. v1 가격은 사용하지 않습니다.",
+  "resolution": {
+    "panel_sha256": "844f0ee211dfc89094b8160558d72e0f8f001e8072d361123447e8c1ebfacdef",
+    "recorded_source_sha256": "81aee59e4da0ad53656af908469280645a011b0d6c7fed39563ddb7ef4c93178",
+    "actual_source_sha256": "81aee59e4da0ad53656af908469280645a011b0d6c7fed39563ddb7ef4c93178"
+  }
+}

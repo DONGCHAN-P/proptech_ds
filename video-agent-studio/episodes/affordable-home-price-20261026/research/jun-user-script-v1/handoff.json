@@ -1,0 +1,45 @@
+{
+  "task_id": "JUN-USER-SCRIPT-V1-FACTS",
+  "role": "research",
+  "status": "complete_scoped_review",
+  "input_revisions": {
+    "docx_sha256": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+    "scene_plan": "user-recording-guide-v1-r2",
+    "as_of": "2026-10-27"
+  },
+  "outputs": [
+    "research/jun-user-script-v1/reviewed_claims.json",
+    "research/jun-user-script-v1/issue_JUN-FACTS-SCOPE.json"
+  ],
+  "affected_scene_ids": [],
+  "checks": [
+    {
+      "check": "48문단/31장면·공식 금융/현행법·세금/VAT·계산 조건",
+      "result": "pass_with_declared_scope",
+      "evidence": "reviewed_claims.json"
+    },
+    {
+      "check": "원문 필수 수정",
+      "result": "0건;원문 유지",
+      "evidence": "required_corrections=[]"
+    },
+    {
+      "check": "가이드7개 문장제안",
+      "result": "모두 optional",
+      "evidence": "guide_proposals"
+    }
+  ],
+  "open_issue_ids": [
+    "JUN-FACTS-SCOPE-01",
+    "JUN-FACTS-SCOPE-02"
+  ],
+  "unresolved": "STRESS 첨부 상세계수·채권실제할인액·주택별견적/은행승인 미확인. 원문 발화에 해당 수치 없음; 비차단.",
+  "next_role": "director",
+  "next_action": "원문48문단 유지. Jun은 최신선택 적용, 실제 생성은 부모 budget gate 뒤. 선택제안 자동반영 금지.",
+  "restrictions": {
+    "paid_calls": 0,
+    "private_upload": false,
+    "audio_generation": false,
+    "other_owned_files_modified": false
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "revision": "ilpae-source-joint-v13",
+  "board_id": "w2",
+  "dimensions": [
+    1392,
+    1305
+  ],
+  "source": {
+    "file": "research/map-led-v5/w2_a3_pamphlet.pdf",
+    "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=66836710",
+    "page": 5,
+    "rotation_degrees": 0,
+    "pdf_rect": [
+      0.0,
+      0.0,
+      1360.6300048828125,
+      907.0869750976562
+    ],
+    "crop_pdf_points": [
+      839,
+      245,
+      1303,
+      680
+    ],
+    "render_scale": 3,
+    "source_sha256": "04d4a6a64cef50c68a63a65864a60ccf9866118a2f98b500f90e422165f78825",
+    "same_crop_png": "research/ilpae-v13/source_w2_same_board_crop.png"
+  },
+  "station": {
+    "id": "ilpae_planned",
+    "pixel": [
+      606,
+      848
+    ],
+    "source_pdf_point": [
+      1041,
+      527.6666667
+    ],
+    "label": "일패역(가칭·계획)",
+    "meaning": "official published plan symbol; NOT surveyed station center/platform/exit",
+    "basis": "source-native same crop transform x=(pdfx-839)*3,y=(pdfy-245)*3",
+    "tolerance_px": 6
+  },
+  "missing_features": [
+    {
+      "id": "ilpae_work_band_missing",
+      "type": "work",
+      "label": "업무시설 계획",
+      "polygon": [
+        [
+          522,
+          837
+        ],
+        [
+          551,
+          831
+        ],
+        [
+          568,
+          823
+        ],
+        [
+          599,
+          824
+        ],
+        [
+          618,
+          813
+        ],
+        [
+          640,
+          816
+        ],
+        [
+          662,
+          831
+        ],
+        [
+          689,
+          844
+        ],
+        [
+          696,
+          866
+        ],
+        [
+          676,
+          874
+        ],
+        [
+          648,
+          858
+        ],
+        [
+          618,
+          869
+        ],
+        [
+          576,
+          889
+        ],
+        [
+          560,
+          871
+        ],
+        [
+          522,
+          873
+        ]
+      ],
+      "basis": "manual transcription of visible dark-blue planned-use band around the official station symbol; simplified visible outline",
+      "boundary_qualification": "partly occluded by original station callout; not a surveyed parcel boundary"
+    },
+    {
+      "id": "ilpae_rail_facility_visible",
+      "type": "rail",
+      "label": "철도시설 계획",
+      "polygon": [
+        [
+          588,
+          887
+        ],
+        [
+          612,
+          883
+        ],
+        [
+          625,
+          906
+        ],
+        [
+          620,
+          930
+        ],
+        [
+          606,
+          925
+        ]
+      ],
+      "basis": "visible gray planned rail facility area immediately southwest of station label",
+      "boundary_qualification": "only visible portion; original callout occludes continuation"
+    }
+  ],
+  "rail_corridor": {
+    "id": "ilpae_source_visible_track",
+    "points": [
+      [
+        595,
+        906
+      ],
+      [
+        611,
+        936
+      ],
+      [
+        630,
+        971
+      ],
+      [
+        650,
+        1007
+      ],
+      [
+        665,
+        1030
+      ]
+    ],
+    "label": "원도 철도 선형 표시",
+    "basis": "visible parallel rail strokes in same p5 land-use drawing",
+    "qualification": "illustrative center between visible rail strokes; do not connect symbol by a fabricated path; not exact alignment/entrance",
+    "occluded": true
+  },
+  "relative_order": [
+    "A1/A3 주거블록",
+    "그 남쪽 주상복합 C1/C2/C5와 상업시설",
+    "상업시설 바로 남쪽 업무시설 띠 위 원도 역기호",
+    "역기호 남서쪽 회색 철도시설/가시 철도선",
+    "더 남쪽 공공복합/공원"
+  ],
+  "root_cause": [
+    "Board uses same source crop, orientation and scale; no verified rotation/crop transform mismatch.",
+    "The source station symbol is positioned over a large dark-blue work land-use band that was omitted from the old 40-feature board.",
+    "Gray rail facility and visible railway line below the symbol were also omitted.",
+    "Thus correct source-local symbol position was rendered over blank beige space beyond the commerce polygons, creating a floating new station.",
+    "Do not move the marker onto an unrelated road merely because it looks more plausible."
+  ],
+  "editor_solution": [
+    "Add work band, visible gray facility, and rail strokes as a single static background group with the station symbol, before narration starts.",
+    "Use the same board transform/camera for every joint element; no separately timed pin insertion.",
+    "Keep source circle at606848; call it a published plan symbol, not station center or exit.",
+    "Existing pastel uses preserved; clear rail stroke and concise planned legend only; no new GIS pin.",
+    "The original callout occludes some rail geometry: show verified visible segment only; do not invent continuation through the station icon."
+  ],
+  "checked_on": "2026-10-15",
+  "status": "qualified_official_schematic_joint_geometry"
+}

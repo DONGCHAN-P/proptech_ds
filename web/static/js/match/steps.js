@@ -13,12 +13,12 @@ window.STEPS = (function () {
   const HOUSEHOLDS = [
     { key: 'single', t: '혼자 살아요', d: '1인 가구', ic: '🧑', pyeong: ['20P'], prio: ['station'] },
     { key: 'couple', t: '둘이 살아요', d: '신혼 · 2인 가구', ic: '💑', pyeong: ['25P', '30P'], prio: ['station'] },
-    { key: 'kids', t: '아이가 있어요', d: '자녀가 있는 가구', ic: '👨‍👩‍👧', pyeong: ['30P', '35P'], prio: ['school', 'station'] },
+    { key: 'kids', t: '아이가 있어요', d: '자녀가 있는 가구', ic: '👨‍👩‍👧', pyeong: ['30P', '35P'], prio: ['station'] },
   ];
 
   const PRIORITIES = [
     { key: 'station', t: '역세권', d: '지하철역까지 걷는 시간', ic: '🚇' },
-    { key: 'school', t: '학군', d: '1km 안 초등학교 수', ic: '🎒' },
+    { key: 'school', t: '학교 접근', d: '1km 안 초등학교 수', ic: '🎒' },
     { key: 'new', t: '신축', d: '준공 연도가 최근일수록', ic: '✨' },
     { key: 'green', t: '녹지', d: '공원 · 숲 · 하천 가까이', ic: '🌳' },
     { key: 'active', t: '거래 활발', d: '최근 1년 실거래가 많은 곳', ic: '🔁' },
@@ -58,14 +58,6 @@ window.STEPS = (function () {
       return '<b>' + t + '</b><small>억</small>';
     }
     return '<b>' + Math.round(man).toLocaleString() + '</b><small>만</small>';
-  }
-
-  /** 현금+대출 → 매매가. 1주택 취득세 + 중개보수 대략치 (6억↓ 1.5%, 9억↓ 2.7%, 그 위 3.9%) */
-  function feeRate(price) { return price <= 60000 ? 0.015 : price <= 90000 ? 0.027 : 0.039; }
-  function priceFromMoney(money) {
-    let price = money / 1.015;
-    for (let i = 0; i < 4; i++) price = money / (1 + feeRate(price));
-    return { price, rate: feeRate(price) };
   }
 
   function workSlot(n, w, ph, label) {
@@ -143,16 +135,7 @@ window.STEPS = (function () {
         '<div class="chips">' + BUDGET_CHIPS.map(v =>
           '<button type="button" class="chip' + (a.budget === v ? ' on' : '') + '" data-v="' + v + '">' +
           U.won(v) + '</button>').join('') + '</div>' +
-        '<button type="button" class="link calc-toggle" id="calcToggle">' +
-        (a._calc ? '계산기 닫기' : '🧮 현금 + 대출로 계산하기') + '</button>' +
-        '<div class="calc" id="calc"' + (a._calc ? '' : ' hidden') + '>' +
-        '<label>보유 현금<span><input type="number" id="cCash" min="0" step="0.1" inputmode="decimal" value="' +
-        (a._cash != null ? a._cash : '') + '" placeholder="2" />억</span></label>' +
-        '<label>대출 예정<span><input type="number" id="cLoan" min="0" step="0.1" inputmode="decimal" value="' +
-        (a._loan != null ? a._loan : '') + '" placeholder="4" />억</span></label>' +
-        '<p class="calc-out" id="calcOut">두 칸을 채우면 매매가 상한을 계산해 드려요.</p>' +
-        '<p class="calc-note">취득세·중개보수를 1주택 기준 대략치로 뺀 값입니다. 대출 한도(LTV·DSR)는 소득과 지역에 따라 달라요.</p>' +
-        '</div></div>',
+        '<p class="calc-note"><a href="/">월 상환·비상금을 포함한 예산 계산기 열기 →</a></p></div>',
       bind(el, a, ctx) {
         const r = el.querySelector('#budgetRange');
         const big = el.querySelector('#budgetBig');
@@ -169,22 +152,6 @@ window.STEPS = (function () {
         el.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
           a.budget = +c.dataset.v; paint(); ctx.changed(true);
         }));
-        el.querySelector('#calcToggle').addEventListener('click', () => { a._calc = !a._calc; ctx.rerender(); });
-        const cash = el.querySelector('#cCash'), loan = el.querySelector('#cLoan'), out = el.querySelector('#calcOut');
-        const calc = () => {
-          a._cash = cash.value === '' ? null : +cash.value;
-          a._loan = loan.value === '' ? null : +loan.value;
-          if (a._cash == null && a._loan == null) return;
-          const money = ((a._cash || 0) + (a._loan || 0)) * 10000;
-          const r2 = priceFromMoney(money);
-          if (r2.price < 10000) { out.textContent = '1억 미만은 찾을 수 있는 단지가 거의 없어요.'; return; }
-          a.budget = Math.min(300000, Math.floor(r2.price / 1000) * 1000);
-          out.innerHTML = '총 <b>' + U.won(money) + '</b> − 부대비용 약 ' + (r2.rate * 100).toFixed(1) +
-            '% → 매매가 <b>' + U.won(a.budget) + '</b> 이하';
-          paint(); ctx.changed();
-        };
-        cash.addEventListener('input', calc); loan.addEventListener('input', calc);
-        if (a._calc) calc();
       },
       valid: a => a.budget > 0,
       summary: a => '💰 ' + U.won(a.budget) + ' 이하',

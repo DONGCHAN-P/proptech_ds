@@ -1,0 +1,12 @@
+const fs=require('fs'),path=require('path'),crypto=require('crypto');
+const e=path.resolve(__dirname,'../..'),r=path.resolve(e,'../../..'),o=path.join(e,'outputs/production-v6-preview'),nm=path.join(r,'video/node_modules'),cache=path.join(__dirname,'cache'),pub=path.join(cache,'public');
+const {bundle}=require(path.join(nm,'@remotion/bundler')),{openBrowser,selectComposition,renderStill}=require(path.join(nm,'@remotion/renderer'));const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
+(async()=>{
+ const p=JSON.parse(fs.readFileSync(path.join(o,'rendered_project_r2.json'))),states=new Map();fs.mkdirSync(path.join(o,'patch_r3'),{recursive:true});
+ for(const v of p.visual_intervals){if(v.render_props.board==='pair'||v.render_props.cue==='M000_C2'){const old=v.frame_file,file='patch_r3/'+path.basename(old);states.set(file,{file,props:v.render_props,original:old});v.frame_file=file;}}
+ const serveUrl=await bundle({entryPoint:path.join(r,'video/src/changneung-v6/entry.tsx'),outDir:path.join(cache,'patch_r3_bundle'),publicDir:pub}),browser=await openBrowser('chrome',{browserExecutable:path.join(nm,'.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe')});
+ try{const base=await selectComposition({serveUrl,puppeteerInstance:browser,id:'ChangneungV6Frame'}),batch=[...states.values()];for(let i=0;i<batch.length;i+=4){await Promise.all(batch.slice(i,i+4).map(async v=>renderStill({serveUrl,puppeteerInstance:browser,composition:{...base,props:v.props},inputProps:v.props,frame:0,output:path.join(o,v.file)})));}console.log('patched '+batch.length+' states only');
+ p.revision='production-v6-preview-r3';p.patch={issues:['QAV6-005','QAV6-006'],source_sha256:sha(fs.readFileSync(path.join(r,'video/src/changneung-v6/Boards.tsx'))),preserved_r2_mp4:true,changes:'generic context summary for M000/M001 and equal two-apartment position comparison; source v5 unchanged'};
+ fs.writeFileSync(path.join(o,'rendered_project_r3.json'),JSON.stringify(p,null,2));fs.writeFileSync(path.join(o,'project_r3.json'),JSON.stringify(Object.fromEntries(Object.entries(p).filter(([k])=>k!=='visual_intervals')),null,2));fs.writeFileSync(path.join(o,'patch_r3_receipt.json'),JSON.stringify({issues:p.patch.issues,source_sha256:p.patch.source_sha256,patched_unique_states:batch.length,reused_unique_states:1308-batch.length,frames:batch.map(v=>({...v,sha256:sha(fs.readFileSync(path.join(o,v.file)))}))},null,2));
+ }finally{await browser.close({silent:true})}
+})().catch(e=>{console.error(e.stack);process.exitCode=1});

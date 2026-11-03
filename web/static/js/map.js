@@ -22,11 +22,7 @@ window.M = (function () {
     });
     L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-    L.tileLayer(tiles.url, {
-      attribution: tiles.attribution,
-      subdomains: tiles.subdomains || 'abc',
-      maxZoom: tiles.maxZoom || 19,
-    }).addTo(map);
+    JIPMap.add(map, tiles);
 
     layer = L.layerGroup().addTo(map);
     poiLayer = L.layerGroup().addTo(map);

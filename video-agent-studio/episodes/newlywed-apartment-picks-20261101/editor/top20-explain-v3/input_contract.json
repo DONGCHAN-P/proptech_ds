@@ -1,0 +1,20 @@
+{
+  "상태": "최종대본·확정가격·지도 수신; 실제 음성 타이밍 대기",
+  "원고": {
+    "scene_json_sha256": "8beec59448e180617327f17913aaa25277b3152769a1815cbdc493351003803e",
+    "script_md_sha256": "4259f50a9c5cadbadd864d838559a16f85e07316818ddcb31ce40939fbccac38",
+    "문장기준": "sentence_id와 display_text; price_role 또는 regional_price/complex_price 의미 비트"
+  },
+  "실제타이밍필수": {
+    "timing_locked": true,
+    "timing_basis": "actual_audio",
+    "script_sha256": "수신 원고MD와 일치",
+    "words_file": "원발화 단어 파일",
+    "words_file_sha256": "단어 파일 실제 SHA",
+    "scenes": "scene_id/start_s/end_s/sentence_times; 단어 local_start_s/local_end_s는 장면 내부 초"
+  },
+  "가격": "director/top20-explain-v3/price_panel_data.json → final-api-20261103-v2 및 독립QA SHA 연결",
+  "지도": "visual/top20-explain-v3/maps/map_assets.json → 가격패널SHA/개별SVG SHA/marker_status/단지ID/lat/lng 내부점 일치",
+  "편집규칙": "특징 마지막 단어 종료 <= 가격 첫 단어 시작에서만 사진→지도 전환. 실제 단어 없는 현재는 provisional 시안만 허용.",
+  "본편재개조건": "별도 script 승인, 실제 음성·타이밍 전달 및 총괄 통합 지시. 이 빌더에는 MP4 렌더/업로드 기능이 없습니다."
+}

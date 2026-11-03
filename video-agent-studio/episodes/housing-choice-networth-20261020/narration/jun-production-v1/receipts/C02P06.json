@@ -1,0 +1,62 @@
+{
+  "paragraph_id": "C02P06",
+  "scene_id": "C02",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:02:23.382Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "aeee3ee8c71ebd72087c698d62ab8b93aa3627422c971da98b4a025eb823893f",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "비교 기간도 같습니다. 매매는 십 년, 투자는 이십 년으로 늘리거나 한쪽에 유리한 종료 시점을 고르면 결과의 의미가 달라집니다. 이번에는 세 가구 모두 백이십 개월이 지난 같은 시점에서 집과 금융자산, 보증금, 남은 빚을 확인합니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 130,
+  "characters": 130,
+  "actual_credits": 52,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17702,
+    "character_limit": 40000,
+    "included_remaining": 22298,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "mX1o21J1rfsfEDRPNTV0",
+    "x-request-id": null,
+    "character-cost": "52",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:02:23 GMT"
+  },
+  "pcm_samples": 716184,
+  "pcm_duration_s": 16.24,
+  "provider_last_spoken_end_s": 16.32,
+  "artifact_sha256": {
+    "paragraphs/C02P06/audio.mp3": "8ed02385380c5373710405ea26442779efe092f82ca4137e4a3650fbf0cca39c",
+    "paragraphs/C02P06/audio.wav": "33a747741a5efc954cbf0d079ea799a11a8b466d14fcb3288e54281561f33c49",
+    "paragraphs/C02P06/alignment.json": "c52ac989aa4c1322bbda67c038815a4aabae84ff20b13558d8f61e9e69e8cf0e",
+    "paragraphs/C02P06/normalized_alignment.json": "c52ac989aa4c1322bbda67c038815a4aabae84ff20b13558d8f61e9e69e8cf0e"
+  },
+  "account_after": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17702,
+    "character_limit": 40000,
+    "included_remaining": 22298,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_observed_delta": 0,
+  "completed_at_utc": "2026-10-26T06:02:28.812Z"
+}

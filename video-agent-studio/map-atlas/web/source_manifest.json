@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "revision": "7905a3c8d79e0df0",
+  "payload_sha256": "e8ffaef861af601288fdd7900f74c6f39ba1c0b9052422ecd00637fd1a3f73fa",
+  "payload": "assets/data/atlas.json.gz",
+  "payload_bytes": 14477011,
+  "item_count": 20058,
+  "meta": {
+    "schema_version": "1.0.0",
+    "dataset_date": "2025",
+    "auxiliary_dates": {
+      "AI": "2025",
+      "AJ": "2025",
+      "AK": "2026Q1",
+      "AM": "2026-08"
+    },
+    "id_field": "HSMP_INNB",
+    "crs": "EPSG:5179",
+    "attribution": "한국부동산원 공동주택 단지 연계정보(2025) · 좌표 가공; 경계: 통계청 SGIS (statgarten/maps, MIT)",
+    "source": "한국부동산원 공동주택 단지 연계정보(2025)",
+    "source_url": "https://www.bigdata-realestate.kr/rebpp/usr/prd/prdInfoDetail.do?req_productId=1",
+    "zip_sha256": "44cd4bd9df1c2582d0e022bd5f630df6709b37cd98ae72ff3cc48676e7dbd2e8",
+    "extras": [
+      {
+        "file": "ES1001AI00101YY2500_csv.csv",
+        "rows": 20055,
+        "sha256": "88d4bf7d3fe02d3076947cdc850a445fb920ac11f8b347e2cef793d07ac767a5"
+      },
+      {
+        "file": "ES1001AJ00101YY2500_csv.csv",
+        "rows": 20055,
+        "sha256": "a1762a28e389551a7221a1f91aac3549b66723275da4cff1bea2e9f5df995029"
+      },
+      {
+        "file": "ES1001AK00101QY2601_csv.csv",
+        "rows": 45851,
+        "sha256": "8562f25221acff8f32ed9f16dcce9fe5e87db53a6a10ecbe8c94f81260e36436"
+      },
+      {
+        "file": "ES1001AM00101MM2608_csv.csv",
+        "rows": 45851,
+        "sha256": "4464c76a72c66690d402ea6e5528bf4d8ee1f07665e5982e48d6899db0b7fd35"
+      }
+    ],
+    "joins": {
+      "AI": 20055,
+      "AJ": 20055,
+      "AK": 20058,
+      "AM": 20058
+    },
+    "education": {
+      "source": "한국교육시설안전원 학구도안내서비스",
+      "source_url": "https://schoolzone.emac.kr/publicData/publicDataList.do",
+      "crs": "EPSG:5179",
+      "school_dates": [
+        "2026-10-01"
+      ],
+      "zone_dates": [
+        "2026-09-20"
+      ],
+      "note": "학교 위치와 배정구역은 별도 자료. 인근 학교/경계 표시가 개별 세대 배정을 확정하지 않음.",
+      "source_hashes": {
+        "schools": "43f9e58339953a0bc4bb09dfbf6ba8e8023146a7c2f6f1953356870203a6f379",
+        "elementary_zones": "66b7650d5eef3b900061083b3d8f5c8f6dcb8eb00b891e6b03132f08fdca2911",
+        "middle_zones": "0af6764dd939a8e6d60244216f7fbd8e80e6b1d7781b5f80c4b852d24bdd416b",
+        "high_zones": "6c704e4b0958de1dbec2e068a62b1b040297555ae730f4bb1b47eb7f86608cae",
+        "school_zone_links": "a102ef9cb6c31dfc0b26a1c8972ad5e4eb9ab680d88ec42fdb1a284742192c85"
+      }
+    },
+    "transit": {
+      "source": "철도산업정보센터 · 전체 도시철도역사정보 20260630",
+      "source_url": "https://data.kric.go.kr/rips/M_01_01/detail.do?id=32",
+      "download_url": "https://data.kric.go.kr/rips/dataset/download.file?type=filedata&id=32&operation=1",
+      "source_sha256": "cdf1d84a7e5c898b2aacd622783ba8ba9af35c40bee0561dc97d55ce8e063f94",
+      "crs": "EPSG:5179",
+      "note": "원자료 주소가 서울·경기·인천인 역별 노선 레코드. 환승역은 노선별 중복. 역 중심 좌표이며 출입구 좌표 아님. 실제 선로·계획역 자료 미포함.",
+      "dates": [
+        "2022-04-30",
+        "2022-05-25",
+        "2022-08-31",
+        "2022-12-08",
+        "2023-05-31",
+        "2023-09-04",
+        "2024-02-29",
+        "2024-05-31",
+        "2024-08-31",
+        "2024-09-12",
+        "2024-12-31",
+        "2025-03-25",
+        "2025-03-31",
+        "2025-04-08",
+        "2025-06-30",
+        "2025-09-23",
+        "2025-09-30",
+        "2025-12-31",
+        "2026-05-25",
+        "2026-06-18",
+        "기준일 미기재"
+      ]
+    },
+    "overlays": {
+      "crs": "EPSG:5179",
+      "plans_source": "LH 내집어디 공개 토지이용계획 WFS",
+      "plans_url": "https://wherehome.lh.or.kr/lhmap.do?mainTabNo=12",
+      "plans_retrieved": "2026-10-18",
+      "plans_approval_date": "원자료 미표기",
+      "plans_sha256": "72c82f67914b2057a1b6015f30919ffc99356cc843fbaa70ce25b08f48e4fcb7",
+      "rail_source": "OpenStreetMap route relation member ways",
+      "rail_license": "ODbL 1.0 · © OpenStreetMap contributors",
+      "rail_url": "https://www.openstreetmap.org/copyright",
+      "rail_timestamp": "2026-10-18T05:13:50Z",
+      "rail_sha256": "718eac4b395de094365aa3cd76e61a4133b038cd4161810c12d564d39c00cae2",
+      "rail_note": "커뮤니티 경로 도형. 일부 누락·시점 차이 가능. 역 점은 별도의 KRIC 자료이며 출입구/정밀 선형을 보장하지 않음."
+    }
+  },
+  "http_contract": {
+    "content_type": "application/gzip",
+    "content_encoding": "omit (payload is gzip file; JS decompresses); auto-decoded JSON also accepted via magic bytes",
+    "relative_paths": true,
+    "cache_revision_query": "7905a3c8d79e0df0"
+  },
+  "assets": {
+    "assets/app.js": "5eb312d28f61cfa235a076a9a7807502565b23c6c1e576e773fff05cd25b545d",
+    "assets/styles.css": "218b80ca6a16159ded718cd02eac83df6cacb8b466123586f387e25aa0452f43"
+  }
+}

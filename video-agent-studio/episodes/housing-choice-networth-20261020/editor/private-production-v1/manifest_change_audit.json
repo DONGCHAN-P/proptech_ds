@@ -1,0 +1,30 @@
+{
+  "reason": "mutable generated render_plan was mistakenly listed as a frozen source input in localized build; removed self-output dependency, retained all source/audio/fact hashes",
+  "removed_previous_plan_sha256": "624834ab2559134a581afa2f6a3eb96ef7d5a1c2f21eb55c3cdf25302d30aac2",
+  "registered_current_pipeline_code": {
+    "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v1/additions.py": "951fdb0c00545fb8c78ff21e464d13ee1b2180ddc97e0494ff911940a65eda15",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v1/alignment.py": "70e45e421ebb2b9904f2cb46307cba1fb5e1a830cf228c8d7be125eb1796784d",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v1/audio_smoke.py": "ab1aa0884a97fe8ecce918520af3156f0c948b31058f836bcde6293a4500323c",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v1/build.py": "bf0a5cf87701c90ab34dc456aa89909626753cefe77e58f8c55a74bd9fcc3eb5",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v1/finish_handoff.py": "de577f664a621d0fcd1df6f6a7e5c46e3faf5f9e5199eca7dfa308eb5b62c6a0",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v1/prepare_mix.py": "8b1b36327ebdc82afa30525c0098735a951e9ffdf0aa30d98630f32fd9244d65",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v1/render_pipeline.py": "539636aba97d39450d4ee88932ecf079448f6732ed965d2447b0a72602aa1bb6",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v1/run_cli_checks.py": "afcc6172cbf70eada1ced1563f667b6382b7efe4798a65237393086b97ecb06c",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v1/test_alignment.py": "c9f3149fba9c60ccdb8de2593405b994f186dd3ab638ea01c1caedaa70d6dfd2",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v1/verify.py": "864ff92b74e1fc0543447b58096efffade24b79ab0850c4c0bad2c3b5020ea34"
+  },
+  "scene_or_audio_changed": false,
+  "pipeline_only_updates": [
+    {
+      "reason": "checked_sha256 QA schema support and explicit ch01-03 stop before ASR-affected chapters; full FFmpeg/ffprobe process PATH",
+      "updates": [
+        {
+          "path": "video-agent-studio/episodes/housing-choice-networth-20261020/editor/private-production-v1/render_pipeline.py",
+          "old_sha256": "539636aba97d39450d4ee88932ecf079448f6732ed965d2447b0a72602aa1bb6",
+          "new_sha256": "e243fcfeb4397fcf2b160ae4bbfb5caaba5f090ee10ecd3a57f8d4cc2b46742a"
+        }
+      ],
+      "scene_or_audio_changed": false
+    }
+  ]
+}

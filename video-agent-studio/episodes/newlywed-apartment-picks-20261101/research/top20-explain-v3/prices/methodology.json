@@ -1,0 +1,25 @@
+{
+  "price_period": [
+    "2026-04-01",
+    "2026-09-30"
+  ],
+  "not_current": true,
+  "area": [
+    83,
+    85
+  ],
+  "cancelled_excluded_n": 350,
+  "transaction_n": 14182,
+  "direct_brokered_flag": "로컬 master와 서빙 캐시에 필드가 없어 분리할 수 없습니다.",
+  "later_cancellation_coverage": "현재 스냅샷 이후 해제 여부를 API 갱신으로 재확인하지 못했습니다.",
+  "upstream_dedup": "run_step3.py: apt_id+deal_date+area_m2+floor 중복 정리와 deal_hash 중복 정리",
+  "comparison_to_previous_v2": "이전 표는 84<=전용<85㎡·3층 이상입니다. 본 표는 83<=전용<=85㎡·전체 층이며 master 스냅샷도 달라집니다. 두 표의 차이를 가격 상승률로 쓰면 안 됩니다.",
+  "missing": [
+    "2026-10월 전체",
+    "현재 호가·판매 상태",
+    "사후 해제 최신 반영",
+    "개별 원거래 중개/직거래 유형",
+    "상위 중복 정리 전 복수 거래의 복원"
+  ],
+  "region_coverage_flags": "모든 20지역을 포함했습니다. 위치 미확인 거래는 지역 중위값 계산에서 제외하지 않았습니다. 모든 개별 거래의 위치를 검사한 것은 아닙니다."
+}

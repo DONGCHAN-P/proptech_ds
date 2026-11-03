@@ -1,0 +1,47 @@
+{
+  "streams": [
+    {
+      "codec_name": "mp3",
+      "sample_rate": "24000",
+      "channels": 1,
+      "bit_rate": "48000"
+    }
+  ],
+  "container_duration_s": 7.896,
+  "pcm": {
+    "duration_s": 7.896,
+    "pcm_frames": 189504,
+    "sample_rate": 24000,
+    "channels": 1,
+    "sample_width_bytes": 2,
+    "peak": 19034,
+    "rms_dbfs": -20.574691930947665,
+    "clipped_sample_count": 0,
+    "signal_first_above_minus60db_s": 0.285125,
+    "signal_last_above_minus60db_s": 6.813125,
+    "signal_boundary_note": "PCM 진폭 임계값; 실제 발화 경계 청취 아님"
+  },
+  "full_decode": "passed",
+  "listening": "not_performed",
+  "sha256": {
+    "sample.mp3": "2d35dd19948c53cdf0c9e4ca8283df21eb9c27cc085878b0276ce6b83e8e7e1d",
+    "sample.wav": "e497ddc7c22d402d9fa2d8e792e9aa6fb2d6cb8c48b9a8da78edcdaffeba77a5"
+  },
+  "boundary_validation": {
+    "boundary_count": 2,
+    "text_coverage": "passed",
+    "monotonic_starts": true,
+    "native_nonoverlap": false,
+    "max_native_overlap_s": 0.05,
+    "display_cue_nonoverlap": true,
+    "within_measured_duration": true,
+    "first_boundary_start_s": 0.1,
+    "last_boundary_end_s": 7.8921052,
+    "basis": "native_service_metadata; not listened or forced alignment"
+  },
+  "status": "sample_generated_technically_checked_not_listened",
+  "voice": "ko-KR-InJoonNeural",
+  "rate": "-5%",
+  "measured_duration_s": 7.896,
+  "recovery": "최초 엄격 비겹침 검사 실패 기록 보존. 같은 오디오를 재생성 없이 재검증; 원시 경계 50ms 겹침 기록 및 표시용 cue만 정리"
+}

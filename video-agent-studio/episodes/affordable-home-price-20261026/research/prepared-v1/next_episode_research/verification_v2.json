@@ -1,0 +1,66 @@
+{
+  "task_id": "next-policy-source-prep-v1",
+  "revision": "v2_addendum",
+  "as_of_kst": "2026-10-26",
+  "status": "passed_structural_source_linkage_arithmetic_scope_checks",
+  "checks": {
+    "json_documents": 7,
+    "v2_sources": 10,
+    "v2_claims": 21,
+    "claim_status_counts": {
+      "verified": 19,
+      "qualified": 2
+    },
+    "unique_ids_and_source_links": "passed",
+    "collateral_order_arithmetic": "passed_A01_365000000_A02_400000000",
+    "v1_base_hashes_unchanged": "passed",
+    "director_addendum_hash": "passed",
+    "handoff_serialized_characters": 1087,
+    "written_outputs_within_assigned_folder": "passed"
+  },
+  "pdf_evidence": [
+    {
+      "file": "evidence/v2/bankreg_20261002.pdf",
+      "pages": 13,
+      "sha256": "319904a926ec88dbc4836bd792497823817cbb59594ae0307dbaef174023aac7"
+    },
+    {
+      "file": "evidence/v2/bank_rules_annex18_20260630.pdf",
+      "pages": 19,
+      "sha256": "36915ad8c8fa5e756d71479c42976b5e41f40ab193ead497e454d2e43f7575e0"
+    },
+    {
+      "file": "evidence/v2/didim_20260618.pdf",
+      "pages": 42,
+      "sha256": "195fb318c0edb9f569a858468c579780e4757ff795063651819b0b65dcd8be21"
+    },
+    {
+      "file": "evidence/v2/bogeum_2026.pdf",
+      "pages": 60,
+      "sha256": "c330c643fade22f32cd49590ad12b1c86919da4560875e87b3a7acedef3ec433"
+    }
+  ],
+  "viewed_pngs": [
+    "evidence/v2/bankreg_20261002_p8.png",
+    "evidence/v2/bank_rules_annex18_20260630_p9.png",
+    "evidence/v2/bank_rules_annex18_20260630_p17.png",
+    "evidence/v2/didim_20260618_p30.png",
+    "evidence/v2/bogeum_2026_p31.png"
+  ],
+  "inspection_limits": [
+    "그 외 PNG는 렌더만 했으며 열람했다고 주장하지 않음.",
+    "PDF의 관련 조항 텍스트를 확인했으며 전면 법률검토나 개인별 은행 승인 검증은 아님.",
+    "main의 HF 신혼보도/FAQ 직접열람은 입력인계이며 이번 researcher의 중복열람 아님.",
+    "독립 정책QA 도구 없음; 총괄에 후속 독립 검수 인계.",
+    "다른 담당·공통 상태를 수정하지 않았으며 다른 담당의 동시 변경을 불변으로 검증한 것은 아님."
+  ],
+  "output_sha256": {
+    "sources_v2.json": "fb399752b4775107ec334895d2459f6f2b1070deb10caaa6f0ae86546ad93c50",
+    "policy_facts_v2.json": "9f91f0bfad5ccb5884f4d2cf81f2814caf33b38c5bf652cf83b9b6d6b83bbfd3",
+    "gaps_v2.json": "d54b003f3f413ee791733b23561c8e435bfd083e675be3b725911c18e09098f2",
+    "changes_v2.json": "a3865ffb6798e2fe6afb1ea8371dc2694a803718bc326832e94e3e4d449b8113",
+    "issue_R02.json": "dfabfadcbdc93af0ab7469e5a1555fef6fac86d92019bdfc68d4aaead2cd5ebc",
+    "handoff_v1.json": "804f0395f3ec0a0818f3a5e2005029dfdfb2620449ab4b556ed91a85a487301e",
+    "handoff.json": "6f55d9903c70eb5523da1545d6032975d52c9dfcee9fd4f84628484efeccc9ac"
+  }
+}

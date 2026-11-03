@@ -1,0 +1,100 @@
+{
+  "argv": [
+    "npx.cmd",
+    "--no-install",
+    "hyperframes",
+    "check",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v2\\SHORT03-R15-R11",
+    "--at",
+    "71.980000,72.180000,73.100000",
+    "--json",
+    "--snapshots",
+    "--timeout",
+    "30000"
+  ],
+  "exit_code": 0,
+  "result": {
+    "ok": true,
+    "strict": false,
+    "browserSkipped": false,
+    "lint": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "filesScanned": 8
+    },
+    "runtime": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": []
+    },
+    "layout": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "duration": 73.133333333,
+      "samples": [
+        71.98,
+        72.18,
+        73.1
+      ],
+      "transitionSamples": [],
+      "transitionSamplesDropped": 0,
+      "tolerance": 2,
+      "totalIssueCount": 0,
+      "truncated": false
+    },
+    "motion": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "enabled": false,
+      "samples": 0
+    },
+    "contrast": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "enabled": true,
+      "samples": [
+        71.98,
+        72.18,
+        73.1
+      ],
+      "checked": 70,
+      "passed": 70
+    },
+    "hdr": {
+      "autoPromotion": null,
+      "inspection": "available"
+    },
+    "snapshots": {
+      "enabled": true,
+      "files": [
+        ".hyperframes\\artifacts\\snapshots\\a68b39d9-361c-476a-ac2f-f3c872b040f2\\frame-00-at-72.0s.png",
+        ".hyperframes\\artifacts\\snapshots\\a68b39d9-361c-476a-ac2f-f3c872b040f2\\frame-01-at-72.2s.png",
+        ".hyperframes\\artifacts\\snapshots\\a68b39d9-361c-476a-ac2f-f3c872b040f2\\frame-02-at-73.1s.png"
+      ],
+      "times": [
+        71.98,
+        72.18,
+        73.1
+      ],
+      "findingFiles": []
+    },
+    "_meta": {
+      "version": "0.8.181",
+      "updateAvailable": false
+    }
+  }
+}

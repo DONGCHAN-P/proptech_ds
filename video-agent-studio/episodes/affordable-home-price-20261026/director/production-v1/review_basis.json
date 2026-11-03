@@ -1,0 +1,2478 @@
+{
+  "policy_as_of": "2026-10-26",
+  "facts": [
+    {
+      "claim_id": "L01",
+      "statement": "일반 주택구입 주담대 LTV는 규제지역 40%, 비규제지역 70%다.",
+      "value": {
+        "regulated": 40,
+        "nonregulated": 70
+      },
+      "unit": "%",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "무주택 또는 기존주택 처분조건부 1주택 일반차주; 생초/서민실수요/정책상품은 별도",
+      "source_ids": [
+        "FSC26",
+        "FSC25"
+      ]
+    },
+    {
+      "claim_id": "L02",
+      "statement": "은행권 차주단위 DSR 규제비율은 40%다.",
+      "value": 40,
+      "unit": "%",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "DSR 적용대상 일반대출; 모든 금융부채의 규정상 연 원리금/인정 연소득. 규제지역 동일",
+      "qualification": "은행 내부 심사·총량관리 및 상품 요건으로 한도가 더 줄 수 있음; 본 자료는 연소득·기존부채를 가정하지 않음",
+      "source_ids": [
+        "FSC26",
+        "FSC25"
+      ]
+    },
+    {
+      "claim_id": "L03",
+      "statement": "생애최초 주담대 LTV는 수도권 또는 규제지역 70%, 그 밖의 지방 비규제지역 80%다.",
+      "value": {
+        "capital_or_regulated": 70,
+        "other_nonregulated": 80
+      },
+      "unit": "%",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "일반 금융권 생초 요건 충족; 지역별 총액한도·DTI·DSR을 함께 적용",
+      "qualification": "생초 인정 및 예외의 세부 판정은 금융사 심사; 세금 생초 요건과 같다고 간주하지 않음",
+      "source_ids": [
+        "FSC25"
+      ]
+    },
+    {
+      "claim_id": "L04",
+      "statement": "수도권·규제지역 구입목적 주담대 총액한도는 시가 15억 이하 6억, 15억 초과~25억 이하 4억, 25억 초과 2억이다.",
+      "value": [
+        {
+          "price_max": 15,
+          "cap": 6
+        },
+        {
+          "price_min_exclusive": 15,
+          "price_max": 25,
+          "cap": 4
+        },
+        {
+          "price_min_exclusive": 25,
+          "cap": 2
+        }
+      ],
+      "unit": "억원",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "일반 주택구입목적 주담대; 신청일 시가 평가, LTV/DTI/DSR 중 더 작은 한도. 중도금·정책대출 별도",
+      "qualification": "수도권 밖 비규제지역에 6/4/2억을 일괄 적용하지 않음",
+      "source_ids": [
+        "FSC26",
+        "FSC25"
+      ]
+    },
+    {
+      "claim_id": "L05",
+      "statement": "수도권·규제지역 일반 구입 주담대에는 6개월 내 전입과 만기 30년 이내 기준이 있다.",
+      "value": {
+        "move_in_months": 6,
+        "maximum_term_years": 30
+      },
+      "unit": "개월/년",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "일반 금융권 주담대; 정책상품의 별도 전입·만기를 대체하지 않음",
+      "source_ids": [
+        "FSC25"
+      ]
+    },
+    {
+      "claim_id": "L06",
+      "statement": "규제지역 일반차주는 DTI도 확인해야 하며 생초·서민실수요 예외가 있다.",
+      "value": {
+        "general_adjustment_DTI": 50,
+        "general_speculative_DTI": 40,
+        "firstbuyer_DTI": 60,
+        "qualified_enduser_LTV": 60,
+        "qualified_enduser_DTI": 60
+      },
+      "unit": "%",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "일반차주: 조정지역 아파트 DTI50, 투과지역40; 생초60. 서민실수요는 연소득<=0.9억·가격<=8억·무주택 모두 충족",
+      "qualification": "규제지역 40%를 생초·정책대출에 그대로 적용하면 오류",
+      "source_ids": [
+        "FSC25"
+      ]
+    },
+    {
+      "claim_id": "L07",
+      "statement": "규제지역 확대 및 스트레스 DSR에는 계약·접수·모집공고 등 경과조치가 있다.",
+      "value": "새 계약 기본사례에는 종전규정을 적용하지 않고 기존 계약은 개별 분기",
+      "unit": "조건",
+      "status": "verified",
+      "effective_status": "grandfathered",
+      "exact_conditions": "2025-10-15까지 계약+계약금 증명 또는 해당 접수·공고 요건; 전매 등 제외조건 확인 필요",
+      "source_ids": [
+        "FSC25",
+        "STRESS"
+      ]
+    },
+    {
+      "claim_id": "S01",
+      "statement": "현행 스트레스 DSR 지도는 2026년 하반기까지 유효하다.",
+      "value": {
+        "capital_or_regulated_floor_pp": 3.0,
+        "other_base_range_pp": [
+          1.5,
+          3.0
+        ],
+        "other_nonregulated_mortgage_factor": 0.5
+      },
+      "unit": "%p/배",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "DSR 적용대상 가계대출. 수도권·규제지역 주담대 스트레스금리 하한3.0%p; 기타1.5~3.0%p; 지방 비규제 주담대는 산정금리×50%",
+      "qualification": "하한과 구간을 기록한 것. 지방 금리를 항상0.75%p로 확정하지 않음; 심사용 가산으로 실제 약정금리에 부과되는 비용이 아님",
+      "source_ids": [
+        "STRESS"
+      ]
+    },
+    {
+      "claim_id": "S02",
+      "statement": "혼합형과 주기형은 고정기간/금리변동주기 비중에 따라 스트레스 적용률이 다르다.",
+      "value": {
+        "bucket_order": [
+          "5년미만",
+          "5년이상 & 30%미만",
+          "30%이상~50%미만",
+          "50%이상~70%미만",
+          "70%이상"
+        ],
+        "variable_percent": 100,
+        "capital_or_regulated_hybrid": [
+          100,
+          80,
+          60,
+          40,
+          0
+        ],
+        "capital_or_regulated_periodic": [
+          100,
+          40,
+          30,
+          20,
+          0
+        ],
+        "other_nonregulated_hybrid": [
+          100,
+          60,
+          40,
+          20,
+          0
+        ],
+        "other_nonregulated_periodic": [
+          100,
+          30,
+          20,
+          10,
+          0
+        ]
+      },
+      "unit": "% of stress rate",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "만기 대비 비중; 5년미만 우선분류. 수도권·규제지역 3단계, 그 밖 비규제 주담대는 2026말까지 2단계 계수",
+      "source_ids": [
+        "STRESS"
+      ]
+    },
+    {
+      "claim_id": "S03",
+      "statement": "30년 만기·5년 고정 후 변동과 5년 주기형은 같은 고정상품으로 취급하면 안 된다.",
+      "value": {
+        "variable": 3.0,
+        "hybrid_5y": 2.4,
+        "periodic_5y": 1.2,
+        "fixed_fullterm": 0
+      },
+      "unit": "%p",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "수도권·규제지역; 기본 스트레스금리3.0%p를 사용하는 계산 예시; 5/30<30%",
+      "qualification": "가정 기반 산술값; 만기 전기간 순수 고정은 미적용",
+      "source_ids": [
+        "STRESS"
+      ]
+    },
+    {
+      "claim_id": "D01",
+      "statement": "디딤돌은 무주택 세대주의 소득·순자산·주택 조건을 함께 심사한다.",
+      "value": {
+        "income_general": 0.6,
+        "income_first_or_2children": 0.7,
+        "income_newlywed": 0.85,
+        "net_assets": 5.11,
+        "house_general": 5,
+        "house_newlywed_or_2children": 6
+      },
+      "unit": "억원",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "일반가구/생초 또는2자녀/신혼 구분; 성년 세대주·세대원 무주택·신용요건·중복대출 제한",
+      "source_ids": [
+        "DIDIM"
+      ]
+    },
+    {
+      "claim_id": "D02",
+      "statement": "디딤돌 한도는 일반2억·생초2.4억·신혼 또는2자녀3.2억, DTI60%다.",
+      "value": {
+        "limit_general": 2,
+        "limit_first": 2.4,
+        "limit_newlywed_or_2children": 3.2,
+        "LTV": 70,
+        "DTI": 60
+      },
+      "unit": "억원/%",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "LTV 기본70%; 생초 보증 이용 가능시 지방 비규제80%, 수도권/규제70%; 한도는 모든 요건 중 작은 금액",
+      "source_ids": [
+        "DIDIM"
+      ]
+    },
+    {
+      "claim_id": "D03",
+      "statement": "디딤돌 대상 전용면적은85㎡ 이하이며 비수도권 비도시 읍면은100㎡ 이하 예외가 있다.",
+      "value": {
+        "standard_area": 85,
+        "exception_area": 100,
+        "single_price": 3,
+        "single_area": 60,
+        "single_limit": 1.5,
+        "single_first_limit": 2
+      },
+      "unit": "㎡/억원",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "만30세 이상 미혼 단독세대주는 가격3억·면적60㎡(같은 읍면70㎡)·한도1.5억(생초2억) 등 별도",
+      "source_ids": [
+        "DIDIM"
+      ]
+    },
+    {
+      "claim_id": "D04",
+      "statement": "현행 디딤돌 안내에는 신혼가구 한 사람 소득을 적용하는 예외가 있다.",
+      "value": {
+        "applicant_income_max": 0.6,
+        "DTI_income_and_debt": "신청인 1인"
+      },
+      "unit": "억원/범위",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "부부합산0.85억 초과 신혼가구도 대출신청인 연소득<=0.6억; DTI는 그 사람 소득·부채만 적용; 자산·주택 요건 별도",
+      "qualification": "실제 시행 개시일은 이 페이지에 미표시; 현행 안내에 반영된 조건으로만 인용",
+      "source_ids": [
+        "DIDIM"
+      ]
+    },
+    {
+      "claim_id": "D05",
+      "statement": "내집마련 디딤돌대출 현행 신규 신청 사례는 실행 후1개월 내 전입하고 전입일부터2년 실거주해야 한다.",
+      "value": {
+        "move_in_within_months_after_execution": 1,
+        "residence_years_from_move_in": 2
+      },
+      "unit": "개월/년",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "전입 마감 해당일이 휴일이면 익영업일. 타당사유 전입 연장·실거주 유예는 별도 심사. 과거 접수·계약·기존 고객에게2년을 일괄 소급하지 않음.",
+      "qualification": "기금 원문을 우선하여 KB 동일 페이지의 본문1년/변경이력2년 상충을 현재 신규 사례 범위에서 해소.",
+      "source_ids": [
+        "V2_NHUF",
+        "V2_DIDIM_RULES"
+      ]
+    },
+    {
+      "claim_id": "B01",
+      "statement": "보금자리론은 기본 연소득7천, 신혼8천5백 및 자녀별 소득 우대가 있다.",
+      "value": {
+        "general": 0.7,
+        "newlywed_no_child": 0.85,
+        "one_child": 0.9,
+        "two_or_more_children": 1,
+        "newlywed_single_borrower_exception": 0.7
+      },
+      "unit": "억원",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "혼인7년 이내 신혼 또는 결혼예정; 신혼 합산기준 초과라도 채무자1인<=7천이면 소득요건 충족으로 안내",
+      "qualification": "신혼소득특례 DTI의 실제 소득·부채 범위는 별도 세칙 확인 필요",
+      "source_ids": [
+        "BOGEUM",
+        "FSC26"
+      ]
+    },
+    {
+      "claim_id": "B02",
+      "statement": "보금자리론은6억 이하 주택이 대상이며 구입 시 여러 평가값 중 하나라도6억 초과면 제외된다.",
+      "value": {
+        "house_price_max": 6,
+        "existing_home_disposal_years": 3,
+        "separate_asset_cap": null,
+        "separate_area_cap": null
+      },
+      "unit": "억원/년",
+      "status": "qualified",
+      "effective_status": "effective",
+      "exact_conditions": "시세/감정/실제매매가 중 어느 하나라도6억 초과 불가. 본건 제외 무주택 또는1주택(처분조건)·성년·신용요건",
+      "qualification": "가격·보유수는 verified; 자산·면적 별도상한이 없다는 법적 확정은 못 함(일반안내에 미기재), G03",
+      "source_ids": [
+        "BOGEUM"
+      ]
+    },
+    {
+      "claim_id": "B03",
+      "statement": "보금자리론 한도는 일반3.6억·다자녀/전세사기피해4억·생초4.2억이다.",
+      "value": {
+        "limit_general": 3.6,
+        "limit_multi_children_or_victim": 4,
+        "limit_firstbuyer": 4.2,
+        "DTI_standard": 60,
+        "regulated_DTI_standard": 50,
+        "regulated_apartment_LTV_standard": 60
+      },
+      "unit": "억원/%",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "아파트LTV70, 기타65; 규제지역LTV/DTI각10%p 차감, 생초·피해자·명시 실수요 예외. DTI기본60",
+      "qualification": "수도권/규제 생초70은 확인; 지방 생초80은 생초 보증 등 해당 요건 추가 확인 후 적용",
+      "source_ids": [
+        "BOGEUM",
+        "FSC25"
+      ]
+    },
+    {
+      "claim_id": "B04",
+      "statement": "수도권·규제지역 보금자리론 구입자금은 실행 후6개월 이내 전입·입증서류 제출이 필요하다.",
+      "value": 6,
+      "unit": "개월",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "해당 담보주택 구입용도; 전입 유지·유예 등 세부사항은 상품설명서",
+      "source_ids": [
+        "BOGEUM"
+      ]
+    },
+    {
+      "claim_id": "N01",
+      "statement": "신생아 특례 구입대출은 최근 출산가구의 소득·무주택 요건을 심사한다.",
+      "value": {
+        "single_income_max": 1.3,
+        "dual_income_max": 2,
+        "one_partner_dual_income_max": 1.3,
+        "birth_lookback_years": 2
+      },
+      "unit": "억원/년",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "접수 전2년 내 출산/입양,2023-01-01 이후 출생; 태아 제외. 무주택 세대주, 구입용도. 맞벌이는 부부 중1인<=1.3억 필요",
+      "qualification": "특공·우선공급 당첨자 자녀나이 예외; 1주택 대환은 별도이고 합산1.3억 초과 대환불가(KB). 토지임대부 특례는 기본사례 제외",
+      "source_ids": [
+        "NEWBORN"
+      ]
+    },
+    {
+      "claim_id": "N02",
+      "statement": "2026년 신생아 특례 순자산 상한은 부부합산5.11억 원이다.",
+      "value": 5.11,
+      "unit": "억원",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "일반 주택구입자금; 혼인신고가 없으면 신생아 가족관계증명상 부모 합산; 토지임대부 사전청약 예외 별도",
+      "source_ids": [
+        "NEWBORN"
+      ]
+    },
+    {
+      "claim_id": "N03",
+      "statement": "신생아 특례는 주택9억·전용85㎡ 이하, 대출최대4억·DTI60%다.",
+      "value": {
+        "house_price_max": 9,
+        "area_standard": 85,
+        "area_exception": 100,
+        "loan_limit": 4,
+        "DTI": 60,
+        "LTV_standard": 70
+      },
+      "unit": "억원/㎡/%",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "비수도권 비도시 읍면100㎡ 예외; LTV기본70, 생초는 수도권/규제70·그밖 비규제80. 각 제한 중 작은 값",
+      "source_ids": [
+        "NEWBORN"
+      ]
+    },
+    {
+      "claim_id": "N04",
+      "statement": "신생아 특례 디딤돌대출 현행 신규 신청 사례는 실행 후1개월 내 전입하고 전입일부터2년 실거주해야 한다.",
+      "value": {
+        "move_in_within_months_after_execution": 1,
+        "residence_years_from_move_in": 2
+      },
+      "unit": "개월/년",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "전입 마감 해당일이 휴일이면 익영업일. 타당사유 전입 연장·실거주 유예는 별도 심사. 과거 접수·계약·기존 고객에게2년을 일괄 소급하지 않음.",
+      "qualification": "기금 원문을 우선하여 KB 동일 페이지의 본문1년/변경이력2년 상충을 현재 신규 사례 범위에서 해소.",
+      "source_ids": [
+        "V2_NHUF",
+        "V2_DIDIM_RULES"
+      ]
+    },
+    {
+      "claim_id": "P01",
+      "statement": "정책모기지 신규취급의 규제DSR 예외와 DTI·내부 상환능력 심사를 구별한다.",
+      "value": {
+        "regulatory_DSR40_for_new_policy_mortgage": "정책모기지 예외로 취급",
+        "DTI": "상품별 적용",
+        "internal_DSR": "별도 관리·심사 가능"
+      },
+      "unit": "처리",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "보금자리론·디딤돌(신생아 특례 디딤돌 포함) 해당 상품 신규취급. 현행 감독규정4마(5)·세칙12나(6)의 정책협약대출 예외 틀과 FSC 상품명 명시자료, 현행 DTI를 연결한 해석.",
+      "qualification": "명칭별 제외 설명은2024 FSC 자료이고 현행성은2026 규정/상품기준을 교차독해한 것임을 표시. 모든 부채 무시·무조건 승인이라는 뜻 아님. 보금자리론 업무기준도 DSR 참고지표 산출을 별도로 둠.",
+      "source_ids": [
+        "V2_BANKREG",
+        "V2_BANK_RULES",
+        "DSR_HISTORY",
+        "DIDIM",
+        "BOGEUM",
+        "NEWBORN"
+      ]
+    },
+    {
+      "claim_id": "T01",
+      "statement": "중과 없는 주택 유상취득 표준세율은6억 이하1%,6억 초과9억 이하 체증식,9억 초과3%다.",
+      "value": {
+        "P_le_6": 1,
+        "6_lt_P_le_9": "P*2/3-3",
+        "P_gt_9": 3,
+        "case_6_9_12_rates": [
+          1,
+          3,
+          3
+        ]
+      },
+      "unit": "%",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "전체 주택 취득가액 기준; 6<P<=9의 세율(%)=P(억원)×2/3−3. 신축·증여·다주택·법인 등 제외",
+      "source_ids": [
+        "LOCAL_TAX"
+      ]
+    },
+    {
+      "claim_id": "T02",
+      "statement": "표준 주택취득의 지방교육세는 취득세 표준세율의10%에 해당한다.",
+      "value": {
+        "case_6_9_12_rates": [
+          0.1,
+          0.3,
+          0.3
+        ]
+      },
+      "unit": "%",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "감면/중과 없는11①8 주택; 세율×50%×20%. 감면 후 금액은 이 표와 분리",
+      "source_ids": [
+        "LOCAL_TAX"
+      ]
+    },
+    {
+      "claim_id": "T03",
+      "statement": "국민주택규모 이하인 통상84㎡ 아파트는 농어촌특별세 비과세 조건으로 사례화할 수 있다.",
+      "value": 0,
+      "unit": "원",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "주택법상 국민주택규모 이하 주거용건물 및 시행령 부속토지 범위 충족; 이 준비팩의84㎡ 일반아파트만",
+      "qualification": "특수 부속토지·85㎡ 초과 등은 재판정; 국민주택규모 조문 전체의 현행 대조는 G04",
+      "source_ids": [
+        "AGRIC"
+      ]
+    },
+    {
+      "claim_id": "T04",
+      "statement": "생애최초 취득세 감면은12억 이하 보통 아파트에서 최대200만원이다.",
+      "value": {
+        "ordinary_cap": 200,
+        "special_cap": 300,
+        "price_max": 12,
+        "joint_owner_combined_cap": 200
+      },
+      "unit": "만원/억원",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "본인/배우자 소유이력 없음(법정예외 별도), 성년 국민, 본인거주 목적 유상취득; 인구감소지역 제외 보통아파트",
+      "qualification": "300만원은 지정 소형 비아파트/도시형/다가구 조건 또는 인구감소지역. 취득(일부 임차승계는 만료) 후3년 내 매각·증여·임대 등 추징; 종전3개월전입 요건을 현행에 그대로 복사하지 않음",
+      "source_ids": [
+        "RELIEF"
+      ]
+    },
+    {
+      "claim_id": "T05",
+      "statement": "출산·양육 취득세 감면은 요건 충족 시 최대500만원이다.",
+      "value": {
+        "cap": 500,
+        "house_price_max": 12,
+        "after_birth_years": 5,
+        "before_birth_years": 1,
+        "one_house_grace_months": 3
+      },
+      "unit": "만원/억원/년/개월",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "2028-12-31까지 출산한 부모가 자녀와 거주 목적으로 출산 후5년 내(출산 전1년 내 취득 포함),12억 이하 1가구1주택(취득 후3개월 내 포함); 자녀당 먼저 신청한1주택",
+      "qualification": "2028년은 출산일 상한. 취득일(해당 임차승계 예외는 임대차만료일)부터3년 내 매각·증여·다른용도(임대포함) 추징. 생초와 자동합산 금지; 적용례·중복·지방교육세는 G05",
+      "source_ids": [
+        "RELIEF"
+      ]
+    },
+    {
+      "claim_id": "C01",
+      "statement": "서울 주택매매 중개보수 상한은6억240만·9억450만·12억720만원이다.",
+      "value": {
+        "prices": [
+          6,
+          9,
+          12
+        ],
+        "rates": [
+          0.4,
+          0.5,
+          0.6
+        ],
+        "fees": [
+          240,
+          450,
+          720
+        ]
+      },
+      "unit": "억원/%/만원",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "정확히6억은0.4%,9억은0.5%,12억은0.6%; 1측 보수, 상한 내 협의, 부가세 전",
+      "source_ids": [
+        "BROKER"
+      ]
+    },
+    {
+      "claim_id": "C02",
+      "statement": "일반과세 중개사에게 상한보수를 지급한다고 가정하면 부가세 포함264만·495만·792만원이다.",
+      "value": {
+        "VAT": 10,
+        "gross_fees": [
+          264,
+          495,
+          792
+        ]
+      },
+      "unit": "%/만원",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "6/9/12억 사례; 일반과세 중개사10% 별도, 실제 협의보수가 달라지면 재계산",
+      "qualification": "간이과세자 실부담·청구 가능액은 G06; 간이과세 납부세율4%를 일괄 청구율로 쓰지 않음",
+      "source_ids": [
+        "BROKER",
+        "VAT"
+      ]
+    },
+    {
+      "claim_id": "C03",
+      "statement": "매매문서 인지세는6억·9억 각15만원,12억35만원이다.",
+      "value": {
+        "price_cases": [
+          6,
+          9,
+          12
+        ],
+        "tax": [
+          15,
+          15,
+          35
+        ]
+      },
+      "unit": "억원/만원",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "소유권이전 증서1통의 기재금액 기준; 총세액이며 매수자에게 전액 고정배분된 세액 아님",
+      "source_ids": [
+        "STAMP"
+      ]
+    },
+    {
+      "claim_id": "C04",
+      "statement": "KB 신생아 대출 인지세는1억 초과10억 이하15만원 중 고객7.5만원 부담으로 안내된다.",
+      "value": {
+        "document_tax": 15,
+        "borrower_share": 7.5
+      },
+      "unit": "만원",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "KB 해당 상품 대출약정; 은행/고객각50%. 매매문서 인지세와 별개",
+      "source_ids": [
+        "NEWBORN",
+        "STAMP"
+      ]
+    },
+    {
+      "claim_id": "C05",
+      "statement": "국민주택채권은 매매가만으로 확정할 수 없고 채권액과 즉시매도 비용도 다르다.",
+      "value": {
+        "actual_cost": "매입액−매도회수액 등 실제 고객부담금",
+        "case_amounts": null
+      },
+      "unit": "원",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "매입용도·지역·시가표준액으로 채권매입액 결정, 매입일/과세구분의 실제 고객부담금 조회",
+      "qualification": "고정 할인율을 현재값으로 제시하지 않음; 사례별 공시가격·등기일 부재 G07",
+      "source_ids": [
+        "BOND",
+        "REGISTRATION"
+      ]
+    },
+    {
+      "claim_id": "C06",
+      "statement": "소유권이전 등기신청수수료는 공식 해설상 신청방식에 따라 다르다.",
+      "value": {
+        "paper": 18000,
+        "eform": 15000,
+        "electronic": 10000
+      },
+      "unit": "원",
+      "status": "qualified",
+      "effective_status": "effective",
+      "exact_conditions": "2026-09-15 기준 정부해설; 서면방문/e-form/전자신청, 법무사보수·발급비 별도",
+      "qualification": "G08: 연결 예규 원문 미확보. 수수료를 법무사 포함 총등기비로 표현하지 않음",
+      "source_ids": [
+        "REGISTRATION"
+      ]
+    },
+    {
+      "claim_id": "C07",
+      "statement": "대출 근저당 설정비와 매매 소유권이전비를 구분해 이중계상하지 않아야 한다.",
+      "value": {
+        "purchase_registration": "매수자 비용 별도 산정",
+        "mortgage_creation": "KB 공시상 은행부담 항목 분리",
+        "scrivener_purchase_fee": null
+      },
+      "unit": "부담주체",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "KB 신생아 상품 기준: 설정 등록면허세·지방세·등기신청수수료·법무사수수료 은행부담, 채권매입비·감액/말소비 고객부담",
+      "qualification": "다른 은행·상품으로 무검증 일반화 금지; 법무사 소유권이전 견적은 G08",
+      "source_ids": [
+        "NEWBORN"
+      ]
+    },
+    {
+      "claim_id": "F01",
+      "statement": "청년미래보금자리론은 현행 구매가능 한도에 넣지 않는다.",
+      "value": "2027-01 잠정",
+      "unit": "예정일",
+      "status": "verified",
+      "effective_status": "announced_future",
+      "exact_conditions": "금융위 카드의2027년1월 잠정 출시 발표;2026-10-26 현재 사례에서 제외",
+      "source_ids": [
+        "FSC26"
+      ]
+    },
+    {
+      "claim_id": "M01",
+      "statement": "LTV 비율과 총액상한만으로 실행액은 확정되지 않는다.",
+      "value": {
+        "collateral_ceiling": "max(0, V*LTV - 선순위채권 - C)",
+        "review_ceiling": "min(담보차감후상한, 해당규제총액상한, 상품한도, DSR/DTI상한, 매매가 등 기타심사한도)"
+      },
+      "unit": "산식",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "평가액V와 선순위채권·상품별 임대보증금/최우선변제 공제액C를 먼저 확정. 실제 임대차는 별도 상품 산정표를 따르며 보증금과 최우선액을 기계적으로 이중 차감하지 않음.",
+      "qualification": "소득·담보·임대차·보증 심사 전 참고 상한이다. 은행이 승인·실행할 금액을 보장하지 않음.",
+      "source_ids": [
+        "V2_BANK_RULES",
+        "V2_NHUF"
+      ]
+    },
+    {
+      "claim_id": "M02",
+      "statement": "서울의 현행 최우선변제액은5,500만원이며, 대상 임차보증금 상한1억6,500만원과 다르다.",
+      "value": {
+        "priority_amount_krw": 55000000,
+        "tenant_deposit_eligibility_ceiling_krw": 165000000
+      },
+      "unit": "원",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "서울 신규 담보권·현행 적용 사례. 최우선변제 총액은 주택가액의1/2 등 법정 제한. 금융상의 공제방수·공제액은 상품별 결정.",
+      "qualification": "",
+      "source_ids": [
+        "V2_TENANT"
+      ]
+    },
+    {
+      "claim_id": "M03",
+      "statement": "일반 은행 주담대의 MCI·MCG 취급 여부는 실행 은행·채널·일자 확인이 필요하다.",
+      "value": {
+        "capital_area_all_bank_ban_confirmed": false,
+        "all_firstbuyer_room_deduction_waived": false,
+        "bank_execution_confirmation_required": true
+      },
+      "unit": "확인상태",
+      "status": "qualified",
+      "effective_status": "effective",
+      "exact_conditions": "세칙상 적법한 보증·보험 가입금액은 소액임차보증금 차감 완화에 반영 가능하나, 상품 존재와 실제 취급승인은 다름.",
+      "qualification": "2026-10-26 현재 수도권 전 은행 일률 금지/전면 재개를 단정할 공식 공통근거 미확보. 미확보를 허용 또는 금지의 증거로 사용하지 않음. G10.",
+      "source_ids": [
+        "V2_BANK_RULES",
+        "V2_HF_GUARANTEE"
+      ]
+    },
+    {
+      "claim_id": "M04",
+      "statement": "생애최초 특례구입자금보증은 별도 심사를 거쳐야 하는 보증상품이다.",
+      "value": {
+        "automatic_waiver": false,
+        "tenancy_at_execution": false,
+        "government_ltv_still_applies": true
+      },
+      "unit": "조건",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "주택구입자금·권리침해 없는 주택·실행시 임대차 없음(실행일까지 퇴거조건 신청 가능), 등기 후3개월 이내 등. 다른 보증 동시 이용 제한과 정부 LTV·상품별 기준 적용.",
+      "qualification": "은행 일반 생초, 디딤돌 생초, 보금자리 생초를 구별. 디딤돌 보증의6억 기준을 일반 은행 생초 전체에 전용하지 않음.",
+      "source_ids": [
+        "V2_HF_GUARANTEE"
+      ]
+    },
+    {
+      "claim_id": "M05",
+      "statement": "일반 디딤돌은 수도권 아파트의 방공제를 의무 적용하며 저소득·저가 예외가 있다.",
+      "value": {
+        "low_income_exception_krw": 40000000,
+        "low_price_exception_krw": 300000000,
+        "MCI_available": false,
+        "unrented_apartment_deduction_rooms": 1
+      },
+      "unit": "원/개/조건",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "수도권 소재 아파트; 연소득4천만원 이하이면서 주택3억원 이하 구입이면 해당 의무공제 제외. MCI보험 불가. 생초·신생아 별도 예외는 M06~M08.",
+      "qualification": "저소득·저가 예외는 수도권 일률 의무공제의 예외이다. 실제 차감 미적용은 보증가입·상품별 담보산정까지 확인하며 자동 면제로 처리하지 않음.",
+      "source_ids": [
+        "V2_DIDIM_RULES"
+      ]
+    },
+    {
+      "claim_id": "M06",
+      "statement": "디딤돌 생초는 주택6억원 이하이고 HF 생애최초 특례구입자금보증에 가입하면 방공제 차감 없이 산정할 수 있다.",
+      "value": {
+        "firstbuyer_guarantee_house_ceiling_krw": 600000000,
+        "capital_or_regulated_ltv_percent": 70,
+        "waiver_requires_guarantee": true
+      },
+      "unit": "원/%",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "생초 자격·보증가입·실행시 임대차 없음·다른 상품요건 충족. 수도권/규제지역 생초LTV70 상한은 유지. 보증가입은 자동이 아님.",
+      "qualification": "",
+      "source_ids": [
+        "V2_HUG",
+        "V2_DIDIM_RULES"
+      ]
+    },
+    {
+      "claim_id": "M07",
+      "statement": "신생아 특례는 일반 디딤돌 맞춤형 관리방안의 대상이 아니며 보증요건 충족·가입시 방공제 미적용이 가능하다.",
+      "value": {
+        "separate_from_ordinary_didim_management": true,
+        "unconditional_no_deduction": false
+      },
+      "unit": "조건",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "기금 FAQ상 일반구입자금보증 또는 생초특례 가입 필요. 기관 회신상 일반보증은 주택3억 이하·LTV70 이내, 생초특례는6억 이하 등 해당 보증요건 확인.",
+      "qualification": "",
+      "source_ids": [
+        "V2_NHUF",
+        "V2_HUG"
+      ]
+    },
+    {
+      "claim_id": "M08",
+      "statement": "주택6억원 초과 신생아 생초는 HUG 공식 회신상 HF 일반·생초특례보증을 이용할 수 없어 방공제를 반영한다.",
+      "value": {
+        "house_price_over_krw": 600000000,
+        "deduction_before_product_cap": true
+      },
+      "unit": "원/산정순서",
+      "status": "qualified",
+      "effective_status": "effective",
+      "exact_conditions": "신생아9억원 주택자격과 보증6억원 문턱은 별개. 서울·수도권 생초LTV70 및 상품4억원 한도와 담보차감후상한의 최솟값을 비교.",
+      "qualification": "6억 초과 명시 회신은2025-09-11 게시 자료. 2026-08 회신/현행 FAQ와 일관되지만 현행 보증 통합세칙을 직접 확보하지 못했으므로 신규 실행 전 수탁은행 재확인. G10.",
+      "source_ids": [
+        "V2_HUG",
+        "V2_NHUF"
+      ]
+    },
+    {
+      "claim_id": "M09",
+      "statement": "보금자리론의 임대차 없는 아파트는 자체 업무기준상 방수공제가 없다.",
+      "value": {
+        "unrented_apartment_deduction_rooms": 0
+      },
+      "unit": "개",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "보금자리론 아파트 기준. 실제 임대차가 있으면 임대보증금을 반영. 연립·다세대/단독주택은 공제방수와 구입자금보증 조건이 별도.",
+      "qualification": "일반 은행 MCI/MCG 중단이나 일반 디딤돌 수도권 방공제를 이 상품에 그대로 적용하지 않음.5월 PDF 전체의 최신성은 미확인이나 현행 조회 안내와 교차확인.",
+      "source_ids": [
+        "V2_BOGEUM_RULES"
+      ]
+    },
+    {
+      "claim_id": "P02",
+      "statement": "기존 정책 주담대가 있으면 추가 일반대출의 DSR 심사에서 그 부채를 포함한다.",
+      "value": {
+        "bank_DSR_percent": 40,
+        "total_loan_threshold_krw_exclusive": 100000000,
+        "existing_policy_mortgage_included": true
+      },
+      "unit": "%/원/조건",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "DSR예외가 아닌 은행 일반대출 신규취급, 총대출1억원 초과 차주(신청액 포함·한도대출은 한도액 기준). 기존 정책대출도 기존부채에 포함; 상환예정분과 별도 부채산정 제외는 해당 조항대로 처리.",
+      "qualification": "전액분할상환 개별 주담대는 분할상환 개시 이후 실제 원금상환액과 실제 이자를 반영하는 표3 기준. 정책대출 원금을 일률적 신용대출5년으로 나누지 않음.",
+      "source_ids": [
+        "V2_BANKREG",
+        "V2_BANK_RULES"
+      ]
+    },
+    {
+      "claim_id": "P03",
+      "statement": "디딤돌과 신생아 특례는 DTI60% 이내이며 부부 소득·부채를 함께 확인한다.",
+      "value": {
+        "DTI_percent": 60,
+        "income_and_debt_basis": "원칙 부부합산",
+        "other_debt_interest_estimate": "한은 예금은행 가계대출 잔액금리 + 1%p"
+      },
+      "unit": "%/산식",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "주담대 연간 원리금과 기타부채 이자 추정액을 연소득으로 나누는 DTI. 상환예정 전세대출 잔액·예적금 잔액 이내 예적금담보 등 명시 조정. 신생아는 별도 특례 외 디딤돌 기준 준용.",
+      "qualification": "DTI 산입방법이 다른 주담대·중복 기금대출을 보유해도 상품자격을 허용한다는 뜻은 아님. 자격·중복대출 제한을 먼저 심사.",
+      "source_ids": [
+        "V2_DIDIM_RULES",
+        "V2_NHUF"
+      ]
+    },
+    {
+      "claim_id": "P04",
+      "statement": "보금자리론 DTI는 기본60%, 규제지역은 기본50%이며 생초 등 명시 예외는 차감하지 않는다.",
+      "value": {
+        "standard_DTI_percent": 60,
+        "regulated_standard_DTI_percent": 50
+      },
+      "unit": "%",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "규제지역 미차감: 생초·피해자·임차보증금 반환용도·구입 실수요자 등 현행 열거 요건. 신혼1인특례는 HFV2_02의 소득·부채 범위 우선.",
+      "qualification": "DTI에 배우자 부채를 합산하면서 배우자 소득은 빼는 등 서로 다른 심사방식을 섞지 않음.5월 합본보다10/19 시행 현행 FAQ를 우선.",
+      "source_ids": [
+        "BOGEUM",
+        "V2_BOGEUM_RULES",
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ]
+    },
+    {
+      "claim_id": "D06",
+      "statement": "디딤돌·신생아 실거주 의무의 전입 연장과 실거주 유예는 승인 조건이 다르다.",
+      "value": {
+        "move_in_extension_months": 2,
+        "residence_deferral_max_years": 3
+      },
+      "unit": "개월/년",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "타당한 전입 곤란 사유 확인시 전입완료예정일2개월 연장 가능. 접수/분양계약 후 발생한 근무·생업·질병·취학·해외이주 등 FAQ 열거 사유의 실거주 유예는 최대3년. 자동 면제 아님.",
+      "qualification": "개인별 승인·증빙과 복귀기한을 확인. 과거 계약 경과를 이 숫자만으로 판정하지 않음.",
+      "source_ids": [
+        "V2_NHUF"
+      ]
+    },
+    {
+      "claim_id": "HFV2_01",
+      "statement": "신혼가구의 기존 합산소득 기준을 넘더라도 채무자가 될 1인의 연소득이7천만원 이하이면 소득특례를 신청할 수 있다.",
+      "value": {
+        "effective_from": "2026-10-19",
+        "input_fact_id": "HF_ADD01"
+      },
+      "unit": "시행일/처리",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "신규 대출 신청분, 신혼은 혼인7년 이내 또는 신청일부터3개월 이내 결혼예정",
+      "qualification": " 독립 총괄의 원문 열람 인계를 사용했으며 researcher의 중복 직접 열람은 아님.",
+      "source_ids": [
+        "HF_MARRIAGE_RELEASE_20260928",
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ]
+    },
+    {
+      "claim_id": "HFV2_02",
+      "statement": "1인 소득특례로 신청하면 DTI도 그1인의 소득과 부채로 심사하며, 소득을 입증한 사람이 차주가 된다.",
+      "value": {
+        "effective_from": "2026-10-19",
+        "input_fact_id": "HF_ADD02"
+      },
+      "unit": "시행일/처리",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "보금자리론 신혼가구 해당 조건에서만 적용",
+      "qualification": " 독립 총괄의 원문 열람 인계를 사용했으며 researcher의 중복 직접 열람은 아님.",
+      "source_ids": [
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ]
+    },
+    {
+      "claim_id": "HFV2_03",
+      "statement": "신혼소득특례에서도 배우자의 소득과 부채는 우대금리·실수요자 요건과 상환할 기존 대출 확인에 사용한다. 주택보유수는 부부를 합산한다.",
+      "value": {
+        "effective_from": "2026-10-19",
+        "input_fact_id": "HF_ADD03"
+      },
+      "unit": "시행일/처리",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "보금자리론 신혼가구 해당 조건에서만 적용",
+      "qualification": " 독립 총괄의 원문 열람 인계를 사용했으며 researcher의 중복 직접 열람은 아님.",
+      "source_ids": [
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ]
+    },
+    {
+      "claim_id": "HFV2_04",
+      "statement": "기존 신혼 합산소득 기준 이내 가구는 기존 부부합산 방식으로 신청한다. 현재 기준은 무자녀8500만원·1자녀9000만원·2자녀이상1억원이며 미성년자녀 기준이다.",
+      "value": {
+        "effective_from": "2026-10-19",
+        "input_fact_id": "HF_ADD04"
+      },
+      "unit": "시행일/처리",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "보금자리론 신혼가구 해당 조건에서만 적용",
+      "qualification": " 독립 총괄의 원문 열람 인계를 사용했으며 researcher의 중복 직접 열람은 아님.",
+      "source_ids": [
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ]
+    },
+    {
+      "claim_id": "HFV2_05",
+      "statement": "규제지역의 실수요자 LTV·DTI 차감 예외는 구입용도·부부무주택·가격6억원이하·부부합산소득7천만원이하 조건을 함께 판단한다.",
+      "value": {
+        "effective_from": "2026-10-19",
+        "input_fact_id": "HF_ADD05"
+      },
+      "unit": "시행일/처리",
+      "status": "verified",
+      "effective_status": "effective",
+      "exact_conditions": "보금자리론 신혼가구 해당 조건에서만 적용",
+      "qualification": "생애최초 등 별도의 차감 예외는 해당 상품 기준에서 따로 판정한다. 독립 총괄의 원문 열람 인계를 사용했으며 researcher의 중복 직접 열람은 아님.",
+      "source_ids": [
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ]
+    }
+  ],
+  "case_conditions": {
+    "task_id": "case-engine-tax-rounding-correction-v2",
+    "as_of_kst": "2026-10-26",
+    "status": "anonymous_research_assumptions_not_bank_approval",
+    "common": {
+      "cash_krw": 250000000,
+      "reserve_krw": 30000000,
+      "misc_plan_krw": 1500000,
+      "months": 360,
+      "prior_claim_krw": 0,
+      "tenancy_deduction_krw": 0,
+      "existing_annual_dsr_krw": 0,
+      "existing_annual_dti_krw": 0,
+      "housing_savings_budget_monthly_krw": 3000000,
+      "ownership_monthly_plan_krw": 300000,
+      "mortgage_budget_monthly_krw": 1700000,
+      "area_sqm": 84,
+      "married_within_7_years": false,
+      "first_purchase": false,
+      "child_within_2_years": false,
+      "net_assets_krw": 250000000
+    },
+    "profiles": {
+      "A_ordinary": {
+        "household_id": "A",
+        "product": "bank",
+        "label": "A 일반 무주택",
+        "annual_income_krw": 100000000,
+        "annual_rate": "0.04",
+        "stress_add": "0.03",
+        "dti_rate": "0.04",
+        "ltv": ".4",
+        "dti_ratio": ".4",
+        "dsr_ratio": ".4",
+        "first_purchase": false
+      },
+      "A_first": {
+        "household_id": "A",
+        "product": "bank",
+        "label": "A 은행 생애최초",
+        "annual_income_krw": 100000000,
+        "annual_rate": "0.04",
+        "stress_add": "0.03",
+        "dti_rate": "0.04",
+        "ltv": ".7",
+        "dti_ratio": ".6",
+        "dsr_ratio": ".4",
+        "first_purchase": true
+      },
+      "B_didim": {
+        "household_id": "B",
+        "product": "didim",
+        "label": "B 디딤돌 신혼",
+        "annual_income_krw": 80000000,
+        "annual_rate": "0.04",
+        "rate_status": "월액 및 DTI 계산용4% 가정; 현행 공시금리 미확인",
+        "dti_rate": "0.04",
+        "ltv": ".7",
+        "dti_ratio": ".6",
+        "dsr_ratio": null,
+        "price_ceiling_krw": 600000000,
+        "product_cap_krw": 320000000,
+        "income_ceiling_krw": 85000000,
+        "asset_ceiling_krw": 511000000,
+        "married_within_7_years": true,
+        "first_purchase": true,
+        "child_within_2_years": true
+      },
+      "B_bogeum": {
+        "household_id": "B",
+        "product": "bogeum",
+        "label": "B 보금자리론 생애최초",
+        "annual_income_krw": 80000000,
+        "annual_rate": "0.04",
+        "rate_status": "월액 및 DTI 계산용4% 가정; 현행 공시금리 미확인",
+        "dti_rate": "0.04",
+        "ltv": ".7",
+        "dti_ratio": ".6",
+        "dsr_ratio": null,
+        "price_ceiling_krw": 600000000,
+        "product_cap_krw": 420000000,
+        "income_ceiling_krw": 85000000,
+        "married_within_7_years": true,
+        "first_purchase": true,
+        "child_within_2_years": true
+      },
+      "B_newborn": {
+        "household_id": "B",
+        "product": "newborn",
+        "label": "B 신생아 특례 디딤돌",
+        "annual_income_krw": 80000000,
+        "annual_rate": "0.029",
+        "rate_status": "공식 기금 동적표/KB 대조: 소득6천초과~8천5백이하·30년 기본2.90%, 기본특례5년; 이후금리 미확정",
+        "dti_rate": "0.029",
+        "ltv": ".7",
+        "dti_ratio": ".6",
+        "dsr_ratio": null,
+        "price_ceiling_krw": 900000000,
+        "product_cap_krw": 400000000,
+        "income_ceiling_krw": 130000000,
+        "asset_ceiling_krw": 511000000,
+        "married_within_7_years": true,
+        "first_purchase": true,
+        "child_within_2_years": true
+      }
+    },
+    "grid": {
+      "prices_krw": [
+        600000000,
+        900000000,
+        1200000000
+      ],
+      "deductions_krw": [
+        0,
+        55000000
+      ]
+    },
+    "solver": {
+      "grid_krw": 10000,
+      "search_max_krw": 3000000000
+    },
+    "notes": [
+      "V=P, 선순위0·임대차없음. 수도권 규제지역 중 투기과열지구를 가정해 일반DTI40/생초60 사용.",
+      "0차감은 보증심사 통과 등 담보 산정 조건의 가정이며 일반·생초 자동면제 아님.",
+      "보금자리 빈 아파트의 현행 방수공제는0;55m은 추가 담보차감 민감도 가정으로만 해석.",
+      "B의9/12억은 상품가격자격 필터 확인용이며6억이 핵심 비교."
+    ],
+    "parent_task_id": "next-case-engine-preparation-v1",
+    "revision": "v2_tax_fraction_rounding_correction"
+  },
+  "cases": [
+    {
+      "case_id": "A_ordinary_P600000000_C0",
+      "profile_id": "A_ordinary",
+      "household_id": "A",
+      "price_krw": "600000000",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "rate_used": "0.04",
+      "rate_status": "계산용 약정4%·스트레스 심사7%",
+      "limits_krw": {
+        "collateral": "240000000.0",
+        "DTI": "698204134.8473085495743687749778798219422",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "600000000"
+      },
+      "binding_constraints": [
+        "collateral"
+      ],
+      "loan_ceiling_krw": "240000000.0",
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      },
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "400740000.0000",
+      "cash_shortfall_krw": "150740000.0000",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "A_ordinary_P600000000_C55000000",
+      "profile_id": "A_ordinary",
+      "household_id": "A",
+      "price_krw": "600000000",
+      "deduction_krw": "55000000",
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "rate_used": "0.04",
+      "rate_status": "계산용 약정4%·스트레스 심사7%",
+      "limits_krw": {
+        "collateral": "185000000.0",
+        "DTI": "698204134.8473085495743687749778798219422",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "600000000"
+      },
+      "binding_constraints": [
+        "collateral"
+      ],
+      "loan_ceiling_krw": "185000000.0",
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      },
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "455740000.0000",
+      "cash_shortfall_krw": "205740000.0000",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "A_ordinary_P900000000_C0",
+      "profile_id": "A_ordinary",
+      "household_id": "A",
+      "price_krw": "900000000",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "rate_used": "0.04",
+      "rate_status": "계산용 약정4%·스트레스 심사7%",
+      "limits_krw": {
+        "collateral": "360000000.0",
+        "DTI": "698204134.8473085495743687749778798219422",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "900000000"
+      },
+      "binding_constraints": [
+        "collateral"
+      ],
+      "loan_ceiling_krw": "360000000.0",
+      "transaction_costs": {
+        "rate_fraction": "0.0300",
+        "rate_percent": "3.0000",
+        "acquisition_before_truncation_krw": "27000000.0000",
+        "education_before_truncation_krw": "2700000.0000",
+        "acquisition_krw": "27000000",
+        "education_krw": "2700000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "4500000.000",
+        "vat_krw": "450000.000",
+        "with_vat_krw": "4950000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "36150000.0000"
+      },
+      "required_loan_krw": "716150000.0000",
+      "cash_required_including_reserve_krw": "606150000.0000",
+      "cash_shortfall_krw": "356150000.0000",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "A_ordinary_P900000000_C55000000",
+      "profile_id": "A_ordinary",
+      "household_id": "A",
+      "price_krw": "900000000",
+      "deduction_krw": "55000000",
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "rate_used": "0.04",
+      "rate_status": "계산용 약정4%·스트레스 심사7%",
+      "limits_krw": {
+        "collateral": "305000000.0",
+        "DTI": "698204134.8473085495743687749778798219422",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "900000000"
+      },
+      "binding_constraints": [
+        "collateral"
+      ],
+      "loan_ceiling_krw": "305000000.0",
+      "transaction_costs": {
+        "rate_fraction": "0.0300",
+        "rate_percent": "3.0000",
+        "acquisition_before_truncation_krw": "27000000.0000",
+        "education_before_truncation_krw": "2700000.0000",
+        "acquisition_krw": "27000000",
+        "education_krw": "2700000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "4500000.000",
+        "vat_krw": "450000.000",
+        "with_vat_krw": "4950000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "36150000.0000"
+      },
+      "required_loan_krw": "716150000.0000",
+      "cash_required_including_reserve_krw": "661150000.0000",
+      "cash_shortfall_krw": "411150000.0000",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "A_ordinary_P1200000000_C0",
+      "profile_id": "A_ordinary",
+      "household_id": "A",
+      "price_krw": "1200000000",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "rate_used": "0.04",
+      "rate_status": "계산용 약정4%·스트레스 심사7%",
+      "limits_krw": {
+        "collateral": "480000000.0",
+        "DTI": "698204134.8473085495743687749778798219422",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "1200000000"
+      },
+      "binding_constraints": [
+        "collateral"
+      ],
+      "loan_ceiling_krw": "480000000.0",
+      "transaction_costs": {
+        "rate_fraction": "0.03",
+        "rate_percent": "3.00",
+        "acquisition_before_truncation_krw": "36000000.00",
+        "education_before_truncation_krw": "3600000.00",
+        "acquisition_krw": "36000000",
+        "education_krw": "3600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "7200000.000",
+        "vat_krw": "720000.000",
+        "with_vat_krw": "7920000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "49020000.0000"
+      },
+      "required_loan_krw": "1029020000.0000",
+      "cash_required_including_reserve_krw": "799020000.0000",
+      "cash_shortfall_krw": "549020000.0000",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "A_ordinary_P1200000000_C55000000",
+      "profile_id": "A_ordinary",
+      "household_id": "A",
+      "price_krw": "1200000000",
+      "deduction_krw": "55000000",
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "rate_used": "0.04",
+      "rate_status": "계산용 약정4%·스트레스 심사7%",
+      "limits_krw": {
+        "collateral": "425000000.0",
+        "DTI": "698204134.8473085495743687749778798219422",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "1200000000"
+      },
+      "binding_constraints": [
+        "collateral"
+      ],
+      "loan_ceiling_krw": "425000000.0",
+      "transaction_costs": {
+        "rate_fraction": "0.03",
+        "rate_percent": "3.00",
+        "acquisition_before_truncation_krw": "36000000.00",
+        "education_before_truncation_krw": "3600000.00",
+        "acquisition_krw": "36000000",
+        "education_krw": "3600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "7200000.000",
+        "vat_krw": "720000.000",
+        "with_vat_krw": "7920000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "49020000.0000"
+      },
+      "required_loan_krw": "1029020000.0000",
+      "cash_required_including_reserve_krw": "854020000.0000",
+      "cash_shortfall_krw": "604020000.0000",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "A_first_P600000000_C0",
+      "profile_id": "A_first",
+      "household_id": "A",
+      "price_krw": "600000000",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "rate_used": "0.04",
+      "rate_status": "계산용 약정4%·스트레스 심사7%",
+      "limits_krw": {
+        "collateral": "420000000.0",
+        "DTI": "1047306202.270962824361553162466819732913",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "600000000"
+      },
+      "binding_constraints": [
+        "collateral"
+      ],
+      "loan_ceiling_krw": "420000000.0",
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      },
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "220740000.0000",
+      "cash_shortfall_krw": "0",
+      "cash_feasible": true,
+      "payment_if_financeable_krw": "1865452.525501736420517881381328776690824"
+    },
+    {
+      "case_id": "A_first_P600000000_C55000000",
+      "profile_id": "A_first",
+      "household_id": "A",
+      "price_krw": "600000000",
+      "deduction_krw": "55000000",
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "rate_used": "0.04",
+      "rate_status": "계산용 약정4%·스트레스 심사7%",
+      "limits_krw": {
+        "collateral": "365000000.0",
+        "DTI": "1047306202.270962824361553162466819732913",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "600000000"
+      },
+      "binding_constraints": [
+        "collateral"
+      ],
+      "loan_ceiling_krw": "365000000.0",
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      },
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "275740000.0000",
+      "cash_shortfall_krw": "25740000.0000",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "A_first_P900000000_C0",
+      "profile_id": "A_first",
+      "household_id": "A",
+      "price_krw": "900000000",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "rate_used": "0.04",
+      "rate_status": "계산용 약정4%·스트레스 심사7%",
+      "limits_krw": {
+        "collateral": "630000000.0",
+        "DTI": "1047306202.270962824361553162466819732913",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "900000000"
+      },
+      "binding_constraints": [
+        "DSR"
+      ],
+      "loan_ceiling_krw": "501025226.4927370467532595404638799597893",
+      "transaction_costs": {
+        "rate_fraction": "0.0300",
+        "rate_percent": "3.0000",
+        "acquisition_before_truncation_krw": "27000000.0000",
+        "education_before_truncation_krw": "2700000.0000",
+        "acquisition_krw": "27000000",
+        "education_krw": "2700000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "4500000.000",
+        "vat_krw": "450000.000",
+        "with_vat_krw": "4950000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "36150000.0000"
+      },
+      "required_loan_krw": "716150000.0000",
+      "cash_required_including_reserve_krw": "465124773.5072629532467404595361200402107",
+      "cash_shortfall_krw": "215124773.5072629532467404595361200402107",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "A_first_P900000000_C55000000",
+      "profile_id": "A_first",
+      "household_id": "A",
+      "price_krw": "900000000",
+      "deduction_krw": "55000000",
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "rate_used": "0.04",
+      "rate_status": "계산용 약정4%·스트레스 심사7%",
+      "limits_krw": {
+        "collateral": "575000000.0",
+        "DTI": "1047306202.270962824361553162466819732913",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "900000000"
+      },
+      "binding_constraints": [
+        "DSR"
+      ],
+      "loan_ceiling_krw": "501025226.4927370467532595404638799597893",
+      "transaction_costs": {
+        "rate_fraction": "0.0300",
+        "rate_percent": "3.0000",
+        "acquisition_before_truncation_krw": "27000000.0000",
+        "education_before_truncation_krw": "2700000.0000",
+        "acquisition_krw": "27000000",
+        "education_krw": "2700000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "4500000.000",
+        "vat_krw": "450000.000",
+        "with_vat_krw": "4950000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "36150000.0000"
+      },
+      "required_loan_krw": "716150000.0000",
+      "cash_required_including_reserve_krw": "465124773.5072629532467404595361200402107",
+      "cash_shortfall_krw": "215124773.5072629532467404595361200402107",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "A_first_P1200000000_C0",
+      "profile_id": "A_first",
+      "household_id": "A",
+      "price_krw": "1200000000",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "rate_used": "0.04",
+      "rate_status": "계산용 약정4%·스트레스 심사7%",
+      "limits_krw": {
+        "collateral": "840000000.0",
+        "DTI": "1047306202.270962824361553162466819732913",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "1200000000"
+      },
+      "binding_constraints": [
+        "DSR"
+      ],
+      "loan_ceiling_krw": "501025226.4927370467532595404638799597893",
+      "transaction_costs": {
+        "rate_fraction": "0.03",
+        "rate_percent": "3.00",
+        "acquisition_before_truncation_krw": "36000000.00",
+        "education_before_truncation_krw": "3600000.00",
+        "acquisition_krw": "36000000",
+        "education_krw": "3600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "7200000.000",
+        "vat_krw": "720000.000",
+        "with_vat_krw": "7920000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "49020000.0000"
+      },
+      "required_loan_krw": "1029020000.0000",
+      "cash_required_including_reserve_krw": "777994773.5072629532467404595361200402107",
+      "cash_shortfall_krw": "527994773.5072629532467404595361200402107",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "A_first_P1200000000_C55000000",
+      "profile_id": "A_first",
+      "household_id": "A",
+      "price_krw": "1200000000",
+      "deduction_krw": "55000000",
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "rate_used": "0.04",
+      "rate_status": "계산용 약정4%·스트레스 심사7%",
+      "limits_krw": {
+        "collateral": "785000000.0",
+        "DTI": "1047306202.270962824361553162466819732913",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "1200000000"
+      },
+      "binding_constraints": [
+        "DSR"
+      ],
+      "loan_ceiling_krw": "501025226.4927370467532595404638799597893",
+      "transaction_costs": {
+        "rate_fraction": "0.03",
+        "rate_percent": "3.00",
+        "acquisition_before_truncation_krw": "36000000.00",
+        "education_before_truncation_krw": "3600000.00",
+        "acquisition_krw": "36000000",
+        "education_krw": "3600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "7200000.000",
+        "vat_krw": "720000.000",
+        "with_vat_krw": "7920000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "49020000.0000"
+      },
+      "required_loan_krw": "1029020000.0000",
+      "cash_required_including_reserve_krw": "777994773.5072629532467404595361200402107",
+      "cash_shortfall_krw": "527994773.5072629532467404595361200402107",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "B_didim_P600000000_C0",
+      "profile_id": "B_didim",
+      "household_id": "B",
+      "price_krw": "600000000",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "rate_used": "0.04",
+      "rate_status": "월액 및 DTI 계산용4% 가정; 현행 공시금리 미확인",
+      "limits_krw": {
+        "collateral": "420000000.0",
+        "DTI": "837844961.8167702594892425299734557863305",
+        "DSR": null,
+        "regulatory_total": null,
+        "product": "320000000",
+        "purchase_price": "600000000"
+      },
+      "binding_constraints": [
+        "product"
+      ],
+      "loan_ceiling_krw": "320000000",
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      },
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "320740000.0000",
+      "cash_shortfall_krw": "70740000.0000",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "B_didim_P600000000_C55000000",
+      "profile_id": "B_didim",
+      "household_id": "B",
+      "price_krw": "600000000",
+      "deduction_krw": "55000000",
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "rate_used": "0.04",
+      "rate_status": "월액 및 DTI 계산용4% 가정; 현행 공시금리 미확인",
+      "limits_krw": {
+        "collateral": "365000000.0",
+        "DTI": "837844961.8167702594892425299734557863305",
+        "DSR": null,
+        "regulatory_total": null,
+        "product": "320000000",
+        "purchase_price": "600000000"
+      },
+      "binding_constraints": [
+        "product"
+      ],
+      "loan_ceiling_krw": "320000000",
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      },
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "320740000.0000",
+      "cash_shortfall_krw": "70740000.0000",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "B_bogeum_P600000000_C0",
+      "profile_id": "B_bogeum",
+      "household_id": "B",
+      "price_krw": "600000000",
+      "deduction_krw": "0",
+      "deduction_note": "빈 아파트 자체 방수공제0",
+      "rate_used": "0.04",
+      "rate_status": "월액 및 DTI 계산용4% 가정; 현행 공시금리 미확인",
+      "limits_krw": {
+        "collateral": "420000000.0",
+        "DTI": "837844961.8167702594892425299734557863305",
+        "DSR": null,
+        "regulatory_total": null,
+        "product": "420000000",
+        "purchase_price": "600000000"
+      },
+      "binding_constraints": [
+        "collateral",
+        "product"
+      ],
+      "loan_ceiling_krw": "420000000.0",
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      },
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "220740000.0000",
+      "cash_shortfall_krw": "0",
+      "cash_feasible": true,
+      "payment_if_financeable_krw": "1865452.525501736420517881381328776690824"
+    },
+    {
+      "case_id": "B_newborn_P600000000_C0",
+      "profile_id": "B_newborn",
+      "household_id": "B",
+      "price_krw": "600000000",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "rate_used": "0.029",
+      "rate_status": "공식 기금 동적표/KB 대조: 소득6천초과~8천5백이하·30년 기본2.90%, 기본특례5년; 이후금리 미확정",
+      "limits_krw": {
+        "collateral": "420000000.0",
+        "DTI": "961007181.3329984226504418629275973578854",
+        "DSR": null,
+        "regulatory_total": null,
+        "product": "400000000",
+        "purchase_price": "600000000"
+      },
+      "binding_constraints": [
+        "product"
+      ],
+      "loan_ceiling_krw": "400000000",
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      },
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "240740000.0000",
+      "cash_shortfall_krw": "0",
+      "cash_feasible": true,
+      "payment_if_financeable_krw": "1626377.024396469120911861925820032915688"
+    },
+    {
+      "case_id": "B_newborn_P600000000_C55000000",
+      "profile_id": "B_newborn",
+      "household_id": "B",
+      "price_krw": "600000000",
+      "deduction_krw": "55000000",
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "rate_used": "0.029",
+      "rate_status": "공식 기금 동적표/KB 대조: 소득6천초과~8천5백이하·30년 기본2.90%, 기본특례5년; 이후금리 미확정",
+      "limits_krw": {
+        "collateral": "365000000.0",
+        "DTI": "961007181.3329984226504418629275973578854",
+        "DSR": null,
+        "regulatory_total": null,
+        "product": "400000000",
+        "purchase_price": "600000000"
+      },
+      "binding_constraints": [
+        "collateral"
+      ],
+      "loan_ceiling_krw": "365000000.0",
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      },
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "275740000.0000",
+      "cash_shortfall_krw": "25740000.0000",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    },
+    {
+      "case_id": "B_newborn_P900000000_C55000000",
+      "profile_id": "B_newborn",
+      "household_id": "B",
+      "price_krw": "900000000",
+      "deduction_krw": "55000000",
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "rate_used": "0.029",
+      "rate_status": "공식 기금 동적표/KB 대조: 소득6천초과~8천5백이하·30년 기본2.90%, 기본특례5년; 이후금리 미확정",
+      "limits_krw": {
+        "collateral": "575000000.0",
+        "DTI": "961007181.3329984226504418629275973578854",
+        "DSR": null,
+        "regulatory_total": null,
+        "product": "400000000",
+        "purchase_price": "900000000"
+      },
+      "binding_constraints": [
+        "product"
+      ],
+      "loan_ceiling_krw": "400000000",
+      "transaction_costs": {
+        "rate_fraction": "0.0300",
+        "rate_percent": "3.0000",
+        "acquisition_before_truncation_krw": "27000000.0000",
+        "education_before_truncation_krw": "2700000.0000",
+        "acquisition_krw": "27000000",
+        "education_krw": "2700000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "4500000.000",
+        "vat_krw": "450000.000",
+        "with_vat_krw": "4950000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "36150000.0000"
+      },
+      "required_loan_krw": "716150000.0000",
+      "cash_required_including_reserve_krw": "566150000.0000",
+      "cash_shortfall_krw": "316150000.0000",
+      "cash_feasible": false,
+      "payment_if_financeable_krw": null
+    }
+  ],
+  "affordability_A": [
+    {
+      "profile_id": "A_ordinary",
+      "deduction_krw": 0,
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "bank_assumptions_max": {
+        "max_price_krw": 355050000,
+        "grid_krw": 10000,
+        "search_max_krw": 3000000000,
+        "condition": "은행심사 가정상한 기준",
+        "affordable_10k_below": true,
+        "affordable_at_max": true,
+        "affordable_10k_above": false,
+        "bank_binding_constraints": [
+          "collateral"
+        ],
+        "monthly_budget_cap_binding": false,
+        "loan_ceiling_krw": "142020000.0",
+        "available_loan_with_budget_krw": "142020000.0",
+        "required_loan_krw": "142017770.0000",
+        "transaction_cost_krw": "6967770.0000",
+        "payment_on_required_loan_krw": "678014.5562589566913285861670185609419529",
+        "payment_shock_same_original_360months_krw": "851468.2858452280444203938686949585307228",
+        "remaining_savings_krw": "2021985.443741043308671413832981439058047",
+        "remaining_savings_shock_krw": "1848531.714154771955579606131305041469277"
+      },
+      "mortgage_budget_max": {
+        "max_price_krw": 355050000,
+        "grid_krw": 10000,
+        "search_max_krw": 3000000000,
+        "condition": "월170만원 목표 + 은행심사 가정상한 기준",
+        "affordable_10k_below": true,
+        "affordable_at_max": true,
+        "affordable_10k_above": false,
+        "bank_binding_constraints": [
+          "collateral"
+        ],
+        "monthly_budget_cap_binding": false,
+        "loan_ceiling_krw": "142020000.0",
+        "available_loan_with_budget_krw": "142020000.0",
+        "required_loan_krw": "142017770.0000",
+        "transaction_cost_krw": "6967770.0000",
+        "payment_on_required_loan_krw": "678014.5562589566913285861670185609419529",
+        "payment_shock_same_original_360months_krw": "851468.2858452280444203938686949585307228",
+        "remaining_savings_krw": "2021985.443741043308671413832981439058047",
+        "remaining_savings_shock_krw": "1848531.714154771955579606131305041469277"
+      }
+    },
+    {
+      "profile_id": "A_ordinary",
+      "deduction_krw": 55000000,
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "bank_assumptions_max": {
+        "max_price_krw": 265680000,
+        "grid_krw": 10000,
+        "search_max_krw": 3000000000,
+        "condition": "은행심사 가정상한 기준",
+        "affordable_10k_below": true,
+        "affordable_at_max": true,
+        "affordable_10k_above": false,
+        "bank_binding_constraints": [
+          "collateral"
+        ],
+        "monthly_budget_cap_binding": false,
+        "loan_ceiling_krw": "51272000.0",
+        "available_loan_with_budget_krw": "51272000.0",
+        "required_loan_krw": "51271472.0000",
+        "transaction_cost_krw": "5591472.0000",
+        "payment_on_required_loan_krw": "244777.8495382903333059394501257094152065",
+        "payment_shock_same_original_360months_krw": "307398.3796295464012222905659465378371250",
+        "remaining_savings_krw": "2455222.150461709666694060549874290584794",
+        "remaining_savings_shock_krw": "2392601.620370453598777709434053462162875"
+      },
+      "mortgage_budget_max": {
+        "max_price_krw": 265680000,
+        "grid_krw": 10000,
+        "search_max_krw": 3000000000,
+        "condition": "월170만원 목표 + 은행심사 가정상한 기준",
+        "affordable_10k_below": true,
+        "affordable_at_max": true,
+        "affordable_10k_above": false,
+        "bank_binding_constraints": [
+          "collateral"
+        ],
+        "monthly_budget_cap_binding": false,
+        "loan_ceiling_krw": "51272000.0",
+        "available_loan_with_budget_krw": "51272000.0",
+        "required_loan_krw": "51271472.0000",
+        "transaction_cost_krw": "5591472.0000",
+        "payment_on_required_loan_krw": "244777.8495382903333059394501257094152065",
+        "payment_shock_same_original_360months_krw": "307398.3796295464012222905659465378371250",
+        "remaining_savings_krw": "2455222.150461709666694060549874290584794",
+        "remaining_savings_shock_krw": "2392601.620370453598777709434053462162875"
+      }
+    },
+    {
+      "profile_id": "A_first",
+      "deduction_krw": 0,
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "bank_assumptions_max": {
+        "max_price_krw": 680190000,
+        "grid_krw": 10000,
+        "search_max_krw": 3000000000,
+        "condition": "은행심사 가정상한 기준",
+        "affordable_10k_below": true,
+        "affordable_at_max": true,
+        "affordable_10k_above": false,
+        "bank_binding_constraints": [
+          "collateral"
+        ],
+        "monthly_budget_cap_binding": false,
+        "loan_ceiling_krw": "476133000.0",
+        "available_loan_with_budget_krw": "476133000.0",
+        "required_loan_krw": "476130426.0000",
+        "transaction_cost_krw": "15940426.0000",
+        "payment_on_required_loan_krw": "2273119.480088850963916911508188408895584",
+        "payment_shock_same_original_360months_krw": "2854642.469495037127093525379179793270133",
+        "remaining_savings_krw": "426880.519911149036083088491811591104416",
+        "remaining_savings_shock_krw": "-154642.469495037127093525379179793270133"
+      },
+      "mortgage_budget_max": {
+        "max_price_krw": 565860000,
+        "grid_krw": 10000,
+        "search_max_krw": 3000000000,
+        "condition": "월170만원 목표 + 은행심사 가정상한 기준",
+        "affordable_10k_below": true,
+        "affordable_at_max": true,
+        "affordable_10k_above": false,
+        "bank_binding_constraints": [
+          "collateral"
+        ],
+        "monthly_budget_cap_binding": true,
+        "loan_ceiling_krw": "396102000.0",
+        "available_loan_with_budget_krw": "356084108.7721273602829280752387187091906",
+        "required_loan_krw": "356074244.0000",
+        "transaction_cost_krw": "10214244.0000",
+        "payment_on_required_loan_krw": "1699952.904069001168611277835231406755464",
+        "payment_shock_same_original_360months_krw": "2134844.999835692934233442512002495359830",
+        "remaining_savings_krw": "1000047.095930998831388722164768593244536",
+        "remaining_savings_shock_krw": "565155.000164307065766557487997504640170"
+      }
+    },
+    {
+      "profile_id": "A_first",
+      "deduction_krw": 55000000,
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "bank_assumptions_max": {
+        "max_price_krw": 518380000,
+        "grid_krw": 10000,
+        "search_max_krw": 3000000000,
+        "condition": "은행심사 가정상한 기준",
+        "affordable_10k_below": true,
+        "affordable_at_max": true,
+        "affordable_10k_above": false,
+        "bank_binding_constraints": [
+          "collateral"
+        ],
+        "monthly_budget_cap_binding": false,
+        "loan_ceiling_krw": "307866000.0",
+        "available_loan_with_budget_krw": "307866000.0",
+        "required_loan_krw": "307863052.0000",
+        "transaction_cost_krw": "9483052.0000",
+        "payment_on_required_loan_krw": "1469785.299334781199058684502814795023451",
+        "payment_shock_same_original_360months_krw": "1845794.545017291183992355516204184802238",
+        "remaining_savings_krw": "1230214.700665218800941315497185204976549",
+        "remaining_savings_shock_krw": "854205.454982708816007644483795815197762"
+      },
+      "mortgage_budget_max": {
+        "max_price_krw": 518380000,
+        "grid_krw": 10000,
+        "search_max_krw": 3000000000,
+        "condition": "월170만원 목표 + 은행심사 가정상한 기준",
+        "affordable_10k_below": true,
+        "affordable_at_max": true,
+        "affordable_10k_above": false,
+        "bank_binding_constraints": [
+          "collateral"
+        ],
+        "monthly_budget_cap_binding": false,
+        "loan_ceiling_krw": "307866000.0",
+        "available_loan_with_budget_krw": "307866000.0",
+        "required_loan_krw": "307863052.0000",
+        "transaction_cost_krw": "9483052.0000",
+        "payment_on_required_loan_krw": "1469785.299334781199058684502814795023451",
+        "payment_shock_same_original_360months_krw": "1845794.545017291183992355516204184802238",
+        "remaining_savings_krw": "1230214.700665218800941315497185204976549",
+        "remaining_savings_shock_krw": "854205.454982708816007644483795815197762"
+      }
+    }
+  ],
+  "conditional_relief_table": [
+    {
+      "price_krw": 600000000,
+      "base_acquisition_krw": "6000000",
+      "conditional_firstbuyer_max_reduction_krw": "2000000",
+      "conditional_child_max_reduction_krw": "5000000",
+      "applied_to_base": false,
+      "additive": false,
+      "net_tax_after_relief_krw": null,
+      "concurrent_eligibility_rule": "생초200/출산500 모두 적격이면 큰 감면 하나 선택; 합산하지 않음",
+      "concurrent_rule_verification": "main 현행 특례법180 원문 직접열람 인계; 감면후교육세/총납부액은 미산출"
+    },
+    {
+      "price_krw": 900000000,
+      "base_acquisition_krw": "27000000",
+      "conditional_firstbuyer_max_reduction_krw": "2000000",
+      "conditional_child_max_reduction_krw": "5000000",
+      "applied_to_base": false,
+      "additive": false,
+      "net_tax_after_relief_krw": null,
+      "concurrent_eligibility_rule": "생초200/출산500 모두 적격이면 큰 감면 하나 선택; 합산하지 않음",
+      "concurrent_rule_verification": "main 현행 특례법180 원문 직접열람 인계; 감면후교육세/총납부액은 미산출"
+    },
+    {
+      "price_krw": 1200000000,
+      "base_acquisition_krw": "36000000",
+      "conditional_firstbuyer_max_reduction_krw": "2000000",
+      "conditional_child_max_reduction_krw": "5000000",
+      "applied_to_base": false,
+      "additive": false,
+      "net_tax_after_relief_krw": null,
+      "concurrent_eligibility_rule": "생초200/출산500 모두 적격이면 큰 감면 하나 선택; 합산하지 않음",
+      "concurrent_rule_verification": "main 현행 특례법180 원문 직접열람 인계; 감면후교육세/총납부액은 미산출"
+    }
+  ],
+  "independent_QA": {
+    "arithmetic_comparisons": 157,
+    "policy_logic_checks": 10,
+    "required_issues": [],
+    "note": "Research/case approval only. The current actual script still needs independent review."
+  },
+  "primary_sources": {
+    "sources.json": {
+      "task_id": "next-policy-source-prep-v1",
+      "revision": "v1",
+      "as_of_kst": "2026-10-26",
+      "source_groups": 15,
+      "sources": [
+        {
+          "id": "FSC26",
+          "title": "부동산 시장 안정을 위한 금융 종합대책 2",
+          "urls": [
+            "https://www.fsc.go.kr/no040101?cnId=3374"
+          ],
+          "date": "2026-08-13",
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web",
+          "evidence_scope": "카드 3·7·8: 현행 LTV/DSR/가격별 한도, 10월 신혼 특례, 2027년 예정 상품",
+          "fetch_limits": "카드의 시행예정 안내만으로 실제 시행을 단정하지 않음; 신혼 특례는 HF 현행 안내로 교차확인"
+        },
+        {
+          "id": "FSC25",
+          "title": "10.15 대책 FAQ 및 6.27 대책",
+          "urls": [
+            "https://www.fsc.go.kr/po020201/85518",
+            "https://www.fsc.go.kr/po020201/85466",
+            "https://www.fsc.go.kr/no010101/84824"
+          ],
+          "date": "2025-06-27 / 2025-10-15 / 2025-10-17",
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web",
+          "evidence_scope": "85518: Q2~4; 85466: Q4 표; 84824: II(3)(4), 수도권·규제지역·생초·실수요·경과조건",
+          "fetch_limits": "2025년 문서를 2026년 카드/현행 상품과 결합; 과거 금리·한도는 현행값으로 재사용하지 않음"
+        },
+        {
+          "id": "STRESS",
+          "title": "스트레스 DSR 금융행정지도 변경 시행",
+          "urls": [
+            "https://better.fsc.go.kr/fsc_new/status/adminMap/OpertnDetail.do?muNo=145&postNo=4215&stNo=11",
+            "https://better.fsc.go.kr/fsc_new/file/displayFile.do?filePath=/2026/06/30&orgFileName=260701_3%EB%8B%A8%EA%B3%84%20%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%8A%A4DSR%20%ED%96%89%EC%A0%95%EC%A7%80%EB%8F%84%20%EB%B3%80%EA%B2%BD%EC%8B%9C%ED%96%89.pdf&sysFileName=b80d2de1d3c34b3ea4ad057ec48aa7fc.pdf"
+          ],
+          "date": "2026-07-01",
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web + read_only_http + local_pdf_visual_inspection",
+          "evidence_scope": "시행중·존속기간 2026-07-01~12-31; 첨부 PDF 1쪽 표·2쪽 경과규정",
+          "fetch_limits": "웹 PDF 열기 오류/옥텟스트림 → 허용된 HTTP 다운로드. 텍스트 추출에서 일부 숫자 누락되어 두 쪽 PNG를 실제 열어 확인",
+          "local_evidence": [
+            "evidence/stress_dsr_20260701.pdf",
+            "evidence/stress_page_1.png",
+            "evidence/stress_page_2.png"
+          ],
+          "pdf_sha256": "cd3ea468aaba90007418f1291c4ef361a341be9d3f49a9b3a7eccfe9c80975d6"
+        },
+        {
+          "id": "DIDIM",
+          "title": "내집마련 디딤돌대출 현행 상품",
+          "urls": [
+            "https://www.hf.go.kr/ko/sub01/sub01_02_01.do",
+            "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030101.jsp"
+          ],
+          "date": null,
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web + read_only_http",
+          "evidence_scope": "HF 상품요건·소득·자산·주택·LTV·DTI·한도; NHUF 요약/대상 중 2026 자산기준",
+          "fetch_limits": "게시/최종개정일 미표시. NHUF는 네이티브 웹 대신 HTTP로 확인; 실거주 세부 항목은 확보하지 못함"
+        },
+        {
+          "id": "BOGEUM",
+          "title": "보금자리론 현행 일반 상품소개",
+          "urls": [
+            "https://www.hf.go.kr/ko/sub01/sub01_01_01.do"
+          ],
+          "date": null,
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web",
+          "evidence_scope": "소득/신혼소득특례자·주택평가·보유수·전입·LTV·DTI·한도",
+          "fetch_limits": "게시/최종개정일 미표시; 자산·전용면적의 별도 상한 유무 및 소득특례자의 DTI 세칙은 이 일반 페이지로 확정하지 않음"
+        },
+        {
+          "id": "NEWBORN",
+          "title": "신생아 특례 디딤돌대출 현행 기금 안내 및 수탁은행 공시",
+          "urls": [
+            "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030801.jsp",
+            "https://obank.kbstar.com/quics?cc=b032425:b033525&page=C020709&prcode=LN40001049"
+          ],
+          "date": "KB 공시 유효기간 2026-08-11~2028-05-31",
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web + read_only_http",
+          "evidence_scope": "NHUF 대출대상/자산; KB 신청자격·대상주택·상품변경·고객유의사항",
+          "fetch_limits": "NHUF 웹 타임아웃 → HTTP로 2026년 5.11억 직접 확인. KB는 본문 1년 거주와 변경이력 2년 거주가 상충"
+        },
+        {
+          "id": "DSR_HISTORY",
+          "title": "가계부채 점검회의: 정책모기지 DSR 및 은행 내부관리 구별",
+          "urls": [
+            "https://www.fsc.go.kr/no010101/82931"
+          ],
+          "date": "2024-08-21",
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web",
+          "evidence_scope": "하반기 가계부채 관리방안 ② 주석(보금자리론·디딤돌) 및 내부관리 DSR",
+          "fetch_limits": "명시적 DSR 제외 근거는 2024년 자료. 2026 현행 규정 별표를 확보하지 못해 현재 적용 주장은 qualified"
+        },
+        {
+          "id": "LOCAL_TAX",
+          "title": "지방세법 제11조·제151조",
+          "urls": [
+            "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0011&lsiSeq=282559&urlMode=lsScJoRltInfoR",
+            "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0151&lsiSeq=282559&urlMode=lsScJoRltInfoR"
+          ],
+          "date": "시행 2026-01-01 / 법률 제21308호",
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web",
+          "evidence_scope": "11①8 가~다 가격별 표준세율·계산식; 151①1 지방교육세",
+          "fetch_limits": "중과 없는 유상 주택취득만 계산. 특정 취득세액 공제 후 지방교육세의 실제 감면액은 별도 미확정"
+        },
+        {
+          "id": "RELIEF",
+          "title": "지방세특례제한법 제36조의3·제36조의5",
+          "urls": [
+            "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1025285313",
+            "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031901089",
+            "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1026446827"
+          ],
+          "date": "시행 2026-06-02 / 법률 제21738호",
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web",
+          "evidence_scope": "36의3①②④; 36의5①②",
+          "fetch_limits": "가구 범위·과거 보유예외·부칙별 적용례 및 중복감면 세칙을 모두 확인한 것은 아님"
+        },
+        {
+          "id": "AGRIC",
+          "title": "농어촌특별세법 제4조11·시행령 제4조⑤",
+          "urls": [
+            "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031706981",
+            "https://law.go.kr/LSW/lsLinkCommonInfo.do?lspttninfSeq=72626"
+          ],
+          "date": "법 시행 2026-05-12 / 시행령 시행 2026-01-02",
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web",
+          "evidence_scope": "국민주택규모 이하 서민주택 및 부속토지 범위",
+          "fetch_limits": "전용 84㎡ 통상 아파트와 요건을 충족하는 부속토지만 가정. 면적 초과·상가·특수 토지로 일반화 금지"
+        },
+        {
+          "id": "BROKER",
+          "title": "서울·경기 주택 중개보수 요율표",
+          "urls": [
+            "https://land.seoul.go.kr/land/broker/brokerageCommission.do",
+            "https://www.yp21.go.kr/www/contents.do?key=1492"
+          ],
+          "date": "서울 조례 표 시행 2021-12-30; 경기 페이지 게시일 미표시",
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web",
+          "evidence_scope": "매매 2~9 미만 0.4%, 9~12 미만 0.5%, 12~15 미만 0.6%; 상한 내 협의·부가세 별도",
+          "fetch_limits": "서울/경기 확인. 다른 지자체는 해당 조례를 연결"
+        },
+        {
+          "id": "VAT",
+          "title": "국세청 부가가치세 개요",
+          "urls": [
+            "https://b.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7693&mi=2272"
+          ],
+          "date": null,
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web",
+          "evidence_scope": "일반과세자 10%; 간이과세자 계산 구별",
+          "fetch_limits": "일반과세 중개사 가정만 10% 추가. 간이과세자의 납부세액 산식을 고객 청구율로 단정하지 않음"
+        },
+        {
+          "id": "STAMP",
+          "title": "인지세법 제3조",
+          "urls": [
+            "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1031595801"
+          ],
+          "date": "시행 2026-01-02 / 법률 제21065호",
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web",
+          "evidence_scope": "① 표 1호 부동산 소유권 이전증서, 2호 금융기관 금전소비대차증서",
+          "fetch_limits": "문서 1통 기준; 매매문서 부담 분담은 계약에 따라 별도, 은행 대출 50% 부담과 혼동 금지"
+        },
+        {
+          "id": "BOND",
+          "title": "국민주택채권 셀프 도우미",
+          "urls": [
+            "https://nhuf.molit.go.kr/FP/FP07/FP0705/FP070509.jsp"
+          ],
+          "date": null,
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web_search_primary_excerpt + read_only_http_title",
+          "evidence_scope": "매입용도·지역·시가표준액에 따른 매입액 및 일자별 고객부담금 안내",
+          "fetch_limits": "네이티브 검색에 수록된 공식 본문 확인; open 오류, HTTP는 제목만 확인. 실제 할인율·매입금액 조회는 안 함"
+        },
+        {
+          "id": "REGISTRATION",
+          "title": "법제처 생활법령: 잔금정산 및 등기",
+          "urls": [
+            "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=2&cnpClsNo=3&csmSeq=666",
+            "https://www.law.go.kr/행정규칙/등기신청수수료 징수에 관한 예규"
+          ],
+          "date": "생활법령 기준 2026-09-15",
+          "confirmed_as_of": "2026-10-26",
+          "method": "native_web",
+          "evidence_scope": "소유권이전 등기신청수수료 18,000/15,000/10,000원, 채권·인지 구분",
+          "fetch_limits": "공식 해설의 수치 확인. 연결된 대법원 예규 원문은 lawService 껍데기만 반환 → 현행 예규 직접 대조 미완료"
+        }
+      ]
+    },
+    "sources_v2.json": {
+      "task_id": "next-policy-source-prep-v1",
+      "revision": "v2_addendum",
+      "as_of_kst": "2026-10-26",
+      "inherit_sources_from": "sources.json",
+      "sources": [
+        {
+          "id": "V2_BANKREG",
+          "title": "은행업감독규정 별표6: 주택관련 담보대출 등에 대한 리스크관리기준",
+          "urls": [
+            "https://law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000285624&chrClsCd=010201",
+            "https://law.go.kr/LSW/flDownload.do?flSeq=169824033&bylClsCd=200201"
+          ],
+          "date": "2026-09-29",
+          "confirmed_as_of": "2026-10-26",
+          "method": "primary_native_web/read_only_http",
+          "evidence_scope": "시행2026-10-02; PDF8~9쪽 제4장4가·마: 1억원 초과 차주 DSR40, 신규예외와 기존부채 산입 구별",
+          "fetch_limits": "네이티브 웹은 메타데이터만 반환; 공식 별표 PDF를 HTTP로 확보. 다른 LTV 조항은 별도 행정지도와 구별하며 이번 팩에서 재판정하지 않음.",
+          "effective_from": "2026-10-02",
+          "local_file": "evidence/v2/bankreg_20261002.pdf",
+          "sha256": "319904a926ec88dbc4836bd792497823817cbb59594ae0307dbaef174023aac7"
+        },
+        {
+          "id": "V2_BANK_RULES",
+          "title": "은행업감독업무시행세칙 별표18: 주택관련 담보대출 등 리스크관리 세부기준",
+          "urls": [
+            "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2200000108789",
+            "https://www.law.go.kr/LSW/flDownload.do?flSeq=166421383&bylClsCd=200201"
+          ],
+          "date": "2026-06-26",
+          "confirmed_as_of": "2026-10-26",
+          "method": "primary_native_web/read_only_http",
+          "evidence_scope": "시행2026-06-30; PDF1쪽 LTV와 보증·보험, 9쪽12나(6)/12-1, 10쪽12-2바, 17~18쪽 표3/주1",
+          "fetch_limits": "동적 본문 대신 공식 별표 PDF 사용. 표3의 전세대출 등 타 항목은 최근 행정지도까지 포괄한 결론으로 사용하지 않음. MCI와 LTV상향용 MI를 구별.",
+          "effective_from": "2026-06-30",
+          "local_file": "evidence/v2/bank_rules_annex18_20260630.pdf",
+          "sha256": "36915ad8c8fa5e756d71479c42976b5e41f40ab193ead497e454d2e43f7575e0"
+        },
+        {
+          "id": "V2_TENANT",
+          "title": "주택임대차보호법 시행령 제10조·제11조",
+          "urls": [
+            "https://law.go.kr/lumLsLinkPop.do?lspttninfSeq=130113"
+          ],
+          "date": "2026-06-23",
+          "confirmed_as_of": "2026-10-26",
+          "method": "primary_native_web/read_only_http",
+          "evidence_scope": "시행2026-07-01; 제10조1항1호 서울 최우선변제액, 제11조1항1호 대상 보증금 상한",
+          "fetch_limits": "현행 신규 담보 사례용. 과거 담보권 설정·계약의 경과 적용은 개별 확인. 공제방수는 이 법정 금액과 별개의 금융상품 규칙.",
+          "effective_from": "2026-07-01"
+        },
+        {
+          "id": "V2_HF_GUARANTEE",
+          "title": "HF 구입자금보증 현행 상품 비교",
+          "urls": [
+            "https://www.hf.go.kr/ko/sub02/sub02_02_06.do"
+          ],
+          "date": null,
+          "confirmed_as_of": "2026-10-26",
+          "method": "primary_native_web/read_only_http",
+          "evidence_scope": "상품소개 표의 일반/생애최초특례/전세사기피해자특례 세 열 및 정책모기지 별도기준 주석",
+          "fetch_limits": "게시·개정일 미표시. 실제 실행 은행의 취급·잔여 보증한도·승인은 확인하지 않음. 표 오른쪽 피해자용 9억원 조건을 생초 열에 오인 적용하지 않음."
+        },
+        {
+          "id": "V2_DIDIM_RULES",
+          "title": "HF 내집마련 디딤돌대출 업무처리기준",
+          "urls": [
+            "https://www.hf.go.kr/cms/etcResourceDown.do?key=%24cms%24M4VwRgDAjA+qmwgJhtGSBsENKQOgAcATAMyA&site=%24cms%24NYeyA"
+          ],
+          "date": "2026-06-18",
+          "confirmed_as_of": "2026-10-26",
+          "method": "primary_native_web/read_only_http",
+          "evidence_scope": "PDF19쪽(인쇄16) DTI;28~31쪽(25~28) LTV·방공제·구입자금보증;34쪽(31) 전입·실거주",
+          "fetch_limits": "확정 업무기준 문서. 현행 적용은 기금 FAQ·2026 HUG 회신과 교차확인. 신생아는 별도 상품 특례가 우선.",
+          "local_file": "evidence/v2/didim_20260618.pdf",
+          "document_date_kind": "개정일",
+          "sha256": "195fb318c0edb9f569a858468c579780e4757ff795063651819b0b65dcd8be21"
+        },
+        {
+          "id": "V2_BOGEUM_RULES",
+          "title": "HF 보금자리론 업무처리기준 및 현행 예상대출조회",
+          "urls": [
+            "https://hf.go.kr/cms/etcResourceDown.do?key=%24cms%24AwRg+sBsHgTJwCsIAsA6ADgEwGZA&site=%24cms%24NYeyA",
+            "https://www.hf.go.kr/ko/sub01/sub01_06_01.do"
+          ],
+          "date": "2026-05-14",
+          "confirmed_as_of": "2026-10-26",
+          "method": "primary_native_web/read_only_http",
+          "evidence_scope": "PDF20~22쪽(16~18) DTI/참고DSR,30~31쪽(26~27) 담보·방공제; 현행 조회 화면 구입자금보증 이용 여부/주택유형",
+          "fetch_limits": "확보한 PDF 합본은5월 개정판으로10월 개정 전체를 반영한 최신 합본임을 확인하지 못함. 아파트 방공제 구별은 현행 조회 안내와 교차확인. 신혼DTI는 main의10/19 시행 FAQ 인계 우선. 조회 양식은 실제 대출 승인 아님.",
+          "local_file": "evidence/v2/bogeum_2026.pdf",
+          "latest_compilation_confirmed": false,
+          "sha256": "c330c643fade22f32cd49590ad12b1c86919da4560875e87b3a7acedef3ec433"
+        },
+        {
+          "id": "V2_NHUF",
+          "title": "주택도시기금 현행 FAQ 및 신생아 특례 디딤돌대출",
+          "urls": [
+            "https://nhuf.molit.go.kr/FP/FP03/FP0301.jsp?searchWord=",
+            "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030801.jsp"
+          ],
+          "date": null,
+          "confirmed_as_of": "2026-10-26",
+          "method": "primary_native_web/read_only_http",
+          "evidence_scope": "일반/신생아 각각의 실거주 예외 FAQ; 신생아 소액임차보증금 공제 FAQ; 상품 대출한도 산식 및 말미 디딤돌 준용",
+          "fetch_limits": "네이티브 웹 타임아웃. 허용된 읽기전용 HTTP로 HTML 이스케이프 답변을 해독하여 직접 확인. 최종개정일 미표시. 과거 접수분 전체 경과규정은 확정하지 않음."
+        },
+        {
+          "id": "V2_HUG",
+          "title": "HUG 기금 담당부서 공식 회신: 방공제·보증 적용",
+          "urls": [
+            "https://www.khug.or.kr/hug/web/cs/el/csel000182.jsp?hmpg_cvap_dcd=04&hmpg_sno=161499",
+            "https://www.khug.or.kr/hug/web/cs/el/csel000182.jsp?hmpg_cvap_dcd=04&hmpg_sno=142863"
+          ],
+          "date": "2026-08-26 / 2025-09-11",
+          "confirmed_as_of": "2026-10-26",
+          "method": "primary_native_web/read_only_http",
+          "evidence_scope": "161499 관리제도팀 답변: 신생아 관리방안 제외, 생초6억/일반3억 보증;142863 답변1: 신생아6억 초과 보증 불가·방공제",
+          "fetch_limits": "민원인의 질문·개인 사례는 정책 근거로 사용하지 않음. 기관 답변만 읽음(CP949 HTTP). 6억 초과 회신은2025년 자료이므로 현행 보증 통합세칙 직접확인 한계를 M08/G10에 표시. 게시글 작성일과 별도 답변일은 구별."
+        },
+        {
+          "id": "HF_MARRIAGE_RELEASE_20260928",
+          "title": "보금자리론, 소득기준 개선해 결혼페널티 없앤다",
+          "urls": [
+            "https://www.hf.go.kr/_custom/hf/_common/board/index/21.do?article.offset=10&articleLimit=10&articleNo=600594&mode=view"
+          ],
+          "date": "2026-09-28",
+          "confirmed_as_of": "2026-10-26",
+          "method": "director_primary_page_read_handoff",
+          "evidence_scope": "신혼가구 소득기준 개선 및10/19 시행",
+          "fetch_limits": "외부 페이지는 video_director가 직접 열람한 입력을 인계받음. 이번 researcher가 중복 검색·직접 재열람했다고 기록하지 않음.",
+          "provenance": {
+            "input_file": "../next_episode_hf_addendum.json",
+            "sha256": "e4a2bbec61ce9a2cc220697c051739b3486ea920f82482c56312a685e6c9de2a",
+            "reviewer": "video_director",
+            "source_status": "primary_pages_read_by_director"
+          }
+        },
+        {
+          "id": "HF_CURRENT_MARRIAGE_FAQ",
+          "title": "보금자리론 자주 하는 질문: 신혼소득특례 6항목",
+          "urls": [
+            "https://corp.hf.go.kr/ko/sub01/sub01_07_01.do"
+          ],
+          "date": null,
+          "confirmed_as_of": "2026-10-26",
+          "method": "director_primary_page_read_handoff",
+          "evidence_scope": "현행 FAQ의 1인 소득·DTI·배우자 확인·주택보유수·실수요자·기준내 합산소득 문답",
+          "fetch_limits": "외부 페이지는 video_director가 직접 열람한 입력을 인계받음. 이번 researcher가 중복 검색·직접 재열람했다고 기록하지 않음.",
+          "provenance": {
+            "input_file": "../next_episode_hf_addendum.json",
+            "sha256": "e4a2bbec61ce9a2cc220697c051739b3486ea920f82482c56312a685e6c9de2a",
+            "reviewer": "video_director",
+            "source_status": "primary_pages_read_by_director"
+          }
+        }
+      ]
+    }
+  },
+  "evidence_files_sha256": {
+    "research/facts.json": "a82c723866c90f0ce93b9fe4d7fcf4d82ab5c1b17fc1092b13bc5a5a336e1659",
+    "research/verified_case_packet.json": "8945667612772beab586c7e9e5f9eba295b8731ce0a4103a63cffe1e3d82b02d",
+    "research/prepared-v1/next_case_independent_arithmetic.json": "d4e4a015a55aef4504330d5dfc2aba8bec9890510e5481cc967aca3a93e5541f",
+    "research/prepared-v1/next_policy_independent_qa/policy_and_case_review.json": "aa6c06e3856b795cfe0155f739d3d4623bfb40603783e1736b9aeb9bf2f5fedc"
+  }
+}

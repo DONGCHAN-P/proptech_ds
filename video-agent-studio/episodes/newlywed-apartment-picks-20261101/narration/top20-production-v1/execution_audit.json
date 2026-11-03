@@ -1,0 +1,31 @@
+{
+  "initial_account_query": {
+    "result": "sandbox_network_EACCES",
+    "generation_calls": 0
+  },
+  "explicit_permission_mode_account_query": {
+    "result": "read_only_checks_passed",
+    "reason": "사용자가 허용한 기존 helper GET 조회를 require_escalated로 1회 실행",
+    "requests": [
+      {
+        "method": "GET",
+        "endpoint": "/v1/user/subscription",
+        "http_status": 200
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v1/voices/4p6UA7mnodF5q7JFFrnW",
+        "http_status": 200
+      },
+      {
+        "method": "GET",
+        "endpoint": "/v1/models",
+        "http_status": 200
+      }
+    ]
+  },
+  "automatic_retry_loop": false,
+  "synthesis_requests": 0,
+  "topup_requests": 0,
+  "account_modification_requests": 0
+}

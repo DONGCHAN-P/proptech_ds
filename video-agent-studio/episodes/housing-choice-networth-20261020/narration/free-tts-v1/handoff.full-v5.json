@@ -1,0 +1,24 @@
+{
+  "task_id": "full-narration-v5",
+  "role": "video_narration",
+  "status": "v5 전체 합성·원문/실측 타임맵 기술 검사 완료; 청취·ASR QA 미수행",
+  "input_revisions": {
+    "script_revision": "script-final-v5",
+    "script_sha256": "babeb15213477f3f6dcb8e8ab958e1a4ccc691c53c1fca6ca9ceae99cc5f269b",
+    "lock": "director/two-episode-production-v1/locked_script.json",
+    "prepared": "narration/free-tts-v1/prepare-v5/prepared.json",
+    "audio_revision": "production-injoon-v5"
+  },
+  "outputs": ["narration/free-tts-v1/final_timing.json", "narration/free-tts-v1/production_result_v5.json", "narration/free-tts-v1/production-injoon-v5/technical_validation.json", "narration/free-tts-v1/prepare-v5/pronunciation_dictionary.json", "narration/free-tts-v1/checks.v5.json"],
+  "affected_scene_ids": ["C01", "C02", "C03", "C04", "C05", "C06", "C07", "C08", "C09", "C10"],
+  "changed_scene_ids": ["C01", "C02", "C03", "C04", "C05", "C06", "C07", "C08", "C09", "C10"],
+  "checks": [
+    {"check": "승인", "result": "Codex+Claude 실제 경로·영수증 SHA·동일 v5 SHA·필수이슈0 확인"},
+    {"check": "음성/시간", "result": "54문단·10장 PCM·1508.9초·WordBoundary2270·표시cue341·클리핑0·13테스트"},
+    {"check": "원문/무음", "result": "원문/읽기표기·구두점 포함 대조, 비겹침·leading/gap/tail·30fps 실측 통과"}
+  ],
+  "open_issue_ids": [],
+  "resolved_issue_ids": ["GATE-SCHEMA-01", "LOCAL-MANIFEST-V5"],
+  "unresolved": "실제 청취·ASR·최종 영상 QA 미수행. 장별 로컬 시간이며 편집자가 브랜드 전역 오프셋 적용. 최종 manifest 경로 오류는 오디오118개 SHA 유지·새TTS0인 로컬 저장 재개로 복구; 실패 기록 보존. 현금0원.",
+  "next_role": "video_director/video_editor/video_qa"
+}

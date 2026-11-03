@@ -1,0 +1,22 @@
+﻿import pathlib,json,hashlib
+R=pathlib.Path.cwd();ep=R/'video-agent-studio/episodes/goyang-changneung-20261015';ed=ep/'editor/shorts-leader-v1';out=ep/'outputs/shorts-leader-v1';p=R/'video/src/changneung-shorts-leader-v1/entry.tsx';s=p.read_text(encoding='utf8').replace('LH 공개 WFS · 2026.10.16 조회\\n실제 계획 필지 · 계획 변경 가능\\n현재 개장·개교를 뜻하지 않음','LH 토지이용계획 · 2026.10.16 조회\\n계획 필지·예정 단지 기준');p.write_text(s,encoding='utf8')
+files=[p,p.with_name('data.json'),ep/'narration/jun-v8-final/segments.json',ep/'narration/jun-v8-final/M009.alignment.json',ep/'outputs/production-v8-jun/audio/M009.wav',R/'config/vertical_video_safe_area.json',*list((ed/'public').glob('*'))]
+(ed/'inputs_manifest.json').write_text(json.dumps({'files':{str(x):hashlib.sha256(x.read_bytes()).hexdigest() for x in files},'voice':'Existing approved ElevenLabs Jun, exact source PCM excerpts; no new synthesis','visual':'Actual LH public WFS source SVG and existing OSM workplace SVG. Derived SVG removes original text; authored labels separately rendered.','script_sha256':'6ffc9fc4819460d4cf6f03fd3b28102e2864402b9965ca14e158230474963982'},ensure_ascii=False,indent=2),encoding='utf8')
+(ed/'placement_guide.md').write_text('''# 창릉 대장 후보 쇼츠 · 로컬 검토본
+
+파일: `outputs/shorts-leader-v1/changneung_leader_short_v1.mp4`  
+제목: 3기 신도시 창릉의 대장단지는 어디가 될까?  
+길이: 45.33초 / 1080×1920 / 30fps
+
+본편 2026-10-19 17:30 KST 공개 이후 게시 검토 권장. 이 쇼츠의 게시 시각·플랫폼·업로드는 승인되지 않았다.
+
+0.00~11.33초 S4 실제 계획 필지와 원흥 생활권·1,024세대 → 11.33~15.23초 S4 공고가격 조건 → 15.23~22.57초 가격수준 후보와 상승률 구분 → 22.57~33.17초 S5 공고가·입주 예정 → 33.17~42.32초 S1 현재 상암 연결 → 마지막 3초 본편 CTA. 실제 컷별 수치는 clip_plan.json 기준.
+
+레이어: 전체 화면 실제 계획도 장식(저불투명도·블러·navy gradient), 고정 ivory 정보 카드, 별도 지도 강조/가격/의미 카드, 원문 의미 단위 자막, 조건·출처. 카메라 고정. 계획 필지 강조가 첫 0.8초에 나타나고 S1 선은 실제 노선이 아닌 위치 비교선이다. 자료 유형은 실제 계획도·기존 경로 조회 결과이며 AI 자료는 사용하지 않았다.
+
+음성: 기존 Jun M009의 지정 8개 유닛. 원문 유지, 속도 변경 없음, 유닛 양쪽 35ms 핸들 및 구절 사이 150ms 무음. 마지막 CTA는 화면 문구만 사용. 음악 없음.
+
+재현: editor/shorts-leader-v1/render_job.json을 analysis/video_task_runner.py에 전달. 이어 verify.py로 MP4 제목 메타데이터·기술검사·프레임·UI 모형 생성. prepare.py는 원본 SVG를 다시 복사하므로 재실행 시 polish.py도 순서대로 적용해야 한다. 최종 입력은 inputs_manifest.json에 고정되어 있다.
+
+이 결과는 로컬 검토용이다. 원본 대본·음성 승인과 새 발췌 컷의 승인 상태는 별개다. 실제 청취·연속 재생은 이 편집 담당이 수행하지 않았다.
+''',encoding='utf8')

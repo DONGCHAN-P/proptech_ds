@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C04P05",
+  "scene_id": "C04",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:05:57.833Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "d81d07772d9d190bde89abf38622d8ac0b2669af7d42340be4a736ad2c461be1",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "월 삼십만 원과 오만 원은 설명을 위한 비용 묶음이며, 매매와 임차의 비용 가정 차이는 이십오만 원입니다. 현실에서는 보유세와 수선, 보증료, 계약 갱신비용을 각각 확인해야 합니다. 같은 관리비를 양쪽에 공통으로 두고, 실제 부담이 다른 항목을 구분하면 매달 투자할 수 있는 돈을 더 정확하게 계산할 수 있습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 175,
+  "characters": 175,
+  "actual_credits": 70,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:05:40.002Z",
+  "local_shadow_remaining_before": 21297,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "hmmnrtyNOyKIDDX9wBmq",
+    "x-request-id": null,
+    "character-cost": "70",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:05:57 GMT"
+  },
+  "pcm_samples": 924336,
+  "pcm_duration_s": 20.96,
+  "provider_last_spoken_end_s": 21.04,
+  "artifact_sha256": {
+    "paragraphs/C04P05/audio.mp3": "53c31fb326ea7dc26231b67d6b35230921502e609711375ceeec68db117655d5",
+    "paragraphs/C04P05/audio.wav": "f56b333e213fb9460e52ed6694c24849ac14c5af8c9e113b9ce5dd10c63122be",
+    "paragraphs/C04P05/alignment.json": "161204cb5dea40820aee12d1cd98911d98b35eff0a69b8e888ccff09898f5cd6",
+    "paragraphs/C04P05/normalized_alignment.json": "161204cb5dea40820aee12d1cd98911d98b35eff0a69b8e888ccff09898f5cd6"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21227,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:06:02.751Z"
+}

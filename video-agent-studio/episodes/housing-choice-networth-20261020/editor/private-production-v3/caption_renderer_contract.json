@@ -1,0 +1,35 @@
+{
+  "revision": "caption-v7-renderer-v1",
+  "input_timing": "narration/free-tts-v1/caption-v7/final_timing.json",
+  "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+  "canvas": {"width": 1920, "height": 1080, "fps": 30},
+  "font": {"family": "Pretendard", "weight": 400, "size_px": 40, "line_height_px": 50},
+  "caption_text_rect": {"x": 140, "y": 876, "width": 1640, "height": 124},
+  "caption_background_rect": {"x": 96, "y": 876, "width": 1728, "height": 124},
+  "max_lines": 2,
+  "safe_max_line_width_px": 1600,
+  "recommended_hangul_graphemes_per_line": [32, 36],
+  "approximate_fullwidth_hangul_upper_bound_per_line": 40,
+  "character_count_is_only_a_heuristic": true,
+  "final_fit_gate": "actual local Pretendard metrics and rendered glyph Range BBox, max two explicit lines",
+  "cue_contract": {
+    "text": "verbatim approved display text; preserve text/order/numbers/units",
+    "display_lines": "array of one or two strings; whitespace-normalized joined text must equal cue.text",
+    "start_s_end_s": "measured native WordBoundary times; no character-ratio timing",
+    "segmentation": "complete sentence/clause/meaning phrase; no standalone orphan predicate or stranded unit",
+    "long_phrase": "rebalance adjacent native-boundary cues or use explicit second line; do not shrink font or omit words"
+  },
+  "render_policy": {
+    "revision": "private-production-v3",
+    "caption_only": true,
+    "preserve_visual_T_anchors_scenes_choreography_audio_and_carve": true,
+    "explicit_newline_rendering": "nested cue-text span with white-space:pre; no browser automatic wrapping",
+    "audio_reprocessing": false,
+    "body_seconds": 1510.2666666666664,
+    "film_seconds": 1525.2666666666664,
+    "render_gate": "completed narration timing + main authorization lock + independent current source QA",
+    "v1_v2_readonly": true,
+    "new_paid_calls": 0
+  },
+  "delivery": "No direct peer-message tool is available; main forwards this contract path to narrator Gibbs."
+}

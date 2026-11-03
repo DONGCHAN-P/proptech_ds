@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C04P01",
+  "scene_id": "C04",
+  "status": "complete",
+  "started_at_utc": "2026-10-27T15:49:39.064Z",
+  "authorization_sha256": "ff4a4b0a3b4551435ce1f525f96d01c98c3d01080dec54ec3b96c869a82a0c8e",
+  "text_sha256": "a8cbde2b783a67f56183e27334b382c221886ddaf587a1b1ef9a0f767b0de465",
+  "phonetic_manifest_sha256": "5290eff5c5724c807bc4062feab7be5889b8decea1316984e48f25b1fe32b9f5",
+  "request": {
+    "text": "자, 현금 일억 원부터 보겠습니다. 준비금 이천만 원을 빼면 집값에 넣을 돈이 팔천만 원 남습니다.\n\n엘티브이 칠십퍼센트라면 내 돈이 집값의 삼십퍼센트는 있어야 하잖아요. 그래서 팔천만 원을 삼십퍼센트로 나누면, 계산상으로는 약 이억 육천육백만 원대가 나옵니다. 오늘은 조금 내려서 이억 육천육백만 원짜리 집을 예로 들게요.\n\n내 돈 팔천만 원에 대출 일억 팔천육백만 원을 더하면 집값이 맞습니다. 이 대출의 월 원리금은 약 구십사만 원입니다. 물론 이 돈 말고 관리비, 보유세, 생활비도 따로 나가겠죠.\n\n여기서 내가 원하는 지역에 이 가격대의 아파트가 없다면, 그건 계산이 틀렸다는 뜻이 아닙니다. 찾아보는 지역의 범위를 넓히거나 면적을 줄여볼지, 자금을 더 모을지, 다른 주거 선택을 할지 판단할 기준이 생긴 거예요.\n\n다음은 현금 이억 원입니다. 준비금 삼천만 원을 빼면 집에 넣을 돈은 일억 칠천만 원입니다. 같은 방식으로 계산하면 약 오억 육천육백만 원짜리 집을 볼 수 있습니다.\n\n내 돈 일억 칠천만 원에 대출 삼억 구천육백만 원을 더하는 구조입니다. 오늘 가정한 개인별 대출한도 사억 원 안에도 들어오죠. 다만 월 원리금이 약 이백일만 원으로 올라갑니다.\n\n현금 일억 원을 더 모으니까 볼 수 있는 집값이 많이 올라갔죠. 그런데 그 차이의 상당 부분은 대출이 더 늘어나서 생긴 겁니다. 이 부분을 빼고 집값만 보면, 자산이 갑자기 훨씬 커진 것처럼 착각하기 쉽습니다.\n\n그리고 현금 이억 원이 있어도 내 소득으로 대출이 이억 원까지만 가능하다면, 같은 준비금을 남겼을 때 집값 예산은 삼억 칠천만 원입니다. 내 통장 잔액만으로 살 수 있는 집을 확정할 수 없는 이유가 바로 이겁니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 838,
+  "characters": 838,
+  "actual_credits": 335,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 21941,
+    "character_limit": 40000,
+    "included_remaining": 18059,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-27T15:49:39.059Z",
+  "local_shadow_remaining_before": 18059,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "cZKQLnPoKnjLr2mCuXNJ",
+    "x-request-id": null,
+    "character-cost": "335",
+    "content-type": "application/json",
+    "date": "Tue, 27 Oct 2026 15:49:39 GMT"
+  },
+  "pcm_samples": 4318272,
+  "pcm_duration_s": 97.92,
+  "provider_last_spoken_end_s": 98,
+  "artifact_sha256": {
+    "paragraphs/C04P01/audio.mp3": "0d640021f9f21813c1c25e70fa1ed0f0b7cd27b950b20d322c40e46a24871640",
+    "paragraphs/C04P01/audio.wav": "58d74b1347b65d5347ba9b17f86b16ea5d54c45003e05ef736cbea179fb7b60e",
+    "paragraphs/C04P01/alignment.json": "95e4e566253e677531ab69ed4803a590544617ebefa638e68acd040d5c187fde",
+    "paragraphs/C04P01/normalized_alignment.json": "95e4e566253e677531ab69ed4803a590544617ebefa638e68acd040d5c187fde"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 17724,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-27T15:50:04.841Z"
+}

@@ -52,6 +52,9 @@ HANDLE = os.environ.get("SNS_HANDLE", "@proptech_ds")
 LOGO = ROOT / "assets" / "brand" / "logo.png"
 MARK = 64            # 브랜드 마크 한 변
 WORDMARK = os.environ.get("SNS_WORDMARK", HANDLE)
+# 유튜브 채널명. 인스타 핸들(영문)과 달리 한글이고, 롱폼 테두리에는
+# 이쪽을 박는다 — 유튜브에서 핸들은 보는 사람에게 의미가 없다.
+CHANNEL = os.environ.get("CHANNEL_NAME", "데이터로보는부동산")
 SERIES = "이번 주 실거래"
 
 

@@ -1,0 +1,61 @@
+{
+  "scene_id": "S18",
+  "chapter": 5,
+  "message": "3억에서 걸리는 한도",
+  "narration_text": "현금 3억 원으로 가보겠습니다. 준비금 4천만 원을 빼면 집값에 넣을 돈은 2억 6천만 원입니다.\n\nLTV만 생각하면 더 비싼 집도 계산에 나오겠지만, 오늘 이 사람은 대출한도가 4억 원이죠. 그래서 2억 6천만 원에 4억 원을 더한 6억 6천만 원이 예시 집값이 됩니다. 이때부터는 LTV보다 개인별 대출한도가 먼저 걸리는 겁니다.",
+  "paragraph_ids": [
+    "P042",
+    "P043"
+  ],
+  "claim_ids": [
+    "DOC",
+    "CALC"
+  ],
+  "material_type": "대출 한도에 닿는 막대",
+  "asset_ids": [
+    "M18"
+  ],
+  "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "audio_revision": null,
+  "start": null,
+  "end": null,
+  "timing_basis": "UNLOCKED: awaiting actual Jun alignment",
+  "beats": [
+    {
+      "anchor": "2억 6천만 원",
+      "action": "주택 투입금 2.6억",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "대출한도가 4억 원",
+      "action": "담보상 한도와 개인 한도 4억을 비교",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "6억 6천만 원",
+      "action": "2.6억+4억=6.6억",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "개인별 대출한도가 먼저",
+      "action": "개인 한도 게이트 선택",
+      "start": null,
+      "end": null
+    }
+  ],
+  "status": "designed_not_rendered",
+  "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+  "fallback": "대출 상한 4억을 유지하고 자기자금만 늘림",
+  "template_status": "representative_authored",
+  "template": "S18_S19",
+  "beat_ids": [
+    "S18.b01",
+    "S18.b02",
+    "S18.b03",
+    "S18.b04"
+  ],
+  "preview_seconds": null
+}

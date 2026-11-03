@@ -1,0 +1,3872 @@
+{
+  "script_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\script-final-v2\\script_v2.md",
+  "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "voice": {
+    "name": "ko-KR-InJoonNeural",
+    "rate": "-5%",
+    "pitch": "+0Hz",
+    "provider": "edge-tts",
+    "version": "7.3.1"
+  },
+  "paragraph_voice_overrides": {
+    "S014": {
+      "name": "ko-KR-InJoonNeural",
+      "rate": "-15%",
+      "pitch": "+0Hz",
+      "provider": "edge-tts",
+      "version": "7.3.1"
+    },
+    "S019": {
+      "name": "ko-KR-InJoonNeural",
+      "rate": "-15%",
+      "pitch": "+0Hz",
+      "provider": "edge-tts",
+      "version": "7.3.1"
+    },
+    "S024": {
+      "name": "ko-KR-InJoonNeural",
+      "rate": "-15%",
+      "pitch": "+0Hz",
+      "provider": "edge-tts",
+      "version": "7.3.1"
+    },
+    "S030": {
+      "name": "ko-KR-InJoonNeural",
+      "rate": "-15%",
+      "pitch": "+0Hz",
+      "provider": "edge-tts",
+      "version": "7.3.1"
+    }
+  },
+  "audio_revision": "production-injoon-v3",
+  "previous_audio_revision": "production-injoon-v2",
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "출발점",
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_01.wav",
+      "total_seconds": 60.833333333333336,
+      "pcm_frames": 1460000,
+      "last_speech_end_s": 59.605249,
+      "last_speech_end_basis": "max(last provider word end, last PCM sample >= -60dBFS); documented unlistened estimate",
+      "last_native_word_end_s": 59.605249,
+      "last_pcm_signal_end_s": 59.57958333333333,
+      "leading_silence_s": 0.6,
+      "paragraph_gap_s": 0.35,
+      "tail_from_last_spoken_s": 1.228084333333335,
+      "cues": [
+        {
+          "id": "C01_S001Q001",
+          "scene_id": "S001",
+          "paragraph": 1,
+          "text": "보유자금이 2억 5천만 원이라면, 어느 가격의 집까지 선택할 수 있을까요?",
+          "spoken_text": "보유자금이 이억 오천만 원이라면, 어느 가격의 집까지 선택할 수 있을까요?",
+          "display_lines": [
+            "보유자금이 2억 5천만 원이라면,",
+            "어느 가격의 집까지 선택할 수 있을까요?"
+          ],
+          "start_s": 0.728958,
+          "end_s": 6.426333,
+          "native_start_s": 0.728958,
+          "native_end_s": 6.426333,
+          "source_start": 0,
+          "source_end": 41,
+          "spoken_start": 0,
+          "spoken_end": 41,
+          "first_word_index": 0,
+          "last_word_index": 9,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C01_S001Q002",
+          "scene_id": "S001",
+          "paragraph": 1,
+          "text": "수도권·규제지역의 15억 원 이하 집에 적용되는 주택구입대출 총액상한 6억 원을 더하면 8억 5천만 원입니다.",
+          "spoken_text": "수도권·규제지역의 십오억 원 이하 집에 적용되는 주택구입대출 총액상한 육억 원을 더하면 팔억 오천만 원입니다.",
+          "display_lines": [
+            "수도권·규제지역의 15억 원 이하 집에 적용되는 주택구입대출",
+            "총액상한 6억 원을 더하면 8억 5천만 원입니다."
+          ],
+          "start_s": 7.428958,
+          "end_s": 15.376333,
+          "native_start_s": 7.428958,
+          "native_end_s": 15.376333,
+          "source_start": 42,
+          "source_end": 103,
+          "spoken_start": 42,
+          "spoken_end": 103,
+          "first_word_index": 10,
+          "last_word_index": 24,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C01_S001Q003",
+          "scene_id": "S001",
+          "paragraph": 1,
+          "text": "실제 범위는 담보, 소득, 거래비용과 매달 남길 돈을 반영해 구하겠습니다.",
+          "spoken_text": "실제 범위는 담보, 소득, 거래비용과 매달 남길 돈을 반영해 구하겠습니다.",
+          "display_lines": [
+            "실제 범위는 담보, 소득,",
+            "거래비용과 매달 남길 돈을 반영해 구하겠습니다."
+          ],
+          "start_s": 16.426333,
+          "end_s": 23.018416,
+          "native_start_s": 16.426333,
+          "native_end_s": 23.018416,
+          "source_start": 104,
+          "source_end": 145,
+          "spoken_start": 104,
+          "spoken_end": 145,
+          "first_word_index": 25,
+          "last_word_index": 34,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C01_S002Q001",
+          "scene_id": "S002",
+          "paragraph": 2,
+          "text": "지난 주거 선택 편의 조건은 보유자금 2억 5천만 원과 월 300만 원이었습니다.",
+          "spoken_text": "지난 주거 선택 편의 조건은 보유자금 이억 오천만 원과 월 삼백만 원이었습니다.",
+          "display_lines": [
+            "지난 주거 선택 편의 조건은 보유자금",
+            "2억 5천만 원과 월 300만 원이었습니다."
+          ],
+          "start_s": 24.547333,
+          "end_s": 30.613083,
+          "native_start_s": 24.547333,
+          "native_end_s": 30.613083,
+          "source_start": 0,
+          "source_end": 45,
+          "spoken_start": 0,
+          "spoken_end": 44,
+          "first_word_index": 0,
+          "last_word_index": 11,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C01_S002Q002",
+          "scene_id": "S002",
+          "paragraph": 2,
+          "text": "이번에는 그 돈으로 집을 살 때의 가격 범위를 계산합니다.",
+          "spoken_text": "이번에는 그 돈으로 집을 살 때의 가격 범위를 계산합니다.",
+          "display_lines": [
+            "이번에는 그 돈으로 집을 살 때의 가격 범위를 계산합니다."
+          ],
+          "start_s": 31.641375,
+          "end_s": 35.838749,
+          "native_start_s": 31.641375,
+          "native_end_s": 35.838749,
+          "source_start": 46,
+          "source_end": 78,
+          "spoken_start": 45,
+          "spoken_end": 77,
+          "first_word_index": 12,
+          "last_word_index": 20,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C01_S002Q003",
+          "scene_id": "S002",
+          "paragraph": 2,
+          "text": "주거 방식의 선택을 구체적인 매수 예산으로 연결하겠습니다.",
+          "spoken_text": "주거 방식의 선택을 구체적인 매수 예산으로 연결하겠습니다.",
+          "display_lines": [
+            "주거 방식의 선택을 구체적인 매수 예산으로 연결하겠습니다."
+          ],
+          "start_s": 36.906541,
+          "end_s": 41.261791,
+          "native_start_s": 36.906541,
+          "native_end_s": 41.261791,
+          "source_start": 79,
+          "source_end": 111,
+          "spoken_start": 78,
+          "spoken_end": 110,
+          "first_word_index": 21,
+          "last_word_index": 27,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C01_S003Q001",
+          "scene_id": "S003",
+          "paragraph": 3,
+          "text": "앞의 6억 원은 해당 지역·가격 구간에서 여러 심사를 함께 통과할 때 적용하는 총액상한입니다.",
+          "spoken_text": "앞의 육억 원은 해당 지역·가격 구간에서 여러 심사를 함께 통과할 때 적용하는 총액상한입니다.",
+          "display_lines": [
+            "앞의 6억 원은 해당 지역·가격 구간에서 여러 심사를 함께",
+            "통과할 때 적용하는 총액상한입니다."
+          ],
+          "start_s": 42.802625,
+          "end_s": 50.592124,
+          "native_start_s": 42.802625,
+          "native_end_s": 50.592124,
+          "source_start": 0,
+          "source_end": 52,
+          "spoken_start": 0,
+          "spoken_end": 52,
+          "first_word_index": 0,
+          "last_word_index": 13,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C01_S003Q002",
+          "scene_id": "S003",
+          "paragraph": 3,
+          "text": "2026년 10월 26일 기준으로, 현금과 은행 한도, 생활을 유지할 월 예산을 맞춰 보겠습니다.",
+          "spoken_text": "이천이십육년 시월 이십육일 기준으로, 현금과 은행 한도, 생활을 유지할 월 예산을 맞춰 보겠습니다.",
+          "display_lines": [
+            "2026년 10월 26일 기준으로, 현금과 은행 한도,",
+            "생활을 유지할 월 예산을 맞춰 보겠습니다."
+          ],
+          "start_s": 51.64475,
+          "end_s": 59.605249,
+          "native_start_s": 51.64475,
+          "native_end_s": 59.605249,
+          "source_start": 53,
+          "source_end": 107,
+          "spoken_start": 53,
+          "spoken_end": 108,
+          "first_word_index": 14,
+          "last_word_index": 26,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        }
+      ],
+      "paragraphs": [
+        {
+          "paragraph": 1,
+          "offset_s": 0.6,
+          "measured_seconds": 23.496,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S001\\audio.wav",
+          "last_native_word_end_s": 23.018416000000002,
+          "last_pcm_signal_end_s": 23.013833333333334
+        },
+        {
+          "paragraph": 2,
+          "offset_s": 24.446,
+          "measured_seconds": 17.904,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S002\\audio.wav",
+          "last_native_word_end_s": 41.261791,
+          "last_pcm_signal_end_s": 41.19741666666667
+        },
+        {
+          "paragraph": 3,
+          "offset_s": 42.7,
+          "measured_seconds": 17.952,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S003\\audio.wav",
+          "last_native_word_end_s": 59.605249,
+          "last_pcm_signal_end_s": 59.57958333333333
+        }
+      ],
+      "audio_sha256": "537b3531b503a7d8da56aaf34f4a272f52ef95e4ea26033d96cde4e4b47c9c78",
+      "listening": "not_performed"
+    },
+    {
+      "chapter": 2,
+      "title": "보유자금",
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_02.wav",
+      "total_seconds": 60.333333333333336,
+      "pcm_frames": 1448000,
+      "last_speech_end_s": 59.111874,
+      "last_speech_end_basis": "max(last provider word end, last PCM sample >= -60dBFS); documented unlistened estimate",
+      "last_native_word_end_s": 59.111874,
+      "last_pcm_signal_end_s": 59.08708333333333,
+      "leading_silence_s": 3.5,
+      "paragraph_gap_s": 0.35,
+      "tail_from_last_spoken_s": 1.2214593333333355,
+      "cues": [
+        {
+          "id": "C02_S004Q001",
+          "scene_id": "S004",
+          "paragraph": 4,
+          "text": "보유자금은 잔금일에 마련할 수 있는 돈입니다.",
+          "spoken_text": "보유자금은 잔금일에 마련할 수 있는 돈입니다.",
+          "display_lines": [
+            "보유자금은 잔금일에 마련할 수 있는 돈입니다."
+          ],
+          "start_s": 3.602625,
+          "end_s": 7.0895,
+          "native_start_s": 3.602625,
+          "native_end_s": 7.0895,
+          "source_start": 0,
+          "source_end": 25,
+          "spoken_start": 0,
+          "spoken_end": 25,
+          "first_word_index": 0,
+          "last_word_index": 5,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C02_S004Q002",
+          "scene_id": "S004",
+          "paragraph": 4,
+          "text": "주식이나 돌려받을 전세보증금은 현금화 날짜까지 맞춰야 합니다.",
+          "spoken_text": "주식이나 돌려받을 전세보증금은 현금화 날짜까지 맞춰야 합니다.",
+          "display_lines": [
+            "주식이나 돌려받을 전세보증금은 현금화 날짜까지 맞춰야 합니다."
+          ],
+          "start_s": 8.184208,
+          "end_s": 13.06575,
+          "native_start_s": 8.184208,
+          "native_end_s": 13.06575,
+          "source_start": 26,
+          "source_end": 60,
+          "spoken_start": 26,
+          "spoken_end": 60,
+          "first_word_index": 6,
+          "last_word_index": 12,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C02_S004Q003",
+          "scene_id": "S004",
+          "paragraph": 4,
+          "text": "여기서는 2억 5천만 원을 준비하고, 이 중 3천만 원은 비상 상황에 쓸 예비자금으로 남깁니다.",
+          "spoken_text": "여기서는 이억 오천만 원을 준비하고, 이 중 삼천만 원은 비상 상황에 쓸 예비자금으로 남깁니다.",
+          "display_lines": [
+            "여기서는 2억 5천만 원을 준비하고,",
+            "이 중 3천만 원은 비상 상황에 쓸 예비자금으로 남깁니다."
+          ],
+          "start_s": 14.05,
+          "end_s": 21.431541,
+          "native_start_s": 14.05,
+          "native_end_s": 21.431541,
+          "source_start": 61,
+          "source_end": 114,
+          "spoken_start": 61,
+          "spoken_end": 114,
+          "first_word_index": 13,
+          "last_word_index": 26,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C02_S005Q001",
+          "scene_id": "S005",
+          "paragraph": 5,
+          "text": "집을 사는 데 배정할 돈은 2억 2천만 원입니다.",
+          "spoken_text": "집을 사는 데 배정할 돈은 이억 이천만 원입니다.",
+          "display_lines": [
+            "집을 사는 데 배정할 돈은 2억 2천만 원입니다."
+          ],
+          "start_s": 22.934,
+          "end_s": 26.736624,
+          "native_start_s": 22.934,
+          "native_end_s": 26.736624,
+          "source_start": 0,
+          "source_end": 27,
+          "spoken_start": 0,
+          "spoken_end": 27,
+          "first_word_index": 0,
+          "last_word_index": 7,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C02_S005Q002",
+          "scene_id": "S005",
+          "paragraph": 5,
+          "text": "세금과 중개보수, 등기 관련 비용을 떼면 집값에 넣는 자기자금이 나옵니다.",
+          "spoken_text": "세금과 중개보수, 등기 관련 비용을 떼면 집값에 넣는 자기자금이 나옵니다.",
+          "display_lines": [
+            "세금과 중개보수, 등기 관련 비용을 떼면",
+            "집값에 넣는 자기자금이 나옵니다."
+          ],
+          "start_s": 27.857666,
+          "end_s": 34.134,
+          "native_start_s": 27.857666,
+          "native_end_s": 34.134,
+          "source_start": 28,
+          "source_end": 69,
+          "spoken_start": 28,
+          "spoken_end": 69,
+          "first_word_index": 8,
+          "last_word_index": 17,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C02_S005Q003",
+          "scene_id": "S005",
+          "paragraph": 5,
+          "text": "예비자금은 구입 후 통장에 남고, 거래비용은 구입 과정에서 지급합니다.",
+          "spoken_text": "예비자금은 구입 후 통장에 남고, 거래비용은 구입 과정에서 지급합니다.",
+          "display_lines": [
+            "예비자금은 구입 후 통장에 남고,",
+            "거래비용은 구입 과정에서 지급합니다."
+          ],
+          "start_s": 35.187958,
+          "end_s": 41.201125,
+          "native_start_s": 35.187958,
+          "native_end_s": 41.201125,
+          "source_start": 70,
+          "source_end": 109,
+          "spoken_start": 70,
+          "spoken_end": 109,
+          "first_word_index": 18,
+          "last_word_index": 26,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C02_S006Q001",
+          "scene_id": "S006",
+          "paragraph": 6,
+          "text": "집값은 자기자금과 대출을 합쳐 충당합니다.",
+          "spoken_text": "집값은 자기자금과 대출을 합쳐 충당합니다.",
+          "display_lines": [
+            "집값은 자기자금과 대출을 합쳐 충당합니다."
+          ],
+          "start_s": 42.7,
+          "end_s": 46.357916,
+          "native_start_s": 42.7,
+          "native_end_s": 46.357916,
+          "source_start": 0,
+          "source_end": 23,
+          "spoken_start": 0,
+          "spoken_end": 23,
+          "first_word_index": 0,
+          "last_word_index": 4,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C02_S006Q002",
+          "scene_id": "S006",
+          "paragraph": 6,
+          "text": "집값이 바뀌면 거래비용도 다시 계산합니다.",
+          "spoken_text": "집값이 바뀌면 거래비용도 다시 계산합니다.",
+          "display_lines": [
+            "집값이 바뀌면 거래비용도 다시 계산합니다."
+          ],
+          "start_s": 47.4,
+          "end_s": 51.149999,
+          "native_start_s": 47.4,
+          "native_end_s": 51.149999,
+          "source_start": 24,
+          "source_end": 47,
+          "spoken_start": 24,
+          "spoken_end": 47,
+          "first_word_index": 5,
+          "last_word_index": 9,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C02_S006Q003",
+          "scene_id": "S006",
+          "paragraph": 6,
+          "text": "이미 낸 계약금도 같은 자기자금에 포함해, 계약금과 잔금을 하나의 자금표로 연결합니다.",
+          "spoken_text": "이미 낸 계약금도 같은 자기자금에 포함해, 계약금과 잔금을 하나의 자금표로 연결합니다.",
+          "display_lines": [
+            "이미 낸 계약금도 같은 자기자금에 포함해,",
+            "계약금과 잔금을 하나의 자금표로 연결합니다."
+          ],
+          "start_s": 52.151333,
+          "end_s": 59.111874,
+          "native_start_s": 52.151333,
+          "native_end_s": 59.111874,
+          "source_start": 48,
+          "source_end": 96,
+          "spoken_start": 48,
+          "spoken_end": 96,
+          "first_word_index": 10,
+          "last_word_index": 20,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        }
+      ],
+      "paragraphs": [
+        {
+          "paragraph": 4,
+          "offset_s": 3.5,
+          "measured_seconds": 18.984,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S004\\audio.wav",
+          "last_native_word_end_s": 21.431541,
+          "last_pcm_signal_end_s": 21.395458333333334
+        },
+        {
+          "paragraph": 5,
+          "offset_s": 22.834,
+          "measured_seconds": 19.416,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S005\\audio.wav",
+          "last_native_word_end_s": 41.201125000000005,
+          "last_pcm_signal_end_s": 41.183791666666664
+        },
+        {
+          "paragraph": 6,
+          "offset_s": 42.6,
+          "measured_seconds": 17.568,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S006\\audio.wav",
+          "last_native_word_end_s": 59.111874,
+          "last_pcm_signal_end_s": 59.08708333333334
+        }
+      ],
+      "audio_sha256": "a01eba931f99f766d3feb6bc32e9407db2606924b610616f3dd9957f553019dd",
+      "listening": "not_performed"
+    },
+    {
+      "chapter": 3,
+      "title": "담보 한도",
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_03.wav",
+      "total_seconds": 90.93333333333334,
+      "pcm_frames": 2182400,
+      "last_speech_end_s": 89.70566600000001,
+      "last_speech_end_basis": "max(last provider word end, last PCM sample >= -60dBFS); documented unlistened estimate",
+      "last_native_word_end_s": 89.70566600000001,
+      "last_pcm_signal_end_s": 89.629375,
+      "leading_silence_s": 3.5,
+      "paragraph_gap_s": 0.35,
+      "tail_from_last_spoken_s": 1.2276673333333292,
+      "cues": [
+        {
+          "id": "C03_S007Q001",
+          "scene_id": "S007",
+          "paragraph": 7,
+          "text": "LTV는 은행이 인정한 집의 담보가치에서 빌릴 수 있는 금액의 비율입니다.",
+          "spoken_text": "엘티브이는 은행이 인정한 집의 담보가치에서 빌릴 수 있는 금액의 비율입니다.",
+          "display_lines": [
+            "LTV는 은행이 인정한 집의 담보가치에서",
+            "빌릴 수 있는 금액의 비율입니다."
+          ],
+          "start_s": 3.6,
+          "end_s": 8.810541,
+          "native_start_s": 3.6,
+          "native_end_s": 8.810541,
+          "source_start": 0,
+          "source_end": 41,
+          "spoken_start": 0,
+          "spoken_end": 42,
+          "first_word_index": 0,
+          "last_word_index": 9,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C03_S007Q002",
+          "scene_id": "S007",
+          "paragraph": 7,
+          "text": "매매가격과 담보평가액은 각각 확인합니다.",
+          "spoken_text": "매매가격과 담보평가액은 각각 확인합니다.",
+          "display_lines": [
+            "매매가격과 담보평가액은 각각 확인합니다."
+          ],
+          "start_s": 9.867125,
+          "end_s": 13.459207,
+          "native_start_s": 9.867125,
+          "native_end_s": 13.459207,
+          "source_start": 42,
+          "source_end": 64,
+          "spoken_start": 43,
+          "spoken_end": 65,
+          "first_word_index": 10,
+          "last_word_index": 13,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C03_S007Q003",
+          "scene_id": "S007",
+          "paragraph": 7,
+          "text": "가구 A는 서울 규제지역의 전용면적 84㎡ 아파트 한 채를 사며, 두 금액이 같다고 가정합니다.",
+          "spoken_text": "가구 에이는 서울 규제지역의 전용면적 팔십사 제곱미터 아파트 한 채를 사며, 두 금액이 같다고 가정합니다.",
+          "display_lines": [
+            "가구 A는 서울 규제지역의 전용면적 84㎡ 아파트 한 채를 사며,",
+            "두 금액이 같다고 가정합니다."
+          ],
+          "start_s": 14.526333,
+          "end_s": 22.815791,
+          "native_start_s": 14.526333,
+          "native_end_s": 22.815791,
+          "source_start": 65,
+          "source_end": 118,
+          "spoken_start": 66,
+          "spoken_end": 125,
+          "first_word_index": 14,
+          "last_word_index": 28,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C03_S008Q001",
+          "scene_id": "S008",
+          "paragraph": 8,
+          "text": "일반 무주택자의 LTV는 이 지역에서 40%, 생애최초 요건을 충족하면 70%입니다.",
+          "spoken_text": "일반 무주택자의 엘티브이는 이 지역에서 사십 퍼센트, 생애최초 요건을 충족하면 칠십 퍼센트입니다.",
+          "display_lines": [
+            "일반 무주택자의 LTV는 이 지역에서 40%,",
+            "생애최초 요건을 충족하면 70%입니다."
+          ],
+          "start_s": 24.35,
+          "end_s": 32.613166,
+          "native_start_s": 24.35,
+          "native_end_s": 32.613166,
+          "source_start": 0,
+          "source_end": 47,
+          "spoken_start": 0,
+          "spoken_end": 54,
+          "first_word_index": 0,
+          "last_word_index": 11,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C03_S008Q002",
+          "scene_id": "S008",
+          "paragraph": 8,
+          "text": "연소득 9천만 원 이하, 집값 8억 원 이하, 무주택 요건을 모두 갖춘 서민실수요자는 60% 예외를 확인할 수 있습니다.",
+          "spoken_text": "연소득 구천만 원 이하, 집값 팔억 원 이하, 무주택 요건을 모두 갖춘 서민실수요자는 육십 퍼센트 예외를 확인할 수 있습니다.",
+          "display_lines": [
+            "연소득 9천만 원 이하, 집값 8억 원 이하, 무주택 요건을",
+            "모두 갖춘 서민실수요자는 60% 예외를 확인할 수 있습니다."
+          ],
+          "start_s": 33.709208,
+          "end_s": 43.538166,
+          "native_start_s": 33.709208,
+          "native_end_s": 43.538166,
+          "source_start": 48,
+          "source_end": 115,
+          "spoken_start": 55,
+          "spoken_end": 125,
+          "first_word_index": 12,
+          "last_word_index": 30,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C03_S008Q003",
+          "scene_id": "S008",
+          "paragraph": 8,
+          "text": "A는 은행 인정소득과 가구소득이 각각 연 1억 원입니다.",
+          "spoken_text": "에이는 은행 인정소득과 가구소득이 각각 연 일억 원입니다.",
+          "display_lines": [
+            "A는 은행 인정소득과 가구소득이 각각 연 1억 원입니다."
+          ],
+          "start_s": 44.498666,
+          "end_s": 49.130291,
+          "native_start_s": 44.498666,
+          "native_end_s": 49.130291,
+          "source_start": 116,
+          "source_end": 147,
+          "spoken_start": 126,
+          "spoken_end": 158,
+          "first_word_index": 31,
+          "last_word_index": 38,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C03_S009Q001",
+          "scene_id": "S009",
+          "paragraph": 9,
+          "text": "담보 한도에는 먼저 갚을 권리와 임차인 보호를 위한 공제도 반영합니다.",
+          "spoken_text": "담보 한도에는 먼저 갚을 권리와 임차인 보호를 위한 공제도 반영합니다.",
+          "display_lines": [
+            "담보 한도에는 먼저 갚을 권리와 임차인",
+            "보호를 위한 공제도 반영합니다."
+          ],
+          "start_s": 50.645333,
+          "end_s": 56.132166,
+          "native_start_s": 50.645333,
+          "native_end_s": 56.132166,
+          "source_start": 0,
+          "source_end": 39,
+          "spoken_start": 0,
+          "spoken_end": 39,
+          "first_word_index": 0,
+          "last_word_index": 9,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C03_S009Q002",
+          "scene_id": "S009",
+          "paragraph": 9,
+          "text": "흔히 방공제라고 부릅니다.",
+          "spoken_text": "흔히 방공제라고 부릅니다.",
+          "display_lines": [
+            "흔히 방공제라고 부릅니다."
+          ],
+          "start_s": 57.095333,
+          "end_s": 59.240083,
+          "native_start_s": 57.095333,
+          "native_end_s": 59.240083,
+          "source_start": 40,
+          "source_end": 54,
+          "spoken_start": 40,
+          "spoken_end": 54,
+          "first_word_index": 10,
+          "last_word_index": 12,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C03_S009Q003",
+          "scene_id": "S009",
+          "paragraph": 9,
+          "text": "서울 사례에서는 보증으로 보완되지 않고 남은 공제액 5,500만 원과, 보증 승인으로 공제가 보완되는 경우를 비교합니다.",
+          "spoken_text": "서울 사례에서는 보증으로 보완되지 않고 남은 공제액 오천오백만 원과, 보증 승인으로 공제가 보완되는 경우를 비교합니다.",
+          "display_lines": [
+            "서울 사례에서는 보증으로 보완되지 않고 남은 공제액 5,500만 원과,",
+            "보증 승인으로 공제가 보완되는 경우를 비교합니다."
+          ],
+          "start_s": 60.305166,
+          "end_s": 69.555166,
+          "native_start_s": 60.305166,
+          "native_end_s": 69.555166,
+          "source_start": 55,
+          "source_end": 122,
+          "spoken_start": 55,
+          "spoken_end": 121,
+          "first_word_index": 13,
+          "last_word_index": 27,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C03_S010Q001",
+          "scene_id": "S010",
+          "paragraph": 10,
+          "text": "보증은 은행의 취급 여부와 가입 요건을 확인하는 별도 절차입니다.",
+          "spoken_text": "보증은 은행의 취급 여부와 가입 요건을 확인하는 별도 절차입니다.",
+          "display_lines": [
+            "보증은 은행의 취급 여부와 가입 요건을 확인하는 별도 절차입니다."
+          ],
+          "start_s": 71.097791,
+          "end_s": 75.834624,
+          "native_start_s": 71.097791,
+          "native_end_s": 75.834624,
+          "source_start": 0,
+          "source_end": 36,
+          "spoken_start": 0,
+          "spoken_end": 36,
+          "first_word_index": 0,
+          "last_word_index": 8,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C03_S010Q002",
+          "scene_id": "S010",
+          "paragraph": 10,
+          "text": "A는 기존 임차인과 선순위 권리가 없는 집을 가정합니다.",
+          "spoken_text": "에이는 기존 임차인과 선순위 권리가 없는 집을 가정합니다.",
+          "display_lines": [
+            "A는 기존 임차인과 선순위 권리가 없는 집을 가정합니다."
+          ],
+          "start_s": 76.809625,
+          "end_s": 81.230707,
+          "native_start_s": 76.809625,
+          "native_end_s": 81.230707,
+          "source_start": 37,
+          "source_end": 68,
+          "spoken_start": 37,
+          "spoken_end": 69,
+          "first_word_index": 9,
+          "last_word_index": 16,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C03_S010Q003",
+          "scene_id": "S010",
+          "paragraph": 10,
+          "text": "기본 계산은 보증 승인 등으로 공제액이 0원인 조건을 쓰고, 공제가 남을 때의 금액도 살펴봅니다.",
+          "spoken_text": "기본 계산은 보증 승인 등으로 공제액이 영원인 조건을 쓰고, 공제가 남을 때의 금액도 살펴봅니다.",
+          "display_lines": [
+            "기본 계산은 보증 승인 등으로 공제액이 0원인 조건을 쓰고,",
+            "공제가 남을 때의 금액도 살펴봅니다."
+          ],
+          "start_s": 82.271458,
+          "end_s": 89.705666,
+          "native_start_s": 82.271458,
+          "native_end_s": 89.705666,
+          "source_start": 69,
+          "source_end": 123,
+          "spoken_start": 70,
+          "spoken_end": 124,
+          "first_word_index": 17,
+          "last_word_index": 30,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        }
+      ],
+      "paragraphs": [
+        {
+          "paragraph": 7,
+          "offset_s": 3.5,
+          "measured_seconds": 20.4,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S007\\audio.wav",
+          "last_native_word_end_s": 22.815791,
+          "last_pcm_signal_end_s": 22.795083333333334
+        },
+        {
+          "paragraph": 8,
+          "offset_s": 24.25,
+          "measured_seconds": 25.944,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S008\\audio.wav",
+          "last_native_word_end_s": 49.130291,
+          "last_pcm_signal_end_s": 49.10258333333333
+        },
+        {
+          "paragraph": 9,
+          "offset_s": 50.544,
+          "measured_seconds": 20.088,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S009\\audio.wav",
+          "last_native_word_end_s": 69.555166,
+          "last_pcm_signal_end_s": 69.56099999999999
+        },
+        {
+          "paragraph": 10,
+          "offset_s": 70.982,
+          "measured_seconds": 19.728,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S010\\audio.wav",
+          "last_native_word_end_s": 89.70566600000001,
+          "last_pcm_signal_end_s": 89.629375
+        }
+      ],
+      "audio_sha256": "03849e0624787643bc623099a05fb2863726670656b3c48e0a3e54cf501d472a",
+      "listening": "not_performed"
+    },
+    {
+      "chapter": 4,
+      "title": "소득 심사",
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_04.wav",
+      "total_seconds": 98.56666666666666,
+      "pcm_frames": 2365600,
+      "last_speech_end_s": 97.363208,
+      "last_speech_end_basis": "max(last provider word end, last PCM sample >= -60dBFS); documented unlistened estimate",
+      "last_native_word_end_s": 97.363208,
+      "last_pcm_signal_end_s": 97.35408333333334,
+      "leading_silence_s": 3.5,
+      "paragraph_gap_s": 0.35,
+      "tail_from_last_spoken_s": 1.2034586666666627,
+      "cues": [
+        {
+          "id": "C04_S011Q001",
+          "scene_id": "S011",
+          "paragraph": 11,
+          "text": "DSR은 은행 인정 연소득에 비해, 한 해 모든 대출의 원금과 이자를 얼마나 갚는지 보는 비율입니다.",
+          "spoken_text": "디에스알은 은행 인정 연소득에 비해, 한 해 모든 대출의 원금과 이자를 얼마나 갚는지 보는 비율입니다.",
+          "display_lines": [
+            "DSR은 은행 인정 연소득에 비해,",
+            "한 해 모든 대출의 원금과 이자를 얼마나 갚는지 보는 비율입니다."
+          ],
+          "start_s": 3.602625,
+          "end_s": 11.234208,
+          "native_start_s": 3.602625,
+          "native_end_s": 11.234208,
+          "source_start": 0,
+          "source_end": 56,
+          "spoken_start": 0,
+          "spoken_end": 57,
+          "first_word_index": 0,
+          "last_word_index": 14,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C04_S011Q002",
+          "scene_id": "S011",
+          "paragraph": 11,
+          "text": "은행권 적용대상 일반대출은 40%가 기준입니다.",
+          "spoken_text": "은행권 적용대상 일반대출은 사십 퍼센트가 기준입니다.",
+          "display_lines": [
+            "은행권 적용대상 일반대출은 40%가 기준입니다."
+          ],
+          "start_s": 12.288166,
+          "end_s": 16.669749,
+          "native_start_s": 12.288166,
+          "native_end_s": 16.669749,
+          "source_start": 57,
+          "source_end": 83,
+          "spoken_start": 58,
+          "spoken_end": 87,
+          "first_word_index": 15,
+          "last_word_index": 20,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C04_S011Q003",
+          "scene_id": "S011",
+          "paragraph": 11,
+          "text": "기존 부채가 없는 A의 인정소득 연 1억 원에 대한 심사상 연간 상환예산은 4천만 원입니다.",
+          "spoken_text": "기존 부채가 없는 에이의 인정소득 연 일억 원에 대한 심사상 연간 상환예산은 사천만 원입니다.",
+          "display_lines": [
+            "기존 부채가 없는 A의 인정소득 연 1억 원에",
+            "대한 심사상 연간 상환예산은 4천만 원입니다."
+          ],
+          "start_s": 17.671041,
+          "end_s": 24.60525,
+          "native_start_s": 17.671041,
+          "native_end_s": 24.60525,
+          "source_start": 84,
+          "source_end": 135,
+          "spoken_start": 88,
+          "spoken_end": 140,
+          "first_word_index": 21,
+          "last_word_index": 34,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C04_S012Q001",
+          "scene_id": "S012",
+          "paragraph": 12,
+          "text": "DTI는 소득에 대한 주택담보대출 원리금과 다른 부채 이자의 비율입니다.",
+          "spoken_text": "디티아이는 소득에 대한 주택담보대출 원리금과 다른 부채 이자의 비율입니다.",
+          "display_lines": [
+            "DTI는 소득에 대한 주택담보대출",
+            "원리금과 다른 부채 이자의 비율입니다."
+          ],
+          "start_s": 26.117791,
+          "end_s": 31.591499,
+          "native_start_s": 26.117791,
+          "native_end_s": 31.591499,
+          "source_start": 0,
+          "source_end": 40,
+          "spoken_start": 0,
+          "spoken_end": 41,
+          "first_word_index": 0,
+          "last_word_index": 8,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C04_S012Q002",
+          "scene_id": "S012",
+          "paragraph": 12,
+          "text": "A가 사는 서울 투기과열지구의 일반 DTI는 40%, 생애최초는 60%입니다.",
+          "spoken_text": "에이가 사는 서울 투기과열지구의 일반 디티아이는 사십 퍼센트, 생애최초는 육십 퍼센트입니다.",
+          "display_lines": [
+            "A가 사는 서울 투기과열지구의 일반",
+            "DTI는 40%, 생애최초는 60%입니다."
+          ],
+          "start_s": 32.60725,
+          "end_s": 40.080916,
+          "native_start_s": 32.60725,
+          "native_end_s": 40.080916,
+          "source_start": 41,
+          "source_end": 84,
+          "spoken_start": 42,
+          "spoken_end": 93,
+          "first_word_index": 9,
+          "last_word_index": 19,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C04_S012Q003",
+          "scene_id": "S012",
+          "paragraph": 12,
+          "text": "담보와 소득 제한을 모두 계산해 가장 작은 한도를 적용합니다.",
+          "spoken_text": "담보와 소득 제한을 모두 계산해 가장 작은 한도를 적용합니다.",
+          "display_lines": [
+            "담보와 소득 제한을 모두 계산해 가장 작은 한도를 적용합니다."
+          ],
+          "start_s": 41.118458,
+          "end_s": 45.763207,
+          "native_start_s": 41.118458,
+          "native_end_s": 45.763207,
+          "source_start": 85,
+          "source_end": 119,
+          "spoken_start": 94,
+          "spoken_end": 128,
+          "first_word_index": 20,
+          "last_word_index": 28,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C04_S013Q001",
+          "scene_id": "S013",
+          "paragraph": 13,
+          "text": "스트레스 DSR은 금리가 오를 가능성을 심사에 반영합니다.",
+          "spoken_text": "스트레스 디에스알은 금리가 오를 가능성을 심사에 반영합니다.",
+          "display_lines": [
+            "스트레스 DSR은 금리가 오를 가능성을 심사에 반영합니다."
+          ],
+          "start_s": 47.285333,
+          "end_s": 51.811625,
+          "native_start_s": 47.285333,
+          "native_end_s": 51.811625,
+          "source_start": 0,
+          "source_end": 32,
+          "spoken_start": 0,
+          "spoken_end": 33,
+          "first_word_index": 0,
+          "last_word_index": 6,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C04_S013Q002",
+          "scene_id": "S013",
+          "paragraph": 13,
+          "text": "A는 변동금리 연 4%, 30년 대출을 가정합니다.",
+          "spoken_text": "에이는 변동금리 연 사 퍼센트, 삼십년 대출을 가정합니다.",
+          "display_lines": [
+            "A는 변동금리 연 4%, 30년 대출을 가정합니다."
+          ],
+          "start_s": 52.761625,
+          "end_s": 57.972166,
+          "native_start_s": 52.761625,
+          "native_end_s": 57.972166,
+          "source_start": 33,
+          "source_end": 61,
+          "spoken_start": 34,
+          "spoken_end": 66,
+          "first_word_index": 7,
+          "last_word_index": 14,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C04_S013Q003",
+          "scene_id": "S013",
+          "paragraph": 13,
+          "text": "수도권 변동형의 스트레스금리 하한 3%포인트를 더해 심사에는 7%를 쓰고, 실제 월 상환액은 계약금리 4%로 계산합니다.",
+          "spoken_text": "수도권 변동형의 스트레스금리 하한 삼 퍼센트 포인트를 더해 심사에는 칠 퍼센트를 쓰고, 실제 월 상환액은 계약금리 사 퍼센트로 계산합니다.",
+          "display_lines": [
+            "수도권 변동형의 스트레스금리 하한 3%포인트를 더해 심사에는",
+            "7%를 쓰고, 실제 월 상환액은 계약금리 4%로 계산합니다."
+          ],
+          "start_s": 59.051125,
+          "end_s": 69.301124,
+          "native_start_s": 59.051125,
+          "native_end_s": 69.301124,
+          "source_start": 62,
+          "source_end": 129,
+          "spoken_start": 67,
+          "spoken_end": 144,
+          "first_word_index": 15,
+          "last_word_index": 33,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "text": "상환 방식은 원리금균등입니다.",
+          "display_lines": [
+            "상환 방식은 원리금균등입니다."
+          ],
+          "source_start": 0,
+          "source_end": 16,
+          "id": "C04_S014Q001",
+          "scene_id": "S014",
+          "paragraph": 14,
+          "spoken_text": "상환 방식은 원리금균등입니다.",
+          "spoken_start": 0,
+          "spoken_end": 16,
+          "start_s": 70.722,
+          "end_s": 73.692583,
+          "native_start_s": 70.722,
+          "native_end_s": 73.692583,
+          "first_word_index": 0,
+          "last_word_index": 2,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "text": "금리가 유지되면 매달 같은 원금과 이자 합계액을 내는 방식입니다.",
+          "display_lines": [
+            "금리가 유지되면 매달 같은 원금과 이자 합계액을 내는 방식입니다."
+          ],
+          "source_start": 17,
+          "source_end": 53,
+          "id": "C04_S014Q002",
+          "scene_id": "S014",
+          "paragraph": 14,
+          "spoken_text": "금리가 유지되면 매달 같은 원금과 이자 합계액을 내는 방식입니다.",
+          "spoken_start": 17,
+          "spoken_end": 53,
+          "start_s": 74.835958,
+          "end_s": 80.585999,
+          "native_start_s": 74.835958,
+          "native_end_s": 80.585999,
+          "first_word_index": 3,
+          "last_word_index": 11,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "text": "이 조건에서 A의 DSR상 대출 한도는 약 5억 103만 원입니다.",
+          "display_lines": [
+            "이 조건에서 A의 DSR상 대출",
+            "한도는 약 5억 103만 원입니다."
+          ],
+          "source_start": 54,
+          "source_end": 91,
+          "id": "C04_S014Q003",
+          "scene_id": "S014",
+          "paragraph": 14,
+          "spoken_text": "이 조건에서 에이의 디 에스 알상 대출 한도는 약 오억, 일백삼만 원입니다.",
+          "spoken_start": 54,
+          "spoken_end": 96,
+          "start_s": 81.716125,
+          "end_s": 89.024916,
+          "native_start_s": 81.716125,
+          "native_end_s": 89.024916,
+          "first_word_index": 12,
+          "last_word_index": 23,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "text": "신용대출 같은 기존 부채가 생기면 같은 소득에서 주택대출에 쓸 상환 여유도 줄어듭니다.",
+          "display_lines": [
+            "신용대출 같은 기존 부채가 생기면",
+            "같은 소득에서 주택대출에 쓸 상환 여유도 줄어듭니다."
+          ],
+          "source_start": 92,
+          "source_end": 140,
+          "id": "C04_S014Q004",
+          "scene_id": "S014",
+          "paragraph": 14,
+          "spoken_text": "신용대출 같은 기존 부채가 생기면 같은 소득에서 주택대출에 쓸 상환 여유도 줄어듭니다.",
+          "spoken_start": 97,
+          "spoken_end": 145,
+          "start_s": 90.216125,
+          "end_s": 97.363208,
+          "native_start_s": 90.216125,
+          "native_end_s": 97.363208,
+          "first_word_index": 24,
+          "last_word_index": 35,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        }
+      ],
+      "paragraphs": [
+        {
+          "paragraph": 11,
+          "offset_s": 3.5,
+          "measured_seconds": 22.152,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S011\\audio.wav",
+          "last_native_word_end_s": 24.60525,
+          "last_pcm_signal_end_s": 24.563666666666666
+        },
+        {
+          "paragraph": 12,
+          "offset_s": 26.002,
+          "measured_seconds": 20.832,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S012\\audio.wav",
+          "last_native_word_end_s": 45.763206999999994,
+          "last_pcm_signal_end_s": 45.743875
+        },
+        {
+          "paragraph": 13,
+          "offset_s": 47.184,
+          "measured_seconds": 23.088,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S013\\audio.wav",
+          "last_native_word_end_s": 69.301124,
+          "last_pcm_signal_end_s": 69.20845833333333
+        },
+        {
+          "paragraph": 14,
+          "offset_s": 70.622,
+          "measured_seconds": 27.936,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S014\\audio.wav",
+          "last_native_word_end_s": 97.363208,
+          "last_pcm_signal_end_s": 97.35408333333334
+        }
+      ],
+      "audio_sha256": "26c6cb2f3ca986e34e41ec57404f2330da60754d9f7c0985d7e4d34ae52ddf08",
+      "listening": "not_performed"
+    },
+    {
+      "chapter": 5,
+      "title": "거래비용",
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_05.wav",
+      "total_seconds": 170.83333333333334,
+      "pcm_frames": 4100000,
+      "last_speech_end_s": 169.610416,
+      "last_speech_end_basis": "max(last provider word end, last PCM sample >= -60dBFS); documented unlistened estimate",
+      "last_native_word_end_s": 169.610416,
+      "last_pcm_signal_end_s": 169.57233333333335,
+      "leading_silence_s": 3.5,
+      "paragraph_gap_s": 0.35,
+      "tail_from_last_spoken_s": 1.2229173333333563,
+      "cues": [
+        {
+          "id": "C05_S015Q001",
+          "scene_id": "S015",
+          "paragraph": 15,
+          "text": "취득세는 집을 취득할 때 내는 세금이고, 지방교육세가 함께 붙습니다.",
+          "spoken_text": "취득세는 집을 취득할 때 내는 세금이고, 지방교육세가 함께 붙습니다.",
+          "display_lines": [
+            "취득세는 집을 취득할 때 내는 세금이고,",
+            "지방교육세가 함께 붙습니다."
+          ],
+          "start_s": 3.615791,
+          "end_s": 9.273666,
+          "native_start_s": 3.615791,
+          "native_end_s": 9.273666,
+          "source_start": 0,
+          "source_end": 38,
+          "spoken_start": 0,
+          "spoken_end": 38,
+          "first_word_index": 0,
+          "last_word_index": 8,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S015Q002",
+          "scene_id": "S015",
+          "paragraph": 15,
+          "text": "중개보수는 거래를 중개한 대가입니다.",
+          "spoken_text": "중개보수는 거래를 중개한 대가입니다.",
+          "display_lines": [
+            "중개보수는 거래를 중개한 대가입니다."
+          ],
+          "start_s": 10.301958,
+          "end_s": 13.420374,
+          "native_start_s": 10.301958,
+          "native_end_s": 13.420374,
+          "source_start": 39,
+          "source_end": 59,
+          "spoken_start": 39,
+          "spoken_end": 59,
+          "first_word_index": 9,
+          "last_word_index": 12,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S015Q003",
+          "scene_id": "S015",
+          "paragraph": 15,
+          "text": "등기는 소유권을 장부에 올리는 절차로, 관련 수수료와 채권 부담을 따로 확인합니다.",
+          "spoken_text": "등기는 소유권을 장부에 올리는 절차로, 관련 수수료와 채권 부담을 따로 확인합니다.",
+          "display_lines": [
+            "등기는 소유권을 장부에 올리는 절차로,",
+            "관련 수수료와 채권 부담을 따로 확인합니다."
+          ],
+          "start_s": 14.446041,
+          "end_s": 21.077624,
+          "native_start_s": 14.446041,
+          "native_end_s": 21.077624,
+          "source_start": 60,
+          "source_end": 106,
+          "spoken_start": 60,
+          "spoken_end": 106,
+          "first_word_index": 13,
+          "last_word_index": 23,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S016Q001",
+          "scene_id": "S016",
+          "paragraph": 16,
+          "text": "이번 표는 무주택 가구가 전용 84㎡의 통상적인 아파트 한 채를 사는 경우입니다.",
+          "spoken_text": "이번 표는 무주택 가구가 전용 팔십사 제곱미터의 통상적인 아파트 한 채를 사는 경우입니다.",
+          "display_lines": [
+            "이번 표는 무주택 가구가 전용 84㎡의 통상적인",
+            "아파트 한 채를 사는 경우입니다."
+          ],
+          "start_s": 22.613791,
+          "end_s": 29.126958,
+          "native_start_s": 22.613791,
+          "native_end_s": 29.126958,
+          "source_start": 0,
+          "source_end": 45,
+          "spoken_start": 0,
+          "spoken_end": 50,
+          "first_word_index": 0,
+          "last_word_index": 12,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S016Q002",
+          "scene_id": "S016",
+          "paragraph": 16,
+          "text": "중과와 감면을 적용하기 전 기준으로 계산합니다.",
+          "spoken_text": "중과와 감면을 적용하기 전 기준으로 계산합니다.",
+          "display_lines": [
+            "중과와 감면을 적용하기 전 기준으로 계산합니다."
+          ],
+          "start_s": 30.180875,
+          "end_s": 33.865124,
+          "native_start_s": 30.180875,
+          "native_end_s": 33.865124,
+          "source_start": 46,
+          "source_end": 72,
+          "spoken_start": 51,
+          "spoken_end": 77,
+          "first_word_index": 13,
+          "last_word_index": 18,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S016Q003",
+          "scene_id": "S016",
+          "paragraph": 16,
+          "text": "취득세율은 6억 원 이하 1%, 6억 원 초과부터 9억 원까지 점차 높아져 3%가 되고, 9억 원 초과도 3%입니다.",
+          "spoken_text": "취득세율은 육억 원 이하 일 퍼센트, 육억 원 초과부터 구억 원까지 점차 높아져 삼 퍼센트가 되고, 구억 원 초과도 삼 퍼센트입니다.",
+          "display_lines": [
+            "취득세율은 6억 원 이하 1%, 6억 원 초과부터 9억 원까지",
+            "점차 높아져 3%가 되고, 9억 원 초과도 3%입니다."
+          ],
+          "start_s": 34.932208,
+          "end_s": 46.169041,
+          "native_start_s": 34.932208,
+          "native_end_s": 46.169041,
+          "source_start": 73,
+          "source_end": 138,
+          "spoken_start": 78,
+          "spoken_end": 152,
+          "first_word_index": 19,
+          "last_word_index": 39,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S017Q001",
+          "scene_id": "S017",
+          "paragraph": 17,
+          "text": "지방교육세를 더하면 6억 원 집의 세금은 660만 원, 9억 원은 2,970만 원, 12억 원은 3,960만 원입니다.",
+          "spoken_text": "지방교육세를 더하면 육억 원 집의 세금은 육백육십만 원, 구억 원은 이천구백칠십만 원, 십이억 원은 삼천구백육십만 원입니다.",
+          "display_lines": [
+            "지방교육세를 더하면 6억 원 집의 세금은 660만 원,",
+            "9억 원은 2,970만 원, 12억 원은 3,960만 원입니다."
+          ],
+          "start_s": 47.693333,
+          "end_s": 58.048583,
+          "native_start_s": 47.693333,
+          "native_end_s": 58.048583,
+          "source_start": 0,
+          "source_end": 66,
+          "spoken_start": 0,
+          "spoken_end": 69,
+          "first_word_index": 0,
+          "last_word_index": 15,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S017Q002",
+          "scene_id": "S017",
+          "paragraph": 17,
+          "text": "이 면적의 일반 주택은 국민주택규모 요건에 따라 농어촌특별세가 붙지 않는 사례로 계산했습니다.",
+          "spoken_text": "이 면적의 일반 주택은 국민주택규모 요건에 따라 농어촌특별세가 붙지 않는 사례로 계산했습니다.",
+          "display_lines": [
+            "이 면적의 일반 주택은 국민주택규모 요건에 따라",
+            "농어촌특별세가 붙지 않는 사례로 계산했습니다."
+          ],
+          "start_s": 59.128833,
+          "end_s": 66.655166,
+          "native_start_s": 59.128833,
+          "native_end_s": 66.655166,
+          "source_start": 67,
+          "source_end": 119,
+          "spoken_start": 70,
+          "spoken_end": 122,
+          "first_word_index": 16,
+          "last_word_index": 27,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S017Q003",
+          "scene_id": "S017",
+          "paragraph": 17,
+          "text": "면적과 주택 종류가 달라지면 비용표도 달라집니다.",
+          "spoken_text": "면적과 주택 종류가 달라지면 비용표도 달라집니다.",
+          "display_lines": [
+            "면적과 주택 종류가 달라지면 비용표도 달라집니다."
+          ],
+          "start_s": 67.776208,
+          "end_s": 71.973583,
+          "native_start_s": 67.776208,
+          "native_end_s": 71.973583,
+          "source_start": 120,
+          "source_end": 147,
+          "spoken_start": 123,
+          "spoken_end": 150,
+          "first_word_index": 28,
+          "last_word_index": 33,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S018Q001",
+          "scene_id": "S018",
+          "paragraph": 18,
+          "text": "세율이 점차 높아지는 취득세와 달리, 중개보수 상한 요율은 구간별 계단입니다.",
+          "spoken_text": "세율이 점차 높아지는 취득세와 달리, 중개보수 상한 요율은 구간별 계단입니다.",
+          "display_lines": [
+            "세율이 점차 높아지는 취득세와 달리,",
+            "중개보수 상한 요율은 구간별 계단입니다."
+          ],
+          "start_s": 73.483333,
+          "end_s": 80.391208,
+          "native_start_s": 73.483333,
+          "native_end_s": 80.391208,
+          "source_start": 0,
+          "source_end": 43,
+          "spoken_start": 0,
+          "spoken_end": 43,
+          "first_word_index": 0,
+          "last_word_index": 9,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S018Q002",
+          "scene_id": "S018",
+          "paragraph": 18,
+          "text": "정확히 6억 원은 0.4%, 9억 원은 0.5%, 12억 원은 0.6%입니다.",
+          "spoken_text": "정확히 육억 원은 영점사 퍼센트, 구억 원은 영점오 퍼센트, 십이억 원은 영점육 퍼센트입니다.",
+          "display_lines": [
+            "정확히 6억 원은 0.4%, 9억 원은 0.5%,",
+            "12억 원은 0.6%입니다."
+          ],
+          "start_s": 81.421458,
+          "end_s": 90.329375,
+          "native_start_s": 81.421458,
+          "native_end_s": 90.329375,
+          "source_start": 44,
+          "source_end": 87,
+          "spoken_start": 44,
+          "spoken_end": 96,
+          "first_word_index": 10,
+          "last_word_index": 22,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S018Q003",
+          "scene_id": "S018",
+          "paragraph": 18,
+          "text": "상한 안에서 협의하며, 일반과세 중개사의 부가세 10%까지 넣은 상한 예산은 각각 264만 원, 495만 원, 792만 원입니다.",
+          "spoken_text": "상한 안에서 협의하며, 일반과세 중개사의 부가세 십 퍼센트까지 넣은 상한 예산은 각각 이백육십사만 원, 사백구십오만 원, 칠백구십이만 원입니다.",
+          "display_lines": [
+            "상한 안에서 협의하며, 일반과세 중개사의 부가세 10%까지 넣은",
+            "상한 예산은 각각 264만 원, 495만 원, 792만 원입니다."
+          ],
+          "start_s": 91.418833,
+          "end_s": 103.616208,
+          "native_start_s": 91.418833,
+          "native_end_s": 103.616208,
+          "source_start": 88,
+          "source_end": 160,
+          "spoken_start": 97,
+          "spoken_end": 177,
+          "first_word_index": 23,
+          "last_word_index": 40,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "text": "채권의 즉시매도 부담, 등기수수료, 법무사보수와 인지 등은 계획용 예산 150만 원으로 묶겠습니다.",
+          "display_lines": [
+            "채권의 즉시매도 부담, 등기수수료,",
+            "법무사보수와 인지 등은 계획용 예산 150만 원으로 묶겠습니다."
+          ],
+          "source_start": 0,
+          "source_end": 55,
+          "id": "C05_S019Q001",
+          "scene_id": "S019",
+          "paragraph": 19,
+          "spoken_text": "채권의 즉시매도 부담, 등기수수료, 법무사보수와 인지 등은 계획용 예산 백오십만 원으로 묶겠습니다.",
+          "spoken_start": 0,
+          "spoken_end": 55,
+          "start_s": 105.156416,
+          "end_s": 114.803458,
+          "native_start_s": 105.156416,
+          "native_end_s": 114.803458,
+          "first_word_index": 0,
+          "last_word_index": 11,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "text": "채권 매입액과 실제 부담액을 구분해 매물별 견적으로 바꿀 항목입니다.",
+          "display_lines": [
+            "채권 매입액과 실제 부담액을 구분해",
+            "매물별 견적으로 바꿀 항목입니다."
+          ],
+          "source_start": 56,
+          "source_end": 94,
+          "id": "C05_S019Q002",
+          "scene_id": "S019",
+          "paragraph": 19,
+          "spoken_text": "채권 매입액과 실제 부담액을 구분해 매물별 견적으로 바꿀 항목입니다.",
+          "spoken_start": 56,
+          "spoken_end": 94,
+          "start_s": 115.910833,
+          "end_s": 121.940249,
+          "native_start_s": 115.910833,
+          "native_end_s": 121.940249,
+          "first_word_index": 12,
+          "last_word_index": 20,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "text": "이 예산까지 포함한 총비용은 6억 원에서 1,074만 원, 9억 원에서 3,615만 원, 12억 원에서 4,902만 원입니다.",
+          "display_lines": [
+            "이 예산까지 포함한 총비용은 6억 원에서 1,074만 원,",
+            "9억 원에서 3,615만 원, 12억 원에서 4,902만 원입니다."
+          ],
+          "source_start": 95,
+          "source_end": 165,
+          "id": "C05_S019Q003",
+          "scene_id": "S019",
+          "paragraph": 19,
+          "spoken_text": "이 예산까지 포함한 총비용은 육억 원에서 천칠십사만 원, 구억 원에서 삼천육백십오만 원, 십이억 원에서 사천구백 이만 원입니다.",
+          "spoken_start": 95,
+          "spoken_end": 166,
+          "start_s": 123.118916,
+          "end_s": 134.677707,
+          "native_start_s": 123.118916,
+          "native_end_s": 134.677707,
+          "first_word_index": 21,
+          "last_word_index": 37,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "id": "C05_S020Q001",
+          "scene_id": "S020",
+          "paragraph": 20,
+          "text": "12억 원 이하 보통 아파트의 생애최초 취득세 감면은 최대 200만 원, 출산·양육은 최대 500만 원입니다.",
+          "spoken_text": "십이억 원 이하 보통 아파트의 생애최초 취득세 감면은 최대 이백만 원, 출산·양육은 최대 오백만 원입니다.",
+          "display_lines": [
+            "12억 원 이하 보통 아파트의 생애최초 취득세 감면은 최대 200만 원,",
+            "출산·양육은 최대 500만 원입니다."
+          ],
+          "start_s": 136.342,
+          "end_s": 145.105166,
+          "native_start_s": 136.342,
+          "native_end_s": 145.105166,
+          "source_start": 0,
+          "source_end": 61,
+          "spoken_start": 0,
+          "spoken_end": 59,
+          "first_word_index": 0,
+          "last_word_index": 15,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S020Q002",
+          "scene_id": "S020",
+          "paragraph": 20,
+          "text": "출산 감면은 2028년 말까지 출산하고, 출산 전 1년부터 출산 후 5년 안에 취득하는 등 요건을 확인합니다.",
+          "spoken_text": "출산 감면은 이천이십팔년 말까지 출산하고, 출산 전 일년부터 출산 후 오년 안에 취득하는 등 요건을 확인합니다.",
+          "display_lines": [
+            "출산 감면은 2028년 말까지 출산하고,",
+            "출산 전 1년부터 출산 후 5년 안에 취득하는 등 요건을 확인합니다."
+          ],
+          "start_s": 146.163041,
+          "end_s": 155.268291,
+          "native_start_s": 146.163041,
+          "native_end_s": 155.268291,
+          "source_start": 62,
+          "source_end": 123,
+          "spoken_start": 60,
+          "spoken_end": 122,
+          "first_word_index": 16,
+          "last_word_index": 31,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S020Q003",
+          "scene_id": "S020",
+          "paragraph": 20,
+          "text": "각 감면의 소유 이력·거주·추징 조건을 확인해 겹치면 큰 감면 하나를 적용합니다.",
+          "spoken_text": "각 감면의 소유 이력·거주·추징 조건을 확인해 겹치면 큰 감면 하나를 적용합니다.",
+          "display_lines": [
+            "각 감면의 소유 이력·거주·추징 조건을 확인해 겹치면",
+            "큰 감면 하나를 적용합니다."
+          ],
+          "start_s": 156.267,
+          "end_s": 162.530166,
+          "native_start_s": 156.267,
+          "native_end_s": 162.530166,
+          "source_start": 124,
+          "source_end": 169,
+          "spoken_start": 123,
+          "spoken_end": 168,
+          "first_word_index": 32,
+          "last_word_index": 44,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C05_S020Q004",
+          "scene_id": "S020",
+          "paragraph": 20,
+          "text": "비용표는 감면 전 금액이며, 감면 후 교육세 포함 세액은 별도 확인합니다.",
+          "spoken_text": "비용표는 감면 전 금액이며, 감면 후 교육세 포함 세액은 별도 확인합니다.",
+          "display_lines": [
+            "비용표는 감면 전 금액이며,",
+            "감면 후 교육세 포함 세액은 별도 확인합니다."
+          ],
+          "start_s": 163.518333,
+          "end_s": 169.610416,
+          "native_start_s": 163.518333,
+          "native_end_s": 169.610416,
+          "source_start": 170,
+          "source_end": 211,
+          "spoken_start": 169,
+          "spoken_end": 210,
+          "first_word_index": 45,
+          "last_word_index": 55,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        }
+      ],
+      "paragraphs": [
+        {
+          "paragraph": 15,
+          "offset_s": 3.5,
+          "measured_seconds": 18.648,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S015\\audio.wav",
+          "last_native_word_end_s": 21.077624,
+          "last_pcm_signal_end_s": 21.072583333333334
+        },
+        {
+          "paragraph": 16,
+          "offset_s": 22.498,
+          "measured_seconds": 24.744,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S016\\audio.wav",
+          "last_native_word_end_s": 46.169041,
+          "last_pcm_signal_end_s": 46.1725
+        },
+        {
+          "paragraph": 17,
+          "offset_s": 47.592,
+          "measured_seconds": 25.44,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S017\\audio.wav",
+          "last_native_word_end_s": 71.97358299999999,
+          "last_pcm_signal_end_s": 71.96879166666666
+        },
+        {
+          "paragraph": 18,
+          "offset_s": 73.382,
+          "measured_seconds": 31.32,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S018\\audio.wav",
+          "last_native_word_end_s": 103.616208,
+          "last_pcm_signal_end_s": 103.60420833333333
+        },
+        {
+          "paragraph": 19,
+          "offset_s": 105.052,
+          "measured_seconds": 30.84,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S019\\audio.wav",
+          "last_native_word_end_s": 134.677707,
+          "last_pcm_signal_end_s": 134.65858333333335
+        },
+        {
+          "paragraph": 20,
+          "offset_s": 136.242,
+          "measured_seconds": 34.392,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S020\\audio.wav",
+          "last_native_word_end_s": 169.610416,
+          "last_pcm_signal_end_s": 169.57233333333332
+        }
+      ],
+      "audio_sha256": "38c0ff2a89e6864e9941fe81e926f77db20165a0928091dcb23b2db2389e63d3",
+      "listening": "not_performed"
+    },
+    {
+      "chapter": 6,
+      "title": "가격별 계산",
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_06.wav",
+      "total_seconds": 143.33333333333334,
+      "pcm_frames": 3440000,
+      "last_speech_end_s": 142.124208,
+      "last_speech_end_basis": "max(last provider word end, last PCM sample >= -60dBFS); documented unlistened estimate",
+      "last_native_word_end_s": 142.124208,
+      "last_pcm_signal_end_s": 142.09425,
+      "leading_silence_s": 3.5,
+      "paragraph_gap_s": 0.35,
+      "tail_from_last_spoken_s": 1.2091253333333327,
+      "cues": [
+        {
+          "id": "C06_S021Q001",
+          "scene_id": "S021",
+          "paragraph": 21,
+          "text": "이제 A가 6억 원 집을 사는 경우입니다.",
+          "spoken_text": "이제 에이가 육억 원 집을 사는 경우입니다.",
+          "display_lines": [
+            "이제 A가 6억 원 집을 사는 경우입니다."
+          ],
+          "start_s": 3.6,
+          "end_s": 6.823666,
+          "native_start_s": 3.6,
+          "native_end_s": 6.823666,
+          "source_start": 0,
+          "source_end": 23,
+          "spoken_start": 0,
+          "spoken_end": 24,
+          "first_word_index": 0,
+          "last_word_index": 6,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C06_S021Q002",
+          "scene_id": "S021",
+          "paragraph": 21,
+          "text": "보유자금에서 예비자금과 거래비용을 빼면 집값에 넣을 자기자금은 2억 926만 원, 필요한 대출은 3억 9,074만 원입니다.",
+          "spoken_text": "보유자금에서 예비자금과 거래비용을 빼면 집값에 넣을 자기자금은 이억 구백이십육만 원, 필요한 대출은 삼억 구천칠십사만 원입니다.",
+          "display_lines": [
+            "보유자금에서 예비자금과 거래비용을 빼면 집값에 넣을 자기자금은",
+            "2억 926만 원, 필요한 대출은 3억 9,074만 원입니다."
+          ],
+          "start_s": 7.881583,
+          "end_s": 18.131582,
+          "native_start_s": 7.881583,
+          "native_end_s": 18.131582,
+          "source_start": 24,
+          "source_end": 93,
+          "spoken_start": 25,
+          "spoken_end": 96,
+          "first_word_index": 7,
+          "last_word_index": 21,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C06_S021Q003",
+          "scene_id": "S021",
+          "paragraph": 21,
+          "text": "일반 무주택 LTV 40%의 한도는 2억 4천만 원이므로, 추가 현금 1억 5,074만 원이 필요합니다.",
+          "spoken_text": "일반 무주택 엘티브이 사십 퍼센트의 한도는 이억 사천만 원이므로, 추가 현금 일억 오천칠십사만 원이 필요합니다.",
+          "display_lines": [
+            "일반 무주택 LTV 40%의 한도는 2억 4천만 원이므로,",
+            "추가 현금 1억 5,074만 원이 필요합니다."
+          ],
+          "start_s": 19.181583,
+          "end_s": 27.615791,
+          "native_start_s": 19.181583,
+          "native_end_s": 27.615791,
+          "source_start": 94,
+          "source_end": 152,
+          "spoken_start": 97,
+          "spoken_end": 159,
+          "first_word_index": 22,
+          "last_word_index": 36,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C06_S022Q001",
+          "scene_id": "S022",
+          "paragraph": 22,
+          "text": "생애최초 LTV 70%에 공제 보완 조건을 적용하면 담보 한도는 4억 2천만 원입니다.",
+          "spoken_text": "생애최초 엘티브이 칠십 퍼센트에 공제 보완 조건을 적용하면 담보 한도는 사억 이천만 원입니다.",
+          "display_lines": [
+            "생애최초 LTV 70%에 공제 보완 조건을 적용하면",
+            "담보 한도는 4억 2천만 원입니다."
+          ],
+          "start_s": 29.150666,
+          "end_s": 36.413832,
+          "native_start_s": 29.150666,
+          "native_end_s": 36.413832,
+          "source_start": 0,
+          "source_end": 48,
+          "spoken_start": 0,
+          "spoken_end": 52,
+          "first_word_index": 0,
+          "last_word_index": 12,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C06_S022Q002",
+          "scene_id": "S022",
+          "paragraph": 22,
+          "text": "필요한 3억 9,074만 원을 이 범위에서 충당할 수 있습니다.",
+          "spoken_text": "필요한 삼억 구천칠십사만 원을 이 범위에서 충당할 수 있습니다.",
+          "display_lines": [
+            "필요한 3억 9,074만 원을 이 범위에서 충당할 수 있습니다."
+          ],
+          "start_s": 37.416458,
+          "end_s": 42.298041,
+          "native_start_s": 37.416458,
+          "native_end_s": 42.298041,
+          "source_start": 49,
+          "source_end": 84,
+          "spoken_start": 53,
+          "spoken_end": 88,
+          "first_word_index": 13,
+          "last_word_index": 21,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C06_S022Q003",
+          "scene_id": "S022",
+          "paragraph": 22,
+          "text": "서울 공제 5,500만 원이 남으면 한도는 3억 6,500만 원으로 내려가고, 추가 현금 2,574만 원이 필요합니다.",
+          "spoken_text": "서울 공제 오천오백만 원이 남으면 한도는 삼억 육천오백만 원으로 내려가고, 추가 현금 이천오백칠십사만 원이 필요합니다.",
+          "display_lines": [
+            "서울 공제 5,500만 원이 남으면 한도는 3억 6,500만 원으로",
+            "내려가고, 추가 현금 2,574만 원이 필요합니다."
+          ],
+          "start_s": 43.272375,
+          "end_s": 52.46975,
+          "native_start_s": 43.272375,
+          "native_end_s": 52.46975,
+          "source_start": 85,
+          "source_end": 151,
+          "spoken_start": 89,
+          "spoken_end": 155,
+          "first_word_index": 22,
+          "last_word_index": 36,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C06_S022Q004",
+          "scene_id": "S022",
+          "paragraph": 22,
+          "text": "이 공제는 대출 한도를 줄이는 항목입니다.",
+          "spoken_text": "이 공제는 대출 한도를 줄이는 항목입니다.",
+          "display_lines": [
+            "이 공제는 대출 한도를 줄이는 항목입니다."
+          ],
+          "start_s": 53.481583,
+          "end_s": 56.810499,
+          "native_start_s": 53.481583,
+          "native_end_s": 56.810499,
+          "source_start": 152,
+          "source_end": 175,
+          "spoken_start": 156,
+          "spoken_end": 179,
+          "first_word_index": 37,
+          "last_word_index": 42,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C06_S023Q001",
+          "scene_id": "S023",
+          "paragraph": 23,
+          "text": "생애최초 기본 사례의 필요 대출을 연 4%, 30년 원리금균등으로 갚으면 월 약 186.5만 원입니다.",
+          "spoken_text": "생애최초 기본 사례의 필요 대출을 연 사 퍼센트, 삼십년 원리금균등으로 갚으면 월 약 백팔십육점오만 원입니다.",
+          "display_lines": [
+            "생애최초 기본 사례의 필요 대출을 연 4%,",
+            "30년 원리금균등으로 갚으면 월 약 186.5만 원입니다."
+          ],
+          "start_s": 58.253333,
+          "end_s": 67.648041,
+          "native_start_s": 58.253333,
+          "native_end_s": 67.648041,
+          "source_start": 0,
+          "source_end": 57,
+          "spoken_start": 0,
+          "spoken_end": 61,
+          "first_word_index": 0,
+          "last_word_index": 14,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C06_S023Q002",
+          "scene_id": "S023",
+          "paragraph": 23,
+          "text": "자금 조달 조건을 맞춘 다음에는 생활 예산을 확인합니다.",
+          "spoken_text": "자금 조달 조건을 맞춘 다음에는 생활 예산을 확인합니다.",
+          "display_lines": [
+            "자금 조달 조건을 맞춘 다음에는 생활 예산을 확인합니다."
+          ],
+          "start_s": 68.716458,
+          "end_s": 72.979625,
+          "native_start_s": 68.716458,
+          "native_end_s": 72.979625,
+          "source_start": 58,
+          "source_end": 89,
+          "spoken_start": 62,
+          "spoken_end": 93,
+          "first_word_index": 15,
+          "last_word_index": 22,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C06_S023Q003",
+          "scene_id": "S023",
+          "paragraph": 23,
+          "text": "뒤에서 정할 월 상환 목표 170만 원과 비교하면 차이가 드러납니다.",
+          "spoken_text": "뒤에서 정할 월 상환 목표 백칠십만 원과 비교하면 차이가 드러납니다.",
+          "display_lines": [
+            "뒤에서 정할 월 상환 목표 170만 원과",
+            "비교하면 차이가 드러납니다."
+          ],
+          "start_s": 73.967791,
+          "end_s": 79.178291,
+          "native_start_s": 73.967791,
+          "native_end_s": 79.178291,
+          "source_start": 90,
+          "source_end": 128,
+          "spoken_start": 94,
+          "spoken_end": 132,
+          "first_word_index": 23,
+          "last_word_index": 32,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "text": "9억 원 집은 필요한 대출이 7억 1,615만 원입니다.",
+          "display_lines": [
+            "9억 원 집은 필요한 대출이 7억 1,615만 원입니다."
+          ],
+          "source_start": 0,
+          "source_end": 31,
+          "id": "C06_S024Q001",
+          "scene_id": "S024",
+          "paragraph": 24,
+          "spoken_text": "구억 원 집은 필요한 대출이 칠억 천육백십오만 원입니다.",
+          "spoken_start": 0,
+          "spoken_end": 31,
+          "start_s": 80.686416,
+          "end_s": 85.524624,
+          "native_start_s": 80.686416,
+          "native_end_s": 85.524624,
+          "first_word_index": 0,
+          "last_word_index": 7,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "text": "생애최초 담보 한도와 총액상한을 비교한 뒤에도 DSR이 약 5억 103만 원으로 제한하므로,",
+          "display_lines": [
+            "생애최초 담보 한도와 총액상한을 비교한 뒤에도",
+            "DSR이 약 5억 103만 원으로 제한하므로,"
+          ],
+          "source_start": 32,
+          "source_end": 83,
+          "id": "C06_S024Q002",
+          "scene_id": "S024",
+          "paragraph": 24,
+          "spoken_text": "생애최초 담보 한도와 총액상한을 비교한 뒤에도 디 에스 알이 약 오억, 일백삼만 원으로 제한하므로,",
+          "spoken_start": 32,
+          "spoken_end": 87,
+          "start_s": 86.705541,
+          "end_s": 95.367291,
+          "native_start_s": 86.705541,
+          "native_end_s": 95.367291,
+          "first_word_index": 8,
+          "last_word_index": 21,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "text": "추가 현금은 약 2억 1,512만 원입니다.",
+          "display_lines": [
+            "추가 현금은 약 2억 1,512만 원입니다."
+          ],
+          "source_start": 84,
+          "source_end": 108,
+          "id": "C06_S024Q003",
+          "scene_id": "S024",
+          "paragraph": 24,
+          "spoken_text": "추가 현금은 약 이억 천오백십이만 원입니다.",
+          "spoken_start": 88,
+          "spoken_end": 112,
+          "start_s": 95.499666,
+          "end_s": 99.499666,
+          "native_start_s": 95.499666,
+          "native_end_s": 99.499666,
+          "first_word_index": 22,
+          "last_word_index": 27,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "text": "12억 원 집은 필요한 대출이 10억 2,902만 원으로 늘고, 같은 DSR 한도에서 추가 현금 약 5억 2,799만 원이 필요합니다.",
+          "display_lines": [
+            "12억 원 집은 필요한 대출이 10억 2,902만 원으로 늘고,",
+            "같은 DSR 한도에서 추가 현금 약 5억 2,799만 원이 필요합니다."
+          ],
+          "source_start": 109,
+          "source_end": 184,
+          "id": "C06_S024Q004",
+          "scene_id": "S024",
+          "paragraph": 24,
+          "spoken_text": "십이억 원 집은 필요한 대출이 십억, 이천구백 이만 원으로 늘고, 같은 디 에스 알 한도에서 추가 현금 약 오억 이천칠백구십구만 원이 필요합니다.",
+          "spoken_start": 113,
+          "spoken_end": 194,
+          "start_s": 100.661416,
+          "end_s": 113.352624,
+          "native_start_s": 100.661416,
+          "native_end_s": 113.352624,
+          "first_word_index": 28,
+          "last_word_index": 49,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "id": "C06_S025Q001",
+          "scene_id": "S025",
+          "paragraph": 25,
+          "text": "여기서 6억·9억·12억은 세금이나 상품 자격을 살피는 가격대입니다.",
+          "spoken_text": "여기서 육억·구억·십이억은 세금이나 상품 자격을 살피는 가격대입니다.",
+          "display_lines": [
+            "여기서 6억·9억·12억은 세금이나",
+            "상품 자격을 살피는 가격대입니다."
+          ],
+          "start_s": 115.041333,
+          "end_s": 120.712332,
+          "native_start_s": 115.041333,
+          "native_end_s": 120.712332,
+          "source_start": 0,
+          "source_end": 38,
+          "spoken_start": 0,
+          "spoken_end": 38,
+          "first_word_index": 0,
+          "last_word_index": 8,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C06_S025Q002",
+          "scene_id": "S025",
+          "paragraph": 25,
+          "text": "수도권·규제지역의 일반 구입 주담대 총액 기준은 시가 15억 원 이하에서 6억 원,",
+          "spoken_text": "수도권·규제지역의 일반 구입 주담대 총액 기준은 시가 십오억 원 이하에서 육억 원,",
+          "display_lines": [
+            "수도권·규제지역의 일반 구입 주담대 총액",
+            "기준은 시가 15억 원 이하에서 6억 원,"
+          ],
+          "start_s": 121.767625,
+          "end_s": 128.096582,
+          "native_start_s": 121.767625,
+          "native_end_s": 128.096582,
+          "source_start": 39,
+          "source_end": 85,
+          "spoken_start": 39,
+          "spoken_end": 85,
+          "first_word_index": 9,
+          "last_word_index": 21,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C06_S025Q003",
+          "scene_id": "S025",
+          "paragraph": 25,
+          "text": "15억 원 초과 25억 원 이하에서 4억 원, 25억 원 초과에서 2억 원입니다.",
+          "spoken_text": "십오억 원 초과 이십오억 원 이하에서 사억 원, 이십오억 원 초과에서 이억 원입니다.",
+          "display_lines": [
+            "15억 원 초과 25억 원 이하에서 4억 원,",
+            "25억 원 초과에서 2억 원입니다."
+          ],
+          "start_s": 128.201833,
+          "end_s": 134.557124,
+          "native_start_s": 128.201833,
+          "native_end_s": 134.557124,
+          "source_start": 86,
+          "source_end": 131,
+          "spoken_start": 86,
+          "spoken_end": 133,
+          "first_word_index": 22,
+          "last_word_index": 34,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C06_S025Q004",
+          "scene_id": "S025",
+          "paragraph": 25,
+          "text": "앞의 세 집은 모두 첫 구간이며, 실제 상한은 담보와 소득 심사까지 함께 정합니다.",
+          "spoken_text": "앞의 세 집은 모두 첫 구간이며, 실제 상한은 담보와 소득 심사까지 함께 정합니다.",
+          "display_lines": [
+            "앞의 세 집은 모두 첫 구간이며,",
+            "실제 상한은 담보와 소득 심사까지 함께 정합니다."
+          ],
+          "start_s": 135.597875,
+          "end_s": 142.124208,
+          "native_start_s": 135.597875,
+          "native_end_s": 142.124208,
+          "source_start": 132,
+          "source_end": 178,
+          "spoken_start": 134,
+          "spoken_end": 180,
+          "first_word_index": 35,
+          "last_word_index": 47,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        }
+      ],
+      "paragraphs": [
+        {
+          "paragraph": 21,
+          "offset_s": 3.5,
+          "measured_seconds": 25.2,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S021\\audio.wav",
+          "last_native_word_end_s": 27.615791,
+          "last_pcm_signal_end_s": 27.619916666666665
+        },
+        {
+          "paragraph": 22,
+          "offset_s": 29.05,
+          "measured_seconds": 28.752,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S022\\audio.wav",
+          "last_native_word_end_s": 56.810499,
+          "last_pcm_signal_end_s": 56.756083333333336
+        },
+        {
+          "paragraph": 23,
+          "offset_s": 58.152,
+          "measured_seconds": 22.08,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S023\\audio.wav",
+          "last_native_word_end_s": 79.178291,
+          "last_pcm_signal_end_s": 79.17675
+        },
+        {
+          "paragraph": 24,
+          "offset_s": 80.582,
+          "measured_seconds": 34.008,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S024\\audio.wav",
+          "last_native_word_end_s": 113.35262399999999,
+          "last_pcm_signal_end_s": 113.17545833333332
+        },
+        {
+          "paragraph": 25,
+          "offset_s": 114.94,
+          "measured_seconds": 28.248,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S025\\audio.wav",
+          "last_native_word_end_s": 142.124208,
+          "last_pcm_signal_end_s": 142.09425
+        }
+      ],
+      "audio_sha256": "9aa6f2f9362caa928d37ff98f4f08ae78c5c2207848eb7f306424f7773f43f6a",
+      "listening": "not_performed"
+    },
+    {
+      "chapter": 7,
+      "title": "정책대출",
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_07.wav",
+      "total_seconds": 171.3,
+      "pcm_frames": 4111200,
+      "last_speech_end_s": 170.088541,
+      "last_speech_end_basis": "max(last provider word end, last PCM sample >= -60dBFS); documented unlistened estimate",
+      "last_native_word_end_s": 170.088541,
+      "last_pcm_signal_end_s": 169.939,
+      "leading_silence_s": 3.5,
+      "paragraph_gap_s": 0.35,
+      "tail_from_last_spoken_s": 1.2114590000000192,
+      "cues": [
+        {
+          "id": "C07_S026Q001",
+          "scene_id": "S026",
+          "paragraph": 26,
+          "text": "정책상품은 별도의 가구 B로 비교합니다.",
+          "spoken_text": "정책상품은 별도의 가구 비로 비교합니다.",
+          "display_lines": [
+            "정책상품은 별도의 가구 B로 비교합니다."
+          ],
+          "start_s": 3.601333,
+          "end_s": 7.127624,
+          "native_start_s": 3.601333,
+          "native_end_s": 7.127624,
+          "source_start": 0,
+          "source_end": 22,
+          "spoken_start": 0,
+          "spoken_end": 22,
+          "first_word_index": 0,
+          "last_word_index": 4,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S026Q002",
+          "scene_id": "S026",
+          "paragraph": 26,
+          "text": "부부합산 연소득 8천만 원, 순자산 2억 5천만 원, 기존 부채는 0원입니다.",
+          "spoken_text": "부부합산 연소득 팔천만 원, 순자산 이억 오천만 원, 기존 부채는 영원입니다.",
+          "display_lines": [
+            "부부합산 연소득 8천만 원,",
+            "순자산 2억 5천만 원, 기존 부채는 0원입니다."
+          ],
+          "start_s": 8.157875,
+          "end_s": 15.35525,
+          "native_start_s": 8.157875,
+          "native_end_s": 15.35525,
+          "source_start": 23,
+          "source_end": 66,
+          "spoken_start": 23,
+          "spoken_end": 66,
+          "first_word_index": 5,
+          "last_word_index": 15,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S026Q003",
+          "scene_id": "S026",
+          "paragraph": 26,
+          "text": "혼인 7년 이내의 무주택 신혼가구로 생애최초이며, 접수 전 2년 내 출산한 자녀가 있습니다.",
+          "spoken_text": "혼인 칠년 이내의 무주택 신혼가구로 생애최초이며, 접수 전 이년 내 출산한 자녀가 있습니다.",
+          "display_lines": [
+            "혼인 7년 이내의 무주택 신혼가구로 생애최초이며,",
+            "접수 전 2년 내 출산한 자녀가 있습니다."
+          ],
+          "start_s": 16.434208,
+          "end_s": 23.302666,
+          "native_start_s": 16.434208,
+          "native_end_s": 23.302666,
+          "source_start": 67,
+          "source_end": 118,
+          "spoken_start": 67,
+          "spoken_end": 118,
+          "first_word_index": 16,
+          "last_word_index": 28,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S026Q004",
+          "scene_id": "S026",
+          "paragraph": 26,
+          "text": "현금과 예비자금, 서울 84㎡ 구입 조건은 A와 같습니다.",
+          "spoken_text": "현금과 예비자금, 서울 팔십사 제곱미터 구입 조건은 에이와 같습니다.",
+          "display_lines": [
+            "현금과 예비자금, 서울 84㎡ 구입 조건은 A와 같습니다."
+          ],
+          "start_s": 24.342125,
+          "end_s": 30.131583,
+          "native_start_s": 24.342125,
+          "native_end_s": 30.131583,
+          "source_start": 119,
+          "source_end": 151,
+          "spoken_start": 119,
+          "spoken_end": 157,
+          "first_word_index": 29,
+          "last_word_index": 37,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S027Q001",
+          "scene_id": "S027",
+          "paragraph": 27,
+          "text": "디딤돌은 신혼가구 기준으로 합산소득 8,500만 원 이하, 순자산 5억 1,100만 원 이하,",
+          "spoken_text": "디딤돌은 신혼가구 기준으로 합산소득 팔천오백만 원 이하, 순자산 오억 천백만 원 이하,",
+          "display_lines": [
+            "디딤돌은 신혼가구 기준으로 합산소득 8,500만 원 이하,",
+            "순자산 5억 1,100만 원 이하,"
+          ],
+          "start_s": 31.648625,
+          "end_s": 38.872333,
+          "native_start_s": 31.648625,
+          "native_end_s": 38.872333,
+          "source_start": 0,
+          "source_end": 52,
+          "spoken_start": 0,
+          "spoken_end": 48,
+          "first_word_index": 0,
+          "last_word_index": 11,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S027Q002",
+          "scene_id": "S027",
+          "paragraph": 27,
+          "text": "주택가격 6억 원 이하와 전용 85㎡ 이하 등을 확인합니다.",
+          "spoken_text": "주택가격 육억 원 이하와 전용 팔십오 제곱미터 이하 등을 확인합니다.",
+          "display_lines": [
+            "주택가격 6억 원 이하와 전용 85㎡ 이하 등을 확인합니다."
+          ],
+          "start_s": 38.977583,
+          "end_s": 43.859166,
+          "native_start_s": 38.977583,
+          "native_end_s": 43.859166,
+          "source_start": 53,
+          "source_end": 86,
+          "spoken_start": 49,
+          "spoken_end": 87,
+          "first_word_index": 12,
+          "last_word_index": 21,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S027Q003",
+          "scene_id": "S027",
+          "paragraph": 27,
+          "text": "B의 상품 한도는 3억 2천만 원입니다.",
+          "spoken_text": "비의 상품 한도는 삼억 이천만 원입니다.",
+          "display_lines": [
+            "B의 상품 한도는 3억 2천만 원입니다."
+          ],
+          "start_s": 44.899291,
+          "end_s": 48.057208,
+          "native_start_s": 44.899291,
+          "native_end_s": 48.057208,
+          "source_start": 87,
+          "source_end": 109,
+          "spoken_start": 88,
+          "spoken_end": 110,
+          "first_word_index": 22,
+          "last_word_index": 27,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S027Q004",
+          "scene_id": "S027",
+          "paragraph": 27,
+          "text": "앞서 필요한 대출 3억 9,074만 원과 비교하면, 상품 한도 때문에 현금 7,074만 원을 더 마련해야 합니다.",
+          "spoken_text": "앞서 필요한 대출 삼억 구천칠십사만 원과 비교하면, 상품 한도 때문에 현금 칠천칠십사만 원을 더 마련해야 합니다.",
+          "display_lines": [
+            "앞서 필요한 대출 3억 9,074만 원과 비교하면,",
+            "상품 한도 때문에 현금 7,074만 원을 더 마련해야 합니다."
+          ],
+          "start_s": 49.085458,
+          "end_s": 57.861791,
+          "native_start_s": 49.085458,
+          "native_end_s": 57.861791,
+          "source_start": 110,
+          "source_end": 173,
+          "spoken_start": 111,
+          "spoken_end": 174,
+          "first_word_index": 28,
+          "last_word_index": 43,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S028Q001",
+          "scene_id": "S028",
+          "paragraph": 28,
+          "text": "보금자리론은 시세·감정가·실제 매매가 중 하나라도 6억 원을 넘는지 확인합니다.",
+          "spoken_text": "보금자리론은 시세·감정가·실제 매매가 중 하나라도 육억 원을 넘는지 확인합니다.",
+          "display_lines": [
+            "보금자리론은 시세·감정가·실제 매매가 중",
+            "하나라도 6억 원을 넘는지 확인합니다."
+          ],
+          "start_s": 59.360958,
+          "end_s": 65.703041,
+          "native_start_s": 59.360958,
+          "native_end_s": 65.703041,
+          "source_start": 0,
+          "source_end": 44,
+          "spoken_start": 0,
+          "spoken_end": 44,
+          "first_word_index": 0,
+          "last_word_index": 10,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S028Q002",
+          "scene_id": "S028",
+          "paragraph": 28,
+          "text": "B는 기존 신혼 합산소득 기준 안에서 신청하며, 생애최초 상품 한도는 4억 2천만 원입니다.",
+          "spoken_text": "비는 기존 신혼 합산소득 기준 안에서 신청하며, 생애최초 상품 한도는 사억 이천만 원입니다.",
+          "display_lines": [
+            "B는 기존 신혼 합산소득 기준 안에서 신청하며,",
+            "생애최초 상품 한도는 4억 2천만 원입니다."
+          ],
+          "start_s": 66.771458,
+          "end_s": 74.166208,
+          "native_start_s": 66.771458,
+          "native_end_s": 74.166208,
+          "source_start": 45,
+          "source_end": 96,
+          "spoken_start": 45,
+          "spoken_end": 96,
+          "first_word_index": 11,
+          "last_word_index": 23,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S028Q003",
+          "scene_id": "S028",
+          "paragraph": 28,
+          "text": "임대차 없는 아파트는 보금자리론 자체 기준상 방수공제가 0이므로, 필요한 대출을 한도 안에서 검토할 수 있습니다.",
+          "spoken_text": "임대차 없는 아파트는 보금자리론 자체 기준상 방수공제가 영이므로, 필요한 대출을 한도 안에서 검토할 수 있습니다.",
+          "display_lines": [
+            "임대차 없는 아파트는 보금자리론 자체 기준상 방수공제가 0이므로,",
+            "필요한 대출을 한도 안에서 검토할 수 있습니다."
+          ],
+          "start_s": 75.216208,
+          "end_s": 83.808333,
+          "native_start_s": 75.216208,
+          "native_end_s": 83.808333,
+          "source_start": 97,
+          "source_end": 160,
+          "spoken_start": 97,
+          "spoken_end": 160,
+          "first_word_index": 24,
+          "last_word_index": 38,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S029Q001",
+          "scene_id": "S029",
+          "paragraph": 29,
+          "text": "신혼 소득 기준에는 현행 예외도 있습니다.",
+          "spoken_text": "신혼 소득 기준에는 현행 예외도 있습니다.",
+          "display_lines": [
+            "신혼 소득 기준에는 현행 예외도 있습니다."
+          ],
+          "start_s": 85.338,
+          "end_s": 88.469583,
+          "native_start_s": 85.338,
+          "native_end_s": 88.469583,
+          "source_start": 0,
+          "source_end": 23,
+          "spoken_start": 0,
+          "spoken_end": 23,
+          "first_word_index": 0,
+          "last_word_index": 5,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S029Q002",
+          "scene_id": "S029",
+          "paragraph": 29,
+          "text": "보금자리론은 기존 합산기준을 넘더라도 채무자 한 사람의 연소득이 7천만 원 이하면 특례를 신청할 수 있습니다.",
+          "spoken_text": "보금자리론은 기존 합산기준을 넘더라도 채무자 한 사람의 연소득이 칠천만 원 이하면 특례를 신청할 수 있습니다.",
+          "display_lines": [
+            "보금자리론은 기존 합산기준을 넘더라도 채무자 한 사람의 연소득이",
+            "7천만 원 이하면 특례를 신청할 수 있습니다."
+          ],
+          "start_s": 89.514333,
+          "end_s": 97.790624,
+          "native_start_s": 89.514333,
+          "native_end_s": 97.790624,
+          "source_start": 24,
+          "source_end": 85,
+          "spoken_start": 24,
+          "spoken_end": 85,
+          "first_word_index": 6,
+          "last_word_index": 20,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S029Q003",
+          "scene_id": "S029",
+          "paragraph": 29,
+          "text": "이때 DTI도 그 사람의 소득과 부채로 심사합니다.",
+          "spoken_text": "이때 디티아이도 그 사람의 소득과 부채로 심사합니다.",
+          "display_lines": [
+            "이때 DTI도 그 사람의 소득과 부채로 심사합니다."
+          ],
+          "start_s": 98.790625,
+          "end_s": 102.9485,
+          "native_start_s": 98.790625,
+          "native_end_s": 102.9485,
+          "source_start": 86,
+          "source_end": 114,
+          "spoken_start": 86,
+          "spoken_end": 115,
+          "first_word_index": 21,
+          "last_word_index": 27,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S029Q004",
+          "scene_id": "S029",
+          "paragraph": 29,
+          "text": "배우자 정보는 우대금리와 실수요 요건 등에, 주택보유수는 부부를 합쳐 확인합니다.",
+          "spoken_text": "배우자 정보는 우대금리와 실수요 요건 등에, 주택보유수는 부부를 합쳐 확인합니다.",
+          "display_lines": [
+            "배우자 정보는 우대금리와 실수요 요건 등에,",
+            "주택보유수는 부부를 합쳐 확인합니다."
+          ],
+          "start_s": 103.961666,
+          "end_s": 110.395916,
+          "native_start_s": 103.961666,
+          "native_end_s": 110.395916,
+          "source_start": 115,
+          "source_end": 160,
+          "spoken_start": 116,
+          "spoken_end": 161,
+          "first_word_index": 28,
+          "last_word_index": 37,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "text": "디딤돌에도 신혼 합산소득이 8,500만 원을 넘을 때 신청인 연소득 6천만 원 이하를 적용하는 예외가 있습니다.",
+          "display_lines": [
+            "디딤돌에도 신혼 합산소득이 8,500만 원을 넘을 때",
+            "신청인 연소득 6천만 원 이하를 적용하는 예외가 있습니다."
+          ],
+          "source_start": 0,
+          "source_end": 62,
+          "id": "C07_S030Q001",
+          "scene_id": "S030",
+          "paragraph": 30,
+          "spoken_text": "디딤돌에도 신혼 합산소득이 팔천오백만 원을 넘을 때 신청인 연소득 육천만 원 이하를 적용하는 예외가 있습니다.",
+          "spoken_start": 0,
+          "spoken_end": 61,
+          "start_s": 111.943541,
+          "end_s": 121.017041,
+          "native_start_s": 111.943541,
+          "native_end_s": 121.017041,
+          "first_word_index": 0,
+          "last_word_index": 14,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "text": "이 경우 DTI는 신청인 한 사람 기준입니다.",
+          "display_lines": [
+            "이 경우 DTI는 신청인 한 사람 기준입니다."
+          ],
+          "source_start": 63,
+          "source_end": 88,
+          "id": "C07_S030Q002",
+          "scene_id": "S030",
+          "paragraph": 30,
+          "spoken_text": "이 경우 디 티 아이는 신청인 한 사람 기준입니다.",
+          "spoken_start": 62,
+          "spoken_end": 90,
+          "start_s": 122.178833,
+          "end_s": 126.958208,
+          "native_start_s": 122.178833,
+          "native_end_s": 126.958208,
+          "first_word_index": 15,
+          "last_word_index": 23,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "text": "B는 합산기준을 충족하는 가구로 비교합니다.",
+          "display_lines": [
+            "B는 합산기준을 충족하는 가구로 비교합니다."
+          ],
+          "source_start": 89,
+          "source_end": 113,
+          "id": "C07_S030Q003",
+          "scene_id": "S030",
+          "paragraph": 30,
+          "spoken_text": "비는 합산기준을 충족하는 가구로 비교합니다.",
+          "spoken_start": 91,
+          "spoken_end": 115,
+          "start_s": 128.17075,
+          "end_s": 132.053082,
+          "native_start_s": 128.17075,
+          "native_end_s": 132.053082,
+          "first_word_index": 24,
+          "last_word_index": 28,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "text": "이런 정책상품의 신규대출은 규제 DSR 예외 틀에서, 해당 DTI와 신용·보증 등 실행 조건을 함께 심사합니다.",
+          "display_lines": [
+            "이런 정책상품의 신규대출은 규제 DSR 예외 틀에서,",
+            "해당 DTI와 신용·보증 등 실행 조건을 함께 심사합니다."
+          ],
+          "source_start": 114,
+          "source_end": 176,
+          "id": "C07_S030Q004",
+          "scene_id": "S030",
+          "paragraph": 30,
+          "spoken_text": "이런 정책상품의 신규대출은 규제 디 에스 알 예외 틀에서, 해당 디 티 아이와 신용·보증 등 실행 조건을 함께 심사합니다.",
+          "spoken_start": 116,
+          "spoken_end": 184,
+          "start_s": 133.149416,
+          "end_s": 144.12,
+          "native_start_s": 133.149416,
+          "native_end_s": 144.12,
+          "first_word_index": 29,
+          "last_word_index": 48,
+          "timing_basis": "actual provider WordBoundary; frozen v2 display meaning units; no interpolation"
+        },
+        {
+          "id": "C07_S031Q001",
+          "scene_id": "S031",
+          "paragraph": 31,
+          "text": "디딤돌과 B의 생애최초 보금자리론에는 DTI 60%를 적용합니다.",
+          "spoken_text": "디딤돌과 비의 생애최초 보금자리론에는 디티아이 육십 퍼센트를 적용합니다.",
+          "display_lines": [
+            "디딤돌과 B의 생애최초 보금자리론에는 DTI 60%를 적용합니다."
+          ],
+          "start_s": 145.693791,
+          "end_s": 151.299041,
+          "native_start_s": 145.693791,
+          "native_end_s": 151.299041,
+          "source_start": 0,
+          "source_end": 36,
+          "spoken_start": 0,
+          "spoken_end": 40,
+          "first_word_index": 0,
+          "last_word_index": 7,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S031Q002",
+          "scene_id": "S031",
+          "paragraph": 31,
+          "text": "현행 신규 신청 디딤돌은 실행 후 1개월 안에 전입하고 전입일부터 2년 실거주합니다.",
+          "spoken_text": "현행 신규 신청 디딤돌은 실행 후 일개월 안에 전입하고 전입일부터 이년 실거주합니다.",
+          "display_lines": [
+            "현행 신규 신청 디딤돌은 실행 후 1개월 안에 전입하고",
+            "전입일부터 2년 실거주합니다."
+          ],
+          "start_s": 152.353,
+          "end_s": 159.076708,
+          "native_start_s": 152.353,
+          "native_end_s": 159.076708,
+          "source_start": 37,
+          "source_end": 84,
+          "spoken_start": 41,
+          "spoken_end": 88,
+          "first_word_index": 8,
+          "last_word_index": 19,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S031Q003",
+          "scene_id": "S031",
+          "paragraph": 31,
+          "text": "수도권 보금자리론은 실행 후 6개월 안에 전입과 입증서류 제출을 준비합니다.",
+          "spoken_text": "수도권 보금자리론은 실행 후 육개월 안에 전입과 입증서류 제출을 준비합니다.",
+          "display_lines": [
+            "수도권 보금자리론은 실행 후 6개월 안에",
+            "전입과 입증서류 제출을 준비합니다."
+          ],
+          "start_s": 160.116166,
+          "end_s": 166.063499,
+          "native_start_s": 160.116166,
+          "native_end_s": 166.063499,
+          "source_start": 85,
+          "source_end": 127,
+          "spoken_start": 89,
+          "spoken_end": 131,
+          "first_word_index": 20,
+          "last_word_index": 29,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C07_S031Q004",
+          "scene_id": "S031",
+          "paragraph": 31,
+          "text": "자격과 한도에 입주 계획도 연결합니다.",
+          "spoken_text": "자격과 한도에 입주 계획도 연결합니다.",
+          "display_lines": [
+            "자격과 한도에 입주 계획도 연결합니다."
+          ],
+          "start_s": 167.062208,
+          "end_s": 170.088541,
+          "native_start_s": 167.062208,
+          "native_end_s": 170.088541,
+          "source_start": 128,
+          "source_end": 149,
+          "spoken_start": 132,
+          "spoken_end": 153,
+          "first_word_index": 30,
+          "last_word_index": 34,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        }
+      ],
+      "paragraphs": [
+        {
+          "paragraph": 26,
+          "offset_s": 3.5,
+          "measured_seconds": 27.696,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S026\\audio.wav",
+          "last_native_word_end_s": 30.131583,
+          "last_pcm_signal_end_s": 30.088833333333334
+        },
+        {
+          "paragraph": 27,
+          "offset_s": 31.546,
+          "measured_seconds": 27.336,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S027\\audio.wav",
+          "last_native_word_end_s": 57.861791,
+          "last_pcm_signal_end_s": 57.82054166666667
+        },
+        {
+          "paragraph": 28,
+          "offset_s": 59.232,
+          "measured_seconds": 25.656,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S028\\audio.wav",
+          "last_native_word_end_s": 83.808333,
+          "last_pcm_signal_end_s": 83.80304166666667
+        },
+        {
+          "paragraph": 29,
+          "offset_s": 85.238,
+          "measured_seconds": 26.232,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S029\\audio.wav",
+          "last_native_word_end_s": 110.395916,
+          "last_pcm_signal_end_s": 110.36641666666667
+        },
+        {
+          "paragraph": 30,
+          "offset_s": 111.82,
+          "measured_seconds": 33.408,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S030\\audio.wav",
+          "last_native_word_end_s": 144.12,
+          "last_pcm_signal_end_s": 144.05541666666664
+        },
+        {
+          "paragraph": 31,
+          "offset_s": 145.578,
+          "measured_seconds": 25.488,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S031\\audio.wav",
+          "last_native_word_end_s": 170.088541,
+          "last_pcm_signal_end_s": 169.939
+        }
+      ],
+      "audio_sha256": "66ca7e32d3602b0a5f5169dea390f53c71cb7a3ff38b98134cb5b23613ae4462",
+      "listening": "not_performed"
+    },
+    {
+      "chapter": 8,
+      "title": "신생아 특례",
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_08.wav",
+      "total_seconds": 169.2,
+      "pcm_frames": 4060800,
+      "last_speech_end_s": 167.97999900000002,
+      "last_speech_end_basis": "max(last provider word end, last PCM sample >= -60dBFS); documented unlistened estimate",
+      "last_native_word_end_s": 167.97999900000002,
+      "last_pcm_signal_end_s": 167.95045833333333,
+      "leading_silence_s": 3.5,
+      "paragraph_gap_s": 0.35,
+      "tail_from_last_spoken_s": 1.220000999999968,
+      "cues": [
+        {
+          "id": "C08_S032Q001",
+          "scene_id": "S032",
+          "paragraph": 32,
+          "text": "같은 B의 신생아 특례 디딤돌을 보겠습니다.",
+          "spoken_text": "같은 비의 신생아 특례 디딤돌을 보겠습니다.",
+          "display_lines": [
+            "같은 B의 신생아 특례 디딤돌을 보겠습니다."
+          ],
+          "start_s": 3.601333,
+          "end_s": 7.075,
+          "native_start_s": 3.601333,
+          "native_end_s": 7.075,
+          "source_start": 0,
+          "source_end": 24,
+          "spoken_start": 0,
+          "spoken_end": 24,
+          "first_word_index": 0,
+          "last_word_index": 5,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S032Q002",
+          "scene_id": "S032",
+          "paragraph": 32,
+          "text": "접수 전 2년 내 출산·입양, 2023년 1월 1일 이후 출생을 확인하며, 입양아는 접수일 현재 만 2세 미만입니다.",
+          "spoken_text": "접수 전 이년 내 출산·입양, 이천이십삼년 일월 일일 이후 출생을 확인하며, 입양아는 접수일 현재 만 이세 미만입니다.",
+          "display_lines": [
+            "접수 전 2년 내 출산·입양, 2023년 1월 1일 이후",
+            "출생을 확인하며, 입양아는 접수일 현재 만 2세 미만입니다."
+          ],
+          "start_s": 8.156583,
+          "end_s": 17.959208,
+          "native_start_s": 8.156583,
+          "native_end_s": 17.959208,
+          "source_start": 25,
+          "source_end": 90,
+          "spoken_start": 25,
+          "spoken_end": 91,
+          "first_word_index": 6,
+          "last_word_index": 23,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S032Q003",
+          "scene_id": "S032",
+          "paragraph": 32,
+          "text": "소득은 외벌이 1억 3천만 원 이하, 맞벌이 합산 2억 원 이하이면서 부부 각자 1억 3천만 원 이하여야 합니다.",
+          "spoken_text": "소득은 외벌이 일억 삼천만 원 이하, 맞벌이 합산 이억 원 이하이면서 부부 각자 일억 삼천만 원 이하여야 합니다.",
+          "display_lines": [
+            "소득은 외벌이 1억 3천만 원 이하, 맞벌이 합산 2억 원 이하이면서",
+            "부부 각자 1억 3천만 원 이하여야 합니다."
+          ],
+          "start_s": 19.025,
+          "end_s": 27.393416,
+          "native_start_s": 19.025,
+          "native_end_s": 27.393416,
+          "source_start": 91,
+          "source_end": 154,
+          "spoken_start": 92,
+          "spoken_end": 155,
+          "first_word_index": 24,
+          "last_word_index": 41,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S032Q004",
+          "scene_id": "S032",
+          "paragraph": 32,
+          "text": "순자산 상한은 5억 1,100만 원입니다.",
+          "spoken_text": "순자산 상한은 오억 천백만 원입니다.",
+          "display_lines": [
+            "순자산 상한은 5억 1,100만 원입니다."
+          ],
+          "start_s": 28.431583,
+          "end_s": 31.431582,
+          "native_start_s": 28.431583,
+          "native_end_s": 31.431582,
+          "source_start": 155,
+          "source_end": 178,
+          "spoken_start": 156,
+          "spoken_end": 176,
+          "first_word_index": 42,
+          "last_word_index": 46,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S033Q001",
+          "scene_id": "S033",
+          "paragraph": 33,
+          "text": "대상 주택은 9억 원 이하, 이 서울 사례의 면적은 전용 85㎡ 이하이며 대출 상품 한도는 4억 원입니다.",
+          "spoken_text": "대상 주택은 구억 원 이하, 이 서울 사례의 면적은 전용 팔십오 제곱미터 이하이며 대출 상품 한도는 사억 원입니다.",
+          "display_lines": [
+            "대상 주택은 9억 원 이하, 이 서울 사례의 면적은 전용 85㎡ 이하이며",
+            "대출 상품 한도는 4억 원입니다."
+          ],
+          "start_s": 32.919333,
+          "end_s": 42.340374,
+          "native_start_s": 32.919333,
+          "native_end_s": 42.340374,
+          "source_start": 0,
+          "source_end": 59,
+          "spoken_start": 0,
+          "spoken_end": 64,
+          "first_word_index": 0,
+          "last_word_index": 17,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S033Q002",
+          "scene_id": "S033",
+          "paragraph": 33,
+          "text": "DTI 60%와 담보·신용·보증을 함께 확인합니다.",
+          "spoken_text": "디티아이 육십 퍼센트와 담보·신용·보증을 함께 확인합니다.",
+          "display_lines": [
+            "DTI 60%와 담보·신용·보증을 함께 확인합니다."
+          ],
+          "start_s": 43.357458,
+          "end_s": 47.804833,
+          "native_start_s": 43.357458,
+          "native_end_s": 47.804833,
+          "source_start": 60,
+          "source_end": 88,
+          "spoken_start": 65,
+          "spoken_end": 97,
+          "first_word_index": 18,
+          "last_word_index": 25,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S033Q003",
+          "scene_id": "S033",
+          "paragraph": 33,
+          "text": "B가 6억 원 집에 보증 가입 요건을 충족하고 승인받아 공제를 보완하면, 필요한 3억 9,074만 원이 상품 한도 안에 들어옵니다.",
+          "spoken_text": "비가 육억 원 집에 보증 가입 요건을 충족하고 승인받아 공제를 보완하면, 필요한 삼억 구천칠십사만 원이 상품 한도 안에 들어옵니다.",
+          "display_lines": [
+            "B가 6억 원 집에 보증 가입 요건을 충족하고 승인받아 공제를 보완하면,",
+            "필요한 3억 9,074만 원이 상품 한도 안에 들어옵니다."
+          ],
+          "start_s": 48.844333,
+          "end_s": 58.304833,
+          "native_start_s": 48.844333,
+          "native_end_s": 58.304833,
+          "source_start": 89,
+          "source_end": 162,
+          "spoken_start": 98,
+          "spoken_end": 171,
+          "first_word_index": 26,
+          "last_word_index": 44,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S034Q001",
+          "scene_id": "S034",
+          "paragraph": 34,
+          "text": "B의 30년 대출은 기본 초기금리 2.9%에서 월 약 162.6만 원을 처음 5년간 갚습니다.",
+          "spoken_text": "비의 삼십년 대출은 기본 초기금리 이점구 퍼센트에서 월 약 백육십이점육만 원을 처음 오년간 갚습니다.",
+          "display_lines": [
+            "B의 30년 대출은 기본 초기금리 2.9%에서",
+            "월 약 162.6만 원을 처음 5년간 갚습니다."
+          ],
+          "start_s": 59.740666,
+          "end_s": 68.043291,
+          "native_start_s": 59.740666,
+          "native_end_s": 68.043291,
+          "source_start": 0,
+          "source_end": 52,
+          "spoken_start": 0,
+          "spoken_end": 56,
+          "first_word_index": 0,
+          "last_word_index": 13,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S034Q002",
+          "scene_id": "S034",
+          "paragraph": 34,
+          "text": "이후에는 대출접수일 기준, 생애최초 신혼 디딤돌의 최저기본금리와 신생아 최저특례금리의 차이를 가산합니다.",
+          "spoken_text": "이후에는 대출접수일 기준, 생애최초 신혼 디딤돌의 최저기본금리와 신생아 최저특례금리의 차이를 가산합니다.",
+          "display_lines": [
+            "이후에는 대출접수일 기준, 생애최초 신혼 디딤돌의 최저기본금리와",
+            "신생아 최저특례금리의 차이를 가산합니다."
+          ],
+          "start_s": 69.087375,
+          "end_s": 77.561041,
+          "native_start_s": 69.087375,
+          "native_end_s": 77.561041,
+          "source_start": 53,
+          "source_end": 111,
+          "spoken_start": 57,
+          "spoken_end": 115,
+          "first_word_index": 14,
+          "last_word_index": 24,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S034Q003",
+          "scene_id": "S034",
+          "paragraph": 34,
+          "text": "신규 합산소득 8,500만 원 이하인 B에 2026년 10월 19일 표를 적용하면, 가산폭 0.75%포인트로 기본금리는 3.65%가 됩니다.",
+          "spoken_text": "신규 합산소득 팔천오백만 원 이하인 비에 이천이십육년 시월 십구일 표를 적용하면, 가산폭 영점칠오 퍼센트 포인트로 기본금리는 삼점육오 퍼센트가 됩니다.",
+          "display_lines": [
+            "신규 합산소득 8,500만 원 이하인 B에 2026년 10월 19일 표를",
+            "적용하면, 가산폭 0.75%포인트로 기본금리는 3.65%가 됩니다."
+          ],
+          "start_s": 78.611041,
+          "end_s": 90.189999,
+          "native_start_s": 78.611041,
+          "native_end_s": 90.189999,
+          "source_start": 112,
+          "source_end": 190,
+          "spoken_start": 116,
+          "spoken_end": 200,
+          "first_word_index": 25,
+          "last_word_index": 43,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S034RQ001",
+          "scene_id": "S034R",
+          "paragraph": 35,
+          "text": "추가 출산·우대·중도상환을 적용하지 않은 기본 사례입니다.",
+          "spoken_text": "추가 출산·우대·중도상환을 적용하지 않은 기본 사례입니다.",
+          "display_lines": [
+            "추가 출산·우대·중도상환을 적용하지 않은 기본 사례입니다."
+          ],
+          "start_s": 91.603333,
+          "end_s": 95.840166,
+          "native_start_s": 91.603333,
+          "native_end_s": 95.840166,
+          "source_start": 0,
+          "source_end": 32,
+          "spoken_start": 0,
+          "spoken_end": 32,
+          "first_word_index": 0,
+          "last_word_index": 7,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S034RQ002",
+          "scene_id": "S034R",
+          "paragraph": 35,
+          "text": "60회 상환 뒤 잔액 약 3억 4,676만 원을 남은 300개월 동안 갚으면 월 약 176.4만 원입니다.",
+          "spoken_text": "육십회 상환 뒤 잔액 약 삼억 사천육백칠십육만 원을 남은 삼백개월 동안 갚으면 월 약 백칠십육점사만 원입니다.",
+          "display_lines": [
+            "60회 상환 뒤 잔액 약 3억 4,676만 원을",
+            "남은 300개월 동안 갚으면 월 약 176.4만 원입니다."
+          ],
+          "start_s": 96.85725,
+          "end_s": 105.962541,
+          "native_start_s": 96.85725,
+          "native_end_s": 105.962541,
+          "source_start": 33,
+          "source_end": 92,
+          "spoken_start": 33,
+          "spoken_end": 94,
+          "first_word_index": 8,
+          "last_word_index": 23,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S034RQ003",
+          "scene_id": "S034R",
+          "paragraph": 35,
+          "text": "B도 월 300만 원의 주거·저축 예산에서 상환 목표를 170만 원으로 정하면, 초기와 5년 뒤 부담을 함께 비교할 수 있습니다.",
+          "spoken_text": "비도 월 삼백만 원의 주거·저축 예산에서 상환 목표를 백칠십만 원으로 정하면, 초기와 오년 뒤 부담을 함께 비교할 수 있습니다.",
+          "display_lines": [
+            "B도 월 300만 원의 주거·저축 예산에서 상환 목표를 170만 원으로",
+            "정하면, 초기와 5년 뒤 부담을 함께 비교할 수 있습니다."
+          ],
+          "start_s": 107.041458,
+          "end_s": 116.475666,
+          "native_start_s": 107.041458,
+          "native_end_s": 116.475666,
+          "source_start": 93,
+          "source_end": 165,
+          "spoken_start": 95,
+          "spoken_end": 166,
+          "first_word_index": 24,
+          "last_word_index": 43,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S035Q001",
+          "scene_id": "S035",
+          "paragraph": 36,
+          "text": "9억 원은 선택 가능한 주택의 가격 조건입니다.",
+          "spoken_text": "구억 원은 선택 가능한 주택의 가격 조건입니다.",
+          "display_lines": [
+            "9억 원은 선택 가능한 주택의 가격 조건입니다."
+          ],
+          "start_s": 118.017333,
+          "end_s": 121.740999,
+          "native_start_s": 118.017333,
+          "native_end_s": 121.740999,
+          "source_start": 0,
+          "source_end": 26,
+          "spoken_start": 0,
+          "spoken_end": 26,
+          "first_word_index": 0,
+          "last_word_index": 6,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S035Q002",
+          "scene_id": "S035",
+          "paragraph": 36,
+          "text": "이 사례에는 공제액 5,500만 원을 반영합니다.",
+          "spoken_text": "이 사례에는 공제액 오천오백만 원을 반영합니다.",
+          "display_lines": [
+            "이 사례에는 공제액 5,500만 원을 반영합니다."
+          ],
+          "start_s": 122.794958,
+          "end_s": 126.597583,
+          "native_start_s": 122.794958,
+          "native_end_s": 126.597583,
+          "source_start": 27,
+          "source_end": 54,
+          "spoken_start": 27,
+          "spoken_end": 53,
+          "first_word_index": 7,
+          "last_word_index": 12,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S035Q003",
+          "scene_id": "S035",
+          "paragraph": 36,
+          "text": "9억 원의 70%에서 공제한 담보 한도 5억 7,500만 원보다 상품 한도 4억 원이 작아, 대출 상한은 4억 원입니다.",
+          "spoken_text": "구억 원의 칠십 퍼센트에서 공제한 담보 한도 오억 칠천오백만 원보다 상품 한도 사억 원이 작아, 대출 상한은 사억 원입니다.",
+          "display_lines": [
+            "9억 원의 70%에서 공제한 담보 한도 5억 7,500만 원보다",
+            "상품 한도 4억 원이 작아, 대출 상한은 4억 원입니다."
+          ],
+          "start_s": 127.639666,
+          "end_s": 137.284416,
+          "native_start_s": 127.639666,
+          "native_end_s": 137.284416,
+          "source_start": 55,
+          "source_end": 122,
+          "spoken_start": 54,
+          "spoken_end": 123,
+          "first_word_index": 13,
+          "last_word_index": 31,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S035Q004",
+          "scene_id": "S035",
+          "paragraph": 36,
+          "text": "예비자금과 비용까지 필요한 현금은 5억 6,615만 원입니다.",
+          "spoken_text": "예비자금과 비용까지 필요한 현금은 오억 육천육백십오만 원입니다.",
+          "display_lines": [
+            "예비자금과 비용까지 필요한 현금은 5억 6,615만 원입니다."
+          ],
+          "start_s": 138.348875,
+          "end_s": 143.519958,
+          "native_start_s": 138.348875,
+          "native_end_s": 143.519958,
+          "source_start": 123,
+          "source_end": 157,
+          "spoken_start": 124,
+          "spoken_end": 159,
+          "first_word_index": 32,
+          "last_word_index": 38,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S036Q001",
+          "scene_id": "S036",
+          "paragraph": 37,
+          "text": "지금 보유한 돈과 비교하면 추가 현금은 3억 1,615만 원입니다.",
+          "spoken_text": "지금 보유한 돈과 비교하면 추가 현금은 삼억 천육백십오만 원입니다.",
+          "display_lines": [
+            "지금 보유한 돈과 비교하면",
+            "추가 현금은 3억 1,615만 원입니다."
+          ],
+          "start_s": 145.031333,
+          "end_s": 150.281333,
+          "native_start_s": 145.031333,
+          "native_end_s": 150.281333,
+          "source_start": 0,
+          "source_end": 37,
+          "spoken_start": 0,
+          "spoken_end": 37,
+          "first_word_index": 0,
+          "last_word_index": 8,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S036Q002",
+          "scene_id": "S036",
+          "paragraph": 37,
+          "text": "금리 혜택과 별도로 자금표가 맞는 가격대를 골라야 합니다.",
+          "spoken_text": "금리 혜택과 별도로 자금표가 맞는 가격대를 골라야 합니다.",
+          "display_lines": [
+            "금리 혜택과 별도로 자금표가 맞는 가격대를 골라야 합니다."
+          ],
+          "start_s": 151.34975,
+          "end_s": 155.770791,
+          "native_start_s": 151.34975,
+          "native_end_s": 155.770791,
+          "source_start": 38,
+          "source_end": 70,
+          "spoken_start": 38,
+          "spoken_end": 70,
+          "first_word_index": 9,
+          "last_word_index": 16,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C08_S036Q003",
+          "scene_id": "S036",
+          "paragraph": 37,
+          "text": "신생아 특례도 현행 신규 신청에서는 실행 후 1개월 내 전입, 전입일부터 2년 실거주 기준을 적용하므로 출산가구의 이사 일정과 함께 확인합니다.",
+          "spoken_text": "신생아 특례도 현행 신규 신청에서는 실행 후 일개월 내 전입, 전입일부터 이년 실거주 기준을 적용하므로 출산가구의 이사 일정과 함께 확인합니다.",
+          "display_lines": [
+            "신생아 특례도 현행 신규 신청에서는 실행 후 1개월 내 전입, 전입일부터",
+            "2년 실거주 기준을 적용하므로 출산가구의 이사 일정과 함께 확인합니다."
+          ],
+          "start_s": 156.808958,
+          "end_s": 167.979999,
+          "native_start_s": 156.808958,
+          "native_end_s": 167.979999,
+          "source_start": 71,
+          "source_end": 151,
+          "spoken_start": 71,
+          "spoken_end": 151,
+          "first_word_index": 17,
+          "last_word_index": 36,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        }
+      ],
+      "paragraphs": [
+        {
+          "paragraph": 32,
+          "offset_s": 3.5,
+          "measured_seconds": 28.968,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S032\\audio.wav",
+          "last_native_word_end_s": 31.431582,
+          "last_pcm_signal_end_s": 31.383916666666668
+        },
+        {
+          "paragraph": 33,
+          "offset_s": 32.818,
+          "measured_seconds": 26.472,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S033\\audio.wav",
+          "last_native_word_end_s": 58.304833,
+          "last_pcm_signal_end_s": 58.245083333333326
+        },
+        {
+          "paragraph": 34,
+          "offset_s": 59.64,
+          "measured_seconds": 31.512,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S034\\audio.wav",
+          "last_native_word_end_s": 90.189999,
+          "last_pcm_signal_end_s": 90.10829166666667
+        },
+        {
+          "paragraph": 35,
+          "offset_s": 91.502,
+          "measured_seconds": 26.064,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S034R\\audio.wav",
+          "last_native_word_end_s": 116.47566599999999,
+          "last_pcm_signal_end_s": 116.44866666666667
+        },
+        {
+          "paragraph": 36,
+          "offset_s": 117.916,
+          "measured_seconds": 26.664,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S035\\audio.wav",
+          "last_native_word_end_s": 143.519958,
+          "last_pcm_signal_end_s": 143.46633333333332
+        },
+        {
+          "paragraph": 37,
+          "offset_s": 144.93,
+          "measured_seconds": 24.12,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S036\\audio.wav",
+          "last_native_word_end_s": 167.97999900000002,
+          "last_pcm_signal_end_s": 167.95045833333333
+        }
+      ],
+      "audio_sha256": "c3115182ea886b7b4f79dff68cd12c589118445b066be5ca424318b2024c2794",
+      "listening": "not_performed"
+    },
+    {
+      "chapter": 9,
+      "title": "월 예산",
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_09.wav",
+      "total_seconds": 133.26666666666668,
+      "pcm_frames": 3198400,
+      "last_speech_end_s": 132.048708,
+      "last_speech_end_basis": "max(last provider word end, last PCM sample >= -60dBFS); documented unlistened estimate",
+      "last_native_word_end_s": 132.048708,
+      "last_pcm_signal_end_s": 132.03420833333334,
+      "leading_silence_s": 3.5,
+      "paragraph_gap_s": 0.35,
+      "tail_from_last_spoken_s": 1.217958666666675,
+      "cues": [
+        {
+          "id": "C09_S037Q001",
+          "scene_id": "S037",
+          "paragraph": 38,
+          "text": "다시 A의 생애최초, 보증 승인으로 공제를 보완한 사례입니다.",
+          "spoken_text": "다시 에이의 생애최초, 보증 승인으로 공제를 보완한 사례입니다.",
+          "display_lines": [
+            "다시 A의 생애최초, 보증 승인으로 공제를 보완한 사례입니다."
+          ],
+          "start_s": 3.601333,
+          "end_s": 8.824999,
+          "native_start_s": 3.601333,
+          "native_end_s": 8.824999,
+          "source_start": 0,
+          "source_end": 34,
+          "spoken_start": 0,
+          "spoken_end": 35,
+          "first_word_index": 0,
+          "last_word_index": 7,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S037Q002",
+          "scene_id": "S037",
+          "paragraph": 38,
+          "text": "현금과 비용, 은행 심사를 함께 넣은 가격 상한은 약 6억 8,019만 원입니다.",
+          "spoken_text": "현금과 비용, 은행 심사를 함께 넣은 가격 상한은 약 육억 팔천십구만 원입니다.",
+          "display_lines": [
+            "현금과 비용, 은행 심사를 함께",
+            "넣은 가격 상한은 약 6억 8,019만 원입니다."
+          ],
+          "start_s": 9.88025,
+          "end_s": 16.525,
+          "native_start_s": 9.88025,
+          "native_end_s": 16.525,
+          "source_start": 35,
+          "source_end": 80,
+          "spoken_start": 36,
+          "spoken_end": 80,
+          "first_word_index": 8,
+          "last_word_index": 19,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S037Q003",
+          "scene_id": "S037",
+          "paragraph": 38,
+          "text": "지금까지의 수치는 각 가정과 실행 조건을 충족할 때의 계획 계산값입니다.",
+          "spoken_text": "지금까지의 수치는 각 가정과 실행 조건을 충족할 때의 계획 계산값입니다.",
+          "display_lines": [
+            "지금까지의 수치는 각 가정과 실행",
+            "조건을 충족할 때의 계획 계산값입니다."
+          ],
+          "start_s": 17.590791,
+          "end_s": 23.196041,
+          "native_start_s": 17.590791,
+          "native_end_s": 23.196041,
+          "source_start": 81,
+          "source_end": 121,
+          "spoken_start": 81,
+          "spoken_end": 121,
+          "first_word_index": 20,
+          "last_word_index": 29,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S037Q004",
+          "scene_id": "S037",
+          "paragraph": 38,
+          "text": "매수 예산에는 매달 유지할 생활도 반영합니다.",
+          "spoken_text": "매수 예산에는 매달 유지할 생활도 반영합니다.",
+          "display_lines": [
+            "매수 예산에는 매달 유지할 생활도 반영합니다."
+          ],
+          "start_s": 24.261833,
+          "end_s": 27.998708,
+          "native_start_s": 24.261833,
+          "native_end_s": 27.998708,
+          "source_start": 122,
+          "source_end": 147,
+          "spoken_start": 122,
+          "spoken_end": 147,
+          "first_word_index": 30,
+          "last_word_index": 35,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S038Q001",
+          "scene_id": "S038",
+          "paragraph": 39,
+          "text": "월 300만 원은 주거와 저축에 배정한 돈입니다.",
+          "spoken_text": "월 삼백만 원은 주거와 저축에 배정한 돈입니다.",
+          "display_lines": [
+            "월 300만 원은 주거와 저축에 배정한 돈입니다."
+          ],
+          "start_s": 29.511333,
+          "end_s": 33.392874,
+          "native_start_s": 29.511333,
+          "native_end_s": 33.392874,
+          "source_start": 0,
+          "source_end": 27,
+          "spoken_start": 0,
+          "spoken_end": 26,
+          "first_word_index": 0,
+          "last_word_index": 6,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S038Q002",
+          "scene_id": "S038",
+          "paragraph": 39,
+          "text": "소유 관련 비용 월 30만 원, 저축 목표 100만 원을 남기면 대출 상환 목표는 170만 원입니다.",
+          "spoken_text": "소유 관련 비용 월 삼십만 원, 저축 목표 백만 원을 남기면 대출 상환 목표는 백칠십만 원입니다.",
+          "display_lines": [
+            "소유 관련 비용 월 30만 원,",
+            "저축 목표 100만 원을 남기면 대출 상환 목표는 170만 원입니다."
+          ],
+          "start_s": 34.460666,
+          "end_s": 42.473791,
+          "native_start_s": 34.460666,
+          "native_end_s": 42.473791,
+          "source_start": 28,
+          "source_end": 84,
+          "spoken_start": 27,
+          "spoken_end": 81,
+          "first_word_index": 7,
+          "last_word_index": 22,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S038Q003",
+          "scene_id": "S038",
+          "paragraph": 39,
+          "text": "이 목표를 넣어 역산한 집값은 약 5억 6,586만 원입니다.",
+          "spoken_text": "이 목표를 넣어 역산한 집값은 약 오억 육천오백팔십육만 원입니다.",
+          "display_lines": [
+            "이 목표를 넣어 역산한 집값은 약 5억 6,586만 원입니다."
+          ],
+          "start_s": 43.473166,
+          "end_s": 49.025791,
+          "native_start_s": 43.473166,
+          "native_end_s": 49.025791,
+          "source_start": 85,
+          "source_end": 119,
+          "spoken_start": 82,
+          "spoken_end": 118,
+          "first_word_index": 23,
+          "last_word_index": 31,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S038Q004",
+          "scene_id": "S038",
+          "paragraph": 39,
+          "text": "소유비 30만 원도 실제 지출로 바꿀 계획값입니다.",
+          "spoken_text": "소유비 삼십만 원도 실제 지출로 바꿀 계획값입니다.",
+          "display_lines": [
+            "소유비 30만 원도 실제 지출로 바꿀 계획값입니다."
+          ],
+          "start_s": 50.10475,
+          "end_s": 54.420499,
+          "native_start_s": 50.10475,
+          "native_end_s": 54.420499,
+          "source_start": 120,
+          "source_end": 148,
+          "spoken_start": 119,
+          "spoken_end": 147,
+          "first_word_index": 32,
+          "last_word_index": 38,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S039Q001",
+          "scene_id": "S039",
+          "paragraph": 40,
+          "text": "은행 조건만 맞춘 가격에서는 월 상환액이 약 227만 원이고 저축 여유는 약 43만 원입니다.",
+          "spoken_text": "은행 조건만 맞춘 가격에서는 월 상환액이 약 이백이십칠만 원이고 저축 여유는 약 사십삼만 원입니다.",
+          "display_lines": [
+            "은행 조건만 맞춘 가격에서는 월 상환액이 약 227만 원이고",
+            "저축 여유는 약 43만 원입니다."
+          ],
+          "start_s": 55.902625,
+          "end_s": 63.731582,
+          "native_start_s": 55.902625,
+          "native_end_s": 63.731582,
+          "source_start": 0,
+          "source_end": 52,
+          "spoken_start": 0,
+          "spoken_end": 55,
+          "first_word_index": 0,
+          "last_word_index": 13,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S039Q002",
+          "scene_id": "S039",
+          "paragraph": 40,
+          "text": "월 목표에 맞춘 가격은 상환액 약 170만 원, 저축 여유 약 100만 원입니다.",
+          "spoken_text": "월 목표에 맞춘 가격은 상환액 약 백칠십만 원, 저축 여유 약 백만 원입니다.",
+          "display_lines": [
+            "월 목표에 맞춘 가격은 상환액 약 170만 원,",
+            "저축 여유 약 100만 원입니다."
+          ],
+          "start_s": 64.8,
+          "end_s": 71.431583,
+          "native_start_s": 64.8,
+          "native_end_s": 71.431583,
+          "source_start": 53,
+          "source_end": 98,
+          "spoken_start": 56,
+          "spoken_end": 99,
+          "first_word_index": 14,
+          "last_word_index": 26,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S039Q003",
+          "scene_id": "S039",
+          "paragraph": 40,
+          "text": "은행이 인정한 소득은 대출 심사의 기준이고, 월 300만 원은 가구가 생활비를 배정한 뒤 정한 예산입니다.",
+          "spoken_text": "은행이 인정한 소득은 대출 심사의 기준이고, 월 삼백만 원은 가구가 생활비를 배정한 뒤 정한 예산입니다.",
+          "display_lines": [
+            "은행이 인정한 소득은 대출 심사의 기준이고,",
+            "월 300만 원은 가구가 생활비를 배정한 뒤 정한 예산입니다."
+          ],
+          "start_s": 72.509208,
+          "end_s": 80.811833,
+          "native_start_s": 72.509208,
+          "native_end_s": 80.811833,
+          "source_start": 99,
+          "source_end": 158,
+          "spoken_start": 100,
+          "spoken_end": 158,
+          "first_word_index": 27,
+          "last_word_index": 41,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S040Q001",
+          "scene_id": "S040",
+          "paragraph": 41,
+          "text": "금리가 4%와 6%일 때도 비교하겠습니다.",
+          "spoken_text": "금리가 사 퍼센트와 육 퍼센트일 때도 비교하겠습니다.",
+          "display_lines": [
+            "금리가 4%와 6%일 때도 비교하겠습니다."
+          ],
+          "start_s": 82.29,
+          "end_s": 86.421582,
+          "native_start_s": 82.29,
+          "native_end_s": 86.421582,
+          "source_start": 0,
+          "source_end": 23,
+          "spoken_start": 0,
+          "spoken_end": 29,
+          "first_word_index": 0,
+          "last_word_index": 6,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S040Q002",
+          "scene_id": "S040",
+          "paragraph": 41,
+          "text": "각 가격에서 필요한 최초 대출원금을 그대로 두고, 각각 새로 360개월을 갚는 조건입니다.",
+          "spoken_text": "각 가격에서 필요한 최초 대출원금을 그대로 두고, 각각 새로 삼백육십개월을 갚는 조건입니다.",
+          "display_lines": [
+            "각 가격에서 필요한 최초 대출원금을 그대로 두고,",
+            "각각 새로 360개월을 갚는 조건입니다."
+          ],
+          "start_s": 87.425541,
+          "end_s": 94.714999,
+          "native_start_s": 87.425541,
+          "native_end_s": 94.714999,
+          "source_start": 24,
+          "source_end": 74,
+          "spoken_start": 30,
+          "spoken_end": 81,
+          "first_word_index": 7,
+          "last_word_index": 18,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S040Q003",
+          "scene_id": "S040",
+          "paragraph": 41,
+          "text": "높은 가격은 월액이 약 227만 원에서 285만 원으로, 예산에 맞춘 가격은 170만 원에서 213만 원으로 늘어납니다.",
+          "spoken_text": "높은 가격은 월액이 약 이백이십칠만 원에서 이백팔십오만 원으로, 예산에 맞춘 가격은 백칠십만 원에서 이백십삼만 원으로 늘어납니다.",
+          "display_lines": [
+            "높은 가격은 월액이 약 227만 원에서 285만 원으로,",
+            "예산에 맞춘 가격은 170만 원에서 213만 원으로 늘어납니다."
+          ],
+          "start_s": 95.755125,
+          "end_s": 105.820916,
+          "native_start_s": 95.755125,
+          "native_end_s": 105.820916,
+          "source_start": 75,
+          "source_end": 142,
+          "spoken_start": 82,
+          "spoken_end": 154,
+          "first_word_index": 19,
+          "last_word_index": 34,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S040Q004",
+          "scene_id": "S040",
+          "paragraph": 41,
+          "text": "소유비를 뺀 저축 여유는 각각 43만 원에서 15만 원 부족으로, 100만 원에서 57만 원으로 바뀝니다.",
+          "spoken_text": "소유비를 뺀 저축 여유는 각각 사십삼만 원에서 십오만 원 부족으로, 백만 원에서 오십칠만 원으로 바뀝니다.",
+          "display_lines": [
+            "소유비를 뺀 저축 여유는 각각 43만 원에서 15만 원 부족으로,",
+            "100만 원에서 57만 원으로 바뀝니다."
+          ],
+          "start_s": 106.872875,
+          "end_s": 115.043958,
+          "native_start_s": 106.872875,
+          "native_end_s": 115.043958,
+          "source_start": 143,
+          "source_end": 202,
+          "spoken_start": 155,
+          "spoken_end": 214,
+          "first_word_index": 35,
+          "last_word_index": 49,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S041Q001",
+          "scene_id": "S041",
+          "paragraph": 42,
+          "text": "6억 원 집도 A의 월액 약 186.5만 원을 월 목표와 대조하면 조정할 지점이 보입니다.",
+          "spoken_text": "육억 원 집도 에이의 월액 약 백팔십육점오만 원을 월 목표와 대조하면 조정할 지점이 보입니다.",
+          "display_lines": [
+            "6억 원 집도 A의 월액 약 186.5만 원을 월 목표와 대조하면",
+            "조정할 지점이 보입니다."
+          ],
+          "start_s": 116.506625,
+          "end_s": 123.888207,
+          "native_start_s": 116.506625,
+          "native_end_s": 123.888207,
+          "source_start": 0,
+          "source_end": 50,
+          "spoken_start": 0,
+          "spoken_end": 52,
+          "first_word_index": 0,
+          "last_word_index": 13,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C09_S041Q002",
+          "scene_id": "S041",
+          "paragraph": 42,
+          "text": "현금을 더 마련할지, 저축 목표를 바꿀지, 가격을 조정할지 비교할 수 있습니다.",
+          "spoken_text": "현금을 더 마련할지, 저축 목표를 바꿀지, 가격을 조정할지 비교할 수 있습니다.",
+          "display_lines": [
+            "현금을 더 마련할지, 저축 목표를 바꿀지,",
+            "가격을 조정할지 비교할 수 있습니다."
+          ],
+          "start_s": 124.956625,
+          "end_s": 132.048708,
+          "native_start_s": 124.956625,
+          "native_end_s": 132.048708,
+          "source_start": 51,
+          "source_end": 95,
+          "spoken_start": 53,
+          "spoken_end": 97,
+          "first_word_index": 14,
+          "last_word_index": 24,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        }
+      ],
+      "paragraphs": [
+        {
+          "paragraph": 38,
+          "offset_s": 3.5,
+          "measured_seconds": 25.56,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S037\\audio.wav",
+          "last_native_word_end_s": 27.998708,
+          "last_pcm_signal_end_s": 27.987208333333335
+        },
+        {
+          "paragraph": 39,
+          "offset_s": 29.41,
+          "measured_seconds": 26.04,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S038\\audio.wav",
+          "last_native_word_end_s": 54.420499,
+          "last_pcm_signal_end_s": 54.3775
+        },
+        {
+          "paragraph": 40,
+          "offset_s": 55.8,
+          "measured_seconds": 26.04,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S039\\audio.wav",
+          "last_native_word_end_s": 80.811833,
+          "last_pcm_signal_end_s": 80.86979166666666
+        },
+        {
+          "paragraph": 41,
+          "offset_s": 82.19,
+          "measured_seconds": 33.864,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S040\\audio.wav",
+          "last_native_word_end_s": 115.043958,
+          "last_pcm_signal_end_s": 114.99025
+        },
+        {
+          "paragraph": 42,
+          "offset_s": 116.404,
+          "measured_seconds": 16.704,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S041\\audio.wav",
+          "last_native_word_end_s": 132.048708,
+          "last_pcm_signal_end_s": 132.03420833333334
+        }
+      ],
+      "audio_sha256": "5baa2a578c108fd3482650de7a9a40f93a371407c6cddb231512c9cfa0ccfc90",
+      "listening": "not_performed"
+    },
+    {
+      "chapter": 10,
+      "title": "다음 선택",
+      "audio_file": "video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v3/chapter_10.wav",
+      "total_seconds": 72.43333333333334,
+      "pcm_frames": 1738400,
+      "last_speech_end_s": 69.41312500000001,
+      "last_speech_end_basis": "max(last provider word end, last PCM sample >= -60dBFS); documented unlistened estimate",
+      "last_native_word_end_s": 69.41312500000001,
+      "last_pcm_signal_end_s": 69.389125,
+      "leading_silence_s": 3.5,
+      "paragraph_gap_s": 0.35,
+      "tail_from_last_spoken_s": 3.020208333333329,
+      "cues": [
+        {
+          "id": "C10_S042Q001",
+          "scene_id": "S042",
+          "paragraph": 43,
+          "text": "매물을 보기 전 세 숫자를 정리합니다.",
+          "spoken_text": "매물을 보기 전 세 숫자를 정리합니다.",
+          "display_lines": [
+            "매물을 보기 전 세 숫자를 정리합니다."
+          ],
+          "start_s": 3.601333,
+          "end_s": 6.574999,
+          "native_start_s": 3.601333,
+          "native_end_s": 6.574999,
+          "source_start": 0,
+          "source_end": 21,
+          "spoken_start": 0,
+          "spoken_end": 21,
+          "first_word_index": 0,
+          "last_word_index": 5,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C10_S042Q002",
+          "scene_id": "S042",
+          "paragraph": 43,
+          "text": "첫째는 보유자금에서 예비자금과 거래비용을 분리한 자기자금입니다.",
+          "spoken_text": "첫째는 보유자금에서 예비자금과 거래비용을 분리한 자기자금입니다.",
+          "display_lines": [
+            "첫째는 보유자금에서 예비자금과 거래비용을 분리한 자기자금입니다."
+          ],
+          "start_s": 7.657875,
+          "end_s": 12.407916,
+          "native_start_s": 7.657875,
+          "native_end_s": 12.407916,
+          "source_start": 22,
+          "source_end": 57,
+          "spoken_start": 22,
+          "spoken_end": 57,
+          "first_word_index": 6,
+          "last_word_index": 11,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C10_S042Q003",
+          "scene_id": "S042",
+          "paragraph": 43,
+          "text": "둘째는 은행이 그 집과 가구에 확인해 준 대출 범위입니다.",
+          "spoken_text": "둘째는 은행이 그 집과 가구에 확인해 준 대출 범위입니다.",
+          "display_lines": [
+            "둘째는 은행이 그 집과 가구에 확인해 준 대출 범위입니다."
+          ],
+          "start_s": 13.447375,
+          "end_s": 17.828958,
+          "native_start_s": 13.447375,
+          "native_end_s": 17.828958,
+          "source_start": 58,
+          "source_end": 90,
+          "spoken_start": 58,
+          "spoken_end": 90,
+          "first_word_index": 12,
+          "last_word_index": 20,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C10_S042Q004",
+          "scene_id": "S042",
+          "paragraph": 43,
+          "text": "인정소득, 기존 부채, 담보평가와 보증 조건을 함께 확인합니다.",
+          "spoken_text": "인정소득, 기존 부채, 담보평가와 보증 조건을 함께 확인합니다.",
+          "display_lines": [
+            "인정소득, 기존 부채, 담보평가와 보증 조건을 함께 확인합니다."
+          ],
+          "start_s": 18.865791,
+          "end_s": 25.023708,
+          "native_start_s": 18.865791,
+          "native_end_s": 25.023708,
+          "source_start": 91,
+          "source_end": 126,
+          "spoken_start": 91,
+          "spoken_end": 126,
+          "first_word_index": 21,
+          "last_word_index": 28,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C10_S043Q001",
+          "scene_id": "S043",
+          "paragraph": 44,
+          "text": "셋째는 매달 감당할 상환액입니다.",
+          "spoken_text": "셋째는 매달 감당할 상환액입니다.",
+          "display_lines": [
+            "셋째는 매달 감당할 상환액입니다."
+          ],
+          "start_s": 26.558,
+          "end_s": 29.426458,
+          "native_start_s": 26.558,
+          "native_end_s": 29.426458,
+          "source_start": 0,
+          "source_end": 18,
+          "spoken_start": 0,
+          "spoken_end": 18,
+          "first_word_index": 0,
+          "last_word_index": 3,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C10_S043Q002",
+          "scene_id": "S043",
+          "paragraph": 44,
+          "text": "생활비와 소유 관련 지출, 저축 목표를 놓고 금리가 달라져도 유지할 수 있는지 비교합니다.",
+          "spoken_text": "생활비와 소유 관련 지출, 저축 목표를 놓고 금리가 달라져도 유지할 수 있는지 비교합니다.",
+          "display_lines": [
+            "생활비와 소유 관련 지출,",
+            "저축 목표를 놓고 금리가 달라져도 유지할 수 있는지 비교합니다."
+          ],
+          "start_s": 30.429708,
+          "end_s": 38.061291,
+          "native_start_s": 30.429708,
+          "native_end_s": 38.061291,
+          "source_start": 19,
+          "source_end": 69,
+          "spoken_start": 19,
+          "spoken_end": 69,
+          "first_word_index": 4,
+          "last_word_index": 16,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C10_S043Q003",
+          "scene_id": "S043",
+          "paragraph": 44,
+          "text": "세 숫자가 만나는 가격 범위가 매물 검색의 출발점입니다.",
+          "spoken_text": "세 숫자가 만나는 가격 범위가 매물 검색의 출발점입니다.",
+          "display_lines": [
+            "세 숫자가 만나는 가격 범위가 매물 검색의 출발점입니다."
+          ],
+          "start_s": 39.126416,
+          "end_s": 43.573791,
+          "native_start_s": 39.126416,
+          "native_end_s": 43.573791,
+          "source_start": 70,
+          "source_end": 101,
+          "spoken_start": 70,
+          "spoken_end": 101,
+          "first_word_index": 17,
+          "last_word_index": 24,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C10_S043Q004",
+          "scene_id": "S043",
+          "paragraph": 44,
+          "text": "정책상품의 소득·자산·출산·입주 조건도 자금표에 연결합니다.",
+          "spoken_text": "정책상품의 소득·자산·출산·입주 조건도 자금표에 연결합니다.",
+          "display_lines": [
+            "정책상품의 소득·자산·출산·입주 조건도 자금표에 연결합니다."
+          ],
+          "start_s": 44.667208,
+          "end_s": 50.167208,
+          "native_start_s": 44.667208,
+          "native_end_s": 50.167208,
+          "source_start": 102,
+          "source_end": 135,
+          "spoken_start": 102,
+          "spoken_end": 135,
+          "first_word_index": 25,
+          "last_word_index": 32,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C10_S044Q001",
+          "scene_id": "S044",
+          "paragraph": 45,
+          "text": "다음 편에서는 정한 예산 안의 지역과 단지를 가격과 일자리 접근성, 교통과 생활 여건으로 비교하겠습니다.",
+          "spoken_text": "다음 편에서는 정한 예산 안의 지역과 단지를 가격과 일자리 접근성, 교통과 생활 여건으로 비교하겠습니다.",
+          "display_lines": [
+            "다음 편에서는 정한 예산 안의 지역과 단지를 가격과 일자리 접근성,",
+            "교통과 생활 여건으로 비교하겠습니다."
+          ],
+          "start_s": 51.701333,
+          "end_s": 60.017124,
+          "native_start_s": 51.701333,
+          "native_end_s": 60.017124,
+          "source_start": 0,
+          "source_end": 58,
+          "spoken_start": 0,
+          "spoken_end": 58,
+          "first_word_index": 0,
+          "last_word_index": 13,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C10_S044Q002",
+          "scene_id": "S044",
+          "paragraph": 45,
+          "text": "이어지는 분석이 도움이 되셨다면 구독과 좋아요를 부탁드립니다.",
+          "spoken_text": "이어지는 분석이 도움이 되셨다면 구독과 좋아요를 부탁드립니다.",
+          "display_lines": [
+            "이어지는 분석이 도움이 되셨다면 구독과 좋아요를 부탁드립니다."
+          ],
+          "start_s": 61.071041,
+          "end_s": 66.084208,
+          "native_start_s": 61.071041,
+          "native_end_s": 66.084208,
+          "source_start": 59,
+          "source_end": 93,
+          "spoken_start": 59,
+          "spoken_end": 93,
+          "first_word_index": 14,
+          "last_word_index": 20,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        },
+        {
+          "id": "C10_S044Q003",
+          "scene_id": "S044",
+          "paragraph": 45,
+          "text": "시청해 주셔서 감사합니다.",
+          "spoken_text": "시청해 주셔서 감사합니다.",
+          "display_lines": [
+            "시청해 주셔서 감사합니다."
+          ],
+          "start_s": 67.15,
+          "end_s": 69.413125,
+          "native_start_s": 67.15,
+          "native_end_s": 69.413125,
+          "source_start": 94,
+          "source_end": 108,
+          "spoken_start": 94,
+          "spoken_end": 108,
+          "first_word_index": 21,
+          "last_word_index": 23,
+          "timing_basis": "actual provider WordBoundary; semantic grouping; no interpolation"
+        }
+      ],
+      "paragraphs": [
+        {
+          "paragraph": 43,
+          "offset_s": 3.5,
+          "measured_seconds": 22.608,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S042\\audio.wav",
+          "last_native_word_end_s": 25.023708,
+          "last_pcm_signal_end_s": 25.015291666666666
+        },
+        {
+          "paragraph": 44,
+          "offset_s": 26.458,
+          "measured_seconds": 24.792,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S043\\audio.wav",
+          "last_native_word_end_s": 50.167208,
+          "last_pcm_signal_end_s": 50.153333333333336
+        },
+        {
+          "paragraph": 45,
+          "offset_s": 51.6,
+          "measured_seconds": 18.864,
+          "wave_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\paragraphs\\S044\\audio.wav",
+          "last_native_word_end_s": 69.41312500000001,
+          "last_pcm_signal_end_s": 69.389125
+        }
+      ],
+      "audio_sha256": "46b1a00be82bd094493c56f26c4075fbf18808fea7391eb674118ba133d9f63b",
+      "listening": "not_performed"
+    }
+  ],
+  "gate_evidence": {
+    "script_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\script-final-v2\\script_v2.md",
+    "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+    "lock_sha256": "b0b1ae715ee013ca40c1c7803c1d7b80aeefc5079498fc85d34178590e0e193d",
+    "receipts": {
+      "codex": {
+        "path": "qa\\content_v2_review.json",
+        "sha256": "fc7597ee56fe39e0ba9384d8b4ec5e1c9ba1f316d976814770967587fc90e961"
+      },
+      "claude": {
+        "path": "director\\production-v1\\claude\\script-v2-round1\\receipt.json",
+        "sha256": "541a7e6c0d2732df8abf57b7eb504c245cea8a911d581462ba45524596e64151"
+      }
+    },
+    "v3_main_instruction_sha256": "a69cc6e28a8e111df9cc7bcb4b67460ba33b02c311cbde8564fa494077ce25f0",
+    "v3_prepared_sha256": "0c371115cbd7dfe9de40de7e1ef6f03c738bd52e974c217117878a659554ed6a",
+    "v3_generator_sha256": "ada0c8d185fe7c120c71fb8684b7911dc3dad593f9d22adefdb29f31573c11b8",
+    "v3_delta_manifest_sha256": "e4278ea5cc65aefab0821c186905c996db26f794eba26ac8d5d42835fb89a265"
+  },
+  "source_mapping": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\prepare-v3\\prepared.json",
+  "new_paragraphs": 4,
+  "reused_paragraphs": 41,
+  "actual_listening": false,
+  "ASR_QA_performed": false,
+  "paid_api_calls": 0,
+  "status": "measured_pending_v3_delta_technical_and_independent_QA",
+  "timing_scope": "chapter-local native WordBoundary; original150 display cues frozen"
+}

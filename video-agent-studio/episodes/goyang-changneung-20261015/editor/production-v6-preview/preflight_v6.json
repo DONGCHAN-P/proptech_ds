@@ -1,0 +1,252 @@
+{
+  "schema_version": "1.0",
+  "status": "script_approved_preview_production_in_progress",
+  "episode_id": "goyang-changneung-20261015",
+  "guide": "guides/제작_기본가이드.md",
+  "feedback_ledger": "guides/사용자_피드백_이력.md",
+  "baseline": {
+    "previous_video": "https://youtu.be/T_GBxTRgRSc",
+    "current_video": "outputs/production-v5/changneung_full_v5r2.mp4",
+    "sha256": "7979a8071e4c07d4047a46b37b4abf6fa89c1a8aa9f4fb0c90dd0d99bec9f0b0",
+    "script_revision": "script-v6",
+    "audio_revision": "audio-v6-preview-heami-rateminus1",
+    "brand_intro": "outputs/editor-preflight-v1/brand_intro_generic_v1.mp4",
+    "brand_outro": "outputs/editor-preflight-v1/brand_outro_generic_v1.mp4",
+    "bgm": "reuse existing licensed brand tracks; no new music purchase"
+  },
+  "approvals": {
+    "topic": {
+      "decision_id": "392581b9c354",
+      "artifact_hashes": {},
+      "status": "approved_production_preparation"
+    },
+    "script": {
+      "decision_id": "aa6d1cf31eb6",
+      "status": "approved",
+      "revision": "script-v6",
+      "artifact_hashes": {
+        "outputs\\script-review-v6\\script_v6.md": "0c94b0c1547b6abd2968c6de622fbf9793cd7cd0e4ab7415664e4701fe162fc1",
+        "outputs\\script-review-v6\\narration_v6.txt": "a1633eca0ee555e947909c22f4d7a34022b8da2c081115098538632502742811",
+        "outputs\\script-review-v6\\changes_v6.md": "6a05555980b79e3efbaf2243b00c06812049b8f1714f768ba2747c1b5f01436b",
+        "research\\commute-v6\\report.md": "a906330fb070ee1769aa4ce032d82e5e74afcc1bc1dfb19ce5ab00ef8fc11eec",
+        "research\\commute-v6\\route_observations.json": "65a890096bc85e7e80d7141e07d0fc2ae6137463ee08283988e64d6579f7319b"
+      }
+    },
+    "budget": {
+      "decision_id": null,
+      "status": "not_granted_for_v6",
+      "artifact_hashes": {},
+      "credits_cap": 0,
+      "cash_cap": 0,
+      "automatic_retry_allowed": false,
+      "note": "free local preview; prior v3 paid allowance not transferred"
+    },
+    "completed": {
+      "decision_id": null,
+      "status": "not_granted_for_v6",
+      "artifact_hashes": {}
+    },
+    "pre_upload": {
+      "decision_id": null,
+      "status": "not_granted_for_v6",
+      "artifact_hashes": {}
+    }
+  },
+  "story": {
+    "opening_question": "창릉 새집을 기다릴까, 원흥·삼송 기존집을 고를까",
+    "previous_episode_reference": "광교동탄 기준→왕숙 완성 시차→창릉 기존 생활권 접점",
+    "next_episode_promise": "하남 교산 같은 기준",
+    "order": [
+      "whole_landuse",
+      "jobs",
+      "transport",
+      "price",
+      "daily_facilities",
+      "nearby_supply",
+      "outside_alternatives",
+      "regional_candidates"
+    ],
+    "each_section_answers": [
+      "where",
+      "resident_benefit",
+      "usable_date",
+      "move_in_gap",
+      "suitable_household"
+    ],
+    "candidate_scope": "conditional_ordinary_market_by_region"
+  },
+  "visual_defaults": {
+    "dynamic_map_zoom": false,
+    "transient_location_insert": false,
+    "locator": "one_current_district_whole_plan_left_with_detail_rectangle",
+    "macro_block_pins": false,
+    "captions_white_box_body_continuous": true,
+    "caption_box_exceptions": [
+      "unvoiced_brand_intro",
+      "unvoiced_brand_outro",
+      "silent_CTA_hold"
+    ],
+    "time_explanations_horizontal_axis": true,
+    "map_labels_near_targets": true,
+    "ai_placeholder_requires_resolution_before_delivery": true,
+    "outro_gap_after_final_spoken_word_seconds": 3
+  },
+  "representative_previews": [
+    "whole_to_detail_locator",
+    "rail_station",
+    "longest_timeline",
+    "price_comparison",
+    "candidate_leaders",
+    "CTA_outro_boundary"
+  ],
+  "facts_required": [
+    "official_geometry_and_plan_date",
+    "station_status_and_location_certainty",
+    "block_use_and_housing_type",
+    "price_area_floor_period_cancellation_sample_statistic",
+    "resale_and_occupancy_conditions",
+    "source_rights_credit"
+  ],
+  "change_control": {
+    "issues": [],
+    "superseded_rules": [],
+    "unchanged_audio_reused": null,
+    "changed_scene_ids": [],
+    "single_timing_lock": null,
+    "package_frozen_before_hash": false
+  },
+  "qa": {
+    "timeline_font_bbox_and_stroke_all_cases": "unverified",
+    "actual_encoded_frames": "unverified",
+    "all_cut_boundaries_no_flash": "unverified",
+    "inset_matches_spoken_region": "unverified",
+    "station_locations": "unverified",
+    "leaders_do_not_cross": "unverified",
+    "semantic_caption_original_text_match": "unverified",
+    "protected_numbers_units_names": "unverified",
+    "caption_box_exceptions": "unverified",
+    "last_speech_plus_three_seconds": "unverified",
+    "full_decode": "unverified",
+    "continuous_playback_performed": false,
+    "actual_listening_performed": false,
+    "evidence_paths": [
+      "qa/production-v5/final_review.json"
+    ],
+    "required_open_issues": 0
+  },
+  "release": {
+    "longform": "outputs\\production-v5\\changneung_full_v5r2.mp4",
+    "shorts": [],
+    "title_description_sources_chapters": "unverified",
+    "thumbnail": "unverified",
+    "actual_platform_privacy": "unverified",
+    "processing": "unverified",
+    "studio_copyright": "unverified",
+    "telegram_notice_receipt": null
+  },
+  "retention": {
+    "keep": [
+      "final_uploaded_files",
+      "reproduction_source_and_dependencies",
+      "raw_research",
+      "rights_sources",
+      "approval_and_QA_records",
+      "reusable_brand_maps_audio_templates"
+    ],
+    "delete_candidates_manifest": null,
+    "dependency_audit_complete": false,
+    "deletion_executed": false
+  },
+  "vertical_video": {
+    "config": "config/vertical_video_safe_area.json",
+    "profile": "cross_platform_conservative",
+    "bounds_font_validation": "required_before_render",
+    "ui_simulation": "required_before_release",
+    "actual_device_playback": "unverified",
+    "old_burned_in_subtitle_position_reusable": false
+  },
+  "reference_direction": {
+    "revision": "reference-direction-v1",
+    "guide": "guides/레퍼런스_설명과_자료연출.md",
+    "episode_plan": "outputs/reference-direction-v1/창릉_레퍼런스_적용안.md",
+    "script_unchanged": true,
+    "actual_listening": false,
+    "sound_effect_reference_analysis": "unverified; proposals_only",
+    "frames_reviewed_by_specialists": 36,
+    "continuous_playback": false
+  },
+  "channel_style_contract": {
+    "guide": "video-agent-studio/guides/채널_톤앤매너와_복기루프.md",
+    "tokens": "config/channel_style_tokens.json",
+    "baseline_primary": "namyangju-wangsuk-20261014/readability-cta-v15",
+    "baseline_secondary": "video/out/newtown-v14-release.mp4",
+    "loop": [
+      "freeze_actual_reference_frames_once",
+      "compare_same_message_scene",
+      "fix_style_and_information_hierarchy",
+      "independent_QA_three_representative_scenes",
+      "expand_to_full",
+      "review_all_cut_boundaries_and_changed_scenes"
+    ],
+    "external_references": "explanation techniques supplement channel grammar",
+    "visual_review_v2_is_final_style": false
+  },
+  "representative_style_QA": "required_before_full_render",
+  "historical_approvals": {
+    "budget": {
+      "decision_id": "5900bea493aa",
+      "artifact_hashes": {
+        "writer\\script-v3\\script_v3.md": "9b5d93523e0d50154d976beee0cccc57a4cddf38245838f77741faa6444a5311",
+        "writer\\script-v3\\manifest.json": "bc48550025a48abd6b810d0bf4f70c5211ebd8e07c96c73d42045a1db2edb502",
+        "outputs\\script-review-v2\\script_v2.md": "7e77b50a09982e6eec35bcbeaa49b73bb814cab6d59c243a1dbd10c60d4dadd5",
+        "writer\\script-v3\\narration_input\\M000.txt": "0e0e48e0aac392db1d485e9cfb5964c40bbb1ab13882b610cf238969ad50cd78",
+        "writer\\script-v3\\narration_input\\M001.txt": "cbf174adc469412e1432f25e008e5079a1ae6db4a328b888a9eb3dd130144a8f",
+        "writer\\script-v3\\narration_input\\M002.txt": "17b7e7e21dddef7e9e51d4aa898e0be61f7d9daceb765e11d3af853342ed1bb8",
+        "writer\\script-v3\\narration_input\\M003.txt": "c7d434f3efda11e7fa878ce9f4636aa575e139f9ba52c171e228c79fb2b83f50",
+        "writer\\script-v3\\narration_input\\M004.txt": "c31fd13b84c9f83937983ffeceaf71dd461722f777d86cf3572d3348698f6d6f",
+        "writer\\script-v3\\narration_input\\M005.txt": "275ef864b7de9659022f5449ccc16e558af312743e314ab97a0218416a04a900",
+        "writer\\script-v3\\narration_input\\M006.txt": "d9de4e99fb231dcdb5287ac5bf19aa44255afe02d10aafca536cb2eef87b920d",
+        "writer\\script-v3\\narration_input\\M007.txt": "45c8d9bdb70a719d441666ea6414175f7caca6052f35df1b106668162e6a01b1",
+        "writer\\script-v3\\narration_input\\M008.txt": "3ad95e17c97386db82d27593c23802a6d7d1fa32cb5e18ab54c8db37bfd9235a",
+        "writer\\script-v3\\narration_input\\M009.txt": "6e368f2006bce4ff7ee23b091b910a717f4e33e31045b54a49a97a46429930df",
+        "outputs\\script-review-v3\\budget_proposal_v3.json": "82fede2784031ca755104615be72ef2916cbb56b791cf4a08914e22cf6ea7757"
+      },
+      "status": "approved",
+      "credits_cap": 7661,
+      "cash_cap": 0,
+      "automatic_retry_allowed": false,
+      "applies_to_script_revision": "script-v3",
+      "applies_to_script_v4": false
+    },
+    "completed": {
+      "decision_id": "74bf28467ae1",
+      "artifact_hashes": {
+        "outputs\\production-v5\\changneung_full_v5r2.mp4": "7979a8071e4c07d4047a46b37b4abf6fa89c1a8aa9f4fb0c90dd0d99bec9f0b0",
+        "outputs\\production-v5\\changneung_full_v5.srt": "2f43c5f9a1f7857635224ee073d013a42234eeb7abdd95af6a5611ab88b2a3a1",
+        "outputs\\production-v5\\project_v5.json": "29418e8117e2a595963de2cec5be3292c7a2c2e29ec45bd75bcc7e9e4d14d724",
+        "qa\\production-v5\\final_review.json": "650e26aca633f7744fb500c3f30a1a80f02d740ad3308ea3a7f30f2aa6d1415f",
+        "outputs\\production-v5\\delivery_manifest.json": "52ba7027c869bb93665d6eec879275c66f691b16d14e3cd9091bb160fa64993b"
+      },
+      "status": "revision_requested"
+    },
+    "pre_upload": {
+      "decision_id": "a24c7c8c99f7",
+      "artifact_hashes": {
+        "video-agent-studio/episodes/goyang-changneung-20261015/outputs/production-v4/changneung_full_v4r2.mp4": "2fe7362fcbe46e45f69f411a5bbf02391c56610a39bf9cbb5aea9105fdf564e0",
+        "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\youtube-private-v4\\upload_job.json": "acf927f734b058527bd5edc6bdc847aed45508b6ae77e35f6a97e0c3b2d6b619"
+      },
+      "status": "approved",
+      "visibility": null,
+      "privacy": "private"
+    }
+  },
+  "v6_production": {
+    "voice": "Microsoft Heami local free review voice",
+    "narration_duration_seconds": 916.7660317460317,
+    "new_paid_generation": false,
+    "claude_motion_request": "writer/claude-motion-v6",
+    "representative_qa": "pending",
+    "continuous_playback": "not_performed",
+    "actual_listening": "not_performed"
+  }
+}

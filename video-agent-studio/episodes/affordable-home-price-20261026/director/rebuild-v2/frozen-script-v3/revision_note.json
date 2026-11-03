@@ -1,0 +1,1165 @@
+{
+  "revision": "script-v3",
+  "status": "writer_v3_frozen_for_exact_script_review",
+  "policy_as_of": "2026-10-26",
+  "ownership": [
+    "writer/rebuild-v2/script_v3.md",
+    "writer/rebuild-v2/scenes_v3.json",
+    "writer/rebuild-v2/revision_note.json"
+  ],
+  "inputs": [
+    {
+      "path": "outputs/script-final-v2/script_v2.md",
+      "sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3"
+    },
+    {
+      "path": "research/verified_case_packet.json",
+      "sha256": "8945667612772beab586c7e9e5f9eba295b8731ce0a4103a63cffe1e3d82b02d"
+    },
+    {
+      "path": "research/facts_v2.json",
+      "sha256": "e778c2145e14c34a034795c40e3e47caa2e7db58b8556b50cfaaf3b66e3eb321"
+    },
+    {
+      "path": "research/newborn_policy_addendum_v2.json",
+      "sha256": "daa99c4fad76c9f3361425b2110899f64827564f1eba1c3e2fc99fa10432d61b"
+    },
+    {
+      "path": "qa/comparison-housing-choice-v1/comparison_findings.json",
+      "sha256": "0464a18e5f0ab60fd9cc4fec85fea5eb227edea3634932d5cd35de98e5c3ba53"
+    },
+    {
+      "path": "director/rebuild-v2/claude/direction-v1/review.json",
+      "sha256": "d3683ae95504b7c223ec875c8890a464cd3c152fb42562649b864eb70bd4b870"
+    }
+  ],
+  "change_summary": [
+    "Claude direction-v1의 필수 5건과 최신 사용자 지시를 잠금 전 script-v3에 반영.",
+    "R001 훅은 약 6억 8천만 원/약 5억 7천만 원으로 요약 낭독. 정밀 원장과 계산값은 유지.",
+    "R002 현금+총액상한 합계 예시 삭제. R029~R033을 R011 직후로 옮겨 A의 월 예산·금리까지 완결.",
+    "R009 서민실수요 예외·R021 한 사람 소득 예외·R023 일반 자격 목록은 보조 참고 사전으로 이동. R021은 B의 세 상품 한도 비교로 전용.",
+    "R027 공제 산정은 소스 작은 주석으로 유지하고 상품 한도 4억 원과 R028 필요 현금 5억 6,615만 원에 집중.",
+    "장면 ID는 보존하고 배열·chapter·대본 문단을 동기화. 계산별 단계 노출과 글자↔도형 분리 지시 강화."
+  ],
+  "parent_primary_reverification": {
+    "basis": "2026-10-26 최신 사용자 메시지의 부모 확인 인계. writer가 새로 공식 웹을 열람한 것으로 기록하지 않음.",
+    "confirmed": [
+      "FSC26 LTV 40/70·DSR 40·15억/25억 총액 구간",
+      "HF 현행 디딤돌 신혼 3.2억·순자산 5.11억·소득 8,500만 원·1인 소득 예외",
+      "보금자리론 생애최초 4.2억",
+      "KB 신생아 소득 6천만 원 초과~8,500만 원 이하·30년 기본 2.9%·초기 5년·접수일 표 0.75%포인트 가산"
+    ],
+    "numeric_changes": 0
+  },
+  "structure": {
+    "chapter_count": 8,
+    "scene_count": 34,
+    "beat_count": 115,
+    "scene_order": [
+      "R001",
+      "R002",
+      "R003",
+      "R004",
+      "R005",
+      "R006",
+      "R007",
+      "R008",
+      "R009",
+      "R010",
+      "R011",
+      "R029",
+      "R030",
+      "R031",
+      "R032",
+      "R033",
+      "R012",
+      "R013",
+      "R014",
+      "R015",
+      "R016",
+      "R017",
+      "R018",
+      "R019",
+      "R020",
+      "R021",
+      "R022",
+      "R023",
+      "R024",
+      "R025",
+      "R026",
+      "R027",
+      "R028",
+      "R034"
+    ],
+    "ordering_rule": "배열이 재생 순서. scene ID는 기존 계약을 유지하며 숫자 연속 정렬을 요구하지 않는다."
+  },
+  "length_estimate": {
+    "timing_basis": "estimate",
+    "display_characters_excluding_whitespace": 5143,
+    "target_minutes": [
+      12,
+      16
+    ],
+    "at_5_67_char_per_second_minutes": 15.12,
+    "prior_free_voice_reference_minutes": 20.01,
+    "basis": "원문 v2 메타데이터의 직전 첫 편 5.67 표시문자/초 실적과 비교 검수의 기존 무료음성 본문 5,017문자/1,171.03초를 각각 참조. 무료 TTS 생성 전 실제시간 예상.",
+    "uncertainty": "같은 문자수라도 숫자 발음·문장 휴지·선택 음성·챕터 전환에 따라 달라진다. 12~16분은 목표이며 필수 조건을 삭제하는 기준으로 쓰지 않는다."
+  },
+  "source_registry": {
+    "SCRIPT_V2": {
+      "path": "outputs/script-final-v2/script_v2.md",
+      "scope": "승인본 낭독·수치·주제 연결"
+    },
+    "PLAN": {
+      "path": "research/verified_case_packet.json",
+      "json_pointer": "/conditions",
+      "scope": "현금·예비자금·월 예산·가구 A/B의 가정"
+    },
+    "AFF_A": {
+      "path": "research/verified_case_packet.json",
+      "json_pointer": "/affordability_A/2",
+      "profile_id": "A_first",
+      "deduction_krw": 0
+    },
+    "N_RESET": {
+      "path": "research/newborn_policy_addendum_v2.json",
+      "json_pointer": "/case",
+      "scope": "60회 상환 후 잔액·남은 300개월의 재계산"
+    },
+    "RELIEF_SELECTION": {
+      "path": "research/verified_case_packet.json",
+      "json_pointer": "/conditional_relief_table",
+      "scope": "동시 적격이면 큰 감면 하나 선택. 감면 후 교육세 포함 총액 미산출"
+    },
+    "N01A": {
+      "path": "research/newborn_policy_addendum_v2.json",
+      "claim_id": "N01A"
+    },
+    "N01B": {
+      "path": "research/newborn_policy_addendum_v2.json",
+      "claim_id": "N01B"
+    },
+    "CASE_A6": {
+      "path": "research/verified_case_packet.json",
+      "case_id": "A_first_P600000000_C0"
+    },
+    "CASE_GENERAL6": {
+      "path": "research/verified_case_packet.json",
+      "case_id": "A_ordinary_P600000000_C0"
+    },
+    "CASE_A6_DEDUCT": {
+      "path": "research/verified_case_packet.json",
+      "case_id": "A_first_P600000000_C55000000"
+    },
+    "CASE_A9": {
+      "path": "research/verified_case_packet.json",
+      "case_id": "A_first_P900000000_C0"
+    },
+    "CASE_A12": {
+      "path": "research/verified_case_packet.json",
+      "case_id": "A_first_P1200000000_C0"
+    },
+    "B6_D": {
+      "path": "research/verified_case_packet.json",
+      "case_id": "B_didim_P600000000_C0"
+    },
+    "B6_B": {
+      "path": "research/verified_case_packet.json",
+      "case_id": "B_bogeum_P600000000_C0"
+    },
+    "B6_N": {
+      "path": "research/verified_case_packet.json",
+      "case_id": "B_newborn_P600000000_C0"
+    },
+    "B9_N": {
+      "path": "research/verified_case_packet.json",
+      "case_id": "B_newborn_P900000000_C55000000"
+    },
+    "L01": {
+      "path": "research/facts_v2.json",
+      "claim_id": "L01",
+      "primary_source_ids": [
+        "FSC26",
+        "FSC25"
+      ]
+    },
+    "L02": {
+      "path": "research/facts_v2.json",
+      "claim_id": "L02",
+      "primary_source_ids": [
+        "FSC26",
+        "FSC25"
+      ]
+    },
+    "L03": {
+      "path": "research/facts_v2.json",
+      "claim_id": "L03",
+      "primary_source_ids": [
+        "FSC25"
+      ]
+    },
+    "L04": {
+      "path": "research/facts_v2.json",
+      "claim_id": "L04",
+      "primary_source_ids": [
+        "FSC26",
+        "FSC25"
+      ]
+    },
+    "L05": {
+      "path": "research/facts_v2.json",
+      "claim_id": "L05",
+      "primary_source_ids": [
+        "FSC25"
+      ]
+    },
+    "L06": {
+      "path": "research/facts_v2.json",
+      "claim_id": "L06",
+      "primary_source_ids": [
+        "FSC25"
+      ]
+    },
+    "L07": {
+      "path": "research/facts_v2.json",
+      "claim_id": "L07",
+      "primary_source_ids": [
+        "FSC25",
+        "STRESS"
+      ]
+    },
+    "S01": {
+      "path": "research/facts_v2.json",
+      "claim_id": "S01",
+      "primary_source_ids": [
+        "STRESS"
+      ]
+    },
+    "S02": {
+      "path": "research/facts_v2.json",
+      "claim_id": "S02",
+      "primary_source_ids": [
+        "STRESS"
+      ]
+    },
+    "S03": {
+      "path": "research/facts_v2.json",
+      "claim_id": "S03",
+      "primary_source_ids": [
+        "STRESS"
+      ]
+    },
+    "D01": {
+      "path": "research/facts_v2.json",
+      "claim_id": "D01",
+      "primary_source_ids": [
+        "DIDIM"
+      ]
+    },
+    "D02": {
+      "path": "research/facts_v2.json",
+      "claim_id": "D02",
+      "primary_source_ids": [
+        "DIDIM"
+      ]
+    },
+    "D03": {
+      "path": "research/facts_v2.json",
+      "claim_id": "D03",
+      "primary_source_ids": [
+        "DIDIM"
+      ]
+    },
+    "D04": {
+      "path": "research/facts_v2.json",
+      "claim_id": "D04",
+      "primary_source_ids": [
+        "DIDIM"
+      ]
+    },
+    "D05": {
+      "path": "research/facts_v2.json",
+      "claim_id": "D05",
+      "primary_source_ids": [
+        "V2_NHUF",
+        "V2_DIDIM_RULES"
+      ]
+    },
+    "B01": {
+      "path": "research/facts_v2.json",
+      "claim_id": "B01",
+      "primary_source_ids": [
+        "BOGEUM",
+        "FSC26"
+      ]
+    },
+    "B02": {
+      "path": "research/facts_v2.json",
+      "claim_id": "B02",
+      "primary_source_ids": [
+        "BOGEUM"
+      ]
+    },
+    "B03": {
+      "path": "research/facts_v2.json",
+      "claim_id": "B03",
+      "primary_source_ids": [
+        "BOGEUM",
+        "FSC25"
+      ]
+    },
+    "B04": {
+      "path": "research/facts_v2.json",
+      "claim_id": "B04",
+      "primary_source_ids": [
+        "BOGEUM"
+      ]
+    },
+    "N01": {
+      "path": "research/facts_v2.json",
+      "claim_id": "N01",
+      "primary_source_ids": [
+        "DIRECTOR_CURRENT_NHUF",
+        "DIRECTOR_CURRENT_KB"
+      ]
+    },
+    "N02": {
+      "path": "research/facts_v2.json",
+      "claim_id": "N02",
+      "primary_source_ids": [
+        "NEWBORN"
+      ]
+    },
+    "N03": {
+      "path": "research/facts_v2.json",
+      "claim_id": "N03",
+      "primary_source_ids": [
+        "NEWBORN"
+      ]
+    },
+    "N04": {
+      "path": "research/facts_v2.json",
+      "claim_id": "N04",
+      "primary_source_ids": [
+        "V2_NHUF",
+        "V2_DIDIM_RULES"
+      ]
+    },
+    "P01": {
+      "path": "research/facts_v2.json",
+      "claim_id": "P01",
+      "primary_source_ids": [
+        "V2_BANKREG",
+        "V2_BANK_RULES",
+        "DSR_HISTORY",
+        "DIDIM",
+        "BOGEUM",
+        "NEWBORN"
+      ]
+    },
+    "T01": {
+      "path": "research/facts_v2.json",
+      "claim_id": "T01",
+      "primary_source_ids": [
+        "LOCAL_TAX"
+      ]
+    },
+    "T02": {
+      "path": "research/facts_v2.json",
+      "claim_id": "T02",
+      "primary_source_ids": [
+        "LOCAL_TAX"
+      ]
+    },
+    "T03": {
+      "path": "research/facts_v2.json",
+      "claim_id": "T03",
+      "primary_source_ids": [
+        "AGRIC"
+      ]
+    },
+    "T04": {
+      "path": "research/facts_v2.json",
+      "claim_id": "T04",
+      "primary_source_ids": [
+        "RELIEF"
+      ]
+    },
+    "T05": {
+      "path": "research/facts_v2.json",
+      "claim_id": "T05",
+      "primary_source_ids": [
+        "RELIEF"
+      ]
+    },
+    "C01": {
+      "path": "research/facts_v2.json",
+      "claim_id": "C01",
+      "primary_source_ids": [
+        "BROKER"
+      ]
+    },
+    "C02": {
+      "path": "research/facts_v2.json",
+      "claim_id": "C02",
+      "primary_source_ids": [
+        "BROKER",
+        "VAT"
+      ]
+    },
+    "C03": {
+      "path": "research/facts_v2.json",
+      "claim_id": "C03",
+      "primary_source_ids": [
+        "STAMP"
+      ]
+    },
+    "C04": {
+      "path": "research/facts_v2.json",
+      "claim_id": "C04",
+      "primary_source_ids": [
+        "NEWBORN",
+        "STAMP"
+      ]
+    },
+    "C05": {
+      "path": "research/facts_v2.json",
+      "claim_id": "C05",
+      "primary_source_ids": [
+        "BOND",
+        "REGISTRATION"
+      ]
+    },
+    "C06": {
+      "path": "research/facts_v2.json",
+      "claim_id": "C06",
+      "primary_source_ids": [
+        "REGISTRATION"
+      ]
+    },
+    "C07": {
+      "path": "research/facts_v2.json",
+      "claim_id": "C07",
+      "primary_source_ids": [
+        "NEWBORN"
+      ]
+    },
+    "F01": {
+      "path": "research/facts_v2.json",
+      "claim_id": "F01",
+      "primary_source_ids": [
+        "FSC26"
+      ]
+    },
+    "M01": {
+      "path": "research/facts_v2.json",
+      "claim_id": "M01",
+      "primary_source_ids": [
+        "V2_BANK_RULES",
+        "V2_NHUF"
+      ]
+    },
+    "M02": {
+      "path": "research/facts_v2.json",
+      "claim_id": "M02",
+      "primary_source_ids": [
+        "V2_TENANT"
+      ]
+    },
+    "M03": {
+      "path": "research/facts_v2.json",
+      "claim_id": "M03",
+      "primary_source_ids": [
+        "V2_BANK_RULES",
+        "V2_HF_GUARANTEE"
+      ]
+    },
+    "M04": {
+      "path": "research/facts_v2.json",
+      "claim_id": "M04",
+      "primary_source_ids": [
+        "V2_HF_GUARANTEE"
+      ]
+    },
+    "M05": {
+      "path": "research/facts_v2.json",
+      "claim_id": "M05",
+      "primary_source_ids": [
+        "V2_DIDIM_RULES"
+      ]
+    },
+    "M06": {
+      "path": "research/facts_v2.json",
+      "claim_id": "M06",
+      "primary_source_ids": [
+        "V2_HUG",
+        "V2_DIDIM_RULES"
+      ]
+    },
+    "M07": {
+      "path": "research/facts_v2.json",
+      "claim_id": "M07",
+      "primary_source_ids": [
+        "V2_NHUF",
+        "V2_HUG"
+      ]
+    },
+    "M08": {
+      "path": "research/facts_v2.json",
+      "claim_id": "M08",
+      "primary_source_ids": [
+        "V2_HUG",
+        "V2_NHUF"
+      ]
+    },
+    "M09": {
+      "path": "research/facts_v2.json",
+      "claim_id": "M09",
+      "primary_source_ids": [
+        "V2_BOGEUM_RULES"
+      ]
+    },
+    "P02": {
+      "path": "research/facts_v2.json",
+      "claim_id": "P02",
+      "primary_source_ids": [
+        "V2_BANKREG",
+        "V2_BANK_RULES"
+      ]
+    },
+    "P03": {
+      "path": "research/facts_v2.json",
+      "claim_id": "P03",
+      "primary_source_ids": [
+        "V2_DIDIM_RULES",
+        "V2_NHUF"
+      ]
+    },
+    "P04": {
+      "path": "research/facts_v2.json",
+      "claim_id": "P04",
+      "primary_source_ids": [
+        "BOGEUM",
+        "V2_BOGEUM_RULES",
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ]
+    },
+    "D06": {
+      "path": "research/facts_v2.json",
+      "claim_id": "D06",
+      "primary_source_ids": [
+        "V2_NHUF"
+      ]
+    },
+    "HFV2_01": {
+      "path": "research/facts_v2.json",
+      "claim_id": "HFV2_01",
+      "primary_source_ids": [
+        "HF_MARRIAGE_RELEASE_20260928",
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ]
+    },
+    "HFV2_02": {
+      "path": "research/facts_v2.json",
+      "claim_id": "HFV2_02",
+      "primary_source_ids": [
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ]
+    },
+    "HFV2_03": {
+      "path": "research/facts_v2.json",
+      "claim_id": "HFV2_03",
+      "primary_source_ids": [
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ]
+    },
+    "HFV2_04": {
+      "path": "research/facts_v2.json",
+      "claim_id": "HFV2_04",
+      "primary_source_ids": [
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ]
+    },
+    "HFV2_05": {
+      "path": "research/facts_v2.json",
+      "claim_id": "HFV2_05",
+      "primary_source_ids": [
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ]
+    },
+    "N05A": {
+      "path": "research/facts_v2.json",
+      "claim_id": "N05A",
+      "primary_source_ids": [
+        "DIRECTOR_CURRENT_KB",
+        "DIRECTOR_CURRENT_NHUF"
+      ]
+    }
+  },
+  "common_visual_directions": {
+    "style": "직전 주거 선택 편과 채널의 Pretendard·아이보리·네이비·파랑·골드·초록·고정 흰 자막 박스 계승. 비교 검수 C01~C04 반영.",
+    "single_message": "화면당 큰 결론 하나. 조건은 해당 소스의 작은 주석. 출처는 하단 자막 아래 별도 영역.",
+    "motion": "완성 도표 선표시·테두리만 이동하는 연출을 쓰지 않는다. 각 anchor 전에는 해당 단계의 새 값과 결과를 숨긴다. 첫 원천 막대→예비·비용 차감→자기자금→필요대출→담보/DSR/DTI 또는 상품 한도→큰 결론 하나를 실제 이동·길이 변화로 만든다. 전 장면 선택 상태는 초기화.",
+    "chapter_photos": "8개 챕터 시작의 배경사진·짧은 전환은 부모 조달·편집. 파일 확보나 실제 타이밍을 주장하지 않는다.",
+    "graphic_purpose": "data_chart는 관계·금액·시간 설명, editorial_card는 실제 공식 원문 발췌 표시, real_photo는 챕터·마무리 분위기. 본문 글머리표 카드로 대체하지 않는다.",
+    "caption": "숫자·단위·날짜는 의미 단위로 보호. 제목·화면지시는 낭독과 분리.",
+    "required_next_samples": [
+      "R005 자금 차감/합산",
+      "R015 필요대출/은행한도/부족현금",
+      "R026 60회 잔액/남은 300개월"
+    ],
+    "next_qa": "기준 게시본과 대표 장면을 나란히 비교. 글자↔그래픽 충돌·숫자 위계·발화 순서를 확인한 뒤 전체 적용. 실제 MP4의 경계·전환·음성은 별도 검수.",
+    "layout_gate_proposal": {
+      "owner": "editor/qa/부모",
+      "affected_scenes": [
+        "R001",
+        "R002",
+        "R003",
+        "R004",
+        "R005",
+        "R006",
+        "R007",
+        "R008",
+        "R009",
+        "R010",
+        "R011",
+        "R029",
+        "R030",
+        "R031",
+        "R032",
+        "R033",
+        "R012",
+        "R013",
+        "R014",
+        "R015",
+        "R016",
+        "R017",
+        "R018",
+        "R019",
+        "R020",
+        "R021",
+        "R022",
+        "R023",
+        "R024",
+        "R025",
+        "R026",
+        "R027",
+        "R028",
+        "R034"
+      ],
+      "issue": "기록된 집 아이콘과 자기자금 라벨 겹침 및 글자↔도형 충돌 검사 공백",
+      "proposal": "집 아이콘·자기자금 라벨·막대의 세로 영역을 분리. 실제 글꼴 로드 후 텍스트 글리프 경계와 모든 도형 영역을 비교하고 렌더 경계·전환 프레임에서도 검사. 공통 검사기 반영은 부모가 editor/qa에 배정.",
+      "writer_implementation_scope": "이 초안의 beats·visual_notes와 제안만 수정. 검사기·다른 담당 파일은 수정하지 않음."
+    }
+  },
+  "pronunciation_handoff": {
+    "LTV": "엘티브이",
+    "DSR": "디에스알",
+    "DTI": "디티아이",
+    "84㎡": "팔십사 제곱미터",
+    "85㎡": "팔십오 제곱미터",
+    "0.75%포인트": "영 점 칠오 퍼센트포인트",
+    "186.5만 원": "백팔십육 점 오만 원",
+    "162.6만 원": "백육십이 점 육만 원",
+    "176.4만 원": "백칠십육 점 사만 원",
+    "2억 926만 원": "이억 구백이십육만 원",
+    "3억 9,074만 원": "삼억 구천칠십사만 원",
+    "6억 8,019만 원": "육억 팔천십구만 원",
+    "5억 6,586만 원": "오억 육천오백팔십육만 원",
+    "emphasis": [
+      "집값에 넣을 자기자금",
+      "필요한 대출",
+      "가장 작은 한도",
+      "매달 남길 저축",
+      "남은 300개월"
+    ]
+  },
+  "validation": {
+    "status": "pass_local_direction_revision_checks",
+    "scope": "실제 저장된 v3 대본·장면표·기록을 읽어 검사. direction-v1 반영 여부의 로컬 점검이며 정확한 v3의 독립 Claude 승인과 구분.",
+    "chapters": 8,
+    "scenes": 34,
+    "scene_order": [
+      "R001",
+      "R002",
+      "R003",
+      "R004",
+      "R005",
+      "R006",
+      "R007",
+      "R008",
+      "R009",
+      "R010",
+      "R011",
+      "R029",
+      "R030",
+      "R031",
+      "R032",
+      "R033",
+      "R012",
+      "R013",
+      "R014",
+      "R015",
+      "R016",
+      "R017",
+      "R018",
+      "R019",
+      "R020",
+      "R021",
+      "R022",
+      "R023",
+      "R024",
+      "R025",
+      "R026",
+      "R027",
+      "R028",
+      "R034"
+    ],
+    "paragraph_exact_match_count": 34,
+    "valid_anchor_count": 115,
+    "beats_per_scene": "2~4",
+    "numeric_anchor_boundaries": "pass",
+    "schema": "pass",
+    "source_ids_resolve": true,
+    "input_sha256_unchanged_count": 6,
+    "numeric_preservation": {
+      "baseline_distinct_number_unit_tokens": 105,
+      "body_preserved": 94,
+      "reference_preserved": 10,
+      "intentional_removed_example": 1,
+      "summary_rounding_exceptions": 2,
+      "calculation_changed": false,
+      "inventory": "numeric_preservation_policy 및 rounding_conversion_table",
+      "precision_spoken_once_each": {
+        "6억 8,019만 원": [
+          "R029"
+        ],
+        "5억 6,586만 원": [
+          "R030"
+        ]
+      }
+    },
+    "unicode_integrity": {
+      "script_v3.md": {
+        "hangul_count": 4685,
+        "question_mark_runs": 0,
+        "replacement_character_count": 0
+      },
+      "scenes_v3.json": {
+        "hangul_count": 11977,
+        "question_mark_runs": 0,
+        "replacement_character_count": 0
+      },
+      "revision_note.json": {
+        "hangul_count": 2867,
+        "question_mark_runs": 0,
+        "replacement_character_count": 0
+      }
+    },
+    "first_paragraph_actual_read": "보유자금 2억 5천만 원으로 감당할 수 있는 집값을 계산하겠습니다. A가구의 현금과 은행 조건을 맞춘 상한은 약 6억 8천만 원입니다. 매달 대출을 170만 원씩 갚는 목표까지 넣으면 약 5억 7천만 원입니다. 서울에서 생애최초로 집을 사고, 보증 승인으로 공제를 보완한 사례입니다. 두 가격이 달라지는 이유를 6억 원짜리 집 한 채로 따라가겠습니다.",
+    "required_user_changes": {
+      "rounded_hook": true,
+      "loose_sum_removed": true,
+      "A_arc_before_B": true,
+      "scene_ids_preserved": true,
+      "chapter_and_script_synchronized": true,
+      "unrelated_exceptions_in_reference": true,
+      "B_eligibility_first": true,
+      "N9_deduction_small_footnote": true,
+      "staged_reveal_and_layout_directions": true
+    },
+    "actual_tts_generated": false,
+    "actual_listening": false,
+    "continuous_playback": false,
+    "exact_v3_independent_Claude_review_completed": false,
+    "anchor_unique_per_scene_count": 115,
+    "anchor_duplicate_or_missing_count": 0,
+    "A_arc_connection_review": {
+      "passed": true,
+      "scope": "실제 낭독 문단과 배열을 읽어 서술 연결 확인",
+      "flow": "R011 월 170만 원 목표→R029 현금·은행 기준 역산→R030 월 상환 목표 역산→R031 저축 비교→R032 금리 비교→R033 조정 선택·다른 가격대 전환→R012 가격별 비용. 이후 R018 가구 B, R023 신생아 특례.",
+      "body_changed": false
+    }
+  },
+  "unconfirmed_items": [
+    {
+      "id": "U01",
+      "item": "direction-v1 반영 후 정확한 v3 대본의 부모/Claude 독립 내용검토",
+      "owner": "부모"
+    },
+    {
+      "id": "U02",
+      "item": "무료 TTS 생성 후 실제 전체 길이·숫자 발음·자막 정렬",
+      "owner": "narration/부모"
+    },
+    {
+      "id": "U03",
+      "item": "챕터 사진·원문 캡처 확보, 단계별 화면 구현·글자↔도형 충돌 검사 및 최종 영상·음성 검수",
+      "owner": "visual/editor/qa/부모"
+    }
+  ],
+  "inherited_execution_conditions": [
+    "일반 은행의 보증·보험 취급과 개인별 승인",
+    "6억 원 초과 신생아 사례의 보증 취급은 신규 실행 시 수탁은행 확인",
+    "감면 후 교육세 포함 세액·실제 채권/등기/법무사 견적"
+  ],
+  "restoration": {
+    "cause": "PowerShell here-string→Python stdin에서 한글이 literal ?로 손상된 초안 발견",
+    "method": "세 파일의 한글 본문·장면 구조·근거 레지스트리·인계 전부 tools.apply_patch로 교체",
+    "parent_documents": "원본 입력·공통 state/scenes·역할 원본문서 보존",
+    "followup": "한글 손상은 이전 초안에서 복구 완료. 이번 잠금 전 v3 수정도 tools.apply_patch로만 저장하며 새 v4 파일을 만들지 않는다."
+  },
+  "handoff": {
+    "outputs": [
+      "writer/rebuild-v2/script_v3.md",
+      "writer/rebuild-v2/scenes_v3.json",
+      "writer/rebuild-v2/revision_note.json"
+    ],
+    "input_versions": [
+      {
+        "path": "outputs/script-final-v2/script_v2.md",
+        "sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3"
+      },
+      {
+        "path": "research/verified_case_packet.json",
+        "sha256": "8945667612772beab586c7e9e5f9eba295b8731ce0a4103a63cffe1e3d82b02d"
+      },
+      {
+        "path": "research/facts_v2.json",
+        "sha256": "e778c2145e14c34a034795c40e3e47caa2e7db58b8556b50cfaaf3b66e3eb321"
+      },
+      {
+        "path": "research/newborn_policy_addendum_v2.json",
+        "sha256": "daa99c4fad76c9f3361425b2110899f64827564f1eba1c3e2fc99fa10432d61b"
+      },
+      {
+        "path": "qa/comparison-housing-choice-v1/comparison_findings.json",
+        "sha256": "0464a18e5f0ab60fd9cc4fec85fea5eb227edea3634932d5cd35de98e5c3ba53"
+      },
+      {
+        "path": "director/rebuild-v2/claude/direction-v1/review.json",
+        "sha256": "d3683ae95504b7c223ec875c8890a464cd3c152fb42562649b864eb70bd4b870"
+      }
+    ],
+    "affected_scenes": [
+      "R001",
+      "R002",
+      "R003",
+      "R004",
+      "R005",
+      "R006",
+      "R007",
+      "R008",
+      "R009",
+      "R010",
+      "R011",
+      "R029",
+      "R030",
+      "R031",
+      "R032",
+      "R033",
+      "R012",
+      "R013",
+      "R014",
+      "R015",
+      "R016",
+      "R017",
+      "R018",
+      "R019",
+      "R020",
+      "R021",
+      "R022",
+      "R023",
+      "R024",
+      "R025",
+      "R026",
+      "R027",
+      "R028",
+      "R034"
+    ],
+    "next_owner": "부모 총괄 — 수정된 script-v3의 실제 Claude 대본검수 전송",
+    "scope_note": "사용자 지정 3파일만 작성. 별도 handoff.json 대신 이 파일에 인계 필드 포함. 다른 담당 실행 없음.",
+    "verification_summary": "34문단 원고 일치·115개 anchor 모두 장면 내 정확히 1회 등장·A의 현금/은행/월예산/금리 흐름이 가격비교/B보다 먼저 완결됨을 자체 확인. 대본 SHA 불변. 본문·숫자 변경 일시중지.",
+    "unresolved_count": 3,
+    "unresolved": [
+      "U01",
+      "U02",
+      "U03"
+    ],
+    "ordering_rule": "scene ID로 정렬하지 않고 scenes 배열 순서로 재생·낭독. R001~R011→R029~R033→R012~R028→R034."
+  },
+  "direction_review": {
+    "path": "director/rebuild-v2/claude/direction-v1/review.json",
+    "reviewed_artifact_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+    "scope": "부모가 실제 수행한 Claude Opus/max direction-v1의 결과 파일을 writer가 읽고 반영. 이 파일은 v2 방향 검토이며, 수정 v3 자체의 독립 승인으로 확대하지 않음.",
+    "required_issue_mapping": [
+      {
+        "id": "R1",
+        "scenes": [
+          "R001",
+          "R002"
+        ],
+        "implemented": "초반 두 결과 예고·합계 삭제·1천만 원 단위 요약과 정밀값 분리"
+      },
+      {
+        "id": "R2",
+        "scenes": [
+          "R011",
+          "R029",
+          "R030",
+          "R031",
+          "R032",
+          "R033"
+        ],
+        "implemented": "A의 현금→은행→월 예산·금리를 B 앞에서 완결"
+      },
+      {
+        "id": "R3",
+        "scenes": [
+          "R009",
+          "R021"
+        ],
+        "implemented": "사례와 무관한 예외를 참고 사전으로 이동"
+      },
+      {
+        "id": "R4",
+        "scenes": [
+          "R023",
+          "R024"
+        ],
+        "implemented": "B의 충족 조건부터 설명하고 일반 자격은 참고 사전 보존"
+      },
+      {
+        "id": "R5",
+        "scenes": [
+          "R001",
+          "R002",
+          "R003",
+          "R004",
+          "R005",
+          "R006",
+          "R007",
+          "R008",
+          "R009",
+          "R010",
+          "R011",
+          "R029",
+          "R030",
+          "R031",
+          "R032",
+          "R033",
+          "R012",
+          "R013",
+          "R014",
+          "R015",
+          "R016",
+          "R017",
+          "R018",
+          "R019",
+          "R020",
+          "R021",
+          "R022",
+          "R023",
+          "R024",
+          "R025",
+          "R026",
+          "R027",
+          "R028",
+          "R034"
+        ],
+        "implemented": "단계별 정보 생성·숨김·차감/합산·한도 비교와 겹침 방지 지시",
+        "remaining": "실제 편집 구현 및 글자↔도형 충돌 검사 추가·영상 검수는 editor/qa가 수행"
+      }
+    ],
+    "exact_revised_v3_independently_approved": false,
+    "review_file_sha256": "d3683ae95504b7c223ec875c8890a464cd3c152fb42562649b864eb70bd4b870"
+  },
+  "rounding_conversion_table": [
+    {
+      "scene": "R001",
+      "meaning": "현금·은행 기준",
+      "ledger_price_krw": 680190000,
+      "precise_display": "6억 8,019만 원",
+      "spoken_summary": "약 6억 8천만 원",
+      "summary_price_krw": 680000000,
+      "rounding_unit_krw": 10000000,
+      "rule": "가장 가까운 1천만 원 단위 반올림",
+      "precise_spoken_once_in": "R029"
+    },
+    {
+      "scene": "R001",
+      "meaning": "월 상환 목표 기준",
+      "ledger_price_krw": 565860000,
+      "precise_display": "5억 6,586만 원",
+      "spoken_summary": "약 5억 7천만 원",
+      "summary_price_krw": 570000000,
+      "rounding_unit_krw": 10000000,
+      "rule": "가장 가까운 1천만 원 단위 반올림",
+      "precise_spoken_once_in": "R030"
+    }
+  ],
+  "supplemental_reference_dictionary": [
+    {
+      "id": "REF_A_ENDUSER",
+      "moved_from": "R009",
+      "reason": "A의 소득은 1억 원으로 이 소득 예외를 적용하지 않는다. A의 일반/생초·DSR/DTI 본문은 보존.",
+      "conditions": "연소득 9천만 원 이하·집값 8억 원 이하·무주택을 모두 충족하는 서민실수요자의 LTV 60% 예외.",
+      "source_ids": [
+        "L06"
+      ]
+    },
+    {
+      "id": "REF_B_ONE_INCOME",
+      "moved_from": "R021",
+      "reason": "B는 합산소득 8천만 원으로 기존 합산 기준을 충족한다. 한 사람 소득 예외를 B 계산에 적용하지 않아 본문에서 이동.",
+      "conditions": [
+        {
+          "product": "보금자리론",
+          "condition": "기존 신혼 합산소득 기준을 넘더라도 채무자 한 사람 연소득 7천만 원 이하이면 특례 신청 가능. DTI도 그 한 사람 소득·부채로 심사. 배우자 소득·부채는 우대금리·실수요 요건·상환할 기존 대출 확인 등에 사용. 주택보유수는 부부 합산.",
+          "source_ids": [
+            "HFV2_01",
+            "HFV2_02",
+            "HFV2_03"
+          ]
+        },
+        {
+          "product": "디딤돌",
+          "condition": "신혼 합산소득 8,500만 원 초과인 경우 신청인 연소득 6천만 원 이하를 적용하는 예외. DTI도 신청인 한 사람 소득·부채 기준. 자산·주택 등 상품 조건은 별도 충족.",
+          "source_ids": [
+            "D04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "REF_N_GENERAL",
+      "moved_from": "R023",
+      "reason": "B의 합산소득 8천만 원·순자산 2억 5천만 원·접수 전 2년 내 출산으로 사례를 설명하고, 다른 소득구간과 입양 요건 전체는 이 사전에서 유지.",
+      "conditions": "접수 전 2년 내 출산·입양, 2023년 1월 1일 이후 출생. 입양아는 접수일 현재 만 2세 미만. 외벌이 1억 3천만 원 이하. 맞벌이 합산 2억 원 이하이면서 부부 각자 1억 3천만 원 이하. 순자산 상한 5억 1,100만 원. 무주택 세대주 등 상품 요건 충족. 주택 9억 원 이하·서울 면적 전용 85㎡ 이하·상품 대출 한도 4억 원·DTI 60%는 본문 B 계산 옆에 유지.",
+      "source_ids": [
+        "N01",
+        "N02",
+        "N03",
+        "N01A",
+        "N01B"
+      ]
+    },
+    {
+      "id": "REF_N9_COLLATERAL",
+      "moved_from": "R027",
+      "reason": "상품 한도 4억 원이 더 작아 공제 차감 설명이 결론을 바꾸지 않는다. 본문은 상품 한도와 필요 현금에 집중하고 이 산정은 소스 작은 주석과 사전에 보존.",
+      "conditions": "서울 생초 9억 원 주택·LTV 70%·공제액 5,500만 원. 9억 원의 70%에서 공제한 담보 한도 5억 7,500만 원과 상품 한도 4억 원의 작은 값 적용. 예비자금·비용 포함 필요 현금 5억 6,615만 원, 보유 현금 대비 추가 3억 1,615만 원.",
+      "source_ids": [
+        "M08",
+        "N03",
+        "B9_N"
+      ]
+    }
+  ],
+  "intentional_removal": {
+    "scene": "R002",
+    "removed_example": "보유자금 2억 5천만 원+주담대 총액상한 6억 원=8억 5천만 원",
+    "reason": "Claude R1 및 최신 사용자 지시. 담보·소득 심사를 반영하지 않은 합계로 오해를 줄 수 있어 본문과 화면에서 삭제. 대출 총액 6억 원과 15억/25억 구간의 실제 정책 설명은 R017에 유지.",
+    "keep_as_active_calculation": false
+  },
+  "numeric_preservation_policy": {
+    "baseline_distinct_number_unit_tokens": 105,
+    "body_preserved_count": 94,
+    "moved_or_removed_from_body": [
+      {
+        "token": "1억3천만원",
+        "disposition": "보조 참고 사전 보존"
+      },
+      {
+        "token": "1월",
+        "disposition": "보조 참고 사전 보존"
+      },
+      {
+        "token": "1일",
+        "disposition": "보조 참고 사전 보존"
+      },
+      {
+        "token": "2023년",
+        "disposition": "보조 참고 사전 보존"
+      },
+      {
+        "token": "2세",
+        "disposition": "보조 참고 사전 보존"
+      },
+      {
+        "token": "5억7500만원",
+        "disposition": "보조 참고 사전 보존"
+      },
+      {
+        "token": "6천만원",
+        "disposition": "보조 참고 사전 보존"
+      },
+      {
+        "token": "7천만원",
+        "disposition": "보조 참고 사전 보존"
+      },
+      {
+        "token": "8억5천만원",
+        "disposition": "사용자 지시로 오해 유도 합계 예시 삭제"
+      },
+      {
+        "token": "8억원",
+        "disposition": "보조 참고 사전 보존"
+      },
+      {
+        "token": "9천만원",
+        "disposition": "보조 참고 사전 보존"
+      }
+    ],
+    "summary_tokens_added": [
+      "6억8천만원",
+      "5억7천만원"
+    ],
+    "rounding_exception": "R001의 약 6억 8천만 원/약 5억 7천만 원은 명시적 요약 반올림. 원장과 본 계산 변경 없음.",
+    "all_105_forced_into_narration": false,
+    "ledger_before_and_after": {
+      "bank_assumptions_max": 680190000,
+      "mortgage_budget_max": 565860000
+    }
+  },
+  "change_history": [
+    {
+      "revision": "script-v3",
+      "event": "잠금 전 direction-v1 반영 및 총괄의 반올림 편집 결정 적용",
+      "prior_writer_sha256": {
+        "writer/rebuild-v2/script_v3.md": "f910e0ab2a25e044b43c956947ebcee3a81662180587b92cf3c5efec9f6ff751",
+        "writer/rebuild-v2/scenes_v3.json": "e2036c39e4832c1e0c03df204a0b8bb041f79c1f259f775d8062848dcdb308ab",
+        "writer/rebuild-v2/revision_note.json": "6ab20f14ed35f0da958fba027a40f6b79ea870489915c52b49761b2bfec0778c"
+      },
+      "preserved_ids": true,
+      "new_revision_file_created": false
+    },
+    {
+      "revision": "script-v3",
+      "event": "총괄 반올림 판단 주체 정정·R003 고유 anchor 수정·writer 검수 전달용 동결",
+      "narration_changed": false,
+      "calculation_changed": false
+    }
+  ],
+  "rounding_decision_provenance": {
+    "owner": "총괄의 반올림 편집 결정",
+    "direct_user_utterance": false,
+    "scope": "R001의 요약 낭독·표시 반올림. 원장 계산과 정밀값 유지."
+  },
+  "freeze": {
+    "scope": "부모의 정확한 v3 Claude 대본검수 전달용 writer 산출물 동결. 본문·숫자 변경 일시중지.",
+    "script_and_narration_unchanged": true,
+    "unique_anchor_fix": {
+      "scene": "R003",
+      "before": "2억 2천만 원",
+      "after": "배정할 돈은 2억 2천만 원",
+      "narration_occurrences": 1
+    },
+    "artifact_sha256": {
+      "script_v3.md": "7016ad7026fb31538e4ddbdb34938658bf7f9828d15aad1338b760f66be0840a",
+      "scenes_v3.json": "c85c47768b3e9b981c83b2e35b6e42548ceb726a33f9c43c37068077469c5e2a"
+    },
+    "exact_v3_independent_approval": false
+  }
+}
+

@@ -1,0 +1,27 @@
+{
+  "issue_id": "PREPARED-GLOBAL-EDL-R2",
+  "scene_id": "ALL34",
+  "to": ["director", "Bohr", "Tesla"],
+  "status": "prepared_waiting_actual_scene_videos",
+  "evidence": {
+    "edl": "outputs/rebuild-v2/full-film-r2-v1/global_edl_draft.json",
+    "srt": "outputs/rebuild-v2/full-film-r2-v1/captions_global_draft.srt",
+    "cards": "outputs/rebuild-v2/full-film-r2-v1/chapter_manifest.json",
+    "voice": "outputs/rebuild-v2/full-film-r2-v1/voice_preserved_draft.wav",
+    "frames": 33654,
+    "seconds": 1121.8,
+    "scenes": 34,
+    "segments": 44,
+    "cues": 169,
+    "beats": 115,
+    "last_speech_global_s": 1108.7833333333335,
+    "outro_start_s": 1111.8
+  },
+  "proposal": {
+    "Bohr": "초안 EDL은 모든 전역 fields를 갖춤. Tesla 실제 scene durations 확정 때만 final global_edl.json으로 바인딩. 현재 챕터 contact를 직접 열어8종·가독성 확인했고 encoded sample extraction 예정.",
+    "Tesla": "scene manifest 형식 scenes:[{scene_id,mp4:{path,sha256},project,model(optional scene.json)}]. frame 수는 assembler가 실제 ffprobe count_frames로 독립 확인. 원래 WAV를 assembler가 다시 연결하므로 MP4 음성 AAC는 최종 재압축 입력으로 쓰지 않음.",
+    "director": "최종 render 명령은 assemble.py render --scene-manifest <path> --representative-approval <path>. 승인 입력에는 approved:true,script_sha256:cc1ef... 및 실제 대표검수 근거 경로/SHA 필요. 대표 승인 후 실제34씬 준비 즉시 실행."
+  },
+  "impact": "34 WAV PCM 보존, 자연 꼬리+정수 CFR 패딩, narrator 추가0.25s 미사용. 8사진 각1회3초. 인트로5초/아웃트로10초 SHA 확인.",
+  "next_owner": "Tesla manifest + director representative gate -> assembly final render"
+}

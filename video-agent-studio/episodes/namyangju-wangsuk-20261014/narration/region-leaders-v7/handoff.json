@@ -1,0 +1,93 @@
+{
+  "status": "complete_alignment_validated_listening_unverified",
+  "script_revision": "script-v7-region-leaders",
+  "source_script_sha256": "6ce6fefb6cbd439b7073091a0107ec65261ba8638aeeb0f339369c0e68640737",
+  "changed_scene_ids": [
+    "M008",
+    "M009"
+  ],
+  "chapters": [
+    {
+      "scene_id": "M008",
+      "file": "narration/region-leaders-v7/M008.mp3",
+      "sha256": "92041dad7b01b4235bb786f19163ef08ed061623280e1e92886e86b20b37ab8e",
+      "text_sha256": "61f13956c000da25f21998977f13457b76c3896b7c7f6e97c38d575f348423f4",
+      "submitted_text_sha256": "5390c476d7092a116ca34bfe06bef36373ebade7ea2c0e045057b6058d2b6bfb",
+      "alignment_file": "narration/region-leaders-v7/M008.alignment.json",
+      "captions_file": "narration/region-leaders-v7/M008.captions_timed.json",
+      "pcm_duration_s": 165.2,
+      "frames_30fps": 4956,
+      "timing_delta_s": 24.159999999999997,
+      "clamped_terminal_characters": [
+        {
+          "character": ".",
+          "index": 1339,
+          "start_s": 164.96,
+          "end_s": 165.28
+        }
+      ]
+    },
+    {
+      "scene_id": "M009",
+      "file": "narration/region-leaders-v7/M009.mp3",
+      "sha256": "299545fbefc764666c99df85d2e07bfbfec7bbffabbe833f001514922735816c",
+      "text_sha256": "67c0f9705027a3c70bb77df1eb8c9e63330e8c6af3ead4bdb71b3d68ff7ab589",
+      "submitted_text_sha256": "67c0f9705027a3c70bb77df1eb8c9e63330e8c6af3ead4bdb71b3d68ff7ab589",
+      "alignment_file": "narration/region-leaders-v7/M009.alignment.json",
+      "captions_file": "narration/region-leaders-v7/M009.captions_timed.json",
+      "pcm_duration_s": 25.36,
+      "frames_30fps": 761,
+      "timing_delta_s": 6.960000000000001,
+      "clamped_terminal_characters": [
+        {
+          "character": ".",
+          "index": 200,
+          "start_s": 25.2,
+          "end_s": 25.44
+        }
+      ]
+    }
+  ],
+  "total_pcm_duration_s": 190.56,
+  "previous_closing_pcm_s": 159.44,
+  "total_delta_s": 31.12,
+  "chapter_ends_relative_to_M008_s": [
+    165.2,
+    190.56
+  ],
+  "total_frame_count_30fps": 5717,
+  "actual_credit_total": 616,
+  "submitted_character_total": 1541,
+  "additional_cash_usd": 0,
+  "requests": 2,
+  "retries": 0,
+  "caption_count": 72,
+  "raw_alignment_exact_normalized_TXT_match": true,
+  "normalization": "Only CRLF to LF authorized by root; raw file and submitted text hashes separately preserved",
+  "actual_listening": false,
+  "unchanged_audio_scene_ids": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M005",
+    "M006",
+    "M007",
+    "M007B"
+  ],
+  "outputs": [
+    "narration/region-leaders-v7/alignment_manifest.json",
+    "narration/region-leaders-v7/timing_proposals.json",
+    "narration/region-leaders-v7/ledger.json"
+  ],
+  "unresolved": [
+    "Actual listening, number/proper-name pronunciation and naturalness unverified",
+    "Director to set global chapter times; no common timeline modified"
+  ],
+  "next_role": [
+    "director",
+    "editor",
+    "qa"
+  ]
+}

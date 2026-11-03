@@ -1,0 +1,39 @@
+{
+  "issue_id": "REGIONS-V3-REPRESENTATIVE-READY",
+  "status": "partial_handoff_continue_remaining_regions",
+  "checked_date": "2026-11-03",
+  "to": ["director", "writer", "visual"],
+  "message_tool_available": false,
+  "affected_scene_ids": ["S022", "S019"],
+  "representatives": [
+    {
+      "region_id": "R01",
+      "scene_id": "S022",
+      "claim_ids": ["V3-R01-H01", "V3-R01-L01", "V3-R01-G01"],
+      "narration": "2024년 통계의 인천 서구에는 청라와 검단이 함께 들어갑니다. 청라는 업무·주거·문화·레저를 함께 배치한 개발지이며, 사진 속 청라호수공원은 산책과 여가를 위한 공간입니다. 현재는 아라뱃길 남쪽 서해구와 북쪽 검단구로 나뉩니다.",
+      "photo_asset_id": "PHOTO_R01",
+      "photo_caption": "청라호수공원 · 청라 생활권의 산책·여가 공간 / 촬영연도 미상 자료사진",
+      "sources": [
+        {"url": "https://www.seohae.go.kr/open_content/main/part/city/development_cheongna.jsp", "location": "청라국제도시 소개·사업개요 L602~614", "status": "verified", "scope": "복합 개발 목적; 개별 예정시설의 운영 여부 미확정"},
+        {"url": "https://www.insiseol.or.kr/park/cheongna/bbs/bbsMsgDetail.do?bcd=cheongna_faq&msg_seq=1&pgno=2", "location": "상시 개방 안내", "status": "verified", "scope": "2026-11-01 기존 검증 재사용"},
+        {"url": "https://www.incheon.go.kr/IC010701", "location": "개편 개요 L255~257, 관할 표 L308~319", "status": "verified", "scope": "2026-07-01 시행·현재 구청 링크 대조"}
+      ]
+    },
+    {
+      "region_id": "R04",
+      "scene_id": "S019",
+      "claim_ids": ["V3-R04-H01", "V3-R04-H02", "V3-R04-L01"],
+      "narration": "강서구 마곡은 주거단지와 산업·업무단지, 공원 구역을 나눠 조성한 지역입니다. 공동주택 구역과 산업단지 기반공사는 각각 2016년과 2018년에 완료됐습니다. 사진 속 서울식물원은 식물 전시와 야외 공원을 함께 갖춘 생활권의 여가 공간입니다.",
+      "photo_asset_id": "PHOTO_R04",
+      "photo_caption": "서울식물원 야외 · 마곡 주거·업무지구의 공원·식물 전시 공간 / 2026년 자료사진",
+      "sources": [
+        {"url": "https://news.seoul.go.kr/citybuild/archives/5701", "location": "사업개요·1지구 주거/2지구 산업업무/3지구 공원", "status": "verified", "as_of": "2026-02-27"},
+        {"url": "https://news.seoul.go.kr/citybuild/archives/5871", "location": "추진현황 2016.08·2018.12", "status": "verified", "as_of": "2026-02-27"},
+        {"url": "https://botanicpark.seoul.go.kr/front/wbook/upload/12_SBP.pdf", "location": "서울식물원 온실 가이드맵", "status": "verified", "scope": "2026-11-01 기존 검증 재사용; 운영시간·요금은 인용 안 함"}
+      ],
+      "caution": "전체 사업 완료나 미래 준공일은 말하지 않음. 서울시 두 페이지의 사업기간 표기가 상이하므로 공사 완료된 구역의 역사만 사용."
+    }
+  ],
+  "proposal": "지역당 주거·생활권 구조 1~2문장과 실제 사진 랜드마크 기능 1문장을 연결. 2024 순위/2026 확인 사실/과거 촬영연도를 분리.",
+  "impact": "20개 지역 상세 설명 확대 및 습니다체 원고 장면 기획 가능. 새 핀 좌표는 제공하지 않음."
+}

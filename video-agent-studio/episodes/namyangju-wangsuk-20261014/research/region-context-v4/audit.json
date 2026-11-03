@@ -1,0 +1,20 @@
+{
+  "revision": "region-context-v4",
+  "checked_on": "2026-10-15",
+  "input_project": "video/src/namyangju-v2/project.json",
+  "shots": [
+    {"shot_id":"V2-002","action":"retain_regional_overview","reason":"전편에서남양주로위치전환. 단지현황확대는광역위치전달방해"},
+    {"shot_id":"V2-004","action":"retain_regional_overview","reason":"세생활권기준점안내. 개별단지도입목적아님"},
+    {"shot_id":"V2-009","action":"retain_regional_overview","reason":"별내·다산·진접·오남·호평·평내·화도7개지역공간소개. 한지역만상세화하면내레이션범위오인"},
+    {"shot_id":"V2-012","action":"replace_with_approved_rail_proof","reason":"검증역좌표·실제선로·진접선동일4호선개념확보"},
+    {"shot_id":"V2-013","action":"replace_with_approved_rail_proof","reason":"별내역/별내별가람역혼동해소는실제지도개선효과가큼"},
+    {"shot_id":"V2-014","action":"replace_with_approved_dasan_context","reason":"주거·상업·공원생활기반설명을실제배치로시각화","context_path":"research/dasan-context-v2/context.json"},
+    {"shot_id":"V2-015","action":"replace_with_approved_commute_proof","reason":"목적지거꾸로후보찾기는동일실제단지→별내역도보/버스예시로구체화"},
+    {"shot_id":"V2-034","action":"retain_region_level_and_stage_only","reason":"기존3산단·신규산단경계정밀미확인. 진접읍/진건읍행정기준점을산업단지위치로오인시키는확대/채색금지","prohibited":"새임의산단경계·핀·회사입점위치"},
+    {"shot_id":"V2-054","action":"improve_dasan_then_byeollae_then_regional","priority":1,"reason":"주변가격비교를실제주거·상업·공원생활조건과연결. 다산배치도를별내나진접으로재라벨링하지말것","contexts":[{"name":"다산역주변","path":"research/dasan-context-v2/context.json"},{"name":"별내역주변","path":"research/region-context-v4/byeollae_context.json"},{"name":"진접생활권","path":"visual/regional_geo_v4.geojson","restriction":"기존검증지명위치수준만"}],"prohibited":"지역간시세수익률·같은생활조건이라는추가결론"}
+  ],
+  "scope": "기존승인조각통합+후반비교V2-054 한곳실제생활배치보완. 왕숙공식원본계획도구간유지.",
+  "unknowns": ["진접지역정밀생활배치·산단정확경계미확인", "OSM폴리곤의현장경계·입점완료상태미확인"],
+  "paid_api_used": false,
+  "tts_generated": false
+}

@@ -1,0 +1,158 @@
+{
+  "task_id": "next-policy-source-prep-v1",
+  "revision": "v2_addendum",
+  "as_of_kst": "2026-10-26",
+  "inherit_sources_from": "sources.json",
+  "sources": [
+    {
+      "id": "V2_BANKREG",
+      "title": "은행업감독규정 별표6: 주택관련 담보대출 등에 대한 리스크관리기준",
+      "urls": [
+        "https://law.go.kr/LSW/admRulInfoP.do?admRulSeq=2100000285624&chrClsCd=010201",
+        "https://law.go.kr/LSW/flDownload.do?flSeq=169824033&bylClsCd=200201"
+      ],
+      "date": "2026-09-29",
+      "confirmed_as_of": "2026-10-26",
+      "method": "primary_native_web/read_only_http",
+      "evidence_scope": "시행2026-10-02; PDF8~9쪽 제4장4가·마: 1억원 초과 차주 DSR40, 신규예외와 기존부채 산입 구별",
+      "fetch_limits": "네이티브 웹은 메타데이터만 반환; 공식 별표 PDF를 HTTP로 확보. 다른 LTV 조항은 별도 행정지도와 구별하며 이번 팩에서 재판정하지 않음.",
+      "effective_from": "2026-10-02",
+      "local_file": "evidence/v2/bankreg_20261002.pdf",
+      "sha256": "319904a926ec88dbc4836bd792497823817cbb59594ae0307dbaef174023aac7"
+    },
+    {
+      "id": "V2_BANK_RULES",
+      "title": "은행업감독업무시행세칙 별표18: 주택관련 담보대출 등 리스크관리 세부기준",
+      "urls": [
+        "https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulSeq=2200000108789",
+        "https://www.law.go.kr/LSW/flDownload.do?flSeq=166421383&bylClsCd=200201"
+      ],
+      "date": "2026-06-26",
+      "confirmed_as_of": "2026-10-26",
+      "method": "primary_native_web/read_only_http",
+      "evidence_scope": "시행2026-06-30; PDF1쪽 LTV와 보증·보험, 9쪽12나(6)/12-1, 10쪽12-2바, 17~18쪽 표3/주1",
+      "fetch_limits": "동적 본문 대신 공식 별표 PDF 사용. 표3의 전세대출 등 타 항목은 최근 행정지도까지 포괄한 결론으로 사용하지 않음. MCI와 LTV상향용 MI를 구별.",
+      "effective_from": "2026-06-30",
+      "local_file": "evidence/v2/bank_rules_annex18_20260630.pdf",
+      "sha256": "36915ad8c8fa5e756d71479c42976b5e41f40ab193ead497e454d2e43f7575e0"
+    },
+    {
+      "id": "V2_TENANT",
+      "title": "주택임대차보호법 시행령 제10조·제11조",
+      "urls": [
+        "https://law.go.kr/lumLsLinkPop.do?lspttninfSeq=130113"
+      ],
+      "date": "2026-06-23",
+      "confirmed_as_of": "2026-10-26",
+      "method": "primary_native_web/read_only_http",
+      "evidence_scope": "시행2026-07-01; 제10조1항1호 서울 최우선변제액, 제11조1항1호 대상 보증금 상한",
+      "fetch_limits": "현행 신규 담보 사례용. 과거 담보권 설정·계약의 경과 적용은 개별 확인. 공제방수는 이 법정 금액과 별개의 금융상품 규칙.",
+      "effective_from": "2026-07-01"
+    },
+    {
+      "id": "V2_HF_GUARANTEE",
+      "title": "HF 구입자금보증 현행 상품 비교",
+      "urls": [
+        "https://www.hf.go.kr/ko/sub02/sub02_02_06.do"
+      ],
+      "date": null,
+      "confirmed_as_of": "2026-10-26",
+      "method": "primary_native_web/read_only_http",
+      "evidence_scope": "상품소개 표의 일반/생애최초특례/전세사기피해자특례 세 열 및 정책모기지 별도기준 주석",
+      "fetch_limits": "게시·개정일 미표시. 실제 실행 은행의 취급·잔여 보증한도·승인은 확인하지 않음. 표 오른쪽 피해자용 9억원 조건을 생초 열에 오인 적용하지 않음."
+    },
+    {
+      "id": "V2_DIDIM_RULES",
+      "title": "HF 내집마련 디딤돌대출 업무처리기준",
+      "urls": [
+        "https://www.hf.go.kr/cms/etcResourceDown.do?key=%24cms%24M4VwRgDAjA+qmwgJhtGSBsENKQOgAcATAMyA&site=%24cms%24NYeyA"
+      ],
+      "date": "2026-06-18",
+      "confirmed_as_of": "2026-10-26",
+      "method": "primary_native_web/read_only_http",
+      "evidence_scope": "PDF19쪽(인쇄16) DTI;28~31쪽(25~28) LTV·방공제·구입자금보증;34쪽(31) 전입·실거주",
+      "fetch_limits": "확정 업무기준 문서. 현행 적용은 기금 FAQ·2026 HUG 회신과 교차확인. 신생아는 별도 상품 특례가 우선.",
+      "local_file": "evidence/v2/didim_20260618.pdf",
+      "document_date_kind": "개정일",
+      "sha256": "195fb318c0edb9f569a858468c579780e4757ff795063651819b0b65dcd8be21"
+    },
+    {
+      "id": "V2_BOGEUM_RULES",
+      "title": "HF 보금자리론 업무처리기준 및 현행 예상대출조회",
+      "urls": [
+        "https://hf.go.kr/cms/etcResourceDown.do?key=%24cms%24AwRg+sBsHgTJwCsIAsA6ADgEwGZA&site=%24cms%24NYeyA",
+        "https://www.hf.go.kr/ko/sub01/sub01_06_01.do"
+      ],
+      "date": "2026-05-14",
+      "confirmed_as_of": "2026-10-26",
+      "method": "primary_native_web/read_only_http",
+      "evidence_scope": "PDF20~22쪽(16~18) DTI/참고DSR,30~31쪽(26~27) 담보·방공제; 현행 조회 화면 구입자금보증 이용 여부/주택유형",
+      "fetch_limits": "확보한 PDF 합본은5월 개정판으로10월 개정 전체를 반영한 최신 합본임을 확인하지 못함. 아파트 방공제 구별은 현행 조회 안내와 교차확인. 신혼DTI는 main의10/19 시행 FAQ 인계 우선. 조회 양식은 실제 대출 승인 아님.",
+      "local_file": "evidence/v2/bogeum_2026.pdf",
+      "latest_compilation_confirmed": false,
+      "sha256": "c330c643fade22f32cd49590ad12b1c86919da4560875e87b3a7acedef3ec433"
+    },
+    {
+      "id": "V2_NHUF",
+      "title": "주택도시기금 현행 FAQ 및 신생아 특례 디딤돌대출",
+      "urls": [
+        "https://nhuf.molit.go.kr/FP/FP03/FP0301.jsp?searchWord=",
+        "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030801.jsp"
+      ],
+      "date": null,
+      "confirmed_as_of": "2026-10-26",
+      "method": "primary_native_web/read_only_http",
+      "evidence_scope": "일반/신생아 각각의 실거주 예외 FAQ; 신생아 소액임차보증금 공제 FAQ; 상품 대출한도 산식 및 말미 디딤돌 준용",
+      "fetch_limits": "네이티브 웹 타임아웃. 허용된 읽기전용 HTTP로 HTML 이스케이프 답변을 해독하여 직접 확인. 최종개정일 미표시. 과거 접수분 전체 경과규정은 확정하지 않음."
+    },
+    {
+      "id": "V2_HUG",
+      "title": "HUG 기금 담당부서 공식 회신: 방공제·보증 적용",
+      "urls": [
+        "https://www.khug.or.kr/hug/web/cs/el/csel000182.jsp?hmpg_cvap_dcd=04&hmpg_sno=161499",
+        "https://www.khug.or.kr/hug/web/cs/el/csel000182.jsp?hmpg_cvap_dcd=04&hmpg_sno=142863"
+      ],
+      "date": "2026-08-26 / 2025-09-11",
+      "confirmed_as_of": "2026-10-26",
+      "method": "primary_native_web/read_only_http",
+      "evidence_scope": "161499 관리제도팀 답변: 신생아 관리방안 제외, 생초6억/일반3억 보증;142863 답변1: 신생아6억 초과 보증 불가·방공제",
+      "fetch_limits": "민원인의 질문·개인 사례는 정책 근거로 사용하지 않음. 기관 답변만 읽음(CP949 HTTP). 6억 초과 회신은2025년 자료이므로 현행 보증 통합세칙 직접확인 한계를 M08/G10에 표시. 게시글 작성일과 별도 답변일은 구별."
+    },
+    {
+      "id": "HF_MARRIAGE_RELEASE_20260928",
+      "title": "보금자리론, 소득기준 개선해 결혼페널티 없앤다",
+      "urls": [
+        "https://www.hf.go.kr/_custom/hf/_common/board/index/21.do?article.offset=10&articleLimit=10&articleNo=600594&mode=view"
+      ],
+      "date": "2026-09-28",
+      "confirmed_as_of": "2026-10-26",
+      "method": "director_primary_page_read_handoff",
+      "evidence_scope": "신혼가구 소득기준 개선 및10/19 시행",
+      "fetch_limits": "외부 페이지는 video_director가 직접 열람한 입력을 인계받음. 이번 researcher가 중복 검색·직접 재열람했다고 기록하지 않음.",
+      "provenance": {
+        "input_file": "../next_episode_hf_addendum.json",
+        "sha256": "e4a2bbec61ce9a2cc220697c051739b3486ea920f82482c56312a685e6c9de2a",
+        "reviewer": "video_director",
+        "source_status": "primary_pages_read_by_director"
+      }
+    },
+    {
+      "id": "HF_CURRENT_MARRIAGE_FAQ",
+      "title": "보금자리론 자주 하는 질문: 신혼소득특례 6항목",
+      "urls": [
+        "https://corp.hf.go.kr/ko/sub01/sub01_07_01.do"
+      ],
+      "date": null,
+      "confirmed_as_of": "2026-10-26",
+      "method": "director_primary_page_read_handoff",
+      "evidence_scope": "현행 FAQ의 1인 소득·DTI·배우자 확인·주택보유수·실수요자·기준내 합산소득 문답",
+      "fetch_limits": "외부 페이지는 video_director가 직접 열람한 입력을 인계받음. 이번 researcher가 중복 검색·직접 재열람했다고 기록하지 않음.",
+      "provenance": {
+        "input_file": "../next_episode_hf_addendum.json",
+        "sha256": "e4a2bbec61ce9a2cc220697c051739b3486ea920f82482c56312a685e6c9de2a",
+        "reviewer": "video_director",
+        "source_status": "primary_pages_read_by_director"
+      }
+    }
+  ]
+}

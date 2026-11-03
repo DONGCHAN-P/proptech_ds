@@ -1,0 +1,4 @@
+﻿from pathlib import Path
+p=Path('analysis/housing_growth_2006'); svg=(p/'annual_heatmap.svg').read_text(encoding='utf8')
+html='''<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>지역별 집값 상승률 차트</title><style>body{margin:0;background:#f6f4ef;color:#173348;font-family:"Malgun Gothic",sans-serif;padding:32px}h1{font-size:26px}main{background:white;border-radius:16px;padding:24px;overflow-x:auto}svg{display:block;width:100%;min-width:1100px;height:auto}p{line-height:1.7;color:#546973}.note{font-size:14px}</style><h1>2006년 이후 지역별 집값 변화</h1><p>파란색: 상승 · 붉은색: 하락 · 숫자 단위: %<br>작은 화면에서는 차트를 좌우로 스크롤할 수 있습니다.</p><main>'''+svg+'''</main><p class="note">자체 실거래 분석 · 서울·경기·인천 · 2006년을 비교 출발점으로 사용<br>동일 단지·동일 면적에서 두 해 각각 5건 이상 거래된 표본의 연평균 가격 비교. 공식 가격지수가 아니며 층·거래시점 차이는 미조정입니다.</p></html>'''
+(p/'chart_view.html').write_text(html,encoding='utf8')

@@ -1,0 +1,11 @@
+{
+  "output": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\jun-user-script-v1\\full-film-v1\\project\\assets\\mix.m4a",
+  "sha256": "fa8792925e36898cb6e01d4794bddbab1d2d34599101c63c849a4ac596d83762",
+  "duration_s": 714.8,
+  "sample_rate": 48000,
+  "filters": "[1:a]highpass=f=80,lowpass=f=12000,equalizer=f=2200:t=o:w=2:g=-5,volume='if(between(t,26.900000000,31.900000000)+between(t,704.800000000,714.800000000),0,0.045)':eval=frame,afade=t=in:st=0:d=1.5[bed];[0:a][bed]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-16:TP=-1.5:LRA=11,aresample=48000[mix]",
+  "brand_music_duplicated": false,
+  "raw_chapter_audio_preserved": true,
+  "actual_listening": false,
+  "intermediate_dry_wav": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\jun-user-script-v1\\full-film-v1\\dry_voice_brand.wav"
+}

@@ -1,0 +1,250 @@
+{
+  "scene_id": "S13",
+  "audio_sha256": "18b90887c9ef8d8aabd5707d1306b0ba337621a7f3ef0f7d987c317a51865f3f",
+  "reference": "자, 현금 1억 원부터 보겠습니다. 준비금 2천만 원을 빼면 집값에 넣을 돈이 8천만 원 남습니다. LTV 70퍼센트라면 내 돈이 집값의 30퍼센트는 있어야 하잖아요. 그래서 8천만 원을 30퍼센트로 나누면, 계산상으로는 약 2억 6천6백만 원대가 나옵니다. 오늘은 조금 내려서 2억 6천6백만 원짜리 집을 예로 들게요.",
+  "transcript": "자 현금 1억원부터 보겠습니다. 준비금 2천만원을 빼면 집값에 넣을 돈이 8천만원 남습니다. ltv 70%라면 내 돈이 집값에 30%는 있어야 하잖아요. 그래서 8천만원을 30%로 나누면 계산상으로는 약 2억 6천만원 때가 나옵니다. 오늘은 조금 내려서 2억 6천만원 짜리 집을 예로 들게요.",
+  "comparison": {
+    "normalized_text_equal": false,
+    "normalized_reference": "자현금숫자100000000원부터보겠습니다준비금숫자20000000원을빼면집값에넣을돈숫자80000000원남습니다ltv숫자70퍼센트라면내돈이집값의숫자30퍼센트는있어야하잖아요그래서숫자80000000원을숫자30퍼센트로나누면계산상으로는약숫자266000000원대가나옵니다오늘은조금내려서숫자266000000원짜리집을예로들게요",
+    "normalized_transcript": "자현금숫자100000000원부터보겠습니다준비금숫자20000000원을빼면집값에넣을돈숫자80000000원남습니다ltv숫자70퍼센트라면내돈이집값에숫자30퍼센트는있어야하잖아요그래서숫자80000000원을숫자30퍼센트로나누면계산상으로는약숫자260000000원때가나옵니다오늘은조금내려서숫자260000000원짜리집을예로들게요",
+    "reference_numbers": [
+      {
+        "raw": "1억 원",
+        "value": 100000000,
+        "unit": "원",
+        "start": 6,
+        "end": 10
+      },
+      {
+        "raw": "2천만 원",
+        "value": 20000000,
+        "unit": "원",
+        "start": 24,
+        "end": 29
+      },
+      {
+        "raw": "이 8천만 원",
+        "value": 80000000,
+        "unit": "원",
+        "start": 42,
+        "end": 49
+      },
+      {
+        "raw": "70퍼센트",
+        "value": 70,
+        "unit": "%",
+        "start": 60,
+        "end": 65
+      },
+      {
+        "raw": "30퍼센트",
+        "value": 30,
+        "unit": "%",
+        "start": 77,
+        "end": 82
+      },
+      {
+        "raw": "8천만 원",
+        "value": 80000000,
+        "unit": "원",
+        "start": 98,
+        "end": 103
+      },
+      {
+        "raw": "30퍼센트",
+        "value": 30,
+        "unit": "%",
+        "start": 105,
+        "end": 110
+      },
+      {
+        "raw": "2억 6천6백만 원",
+        "value": 266000000,
+        "unit": "원",
+        "start": 126,
+        "end": 136
+      },
+      {
+        "raw": "2억 6천6백만 원",
+        "value": 266000000,
+        "unit": "원",
+        "start": 156,
+        "end": 166
+      }
+    ],
+    "recognized_numbers": [
+      {
+        "raw": "1억원",
+        "value": 100000000,
+        "unit": "원",
+        "start": 5,
+        "end": 8
+      },
+      {
+        "raw": "2천만원",
+        "value": 20000000,
+        "unit": "원",
+        "start": 22,
+        "end": 26
+      },
+      {
+        "raw": "이 8천만원",
+        "value": 80000000,
+        "unit": "원",
+        "start": 39,
+        "end": 45
+      },
+      {
+        "raw": "70%",
+        "value": 70,
+        "unit": "%",
+        "start": 56,
+        "end": 59
+      },
+      {
+        "raw": "30%",
+        "value": 30,
+        "unit": "%",
+        "start": 71,
+        "end": 74
+      },
+      {
+        "raw": "8천만원",
+        "value": 80000000,
+        "unit": "원",
+        "start": 90,
+        "end": 94
+      },
+      {
+        "raw": "30%",
+        "value": 30,
+        "unit": "%",
+        "start": 96,
+        "end": 99
+      },
+      {
+        "raw": "2억 6천만원",
+        "value": 260000000,
+        "unit": "원",
+        "start": 114,
+        "end": 121
+      },
+      {
+        "raw": "2억 6천만원",
+        "value": 260000000,
+        "unit": "원",
+        "start": 142,
+        "end": 149
+      }
+    ],
+    "numeric_differences": [
+      {
+        "operation": "replace",
+        "expected": [
+          {
+            "raw": "2억 6천6백만 원",
+            "value": 266000000,
+            "unit": "원",
+            "start": 126,
+            "end": 136
+          },
+          {
+            "raw": "2억 6천6백만 원",
+            "value": 266000000,
+            "unit": "원",
+            "start": 156,
+            "end": 166
+          }
+        ],
+        "recognized": [
+          {
+            "raw": "2억 6천만원",
+            "value": 260000000,
+            "unit": "원",
+            "start": 114,
+            "end": 121
+          },
+          {
+            "raw": "2억 6천만원",
+            "value": 260000000,
+            "unit": "원",
+            "start": 142,
+            "end": 149
+          }
+        ]
+      }
+    ],
+    "text_similarity_ratio": 0.976879,
+    "sentences": [
+      {
+        "reference": "자, 현금 1억 원부터 보겠습니다.",
+        "matched_character_fraction": 1.0,
+        "possible_omission_or_misrecognition": false
+      },
+      {
+        "reference": "준비금 2천만 원을 빼면 집값에 넣을 돈이 8천만 원 남습니다.",
+        "matched_character_fraction": 1.0,
+        "possible_omission_or_misrecognition": false
+      },
+      {
+        "reference": "LTV 70퍼센트라면 내 돈이 집값의 30퍼센트는 있어야 하잖아요.",
+        "matched_character_fraction": 0.9697,
+        "possible_omission_or_misrecognition": false
+      },
+      {
+        "reference": "그래서 8천만 원을 30퍼센트로 나누면, 계산상으로는 약 2억 6천6백만 원대가 나옵니다.",
+        "matched_character_fraction": 0.9608,
+        "possible_omission_or_misrecognition": false
+      },
+      {
+        "reference": "오늘은 조금 내려서 2억 6천6백만 원짜리 집을 예로 들게요.",
+        "matched_character_fraction": 0.9655,
+        "possible_omission_or_misrecognition": false
+      }
+    ],
+    "method": "한자어/아라비아 숫자와 단위 정규화 후 순서·개수 대조; 문장별 문자 정렬 휴리스틱"
+  },
+  "seconds": 21.92,
+  "elapsed_s": 3.235000000000582,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.0,
+      "text": " 자 현금 1억원부터 보겠습니다.",
+      "avg_logprob": -0.17631288433074951
+    },
+    {
+      "start": 2.4,
+      "end": 6.36,
+      "text": " 준비금 2천만원을 빼면 집값에 넣을 돈이 8천만원 남습니다.",
+      "avg_logprob": -0.17631288433074951
+    },
+    {
+      "start": 6.8,
+      "end": 10.92,
+      "text": " ltv 70%라면 내 돈이 집값에 30%는 있어야 하잖아요.",
+      "avg_logprob": -0.17631288433074951
+    },
+    {
+      "start": 11.36,
+      "end": 13.84,
+      "text": " 그래서 8천만원을 30%로 나누면",
+      "avg_logprob": -0.17631288433074951
+    },
+    {
+      "start": 13.84,
+      "end": 17.38,
+      "text": " 계산상으로는 약 2억 6천만원 때가 나옵니다.",
+      "avg_logprob": -0.17631288433074951
+    },
+    {
+      "start": 17.74,
+      "end": 21.4,
+      "text": " 오늘은 조금 내려서 2억 6천만원 짜리 집을 예로 들게요.",
+      "avg_logprob": -0.17631288433074951
+    }
+  ],
+  "actual_listening": false,
+  "naturalness_verified": false,
+  "external_upload": false
+}

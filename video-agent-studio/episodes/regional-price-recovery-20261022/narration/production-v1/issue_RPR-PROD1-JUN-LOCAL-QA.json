@@ -1,0 +1,31 @@
+{
+  "issue_id": "RPR-PROD1-JUN-LOCAL-QA",
+  "scene_ids": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012"
+  ],
+  "problem": "현재 sandbox에서 기존 Winget FFmpeg 실행 가능 여부를 통과하지 못해 실제 디코딩·합본을 검증하지 못함.",
+  "evidence": {
+    "offline_preflight": "offline_preflight.json",
+    "ffmpeg_ready": false,
+    "user_report": "기본 sandbox FFprobe 하위 프로세스 WinError5; 총괄 require_escalated 실행 가능"
+  },
+  "proposal": "실제 예산 승인과 새 authorization.json 발급 후 총괄이 require_escalated로 생성기와 timing builder를 실행한다. 실제 오디오 기술 검사와 별도 청취·편집 QA를 수행한다.",
+  "impact": "로컬 준비 완료에는 영향 없음. 실제 음성·timing lock·합본·자막 타이밍 검증은 미완료.",
+  "next_role": [
+    "director",
+    "editor",
+    "qa"
+  ],
+  "peer_message_tool_available": false
+}

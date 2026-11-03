@@ -1,0 +1,45 @@
+{
+  "episode_id": "data-insight-20261019",
+  "request_type": "new_video",
+  "duration": 30,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "format": "무대사 · BGM · 한글 별도 합성",
+  "purpose": "WBR 삽입 및 사내 단독 공유",
+  "source": "Downloads/영상제작 이미지.zip",
+  "all_13_assets_required": true,
+  "style": {
+    "rose": "① 필요한 순간 바로",
+    "purple": "② 평소에도 먼저",
+    "before": "무채색"
+  },
+  "scope": "제공된 시놉시스를 30초로 압축; 인물 등장 유료 API 클립; 전 이미지 사용",
+  "approvals": {
+    "topic": "direct user request",
+    "script": "user supplied synopsis with delegated 30s adaptation; prewritten text v1",
+    "budget": "user explicitly selected maximum USD 3.00, tax excluded",
+    "upload": false
+  },
+  "source_data_note": "팀 규모·성과 수치는 사용자 제공 구성안이며 외부 검증하지 않음; 일정 10/14는 화면에 표시하지 않음",
+  "text_policy": "한글은 생성 API에 맡기지 않고 로컬 한글 폰트로 합성; 실제 UI는 제공 이미지 원문 사용; 무대사 유지",
+  "api_plan": {
+    "provider": "Runway",
+    "model": "gen4.5",
+    "clips": 3,
+    "seconds_each": 5,
+    "expected_credits": 180,
+    "max_credits": 300,
+    "max_cash_usd": 3.0,
+    "retry_max": 2,
+    "reference_assets": [
+      "A02",
+      "A04",
+      "A11"
+    ],
+    "external_transmission_authorized": true
+  },
+  "nonapplicable_defaults": [
+    "부동산 채널 브랜드/구독 CTA/지도/가격/Jun TTS; 별도 사내 영상이므로 사용하지 않음"
+  ]
+}

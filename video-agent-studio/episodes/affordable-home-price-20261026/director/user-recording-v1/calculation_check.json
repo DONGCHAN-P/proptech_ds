@@ -1,0 +1,100 @@
+{
+  "status": "passed_arithmetic_only",
+  "policy_clearance": "not_equivalent_to_arithmetic_pass",
+  "units": "Amounts in KRW; precise strings retain Decimal precision. Display prices are chosen below mathematical ceilings.",
+  "rate": "4.5%",
+  "months": 360,
+  "individual_loan_cap_won": 400000000,
+  "reserve_origin": "User-authored hypothetical budget, not measured average cost.",
+  "rows": [
+    {
+      "cash_won": 100000000,
+      "reserve_won": 20000000,
+      "equity_won": 80000000,
+      "price_won": 266000000,
+      "loan_won": 186000000,
+      "LTV_cap_won": 186200000,
+      "theoretical_price_upper_won": "266666666.6666666666666666667",
+      "monthly_payment_won": "942434.6762761380858615681159",
+      "monthly_payment_10k_display": "94.2",
+      "narration_monthly_10k": 94,
+      "LTV40_price_won": 133000000,
+      "LTV40_loan_won": 53000000
+    },
+    {
+      "cash_won": 200000000,
+      "reserve_won": 30000000,
+      "equity_won": 170000000,
+      "price_won": 566000000,
+      "loan_won": 396000000,
+      "LTV_cap_won": 396200000,
+      "theoretical_price_upper_won": "566666666.6666666666666666667",
+      "monthly_payment_won": "2006473.826910487537640757924",
+      "monthly_payment_10k_display": "200.6",
+      "narration_monthly_10k": 201,
+      "LTV40_price_won": 283000000,
+      "LTV40_loan_won": 113000000
+    },
+    {
+      "cash_won": 300000000,
+      "reserve_won": 40000000,
+      "equity_won": 260000000,
+      "price_won": 660000000,
+      "loan_won": 400000000,
+      "LTV_cap_won": 462000000,
+      "theoretical_price_upper_won": "660000000",
+      "monthly_payment_won": "2026741.239303522765293694873",
+      "monthly_payment_10k_display": "202.7",
+      "narration_monthly_10k": 203,
+      "LTV40_price_won": 433000000,
+      "LTV40_loan_won": 173000000
+    },
+    {
+      "cash_won": 400000000,
+      "reserve_won": 50000000,
+      "equity_won": 350000000,
+      "price_won": 750000000,
+      "loan_won": 400000000,
+      "LTV_cap_won": 525000000,
+      "theoretical_price_upper_won": "750000000",
+      "monthly_payment_won": "2026741.239303522765293694873",
+      "monthly_payment_10k_display": "202.7",
+      "narration_monthly_10k": 203,
+      "LTV40_price_won": 583000000,
+      "LTV40_loan_won": 233000000
+    },
+    {
+      "cash_won": 500000000,
+      "reserve_won": 60000000,
+      "equity_won": 440000000,
+      "price_won": 840000000,
+      "loan_won": 400000000,
+      "LTV_cap_won": 588000000,
+      "theoretical_price_upper_won": "840000000",
+      "monthly_payment_won": "2026741.239303522765293694873",
+      "monthly_payment_10k_display": "202.7",
+      "narration_monthly_10k": 203,
+      "LTV40_price_won": 733000000,
+      "LTV40_loan_won": 293000000
+    }
+  ],
+  "cost_example": {
+    "price_won": 660000000,
+    "assumptions": "일반적인 1주택 취득·전용85㎡이하·감면없음·일반과세 중개사·상한보수 적용",
+    "acquisition_tax_won": 9240000,
+    "local_education_tax_won": 924000,
+    "broker_with_VAT_won": 2904000,
+    "total_won": 13068000,
+    "reserve_won": 40000000,
+    "unallocated_remainder_won": 26932000
+  },
+  "insights": {
+    "cash1_to_cash2_price_increase_won": 300000000,
+    "equity_increase_won": 90000000,
+    "loan_increase_won": 210000000,
+    "cash5_cheaper_home_price_won": 700000000,
+    "cash5_cheaper_home_loan_won": 260000000,
+    "cash5_cheaper_home_payment_10k": "131.7",
+    "savings_between_cash5_choices_10k": "70.9"
+  }
+}

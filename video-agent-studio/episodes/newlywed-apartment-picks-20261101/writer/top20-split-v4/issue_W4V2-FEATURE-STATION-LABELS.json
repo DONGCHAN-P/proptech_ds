@@ -1,0 +1,174 @@
+{
+  "issue_id": "W4V2-FEATURE-STATION-LABELS",
+  "status": "visual_fix_manifest_confirmed_QA_in_progress",
+  "to": [
+    "director",
+    "qa"
+  ],
+  "items": [
+    {
+      "scene_id": "P01-R19",
+      "region_id": "R19",
+      "named_stations": [
+        "신내역"
+      ],
+      "evidence": [
+        "scene_proposals_v2.json#/claim_registry",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-split-v4/map_assets.json"
+      ],
+      "impact": "writer의 지도 추가 표시 요청은 메타데이터에서 반영 확인. 좌표·실제 파란 라벨·가독성은 QA 확인 중으로 인계",
+      "original_problem": "공식 검증된 지역 특성/사진 대상 역이나 현재 대표단지 확대지도 라벨 목록 밖에 있음",
+      "original_proposal": "해당 발화는 실제 장소 사진에 연결하고, 필요한 전체지도 위치 라벨은 검증된 좌표로 visual 담당이 추가. 대표단지 상세의 다른 역과 혼합하지 않음",
+      "status": "visual_fix_manifest_confirmed_QA_in_progress",
+      "resolution": {
+        "source_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-split-v4/map_assets.json",
+        "source_sha256": "ffa699de36ec7d2f7809ff5e8defce2dd8ef8a631364ac83580c923063fbdbb2",
+        "source_field": "/assets/37/displayed_overview_labels",
+        "confirmed_name": "신내역",
+        "modes_checked": [
+          "context",
+          "prices"
+        ]
+      }
+    },
+    {
+      "scene_id": "P01-R18",
+      "region_id": "R18",
+      "named_stations": [
+        "구성역"
+      ],
+      "evidence": [
+        "scene_proposals_v2.json#/claim_registry",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-split-v4/map_assets.json"
+      ],
+      "impact": "writer의 지도 추가 표시 요청은 메타데이터에서 반영 확인. 좌표·실제 파란 라벨·가독성은 QA 확인 중으로 인계",
+      "original_problem": "공식 검증된 지역 특성/사진 대상 역이나 현재 대표단지 확대지도 라벨 목록 밖에 있음",
+      "original_proposal": "해당 발화는 실제 장소 사진에 연결하고, 필요한 전체지도 위치 라벨은 검증된 좌표로 visual 담당이 추가. 대표단지 상세의 다른 역과 혼합하지 않음",
+      "status": "visual_fix_manifest_confirmed_QA_in_progress",
+      "resolution": {
+        "source_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-split-v4/map_assets.json",
+        "source_sha256": "ffa699de36ec7d2f7809ff5e8defce2dd8ef8a631364ac83580c923063fbdbb2",
+        "source_field": "/assets/35/displayed_overview_labels",
+        "confirmed_name": "구성역",
+        "modes_checked": [
+          "context",
+          "prices"
+        ]
+      }
+    },
+    {
+      "scene_id": "P01-R15",
+      "region_id": "R15",
+      "named_stations": [
+        "신도림역"
+      ],
+      "evidence": [
+        "scene_proposals_v2.json#/claim_registry",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-split-v4/map_assets.json"
+      ],
+      "impact": "writer의 지도 추가 표시 요청은 메타데이터에서 반영 확인. 좌표·실제 파란 라벨·가독성은 QA 확인 중으로 인계",
+      "original_problem": "공식 검증된 지역 특성/사진 대상 역이나 현재 대표단지 확대지도 라벨 목록 밖에 있음",
+      "original_proposal": "해당 발화는 실제 장소 사진에 연결하고, 필요한 전체지도 위치 라벨은 검증된 좌표로 visual 담당이 추가. 대표단지 상세의 다른 역과 혼합하지 않음",
+      "status": "visual_fix_manifest_confirmed_QA_in_progress",
+      "resolution": {
+        "source_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-split-v4/map_assets.json",
+        "source_sha256": "ffa699de36ec7d2f7809ff5e8defce2dd8ef8a631364ac83580c923063fbdbb2",
+        "source_field": "/assets/29/displayed_overview_labels",
+        "confirmed_name": "신도림역",
+        "modes_checked": [
+          "context",
+          "prices"
+        ]
+      }
+    },
+    {
+      "scene_id": "P02-R10",
+      "region_id": "R10",
+      "named_stations": [
+        "주안역"
+      ],
+      "evidence": [
+        "scene_proposals_v2.json#/claim_registry",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-split-v4/map_assets.json"
+      ],
+      "impact": "writer의 지도 추가 표시 요청은 메타데이터에서 반영 확인. 좌표·실제 파란 라벨·가독성은 QA 확인 중으로 인계",
+      "original_problem": "공식 검증된 지역 특성/사진 대상 역이나 현재 대표단지 확대지도 라벨 목록 밖에 있음",
+      "original_proposal": "해당 발화는 실제 장소 사진에 연결하고, 필요한 전체지도 위치 라벨은 검증된 좌표로 visual 담당이 추가. 대표단지 상세의 다른 역과 혼합하지 않음",
+      "status": "visual_fix_manifest_confirmed_QA_in_progress",
+      "resolution": {
+        "source_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-split-v4/map_assets.json",
+        "source_sha256": "ffa699de36ec7d2f7809ff5e8defce2dd8ef8a631364ac83580c923063fbdbb2",
+        "source_field": "/assets/19/displayed_overview_labels",
+        "confirmed_name": "주안역",
+        "modes_checked": [
+          "context",
+          "prices"
+        ]
+      }
+    },
+    {
+      "scene_id": "P02-R07",
+      "region_id": "R07",
+      "named_stations": [
+        "고덕역"
+      ],
+      "evidence": [
+        "scene_proposals_v2.json#/claim_registry",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-split-v4/map_assets.json"
+      ],
+      "impact": "writer의 지도 추가 표시 요청은 메타데이터에서 반영 확인. 좌표·실제 파란 라벨·가독성은 QA 확인 중으로 인계",
+      "original_problem": "공식 검증된 지역 특성/사진 대상 역이나 현재 대표단지 확대지도 라벨 목록 밖에 있음",
+      "original_proposal": "해당 발화는 실제 장소 사진에 연결하고, 필요한 전체지도 위치 라벨은 검증된 좌표로 visual 담당이 추가. 대표단지 상세의 다른 역과 혼합하지 않음",
+      "status": "visual_fix_manifest_confirmed_QA_in_progress",
+      "resolution": {
+        "source_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-split-v4/map_assets.json",
+        "source_sha256": "ffa699de36ec7d2f7809ff5e8defce2dd8ef8a631364ac83580c923063fbdbb2",
+        "source_field": "/assets/13/displayed_overview_labels",
+        "confirmed_name": "고덕역",
+        "modes_checked": [
+          "context",
+          "prices"
+        ]
+      }
+    },
+    {
+      "scene_id": "P02-R03",
+      "region_id": "R03",
+      "named_stations": [
+        "삼송역"
+      ],
+      "evidence": [
+        "scene_proposals_v2.json#/claim_registry",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-split-v4/map_assets.json"
+      ],
+      "impact": "writer의 지도 추가 표시 요청은 메타데이터에서 반영 확인. 좌표·실제 파란 라벨·가독성은 QA 확인 중으로 인계",
+      "original_problem": "공식 검증된 지역 특성/사진 대상 역이나 현재 대표단지 확대지도 라벨 목록 밖에 있음",
+      "original_proposal": "해당 발화는 실제 장소 사진에 연결하고, 필요한 전체지도 위치 라벨은 검증된 좌표로 visual 담당이 추가. 대표단지 상세의 다른 역과 혼합하지 않음",
+      "status": "visual_fix_manifest_confirmed_QA_in_progress",
+      "resolution": {
+        "source_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-split-v4/map_assets.json",
+        "source_sha256": "ffa699de36ec7d2f7809ff5e8defce2dd8ef8a631364ac83580c923063fbdbb2",
+        "source_field": "/assets/5/displayed_overview_labels",
+        "confirmed_name": "삼송역",
+        "modes_checked": [
+          "context",
+          "prices"
+        ]
+      }
+    }
+  ],
+  "resolved_representative_label_changes": [
+    {
+      "scene_id": "P02-R10",
+      "removed_spoken": "인천용현남초등학교",
+      "replacement": "인항고등학교"
+    },
+    {
+      "scene_id": "P02-R09",
+      "removed_spoken": "서현역",
+      "replacement": "수내역"
+    }
+  ],
+  "communication": "직접 peer 메시지 도구 없이 writer 폴더 이슈로 인계",
+  "current_handoff": "v2 원문과 대표 상세58시설은 유지. 시각 후속 수정은 전체지도 표시명 목록으로 확인했으며 독립 QA 완료로 기록하지 않음"
+}

@@ -1,0 +1,194 @@
+{
+  "task_id": "RPR-LIT-SOURCEFIX-001",
+  "created_at": "2026-10-23T08:39:12.197014+00:00",
+  "role": "research",
+  "scope": "ST-F08 판본·읽은 범위·가격 조건만 정정; literature_only / voice_held",
+  "authorization": "최신 직접 지시: facts.json 및 같은 폴더 corrections_v1/**만 편집권 재배정; 원담당 종료",
+  "facts_file": "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/facts.json",
+  "prepatch_file": "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/corrections_v1/facts.prepatch.json",
+  "prepatch_sha256": "ddfb4224d55f1364c4353404291f6bb63a306e82887c54accea04b9407f4093e",
+  "backup_sha256": "ddfb4224d55f1364c4353404291f6bb63a306e82887c54accea04b9407f4093e",
+  "postpatch_sha256": "0536b7a98d9fa5167ae3635ce16d4849241084a4e0860b524e4072dec33fc5f5",
+  "input_revisions": {
+    "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/sources.json": "839fcc66bf6938d8a97f4c70a81f4fd905d87b889c667014d78e66e084bdaa1a",
+    "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations.md": "02b17e95739d337964707e48debf04d1a73386a89ce955ae6713594053c5fb9b",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/qa/literature-mechanisms-v1/issue_RPR-LIT-QA-001.json": "36366881c6d69a71a9fc989dfeac415f5069be9c754a0be89f86a37c0e284a3f",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/brief.json": "03a343f203f6aa324ea95dffa2bc48e042a6b10b80a120c5c86a5fc72caae03a",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/state.json": "b4ab65a31adbe00d670e75e6bc822e6355f9ded7b3d4ded211310a9b9e69c8df"
+  },
+  "source_binding_pointer": "/sources/5/related_article",
+  "changed_json_pointers": [
+    {
+      "op": "replace",
+      "path": "/claims/7/sentence",
+      "before": "관련 학술지 초록의 Granger는 가격상승이 외지인 거래보다 앞서는 순서를 보고한다.",
+      "after": "2020년 학술지 초록은 2009Q1–2019Q4 Granger 분석에서 가격 상승→전체 거래→외지인 거래의 예측 선행 순서를 보고한다."
+    },
+    {
+      "op": "replace",
+      "path": "/claims/7/evidence_locations",
+      "before": [
+        "관련 학술지 원초록 Granger 결과"
+      ],
+      "after": [
+        "학술지 국문초록의 Granger 결과(기존 확인 기록; 전문 미확인)",
+        "sources.json#/sources/5/related_article: 2020년 학술지판, 초록·서지, 2009Q1-2019Q4",
+        "../spatial_transport_expectations.md / S6 / 관련판: 가격 상승→전체 거래→외지인 거래; WP 기간·수치와 혼합 금지"
+      ]
+    },
+    {
+      "op": "replace",
+      "path": "/claims/7/source_id",
+      "before": "S6",
+      "after": "S6.related_article"
+    },
+    {
+      "op": "replace",
+      "path": "/claims/7/status_scope",
+      "before": "조건부 문헌 결과/한계; 현재 격차의 확정 인과 아님",
+      "after": "학술지 초록에 보고된 Granger 예측 선행성으로 한정; 구조적 인과·외생적 투자 충격 또는 현재 서울·경기 격차의 확정 원인이 아님"
+    },
+    {
+      "op": "replace",
+      "path": "/claims/7/price_conditions/statistic",
+      "before": "아파트가격지수 로그차분과 거래량·비중 회귀",
+      "after": "아파트가격과 전체·외지인 아파트거래의 Granger 예측 선행성(학술지 초록)"
+    },
+    {
+      "op": "replace",
+      "path": "/claims/7/price_conditions/geography",
+      "before": "전국/수도권/서울",
+      "after": null
+    },
+    {
+      "op": "replace",
+      "path": "/claims/7/price_conditions/period",
+      "before": "현황2006-2019;표5 2012Q1-2019Q4;회귀창 미확인",
+      "after": "2009Q1-2019Q4"
+    },
+    {
+      "op": "replace",
+      "path": "/claims/7/price_conditions/area",
+      "before": "지수 집계, 특정면적 아님",
+      "after": null
+    },
+    {
+      "op": "replace",
+      "path": "/claims/7/price_conditions/transaction_type",
+      "before": "아파트 매매;증여·분양권 분리",
+      "after": null
+    },
+    {
+      "op": "replace",
+      "path": "/claims/7/price_conditions/unit",
+      "before": "로그비중 계수와 %p 환산을 구분",
+      "after": null
+    },
+    {
+      "op": "replace",
+      "path": "/claims/7/price_conditions/aggregation",
+      "before": "분기 AR(1)",
+      "after": "Granger 예측 선행성 검정(초록); 세부 모형·시차 미확인"
+    },
+    {
+      "op": "replace",
+      "path": "/claims/7/price_conditions/cancellations",
+      "before": "미확인",
+      "after": null
+    },
+    {
+      "op": "add",
+      "path": "/claims/7/price_conditions/index_name",
+      "after": null
+    },
+    {
+      "op": "add",
+      "path": "/claims/7/price_conditions/index_base_period",
+      "after": null
+    },
+    {
+      "op": "add",
+      "path": "/claims/7/source_binding",
+      "after": {
+        "registry_file": "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/sources.json",
+        "json_pointer": "/sources/5/related_article",
+        "parent_source_id": "S6",
+        "publication_type": "journal_article",
+        "title": "외지인 아파트거래가 아파트가격에 미치는 영향분석 연구",
+        "year": 2020,
+        "journal": "부동산연구",
+        "volume": "30(4)",
+        "pages": "33-44",
+        "doi": "10.35136/krer.30.4.3",
+        "relationship_to_wp": "관련 연구이며 표본·추정값 동일성 미검증. 독립 복제 증거로 세지 않음."
+      }
+    },
+    {
+      "op": "add",
+      "path": "/claims/7/read_scope",
+      "after": "abstract_only"
+    },
+    {
+      "op": "add",
+      "path": "/claims/7/read_scope_note",
+      "after": "기존 sources.json 관련 학술지 원초록·서지 확인 기록과 노트 S6에 근거한 메타데이터 정정. 이번 작업에서 원문 추가 열람 없음."
+    },
+    {
+      "op": "add",
+      "path": "/claims/7/price_conditions_unverified_fields",
+      "after": [
+        "geography",
+        "sample_count",
+        "area",
+        "transaction_type",
+        "unit",
+        "cancellations",
+        "index_name",
+        "index_base_period"
+      ]
+    },
+    {
+      "op": "add",
+      "path": "/claims/7/unverified_details",
+      "after": [
+        "학술지판 전문·원표",
+        "세부 추정식·시차 선택",
+        "효과크기·표준오차·유의수준",
+        "지수 구성·집계 세부조건"
+      ]
+    }
+  ],
+  "affected_claim_ids": [
+    "ST-F08"
+  ],
+  "affected_scene_ids": [],
+  "scene_scope": "문헌 단계이며 기존 장면을 열람·변경하지 않아 실제 장면ID 미지정",
+  "verification": {
+    "json_parsed": true,
+    "claim_count": 12,
+    "other_11_claims_unchanged": true,
+    "outside_ST_F08_text_bytes_unchanged": true,
+    "backup_byte_identical": true,
+    "status_qualified_retained": true,
+    "new_browsing": false,
+    "independent_qa": "pending_narrow_closure"
+  },
+  "source_file_modified": false,
+  "notes_file_modified": false,
+  "shared_state_modified": false,
+  "not_performed": [
+    "새 자료 검색",
+    "다른 주장 출처 변경",
+    "대본",
+    "렌더",
+    "TTS",
+    "유료 서비스",
+    "수집기",
+    "공통 상태 변경",
+    "외부 메시지"
+  ],
+  "write_scope": [
+    "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/facts.json",
+    "research_notes/서울 경기 집값 격차의 복합 원인/spatial_transport_expectations/corrections_v1/**"
+  ]
+}

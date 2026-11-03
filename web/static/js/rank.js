@@ -2,10 +2,10 @@
 window.RANK = (function () {
 
   const DESC = {
-    undervalue: '지역 내 같은 평형 대비 가격이 낮은 단지입니다. ' +
-                'run_step7_undervalue.py 의 최신 산출물(중위가 대비·저가 백분위·인프라 가중)을 그대로 보여줍니다.',
+    undervalue: '같은 지역·평형의 거래가격과 주변 생활시설을 함께 비교한 목록입니다. ' +
+                '동·층·거래 시점에 따라 가격 차이가 있으므로 개별 거래도 함께 확인해 주세요.',
     newhigh:    '최근 수집분에서 같은 평형 직전 평균 대비 크게 높게 체결된 거래입니다. ' +
-                'run_step8_new_trades.py 산출물 기준이며, 특이 거래(증여성·저층 등)가 섞일 수 있습니다.',
+                '거래가 적거나 층·거래 조건이 다르면 가격 차이가 클 수 있습니다.',
     surge:      '최근 1년 평단가가 그 직전 1년 대비 가장 많이 오른 단지입니다. 1년 거래 3건 이상만 집계합니다.',
   };
   const TITLE = { undervalue: '저평가 단지 TOP', newhigh: '신고가·특이거래', surge: '1년 상승률 TOP' };
@@ -40,15 +40,19 @@ window.RANK = (function () {
     document.getElementById('rankDesc').textContent = DESC[kind];
     document.getElementById('rankBody').innerHTML = '<div class="empty">불러오는 중…</div>';
 
-    const d = await U.get('/api/rankings?' + U.qs({ kind, limit: 60 }), 'rank');
-    render(kind, d.items);
+    try {
+      const d = await U.get('/api/rankings?' + U.qs({ kind, limit: 60 }), 'rank');
+      if (cur === kind) render(kind, d.items);
+    } catch (error) {
+      if (error.name !== 'AbortError' && cur === kind)
+        document.getElementById('rankBody').innerHTML = '<div class="empty">목록을 불러오지 못했습니다. 잠시 후 다시 선택해 주세요.</div>';
+    }
   }
 
   function render(kind, items) {
     const body = document.getElementById('rankBody');
     if (!items.length) {
-      body.innerHTML = '<div class="empty">표시할 데이터가 없습니다.<br>' +
-        'exports/daily/ 의 산출물이 필요합니다.</div>';
+      body.innerHTML = '<div class="empty">현재 집계된 결과가 없습니다.<br>다른 목록이나 지도에서 단지를 찾아보세요.</div>';
       return;
     }
     body.innerHTML = items.map((d, idx) => {
@@ -64,8 +68,9 @@ window.RANK = (function () {
         price = U.won(d.last_price);
         sub = U.esc(d.sigungu_name) + ' ' + U.esc(d.legal_dong_name || '') +
               ' · ' + U.esc(d.pyeong_bucket) + ' · 평당 ' + U.ppy(d.ppy) + '만';
-        reason = U.esc(d.reason || '') +
-                 (d.price_vs_median != null ? ' · 중위가 대비 ' + Math.round(d.price_vs_median) + '%' : '');
+        reason = d.price_vs_median != null
+          ? '지역·평형 거래 중간값의 ' + Math.round(d.price_vs_median) + '% 수준'
+          : '같은 지역·평형의 거래가격 비교';
       } else {
         price = U.won(d.rep_price);
         sub = U.esc(d.sigungu_name) + ' ' + U.esc(d.legal_dong_name) +

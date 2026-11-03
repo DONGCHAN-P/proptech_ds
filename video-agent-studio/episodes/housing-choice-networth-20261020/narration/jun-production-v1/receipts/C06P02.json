@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C06P02",
+  "scene_id": "C06",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:06:31.196Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "4b6186dc69485252ded6e20fed7c170ccf75d1027c63ac0e7de7dfa9d21335b2",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "환율도 같은 방식입니다. 달러 자산이 십 퍼센트 오르고 원·달러 환율도 십 퍼센트 오르면, 한국 돈으로 환산한 자산은 일 점 일 배에 일 점 일 배를 곱한 일 점 이일 배가 됩니다. 원화 수익률은 원금을 제외한 이십일 퍼센트입니다. 이미 원화로 계산한 이 티 에프 수익률에는 환율 효과가 들어 있습니다. 이 원화 수익률로 환율 효과까지 함께 반영합니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 197,
+  "characters": 197,
+  "actual_credits": 79,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:26.698Z",
+  "local_shadow_remaining_before": 21459,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "4T1jT01hCNr7Z5K3wGtp",
+    "x-request-id": null,
+    "character-cost": "79",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:06:30 GMT"
+  },
+  "pcm_samples": 1058400,
+  "pcm_duration_s": 24,
+  "provider_last_spoken_end_s": 24.08,
+  "artifact_sha256": {
+    "paragraphs/C06P02/audio.mp3": "02c0492e9460bf4277f43122ff5fdda50275cfb762de34cb93a61c2b6787fd66",
+    "paragraphs/C06P02/audio.wav": "22b5be4104297628055afc1e29300b29ca534bbc790adda23e9a015e680f9989",
+    "paragraphs/C06P02/alignment.json": "94a5dba157342e3f9c9bfd012f0e545c95deee653b447ea4a556378bc1fd5241",
+    "paragraphs/C06P02/normalized_alignment.json": "94a5dba157342e3f9c9bfd012f0e545c95deee653b447ea4a556378bc1fd5241"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21380,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:06:36.384Z"
+}

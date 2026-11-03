@@ -1,0 +1,96 @@
+{
+  "as_of": "2026-10-27",
+  "topic": "Korean transaction-price input timing for existing 11-province forecasting",
+  "scope": "One bounded research pass; no implementation, model rounds, paid calls, credentials or uploads",
+  "source_count": 3,
+  "sources": [
+    {
+      "id": "S1",
+      "publisher": "Ministry of Land, Infrastructure and Transport (MOLIT), on official Korea Policy Briefing",
+      "title": "실거래가라면서 두달전 가격? 2월 21일부터 거래신고 기한 30일로 단축",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148869388",
+      "publication_date": "2020-02-20",
+      "accessed_date": "2026-10-27",
+      "primary_official": true,
+      "retrieval": "Full HTML opened; relevant body lines 279-285 read",
+      "supports": {
+        "old_reporting_deadline_days": 60,
+        "new_reporting_deadline_days": 30,
+        "effective_contract_date_inclusive": "2020-02-21",
+        "historical_mean_reporting_days": 23,
+        "historical_fraction_within_30_days": 0.68,
+        "historical_sample_description": "Recent four years as described in the February 2020 announcement; exact sample dates not specified"
+      },
+      "limitations": [
+        "MOLIT explanation of the legal change, not an independently inspected consolidated statute",
+        "Historical reporting statistics predate implementation and must not be represented as 2026 performance",
+        "Does not establish universal compliance, public availability or finality"
+      ]
+    },
+    {
+      "id": "S2",
+      "publisher": "MOLIT Real Estate Transaction Price Disclosure System",
+      "title": "매매 FAQ — 계약일자와 신고일자의 차이는 무엇이며 자료제공시점은 언제인가요?",
+      "url": "https://rt.molit.go.kr/pt/bbs/faqList.do?mobileAt=&qnaProcessSttusCode=1",
+      "publication_date": null,
+      "accessed_date": "2026-10-27",
+      "primary_official": true,
+      "retrieval": "Full HTML opened; relevant lines 47-60 and 62-79 read",
+      "supports": {
+        "legal_reference": "부동산 거래신고 등에 관한 법률 제3조",
+        "pre_2020_02_21_deadline_days": 60,
+        "from_2020_02_21_deadline_days": 30,
+        "publication_principle": "Day after reporting, provided there is no problem in disclosure procedures",
+        "assignment_basis": "Contract date; July contract reported in August is published under July",
+        "public_fields_include": "Cancellation status"
+      },
+      "limitations": [
+        "Next-day publication is qualified, not an unconditional end-to-end guarantee",
+        "No post-change empirical delay distribution or vintage archive established"
+      ]
+    },
+    {
+      "id": "S3",
+      "publisher": "MOLIT Real Estate Transaction Price Disclosure System",
+      "title": "조건별 자료제공 이용시 유의사항",
+      "url": "https://rt.molit.go.kr/pt/xls/xls.do?mobileAt=",
+      "publication_date": null,
+      "accessed_date": "2026-10-27",
+      "primary_official": true,
+      "retrieval": "Full HTML opened; relevant lines 38-47 read",
+      "supports": {
+        "revision_warning": "Reported information changes and is cancelled in real time; disclosed counts and contents may differ depending on provision time",
+        "assignment_basis": "Contract date",
+        "reporting_deadline_days": 30,
+        "download_formats_shown": ["EXCEL", "CSV"]
+      },
+      "limitations": [
+        "No guaranteed date at which a contract month becomes final",
+        "CSV/EXCEL here are transaction extracts, not regional monthly price-index files"
+      ]
+    }
+  ],
+  "model_interpretation": {
+    "status": "Inference and assigned evaluation constraints; not an implementation or performance finding",
+    "monthly_origin_day": 27,
+    "baseline_feature_lag_months": 3,
+    "candidate_feature_lag_months": 2,
+    "first_fully_post_change_contract_month": "2020-03",
+    "first_origin_for_whole_month_t_minus_2_rule": "2020-05-27",
+    "label_maturity_months_unchanged": 3,
+    "evaluation_cohorts": "Keep fixed across baseline and sensitivity",
+    "age_examples_days": {
+      "2026_07_31_to_2026_10_27": 88,
+      "2026_08_31_to_2026_10_27": 57,
+      "2026_08_31_to_2026_10_13": 43
+    },
+    "snapshot_context_origin": "User task: Oct-13 master plus October-2026 expansion contains August observations; underlying files not independently audited in this pass",
+    "required_qualification": "Conditional pseudo-realtime test on latest snapshots; legal deadlines and observation age do not prove historical availability, completeness, finality or no lookahead",
+    "unresolved_risks": ["Late reporting", "Disclosure processing delays", "Corrections", "Retrospective cancellation filtering", "Unobserved historical revisions"]
+  },
+  "optional_price_index": {
+    "status": "Not pursued further within three-source timing-priority bound",
+    "file_downloaded": false,
+    "verified_direct_csv_xls_url": null
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "access": "success_read_only",
+  "tab": "집 시뮬레이션",
+  "sheetId": 1554741799,
+  "ranges": [
+    "A1:Z20",
+    "A1:K12",
+    "A100:K101",
+    "A240:K241",
+    "A500:K501"
+  ],
+  "full_grid_audit": false,
+  "privacy": "Anonymous structure review. No personal values or source URL. All letters are symbolic, not household data.",
+  "observed": [
+    "C1 loan annual interest; E1 shared monthly budget; G1 home monthly appreciation; I1 portfolio monthly return (unlabelled in visible header).",
+    "E5 buyer interest plus unexplained fixed monthly increment; E6 tenant interest; D7 renter rent. G5:G7 = monthly budget minus housing spending.",
+    "B10 initial home = B5 own equity + C5 debt. Scenario label disagrees with calculated home value. No personal amounts retained.",
+    "C10:D10 initial portfolios equal first monthly contribution. E10 includes first contribution plus hardcoded own-equity minus rental-deposit difference.",
+    "B11 home grows by G1; C11:E11 = prior portfolio*(1+I1)+monthly contribution. Samples at rows 100/101 and 240/241 repeat this pattern.",
+    "F/G buyer output = home+portfolio-hardcoded initial home value+initial equity = home+portfolio-initial debt, if hardcoded initial home value is consistent.",
+    "H tenant output = portfolio+B6 own deposit equity. Since deposit=own equity+loan, this already nets tenant debt; do not subtract same debt again.",
+    "I renter output = portfolio+B7 rental deposit. Deposits and debt stay constant in sampled formulas. First row has a contribution but no home appreciation; subsequent rows apply growth then contribution."
+  ],
+  "issues": [
+    "HIGH E5/F:G: unexplained buyer fixed monthly increment. If principal repayment, debt balance must decline; if operating cost, explain category. Do not declare a confirmed error before clarification.",
+    "HIGH A5/B10: scenario label and implied purchase price mismatch.",
+    "HIGH G1/I1: monthly return inputs applied monthly. Annualize as (1+r_month)^12-1, not r_month*12 for compound labels. No evidence inputs are forecasts.",
+    "MEDIUM F:G/E10: replace hardcoded initial-value and deposit-difference constants with references.",
+    "MEDIUM sampled headers/formulas: no explicit dividend/total-return, FX, tax/fee, purchase/sale friction, owner tax/maintenance, lease reset, guarantee/default assumptions.",
+    "MEDIUM B10:E11: define t=0 and month-end cashflow consistently."
+  ],
+  "proposed": {
+    "fairness": "Equal initial net worth W0, equal monthly available budget M after common living costs, comparable housing service, same horizon and terminal date.",
+    "initial": "Buyer liquid=W0-(price-loan)-purchase costs. Tenant liquid=W0-(deposit-jeonse loan)-entry costs. Renter liquid=W0-deposit-entry costs.",
+    "recurrence": "Liquid[t]=Liquid[t-1]*(1+net return[t])+M[t]-housing outflow[t]. Buyer outflow includes interest+principal+owner costs; loan[t]=loan[t-1]-principal. If contribution negative, model liquidity draw explicitly or mark infeasible.",
+    "terminal": "Buyer=home-sale costs-sale taxes-debt+liquid; tenant=returned deposit-debt+liquid-exit costs; renter=returned deposit+liquid-exit costs. Show gross and liquidation adjusted values.",
+    "double_counting": "Do not subtract an extra deposit opportunity-cost charge when smaller initial liquid portfolio already captures tied capital. Do not add dividends to total-return index. KRW return=(1+USD return)*(1+FX change)-1; avoid FX twice for KRW products.",
+    "sensitivity": "Weak/base/strong home and portfolio paths; rates, rent/reset, holding horizon, FX and liquidity; report break-even and reversal cases, not one winner."
+  },
+  "limits": "Read-only bounded sampling: A1:Z20, A1:K12, A100:K101, A240:K241, A500:K501. Not full-grid validation. Meaning of buyer increment, actual investment instrument, total return/tax/FX basis, comparable housing service, and intervening formula exceptions remain unverified. Historical jeonse loan rate before official comparable series must be labelled a conditional assumption.",
+  "claude": {
+    "status": "completed_anonymous_method_review",
+    "first_attempt": "ConnectionRefused exit 1",
+    "second_attempt": "approved elevated CLI exit 0; is_error false",
+    "receipt": "director/claude-sheet-audit/receipt.json",
+    "adjudication": "director/claude-sheet-audit/adjudication.md",
+    "not_full_script_consensus": true
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "revision": "rail-route-proof-v3",
+  "status": "rendered_awaiting_independent_walking_qa",
+  "owner": "video_editor",
+  "next_owner": "video_qa_then_video_director",
+  "scene_ids": ["S002"],
+  "artifacts": {
+    "mp4": "outputs/rail-route-proof-v3/namyangju_rail-route-proof_v3.mp4",
+    "technical_check": "outputs/rail-route-proof-v3/technical_check.json",
+    "render_manifest": "outputs/rail-route-proof-v3/render_manifest.json",
+    "placement_guide": "outputs/rail-route-proof-v3/placement_guide.md",
+    "actual_detail_crop": "outputs/rail-route-proof-v3/actual_walker_crop_200pct.png",
+    "source": "video/src/NamyangjuRailRouteProofV3.tsx",
+    "render_command": "node video-agent-studio/episodes/namyangju-wangsuk-20261014/editor/walking-polish-v3/render.cjs"
+  },
+  "inputs": {
+    "source": "video/src/NamyangjuRailRouteProofV2.tsx",
+    "prior_clip": "outputs/rail-route-proof-v2/namyangju_rail-route-proof_v2.mp4",
+    "data_readonly": "video/public/namyangju-rail-route-proof-v2/proof_data.json",
+    "audio_readonly": "video/public/namyangju-rail-route-proof-v1/original_audio_94_174.wav"
+  },
+  "verified": {
+    "duration_s": 80,
+    "resolution": [1920, 1080],
+    "fps": 30,
+    "bytes": 8337521,
+    "sha256": "77b5da270f26065e50e0441f48dc6d6ff78eba73437ea850011774acafddf385",
+    "whole_decode_passed": true,
+    "actual_encoded_frames": 17,
+    "editor_viewed_actual_crop": true,
+    "bus_component_source_unchanged": true,
+    "dasan_component_source_unchanged": true,
+    "data_and_audio_assets_reused_readonly": true,
+    "full_master_modified": false,
+    "external_transmission": false,
+    "paid_generation": false
+  },
+  "walking": {
+    "human_height_px": 25.44,
+    "badge_diameter_px": 32,
+    "badge_background": "pale cream, 1.25px amber/blue outline, no bounce or glow",
+    "figure": "own filled clothed SVG silhouette with head, jacket, trousers, shoes, small backpack",
+    "stride": "alternating arms and legs while moving; 0.38px maximum body bounce; feet anchored to actual route point",
+    "idle": "neutral pose at progress 0 or 1 and while waiting",
+    "heading": "horizontal mirror using smoothed route tangent; no body rotation",
+    "label_avoidance": "commute station name placed left of unchanged station pin to avoid badge collision",
+    "actual_motion_pairs_s": [[31.5,31.633],[68,68.133]],
+    "actual_idle_pairs_s": [[33,33.133],[39.1,39.233],[70.5,70.633]]
+  },
+  "unverified": ["실제 청취", "연속 재생", "문장별 음성·자막 정렬", "기존 현장 통행 및 시설 완료 여부 미확인 범위"],
+  "integration_authorized": false,
+  "publication_authorized": false
+}

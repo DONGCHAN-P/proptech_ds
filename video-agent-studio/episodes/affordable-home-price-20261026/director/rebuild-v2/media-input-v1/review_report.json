@@ -1,0 +1,205 @@
+{
+  "video": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/full-film-r2-v1/affordable_home_price_rebuild_r2_v1.mp4",
+  "video_sha256": "55d8626a5eff6ea43da064a44d9999133e09dc635a6b3f6e67a6f5025b64b761",
+  "srt": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/full-film-r2-v1/captions_global.srt",
+  "srt_sha256": "239e237d9b8faa17741bee87ff3becff442275a570083270b89579aa93bb6331",
+  "duration_s": 1121.8,
+  "frames": 33654,
+  "script_sha256": "cc1ef7d80225e992e7e5d31faffbfb09a8f90c80fb5352e17c36eb8c90755b12",
+  "script_markdown_sha256": "b58af9894aabfd7cfd231bcddc98448bd3e2af0e136b10b335083e717cc6a034",
+  "source_scene_order": [
+    "R001",
+    "R002",
+    "R003",
+    "R004",
+    "R005",
+    "R006",
+    "R007",
+    "R008",
+    "R009",
+    "R010",
+    "R011",
+    "R029",
+    "R030",
+    "R031",
+    "R032",
+    "R033",
+    "R012",
+    "R013",
+    "R014",
+    "R015",
+    "R016",
+    "R017",
+    "R018",
+    "R019",
+    "R020",
+    "R021",
+    "R022",
+    "R023",
+    "R024",
+    "R025",
+    "R026",
+    "R027",
+    "R028",
+    "R034"
+  ],
+  "actual_encoded_image_scope": "19 images: all34 final-information overview5 sheets,3 progressive examples,6 critical full frames,2 longest caption full frames,8 unique chapter cards,4 entry-cut triplets,1 published baseline comparison. Image manifest carries exact video/frame/image hashes.",
+  "frame_manifest": "video-agent-studio/episodes/affordable-home-price-20261026/director/rebuild-v2/media-input-v1/frame_manifest.json",
+  "independent_full_QA": "in progress in qa/rebuild-v2/media-qa, not pre-claimed approved",
+  "representative_QA": {
+    "status": "approved_to_expand_full_render",
+    "approved": true,
+    "representative_approved": true,
+    "required_open": 0,
+    "critical_open": 0,
+    "scope": "exact v3 R003/R006/R030 대표 게이트 → full34 렌더 확대",
+    "checked_revision": {
+      "script_revision": "script-v3-r2",
+      "script_md_sha256": "b58af9894aabfd7cfd231bcddc98448bd3e2af0e136b10b335083e717cc6a034",
+      "scenes_json_sha256": "cc1ef7d80225e992e7e5d31faffbfb09a8f90c80fb5352e17c36eb8c90755b12",
+      "media_run": "actual-scenes-r2-parent-v3",
+      "MP4_hashes": {
+        "R003": "6a0b9c6d1da054a1a6b29eb0d423396cad921cd053099eccb0ed1cbe1963a7c8",
+        "R006": "17a0c674e3125af5df5b215c60f250768de1dc582212114bb5d7d54b42587138",
+        "R030": "6553bc360727f9cec4c3a32ae9629c350002b212a506893d0083b6e11a1e5b95"
+      }
+    },
+    "review": {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\qa\\rebuild-v2\\media-qa\\representative_review_v3.json",
+      "sha256": "5986af8df3ca1e42206a0a2468054b9815f3e7708d1fcc6eb89c95f688420e82"
+    },
+    "final_full_film_approval": "unchecked",
+    "actual_listening": false,
+    "continuous_playback": false,
+    "next_owner": "parent/Tesla full34 render → Lovelace assembly → independent final media QA"
+  },
+  "audio_scope": {
+    "status": "signal_and_mapping_passed_ASR_support_reviewed_listening_unverified",
+    "timing": "narration/rebuild-v2/audio-r2-recovered/final_timing.json",
+    "scene_count": 34,
+    "scope": {
+      "PCM_signal": "34 WAVs: clipped samples 0; RMS -21.44 to -20.00 dBFS; peak 23078/32768",
+      "exact_display_and_spoken_mapping": "34 scenes, all source cues and provider words preserved; numerical units protected; native WordBoundary clocks",
+      "percent_event_recovery": "R013 raw54 events retained. Two separately timed percent symbols joined to preceding words at their actual native endpoints, giving52 aligned words. No interpolation, audio trimming or speech speed change.",
+      "cache": "18 received MP3s reused; 17 previous delivered PCMs byte identical; remaining16 scenes synthesized. Cumulative34 free streams, automatic retries0, paid calls0. recovery_receipt_verified.json supersedes the raw engine scene-iteration counter for network counts."
+    },
+    "ASR": {
+      "small_unprompted_whole_scene": [
+        "R005",
+        "R006",
+        "R008",
+        "R013",
+        "R015",
+        "R026",
+        "R030",
+        "R032"
+      ],
+      "medium_unprompted_followup": [
+        "R005",
+        "R008",
+        "R013",
+        "R015",
+        "R026"
+      ],
+      "Vosk_other_family_unprompted": [
+        "R005",
+        "R008",
+        "R013"
+      ],
+      "generic_no_ASCII_digit_diagnostic": [
+        "R005",
+        "R008"
+      ],
+      "observations": [
+        "R006/R030/R032 standard small numeric extraction matched. R015 and R026 medium resolved small numeric differences.",
+        "R008 standard models formatted103 as130. Generic no-digit diagnostic produced '오억 백삼만원' supporting the approved103 reading. This is constrained diagnostic evidence, not listening.",
+        "R013 small/medium differ in numerical formatting and units. Vosk independently produced the4902 numeral as '[4] 천 [9] 백 [2] 만원'; small supports3615 and medium supports1074. Full speech naturalness remains unverified.",
+        "R005 standard recognizers inconsistently formatted1074 and9074. Vosk includes '(천) [74] 만' and '구천 [74] 만'. The no-digit diagnostic omitted the numeric sentences and is explicitly nonconfirming for this scene."
+      ],
+      "interpretation": "Recognition disagreements are retained and are not automatically counted as TTS defects or silently corrected. No confirmed pronunciation defect is established by these inputs. The readings of all numerals have not been verified by actual listening."
+    },
+    "actual_listening": false,
+    "continuous_playback": false,
+    "subjective_audio_quality": "unchecked",
+    "human_listening_focus": [
+      "R005:1,074만원/3억9,074만원",
+      "R013:1,074/3,615/4,902만원"
+    ],
+    "evidence": [
+      "asr-small/all_scene_signal.json",
+      "asr-small/summary.json",
+      "asr-medium/summary.json",
+      "asr-vosk/",
+      "asr-phonetic/",
+      "../../narration/rebuild-v2/audio-r2-recovered/mapping_checks.json",
+      "../../narration/rebuild-v2/audio-r2-recovered/recovery_receipt_verified.json"
+    ]
+  },
+  "technical": {
+    "status": "technical_verified_subjective_review_pending",
+    "movie": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/full-film-r2-v1/affordable_home_price_rebuild_r2_v1.mp4",
+      "sha256": "55d8626a5eff6ea43da064a44d9999133e09dc635a6b3f6e67a6f5025b64b761",
+      "bytes": 56689351
+    },
+    "probe": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/full-film-r2-v1/probe.json",
+      "sha256": "9748219aa80478dd87d6f60d7bd33e4da4bb8eec94b896dab60559d0c3306843",
+      "bytes": 3898
+    },
+    "frame_pts_validation": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/full-film-r2-v1/frame_pts_validation.json",
+      "sha256": "4b75f3819f4af0f34b29de3c7bc9a950156fe116e70783485634c3f8aed34d62",
+      "bytes": 816
+    },
+    "total_frames": 33654,
+    "duration_seconds": 1121.8,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": "30/1",
+    "audio_streams": 1,
+    "audio_sample_rate": 48000,
+    "audio_channels": 2,
+    "full_AV_decode_returncode": 0,
+    "full_AV_decode_log": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/full-film-r2-v1/commands/full-av-decode/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "signal_log": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/full-film-r2-v1/commands/final-av-signal/stdout.log",
+      "sha256": "853af0ca750afc093455595769ed8633dffb49fd0aeb701495d224ae062603af",
+      "bytes": 1971577
+    },
+    "metrics": {
+      "integrated_LUFS": -17.0,
+      "LRA_LU": 3.8,
+      "true_peak_dBTP": -3.2,
+      "sample_peak_dBFS": -3.166526,
+      "RMS_dBFS": -20.800511,
+      "NaN_samples": 0.0,
+      "Inf_samples": 0.0
+    },
+    "signal_summary": "[Parsed_astats_0 @ 000001f779321900] Zero crossings: 2095152\n[Parsed_astats_0 @ 000001f779321900] Zero crossings rate: 0.038909\n[Parsed_astats_0 @ 000001f779321900] Number of NaNs: 0\n[Parsed_astats_0 @ 000001f779321900] Number of Infs: 0\n[Parsed_astats_0 @ 000001f779321900] Number of denormals: 0\n[Parsed_astats_0 @ 000001f779321900] Channel: 2\n[Parsed_astats_0 @ 000001f779321900] DC offset: 0.000009\n[Parsed_astats_0 @ 000001f779321900] Min level: -0.694324\n[Parsed_astats_0 @ 000001f779321900] Max level: 0.671267\n[Parsed_astats_0 @ 000001f779321900] Min difference: 0.000000\n[Parsed_astats_0 @ 000001f779321900] Max difference: 0.338021\n[Parsed_astats_0 @ 000001f779321900] Mean difference: 0.005632\n[Parsed_astats_0 @ 000001f779321900] RMS difference: 0.013227\n[Parsed_astats_0 @ 000001f779321900] Peak level dB: -3.168754\n[Parsed_astats_0 @ 000001f779321900] RMS level dB: -20.801723\n[Parsed_astats_0 @ 000001f779321900] RMS peak dB: -11.603399\n[Parsed_astats_0 @ 000001f779321900] RMS trough dB: -129.494008\n[Parsed_astats_0 @ 000001f779321900] Crest factor: 7.614623\n[Parsed_astats_0 @ 000001f779321900] Flat factor: 0.000000\n[Parsed_astats_0 @ 000001f779321900] Peak count: 2\n[Parsed_astats_0 @ 000001f779321900] Abs Peak count: 1\n[Parsed_astats_0 @ 000001f779321900] Noise floor dB: -inf\n[Parsed_astats_0 @ 000001f779321900] Noise floor count: 40258\n[Parsed_astats_0 @ 000001f779321900] Entropy: 0.746465\n[Parsed_astats_0 @ 000001f779321900] Bit depth: 31/32/32/32\n[Parsed_astats_0 @ 000001f779321900] Dynamic range: 267.909744\n[Parsed_astats_0 @ 000001f779321900] Zero crossings: 2092431\n[Parsed_astats_0 @ 000001f779321900] Zero crossings rate: 0.038859\n[Parsed_astats_0 @ 000001f779321900] Number of NaNs: 0\n[Parsed_astats_0 @ 000001f779321900] Number of Infs: 0\n[Parsed_astats_0 @ 000001f779321900] Number of denormals: 0\n[Parsed_astats_0 @ 000001f779321900] Overall\n[Parsed_astats_0 @ 000001f779321900] DC offset: 0.000009\n[Parsed_astats_0 @ 000001f779321900] Min level: -0.694502\n[Parsed_astats_0 @ 000001f779321900] Max level: 0.671267\n[Parsed_astats_0 @ 000001f779321900] Min difference: 0.000000\n[Parsed_astats_0 @ 000001f779321900] Max difference: 0.338021\n[Parsed_astats_0 @ 000001f779321900] Mean difference: 0.005637\n[Parsed_astats_0 @ 000001f779321900] RMS difference: 0.013227\n[Parsed_astats_0 @ 000001f779321900] Peak level dB: -3.166526\n[Parsed_astats_0 @ 000001f779321900] RMS level dB: -20.800511\n[Parsed_astats_0 @ 000001f779321900] RMS peak dB: -11.603399\n[Parsed_astats_0 @ 000001f779321900] RMS trough dB: -129.494008\n[Parsed_astats_0 @ 000001f779321900] Flat factor: 0.000000\n[Parsed_astats_0 @ 000001f779321900] Peak count: 2.000000\n[Parsed_astats_0 @ 000001f779321900] Abs Peak count: 1.000000\n[Parsed_astats_0 @ 000001f779321900] Noise floor dB: -inf\n[Parsed_astats_0 @ 000001f779321900] Noise floor count: 40258.000000\n[Parsed_astats_0 @ 000001f779321900] Entropy: 0.748390\n[Parsed_astats_0 @ 000001f779321900] Bit depth: 31/32/32/32\n[Parsed_astats_0 @ 000001f779321900] Number of samples: 53847040\n[Parsed_astats_0 @ 000001f779321900] Number of NaNs: 0.000000\n[Parsed_astats_0 @ 000001f779321900] Number of Infs: 0.000000\n[Parsed_astats_0 @ 000001f779321900] Number of denormals: 0.000000\n[Parsed_ebur128_1 @ 000001f77b083fc0] Summary:\n\n  Integrated loudness:\n    I:         -17.0 LUFS\n    Threshold: -28.2 LUFS\n\n  Loudness range:\n    LRA:         3.8 LU\n    Threshold: -38.3 LUFS\n    LRA low:   -20.2 LUFS\n    LRA high:  -16.4 LUFS\n\n  True peak:\n    Peak:       -3.2 dBFS\n[out#0/null @ 000001f77b949780] video:0KiB audio:210340KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown\nsize=N/A time=00:18:41.81 bitrate=N/A speed= 164x    ",
+    "actual_listening": false,
+    "continuous_playback": false,
+    "pronunciation_verified": false,
+    "perceived_music_voice_balance_reviewed": false,
+    "encoded_audio_PCM_signal": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/full-film-r2-v1/encoded_audio_signal.json",
+      "sha256": "835a7c3ad81ae0e6ef3219727c91890c987c3dc9d8f1a5ab05c83b5f58f31cc8",
+      "bytes": 20883
+    }
+  },
+  "corrections": "Opening context blank-body bug corrected and checked actual R0067.31875s. R011186.5 retained; R0176:4:2 bar lengths corrected; R029labels hidden with values. R030 now300 budget−30 ownership−100 savings→170 mortgage→5억6586 price, each actual anchor. New images3, distinct chapter photos8, no AI badge or internal source IDs. Narration A arc finishes before B.",
+  "outro": {
+    "last_speech_global_s": 1108.7833333333335,
+    "outro_start_s": 1111.8,
+    "gap_s": 3.016666666666424
+  },
+  "actual_listening": false,
+  "continuous_playback": false,
+  "screen_content_is_current_exact_MP4": true
+}

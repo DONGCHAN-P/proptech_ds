@@ -1,0 +1,18 @@
+{
+  "issue_id": "RPR-EDITOR-LOCAL-MEDIA",
+  "task_id": "RPR-PROD1-EDITOR",
+  "scene_ids": [
+    "S003",
+    "S004",
+    "S007"
+  ],
+  "problem": "기본 sandbox에서 manifest FFmpeg/FFprobe가 실행 가능한 도구로 검색되지 않음. PATH 추가 후에도 HyperFrames render preflight는 FFmpeg not found / FFprobe not found. 직접 & manifest.ffprobe -version도 CommandNotFoundException. 브라우저 기반 check는 실행 가능.",
+  "evidence": "checks/render_* 로그, checks/hyperframes_check_initial.json; CLI 0.8.181. 실행 파일 복사나 새 설치하지 않음.",
+  "proposal": "총괄이 기존 로컬 미디어 전용 escalation 범위로 다음 스크립트를 실행하면 3개 8초 무음 프리뷰가 생성됨.",
+  "command_from_repo_root": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File video-agent-studio/episodes/regional-price-recovery-20261022/editor/production-v1/run_local.ps1 -Mode previews",
+  "impact": "실제 MP4 검증은 렌더 이후에만 통과 가능. HTML/스크린샷 검사는 계속 가능.",
+  "next_owner": "director",
+  "external_transmission": false,
+  "status": "resolved_by_authorized_local_media_elevation",
+  "resolution": "director rendered original 3 previews; editor rendered/decoded only Incheon v2 after inspecting a real label collision; native stderr wrapper corrected"
+}

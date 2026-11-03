@@ -1,0 +1,43 @@
+{
+  "issue_id": "EDITOR-AUDIO-F32LE-01",
+  "scene_id": "all voiced body chapters",
+  "severity": "required_before_BGM_mix",
+  "problem": "기존 Remotion FFmpeg는 canonical carve의 raw 48kHz float32 파이프 출력을 지원하지 않음",
+  "evidence": [
+    "editor/private-production-v1/audio-smoke/receipt.json",
+    "실제 명령: ffmpeg -v error -i thinking_music.mp3 -vn -t 0.25 -ac 1 -ar 48000 -f f32le pipe:1",
+    "실제 오류: Requested output format 'f32le' is not known.",
+    "ffmpeg -encoders 목록에서 pcm_s16le 확인, pcm_f32le 미확인",
+    "workspace tools/.venv 내 별도 ffmpeg exe 검색 결과 없음"
+  ],
+  "core_status": {
+    "version": "0.8.181",
+    "installed_by": "director",
+    "canonical_loadCore_executed": true,
+    "result_exports": [
+      "carve",
+      "fx"
+    ],
+    "core_dir": "outputs/private-production-v1/audio-deps"
+  },
+  "proposal": "총괄이 허용 범위에서 f32le muxer와 pcm_f32le encoder를 지원하는 FFmpeg를 제공하고 canonical carve 실행 시 PATH 앞에 해당 디렉터리를 연결. 0.25초 pipe smoke 통과 후 실측 음성/BGM에 canonical carve 적용.",
+  "impact": "화면 준비와 BBox 검증은 가능. 음성/BGM canonical carve, 최종 믹스와 해당 출력 검수는 해결 전 보류.",
+  "done": true,
+  "next_owner": "video_director",
+  "not_performed": [
+    "새 FFmpeg 설치",
+    "전역 변경",
+    "직접 duck/EQ 대체",
+    "carve 실행",
+    "TTS",
+    "전체 렌더",
+    "업로드"
+  ],
+  "resolution": {
+    "receipt": "director/two-episode-production-v1/ffmpeg_receipt.json",
+    "receipt_sha256": "87fd7c1448716f22e7f4ffeecb29f9bb816c19b719df37b8d9c6f24f5131623d",
+    "binary_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+    "smoke_owner": "director",
+    "global_install": false
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "scene_ids": [
+    "M002",
+    "M003"
+  ],
+  "kind": "concept_process_not_time_scale",
+  "steps": [
+    {
+      "id": "access",
+      "label": "집 → 원흥역",
+      "minutes": null
+    },
+    {
+      "id": "wait",
+      "label": "대기",
+      "minutes": null
+    },
+    {
+      "id": "train",
+      "label": "열차 안",
+      "minutes_by_destination": [
+        {
+          "name": "경복궁",
+          "minutes": 24
+        },
+        {
+          "name": "종로3가",
+          "minutes": 28
+        },
+        {
+          "name": "교대",
+          "minutes": 49
+        }
+      ]
+    },
+    {
+      "id": "transfer",
+      "label": "필요한 환승",
+      "minutes": null
+    },
+    {
+      "id": "lastmile",
+      "label": "도착역 → 직장",
+      "minutes": null
+    }
+  ],
+  "notes": [
+    "단계별 카드 폭은 소요시간에 비례하지 않음",
+    "24/28/49분은 원흥역 출발 해당 열차구간 사례, 문 앞 총시간 아님",
+    "환승 단계는 목적지별 필요 여부가 다름, 세 사례의 추가환승 확정 아님",
+    "07~09시 출발 평일18편 대조, 공개표 시행2022-08-01; 현재 실측 아님"
+  ],
+  "source_facts": [
+    {
+      "claim_id": "CN3-ILS-GYEONGBOK",
+      "statement": "코레일 공개 일산선 평일표의 원흥07~09시출발18편 동일열차번호 대조 결과 경복궁까지 24분이다.",
+      "source_url": "https://www.korail.com/file/cubedata/COMMON/jfile/202508/06/202508061987eaed712820.xlsx",
+      "source_list_url": "https://www.korail.com/com/userBoard.do?mode=list&schBcid=ticketTable",
+      "source_file": "ilsan_official.xlsx",
+      "evidence_location": "일산(3호)선 평일_하행 원흥출발21행/목적지도착행; 열차별주소 ilsan_calculation.json",
+      "as_of": "2022-08-01 시행/2025-08-06 등록된 공개표",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "minutes": 24,
+      "sample_size": 18,
+      "method": "같은 열차번호 열(column)의 원흥 출발(row21)부터 목적지 도착(row40/44/66) 차감; 07:00~08:59 출발 전 열차",
+      "caution": "공식현재목록에공개된표.변경공지전수확인없음.단지접근·열차대기·목적지역출구회사이동미포함.실측아님"
+    },
+    {
+      "claim_id": "CN3-ILS-JONGNO",
+      "statement": "코레일 공개 일산선 평일표의 원흥07~09시출발18편 동일열차번호 대조 결과 종로3가까지 28분이다.",
+      "source_url": "https://www.korail.com/file/cubedata/COMMON/jfile/202508/06/202508061987eaed712820.xlsx",
+      "source_list_url": "https://www.korail.com/com/userBoard.do?mode=list&schBcid=ticketTable",
+      "source_file": "ilsan_official.xlsx",
+      "evidence_location": "일산(3호)선 평일_하행 원흥출발21행/목적지도착행; 열차별주소 ilsan_calculation.json",
+      "as_of": "2022-08-01 시행/2025-08-06 등록된 공개표",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "minutes": 28,
+      "sample_size": 18,
+      "method": "같은 열차번호 열(column)의 원흥 출발(row21)부터 목적지 도착(row40/44/66) 차감; 07:00~08:59 출발 전 열차",
+      "caution": "공식현재목록에공개된표.변경공지전수확인없음.단지접근·열차대기·목적지역출구회사이동미포함.실측아님"
+    },
+    {
+      "claim_id": "CN3-ILS-GYODAE",
+      "statement": "코레일 공개 일산선 평일표의 원흥07~09시출발18편 동일열차번호 대조 결과 교대까지 49분이다.",
+      "source_url": "https://www.korail.com/file/cubedata/COMMON/jfile/202508/06/202508061987eaed712820.xlsx",
+      "source_list_url": "https://www.korail.com/com/userBoard.do?mode=list&schBcid=ticketTable",
+      "source_file": "ilsan_official.xlsx",
+      "evidence_location": "일산(3호)선 평일_하행 원흥출발21행/목적지도착행; 열차별주소 ilsan_calculation.json",
+      "as_of": "2022-08-01 시행/2025-08-06 등록된 공개표",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "operating",
+      "minutes": 49,
+      "sample_size": 18,
+      "method": "같은 열차번호 열(column)의 원흥 출발(row21)부터 목적지 도착(row40/44/66) 차감; 07:00~08:59 출발 전 열차",
+      "caution": "공식현재목록에공개된표.변경공지전수확인없음.단지접근·열차대기·목적지역출구회사이동미포함.실측아님"
+    }
+  ]
+}

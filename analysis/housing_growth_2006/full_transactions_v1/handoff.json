@@ -1,0 +1,118 @@
+{
+  "task_id": "ALL-VALID-TRANSACTIONS-V1",
+  "role": "research",
+  "status": "computed_self_checks_and_chart_review_pass_independent_qa_pending",
+  "checked_at": "2026-10-23T04:43:18.481672+00:00",
+  "write_scope": "analysis/housing_growth_2006/full_transactions_v1",
+  "input_revisions": {
+    "manifest": "analysis/housing_growth_2006/full_transactions_v1/results.json#input_manifest",
+    "revision": "regional_expansion_v1 frozen caches; no raw XML/new API/original builder execution"
+  },
+  "outputs": [
+    {
+      "path": "analysis/housing_growth_2006/full_transactions_v1/analyze_full_transactions.py",
+      "sha256": "12cddcb3a7209540c310bfb9df63cba9bc0ff28c89c1eb9f00fc025cecf17ade",
+      "bytes": 16683
+    },
+    {
+      "path": "analysis/housing_growth_2006/full_transactions_v1/quarterly_all_valid_transactions.csv",
+      "sha256": "75b77faab614ae4f072c16291aa75aef8a505d6a680e78df2ba98b850b61045f",
+      "bytes": 59802
+    },
+    {
+      "path": "analysis/housing_growth_2006/full_transactions_v1/quarterly_median_price_per_m2_sejong_cache_history.png",
+      "sha256": "3657c9620545aec9ddbfd3d0abcfb679c49a8f2409c592cd8db53622e605f11a",
+      "bytes": 160653
+    },
+    {
+      "path": "analysis/housing_growth_2006/full_transactions_v1/quarterly_median_price_per_m2_sejong_cache_history.svg",
+      "sha256": "fd977c72b37e3d2a868b05a5fc75a2f0eaa1c35607ee2d23410180524c8d71b9",
+      "bytes": 120736
+    },
+    {
+      "path": "analysis/housing_growth_2006/full_transactions_v1/quarterly_median_price_per_m2_six_regions_2006.png",
+      "sha256": "17cd11b176c2f5f01fe53de355d1eaad8386abda94d9de58ddb207033e76b744",
+      "bytes": 252768
+    },
+    {
+      "path": "analysis/housing_growth_2006/full_transactions_v1/quarterly_median_price_per_m2_six_regions_2006.svg",
+      "sha256": "5b14ec9592d06cc790be3831b0752a314f8d62c05c061c32bdfb713dd95be149",
+      "bytes": 174607
+    },
+    {
+      "path": "analysis/housing_growth_2006/full_transactions_v1/report.md",
+      "sha256": "c06b354f3353fbec45a8dfda36c2c9e6a039f1ca01075773fa8eb05b235b1736",
+      "bytes": 3775
+    },
+    {
+      "path": "analysis/housing_growth_2006/full_transactions_v1/results.json",
+      "sha256": "7197d41717883031a56d497198c2c692dc8ae4e1651656d63421c4ebf7d24479",
+      "bytes": 14774
+    }
+  ],
+  "affected_scene_ids": [],
+  "scene_mapping": "v3 ?????? ??",
+  "checks": [
+    {
+      "check": "7? ?? ????? ????, 574?? ?? ???? ? ?? ?? ??",
+      "result": "pass",
+      "evidence": "analysis/housing_growth_2006/full_transactions_v1/results.json"
+    },
+    {
+      "check": "?? CSV ?????? ????/??? ?? ??",
+      "result": "pass",
+      "evidence": "analysis/housing_growth_2006/full_transactions_v1/quarterly_all_valid_transactions.csv"
+    },
+    {
+      "check": "PNG ????SVG ?? ? ? PNG ?? ??? ??",
+      "result": "pass",
+      "evidence": {
+        "quarterly_median_price_per_m2_sejong_cache_history.png": {
+          "dimensions": [
+            1980,
+            954
+          ],
+          "decode": "pass"
+        },
+        "quarterly_median_price_per_m2_six_regions_2006.png": {
+          "dimensions": [
+            2340,
+            1890
+          ],
+          "decode": "pass"
+        },
+        "quarterly_median_price_per_m2_sejong_cache_history.svg": {
+          "svg_parse": "pass"
+        },
+        "quarterly_median_price_per_m2_six_regions_2006.svg": {
+          "svg_parse": "pass"
+        }
+      }
+    },
+    {
+      "check": "?? ?? ??????? ?? ?? ??",
+      "result": "pass",
+      "evidence": "analysis/housing_growth_2006/full_transactions_v1/results.json#input_manifest"
+    },
+    {
+      "check": "?? QA",
+      "result": "pending",
+      "evidence": null
+    }
+  ],
+  "open_issue_ids": [
+    "ALL-TXN-V1-SCRIPT-QUALIFICATION"
+  ],
+  "issue_path": "analysis/housing_growth_2006/full_transactions_v1/issue_ALL-TXN-V1-SCRIPT-QUALIFICATION.json",
+  "unresolved": [
+    "?? QA ? v3 ?? ??? ?? ??",
+    "? XML?? ??/????? ??? ?? ?? ??"
+  ],
+  "next_role": [
+    "director",
+    "writer",
+    "visual",
+    "independent_qa"
+  ],
+  "summary": "? ??? ?? ?? ??? ??? ?? ?? ?? 6,640,041?? ??. ?? ????? ?? ? ?? ??. 574?? CSV? ?? ???? PNG/SVG ??. ?? ?? 9,776?/62??/36110 ??? ?? ??. ?? ?? ??? ?? ???? ?? ?? ????????? ?? ??. ?? ???? ?? ??? ?? ??."
+}

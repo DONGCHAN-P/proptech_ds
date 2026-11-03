@@ -1,0 +1,131 @@
+{
+  "approved": true,
+  "required_open": 0,
+  "reviewer": "parent agent; not an independent subagent approval",
+  "delete_manifest_sha256": "5c874b77e52bdaa3db2840732b0b918418af559937a1096c14443526955472e2",
+  "checks": [
+    "all exact paths/parents within video roots; no junction traversal",
+    "all planned size/SHA values rechecked",
+    "all managed final and reference endpoints protected",
+    "current main baseline audio/patch and corrected Shorts inputs protected",
+    "named diagnostics and representative frames retained",
+    "original voices, models, source/research/data/code/approvals preserved"
+  ],
+  "summary": {
+    "delete_files": 4278,
+    "delete_logical_GiB": 1.422,
+    "named_diagnostics_additionally_kept": 122,
+    "protected_hashed_files": 1532,
+    "by_reason": {
+      "redundant_encoded_or_render_frame_evidence": 3844,
+      "regenerable_local_python_bytecode": 62,
+      "derived_mix_or_signal_analysis_audio_original_voice_kept": 2,
+      "derived_audio_analysis_or_mix_original_inputs_preserved": 14,
+      "superseded_shorts_audio_render_original_Jun_inputs_preserved": 6,
+      "obsolete_unregistered_video_render_current_and_uploaded_kept": 13,
+      "redundant_legacy_video_out_QA_frame": 337
+    },
+    "largest_deletions": [
+      {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/full-film-r2-v1/affordable_home_price_rebuild_r2_v1.mp4",
+        "bytes": 56689351,
+        "reason": "obsolete_unregistered_video_render_current_and_uploaded_kept"
+      },
+      {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/jun-user-script-v1/full-film-v1/affordable_price_jun_user_script_v1.mp4",
+        "bytes": 47842962,
+        "reason": "obsolete_unregistered_video_render_current_and_uploaded_kept"
+      },
+      {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/director/shorts-ending-fix-v1/02_summary_jun_v4_decoded.wav",
+        "bytes": 4540380,
+        "reason": "derived_mix_or_signal_analysis_audio_original_voice_kept"
+      },
+      {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/director/shorts-ending-fix-v1/02_summary_jun_v4_regression.wav",
+        "bytes": 4540380,
+        "reason": "derived_audio_analysis_or_mix_original_inputs_preserved"
+      },
+      {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/director/shorts-ending-fix-v1/02_summary_jun_v5_regression.wav",
+        "bytes": 4540380,
+        "reason": "derived_audio_analysis_or_mix_original_inputs_preserved"
+      },
+      {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/editor/jun-quality-v2/shorts/02_summary_jun_v1_audio.wav",
+        "bytes": 4539404,
+        "reason": "superseded_shorts_audio_render_original_Jun_inputs_preserved"
+      },
+      {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/editor/jun-quality-v2/shorts/02_summary_jun_v3_audio.wav",
+        "bytes": 4539404,
+        "reason": "superseded_shorts_audio_render_original_Jun_inputs_preserved"
+      },
+      {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/editor/jun-quality-v2/shorts/02_summary_jun_v4_audio.wav",
+        "bytes": 4539404,
+        "reason": "superseded_shorts_audio_render_original_Jun_inputs_preserved"
+      },
+      {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/qa/jun-user-script-v1/full-film-v1/encoded-v2-0d73a746eee4/frame-0236.png",
+        "bytes": 3782529,
+        "reason": "redundant_encoded_or_render_frame_evidence"
+      },
+      {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/qa/jun-user-script-v1/full-film-v1/encoded-v2-0d73a746eee4/frame-0235.png",
+        "bytes": 3773217,
+        "reason": "redundant_encoded_or_render_frame_evidence"
+      },
+      {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/qa/jun-user-script-v1/full-film-v1/encoded-v2-0d73a746eee4/frame-0234.png",
+        "bytes": 3772921,
+        "reason": "redundant_encoded_or_render_frame_evidence"
+      },
+      {
+        "path": "video-agent-studio/episodes/hanam-gyosan-20261019/qa/review-v2/C_0385.png",
+        "bytes": 3527194,
+        "reason": "redundant_encoded_or_render_frame_evidence"
+      },
+      {
+        "path": "video-agent-studio/episodes/hanam-gyosan-20261019/qa/review-v5-independent/v5_15.png",
+        "bytes": 3458705,
+        "reason": "redundant_encoded_or_render_frame_evidence"
+      },
+      {
+        "path": "video-agent-studio/episodes/hanam-gyosan-20261019/qa/review-v5-jun-independent/jun_35.png",
+        "bytes": 3458705,
+        "reason": "redundant_encoded_or_render_frame_evidence"
+      },
+      {
+        "path": "video-agent-studio/episodes/hanam-gyosan-20261019/qa/review-v5-independent/v5_10.png",
+        "bytes": 3428304,
+        "reason": "redundant_encoded_or_render_frame_evidence"
+      },
+      {
+        "path": "video-agent-studio/episodes/hanam-gyosan-20261019/qa/review-v5-jun-independent/jun_30.png",
+        "bytes": 3428304,
+        "reason": "redundant_encoded_or_render_frame_evidence"
+      },
+      {
+        "path": "video-agent-studio/episodes/hanam-gyosan-20261019/qa/review-v4-independent/frame_022964.png",
+        "bytes": 3420723,
+        "reason": "redundant_encoded_or_render_frame_evidence"
+      },
+      {
+        "path": "video-agent-studio/episodes/hanam-gyosan-20261019/qa/review-v4-independent/frame_022961.png",
+        "bytes": 3419837,
+        "reason": "redundant_encoded_or_render_frame_evidence"
+      },
+      {
+        "path": "video-agent-studio/episodes/hanam-gyosan-20261019/qa/review-v2-independent/f_0665.267.png",
+        "bytes": 3419790,
+        "reason": "redundant_encoded_or_render_frame_evidence"
+      },
+      {
+        "path": "video-agent-studio/episodes/hanam-gyosan-20261019/qa/review-v5-independent/v5_13.png",
+        "bytes": 3419217,
+        "reason": "redundant_encoded_or_render_frame_evidence"
+      }
+    ]
+  }
+}

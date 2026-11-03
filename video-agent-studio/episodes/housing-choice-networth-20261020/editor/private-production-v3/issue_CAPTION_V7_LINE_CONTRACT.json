@@ -1,0 +1,11 @@
+{
+  "issue_id": "CAPTION-V7-LINE-CONTRACT",
+  "scene_id": "all captions; reported examples ch09/s9d and ch10/s10life",
+  "problem": "v6 contains orphan predicate cues; v7 must combine meaning without overflow",
+  "evidence": "current v2 CSS: Pretendard 40px / 50px, 1640x124 text rectangle",
+  "proposal": "max two display_lines, each <=1600 actual font pixels; target 32-36 Hangul graphemes, keep numbers/units together",
+  "contract": "editor/private-production-v3/caption_renderer_contract.json",
+  "impact": "caption DOM and SRT only; existing picture, scene/T times, audio and canonical carve frozen",
+  "next_owner": "narrator Gibbs via main; editor integrates after formal completed timing and authorization lock",
+  "direct_peer_tool_available": false
+}

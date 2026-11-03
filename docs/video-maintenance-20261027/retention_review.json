@@ -1,0 +1,290 @@
+{
+  "review_id": "retention-independent-qa-20261027",
+  "reviewed_at_utc": "2026-10-26 15:54:59 UTC",
+  "reviewer": "video_qa",
+  "scope": "공통 저장공간 정리 계획·실행 코드의 파괴적 실행 전 독립 검토",
+  "approved": true,
+  "required_open": 0,
+  "critical_open": 0,
+  "delete_manifest_sha256": "17036eee0bd0f5fcb1bbc49b712fdb5592d1a7c6d4fbce40a80ddbf164d53e40",
+  "execute_cleanup_ps1_sha256": "661fedd08b86a3d0610de617925c50d016e49604dd8959740074d8913a14c133",
+  "protected_hashes_sha256": "42aa8905f41267b39eac1ddf93f4a159c67e99db11fe7c873804a758137668c3",
+  "input_versions": {
+    "delete_manifest.json": "17036eee0bd0f5fcb1bbc49b712fdb5592d1a7c6d4fbce40a80ddbf164d53e40",
+    "protected_hashes.json": "42aa8905f41267b39eac1ddf93f4a159c67e99db11fe7c873804a758137668c3",
+    "plan_storage_cleanup.py": "593566981a6765db93192ef114c179eed44a056319f98b78b1872617a38a1736",
+    "execute_cleanup.ps1": "661fedd08b86a3d0610de617925c50d016e49604dd8959740074d8913a14c133",
+    "file_decisions.csv": "0c0017b5746b449d68b4316ae74193da822fab7fdd73883ce8a3ce3a7b1a6657",
+    "retention_policy.md": "b36689bff60a03b2cf936b2d49c2be7f8208e8aea9c40fede1fc3219caa45228",
+    "protected_hashes_before_guide_integration.json": "a5bc8bb1ba6f9e2e32f096064997bddc9d07a9ebf2a8f3789adae4ead194bc37",
+    "authorized_document_hash_updates.json": "62e731c4d45d868b08b2420f67bba6bbdb3583b1aad03d04e9ca4c2024f00d5e"
+  },
+  "authorization_basis": "사용자 2026-10-27 명시 정리 승인 및 최신 부모 통합 업데이트. 본 검토자의 권한은 검토·핸드오프 두 JSON 작성이며 삭제·이동은 수행하지 않았다.",
+  "verdict": "정확히 검토한 24,230개 파일·14,397,437,441 논리 바이트의 삭제 계획에서 미해결 필수 위험을 발견하지 않았다. 기본가이드의 의도된 문서 수정에 따른 보호 기준 불일치는 이전 기준 보존·정확한 단일 변경 대조·현재 파일 SHA 확인으로 해소했다.",
+  "counts": {
+    "inventory_decisions": 90040,
+    "delete": 24230,
+    "protected": 1536,
+    "kept": 65810,
+    "logical_bytes": 14397437441,
+    "unique_parent_dirs_checked": 585,
+    "shelf_pairs": 186,
+    "state_documents": 11,
+    "config_and_state_references": 294,
+    "current_project_documents": 12,
+    "current_project_references": 4514,
+    "changneung_cache_refs": 2508,
+    "frame_groups": 140,
+    "duplicate_pairs": 590,
+    "unique_retained_duplicates": 247,
+    "duplicate_files_hashed": 837
+  },
+  "delete_logical_GiB": 13.409,
+  "by_reason": {
+    "regenerable_webpack_build_cache": 24,
+    "obsolete_unregistered_video_render_current_and_uploaded_kept": 271,
+    "redundant_encoded_or_render_frame_evidence": 15759,
+    "derived_mix_or_signal_analysis_audio_original_voice_kept": 18,
+    "superseded_unreferenced_render_cache": 7112,
+    "regenerable_legacy_bundle_javascript_source_map": 456,
+    "verified_duplicate_legacy_render_bundle_asset": 590
+  },
+  "checks": [
+    {
+      "id": "manifest_structure",
+      "status": "pass",
+      "evidence": "24,230개 경로의 대소문자 정규화 중복·SHA 형식·크기 합계·사유 집계 확인. file_decisions.csv 90,040개 행의 삭제 집합·크기·사유가 매니페스트와 일치한다."
+    },
+    {
+      "id": "scope_and_path",
+      "status": "pass",
+      "evidence": "모든 대상 파일을 lstat하여 일반 파일·크기·reparse 속성을 확인했고 부모 디렉터리 585개를 검사했다. 허용 영역은 video-agent-studio/episodes/, .cache/webpack/, video/node_modules/.cache/ 세 곳이다. 절대·상위 이동·영역 이탈 경로 및 reparse 부모는 발견하지 않았다."
+    },
+    {
+      "id": "excluded_business_and_private_data",
+      "status": "pass",
+      "evidence": "삭제 집합에 output/exports/raw/analysis/data/reports/영상 진입점, .env 또는 자격증명·원본대화 명명 경로가 없었다. 현재 매니페스트·실행 코드의 범위와 원천 디렉터리 배제 규칙을 함께 확인했다. 자격증명이나 대화 본문을 열지 않았다."
+    },
+    {
+      "id": "managed_shelf",
+      "status": "pass",
+      "evidence": "config/video_shelf.json의 186개 원본·별칭 쌍 모두 실제 파일이 존재하며 삭제 집합 밖이다. 인벤토리 밖 analysis/reports 원본 13개도 존재·비대상을 별도로 확인했다. 이들은 인벤토리 누락에 따른 손실로 판정하지 않았다."
+    },
+    {
+      "id": "current_and_published",
+      "status": "pass",
+      "evidence": "current_video/video_shelf/video_style 설정 및 episode state 11개의 직접 로컬 참조 294개, 현재 프로젝트 JSON 12개의 직접 참조 4,514개에서 삭제 대상 중첩이 없었다. 현재 패키지 전체 보호 경로와도 중첩이 없다."
+    },
+    {
+      "id": "current_cache_inputs",
+      "status": "pass",
+      "evidence": "창릉 rendered_project_v8_jun.json이 참조하는 cache/stills 입력 2,508개 모두 보존 판정·비삭제다.",
+      "samples": [
+        "video-agent-studio/episodes/goyang-changneung-20261015/editor/production-v8-labels/cache/stills/030f611dbbd5c55ac18a.png",
+        "video-agent-studio/episodes/goyang-changneung-20261015/editor/production-v8-labels/cache/stills/08fc015eeebc76bee029.png",
+        "video-agent-studio/episodes/goyang-changneung-20261015/editor/production-v8-labels/cache/stills/09fd28eaf71d3a9f1fd1.png"
+      ]
+    },
+    {
+      "id": "sources_models_and_voice",
+      "status": "pass",
+      "evidence": "원천·연구·모델·narration·visual·writer·raw 등 source component의 삭제는 검증된 legacy bundle 중복 예외 외에는 없었다. source_frames/source-frames 405개 모두 keep이다. 창릉·교산 현재 assemble.py를 읽어 full_mix가 보존 음성·브랜드·음악에서 생성되는 중간물임을 확인했다."
+    },
+    {
+      "id": "duplicates",
+      "status": "pass",
+      "evidence": "590개 legacy bundle 사본과 안정 원본 247개, 총 837개 실제 파일을 SHA-256 재계산했다. 각 사본·retained_duplicate·기록 SHA가 같고, 보존 원본은 모두 keep·보호목록 포함이며 삭제 집합과 겹치지 않는다."
+    },
+    {
+      "id": "evidence_retention",
+      "status": "pass",
+      "evidence": "진단/컨택트시트 이름 보호와 140개 프레임 폴더의 정렬상 처음·중간·끝 보존을 전량 대조했다. 승인·출처·검수 등 문서 보존 분기를 검토했다. 과거 점검 프레임 전량을 유지하거나 폐기본의 즉시 재현을 보장하는 계획은 아니다."
+    },
+    {
+      "id": "protected_baseline",
+      "status": "pass",
+      "evidence": "기존 보호목록 1,536개 실제 파일 5,586,961,894바이트를 SHA 재계산했다. 기본가이드 1개 외 1,535개가 일치했다. 새 보호목록은 경로 추가·제거 없이 기본가이드 행만 변경됐고, 현재 가이드의 SHA·크기가 새 행과 일치한다. 이전 보호목록 파일의 SHA도 최초 검토값과 같다."
+    },
+    {
+      "id": "execution_code",
+      "status": "pass",
+      "evidence": "PowerShell 파서 오류 0건. 사전 절대경로/허용 prefix/부모 reparse 검증, 보호집합 배제, 사본 원본 SHA 검증, 파일별 실행 직전 SHA, Remove-Item -LiteralPath -Force 비재귀 삭제, 파일별 실패·이벤트 로그를 소스에서 확인했다. 승인 boolean/미해결 수/매니페스트 SHA 및 마스터가이드 존재 게이트가 있다. 실행은 하지 않았다."
+    },
+    {
+      "id": "space_accounting",
+      "status": "pass",
+      "evidence": "dev/ino/nlink 제공 불가를 물리 중복 계산 근거로 쓰지 않는다. 13.409 GiB는 삭제 대상 논리 크기이고, 실제 드라이브 여유공간 관측 차이는 별도 기록한다."
+    }
+  ],
+  "findings": [
+    {
+      "issue_id": "RET-001",
+      "scene_id": null,
+      "timecode": null,
+      "severity": "required",
+      "문제": "검토 도중 제작_기본가이드.md가 의도된 마스터가이드 진입 연결로 바뀌어 최초 보호 SHA·크기와 달랐다.",
+      "evidence": {
+        "path": "C:/projects/realestate_reco/video-agent-studio/guides/제작_기본가이드.md",
+        "previous_bytes": 28323,
+        "current_bytes": 28855,
+        "previous_sha256": "816564bd14a98623632182deb406f11cd39e87b3d72a7f01506c84b46d17d260",
+        "current_sha256": "32f669316188dcc02f57e74e1a5797a8b9d36b938435a32eb696e5d610d8b3e4",
+        "preserved_before": "protected_hashes_before_guide_integration.json",
+        "authorization_diff": "authorized_document_hash_updates.json",
+        "exact_changed_rows": 1,
+        "added_or_removed_paths": 0,
+        "manifest_and_execution_code_unchanged": true
+      },
+      "수정안": "부모가 통합 후 보호 기준을 현재 문서로 재고정하고 이전 목록·변경 사유를 보존했다. 독립 검토자가 실제 파일 SHA·크기 및 두 목록의 단일 행 차이를 확인했다. inventory/file_decisions의 문서 크기는 계획 당시 기록으로 두고 의도된 문서 변경은 별도 추적한다.",
+      "owner": "부모/총괄",
+      "status": "resolved_verified",
+      "checked_revision": "protected_hashes.json@42aa8905f41267b39eac1ddf93f4a159c67e99db11fe7c873804a758137668c3"
+    }
+  ],
+  "representative_review": {
+    "selection": "삭제 논리 크기 최대 14개, 각 삭제 사유의 최대 2개, 원천 경계 및 파생 오디오 18개 경로 분류. 원문 매니페스트 전량을 모델 입력으로 읽지 않았다.",
+    "largest_samples": [
+      {
+        "path": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/full-film-r2-v1/premix_float.wav",
+        "bytes": 430771292,
+        "reason": "derived_mix_or_signal_analysis_audio_original_voice_kept",
+        "retained_duplicate": null
+      },
+      {
+        "path": "video-agent-studio/episodes/goyang-changneung-20261015/editor/production-v3/cache/assembly/full_mix.f32",
+        "bytes": 308992000,
+        "reason": "superseded_unreferenced_render_cache",
+        "retained_duplicate": null
+      },
+      {
+        "path": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/production-v4/full_mix.wav",
+        "bytes": 215878444,
+        "reason": "derived_mix_or_signal_analysis_audio_original_voice_kept",
+        "retained_duplicate": null
+      },
+      {
+        "path": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/production-v5/full_mix.wav",
+        "bytes": 214579244,
+        "reason": "derived_mix_or_signal_analysis_audio_original_voice_kept",
+        "retained_duplicate": null
+      },
+      {
+        "path": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/production-v5-jun/full_mix.wav",
+        "bytes": 206540844,
+        "reason": "derived_mix_or_signal_analysis_audio_original_voice_kept",
+        "retained_duplicate": null
+      }
+    ],
+    "reason_samples": {
+      "regenerable_webpack_build_cache": [
+        {
+          "path": ".cache/webpack/remotion-production-4.0.534/5651c8ed20c94d1eb8f35c9a75dec4fa/0.pack",
+          "bytes": 183527174,
+          "retained_duplicate": null
+        },
+        {
+          "path": "video/node_modules/.cache/webpack/remotion-production-4.0.534/9e7e3acc82fb1ee99d00714cf01e5cfa/0.pack",
+          "bytes": 178328335,
+          "retained_duplicate": null
+        }
+      ],
+      "obsolete_unregistered_video_render_current_and_uploaded_kept": [
+        {
+          "path": "video-agent-studio/episodes/goyang-changneung-20261015/editor/production-v1/brand-bundle/public/namyangju-map-focus-v10/base_v8.mp4",
+          "bytes": 75120354,
+          "retained_duplicate": null
+        },
+        {
+          "path": "video-agent-studio/episodes/goyang-changneung-20261015/editor/production-v3/representative-bundle/public/namyangju-map-focus-v10/base_v8.mp4",
+          "bytes": 75120354,
+          "retained_duplicate": null
+        }
+      ],
+      "redundant_encoded_or_render_frame_evidence": [
+        {
+          "path": "video-agent-studio/episodes/goyang-changneung-20261015/outputs/production-v8-jun/encoded_evidence/s101_f11515.png",
+          "bytes": 3527242,
+          "retained_duplicate": null
+        },
+        {
+          "path": "video-agent-studio/episodes/goyang-changneung-20261015/outputs/production-v8-preview/encoded_evidence/s101_f14395.png",
+          "bytes": 3527242,
+          "retained_duplicate": null
+        }
+      ],
+      "derived_mix_or_signal_analysis_audio_original_voice_kept": [
+        {
+          "path": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/rebuild-v2/full-film-r2-v1/premix_float.wav",
+          "bytes": 430771292,
+          "retained_duplicate": null
+        },
+        {
+          "path": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/production-v4/full_mix.wav",
+          "bytes": 215878444,
+          "retained_duplicate": null
+        }
+      ],
+      "superseded_unreferenced_render_cache": [
+        {
+          "path": "video-agent-studio/episodes/goyang-changneung-20261015/editor/production-v3/cache/assembly/full_mix.f32",
+          "bytes": 308992000,
+          "retained_duplicate": null
+        },
+        {
+          "path": "video-agent-studio/episodes/goyang-changneung-20261015/editor/production-v6-preview/cache/assembly_r2/full_mix.wav",
+          "bytes": 179315244,
+          "retained_duplicate": null
+        }
+      ],
+      "regenerable_legacy_bundle_javascript_source_map": [
+        {
+          "path": "video-agent-studio/episodes/goyang-changneung-20261015/editor/production-v1/brand-bundle/922.bundle.js.map",
+          "bytes": 7452297,
+          "retained_duplicate": null
+        },
+        {
+          "path": "video-agent-studio/episodes/hanam-gyosan-20261019/editor/review-v2/cache/bundle/922.bundle.js.map",
+          "bytes": 7452297,
+          "retained_duplicate": null
+        }
+      ],
+      "verified_duplicate_legacy_render_bundle_asset": [
+        {
+          "path": "video-agent-studio/episodes/goyang-changneung-20261015/editor/production-v1/brand-bundle/public/real-assets/gnews-gwanggyo-history-3.jpg",
+          "bytes": 17674282,
+          "retained_duplicate": "video/public/real-assets/gnews-gwanggyo-history-3.jpg"
+        },
+        {
+          "path": "video-agent-studio/episodes/goyang-changneung-20261015/editor/production-v3/representative-bundle/public/real-assets/gnews-gwanggyo-history-3.jpg",
+          "bytes": 17674282,
+          "retained_duplicate": "video/public/real-assets/gnews-gwanggyo-history-3.jpg"
+        }
+      ]
+    }
+  },
+  "coverage": {
+    "independently_performed": [
+      "매니페스트/CSV 전량 구조·집합 대조",
+      "삭제 대상 24,230개 존재·크기·속성/부모 검사",
+      "보호 기준 1,536개 실제 SHA 계산 및 변경 가이드 1개 재확인",
+      "중복 사본/보존 원본 837개 실제 SHA 계산",
+      "설정·상태·현재 프로젝트 직접 참조 대조",
+      "실행 코드 정적 검토 및 PowerShell 구문 분석"
+    ],
+    "parent_reported_only": [
+      "PowerShell read-only dryrun 전체 PASS",
+      "마스터가이드 통합 완료",
+      "실행 후 전체 보존검증 예정"
+    ],
+    "not_performed": [
+      "삭제·이동",
+      "정리 스크립트 실행 또는 dryrun 재실행",
+      "실제 inline PowerShell 래퍼 실행",
+      "영상 렌더·연속 재생·프레임 화질 검수·청취",
+      "인터넷·유료 서비스·업로드"
+    ],
+    "limitations": "정적 직접 참조와 실제 로컬 파일 검증에 한정한다. 실행 시점의 파일별 SHA 재확인과 실행 후 보존 검증은 부모가 담당한다. inline 실행 시 검토한 본문 및 PSScriptRoot에 해당하는 작업 디렉터리를 정확히 유지해야 하며 ExecutionPolicy 변경/Bypass를 추가하지 않는다."
+  },
+  "next_owner": "부모/총괄",
+  "handoff_path": "C:/projects/realestate_reco/docs/video-maintenance-20261027/retention_handoff.json"
+}

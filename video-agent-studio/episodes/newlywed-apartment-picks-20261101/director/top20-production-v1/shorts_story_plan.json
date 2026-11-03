@@ -1,0 +1,35 @@
+{
+  "revision": "top20-shorts-v1",
+  "voice": "reuse_selected_free_main_narration",
+  "timing_status": "pending_actual_sentence_boundaries",
+  "privacy": "private",
+  "profile": "youtube_portrait_full_frame_v2",
+  "end_hold_after_last_complete_sentence_s": 3,
+  "items": [
+    {
+      "id": "promo",
+      "title": "신혼부부가 많이 사는 동네, 순위만 보면 놓치는 것 #Shorts",
+      "viewer_question": "신혼부부가 많이 사는 수도권 지역은 어디일까?",
+      "sentence_ids": ["O001-01", "O001-02", "S013-01", "S013-02", "S013-03", "O001-05", "C001-07"],
+      "screen_sequence": ["서로 다른 지역 실사와 질문", "2024 수도권 53개 구·쌍 단위", "미추홀 8,483·노원 8,473 비례 막대와 10쌍 차이", "20개 지역 지도와 본편 안내", "구독·좋아요 안정 유지"],
+      "end_card": "20곳 전체 순위는 본편에서",
+      "source_region_ids": ["R10", "R11"]
+    },
+    {
+      "id": "analysis",
+      "title": "신혼부부 1위 지역은 줄고, 강남은 9.4% 늘었다 #Shorts",
+      "viewer_question": "많이 사는 곳과 늘어난 곳은 어떻게 다를까?",
+      "sentence_ids": ["C001-02", "S022-01", "S022-03", "S022-05", "S017-01", "S017-03", "C001-03", "C001-07"],
+      "screen_sequence": ["두 지역 변화율로 훅", "2024 옛 서구 위치와 15,737쌍", "2023→2024 서구 규모 감소", "강남 8,523→9,321·798쌍 증가", "거주 규모와 전년 변화 두 축을 구분", "구독·좋아요 안정 유지"],
+      "end_card": "규모와 증가, 함께 봐야 합니다",
+      "source_region_ids": ["R01", "R06"]
+    }
+  ],
+  "editing_rules": [
+    "Use the exact complete sentence audio; never cut at an estimated character timestamp.",
+    "Keep verified sentence-internal silence; preserve final consonants and avoid the next sentence's first syllable.",
+    "Recompose for portrait; do not crop the horizontal main or add a blurred duplicate background.",
+    "Keep source definition 2024, capital 53 gu, unit couples visible and consistent.",
+    "Shorts descriptions link the new main ID after its verified private upload."
+  ]
+}

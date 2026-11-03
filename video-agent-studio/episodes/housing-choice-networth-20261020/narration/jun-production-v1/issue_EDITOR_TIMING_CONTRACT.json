@@ -1,0 +1,31 @@
+{
+  "issue_id": "EDITOR_TIMING_CONTRACT",
+  "target_agent_id": "01a176c8-44f4-7c72-94a3-139394b2dc95",
+  "next_owner": "video_editor; video_director가 전달",
+  "delivery_method": "직접 에이전트 메시지 도구 없음; 담당 폴더 인계 파일",
+  "status": "schema_ready_audio_generation_pending",
+  "scene_ids": ["C01", "C02", "C03", "C04", "C05", "C06", "C07", "C08", "C09", "C10"],
+  "problem": "Jun으로 54문단을 교체하므로 기존 무료음성 타임코드 재사용 불가",
+  "evidence": {
+    "authorization": "director/launch-and-jun-v1/authorization.json",
+    "schema_reference": "narration/free-tts-v1/caption-v7/final_timing.json",
+    "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+    "phonetic_input_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7"
+  },
+  "proposal": {
+    "final_timing": "narration/jun-production-v1/final_timing.json",
+    "joined_body_wav": "narration/jun-production-v1/body_mono.wav",
+    "chapter_wavs": "narration/jun-production-v1/chapter_01.wav .. chapter_10.wav",
+    "paragraph_segments": "narration/jun-production-v1/paragraphs/C01P01/audio.wav .. C10P06/audio.wav",
+    "ledger": "narration/jun-production-v1/generation_ledger.json",
+    "handoff": "narration/jun-production-v1/handoff.json",
+    "audio_revision": "jun-production-v1",
+    "timing_scope": "장별 local seconds. chapter.body_offset_s는 인트로/브랜드를 제외한 연결 WAV 시작 기준. 최종 글로벌 오프셋은 editor가 브랜드 삽입 이후 확정.",
+    "chapter_fields": ["chapter", "title", "audio_file", "audio_sha256", "total_seconds", "pcm_frames", "last_speech_end_s", "last_native_word_end_s", "last_pcm_signal_end_s", "leading_silence_s", "paragraph_gap_s", "tail_from_last_spoken_s", "cues", "paragraphs", "body_offset_s"],
+    "paragraph_fields": ["paragraph", "paragraph_id", "offset_s", "measured_seconds", "wave_file", "last_native_word_end_s", "last_pcm_signal_end_s"],
+    "cue_fields": ["id", "paragraph", "text", "spoken_text", "display_lines", "start_s", "end_s", "native_start_s", "native_end_s", "source_start", "source_end", "timing_basis"],
+    "cue_policy": "기존206 cue ID·본문·display_lines·분할을 유지하고 시작/끝은 실제 Jun 문자 정렬로 재계산. 생성 전 길이 수치는 제공하지 않음.",
+    "tail_policy": "마지막 장은 최종 발화(공급자·PCM 신호의 늦은 끝)부터 최소3초 보장 후 30fps 프레임 상향 정렬. outros 시작은 editor가 확인."
+  },
+  "impact": "10장 모든 오디오/자막 타이밍 재정렬. 본문·원본 영상·공통 state/scenes/decisions/편집산출물 변경 없음. 실제 청취 불가(actual_listening=false)."
+}

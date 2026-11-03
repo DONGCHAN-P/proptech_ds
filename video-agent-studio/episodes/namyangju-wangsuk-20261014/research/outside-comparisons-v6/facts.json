@@ -1,0 +1,175 @@
+{
+  "version": "outside-comparisons-v6",
+  "checked_on": "2026-10-15",
+  "facts": [
+    {
+      "claim_id": "OUT-CN-S5-PRICE",
+      "statement": "창릉 S5 일반 공공분양 84A 전용84.64㎡, 5층~최상층 기본형 공급금액은769,980,000원이다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&mi=1027&uppAisTpCd=05&panId=0000060803",
+      "evidence_location": "changneung_s5_notice.pdf p4 면적표 및 p5 공급금액표; p5 PNG 실물 확인",
+      "as_of": "2025-01-31",
+      "checked_on": "2026-10-15",
+      "status": "verified",
+      "affected_scene_ids": [
+        "M007B"
+      ],
+      "price": {
+        "statistic": "공고 특정타입·층구간 기본형 공급가격",
+        "scope": "고양창릉 S5 84A",
+        "exclusive_area_sqm": 84.64,
+        "floor": "5층~최상층",
+        "amount_krw": 769980000,
+        "unit": "원",
+        "transaction_type": "일반 공공분양 최초 공급",
+        "period": "2025-01-31 원공고",
+        "sample_size": null,
+        "aggregation": "단일타입 층구간 고시가격; 평균/실거래 아님",
+        "cancelled_transactions": "해당 없음",
+        "excluded": [
+          "발코니 확장",
+          "추가옵션",
+          "취득세 등"
+        ],
+        "correction_caution": "정정공고 존재 안내 확인; 최종 계약가격 및 잔여물량 공고 재검증 전 신청 유도 금지"
+      }
+    },
+    {
+      "claim_id": "OUT-CN-S5-TIME",
+      "statement": "창릉 S5는759세대이며 LH 안내 입주예정일은2028년1월이다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&mi=1027&uppAisTpCd=05&panId=0000060803",
+      "evidence_location": "changneung_s5.html 공급개요·입주예정일",
+      "as_of": "2025-01-31",
+      "checked_on": "2026-10-15",
+      "status": "verified",
+      "affected_scene_ids": [
+        "M007B"
+      ],
+      "development_status": "construction",
+      "target": "2028-01",
+      "target_caution": "입주예정일은 공정에 따라 변경 가능"
+    },
+    {
+      "claim_id": "OUT-CN-S5-CLOSED",
+      "statement": "창릉 S5 해당2025년 공고는 접수마감이다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&mi=1027&uppAisTpCd=05&panId=0000060803",
+      "evidence_location": "changneung_s5.html 공고상태·마감일2025-02-21",
+      "as_of": "2026-10-15",
+      "checked_on": "2026-10-15",
+      "status": "verified",
+      "affected_scene_ids": [
+        "M007B"
+      ]
+    },
+    {
+      "claim_id": "OUT-CN-SCHOOL",
+      "statement": "S5·S6 합동공고 학교표는 창릉5유·5초2028년3월, 창릉3중·2고 미정으로 안내한다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&mi=1027&uppAisTpCd=05&panId=0000060803",
+      "evidence_location": "changneung_s5_notice.pdf p45 학교표; PNG 실물 확인",
+      "as_of": "2025-01-31",
+      "checked_on": "2026-10-15",
+      "status": "verified",
+      "affected_scene_ids": [
+        "M007B"
+      ],
+      "school_assignment_caution": "합동공고 표이며 최종 S5 개별 배정·통학경로는 별도 확인; 개교 목표는 변경 가능"
+    },
+    {
+      "claim_id": "OUT-CN-RAIL",
+      "statement": "GTX-A 창릉역은 신설 예정역이며 LH 마이홈 안내상2030년 개통 예정이다.",
+      "source_url": "https://www.myhome.go.kr/hws/portal/bbs/selectBoardHappyNewsDetailView.do?nttId=795",
+      "evidence_location": "검색 색인 본문 확인; 직접 열기는 timeout. 보완: 고양시의회 minutes uid14592 원문 저장·2030 목표 언급",
+      "as_of": "2025",
+      "checked_on": "2026-10-15",
+      "status": "qualified",
+      "affected_scene_ids": [
+        "M007B"
+      ],
+      "development_status": "approved_plan",
+      "target": "2030",
+      "gap": "S5 2028.01 입주와 약2년 차이; 연도 비교이며 실제 개통일 보장 아님"
+    },
+    {
+      "claim_id": "OUT-CN-DIRECTION",
+      "statement": "LH는 창릉지구를 서울 은평·마포 인접지구로 설명하고 GTX-A 창릉역 신설 및 고양은평선2031년 개통 계획을 제시한다.",
+      "source_url": "https://xn--3-3u6ey6lv7rsa.kr/kor/CMS/Board/Board.do?board_seq=466&mCode=MN024&mgr_seq=12&mode=view&page=1",
+      "evidence_location": "2026-07-03 보도자료 본문",
+      "as_of": "2026-07-03",
+      "checked_on": "2026-10-15",
+      "status": "verified",
+      "affected_scene_ids": [
+        "M007B"
+      ],
+      "development_status": "approved_plan",
+      "scope_caution": "S3/S4 보도자료의 지구 광역교통 설명만 활용. 그 단지들의 IKEA·롯데아울렛 도보권·학교 인접성을 S5에 전용하지 않는다."
+    },
+    {
+      "claim_id": "OUT-GS-A2-TYPE",
+      "statement": "교산푸르지오더퍼스트 A2는 민간참여 일반 공공분양1115세대,51·55·58·59㎡ 공급이다. 확인 공고에84㎡ 가격이 없다.",
+      "source_url": "https://www.prugio.com/hb/2025/gyosan/assets/pdf/교산푸르지오더퍼스트_입주자모집공고.pdf",
+      "evidence_location": "gyosan_notice.pdf p1 공급방식, p4~5 공급내역",
+      "as_of": "2025-03-31",
+      "checked_on": "2026-10-15",
+      "status": "verified",
+      "affected_scene_ids": [
+        "M007B"
+      ],
+      "comparison_caution": "이익공유형 아님. 59㎡ 가격을 왕숙84㎡ 동일면적 차트에 넣지 않는다."
+    },
+    {
+      "claim_id": "OUT-GS-A2-TIME",
+      "statement": "교산 A2의 입주예정시기는2029년6월이다.",
+      "source_url": "https://www.prugio.com/hb/2025/gyosan/assets/pdf/교산푸르지오더퍼스트_입주자모집공고.pdf",
+      "evidence_location": "gyosan_notice.pdf p4~5 공급개요 및 p44 입주예정일",
+      "as_of": "2025-03-31",
+      "checked_on": "2026-10-15",
+      "status": "verified",
+      "affected_scene_ids": [
+        "M007B"
+      ],
+      "development_status": "construction",
+      "target": "2029-06"
+    },
+    {
+      "claim_id": "OUT-GS-RAIL",
+      "statement": "송파하남선(3호선 연장)은2026년9월 하남시 답변상3·4공구 실시설계 진행 중이며2032년 개통을 목표로 한다.",
+      "source_url": "https://www.hanam.go.kr/mayor/selectCvplRceptWebView.do?cvplCode=MINWON5&key=10228&listTy=N&pageIndex=7&pageUnit=10&rceptNo=10639&searchCnd=all",
+      "evidence_location": "하남시 광역교통과 답변2026-09-22 12:38:07",
+      "as_of": "2026-09-22",
+      "checked_on": "2026-10-15",
+      "status": "verified",
+      "affected_scene_ids": [
+        "M007B"
+      ],
+      "development_status": "approved_plan",
+      "target": "2032",
+      "gap": "A2 2029.06 입주예정과 약3년. 전 구간 착공 완료 또는 운행 중으로 표시 금지."
+    },
+    {
+      "claim_id": "OUT-GS-LIFE",
+      "statement": "교산 A2 공고는 지구 북측의 기존5호선 하남시청·하남검단산역, 단지 북서측 천현초와 하남시청을 명시한다.",
+      "source_url": "https://www.prugio.com/hb/2025/gyosan/assets/pdf/교산푸르지오더퍼스트_입주자모집공고.pdf",
+      "evidence_location": "gyosan_notice.pdf p45 지구·철도설명 및 p46 사업지주변현황",
+      "as_of": "2025-03-31",
+      "checked_on": "2026-10-15",
+      "status": "verified",
+      "affected_scene_ids": [
+        "M007B"
+      ],
+      "development_status": "operating",
+      "proximity_caution": "역까지 실제 보행 경로·출입구·분 단위 미확인. 하남시청 약170m는 공고 이격거리로서 보행거리 아님."
+    },
+    {
+      "claim_id": "OUT-GS-SCHOOL",
+      "statement": "교산 A2는 초1·중1 신설학교 개교 전 천현초·하남중 임시배치 계획을 안내하며 상업·편의시설이 입주 뒤 설치될 수 있다고 명시한다.",
+      "source_url": "https://www.prugio.com/hb/2025/gyosan/assets/pdf/교산푸르지오더퍼스트_입주자모집공고.pdf",
+      "evidence_location": "gyosan_notice.pdf p46 생활시설 유의, p47 학생배치·학교설립; 학교표 실물 확인",
+      "as_of": "2025-03-31",
+      "checked_on": "2026-10-15",
+      "status": "qualified",
+      "affected_scene_ids": [
+        "M007B"
+      ],
+      "readiness": "신설학교 정확한 개교일 미기재; 주변 공원·학교용지는 계획시설이며 완성 현황 아님"
+    }
+  ]
+}

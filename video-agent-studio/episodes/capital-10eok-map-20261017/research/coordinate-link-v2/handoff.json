@@ -1,0 +1,16 @@
+{
+  "status": "official_source_linked_with_remaining_qualification",
+  "input_version": "source-completion-v1/coordinate_join_inputs_complete.parquet",
+  "input_sha256": "c40dcd2b6b04d1a3c83cdb02ac874a901aa478ad800b6931fa502018dfaa3d9f",
+  "source_zip_sha256": "44cd4bd9df1c2582d0e022bd5f630df6709b37cd98ae72ff3cc48676e7dbd2e8",
+  "outputs": ["README.md", "coordinate_links_reviewed.parquet", "coordinate_links_reviewed.csv", "coordinates_verified_source_packet.json", "capital_official_geometry.parquet", "official_attributes.parquet", "validation.json", "link_quality_validation.json"],
+  "eligible_count": 8288,
+  "remaining_review_count": 884,
+  "coordinates_from_legacy_geocoder": false,
+  "raw_zip_preserved": true,
+  "unresolved": ["Independent PROJ transform comparison", "2026 administrative boundary/code changes", "Multiple RTMS IDs to one official complex", "Unique parcel with name mismatch", "Official source temporal coverage"],
+  "affected_scene_ids": ["all_annual_map_frames"],
+  "next_owner": "director and source data auditor",
+  "external_calls": 0,
+  "paid_calls": 0
+}

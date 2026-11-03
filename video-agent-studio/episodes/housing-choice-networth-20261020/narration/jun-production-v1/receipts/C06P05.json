@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C06P05",
+  "scene_id": "C06",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:06:45.890Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "8a7a7ca30c2a4950601ffbb3039f6cbfb12ceffdb2f5ba1e43ab29005bab880a",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "집값에는 가격 상승만 넣습니다. 실거주 가구가 월세를 내지 않는 효과는 매달 지출표에 이미 들어 있습니다. 주거 혜택은 이 지출표에서 한 번 반영합니다. 집과 투자계좌 각각에 무엇이 포함됐는지를 맞추는 것이 수익률 숫자 자체만큼 중요합니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 134,
+  "characters": 134,
+  "actual_credits": 54,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:26.698Z",
+  "local_shadow_remaining_before": 21239,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "IPsLbp9jWK4f8pZZ3yBe",
+    "x-request-id": null,
+    "character-cost": "54",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:06:45 GMT"
+  },
+  "pcm_samples": 754992,
+  "pcm_duration_s": 17.12,
+  "provider_last_spoken_end_s": 17.2,
+  "artifact_sha256": {
+    "paragraphs/C06P05/audio.mp3": "0b5e6db5627ae7905e83ca6193347bd95f0b58e52e05b663f68b9d43dee31d6a",
+    "paragraphs/C06P05/audio.wav": "15216fa5c34e99c13c7f847edcb291253c16d44f034a7ffeba67282b40ed4c6a",
+    "paragraphs/C06P05/alignment.json": "68372bbaeefd94c2ac7f35564087fac031876e221884a4a874ee02a853534624",
+    "paragraphs/C06P05/normalized_alignment.json": "68372bbaeefd94c2ac7f35564087fac031876e221884a4a874ee02a853534624"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21185,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:06:50.066Z"
+}

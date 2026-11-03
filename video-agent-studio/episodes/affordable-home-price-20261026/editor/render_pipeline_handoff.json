@@ -1,0 +1,61 @@
+{
+  "status": "visual_v4_targeted_source_ready_and_full_pipeline_prepared_not_authorized",
+  "source_handoff": "editor/source_build_v4_handoff.json",
+  "source_handoff_sha256": "c619b789350af2e4eb5249eb29aac1bf0cbce1ffb1d7bb9f125a733ad17df1da",
+  "targeted_QA_handoff": "editor/visual_v4_targeted_handoff.json",
+  "targeted_QA_handoff_sha256": "35dfed742049696e5dd2221333a3b49cdd294c9fba9f8cab520c4c634af50253",
+  "issues_ready_for_independent_closure": [
+    "SOURCE-FOCUS-003",
+    "SOURCE-BRAND-004"
+  ],
+  "target_frames": 13,
+  "affected_chapters": [
+    1,
+    7,
+    9
+  ],
+  "actual_editor_viewed": [
+    "S031Q002",
+    "S031Q003",
+    "S040Q003",
+    "S040Q004",
+    "post_intro_first_body_frame"
+  ],
+  "canonical_carve_recomputed": false,
+  "audio_tags_carve_BGM_WAV_bytes_unchanged": true,
+  "EDL_sha256": "b7ac9e06a4bfacb8ab229f3a9250fed6757bd83656b29fefdd3a680535e17109",
+  "SRT_sha256": "070ae5624c211f8aaa6b862079d068820bf7e6ad84013e628b7bb40d6718120b",
+  "render_pipeline": "editor/render_pipeline.py",
+  "render_commands": "editor/render_commands.json",
+  "render_commands_sha256": "61544813eeaaa5188f1c5452fed5aeb1cbafc7119852258d453c4a8891cb03a8",
+  "render_input_manifest": "editor/render_input_manifest.json",
+  "render_input_manifest_sha256": "fdb10e110929e63618960434dd3dfa36e83c984253510304b1d99578d6e7869d",
+  "pinned_input_file_count": 455,
+  "main_authorization_template": "editor/main_render_authorization_template.json",
+  "main_authorization_template_approved": false,
+  "main_authorization_template_sha256": "159b5c3448b2577b44842c21b1f4a4abe62257d7dca423bf96a09cb0f8455832",
+  "receipt_schema": "editor/render_receipt_schema.json",
+  "runbook": "editor/render_runbook.md",
+  "encoded_plan": "outputs/private-production-v1/encoded_frame_plan.prepared.json",
+  "encoded_plan_sha256": "baf05a2eb7e1dc3a865b4f772c4105020c4bb6f596e593f3a2d6e3c6b31d37ee",
+  "encoded_unique_frames_planned": 185,
+  "encoded_fullres_critical_frames_planned": 16,
+  "scene_representatives": 45,
+  "assembly_joins": 12,
+  "film_seconds": 1186.0333333333335,
+  "total_video_frames": 35581,
+  "checks": {
+    "python_syntax": "pass",
+    "command_preparation": "pass",
+    "no_authorization_execute_rejected": true,
+    "editor_template_as_authority_rejected": true,
+    "current_CLI_BBox_SHA_match": true,
+    "full_render_executed": false,
+    "encoded_final_frames_extracted": false
+  },
+  "authorization_status": "Main exact authorization pending independent source/audio closure",
+  "actual_listening": false,
+  "continuous_playback": false,
+  "paid_calls": 0,
+  "other_owner_writes": false
+}

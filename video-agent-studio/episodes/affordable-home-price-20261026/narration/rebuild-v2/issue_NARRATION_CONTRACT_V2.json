@@ -1,0 +1,14 @@
+{
+  "issue_id": "NARRATION_CONTRACT_V2",
+  "status": "contract_ready_for_parent_and_editor_handoff",
+  "scene_ids": ["R011", "R029", "R030", "R031", "R032", "R033"],
+  "recipients": ["director", "Tesla:01a177dc-f802-78b3-8161-7f47b028d7b6"],
+  "direct_message_sent": false,
+  "reason": "이 실행 환경에는 에이전트 직접 메시지 도구가 없어 역할 소유 폴더의 이슈 파일로 전달합니다.",
+  "problem": "편집에서 사용할 음성·큐·beats의 경로와 시각 기준, 최종 scenes 배열 순서를 동일하게 적용해야 합니다.",
+  "evidence": ["build_contract.json", "build_narration.py", "offline-tests/verification-v1/receipt.json"],
+  "proposal": "배열 순서 그대로 장면 문단당 1회 InJoon +0% 합성. 원본 MP3/WordBoundary/PCM 보존. audio_path=24k mono, audio_48k_path=48k mono. cue/word/beat는 scene-local. anchor는 정확 원문 span을 덮는 실제 단어 경계 사용. 내부 쉼 강제 없음. 장면 사이 추가 무음 0.25초. 마지막 WAV는 발화 뒤 3초 여백 포함.",
+  "impact": "편집은 scene ID나 chapter 숫자로 재정렬하지 않습니다. scene_start_s는 브랜드·챕터 카드 제외 본문 제안값이며 공통 EDL 확정은 총괄 담당입니다. 마지막 3초 여백을 중복 추가하지 않습니다.",
+  "next_step": "writer UTF-8 복원·최종 수정 통지 후 부모가 prepare를 실행하고, 정확 대본 SHA와 prepared SHA에 연결한 director 소유 잠금/무료 외부호출 승인 파일을 발급합니다. 현재 실제 writer 원고 미사용, TTS 0회.",
+  "contract_sha256": "e23f8f4cb8a2cd933c32114ce05b1e25e255d60c18068df17c5cfed9f0cc2bf4"
+}

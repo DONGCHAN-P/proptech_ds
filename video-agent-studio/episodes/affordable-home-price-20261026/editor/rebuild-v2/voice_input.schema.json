@@ -1,0 +1,50 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"rebuild-v2 actual scene voice/timing handoff",
+  "type":"object",
+  "required":["status","clock","script_sha256","audio_revision","voice","rate","scenes"],
+  "properties":{
+    "status":{"const":"timing_locked"},
+    "clock":{"const":"scene_local_seconds"},
+    "script_sha256":{"$ref":"#/$defs/sha"},
+    "audio_revision":{"type":"string","minLength":1},
+    "voice":{"type":"string","minLength":1},
+    "rate":{"const":"0%"},
+    "scenes":{"type":"array","minItems":1,"items":{
+      "type":"object","required":["scene_id","audio_path","audio_sha256","duration_s","last_speech_end_s","cues","beatanchors"],
+      "properties":{
+        "scene_id":{"type":"string","pattern":"^R[0-9]{3,}$"},
+        "audio_path":{"type":"string","minLength":1},
+        "audio_sha256":{"$ref":"#/$defs/sha"},
+        "duration_s":{"type":"number","exclusiveMinimum":0},
+        "last_speech_end_s":{"type":"number","exclusiveMinimum":0},
+        "cues":{"type":"array","minItems":1,"items":{
+          "type":"object","required":["id","text","display_lines","start_s","end_s"],
+          "properties":{
+            "id":{"type":"string","pattern":"^[A-Za-z0-9_-]+$"},
+            "text":{"type":"string","minLength":1},
+            "spoken_text":{"type":"string"},
+            "display_lines":{"type":"array","minItems":1,"maxItems":2,"items":{"type":"string","minLength":1}},
+            "start_s":{"type":"number","minimum":0},
+            "end_s":{"type":"number","exclusiveMinimum":0}
+          }
+        }},
+        "beatanchors":{"type":"array","minItems":1,"items":{
+          "type":"object","required":["beat_index","anchor","char_start","char_end","start_s","end_s","cue_ids","timing_basis"],
+          "properties":{
+            "beat_index":{"type":"integer","minimum":0},
+            "anchor":{"type":"string","minLength":1},
+            "char_start":{"type":"integer","minimum":0},
+            "char_end":{"type":"integer","minimum":1},
+            "start_s":{"type":"number","minimum":0},
+            "end_s":{"type":"number","exclusiveMinimum":0},
+            "cue_ids":{"type":"array","minItems":1,"items":{"type":"string"}},
+            "timing_basis":{"enum":["native_word_boundary","forced_alignment","manual_audio_verified"]}
+          }
+        }}
+      }
+    }}
+  },
+  "$defs":{"sha":{"type":"string","pattern":"^[a-f0-9]{64}$"}},
+  "$comment":"start/end order, exact text spans, unique IDs, cue coverage, actual file hash/duration are checked by pipeline.py; JSON shape alone is not approval. No pronunciation/naturalness claim from file existence."
+}

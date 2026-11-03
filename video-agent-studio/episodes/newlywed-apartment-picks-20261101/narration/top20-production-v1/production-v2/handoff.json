@@ -1,0 +1,84 @@
+{
+  "task_id": "top20-narration-sentencecut-v2",
+  "role": "narration",
+  "status": "final_director_lock_referenced_cut_technical_checks_passed_listening_pending",
+  "input_revisions": {
+    "script_v4.md": "f1ff6dcd71283335cd8a675f1446f56557f4c81718dab59e8f641588334dbed2",
+    "scene_proposals_v4.json": "d6bb699985b6684ff72dacf5788b62bca28e8fcd3c19fd62b0ece67873592aa4",
+    "editorial_cut_plan.json": "5c8bf1f491d223c45959ab1083b2fb34ba8ec76daed4466cb52f7b8936992625",
+    "source_proposed_timing_v1.json": "8378067aabf224d79079e52fbf5d252f069f5e8c44b2053b89e40b9f5ebd92be",
+    "cut_builder_sha256": "f1420bc280c64427d7ef71c6869f9c052d1607c4f0be2372353b572f445511aa"
+  },
+  "outputs": [
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/timing_proposals_v2.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/narration_body.wav",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/narration_full_brand.wav",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/cut_boundary_qa.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/verification.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/artifact_manifest.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/validation_final.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/cut_boundary_handoff_final.json"
+  ],
+  "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+  "body_duration_s": 450.63503401360543,
+  "total_duration_s": 468.0031746031746,
+  "timing_delta_from_v1_s": -69.44623582766434,
+  "affected_scene_ids": [
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S017",
+    "S019",
+    "S020",
+    "C001"
+  ],
+  "checks": [
+    {
+      "check": "샘플 편집/103문장/제공자 경계 이동/27장면/v1 보존",
+      "result": "passed",
+      "evidence": "verification.json"
+    },
+    {
+      "check": "절단부 실제 청취/ASR/독립QA",
+      "result": "not_performed",
+      "evidence": "cut_boundary_qa.json"
+    },
+    {
+      "check": "PCM source slices/full track composition/928 word maps/frozen v1 hashes",
+      "result": "passed",
+      "evidence": "validation_final.json"
+    },
+    {
+      "check": "Final director audio hash and 26 unchanged scene WAVs / 165 frozen v1 files / 15 cut edges",
+      "result": "passed_technical_only",
+      "evidence": "cut_boundary_handoff_final.json"
+    }
+  ],
+  "open_issue_ids": [
+    "CUT_BOUNDARY_LISTENING_UNVERIFIED"
+  ],
+  "next_role": "qa; no further narration generation/editing requested",
+  "generation_cost_krw": 0,
+  "new_tts_calls": 0,
+  "unresolved": "Final phonetic/subjective listening remains unverified. No technical cut defect detected. Parent ASR results pending/unreviewed.",
+  "final_timing_authority": {
+    "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked_timing.json",
+    "sha256": "6b705657f372955248b614af6f6a928f98b368335be74c53cdfe6984401a6175",
+    "owner": "director",
+    "timing_locked": true,
+    "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+    "audio_sha256": "2de854444aa6e267d8d2e228746f0dfd3d9336de8e9d714158c3bb033d122c44",
+    "audio_origin_global_s": 0,
+    "duration_s": 468.0031746031746,
+    "opening_order": "data_question_hook_then_5s_clean_brand_then_definition",
+    "clean_brand_source": "existing approved clean v7 video audio"
+  },
+  "detected_required_technical_defects": 0,
+  "legacy_audio_note": "production-v2/narration_full_brand.wav uses earlier brand placement candidate. Use final_timing_authority.audio_file and director locked_timing.json for final release."
+}

@@ -1,0 +1,42 @@
+{
+  "task_id": "top20-thumbnail-v1",
+  "role": "visual",
+  "status": "완료·독립 QA 대기",
+  "input_revisions": {
+    "photo_assets": "photo_assets_v2",
+    "photo_manifest_sha256": "aedc96c581c397828a5a0a1b464138da6cef8cd54792ff663b900b4292baa1c1",
+    "ranking": "top20-8min-v2",
+    "ranking_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+    "initial_inputs": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-production-v1/input_snapshot.json"
+  },
+  "outputs": [
+    "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/thumbnail/TH001_신혼부부_수도권TOP20_1280x720.png",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/thumbnail/TH001_신혼부부_수도권TOP20_mobile_320.png",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/thumbnail/artifact_manifest.json",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-production-v1/assets.json"
+  ],
+  "affected_scene_ids": [
+    "TH001"
+  ],
+  "checks": [
+    {
+      "check": "해상도·PNG·경계·겹침·원본 SHA",
+      "result": "passed",
+      "evidence": "technical_checks.json"
+    },
+    {
+      "check": "최종1280/320 실제 열람·사진3장 직접 확인",
+      "result": "self_checked",
+      "evidence": "visual_review.json"
+    },
+    {
+      "check": "CC0 2장 출처·2021/2025 촬영연도 보존",
+      "result": "passed",
+      "evidence": "source_ledger.json"
+    }
+  ],
+  "open_issue_ids": [],
+  "unresolved": "독립 QA 대기. 320px 보조 촬영연도는 작음. 실제 휴대전화 테스트 없음.",
+  "next_role": "qa → director",
+  "note": "썸네일만 제작. 본편·쇼츠·음성·공통 상태 변경 없음. 신규 외부API·유료생성·업로드 없음."
+}

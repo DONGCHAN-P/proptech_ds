@@ -1,0 +1,317 @@
+[
+  {
+    "scene_id": "P01-R20",
+    "sentence_id": "P01-R20-V2-05",
+    "groups": [
+      {
+        "label": "2000년 이전 준공",
+        "transaction_n": 279,
+        "complex_n": 28,
+        "median_manwon": 60000.0
+      },
+      {
+        "label": "2011년 이후 준공",
+        "transaction_n": 167,
+        "complex_n": 13,
+        "median_manwon": 89900.0
+      }
+    ],
+    "distribution": false,
+    "source_fields": [
+      {
+        "claim_id": "W4V2-R20-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/19/build_cohorts/0"
+      },
+      {
+        "claim_id": "W4V2-R20-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/19/build_cohorts/2"
+      }
+    ]
+  },
+  {
+    "scene_id": "P01-R19",
+    "sentence_id": "P01-R19-V2-07",
+    "groups": [
+      {
+        "dong": "신내동",
+        "transaction_n": 100,
+        "complex_n": 17,
+        "median_manwon": 74000.0
+      },
+      {
+        "dong": "면목동",
+        "transaction_n": 132,
+        "complex_n": 30,
+        "median_manwon": 84000.0
+      }
+    ],
+    "distribution": false,
+    "source_fields": [
+      {
+        "claim_id": "W4V2-R19-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/18/dong_prices_by_transaction_count/1"
+      },
+      {
+        "claim_id": "W4V2-R19-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/18/dong_prices_by_transaction_count/0"
+      }
+    ]
+  },
+  {
+    "scene_id": "P01-R18",
+    "sentence_id": "P01-R18-V2-07",
+    "groups": [
+      {
+        "dong": "동백동",
+        "transaction_n": 165,
+        "complex_n": 15,
+        "median_manwon": 52000.0
+      },
+      {
+        "dong": "영덕동",
+        "transaction_n": 179,
+        "complex_n": 14,
+        "median_manwon": 71500.0
+      }
+    ],
+    "distribution": false,
+    "source_fields": [
+      {
+        "claim_id": "W4V2-R18-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/17/dong_prices_by_transaction_count/1"
+      },
+      {
+        "claim_id": "W4V2-R18-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/17/dong_prices_by_transaction_count/0"
+      }
+    ]
+  },
+  {
+    "scene_id": "P01-R17",
+    "sentence_id": "P01-R17-V2-05",
+    "groups": [
+      {
+        "dong": "연수동",
+        "transaction_n": 70,
+        "complex_n": 10,
+        "median_manwon": 33150.0
+      },
+      {
+        "dong": "송도동",
+        "transaction_n": 860,
+        "complex_n": 65,
+        "median_manwon": 74000.0
+      }
+    ],
+    "distribution": false,
+    "source_fields": [
+      {
+        "claim_id": "W4V2-R17-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/16/dong_prices_by_transaction_count/2"
+      },
+      {
+        "claim_id": "W4V2-R17-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/16/dong_prices_by_transaction_count/0"
+      }
+    ]
+  },
+  {
+    "scene_id": "P01-R16",
+    "sentence_id": "P01-R16-V2-07",
+    "groups": [
+      {
+        "label": "5억 미만",
+        "color": "#3E82BD",
+        "complex_n": 61,
+        "denominator": 77
+      },
+      {
+        "label": "5~7억",
+        "color": "#299D92",
+        "complex_n": 16,
+        "denominator": 77
+      }
+    ],
+    "distribution": true,
+    "source_fields": [
+      {
+        "claim_id": "W4V2-R16-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/15/mapped_bands/0"
+      },
+      {
+        "claim_id": "W4V2-R16-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/15/mapped_bands/1"
+      },
+      {
+        "claim_id": "W4V2-R16-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/15/mapped_complexes"
+      }
+    ]
+  },
+  {
+    "scene_id": "P01-R15",
+    "sentence_id": "P01-R15-V2-07",
+    "groups": [
+      {
+        "dong": "구로동",
+        "transaction_n": 123,
+        "complex_n": 40,
+        "median_manwon": 78000.0
+      },
+      {
+        "dong": "신도림동",
+        "transaction_n": 80,
+        "complex_n": 18,
+        "median_manwon": 132000.0
+      }
+    ],
+    "distribution": false,
+    "source_fields": [
+      {
+        "claim_id": "W4V2-R15-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/14/dong_prices_by_transaction_count/0"
+      },
+      {
+        "claim_id": "W4V2-R15-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/14/dong_prices_by_transaction_count/3"
+      }
+    ]
+  },
+  {
+    "scene_id": "P01-R14",
+    "sentence_id": "P01-R14-V2-05",
+    "groups": [
+      {
+        "dong": "신사동",
+        "transaction_n": 67,
+        "complex_n": 20,
+        "median_manwon": 63800.0
+      },
+      {
+        "dong": "진관동",
+        "transaction_n": 91,
+        "complex_n": 25,
+        "median_manwon": 94000.0
+      }
+    ],
+    "distribution": false,
+    "source_fields": [
+      {
+        "claim_id": "W4V2-R14-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/13/dong_prices_by_transaction_count/3"
+      },
+      {
+        "claim_id": "W4V2-R14-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/13/dong_prices_by_transaction_count/1"
+      }
+    ]
+  },
+  {
+    "scene_id": "P01-R13",
+    "sentence_id": "P01-R13-V2-06",
+    "groups": [
+      {
+        "dong": "금곡동",
+        "transaction_n": 217,
+        "complex_n": 17,
+        "median_manwon": 53000.0
+      },
+      {
+        "dong": "권선동",
+        "transaction_n": 192,
+        "complex_n": 18,
+        "median_manwon": 64750.0
+      }
+    ],
+    "distribution": false,
+    "source_fields": [
+      {
+        "claim_id": "W4V2-R13-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/12/dong_prices_by_transaction_count/0"
+      },
+      {
+        "claim_id": "W4V2-R13-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/12/dong_prices_by_transaction_count/1"
+      }
+    ]
+  },
+  {
+    "scene_id": "P01-R12",
+    "sentence_id": "P01-R12-V2-07",
+    "groups": [
+      {
+        "dong": "망포동",
+        "transaction_n": 235,
+        "complex_n": 23,
+        "median_manwon": 73000.0
+      },
+      {
+        "dong": "이의동",
+        "transaction_n": 100,
+        "complex_n": 10,
+        "median_manwon": 119000.0
+      }
+    ],
+    "distribution": false,
+    "source_fields": [
+      {
+        "claim_id": "W4V2-R12-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/11/dong_prices_by_transaction_count/0"
+      },
+      {
+        "claim_id": "W4V2-R12-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/11/dong_prices_by_transaction_count/3"
+      }
+    ]
+  },
+  {
+    "scene_id": "P01-R11",
+    "sentence_id": "P01-R11-V2-06",
+    "groups": [
+      {
+        "dong": "상계동",
+        "transaction_n": 213,
+        "complex_n": 43,
+        "median_manwon": 71000.0
+      },
+      {
+        "dong": "중계동",
+        "transaction_n": 159,
+        "complex_n": 37,
+        "median_manwon": 86000.0
+      }
+    ],
+    "distribution": false,
+    "source_fields": [
+      {
+        "claim_id": "W4V2-R11-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/10/dong_prices_by_transaction_count/0"
+      },
+      {
+        "claim_id": "W4V2-R11-PRICE-SELECTED",
+        "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-split-v4/prices/region_insights.json",
+        "field": "/regions/10/dong_prices_by_transaction_count/1"
+      }
+    ]
+  }
+]

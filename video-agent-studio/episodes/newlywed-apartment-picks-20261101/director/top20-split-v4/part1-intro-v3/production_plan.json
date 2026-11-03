@@ -1,0 +1,20 @@
+{
+  "request_type": "enhance_video",
+  "changed_scene_ids": [
+    "P01-INTRO"
+  ],
+  "script_gate": "d884be1c4e38",
+  "voice": "free ko-KR-InJoonNeural +0% then fixed atempo1.35",
+  "strategy": "new intro in HyperFrames; reuse approved encoded body beyond a verified keyframe; remux actual retimed audio and captions",
+  "proofs": [
+    "actual new voice word alignment",
+    "seek-safe source checks",
+    "encoded intro frames and continuous motion frame strips",
+    "old/new body decoded equality and audio alignment",
+    "independent bounded QA"
+  ],
+  "cash_cap_krw": 0,
+  "new_paid_calls": 0,
+  "actual_listening": false,
+  "completed_gate": "new pending decision only after local file ready"
+}

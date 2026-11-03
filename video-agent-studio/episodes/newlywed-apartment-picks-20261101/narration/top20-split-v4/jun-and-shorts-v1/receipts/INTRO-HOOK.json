@@ -1,0 +1,62 @@
+{
+  "asset_id": "INTRO-HOOK",
+  "sentence_ids": [
+    "P01-INTRO-V3-01"
+  ],
+  "status": "complete",
+  "started_at_utc": "2026-11-03T13:23:14.252Z",
+  "authorization_id": "9cde211f3073",
+  "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+  "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+  "input_file_sha256": "97b42212521e90dbb8c9dab06e296403ed252a1a29d71b2e14418aaa2a7d5396",
+  "request_text_sha256": "97b42212521e90dbb8c9dab06e296403ed252a1a29d71b2e14418aaa2a7d5396",
+  "characters": 33,
+  "reserved_credits": 33,
+  "actual_credits": 13,
+  "charge_known": true,
+  "request": {
+    "text": "우리 예산으로 집을 산다면, 어느 동네부터 찾아봐야 할까요?",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+  "local_shadow_remaining_before": 16664,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "p9n9QIokb0VTbvQ4ffXN",
+    "x-request-id": null,
+    "character-cost": "13",
+    "content-type": "application/json",
+    "date": "Tue, 03 Nov 2026 13:23:16 GMT"
+  },
+  "pcm_samples": 172872,
+  "pcm_duration_s": 3.92,
+  "provider_last_alignment_end_s": 4,
+  "complete_tail_after_alignment_s": -0.08000000000000007,
+  "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-HOOK.wav",
+  "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-HOOK/audio.mp3",
+  "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-HOOK/alignment.json",
+  "pcm_sha256": "f19b919d715c71e5399b785b08bfc90af0002b6f2f598eb9e6f7d08794758b82",
+  "artifact_sha256": {
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-HOOK/audio.mp3": "902c14e4f3ebfb98d1e7e2709f3bcaf3063ea331168625e9c61ec0456476fddb",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-HOOK/alignment.json": "4ec04832d2bdf09e989782b610ef62f9d22aea8dafe1f90e383c781ee1b1c330",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-HOOK/normalized_alignment.json": "4ec04832d2bdf09e989782b610ef62f9d22aea8dafe1f90e383c781ee1b1c330",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-HOOK.wav": "f414f803dc2a83e0bcca79ec3e0a4beee020df2c327b48e38468ae80fb45e593"
+  },
+  "processing": {
+    "sample_rate_hz": 44100,
+    "channels": 1,
+    "codec": "pcm_s16le",
+    "tempo_factor": 1,
+    "trimmed": false,
+    "tail_preserved": true,
+    "provider_speed": 0.97
+  },
+  "local_shadow_remaining_after": 16651,
+  "completed_at_utc": "2026-11-03T13:23:18.463Z"
+}

@@ -1,0 +1,20 @@
+{
+  "issue_id": "W4-CONTEXT-MATCH",
+  "task_id": "two-part-v4-script",
+  "status": "open_next_visual_step",
+  "to": ["director", "visual"],
+  "scene_ids": "P01-R20~P01-R11 및 P02-R10~P02-R01",
+  "problem": "학교·역 명칭과 원자료 날짜를 원고에 연결했으나, 실제 v4 상세 지도에 표시된 좌표·이름과의 매칭은 아직 검수하지 않았습니다. OSM 도로·공원·상업시설은 상위에서 다운로드 진행 중으로 전달했습니다.",
+  "evidence": ["research/top20-split-v4/context_notes.json", "writer/top20-split-v4/scene_proposals_v1.json: scenes[].context_selection", "writer/top20-split-v4/validation_v1.json"],
+  "proposal": "왼쪽 구 전체 분포+오른쪽 실제 대표단지 상세를 유지하고, 선택한 학교·역 총58개 표시와 문장을 대조합니다. 학교는 원자료2026-10-01, 역은 레코드별 원자료일을 표기합니다. 상업시설은 OSM 취득·이용조건·명칭·좌표를 확인한 뒤 추가하며 원고에 새 시설 사실을 넣으면 writer 수정본으로 회수합니다.",
+  "specific_limits": [
+    "R10·R13의 대표단지 주변 역 목록은 비어 있습니다. 역이 없다는 결론이 아닙니다.",
+    "KRIC 원자료 일부 누락으로 R15·R16을 포함해 최인접역·완전한 접근성 순위를 판단하지 않았습니다.",
+    "용마산(용마폭포공원)→용마산역, 잠실(송파구청)→잠실역, 아라(북부법원, 검찰청)→아라역은 낭독 별칭이며 지도 원자료명은 보존합니다.",
+    "대표단지 주변 시설과 비교 동의 거래 중위값은 서로 다른 범위입니다. 같은 장소로 붙이지 않습니다.",
+    "지도상 학교 위치를 지역 전체 세대의 배정·통학시간 보장으로 설명하지 않습니다."
+  ],
+  "cohort_display_clarification": "build_region_insights.py의 첫 준공 집단은 between(0,2000)으로 2000년을 포함합니다. 입력의 '2000년 이전' 라벨은 원천에 보존하고, 낭독·화면에서는 '2000년까지 준공'으로 명확히 했습니다.",
+  "impact": "새 대본 검토 제출은 가능하나 시설·상업 맥락 지도 검수와 최종 미디어 통과는 별도입니다.",
+  "communication": "직접 peer 메시지 도구·지정된 실행 peer가 없어 담당 폴더 이슈로 총괄에 인계합니다. 앞선 네이티브 역할 capacity 오류를 새 조사 완료로 기록하지 않습니다."
+}

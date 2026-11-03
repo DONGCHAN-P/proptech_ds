@@ -1,0 +1,23 @@
+{
+  "base_review": "qa/ranking_source_review.json",
+  "source_rows_checked": 86,
+  "numeric_cells_checked": 258,
+  "critical": 0,
+  "required": 0,
+  "original_source_and_rankings_unchanged": true,
+  "resolutions": [
+    {
+      "id": "RANK-SOURCE-001",
+      "status": "implemented_and_director_checked",
+      "change": "각 표 제목에2024 통계구역·거주 규모 명시"
+    },
+    {
+      "id": "RANK-SOURCE-002",
+      "status": "implemented_and_director_checked",
+      "change": "독립 문서에0.5가중치·합계 반올림 가능성 설명 추가"
+    }
+  ],
+  "document_sha256_after": "3ecb69aa6e5819e9164242111ca25b39593b08ca235c982f89513e40cfc16d2a",
+  "new_independent_recheck_claimed": false,
+  "scope": "Numeric QA applies to unchanged TSV/rankings. Director checked documentation-only changes. No video/audio review performed."
+}

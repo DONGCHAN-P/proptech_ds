@@ -1,0 +1,1734 @@
+{
+  "task_id": "two-part-v4-script-v2",
+  "status": "pass",
+  "verification_kind": "writer_self_check_not_independent_QA",
+  "scene_proposals_sha256": "5a2a098c23137d64fbc23fd861ca1eeff5a76554d397d22171dac54b091b8b3b",
+  "counts": {
+    "parts": 2,
+    "regions": 20,
+    "scenes": 24,
+    "sentences": 174,
+    "selected_facility_labels_matched": 58,
+    "checks": 207,
+    "failed_checks": 0
+  },
+  "parts": [
+    {
+      "part": 1,
+      "path": "part1_script_v2.md",
+      "sha256": "0ac3134f4f510853351276818b375d3a46861f4a31309b7d8077f2f4e4f7796a",
+      "scenes": 12,
+      "sentences": 85,
+      "estimate_seconds": 619.0,
+      "intro_estimate_seconds": 41.3
+    },
+    {
+      "part": 2,
+      "path": "part2_script_v2.md",
+      "sha256": "6b181e20402acb1c337d60809405edac3bdd53171794ffba4b4fb45af0e3dcb9",
+      "scenes": 12,
+      "sentences": 89,
+      "estimate_seconds": 654.4,
+      "intro_estimate_seconds": 41.3
+    }
+  ],
+  "price_comparison_types": {
+    "cohort_pair": 4,
+    "dong_pair": 14,
+    "band_distribution": 2
+  },
+  "v6_comparison": [
+    {
+      "region_id": "R20",
+      "old_v6_nonspace_chars": 210,
+      "v2_nonspace_chars": 395,
+      "ratio": 1.88
+    },
+    {
+      "region_id": "R19",
+      "old_v6_nonspace_chars": 180,
+      "v2_nonspace_chars": 378,
+      "ratio": 2.1
+    },
+    {
+      "region_id": "R18",
+      "old_v6_nonspace_chars": 211,
+      "v2_nonspace_chars": 362,
+      "ratio": 1.72
+    },
+    {
+      "region_id": "R17",
+      "old_v6_nonspace_chars": 192,
+      "v2_nonspace_chars": 377,
+      "ratio": 1.96
+    },
+    {
+      "region_id": "R16",
+      "old_v6_nonspace_chars": 206,
+      "v2_nonspace_chars": 375,
+      "ratio": 1.82
+    },
+    {
+      "region_id": "R15",
+      "old_v6_nonspace_chars": 215,
+      "v2_nonspace_chars": 374,
+      "ratio": 1.74
+    },
+    {
+      "region_id": "R14",
+      "old_v6_nonspace_chars": 180,
+      "v2_nonspace_chars": 378,
+      "ratio": 2.1
+    },
+    {
+      "region_id": "R13",
+      "old_v6_nonspace_chars": 183,
+      "v2_nonspace_chars": 323,
+      "ratio": 1.77
+    },
+    {
+      "region_id": "R12",
+      "old_v6_nonspace_chars": 183,
+      "v2_nonspace_chars": 322,
+      "ratio": 1.76
+    },
+    {
+      "region_id": "R11",
+      "old_v6_nonspace_chars": 188,
+      "v2_nonspace_chars": 340,
+      "ratio": 1.81
+    },
+    {
+      "region_id": "R10",
+      "old_v6_nonspace_chars": 201,
+      "v2_nonspace_chars": 385,
+      "ratio": 1.92
+    },
+    {
+      "region_id": "R09",
+      "old_v6_nonspace_chars": 203,
+      "v2_nonspace_chars": 421,
+      "ratio": 2.07
+    },
+    {
+      "region_id": "R08",
+      "old_v6_nonspace_chars": 209,
+      "v2_nonspace_chars": 377,
+      "ratio": 1.8
+    },
+    {
+      "region_id": "R07",
+      "old_v6_nonspace_chars": 191,
+      "v2_nonspace_chars": 374,
+      "ratio": 1.96
+    },
+    {
+      "region_id": "R06",
+      "old_v6_nonspace_chars": 204,
+      "v2_nonspace_chars": 385,
+      "ratio": 1.89
+    },
+    {
+      "region_id": "R05",
+      "old_v6_nonspace_chars": 166,
+      "v2_nonspace_chars": 369,
+      "ratio": 2.22
+    },
+    {
+      "region_id": "R04",
+      "old_v6_nonspace_chars": 162,
+      "v2_nonspace_chars": 373,
+      "ratio": 2.3
+    },
+    {
+      "region_id": "R03",
+      "old_v6_nonspace_chars": 186,
+      "v2_nonspace_chars": 380,
+      "ratio": 2.04
+    },
+    {
+      "region_id": "R02",
+      "old_v6_nonspace_chars": 222,
+      "v2_nonspace_chars": 381,
+      "ratio": 1.72
+    },
+    {
+      "region_id": "R01",
+      "old_v6_nonspace_chars": 214,
+      "v2_nonspace_chars": 380,
+      "ratio": 1.78
+    }
+  ],
+  "facility_label_matches": [
+    {
+      "scene_id": "P01-R20",
+      "type": "school",
+      "source_name": "계남초등학교",
+      "displayed_label": "계남초등학교",
+      "spoken_name": "계남초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 171
+    },
+    {
+      "scene_id": "P01-R20",
+      "type": "school",
+      "source_name": "계남중학교",
+      "displayed_label": "계남중학교",
+      "spoken_name": "계남중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 115
+    },
+    {
+      "scene_id": "P01-R20",
+      "type": "station",
+      "source_name": "신중동",
+      "displayed_label": "신중동역",
+      "spoken_name": "신중동역",
+      "source_record_date": "2022-04-30",
+      "straight_distance_m": 559
+    },
+    {
+      "scene_id": "P01-R19",
+      "type": "school",
+      "source_name": "서울면남초등학교",
+      "displayed_label": "서울면남초등학교",
+      "spoken_name": "서울면남초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 230
+    },
+    {
+      "scene_id": "P01-R19",
+      "type": "school",
+      "source_name": "용마중학교",
+      "displayed_label": "용마중학교",
+      "spoken_name": "용마중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 410
+    },
+    {
+      "scene_id": "P01-R19",
+      "type": "station",
+      "source_name": "용마산(용마폭포공원)",
+      "displayed_label": "용마산(용마폭포공원)역",
+      "spoken_name": "용마산역",
+      "source_record_date": "2024-12-31",
+      "straight_distance_m": 429
+    },
+    {
+      "scene_id": "P01-R18",
+      "type": "school",
+      "source_name": "청곡초등학교",
+      "displayed_label": "청곡초등학교",
+      "spoken_name": "청곡초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 467
+    },
+    {
+      "scene_id": "P01-R18",
+      "type": "station",
+      "source_name": "상갈역",
+      "displayed_label": "상갈역",
+      "spoken_name": "상갈역",
+      "source_record_date": "2025-04-08",
+      "straight_distance_m": 1108
+    },
+    {
+      "scene_id": "P01-R17",
+      "type": "school",
+      "source_name": "인천송담초등학교",
+      "displayed_label": "인천송담초등학교",
+      "spoken_name": "인천송담초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 304
+    },
+    {
+      "scene_id": "P01-R17",
+      "type": "school",
+      "source_name": "인천미송중학교",
+      "displayed_label": "인천미송중학교",
+      "spoken_name": "인천미송중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 532
+    },
+    {
+      "scene_id": "P01-R17",
+      "type": "station",
+      "source_name": "송도달빛축제공원",
+      "displayed_label": "송도달빛축제공원역",
+      "spoken_name": "송도달빛축제공원역",
+      "source_record_date": "2022-04-30",
+      "straight_distance_m": 983
+    },
+    {
+      "scene_id": "P01-R16",
+      "type": "school",
+      "source_name": "인천논곡초등학교",
+      "displayed_label": "인천논곡초등학교",
+      "spoken_name": "인천논곡초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 393
+    },
+    {
+      "scene_id": "P01-R16",
+      "type": "school",
+      "source_name": "인천금융고등학교",
+      "displayed_label": "인천금융고등학교",
+      "spoken_name": "인천금융고등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 216
+    },
+    {
+      "scene_id": "P01-R15",
+      "type": "school",
+      "source_name": "서울구일초등학교",
+      "displayed_label": "서울구일초등학교",
+      "spoken_name": "서울구일초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 346
+    },
+    {
+      "scene_id": "P01-R15",
+      "type": "school",
+      "source_name": "구일중학교",
+      "displayed_label": "구일중학교",
+      "spoken_name": "구일중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 453
+    },
+    {
+      "scene_id": "P01-R15",
+      "type": "school",
+      "source_name": "구일고등학교",
+      "displayed_label": "구일고등학교",
+      "spoken_name": "구일고등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 267
+    },
+    {
+      "scene_id": "P01-R14",
+      "type": "school",
+      "source_name": "영락중학교",
+      "displayed_label": "영락중학교",
+      "spoken_name": "영락중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 218
+    },
+    {
+      "scene_id": "P01-R14",
+      "type": "school",
+      "source_name": "서울녹번초등학교",
+      "displayed_label": "서울녹번초등학교",
+      "spoken_name": "서울녹번초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 680
+    },
+    {
+      "scene_id": "P01-R14",
+      "type": "station",
+      "source_name": "녹번",
+      "displayed_label": "녹번역",
+      "spoken_name": "녹번역",
+      "source_record_date": "2024-12-31",
+      "straight_distance_m": 844
+    },
+    {
+      "scene_id": "P01-R13",
+      "type": "school",
+      "source_name": "수원중촌초등학교",
+      "displayed_label": "수원중촌초등학교",
+      "spoken_name": "수원중촌초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 476
+    },
+    {
+      "scene_id": "P01-R13",
+      "type": "school",
+      "source_name": "상촌초등학교",
+      "displayed_label": "상촌초등학교",
+      "spoken_name": "상촌초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 533
+    },
+    {
+      "scene_id": "P01-R13",
+      "type": "school",
+      "source_name": "칠보중학교",
+      "displayed_label": "칠보중학교",
+      "spoken_name": "칠보중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 546
+    },
+    {
+      "scene_id": "P01-R12",
+      "type": "school",
+      "source_name": "태장초등학교",
+      "displayed_label": "태장초등학교",
+      "spoken_name": "태장초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 344
+    },
+    {
+      "scene_id": "P01-R12",
+      "type": "school",
+      "source_name": "잠원중학교",
+      "displayed_label": "잠원중학교",
+      "spoken_name": "잠원중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 439
+    },
+    {
+      "scene_id": "P01-R12",
+      "type": "station",
+      "source_name": "망포역",
+      "displayed_label": "망포역",
+      "spoken_name": "망포역",
+      "source_record_date": "2025-04-08",
+      "straight_distance_m": 628
+    },
+    {
+      "scene_id": "P01-R11",
+      "type": "school",
+      "source_name": "상계중학교",
+      "displayed_label": "상계중학교",
+      "spoken_name": "상계중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 300
+    },
+    {
+      "scene_id": "P01-R11",
+      "type": "school",
+      "source_name": "서울상계초등학교",
+      "displayed_label": "서울상계초등학교",
+      "spoken_name": "서울상계초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 510
+    },
+    {
+      "scene_id": "P01-R11",
+      "type": "station",
+      "source_name": "노원",
+      "displayed_label": "노원역",
+      "spoken_name": "노원역",
+      "source_record_date": "2024-12-31",
+      "straight_distance_m": 468
+    },
+    {
+      "scene_id": "P02-R10",
+      "type": "school",
+      "source_name": "용현중학교",
+      "displayed_label": "용현중학교",
+      "spoken_name": "용현중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 510
+    },
+    {
+      "scene_id": "P02-R10",
+      "type": "school",
+      "source_name": "용현여자중학교",
+      "displayed_label": "용현여자중학교",
+      "spoken_name": "용현여자중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 600
+    },
+    {
+      "scene_id": "P02-R10",
+      "type": "school",
+      "source_name": "인항고등학교",
+      "displayed_label": "인항고등학교",
+      "spoken_name": "인항고등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 632
+    },
+    {
+      "scene_id": "P02-R09",
+      "type": "school",
+      "source_name": "서당초등학교",
+      "displayed_label": "서당초등학교",
+      "spoken_name": "서당초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 81
+    },
+    {
+      "scene_id": "P02-R09",
+      "type": "school",
+      "source_name": "양영중학교",
+      "displayed_label": "양영중학교",
+      "spoken_name": "양영중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 322
+    },
+    {
+      "scene_id": "P02-R09",
+      "type": "station",
+      "source_name": "수내역",
+      "displayed_label": "수내역",
+      "spoken_name": "수내역",
+      "source_record_date": "2025-04-08",
+      "straight_distance_m": 1865
+    },
+    {
+      "scene_id": "P02-R08",
+      "type": "school",
+      "source_name": "대방중학교",
+      "displayed_label": "대방중학교",
+      "spoken_name": "대방중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 280
+    },
+    {
+      "scene_id": "P02-R08",
+      "type": "school",
+      "source_name": "서울대길초등학교",
+      "displayed_label": "서울대길초등학교",
+      "spoken_name": "서울대길초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 456
+    },
+    {
+      "scene_id": "P02-R08",
+      "type": "station",
+      "source_name": "신풍",
+      "displayed_label": "신풍역",
+      "spoken_name": "신풍역",
+      "source_record_date": "2024-12-31",
+      "straight_distance_m": 575
+    },
+    {
+      "scene_id": "P02-R07",
+      "type": "school",
+      "source_name": "둔촌중학교",
+      "displayed_label": "둔촌중학교",
+      "spoken_name": "둔촌중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 358
+    },
+    {
+      "scene_id": "P02-R07",
+      "type": "school",
+      "source_name": "서울선린초등학교",
+      "displayed_label": "서울선린초등학교",
+      "spoken_name": "서울선린초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 482
+    },
+    {
+      "scene_id": "P02-R07",
+      "type": "station",
+      "source_name": "길동",
+      "displayed_label": "길동역",
+      "spoken_name": "길동역",
+      "source_record_date": "2024-12-31",
+      "straight_distance_m": 706
+    },
+    {
+      "scene_id": "P02-R06",
+      "type": "school",
+      "source_name": "서울구룡초등학교",
+      "displayed_label": "서울구룡초등학교",
+      "spoken_name": "서울구룡초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 305
+    },
+    {
+      "scene_id": "P02-R06",
+      "type": "school",
+      "source_name": "서울포이초등학교",
+      "displayed_label": "서울포이초등학교",
+      "spoken_name": "서울포이초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 366
+    },
+    {
+      "scene_id": "P02-R06",
+      "type": "station",
+      "source_name": "매봉",
+      "displayed_label": "매봉역",
+      "spoken_name": "매봉역",
+      "source_record_date": "2024-12-31",
+      "straight_distance_m": 1089
+    },
+    {
+      "scene_id": "P02-R05",
+      "type": "school",
+      "source_name": "산곡여자중학교",
+      "displayed_label": "산곡여자중학교",
+      "spoken_name": "산곡여자중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 239
+    },
+    {
+      "scene_id": "P02-R05",
+      "type": "school",
+      "source_name": "인천산곡남초등학교",
+      "displayed_label": "인천산곡남초등학교",
+      "spoken_name": "인천산곡남초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 301
+    },
+    {
+      "scene_id": "P02-R05",
+      "type": "station",
+      "source_name": "산곡",
+      "displayed_label": "산곡역",
+      "spoken_name": "산곡역",
+      "source_record_date": "2022-04-30",
+      "straight_distance_m": 1068
+    },
+    {
+      "scene_id": "P02-R04",
+      "type": "school",
+      "source_name": "서울염동초등학교",
+      "displayed_label": "서울염동초등학교",
+      "spoken_name": "서울염동초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 264
+    },
+    {
+      "scene_id": "P02-R04",
+      "type": "school",
+      "source_name": "염창중학교",
+      "displayed_label": "염창중학교",
+      "spoken_name": "염창중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 380
+    },
+    {
+      "scene_id": "P02-R04",
+      "type": "station",
+      "source_name": "염창",
+      "displayed_label": "염창역",
+      "spoken_name": "염창역",
+      "source_record_date": "2024-02-29",
+      "straight_distance_m": 603
+    },
+    {
+      "scene_id": "P02-R03",
+      "type": "school",
+      "source_name": "고양화정초등학교",
+      "displayed_label": "고양화정초등학교",
+      "spoken_name": "고양화정초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 416
+    },
+    {
+      "scene_id": "P02-R03",
+      "type": "school",
+      "source_name": "화정중학교",
+      "displayed_label": "화정중학교",
+      "spoken_name": "화정중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 491
+    },
+    {
+      "scene_id": "P02-R03",
+      "type": "station",
+      "source_name": "화정역",
+      "displayed_label": "화정역",
+      "spoken_name": "화정역",
+      "source_record_date": "2025-04-08",
+      "straight_distance_m": 557
+    },
+    {
+      "scene_id": "P02-R02",
+      "type": "school",
+      "source_name": "서울송전초등학교",
+      "displayed_label": "서울송전초등학교",
+      "spoken_name": "서울송전초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 45
+    },
+    {
+      "scene_id": "P02-R02",
+      "type": "school",
+      "source_name": "영동일고등학교",
+      "displayed_label": "영동일고등학교",
+      "spoken_name": "영동일고등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 451
+    },
+    {
+      "scene_id": "P02-R02",
+      "type": "station",
+      "source_name": "잠실(송파구청)",
+      "displayed_label": "잠실(송파구청)역",
+      "spoken_name": "잠실역",
+      "source_record_date": "2024-12-31",
+      "straight_distance_m": 656
+    },
+    {
+      "scene_id": "P02-R01",
+      "type": "school",
+      "source_name": "인천아람초등학교",
+      "displayed_label": "인천아람초등학교",
+      "spoken_name": "인천아람초등학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 393
+    },
+    {
+      "scene_id": "P02-R01",
+      "type": "school",
+      "source_name": "인천아라중학교",
+      "displayed_label": "인천아라중학교",
+      "spoken_name": "인천아라중학교",
+      "source_record_date": "2026-10-01",
+      "straight_distance_m": 1137
+    },
+    {
+      "scene_id": "P02-R01",
+      "type": "station",
+      "source_name": "아라(북부법원, 검찰청)",
+      "displayed_label": "아라(북부법원, 검찰청)역",
+      "spoken_name": "아라역",
+      "source_record_date": "2025-06-30",
+      "straight_distance_m": 994
+    }
+  ],
+  "checks": [
+    {
+      "check": "v1 원고·장면표·검증·인계 등13파일 해시 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "두 편·20지역·24장면",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "20~11위와10~1위 순서",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "새 승인 미승계·TTS/본편 생성 전",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "낭독의 부정형 회피 표현 제거",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "추정통근분·학교배정·상승보장 표현 없음",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R20 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R19 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R18 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R17 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R16 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R15 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R14 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R13 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R12 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R11 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R10 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R09 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R08 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R07 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R06 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R05 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R04 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R03 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R02 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 낭독 가격 대비 정확히1개",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 다른 문장의 금액 연속 낭독 제거",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 선택 대비의 원수치·건수·분모",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 나머지 가격 원수치 화면용 보존",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 설명 문자비중70% 이상",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 실제 장소 사진은 특성 설명 뒤",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 사실·해석·문장별근거·지도단계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 실제 표시 학교·역58곳 부분 매칭",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R01 oldv6보다 지역설명 확대",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "가격 대비 구성3종으로 변경",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "지역별 문장수 변화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "지역별 가격 대비의 배치 변화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "40지도판·20/20 OSM 목록과 실제 파일 존재",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "가격 지도 점 합계2094",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "미추홀 인항고·분당 수내역 교체",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "대표 상세 밖의 지역 특성 역6곳 이슈 인계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "출처 파일·JSON 필드·기록값 일치",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "최종생성 입력 해시 고정",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "1편 INTRO5문장·35~45초 추정",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "1편 범위·면적기간·6가격대·시설 설명",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "1편 10월조건 한 번·긍정형",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "1편 읽는원고와 장면제안 동일",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "1편 8~11분 편성 가이드 추정",
+      "result": "pass",
+      "evidence": "실제TTS 길이·최종본 길이 통과 판정 아님"
+    },
+    {
+      "check": "1편 CTA·다음 연결",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "2편 INTRO5문장·35~45초 추정",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "2편 범위·면적기간·6가격대·시설 설명",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "2편 10월조건 한 번·긍정형",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "2편 읽는원고와 장면제안 동일",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "2편 8~11분 편성 가이드 추정",
+      "result": "pass",
+      "evidence": "실제TTS 길이·최종본 길이 통과 판정 아님"
+    },
+    {
+      "check": "2편 CTA·다음 연결",
+      "result": "pass",
+      "evidence": null
+    }
+  ],
+  "not_performed": [
+    "독립 QA",
+    "지도 픽셀·30초 모션의 시각 검수/연속 재생",
+    "새 TTS·음성 청취·실측 타임록",
+    "새 본편 렌더",
+    "유료 호출·외부 전송·업로드"
+  ],
+  "open_issue_ids": [
+    "W4V2-FEATURE-STATION-LABELS",
+    "W4V2-INDEPENDENT-QA-SCRIPT-GATE"
+  ]
+}

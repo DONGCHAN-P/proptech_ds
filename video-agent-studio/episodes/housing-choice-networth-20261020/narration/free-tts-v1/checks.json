@@ -1,0 +1,79 @@
+{
+  "checked_at": "2026-10-25T17:05:42.671032+00:00",
+  "status": "passed_with_listening_pending",
+  "json_and_python_syntax": "passed",
+  "output_paths": "passed",
+  "package_import_from_target": "passed",
+  "tests": {
+    "command": "python -B -X utf8 -m unittest discover -s narration/free-tts-v1 -p test_tts_pipeline.py -v",
+    "count": 5,
+    "exit_code": 0,
+    "log": "tests.free-tts-v1.log"
+  },
+  "audio_hash_preservation": "matched",
+  "sample_pcm_duration_s": 7.896,
+  "native_overlap_s": 0.05,
+  "display_overlap_s": 0,
+  "original_audio_preserved": true,
+  "full_script_generated": false,
+  "listening": "not_performed",
+  "handoff_characters": 1190,
+  "artifacts": [
+    {
+      "path": "tts_pipeline.py",
+      "sha256": "d1be4d59100e826f69584ba5084ebefc88136fc266793fbff14eb3478d11ec8b"
+    },
+    {
+      "path": "test_tts_pipeline.py",
+      "sha256": "56521a1dcb9c8304c6235dadbd1228205a5a31ba84147faceb9f9f2370f06b3c"
+    },
+    {
+      "path": "sample_readiness.json",
+      "sha256": "77ad8ee7ed3149bab86f5bdb16aa15ce254caa78a5464c9b68cee016b559e469"
+    },
+    {
+      "path": "handoff.json",
+      "sha256": "ce10d308bf9d4e5ce59d10809a4d228c2d51538ca834057e21af7f93248ac73b"
+    },
+    {
+      "path": "dependency_manifest.json",
+      "sha256": "0cde3bc01c7cb83bd2ccc0cfa120ea57cd784ce79a5e65d51060540a96eaf6ed"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "8b2557bb77e74f7dd7d734a1c536eda9a6032d9dd81e868900990396da940a6b"
+    },
+    {
+      "path": "samples\\injoon-20261026-v1\\sample.mp3",
+      "sha256": "2d35dd19948c53cdf0c9e4ca8283df21eb9c27cc085878b0276ce6b83e8e7e1d"
+    },
+    {
+      "path": "samples\\injoon-20261026-v1\\sample.wav",
+      "sha256": "e497ddc7c22d402d9fa2d8e792e9aa6fb2d6cb8c48b9a8da78edcdaffeba77a5"
+    },
+    {
+      "path": "samples\\injoon-20261026-v1\\boundaries.json",
+      "sha256": "e333424518b2ebb005a0c0037da516d76524f0efcb7aad7ecb2a7ac59222f81e"
+    },
+    {
+      "path": "samples\\injoon-20261026-v1\\cue_boundaries.json",
+      "sha256": "7a7e03c31b397811bac42b20c9e73084ffdf5eb4df5e8bf9d3d983ab86cf6dd2"
+    },
+    {
+      "path": "samples\\injoon-20261026-v1\\timemap.json",
+      "sha256": "a26143b80fc28274b5ba113bc8122f872b7ad5c346008513224c9c6bddde45a8"
+    },
+    {
+      "path": "samples\\injoon-20261026-v1\\sample.srt",
+      "sha256": "8307335db7699918b938ba75f43592616c0e61e8f100afba716dfe97a7824467"
+    },
+    {
+      "path": "samples\\injoon-20261026-v1\\validation.json",
+      "sha256": "255fb7a5af6032962ca502ac69d2c3fc948c04a0af387f74c8f0d23b0d97e646"
+    },
+    {
+      "path": "samples\\injoon-20261026-v1\\request.json",
+      "sha256": "6f3359f340c54a60ba6cc10ca147d16fbe08eca61779821b89cb377ecac12d6a"
+    }
+  ]
+}

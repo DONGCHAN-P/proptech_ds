@@ -3,8 +3,9 @@ window.RES = (function () {
 
   const RANK_COLORS = ['#7c5cff', '#ff5c8a', '#ff9f43', '#1fbf8f', '#2d9cff'];
   const PART = {
+    location: ['업무지 접근', '#7964ef'], value: ['비교가격', '#bb87dc'], liquidity: ['거래 활발도', '#329f92'], residential: ['주거 여건', '#d69056'],
     price: ['가격', '#8b7cf6'], commute: ['출근', '#f5a524'], station: ['역세권', '#22b8cf'],
-    school: ['학군', '#2fb37a'], new: ['신축', '#e8618c'], green: ['녹지', '#8cc63f'], active: ['거래', '#94a3b8'],
+    school: ['학교 접근', '#2fb37a'], new: ['신축', '#e8618c'], green: ['녹지', '#8cc63f'], active: ['거래', '#94a3b8'],
   };
   const TIE = 1.0;   // 앞 순위와 이 점수 이내면 '사실상 동률'
   const $ = id => document.getElementById(id);
@@ -39,7 +40,7 @@ window.RES = (function () {
           d.textContent = i + 1;
         } else d.className = 'gone';
       });
-      $('searchingT').textContent = '5곳을 찾았어요';
+      $('searchingT').textContent = '조건을 비교하고 있습니다';
       setTimeout(res, 750);
     }, 1050));
   }
@@ -49,7 +50,7 @@ window.RES = (function () {
     if (map) return;
     map = L.map('map', { zoomControl: false, attributionControl: true });
     L.control.zoom({ position: 'bottomright' }).addTo(map);
-    L.tileLayer(tiles.url, { attribution: tiles.attribution, maxZoom: tiles.maxZoom }).addTo(map);
+    JIPMap.add(map, tiles);
     layers = L.layerGroup().addTo(map);
   }
 
@@ -178,7 +179,8 @@ window.RES = (function () {
     ensureMap(opts.tiles);
     setTimeout(() => map.invalidateSize(), 30);
 
-    $('rEyebrow').textContent = d.count.toLocaleString() + '곳 가운데 조건 적합도 순';
+    $('rEyebrow').textContent = d.count.toLocaleString() + (d.objective === 'long_term' ? '곳 가운데 장기보유 비교 순' : '곳 가운데 조건 적합도 순');
+    $('result').querySelector('h1 b').textContent = d.items.length + '곳';
     // 조건 칩 — 누르면 그 질문으로 돌아가 하나만 고칠 수 있다
     $('sumChips').innerHTML = STEPS.list.map((s, i) => {
       const t = s.valid(a) && s.summary(a, opts.ctx);
@@ -194,7 +196,7 @@ window.RES = (function () {
     if (d.weak) {
       const si = STEP_OF[d.weak.key] != null ? STEP_OF[d.weak.key] : 5;
       notes.push('ℹ︎ 고르신 조건을 한꺼번에 만족하는 곳이 드물어요. 특히 <b>' + U.esc(d.weak.label) +
-        '</b> 점수가 낮아요 (5곳 평균 ' + d.weak.avg + '점). ' +
+        '</b> 점수가 낮아요 (후보 평균 ' + d.weak.avg + '점). ' +
         '<button type="button" class="link" id="weakEdit" data-i="' + si + '">이 조건 바꾸기</button>');
     }
     $('relaxed').hidden = !notes.length;
@@ -234,8 +236,8 @@ window.RES = (function () {
     const used = Object.keys(d.items[0].breakdown);
     el.innerHTML =
       '<div class="fs-head"><span>적합도 분포</span><b>' +
-      (spread < 3 ? '5곳이 ' + spread.toFixed(1) + '점 안에 몰려 있어요 — 순위보다 조건을 비교해 보세요'
-                  : '1위와 5위 차이 ' + spread.toFixed(1) + '점') + '</b></div>' +
+      (spread < 3 ? d.items.length + '곳이 ' + spread.toFixed(1) + '점 안에 몰려 있어요 — 순위보다 조건을 비교해 보세요'
+                  : '1위와 마지막 후보 차이 ' + spread.toFixed(1) + '점') + '</b></div>' +
       '<div class="fs-track"><span class="fs-fill" style="left:' + pos(Math.min(...sc)) + ';right:calc(100% - ' + pos(Math.max(...sc)) + ')"></span>' +
       d.items.map((x, i) => '<button type="button" class="fs-dot' + ['', ' up', ' down'][lane[i]] + '" data-id="' + U.esc(x.apt_id) +
         '" style="left:' + pos(x.score) + ';--c:' + RANK_COLORS[i] + ';--d:' + (200 + i * 90) + 'ms" title="' +

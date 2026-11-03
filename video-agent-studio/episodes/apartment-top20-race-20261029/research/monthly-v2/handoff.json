@@ -1,0 +1,115 @@
+{
+  "task_id": "apartment-top20-race-monthly-v2",
+  "role": "research",
+  "status": "data_ready",
+  "input_revisions": {
+    "video-agent-studio/episodes/capital-10eok-map-20261017/research/source-completion-v1/episode_84_source_rows.parquet": "86b39d1800da16c87039bcaf58e3f0a1a143b2dcafb12eb8a793148b3f1399ab",
+    "analysis/housing_growth_2006/regional_expansion_v1/expansion_normalized.parquet": "e12a397460797b19d8ca84898a2934217871b3656fa49d21023c1f218ea80450"
+  },
+  "outputs": [
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/data.json",
+      "sha256": "06981b0d00d2de8777197772dc686b671e999e2f865680b85b7aa435862178c8",
+      "bytes": 6201737
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/top20_monthly.csv",
+      "sha256": "6337243624e40ca5f6ce607dd6dd0d8e057af9bbb34266b275e416611322c600",
+      "bytes": 764755
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/methods.md",
+      "sha256": "eb6d590d230d0683207fe29909850bc9d53623b193e11a79a508339e85dac2a4",
+      "bytes": 7507
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/validation.json",
+      "sha256": "6f9bce3a67b1f0b19597473c615bc10bab6ea7cd793a371ce11ef45ec1211cf0",
+      "bytes": 1909
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/facts.json",
+      "sha256": "206557c83e75bd1a48989ba13c8e26e5328067e74a13a866ad38c13710280ed5",
+      "bytes": 3569033
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/median_evidence.csv",
+      "sha256": "53ccc119ba10355ed126bb668a5b12c298eab39314a1b2bff17bde0a3b3f561f",
+      "bytes": 2490075
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/source_accounting.json",
+      "sha256": "d1c02296cd222c5d66308d6e1705f7469784d889b7db7a4cec67b2fb9f6f5360",
+      "bytes": 1855
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/coverage.csv",
+      "sha256": "96dedc429c83aea75bc1f849f9bf47374a01eb9d11710b2ab514d0e2bd63a246",
+      "bytes": 334
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/monthly_accounting.csv",
+      "sha256": "d7a68458f9da4c9142f8d9f0d4125be5996f00e567d330369708f1e86edd5d6c",
+      "bytes": 12885
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/identity_review.json",
+      "sha256": "9a5559d39cd0ee6c767429d8b829263705fb1808d24081799923f10ac3c2504d",
+      "bytes": 140
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/name_mapping.csv",
+      "sha256": "da6d9bb4afa260c13c51e386d7a66e2b59558a87279ce3bfd1081007353b7391",
+      "bytes": 9382
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/entry_events.csv",
+      "sha256": "23519840c41c7584310c82babfa735d414b80d1c104797055d0dbb059e3bcdea",
+      "bytes": 34144
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/leader_changes.csv",
+      "sha256": "3506a0d65df91c226bed0b16b28568d533ebdfd6b216d5fa8fab1d81ec8ca31b",
+      "bytes": 1465
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/build_monthly.py",
+      "sha256": "5736e616563e1383f2a662c2bbf91aac3c09c2319ec0539244acefc40ad10cab",
+      "bytes": 19678
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/monthly-v2/verify_monthly.py",
+      "sha256": "5dd5444b8fe7da2a4c47605acf79c795ae89eb15369edc02055357a9b6578c78",
+      "bytes": 15901
+    }
+  ],
+  "schema": "frames[].period=YYYY-MM; top과 top20 동일; 행 추가필드 quote_asof_month/month_new_n/carried/stale_age_months/current_window_n",
+  "affected_scene_ids": [
+    "monthly_race_all_235_frames",
+    "monthly_entries",
+    "monthly_leader_changes",
+    "monthly_final_top20"
+  ],
+  "checks": [
+    {
+      "check": "235개 월 전체 후보/갱신/이월/중앙 원행/순위",
+      "result": "passed",
+      "evidence": "validation.json; median_evidence.csv"
+    }
+  ],
+  "unresolved": [
+    "파일별 수집일 혼재·후속 취소 갱신 차이",
+    "장기 이월값을 현재 시세로 표현하지 말 것",
+    "최종 영상 독립 QA 필요"
+  ],
+  "next_role": [
+    "visual",
+    "editor",
+    "qa"
+  ],
+  "network_calls": 0,
+  "paid_calls": 0,
+  "claude_calls": 0,
+  "uploads": 0,
+  "summary": "235개월·전체12470단지 재집계, 누적자격 9904단지·TOP20등장 88단지. 신규 68회·재진입 126회·1위 교체 7회. 마지막 TOP20 이월 11/20·최대 12개월, 전체 풀 최대 234개월. 전 상태 및 4700표시행 검산 통과."
+}

@@ -1,0 +1,43 @@
+{
+  "issue_id": "JUN_PREPARATION_REVIEW",
+  "scene_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10"
+  ],
+  "severity": "review_before_generation",
+  "status": "proposed_to_director_no_peer_message_tool",
+  "problem": "생성 전 텍스트 후보/예산 범위 확정과 v4 요청 옵션 지원 검토 필요.",
+  "evidence": {
+    "budget": {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/budget_proposal.json",
+      "sha256": "d7def310f2ea5ae2daead366eb223d603722d574b43f4de8105f0b70f6393d5b"
+    },
+    "exact_manifest": {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/narration_manifest.json",
+      "sha256": "e2452530e6ce66cb4256dc4ed4e12c2b9d13913e8a76fba4149eea04665191e8"
+    },
+    "pronunciation_proposal": {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/pronunciation_proposal.json",
+      "sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7"
+    },
+    "account_snapshot": {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/account_readonly.json",
+      "sha256": "e7cc7b9b4f97398d8e623d7becfe62d0c3a54603c2daa43913e18862c89f6dfb"
+    }
+  },
+  "proposal": "마케팅 제안을 우선 완료한 뒤 동일 SHA/Jun v4/추가 현금0/10,739크레딧 이하 범위로 결정. 발음 치환은 별도 후보 선택으로 기록. v4가 지원하지 않는 style/boost를 무조건 전송하거나 모델/속도를 변경하지 않음.",
+  "impact": "10장54문단의 음성이 교체되면 모든 실제 타이밍을 다시 측정. 현재 편집·공통 시간표·기존 비공개본은 그대로 보존.",
+  "requested_decision": "총괄이 budget 게이트와 텍스트 선택을 관리. 실제 생성은 현재 범위 밖.",
+  "next_roles": [
+    "video_director",
+    "video_editor"
+  ]
+}

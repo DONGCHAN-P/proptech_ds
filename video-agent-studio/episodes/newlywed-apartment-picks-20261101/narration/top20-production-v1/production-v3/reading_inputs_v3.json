@@ -1,0 +1,289 @@
+{
+  "task": "single_free_I002_clarity_patch",
+  "reading_revision": "I002-clarity-v3",
+  "script_revision": "top20-production-editorial-v4",
+  "display_text_unchanged": true,
+  "source_script_sha256": "f1ff6dcd71283335cd8a675f1446f56557f4c81718dab59e8f641588334dbed2",
+  "provider": "microsoft_edge_consumer_tts",
+  "voice": "ko-KR-InJoonNeural",
+  "rate": "+0%",
+  "atempo_after_generation": 1.35,
+  "input_characters": 292,
+  "input_sha256": "db664eb7d6c2d77e901eb20b10420396b12c59e43e4e4f8429035a692ef53cd6",
+  "sentences": [
+    {
+      "sentence_id": "I002-01",
+      "scene_id": "I002",
+      "display_text": "그전에, 방금 본 수원의 두 구를 한 번 더 보죠.",
+      "previous_reading_text": "그전에, 방금 본 수원의 두 구를 한 번 더 보죠.",
+      "reading_text": "그전에, 방금 본 수원의 두 구를 한 번 더 보죠.",
+      "reading_diff": [],
+      "numeric_values": [],
+      "claim_ids": []
+    },
+    {
+      "sentence_id": "I002-02",
+      "scene_id": "I002",
+      "display_text": "전체 수 차이는 59쌍이었는데, 초혼 부부는 영통구 7,634쌍, 권선구 6,746쌍입니다.",
+      "previous_reading_text": "전체 수 차이는 오십구 쌍이었는데, 초혼 부부는 영통구 칠천육백삼십사 쌍, 권선구 육천칠백사십육 쌍입니다.",
+      "reading_text": "전체 수 차이는 오십구 쌍이었는데, 초혼 부부는 수원시 영통구가 칠천육백삼십사 쌍, 수원시 권선구는 육천칠백사십육 쌍입니다.",
+      "reading_diff": [
+        {
+          "operation": "insert",
+          "before_start": 27,
+          "before_end": 27,
+          "after_start": 27,
+          "after_end": 31,
+          "before": "",
+          "after": "수원시 "
+        },
+        {
+          "operation": "insert",
+          "before_start": 30,
+          "before_end": 30,
+          "after_start": 34,
+          "after_end": 35,
+          "before": "",
+          "after": "가"
+        },
+        {
+          "operation": "insert",
+          "before_start": 42,
+          "before_end": 42,
+          "after_start": 47,
+          "after_end": 51,
+          "before": "",
+          "after": "수원시 "
+        },
+        {
+          "operation": "insert",
+          "before_start": 45,
+          "before_end": 45,
+          "after_start": 54,
+          "after_end": 55,
+          "before": "",
+          "after": "는"
+        }
+      ],
+      "numeric_values": [
+        {
+          "display": "59쌍",
+          "reading": "오십구 쌍",
+          "exact_value": "59",
+          "unit": "쌍",
+          "value_unchanged": true,
+          "reading_start": 9,
+          "reading_end": 14
+        },
+        {
+          "display": "7,634쌍",
+          "reading": "칠천육백삼십사 쌍",
+          "exact_value": "7634",
+          "unit": "쌍",
+          "value_unchanged": true,
+          "reading_start": 36,
+          "reading_end": 45
+        },
+        {
+          "display": "6,746쌍",
+          "reading": "육천칠백사십육 쌍",
+          "exact_value": "6746",
+          "unit": "쌍",
+          "value_unchanged": true,
+          "reading_start": 56,
+          "reading_end": 65
+        }
+      ],
+      "claim_ids": [
+        "DIFF-R12-R13",
+        "T2024-R12-FIRST",
+        "T2024-R13-FIRST"
+      ]
+    },
+    {
+      "sentence_id": "I002-03",
+      "scene_id": "I002",
+      "display_text": "초혼만 놓으면 영통구가 888쌍 더 많아요.",
+      "previous_reading_text": "초혼만 놓으면 영통구가 팔백팔십팔 쌍 더 많아요.",
+      "reading_text": "초혼만 놓으면 수원시 영통구가 팔백팔십팔 쌍 더 많아요.",
+      "reading_diff": [
+        {
+          "operation": "insert",
+          "before_start": 7,
+          "before_end": 7,
+          "after_start": 7,
+          "after_end": 11,
+          "before": "",
+          "after": " 수원시"
+        }
+      ],
+      "numeric_values": [
+        {
+          "display": "888쌍",
+          "reading": "팔백팔십팔 쌍",
+          "exact_value": "888",
+          "unit": "쌍",
+          "value_unchanged": true,
+          "reading_start": 17,
+          "reading_end": 24
+        }
+      ],
+      "claim_ids": [
+        "COMPOSITION-PAIR"
+      ]
+    },
+    {
+      "sentence_id": "I002-04",
+      "scene_id": "I002",
+      "display_text": "재혼 부부는 영통구 733쌍, 권선구 1,563쌍으로 방향이 바뀝니다.",
+      "previous_reading_text": "재혼 부부는 영통구 칠백삼십삼 쌍, 권선구 천오백육십삼 쌍으로 방향이 바뀝니다.",
+      "reading_text": "재혼 부부는 수원시 영통구가 칠백삼십삼 쌍이고, 수원시 권선구는 천오백육십삼 쌍으로 방향이 바뀝니다.",
+      "reading_diff": [
+        {
+          "operation": "insert",
+          "before_start": 7,
+          "before_end": 7,
+          "after_start": 7,
+          "after_end": 11,
+          "before": "",
+          "after": "수원시 "
+        },
+        {
+          "operation": "insert",
+          "before_start": 10,
+          "before_end": 10,
+          "after_start": 14,
+          "after_end": 15,
+          "before": "",
+          "after": "가"
+        },
+        {
+          "operation": "insert",
+          "before_start": 18,
+          "before_end": 18,
+          "after_start": 23,
+          "after_end": 25,
+          "before": "",
+          "after": "이고"
+        },
+        {
+          "operation": "insert",
+          "before_start": 19,
+          "before_end": 19,
+          "after_start": 26,
+          "after_end": 30,
+          "before": "",
+          "after": " 수원시"
+        },
+        {
+          "operation": "insert",
+          "before_start": 23,
+          "before_end": 23,
+          "after_start": 34,
+          "after_end": 35,
+          "before": "",
+          "after": "는"
+        }
+      ],
+      "numeric_values": [
+        {
+          "display": "733쌍",
+          "reading": "칠백삼십삼 쌍",
+          "exact_value": "733",
+          "unit": "쌍",
+          "value_unchanged": true,
+          "reading_start": 16,
+          "reading_end": 23
+        },
+        {
+          "display": "1,563쌍",
+          "reading": "천오백육십삼 쌍",
+          "exact_value": "1563",
+          "unit": "쌍",
+          "value_unchanged": true,
+          "reading_start": 36,
+          "reading_end": 44
+        }
+      ],
+      "claim_ids": [
+        "T2024-R12-REMARRIED",
+        "T2024-R13-REMARRIED"
+      ]
+    },
+    {
+      "sentence_id": "I002-05",
+      "scene_id": "I002",
+      "display_text": "이번에는 권선구가 830쌍 더 많습니다.",
+      "previous_reading_text": "이번에는 권선구가 팔백삼십 쌍 더 많습니다.",
+      "reading_text": "이번에는 수원시 권선구가 팔백삼십 쌍 더 많습니다.",
+      "reading_diff": [
+        {
+          "operation": "insert",
+          "before_start": 4,
+          "before_end": 4,
+          "after_start": 4,
+          "after_end": 8,
+          "before": "",
+          "after": " 수원시"
+        }
+      ],
+      "numeric_values": [
+        {
+          "display": "830쌍",
+          "reading": "팔백삼십 쌍",
+          "exact_value": "830",
+          "unit": "쌍",
+          "value_unchanged": true,
+          "reading_start": 14,
+          "reading_end": 20
+        }
+      ],
+      "claim_ids": [
+        "COMPOSITION-PAIR"
+      ]
+    },
+    {
+      "sentence_id": "I002-06",
+      "scene_id": "I002",
+      "display_text": "전체 규모가 비슷해도 통계에 담긴 부부의 구성은 이렇게 달라집니다.",
+      "previous_reading_text": "전체 규모가 비슷해도 통계에 담긴 부부의 구성은 이렇게 달라집니다.",
+      "reading_text": "전체 규모가 비슷해도 통계에 담긴 부부의 구성은 이렇게 달라집니다.",
+      "reading_diff": [],
+      "numeric_values": [],
+      "claim_ids": [
+        "COMPOSITION-PAIR"
+      ]
+    },
+    {
+      "sentence_id": "I002-07",
+      "scene_id": "I002",
+      "display_text": "지역을 이해할 때 전체 수와 그 안의 구성을 함께 살펴볼 이유예요.",
+      "previous_reading_text": "지역을 이해할 때 전체 수와 그 안의 구성을 함께 살펴볼 이유예요.",
+      "reading_text": "지역을 이해할 때 전체 수와 그 안의 구성을 함께 살펴볼 이유예요.",
+      "reading_diff": [],
+      "numeric_values": [],
+      "claim_ids": [
+        "COMPOSITION-PAIR"
+      ]
+    }
+  ],
+  "mapping_policy": "수원시를 붙인 정식 지명과 조사/접속어는 명시적 읽기문 변환. 화면 지명 약칭·원 수치·7개 문장 ID 유지. ASR 차이를 실제 발음 오류로 단정하지 않음.",
+  "pronunciation_display_abbreviation_mapping": [
+    {
+      "reading": "수원시 영통구",
+      "display": "영통구"
+    },
+    {
+      "reading": "수원시 권선구",
+      "display": "권선구"
+    },
+    {
+      "reading": "쌍이고,",
+      "display": "쌍,"
+    }
+  ],
+  "generation_limit": "one new free I002 chunk only; no new TTS for other25; no further cycle even if ASR differs",
+  "new_paid_calls_authorized": false,
+  "cash_cap_krw": 0,
+  "actual_listening_performed": false
+}

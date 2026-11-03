@@ -1,0 +1,49 @@
+{
+  "status": "preproduction_ready_pending_current_episode_credit_cap",
+  "checks": {
+    "exact48paragraphs": true,
+    "chapter7_count5797": true,
+    "semantic_cues156": true,
+    "no_guessed_timing": true,
+    "no_material_corrections": true,
+    "no_current_budget_authorization": true,
+    "no_voice_generation_ledger": true,
+    "exactLF_input_bytes_match_payload": true,
+    "independent_required_open_zero": true
+  },
+  "inputs": [
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/narration/jun-user-script-v1/narration_manifest.json",
+      "sha256": "19fceacda05c451df69103002ce6bd2cf23e53020383a6543b60cb03eec3a018"
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/narration/jun-user-script-v1/generation_input.json",
+      "sha256": "5290eff5c5724c807bc4062feab7be5889b8decea1316984e48f25b1fe32b9f5"
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/narration/jun-user-script-v1/caption_plan.json",
+      "sha256": "a4599eddf611db97bf549a87d2fe3d119093cb60323b8ef2ea890dec8061adf3"
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/narration/jun-user-script-v1/budget_proposal.json",
+      "sha256": "7fec822e88ce2418702f940b09c9dd296280ee55d65bda12d2ac76b076a64e42"
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/narration/jun-user-script-v1/generate.mjs",
+      "sha256": "8cdb5882f730ca163cb8d850417fe800e05cb7a74db1e2ba0eaf66dcaea08c6f"
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/narration/jun-user-script-v1/generation_readiness.json",
+      "sha256": "7818077aeaf197a34ef72d491c955b25ea40ca09fbbf4cb4c803c7df074c2b3e"
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/research/jun-user-script-v1/reviewed_claims.json",
+      "sha256": "d6cdad5fbc55b7c427e34472814a8470a350f50f9e8ae697daab2d3495a4bc69"
+    }
+  ],
+  "tts_post_calls": 0,
+  "actual_listening": false,
+  "full_render": false,
+  "required_fix_closed_by_producer": "JUN-IN-001: byte-level contract failed then passed after LF serialization fix; independent recheck pending",
+  "current_recommendation_recheck": "qa/jun-user-script-v1/recommendation_recheck_v2.json"
+}

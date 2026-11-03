@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C08P07",
+  "scene_id": "C08",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:07:45.699Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "ebdea417eb21f836373fb15bfebe865d26e1c51ae1fbf27ed7f0c1c02bb80e97",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "금리도 경계를 움직입니다. 전세대출은 연 이 퍼센트, 매매대출은 연 육 퍼센트로 놓으면 전세 순자산은 약 칠억천삼백만 원, 매매는 약 오억이천오백만 원으로 계산됩니다. 반대로 전세대출은 연 육 퍼센트, 매매대출은 연 이 퍼센트이면 매매가 약 육억구천팔백만 원으로 커집니다. 이때 월세 보증금대출 금리는 계속 연 사 퍼센트입니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 183,
+  "characters": 183,
+  "actual_credits": 73,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19183,
+    "character_limit": 40000,
+    "included_remaining": 20817,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:07:16.662Z",
+  "local_shadow_remaining_before": 20408,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "Rgmzz9EW3WRD8QiuFlr7",
+    "x-request-id": null,
+    "character-cost": "73",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:07:45 GMT"
+  },
+  "pcm_samples": 1068984,
+  "pcm_duration_s": 24.24,
+  "provider_last_spoken_end_s": 24.32,
+  "artifact_sha256": {
+    "paragraphs/C08P07/audio.mp3": "42beafc8e7f1f852a13b1a52d1b609abee1ebd8bb7db68221ec42a197713ab74",
+    "paragraphs/C08P07/audio.wav": "70ad2659e80f996f2b8f995dee5b2c6a88bb39511a4967624671cba0c84ef502",
+    "paragraphs/C08P07/alignment.json": "e8160b2ad83974fc4155ad6eb846674380f3e7194284329492d334f43e4f7e2e",
+    "paragraphs/C08P07/normalized_alignment.json": "e8160b2ad83974fc4155ad6eb846674380f3e7194284329492d334f43e4f7e2e"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 20335,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:07:50.963Z"
+}

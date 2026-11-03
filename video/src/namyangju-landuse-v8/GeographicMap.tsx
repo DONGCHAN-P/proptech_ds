@@ -1,0 +1,13 @@
+import React from 'react';
+import geo from '../../public/namyangju-map-led-v6/outside_geometry.json';
+import link from '../../public/namyangju-landuse-v8/geographic_linkage.json';
+export type Bounds=[number,number,number,number];
+export const colors={w1:'#2c74c8',w2:'#bd842e'};
+export function regionCenter(id:string){const r=link.regions.find(r=>r.id===id)!;const a=r.polygon_lonlat.slice(0,-1);return [a.reduce((s,p)=>s+p[0],0)/a.length,a.reduce((s,p)=>s+p[1],0)/a.length]}
+export function projection(bounds:Bounds,width:number,height:number){const [w,s,e,n]=bounds,k=Math.min((width-70)/((e-w)*.791),(height-70)/(n-s));return (p:number[])=>[width/2+(p[0]-(w+e)/2)*.791*k,height/2+((n+s)/2-p[1])*k]}
+export function GeographicMap({bounds,width,height,focus='all',compact=false}:{bounds:Bounds;width:number;height:number;focus?:string;compact?:boolean}){
+ const pr=projection(bounds,width,height),path=(pts:number[][])=>pts.map((p,i)=>{const q=pr(p);return `${i?'L':'M'}${q[0]},${q[1]}`}).join(' ');
+ const names:Record<string,string>={w1_north_block_area:'왕숙1 북부 안내위치',w1_south_block_area:'왕숙1 남부 안내위치',w2_block_area:'왕숙2 안내위치'};
+ return <svg width={width} height={height} style={{display:'block',background:'#eeede5',borderRadius:14}}><defs><clipPath id={`geoClip${width}${height}`}><rect width={width} height={height} rx={14}/></clipPath></defs><g clipPath={`url(#geoClip${width}${height})`}>{geo.paths.map((p,i)=><path key={i} d={path(p.points)} fill="none" stroke={p.kind==='water'?'#a2cddc':'#cec6b4'} strokeWidth={p.kind==='water'?3.3:1.2}/>)}{link.regions.map(r=>{const col=r.id.startsWith('w2')?colors.w2:colors.w1,[x,y]=pr(regionCenter(r.id)),active=focus==='all'||r.id===focus;return <g key={r.id} opacity={active?1:.48}><path d={path(r.polygon_lonlat)} fill={col} fillOpacity={active?.22:.08} stroke={col} strokeWidth={active?3:1.5} strokeDasharray="7 4"/>{x>20&&x<width-20&&y>20&&y<height-20?<text x={x+15} y={y-12} fontSize={compact?16:27} fontWeight={700} fill={col} stroke="#f8f6ee" strokeWidth={5} paintOrder="stroke">{compact?(r.id.startsWith('w2')?'왕숙2':r.id.includes('south')?'왕숙1 남부':'왕숙1 북부'):names[r.id]}</text>:null}</g>})}{[{label:'별내역',p:[127.1278172,37.6420348]},{label:'다산역',p:[127.1497626,37.6243286]},{label:'진접역',p:[127.2032505,37.7200538]},{label:'서울',p:[127.02,37.566]}].map(o=>{const [x,y]=pr(o.p);if(compact||x<20||x>width-70||y<25||y>height-30)return null;return <g key={o.label}><circle cx={x} cy={y} r={compact?3:5} fill="#5d6c75"/><text x={x+9} y={y-8} fontSize={compact?15:25} fill="#485c6b" stroke="#f5f3eb" strokeWidth={5} paintOrder="stroke">{o.label}</text></g>})}</g></svg>
+}
+export {link};

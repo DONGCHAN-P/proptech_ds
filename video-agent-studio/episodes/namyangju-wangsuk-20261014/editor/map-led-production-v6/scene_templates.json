@@ -1,0 +1,310 @@
+[
+  {
+    "scene_id": "M000",
+    "title": "같은 예산, 무엇을 기다릴 것인가",
+    "message": "이미 만들어진 도시와 기다리는 새집의 선택을 제시하고 지도·달력·광역대안 비교에 집중시킨다.",
+    "claim_ids": [
+      "W1-B17-PRICE",
+      "W2-A1-PRICE",
+      "W2-A3-PRICE",
+      "ALT-002"
+    ],
+    "source_script_revision": "script-v4-map-led",
+    "target_script_revision": "script-v4-hook-outside",
+    "timing_locked": false,
+    "from_frame": null,
+    "duration_frames": null,
+    "suggested_visuals": [
+      "official_plan",
+      "registered_map"
+    ],
+    "asset_selection": "explicit asset_ids per shot; no modulo/random fallback",
+    "music_role": "intro_hook"
+  },
+  {
+    "scene_id": "M001",
+    "title": "전체 토지계획도에서 시작하기",
+    "message": "전체 토지계획도에서 왕숙1·2와 기능 배치, 분석 범위를 먼저 파악한다.",
+    "claim_ids": [
+      "DEV-001",
+      "DEV-002",
+      "W1-A1-LOC",
+      "W1-A2-LOC",
+      "W1-A24-LOC",
+      "W1-B17-LOC",
+      "W2-A1-LOC",
+      "W2-A3-LOC"
+    ],
+    "source_script_revision": "script-v4-map-led",
+    "target_script_revision": "script-v4-hook-outside",
+    "timing_locked": false,
+    "from_frame": null,
+    "duration_frames": null,
+    "suggested_visuals": [
+      "official_plan",
+      "registered_map"
+    ],
+    "asset_selection": "explicit asset_ids per shot; no modulo/random fallback",
+    "music_role": "none"
+  },
+  {
+    "scene_id": "M002",
+    "title": "일자리는 지도의 어느 쪽에서 생기나",
+    "message": "남측 산업·환승 기능의 공간 장점과 2028 입주/2029 개별준공/2032 단계추진의 시차를 이해한다.",
+    "claim_ids": [
+      "MAP-JOBS-W1",
+      "MAP-RAIL-W1",
+      "DEV-005",
+      "DEV-006",
+      "DEV-007",
+      "W1-A24-LOC",
+      "W1-B17-LOC",
+      "W1-A24-TIME",
+      "W1-B17-TIME"
+    ],
+    "source_script_revision": "script-v4-map-led",
+    "target_script_revision": "script-v4-hook-outside",
+    "timing_locked": false,
+    "from_frame": null,
+    "duration_frames": null,
+    "suggested_visuals": [
+      "registered_map",
+      "completion_calendar"
+    ],
+    "asset_selection": "explicit asset_ids per shot; no modulo/random fallback",
+    "music_role": "none"
+  },
+  {
+    "scene_id": "M003",
+    "title": "철도는 개통 뒤와 입주 첫해를 따로 보기",
+    "message": "두 예정 환승 중심의 편의와 입주 첫해 기존 교통 연결을 함께 판단한다.",
+    "claim_ids": [
+      "MAP-RAIL-W1",
+      "MAP-RAIL-W2",
+      "MAP-GTX-TIME",
+      "MAP-NINE-TIME",
+      "DEV-008",
+      "LIV-010",
+      "LIV-011",
+      "W1-A24-LOC",
+      "W1-A24-TIME",
+      "W1-B17-LOC",
+      "W1-B17-TIME",
+      "W2-A1-LOC",
+      "W2-A1-TIME",
+      "W2-A3-LOC",
+      "W2-A3-TIME"
+    ],
+    "source_script_revision": "script-v4-map-led",
+    "target_script_revision": "script-v4-hook-outside",
+    "timing_locked": false,
+    "from_frame": null,
+    "duration_frames": null,
+    "suggested_visuals": [
+      "rail_status",
+      "registered_map",
+      "completion_calendar"
+    ],
+    "asset_selection": "explicit asset_ids per shot; no modulo/random fallback",
+    "music_role": "none"
+  },
+  {
+    "scene_id": "M004",
+    "title": "분양가는 어느 집의 어떤 가격인가",
+    "message": "84형 기준층 약6.4/6.9/7.3억과 작은 면적 상품을 분리해 예산을 읽는다.",
+    "claim_ids": [
+      "W1-B17-PRICE",
+      "W2-A1-PRICE",
+      "W2-A3-PRICE",
+      "ALT-SALE-A1",
+      "ALT-SALE-A3"
+    ],
+    "source_script_revision": "script-v4-map-led",
+    "target_script_revision": "script-v4-hook-outside",
+    "timing_locked": false,
+    "from_frame": null,
+    "duration_frames": null,
+    "suggested_visuals": [
+      "block_candidate",
+      "price_comparison"
+    ],
+    "asset_selection": "explicit asset_ids per shot; no modulo/random fallback",
+    "music_role": "none"
+  },
+  {
+    "scene_id": "M005",
+    "title": "학교와 상업시설로 하루를 그려보기",
+    "message": "학교·공원·복합 기능 배치와 2028/2029 학교 목표를 가족 동선에 대입한다.",
+    "claim_ids": [
+      "W1-A1-LIFE",
+      "W1-A1-SCHOOL",
+      "W1-A1-TIME",
+      "W1-A2-LIFE",
+      "W1-A2-SCHOOL",
+      "W1-A2-TIME",
+      "W1-A24-LIFE",
+      "W1-A24-SCHOOL",
+      "W1-A24-TIME",
+      "W1-B17-LIFE",
+      "W1-B17-SCHOOL",
+      "W1-B17-TIME",
+      "W2-A1-LIFE",
+      "W2-A1-SCHOOL",
+      "W2-A1-TIME",
+      "W2-A3-LIFE",
+      "W2-A3-SCHOOL",
+      "W2-A3-TIME"
+    ],
+    "source_script_revision": "script-v4-map-led",
+    "target_script_revision": "script-v4-hook-outside",
+    "timing_locked": false,
+    "from_frame": null,
+    "duration_frames": null,
+    "suggested_visuals": [
+      "registered_map",
+      "completion_calendar"
+    ],
+    "asset_selection": "explicit asset_ids per shot; no modulo/random fallback",
+    "music_role": "none"
+  },
+  {
+    "scene_id": "M006",
+    "title": "공급은 지도와 입주 달력을 같이 읽기",
+    "message": "여섯 블록의 입주예정 군집을 보고 초기생활과 공급중첩의 의미를 이해한다.",
+    "claim_ids": [
+      "DEV-001",
+      "W1-A1-TIME",
+      "W1-A2-TIME",
+      "W1-A24-TIME",
+      "W1-B17-TIME",
+      "W2-A1-TIME",
+      "W2-A3-TIME"
+    ],
+    "source_script_revision": "script-v4-map-led",
+    "target_script_revision": "script-v4-hook-outside",
+    "timing_locked": false,
+    "from_frame": null,
+    "duration_frames": null,
+    "suggested_visuals": [
+      "block_candidate",
+      "completion_calendar"
+    ],
+    "asset_selection": "explicit asset_ids per shot; no modulo/random fallback",
+    "music_role": "none"
+  },
+  {
+    "scene_id": "M007",
+    "title": "주변 아파트보다 싼가, 무엇을 바꾸는 선택인가",
+    "message": "같은84㎡급 대안에서 새집·기다림·현재 생활권을 교환하는 조건부 메리트를 판단한다.",
+    "claim_ids": [
+      "ALT-001",
+      "ALT-002",
+      "ALT-003",
+      "ALT-SALE-A1",
+      "ALT-SALE-A3",
+      "W1-B17-PRICE"
+    ],
+    "source_script_revision": "script-v4-map-led",
+    "target_script_revision": "script-v4-hook-outside",
+    "timing_locked": false,
+    "from_frame": null,
+    "duration_frames": null,
+    "suggested_visuals": [
+      "price_comparison",
+      "registered_map"
+    ],
+    "asset_selection": "explicit asset_ids per shot; no modulo/random fallback",
+    "music_role": "none"
+  },
+  {
+    "scene_id": "M007B",
+    "title": "남양주 밖에서는 무엇이 달라질까",
+    "message": "창릉·교산을 출근방향과 실제입주/철도/학교준비의 교환조건으로 비교하며 면적·예산차를 구분한다.",
+    "claim_ids": [
+      "OUT-CN-S5-PRICE",
+      "OUT-CN-S5-TIME",
+      "OUT-CN-S5-CLOSED",
+      "OUT-CN-SCHOOL",
+      "OUT-CN-RAIL",
+      "OUT-CN-DIRECTION",
+      "OUT-GS-A2-TYPE",
+      "OUT-GS-A2-TIME",
+      "OUT-GS-RAIL",
+      "OUT-GS-LIFE",
+      "OUT-GS-SCHOOL"
+    ],
+    "source_script_revision": "script-v4-map-led",
+    "target_script_revision": "script-v4-hook-outside",
+    "timing_locked": false,
+    "from_frame": null,
+    "duration_frames": null,
+    "suggested_visuals": [
+      "outside_locator",
+      "outside_price_comparison"
+    ],
+    "asset_selection": "explicit asset_ids per shot; no modulo/random fallback",
+    "music_role": "none"
+  },
+  {
+    "scene_id": "M008",
+    "title": "계획도 기준 입지 대장 후보와 실생활 대안",
+    "message": "B17/A3 입지대장 후보와 A1/A2/A24 실생활·예산 대안을 조건별로 좁힌다.",
+    "claim_ids": [
+      "MAP-RAIL-W1",
+      "MAP-RAIL-W2",
+      "W1-A2-LOC",
+      "W1-A2-TIME",
+      "W1-A2-LIFE",
+      "W1-A2-PRICE",
+      "W1-A2-SCHOOL",
+      "W1-A24-LOC",
+      "W1-A24-TIME",
+      "W1-A24-LIFE",
+      "W1-A24-PRICE",
+      "W1-A24-SCHOOL",
+      "W1-B17-LOC",
+      "W1-B17-TIME",
+      "W1-B17-LIFE",
+      "W1-B17-PRICE",
+      "W1-B17-SCHOOL",
+      "W2-A1-LOC",
+      "W2-A1-TIME",
+      "W2-A1-LIFE",
+      "W2-A1-PRICE",
+      "W2-A1-SCHOOL",
+      "W2-A3-LOC",
+      "W2-A3-TIME",
+      "W2-A3-LIFE",
+      "W2-A3-PRICE",
+      "W2-A3-SCHOOL"
+    ],
+    "source_script_revision": "script-v4-map-led",
+    "target_script_revision": "script-v4-hook-outside",
+    "timing_locked": false,
+    "from_frame": null,
+    "duration_frames": null,
+    "suggested_visuals": [
+      "block_candidate",
+      "registered_map"
+    ],
+    "asset_selection": "explicit asset_ids per shot; no modulo/random fallback",
+    "music_role": "none"
+  },
+  {
+    "scene_id": "M009",
+    "title": "내 생활에 맞는 조건으로 닫기",
+    "message": "좋은 배치·이용시점·감수할 가격을 동시에 맞춰 다음 자료를 읽는다.",
+    "claim_ids": [],
+    "source_script_revision": "script-v4-map-led",
+    "target_script_revision": "script-v4-hook-outside",
+    "timing_locked": false,
+    "from_frame": null,
+    "duration_frames": null,
+    "suggested_visuals": [
+      "registered_map",
+      "channel_outro"
+    ],
+    "asset_selection": "explicit asset_ids per shot; no modulo/random fallback",
+    "music_role": "outro"
+  }
+]

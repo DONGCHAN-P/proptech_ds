@@ -1,0 +1,166 @@
+{
+  "task_id": "writer-top20-8min-v2",
+  "role": "writer",
+  "status": "review_draft_complete_pending_user_script_approval_and_independent_QA",
+  "summary": "20→1위 20개 지역 검토 초안. 낭독문 4135자(공백 포함), 3182자(공백 제외). 총480초는 estimate이며 오디오 미확정. 19지역 변화=6증가13감소, 원미2023=null. 서울9·경기6·인천5. 보강verified2개 반영. 새 대본 승인 대기.",
+  "input_revisions": {
+    "brief.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "719bde90dbdc79afff1383d47feffb4f019959855ef676e82d6abae0fcd9f534"
+    },
+    "state.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "56734362e401d3555b007de91e686977e0f514a57639b603281ac2d8a33afd7c"
+    },
+    "research/top20-8min-v2/top20.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b"
+    },
+    "research/top20-8min-v2/ranks01_10_facts.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "a436794713cb97290701a909d6702aa2108311b0174d4168d9bbd2769c316c8d"
+    },
+    "research/top20-8min-v2/ranks11_20_facts.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "68b9c675fb41d91c0bb4216666c063b655523b615c678c33d235c28c2c5e4c84"
+    },
+    "research/top20-8min-v2/supplemental_facts.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "12b8bde1a9230b8056cb858f4cb0348d4065dcfc66c470d89b526c1e013e5ca8"
+    },
+    "visual/top20-8min-v2/maps/map_assets.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "dc3c9b07d3be714cc1bc962433e1ef96079239072dace536a194e9e54ff2261a"
+    },
+    "visual/top20-8min-v2/data_cards/data_card_assets.json": {
+      "revision": "top20-8min-v2",
+      "sha256": "27cba8c9c90b158967b70e65bb076f84d4436159035b6d2e32ef42d10efcf4d8"
+    }
+  },
+  "authoring_source": {
+    "path": "writer/top20-8min-v2/build_draft.py",
+    "sha256": "618f8caabbe1fae8a0978e3cd208a84524543baa9477950810ce3380fb26f7c0"
+  },
+  "outputs": [
+    {
+      "path": "writer/top20-8min-v2/script_v2.md",
+      "sha256": "9fab0db4d964439d9bc2152b94f82144c7995344c4fb07fa32a3173965bd4194",
+      "bytes": 21315
+    },
+    {
+      "path": "writer/top20-8min-v2/scene_proposals.json",
+      "sha256": "c6b7b660774ce6c69e2786aab28eb9c7f44c7441154af0a678cc60a98188e0f6",
+      "bytes": 99686
+    },
+    {
+      "path": "writer/top20-8min-v2/claim_map.json",
+      "sha256": "6683039f4782d1d8dbdf959adda616bdda9597f2f7b0b29f51cb4568cee0a4e2",
+      "bytes": 360018
+    },
+    {
+      "path": "writer/top20-8min-v2/issue_TOP20V2_REVIEW.json",
+      "sha256": "522dcdde4649f5ed8457ef74b9cde654766ee0eb351657832259c20dc0845efb",
+      "bytes": 2870
+    },
+    {
+      "path": "writer/top20-8min-v2/verification.json",
+      "sha256": "084ed5442be5f9a6770842a5eb55d103d01bf76a51286f14ec932dc78f6b2bd9",
+      "bytes": 6755
+    }
+  ],
+  "affected_scene_ids": [
+    "O001",
+    "O002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "I001",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012",
+    "I002",
+    "S013",
+    "S014",
+    "S015",
+    "S016",
+    "S017",
+    "I003",
+    "S018",
+    "S019",
+    "S020",
+    "S021",
+    "S022",
+    "C001",
+    "E001"
+  ],
+  "checks": [
+    {
+      "check": "낭독문자수·순위20개누락/중복·장면시드·2024값20개·19지역재계산·qualified제외·480초합계",
+      "result": "passed_local_consistency",
+      "evidence": "writer/top20-8min-v2/verification.json"
+    },
+    {
+      "check": "사용자 새 대본 승인",
+      "result": "pending",
+      "evidence": null
+    },
+    {
+      "check": "독립QA·2023원표화상·사진장소/권리·실제오디오정렬",
+      "result": "not_performed_by_writer",
+      "evidence": "writer/top20-8min-v2/issue_TOP20V2_REVIEW.json"
+    },
+    {
+      "check": "저장본 Markdown/JSON·근거 의존성·핸드오프해시 재대조",
+      "result": "passed_local_readback",
+      "evidence": "writer/top20-8min-v2/verification.json written_artifact_readback"
+    }
+  ],
+  "narration_character_count": {
+    "with_spaces_normalized": 4135,
+    "without_whitespace": 3182,
+    "method": "낭독문만 연결, 줄바꿈 등 연속 공백을1칸 정규화. 장면명·제목·화면메모 제외"
+  },
+  "rank_validation": {
+    "expected": 20,
+    "observed": 20,
+    "missing": [],
+    "duplicates": [],
+    "count2024_exact_matches": 20
+  },
+  "audio_and_timing": {
+    "estimated_total_s": 480,
+    "actual_duration_s": null,
+    "timing_locked": false,
+    "audio_created": false
+  },
+  "approval_status": {
+    "script": "pending_new_user_approval",
+    "approval_id": null
+  },
+  "open_issue_ids": [
+    "TOP20V2-REVIEW"
+  ],
+  "unresolved": [
+    "사용자 새 대본 승인",
+    "독립QA 및2023원표화상 대조",
+    "장소별 사진선택/권리 및지도·카드 픽셀 확인",
+    "음성선택·승인 후 실제길이/정렬"
+  ],
+  "next_role": "director → qa(대본/계산) → 사용자 script 결정; 승인 후 visual/narration",
+  "common_scene_proposal": "scene_proposals.json만 병합 제안; 공통파일 및기존writer/대본초안_v1.md 미수정",
+  "authorization": {
+    "audio": false,
+    "paid_generation": false,
+    "external_claude_transfer": false,
+    "render": false,
+    "upload": false
+  },
+  "skills_applied": [
+    "hyperframes-creative/references/narration.md (문체·숫자읽기만; 제작/CLI 미실행)"
+  ],
+  "created_at": "2026-11-01T22:18:36.117546+09:00"
+}

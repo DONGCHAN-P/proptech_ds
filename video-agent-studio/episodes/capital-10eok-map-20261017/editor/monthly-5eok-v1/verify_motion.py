@@ -1,0 +1,19 @@
+﻿from pathlib import Path
+import subprocess,json,hashlib
+from PIL import Image,ImageDraw,ImageFont
+import numpy as np
+P=Path(__file__).resolve().parent;E=P.parent.parent;O=E/'outputs/monthly-5eok-v1';R=E/'research/monthly-5eok-v1';B=Path('C:/Users/e2ken/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-124716-g054dffd133-win64-gpl/bin');v=O/'capital_5eok_monthly_2006-2026_v1.mp4';frames=sorted(set([0,89,90,95,96,965,966,967,968,969,970,971,1589,1590,1709]));expr='+'.join(f'eq(n\\,{f})' for f in frames);subprocess.run([str(B/'ffmpeg.exe'),'-v','error','-y','-i',str(v),'-vf','select='+expr,'-fps_mode','vfr','-frames:v',str(len(frames)),str(O/'encoded_%03d.png')],check=True);files={f:O/f'encoded_{i:03d}.png' for i,f in enumerate(frames,1)};fo=ImageFont.truetype(str(E/'visual/map-preview-v1/Pretendard-Regular.ttf'),18)
+for frame,name in [(0,'first'),(971,'motion'),(1709,'final')]:Image.open(files[frame]).resize((375,667),Image.Resampling.LANCZOS).save(O/f'phone375_{name}.png')
+full=Image.new('RGB',(7*375,705),'#030914');detail=Image.new('RGB',(7*375,330),'#030914')
+for i,f in enumerate(range(965,972)):
+ im=Image.open(files[f]);small=im.resize((375,667),Image.Resampling.LANCZOS);full.paste(small,(i*375,35));ImageDraw.Draw(full).text((i*375+8,8),'frame '+str(f),font=fo,fill='white');crop=im.crop((180,1040,930,1600)).resize((375,280),Image.Resampling.LANCZOS);detail.paste(crop,(i*375,35));ImageDraw.Draw(detail).text((i*375+8,8),'frame '+str(f),font=fo,fill='white')
+full.save(O/'motion_contact_phone375.png');detail.save(O/'motion_contact_detail.png');log=json.loads((O/'motion_frame_log.json').read_text(encoding='utf8'));summ=json.loads((R/'monthly_summary.json').read_text(encoding='utf8'));checks=[]
+for f,r in enumerate(log):
+ mi=0 if f<90 else 249 if f>=1590 else (f-90)//6;assert r['month_index']==mi and r['month']==summ[mi]['month'];assert r['actual_map_under']==summ[mi]['map_under'] and r['actual_map_observed']==summ[mi]['map_observed'];assert 0<=r['alpha_smoothstep']<=1 and not r['numbers_interpolated'];
+ if f:assert r['chart_time_position']>=log[f-1]['chart_time_position']
+for mi in range(250):assert log[95+mi*6]['alpha_smoothstep']==1
+# Verify genuine within-month RGB motion in encoded map pixels. Counters deliberately remain discrete.
+map_deltas=[]
+for a,b in zip(range(966,971),range(967,972)):
+ x=np.array(Image.open(files[a]).crop((100,780,980,1770))).astype(np.int16);y=np.array(Image.open(files[b]).crop((100,780,980,1770))).astype(np.int16);delta=float(np.abs(y-x).mean());assert delta>0;map_deltas.append({'frames':[a,b],'map_mean_abs_rgb_delta':delta})
+summary={'frames':len(log),'timeline_target':1710,'all_frame_actual_counters_match_month':True,'all_month_endpoints_alpha_one':True,'chart_cursor_monotone':True,'every_month_uses_6_frame_smoothstep':True,'no_numeric_price_or_count_interpolation':True,'native_positions_fixed':True,'motion_in_actual_encoded_map_verified':map_deltas,'actual_continuous_playback':False,'actual_listening':False};(O/'motion_validation.json').write_text(json.dumps(summary,indent=2),encoding='utf8');samples=[{'frame':f,'time_s':f/30,'file':files[f].name,'sha256':hashlib.sha256(files[f].read_bytes()).hexdigest()} for f in frames];(O/'encoded_samples.json').write_text(json.dumps({'video_sha256':hashlib.sha256(v.read_bytes()).hexdigest(),'samples':samples,'actual_continuous_playback':False},indent=2),encoding='utf8');(O/'final_summary.json').write_text(json.dumps({'month':summ[-1],'source_scope':'linked verified 8288 complexes out of transaction catalog9172','partial_month':True,'latest_contract_date':'2026-10-10','all_month_valid_source_transactions':1626292,'no_audio':True},ensure_ascii=False,indent=2),encoding='utf8');print({'sampled_frames':len(frames),'within_month_deltas':map_deltas,'final_month':summ[-1]})

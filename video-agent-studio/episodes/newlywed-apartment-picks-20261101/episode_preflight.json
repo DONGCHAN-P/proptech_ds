@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "status": "private_review_delivered_with_disclosed_limits",
+  "episode_id": "newlywed-apartment-picks-20261101",
+  "guide": "guides/영상제작_마스터가이드.md",
+  "detail_guide": "guides/제작_기본가이드.md",
+  "request_trace": "guides/영상제작_요청추적표.md",
+  "feedback_ledger": "guides/사용자_피드백_이력.md",
+  "input_contract": {
+    "narration_mode": "free_tts",
+    "original_user_script": null,
+    "original_user_script_sha256": null,
+    "proposed_script_changes": "writer/top20-8min-v2/script_v3.md",
+    "original_user_audio": null,
+    "timing_basis": "not_locked_no_audio",
+    "episode_specific_choices": [
+      "TOP20·8분 requested by user",
+      "2024 53-gu scope",
+      "20 authentic regional photos and period-matched geometry"
+    ],
+    "superseded_historical_defaults": [
+      "새 편에 과거 Jun 예산·음성을 자동 승계하지 않음",
+      "신도시 블록별 소개 순서를 강제하지 않음"
+    ]
+  },
+  "baseline": {
+    "previous_video": "https://youtu.be/eMK7LGoSkKE",
+    "current_video": null,
+    "sha256": null,
+    "script_revision": "video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-quality-v2\\main\\script_user_original.md",
+    "audio_revision": null,
+    "brand_intro": null,
+    "brand_outro": null,
+    "bgm": null,
+    "previous_script_sha256": "ef1d72153017a8e38b68958dadf9bbdc13d6faae5d456e935eb2fa51481b25b5",
+    "previous_outro_checked": "예산 다음 실제 아파트 선택, 같은5억대·7억대 입지/단지 비교 예고 본문 확인"
+  },
+  "approvals": {
+    "topic": {
+      "status": "authorized_by_current_direct_user",
+      "decision_id": "direct-user-20261101-top20-eight-minutes",
+      "artifact_hashes": {}
+    },
+    "script": {
+      "status": "authorized_by_latest_production_request",
+      "decision_id": "D009",
+      "artifact_hashes": {
+        "writer/top20-8min-v2/script_v3.md": "4cc70ef2ae3cabda13b560104dd96ef0df0fe1f815a5f1372ac680e729d3be17"
+      }
+    },
+    "budget": {
+      "status": "free_TTS_selected_by_user",
+      "cash_cap_krw": 0,
+      "paid_provider_calls_allowed": false,
+      "reference": "current async reply: 무료 TTS로 진행"
+    },
+    "completed": {
+      "status": "local_quality_verified_with_limits_for_private_review",
+      "artifact_hashes": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/main/top20_main_free_v5.mp4": "1cea67518687e604af5d89fd2aad4e9df1826d5460abaead780912be5f97f304",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/shorts/top20_promo_free_v3.mp4": "2d6d67e26e38345d1c9c2dd4db9728c7184d1a21ba2395ed1ba4700cbc0cd432",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/shorts/top20_analysis_free_v3.mp4": "6f4cac49d21af1dd934759faa140a1f760d60262ca179121e5483865b89ad3f1"
+      }
+    },
+    "pre_upload": {
+      "status": "executed_and_private_verified",
+      "decision_id": "D010",
+      "visibility": "private",
+      "artifact_hashes": {},
+      "scope": [
+        "main",
+        "promo_short",
+        "analysis_short"
+      ]
+    }
+  },
+  "story": {
+    "opening_question": "신혼부부가 많이 사는 수도권 지역은 어디일까?",
+    "order": [
+      "scope_2024_53_gu",
+      "countdown_20_to_1",
+      "stock_vs_change",
+      "composition",
+      "next_apartment_comparisons"
+    ],
+    "price_recommendation": "future_episode"
+  },
+  "visual_defaults": {
+    "dynamic_map_zoom": false,
+    "transient_location_insert": false,
+    "locator": "one_current_district_whole_plan_left_with_detail_rectangle",
+    "macro_block_pins": false,
+    "captions_white_box_body_continuous": true,
+    "caption_box_exceptions": [
+      "unvoiced_brand_intro",
+      "unvoiced_brand_outro",
+      "silent_CTA_hold"
+    ],
+    "time_explanations_horizontal_axis": true,
+    "map_labels_near_targets": true,
+    "ai_placeholder_requires_resolution_before_delivery": true,
+    "outro_gap_after_final_spoken_word_seconds": 3
+  },
+  "representative_previews": [
+    "regional_photo_map_count",
+    "stock_and_year_over_year_change",
+    "first_and_remarriage_composition"
+  ],
+  "facts_required": [
+    "newlywed_scope_and_old_boundary",
+    "ranking_and_comparison_counts",
+    "photo_place_and_capture_date",
+    "source_rights"
+  ],
+  "change_control": {
+    "issues": [],
+    "superseded_rules": [],
+    "unchanged_audio_reused": null,
+    "changed_scene_ids": [],
+    "single_timing_lock": null,
+    "package_frozen_before_hash": false
+  },
+  "qa": {
+    "timeline_font_bbox_and_stroke_all_cases": "unverified",
+    "actual_encoded_frames": "unverified",
+    "all_cut_boundaries_no_flash": "unverified",
+    "inset_matches_spoken_region": "unverified",
+    "station_locations": "unverified",
+    "leaders_do_not_cross": "unverified",
+    "semantic_caption_original_text_match": "unverified",
+    "protected_numbers_units_names": "unverified",
+    "caption_box_exceptions": "unverified",
+    "last_speech_plus_three_seconds": "unverified",
+    "full_decode": "unverified",
+    "continuous_playback_performed": false,
+    "actual_listening_performed": false,
+    "evidence_paths": [
+      "qa/top20-8min-v2/findings.json",
+      "qa/top20-8min-v2/media_followup.json"
+    ],
+    "required_open_issues": null,
+    "caption_display_mapping_and_numeric_value_match": "unverified",
+    "actual_block_plan_and_locator": "unverified",
+    "district_area_vs_planned_station_distinguished": "unverified"
+  },
+  "release": {
+    "longform": "planning_only",
+    "shorts": [],
+    "title_description_sources_chapters": "unverified",
+    "thumbnail": "unverified",
+    "actual_platform_privacy": "unverified",
+    "processing": "unverified",
+    "studio_copyright": "unverified",
+    "telegram_notice_receipt": null
+  },
+  "retention": {
+    "keep": [
+      "final_uploaded_files",
+      "reproduction_source_and_dependencies",
+      "raw_research",
+      "rights_sources",
+      "approval_and_QA_records",
+      "reusable_brand_maps_audio_templates"
+    ],
+    "delete_candidates_manifest": null,
+    "dependency_audit_complete": false,
+    "deletion_executed": false
+  },
+  "vertical_video": {
+    "config": "config/vertical_video_safe_area.json",
+    "profile": "cross_platform_conservative",
+    "bounds_font_validation": "required_before_render",
+    "ui_simulation": "required_before_release",
+    "actual_device_playback": "unverified",
+    "old_burned_in_subtitle_position_reusable": false
+  },
+  "channel_style_contract": {
+    "guide": "video-agent-studio/guides/채널_톤앤매너와_복기루프.md",
+    "tokens": "config/channel_style_tokens.json",
+    "baseline_primary": "namyangju-wangsuk-20261014/readability-cta-v15",
+    "baseline_secondary": "video/out/newtown-v14-release.mp4",
+    "loop": [
+      "freeze_actual_reference_frames_once",
+      "compare_same_message_scene",
+      "fix_style_and_information_hierarchy",
+      "independent_QA_three_representative_scenes",
+      "expand_to_full",
+      "review_all_cut_boundaries_and_changed_scenes"
+    ],
+    "external_references": "explanation techniques supplement channel grammar",
+    "visual_review_v2_is_final_style": false
+  },
+  "representative_style_QA": "required_before_full_render"
+}

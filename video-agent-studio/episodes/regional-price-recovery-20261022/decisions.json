@@ -1,0 +1,135 @@
+{
+  "episode_id": "regional-price-recovery-20261022",
+  "decisions": [
+    {
+      "id": "regional-research-script-20261022",
+      "scope": "Research and draft from collected statistics; continue supplementation",
+      "basis": "Direct user request; independent regional-data exploration, not tenure comparison",
+      "status": "authorized",
+      "created_at": "2026-10-21T16:33:01.829274+00:00"
+    },
+    {
+      "id": "regional-script-v2-20261022",
+      "status": "authorized_draft_scope_only",
+      "basis": "Latest direct user request: regional video script; use Claude maximum setting too",
+      "scope": "Preserve v1. Create v2 regional script, visual plan and independent factual QA. Codex owns final integration; external Claude has no file or shell tools.",
+      "version": "v2",
+      "script_sha256": "f4e006a65b69965e0e50728eecfeeebcc9ce3f3299e8647032c505b7384ccbfd",
+      "created_at": "2026-10-22T11:57:46.519140+00:00"
+    },
+    {
+      "id": "regional-claude-payload-v2-20261022",
+      "status": "explicitly_authorized",
+      "basis": "User answered: 집계 수치와 대본 전달 승인",
+      "prior_block_resolved": "Automatic review initially rejected external transfer pending explicit payload/destination permission; user subsequently provided that permission.",
+      "reviewable_payload": [
+        "outputs/script-review-v2/collaboration/verified_facts.json",
+        "outputs/script-review-v2/script_v2_codex_before_qa.md"
+      ],
+      "scope": "Only aggregate statistics and draft script to Claude Opus effort=max; no individual trades or credentials.",
+      "execution_status": "editorial_review_completed",
+      "created_at": "2026-10-22T11:57:46.519140+00:00"
+    },
+    {
+      "id": "regional-stage-boundaries-v2-20261022",
+      "status": "retained",
+      "scope": "Draft delivered is not script approval, paid-generation budget approval, finished video approval or upload permission. Public-release official-index crosscheck and factor causal tests remain separate.",
+      "created_at": "2026-10-22T11:57:46.519140+00:00"
+    },
+    {
+      "id": "regional-full-history-v3-20261023",
+      "status": "authorized_draft_scope_only",
+      "basis": "User requested full available transaction history since2006 and further collection",
+      "scope": "Preserve v1/v2/raw. Full valid-transaction statistics and full-history peaks/drawdowns/first-return episodes. No production approval.",
+      "script_sha256": "99b40e8730ee0f8fdf74402cffbe04b5b418540344e6d2a7175e6a01c3054664",
+      "script_decision_id": "00054f140c83",
+      "created_at": "2026-10-23T05:00:53.964866+00:00"
+    },
+    {
+      "id": "regional-claude-payload-v3-20261023",
+      "status": "explicitly_authorized",
+      "basis": "User reply: 새 집계·대본의 Claude 전달 승인",
+      "scope": "2006-2026Q2 seven-region aggregate packet and v3 draft to Claude Opus effort=max; no individual trades or credentials",
+      "prompt_sha256": "078325c6d99bafa2b40537581283b99dd7ec45aa4a66aed2fdd07339959c2600",
+      "execution_status": "completed",
+      "created_at": "2026-10-23T05:00:53.964866+00:00"
+    },
+    {
+      "id": "additional-regions-20261023",
+      "status": "authorized_running",
+      "scope": "Gwangju old-five-district geography, Ulsan, Chungbuk, Chungnam; 200601-202609; known-call cap8000 per day; no automated next-day restart",
+      "boundary_review": "Retired/parent district codes remain separate until dedup/geography checks",
+      "implementation_fix": "Atomic status write retries transient Windows reader-lock PermissionError; regression tests passed",
+      "created_at": "2026-10-23T05:00:53.964866+00:00"
+    },
+    {
+      "id": "regional-production-v1-20261023",
+      "status": "authorized_local_production",
+      "basis": "Direct user request: 이걸로 영상 제작 진행해줘",
+      "script_sha256": "99b40e8730ee0f8fdf74402cffbe04b5b418540344e6d2a7175e6a01c3054664",
+      "scope": "v3 script production, local assets/composition/previews/render preparation. Jun credit budget and upload remain separate.",
+      "created_at": "2026-10-23T05:36:33.500901+00:00"
+    },
+    {
+      "id": "regional-voice-deferred-20261023",
+      "status": "explicit_user_instruction",
+      "basis": "Async budget reply: 음성 생성 보류",
+      "scope": "No voice synthesis or paid requests. Continue full visual/caption review using provisional timing and existing local brand/music; no upload.",
+      "created_at": "2026-10-23T06:23:40.416790+00:00"
+    },
+    {
+      "id": "regional-insight-literature-pivot-20261023",
+      "created_at": "2026-10-23T08:14:14.436066+00:00",
+      "status": "explicit_research_authorization",
+      "basis": [
+        "차트를 읽는 반복 대신 지역별 상승과 하락의 원인 분석",
+        "뭘 말할건지를 먼저 정리",
+        "금리 외 복잡한 이유와 부동산 논문 조사 요청"
+      ],
+      "scope": "Read scholarly/official research and produce mechanisms, evidence strength, counterevidence and testable data plans. Preserve original v3/media. No new script approval, paid synthesis, render or upload."
+    },
+    {
+      "id": "regional-literature-local-only-20261023",
+      "created_at": "2026-10-23T09:29:50.794400+00:00",
+      "status": "explicit_user_instruction",
+      "scope": "This literature report only: local viewing; no Telegram transmission. Other delivery preferences unchanged.",
+      "report_sha256": "8c8ba9faff955bcd7f6085f80f822d3267cc071dde0f03a18b6a8c1ee398d492"
+    },
+    {
+      "id": "regional-literature-script-v1-20261023",
+      "status": "approved_by_explicit_reply",
+      "basis": "이 대본으로 화면 제작 진행",
+      "scope": "8-scene visuals and local visual-review render; voice generation remains on hold; no upload",
+      "artifact_hashes": {
+        "영상구성안.md": "9d6ee0848cf0159ce39a5ac661c1ca060a2439d2b08b2cc5df08b625c8fa8bf3",
+        "내레이션_초안.md": "5f40c29d4a3e0ef5255ade11eaa63cb04c8093e2c3d1d0296873126707a26d9b",
+        "인용근거.json": "812bbde2d80476111ae1f9e5e2882bb94b3eb85c615910003b98e6015bfd3151",
+        "장면표.json": "d61f0b1d9711e720929f0f594236c840fea782fa65cad30e9c9a13e6b437e8a9"
+      },
+      "independent_text_qa": {
+        "path": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/literature-video-v1/recheck.json",
+        "sha256": "2543519d2e736c6ca36f3df18c14cd282b53ed2d002c64bca9e9187c160e325e",
+        "critical_open": 0,
+        "required_open": 0,
+        "recommended_open": 0,
+        "scope": "Narration and treatment text review plus changed-paragraph recheck; media unreviewed"
+      },
+      "local_delivery": true,
+      "voice_hold_preserved": true,
+      "created_at": "2026-10-23T09:52:40.314166+00:00",
+      "script_sha256": "5f40c29d4a3e0ef5255ade11eaa63cb04c8093e2c3d1d0296873126707a26d9b",
+      "at_utc": "2026-10-23T10:29:51.382897+00:00"
+    },
+    {
+      "id": "regional-literature-visual-v1-completed-20261023",
+      "status": "review_ready_not_upload_approval",
+      "basis": "User authorized visuals for approved literature script; local completion receipt",
+      "video_sha256": "da4490634c89cd371065bc293659e3a974a37a366766dd2902fb6319f76635ee",
+      "script_sha256": "5f40c29d4a3e0ef5255ade11eaa63cb04c8093e2c3d1d0296873126707a26d9b",
+      "duration": 568.266667,
+      "narration_present": false,
+      "qa_required_open": 0,
+      "at_utc": "2026-10-23T10:53:40.464600+00:00"
+    }
+  ]
+}

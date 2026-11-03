@@ -1,0 +1,28 @@
+{
+  "revision": "methods-v1",
+  "as_of": "2026-10-20",
+  "checked_at": "2026-10-20",
+  "scope": "유사 분석·회계 설계·ETF 총수익 자료 경로. 실제 역사 수익 및 승패 미산출",
+  "sources": [
+    {"claim_id":"M01","sentence":"원리금 전체는 회수 불가능한 소유 비용이 아니다.","url":"https://pwlcapital.com/rent-or-own-your-home-5-rule/","location":"What’s To Recover","reference_date":"2019년 설명","status":"verified"},
+    {"claim_id":"M02","sentence":"5% 규칙은 저자의 세금·유지·자본비용 가정에 기초하며 한국 고정 상수로 검증된 것이 아니다.","url":"https://pwlcapital.com/rent-or-own-your-home-5-rule/","location":"Estimating Taxes and Maintenance / Calculating Cost of Capital","reference_date":"2019-04 금리 가정","status":"qualified"},
+    {"claim_id":"M03","sentence":"캐나다 2005~2024 PWL 모형은 아파트 자료와 지역별 비교 및 투자 실행·수수료 민감도를 다룬다.","url":"https://pwlcapital.com/wp-content/uploads/2025/08/PWL-Capital-Renting-vs.-Owning-a-Home-in-Canada-2005-2024.pdf","location":"인쇄 7~15쪽","reference_date":"2025-09 보고서 / 2005-2024 표본","status":"verified"},
+    {"claim_id":"M04","sentence":"PWL The Case for Renting은 임차와 자본 투자 기회를 함께 검토한다.","url":"https://pwlcapital.com/the-case-for-renting/","location":"본문 및 저자 보고서 링크","reference_date":"2017 보고서","status":"verified"},
+    {"claim_id":"M05","sentence":"Rate of Return on Everything은 16개 선진국 1870~2015 자산군 총수익 연구다.","url":"https://www.frbsf.org/research-and-insights/publications/working-papers/2017/12/the-rate-of-return-on-everything-1870-2015/","location":"초록","reference_date":"2017-12","status":"verified"},
+    {"claim_id":"M06","sentence":"주택 총수익에는 가격 변화와 비용 차감 임대료 또는 귀속임대료가 포함된다.","url":"https://www.frbsf.org/research-and-insights/blog/sf-fed-blog/2018/2/5/rate-of-return-housing-equities-safe-assets/","location":"주택의 두 수익 구성 문단","reference_date":"2018-02-05","status":"verified"},
+    {"claim_id":"M07","sentence":"주택구입 자금의 투자 선택에는 사용까지 남은 기간을 고려한다.","url":"https://ownyourfuture.vanguard.com/content/en/learn/financial-planning/the-keys-to-buying-a-home.html","location":"down payment saving 5단계","reference_date":"현재 공개 페이지","status":"verified"},
+    {"claim_id":"M08","sentence":"S&P 총수익지수는 가격 변동과 배당 재투자를 반영한다.","url":"https://www.spglobal.com/spdji/en/methodology/article/index-mathematics-methodology/","location":"Derived Indices","reference_date":"현재 공개 방법론","status":"verified"},
+    {"claim_id":"M09","sentence":"S&P500 TR은 구성종목 배당락일 배당 재투자를 설명한다.","url":"https://www.spglobal.com/spdji/en/education/article/faq-sp-500-dividend-points-index/","location":"S&P500 Total Return 설명","reference_date":"현재 공개 FAQ","status":"verified"},
+    {"claim_id":"M10","sentence":"FRED SP500은 배당 없는 가격지수이며 일별 과거 제공기간이 제한된다.","url":"https://fred.stlouisfed.org/series/SP500","location":"Notes","reference_date":"현재 계열 설명","status":"verified"},
+    {"claim_id":"M11","sentence":"DEXKOUS는 일별 미화 1달러당 원화 환율이다.","url":"https://fred.stlouisfed.org/series/DEXKOUS","location":"Units / Frequency","reference_date":"현재 계열 설명","status":"verified"},
+    {"claim_id":"M12","sentence":"Shiller 월자료 설명은 가격·배당·이익·CPI를 포함하지만 이번에 원파일은 취득하지 않았다.","url":"https://www.econ.yale.edu/~shiller/data.htm","location":"검색 추출 설명만 확인 / 본문 열기 오류","reference_date":"현재 검색 추출","status":"qualified"},
+    {"claim_id":"M13","sentence":"VOO 공식 성과는 분배금 재투자, 세전, 비용 차감 후 기준이다.","url":"https://institutional.vanguard.com/assets/corp/fund_communications/pdf_publish/us-products/fact-sheet/F0968.pdf","location":"1쪽 각주2","reference_date":"접근한 공식 팩트시트","status":"verified"},
+    {"claim_id":"M14","sentence":"2020년 이후 과세대상 국내·국외주식 손익통산과 합산 연 250만원 기본공제 안내가 있다.","url":"https://i.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=8800&mi=12274","location":"국내·국외주식 손익통산 허용","reference_date":"2020-01-01 이후 양도분","status":"verified"},
+    {"claim_id":"M15","sentence":"국세청은 국외 일반 주식 국세 세율 20%를 안내한다. 지방세와 상품 적용은 추가 확인한다.","url":"https://i.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7711&mi=2312","location":"국외 주식등 표","reference_date":"현재 안내","status":"qualified"},
+    {"claim_id":"M16","sentence":"국내 상장 해외 ETF 일반계좌 매매차익을 배당소득 과세로 안내하는 운용사 자료가 있다.","url":"https://www.samsungfund.com/etf/pension/mediation-isa.do","location":"FAQ 및 일반계좌 사례","reference_date":"2026-08 심의 페이지","status":"qualified"}
+  ],
+  "unresolved": ["SPTR/실제 ETF 2016~최신 공통완료월 월자료 미취득", "연도별 ETF 과세·배당 원천세 상세 미검증", "NYT 원문 접근 실패", "국내 유사 실증 모형 확보 미완료", "전세 공식금리 계열의 2016 소급 금지: 자료 담당 원출처와 시작월을 최종 통합 시 연결"],
+  "model_checks_proposed": ["equal initial wealth before costs", "equal monthly budget including buyer investment surplus", "principal cash reduction equals debt reduction", "deposit changes match deposit asset changes", "no imputed rent added to owner cash flow", "no opportunity return double count", "terminal remaining debt computed from monthly amortization, not hardcoded", "monthly cash deficit feasibility", "liquidation versus continuing residence separated"],
+  "affected_scene_ids": [],
+  "scene_status": "미배정"
+}

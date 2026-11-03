@@ -1,0 +1,62 @@
+{
+  "paragraph_id": "C02P01",
+  "scene_id": "C02",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:01:40.636Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "3dbe4fbbd9493cb69f4834b72e4dc6e3639001a09f33a06c7f33d4967f9b2c27",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "먼저 비교의 출발선을 맞추겠습니다. 세 가구는 집의 면적과 위치, 생활 편의가 같은 것으로 둡니다. 공통 생활비를 지출한 뒤 주거비와 저축에 쓸 수 있는 돈이 매달 삼백만 원입니다. 전기나 수도처럼 같은 집에 살면 공통으로 드는 돈은 동일하게 처리합니다. 집주인과 임차인이 다르게 부담하는 비용만 따로 넣습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 174,
+  "characters": 174,
+  "actual_credits": 70,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17505,
+    "character_limit": 40000,
+    "included_remaining": 22495,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "UNY22AMCa3fT1fsD0sFn",
+    "x-request-id": null,
+    "character-cost": "70",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:01:39 GMT"
+  },
+  "pcm_samples": 931392,
+  "pcm_duration_s": 21.12,
+  "provider_last_spoken_end_s": 21.2,
+  "artifact_sha256": {
+    "paragraphs/C02P01/audio.mp3": "f87e3ce340d092ca47e64b30eeba81a121a026c8c83f81b9f5d38a2bb972ea33",
+    "paragraphs/C02P01/audio.wav": "640626fa2ee13179ae4125be1fec9275d65cb12e4f4d5241cf3aff929b7dae32",
+    "paragraphs/C02P01/alignment.json": "d977816eab56b0169fc37de4fbf982cb37f3f668f5711056efff6d0b822439d5",
+    "paragraphs/C02P01/normalized_alignment.json": "d977816eab56b0169fc37de4fbf982cb37f3f668f5711056efff6d0b822439d5"
+  },
+  "account_after": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17702,
+    "character_limit": 40000,
+    "included_remaining": 22298,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_observed_delta": 197,
+  "completed_at_utc": "2026-10-26T06:01:46.598Z"
+}

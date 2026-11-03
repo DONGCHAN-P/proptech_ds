@@ -1,0 +1,90 @@
+{
+  "id": "S21",
+  "duration": 12,
+  "title": "5. 준비금 4000만원, 어디에 얼마나 쓸까",
+  "condition": "6억6000만원 · 일반적인 1주택 취득 · 전용 85㎡ 이하 · 감면 없음 · 일반과세 중개사",
+  "events": [
+    {
+      "at": 1,
+      "show": [
+        "tax",
+        "edu",
+        "taxsum"
+      ]
+    },
+    {
+      "at": 3.5,
+      "show": [
+        "broker",
+        "broker-basis"
+      ]
+    },
+    {
+      "at": 5.5,
+      "show": [
+        "sum",
+        "cost-bar-group"
+      ],
+      "fills": [
+        "cost-bar"
+      ]
+    },
+    {
+      "at": 7.5,
+      "show": [
+        "remaining",
+        "remaining-bar-group"
+      ],
+      "fills": [
+        "remaining-bar"
+      ]
+    }
+  ],
+  "cues": [
+    [
+      0,
+      "아까 빼놓은 준비금도 한번 확인해볼게요."
+    ],
+    [
+      1,
+      "감면이 없는 경우로 계산하면 취득세와\n지방교육세가 합쳐서 약 1천16만 원입니다."
+    ],
+    [
+      3.5,
+      "일반과세 중개사의 부가세까지\n가정하면 약 290만 원이고요."
+    ],
+    [
+      5.5,
+      "두 항목만 약 1천307만 원입니다."
+    ],
+    [
+      7.5,
+      "남은 약 2천693만 원 안에서 등기 관련 비용,\n이사, 가전과 가구, 비상금 등을 배분하는 거예요."
+    ]
+  ],
+  "anchor_events": {
+    "S21.b01": 1,
+    "S21.b02": 3.5,
+    "S21.b03": 5.5,
+    "S21.b04": 7.5
+  },
+  "source": "자료: 지방세법 제11·151조 · 서울시 중개보수 요율표 | 원고의 6.6억 사례 조건",
+  "samples": [
+    0,
+    1.7,
+    4.2,
+    6.2,
+    8.2,
+    11.5
+  ],
+  "cue_ids": [
+    "P047Q01",
+    "P047Q03",
+    "P048Q02",
+    "P048Q03",
+    "P048Q05"
+  ],
+  "caption_policy": "Exact supplied display_lines, selected cues only. Preview seconds are NOT narration synchronization.",
+  "timing_basis": "preview_only_unlocked",
+  "audio": null
+}

@@ -1,0 +1,82 @@
+{
+  "version": "outside-comparisons-v6",
+  "as_of": "2026-10-15",
+  "scene_id": "M007B",
+  "selection": "창릉은 같은84 일반공공분양·교산은 다른 출근방향과 기반시설 준비기간을 비교하는 서로 다른 역할",
+  "regions": [
+    {
+      "id": "changneung-s5",
+      "name": "고양창릉 S5",
+      "role": "같은84㎡ 일반공공분양 가격과 서울 서북부 교통축 비교",
+      "housing_product": "일반 공공분양",
+      "price_claim": "OUT-CN-S5-PRICE",
+      "price_84_krw": 769980000,
+      "price_basis": "84A84.64㎡5층~최상층 기본형·확장/옵션/세금 별도",
+      "budget_implication": "왕숙B17 6.4411억·왕숙2A1 6.9363억·A3 7.3245억과 같은 층구간 기본형으로 볼 때 추가예산 필요. 단지·면적·연도 차이 존재, 실거래 가격차 아님.",
+      "move_in_target": "2028-01",
+      "rail_target": "2030 GTX-A 창릉역;2031 고양은평선은 지구계획",
+      "infrastructure_readiness": "S5 원공고 신설유치원·초등학교2028.03 목표로 초기 입주와약2개월 차이; 중·고 미정. 상업시설 개별 개점일 미확인.",
+      "direction_fit": "서울 은평·마포·서울역 방향의 생활·출근축을 검토하는 사람. GTX-A 신설역은 입주 첫날 이용 수단으로 확정하지 않는다.",
+      "map": {
+        "lon": 126.8688334,
+        "lat": 37.6231684,
+        "status": "qualified",
+        "source": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&mi=1027&uppAisTpCd=05&panId=0000060803",
+        "meaning": "LH 안내지도 기준점; 출입구·경계·GTX역좌표 아님"
+      },
+      "claim_ids": [
+        "OUT-CN-S5-PRICE",
+        "OUT-CN-S5-TIME",
+        "OUT-CN-SCHOOL",
+        "OUT-CN-RAIL",
+        "OUT-CN-DIRECTION"
+      ]
+    },
+    {
+      "id": "gyosan-a2",
+      "name": "하남교산 A2",
+      "role": "서울 동남권 출근 방향·기존도심 접점·철도 준비기간 비교",
+      "housing_product": "민간참여 일반 공공분양",
+      "price_84_krw": null,
+      "price_basis": "확인 공고는51~59㎡.84㎡ 동일면적 가격비교 제외",
+      "move_in_target": "2029-06",
+      "rail_target": "2032 송파하남선3호선 연장",
+      "infrastructure_readiness": "기존5호선·하남시청·천현초 접점은 있으나 학교·공원·상업 신설시설은 개별 준비시점을 따져야 함. 초1·중1 개교 전 임시학교 배치계획 존재.",
+      "direction_fit": "송파·강동 등 서울 동남권에서 일하고 기존하남도심 이용을 함께 따지는 사람. 왕숙GTX-B·9호선과 목적지가 다르므로 단순 우열 없음.",
+      "map": {
+        "address": "경기도 하남시 천현동130 일원",
+        "lon": null,
+        "lat": null,
+        "status": "qualified",
+        "source": "https://www.prugio.com/hb/2025/gyosan/assets/pdf/교산푸르지오더퍼스트_입주자모집공고.pdf",
+        "meaning": "공고 주소만 확인. 출입구/예정역 좌표 미검증이므로 임의 핀 금지"
+      },
+      "claim_ids": [
+        "OUT-GS-A2-TYPE",
+        "OUT-GS-A2-TIME",
+        "OUT-GS-RAIL",
+        "OUT-GS-LIFE",
+        "OUT-GS-SCHOOL"
+      ]
+    }
+  ],
+  "narrative": "왕숙을 고를 때 남양주 안의 가격만 볼 필요는 없습니다. 서울 서북부로 출근한다면 창릉도 함께 보되 같은84㎡ 일반공공분양은 약7.7억으로 예산을 더 잡아야 합니다. 동남권이라면 교산의3호선 연장과 기존5호선 접점을 볼 수 있습니다. 다만 확인된교산A2는51~59㎡여서84㎡ 가격 우열은 말할 수 없습니다. 세 곳 모두 입주일과 새 철도·학교·상가가 준비되는 날을 한 날짜로 묶어 판단하면 안 됩니다.",
+  "comparison_limits": [
+    "모두 현재 신청가능 상품으로 소개하지 않음",
+    "창릉S5 2025원공고와 왕숙2025/2026공고 가격은 분양시점·타입이 다름",
+    "창릉S3 이익공유형84 약7억을 일반공공분양 가격표에 섞지 않음",
+    "철도 개통 목표와 개별역 출입구·버스 연결·실제 통근분 미검증",
+    "교산84가격 미확인; 창릉S5상업시설별 준비일 미확인",
+    "지도출입구·경계 미확인 부분은 정확한 블록폴리곤처럼 그리지 않음"
+  ],
+  "media_rights": {
+    "official_documents": "연구용 원문 보존. LH/푸르지오 도면·CG의 상업 영상 재사용 허락 미검증",
+    "usable": "팩트·주소·공식안내점으로 독립 도식 작성 가능. 원본 홍보이미지 재사용은 별도 확인",
+    "goyang_press": "고양시 KOGL4 자료 이미지는 상업영상 소스로 사용하지 않음"
+  },
+  "sources_extra": [
+    "https://www.myhome.go.kr/hws/portal/bbs/selectBoardHappyNewsDetailView.do?nttId=795",
+    "https://xn--3-3u6ey6lv7rsa.kr/kor/CMS/Board/Board.do?board_seq=466&mCode=MN024&mgr_seq=12&mode=view&page=1",
+    "https://www.hanam.go.kr/mayor/selectCvplRceptWebView.do?cvplCode=MINWON5&key=10228&listTy=N&pageIndex=7&pageUnit=10&rceptNo=10639&searchCnd=all"
+  ]
+}

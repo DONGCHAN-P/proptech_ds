@@ -1,0 +1,155 @@
+{
+  "task_id": "RPR-PROD1-EDITOR",
+  "role": "editor",
+  "status": "production_preparation_complete_provisional_not_final_video",
+  "input_revisions": {
+    "video-agent-studio\\episodes\\regional-price-recovery-20261022\\outputs\\script-review-v3\\script_v3.md": "99b40e8730ee0f8fdf74402cffbe04b5b418540344e6d2a7175e6a01c3054664",
+    "video-agent-studio\\episodes\\regional-price-recovery-20261022\\outputs\\script-review-v3\\scenes_v3.json": "2ce58a0934749ce02190ed4595d8d1ed0cb4b73c5577770c4e469a7a7fe37615",
+    "video-agent-studio\\episodes\\regional-price-recovery-20261022\\visual\\production-v1\\chart_data.json": "3731da4b839424f7c12a948c6316a0b0ac29cec99aa42c6d6855b832fe7c1899",
+    "video-agent-studio\\episodes\\regional-price-recovery-20261022\\outputs\\production-v1-jun\\data_contract.md": "aee28cab251474e7b9817f0aca2219f49d539f2fc2beb83c75a223fe46566211",
+    "config\\channel_style_tokens.json": "7c9a9edc4c70139721fc585dd73f73a9ea7cdf22235918fb93f74e9730e2a5be"
+  },
+  "outputs": [
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/index.html",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/BRIEF.md",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/STORYBOARD.md",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/frame.md",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/beat_manifest.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/timing_resolved.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/assembly_plan.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/project_manifest.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/editor/production-v1/README.md",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/editor/production-v1/placement_guide.md",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/representative_contactsheet.png",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/full2006paths_provisional_v1.mp4",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/incheon2008-2016recovery_provisional_v2.mp4",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/rawmedianvsindex_provisional_v1.mp4",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/incheon2008-2016recovery_provisional_v3.mp4",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/representative_contactsheet_v3.png",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/editor/production-v1/handoff_fix.json"
+  ],
+  "selected_previews": [
+    {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/full2006paths_provisional_v1.mp4",
+      "sha256": "b09e9d14dc8680a6f72a9a8f1ab44de495bfb520afe6bc7d1269c202170d8361",
+      "duration_seconds": 8,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/incheon2008-2016recovery_provisional_v3.mp4",
+      "sha256": "1d03c38d53853a2a97ce22c4b03c6a81a753c5971fc1842cb0d3d045cdb699f0",
+      "duration_seconds": 8,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/rawmedianvsindex_provisional_v1.mp4",
+      "sha256": "c4aafd09a93a7249664ecbfa46b9ba38941d485c253fd7bd4fcf9f83c2aa2f52",
+      "duration_seconds": 8,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": "30/1",
+      "audio_streams": 0
+    }
+  ],
+  "affected_scene_ids": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012"
+  ],
+  "checks": [
+    {
+      "check": "approved data and script binding / 12 scenes / 39 beats / 137 cues",
+      "result": "pass",
+      "evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/timeline_validation.json"
+    },
+    {
+      "check": "HyperFrames 0.8.181 check (browser actually ran)",
+      "result": "pass_with_6_advisories",
+      "evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/hyperframes_check.json"
+    },
+    {
+      "check": "3 original preview streams/full decode",
+      "result": "pass_reused_for_unchanged_two",
+      "evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/preview_technical.json"
+    },
+    {
+      "check": "Incheon v2 FFprobe / 240 decoded frames / motion pixel difference",
+      "result": "pass",
+      "evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/media_validation.json"
+    },
+    {
+      "check": "actual encoded representative frames / source below caption",
+      "result": "pass_sampled_only",
+      "evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/visual_review.json"
+    },
+    {
+      "check": "animation map",
+      "result": "offline_source_audit_106_chart_drivers",
+      "evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/animation_map.json"
+    },
+    {
+      "check": "actual listening and continuous playback",
+      "result": "not_performed_silent_previews",
+      "evidence": null
+    }
+  ],
+  "open_issue_ids": [],
+  "unresolved": [
+    "actual Jun audio and timing lock pending budget approval",
+    "body provisional duration 837.7s is not measured voice duration",
+    "display numeric/units caption normalization and actual pronunciation/naturalness pending",
+    "full body and approved music mix/final brand assembly not rendered",
+    "final assembly helper prepared but unexecuted until actual audio; all cut boundaries and last speech+3s need encoded verification",
+    "independent QA and public-release dependencies remain with director"
+  ],
+  "next_role": "director -> narration actual timing lock -> editor actual assembly -> independent QA",
+  "preserved_other_ownership": true,
+  "state_scenes_decisions_modified": false,
+  "full_length_render_performed": false,
+  "paid_or_cloud_generation_calls": 0,
+  "uploads_or_external_messages": 0,
+  "tool_limitations": {
+    "skills_update": "director initial EACCES/network/cache failure and escalated Unknown skill(s): general-video; installed docs actually read; no repeat update; init auto-install interrupted",
+    "usage": "director reported unknown/usage_request_failed; no allowance guessed",
+    "catalog": "line chart query returned [] once; local authored chart layouts used",
+    "animation_map_helper": "missing local @hyperframes/producer + @hyperframes/core; no npm latest bootstrap; offline authored-job audit stored",
+    "hyperframes_history": "global history write EPERM in sandbox; local check JSON and PNG evidence retained",
+    "capture": "full2006paths v1 drawElement self-verification fell back to screenshot as director reported; Incheon v2 drawElement hardware capture self-verification passed, 11.8s render"
+  },
+  "check_advisories": {
+    "count": 6,
+    "details": [
+      "caption background lacks stable Studio edit id",
+      "137 captions on one deliberate caption track",
+      "six final-scene beats on one visual track",
+      "three repeated same-source emoji discovery warnings; timed scene visibility keeps one per beat"
+    ],
+    "not_a_zero_warning_or_full_review_claim": true
+  },
+  "exact_commands_document": "video-agent-studio/episodes/regional-price-recovery-20261022/editor/production-v1/README.md",
+  "brand_policy": "reuse manifest hashes; 150 intro / 300 outro video frames at30fps; outro starts at ceil((last_actual_spoken_end+3)*30)/30 relative to body plus 5s intro; no guessed final assembly",
+  "superseded_preview": "Incheon v1 and original 24s concat remain historical; use selected v2 and current contactsheet",
+  "latest_fix": "video-agent-studio/episodes/regional-price-recovery-20261022/editor/production-v1/handoff_fix.json",
+  "latest_fix_status": "ready_for_independent_recheck"
+}

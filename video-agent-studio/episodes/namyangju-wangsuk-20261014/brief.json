@@ -1,0 +1,65 @@
+{
+  "episode_id": "namyangju-wangsuk-20261014",
+  "mode": "enhance_video_editorial_rebuild",
+  "topic": "남양주 소개: 기존 생활권과 왕숙1·2의 연결",
+  "input_revision": "hook-outside-comparisons-v6",
+  "requested_deliverables": [
+    "근거 검증",
+    "기획",
+    "검토용 대본"
+  ],
+  "notes": [
+    "사용자 직접 요청으로 주제 선택 및 조사·대본 작업 착수. 기존 대본 및 방향 변경 허용.",
+    "남양주 전체 생활권과 왕숙을 연결. 자료의 13분은 미확정 제안.",
+    "2026-10-15 explicit user visual quality correction: inherit previous v14 actual production, mix real photos/maps/GPT generated concepts/motion. Preserve approved script/audio."
+  ],
+  "authorization": {
+    "research": true,
+    "script_drafting": true,
+    "paid_generation": true,
+    "publication": false,
+    "external_audio_transmission": "approved_text_to_elevenlabs_with_budget_v1_only",
+    "paid_generation_scope": "budget-v1: 8903 actual credits maximum; $0 additional cash; stop if account/voice terms not confirmed",
+    "builtin_gpt_image_generation": true,
+    "new_narration_for_rebuild_v5": false,
+    "new_generated_images_for_rebuild_v5": false
+  },
+  "visual_quality_requirements": {
+    "reference": "video/out/newtown-v14-release.mp4",
+    "reference_status": "user_requested_actual_previous_production",
+    "materials": [
+      "actual_geographic_map",
+      "verified_real_photo",
+      "labelled_GPT_concept",
+      "data_chart",
+      "meaningful_motion_graphic"
+    ],
+    "pacing": "meaning-based_shots_not_one_static_image_per_chapter",
+    "release_evidence": "actual_moving_MP4_review_not_source_or_codec_only",
+    "preserve_script": "script-v2",
+    "preserve_audio": "audio-v1"
+  },
+  "editorial_direction": {
+    "sequence": [
+      "왕숙1·왕숙2 전체 토지이용계획도와 분석 범위",
+      "일자리: 공간과 가동 시점",
+      "교통: 노선·역 위치와 입주 시 이용 가능성",
+      "분양가: 실제 타입·층·비용 조건",
+      "생활시설: 상업·학교·공원 배치와 이용 시점",
+      "주변 공급: 연도별 입주와 생활권 중첩",
+      "대체 지역 대비 분양가 메리트와 감수할 조건",
+      "지구명을 붙인 블록별 주목 단지·대장 후보와 유보 사유"
+    ],
+    "analysis_rule": "각 항목은 지도→편의의 실제 의미→완성/운영 시점→입주자에게 남는 조건의 순서로 답한다. 사실 목록을 낭독하지 않는다.",
+    "candidate_rule": "왕숙1/왕숙2의 동일 A번호를 구분. 후보는 입지·실제 교통·학교·상업·공원·분양 조건으로 선정하고 가격 미확인 블록의 수익 순위를 만들지 않는다.",
+    "captions": "의미 단위 및 수량·단위·고유명사 묶음",
+    "visuals": "실제 계획/현황 지도 중심 확대·축소·노선/구역 모션. 설명에 부족한 생성 이미지 후보는 검토본에서 빈 장면과 요청서로 남기고 조율 후 제작"
+  },
+  "production_order": "script lock then voice generation/timing lock; prepare geographic assets and motion templates in parallel; final edit after actual voice timing",
+  "new_requests": {
+    "hook": "Concrete budget/ready-city versus future-Wangsuk choice before whole plan",
+    "intro_outro_bgm": "Reuse original Data City Ambient v1 with voice ducking and fades",
+    "outside_comparisons": "Verified comparable transport/infrastructure alternatives beyond Namyangju; preserve area and product distinctions",
+    "final_video_requested": true
+  }
+}

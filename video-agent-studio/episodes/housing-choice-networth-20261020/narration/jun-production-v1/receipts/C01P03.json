@@ -1,0 +1,62 @@
+{
+  "paragraph_id": "C01P03",
+  "scene_id": "C01",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:01:23.766Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "cfda1c8ff3ae80a0bdabbaae4f49f9eb114abd90a1653bc88b15a1312e5f0fae",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "그 결과 기본 가정에서는 십 년 후 순자산이 매매 약 육억천만 원, 전세 약 육억육천만 원, 월세 약 육억구천만 원으로 계산됩니다. 여기서 집값과 투자수익 가정을 바꾸면 매매가 가장 크게 남는 경우도, 전세가 가장 크게 남는 경우도 나옵니다. 오늘 살펴볼 것은 이 순서가 바뀌는 이유입니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 162,
+  "characters": 162,
+  "actual_credits": 65,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17505,
+    "character_limit": 40000,
+    "included_remaining": 22495,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "a49zuHZ3almt1ubdkZ8l",
+    "x-request-id": null,
+    "character-cost": "65",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:01:22 GMT"
+  },
+  "pcm_samples": 913752,
+  "pcm_duration_s": 20.72,
+  "provider_last_spoken_end_s": 20.8,
+  "artifact_sha256": {
+    "paragraphs/C01P03/audio.mp3": "133161548348deb009875b8d03befdf621116db60cea1fed3a7d2dbb7e557f12",
+    "paragraphs/C01P03/audio.wav": "e6542883664e93c26453fc795bd56939a198ec7695865d4567951f519c5f33d9",
+    "paragraphs/C01P03/alignment.json": "9d57de4490d9016720012950b676a9e258d92e3cb92ab2c20e1063fd056055cb",
+    "paragraphs/C01P03/normalized_alignment.json": "9d57de4490d9016720012950b676a9e258d92e3cb92ab2c20e1063fd056055cb"
+  },
+  "account_after": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17505,
+    "character_limit": 40000,
+    "included_remaining": 22495,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_observed_delta": 0,
+  "completed_at_utc": "2026-10-26T06:01:30.249Z"
+}

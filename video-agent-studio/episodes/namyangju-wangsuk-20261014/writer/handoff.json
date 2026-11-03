@@ -1,0 +1,74 @@
+{
+    "task_id":  "NYJ-WRITER-PROPOSAL-V1",
+    "role":  "writer",
+    "status":  "script_v1_draft_ready_for_director_and_qa",
+    "input_revisions":  {
+                            "brief":  "input-v1/latest_user_instruction",
+                            "workbook_extracted.md":  "input-v1",
+                            "writing-block.md":  "input-v1",
+                            "facts":  "research/facts.json normalized DEV/LIV IDs",
+                            "development":  "development-v1",
+                            "living":  "living-v1",
+                            "local_transactions":  "local_transactions_v1 exploratory; selected basis and dong entries reviewed, not used in narration"
+                        },
+    "outputs":  [
+                    "writer/editorial_proposal_v1.md",
+                    "writer/script_v1.md",
+                    "writer/scene_proposals_v1.json"
+                ],
+    "affected_scene_ids":  [
+                               "S001",
+                               "S002",
+                               "S003",
+                               "S004",
+                               "S005",
+                               "S006",
+                               "S007",
+                               "S008"
+                           ],
+    "checks":  [
+                   {
+                       "check":  "워크플로·writer 역할·brief/state 읽기",
+                       "result":  "passed",
+                       "evidence":  "역할 소유권과 연구 후 대본 작성 순서 반영"
+                   },
+                   {
+                       "check":  "입력 2종 전체 읽기",
+                       "result":  "passed",
+                       "evidence":  "workbook_extracted.md 전체 시트 및 writing-block.md 1~16절을 분할 읽기"
+                   },
+                   {
+                       "check":  "내레이션 작성·장면 구조·claim 연결",
+                       "result":  "passed",
+                       "evidence":  "전체 내레이션 8장면, missing_claims=0, placeholders=0. 초당 공백제외8글자 가정612초. 실제 음성 없음"
+                   },
+                   {
+                       "check":  "외부 원문 사실 검증",
+                       "result":  "qualified",
+                       "evidence":  "research 담당 사실 파일을 읽고 연결. writer의 외부 원문 독립 재검증은 안 함. 조건부확인·목표·허가·운영 구분 유지"
+                   },
+                   {
+                       "check":  "로컬 실거래 후보 확인",
+                       "result":  "qualified",
+                       "evidence":  "basis와 동집계 및 일부단지 본문 검토. 전체1491행 검토는 안 함. 내레이션에는 로컬 수치 미사용, 한계는 별첨 기록"
+                   },
+                   {
+                       "check":  "가격·9호선 검토 반영",
+                       "result":  "passed",
+                       "evidence":  "가격은 현재페이지 타입별기준층 표시값 및 최종계약 미확정. 9호선 최신 개통연도 생략, 일부공구절차만 설명"
+                   }
+               ],
+    "open_issue_ids":  [
+                           "NYJ-WRITER-DRAFT-QA-V1",
+                           "NYJ-WRITER-PRONUNCIATION-V1"
+                       ],
+    "next_role":  "director",
+    "notes":  "총괄 채택 생활권→왕숙1/2→첫입주자하루 반영. 사용자 승인 전 초안. 지도경계/출입구/학교배정 미확정, LH 첨부최종조건 미검증. 가칭학교·WE 브랜드 발음은 narration 단계에서 확인. 공통 scenes/state/decisions 수정 없음. 실제 녹음/재생/청취 없음.",
+    "narration_estimate":  {
+                               "nonwhitespace_characters":  4888,
+                               "assumed_characters_per_second":  8,
+                               "estimated_seconds":  612,
+                               "duration_status":  "provisional_not_recorded",
+                               "target_minutes":  "10~12 편집 목표, 실제와 달라질 수 있음"
+                           }
+}

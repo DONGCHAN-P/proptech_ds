@@ -1,0 +1,39 @@
+{
+  "revision": "visual-review-v2",
+  "at": "2026-10-20T08:02:57.504082+00:00",
+  "baseline": "v1r3-free-tts",
+  "reference": "changneung-full-v8-jun",
+  "claude_review": "qa/review-v2/claude_review.md",
+  "claude_receipt": "qa/review-v2/claude_receipt.json",
+  "root_review": "47 sampled encoded frames; no listening or continuous playback",
+  "adopted": [
+    "M001 display numeric values",
+    "M002 map synchronised to named employment districts",
+    "M003 operating versus planned rail distinction",
+    "M004 basic price / balcony / combined price separated with matching original rows",
+    "M005 remove orphan single-character line and enlarge map",
+    "M006 replace repetitive map/timeline with meaningful supply and completion graphics",
+    "M007 comparative price labels and sample conditions readable",
+    "M008 parcel detail locator and highlights readable",
+    "M009 reuse brand assets and CTA motion; keep three-second tail"
+  ],
+  "not_adopted": [
+    {
+      "item": "Claude R2 A2 2029.06 rail label",
+      "reason": "A2 date is occupancy, not rail opening; preserve original factual meaning"
+    },
+    {
+      "item": "Claude chapter missing conjecture",
+      "reason": "Chapter intervals exist; sampled sheets excluded transitions. Inspect encoded chapter frames before judging."
+    }
+  ],
+  "unchanged": [
+    "approved narration text",
+    "free TTS PCM sources",
+    "duration",
+    "fact source files",
+    "prior gates tied to old artifacts"
+  ],
+  "new_paid_generation": false,
+  "upload_this_revision": false
+}

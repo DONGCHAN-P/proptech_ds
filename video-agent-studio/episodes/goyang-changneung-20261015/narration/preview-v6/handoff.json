@@ -1,0 +1,59 @@
+{
+  "status": "generated_measured_not_listened",
+  "script_revision": "script-v6",
+  "audio_revision": "audio-v6-preview-heami-rateminus1",
+  "voice": "Microsoft Heami Desktop - Korean",
+  "engine": "Windows SAPI COM",
+  "rate": -1,
+  "cost": 0,
+  "network_used": false,
+  "duration_s": 916.7660317460317,
+  "ten_minute_requirement_met": true,
+  "scene_count": 10,
+  "semantic_unit_count": 117,
+  "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\production-v6-preview\\audio\\narration_v6_preview.wav",
+  "captions": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\narration\\preview-v6\\captions.srt",
+  "segments": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\narration\\preview-v6\\segments.json",
+  "timing_proposals": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\narration\\preview-v6\\timing_proposals.json",
+  "input_hashes": {
+    "script_v6.md": "0c94b0c1547b6abd2968c6de622fbf9793cd7cd0e4ab7415664e4701fe162fc1",
+    "narration_v6.txt": "a1633eca0ee555e947909c22f4d7a34022b8da2c081115098538632502742811"
+  },
+  "audio_sha256": "6ca4c4c9e59c8a13c32aeba7cc78ca69f00cbcaf94384453ae9f9b8976e7d75b",
+  "technical_validation": {
+    "sample_rate": 22050,
+    "channels": 1,
+    "sample_width": 2,
+    "peak": 23987,
+    "rms": 3010.562374584547
+  },
+  "verification": [
+    "117 WAV units parsed and PCM frame durations measured",
+    "Combined WAV and 10 chapter WAVs created",
+    "No inserted silence; each unit uses native TTS sentence ending",
+    "All 117 subtitle units exactly match narration_v6.txt after whitespace normalization: 3962 characters"
+  ],
+  "unverified": [
+    "Actual listening and pronunciation QA not performed",
+    "Subtitle internal word boundaries not measured; each caption exactly matches synthesized semantic file",
+    "Voice is free review placeholder; final Jun replacement requires new measured timing"
+  ],
+  "changed_scene_ids": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M005",
+    "M006",
+    "M007",
+    "M008",
+    "M009"
+  ],
+  "next_owner": "video_editor",
+  "notes": [
+    "Restricted process SAPI failed 0x80045040; same generation succeeded under approved local execution escalation",
+    "Timeline starts at 0; editor adds intro/outro offsets",
+    "No source Jun audio reused"
+  ]
+}

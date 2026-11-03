@@ -1,0 +1,25 @@
+{
+  "status": "passed_sampled_delta_review",
+  "video_sha256": "cc6de853097391324aa1c584904c05fa2f118e09978914962ddb151905ab2b3e",
+  "inspected": [
+    "proofs/caption_rail_scanline_proof.jpg",
+    "proofs/sentence_gap_5.0.png",
+    "proofs/silent_CTA_669.53.png",
+    "proofs/native/contact-sheet.jpg"
+  ],
+  "scope": "actual MP4 8 sampled frames + 5 exact native HF inactive-cue snapshots",
+  "required_inactive_proofs_s": [
+    0.1,
+    5.0,
+    232.4,
+    448.03333333333336,
+    669.53
+  ],
+  "white_box_policy": "181 actual native caption cues, union merged into 90 windows; all inactive cue intervals hide box",
+  "logic_frame_union_test": "all 20452 frame indices match original 181 cue activity",
+  "required_editor_fixes": [],
+  "scanline_annotation_in_MP4": false,
+  "actual_listening": false,
+  "continuous_playback": false,
+  "independent_qa": false
+}

@@ -1,0 +1,40 @@
+{
+  "task_id": "top20-thumbnail-v2-scope-fix",
+  "issue_id": "QA-T20P-TH-SCOPE-01",
+  "reviewed_utc": "2026-11-01T15:04:03.261Z",
+  "status": "self_checked_pending_independent_reQA",
+  "actual_viewed_files": [
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/thumbnail/TH001_신혼부부_수도권TOP20_v2_1280x720.png",
+      "sha256": "d669526af8537c36aeade8a35f79731fd5158b78dad723bad6d86c416c4a85bd",
+      "bytes": 687535,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/thumbnail/TH001_신혼부부_수도권TOP20_v2_mobile_320.png",
+      "sha256": "933e7be70fbc6401a3523c24d5cb1b442071f92b97ef55ebf55b85d11289fddc",
+      "bytes": 81748,
+      "dimensions": [
+        320,
+        180
+      ]
+    }
+  ],
+  "view_method": "최종 1280×720 PNG와 320×180 PNG를 view_image로 각각 직접 열람",
+  "observation": "320px에서도 2024년 · 수도권 53개 구 기준의 53개 구가 식별됨. 하단 라벨만 문구·가독성을 위한 글자 크기 27→38px(모바일9.5px) 변경. 제목·사진·색·사진 배치 동일.",
+  "fit_bounds": "글자 모두 캔버스/텍스트열 안, 겹침0. 기술 좌표는 technical_checks_v2.json.",
+  "scope_confirmation": "2024년 수도권 53개 구 가운데 신혼부부 전체 수 TOP20. 시·군을 포함한 수도권 전체 순위로 확장하지 않음.",
+  "independent_QA": false,
+  "real_phone_device_test": false,
+  "previous_sha256": [
+    "773a483c341749547878500bbd0028efc617ea2a76147cb9afeb48af415bd571",
+    "50706f9b6f76476055dba604f3e52cf9761dd3e77c8811a2f050104b6b81bb81"
+  ],
+  "v2_sha256": [
+    "d669526af8537c36aeade8a35f79731fd5158b78dad723bad6d86c416c4a85bd",
+    "933e7be70fbc6401a3523c24d5cb1b442071f92b97ef55ebf55b85d11289fddc"
+  ]
+}

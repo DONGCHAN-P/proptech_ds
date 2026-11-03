@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C05P01",
+  "scene_id": "C05",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:06:04.417Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "14de4a6df7aceede3337123a66b43f3a07f2240658795154fd15d3d19a660498",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "매매 가구가 낸 월 백칠십이만 원을 조금 더 나눠보겠습니다. 첫 달 이자는 백이십만 원이고 원금은 약 오십이만 원입니다. 이자는 그달의 비용으로 나갑니다. 원금 오십이만 원은 현금에서 빠지는 동시에 대출잔액을 줄입니다. 통장에서 나간 돈이라는 점은 같지만 순자산에 남기는 결과가 다릅니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 161,
+  "characters": 161,
+  "actual_credits": 64,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:04.412Z",
+  "local_shadow_remaining_before": 21526,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "onExlDAuuL43fiRH11DE",
+    "x-request-id": null,
+    "character-cost": "64",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:06:03 GMT"
+  },
+  "pcm_samples": 889056,
+  "pcm_duration_s": 20.16,
+  "provider_last_spoken_end_s": 20.24,
+  "artifact_sha256": {
+    "paragraphs/C05P01/audio.mp3": "c26c8ad484a98528700a938420599caaed4c0d7fadbbe3bb601f5ef762d02e44",
+    "paragraphs/C05P01/audio.wav": "f4cdac2d6437dd83cc24017be05c2384850384a1898318d756d3e68543d12939",
+    "paragraphs/C05P01/alignment.json": "ff2e88552720eae6756e3b67a1c0331d0e9054ed2f54408ae1b7d618fc3df7a1",
+    "paragraphs/C05P01/normalized_alignment.json": "ff2e88552720eae6756e3b67a1c0331d0e9054ed2f54408ae1b7d618fc3df7a1"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21462,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:06:09.288Z"
+}

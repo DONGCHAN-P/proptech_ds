@@ -1,0 +1,229 @@
+{
+  "task_id": "top20-thumbnail-v1",
+  "rendered_utc": "2026-11-01T14:50:50.342Z",
+  "engine": "local Chromium via HyperFrames-installed puppeteer-core; native static HTML/CSS",
+  "browser_version": "HeadlessChrome/152.0.7977.30",
+  "puppeteer_version": "25.15.0",
+  "external_network_requests": [],
+  "technical_status": "passed",
+  "checks": {
+    "fontReady": true,
+    "texts": [
+      {
+        "text": "삼송 · 2021년 촬영",
+        "rect": {
+          "x": 709,
+          "y": 403.859375,
+          "width": 157.40625,
+          "height": 25,
+          "right": 866.40625,
+          "bottom": 428.859375
+        },
+        "font_px": 21,
+        "mobile_font_px": 5.25,
+        "inside_canvas": true
+      },
+      {
+        "text": "석촌호수 · 2025년 촬영",
+        "rect": {
+          "x": 709,
+          "y": 673.859375,
+          "width": 196.4375,
+          "height": 25,
+          "right": 905.4375,
+          "bottom": 698.859375
+        },
+        "font_px": 21,
+        "mobile_font_px": 5.25,
+        "inside_canvas": true
+      },
+      {
+        "text": "서울 · 경기 · 인천",
+        "rect": {
+          "x": 58,
+          "y": 59,
+          "width": 205.265625,
+          "height": 35,
+          "right": 263.265625,
+          "bottom": 94
+        },
+        "font_px": 29,
+        "mobile_font_px": 7.25,
+        "inside_canvas": true
+      },
+      {
+        "text": "신혼부부는",
+        "rect": {
+          "x": 52,
+          "y": 123,
+          "width": 484.921875,
+          "height": 140,
+          "right": 536.921875,
+          "bottom": 263
+        },
+        "font_px": 118,
+        "mobile_font_px": 29.5,
+        "inside_canvas": true
+      },
+      {
+        "text": "어디에 살까?",
+        "rect": {
+          "x": 48,
+          "y": 269,
+          "width": 606.03125,
+          "height": 152,
+          "right": 654.03125,
+          "bottom": 421
+        },
+        "font_px": 127,
+        "mobile_font_px": 31.75,
+        "inside_canvas": true
+      },
+      {
+        "text": "수도권 TOP20",
+        "rect": {
+          "x": 58,
+          "y": 442,
+          "width": 490.703125,
+          "height": 99,
+          "right": 548.703125,
+          "bottom": 541
+        },
+        "font_px": 83,
+        "mobile_font_px": 20.75,
+        "inside_canvas": true
+      },
+      {
+        "text": "2024년 신혼부부 수 기준",
+        "rect": {
+          "x": 59,
+          "y": 601,
+          "width": 265.21875,
+          "height": 33,
+          "right": 324.21875,
+          "bottom": 634
+        },
+        "font_px": 27,
+        "mobile_font_px": 6.75,
+        "inside_canvas": true
+      }
+    ],
+    "photos": [
+      {
+        "asset_id": "PHOTO_R03",
+        "frame": {
+          "x": 680,
+          "y": 0,
+          "width": 600,
+          "height": 450
+        },
+        "natural": [
+          3840,
+          2880
+        ],
+        "object_fit": "contain",
+        "object_position": "50% 50%",
+        "filter": "none",
+        "opacity": "1",
+        "loaded": true
+      },
+      {
+        "asset_id": "PHOTO_R02_ALT01",
+        "frame": {
+          "x": 680,
+          "y": 456,
+          "width": 600,
+          "height": 264
+        },
+        "natural": [
+          3840,
+          2880
+        ],
+        "object_fit": "cover",
+        "object_position": "50% 100%",
+        "filter": "none",
+        "opacity": "1",
+        "loaded": true
+      }
+    ]
+  },
+  "source_hashes_unchanged": true,
+  "inputs": [
+    {
+      "name": "photo_assets_v2",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photo_assets_v2.json",
+      "sha256": "aedc96c581c397828a5a0a1b464138da6cef8cd54792ff663b900b4292baa1c1"
+    },
+    {
+      "name": "brief",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/brief.json",
+      "sha256": "1739d99fd6bf98f1c9bded9f0ea747488f8a38252d8b06d163febdf23c66e93e"
+    },
+    {
+      "name": "state_at_start",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/state.json",
+      "sha256": "c85366579e7d1fb79b7e9d32500433278452d703b7e31414c279a246c70095e2"
+    },
+    {
+      "name": "channel_style",
+      "path": "C:/projects/realestate_reco/config/channel_style_tokens.json",
+      "sha256": "7c9a9edc4c70139721fc585dd73f73a9ea7cdf22235918fb93f74e9730e2a5be"
+    },
+    {
+      "name": "current_video",
+      "path": "C:/projects/realestate_reco/config/current_video.json",
+      "sha256": "8cf1d6ab50271410a97c79b0dbf57f57a8658c80f8961ea6cb9f832c8d55e507"
+    },
+    {
+      "name": "master_guide",
+      "path": "C:/projects/realestate_reco/video-agent-studio/guides/영상제작_마스터가이드.md",
+      "sha256": "50d179e4b21142ea0a6b04d867916608e61a8179b34758d5a696dc46a771f1a7"
+    },
+    {
+      "name": "font",
+      "path": "C:/projects/realestate_reco/assets/fonts/Pretendard-ExtraBold.woff2",
+      "sha256": "dd7c1e156f508eb962acc7a33a7a1896d1e0b71e11156fad96e731689ceb6dc3"
+    },
+    {
+      "name": "approved_affordable_thumbnail",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/TH001_affordable_photo_v1.png",
+      "sha256": "e8a83381203874fe2768e6bfd57b7b490f65f6fd75ceabd9c635d0592d1fc096"
+    },
+    {
+      "name": "approved_housing_thumbnail",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/outputs/launch-proposal-v2/TH003_housing_modes_1280x720.png",
+      "sha256": "ddeae250181103ca29b5f2c81461cd222d75875f8f3ad97e014ab8a07bc0b085"
+    },
+    {
+      "name": "html",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-production-v1/thumbnail.html",
+      "sha256": "4a7dd9f8e05f5e3df970d33074cc41f32f08dbe898e38c30438b58257974b1f3"
+    },
+    {
+      "name": "renderer",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-production-v1/render_thumbnail.cjs",
+      "sha256": "53f9d9ee307c32abb82534051e95b16d6994973b769a72d2420be229e762a20d"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/thumbnail/TH001_신혼부부_수도권TOP20_1280x720.png",
+      "sha256": "773a483c341749547878500bbd0028efc617ea2a76147cb9afeb48af415bd571",
+      "dimensions": [
+        1280,
+        720
+      ],
+      "bytes": 684073
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/thumbnail/TH001_신혼부부_수도권TOP20_mobile_320.png",
+      "sha256": "50706f9b6f76476055dba604f3e52cf9761dd3e77c8811a2f050104b6b81bb81",
+      "dimensions": [
+        320,
+        180
+      ],
+      "bytes": 80577
+    }
+  ],
+  "visual_review": "pending_actual_view"
+}

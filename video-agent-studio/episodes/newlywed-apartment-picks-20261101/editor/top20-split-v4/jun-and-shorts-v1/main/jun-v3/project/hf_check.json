@@ -1,0 +1,127 @@
+{
+  "command": [
+    "npx.cmd",
+    "--no-install",
+    "hyperframes",
+    "check",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\main\\jun-v3\\project",
+    "--at",
+    "0.100000,5.000000,232.410000,448.050000,669.530000,1.200000,668.700000",
+    "--json",
+    "--snapshots",
+    "--timeout",
+    "20000"
+  ],
+  "exit_code": 0,
+  "result": {
+    "ok": true,
+    "strict": false,
+    "browserSkipped": false,
+    "lint": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 1,
+      "infoCount": 0,
+      "findings": [
+        {
+          "code": "timeline_track_too_dense",
+          "severity": "warning",
+          "message": "Track 2 has 90 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+          "selector": "[data-composition-id]",
+          "dataAttributes": {},
+          "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\main\\jun-v3\\project\\index.html",
+          "bbox": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "time": 0,
+          "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+        }
+      ],
+      "filesScanned": 1
+    },
+    "runtime": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": []
+    },
+    "layout": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "duration": 681.733333333,
+      "samples": [
+        0.1,
+        1.2,
+        5,
+        232.41,
+        448.05,
+        668.7,
+        669.53
+      ],
+      "transitionSamples": [],
+      "transitionSamplesDropped": 0,
+      "tolerance": 2,
+      "totalIssueCount": 0,
+      "truncated": false
+    },
+    "motion": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "enabled": false,
+      "samples": 0
+    },
+    "contrast": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "enabled": true,
+      "samples": [
+        0.1,
+        1.2,
+        232.41,
+        448.05,
+        669.53
+      ],
+      "checked": 1,
+      "passed": 1
+    },
+    "hdr": {
+      "autoPromotion": null,
+      "inspection": "available"
+    },
+    "snapshots": {
+      "enabled": true,
+      "files": [
+        ".hyperframes\\artifacts\\snapshots\\d604def4-88d5-4adc-ad20-94374a52d3bf\\frame-00-at-0.1s.png",
+        ".hyperframes\\artifacts\\snapshots\\d604def4-88d5-4adc-ad20-94374a52d3bf\\frame-01-at-1.2s.png",
+        ".hyperframes\\artifacts\\snapshots\\d604def4-88d5-4adc-ad20-94374a52d3bf\\frame-02-at-232.4s.png",
+        ".hyperframes\\artifacts\\snapshots\\d604def4-88d5-4adc-ad20-94374a52d3bf\\frame-03-at-448.1s.png",
+        ".hyperframes\\artifacts\\snapshots\\d604def4-88d5-4adc-ad20-94374a52d3bf\\frame-04-at-669.5s.png"
+      ],
+      "times": [
+        0.1,
+        1.2,
+        232.41,
+        448.05,
+        669.53
+      ],
+      "findingFiles": []
+    },
+    "_meta": {
+      "version": "0.8.181",
+      "updateAvailable": false
+    }
+  }
+}

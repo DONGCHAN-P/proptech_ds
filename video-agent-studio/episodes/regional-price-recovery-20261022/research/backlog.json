@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "priority": 1,
+      "task": "Complete six-city trade collection and audit totalCount/page rows; normalize without altering current master",
+      "status": "running_external_collector"
+    },
+    {
+      "priority": 1,
+      "task": "Unsold source: resolve original Excel number formats and dates; retain blank vs zero; verify region/subdistrict sums",
+      "status": "raw_acquired_normalization_pending"
+    },
+    {
+      "priority": 1,
+      "task": "Housing stock denominator and apartment-only completions; distinguish household demand from population",
+      "status": "census_snapshot_only"
+    },
+    {
+      "priority": 2,
+      "task": "Historical district population and household panel, age25-44 net migration; harmonize census vs registered households",
+      "status": "not_acquired"
+    },
+    {
+      "priority": 2,
+      "task": "Industry employment panel with geography/classification continuity",
+      "status": "report_only"
+    },
+    {
+      "priority": 2,
+      "task": "Mortgage-rate history and historical lending-policy dates",
+      "status": "base_rate_only"
+    },
+    {
+      "priority": 3,
+      "task": "Fixed-sample and annual-window sensitivity; sustained recovery definition; district/time controls before interpreting association",
+      "status": "pending"
+    }
+  ],
+  "no_automatic_future_agent_execution": true
+}

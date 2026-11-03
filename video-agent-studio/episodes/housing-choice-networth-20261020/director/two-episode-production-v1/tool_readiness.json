@@ -1,0 +1,224 @@
+{
+  "task_id": "housing-choice-tool-readiness-free-tts-v1",
+  "role": "video_narration",
+  "status": "metadata_checked_runtime_pending",
+  "checked_at": "2026-10-26T01:52:22+09:00",
+  "scope": "15분 이내 sidecar 준비 점검. 외부 payload 전송·생성·토큰 갱신·업로드·설치 없음",
+  "studio_root": "C:/projects/realestate_reco/video-agent-studio",
+  "episode_root": "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020",
+  "authorization": {
+    "path": "director/two-episode-production-v1/authorization.json",
+    "sha256": "922090f8612003b9cfcf51e3dbdd006166dc94f7548b7194bf080d620cbec7ef",
+    "claude_review_authorized": true,
+    "free_tts_authorized": true,
+    "paid_voice_generation_authorized": false,
+    "cash_budget_krw": 0,
+    "upload_visibility": "private",
+    "public_release_authorized": false,
+    "current_sidecar_instruction": "실제 외부 전송/TTS/업로드를 지금 실행하지 않음",
+    "older_state_note": "brief/state의 과거 hold·미승인은 최신 authorization보다 오래된 기록. 본 담당은 공통 상태를 수정하지 않음."
+  },
+  "performed": {
+    "claude_version_help_auth_status": true,
+    "sapi_voice_enumeration": true,
+    "dependency_metadata_and_offline_imports": true,
+    "credential_values_printed_or_copied": false,
+    "dotenv_read_or_loaded": false,
+    "external_payload_requests": 0,
+    "token_refreshes": 0,
+    "tts_calls": 0,
+    "uploads": 0,
+    "paid_calls": 0,
+    "package_installs": 0,
+    "audio_listening": false,
+    "video_playback": false
+  },
+  "claude": {
+    "executable": "C:/Users/e2ken/.local/bin/claude.exe",
+    "version": "2.1.168 (Claude Code)",
+    "auth_status": {
+      "exit_code": 0,
+      "logged_in": true,
+      "auth_method": "claude.ai",
+      "api_provider": "firstParty",
+      "subscription_type": "pro"
+    },
+    "local_oauth": {
+      "access_token_present": true,
+      "refresh_token_present": true,
+      "access_token_expired_offline": false
+    },
+    "api_key_auth_env_present": false,
+    "existing_code": [
+      "video-agent-studio/episodes/housing-choice-networth-20261020/director/claude-story-v1/run.cjs",
+      "tools/review_regional_script_v3_claude.py"
+    ],
+    "safe_future_argv": [
+      "C:/Users/e2ken/.local/bin/claude.exe",
+      "-p",
+      "--output-format",
+      "json",
+      "--tools",
+      "",
+      "--permission-mode",
+      "dontAsk",
+      "--disable-slash-commands",
+      "--no-chrome",
+      "--strict-mcp-config",
+      "--mcp-config",
+      "{\"mcpServers\":{}}",
+      "--setting-sources",
+      "",
+      "--settings",
+      "{\"disableAllHooks\":true}",
+      "--no-session-persistence"
+    ],
+    "stdin": "총괄이 확정 버전과 SHA를 묶은 한국어 검수 prompt에 승인된 대본·공개 근거·익명 집계만 직접 포함. 파일 접근 도구 없음",
+    "launch_contract": [
+      "subprocess argv 배열로 실행하고 stdin으로 prompt 전달. 현재는 실행하지 않음",
+      "child env에서 ANTHROPIC_*와 CLAUDE_CODE_USE_* 및 CLAUDE_CODE_OAUTH_TOKEN을 제거하여 기존 로컬 구독 로그인 사용. .env는 로드하지 않음",
+      "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1, DISABLE_TELEMETRY=1, DISABLE_ERROR_REPORTING=1",
+      "--bare는 OAuth를 읽지 않으므로 사용하지 않음. API/제3자 provider·모델 자동 fallback·권한 우회 사용하지 않음",
+      "모델·추론 강도를 추가 지정하지 않고 현 실행 설정 유지. stdout/stderr는 비밀을 검토한 뒤 승인된 작업 폴더에만 보관",
+      "기존 코드의 opus/max·max-budget-usd=5·과거 packet/출력 경로는 복사 실행하지 않음"
+    ],
+    "blockers": [
+      "잔여 구독 한도와 extra usage 과금 설정은 외부 확인하지 않음. 로그인 확인만으로 현금0원 보장 또는 실제 검수 성공을 주장할 수 없음",
+      "실행 시 구독 포함 사용량 안에서만 진행하고 과금·한도 초과·인증 실패면 중단. 자동 유료 전환 금지",
+      "future argv는 로컬 --help로 플래그 존재만 확인. 실제 검수 prompt·버전은 총괄 확정 후 전달"
+    ],
+    "actual_review_performed": false
+  },
+  "free_korean_tts": {
+    "preferred_preparation_path": "추가 설치 없는 Windows SAPI COM Heami 후보. 최종 음성 선택으로 확정하지 않음",
+    "sapi": {
+      "voice_name": "Microsoft Heami Desktop - Korean",
+      "language_hex": "412",
+      "token": "HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Speech/Voices/Tokens/TTS_MS_KO-KR_HEAMI_11.0",
+      "com_creation_and_voice_enumeration": "passed",
+      "network_required_for_installed_voice": false,
+      "api_key_required": false,
+      "generation_test": "not_run",
+      "existing_generator": "video-agent-studio/episodes/goyang-changneung-20261015/narration/preview-v8/generate.ps1",
+      "generator_details": "SAPI.SpVoice+SpFileStream, Rate=0, Volume=100, Format.Type=22. units.json의 file/spoken_text를 의미 단위 WAV로 합성. 과거 편 경로에 고정",
+      "other_generator": "video-agent-studio/episodes/hanam-gyosan-20261019/narration/generate.ps1",
+      "other_generator_warning": "교산 경로·Rate=2 고정이며 기존 파일은 건너뜀. 이번 편에 직접 실행하지 않음",
+      "system_speech_dotnet": "어셈블리와 SpeakProgressEventArgs.AudioPosition/CharacterPosition/CharacterCount 존재 확인. GetInstalledVoices는 NullReferenceException으로 실패. COM 대안 유지",
+      "future_generation_command_after_adaptation": "powershell.exe -NoProfile -File <이번 편 전용 generate.ps1>",
+      "adaptation_required": true
+    },
+    "pronunciation": {
+      "existing_prepare_code": "video-agent-studio/episodes/goyang-changneung-20261015/narration/preview-v8/prepare.py",
+      "existing_dictionary": "video-agent-studio/episodes/goyang-changneung-20261015/narration/preview-v8/pronunciation.json",
+      "capability": "표시용 text와 낭독용 spoken_text 분리. 긴 키부터 사전 치환. 이번 편의 S&P500/DSR/LTV/금액·비율·단위는 확정 발음 사전 필요",
+      "script_revision": "총괄 확정 대기; authorization의 첫 대본 후보는 outputs/cost-wording-v3/script_cost_v3.md",
+      "voice_rate_style": "기존 config/tts.json Jun 설정은 보존. 무료 후보의 voice/rate/style은 아직 이번 편 설정으로 확정하지 않음",
+      "actual_pronunciation_checked": false
+    },
+    "timing": {
+      "existing_measurement_code": "video-agent-studio/episodes/goyang-changneung-20261015/narration/preview-v8/finalize.py",
+      "capability": "wave.getnframes()/getframerate()로 생성된 의미 단위 PCM의 실제 파일 길이를 측정·누적하여 segments/scene timing/SRT 생성",
+      "limits": "파일 경계 측정은 실제 발화 시작/끝 청취나 내부 단어 강제 정렬이 아님. 기존 finalizer의 과거 승인·상태·단언 문구도 이번 편에 승계 금지",
+      "future_record_schema": [
+        "scene_id",
+        "start_s",
+        "end_s",
+        "timing_basis",
+        "confidence",
+        "audio_revision"
+      ],
+      "measured_duration_s": null,
+      "timing_locked": false,
+      "subtitles_verified": false,
+      "changed_scene_ids": [],
+      "generation_required_before_validation": true
+    },
+    "edge_tts": {
+      "installed_in_active_python": false,
+      "global_cli_found": false,
+      "network_connectivity_checked": false,
+      "voice_inventory_checked": false,
+      "not_used_reason": "무료 로컬 SAPI가 이미 있으며 이번 점검은 외부 전송·패키지 다운로드를 실행하지 않는 범위",
+      "optional_future_install_argv": [
+        "tools/python311/python.exe",
+        "-m",
+        "pip",
+        "install",
+        "--target",
+        "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/deps",
+        "edge-tts"
+      ],
+      "optional_future_help": "$env:PYTHONPATH=(Resolve-Path 'video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/deps').Path; & tools/python311/python.exe -m edge_tts --help",
+      "timestamp_capability_status": "미설치이므로 현재 버전의 word/sentence boundary·SRT 옵션과 한국어 실제 지원은 확인하지 않음. 설치 후 로컬 help/소스와 실제 생성 결과로 검증 필요",
+      "external_service_note": "사용 시 텍스트가 외부 서비스로 전송되는 온라인 후보. 이번 점검에서 접속하지 않음",
+      "global_install_prohibited": true
+    }
+  },
+  "youtube_private_upload": {
+    "dependency_path": "tools/youtube_deps",
+    "python": "tools/python311/python.exe (3.11.9)",
+    "versions": {
+      "google-api-python-client": "2.201.0",
+      "google-auth": "2.62.0",
+      "google-auth-oauthlib": "1.5.0"
+    },
+    "dependency_imports": "passed_no_service_created",
+    "oauth": {
+      "token_file_exists": true,
+      "client_file_exists": true,
+      "access_token_present": true,
+      "refresh_token_present": true,
+      "upload_scope": true,
+      "readonly_scope": true,
+      "force_ssl_scope": true,
+      "access_token_expired_offline": true,
+      "refreshed": false,
+      "remote_validity_checked": false
+    },
+    "credential_files": "config/youtube-token.json 및 config/youtube-client-secret.json; 값은 출력/복사/핸드오프에 포함하지 않음",
+    "private_only_reuse_source": "analysis/upload_gyosan_private_v1.py",
+    "service_reuse_source": "analysis/upload_changneung_scheduled_v8.py:service (함수만 참고; 예약 공개 main 실행 금지)",
+    "current_limitation": "private 전용 소스의 EP/OUT이 교산에 고정. 이번 편 전용 사본/매개변수 연결과 최종 job·QA·정확한 승인 SHA가 아직 없음",
+    "future_adapter_commands": [
+      "tools/python311/python.exe -B -X utf8 <이번 편 private 전용 업로더.py> validate --job <최종 upload_job.json>",
+      "tools/python311/python.exe -B -X utf8 <이번 편 private 전용 업로더.py> upload --job <최종 upload_job.json>",
+      "tools/python311/python.exe -B -X utf8 <이번 편 private 전용 업로더.py> verify --job <최종 upload_job.json>"
+    ],
+    "generic_existing_command": "tools/python311/python.exe -B -X utf8 analysis/youtube_release.py <최종 upload_job.json>",
+    "generic_command_status": "소스에서 명령 형식 확인만 함. 지금 실행 금지; 별도 private 강제·정확한 승인/최종 QA 검증 어댑터 없이 직접 사용 권장하지 않음",
+    "generic_code_caveats": [
+      "--help/dry-run 경로 없이 import 직후 job을 읽고 OAuth/API 작업으로 이어짐",
+      "publication_authorized=true와 privacy=private를 요구하는 job이 필요하지만 코드는 public/unlisted도 허용",
+      "만료 토큰 갱신 시 공통 config/youtube-token.json을 덮어씀. 이 sidecar의 쓰기 범위 밖",
+      "중복 receipt/SHA 보호는 있으나 final QA·exact-version 승인 확인은 총괄 연결 필요"
+    ],
+    "required_future_checks": [
+      "현금0원·private·공개/예약 없음과 최종 영상/자막/QA/승인 SHA 결합",
+      "refresh는 허용된 단계에서만 수행하고 실제 인증 채널 확인",
+      "이미 시작된 receipt의 video_id가 없으면 자동 재업로드 금지",
+      "업로드 후 videos.list에서 privacyStatus=private, publishAt 부재와 처리 상태를 실제 확인"
+    ],
+    "upload_performed": false,
+    "private_status_verified": false
+  },
+  "local_commands": {
+    "offline_probe": "tools/python311/python.exe -B -X utf8 video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/local_probe.py",
+    "claude_metadata": "C:/Users/e2ken/.local/bin/claude.exe --version; auth status --json은 값을 로컬 파싱해 로그인/구독 필드만 출력",
+    "ffprobe": "video/node_modules/@remotion/compositor-win32-x64-msvc/ffprobe.exe -version",
+    "ffmpeg": "video/node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe -version",
+    "ffmpeg_versions_observed": "ffprobe n7.1 / ffmpeg n7.1",
+    "after_generation_duration": "video/node_modules/@remotion/compositor-win32-x64-msvc/ffprobe.exe -v error -show_entries format=duration -of json <생성 WAV>"
+  },
+  "input_revisions": {
+    "brief_sha256": "e2595699a29e53295fe141c5f2724ae3af12603b2e1e3814154beb7a14fbcd2f",
+    "state_sha256_at_inspection": "4b79f2d98d1c24adb91fbd42417594819fd7899b6fe9f1eda4f615776c005cb5",
+    "claude_existing_run_sha256": "f23debe2aa2cb77aa16a75ede59a55b295fad702d4369287196706ec3218fad7",
+    "sapi_existing_generator_sha256": "09e353bc821a55e889b0e1c1f26df272116d4ba8066ab7248f158dfb3bdb82a3",
+    "pcm_existing_finalizer_sha256": "c2347262dfc93f60e30d3cb91194ca472283464a7f71f39a9988f70219f84057",
+    "private_uploader_source_sha256": "a4852bb027e6586ae279cf35ef83f26d5638f86db087398dc7d0f2047b2763ea",
+    "generic_uploader_source_sha256": "faf78fc15b7c60d527462c1f7aa9abc29ac28e62c2c6aba368602233a4b8327d"
+  },
+  "issue_path": "narration/free-tts-v1/issue_TOOL-READINESS-01.json",
+  "next_owner": "video_director",
+  "validation_path": "narration/free-tts-v1/checks.json"
+}

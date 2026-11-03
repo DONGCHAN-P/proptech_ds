@@ -1,0 +1,4 @@
+﻿import pathlib,json
+p=pathlib.Path('video/src/changneung-shorts-leader-v1/entry.tsx');s=p.read_text(encoding='utf8').replace("<Audio src={staticFile('voice.wav')}/><div", "<Audio src={staticFile('voice.wav')}/><Img src={staticFile(block+'.svg')} style={{position:'absolute',width:2100,height:1920,left:-510,top:0,objectFit:'cover',opacity:.21,filter:'blur(18px) saturate(.6)'}}/><div").replace("background:'radial-gradient(ellipse at 40% 35%,#224b6e 0%,#102538 70%)'","background:'linear-gradient(180deg,#10253855 0%,#173d5b44 30%,#10253899 100%)'")
+p.write_text(s,encoding='utf8')
+p=pathlib.Path('video-agent-studio/episodes/goyang-changneung-20261015/editor/shorts-leader-v1/verify.py');s=p.read_text(encoding='utf-8-sig').replace("info=json.loads", "tagged=out/'tagged.tmp.mp4'\nrun([ff,'-y','-v','error','-i',v,'-map','0','-c','copy','-metadata','title=3기 신도시 창릉의 대장단지는 어디가 될까?',tagged]);tagged.replace(v)\ninfo=json.loads");p.write_text(s,encoding='utf8')

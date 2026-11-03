@@ -1,0 +1,15 @@
+{
+  "task_id": "two-part-v4-script-v2",
+  "source": "현재 세션의 v1 실제 열람 후 수정 요청 및 지도 완료 보강 전달",
+  "date": "2026-11-03",
+  "scope": "v1 보존, writer/top20-split-v4 안에 v2 원고 2개·장면 제안·검증·인계 생성",
+  "intro": "편당 4~5문장·35~45초 추정: 훅→2024 거주순위→단지 점과 여섯 색→학교/역/상업시설·면적/기간→시작",
+  "regional_narration": "지역당 가장 유용한 가격 대비 1개만 낭독; 나머지 수치는 화면값·근거에 보존. 생활권·교통·학교/상권·여가·직장 연결의 검증사실과 명시적 해석을 확대",
+  "negative_caveats": "부정형 회피 문장은 낭독에서 제거하고 제작 근거에 보존. 10월 자료 조건은 짧은 긍정형으로 도입에 한 번",
+  "duration_guidance": "8~11분/편은 추정 가이드; 실제 TTS 전 확정 금지",
+  "latest_map_status_reported_by_parent": "지도40판 완성, OSM20/20 확보, 30초 무음 지도읽기 모션 시안 HF렌더/decode 완료",
+  "map_match_input": "visual/top20-split-v4/map_assets.json: prices 자산의 displayed_detail_labels",
+  "map_matching_rule": "실제 표시된 학교·역 명칭과 원고를 매칭. 역 접미사만 정규화. 숨겨진 시설은 표시된 원자료 시설로 교체하거나 지도 추가 표시 이슈로 인계",
+  "permissions": "새 두 본편·TTS는 새 script 게이트 후 진행; 이번 writer는 생성·렌더·청취·업로드를 수행하지 않음",
+  "verification_scope": "상위 완료 전달과 실제 JSON 라벨 목록을 구분. 이번 writer가 지도 픽셀·30초 시안을 보고 검수했다고 기록하지 않음"
+}

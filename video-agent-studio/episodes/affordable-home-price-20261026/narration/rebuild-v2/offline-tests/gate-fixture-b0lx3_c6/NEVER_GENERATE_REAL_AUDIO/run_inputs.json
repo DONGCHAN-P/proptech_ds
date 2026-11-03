@@ -1,0 +1,46 @@
+{
+  "gate": {
+    "lock_path": "video-agent-studio/episodes/affordable-home-price-20261026/narration/rebuild-v2/offline-tests/gate-fixture-b0lx3_c6/FAKE_EPISODE/director/fixture-lock.json",
+    "lock_sha256": "f260dc386c53686fa64a98296234b04636bc38eb8c56450fb2e3c20b35303d25",
+    "authorization_path": "video-agent-studio/episodes/affordable-home-price-20261026/narration/rebuild-v2/offline-tests/gate-fixture-b0lx3_c6/FAKE_EPISODE/director/fixture-auth.json",
+    "authorization_sha256": "e588c25fadd58ab076d96868e8f455bedbfc19ec53b5274221237c6da5689c6c",
+    "prepared_sha256": "1f8ba3af32276373c5890483c3a187399f6d703a1c7acfa9cfff9b291582297a",
+    "script_sha256": "973d1a34c08183da4319a80f37202ffe96e26b9ae0c9cbcf8b07120154d43cbe"
+  },
+  "pipeline_inputs": {
+    "video-agent-studio/episodes/affordable-home-price-20261026/narration/rebuild-v2/build_narration.py": "c7e2de95b5690d62165e341ce7e257d9c79137878b53d7e0921fa254622bff78",
+    "video-agent-studio/episodes/affordable-home-price-20261026/narration/rebuild-v2/build_contract.json": "2cc201071efbbf4d926fc45466bb8f0a34399e757208adb0668fee91d78934ff",
+    "video-agent-studio/episodes/affordable-home-price-20261026/narration/production_v1.py": "77cc23a640a1d0c6298ba5a3cc2da6996f3012c476225b7fa844226235b95c3c",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/production_narration.py": "009e85a92892002c54de3236395e76f0ee12af3fc3a874e9089b60fe02fc4a36"
+  },
+  "dependencies": {
+    "edge_tts": "7.3.1",
+    "deps_path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/deps",
+    "ffmpeg_path": "video/node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe",
+    "ffmpeg_sha256": "5d1aa3706022b2f1814993c7108ca689a0a2e6fe9af91ec15dbf0bc05d6d39e4",
+    "python": "3.11.9",
+    "WordBoundary_supported": true,
+    "network_calls": 0,
+    "installation_performed": false
+  },
+  "voice": "ko-KR-InJoonNeural",
+  "rate": "+0%",
+  "command_argv": [
+    "C:\\projects\\realestate_reco\\tools\\python311\\python.exe",
+    "-X",
+    "utf8",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\rebuild-v2\\build_narration.py",
+    "generate",
+    "--prepared",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\rebuild-v2\\offline-tests\\gate-fixture-b0lx3_c6\\prepare-two\\prepared.json",
+    "--lock",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\rebuild-v2\\offline-tests\\gate-fixture-b0lx3_c6\\FAKE_EPISODE\\director\\fixture-lock.json",
+    "--authorization",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\rebuild-v2\\offline-tests\\gate-fixture-b0lx3_c6\\FAKE_EPISODE\\director\\fixture-auth.json",
+    "--out",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\rebuild-v2\\offline-tests\\gate-fixture-b0lx3_c6\\NEVER_GENERATE_REAL_AUDIO"
+  ],
+  "TEST_FIXTURE_ONLY": true,
+  "actual_network_calls": 0,
+  "synthesis_function_mocked": true
+}

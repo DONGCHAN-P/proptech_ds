@@ -1,0 +1,222 @@
+{
+  "task_id": "next-policy-independent-qa-v1",
+  "reviewed_at": "2026-10-25T19:35:57.073411+00:00",
+  "status": "approved_with_scope",
+  "critical": 0,
+  "required": 0,
+  "recommended": 5,
+  "checked_revision": {
+    "case_engine": "v2_tax_fraction_rounding_correction",
+    "results_sha256": "fed428bb89b509e0ec4dcda657ce284740bcbbfd9f9dabc5dd91c300f1ebc6a8",
+    "policy_v2_sha256": "9f91f0bfad5ccb5884f4d2cf81f2814caf33b38c5bf652cf83b9b6d6b83bbfd3",
+    "editorial_sha256": "c56710bd814678cc5d3df5cdfc17592dd3662a05416ac2bbb176cd84b9ddccfd"
+  },
+  "approval_scope": "현재 연구준비본의 정책·사례 논리만. 실제대본/미디어/상품실행/업로드 승인이 아님.",
+  "conclusion": "검토한 조건부 사례와v2정책 병합에서 확인된 필수오류 없음. 기존 미확정 실행입력과 주장조건 유지.",
+  "approved_conditional_case_ids": [
+    "A_first_P1200000000_C0",
+    "A_first_P1200000000_C55000000",
+    "A_first_P600000000_C0",
+    "A_first_P600000000_C55000000",
+    "A_first_P900000000_C0",
+    "A_first_P900000000_C55000000",
+    "A_ordinary_P1200000000_C0",
+    "A_ordinary_P1200000000_C55000000",
+    "A_ordinary_P600000000_C0",
+    "A_ordinary_P600000000_C55000000",
+    "A_ordinary_P900000000_C0",
+    "A_ordinary_P900000000_C55000000",
+    "B_bogeum_P600000000_C0",
+    "B_didim_P600000000_C0",
+    "B_didim_P600000000_C55000000",
+    "B_newborn_P600000000_C0",
+    "B_newborn_P600000000_C55000000",
+    "B_newborn_P900000000_C55000000"
+  ],
+  "coverage": {
+    "input_manifest": [
+      {
+        "path": "next_episode_research/sources.json",
+        "sha256": "cef13634ea4f3ea18e2f858abd907376ef3188b640573e3bef67b38dc01ce6de",
+        "bytes": 10383
+      },
+      {
+        "path": "next_episode_research/policy_facts.json",
+        "sha256": "b56a756d0d33b5f8504ab6158f1b60ae3cb0597595ac38efa911c9dcd68f7b68",
+        "bytes": 42538
+      },
+      {
+        "path": "next_episode_research/sources_v2.json",
+        "sha256": "fb399752b4775107ec334895d2459f6f2b1070deb10caaa6f0ae86546ad93c50",
+        "bytes": 9219
+      },
+      {
+        "path": "next_episode_research/policy_facts_v2.json",
+        "sha256": "9f91f0bfad5ccb5884f4d2cf81f2814caf33b38c5bf652cf83b9b6d6b83bbfd3",
+        "bytes": 31201
+      },
+      {
+        "path": "next_episode_research/gaps_v2.json",
+        "sha256": "d54b003f3f413ee791733b23561c8e435bfd083e675be3b725911c18e09098f2",
+        "bytes": 4639
+      },
+      {
+        "path": "next_case_engine_prep_v2/engine.py",
+        "sha256": "86582c82c831c5c9a2e4af8faf5a2b39c28e1dac8f1147793c0cd6c21959dec4",
+        "bytes": 16953
+      },
+      {
+        "path": "next_case_engine_prep_v2/assumptions.json",
+        "sha256": "737140e2744db0fb9c3acba87e21f6d3b06bd1f0005d024264f46d6e12e98c61",
+        "bytes": 13992
+      },
+      {
+        "path": "next_case_engine_prep_v2/cases.json",
+        "sha256": "927d915ca45ad7a39b3dafafdca3cb0c41b9e3a32541bf5e7fc2d584e6f3cb66",
+        "bytes": 4220
+      },
+      {
+        "path": "next_case_engine_prep_v2/results.json",
+        "sha256": "fed428bb89b509e0ec4dcda657ce284740bcbbfd9f9dabc5dd91c300f1ebc6a8",
+        "bytes": 192165
+      },
+      {
+        "path": "next_case_engine_prep_v2/tests/test_engine.py",
+        "sha256": "b0442773cf86d446be67247d8bfc5d867774e3a1424bc55582aa6cd49da2b7e2",
+        "bytes": 13036
+      },
+      {
+        "path": "next_case_independent_arithmetic.json",
+        "sha256": "d4e4a015a55aef4504330d5dfc2aba8bec9890510e5481cc967aca3a93e5541f",
+        "bytes": 25585
+      },
+      {
+        "path": "next_episode_editorial_plan.json",
+        "sha256": "c56710bd814678cc5d3df5cdfc17592dd3662a05416ac2bbb176cd84b9ddccfd",
+        "bytes": 5720
+      },
+      {
+        "path": "next_episode_story_findings.json",
+        "sha256": "f648c31d4c06f65f5a45112c4b0d57654827b39fece76ec5f0553305a256b2ae",
+        "bytes": 4601
+      }
+    ],
+    "merge_rule": "동일claim_id는v2우선; 신혼세칙은HFV2상세항목우선",
+    "merged_claim_count": 55,
+    "code_review": "engine.py 및 tests/test_engine.py 열람. 원본results를 쓰는 engine.main/전체테스트 미실행. evaluate로 자격·제외 논리만 확인.",
+    "arithmetic_reuse": "현재v2 SHA일치157checks/0failed 재사용;157산술 재실행 없음",
+    "independent_logical_checks": [
+      {
+        "check": "157검사 기록이 현재 v2 결과에 귀속",
+        "passed": true
+      },
+      {
+        "check": "결과의 엔진·입력 해시 일치",
+        "passed": true
+      },
+      {
+        "check": "디딤돌/보금자리 6억 포함·초과 제외",
+        "passed": true
+      },
+      {
+        "check": "신생아 9억 포함·초과 제외",
+        "passed": true
+      },
+      {
+        "check": "기금 순자산5.11억 포함·초과 제외",
+        "passed": true
+      },
+      {
+        "check": "B의 신혼/최근출산 자격 분기",
+        "passed": true
+      },
+      {
+        "check": "정책상품 DSR40 미대입·DTI60 적용",
+        "passed": true
+      },
+      {
+        "check": "반사실·상품부적격 제외한 후보18개",
+        "passed": true
+      },
+      {
+        "check": "감면 기본표 미적용·미합산·순세금 미확정",
+        "passed": true
+      },
+      {
+        "check": "현재 구성안 핵심 입력과 사례 일치",
+        "passed": true
+      }
+    ],
+    "primary_pages_visually_inspected": [
+      {
+        "path": "next_episode_research/evidence/v2/bankreg_20261002_p8.png",
+        "sha256": "e031f2a081904dc1d7ed64792c78034e272dd46d4dd00cf9b9e02bea4f5b7492"
+      },
+      {
+        "path": "next_episode_research/evidence/v2/bankreg_20261002_p9.png",
+        "sha256": "d644ae8c037b8c1ea4a41c4bc934c748138686032cb6a71201d5b74bc5cb9fab"
+      },
+      {
+        "path": "next_episode_research/evidence/v2/bank_rules_annex18_20260630_p9.png",
+        "sha256": "e793ffcc5019a10b46edc1ddf0afb8017333e08612e5e640b4b8ad470c9724c3"
+      },
+      {
+        "path": "next_episode_research/evidence/v2/didim_20260618_p19.png",
+        "sha256": "b020cf7c9b4c6050f49061115ccea45beb920b86615d1a2293215a898caec443"
+      },
+      {
+        "path": "next_episode_research/evidence/v2/didim_20260618_p28.png",
+        "sha256": "4a7382f847e19a977cc4f2c5812132619f21efc348fb6e63073cd62cefd6f171"
+      },
+      {
+        "path": "next_episode_research/evidence/v2/didim_20260618_p34.png",
+        "sha256": "8aa0e78fa5d03329734366dc605d6f50f0a55102970173cf0c573a89eeff475f"
+      },
+      {
+        "path": "next_episode_research/evidence/v2/bogeum_2026_p20.png",
+        "sha256": "7581c7e773959b934ef3bc6804b57cdbfdae26c0deb3f36f39ff1a4754d47b9a"
+      },
+      {
+        "path": "next_episode_research/evidence/v2/bogeum_2026_p21.png",
+        "sha256": "8755677f4c9793f11c6f3ce35a8ad6fc6e3d670b51e782b644f5c00d1817a621"
+      },
+      {
+        "path": "next_episode_research/evidence/v2/bogeum_2026_p31.png",
+        "sha256": "6886c7e08726c73f2eb5e5fd19ebf86a66a5d397a784064423ddb2a73ed0a7f4"
+      },
+      {
+        "path": "next_episode_research/evidence/stress_page_1.png",
+        "sha256": "981ef167749cce694dd722ad6312195962c4da58e255b7f3d6885cb073dd44b8"
+      }
+    ],
+    "cached_pdf_sha256_verified": {
+      "bankreg_20261002.pdf": "319904a926ec88dbc4836bd792497823817cbb59594ae0307dbaef174023aac7",
+      "bank_rules_annex18_20260630.pdf": "36915ad8c8fa5e756d71479c42976b5e41f40ab193ead497e454d2e43f7575e0",
+      "didim_20260618.pdf": "195fb318c0edb9f569a858468c579780e4757ff795063651819b0b65dcd8be21",
+      "bogeum_2026.pdf": "c330c643fade22f32cd49590ad12b1c86919da4560875e87b3a7acedef3ec433"
+    },
+    "inherited_evidence": "웹원문 LTV/상품소득·자산·세금/요율·10월 신혼FAQ 등은 제공 출처팩 열람기록 사용. 이번QA가 모든 원문을 재열람했다는 의미 아님.",
+    "primary_policy_inference": "P01 상품명별 신규DSR예외는2024 FSC명시자료와2026 감독규정/세칙·상품DTI를 교차한 해석. 단일2026조문에 상품명이 직접 열거된다는 주장은 하지 않음.",
+    "live_browsing": "미실행: 캐시 대조에서 새 정책 불일치 미발견. 전면최신성 수집 범위 아님.",
+    "tools_limit": "지정Python의fitz/pypdf/pdfplumber없음. 제공 공식PDF 캐시PNG10쪽 실제열람으로 대체.",
+    "actual_listening": "unchecked / 대상미제작",
+    "continuous_playback": "unchecked / 대상미제작",
+    "mp4_frames": "범위밖",
+    "paid_api_calls": 0,
+    "external_payloads_sent": 0
+  },
+  "audit_summary": [
+    "A: 서울투과·인정/가구소득1억·부채0·V=P·30년변동4%/심사7%·일반40/생초70. LTV/DTI/DSR/총액/매매가의 최솟값과 담보차감 순서 적합.",
+    "B: 별도 합산8000만·순자산2.5억·신혼/생초/최근출산·84㎡. 6억/9억 상품가격과3.2/4.2/4억 상품한도를 구분. DSR예외와 DTI/거주 의무 분리.",
+    "은행C0/5500만 조건부와 보금자리 빈아파트0 구분. 신생아6억초과 보증은2025회신·현행FAQ 교차해석의 제한을 유지. 전은행금지/자동면제 단정 없음.",
+    "감면전 비용·VAT·계획예산·잔존예비현금 구분. 최저 필요대출/빌릴수있는상한/부족자금/월목표 구분. 현재 구성메모는v2 수치 반영."
+  ],
+  "open_items": [
+    "NQA-01 구성안 입력해시 갱신(권장)",
+    "G05 감면후교육세/총세금",
+    "G10/CE_G01 실제은행 MCI/MCG/HF보증 승인",
+    "G07/G08/CE_G03 실제 채권/등기/법무사/인지 견적",
+    "CE_G02 정책 실제심사금리/신생아 특례종료후금리"
+  ],
+  "next_gate": "첫영상 비공개업로드 실제완료 후 총괄지시로 대본 작성·현재시점 조건표현 별도검수."
+}

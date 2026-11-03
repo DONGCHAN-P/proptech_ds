@@ -1,0 +1,93 @@
+{
+  "revision": "top20-8min-v2",
+  "photo_revision": "photo_assets_v2",
+  "owner": "visual/photos",
+  "status": "three_alternate_photos_self_checked",
+  "outputs": {
+    "manifest": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photo_assets_v2.json",
+    "sources": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photo_sources_v2.md",
+    "contactsheet": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/alternates/R02_R06_R11_alternates_contactsheet.jpg"
+  },
+  "base_manifest": {
+    "path": "photo_assets.json",
+    "sha256": "fedbad09a0d9a6bf06299ba81d11926e647d73c1641aff4360ceb4f9c0e93dac"
+  },
+  "changed_region_ids": [
+    "R02",
+    "R06",
+    "R11"
+  ],
+  "affected_scene_ids": [
+    "S021",
+    "S017",
+    "S012"
+  ],
+  "replacement_log": [
+    {
+      "region_id": "R02",
+      "scene_ids": [
+        "S021"
+      ],
+      "old_asset_id": "PHOTO_R02",
+      "new_asset_id": "PHOTO_R02_ALT01",
+      "reason": "원본의 NoFoP-South Korea/건축물·제3자 권리 주의가 있는 주피사체를 피하고, 별도의 CC0 또는 기관 보유권리+개별 자유이용 표시가 확인되는 풍경 사진으로 교체.",
+      "old_file": "photos/R02_송파_석촌호수_롯데타워.jpg",
+      "new_file": "photos/alternates/R02_ALT_석촌호수_수변_CC0.jpg",
+      "old_conditions_ref": "assets[1].replaces.old_license"
+    },
+    {
+      "region_id": "R06",
+      "scene_ids": [
+        "S017"
+      ],
+      "old_asset_id": "PHOTO_R06",
+      "new_asset_id": "PHOTO_R06_ALT01",
+      "reason": "원본의 NoFoP-South Korea/건축물·제3자 권리 주의가 있는 주피사체를 피하고, 별도의 CC0 또는 기관 보유권리+개별 자유이용 표시가 확인되는 풍경 사진으로 교체.",
+      "old_file": "photos/R06_강남_테헤란로.jpg",
+      "new_file": "photos/alternates/R06_ALT_양재천산책로_서울경관_1600.jpg",
+      "old_conditions_ref": "assets[5].replaces.old_license"
+    },
+    {
+      "region_id": "R11",
+      "scene_ids": [
+        "S012"
+      ],
+      "old_asset_id": "PHOTO_R11",
+      "new_asset_id": "PHOTO_R11_ALT01",
+      "reason": "원본의 NoFoP-South Korea/건축물·제3자 권리 주의가 있는 주피사체를 피하고, 별도의 CC0 또는 기관 보유권리+개별 자유이용 표시가 확인되는 풍경 사진으로 교체.",
+      "old_file": "photos/R11_노원_상계당현천.jpg",
+      "new_file": "photos/alternates/R11_ALT_경춘선숲길_서울경관_1600.jpg",
+      "old_conditions_ref": "assets[10].replaces.old_license"
+    }
+  ],
+  "replacement_gaps": [],
+  "validation": {
+    "new_physical_files": 3,
+    "new_files_decode_and_hash_checked": true,
+    "all_landscape": true,
+    "all_long_edges_at_least_1200": true,
+    "individual_reuse_licenses_and_positive_permission_evidence_checked": true,
+    "same_unresolved_nofop_third_party_trigger_detected": false,
+    "visual_review": true,
+    "original20_file_hashes_preserved": true,
+    "original_manifest_and_docs_preserved": true,
+    "unchanged17_rows_identical": true,
+    "independent_qa_performed": false
+  },
+  "search_budget": {
+    "used": 6,
+    "limit": 6,
+    "log": "photos/alternates/evidence/search_batches_all.json"
+  },
+  "remaining_conditions": [
+    "허락이 확인된 현재 수변/산책로 풍경 구도로 채택. 제3자 권리 전부를 포괄 보증하는 선언은 아님.",
+    "귀속·촬영시점·기관2020사업연도 분리 표시 유지. 사람/특정 건축물/조형물을 주피사체로 확대하면 재검토.",
+    "독립 QA는 총괄 단계에서3장 변경 범위만 확인. 기존17장 재검수는 불필요."
+  ],
+  "network_blockers": [],
+  "new_paid_generation": false,
+  "contact_email_or_upload_performed": false,
+  "shared_files_modified": false,
+  "next_owner": "director: v2 세 행을 자료화면 안내에 연결하고3장 독립 검수",
+  "summary": "R02 CC0 석촌호수3840×2880, R06/R11 기관 보유권리·개별 CC BY4/공공누리1 공개사진1600×1067로 대체. 노원 가로3:2. 원본20장·v1원장 보존, 나머지17행 동일. 검색6묶음 종료, 대체공백0. 개별 출처·해시·픽셀·지역·귀속문·기존조건 연결 완료."
+}

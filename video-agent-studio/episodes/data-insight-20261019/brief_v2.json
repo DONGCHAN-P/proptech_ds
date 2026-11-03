@@ -1,0 +1,62 @@
+{
+  "episode_id": "data-insight-20261019",
+  "revision": "v2",
+  "latest_user": "Capture screens must be seen on working computer or phone being checked by a person; no floating screenshot overlays. Send final result to Telegram.",
+  "duration": 30,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "no_narration": true,
+  "all_ui_assets_inside_device": true,
+  "office_photo_roles": {
+    "A02": "monitor keyframe office reference",
+    "A04": "phone pantry reference",
+    "A11": "laptop lounge reference"
+  },
+  "ui_asset_ids": [
+    "A01",
+    "A03",
+    "A05",
+    "A06",
+    "A07",
+    "A08",
+    "A09",
+    "A10",
+    "A12",
+    "A13"
+  ],
+  "technical": "Full frame physically grounded monitor/laptop/phone plate; screen corner perspective replacement and source-frame tracking; original Korean pixels or faithful local device adaptation; no floating cards; subtitles separate.",
+  "keyframes": "visual-v2/*_keyframe.png; runway input1280x720 *_reference.jpg",
+  "new_api_budget": {
+    "id": "DI-BUDGET-v2",
+    "approved": true,
+    "max_new_usd": 3,
+    "expected_new_usd": 1.8,
+    "credits_cap": 300,
+    "tax_excluded": true,
+    "old_v1_spend_usd": 1.8
+  },
+  "telegram": {
+    "authorized": true,
+    "target": "existing .env configured TELEGRAM_CHAT_ID",
+    "artifact": "final MP4 sendDocument preserving quality",
+    "do_not_send_credentials": true
+  },
+  "preserve": [
+    "v1 outputs and sources",
+    "original13inputs"
+  ],
+  "reuse": [
+    "BGM/fonts/claims"
+  ],
+  "must_check": [
+    "UI stays within display throughout",
+    "person looks at device",
+    "hand occlusion",
+    "phone notch and bezel preserved",
+    "no unsupported synthetic UI numbers",
+    "Hangul/captions",
+    "all10UIassets used on displays",
+    "3source officephoto references retained"
+  ]
+}

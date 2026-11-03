@@ -1,0 +1,61 @@
+{
+  "status": "review_ready_no_audio_generated",
+  "script_revision": "script-v7-region-leaders",
+  "source_script_sha256": "6ce6fefb6cbd439b7073091a0107ec65261ba8638aeeb0f339369c0e68640737",
+  "input_version": "script-v6-series-cta + research/region-leaders-v14",
+  "ownership": [
+    "writer/region-leaders-v7/**",
+    "outputs/story-review-v7/**"
+  ],
+  "outputs": [
+    "outputs/story-review-v7/script_v7.md",
+    "outputs/story-review-v7/manifest.json",
+    "outputs/story-review-v7/M008.txt",
+    "outputs/story-review-v7/M009.txt",
+    "outputs/story-review-v7/M008_semantic_captions.json",
+    "outputs/story-review-v7/M009_semantic_captions.json",
+    "writer/region-leaders-v7/outline.md"
+  ],
+  "validation": {
+    "unchanged_9_narration_chapters": true,
+    "semantic_cues": 72,
+    "exact_character_spans": true,
+    "excluded_A2_A24_from_new_candidate_narration": true,
+    "paid_calls": 0
+  },
+  "changed_scene_ids": [
+    "M008",
+    "M009"
+  ],
+  "claim_ids": [
+    "V14-W1-B1",
+    "V14-W1-B2",
+    "V14-W1-B17",
+    "V14-W2-A1",
+    "V14-W2-A3",
+    "W1-B17-PRICE",
+    "W2-A1-PRICE",
+    "W2-A3-PRICE",
+    "ALT-002",
+    "MAP-RAIL-W1",
+    "MAP-RAIL-W2"
+  ],
+  "budget_proposal": {
+    "initial_characters": 1541,
+    "reserve": 309,
+    "submitted_character_and_credit_hard_cap": 1850,
+    "additional_cash_usd": 0,
+    "approval_transferred": false
+  },
+  "unresolved": [
+    "New script and budget approval required before new M008/M009 voice",
+    "B1/B2 individual superiority not established; jointly selected",
+    "Correction notices, actual school opening/assignment/walking routes and facility opening dates require later verification",
+    "Actual transfer conditions depend on applicable restrictions and registration; no free-trade date inferred"
+  ],
+  "next_role": [
+    "director",
+    "editor",
+    "qa"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "provider": "microsoft_edge_consumer_tts",
+  "edge_tts_version": "7.3.1",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "voice": "ko-KR-InJoonNeural",
+  "rate": "+0%",
+  "atempo": 1.35,
+  "native_boundary": "WordBoundary",
+  "automatic_retry": false,
+  "provider_403_retry_disabled": true,
+  "paid_api_calls": 0,
+  "cash_cost_krw": 0,
+  "credentials_loaded": false,
+  "claude_calls": 0,
+  "chunks": [
+    {
+      "scene_id": "P01-CRITERIA",
+      "status": "complete",
+      "started_at": "2026-11-03T12:35:26.083303+00:00",
+      "input_sha256": "3ff14277d01e8676e4c99c2f1ccc3b0a2cc7c4814600a47669031b8f99e18698",
+      "generation_input_sha256": "6dc283b539aaad03ec96e7b708fcb225040035269d18cb7a84a0d7dfa6d2c086",
+      "voice": "ko-KR-InJoonNeural",
+      "rate": "+0%",
+      "edge_tts_version": "7.3.1",
+      "characters": 116,
+      "automatic_retry": false,
+      "provider_403_retry_disabled": true,
+      "paid_api_calls": 0,
+      "cash_cost_krw": 0,
+      "credentials_loaded": false,
+      "completed_at": "2026-11-03T12:35:27.925119+00:00",
+      "duration_s": 16.848004535147393,
+      "boundary_count": 29,
+      "outputs": {
+        "mp3": {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/map-clean-v1/raw/P01-CRITERIA.mp3",
+          "sha256": "c76b9fb97650a842c10e7c5aa41dc46c7c25991ad26e527d18a01e736f2ca09a",
+          "bytes": 101088
+        },
+        "metadata": {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/map-clean-v1/raw/P01-CRITERIA.boundaries.json",
+          "sha256": "0a586eb05e04da1f40b83de7e272c96e9ca6f7d9091dd95c8debb1e4692484a4",
+          "bytes": 3623
+        },
+        "wav": {
+          "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/map-clean-v1/raw/P01-CRITERIA.wav",
+          "sha256": "d6996b4340eb6a8db563be47d8ad8df43921453d8348c16c97d67e75894fd1ad",
+          "bytes": 1486072
+        }
+      },
+      "actual_listening": false
+    }
+  ]
+}

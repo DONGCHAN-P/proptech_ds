@@ -1,0 +1,980 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "KR_APARTMENT_POLICY_REGIONAL_PARTIAL_20261027",
+  "research_as_of": "2026-10-27",
+  "timezone": "Asia/Seoul",
+  "status": "verified_partial_registry_first_experiment_freeze",
+  "direction_definition": {
+    "0": "neutral or schedule/infrastructure information; never a price-effect sign",
+    "+1": "regulatory tightening or expanded constraint coverage",
+    "-1": "regulatory easing or release"
+  },
+  "code_system": {
+    "district_prefixes": "Five-digit Korean legal/administrative district reporting identifiers; two-digit province/metropolitan prefixes where coverage permits. Strings only.",
+    "nationwide": "00",
+    "main_city_scope": [
+      "11",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30",
+      "31",
+      "36",
+      "41",
+      "43",
+      "44"
+    ],
+    "code_catalog_url": "https://www.code.go.kr/stdcode/regCodeL.do",
+    "stable_gwangju_reporting": {
+      "city_prefix": "29",
+      "reported_upstream_raw_statistical_codes": [
+        "12210",
+        "12240",
+        "12270",
+        "12300",
+        "12330"
+      ],
+      "mapping_basis": "User-reported upstream official-name-verified remapping; raw codes are NOT legal district prefixes. This task did not re-audit that upstream crosswalk.",
+      "join_instruction": "Join upstream canonical district names or a versioned verified crosswalk before applying legal prefixes; never startswith-match those raw statistical codes."
+    },
+    "dongtan_2026": {
+      "prefix": "41597",
+      "effective_boundary_date": "2026-02-01",
+      "source_url": "https://www.110.go.kr/data/counselView.do?num=A01_720927",
+      "predecessor_city_reporting_prefix": "41590",
+      "instruction": "Use vintage boundaries or a verified split crosswalk; 41590 is not equivalent to 41597."
+    }
+  },
+  "usage_contract": {
+    "default_input_array": "events",
+    "required_projection_fields": [
+      "announcement_date",
+      "effective_date",
+      "affected_prefixes",
+      "direction",
+      "event_id",
+      "source_url"
+    ],
+    "projection": "Project events to these six keys. Each events row is generic_eligible=true. Do not flatten other arrays.",
+    "announcement_date_semantics": "Public announcement date of THIS record, sometimes a later implementation/clarification bulletin. package_announcement_date retains the earlier package date. Conservative later bulletin dates deliberately avoid backdating detailed information.",
+    "information_gate": "Use a record only if information_available_from <= forecast_origin_cutoff. All default events use announcement_date as this gate; date-only daily forecasts should activate next day absent a verified intraday release time.",
+    "effective_date_semantics": "Published legal/administrative commencement date or explicitly announced schedule; it is not evidence of economic impact. Respect later revisions and borrower grandfathering. Never use a future unannounced event inside the six-month target window.",
+    "intended_generic_feature": "Dated event pulses/counts within the recorded geographic subset. Not a complete legal regime-state reconstruction.",
+    "coverage_missingness": "Unlisted places/dates are unknown, not proven unregulated or zero policy. 'verified_subset' rows omit some real affected places deliberately.",
+    "package_counting": "Cluster by package/date/type; same-package submeasures are not independent policy observations.",
+    "historical_backtest": "Pseudo real time. Most historical first-seen/release availability is estimated upstream. Official publication dates here are not authenticated historical collection timestamps.",
+    "no_causal_claim": "No estimated or asserted causal housing-price effect. Incremental predictive value must be established by time-ordered ablation."
+  },
+  "events": [
+    {
+      "event_id": "KR_20170802_DESIGNATION_SEOUL_GWACHEON",
+      "announcement_date": "2017-08-02",
+      "effective_date": "2017-08-03",
+      "affected_prefixes": [
+        "11",
+        "41290"
+      ],
+      "direction": 1,
+      "type": "regulated_designation",
+      "source_url": "https://police.molit.go.kr/USR/I0204/m_14993/dtl.jsp?idx=15117&lcmspage=325&psize=10",
+      "information_available_from": "2017-08-02",
+      "generic_eligible": true,
+      "source_urls": [
+        "https://police.molit.go.kr/USR/I0204/m_14993/dtl.jsp?idx=15117&lcmspage=325&psize=10",
+        "https://m.korea.kr/news/policyNewsView.do?newsId=148840552"
+      ],
+      "coverage": "verified_subset_of_package",
+      "parameters": {
+        "designation": "speculative_overheated_district",
+        "action": "designate"
+      },
+      "notes": "Seoul and Gwacheon only. Sejong's designated planned-city area is excluded from prefix-only input; do not assign the whole of 36."
+    },
+    {
+      "event_id": "KR_20170823_LTV_DTI_40_BULLETIN",
+      "announcement_date": "2017-08-23",
+      "effective_date": "2017-08-23",
+      "affected_prefixes": [
+        "11",
+        "41290"
+      ],
+      "direction": 1,
+      "type": "ltv_dti",
+      "source_url": "https://fsc.go.kr/no010101/72791",
+      "information_available_from": "2017-08-23",
+      "generic_eligible": true,
+      "package_announcement_date": "2017-08-02",
+      "coverage": "verified_subset_of_package",
+      "parameters": {
+        "standard_ltv_pct": 40,
+        "standard_dti_pct": 40,
+        "eligible_end_user_relief_pp": 10
+      },
+      "notes": "Detailed supervisory-amendment bulletin date used conservatively. Exceptions and pre-existing contracts prevent a universal borrower-level ceiling."
+    },
+    {
+      "event_id": "KR_20180914_PURCHASE_MORTGAGE_RESTRICTIONS",
+      "announcement_date": "2018-09-14",
+      "effective_date": "2018-09-14",
+      "affected_prefixes": [
+        "11"
+      ],
+      "direction": 1,
+      "type": "mortgage_eligibility",
+      "source_url": "https://www.fsc.go.kr/eng/pr010101/22189",
+      "information_available_from": "2018-09-14",
+      "generic_eligible": true,
+      "package_announcement_date": "2018-09-13",
+      "coverage": "verified_subset_of_regulated_areas",
+      "parameters": {
+        "multiple_home_owner_additional_purchase_mortgage": "prohibited_in_covered_regulated_areas",
+        "one_home_owner": "exceptions_for_relocation_etc"
+      },
+      "notes": "Conservative availability: the detailed English release/FAQ is dated September 14. Jeonse-guarantee changes expected in October are NOT assigned September 14."
+    },
+    {
+      "event_id": "KR_20191216_APARTMENT_GT_15EOK_MORTGAGE_BAN",
+      "announcement_date": "2019-12-16",
+      "effective_date": "2019-12-17",
+      "affected_prefixes": [
+        "11"
+      ],
+      "direction": 1,
+      "type": "mortgage_eligibility",
+      "source_url": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=148867548",
+      "information_available_from": "2019-12-16",
+      "generic_eligible": true,
+      "source_urls": [
+        "https://www.korea.kr/briefing/policyBriefingView.do?newsId=148867548",
+        "https://www.fsc.go.kr/no010101/74057?curPage=339&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText="
+      ],
+      "coverage": "verified_subset_of_speculative_and_overheated_areas",
+      "parameters": {
+        "apartment_market_value_gt_krw": 1500000000,
+        "purchase_mortgage": "prohibited"
+      },
+      "notes": "Price threshold concerns eligible collateral, not the regional mean apartment price."
+    },
+    {
+      "event_id": "KR_20191223_TIERED_LTV_IMPLEMENTATION",
+      "announcement_date": "2019-12-23",
+      "effective_date": "2019-12-23",
+      "affected_prefixes": [
+        "11"
+      ],
+      "direction": 1,
+      "type": "ltv_price_tiers",
+      "source_url": "https://www.fsc.go.kr/no010101/74057?curPage=339&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText=",
+      "information_available_from": "2019-12-23",
+      "generic_eligible": true,
+      "package_announcement_date": "2019-12-16",
+      "coverage": "verified_subset_of_speculative_and_overheated_areas",
+      "parameters": {
+        "value_up_to_krw": 900000000,
+        "ltv_below_threshold_pct": 40,
+        "ltv_above_threshold_marginal_pct": 20
+      },
+      "notes": "Implementation bulletin is used as the record's announcement. Marginal 20% applies only to the value above KRW900m; not 20% on the entire home."
+    },
+    {
+      "event_id": "KR_20200630_MORTGAGE_OCCUPANCY_BULLETIN",
+      "announcement_date": "2020-06-30",
+      "effective_date": "2020-07-01",
+      "affected_prefixes": [
+        "11"
+      ],
+      "direction": 1,
+      "type": "occupancy_and_disposal_conditions",
+      "source_url": "https://www.fsc.go.kr/no010101/74417",
+      "information_available_from": "2020-06-30",
+      "generic_eligible": true,
+      "package_announcement_date": "2020-06-17",
+      "coverage": "verified_subset_of_regulated_areas",
+      "parameters": {
+        "move_in_deadline_months": 6,
+        "conditional_one_home_owner_disposal_deadline_months": 6
+      },
+      "notes": "Do not use June 19 designation effectiveness as the start of this July 1 credit rule."
+    },
+    {
+      "event_id": "KR_20201217_GWANGJU_ADJUSTMENT_DESIGNATION",
+      "announcement_date": "2020-12-17",
+      "effective_date": "2020-12-18",
+      "affected_prefixes": [
+        "29"
+      ],
+      "direction": 1,
+      "type": "regulated_designation",
+      "source_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148881292",
+      "information_available_from": "2020-12-17",
+      "generic_eligible": true,
+      "coverage": "complete_city_subset_of_package",
+      "parameters": {
+        "designation": "adjustment_target_area",
+        "action": "designate",
+        "district_names": [
+          "동구",
+          "서구",
+          "남구",
+          "북구",
+          "광산구"
+        ]
+      },
+      "notes": "All five Gwangju districts are explicitly listed. City prefix 29 is the stable reporting scope; do not match KOSIS statistical codes by raw prefix."
+    },
+    {
+      "event_id": "KR_20210517_DSR_PHASE1_CLARIFICATION",
+      "announcement_date": "2021-05-17",
+      "effective_date": "2021-07-01",
+      "affected_prefixes": [
+        "11"
+      ],
+      "direction": 1,
+      "type": "borrower_dsr_coverage",
+      "source_url": "https://www.fsc.go.kr/no010102/75917?curPage=5&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText=",
+      "information_available_from": "2021-05-17",
+      "generic_eligible": true,
+      "package_announcement_date": "2021-04-29",
+      "source_urls": [
+        "https://www.fsc.go.kr/no010102/75917?curPage=5&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText=",
+        "https://www.korea.kr/briefing/policyBriefingView.do?newsId=148886836"
+      ],
+      "coverage": "verified_subset_of_regulated_areas",
+      "parameters": {
+        "mortgage_collateral_value_gt_krw": 600000000
+      },
+      "notes": "Clarification release conservatively gates this row. National credit-loan coverage and all other regulated districts are not exhaustively mapped here."
+    },
+    {
+      "event_id": "KR_20211026_DSR_PHASE2_SCHEDULE",
+      "announcement_date": "2021-10-26",
+      "effective_date": "2022-01-01",
+      "affected_prefixes": [
+        "00"
+      ],
+      "direction": 1,
+      "type": "borrower_dsr_coverage",
+      "source_url": "https://www.fsc.go.kr/no010101/76740",
+      "information_available_from": "2021-10-26",
+      "generic_eligible": true,
+      "coverage": "nationwide_conditional",
+      "parameters": {
+        "total_borrowing_gt_krw": 200000000,
+        "bank_dsr_pct": 40,
+        "nonbank_dsr_pct": 50
+      },
+      "notes": "October 26 accelerated phase 2 from July 2022 to January 2022. DSR-exempt loans and grandfathering still apply."
+    },
+    {
+      "event_id": "KR_20211026_DSR_PHASE3_SCHEDULE",
+      "announcement_date": "2021-10-26",
+      "effective_date": "2022-07-01",
+      "affected_prefixes": [
+        "00"
+      ],
+      "direction": 1,
+      "type": "borrower_dsr_coverage",
+      "source_url": "https://www.fsc.go.kr/no010101/76740",
+      "information_available_from": "2021-10-26",
+      "generic_eligible": true,
+      "coverage": "nationwide_conditional",
+      "parameters": {
+        "total_borrowing_gt_krw": 100000000,
+        "bank_dsr_pct": 40,
+        "nonbank_dsr_pct": 50
+      },
+      "notes": "The earlier April 2021 plan had July 2023; do not put the accelerated date into origins before October 26, 2021."
+    },
+    {
+      "event_id": "KR_20220921_GWANGJU_DAEJEON_ADJUSTMENT_RELEASE",
+      "announcement_date": "2022-09-21",
+      "effective_date": "2022-09-26",
+      "affected_prefixes": [
+        "29",
+        "30"
+      ],
+      "direction": -1,
+      "type": "regulated_designation",
+      "source_url": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=148906145",
+      "information_available_from": "2022-09-21",
+      "generic_eligible": true,
+      "coverage": "complete_city_subset_of_package",
+      "parameters": {
+        "designation": "adjustment_target_area",
+        "action": "release"
+      },
+      "notes": "Verified complete-city releases. Other provincial releases in the same package are intentionally not exhaustively encoded."
+    },
+    {
+      "event_id": "KR_20221110_INCHEON_SEJONG_ADJUSTMENT_RELEASE",
+      "announcement_date": "2022-11-10",
+      "effective_date": "2022-11-14",
+      "affected_prefixes": [
+        "28",
+        "36"
+      ],
+      "direction": -1,
+      "type": "regulated_designation",
+      "source_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148908107",
+      "information_available_from": "2022-11-10",
+      "generic_eligible": true,
+      "coverage": "complete_city_subset_of_package",
+      "parameters": {
+        "designation": "adjustment_target_area",
+        "action": "release"
+      },
+      "notes": "Apply as a release event or to previously designated areas, not as evidence that every tract was previously regulated."
+    },
+    {
+      "event_id": "KR_20221110_LTV_NORMALIZATION_SCHEDULE",
+      "announcement_date": "2022-11-10",
+      "effective_date": "2022-12-01",
+      "affected_prefixes": [
+        "11",
+        "41131",
+        "41135",
+        "41210",
+        "41290",
+        "41450"
+      ],
+      "direction": -1,
+      "type": "ltv_and_high_price_mortgage_relaxation",
+      "source_url": "https://www.fsc.go.kr/no010101/78887",
+      "information_available_from": "2022-11-10",
+      "generic_eligible": true,
+      "package_announcement_date": "2022-10-27",
+      "coverage": "verified_remaining_regulated_area_scope",
+      "parameters": {
+        "standard_ltv_pct": 50,
+        "apartment_gt_1500000000_krw_purchase_mortgage": "permitted_for_eligible_no_home_or_conditional_one_home_borrowers"
+      },
+      "notes": "November 10 specified December 1 (then provisional). This is not a nationwide unconditional 50% ceiling; DSR and borrower exceptions remain."
+    },
+    {
+      "event_id": "KR_20230103_REGULATED_AREA_RELEASE",
+      "announcement_date": "2023-01-03",
+      "effective_date": "2023-01-05",
+      "affected_prefixes": [
+        "11110",
+        "11140",
+        "11200",
+        "11215",
+        "11230",
+        "11260",
+        "11290",
+        "11305",
+        "11320",
+        "11350",
+        "11380",
+        "11410",
+        "11440",
+        "11470",
+        "11500",
+        "11530",
+        "11545",
+        "11560",
+        "11590",
+        "11620",
+        "11740",
+        "41131",
+        "41135",
+        "41210",
+        "41290",
+        "41450"
+      ],
+      "direction": -1,
+      "type": "regulated_designation",
+      "source_url": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156546653",
+      "information_available_from": "2023-01-03",
+      "generic_eligible": true,
+      "source_urls": [
+        "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156546653",
+        "https://www.molit.go.kr/USR/I0204/m_45/dtl.jsp?idx=17700&lcmspage=1&psize=10",
+        "https://www.molit.go.kr/USR/I0204/m_45/dtl.jsp?idx=17701&lcmspage=1&psize=10"
+      ],
+      "coverage": "remaining_area_release_except_retained_four",
+      "parameters": {
+        "designations": [
+          "speculative_overheated_district",
+          "adjustment_target_area"
+        ],
+        "action": "release",
+        "retained_prefixes": [
+          "11170",
+          "11650",
+          "11680",
+          "11710"
+        ]
+      },
+      "notes": "Seongnam Jungwon is not added to this January release: only Sujeong/Bundang remained. This row does not encode the separate tax-law speculative-area designation."
+    },
+    {
+      "event_id": "KR_20240226_STRESS_DSR_PHASE1_BULLETIN",
+      "announcement_date": "2024-02-26",
+      "effective_date": "2024-02-26",
+      "affected_prefixes": [
+        "00"
+      ],
+      "direction": 1,
+      "type": "stress_dsr_phase",
+      "source_url": "https://www.fsc.go.kr/po010101/81777",
+      "information_available_from": "2024-02-26",
+      "generic_eligible": true,
+      "package_announcement_date": "2023-12-27",
+      "coverage": "nationwide_conditional",
+      "parameters": {
+        "phase": 1,
+        "lenders": "banks",
+        "loan_scope": "DSR-covered housing mortgages",
+        "stress_rate_pp": 0.38
+      },
+      "notes": "Detailed implementation bulletin date used. Stress rate is a calculation add-on, not a charged lending-rate increase."
+    },
+    {
+      "event_id": "KR_20240820_STRESS_DSR_PHASE2",
+      "announcement_date": "2024-08-20",
+      "effective_date": "2024-09-01",
+      "affected_prefixes": [
+        "00"
+      ],
+      "direction": 1,
+      "type": "stress_dsr_phase",
+      "source_url": "https://www.fsc.go.kr/no010101/82917",
+      "information_available_from": "2024-08-20",
+      "generic_eligible": true,
+      "coverage": "nationwide_conditional",
+      "source_urls": [
+        "https://www.fsc.go.kr/no010101/82917",
+        "https://www.fsc.go.kr/no010101/82931"
+      ],
+      "parameters": {
+        "phase": 2,
+        "standard_stress_rate_pp": 0.75,
+        "bank_loan_scope": "mortgages_and_eligible_credit_loans",
+        "nonbank_loan_scope": "mortgages"
+      },
+      "notes": "The June 25 postponement must be honored. Grandfathering uses pre-August 31 contracts/advertisements."
+    },
+    {
+      "event_id": "KR_20240820_CAPITAL_BANK_MORTGAGE_STRESS_INCREMENT",
+      "announcement_date": "2024-08-20",
+      "effective_date": "2024-09-01",
+      "affected_prefixes": [
+        "11",
+        "28",
+        "41"
+      ],
+      "direction": 1,
+      "type": "stress_dsr_regional_differential",
+      "source_url": "https://www.fsc.go.kr/no010101/82917",
+      "information_available_from": "2024-08-20",
+      "generic_eligible": true,
+      "coverage": "capital_region_conditional",
+      "parameters": {
+        "bank_mortgage_stress_rate_pp": 1.2,
+        "other_region_standard_pp": 0.75
+      },
+      "notes": "Additional regional interaction in the same package. Do not count this and phase 2 as two independent packages."
+    },
+    {
+      "event_id": "KR_20250520_STRESS_DSR_PHASE3",
+      "announcement_date": "2025-05-20",
+      "effective_date": "2025-07-01",
+      "affected_prefixes": [
+        "00"
+      ],
+      "direction": 1,
+      "type": "stress_dsr_phase",
+      "source_url": "https://www.fsc.go.kr/no010101/84617",
+      "information_available_from": "2025-05-20",
+      "generic_eligible": true,
+      "coverage": "nationwide_conditional",
+      "parameters": {
+        "phase": 3,
+        "lenders": "all_sectors",
+        "loan_scope": "all_DSR_covered_household_loan_types",
+        "standard_stress_rate_pp": 1.5,
+        "noncapital_mortgage_stress_rate_pp": 0.75,
+        "noncapital_relief_scheduled_through": "2025-12-31"
+      },
+      "notes": "Credit loans receive the stress add-on only when balance exceeds KRW100m. This row says what was announced in May, not what later extensions realized."
+    },
+    {
+      "event_id": "KR_20250627_CAPITAL_MORTGAGE_CONSTRAINTS",
+      "announcement_date": "2025-06-27",
+      "effective_date": "2025-06-28",
+      "affected_prefixes": [
+        "11",
+        "28",
+        "41"
+      ],
+      "direction": 1,
+      "type": "mortgage_constraints_bundle",
+      "source_url": "https://www.fsc.go.kr/no010101/84824",
+      "information_available_from": "2025-06-27",
+      "generic_eligible": true,
+      "coverage": "capital_region_subset_of_capital_or_regulated_scope",
+      "parameters": {
+        "purchase_mortgage_cap_krw": 600000000,
+        "max_mortgage_maturity_years": 30,
+        "move_in_deadline_months": 6,
+        "first_time_buyer_ltv_pct": 70
+      },
+      "notes": "Policy loans have their own caps; interim-payment loans are excepted from the KRW600m cap. Contract/application grandfathering applies. Borrower eligibility differs by clause."
+    },
+    {
+      "event_id": "KR_20250627_JEONSE_GUARANTEE_RATIO",
+      "announcement_date": "2025-06-27",
+      "effective_date": "2025-07-21",
+      "affected_prefixes": [
+        "11",
+        "28",
+        "41"
+      ],
+      "direction": 1,
+      "type": "jeonse_guarantee",
+      "source_url": "https://www.fsc.go.kr/no010101/84824",
+      "information_available_from": "2025-06-27",
+      "generic_eligible": true,
+      "coverage": "capital_region_subset_of_capital_or_regulated_scope",
+      "parameters": {
+        "guarantee_coverage_pct_before": 90,
+        "guarantee_coverage_pct_after": 80,
+        "guarantors": [
+          "HF",
+          "HUG",
+          "SGI"
+        ]
+      },
+      "notes": "This clause starts July 21, not June 28; the percentage is guarantee coverage, not borrower LTV."
+    },
+    {
+      "event_id": "KR_20250907_REGULATED_LTV40",
+      "announcement_date": "2025-09-07",
+      "effective_date": "2025-09-08",
+      "affected_prefixes": [
+        "11170",
+        "11650",
+        "11680",
+        "11710"
+      ],
+      "direction": 1,
+      "type": "ltv",
+      "source_url": "https://www.fsc.go.kr/no010101/85253",
+      "information_available_from": "2025-09-07",
+      "generic_eligible": true,
+      "coverage": "then_regulated_four_districts",
+      "parameters": {
+        "standard_ltv_pct_before": 50,
+        "standard_ltv_pct_after": 40,
+        "borrowers": "no_home_or_disposal_conditional_one_home"
+      },
+      "notes": "The four regulated districts were Gangnam, Seocho, Songpa and Yongsan at this announcement."
+    },
+    {
+      "event_id": "KR_20251015_PRICE_TIER_MORTGAGE_CAPS",
+      "announcement_date": "2025-10-15",
+      "effective_date": "2025-10-16",
+      "affected_prefixes": [
+        "11",
+        "28",
+        "41"
+      ],
+      "direction": 1,
+      "type": "mortgage_amount_price_tiers",
+      "source_url": "https://www.fsc.go.kr/no010101/85432?curPage=67&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText=",
+      "information_available_from": "2025-10-15",
+      "generic_eligible": true,
+      "coverage": "capital_region_subset_of_capital_or_regulated_scope",
+      "parameters": {
+        "tiers": [
+          {
+            "market_value_max_krw": 1500000000,
+            "cap_krw": 600000000
+          },
+          {
+            "market_value_gt_krw": 1500000000,
+            "market_value_max_krw": 2500000000,
+            "cap_krw": 400000000
+          },
+          {
+            "market_value_gt_krw": 2500000000,
+            "cap_krw": 200000000
+          }
+        ]
+      },
+      "notes": "Price-tier amounts are loan caps; they are not LTV ratios."
+    },
+    {
+      "event_id": "KR_20251015_STRESS_DSR_FLOOR3",
+      "announcement_date": "2025-10-15",
+      "effective_date": "2025-10-16",
+      "affected_prefixes": [
+        "11",
+        "28",
+        "41"
+      ],
+      "direction": 1,
+      "type": "stress_dsr_regional_differential",
+      "source_url": "https://www.fsc.go.kr/no010101/85432?curPage=67&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText=",
+      "information_available_from": "2025-10-15",
+      "generic_eligible": true,
+      "coverage": "capital_region_subset_of_capital_or_regulated_scope",
+      "parameters": {
+        "mortgage_stress_rate_floor_pp": 3
+      },
+      "notes": "A calculation floor for covered mortgages, not a 3pp increase in actual interest rates."
+    },
+    {
+      "event_id": "KR_20251015_ONE_HOME_OWNER_JEONSE_DSR",
+      "announcement_date": "2025-10-15",
+      "effective_date": "2025-10-29",
+      "affected_prefixes": [
+        "11",
+        "28",
+        "41"
+      ],
+      "direction": 1,
+      "type": "jeonse_dsr",
+      "source_url": "https://www.fsc.go.kr/no010101/85432?curPage=67&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText=",
+      "information_available_from": "2025-10-15",
+      "generic_eligible": true,
+      "coverage": "capital_region_subset_of_capital_or_regulated_scope",
+      "parameters": {
+        "borrower_home_count": 1,
+        "dsr_component": "interest_repayment_on_jeonse_loan",
+        "owned_home_location": "any"
+      },
+      "notes": "Tenant's rented-home location determines this spatial scope; do not match it to the owned home's location. Not all jeonse principal is included."
+    }
+  ],
+  "current_2026_events": [
+    {
+      "event_id": "KR_20260401_ONLINE_INVESTMENT_LINKED_LENDING_RULES",
+      "announcement_date": "2026-04-01",
+      "effective_date": "2026-04-02",
+      "affected_prefixes": [
+        "00"
+      ],
+      "direction": 1,
+      "type": "lender_coverage_extension",
+      "source_url": "https://www.fsc.go.kr/no010101/86606",
+      "information_available_from": "2026-04-01",
+      "generic_eligible": true,
+      "coverage": "nationwide_lender_class_conditional",
+      "parameters": {
+        "lenders": "online_investment_linked_finance",
+        "regulated_ltv_pct": 40,
+        "nonregulated_ltv_pct": 70
+      },
+      "notes": "National lender-class extension. Regional amount caps remain conditional, not national unconditional caps.",
+      "default_historical_training_include": false
+    },
+    {
+      "event_id": "KR_20260401_MULTIPLE_HOME_OWNER_RENEWAL_RESTRICTION",
+      "announcement_date": "2026-04-01",
+      "effective_date": "2026-04-17",
+      "affected_prefixes": [
+        "11",
+        "28",
+        "41"
+      ],
+      "direction": 1,
+      "type": "mortgage_renewal",
+      "source_url": "https://www.fsc.go.kr/no010101/86606",
+      "information_available_from": "2026-04-01",
+      "generic_eligible": true,
+      "coverage": "capital_region_subset_of_capital_or_regulated_scope",
+      "parameters": {
+        "borrowers": "multiple_home_owners_and_rental_business_operators",
+        "collateral": "apartments",
+        "maturity_extension": "generally_disallowed_with_exceptions"
+      },
+      "notes": "Includes tenant-related and other unavoidable exceptions; not an immediate universal forced repayment.",
+      "default_historical_training_include": false
+    },
+    {
+      "event_id": "KR_20260630_THREE_DISTRICT_DESIGNATION",
+      "announcement_date": "2026-06-30",
+      "effective_date": "2026-07-01",
+      "affected_prefixes": [
+        "41597",
+        "41463",
+        "41310"
+      ],
+      "direction": 1,
+      "type": "regulated_designation",
+      "source_url": "https://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95092167",
+      "information_available_from": "2026-06-30",
+      "generic_eligible": true,
+      "source_urls": [
+        "https://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95092167",
+        "https://www.fsc.go.kr/no010101/87222?curPage=17&srchBeginDt=&srchCtgry=&srchEndDt=%0A&srchKey=&srchText=",
+        "https://www.110.go.kr/data/counselView.do?num=A01_720927"
+      ],
+      "coverage": "three_newly_designated_districts",
+      "parameters": {
+        "district_names": [
+          "화성시 동탄구",
+          "용인시 기흥구",
+          "구리시"
+        ],
+        "designations": [
+          "speculative_overheated_district",
+          "adjustment_target_area"
+        ],
+        "action": "designate"
+      },
+      "notes": "Dongtan uses the post-February 2026 district code. Never apply 41597 retroactively to all historical Hwaseong (41590).",
+      "default_historical_training_include": false
+    },
+    {
+      "event_id": "KR_20260630_THREE_DISTRICT_LTV40",
+      "announcement_date": "2026-06-30",
+      "effective_date": "2026-07-01",
+      "affected_prefixes": [
+        "41597",
+        "41463",
+        "41310"
+      ],
+      "direction": 1,
+      "type": "ltv",
+      "source_url": "https://www.fsc.go.kr/no010101/87222?curPage=17&srchBeginDt=&srchCtgry=&srchEndDt=%0A&srchKey=&srchText=",
+      "information_available_from": "2026-06-30",
+      "generic_eligible": true,
+      "coverage": "three_newly_designated_districts",
+      "parameters": {
+        "standard_ltv_pct_before": 70,
+        "standard_ltv_pct_after": 40
+      },
+      "notes": "Same package as the designation row; contracts/applications completed by June 30 may retain prior rules.",
+      "default_historical_training_include": false
+    }
+  ],
+  "restricted_geography_or_pending_records": [
+    {
+      "event_id": "KR_20210422_REDEVELOPMENT_LAND_PERMIT",
+      "announcement_date": "2021-04-22",
+      "effective_date": "2021-04-27",
+      "affected_prefixes": [
+        "11680",
+        "11560",
+        "11470",
+        "11200"
+      ],
+      "direction": 1,
+      "type": "land_transaction_permit",
+      "source_url": "https://news.seoul.go.kr/citybuild/archives/512421",
+      "information_available_from": "2021-04-22",
+      "generic_eligible": false,
+      "coverage": "partial_district_polygons_only",
+      "parameters": {
+        "areas": [
+          "압구정아파트지구",
+          "여의도아파트지구 및 인근단지",
+          "목동택지개발사업지구",
+          "성수전략정비구역"
+        ],
+        "announced_end_date": "2022-04-26"
+      },
+      "notes": "Parent codes are candidate joins only. Parcel/project polygons and covered property types are required; never mark every apartment in the four districts regulated. Later extensions are not backfilled."
+    },
+    {
+      "event_id": "KR_20250213_PARTIAL_LAND_PERMIT_RELEASE",
+      "announcement_date": "2025-02-13",
+      "effective_date": "2025-02-13",
+      "affected_prefixes": [
+        "11680",
+        "11710"
+      ],
+      "direction": -1,
+      "type": "land_transaction_permit",
+      "source_url": "https://event.seoul.go.kr/snews/data/CN_MST/seoulsibo_20250213092648_24250.pdf",
+      "information_available_from": "2025-02-13",
+      "generic_eligible": false,
+      "coverage": "partial_district_polygons_and_project_exceptions",
+      "parameters": {
+        "named_areas": [
+          "청담동",
+          "삼성동",
+          "대치동",
+          "잠실동"
+        ],
+        "released_area_km2": 13.04
+      },
+      "notes": "Notice retains named redevelopment complexes. This is not complete release of those four dongs or two districts; cannot be used as a binary prefix event."
+    },
+    {
+      "event_id": "KR_20251015_DESIGNATION_EXPANSION_ANNOUNCEMENT",
+      "announcement_date": "2025-10-15",
+      "effective_date": null,
+      "affected_prefixes": [
+        "11110",
+        "11140",
+        "11200",
+        "11215",
+        "11230",
+        "11260",
+        "11290",
+        "11305",
+        "11320",
+        "11350",
+        "11380",
+        "11410",
+        "11440",
+        "11470",
+        "11500",
+        "11530",
+        "11545",
+        "11560",
+        "11590",
+        "11620",
+        "11740",
+        "41290",
+        "41210",
+        "41135",
+        "41131",
+        "41133",
+        "41117",
+        "41111",
+        "41115",
+        "41173",
+        "41465",
+        "41430",
+        "41450"
+      ],
+      "direction": 1,
+      "type": "regulated_designation_announcement",
+      "source_url": "https://www.korea.kr/news/policyNewsView.do?newsId=148950973",
+      "information_available_from": "2025-10-15",
+      "generic_eligible": false,
+      "coverage": "verified_new_designation_names_effective_notice_not_fully_inspected",
+      "parameters": {
+        "new_seoul_district_count": 21,
+        "new_gyeonggi_district_count": 12,
+        "retained_prefixes": [
+          "11170",
+          "11650",
+          "11680",
+          "11710"
+        ]
+      },
+      "notes": "Names/coverage verified from the October 15 joint-government release. Gazette commencement was not independently inspected here; no invented effective date. Excluded from flat experiment input."
+    },
+    {
+      "event_id": "KR_20260630_LAND_PERMIT_THREE_DISTRICT_PLAN",
+      "announcement_date": "2026-06-30",
+      "effective_date": "2026-07-05",
+      "affected_prefixes": [
+        "41597",
+        "41463",
+        "41310"
+      ],
+      "direction": 1,
+      "type": "land_transaction_permit_plan",
+      "source_url": "https://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95092167",
+      "information_available_from": "2026-06-30",
+      "generic_eligible": false,
+      "default_historical_training_include": false,
+      "coverage": "three_districts_property_and_parcel_notice_required",
+      "parameters": {
+        "announced_end_date": "2027-12-31"
+      },
+      "notes": "Officially announced July 5 schedule, separate from July 1 regulated designation. Exact provincial notice/property mask and realized legal commencement remain unverified in this registry."
+    }
+  ],
+  "schedule_revision_records": [
+    {
+      "event_id": "KR_20240625_STRESS_DSR_PHASE2_POSTPONEMENT",
+      "announcement_date": "2024-06-25",
+      "effective_date": null,
+      "affected_prefixes": [
+        "00"
+      ],
+      "direction": 0,
+      "type": "stress_dsr_schedule_revision",
+      "source_url": "https://www.fsc.go.kr/no010101/82526?srchKey=sj&srchText=%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%8A%A4+DSR",
+      "information_available_from": "2024-06-25",
+      "generic_eligible": false,
+      "parameters": {
+        "revised_phase2_scheduled_date": "2024-09-01",
+        "previous_phase2_scheduled_date": "2024-07-01"
+      },
+      "notes": "Event ID corrected below. This is information about postponement, not a new tightening effective June 25."
+    }
+  ],
+  "infrastructure_records": [
+    {
+      "event_id": "KR_20230103_GTX_A_EXPECTATION",
+      "announcement_date": "2023-01-03",
+      "effective_date": null,
+      "affected_prefixes": [
+        "11",
+        "41"
+      ],
+      "direction": 0,
+      "type": "infrastructure_expected",
+      "source_url": "https://www.korea.kr/briefing/policyBriefingView.do?newsId=156546653",
+      "information_available_from": "2023-01-03",
+      "generic_eligible": false,
+      "coverage": "corridor_candidate_regions_not_all_apartments",
+      "parameters": {
+        "project": "GTX-A",
+        "expected_timing_text_as_announced": "2024년 초"
+      },
+      "notes": "Expectation only. No exact March 30 date, actual opening, realized travel time, utilization or final station access may be inserted into January 2023 predictors."
+    },
+    {
+      "event_id": "KR_20240329_GTX_A_SUSEO_DONGTAN_OPENING_NOTICE",
+      "announcement_date": "2024-03-29",
+      "effective_date": "2024-03-30",
+      "affected_prefixes": [
+        "11680",
+        "41135",
+        "41590"
+      ],
+      "direction": 0,
+      "type": "infrastructure_opening_notice",
+      "source_url": "https://www.molit.go.kr/USR/NEWS/m_72/dtl.jsp?id=95089607",
+      "information_available_from": "2024-03-29",
+      "generic_eligible": false,
+      "coverage": "station_catchments_not_mapped",
+      "parameters": {
+        "project": "GTX-A 수서~동탄",
+        "scheduled_first_service": "2024-03-30T05:30:00+09:00"
+      },
+      "notes": "Official near-opening notice, not proof of observed operation on March 29. Use historical Hwaseong 41590 for that vintage; never imply the later Guseong opening or whole-city uniform exposure."
+    },
+    {
+      "event_id": "KR_20250415_GTX_A_RETROSPECTIVE_CONFIRMATION",
+      "announcement_date": "2025-04-15",
+      "effective_date": "2024-03-30",
+      "affected_prefixes": [
+        "11680",
+        "41135",
+        "41590"
+      ],
+      "direction": 0,
+      "type": "infrastructure_realization_retrospective",
+      "source_url": "https://www.molit.go.kr/USR/BORD0201/m_37060/DTL.jsp?idx=263677&mode=view",
+      "information_available_from": "2025-04-15",
+      "generic_eligible": false,
+      "coverage": "station_catchments_not_mapped",
+      "notes": "This later official account confirms earlier opening. Available only from April 15, 2025 for this source; absolutely no backfill of realized operation or ridership into 2023/2024 origins."
+    }
+  ],
+  "coverage_gaps": [
+    "Not a full 2017-2025 law/regime calendar; early-2017 baseline, intermediate designations/releases, taxes, transaction rules, policy mortgages and borrower exceptions are incomplete.",
+    "Sejong partial planned-city designation, Dongtan2, exempt eup/myeon, and project/parcel restrictions must not be inflated to whole prefixes.",
+    "2025 October designation coverage is verified but commencement notice remains withheld from the generic array.",
+    "2026 entries are verified selected April/June announcements, not a certification that no later change occurred before October 27.",
+    "Regional statistics-code and legal-prefix concordance, household/credit exposure data, actual release vintages and station catchment masks require upstream validation."
+  ],
+  "verification": {
+    "sources": "Primary official agencies and their direct government-hosted releases only; no media-clipping summaries used as evidence.",
+    "retrieval_date": "2026-10-27",
+    "causal_effects_estimated": false,
+    "macro_series_downloaded": false
+  }
+}

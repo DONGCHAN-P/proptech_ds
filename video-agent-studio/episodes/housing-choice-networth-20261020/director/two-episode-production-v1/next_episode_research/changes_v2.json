@@ -1,0 +1,51 @@
+{
+  "task_id": "next-policy-source-prep-v1",
+  "revision": "v2_addendum",
+  "as_of_kst": "2026-10-26",
+  "base_files_preserved_sha256": {
+    "policy_facts.json": "b56a756d0d33b5f8504ab6158f1b60ae3cb0597595ac38efa911c9dcd68f7b68",
+    "gaps.json": "85793843215541c231991617839b04257468fb7d066ce77a51b8704a3658f23d",
+    "sources.json": "cef13634ea4f3ea18e2f858abd907376ef3188b640573e3bef67b38dc01ce6de"
+  },
+  "input_addendum": {
+    "path": "../next_episode_hf_addendum.json",
+    "sha256": "e4a2bbec61ce9a2cc220697c051739b3486ea920f82482c56312a685e6c9de2a",
+    "status": "primary_pages_read_by_director"
+  },
+  "precedence": [
+    "v2 동일claim_id D05/N04/P01 우선",
+    "v1 B01의 신혼DTI 미확정 주석은 HFV2_01~04로 부분 해소",
+    "v1 illustrative_cases의 before_income_tests_loan_ceiling_krw는 담보차감 전 LTV/총액 참고치일 뿐 실행한도가 아님; M01 및 상품표 적용"
+  ],
+  "resolved_issue": {
+    "issue_id": "R01",
+    "status": "closed_current_new_application_scope",
+    "evidence_claim_ids": [
+      "D05",
+      "N04"
+    ],
+    "old_issue_file": "issue_R01.json",
+    "old_issue_file_retained": true
+  },
+  "affected_claim_ids": [
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "D02",
+    "D05",
+    "B01",
+    "B03",
+    "N03",
+    "N04",
+    "P01"
+  ],
+  "affected_scene_ids": [],
+  "effective_vs_other": [
+    "현행 확인일2026-10-26",
+    "HF 신혼특례10/19 신규 신청분 시행: main 공식보도·현행FAQ 인계",
+    "과거접수·계약·기존고객 경과는 일괄소급하지 않음",
+    "예고·미확정 은행 재개·장래상품을 현재 승인이나 현재 적용 사실로 승격하지 않음"
+  ],
+  "modifications_scope": "지정 next_episode_research 폴더만; v1 facts/sources/gaps 및 공통state/scenes/다른 담당 파일 수정 없음"
+}

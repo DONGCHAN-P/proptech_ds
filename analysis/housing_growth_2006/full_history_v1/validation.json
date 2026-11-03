@@ -1,0 +1,120 @@
+{
+  "status": "pass",
+  "verified_at": "2026-10-23",
+  "synthetic_checks": [
+    {
+      "check": "단조상승",
+      "status": "pass",
+      "expected_peak_trough_return_positions": []
+    },
+    {
+      "check": "복귀후_더낮은미래저점",
+      "status": "pass",
+      "expected_peak_trough_return_positions": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          4,
+          6
+        ]
+      ]
+    },
+    {
+      "check": "고점동률_최초복귀",
+      "status": "pass",
+      "expected_peak_trough_return_positions": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "check": "고점및저점_동률처리",
+      "status": "pass",
+      "expected_peak_trough_return_positions": [
+        [
+          1,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "check": "미회복_관측종료",
+      "status": "pass",
+      "expected_peak_trough_return_positions": [
+        [
+          0,
+          1,
+          null
+        ]
+      ]
+    },
+    {
+      "check": "정확히5퍼센트",
+      "status": "pass",
+      "expected_peak_trough_return_positions": [
+        [
+          0,
+          1,
+          2
+        ]
+      ]
+    },
+    {
+      "check": "마지막분기_첫하락",
+      "status": "pass",
+      "expected_peak_trough_return_positions": [
+        [
+          1,
+          2,
+          null
+        ]
+      ]
+    }
+  ],
+  "checks": {
+    "monotone_consecutive_quarter_chain": "pass",
+    "no_future_trough": "pass",
+    "first_cross_ge_prior_high": "pass",
+    "episode_censoring": "pass",
+    "all_underwater_quarters_accounted_once": "pass",
+    "max_drawdown_matches_running_curve": "pass",
+    "quarterly_volume_equals_coverage": "pass",
+    "matched_complex_link_support_ge30": "pass"
+  },
+  "input_rows": {
+    "quarterly_index": 538,
+    "quarterly_volume": 574,
+    "analysis_coverage": 7
+  },
+  "real_episode_count": 33,
+  "major_episode_count": 14,
+  "original_aggregate_inputs_and_builder_unchanged": true,
+  "external_calls": 0,
+  "raw_ingestion_runs": 0,
+  "visual_review": {
+    "status": "pass",
+    "evidence": "analysis/housing_growth_2006/full_history_v1/verification_receipt.json",
+    "scope": "?? PNG 3? ?? ??, ?? PNG SHA ???"
+  },
+  "independent_qa": "not_performed_by_this_worker",
+  "final_saved_artifact_checks": {
+    "serialized_csv_arithmetic_and_first_return": "pass: 7 regions,33 episodes; separate stdlib arithmetic",
+    "svg_parsing_and_external_references": "pass: 3 standalone SVG, font glyph paths, no external href/image/script",
+    "png_decoding_and_reviewed_sha_reuse": "pass: 3 PNG",
+    "frozen_inputs_builder_font_source_sha": "pass",
+    "facts_claim_metadata_readback": "pass:8 qualified claims"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "role": "video_writer",
+  "revision": "script-v4-map-led",
+  "status": "final_review_package_ready_pending_qa_hash_lock",
+  "input_revision": "사용자 훅·외부지역비교·인트로아웃트로음악 요청",
+  "inputs": [
+    "WORKFLOW.md",
+    "brief.json editorial_direction",
+    "writer/map-led-v3/script_v3.md (보존)",
+    "research/map-led-v5/analysis.json",
+    "research/map-led-v5/facts.json",
+    "research/alternatives-v5/comparison.json",
+    "research/outside-comparisons-v6/comparison.json",
+    "research/outside-comparisons-v6/facts.json",
+    "research/outside-comparisons-v6/handoff.json"
+  ],
+  "outputs": [
+    "writer/map-led-v4/script_v4.md",
+    "writer/map-led-v4/scene_plan.json",
+    "writer/map-led-v4/map_storyboard.md",
+    "writer/map-led-v4/captions_semantic_v4.json",
+    "writer/map-led-v4/narration_input/manifest.json",
+    "writer/map-led-v4/narration_input/*.txt (11개)",
+    "writer/map-led-v4/narration_estimate.json",
+    "writer/map-led-v4/narration_notes.md",
+    "writer/map-led-v4/candidate_logic.md",
+    "writer/map-led-v4/image_gap_requests.json",
+    "writer/map-led-v4/source_claims.json",
+    "writer/map-led-v4/validation.json",
+    "outputs/story-review-v4/README.md"
+  ],
+  "scene_order": ["M000", "M001", "M002", "M003", "M004", "M005", "M006", "M007", "M007B", "M008", "M009"],
+  "validation": {
+    "command": "tools/python311/python.exe -X utf8 .../writer/map-led-v4/build_review.py",
+    "exit_code": 0,
+    "scene_count": 11,
+    "exact_tts_input_characters": 6879,
+    "correction_input_characters_max": 1376,
+    "total_character_cap": 8255,
+    "semantic_caption_count": 269,
+    "protected_number_unit_date_name_occurrences": 108,
+    "all_scene_whitespace_normalized_text_exact": true,
+    "all_claim_ids_resolved": true,
+    "all_caption_char_spans_exact_input_txt": true,
+    "char_span_basis": "Unicode codepoint,0-based,start inclusive/end exclusive",
+    "all_caption_times_null": true,
+    "maximum_lines": 2,
+    "maximum_line_characters": 36,
+    "review_copy_script_byte_equal": true
+  },
+  "editorial_changes": [
+    "M000:7억안팎현재도시와기다리는새집의선택으로20~30초예상훅",
+    "M001:전편연결은짧게,전체토지계획도로빠르게진입",
+    "M007B:창릉S5는84형약7.7억추가예산/서북부교통축/입주시차;교산A2는51~59형/동남권/기존5호선과3호선목표/임시학교 비교",
+    "M007/M008:지역가격방법·연식낭독과후보중복을줄여전체길이억제",
+    "M009:조건별후보회수와기존브랜드엔딩·자체BGM꼬리"
+  ],
+  "music_requirements": {
+    "asset_preference": "기존 자체제작 Data City Ambient v1, 실제파일과license.json은 편집자가대조",
+    "intro": "음악1~2초리드인뒤훅,실음성에맞춰확정",
+    "outro": "마지막말뒤3~5초음악꼬리페이드",
+    "during_voice": "말명료도우선으로낮게혼합하고실제청취검수",
+    "new_music_purchase": false
+  },
+  "unresolved": [
+    "최종QA해시고정·총괄새대본승인기록",
+    "새음성계정/모델/포함잔액/예산상한확인과승인",
+    "실제음성길이·character alignment·청취·최종자막/BGM혼합",
+    "정밀지도/출입구/통학로·원본홍보물권리",
+    "창릉역2030은qualified,개통보장/완공시설표현금지",
+    "GAP2보조이미지요청조율,새이미지자동생성없음"
+  ],
+  "next_roles": ["video_director", "video_qa", "video_narration", "video_editor"],
+  "new_paid_api_calls": 0,
+  "new_images_generated": 0,
+  "new_full_video_rendered": false,
+  "old_approval_reused": false,
+  "common_state_modified": false
+}

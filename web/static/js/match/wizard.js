@@ -166,12 +166,15 @@ window.WIZ = (function () {
 
   // ── 카운터 ──────────────────────────────────────────────────────────
   async function refreshCount() {
+    if (!window.JIP?.session) {
+      $('counterN').textContent = '로그인 후';
+      return;
+    }
     try {
-      const r = await fetch('/api/match/count', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
+      const d = await JIP.api('/api/match/count', {
+        method: 'POST',
         body: JSON.stringify(payload(false)),
       });
-      const d = await r.json();
       roll(d.count);
     } catch (e) { /* 카운터는 보조 정보 — 실패해도 진행은 막지 않는다 */ }
   }

@@ -1,0 +1,59 @@
+{
+  "role": "editor",
+  "status": "preparation_complete_final_edit_blocked",
+  "input_versions": {
+    "script": "script-v2",
+    "scenes": "scenes-v2",
+    "visual": "visual-v2",
+    "style": "config/video_style.json",
+    "previous_episode": "v14"
+  },
+  "outputs": [
+    "editor/assembly_provisional_v1.json",
+    "editor/placement_guide.md",
+    "editor/prepare-preview.cjs",
+    "editor/S001_preview_v1.png",
+    "editor/S007_preview_v1.png",
+    "editor/S008_preview_v1.png",
+    "editor/preview_technical_v1.json"
+  ],
+  "verification": {
+    "three_actual_pngs_rendered": true,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "actual_frames_inspected": [
+      "S001",
+      "S007",
+      "S008"
+    ],
+    "korean_visible": true,
+    "source_caption_overlap": false,
+    "font": "embedded existing Pretendard-Regular.woff2",
+    "audio_listened": false,
+    "continuous_playback": false,
+    "final_mp4": false
+  },
+  "unresolved": [
+    "actual narration and timing lock",
+    "complete actual geography assets",
+    "mobile-scale legibility and full-scene QA"
+  ],
+  "affected_scenes": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008"
+  ],
+  "next_role": "director then narration/visual then editor",
+  "telegram": {
+    "sent": true,
+    "scope": "short status text only",
+    "message_file": "editor/status_notice.txt"
+  }
+}

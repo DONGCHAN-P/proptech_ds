@@ -1,0 +1,1827 @@
+{
+  "episode_id": "affordable-home-price-20261026",
+  "script_revision": "v1",
+  "frozen_script_sha256": "26ed3cb78465bfde7bf52655df535e0d5b6fd8287e24c105c94266f757e7717f",
+  "policy_as_of": "2026-10-26",
+  "rounding": {
+    "cash_tables": "원 단위 원본 보존·표시만원은 반올림; 낭독에 약 표시",
+    "monthly_six_hundred_and_newborn": "만원 소수1자리",
+    "monthly_budget_comparison": "만원 정수 반올림",
+    "price_solver": "1만원 격자의 조건부 최대값, 실제 실행상한과 구별"
+  },
+  "protected_occurrences": [
+    {
+      "scene_id": "S001",
+      "display_start": 6,
+      "display_end": 14,
+      "display": "2억 5천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S001",
+      "display_start": 54,
+      "display_end": 58,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S001",
+      "display_start": 63,
+      "display_end": 71,
+      "display": "8억 5천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S002",
+      "display_start": 21,
+      "display_end": 29,
+      "display": "2억 5천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S002",
+      "display_start": 33,
+      "display_end": 39,
+      "display": "300만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S003",
+      "display_start": 0,
+      "display_end": 4,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S003",
+      "display_start": 36,
+      "display_end": 49,
+      "display": "2026년 10월 26일",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S004",
+      "display_start": 66,
+      "display_end": 74,
+      "display": "2억 5천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S004",
+      "display_start": 86,
+      "display_end": 91,
+      "display": "3천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S005",
+      "display_start": 15,
+      "display_end": 23,
+      "display": "2억 2천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S007",
+      "display_start": 85,
+      "display_end": 88,
+      "display": "84㎡",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S008",
+      "display_start": 21,
+      "display_end": 24,
+      "display": "40%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S008",
+      "display_start": 40,
+      "display_end": 43,
+      "display": "70%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S008",
+      "display_start": 52,
+      "display_end": 57,
+      "display": "9천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S008",
+      "display_start": 65,
+      "display_end": 69,
+      "display": "8억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S008",
+      "display_start": 96,
+      "display_end": 99,
+      "display": "60%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S008",
+      "display_start": 139,
+      "display_end": 143,
+      "display": "1억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S009",
+      "display_start": 77,
+      "display_end": 85,
+      "display": "5,500만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S010",
+      "display_start": 91,
+      "display_end": 93,
+      "display": "0원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S011",
+      "display_start": 72,
+      "display_end": 75,
+      "display": "40%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S011",
+      "display_start": 104,
+      "display_end": 108,
+      "display": "1억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S011",
+      "display_start": 126,
+      "display_end": 131,
+      "display": "4천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S012",
+      "display_start": 66,
+      "display_end": 69,
+      "display": "40%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S012",
+      "display_start": 77,
+      "display_end": 80,
+      "display": "60%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S013",
+      "display_start": 43,
+      "display_end": 45,
+      "display": "4%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S013",
+      "display_start": 47,
+      "display_end": 50,
+      "display": "30년",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S013",
+      "display_start": 81,
+      "display_end": 86,
+      "display": "3%포인트",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S013",
+      "display_start": 96,
+      "display_end": 98,
+      "display": "7%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S013",
+      "display_start": 119,
+      "display_end": 121,
+      "display": "4%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S014",
+      "display_start": 78,
+      "display_end": 87,
+      "display": "5억 103만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S016",
+      "display_start": 17,
+      "display_end": 20,
+      "display": "84㎡",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S016",
+      "display_start": 79,
+      "display_end": 83,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S016",
+      "display_start": 87,
+      "display_end": 89,
+      "display": "1%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S016",
+      "display_start": 91,
+      "display_end": 95,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S016",
+      "display_start": 101,
+      "display_end": 105,
+      "display": "9억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S016",
+      "display_start": 115,
+      "display_end": 117,
+      "display": "3%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S016",
+      "display_start": 123,
+      "display_end": 127,
+      "display": "9억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S016",
+      "display_start": 132,
+      "display_end": 134,
+      "display": "3%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S017",
+      "display_start": 11,
+      "display_end": 15,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S017",
+      "display_start": 23,
+      "display_end": 29,
+      "display": "660만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S017",
+      "display_start": 31,
+      "display_end": 35,
+      "display": "9억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S017",
+      "display_start": 37,
+      "display_end": 45,
+      "display": "2,970만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S017",
+      "display_start": 47,
+      "display_end": 52,
+      "display": "12억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S017",
+      "display_start": 54,
+      "display_end": 62,
+      "display": "3,960만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S018",
+      "display_start": 48,
+      "display_end": 52,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S018",
+      "display_start": 54,
+      "display_end": 58,
+      "display": "0.4%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S018",
+      "display_start": 60,
+      "display_end": 64,
+      "display": "9억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S018",
+      "display_start": 66,
+      "display_end": 70,
+      "display": "0.5%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S018",
+      "display_start": 72,
+      "display_end": 77,
+      "display": "12억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S018",
+      "display_start": 79,
+      "display_end": 83,
+      "display": "0.6%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S018",
+      "display_start": 115,
+      "display_end": 118,
+      "display": "10%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S018",
+      "display_start": 134,
+      "display_end": 140,
+      "display": "264만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S018",
+      "display_start": 142,
+      "display_end": 148,
+      "display": "495만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S018",
+      "display_start": 150,
+      "display_end": 156,
+      "display": "792만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S019",
+      "display_start": 40,
+      "display_end": 46,
+      "display": "150만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S019",
+      "display_start": 111,
+      "display_end": 115,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S019",
+      "display_start": 118,
+      "display_end": 126,
+      "display": "1,074만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S019",
+      "display_start": 128,
+      "display_end": 132,
+      "display": "9억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S019",
+      "display_start": 135,
+      "display_end": 143,
+      "display": "3,615만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S019",
+      "display_start": 145,
+      "display_end": 150,
+      "display": "12억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S019",
+      "display_start": 153,
+      "display_end": 161,
+      "display": "4,902만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S020",
+      "display_start": 23,
+      "display_end": 28,
+      "display": "12억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S020",
+      "display_start": 49,
+      "display_end": 55,
+      "display": "200만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S020",
+      "display_start": 67,
+      "display_end": 73,
+      "display": "500만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S021",
+      "display_start": 6,
+      "display_end": 10,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S021",
+      "display_start": 59,
+      "display_end": 68,
+      "display": "2억 926만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S021",
+      "display_start": 78,
+      "display_end": 89,
+      "display": "3억 9,074만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S021",
+      "display_start": 105,
+      "display_end": 108,
+      "display": "40%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S021",
+      "display_start": 114,
+      "display_end": 122,
+      "display": "2억 4천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S021",
+      "display_start": 133,
+      "display_end": 144,
+      "display": "1억 5,074만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S022",
+      "display_start": 9,
+      "display_end": 12,
+      "display": "70%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S022",
+      "display_start": 36,
+      "display_end": 44,
+      "display": "4억 2천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S022",
+      "display_start": 53,
+      "display_end": 64,
+      "display": "3억 9,074만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S022",
+      "display_start": 91,
+      "display_end": 99,
+      "display": "5,500만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S022",
+      "display_start": 109,
+      "display_end": 120,
+      "display": "3억 6,500만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S022",
+      "display_start": 135,
+      "display_end": 143,
+      "display": "2,574만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S023",
+      "display_start": 21,
+      "display_end": 23,
+      "display": "4%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S023",
+      "display_start": 25,
+      "display_end": 28,
+      "display": "30년",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S023",
+      "display_start": 45,
+      "display_end": 53,
+      "display": "186.5만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S023",
+      "display_start": 105,
+      "display_end": 111,
+      "display": "170만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S024",
+      "display_start": 0,
+      "display_end": 4,
+      "display": "9억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S024",
+      "display_start": 16,
+      "display_end": 27,
+      "display": "7억 1,615만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S024",
+      "display_start": 65,
+      "display_end": 74,
+      "display": "5억 103만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S024",
+      "display_start": 93,
+      "display_end": 104,
+      "display": "2억 1,512만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S024",
+      "display_start": 109,
+      "display_end": 114,
+      "display": "12억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S024",
+      "display_start": 126,
+      "display_end": 138,
+      "display": "10억 2,902만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S024",
+      "display_start": 165,
+      "display_end": 176,
+      "display": "5억 2,799만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S025",
+      "display_start": 4,
+      "display_end": 6,
+      "display": "6억",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S025",
+      "display_start": 7,
+      "display_end": 9,
+      "display": "9억",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S025",
+      "display_start": 10,
+      "display_end": 13,
+      "display": "12억",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S025",
+      "display_start": 64,
+      "display_end": 69,
+      "display": "15억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S025",
+      "display_start": 75,
+      "display_end": 79,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S025",
+      "display_start": 81,
+      "display_end": 86,
+      "display": "15억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S025",
+      "display_start": 90,
+      "display_end": 95,
+      "display": "25억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S025",
+      "display_start": 101,
+      "display_end": 105,
+      "display": "4억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S025",
+      "display_start": 107,
+      "display_end": 112,
+      "display": "25억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S025",
+      "display_start": 118,
+      "display_end": 122,
+      "display": "2억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S026",
+      "display_start": 32,
+      "display_end": 37,
+      "display": "8천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S026",
+      "display_start": 43,
+      "display_end": 51,
+      "display": "2억 5천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S026",
+      "display_start": 60,
+      "display_end": 62,
+      "display": "0원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S026",
+      "display_start": 70,
+      "display_end": 72,
+      "display": "7년",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S026",
+      "display_start": 100,
+      "display_end": 102,
+      "display": "2년",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S026",
+      "display_start": 132,
+      "display_end": 135,
+      "display": "84㎡",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S027",
+      "display_start": 20,
+      "display_end": 28,
+      "display": "8,500만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S027",
+      "display_start": 37,
+      "display_end": 48,
+      "display": "5억 1,100만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S027",
+      "display_start": 58,
+      "display_end": 62,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S027",
+      "display_start": 70,
+      "display_end": 73,
+      "display": "85㎡",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S027",
+      "display_start": 97,
+      "display_end": 105,
+      "display": "3억 2천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S027",
+      "display_start": 120,
+      "display_end": 131,
+      "display": "3억 9,074만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S027",
+      "display_start": 152,
+      "display_end": 160,
+      "display": "7,074만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S028",
+      "display_start": 28,
+      "display_end": 32,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S028",
+      "display_start": 84,
+      "display_end": 92,
+      "display": "4억 2천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S029",
+      "display_start": 60,
+      "display_end": 65,
+      "display": "7천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S030",
+      "display_start": 15,
+      "display_end": 23,
+      "display": "8,500만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S030",
+      "display_start": 38,
+      "display_end": 43,
+      "display": "6천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S031",
+      "display_start": 25,
+      "display_end": 28,
+      "display": "60%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S031",
+      "display_start": 56,
+      "display_end": 59,
+      "display": "1개월",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S031",
+      "display_start": 74,
+      "display_end": 76,
+      "display": "2년",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S031",
+      "display_start": 101,
+      "display_end": 104,
+      "display": "6개월",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S032",
+      "display_start": 30,
+      "display_end": 32,
+      "display": "2년",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S032",
+      "display_start": 42,
+      "display_end": 53,
+      "display": "2023년 1월 1일",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S032",
+      "display_start": 79,
+      "display_end": 87,
+      "display": "1억 3천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S032",
+      "display_start": 96,
+      "display_end": 100,
+      "display": "2억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S032",
+      "display_start": 118,
+      "display_end": 126,
+      "display": "1억 3천만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S032",
+      "display_start": 145,
+      "display_end": 156,
+      "display": "5억 1,100만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S033",
+      "display_start": 7,
+      "display_end": 11,
+      "display": "9억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S033",
+      "display_start": 32,
+      "display_end": 35,
+      "display": "85㎡",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S033",
+      "display_start": 51,
+      "display_end": 55,
+      "display": "4억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S033",
+      "display_start": 64,
+      "display_end": 67,
+      "display": "60%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S033",
+      "display_start": 92,
+      "display_end": 96,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S033",
+      "display_start": 134,
+      "display_end": 145,
+      "display": "3억 9,074만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S034",
+      "display_start": 11,
+      "display_end": 14,
+      "display": "30년",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S034",
+      "display_start": 29,
+      "display_end": 33,
+      "display": "2.9%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S034",
+      "display_start": 58,
+      "display_end": 66,
+      "display": "162.6만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S034",
+      "display_start": 91,
+      "display_end": 93,
+      "display": "5년",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S035",
+      "display_start": 0,
+      "display_end": 4,
+      "display": "9억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S035",
+      "display_start": 42,
+      "display_end": 46,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S035",
+      "display_start": 97,
+      "display_end": 101,
+      "display": "4억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S035",
+      "display_start": 113,
+      "display_end": 117,
+      "display": "9억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S035",
+      "display_start": 129,
+      "display_end": 133,
+      "display": "4억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S035",
+      "display_start": 156,
+      "display_end": 167,
+      "display": "5억 6,615만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S036",
+      "display_start": 22,
+      "display_end": 33,
+      "display": "3억 1,615만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S036",
+      "display_start": 96,
+      "display_end": 99,
+      "display": "1개월",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S036",
+      "display_start": 112,
+      "display_end": 114,
+      "display": "2년",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S037",
+      "display_start": 65,
+      "display_end": 76,
+      "display": "6억 8,019만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S038",
+      "display_start": 2,
+      "display_end": 8,
+      "display": "300만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S038",
+      "display_start": 39,
+      "display_end": 44,
+      "display": "30만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S038",
+      "display_start": 52,
+      "display_end": 58,
+      "display": "100만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S038",
+      "display_start": 74,
+      "display_end": 80,
+      "display": "170만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S038",
+      "display_start": 104,
+      "display_end": 115,
+      "display": "5억 6,586만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S038",
+      "display_start": 124,
+      "display_end": 129,
+      "display": "30만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S039",
+      "display_start": 25,
+      "display_end": 31,
+      "display": "227만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S039",
+      "display_start": 43,
+      "display_end": 48,
+      "display": "43만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S039",
+      "display_start": 72,
+      "display_end": 78,
+      "display": "170만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S039",
+      "display_start": 88,
+      "display_end": 94,
+      "display": "100만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S039",
+      "display_start": 126,
+      "display_end": 132,
+      "display": "300만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S040",
+      "display_start": 4,
+      "display_end": 6,
+      "display": "4%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S040",
+      "display_start": 8,
+      "display_end": 10,
+      "display": "6%",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S040",
+      "display_start": 58,
+      "display_end": 63,
+      "display": "360개월",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S040",
+      "display_start": 88,
+      "display_end": 94,
+      "display": "227만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S040",
+      "display_start": 97,
+      "display_end": 103,
+      "display": "285만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S040",
+      "display_start": 118,
+      "display_end": 124,
+      "display": "170만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S040",
+      "display_start": 127,
+      "display_end": 133,
+      "display": "213만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S040",
+      "display_start": 160,
+      "display_end": 165,
+      "display": "43만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S040",
+      "display_start": 168,
+      "display_end": 173,
+      "display": "15만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S040",
+      "display_start": 180,
+      "display_end": 186,
+      "display": "100만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S040",
+      "display_start": 189,
+      "display_end": 194,
+      "display": "57만 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S041",
+      "display_start": 0,
+      "display_end": 4,
+      "display": "6억 원",
+      "protect_across_cues_and_lines": true
+    },
+    {
+      "scene_id": "S041",
+      "display_start": 16,
+      "display_end": 24,
+      "display": "186.5만 원",
+      "protect_across_cues_and_lines": true
+    }
+  ],
+  "case_numbers_exact": [
+    {
+      "case_id": "A_ordinary_P600000000_C0",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "limits_krw": {
+        "collateral": "240000000.0",
+        "DTI": "698204134.8473085495743687749778798219422",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "600000000"
+      },
+      "loan_ceiling_krw": "240000000.0",
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "400740000.0000",
+      "cash_shortfall_krw": "150740000.0000",
+      "payment_if_financeable_krw": null,
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      }
+    },
+    {
+      "case_id": "A_ordinary_P900000000_C0",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "limits_krw": {
+        "collateral": "360000000.0",
+        "DTI": "698204134.8473085495743687749778798219422",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "900000000"
+      },
+      "loan_ceiling_krw": "360000000.0",
+      "required_loan_krw": "716150000.0000",
+      "cash_required_including_reserve_krw": "606150000.0000",
+      "cash_shortfall_krw": "356150000.0000",
+      "payment_if_financeable_krw": null,
+      "transaction_costs": {
+        "rate_fraction": "0.0300",
+        "rate_percent": "3.0000",
+        "acquisition_before_truncation_krw": "27000000.0000",
+        "education_before_truncation_krw": "2700000.0000",
+        "acquisition_krw": "27000000",
+        "education_krw": "2700000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "4500000.000",
+        "vat_krw": "450000.000",
+        "with_vat_krw": "4950000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "36150000.0000"
+      }
+    },
+    {
+      "case_id": "A_ordinary_P1200000000_C0",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "limits_krw": {
+        "collateral": "480000000.0",
+        "DTI": "698204134.8473085495743687749778798219422",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "1200000000"
+      },
+      "loan_ceiling_krw": "480000000.0",
+      "required_loan_krw": "1029020000.0000",
+      "cash_required_including_reserve_krw": "799020000.0000",
+      "cash_shortfall_krw": "549020000.0000",
+      "payment_if_financeable_krw": null,
+      "transaction_costs": {
+        "rate_fraction": "0.03",
+        "rate_percent": "3.00",
+        "acquisition_before_truncation_krw": "36000000.00",
+        "education_before_truncation_krw": "3600000.00",
+        "acquisition_krw": "36000000",
+        "education_krw": "3600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "7200000.000",
+        "vat_krw": "720000.000",
+        "with_vat_krw": "7920000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "49020000.0000"
+      }
+    },
+    {
+      "case_id": "A_first_P600000000_C0",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "limits_krw": {
+        "collateral": "420000000.0",
+        "DTI": "1047306202.270962824361553162466819732913",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "600000000"
+      },
+      "loan_ceiling_krw": "420000000.0",
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "220740000.0000",
+      "cash_shortfall_krw": "0",
+      "payment_if_financeable_krw": "1865452.525501736420517881381328776690824",
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      }
+    },
+    {
+      "case_id": "A_first_P600000000_C55000000",
+      "deduction_krw": "55000000",
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "limits_krw": {
+        "collateral": "365000000.0",
+        "DTI": "1047306202.270962824361553162466819732913",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "600000000"
+      },
+      "loan_ceiling_krw": "365000000.0",
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "275740000.0000",
+      "cash_shortfall_krw": "25740000.0000",
+      "payment_if_financeable_krw": null,
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      }
+    },
+    {
+      "case_id": "A_first_P900000000_C0",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "limits_krw": {
+        "collateral": "630000000.0",
+        "DTI": "1047306202.270962824361553162466819732913",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "900000000"
+      },
+      "loan_ceiling_krw": "501025226.4927370467532595404638799597893",
+      "required_loan_krw": "716150000.0000",
+      "cash_required_including_reserve_krw": "465124773.5072629532467404595361200402107",
+      "cash_shortfall_krw": "215124773.5072629532467404595361200402107",
+      "payment_if_financeable_krw": null,
+      "transaction_costs": {
+        "rate_fraction": "0.0300",
+        "rate_percent": "3.0000",
+        "acquisition_before_truncation_krw": "27000000.0000",
+        "education_before_truncation_krw": "2700000.0000",
+        "acquisition_krw": "27000000",
+        "education_krw": "2700000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "4500000.000",
+        "vat_krw": "450000.000",
+        "with_vat_krw": "4950000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "36150000.0000"
+      }
+    },
+    {
+      "case_id": "A_first_P1200000000_C0",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "limits_krw": {
+        "collateral": "840000000.0",
+        "DTI": "1047306202.270962824361553162466819732913",
+        "DSR": "501025226.4927370467532595404638799597893",
+        "regulatory_total": "600000000",
+        "product": null,
+        "purchase_price": "1200000000"
+      },
+      "loan_ceiling_krw": "501025226.4927370467532595404638799597893",
+      "required_loan_krw": "1029020000.0000",
+      "cash_required_including_reserve_krw": "777994773.5072629532467404595361200402107",
+      "cash_shortfall_krw": "527994773.5072629532467404595361200402107",
+      "payment_if_financeable_krw": null,
+      "transaction_costs": {
+        "rate_fraction": "0.03",
+        "rate_percent": "3.00",
+        "acquisition_before_truncation_krw": "36000000.00",
+        "education_before_truncation_krw": "3600000.00",
+        "acquisition_krw": "36000000",
+        "education_krw": "3600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "7200000.000",
+        "vat_krw": "720000.000",
+        "with_vat_krw": "7920000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "49020000.0000"
+      }
+    },
+    {
+      "case_id": "B_didim_P600000000_C0",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "limits_krw": {
+        "collateral": "420000000.0",
+        "DTI": "837844961.8167702594892425299734557863305",
+        "DSR": null,
+        "regulatory_total": null,
+        "product": "320000000",
+        "purchase_price": "600000000"
+      },
+      "loan_ceiling_krw": "320000000",
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "320740000.0000",
+      "cash_shortfall_krw": "70740000.0000",
+      "payment_if_financeable_krw": null,
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      }
+    },
+    {
+      "case_id": "B_bogeum_P600000000_C0",
+      "deduction_krw": "0",
+      "deduction_note": "빈 아파트 자체 방수공제0",
+      "limits_krw": {
+        "collateral": "420000000.0",
+        "DTI": "837844961.8167702594892425299734557863305",
+        "DSR": null,
+        "regulatory_total": null,
+        "product": "420000000",
+        "purchase_price": "600000000"
+      },
+      "loan_ceiling_krw": "420000000.0",
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "220740000.0000",
+      "cash_shortfall_krw": "0",
+      "payment_if_financeable_krw": "1865452.525501736420517881381328776690824",
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      }
+    },
+    {
+      "case_id": "B_newborn_P600000000_C0",
+      "deduction_krw": "0",
+      "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+      "limits_krw": {
+        "collateral": "420000000.0",
+        "DTI": "961007181.3329984226504418629275973578854",
+        "DSR": null,
+        "regulatory_total": null,
+        "product": "400000000",
+        "purchase_price": "600000000"
+      },
+      "loan_ceiling_krw": "400000000",
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "240740000.0000",
+      "cash_shortfall_krw": "0",
+      "payment_if_financeable_krw": "1626377.024396469120911861925820032915688",
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      }
+    },
+    {
+      "case_id": "B_newborn_P600000000_C55000000",
+      "deduction_krw": "55000000",
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "limits_krw": {
+        "collateral": "365000000.0",
+        "DTI": "961007181.3329984226504418629275973578854",
+        "DSR": null,
+        "regulatory_total": null,
+        "product": "400000000",
+        "purchase_price": "600000000"
+      },
+      "loan_ceiling_krw": "365000000.0",
+      "required_loan_krw": "390740000.0000",
+      "cash_required_including_reserve_krw": "275740000.0000",
+      "cash_shortfall_krw": "25740000.0000",
+      "payment_if_financeable_krw": null,
+      "transaction_costs": {
+        "rate_fraction": "0.01",
+        "rate_percent": "1.00",
+        "acquisition_before_truncation_krw": "6000000.00",
+        "education_before_truncation_krw": "600000.00",
+        "acquisition_krw": "6000000",
+        "education_krw": "600000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "2400000.000",
+        "vat_krw": "240000.000",
+        "with_vat_krw": "2640000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "10740000.0000"
+      }
+    },
+    {
+      "case_id": "B_newborn_P900000000_C55000000",
+      "deduction_krw": "55000000",
+      "deduction_note": "서울1방 미커버5500만원 차감 가정",
+      "limits_krw": {
+        "collateral": "575000000.0",
+        "DTI": "961007181.3329984226504418629275973578854",
+        "DSR": null,
+        "regulatory_total": null,
+        "product": "400000000",
+        "purchase_price": "900000000"
+      },
+      "loan_ceiling_krw": "400000000",
+      "required_loan_krw": "716150000.0000",
+      "cash_required_including_reserve_krw": "566150000.0000",
+      "cash_shortfall_krw": "316150000.0000",
+      "payment_if_financeable_krw": null,
+      "transaction_costs": {
+        "rate_fraction": "0.0300",
+        "rate_percent": "3.0000",
+        "acquisition_before_truncation_krw": "27000000.0000",
+        "education_before_truncation_krw": "2700000.0000",
+        "acquisition_krw": "27000000",
+        "education_krw": "2700000",
+        "agricultural_krw": "0",
+        "before_vat_krw": "4500000.000",
+        "vat_krw": "450000.000",
+        "with_vat_krw": "4950000.0000",
+        "misc_plan_krw": "1500000",
+        "total_krw": "36150000.0000"
+      }
+    }
+  ],
+  "affordability_exact": {
+    "profile_id": "A_first",
+    "deduction_krw": 0,
+    "deduction_note": "보증승인 등으로 미커버 차감0을 가정; 자동면제 아님",
+    "bank_assumptions_max": {
+      "max_price_krw": 680190000,
+      "grid_krw": 10000,
+      "search_max_krw": 3000000000,
+      "condition": "은행심사 가정상한 기준",
+      "affordable_10k_below": true,
+      "affordable_at_max": true,
+      "affordable_10k_above": false,
+      "bank_binding_constraints": [
+        "collateral"
+      ],
+      "monthly_budget_cap_binding": false,
+      "loan_ceiling_krw": "476133000.0",
+      "available_loan_with_budget_krw": "476133000.0",
+      "required_loan_krw": "476130426.0000",
+      "transaction_cost_krw": "15940426.0000",
+      "payment_on_required_loan_krw": "2273119.480088850963916911508188408895584",
+      "payment_shock_same_original_360months_krw": "2854642.469495037127093525379179793270133",
+      "remaining_savings_krw": "426880.519911149036083088491811591104416",
+      "remaining_savings_shock_krw": "-154642.469495037127093525379179793270133",
+      "presentation": {
+        "rounded_krw": {
+          "max_price_krw": 680190000,
+          "grid_krw": 10000,
+          "search_max_krw": 3000000000,
+          "loan_ceiling_krw": 476133000,
+          "available_loan_with_budget_krw": 476133000,
+          "required_loan_krw": 476130426,
+          "transaction_cost_krw": 15940426,
+          "payment_on_required_loan_krw": 2273119,
+          "payment_shock_same_original_360months_krw": 2854642,
+          "remaining_savings_krw": 426881,
+          "remaining_savings_shock_krw": -154642
+        },
+        "reading_manwon": {
+          "max_price_krw": 68019,
+          "grid_krw": 1,
+          "search_max_krw": 300000,
+          "loan_ceiling_krw": 47613,
+          "available_loan_with_budget_krw": 47613,
+          "required_loan_krw": 47613,
+          "transaction_cost_krw": 1594,
+          "payment_on_required_loan_krw": 227,
+          "payment_shock_same_original_360months_krw": 285,
+          "remaining_savings_krw": 43,
+          "remaining_savings_shock_krw": -15
+        }
+      }
+    },
+    "mortgage_budget_max": {
+      "max_price_krw": 565860000,
+      "grid_krw": 10000,
+      "search_max_krw": 3000000000,
+      "condition": "월170만원 목표 + 은행심사 가정상한 기준",
+      "affordable_10k_below": true,
+      "affordable_at_max": true,
+      "affordable_10k_above": false,
+      "bank_binding_constraints": [
+        "collateral"
+      ],
+      "monthly_budget_cap_binding": true,
+      "loan_ceiling_krw": "396102000.0",
+      "available_loan_with_budget_krw": "356084108.7721273602829280752387187091906",
+      "required_loan_krw": "356074244.0000",
+      "transaction_cost_krw": "10214244.0000",
+      "payment_on_required_loan_krw": "1699952.904069001168611277835231406755464",
+      "payment_shock_same_original_360months_krw": "2134844.999835692934233442512002495359830",
+      "remaining_savings_krw": "1000047.095930998831388722164768593244536",
+      "remaining_savings_shock_krw": "565155.000164307065766557487997504640170",
+      "presentation": {
+        "rounded_krw": {
+          "max_price_krw": 565860000,
+          "grid_krw": 10000,
+          "search_max_krw": 3000000000,
+          "loan_ceiling_krw": 396102000,
+          "available_loan_with_budget_krw": 356084109,
+          "required_loan_krw": 356074244,
+          "transaction_cost_krw": 10214244,
+          "payment_on_required_loan_krw": 1699953,
+          "payment_shock_same_original_360months_krw": 2134845,
+          "remaining_savings_krw": 1000047,
+          "remaining_savings_shock_krw": 565155
+        },
+        "reading_manwon": {
+          "max_price_krw": 56586,
+          "grid_krw": 1,
+          "search_max_krw": 300000,
+          "loan_ceiling_krw": 39610,
+          "available_loan_with_budget_krw": 35608,
+          "required_loan_krw": 35607,
+          "transaction_cost_krw": 1021,
+          "payment_on_required_loan_krw": 170,
+          "payment_shock_same_original_360months_krw": 213,
+          "remaining_savings_krw": 100,
+          "remaining_savings_shock_krw": 57
+        }
+      }
+    }
+  },
+  "critical_pairs": [
+    {
+      "scenes": [
+        "S001",
+        "S025"
+      ],
+      "keep": "현금2억5천+총액상한6억=산술8억5천; 실제는 담보·소득·비용·월예산 필터"
+    },
+    {
+      "scenes": [
+        "S013"
+      ],
+      "keep": "계약4% vs 심사7%=4%+3%포인트; %와 %포인트 역할 구분"
+    },
+    {
+      "scenes": [
+        "S019"
+      ],
+      "keep": "세금660/2970/3960 + 복비VAT264/495/792 + 기타계획150 = 총1074/3615/4902만원; 예비3천은 별도 잔존현금"
+    },
+    {
+      "scenes": [
+        "S022"
+      ],
+      "keep": "6억 생초 C0 42000만 vs C55 36500만, 필요39074만, C55 추가2574만"
+    },
+    {
+      "scenes": [
+        "S023",
+        "S041"
+      ],
+      "keep": "필요39074만원의4%·30년 월186.5만원 vs 목표170만원"
+    },
+    {
+      "scenes": [
+        "S020"
+      ],
+      "keep": "생초최대200/출산최대500은 각 요건·큰 감면 하나; 순교육세 미산출"
+    },
+    {
+      "scenes": [
+        "S027",
+        "S028",
+        "S033"
+      ],
+      "keep": "별도 B: 디딤돌32000만, 보금자리생초42000만, 신생아40000만; 주택가격과 대출한도 구분"
+    },
+    {
+      "scenes": [
+        "S034"
+      ],
+      "keep": "신생아 초기기본2.9%·월162.6만·처음5년; 만기30년 전체금리로 확대하지 않음"
+    },
+    {
+      "scenes": [
+        "S037",
+        "S038"
+      ],
+      "keep": "A생초C0 조건부 상한68019만 vs 월상환170·저축100·소유30 조건56586만"
+    },
+    {
+      "scenes": [
+        "S040"
+      ],
+      "keep": "각 가격의 동일 최초원금·새360개월:4→6%, 월227→285/170→213, 저축43→15부족/100→57"
+    }
+  ],
+  "approximate_case_display_manwon": [
+    {
+      "case_id": "A_ordinary_P600000000_C0",
+      "ceiling": 24000,
+      "needed": 39074,
+      "additional_cash": 15074
+    },
+    {
+      "case_id": "A_ordinary_P900000000_C0",
+      "ceiling": 36000,
+      "needed": 71615,
+      "additional_cash": 35615
+    },
+    {
+      "case_id": "A_ordinary_P1200000000_C0",
+      "ceiling": 48000,
+      "needed": 102902,
+      "additional_cash": 54902
+    },
+    {
+      "case_id": "A_first_P600000000_C0",
+      "ceiling": 42000,
+      "needed": 39074,
+      "additional_cash": 0
+    },
+    {
+      "case_id": "A_first_P600000000_C55000000",
+      "ceiling": 36500,
+      "needed": 39074,
+      "additional_cash": 2574
+    },
+    {
+      "case_id": "A_first_P900000000_C0",
+      "ceiling": 50103,
+      "needed": 71615,
+      "additional_cash": 21512
+    },
+    {
+      "case_id": "A_first_P1200000000_C0",
+      "ceiling": 50103,
+      "needed": 102902,
+      "additional_cash": 52799
+    },
+    {
+      "case_id": "B_didim_P600000000_C0",
+      "ceiling": 32000,
+      "needed": 39074,
+      "additional_cash": 7074
+    },
+    {
+      "case_id": "B_bogeum_P600000000_C0",
+      "ceiling": 42000,
+      "needed": 39074,
+      "additional_cash": 0
+    },
+    {
+      "case_id": "B_newborn_P600000000_C0",
+      "ceiling": 40000,
+      "needed": 39074,
+      "additional_cash": 0
+    },
+    {
+      "case_id": "B_newborn_P600000000_C55000000",
+      "ceiling": 36500,
+      "needed": 39074,
+      "additional_cash": 2574
+    },
+    {
+      "case_id": "B_newborn_P900000000_C55000000",
+      "ceiling": 40000,
+      "needed": 71615,
+      "additional_cash": 31615
+    }
+  ]
+}

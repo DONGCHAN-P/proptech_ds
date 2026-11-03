@@ -1,0 +1,41 @@
+{
+  "task_id": "part1-clean-maps-photo-transitions-v1",
+  "revision": "hero-replacements-v2",
+  "status": "ready_for_parent_review",
+  "changed_region_ids": [
+    "R14",
+    "R19"
+  ],
+  "outputs": [
+    "assets_v2.json",
+    "photos/R14_hero_v2_Gupabal.jpg",
+    "photos/R19_hero_v2_Mangu.jpg",
+    "contactsheet_v2_replacements.jpg",
+    "credits_v2_replacements.json"
+  ],
+  "input_assets_sha256": "1746aff158634c06caeb45fa212ff6b7e1ab6189e1264d2b3b89de7dd9346769",
+  "checks": [
+    {
+      "rank": 14,
+      "decode_hash_dimensions": "pass",
+      "source_title": "File:Tongil-ro at Gupabal Station.jpg",
+      "evidence": "evidence_v2/R14_v2_receipt.json",
+      "pixel_review": "?? ?? 2? ???? ?? ?? ??; ?? 8?? ?? ????? ??"
+    },
+    {
+      "rank": 19,
+      "decode_hash_dimensions": "pass",
+      "source_title": "File:ROK National Route 6 Manguro Mangu Crossroad(Westward Dir) 1.jpg",
+      "evidence": "evidence_v2/R19_v2_receipt.json",
+      "pixel_review": "?? ?? 2? ???? ?? ?? ??; ?? 8?? ?? ????? ??"
+    }
+  ],
+  "unchanged_eight_rows_exact": true,
+  "all_v1_photo_hashes_unchanged": true,
+  "source_date_note": "R14 2021-05-02. R19 2016-08-06으로 2018+ 선호에는 못 미치나, 구도 우선으로 망우사거리 도시 가로 선택.",
+  "license_note": "CC BY-SA: 작가·출처·라이선스 링크와 크롭/줌 변형 표기 및 동일·호환 조건 반영. 기존 8장 크레디트는 credits.json 그대로 유지.",
+  "paid_cloud_upload_telegram": false,
+  "independent_qa": false,
+  "next_role": "director/editor: 두 region_id만 새 file 경로로 연결",
+  "assets_v2_sha256": "8ec2c80b7cafd479986b15da9b2ffa6f5409c01b645b62a6f9c71b494cd44b95"
+}

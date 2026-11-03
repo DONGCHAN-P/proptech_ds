@@ -1,0 +1,43 @@
+﻿{
+    "checks":  [
+                   {
+                       "evidence":  "evidence.json",
+                       "result":  "passed",
+                       "check":  "추출 12개 프레임 직접 확인"
+                   },
+                   {
+                       "evidence":  "watch-in1r5wt7/download/run-8j5g2fpe/video.ko-orig.vtt",
+                       "result":  "passed",
+                       "check":  "한국어 자동 자막 읽기"
+                   },
+                   {
+                       "evidence":  null,
+                       "result":  "unchecked",
+                       "check":  "효과음 청취·연속재생"
+                   }
+               ],
+    "input_revisions":  {
+                            "script":  "script-v1",
+                            "baseline":  "namyangju-wangsuk-20261014/readability-cta-v15",
+                            "visual":  "production-v1-layout-only",
+                            "research":  "production-v2"
+                        },
+    "outputs":  [
+                    "report.md",
+                    "evidence.json",
+                    "watch-in1r5wt7/frames",
+                    "watch-in1r5wt7/download/run-8j5g2fpe/video.mp4",
+                    "watch-in1r5wt7/download/run-8j5g2fpe/video.ko-orig.vtt"
+                ],
+    "affected_scene_ids":  [
+
+                           ],
+    "open_issue_ids":  [
+                           "audio_motion_unverified"
+                       ],
+    "notes":  "공통 가이드와 장면표 미수정. 고정지도 정책 우선. 실제 장소·수치·예정노선은 별도 사실검증 필요.",
+    "next_role":  "video_director",
+    "role":  "visual",
+    "task_id":  "reference-SbDrzVB47xQ",
+    "status":  "completed_with_limits"
+}

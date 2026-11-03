@@ -1,0 +1,39 @@
+{
+  "task_id": "next-policy-independent-qa-v1",
+  "status": "approved_with_scope",
+  "owner": "video_qa",
+  "output_paths": [
+    "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/director/two-episode-production-v1/next_policy_independent_qa/findings.json",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/director/two-episode-production-v1/next_policy_independent_qa/policy_and_case_review.json",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/director/two-episode-production-v1/next_policy_independent_qa/issue_NQA-HANDOFF.json"
+  ],
+  "input_versions": "policy_and_case_review.json coverage.input_manifest:13개파일SHA256",
+  "validation": {
+    "required": 0,
+    "recommended": 5,
+    "independent_logical_checks": 10,
+    "all_passed": true,
+    "arithmetic": "해시일치157검사 재사용",
+    "primary_review": "원문 캐시PNG10쪽 실제열람",
+    "playback_listening": "unchecked/범위밖"
+  },
+  "unresolved": [
+    "NQA-01 구성안 입력해시 갱신(권장)",
+    "G05 감면후교육세/총세금",
+    "G10/CE_G01 실제은행 MCI/MCG/HF보증 승인",
+    "G07/G08/CE_G03 실제 채권/등기/법무사/인지 견적",
+    "CE_G02 정책 실제심사금리/신생아 특례종료후금리"
+  ],
+  "affected_scenes": [
+    "PREP_CH02",
+    "PREP_CH03",
+    "PREP_CH04",
+    "PREP_CH05",
+    "PREP_CH06",
+    "PREP_CH07",
+    "PREP_CH08",
+    "PREP_CH09"
+  ],
+  "next_owner": "video_director; 첫업로드 실제완료 후 대본담당",
+  "scope": "연구준비 논리만 승인. 실제대본 승인 아님. 다른담당/공통상태 변경·신규episode/미디어/TTS/업로드·유료/외부전송 없음."
+}

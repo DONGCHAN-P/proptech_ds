@@ -572,6 +572,33 @@ def handle(text: str) -> None:
         TG.send(f"무슨 뜻인지 몰랐습니다.{NL}{NL}{HELP}", quiet=True)
 
 
+def process_update(up: dict) -> None:
+    """Persist ordinary requests before acknowledging the getUpdates offset."""
+    import os
+    from notify import conversation_bridge as bridge
+    from notify.video_decisions import handle_update
+    cid=TG.creds()[1]
+    user=os.getenv('TELEGRAM_USER_ID','').strip() or cid
+    if not bridge.authorized(up,cid,user):return
+    if handle_update(up) is not None:return
+    if bridge.handle_update(up) is not None:return
+    handle((up.get('message') or {}).get('text') or '')
+
+
+def single_instance():
+    """Hold a Windows file lock for the lifetime of the only poller."""
+    import msvcrt
+    path=ROOT/'output/telegram_conversation/poller.lock'
+    path.parent.mkdir(parents=True,exist_ok=True)
+    fh=path.open('a+b')
+    if path.stat().st_size==0:fh.write(b'1');fh.flush()
+    fh.seek(0)
+    try:msvcrt.locking(fh.fileno(),msvcrt.LK_NBLCK,1)
+    except OSError:
+        fh.close();raise RuntimeError('Telegram poller already running')
+    return fh
+
+
 def serve() -> int:
     """롱폴링 루프. Ctrl-C 로 멈춘다."""
     tok, cid = TG.creds()
@@ -581,34 +608,32 @@ def serve() -> int:
     info = TG.me(tok)
     if not info.get("ok"):
         return 1
+    import os
+    pid_file=ROOT/'output/telegram_conversation/poller_pid.txt'
+    pid_file.parent.mkdir(parents=True,exist_ok=True)
+    pid_file.write_text(str(os.getpid()),encoding='utf-8')
     print(f"봇 @{info['result'].get('username')} 대기 중 "
           f"(허용 chat_id {cid}) — Ctrl-C 로 종료")
+
+    from notify.conversation_bridge import start_worker
+    start_worker()
 
     st = load()
     offset = st.get("offset", 0)
     while True:
         res = TG._post("getUpdates", tok, data={
-            "offset": offset, "timeout": POLL_TIMEOUT})
+            "offset": offset, "timeout": POLL_TIMEOUT}, timeout=POLL_TIMEOUT + 15)
         if not res.get("ok"):
             print(f"  수신 실패 — {TG.explain(res)}")
             continue
         for up in res.get("result") or []:
-            offset = max(offset, up["update_id"] + 1)
-            st = load()
-            st["offset"] = offset
-            save(st)
-            msg = up.get("message") or up.get("edited_message") or {}
-            chat = (msg.get("chat") or {}).get("id")
-            if not allowed(chat):
-                # 답하지 않는다. 답하면 봇이 살아 있다는 것만 알려 준다.
-                print(f"  허용되지 않은 chat_id {chat} — 무시")
-                continue
-            text = msg.get("text") or ""
-            print(f"  받음: {text[:40]}")
             try:
-                handle(text)
-            except Exception:
-                traceback.print_exc()
+                process_update(up)
+            except Exception as e:
+                print(f"  메시지 처리 실패 ({type(e).__name__}); offset 보존")
+                break
+            offset=max(offset,up['update_id']+1)
+            st=load();st['offset']=offset;save(st)
 
 
 def main() -> int:
@@ -622,6 +647,7 @@ def main() -> int:
         pass
     if a.morning:
         return 0 if morning() else 1
+    poller_lock=single_instance()
     try:
         return serve()
     except KeyboardInterrupt:

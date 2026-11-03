@@ -1,0 +1,89 @@
+{
+  "build": [
+    "tools/python311/python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\jun-user-script-v1\\build.py"
+  ],
+  "render": [
+    {
+      "scene_id": "S13",
+      "argv": [
+        "node",
+        "C:\\Users\\e2ken\\AppData\\Roaming\\npm\\node_modules\\hyperframes\\bin\\hyperframes.mjs",
+        "render",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\jun-user-script-v1\\project\\S13",
+        "--output",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-user-script-v1\\representatives\\S13_preview_silent_NEW_VERSION.mp4",
+        "--fps",
+        "30",
+        "--quality",
+        "looks",
+        "--workers",
+        "2"
+      ]
+    },
+    {
+      "scene_id": "S18_S19",
+      "argv": [
+        "node",
+        "C:\\Users\\e2ken\\AppData\\Roaming\\npm\\node_modules\\hyperframes\\bin\\hyperframes.mjs",
+        "render",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\jun-user-script-v1\\project\\S18_S19",
+        "--output",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-user-script-v1\\representatives\\S18_S19_preview_silent_NEW_VERSION.mp4",
+        "--fps",
+        "30",
+        "--quality",
+        "looks",
+        "--workers",
+        "2"
+      ]
+    },
+    {
+      "scene_id": "S21",
+      "argv": [
+        "node",
+        "C:\\Users\\e2ken\\AppData\\Roaming\\npm\\node_modules\\hyperframes\\bin\\hyperframes.mjs",
+        "render",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\jun-user-script-v1\\project\\S21",
+        "--output",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-user-script-v1\\representatives\\S21_preview_silent_NEW_VERSION.mp4",
+        "--fps",
+        "30",
+        "--quality",
+        "looks",
+        "--workers",
+        "2"
+      ]
+    }
+  ],
+  "environment": {
+    "DO_NOT_TRACK": "1",
+    "HYPERFRAMES_NO_UPDATE_CHECK": "1",
+    "HYPERFRAMES_NO_AUTO_INSTALL": "1",
+    "PATH_prepend": [
+      "existing housing-choice private-production-v1/media-bin",
+      "existing video/node_modules/@remotion/compositor-win32-x64-msvc"
+    ]
+  },
+  "no_global_upgrade": true,
+  "concat": {
+    "argv": [
+      "existing ffmpeg.exe",
+      "-f",
+      "concat",
+      "-safe",
+      "0",
+      "-i",
+      "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\jun-user-script-v1\\representatives\\concat_current.txt",
+      "-c",
+      "copy",
+      "-movflags",
+      "+faststart",
+      "NEW_VERSION.mp4"
+    ]
+  },
+  "warning": "Choose a new output version. Do not overwrite existing MP4s."
+}

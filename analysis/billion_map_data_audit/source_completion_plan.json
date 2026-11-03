@@ -1,0 +1,50 @@
+{
+  "endpoint": "https://apis.data.go.kr/1613000/RTMSDataSvcAptTradeDev/getRTMSDataSvcAptTradeDev",
+  "official_source": "https://www.data.go.kr/data/15126468/openapi.do",
+  "cost": "free as stated on official portal checked 2026-10-17",
+  "published_development_traffic": 10000,
+  "account_remaining_quota": "unknown; no authenticated remaining counter inspected",
+  "credential_configured": true,
+  "credential_live_probe_performed": false,
+  "affected_region_months": 266,
+  "fresh_full_pages_expected": 543,
+  "extra_final_page1_checks": 266,
+  "full_expected_with_total_recheck": 809,
+  "pilot": [
+    {
+      "code": "11350",
+      "ym": "200603",
+      "old_total": 1123,
+      "expected_pages": 2
+    },
+    {
+      "code": "11350",
+      "ym": "200609",
+      "old_total": 2049,
+      "expected_pages": 3
+    }
+  ],
+  "pilot_request_cap": 8,
+  "collection_rules": [
+    "fresh page1 establishes totalCount; subsequent pages same totalCount",
+    "verify header success and pageNo/numOfRows",
+    "no output exception URLs or auth values",
+    "per-page sha256 and fetched_at recorded",
+    "retrieve all pages of each selected month into episode research source-completion-v1",
+    "recheck page1 totalCount after full download; mismatch stops pair",
+    "source item identity/count duplicate audit before integration",
+    "never append fresh page2 to old page1",
+    "no writes to raw/staged/master",
+    "no unbounded retry; request cap hard limit"
+  ],
+  "episode_overlay_rules": [
+    "replacement scoped to selected sigungu_code and contract month",
+    "fresh complete region-month replaces existing cached rows for episode analysis only",
+    "canonical official apt_seq preserved per source row",
+    "cdealType nonempty or cancellation date removes canceled identity; do not let active stale row survive cancel",
+    "dedup should not copy legacy same-apt/date/area/floor max-price collapse without diagnosis",
+    "maintain source row hash and full provided-record fingerprint; identical-key distinct raw payload flagged for review",
+    "2026 administrative remapping must match old/new region code aliases rather than blindly union duplicate history",
+    "recompute medians/sample n/states/coordinate exclusions from refreshed episode-only analysis source"
+  ]
+}

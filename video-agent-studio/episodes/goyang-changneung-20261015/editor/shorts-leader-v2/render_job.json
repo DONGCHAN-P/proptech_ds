@@ -1,0 +1,41 @@
+{
+  "task_id": "changneung-leader-v2-final",
+  "inputs": [
+    "C:\\projects\\realestate_reco\\video\\src\\changneung-shorts-leader-v2\\entry.tsx",
+    "C:\\projects\\realestate_reco\\video\\src\\changneung-shorts-leader-v2\\data.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v2\\inputs_manifest.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v2\\verify.py"
+  ],
+  "outputs": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\changneung_leader_short_v2.mp4",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\technical.json"
+  ],
+  "steps": [
+    {
+      "argv": [
+        "node",
+        "C:\\projects\\realestate_reco\\video\\node_modules\\@remotion\\cli\\remotion-cli.js",
+        "render",
+        "C:\\projects\\realestate_reco\\video\\src\\changneung-shorts-leader-v2\\entry.tsx",
+        "ChangneungLeaderShortV2",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\changneung_leader_short_v2.mp4",
+        "--public-dir=C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v2\\public",
+        "--browser-executable=C:/Program Files/Google/Chrome/Application/chrome.exe",
+        "--codec=h264",
+        "--crf=18",
+        "--concurrency=8",
+        "--log=error"
+      ],
+      "cwd": "C:\\projects\\realestate_reco"
+    },
+    {
+      "argv": [
+        "C:\\projects\\realestate_reco\\tools\\python311\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v2\\verify.py"
+      ],
+      "cwd": "C:\\projects\\realestate_reco"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "as_of_date": "2026-10-27",
+  "frozen_input_sha256": "cbccdf22841a4d93c0233696e182c693fd05801929ba94522dc941e96646b576",
+  "parent_owns_pipeline_and_feature_selection": true,
+  "features": [
+    {
+      "variable": "bok_policy_rate_eom_pct",
+      "status": "candidate_with_caveats",
+      "reason": "Apply available_date, vintage and geography checks.",
+      "first_month": "2006-01",
+      "last_month": "2026-09",
+      "unit": "percent_per_annum"
+    },
+    {
+      "variable": "employed_residents_thousand",
+      "status": "deferred_historical_training",
+      "reason": "Only 2026-09 acquired; exclude from historical learning/feature selection.",
+      "first_month": "2026-09",
+      "last_month": "2026-09",
+      "unit": "thousand_persons"
+    },
+    {
+      "variable": "employment_rate_15plus_pct",
+      "status": "deferred_historical_training",
+      "reason": "Only 2026-09 acquired; exclude from historical learning/feature selection.",
+      "first_month": "2026-09",
+      "last_month": "2026-09",
+      "unit": "percent"
+    },
+    {
+      "variable": "housing_completions_all",
+      "status": "candidate_with_caveats",
+      "reason": "All housing, six regions, ends 2025-12. Mask stale values >6 months as parent specified; keep missing flags. Negative source values require review.",
+      "first_month": "2006-01",
+      "last_month": "2025-12",
+      "unit": "housing_units"
+    },
+    {
+      "variable": "housing_permits_all",
+      "status": "candidate_with_caveats",
+      "reason": "All housing, six regions, ends 2025-12. Mask stale values >6 months as parent specified; keep missing flags. Negative source values require review.",
+      "first_month": "2006-01",
+      "last_month": "2025-12",
+      "unit": "housing_units"
+    },
+    {
+      "variable": "housing_starts_all",
+      "status": "candidate_with_caveats",
+      "reason": "All housing, six regions, ends 2025-12. Mask stale values >6 months as parent specified; keep missing flags. Negative source values require review.",
+      "first_month": "2006-01",
+      "last_month": "2025-12",
+      "unit": "housing_units"
+    },
+    {
+      "variable": "migration_inflow_persons",
+      "status": "deferred_pre2024_selection",
+      "reason": "Regional history begins 2024-08, or exact persons only 2026-08. Preserve signed net flows; do not select using a future holdout window. Longer monthly KOSIS extraction remains deferred.",
+      "first_month": "2026-08",
+      "last_month": "2026-08",
+      "unit": "persons"
+    },
+    {
+      "variable": "migration_inflow_thousand",
+      "status": "deferred_pre2024_selection",
+      "reason": "Regional history begins 2024-08, or exact persons only 2026-08. Preserve signed net flows; do not select using a future holdout window. Longer monthly KOSIS extraction remains deferred.",
+      "first_month": "2024-08",
+      "last_month": "2026-08",
+      "unit": "thousand_persons"
+    },
+    {
+      "variable": "migration_outflow_persons",
+      "status": "deferred_pre2024_selection",
+      "reason": "Regional history begins 2024-08, or exact persons only 2026-08. Preserve signed net flows; do not select using a future holdout window. Longer monthly KOSIS extraction remains deferred.",
+      "first_month": "2026-08",
+      "last_month": "2026-08",
+      "unit": "persons"
+    },
+    {
+      "variable": "migration_outflow_thousand",
+      "status": "deferred_pre2024_selection",
+      "reason": "Regional history begins 2024-08, or exact persons only 2026-08. Preserve signed net flows; do not select using a future holdout window. Longer monthly KOSIS extraction remains deferred.",
+      "first_month": "2024-08",
+      "last_month": "2026-08",
+      "unit": "thousand_persons"
+    },
+    {
+      "variable": "mortgage_rate_new_business_pct",
+      "status": "candidate_with_caveats",
+      "reason": "Apply available_date, vintage and geography checks.",
+      "first_month": "2006-01",
+      "last_month": "2026-08",
+      "unit": "percent_per_annum"
+    },
+    {
+      "variable": "net_migration_persons",
+      "status": "deferred_pre2024_selection",
+      "reason": "Regional history begins 2024-08, or exact persons only 2026-08. Preserve signed net flows; do not select using a future holdout window. Longer monthly KOSIS extraction remains deferred.",
+      "first_month": "2026-08",
+      "last_month": "2026-08",
+      "unit": "persons"
+    },
+    {
+      "variable": "net_migration_thousand",
+      "status": "deferred_pre2024_selection",
+      "reason": "Regional history begins 2024-08, or exact persons only 2026-08. Preserve signed net flows; do not select using a future holdout window. Longer monthly KOSIS extraction remains deferred.",
+      "first_month": "2024-08",
+      "last_month": "2026-08",
+      "unit": "thousand_persons"
+    },
+    {
+      "variable": "resident_registered_households",
+      "status": "candidate_with_caveats",
+      "reason": "Registered households are not census general households. Keep code12 separate. Code29/46 end 2026-06; do not splice combined geography. Historical district/province boundary changes not adjusted.",
+      "first_month": "2008-01",
+      "last_month": "2026-09",
+      "unit": "registered_households"
+    },
+    {
+      "variable": "resident_registered_population",
+      "status": "candidate_with_caveats",
+      "reason": "Registered households are not census general households. Keep code12 separate. Code29/46 end 2026-06; do not splice combined geography. Historical district/province boundary changes not adjusted.",
+      "first_month": "2008-01",
+      "last_month": "2026-09",
+      "unit": "persons"
+    },
+    {
+      "variable": "unemployment_rate_pct",
+      "status": "deferred_historical_training",
+      "reason": "Only 2026-09 acquired; exclude from historical learning/feature selection.",
+      "first_month": "2026-09",
+      "last_month": "2026-09",
+      "unit": "percent"
+    },
+    {
+      "variable": "unsold_housing_completed",
+      "status": "candidate_with_caveats",
+      "reason": "Apply available_date, vintage and geography checks.",
+      "first_month": "2024-03",
+      "last_month": "2026-08",
+      "unit": "housing_units"
+    },
+    {
+      "variable": "unsold_housing_total",
+      "status": "candidate_with_caveats",
+      "reason": "Apply available_date, vintage and geography checks.",
+      "first_month": "2017-01",
+      "last_month": "2026-08",
+      "unit": "housing_units"
+    },
+    {
+      "variable": "net_migration_annual_persons",
+      "status": "candidate_annual_supplement_separate_file",
+      "file": "collected/migration_annual_net_six_regions.csv",
+      "frequency": "annual",
+      "first_month": "2005-12",
+      "last_month": "2025-12",
+      "rows": 126,
+      "reason": "Six regions. December observation only; available following March31 by conservative assumption. Preserve signs; never backfill to January. Parent can use frequency-specific max observation age18 months. Latest revised vintage remains a limitation."
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "revision": "v1r3",
+  "status": "changed_media_ready",
+  "scope": [
+    "M002 외부 업무지 실제 역 대표점 지도",
+    "M008 C2/B2 전체 locator+실제필지상세+풀네임시설라벨",
+    "M007 부모 제공 제목 변경"
+  ],
+  "outputs": {
+    "representatives": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v1\\preflight-r3",
+    "renderer": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\editor\\production-v1\\render_r3.cjs",
+    "rendered_project": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v1\\rendered_project_r3.json",
+    "receipt": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v1\\render_receipt_r3.json"
+  },
+  "inputs": {
+    "source_sha256": {
+      "Board.tsx": "d1aef1dc57f7e9f5c1358f0a95be24e6e5df3ec6f2074e7d2bae667f440aa4db",
+      "R3Maps.tsx": "7744627c6c1a0db4078f74d7f4f407af13dd7b4240ad848b62fb6630779e7040",
+      "data_r3.json": "b546a767c4f9686707ebc9b115d8fcdc647d3394f7fff8c159b7cf1709f7800d"
+    },
+    "atlas_sha256": "e8ffaef861af601288fdd7900f74c6f39ba1c0b9052422ecd00637fd1a3f73fa",
+    "project_sha256": "c29bc61bf9c9bd2874bf20a0bde0ff2ae77a96f107eadce18a8255bc4438545a"
+  },
+  "verification": {
+    "representative_guard": {
+      "input_digest": "0eb421a3ac521b325c905e7b725da80261d8c3324a1152412cf576a45ec0e69a",
+      "passed": true,
+      "checks": [
+        {
+          "file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v1\\preflight-r3\\REP_jobs_external.png",
+          "mode": "jobs",
+          "active": "외부업무지",
+          "passed": true
+        },
+        {
+          "file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v1\\preflight-r3\\REP_C2.png",
+          "mode": "decision",
+          "active": "C2",
+          "passed": true
+        },
+        {
+          "file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v1\\preflight-r3\\REP_B2.png",
+          "mode": "decision",
+          "active": "B2",
+          "passed": true
+        }
+      ]
+    },
+    "geometry_checks": {
+      "C2": {
+        "leader_intersections": [],
+        "all_label_points_inside": true,
+        "block_bbox_fully_inside_view": true,
+        "leader_segments": [
+          [
+            [
+              487.96886363636366,
+              94.10659090909095
+            ],
+            [
+              975,
+              65
+            ]
+          ],
+          [
+            [
+              386.5715909090909,
+              292.2299999999999
+            ],
+            [
+              975,
+              180
+            ]
+          ],
+          [
+            [
+              643.1247727272728,
+              305.17704545454535
+            ],
+            [
+              975,
+              295
+            ]
+          ],
+          [
+            [
+              581.2756818181819,
+              329.70340909090885
+            ],
+            [
+              975,
+              410
+            ]
+          ]
+        ]
+      },
+      "B2": {
+        "leader_intersections": [],
+        "all_label_points_inside": true,
+        "block_bbox_fully_inside_view": true,
+        "leader_segments": [
+          [
+            [
+              497.65074999999996,
+              111.53700000000005
+            ],
+            [
+              975,
+              65
+            ]
+          ],
+          [
+            [
+              499.21899999999994,
+              181.99350000000004
+            ],
+            [
+              975,
+              180
+            ]
+          ],
+          [
+            [
+              253.5392499999999,
+              431.61299999999994
+            ],
+            [
+              975,
+              295
+            ]
+          ],
+          [
+            [
+              303.3789999999999,
+              433.8952499999999
+            ],
+            [
+              975,
+              410
+            ]
+          ]
+        ]
+      }
+    },
+    "actually_viewed": [
+      "REP_jobs_external",
+      "REP_C2",
+      "REP_B2"
+    ],
+    "all_target_block_bboxes_inside": true,
+    "all_label_points_inside": true,
+    "leader_intersections": 0,
+    "mp4_continuous_playback": false,
+    "audio_listened": false,
+    "render_receipt": {
+      "completed": true,
+      "input_digest": "0eb421a3ac521b325c905e7b725da80261d8c3324a1152412cf576a45ec0e69a",
+      "project_sha256": "c29bc61bf9c9bd2874bf20a0bde0ff2ae77a96f107eadce18a8255bc4438545a",
+      "baseline_sha256": "8eb76ffe665e7b215db25ad6436a97f5acb37c653d6085405816458c2bf06dcd",
+      "actual_still_calls": 194,
+      "changed_png": 187,
+      "reused_png": 317,
+      "changed_variants": 4
+    },
+    "root_and_independent_qa_representatives": "부모의 명시적 대표 3장 통과 전달 후 변경 렌더 실행",
+    "new_png_and_source_hash_check": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\visual\\verification_r3.json"
+  },
+  "coordinates": {
+    "stations": [
+      {
+        "label": "강남역",
+        "xy": [
+          170.97,
+          445.592
+        ],
+        "source_xy": [
+          958274.26,
+          1944414.62
+        ],
+        "source_name": "강남",
+        "line": "2호선",
+        "address": "서울특별시 강남구 강남대로 지하396(역삼동)",
+        "source_id": "S1102:0222:378"
+      },
+      {
+        "label": "잠실역",
+        "xy": [
+          426.463,
+          381.634
+        ],
+        "source_xy": [
+          964661.57,
+          1946077.51
+        ],
+        "source_name": "잠실(송파구청)",
+        "line": "2호선",
+        "address": "서울특별시 송파구 올림픽로 지하265(신천동)",
+        "source_id": "S1102:0216:372"
+      },
+      {
+        "label": "판교역",
+        "xy": [
+          463.483,
+          883.552
+        ],
+        "source_xy": [
+          965587.08,
+          1933027.65
+        ],
+        "source_name": "판교",
+        "line": "신분당선",
+        "address": "경기도 성남시 분당구 판교역로 지하 160",
+        "source_id": "I11D1:D011:9"
+      }
+    ],
+    "detail_mapping": {
+      "C2": {
+        "view": [
+          160,
+          420,
+          330,
+          220
+        ],
+        "block_point": [
+          286.48,
+          567.21
+        ],
+        "labels": [
+          {
+            "source_name": "교육시설 (초5)",
+            "display_label": "초등학교 예정 부지",
+            "feature_index": 611,
+            "point": [
+              337.065,
+              460.595
+            ],
+            "point_inside": true
+          },
+          {
+            "source_name": "공원 (수5)",
+            "display_label": "수변공원 예정 부지",
+            "feature_index": 522,
+            "point": [
+              293.325,
+              546.06
+            ],
+            "point_inside": true
+          },
+          {
+            "source_name": "교육시설 (고2)",
+            "display_label": "고등학교 예정 부지",
+            "feature_index": 415,
+            "point": [
+              403.995,
+              551.645
+            ],
+            "point_inside": true
+          },
+          {
+            "source_name": "근린생활시설용지 (근생)",
+            "display_label": "근린생활시설 예정 부지",
+            "feature_index": 263,
+            "point": [
+              377.315,
+              562.2249999999999
+            ],
+            "point_inside": true
+          }
+        ]
+      },
+      "B2": {
+        "view": [
+          330,
+          360,
+          310,
+          200
+        ],
+        "block_point": [
+          495.65999999999997,
+          476.14
+        ],
+        "labels": [
+          {
+            "source_name": "근린생활시설용지 (근생)",
+            "display_label": "근린생활시설 예정 부지",
+            "feature_index": 378,
+            "point": [
+              499.765,
+              403.74
+            ],
+            "point_inside": true
+          },
+          {
+            "source_name": "공원 (근8)",
+            "display_label": "근린공원 예정 부지",
+            "feature_index": 748,
+            "point": [
+              500.38,
+              431.37
+            ],
+            "point_inside": true
+          },
+          {
+            "source_name": "교육시설 (초6)",
+            "display_label": "초등학교 예정 부지",
+            "feature_index": 335,
+            "point": [
+              404.03499999999997,
+              529.26
+            ],
+            "point_inside": true
+          },
+          {
+            "source_name": "교육시설 (유5)",
+            "display_label": "유치원 예정 부지",
+            "feature_index": 507,
+            "point": [
+              423.58,
+              530.155
+            ],
+            "point_inside": true
+          }
+        ]
+      }
+    }
+  },
+  "unresolved": [
+    "최종 MP4 연속 재생 및 실제 청취 미수행",
+    "통합 MP4 독립 QA 필요"
+  ],
+  "next_owner": "director / independent QA"
+}

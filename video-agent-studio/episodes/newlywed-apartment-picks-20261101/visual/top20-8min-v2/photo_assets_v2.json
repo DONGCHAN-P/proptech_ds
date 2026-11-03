@@ -1,0 +1,2368 @@
+{
+  "revision": "top20-8min-v2",
+  "owner": "visual/photos",
+  "created_utc": "2026-11-01T13:08:49.065733+00:00",
+  "brief": {
+    "request": "TOP20 각 구의 사용자 지정 실제 장소 사진 최소1장. 상업 이용·변형 가능한 개별 사용권·실물 파일·지역 일치 확인.",
+    "photo_count_target": 20,
+    "visual_treatment": "원본 비율·색 유지. 숫자·텍스트·AI·지도·분양 조감도 대체 없음. 영상 배치·줌·자막은 이번 범위 밖.",
+    "resolution": "장변1200px 이상 우선; 확대하지 않음",
+    "time_prefix": "timing lock 미확정; region_id 연결, 시간 접두사 없음",
+    "scope": "photos/**, photo_assets.json, photo_sources.md, photo_handoff.json, 사진 수집 스크립트만 수정"
+  },
+  "input_versions": [
+    {
+      "path": "research/top20-8min-v2/top20.json",
+      "sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+      "used_scope": "TOP20 지역ID·장면ID·통계기준일"
+    },
+    {
+      "path": "research/top20-8min-v2/ranks01_10_facts.json",
+      "sha256": "a436794713cb97290701a909d6702aa2108311b0174d4168d9bbd2769c316c8d",
+      "used_scope": "image_suggestions만 장소·주소·권리 제한 대조; 공식 사진 권리는 승계하지 않음"
+    },
+    {
+      "path": "research/top20-8min-v2/ranks11_20_facts.json",
+      "sha256": "68b9c675fb41d91c0bb4216666c063b655523b615c678c33d235c28c2c5e4c84",
+      "used_scope": "image_suggestions만 장소·주소·권리 제한 대조; 공식 사진 권리는 승계하지 않음"
+    }
+  ],
+  "statistical_reference_date": "2024-11-01",
+  "photo_dates_are_separate": true,
+  "primary_photo_count": 20,
+  "covered_region_count": 20,
+  "missing_regions": [],
+  "assets": [
+    {
+      "asset_id": "PHOTO_R01",
+      "region_id": "R01",
+      "scene_ids": [
+        "S022"
+      ],
+      "rank": 1,
+      "statistical_region_2024": "인천 서구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "청라호수공원",
+      "address_or_area": "인천광역시 서해구 크리스탈로 131",
+      "photo_capture_year": null,
+      "photo_capture_date_raw": "원문 촬영일 미표시",
+      "source_or_prompt": {
+        "provider": "인천시설공단",
+        "title": "청라호수공원 사진",
+        "author": "인천시설공단 청라공원사업단",
+        "author_html_original": "인천시설공단 청라공원사업단",
+        "author_urls": [],
+        "file_page": "https://www.insiseol.or.kr/park/cheongna/facility/lake.jsp",
+        "fixed_revision_url": "https://www.insiseol.or.kr/park/cheongna/facility/lake.jsp",
+        "original_image_url": "https://www.insiseol.or.kr/park/cheongna/img/contents/lake.jpg",
+        "actual_download_url": "https://www.insiseol.or.kr/park/cheongna/img/contents/lake.jpg",
+        "metadata_snapshot": "photos/evidence/R01_official_metadata.json",
+        "original_credit": "인천시설공단 청라공원사업단",
+        "original_description": "청라호수공원"
+      },
+      "license": {
+        "name": "공공누리 제1유형",
+        "version": "제1유형(웹페이지 별도 버전 미표시)",
+        "license_url": "https://www.kogl.or.kr/info/licenseType1.do",
+        "copyright_permission_basis": "청라호수공원 시설 원문 페이지의 kogl_type01.gif 출처표시 마크",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": false,
+        "usage_conditions_ko": "공공누리 제1유형: 출처 표시, 상업 이용 및 변형 가능. 기관이 이용자를 후원·보증하는 것처럼 표시하지 않음.",
+        "attribution_ko": "사진: 인천시설공단 청라공원사업단, 「청라호수공원 사진」, 공공누리 제1유형. 출처: https://www.insiseol.or.kr/park/cheongna/facility/lake.jsp / 이용조건: https://www.kogl.or.kr/info/licenseType1.do / 변형: 게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": [
+          "촬영일 미표시. 공사·미개발지 흔적이 보이는 과거 자료사진이므로 2024 또는 2026 현재 전경으로 단정하지 않음. 1600×600 와이드 사진은 비율 유지 패널 사용 권장."
+        ]
+      },
+      "dimensions": {
+        "width": 1600,
+        "height": 600,
+        "stored_pixel_width": 1600,
+        "stored_pixel_height": 600,
+        "exif_orientation": 1,
+        "api_original_dimensions": null,
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R01_청라호수공원.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R01_청라호수공원.jpg",
+      "bytes": 644987,
+      "sha256": "0ac3d1cd636426f4605936a58c5115a150b5b5754a83ebeb8ffd85631688c5a2",
+      "download_variant": "official_site_published_file",
+      "is_original_published_file": true,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "공식 시설 페이지의 청라호수공원 항공 실사와 소재지. 2024 통계권역은 옛 인천 서구, 현재 사진 소재지는 서해구.",
+        "coordinates_from_source": [],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "청라호수공원",
+            "address": "인천광역시 서해구 청라동106-2",
+            "source_url": "https://www.ifez.go.kr/main/tour/view.do?tour_fclt_sn=10",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": [
+          "촬영일 미표시. 공사·미개발지 흔적이 보이는 과거 자료사진이므로 2024 또는 2026 현재 전경으로 단정하지 않음. 1600×600 와이드 사진은 비율 유지 패널 사용 권장."
+        ]
+      }
+    },
+    {
+      "asset_id": "PHOTO_R02_ALT01",
+      "region_id": "R02",
+      "scene_ids": [
+        "S021"
+      ],
+      "rank": 2,
+      "statistical_region_2024": "서울 송파구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "해당 구의 실제 수변·산책로 주제 이미지. 신혼부부 실거주·전입 원인·단지입지·현재 시설 상태의 증거 아님.",
+      "actual_place": "석촌호수 동호 수면·벚꽃 수변 원경",
+      "address_or_area": "서울특별시 송파구 석촌호수 동호 일대",
+      "photo_capture_year": 2025,
+      "photo_capture_date_raw": "2025-04-09 16:20:47",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "20250409 석촌호수공원 2.jpg",
+        "author": "Striker9498",
+        "file_page": "https://commons.wikimedia.org/wiki/File:20250409_%EC%84%9D%EC%B4%8C%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90_2.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1020608327",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/20250409_%EC%84%9D%EC%B4%8C%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/20250409_%EC%84%9D%EC%B4%8C%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90_2.jpg/3840px-20250409_%EC%84%9D%EC%B4%8C%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/alternates/evidence/R02_final_commons.json",
+        "original_description": "석촌호수공원 2",
+        "author_html_original": "<a href=\"//commons.wikimedia.org/wiki/User:Striker9498\" title=\"User:Striker9498\">Striker9498</a>"
+      },
+      "license": {
+        "name": "CC0 1.0",
+        "version": "1.0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "alternate_license_url": null,
+        "copyright_permission_basis": "개별 File의 저작자 Own work·CC0 1.0 헌납, 전체 분류·위키텍스트 확인, 타워/조형물 중심을 피한 실제 수변 구도 확인.",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": false,
+        "usage_conditions_ko": "원저작자·제목·원문·라이선스·변형 여부 표시. 기관/작가의 보증·후원을 암시하지 않음. 인물·표지·배경 건물을 주피사체로 확대하지 않고 이 수변/산책로 구도로 사용.",
+        "attribution_ko": "사진: Striker9498, 「20250409 석촌호수공원 2.jpg」, CC0 1.0. 원문: https://commons.wikimedia.org/wiki/File:20250409_%EC%84%9D%EC%B4%8C%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90_2.jpg / 이용조건: http://creativecommons.org/publicdomain/zero/1.0/deed.en / 변형: Wikimedia 공식3840px 비율유지 CDN 사본. 로컬 크롭·색보정·생성 보정 없음.",
+        "changes_notice": "Wikimedia 공식3840px 비율유지 CDN 사본. 로컬 크롭·색보정·생성 보정 없음.",
+        "third_party_content_notes": [
+          "권리표시가 없다는 이유만으로 모든 권리가 해결됐다고 판단하지 않음. 개별 라이선스·기관 보유권리 근거와 실제 주피사체/원문 주의표시를 함께 검토.",
+          "이번 대체 구도에서는 원본과 같은 NoFoP/특정 건축물 중심의 미해결 트리거를 확인하지 않음. 모든 상황의 제3자 권리까지 포괄 보증하는 뜻은 아님."
+        ]
+      },
+      "dimensions": {
+        "width": 3840,
+        "height": 2880,
+        "stored_pixel_width": 3840,
+        "stored_pixel_height": 2880,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4000,
+          3000
+        ],
+        "long_edge_at_least_1200": true,
+        "aspect_ratio": "4:3"
+      },
+      "actual_file": "photos/alternates/R02_ALT_석촌호수_수변_CC0.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/alternates/R02_ALT_석촌호수_수변_CC0.jpg",
+      "bytes": 1946124,
+      "sha256": "730366156b1f7c8cc7d7ce1eeefd592f8118c45b1079a5ad0c5005c61b6c97b4",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_and_source_location_matched",
+        "basis": "Commons 개별 File의 석촌호수공원2 설명, 카메라 좌표(37.510042,127.103775), 실제 수면·벚꽃 수변을 대조. 송파구 석촌호수 동호의 사진이며 잘못된127.03 좌표가 있는 별도 후보는 사용하지 않음.",
+        "coordinates_from_source": [
+          {
+            "lat": 37.510042,
+            "lon": 127.103775,
+            "primary": true,
+            "globe": "earth"
+          }
+        ],
+        "coordinates_role": "원문/EXIF 카메라 위치. 대상지 전체의 대표점 아님.",
+        "gis_boundary_point_in_polygon_performed": false,
+        "official_place_reference_urls": [
+          "https://parks.seoul.go.kr/park/detailView.do?key=2604070019&pIdx=118&tabTarget=1"
+        ],
+        "ai_generated_caption_used_as_evidence": false
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "pixel_visual_review": true,
+        "source_license_checked": true,
+        "same_unresolved_trigger_detected": false,
+        "positive_copyright_permission_evidence": true,
+        "visual_content_finding": "수면이 전경을 넓게 차지하고 벚꽃 수변과 멀리 있는 일반 도시 건물군이 배경이다. 롯데월드타워·놀이기구·조형물을 주피사체로 삼지 않는다. 저작권 표시 누락만을 근거로 하지 않고 실제 구도를 추가 확인.",
+        "status": "self_checked_alternate_landscape_accepted",
+        "independent_qa_performed": false,
+        "notes": [
+          "통계2024-11-01과 촬영시점/2020사업연도를 분리.",
+          "후속 편집에서 인물/건축물/안내판을 주피사체로 재확대하면 이 확인 범위가 달라짐."
+        ],
+        "review_scope": "3장 최종 contact sheet 실제 픽셀 확인, 노원1600px 개별 열람으로 기관 모자이크 확인. 개별 원문·기관 권리정책·해상도·해시·GPS/지역 대조."
+      },
+      "replaces": {
+        "manifest": "photo_assets.json",
+        "manifest_sha256": "fedbad09a0d9a6bf06299ba81d11926e647d73c1641aff4360ceb4f9c0e93dac",
+        "asset_id": "PHOTO_R02",
+        "actual_file": "photos/R02_송파_석촌호수_롯데타워.jpg",
+        "sha256": "b7200482ea647411fad425448fdb070a74132a5c162640f3eeefe1a2906d43c8",
+        "old_license": {
+          "name": "CC BY-SA 4.0",
+          "version": "4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+          "commercial_copyright_use": true,
+          "adaptation_allowed": true,
+          "share_alike": true,
+          "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시. 편집·변형본을 배포할 때 동일 또는 호환 라이선스 조건을 유지하고 최종 영상 결합 방식은 총괄/QA가 검토.",
+          "attribution_ko": "사진: kallerna, 「Lotte World morning view 8.jpg」, CC BY-SA 4.0. 출처: https://commons.wikimedia.org/wiki/File:Lotte_World_morning_view_8.jpg / 이용조건: https://creativecommons.org/licenses/by-sa/4.0 / 변형: 게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+          "changes_notice": "게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+          "third_party_content_notes": [
+            "원문에 NoFoP-South Korea 분류가 있음. 사진가의 CC 허락과 별개인 건축물·미술저작물 권리는 최종 사용 구도에서 확인. 원문 De minimis/Incidental 분류도 함께 보존."
+          ]
+        },
+        "old_inspection_notes": [
+          "원문에 NoFoP-South Korea 분류가 있음. 사진가의 CC 허락과 별개인 건축물·미술저작물 권리는 최종 사용 구도에서 확인. 원문 De minimis/Incidental 분류도 함께 보존."
+        ],
+        "replacement_reason": "원본의 NoFoP-South Korea/건축물·제3자 권리 주의가 있는 주피사체를 피하고, 별도의 CC0 또는 기관 보유권리+개별 자유이용 표시가 확인되는 풍경 사진으로 교체.",
+        "old_file_retained": true,
+        "v1_manifest_unchanged": true
+      },
+      "replacement_release": {
+        "status": "accepted_for_this_landscape_context_pending_independent_QA",
+        "same_trigger_remaining": false,
+        "universal_third_party_rights_guarantee": false,
+        "new_paid_generation": false,
+        "private_contact_performed": false
+      }
+    },
+    {
+      "asset_id": "PHOTO_R03",
+      "region_id": "R03",
+      "scene_ids": [
+        "S020"
+      ],
+      "rank": 3,
+      "statistical_region_2024": "경기 고양시 덕양구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "삼송로 도시풍경",
+      "address_or_area": "경기도 고양시 덕양구 삼송로 일대",
+      "photo_capture_year": 2021,
+      "photo_capture_date_raw": "2021-11-14 16:32:47",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "Samsong-Jichuk, Goyang 20211114 163247.jpg",
+        "author": "H. Y. Shin 000",
+        "author_html_original": "<a href=\"//commons.wikimedia.org/wiki/User:H._Y._Shin_000\" title=\"User:H. Y. Shin 000\">H. Y. Shin 000</a>",
+        "author_urls": [
+          "//commons.wikimedia.org/wiki/User:H._Y._Shin_000"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:Samsong-Jichuk,_Goyang_20211114_163247.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1209713287",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Samsong-Jichuk%2C_Goyang_20211114_163247.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Samsong-Jichuk%2C_Goyang_20211114_163247.jpg/3840px-Samsong-Jichuk%2C_Goyang_20211114_163247.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/evidence/R03_selected_commons.json",
+        "original_credit": "Own work",
+        "original_description": "Samsong-ro, Goyang"
+      },
+      "license": {
+        "name": "CC0",
+        "version": "1.0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": false,
+        "usage_conditions_ko": "저작권상 상업 이용·변형 가능. 기록용 출처·작가 표기를 보존.",
+        "attribution_ko": "사진: H. Y. Shin 000, 「Samsong-Jichuk, Goyang 20211114 163247.jpg」, CC0 1.0. 출처: https://commons.wikimedia.org/wiki/File:Samsong-Jichuk,_Goyang_20211114_163247.jpg / 이용조건: http://creativecommons.org/publicdomain/zero/1.0/deed.en / 변형: Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": []
+      },
+      "dimensions": {
+        "width": 3840,
+        "height": 2880,
+        "stored_pixel_width": 3840,
+        "stored_pixel_height": 2880,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4032,
+          3024
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R03_덕양_삼송도시풍경.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R03_덕양_삼송도시풍경.jpg",
+      "bytes": 1363840,
+      "sha256": "f9649606b6719ad6b82ece49097f72a2138b7247a0d7df1fdde4a0cc61d89582",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "File 설명 Samsong-ro, Goyang 및 삼송-지축 파일명. 고양시 삼송1동 소개·관내시설의 삼송로/덕양구 표기와 대조. 정밀 카메라 좌표는 없음.",
+        "coordinates_from_source": [],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "화정중앙공원",
+            "address": "경기도 고양시 덕양구 화정동985",
+            "source_url": "https://www.goyang.go.kr/www/www03/www03_9/www03_9_3.jsp",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          },
+          {
+            "place_name": "행주산성 역사공원",
+            "address": "경기도 고양시 덕양구 행주외동140-8",
+            "source_url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=7c9ce79b-874b-4ee6-8c88-2556067dad10",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": [
+          {
+            "title": "고양시 삼송1동 소개",
+            "url": "https://www.goyang.go.kr/dong/dong01/dong01_4/dong01_4_5/dong01_4_5_tab1.jsp"
+          },
+          {
+            "title": "삼송1동 관내시설",
+            "url": "https://www.goyang.go.kr/dong/user/bbs/BD_selectBbsList.do?q_bbsCode=1072&q_clCode=7"
+          }
+        ]
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": []
+      }
+    },
+    {
+      "asset_id": "PHOTO_R04",
+      "region_id": "R04",
+      "scene_ids": [
+        "S019"
+      ],
+      "rank": 4,
+      "statistical_region_2024": "서울 강서구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "마곡 서울식물원 야외",
+      "address_or_area": "서울특별시 강서구 마곡동로 161 일대",
+      "photo_capture_year": 2026,
+      "photo_capture_date_raw": "2026-05-23 10:42:17",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "서울식물원 야외.jpg",
+        "author": "Tjwlgns",
+        "author_html_original": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Tjwlgns&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Tjwlgns (page does not exist)\">Tjwlgns</a>",
+        "author_urls": [
+          "//commons.wikimedia.org/w/index.php?title=User:Tjwlgns&amp;action=edit&amp;redlink=1"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:%EC%84%9C%EC%9A%B8%EC%8B%9D%EB%AC%BC%EC%9B%90_%EC%95%BC%EC%99%B8.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1220557720",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/%EC%84%9C%EC%9A%B8%EC%8B%9D%EB%AC%BC%EC%9B%90_%EC%95%BC%EC%99%B8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/%EC%84%9C%EC%9A%B8%EC%8B%9D%EB%AC%BC%EC%9B%90_%EC%95%BC%EC%99%B8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "metadata_snapshot": "photos/evidence/R04_selected_commons.json",
+        "original_credit": "Own work",
+        "original_description": "서울식물원"
+      },
+      "license": {
+        "name": "CC BY 4.0",
+        "version": "4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": false,
+        "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시.",
+        "attribution_ko": "사진: Tjwlgns, 「서울식물원 야외.jpg」, CC BY 4.0. 출처: https://commons.wikimedia.org/wiki/File:%EC%84%9C%EC%9A%B8%EC%8B%9D%EB%AC%BC%EC%9B%90_%EC%95%BC%EC%99%B8.jpg / 이용조건: https://creativecommons.org/licenses/by/4.0 / 변형: 게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": []
+      },
+      "dimensions": {
+        "width": 4032,
+        "height": 3024,
+        "stored_pixel_width": 4032,
+        "stored_pixel_height": 3024,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4032,
+          3024
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R04_강서_서울식물원.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R04_강서_서울식물원.jpg",
+      "bytes": 4921441,
+      "sha256": "872ec5c2b13e2ff94285e864fb87ac5db5a1516ef2f23c331ec94f9c82c9c5f9",
+      "download_variant": "original",
+      "is_original_published_file": true,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "서울식물원 원문 설명·마곡 카메라 좌표와 실제 야외 정원·온실 배경을 대조. 온실 내부 사진 아님.",
+        "coordinates_from_source": [
+          {
+            "lat": 37.567314,
+            "lon": 126.831169,
+            "primary": true,
+            "globe": "earth"
+          }
+        ],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "서울식물원 식물문화센터 온실",
+            "address": "서울특별시 강서구 마곡동로161",
+            "source_url": "https://botanicpark.seoul.go.kr/front/wbook/upload/12_SBP.pdf",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": true,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": []
+      }
+    },
+    {
+      "asset_id": "PHOTO_R05",
+      "region_id": "R05",
+      "scene_ids": [
+        "S018"
+      ],
+      "rank": 5,
+      "statistical_region_2024": "인천 부평구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "부평역 외관과 역앞 거리",
+      "address_or_area": "인천광역시 부평구 부평역 일대",
+      "photo_capture_year": 2016,
+      "photo_capture_date_raw": "2016-08-18 15:08:24",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "Korail-Bupyeong Stn-Exterior.jpg",
+        "author": "IRTC1015",
+        "author_html_original": "<a href=\"//commons.wikimedia.org/wiki/User:IRTC1015\" title=\"User:IRTC1015\">IRTC1015</a>",
+        "author_urls": [
+          "//commons.wikimedia.org/wiki/User:IRTC1015"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:Korail-Bupyeong_Stn-Exterior.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=864772190",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Korail-Bupyeong_Stn-Exterior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Korail-Bupyeong_Stn-Exterior.jpg/3840px-Korail-Bupyeong_Stn-Exterior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/evidence/R05_selected_commons.json",
+        "original_credit": "Own work",
+        "original_description": "ko:부평역  역사"
+      },
+      "license": {
+        "name": "Public domain",
+        "version": "해당 없음(PD-self 공개 헌납)",
+        "license_url": "https://commons.wikimedia.org/wiki/Template:PD-self",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": false,
+        "usage_conditions_ko": "저작권상 상업 이용·변형 가능. 기록용 출처·작가 표기를 보존.",
+        "attribution_ko": "사진: IRTC1015, 「Korail-Bupyeong Stn-Exterior.jpg」, Public domain. 출처: https://commons.wikimedia.org/wiki/File:Korail-Bupyeong_Stn-Exterior.jpg / 이용조건: https://commons.wikimedia.org/wiki/Template:PD-self / 변형: Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": []
+      },
+      "dimensions": {
+        "width": 3840,
+        "height": 2880,
+        "stored_pixel_width": 3840,
+        "stored_pixel_height": 2880,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4160,
+          3120
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R05_부평_부평역.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R05_부평_부평역.jpg",
+      "bytes": 1515171,
+      "sha256": "5868c7923549e5341b49f1f6bfb4bf6e935ee28dd5bd07fc78c60011c68cc1b3",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "File 설명 부평역 역사·Bupyeong Station 분류·카메라 좌표와 역사 전면 실사 대조.",
+        "coordinates_from_source": [
+          {
+            "lat": 37.490856,
+            "lon": 126.72302,
+            "primary": true,
+            "globe": "earth"
+          }
+        ],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "부평공원",
+            "address": "인천광역시 부평구 부평동271",
+            "source_url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21121613074055886",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          },
+          {
+            "place_name": "부평문화의거리",
+            "address": "인천광역시 부평구 부평문화로78-2",
+            "source_url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21122714272330866",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": []
+      }
+    },
+    {
+      "asset_id": "PHOTO_R06_ALT01",
+      "region_id": "R06",
+      "scene_ids": [
+        "S017"
+      ],
+      "rank": 6,
+      "statistical_region_2024": "서울 강남구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "해당 구의 실제 수변·산책로 주제 이미지. 신혼부부 실거주·전입 원인·단지입지·현재 시설 상태의 증거 아님.",
+      "actual_place": "강남구 양재천 영동4교 인근 수변길",
+      "address_or_area": "서울특별시 강남구 양재천 영동4교 인근(세부 법정동·필지 확정 아님)",
+      "photo_capture_year": 2019,
+      "photo_capture_date_raw": "2019-12-19 16:44:28.65 (JPEG XMP/EXIF 생성시점); 원문 촬영월2019/12",
+      "source_or_prompt": {
+        "provider": "서울특별시·서울연구원",
+        "title": "영동4교·양재천 (06A05509Bb60000)",
+        "author": "서울특별시(서울경관기록화 사업 2020), 제공: 서울연구원 서울연구데이터서비스",
+        "file_page": "https://data.si.re.kr/photo/06a05509bb60000",
+        "fixed_revision_url": "https://data.si.re.kr/photo/06a05509bb60000",
+        "original_image_url": "https://data.si.re.kr/photo/download/56111?t=4f22de9bc3a85a1212bd1e9ef6b34552",
+        "actual_download_url": "https://data.si.re.kr/photo/download/56111?t=4f22de9bc3a85a1212bd1e9ef6b34552",
+        "metadata_snapshot": "photos/alternates/evidence/R06_SI_candidate.html",
+        "rights_policy_url": "https://data.si.re.kr/node/65064#photo-rights",
+        "rights_policy_snapshot": "photos/alternates/evidence/SI_photo_rights_policy.html",
+        "original_description": "생성형AI 설명은 위치·사실 검증 근거로 사용하지 않음. 통합코드·대상지·촬영월 등 원문 속성 및 실제 사진을 사용.",
+        "embedded_copyright": "서울특별시(Seoul Metropolitan Government)",
+        "embedded_project_comment": "2020 서울경관기록화사업, The Project of Documenting the Landscape of Seoul",
+        "individual_photographer_credit_note": "기관이 지정한 귀속문 사용. EXIF의 개인 연락처는 원장에 전재하지 않음."
+      },
+      "license": {
+        "name": "CC BY 4.0 / 공공누리 제1유형",
+        "version": "CC BY4.0·공공누리1",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/deed.ko",
+        "alternate_license_url": "https://www.kogl.or.kr/info/licenseType1.do",
+        "copyright_permission_basis": "개별 사진 상세페이지에 공공누리1·CC BY4.0 표시가 함께 있음. 연결된 기관 저작권 정책이 해당 표시 자료는 서울시/산하기관 보유 공공저작물이며 상업 이용·변형을 허용한다고 설명. 제공 JPEG의2020사업 댓글·서울특별시 저작권 EXIF 확인.",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": false,
+        "usage_conditions_ko": "원저작자·제목·원문·라이선스·변형 여부 표시. 기관/작가의 보증·후원을 암시하지 않음. 인물·표지·배경 건물을 주피사체로 확대하지 않고 이 수변/산책로 구도로 사용.",
+        "attribution_ko": "사진: 서울특별시(서울경관기록화 사업 2020), 제공: 서울연구원 서울연구데이터서비스, 「영동4교·양재천 (06A05509Bb60000)」, CC BY 4.0 / 공공누리 제1유형. 원문: https://data.si.re.kr/photo/06a05509bb60000 / 이용조건: https://creativecommons.org/licenses/by/4.0/deed.ko / 변형: 공식 공개 다운로드 버튼에서 제공된1600px JPEG 그대로 저장. 기관 제공 모자이크·비율 유지. 로컬 크롭·색보정·생성 보정 없음.",
+        "changes_notice": "공식 공개 다운로드 버튼에서 제공된1600px JPEG 그대로 저장. 기관 제공 모자이크·비율 유지. 로컬 크롭·색보정·생성 보정 없음.",
+        "third_party_content_notes": [
+          "권리표시가 없다는 이유만으로 모든 권리가 해결됐다고 판단하지 않음. 개별 라이선스·기관 보유권리 근거와 실제 주피사체/원문 주의표시를 함께 검토.",
+          "이번 대체 구도에서는 원본과 같은 NoFoP/특정 건축물 중심의 미해결 트리거를 확인하지 않음. 모든 상황의 제3자 권리까지 포괄 보증하는 뜻은 아님."
+        ]
+      },
+      "dimensions": {
+        "width": 1600,
+        "height": 1067,
+        "stored_pixel_width": 1600,
+        "stored_pixel_height": 1067,
+        "exif_orientation": 1,
+        "api_original_dimensions": null,
+        "long_edge_at_least_1200": true,
+        "aspect_ratio": "3:2 가로"
+      },
+      "actual_file": "photos/alternates/R06_ALT_양재천산책로_서울경관_1600.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/alternates/R06_ALT_양재천산책로_서울경관_1600.jpg",
+      "bytes": 1119024,
+      "sha256": "5be076060a15e197e78b08c431510a50d107157eb1b2b43627122ca95fe8bd59",
+      "download_variant": "official_public_1600px_download",
+      "is_original_published_file": true,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_and_source_location_matched",
+        "basis": "서울연구원 원문 통합코드06A05509Bb60000의 대상지 영동4교·세부대상지 양재천을 확인. 강남구 공식 시설 주소의 양재천(영동4교) 개포동175 및 JPEG EXIF GPS와 대조. 서초/과천 구간 후보는 제외.",
+        "coordinates_from_source": [
+          {
+            "lat": 37.488776666666666,
+            "lon": 127.05826,
+            "source": "공식 제공 JPEG의 EXIF GPS",
+            "precision_note": "촬영기기 기록이며 측량/행정경계 GIS 검사는 아님"
+          }
+        ],
+        "coordinates_role": "원문/EXIF 카메라 위치. 대상지 전체의 대표점 아님.",
+        "gis_boundary_point_in_polygon_performed": false,
+        "official_place_reference_urls": [
+          "https://www.gangnam.go.kr/contents/womansafe/2/view.do?mid=ID06_041611",
+          "https://data.si.re.kr/photo/06a05509bb60000"
+        ],
+        "ai_generated_caption_used_as_evidence": false
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "pixel_visual_review": true,
+        "source_license_checked": true,
+        "same_unresolved_trigger_detected": false,
+        "positive_copyright_permission_evidence": true,
+        "visual_content_finding": "갈대·수목·수변길이 주피사체이며 특정 신축 건물·미술 조형물은 화면 중심에 없다. 상부의 기능적 교량은 주변 맥락이다. 원거리 보행자의 신원·신혼부부 여부를 주장하지 않음.",
+        "status": "self_checked_alternate_landscape_accepted",
+        "independent_qa_performed": false,
+        "notes": [
+          "통계2024-11-01과 촬영시점/2020사업연도를 분리.",
+          "후속 편집에서 인물/건축물/안내판을 주피사체로 재확대하면 이 확인 범위가 달라짐."
+        ],
+        "review_scope": "3장 최종 contact sheet 실제 픽셀 확인, 노원1600px 개별 열람으로 기관 모자이크 확인. 개별 원문·기관 권리정책·해상도·해시·GPS/지역 대조."
+      },
+      "replaces": {
+        "manifest": "photo_assets.json",
+        "manifest_sha256": "fedbad09a0d9a6bf06299ba81d11926e647d73c1641aff4360ceb4f9c0e93dac",
+        "asset_id": "PHOTO_R06",
+        "actual_file": "photos/R06_강남_테헤란로.jpg",
+        "sha256": "ee7d0e434f8691bd9367eb366ab73d97d41b4c36b81b35406266fe44445d2150",
+        "old_license": {
+          "name": "CC BY-SA 4.0",
+          "version": "4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+          "commercial_copyright_use": true,
+          "adaptation_allowed": true,
+          "share_alike": true,
+          "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시. 편집·변형본을 배포할 때 동일 또는 호환 라이선스 조건을 유지하고 최종 영상 결합 방식은 총괄/QA가 검토.",
+          "attribution_ko": "사진: kallerna, 「Teheran-ro Yeongdong-daero crossing 6.jpg」, CC BY-SA 4.0. 출처: https://commons.wikimedia.org/wiki/File:Teheran-ro_Yeongdong-daero_crossing_6.jpg / 이용조건: https://creativecommons.org/licenses/by-sa/4.0 / 변형: 게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+          "changes_notice": "게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+          "third_party_content_notes": [
+            "원문에 NoFoP-South Korea 분류가 있음. 사진가의 CC 허락과 별개인 건축물·미술저작물 권리는 최종 사용 구도에서 확인. 원문 De minimis/Incidental 분류도 함께 보존."
+          ]
+        },
+        "old_inspection_notes": [
+          "원문에 NoFoP-South Korea 분류가 있음. 사진가의 CC 허락과 별개인 건축물·미술저작물 권리는 최종 사용 구도에서 확인. 원문 De minimis/Incidental 분류도 함께 보존."
+        ],
+        "replacement_reason": "원본의 NoFoP-South Korea/건축물·제3자 권리 주의가 있는 주피사체를 피하고, 별도의 CC0 또는 기관 보유권리+개별 자유이용 표시가 확인되는 풍경 사진으로 교체.",
+        "old_file_retained": true,
+        "v1_manifest_unchanged": true
+      },
+      "replacement_release": {
+        "status": "accepted_for_this_landscape_context_pending_independent_QA",
+        "same_trigger_remaining": false,
+        "universal_third_party_rights_guarantee": false,
+        "new_paid_generation": false,
+        "private_contact_performed": false
+      }
+    },
+    {
+      "asset_id": "PHOTO_R07",
+      "region_id": "R07",
+      "scene_ids": [
+        "S016"
+      ],
+      "rank": 7,
+      "statistical_region_2024": "서울 강동구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "고덕역 4번출구와 주변 가로",
+      "address_or_area": "서울특별시 강동구 고덕역 일대",
+      "photo_capture_year": 2018,
+      "photo_capture_date_raw": "Taken on 14 September 2018, 12:40:06 KST (UTC+9)",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "Seoul-metro-552-Godeok-station-entrance-4-20180914-124006.jpg",
+        "author": "LERK",
+        "author_html_original": "<bdi><a href=\"//commons.wikimedia.org/wiki/User:LERK\" title=\"User:LERK\">LERK</a></bdi>",
+        "author_urls": [
+          "//commons.wikimedia.org/wiki/User:LERK"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:Seoul-metro-552-Godeok-station-entrance-4-20180914-124006.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1108629486",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Seoul-metro-552-Godeok-station-entrance-4-20180914-124006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Seoul-metro-552-Godeok-station-entrance-4-20180914-124006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "metadata_snapshot": "photos/evidence/R07_selected_commons.json",
+        "original_credit": "Own work",
+        "original_description": "The no.4 entrance to the  Godeok Station  on the Seoul Metro Line 5 in Gangdong-gu, Seoul, Republic of Korea(South Korea)"
+      },
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "version": "4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": true,
+        "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시. 편집·변형본을 배포할 때 동일 또는 호환 라이선스 조건을 유지하고 최종 영상 결합 방식은 총괄/QA가 검토.",
+        "attribution_ko": "사진: LERK, 「Seoul-metro-552-Godeok-station-entrance-4-20180914-124006.jpg」, CC BY-SA 4.0. 출처: https://commons.wikimedia.org/wiki/File:Seoul-metro-552-Godeok-station-entrance-4-20180914-124006.jpg / 이용조건: https://creativecommons.org/licenses/by-sa/4.0 / 변형: 게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": [
+          "과거 촬영 자료. 역·가로의 2026년 현 상태·운영·공급 완료를 증명하지 않음."
+        ]
+      },
+      "dimensions": {
+        "width": 4000,
+        "height": 2250,
+        "stored_pixel_width": 4000,
+        "stored_pixel_height": 2250,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4000,
+          2250
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R07_강동_고덕역일대.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R07_강동_고덕역일대.jpg",
+      "bytes": 3051673,
+      "sha256": "3b8666b50d5e7e309012ad7680530184dbaf83225562bdd7f75b9b40cdd4e6c6",
+      "download_variant": "original",
+      "is_original_published_file": true,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "File 설명에 Gangdong-gu와 고덕역 4번출구 명시. 좌표와 출구 표지·주변 가로 실사 대조. 신축 고덕 단지 현황 사진 아님.",
+        "coordinates_from_source": [
+          {
+            "lat": 37.55491667,
+            "lon": 127.15441667,
+            "primary": true,
+            "globe": "earth"
+          }
+        ],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "일자산 자연공원",
+            "address": "서울특별시 강동구 동남로660 일대(둔촌동 산140 일대)",
+            "source_url": "https://www.gangdong.go.kr/web/dongrenew/contents/dunchon2_030_020",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          },
+          {
+            "place_name": "허브천문공원",
+            "address": "서울특별시 강동구 둔촌동 산86 일대",
+            "source_url": "https://www.gangdong.go.kr/web/dongrenew/contents/dunchon2_030_020",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": true,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": [
+          "과거 촬영 자료. 역·가로의 2026년 현 상태·운영·공급 완료를 증명하지 않음."
+        ]
+      }
+    },
+    {
+      "asset_id": "PHOTO_R08",
+      "region_id": "R08",
+      "scene_ids": [
+        "S015"
+      ],
+      "rank": 8,
+      "statistical_region_2024": "서울 영등포구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "여의도 스카이라인",
+      "address_or_area": "서울특별시 영등포구 여의도",
+      "photo_capture_year": 2024,
+      "photo_capture_date_raw": "2024-03-26 16:32:34",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "Skyline of Yeouido, a prominent finance district in Seoul.jpg",
+        "author": "S h y numis",
+        "author_html_original": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:S_h_y_numis&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:S h y numis (page does not exist)\">S h y numis</a>",
+        "author_urls": [
+          "//commons.wikimedia.org/w/index.php?title=User:S_h_y_numis&amp;action=edit&amp;redlink=1"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:Skyline_of_Yeouido,_a_prominent_finance_district_in_Seoul.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1071635803",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Skyline_of_Yeouido%2C_a_prominent_finance_district_in_Seoul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Skyline_of_Yeouido%2C_a_prominent_finance_district_in_Seoul.jpg/3840px-Skyline_of_Yeouido%2C_a_prominent_finance_district_in_Seoul.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/evidence/R08_selected_commons.json",
+        "original_credit": "Own work",
+        "original_description": "Skyline of Yeouido, a prominent finance district in Seoul"
+      },
+      "license": {
+        "name": "CC BY 4.0",
+        "version": "4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": false,
+        "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시.",
+        "attribution_ko": "사진: S h y numis, 「Skyline of Yeouido, a prominent finance district in Seoul.jpg」, CC BY 4.0. 출처: https://commons.wikimedia.org/wiki/File:Skyline_of_Yeouido,_a_prominent_finance_district_in_Seoul.jpg / 이용조건: https://creativecommons.org/licenses/by/4.0 / 변형: Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": []
+      },
+      "dimensions": {
+        "width": 3840,
+        "height": 2883,
+        "stored_pixel_width": 3840,
+        "stored_pixel_height": 2883,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          5328,
+          4000
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R08_영등포_여의도.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R08_영등포_여의도.jpg",
+      "bytes": 1944624,
+      "sha256": "b1992e290ccc82f8a16bf67901646cc0b06eabb44bfabd9ef68a402481a6144a",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "원문 설명과 Yeouido 분류·타워군과 한강 원경 대조. 카메라 위치의 구가 아니라 화면에 묘사된 여의도를 설명.",
+        "coordinates_from_source": [],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "여의도한강공원",
+            "address": "서울특별시 영등포구 여의동로330(여의도동8)",
+            "source_url": "https://hangang.seoul.go.kr/www/contents/669.do?mid=431",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": []
+      }
+    },
+    {
+      "asset_id": "PHOTO_R09",
+      "region_id": "R09",
+      "scene_ids": [
+        "S014"
+      ],
+      "rank": 9,
+      "statistical_region_2024": "경기 성남시 분당구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "판교테크노밸리 겨울 거리",
+      "address_or_area": "경기도 성남시 분당구 삼평동 판교테크노밸리",
+      "photo_capture_year": 2016,
+      "photo_capture_date_raw": "Taken on 28 February 2016",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "눈오는 판교4 - panoramio.jpg",
+        "author": "Seongrae Kim",
+        "author_html_original": "<a rel=\"nofollow\" class=\"external text\" href=\"https://web.archive.org/web/20161102221831/http://www.panoramio.com/user/9096624?with_photo_id=129812320\">Seongrae Kim</a>",
+        "author_urls": [
+          "https://web.archive.org/web/20161102221831/http://www.panoramio.com/user/9096624?with_photo_id=129812320"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:%EB%88%88%EC%98%A4%EB%8A%94_%ED%8C%90%EA%B5%904_-_panoramio.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1214276864",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/%EB%88%88%EC%98%A4%EB%8A%94_%ED%8C%90%EA%B5%904_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/%EB%88%88%EC%98%A4%EB%8A%94_%ED%8C%90%EA%B5%904_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "metadata_snapshot": "photos/evidence/R09_selected_commons.json",
+        "original_credit": "https://web.archive.org/web/20161102221829/http://www.panoramio.com/photo/129812320",
+        "original_description": "눈오는 판교4"
+      },
+      "license": {
+        "name": "CC BY 3.0",
+        "version": "3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": false,
+        "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시.",
+        "attribution_ko": "사진: Seongrae Kim, 「눈오는 판교4 - panoramio.jpg」, CC BY 3.0. 출처: https://commons.wikimedia.org/wiki/File:%EB%88%88%EC%98%A4%EB%8A%94_%ED%8C%90%EA%B5%904_-_panoramio.jpg / 이용조건: https://creativecommons.org/licenses/by/3.0 / 변형: 게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": [
+          "2016년2월 촬영한 겨울 야경 자료사진. 계절·촬영연도 표시를 유지하며 현재 날씨나 통계 기준시점의 현장 모습으로 제시하지 않음."
+        ]
+      },
+      "dimensions": {
+        "width": 3000,
+        "height": 1688,
+        "stored_pixel_width": 3000,
+        "stored_pixel_height": 1688,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          3000,
+          1688
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R09_분당_판교겨울도시풍경.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R09_분당_판교겨울도시풍경.jpg",
+      "bytes": 1710172,
+      "sha256": "8ef2fdeb2ceb0dc05f3436ac965b51163da6344d698b73aadce52bd84849243d",
+      "download_variant": "original",
+      "is_original_published_file": true,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "File 설명 눈오는 판교4·Pangyo Techno Valley 분류·좌표(37.402017,127.106722)를 판교테크노밸리 공식 소재 권역과 대조. 눈 쌓인 거리·업무빌딩 실사. 2016년 겨울 자료사진이며 2024/2026 현재 모습 아님.",
+        "coordinates_from_source": [
+          {
+            "lat": 37.402017,
+            "lon": 127.106722,
+            "primary": true,
+            "globe": "earth"
+          }
+        ],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "분당중앙공원 분당호 주변",
+            "address": "경기도 성남시 분당구 성남대로550(수내동)",
+            "source_url": "https://snvision.seongnam.go.kr/ins_photo.html?f_uid=8461&mode=view&psc=1170309755",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": [
+          {
+            "title": "판교테크노밸리 공식 입주기업 주소",
+            "url": "https://www.pangyotechnovalley.org/base/company/list?menuLevel=3&menuNo=39"
+          }
+        ]
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": true,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": [
+          "2016년2월 촬영한 겨울 야경 자료사진. 계절·촬영연도 표시를 유지하며 현재 날씨나 통계 기준시점의 현장 모습으로 제시하지 않음."
+        ]
+      }
+    },
+    {
+      "asset_id": "PHOTO_R10",
+      "region_id": "R10",
+      "scene_ids": [
+        "S013"
+      ],
+      "rank": 10,
+      "statistical_region_2024": "인천 미추홀구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "문학경기장 외관",
+      "address_or_area": "인천광역시 미추홀구 문학경기장 일대",
+      "photo_capture_year": 2024,
+      "photo_capture_date_raw": "2024-10-13 15:53:19",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "SSG 랜더스 문학경기장 문학스타디움 전경 2024.jpg",
+        "author": "Narubaru7",
+        "author_html_original": "<a href=\"//commons.wikimedia.org/wiki/User:Narubaru7\" title=\"User:Narubaru7\">Narubaru7</a>",
+        "author_urls": [
+          "//commons.wikimedia.org/wiki/User:Narubaru7"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:SSG_%EB%9E%9C%EB%8D%94%EC%8A%A4_%EB%AC%B8%ED%95%99%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EB%AC%B8%ED%95%99%EC%8A%A4%ED%83%80%EB%94%94%EC%9B%80_%EC%A0%84%EA%B2%BD_2024.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1278221558",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/SSG_%EB%9E%9C%EB%8D%94%EC%8A%A4_%EB%AC%B8%ED%95%99%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EB%AC%B8%ED%95%99%EC%8A%A4%ED%83%80%EB%94%94%EC%9B%80_%EC%A0%84%EA%B2%BD_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/SSG_%EB%9E%9C%EB%8D%94%EC%8A%A4_%EB%AC%B8%ED%95%99%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EB%AC%B8%ED%95%99%EC%8A%A4%ED%83%80%EB%94%94%EC%9B%80_%EC%A0%84%EA%B2%BD_2024.jpg/3840px-SSG_%EB%9E%9C%EB%8D%94%EC%8A%A4_%EB%AC%B8%ED%95%99%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EB%AC%B8%ED%95%99%EC%8A%A4%ED%83%80%EB%94%94%EC%9B%80_%EC%A0%84%EA%B2%BD_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/evidence/R10_selected_commons.json",
+        "original_credit": "Own work   원본",
+        "original_description": "인천광역시 미추홀구의 문학경기장 외관"
+      },
+      "license": {
+        "name": "CC BY 4.0",
+        "version": "4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": false,
+        "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시.",
+        "attribution_ko": "사진: Narubaru7, 「SSG 랜더스 문학경기장 문학스타디움 전경 2024.jpg」, CC BY 4.0. 출처: https://commons.wikimedia.org/wiki/File:SSG_%EB%9E%9C%EB%8D%94%EC%8A%A4_%EB%AC%B8%ED%95%99%EA%B2%BD%EA%B8%B0%EC%9E%A5_%EB%AC%B8%ED%95%99%EC%8A%A4%ED%83%80%EB%94%94%EC%9B%80_%EC%A0%84%EA%B2%BD_2024.jpg / 이용조건: https://creativecommons.org/licenses/by/4.0 / 변형: Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": []
+      },
+      "dimensions": {
+        "width": 3840,
+        "height": 2880,
+        "stored_pixel_width": 3840,
+        "stored_pixel_height": 2880,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4032,
+          3024
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R10_미추홀_문학경기장.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R10_미추홀_문학경기장.jpg",
+      "bytes": 2341622,
+      "sha256": "c9c6ad60e247233a7268281112bb2ff12510beaf83892e02c7df228db3709a6a",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "File 설명이 미추홀구 문학경기장 외관으로 명시. 카메라 좌표·구장 외관 대조. 인천축구전용경기장 후보는 제외.",
+        "coordinates_from_source": [
+          {
+            "lat": 37.437172,
+            "lon": 126.691567,
+            "primary": true,
+            "globe": "earth"
+          }
+        ],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "수봉공원",
+            "address": "인천광역시 미추홀구 수봉안길84",
+            "source_url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21121615505259129",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": []
+      }
+    },
+    {
+      "asset_id": "PHOTO_R11_ALT01",
+      "region_id": "R11",
+      "scene_ids": [
+        "S012"
+      ],
+      "rank": 11,
+      "statistical_region_2024": "서울 노원구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "해당 구의 실제 수변·산책로 주제 이미지. 신혼부부 실거주·전입 원인·단지입지·현재 시설 상태의 증거 아님.",
+      "actual_place": "노원구 경춘선숲길 산책로·옛 철로",
+      "address_or_area": "서울특별시 노원구 공릉동 경춘선숲길 구간",
+      "photo_capture_year": 2020,
+      "photo_capture_date_raw": "2020-04-13 11:57:38 (JPEG XMP/EXIF 생성시점); 원문 촬영월2020/04",
+      "source_or_prompt": {
+        "provider": "서울특별시·서울연구원",
+        "title": "경춘선숲길 (06I00312Ac30000)",
+        "author": "서울특별시(서울경관기록화 사업 2020), 제공: 서울연구원 서울연구데이터서비스",
+        "file_page": "https://data.si.re.kr/node/58286",
+        "fixed_revision_url": "https://data.si.re.kr/node/58286",
+        "original_image_url": "https://data.si.re.kr/photo/download/58286?t=b9c028046ff95e78559d94eae2d5eff1",
+        "actual_download_url": "https://data.si.re.kr/photo/download/58286?t=b9c028046ff95e78559d94eae2d5eff1",
+        "metadata_snapshot": "photos/alternates/evidence/R11_SI_candidate.html",
+        "rights_policy_url": "https://data.si.re.kr/node/65064#photo-rights",
+        "rights_policy_snapshot": "photos/alternates/evidence/SI_photo_rights_policy.html",
+        "original_description": "생성형AI 설명은 위치·사실 검증 근거로 사용하지 않음. 통합코드·대상지·촬영월 등 원문 속성 및 실제 사진을 사용.",
+        "embedded_copyright": "서울특별시(Seoul Metropolitan Government)",
+        "embedded_project_comment": "2020 서울경관기록화사업, The Project of Documenting the Landscape of Seoul",
+        "individual_photographer_credit_note": "기관이 지정한 귀속문 사용. EXIF의 개인 연락처는 원장에 전재하지 않음."
+      },
+      "license": {
+        "name": "CC BY 4.0 / 공공누리 제1유형",
+        "version": "CC BY4.0·공공누리1",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/deed.ko",
+        "alternate_license_url": "https://www.kogl.or.kr/info/licenseType1.do",
+        "copyright_permission_basis": "개별 사진 상세페이지에 공공누리1·CC BY4.0 표시가 함께 있음. 연결된 기관 저작권 정책이 해당 표시 자료는 서울시/산하기관 보유 공공저작물이며 상업 이용·변형을 허용한다고 설명. 제공 JPEG의2020사업 댓글·서울특별시 저작권 EXIF 확인.",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": false,
+        "usage_conditions_ko": "원저작자·제목·원문·라이선스·변형 여부 표시. 기관/작가의 보증·후원을 암시하지 않음. 인물·표지·배경 건물을 주피사체로 확대하지 않고 이 수변/산책로 구도로 사용.",
+        "attribution_ko": "사진: 서울특별시(서울경관기록화 사업 2020), 제공: 서울연구원 서울연구데이터서비스, 「경춘선숲길 (06I00312Ac30000)」, CC BY 4.0 / 공공누리 제1유형. 원문: https://data.si.re.kr/node/58286 / 이용조건: https://creativecommons.org/licenses/by/4.0/deed.ko / 변형: 공식 공개 다운로드 버튼에서 제공된1600px JPEG 그대로 저장. 기관 제공 모자이크·비율 유지. 로컬 크롭·색보정·생성 보정 없음.",
+        "changes_notice": "공식 공개 다운로드 버튼에서 제공된1600px JPEG 그대로 저장. 기관 제공 모자이크·비율 유지. 로컬 크롭·색보정·생성 보정 없음.",
+        "third_party_content_notes": [
+          "권리표시가 없다는 이유만으로 모든 권리가 해결됐다고 판단하지 않음. 개별 라이선스·기관 보유권리 근거와 실제 주피사체/원문 주의표시를 함께 검토.",
+          "이번 대체 구도에서는 원본과 같은 NoFoP/특정 건축물 중심의 미해결 트리거를 확인하지 않음. 모든 상황의 제3자 권리까지 포괄 보증하는 뜻은 아님."
+        ]
+      },
+      "dimensions": {
+        "width": 1600,
+        "height": 1067,
+        "stored_pixel_width": 1600,
+        "stored_pixel_height": 1067,
+        "exif_orientation": 1,
+        "api_original_dimensions": null,
+        "long_edge_at_least_1200": true,
+        "aspect_ratio": "3:2 가로"
+      },
+      "actual_file": "photos/alternates/R11_ALT_경춘선숲길_서울경관_1600.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/alternates/R11_ALT_경춘선숲길_서울경관_1600.jpg",
+      "bytes": 1247011,
+      "sha256": "cd7a950eb136409617d879122d2ae7640feab83cb96f5bd662ac0055f7b71a54",
+      "download_variant": "official_public_1600px_download",
+      "is_original_published_file": true,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_and_source_location_matched",
+        "basis": "서울연구원 원문 통합코드06I00312Ac30000의 경춘선숲길·촬영장소 짐앤아이유소년스포츠센터 및 JPEG EXIF GPS 확인. 노원구 공릉2동 공식 소개의 경춘선숲길 공릉동 구간과 대조.",
+        "coordinates_from_source": [
+          {
+            "lat": 37.621051666666666,
+            "lon": 127.08287666666666,
+            "source": "공식 제공 JPEG의 EXIF GPS",
+            "precision_note": "촬영기기 기록이며 측량/행정경계 GIS 검사는 아님"
+          }
+        ],
+        "coordinates_role": "원문/EXIF 카메라 위치. 대상지 전체의 대표점 아님.",
+        "gis_boundary_point_in_polygon_performed": false,
+        "official_place_reference_urls": [
+          "https://www.nowon.kr/dong/intrcn/intrcn4/intrcn4_05.jsp",
+          "https://data.si.re.kr/node/58286"
+        ],
+        "ai_generated_caption_used_as_evidence": false
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "pixel_visual_review": true,
+        "source_license_checked": true,
+        "same_unresolved_trigger_detected": false,
+        "positive_copyright_permission_evidence": true,
+        "visual_content_finding": "가로3:2 사진으로 산책로·옛 철로·벚꽃과 수목이 주피사체다. 기존 상계백병원 건축물 중심 구도가 사라졌다. 가까운 벤치 이용자 얼굴의 기관 제공 모자이크를1600px 파일에서도 확인. 부조작품·미술관 전시물은 주피사체가 아님.",
+        "status": "self_checked_alternate_landscape_accepted",
+        "independent_qa_performed": false,
+        "notes": [
+          "통계2024-11-01과 촬영시점/2020사업연도를 분리.",
+          "후속 편집에서 인물/건축물/안내판을 주피사체로 재확대하면 이 확인 범위가 달라짐."
+        ],
+        "review_scope": "3장 최종 contact sheet 실제 픽셀 확인, 노원1600px 개별 열람으로 기관 모자이크 확인. 개별 원문·기관 권리정책·해상도·해시·GPS/지역 대조."
+      },
+      "replaces": {
+        "manifest": "photo_assets.json",
+        "manifest_sha256": "fedbad09a0d9a6bf06299ba81d11926e647d73c1641aff4360ceb4f9c0e93dac",
+        "asset_id": "PHOTO_R11",
+        "actual_file": "photos/R11_노원_상계당현천.jpg",
+        "sha256": "292b1d4f6712e7ca06bc021b9cf3cbe8c8ff3a34b6abc8b4672f1edb3791445d",
+        "old_license": {
+          "name": "CC BY-SA 3.0",
+          "version": "3.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+          "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+          "commercial_copyright_use": true,
+          "adaptation_allowed": true,
+          "share_alike": true,
+          "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시. 편집·변형본을 배포할 때 동일 또는 호환 라이선스 조건을 유지하고 최종 영상 결합 방식은 총괄/QA가 검토.",
+          "attribution_ko": "사진: Ox1997cow, 「Danghyeoncheon and Inje University Sanggye Paik Hospital.jpg」, CC BY-SA 3.0. 출처: https://commons.wikimedia.org/wiki/File:Danghyeoncheon_and_Inje_University_Sanggye_Paik_Hospital.jpg / 이용조건: https://creativecommons.org/licenses/by-sa/3.0 / 변형: 게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+          "changes_notice": "게시된 파일 바이트 그대로 저장. 로컬 크롭·색보정·합성·생성보정 없음.",
+          "third_party_content_notes": [
+            "원문에 NoFoP-South Korea 분류가 있음. 사진가의 CC 허락과 별개인 건축물·미술저작물 권리는 최종 사용 구도에서 확인. 원문 De minimis/Incidental 분류도 함께 보존.",
+            "EXIF 회전 태그가 있는 세로 사진. 저장 픽셀과 표시 방향 해상도를 구분. 16:9 화면에 비율 유지 패널로 배치."
+          ]
+        },
+        "old_inspection_notes": [
+          "원문에 NoFoP-South Korea 분류가 있음. 사진가의 CC 허락과 별개인 건축물·미술저작물 권리는 최종 사용 구도에서 확인. 원문 De minimis/Incidental 분류도 함께 보존.",
+          "EXIF 회전 태그가 있는 세로 사진. 저장 픽셀과 표시 방향 해상도를 구분. 16:9 화면에 비율 유지 패널로 배치."
+        ],
+        "replacement_reason": "원본의 NoFoP-South Korea/건축물·제3자 권리 주의가 있는 주피사체를 피하고, 별도의 CC0 또는 기관 보유권리+개별 자유이용 표시가 확인되는 풍경 사진으로 교체.",
+        "old_file_retained": true,
+        "v1_manifest_unchanged": true
+      },
+      "replacement_release": {
+        "status": "accepted_for_this_landscape_context_pending_independent_QA",
+        "same_trigger_remaining": false,
+        "universal_third_party_rights_guarantee": false,
+        "new_paid_generation": false,
+        "private_contact_performed": false
+      }
+    },
+    {
+      "asset_id": "PHOTO_R12",
+      "region_id": "R12",
+      "scene_ids": [
+        "S011"
+      ],
+      "rank": 12,
+      "statistical_region_2024": "경기 수원시 영통구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "광교 원천호수 수변",
+      "address_or_area": "경기도 수원시 영통구 광교호수공원 원천호수 구간",
+      "photo_capture_year": 2014,
+      "photo_capture_date_raw": "Taken on 5 October 2014, 11:31:31",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "광교호수공원 (3).jpg",
+        "author": "Jocelyndurrey",
+        "author_html_original": "<p><a href=\"//commons.wikimedia.org/wiki/User:Jocelyndurrey\" title=\"User:Jocelyndurrey\">Jocelyndurrey</a>\n</p>\n<div style=\"display:table;width:auto;vertical-align:middle;direction:ltr;float:left;line-height:22px;height:24px;font-size:.96em;margin:0px;padding:2px 4px 2px 6px;color:var(--color-base,#000);background:var(--background-color-neutral-subtle,#F8F9FA);border:1px solid #BAB;border-collapse:separate;border-spacing:0px;\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Fxemoji_u1F4F1.svg\" class=\"mw-file-description\"><img src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Fxemoji_u1F4F1.svg/20px-Fxemoji_u1F4F1.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"20\" height=\"20\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Fxemoji_u1F4F1.svg/40px-Fxemoji_u1F4F1.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"512\" data-file-height=\"512\"></a></span> This <a href=\"https://en.wikipedia.org/wiki/photo\" class=\"extiw\" title=\"w:photo\">photo</a> was taken with LG G3</div>",
+        "author_urls": [
+          "//commons.wikimedia.org/wiki/User:Jocelyndurrey",
+          "//commons.wikimedia.org/wiki/File:Fxemoji_u1F4F1.svg",
+          "https://en.wikipedia.org/wiki/photo"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:%EA%B4%91%EA%B5%90%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90_(3).jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=866929198",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/%EA%B4%91%EA%B5%90%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/%EA%B4%91%EA%B5%90%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90_%283%29.jpg/3840px-%EA%B4%91%EA%B5%90%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/evidence/R12_selected_commons.json",
+        "original_credit": "Own work",
+        "original_description": "광교호수공원 (3)"
+      },
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "version": "4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": true,
+        "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시. 편집·변형본을 배포할 때 동일 또는 호환 라이선스 조건을 유지하고 최종 영상 결합 방식은 총괄/QA가 검토.",
+        "attribution_ko": "사진: Jocelyndurrey, 「광교호수공원 (3).jpg」, CC BY-SA 4.0. 출처: https://commons.wikimedia.org/wiki/File:%EA%B4%91%EA%B5%90%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90_(3).jpg / 이용조건: https://creativecommons.org/licenses/by-sa/4.0 / 변형: Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": []
+      },
+      "dimensions": {
+        "width": 3840,
+        "height": 2160,
+        "stored_pixel_width": 3840,
+        "stored_pixel_height": 2160,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4160,
+          2340
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R12_영통_광교원천호수.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R12_영통_광교원천호수.jpg",
+      "bytes": 1256402,
+      "sha256": "3b6b27cb54f1a74db71db193cdff9d3b9429da32503adcd0892d37778ac04888",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "광교호수공원 File 설명·수변 픽셀 및 원문 추정 카메라 좌표(37.28223356,127.06447205)를 대조. 정밀 측량 좌표 아님. 배경 모든 건물을 영통구 소재로 단정하지 않음.",
+        "coordinates_from_source": [
+          {
+            "lat": 37.28223356,
+            "lon": 127.06447205,
+            "primary": true,
+            "globe": "earth"
+          }
+        ],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "광교호수공원 하동 구간",
+            "address": "경기도 수원시 영통구 하동 1023",
+            "source_url": "https://www.suwon.go.kr/sw-www/sw-suwonpark/sw-suwonpark-04/sw-suwonpark-04-03.jsp",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": []
+      }
+    },
+    {
+      "asset_id": "PHOTO_R13",
+      "region_id": "R13",
+      "scene_ids": [
+        "S010"
+      ],
+      "rank": 13,
+      "statistical_region_2024": "경기 수원시 권선구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "권선동 수원종합버스터미널 일대 도시풍경",
+      "address_or_area": "경기도 수원시 권선구 경수대로 270",
+      "photo_capture_year": 2015,
+      "photo_capture_date_raw": "2015-11-21 10:46:24",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "Suwon Bus Terminal.jpeg",
+        "author": "Nt",
+        "author_html_original": "<a href=\"//commons.wikimedia.org/wiki/User:Nt\" class=\"mw-redirect\" title=\"User:Nt\">Nt</a>",
+        "author_urls": [
+          "//commons.wikimedia.org/wiki/User:Nt"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:Suwon_Bus_Terminal.jpeg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=478384150",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Suwon_Bus_Terminal.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Suwon_Bus_Terminal.jpeg/3840px-Suwon_Bus_Terminal.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/evidence/R13_selected_commons.json",
+        "original_credit": "Own work",
+        "original_description": "대한민국 경기도 수원시  ko:수원종합버스터미널"
+      },
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "version": "4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": true,
+        "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시. 편집·변형본을 배포할 때 동일 또는 호환 라이선스 조건을 유지하고 최종 영상 결합 방식은 총괄/QA가 검토.",
+        "attribution_ko": "사진: Nt, 「Suwon Bus Terminal.jpeg」, CC BY-SA 4.0. 출처: https://commons.wikimedia.org/wiki/File:Suwon_Bus_Terminal.jpeg / 이용조건: https://creativecommons.org/licenses/by-sa/4.0 / 변형: Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": [
+          "과거 촬영 자료. 역·가로의 2026년 현 상태·운영·공급 완료를 증명하지 않음."
+        ]
+      },
+      "dimensions": {
+        "width": 3840,
+        "height": 1674,
+        "stored_pixel_width": 3840,
+        "stored_pixel_height": 1674,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4963,
+          2163
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R13_권선_권선동도시풍경.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R13_권선_권선동도시풍경.jpg",
+      "bytes": 1176092,
+      "sha256": "40e99b6bce716d07a0ba794021d3a1c272d28b3e983b00e7504178b143c88e55",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "File의 수원종합버스터미널 설명·전면 가로 실사. 수원시 공식 교통 안내 및 공공와이파이 주소 목록의 권선구 경수대로270(권선동)과 대조. 수원역/팔달구 사진 아님. 호매실로 표기하지 않음.",
+        "coordinates_from_source": [],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "서수원칠보체육관",
+            "address": "경기도 수원시 권선구 서수원로577번길 171(금곡동)",
+            "source_url": "https://learning.suwon.go.kr/lmth/03_suwon02_view.asp?idx=486&page=15",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": [
+          {
+            "title": "수원시 공식 관광 교통안내",
+            "url": "https://www.suwon.go.kr/webcontent/ckeditor/2022/7/18/59ea7803-2adb-4b2b-982f-4610e1e3e41e.pdf"
+          },
+          {
+            "title": "수원시 공공와이파이 장소 주소",
+            "url": "https://www.suwon.go.kr/sw-www/sw-share/sw-share02/sw-share02-04/sw-share02-04-01.jsp"
+          }
+        ]
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": [
+          "과거 촬영 자료. 역·가로의 2026년 현 상태·운영·공급 완료를 증명하지 않음."
+        ]
+      }
+    },
+    {
+      "asset_id": "PHOTO_R14",
+      "region_id": "R14",
+      "scene_ids": [
+        "S009"
+      ],
+      "rank": 14,
+      "statistical_region_2024": "서울 은평구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "진관동 은평뉴타운",
+      "address_or_area": "서울특별시 은평구 진관동",
+      "photo_capture_year": 2022,
+      "photo_capture_date_raw": "28 February 2022 (according to   Exif   data)",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "Eunpyeong Newtown.jpg",
+        "author": "Wikiwater2020",
+        "author_html_original": "<a href=\"//commons.wikimedia.org/wiki/User:Wikiwater2020\" title=\"User:Wikiwater2020\">Wikiwater2020</a>",
+        "author_urls": [
+          "//commons.wikimedia.org/wiki/User:Wikiwater2020"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:Eunpyeong_Newtown.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1234551123",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Eunpyeong_Newtown.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Eunpyeong_Newtown.jpg/3840px-Eunpyeong_Newtown.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/evidence/R14_selected_commons.json",
+        "original_credit": "Own work",
+        "original_description": "Landscape of Eunpyeong Newtown, Jingwan-dong, Eunpyeong-gu, Seoul"
+      },
+      "license": {
+        "name": "CC BY-SA 3.0",
+        "version": "3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": true,
+        "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시. 편집·변형본을 배포할 때 동일 또는 호환 라이선스 조건을 유지하고 최종 영상 결합 방식은 총괄/QA가 검토.",
+        "attribution_ko": "사진: Wikiwater2020, 「Eunpyeong Newtown.jpg」, CC BY-SA 3.0. 출처: https://commons.wikimedia.org/wiki/File:Eunpyeong_Newtown.jpg / 이용조건: https://creativecommons.org/licenses/by-sa/3.0 / 변형: Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": []
+      },
+      "dimensions": {
+        "width": 3840,
+        "height": 2880,
+        "stored_pixel_width": 3840,
+        "stored_pixel_height": 2880,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4032,
+          3024
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R14_은평_은평뉴타운.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R14_은평_은평뉴타운.jpg",
+      "bytes": 2831855,
+      "sha256": "059fbef33c13dce5bdbd99fa0246179ed52344f2d81f6127a6c944dc17d2b666",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "File 설명이 Jingwan-dong, Eunpyeong-gu의 Eunpyeong Newtown 경관을 명시. 아파트군 실사 대조. 한옥마을이라고 표기하지 않음.",
+        "coordinates_from_source": [],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "은평한옥마을",
+            "address": "서울특별시 은평구 진관동 193-14 일대",
+            "source_url": "https://mediahub.seoul.go.kr/archives/2017014",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": []
+      }
+    },
+    {
+      "asset_id": "PHOTO_R15",
+      "region_id": "R15",
+      "scene_ids": [
+        "S008"
+      ],
+      "rank": 15,
+      "statistical_region_2024": "서울 구로구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "신도림역 1번출구와 주변 가로",
+      "address_or_area": "서울특별시 구로구 신도림역 일대",
+      "photo_capture_year": 2018,
+      "photo_capture_date_raw": "Taken on 21 November 2018 09:38:08 KST (UTC+9)",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "Seoul-metro-Sindorim-station-entrance-1-20181121-093808.jpg",
+        "author": "LERK",
+        "author_html_original": "<bdi><a href=\"//commons.wikimedia.org/wiki/User:LERK\" title=\"User:LERK\">LERK</a></bdi>",
+        "author_urls": [
+          "//commons.wikimedia.org/wiki/User:LERK"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:Seoul-metro-Sindorim-station-entrance-1-20181121-093808.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1038361313",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Seoul-metro-Sindorim-station-entrance-1-20181121-093808.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Seoul-metro-Sindorim-station-entrance-1-20181121-093808.jpg/3840px-Seoul-metro-Sindorim-station-entrance-1-20181121-093808.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/evidence/R15_selected_commons.json",
+        "original_credit": "Own work",
+        "original_description": "The no.1 entrance to  Sindorim Station  on the Seoul Metro Line 1 and Line 2 in Guro-gu, Seoul, Republic of Korea(South Korea)"
+      },
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "version": "4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": true,
+        "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시. 편집·변형본을 배포할 때 동일 또는 호환 라이선스 조건을 유지하고 최종 영상 결합 방식은 총괄/QA가 검토.",
+        "attribution_ko": "사진: LERK, 「Seoul-metro-Sindorim-station-entrance-1-20181121-093808.jpg」, CC BY-SA 4.0. 출처: https://commons.wikimedia.org/wiki/File:Seoul-metro-Sindorim-station-entrance-1-20181121-093808.jpg / 이용조건: https://creativecommons.org/licenses/by-sa/4.0 / 변형: Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": [
+          "과거 촬영 자료. 역·가로의 2026년 현 상태·운영·공급 완료를 증명하지 않음."
+        ]
+      },
+      "dimensions": {
+        "width": 3840,
+        "height": 2160,
+        "stored_pixel_width": 3840,
+        "stored_pixel_height": 2160,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4000,
+          2250
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R15_구로_신도림.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R15_구로_신도림.jpg",
+      "bytes": 1607041,
+      "sha256": "4b81a9312d85151ba64b8d980695cbdf6ee6a8751d2de5083c82b90e66df7b8e",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "File 설명이 Guro-gu, Sindorim Station entrance1을 명시. 출구 표지·주변 건물 대조. 가산동 G밸리 사진 아님.",
+        "coordinates_from_source": [],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "G타워·G밸리산업박물관",
+            "address": "서울특별시 구로구 디지털로26길 38",
+            "source_url": "https://mediahub.seoul.go.kr/archives/2003158",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": [
+          "과거 촬영 자료. 역·가로의 2026년 현 상태·운영·공급 완료를 증명하지 않음."
+        ]
+      }
+    },
+    {
+      "asset_id": "PHOTO_R16",
+      "region_id": "R16",
+      "scene_ids": [
+        "S007"
+      ],
+      "rank": 16,
+      "statistical_region_2024": "인천 남동구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "소래습지생태공원 갈대밭·탐방데크",
+      "address_or_area": "인천광역시 남동구 소래로154번길 77",
+      "photo_capture_year": 2025,
+      "photo_capture_date_raw": "2025-12-07 16:31:22",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "소래습지생태공원 갈대밭.jpg",
+        "author": "Narubaru7",
+        "author_html_original": "<a href=\"//commons.wikimedia.org/wiki/User:Narubaru7\" title=\"User:Narubaru7\">Narubaru7</a>",
+        "author_urls": [
+          "//commons.wikimedia.org/wiki/User:Narubaru7"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:%EC%86%8C%EB%9E%98%EC%8A%B5%EC%A7%80%EC%83%9D%ED%83%9C%EA%B3%B5%EC%9B%90_%EA%B0%88%EB%8C%80%EB%B0%AD.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1190347936",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/%EC%86%8C%EB%9E%98%EC%8A%B5%EC%A7%80%EC%83%9D%ED%83%9C%EA%B3%B5%EC%9B%90_%EA%B0%88%EB%8C%80%EB%B0%AD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/%EC%86%8C%EB%9E%98%EC%8A%B5%EC%A7%80%EC%83%9D%ED%83%9C%EA%B3%B5%EC%9B%90_%EA%B0%88%EB%8C%80%EB%B0%AD.jpg/3840px-%EC%86%8C%EB%9E%98%EC%8A%B5%EC%A7%80%EC%83%9D%ED%83%9C%EA%B3%B5%EC%9B%90_%EA%B0%88%EB%8C%80%EB%B0%AD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/evidence/R16_selected_commons.json",
+        "original_credit": "Own work",
+        "original_description": "Sorae Wetland Ecological Park, 77 Sorae-ro 154beon-gil, Namdong-gu, Incheon"
+      },
+      "license": {
+        "name": "CC BY 4.0",
+        "version": "4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": false,
+        "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시.",
+        "attribution_ko": "사진: Narubaru7, 「소래습지생태공원 갈대밭.jpg」, CC BY 4.0. 출처: https://commons.wikimedia.org/wiki/File:%EC%86%8C%EB%9E%98%EC%8A%B5%EC%A7%80%EC%83%9D%ED%83%9C%EA%B3%B5%EC%9B%90_%EA%B0%88%EB%8C%80%EB%B0%AD.jpg / 이용조건: https://creativecommons.org/licenses/by/4.0 / 변형: Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": []
+      },
+      "dimensions": {
+        "width": 3840,
+        "height": 2880,
+        "stored_pixel_width": 3840,
+        "stored_pixel_height": 2880,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4000,
+          3000
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R16_남동_소래습지.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R16_남동_소래습지.jpg",
+      "bytes": 1658880,
+      "sha256": "03aaf3ffd7e40ad254794e8f8c88a8c7f46fbff76b3084c26c2c122ae0832ace",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "File 설명의 남동구 주소·좌표를 research2 공식 주소와 대조. 갈대·데크 실사 확인. 시흥 갯골생태공원 아님.",
+        "coordinates_from_source": [
+          {
+            "lat": 37.408922,
+            "lon": 126.746361,
+            "primary": true,
+            "globe": "earth"
+          }
+        ],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "소래습지생태공원",
+            "address": "인천광역시 남동구 소래로154번길 77",
+            "source_url": "https://itour.incheon.go.kr/ssst/ssst/detail.do?cotId=ITD21121615132555085",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": []
+      }
+    },
+    {
+      "asset_id": "PHOTO_R17",
+      "region_id": "R17",
+      "scene_ids": [
+        "S006"
+      ],
+      "rank": 17,
+      "statistical_region_2024": "인천 연수구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "송도 센트럴파크 수로·도시풍경",
+      "address_or_area": "인천광역시 연수구 송도동 센트럴파크",
+      "photo_capture_year": 2021,
+      "photo_capture_date_raw": "2021-10-27 17:38:25",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "Songdo Central Park in 2021.jpg",
+        "author": "José Carioca",
+        "author_html_original": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Raccoon_Dog&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Raccoon Dog (page does not exist)\">José Carioca</a>",
+        "author_urls": [
+          "//commons.wikimedia.org/w/index.php?title=User:Raccoon_Dog&amp;action=edit&amp;redlink=1"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:Songdo_Central_Park_in_2021.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=655169716",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Songdo_Central_Park_in_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Songdo_Central_Park_in_2021.jpg/3840px-Songdo_Central_Park_in_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/evidence/R17_selected_commons.json",
+        "original_credit": "Own work",
+        "original_description": "2021년 10월 송도 센트럴파크의 전경"
+      },
+      "license": {
+        "name": "CC BY-SA 4.0",
+        "version": "4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": true,
+        "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시. 편집·변형본을 배포할 때 동일 또는 호환 라이선스 조건을 유지하고 최종 영상 결합 방식은 총괄/QA가 검토.",
+        "attribution_ko": "사진: José Carioca, 「Songdo Central Park in 2021.jpg」, CC BY-SA 4.0. 출처: https://commons.wikimedia.org/wiki/File:Songdo_Central_Park_in_2021.jpg / 이용조건: https://creativecommons.org/licenses/by-sa/4.0 / 변형: Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": []
+      },
+      "dimensions": {
+        "width": 3840,
+        "height": 1817,
+        "stored_pixel_width": 3840,
+        "stored_pixel_height": 1817,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4032,
+          1908
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R17_연수_송도센트럴파크.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R17_연수_송도센트럴파크.jpg",
+      "bytes": 1478813,
+      "sha256": "8c92022ad98b8eb46960022f4c979a5ccb867e27d9823f47c08a522b2f1b0793",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "File 설명 2021년10월 송도센트럴파크 전경·분류를 research2 공식 장소와 대조. 수로·송도 건물군 실사 확인.",
+        "coordinates_from_source": [],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "송도 센트럴파크",
+            "address": "인천광역시 연수구 컨벤시아대로 160 일원(송도동 24-5)",
+            "source_url": "https://www.ifez.go.kr/main/tour/view.do?tour_fclt_sn=4",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": []
+      }
+    },
+    {
+      "asset_id": "PHOTO_R18",
+      "region_id": "R18",
+      "scene_ids": [
+        "S005"
+      ],
+      "rank": 18,
+      "statistical_region_2024": "경기 용인시 기흥구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "구성역 5번출구 주변 거리",
+      "address_or_area": "경기도 용인시 기흥구 구성역 일대",
+      "photo_capture_year": 2026,
+      "photo_capture_date_raw": "2026-07-05 19:01:32",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "구성역 5번출구 주변.jpg",
+        "author": "Bykim2012",
+        "author_html_original": "<a href=\"//commons.wikimedia.org/wiki/User:Bykim2012\" title=\"User:Bykim2012\">Bykim2012</a>",
+        "author_urls": [
+          "//commons.wikimedia.org/wiki/User:Bykim2012"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:%EA%B5%AC%EC%84%B1%EC%97%AD_5%EB%B2%88%EC%B6%9C%EA%B5%AC_%EC%A3%BC%EB%B3%80.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1253524212",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/%EA%B5%AC%EC%84%B1%EC%97%AD_5%EB%B2%88%EC%B6%9C%EA%B5%AC_%EC%A3%BC%EB%B3%80.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/%EA%B5%AC%EC%84%B1%EC%97%AD_5%EB%B2%88%EC%B6%9C%EA%B5%AC_%EC%A3%BC%EB%B3%80.jpg/3840px-%EA%B5%AC%EC%84%B1%EC%97%AD_5%EB%B2%88%EC%B6%9C%EA%B5%AC_%EC%A3%BC%EB%B3%80.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/evidence/R18_selected_commons.json",
+        "original_credit": "Own work",
+        "original_description": "구성역 5번출구 주변"
+      },
+      "license": {
+        "name": "CC0",
+        "version": "1.0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": false,
+        "usage_conditions_ko": "저작권상 상업 이용·변형 가능. 기록용 출처·작가 표기를 보존.",
+        "attribution_ko": "사진: Bykim2012, 「구성역 5번출구 주변.jpg」, CC0 1.0. 출처: https://commons.wikimedia.org/wiki/File:%EA%B5%AC%EC%84%B1%EC%97%AD_5%EB%B2%88%EC%B6%9C%EA%B5%AC_%EC%A3%BC%EB%B3%80.jpg / 이용조건: http://creativecommons.org/publicdomain/zero/1.0/deed.en / 변형: Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": []
+      },
+      "dimensions": {
+        "width": 3840,
+        "height": 2880,
+        "stored_pixel_width": 3840,
+        "stored_pixel_height": 2880,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4032,
+          3024
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R18_기흥_구성역주변.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R18_기흥_구성역주변.jpg",
+      "bytes": 1683607,
+      "sha256": "3c8184cc217d93c55073f91a1f6de42af6638f1f3021e56b10d8e85b142335aa",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "File 설명·Guseong Station 분류·좌표(37.299253,127.102981), 5번출구 주변 실제 가로 대조. 동백호수로 표기하지 않음.",
+        "coordinates_from_source": [
+          {
+            "lat": 37.299253,
+            "lon": 127.102981,
+            "primary": true,
+            "globe": "earth"
+          }
+        ],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "동백호수공원",
+            "address": "경기도 용인시 기흥구 동백5로 12",
+            "source_url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1076&q_bbscttSn=20250114142934325",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": []
+      }
+    },
+    {
+      "asset_id": "PHOTO_R19",
+      "region_id": "R19",
+      "scene_ids": [
+        "S004"
+      ],
+      "rank": 19,
+      "statistical_region_2024": "서울 중랑구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "신내역 3번출구 버스정류장 일대",
+      "address_or_area": "서울특별시 중랑구 신내역 일대",
+      "photo_capture_year": 2015,
+      "photo_capture_date_raw": "2015-03-09 13:30:58",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "Sinnae station exit3 bus.jpg",
+        "author": "홍승택",
+        "author_html_original": "<a href=\"//commons.wikimedia.org/wiki/User:%ED%99%8D%EC%8A%B9%ED%83%9D\" title=\"User:홍승택\">홍승택</a>",
+        "author_urls": [
+          "//commons.wikimedia.org/wiki/User:%ED%99%8D%EC%8A%B9%ED%83%9D"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:Sinnae_station_exit3_bus.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1199335043",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Sinnae_station_exit3_bus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Sinnae_station_exit3_bus.jpg/1280px-Sinnae_station_exit3_bus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/evidence/R19_selected_commons.json",
+        "original_credit": "Self-photographed",
+        "original_description": "신내역 3번 출구 버스 정류장"
+      },
+      "license": {
+        "name": "CC BY-SA 3.0",
+        "version": "3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": true,
+        "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시. 편집·변형본을 배포할 때 동일 또는 호환 라이선스 조건을 유지하고 최종 영상 결합 방식은 총괄/QA가 검토.",
+        "attribution_ko": "사진: 홍승택, 「Sinnae station exit3 bus.jpg」, CC BY-SA 3.0. 출처: https://commons.wikimedia.org/wiki/File:Sinnae_station_exit3_bus.jpg / 이용조건: https://creativecommons.org/licenses/by-sa/3.0 / 변형: Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": [
+          "표준 사본 1280×768. 1920×1080 전체 화면 확대/추가 줌을 피하고 지도 옆 사진 패널로 사용 권장.",
+          "과거 촬영 자료. 역·가로의 2026년 현 상태·운영·공급 완료를 증명하지 않음."
+        ]
+      },
+      "dimensions": {
+        "width": 1280,
+        "height": 768,
+        "stored_pixel_width": 1280,
+        "stored_pixel_height": 768,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          2000,
+          1200
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R19_중랑_신내역일대.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R19_중랑_신내역일대.jpg",
+      "bytes": 259030,
+      "sha256": "4c955b79f4b5076b263dc65929ef053eefe5f5fc71aa3c6ada031ebc3991d0eb",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "File 설명 신내역3번출구 버스정류장·좌표(37.61326533,127.10338667)와 실제 출구/버스정류장 대조. 중랑천 타구 사진 아님.",
+        "coordinates_from_source": [
+          {
+            "lat": 37.61326533,
+            "lon": 127.10338667,
+            "primary": true,
+            "globe": "earth"
+          }
+        ],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "중랑장미공원",
+            "address": "서울특별시 중랑구 묵동 375",
+            "source_url": "https://mediahub.seoul.go.kr/archives/2014407",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": [
+          "표준 사본 1280×768. 1920×1080 전체 화면 확대/추가 줌을 피하고 지도 옆 사진 패널로 사용 권장.",
+          "과거 촬영 자료. 역·가로의 2026년 현 상태·운영·공급 완료를 증명하지 않음."
+        ]
+      }
+    },
+    {
+      "asset_id": "PHOTO_R20",
+      "region_id": "R20",
+      "scene_ids": [
+        "S003"
+      ],
+      "rank": 20,
+      "statistical_region_2024": "경기 부천시 원미구",
+      "statistic_reference_date": "2024-11-01",
+      "statistic_year": 2024,
+      "type": "real_place_photo",
+      "purpose": "대표 지역·생활권 소개용 실사. 단지 입지 평가·신혼부부 실거주·추천 수익의 증거 아님.",
+      "actual_place": "부천 상동 도시 가로",
+      "address_or_area": "경기도 부천시 원미구 상동",
+      "photo_capture_year": 2025,
+      "photo_capture_date_raw": "2025-04-11 14:06:28",
+      "source_or_prompt": {
+        "provider": "Wikimedia Commons",
+        "title": "Sangdong2025.jpg",
+        "author": "Kimhs5400(누리위키)",
+        "author_html_original": "<a href=\"//commons.wikimedia.org/wiki/User:Kimhs5400\" title=\"User:Kimhs5400\">Kimhs5400(누리위키)</a>",
+        "author_urls": [
+          "//commons.wikimedia.org/wiki/User:Kimhs5400"
+        ],
+        "file_page": "https://commons.wikimedia.org/wiki/File:Sangdong2025.jpg",
+        "fixed_revision_url": "https://commons.wikimedia.org/w/index.php?oldid=1198869387",
+        "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Sangdong2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "actual_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Sangdong2025.jpg/3840px-Sangdong2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "metadata_snapshot": "photos/evidence/R20_selected_commons.json",
+        "original_credit": "Own work",
+        "original_description": "Street in Sangdong District, Bucheon"
+      },
+      "license": {
+        "name": "CC BY 4.0",
+        "version": "4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "copyright_permission_basis": "개별 File 원문의 CC/PD-self 표기",
+        "commercial_copyright_use": true,
+        "adaptation_allowed": true,
+        "share_alike": false,
+        "usage_conditions_ko": "상업 이용·변형 가능. 작가·제목·출처·라이선스 링크·변형 여부 표시.",
+        "attribution_ko": "사진: Kimhs5400(누리위키), 「Sangdong2025.jpg」, CC BY 4.0. 출처: https://commons.wikimedia.org/wiki/File:Sangdong2025.jpg / 이용조건: https://creativecommons.org/licenses/by/4.0 / 변형: Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "changes_notice": "Wikimedia CDN의 비율 유지 축소 사본. 로컬 크롭·색보정·합성·생성보정 없음.",
+        "third_party_content_notes": []
+      },
+      "dimensions": {
+        "width": 3840,
+        "height": 2880,
+        "stored_pixel_width": 3840,
+        "stored_pixel_height": 2880,
+        "exif_orientation": 1,
+        "api_original_dimensions": [
+          4000,
+          3000
+        ],
+        "long_edge_at_least_1200": true
+      },
+      "actual_file": "photos/R20_원미_상동.jpg",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R20_원미_상동.jpg",
+      "bytes": 3278287,
+      "sha256": "bb792e6b7a7d4d4ddb3d6847c70ea1e991c8fec812a8f0b681edf3adba58e7c5",
+      "download_variant": "standard_cdn",
+      "is_original_published_file": false,
+      "upscaled": false,
+      "ai_generated": false,
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진",
+      "geography_verification": {
+        "status": "named_place_match_checked",
+        "basis": "File 설명 Street in Sangdong District, Bucheon·좌표(37.5034,126.7516)와 실제 상동 가로 대조. 부천중앙공원/상동호수공원으로 표기하지 않음.",
+        "coordinates_from_source": [
+          {
+            "lat": 37.5034,
+            "lon": 126.7516,
+            "primary": true,
+            "globe": "earth"
+          }
+        ],
+        "coordinates_role": "원문 카메라 위치; 촬영 대상의 대표 중심점으로 사용하지 않음",
+        "gis_boundary_point_in_polygon_performed": false,
+        "research2_place_reference_only": [
+          {
+            "place_name": "부천중앙공원",
+            "address": "경기도 부천시 원미구 소향로 162",
+            "source_url": "https://bucheon.go.kr/site/homepage/menu/viewMenu?menuid=172002002001",
+            "rights_not_inherited": true,
+            "reference_note": "장소·구역 대조 참고. 이 기관 후보 사진의 이용허락을 현재 Commons 사진에 적용하지 않음."
+          }
+        ],
+        "supplemental_official_sources": []
+      },
+      "inspection": {
+        "decode_passed": true,
+        "hash_verified": true,
+        "original_commons_sha1_match": null,
+        "pixel_visual_review": true,
+        "review_scope": "대표2장 패널·전체20장 contact sheet 및 최종 교체 판교 원본/청라 게시파일의 실제 픽셀 확인. 불변 사진은 기존 시각 점검 재사용.",
+        "source_license_checked": true,
+        "status": "self_checked_pending_independent_director_QA",
+        "independent_qa_performed": false,
+        "notes": []
+      }
+    }
+  ],
+  "contact_sheet": "photos/alternates/R02_R06_R11_alternates_contactsheet.jpg",
+  "non_primary_files": [
+    {
+      "file": "photos/candidates/R01_청라루와호수.jpg",
+      "status": "non_primary_candidate_or_low_resolution_reference",
+      "use_in_video": false,
+      "source_evidence_note": "동일 R번호의 photos/evidence 검색/earlier/official_metadata 원문에 후보 출처와 권리 기록. 대표사진20장 수에 포함하지 않음."
+    },
+    {
+      "file": "photos/candidates/R03_thumbnail1280.jpg",
+      "status": "non_primary_candidate_or_low_resolution_reference",
+      "use_in_video": false,
+      "source_evidence_note": "동일 R번호의 photos/evidence 검색/earlier/official_metadata 원문에 후보 출처와 권리 기록. 대표사진20장 수에 포함하지 않음."
+    },
+    {
+      "file": "photos/candidates/R03_덕양_스타필드고양.jpg",
+      "status": "non_primary_candidate_or_low_resolution_reference",
+      "use_in_video": false,
+      "source_evidence_note": "동일 R번호의 photos/evidence 검색/earlier/official_metadata 원문에 후보 출처와 권리 기록. 대표사진20장 수에 포함하지 않음."
+    },
+    {
+      "file": "photos/candidates/R05_thumbnail1280.jpg",
+      "status": "non_primary_candidate_or_low_resolution_reference",
+      "use_in_video": false,
+      "source_evidence_note": "동일 R번호의 photos/evidence 검색/earlier/official_metadata 원문에 후보 출처와 권리 기록. 대표사진20장 수에 포함하지 않음."
+    },
+    {
+      "file": "photos/candidates/R09_분당_판교.jpg",
+      "status": "non_primary_candidate_or_low_resolution_reference",
+      "use_in_video": false,
+      "source_evidence_note": "동일 R번호의 photos/evidence 검색/earlier/official_metadata 원문에 후보 출처와 권리 기록. 대표사진20장 수에 포함하지 않음."
+    },
+    {
+      "file": "photos/candidates/R09_분당_판교테크노밸리.jpg",
+      "status": "non_primary_candidate_or_low_resolution_reference",
+      "use_in_video": false,
+      "source_evidence_note": "동일 R번호의 photos/evidence 검색/earlier/official_metadata 원문에 후보 출처와 권리 기록. 대표사진20장 수에 포함하지 않음."
+    },
+    {
+      "file": "photos/candidates/R18_기흥_구성역.jpg",
+      "status": "non_primary_candidate_or_low_resolution_reference",
+      "use_in_video": false,
+      "source_evidence_note": "동일 R번호의 photos/evidence 검색/earlier/official_metadata 원문에 후보 출처와 권리 기록. 대표사진20장 수에 포함하지 않음."
+    }
+  ],
+  "constraints": [
+    "실제 장소 대표 이미지이며 신혼부부의 거주·전입 원인·단지 입지·현재 개발 상태를 증명하지 않음.",
+    "사진가의 명시된 재사용 허락을 확인. 화면 속 건축물·상표·인물 등 별도 권리는 개별 주의사항과 최종 사용 구도에서 검토.",
+    "독립 검수·실제 영상 재생·음성 청취·업로드는 미실행."
+  ],
+  "collection_issues": [
+    {
+      "issue": "Commons 원본 파일 서버 HTTP429",
+      "resolution": "Commons 원본6장+기관 게시파일1장 보존; 나머지13장은 서버 안내 표준3840px/1280px CDN 사본으로 확보. 원본과 구분 기록.",
+      "unresolved": false
+    },
+    {
+      "issue": "일부 Commons 서울식물원 후보의 CC표기와 변형금지 문구 충돌",
+      "resolution": "korea.net 후보 제외, 별도 개인촬영 CC BY4.0 실물로 교체.",
+      "unresolved": false
+    },
+    {
+      "issue": "Pangyo Techno Valley 2.jpg GPS가 서울로 표시",
+      "resolution": "해당 후보 미사용. 원문 설명·좌표가 판교와 일치하는 CC BY3.0 겨울 거리 원본으로 교체. 커피컵이 큰 U-Space 사진도 비대표 후보로 분리.",
+      "unresolved": false
+    },
+    {
+      "issue": "기존3장의NoFoP/건축물 권리 트리거",
+      "resolution": "R02/R06/R11 개별 사용권과 실제 풍경 구도를 확인한 별도 사진으로 교체. 기존 조건은 replaces에 보존.",
+      "unresolved": false
+    }
+  ],
+  "photo_revision": "photo_assets_v2",
+  "updated_utc": "2026-11-01T13:24:03.894177+00:00",
+  "base_manifest": {
+    "path": "photo_assets.json",
+    "sha256": "fedbad09a0d9a6bf06299ba81d11926e647d73c1641aff4360ceb4f9c0e93dac"
+  },
+  "replacement_scope": [
+    "R02",
+    "R06",
+    "R11"
+  ],
+  "replacement_log": [
+    {
+      "region_id": "R02",
+      "scene_ids": [
+        "S021"
+      ],
+      "old_asset_id": "PHOTO_R02",
+      "new_asset_id": "PHOTO_R02_ALT01",
+      "reason": "원본의 NoFoP-South Korea/건축물·제3자 권리 주의가 있는 주피사체를 피하고, 별도의 CC0 또는 기관 보유권리+개별 자유이용 표시가 확인되는 풍경 사진으로 교체.",
+      "old_file": "photos/R02_송파_석촌호수_롯데타워.jpg",
+      "new_file": "photos/alternates/R02_ALT_석촌호수_수변_CC0.jpg",
+      "old_conditions_ref": "assets[1].replaces.old_license"
+    },
+    {
+      "region_id": "R06",
+      "scene_ids": [
+        "S017"
+      ],
+      "old_asset_id": "PHOTO_R06",
+      "new_asset_id": "PHOTO_R06_ALT01",
+      "reason": "원본의 NoFoP-South Korea/건축물·제3자 권리 주의가 있는 주피사체를 피하고, 별도의 CC0 또는 기관 보유권리+개별 자유이용 표시가 확인되는 풍경 사진으로 교체.",
+      "old_file": "photos/R06_강남_테헤란로.jpg",
+      "new_file": "photos/alternates/R06_ALT_양재천산책로_서울경관_1600.jpg",
+      "old_conditions_ref": "assets[5].replaces.old_license"
+    },
+    {
+      "region_id": "R11",
+      "scene_ids": [
+        "S012"
+      ],
+      "old_asset_id": "PHOTO_R11",
+      "new_asset_id": "PHOTO_R11_ALT01",
+      "reason": "원본의 NoFoP-South Korea/건축물·제3자 권리 주의가 있는 주피사체를 피하고, 별도의 CC0 또는 기관 보유권리+개별 자유이용 표시가 확인되는 풍경 사진으로 교체.",
+      "old_file": "photos/R11_노원_상계당현천.jpg",
+      "new_file": "photos/alternates/R11_ALT_경춘선숲길_서울경관_1600.jpg",
+      "old_conditions_ref": "assets[10].replaces.old_license"
+    }
+  ],
+  "replacement_gaps": [],
+  "protected_v1_hashes": {
+    "photo_assets.json": "fedbad09a0d9a6bf06299ba81d11926e647d73c1641aff4360ceb4f9c0e93dac",
+    "photo_sources.md": "48bf61dba8accea13bca5966695e13b976df0a699468f565c02f915cc0949ef3",
+    "photo_handoff.json": "eff55e554d2698f0a4c85eadd8e55a9d1bf0b51679969ac77910b3e9206ce918",
+    "photos/TOP20_photo_contactsheet.jpg": "d5f62305bf01ae628e1b2c43bdc5208a6e8c71d6cd526771cbc491d9c2166b3a",
+    "photos/R01_청라호수공원.jpg": "0ac3d1cd636426f4605936a58c5115a150b5b5754a83ebeb8ffd85631688c5a2",
+    "photos/R02_송파_석촌호수_롯데타워.jpg": "b7200482ea647411fad425448fdb070a74132a5c162640f3eeefe1a2906d43c8",
+    "photos/R03_덕양_삼송도시풍경.jpg": "f9649606b6719ad6b82ece49097f72a2138b7247a0d7df1fdde4a0cc61d89582",
+    "photos/R04_강서_서울식물원.jpg": "872ec5c2b13e2ff94285e864fb87ac5db5a1516ef2f23c331ec94f9c82c9c5f9",
+    "photos/R05_부평_부평역.jpg": "5868c7923549e5341b49f1f6bfb4bf6e935ee28dd5bd07fc78c60011c68cc1b3",
+    "photos/R06_강남_테헤란로.jpg": "ee7d0e434f8691bd9367eb366ab73d97d41b4c36b81b35406266fe44445d2150",
+    "photos/R07_강동_고덕역일대.jpg": "3b8666b50d5e7e309012ad7680530184dbaf83225562bdd7f75b9b40cdd4e6c6",
+    "photos/R08_영등포_여의도.jpg": "b1992e290ccc82f8a16bf67901646cc0b06eabb44bfabd9ef68a402481a6144a",
+    "photos/R09_분당_판교겨울도시풍경.jpg": "8ef2fdeb2ceb0dc05f3436ac965b51163da6344d698b73aadce52bd84849243d",
+    "photos/R10_미추홀_문학경기장.jpg": "c9c6ad60e247233a7268281112bb2ff12510beaf83892e02c7df228db3709a6a",
+    "photos/R11_노원_상계당현천.jpg": "292b1d4f6712e7ca06bc021b9cf3cbe8c8ff3a34b6abc8b4672f1edb3791445d",
+    "photos/R12_영통_광교원천호수.jpg": "3b6b27cb54f1a74db71db193cdff9d3b9429da32503adcd0892d37778ac04888",
+    "photos/R13_권선_권선동도시풍경.jpg": "40e99b6bce716d07a0ba794021d3a1c272d28b3e983b00e7504178b143c88e55",
+    "photos/R14_은평_은평뉴타운.jpg": "059fbef33c13dce5bdbd99fa0246179ed52344f2d81f6127a6c944dc17d2b666",
+    "photos/R15_구로_신도림.jpg": "4b81a9312d85151ba64b8d980695cbdf6ee6a8751d2de5083c82b90e66df7b8e",
+    "photos/R16_남동_소래습지.jpg": "03aaf3ffd7e40ad254794e8f8c88a8c7f46fbff76b3084c26c2c122ae0832ace",
+    "photos/R17_연수_송도센트럴파크.jpg": "8c92022ad98b8eb46960022f4c979a5ccb867e27d9823f47c08a522b2f1b0793",
+    "photos/R18_기흥_구성역주변.jpg": "3c8184cc217d93c55073f91a1f6de42af6638f1f3021e56b10d8e85b142335aa",
+    "photos/R19_중랑_신내역일대.jpg": "4c955b79f4b5076b263dc65929ef053eefe5f5fc71aa3c6ada031ebc3991d0eb",
+    "photos/R20_원미_상동.jpg": "bb792e6b7a7d4d4ddb3d6847c70ea1e991c8fec812a8f0b681edf3adba58e7c5"
+  },
+  "replacement_status": "three_replacements_self_checked",
+  "three_alternate_contact_sheet": "photos/alternates/R02_R06_R11_alternates_contactsheet.jpg",
+  "active_counts": {
+    "total": 20,
+    "replaced": 3,
+    "unchanged_rows": 17
+  },
+  "contact_sheet_scope": "교체3장만. 기존20장 contact sheet는 v1 이력으로 보존하며 v2 전체20장 미리보기로 오인하지 않음.",
+  "v1_full_contactsheet_reference": "photos/TOP20_photo_contactsheet.jpg",
+  "active_replacement_conditions": [
+    "R02/R06/R11 모두 개별 CC0 또는 공공기관의 CC BY4·공공누리1 허락이 확인된 실제 풍경 파일.",
+    "특정 건축물·조형물·인물을 주피사체로 재확대하는 편집은 이 구도 확인 범위에 포함되지 않음. 원문 권리표시 누락만으로 전체권리 해결이라 판단하지 않음.",
+    "최종 공개본의 독립 QA는 총괄 단계에서 별도 수행."
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "role": "narration",
+  "status": "generated_alignment_validated_listening_unverified",
+  "input_versions": {
+    "script_revision": "script-v3",
+    "source_script_sha256": "9b5d93523e0d50154d976beee0cccc57a4cddf38245838f77741faa6444a5311",
+    "manifest_sha256": "bc48550025a48abd6b810d0bf4f70c5211ebd8e07c96c73d42045a1db2edb502"
+  },
+  "artifacts": [
+    "narration/audio-v3/generation_ledger_v3.json",
+    "narration/audio-v3/alignment_manifest_v3.json",
+    "narration/audio-v3/timing_proposals_v3.json",
+    "narration/audio-v3/M000..M009.mp3",
+    "narration/audio-v3/M000..M009.alignment.json",
+    "narration/audio-v3/M000..M009.caption_cues_proposal.json",
+    "narration/audio-v3/M000_hook_split_proposal.json",
+    "narration/audio-v3/account_reconciliation.json"
+  ],
+  "verification": {
+    "chapters": 10,
+    "characters": 6372,
+    "provider_actual_credits": 2548,
+    "total_pcm_duration_s": 786.4800000000001,
+    "exact_input_hashes": true,
+    "original_alignment_exact_text": true,
+    "decoded_PCM": true,
+    "actual_listening": false,
+    "external_ASR_calls": 0,
+    "account_reconciliation": {
+      "checked_at": "2026-10-15T16:52:47.360Z",
+      "requests": "GET only",
+      "character_count": 11473,
+      "character_limit": 40000,
+      "remaining": 28527,
+      "initial_character_count": 8925,
+      "account_total_delta": 2548,
+      "provider_header_total": 2548,
+      "overage_enabled": false,
+      "allowed_to_extend": false,
+      "max_credit_limit_extension": 0
+    },
+    "final_file_sha_and_caption_span_recheck": true
+  },
+  "unresolved": [
+    "Actual listening unverified",
+    "Provider character alignment can exceed PCM by up to 0.1s; caption proposal end clamps to PCM",
+    "Caption cues require editor semantic/readability review"
+  ],
+  "affected_scene_ids": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M005",
+    "M006",
+    "M007",
+    "M008",
+    "M009"
+  ],
+  "next_owner": "director_and_editor"
+}

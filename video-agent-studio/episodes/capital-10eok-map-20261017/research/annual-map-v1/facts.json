@@ -1,0 +1,72 @@
+{
+  "claims": [
+    {
+      "claim_id": "DATA001",
+      "statement": "Existing actual transaction records include Seoul, Gyeonggi and Incheon from 2006-01-01 through 2026-10-10. This is a source availability statement, not full reporting completeness.",
+      "source_file": "master/trade_events.parquet",
+      "evidence_location": "analysis/billion_map_data_audit/audit.json;annual_region_coverage.csv",
+      "as_of": "2026-10-10 latest contract date in initial master",
+      "checked_on": "2026-10-17",
+      "status": "verified"
+    },
+    {
+      "claim_id": "DATA002",
+      "statement": "266 region-month cached XMLs have item counts below totalCount. The cached count deficit is 80619 all-area item occurrences; fresh complete snapshots are being collected separately.",
+      "source_file": "raw/rtms_trade/**/*.xml",
+      "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+      "evidence_location": "analysis/billion_map_data_audit/truncated_raw_files.csv;truncation_summary.json",
+      "as_of": "initial cached XML snapshots",
+      "checked_on": "2026-10-17",
+      "status": "verified"
+    },
+    {
+      "claim_id": "METHOD001",
+      "statement": "Apartment by official aptSeq, contract calendar year, 83<=exclusive_area<85 square metres, noncancelled positive price, annual median in manwon; show <=100000 and hide >100000, permitting later reappearance. n is preserved, including single-transaction samples.",
+      "source_file": "episode brief.json and research/source-completion-v1 aggregation implementation",
+      "evidence_location": "analysis/billion_map_data_audit/rebuild_episode.py;aggregation_fixture_results.json",
+      "as_of": "user confirmed method",
+      "checked_on": "2026-10-17",
+      "status": "qualified",
+      "limitations": "final counts pending full source completion and independent QA; no direct-trade or floor exclusions are applied"
+    },
+    {
+      "claim_id": "COORD001",
+      "statement": "Existing coordinates do not have row-level geocoder provenance and include road/dong-only fallbacks. They must not be represented as verified precise complex positions or automatically assumed reusable for publication.",
+      "source_file": "run_geocode_apts.py;run_geocode_retry.py;logs/geocode_run.log;master/apt_id_map.parquet",
+      "evidence_location": "analysis/billion_map_data_audit/shared_coord_complexes.csv;research/coordinate-rescue-v1/findings.md",
+      "as_of": "existing coordinate cache",
+      "checked_on": "2026-10-17",
+      "status": "verified"
+    },
+    {
+      "claim_id": "FRESHNESS001",
+      "statement": "Source collection timestamps differ by file. Cached source files with 84m2 observations were collected between 2026-04-30 and 2026-10-13; fresh completion only refreshes selected 266 region-months.",
+      "source_file": "raw/rtms_trade/**/*.meta.json",
+      "evidence_location": "research/source-completion-v1/cached_source_manifest.parquet;cache_time_summary.json",
+      "as_of": "per-source metadata timestamp",
+      "checked_on": "2026-10-17",
+      "status": "qualified",
+      "limitations": "fresh 266 region-months do not prove every area has all reports through today"
+    }
+  ],
+  "price_scope": {
+    "statistic": "annual median",
+    "regions": [
+      "11",
+      "28",
+      "41"
+    ],
+    "area_gte": 83,
+    "area_lt": 85,
+    "unit": "manwon",
+    "contract_year": true,
+    "canceled_excluded": true,
+    "transaction_type": "all provided apartment-sale records; no direct-trade filter",
+    "n": "per complex-year actual item occurrences"
+  },
+  "pending": [
+    "fresh snapshot completion",
+    "reaggregation and QA",
+    "coordinate licensing and precision"
+  ]
+}

@@ -1,0 +1,2843 @@
+{
+  "status": "pass",
+  "version": "0.8.181",
+  "timing_revision": "production-injoon-v3",
+  "chapters": [
+    {
+      "chapter": 1,
+      "ok": true,
+      "returncode": 0,
+      "html_sha256": "0d1b88dcb824dedf1d388a0b41ef012a150e0a9948f16646c2f7de280e99b7d9",
+      "sections": {
+        "lint": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 8,
+          "findings": [
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<h1 class=\"scene-topic\" data-start=\"0\" data-track-index=\"4\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch01\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"0.000000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch01\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"23.033333333333\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch01\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"42.700000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch01\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 3 has 8 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch01\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S001\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S001",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch01\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S001\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S002\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S002",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch01\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S002\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S003\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S003",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch01\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S003\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            }
+          ]
+        },
+        "runtime": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": []
+        },
+        "layout": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            11.403,
+            33.74,
+            55.625
+          ],
+          "totalIssueCount": 0
+        },
+        "contrast": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            11.403,
+            33.74,
+            55.625
+          ]
+        },
+        "motion": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": 0
+        }
+      }
+    },
+    {
+      "chapter": 2,
+      "ok": true,
+      "returncode": 0,
+      "html_sha256": "da7866c1e1bd890b065fc316b84ad3471e83b1019cb0184ac01754d73f19f05b",
+      "sections": {
+        "lint": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 10,
+          "findings": [
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"chapter-card\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch02\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<h1 class=\"scene-topic\" data-start=\"3.5\" data-track-index=\"4\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch02\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"3.500000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch02\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"22.834000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch02\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"42.600000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch02\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 3 has 9 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch02\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<div> is a timeline element that contains nested <svg>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch02\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <div> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S004\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S004",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch02\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S004\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S005\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S005",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch02\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S005\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S006\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S006",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch02\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S006\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            }
+          ]
+        },
+        "runtime": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": []
+        },
+        "layout": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            10.625,
+            30.996,
+            49.275
+          ],
+          "totalIssueCount": 0
+        },
+        "contrast": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            10.625,
+            30.996,
+            49.275
+          ]
+        },
+        "motion": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": 0
+        }
+      }
+    },
+    {
+      "chapter": 3,
+      "ok": true,
+      "returncode": 0,
+      "html_sha256": "10790784e64c2cff2d40a61df87f49fb8f6ba9f78f47b9f3ec99c0c967ed17ea",
+      "sections": {
+        "lint": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 14,
+          "findings": [
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"chapter-card\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<h1 class=\"scene-topic\" data-start=\"3.5\" data-track-index=\"4\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"3.500000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"24.250000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"50.544000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"70.982000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 2 has 4 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 5 has 4 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 3 has 12 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<div> is a timeline element that contains nested <svg>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <div> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S007\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S007",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S007\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S008\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S008",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S008\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S009\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S009",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S009\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S010\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S010",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S010\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            }
+          ]
+        },
+        "runtime": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": []
+        },
+        "layout": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            11.663,
+            38.624,
+            58.168,
+            79.02
+          ],
+          "totalIssueCount": 0
+        },
+        "contrast": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            11.663,
+            38.624,
+            58.168,
+            79.02
+          ]
+        },
+        "motion": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": 0
+        }
+      }
+    },
+    {
+      "chapter": 4,
+      "ok": true,
+      "returncode": 0,
+      "html_sha256": "907a3a9027567d6a4b66260501bc213425f764a45788b175285fc7c9f2fadace",
+      "sections": {
+        "lint": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 14,
+          "findings": [
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"chapter-card\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<h1 class=\"scene-topic\" data-start=\"3.5\" data-track-index=\"4\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"3.500000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"26.002000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"47.184000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"70.622000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 2 has 4 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 5 has 4 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 3 has 13 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<div> is a timeline element that contains nested <svg>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <div> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S011\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S011",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S011\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S012\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S012",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S012\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S013\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S013",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S013\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S014\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S014",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S014\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            }
+          ]
+        },
+        "runtime": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": []
+        },
+        "layout": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            14.479,
+            36.344,
+            55.367,
+            85.371
+          ],
+          "totalIssueCount": 0
+        },
+        "contrast": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            14.479,
+            36.344,
+            55.367,
+            85.371
+          ]
+        },
+        "motion": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": 0
+        }
+      }
+    },
+    {
+      "chapter": 5,
+      "ok": true,
+      "returncode": 0,
+      "html_sha256": "b4be6a4549ecd43cb4ae646c6322d57a2f43f522d48fab29db9c65e0e2156c25",
+      "sections": {
+        "lint": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 18,
+          "findings": [
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"chapter-card\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<h1 class=\"scene-topic\" data-start=\"3.5\" data-track-index=\"4\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"3.500000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"22.498000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"47.592000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"73.382000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"105.052000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"136.242000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 2 has 6 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 5 has 6 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 3 has 19 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<div> is a timeline element that contains nested <svg>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <div> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S015\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S015",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S015\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S016\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S016",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S016\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S017\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S017",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S017\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S018\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S018",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S018\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S019\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S019",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S019\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S020\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S020",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S020\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            }
+          ]
+        },
+        "runtime": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": []
+        },
+        "layout": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            11.861,
+            32.023,
+            62.892,
+            85.875,
+            118.926,
+            159.399
+          ],
+          "totalIssueCount": 0
+        },
+        "contrast": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            11.861,
+            32.023,
+            62.892,
+            85.875,
+            159.399
+          ]
+        },
+        "motion": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": 0
+        }
+      }
+    },
+    {
+      "chapter": 6,
+      "ok": true,
+      "returncode": 0,
+      "html_sha256": "93ef08619e333b43dd70062d9c92a6e75a82d6a1ec7cf04e3b31c9f6e295cd00",
+      "sections": {
+        "lint": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 16,
+          "findings": [
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"chapter-card\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<h1 class=\"scene-topic\" data-start=\"3.5\" data-track-index=\"4\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"3.500000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"29.050000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"58.152000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"80.582000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"114.940000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 2 has 5 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 5 has 5 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 3 has 18 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<div> is a timeline element that contains nested <svg>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <div> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S021\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S021",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S021\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S022\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S022",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S022\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S023\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S023",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S023\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S024\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S024",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S024\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S025\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S025",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S025\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            }
+          ]
+        },
+        "runtime": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": []
+        },
+        "layout": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            13.007,
+            47.871,
+            70.848,
+            97.5,
+            131.379
+          ],
+          "totalIssueCount": 0
+        },
+        "contrast": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            13.007,
+            47.871,
+            70.848,
+            97.5,
+            131.379
+          ]
+        },
+        "motion": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": 0
+        }
+      }
+    },
+    {
+      "chapter": 7,
+      "ok": true,
+      "returncode": 0,
+      "html_sha256": "cea987b4c189f3c49e2831da82146e5b664d085648e1212daa7c8ebd668d88fc",
+      "sections": {
+        "lint": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 18,
+          "findings": [
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"chapter-card\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<h1 class=\"scene-topic\" data-start=\"3.5\" data-track-index=\"4\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"3.500000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"31.546000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"59.232000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"85.238000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"111.820000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"145.578000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 2 has 6 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 5 has 6 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 3 has 23 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<div> is a timeline element that contains nested <svg>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <div> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S026\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S026",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S026\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S027\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S027",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S027\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S028\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S028",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S028\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S029\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S029",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S029\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S030\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S030",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S030\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S031\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S031",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S031\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            }
+          ]
+        },
+        "runtime": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": []
+        },
+        "layout": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            19.868,
+            46.478,
+            70.469,
+            100.87,
+            130.112,
+            163.09
+          ],
+          "totalIssueCount": 0
+        },
+        "contrast": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            19.868,
+            46.478,
+            70.469,
+            100.87,
+            163.09
+          ]
+        },
+        "motion": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": 0
+        }
+      }
+    },
+    {
+      "chapter": 8,
+      "ok": true,
+      "returncode": 0,
+      "html_sha256": "c01c776cda7a64566f5bddde5bc320ad78a7dec30a50308279ce914ca1edd119",
+      "sections": {
+        "lint": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 18,
+          "findings": [
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"chapter-card\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<h1 class=\"scene-topic\" data-start=\"3.5\" data-track-index=\"4\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"3.500000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"32.818000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"59.640000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"91.502000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"117.916000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"144.930000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 2 has 6 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 5 has 6 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 3 has 20 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<div> is a timeline element that contains nested <svg>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <div> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S032\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S032",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S032\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S033\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S033",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S033\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S034\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S034",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S034\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S034R\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S034R",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S034R\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S035\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S035",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S035\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S036\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S036",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S036\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            }
+          ]
+        },
+        "runtime": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": []
+        },
+        "layout": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            23.209,
+            45.581,
+            73.324,
+            101.41,
+            132.462,
+            153.56
+          ],
+          "totalIssueCount": 0
+        },
+        "contrast": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 1,
+          "findings": [
+            {
+              "code": "contrast_aa_failure",
+              "severity": "warning",
+              "message": "Contrast is 3.81:1; WCAG AA requires 4.5:1.",
+              "text": "월 상환 목표 170만원",
+              "fg": "rgb(148,112,42)",
+              "bg": "rgb(236,235,228)",
+              "ratio": 3.81,
+              "requiredRatio": 4.5,
+              "suggestedColor": "rgb(134,101,38)",
+              "large": false,
+              "selector": "#S034R_text017",
+              "dataAttributes": {},
+              "sourceFile": "index.html",
+              "bbox": {
+                "x": 1387.46875,
+                "y": 619,
+                "width": 185.0625,
+                "height": 26
+              },
+              "time": 101.41,
+              "times": [
+                101.41
+              ]
+            }
+          ],
+          "samples": [
+            23.209,
+            45.581,
+            73.324,
+            101.41,
+            153.56
+          ]
+        },
+        "motion": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": 0
+        }
+      }
+    },
+    {
+      "chapter": 9,
+      "ok": true,
+      "returncode": 0,
+      "html_sha256": "c5af17689b8fc5e482dc7fc809f3512725096126d2bf26831f44ed742ef959ed",
+      "sections": {
+        "lint": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 16,
+          "findings": [
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"chapter-card\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<h1 class=\"scene-topic\" data-start=\"3.5\" data-track-index=\"4\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"3.500000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"29.410000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"55.800000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"82.190000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"116.404000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 2 has 5 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 5 has 5 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 3 has 17 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<div> is a timeline element that contains nested <svg>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <div> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S037\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S037",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S037\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S038\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S038",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S038\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S039\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S039",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S039\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S040\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S040",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S040\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S041\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S041",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S041\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            }
+          ]
+        },
+        "runtime": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": []
+        },
+        "layout": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            20.393,
+            46.249,
+            68.116,
+            100.788,
+            128.503
+          ],
+          "totalIssueCount": 0
+        },
+        "contrast": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            20.393,
+            46.249,
+            68.116,
+            100.788,
+            128.503
+          ]
+        },
+        "motion": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": 0
+        }
+      }
+    },
+    {
+      "chapter": 10,
+      "ok": true,
+      "returncode": 0,
+      "html_sha256": "bc72338bb33537f6666954741aa3cfb293c291cd6a3999ab7d84efdc9cbac78b",
+      "sections": {
+        "lint": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 10,
+          "findings": [
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"chapter-card\" data-start=\"0\" data-track-index=\"1\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch10\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<h1 class=\"scene-topic\" data-start=\"3.5\" data-track-index=\"4\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch10\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"3.500000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch10\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"26.458000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch10\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "studio_missing_editable_id",
+              "severity": "warning",
+              "message": "<div class=\"scene-source\" data-start=\"51.600000000000\" data-track-index=\"5\"> has no id, so Studio cannot use a stable edit target for its timeline and canvas controls.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch10\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Add a stable, human-readable id such as id=\"hero-title\" or id=\"scene-1-card\" to every timeline-visible element you want agents or Studio to edit."
+            },
+            {
+              "code": "timeline_track_too_dense",
+              "severity": "warning",
+              "message": "Track 3 has 11 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch10\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<div> is a timeline element that contains nested <svg>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "[data-composition-id]",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch10\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <div> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S042\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S042",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch10\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S042\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S043\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S043",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch10\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S043\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            },
+            {
+              "code": "nested_structure_needs_subcomposition",
+              "severity": "warning",
+              "message": "<section id=\"S044\"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+              "selector": "#S044",
+              "dataAttributes": {},
+              "sourceFile": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch10\\index.html",
+              "bbox": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "time": 0,
+              "fixHint": "Move <section id=\"S044\"> and its contents into a sub-composition file and mount it with data-composition-src."
+            }
+          ]
+        },
+        "runtime": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": []
+        },
+        "layout": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            15.638,
+            41.35,
+            63.578
+          ],
+          "totalIssueCount": 0
+        },
+        "contrast": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": [
+            15.638,
+            41.35,
+            63.578
+          ]
+        },
+        "motion": {
+          "ok": true,
+          "errorCount": 0,
+          "warningCount": 0,
+          "findings": [],
+          "samples": 0
+        }
+      }
+    }
+  ],
+  "full_render": false
+}

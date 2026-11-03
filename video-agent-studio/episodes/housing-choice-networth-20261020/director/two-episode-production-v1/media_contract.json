@@ -1,0 +1,30 @@
+{
+  "revision": "private-production-media-contract-v1",
+  "canvas": {"width":1920,"height":1080,"fps":30},
+  "locked_script": "director/two-episode-production-v1/locked_script.json",
+  "narration_output": "narration/free-tts-v1/final_timing.json",
+  "narration_required_keys": ["script_path","script_sha256","voice","audio_revision","chapters"],
+  "chapter_schema": {
+    "chapter": "1..10",
+    "title": "장 제목",
+    "audio_file": "workspace-relative per-chapter WAV or lossless-equivalent",
+    "total_seconds": "measured padded duration, ceil to 30fps boundary",
+    "last_speech_end_s": "provider boundary or documented sample-based estimate",
+    "cues": [{"id":"unique","paragraph":0,"text":"display original","spoken_text":"pronunciation mapping","start_s":0.6,"end_s":4.1,"timing_basis":"provider boundary/actual segment duration; be explicit"}]
+  },
+  "leading_silence": {"chapter_1_s":0.6,"other_chapters_s":3.5},
+  "chapter_cards_s":3.0,
+  "paragraph_gap_s":0.35,
+  "tail_s": {"chapters_1_to_9":1.2,"chapter_10_from_last_spoken_word":3.0},
+  "caption_rules": {
+    "display_text_matches_locked_script_with_recorded_display_mapping":true,
+    "meaning_units":true,"protect_numbers_and_units":true,
+    "persistent_white_box_body":true,
+    "exceptions":["clean_brand_intro","clean_brand_outro","final_3s_silent_CTA_hold"]
+  },
+  "audio_generation_gate":"locked_script.json must contain current script SHA and separate Codex/Claude content pass receipts",
+  "render_gate":"source/time validation and representative scene QA pass; full media review remains pending",
+  "upload_gate":"current final MP4 + caption SHA, Codex + Claude final review passes, zero required issues, private-only job",
+  "brand_assembly":"reuse clean intro/outro assets; insert intro after opening hook using real cue boundary; apply one global offset map to media/captions",
+  "claims":"Do not mark sampled frames as continuous playback or automatic ASR as actual listening."
+}

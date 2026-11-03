@@ -1,0 +1,84 @@
+{
+  "role": "editor",
+  "revision": "shorts-leader-v1-final2",
+  "status": "local_review_draft_rendered_technical_checks_passed_independent_qa_recheck_pending",
+  "title": "3기 신도시 창릉의 대장단지는 어디가 될까?",
+  "artifacts": {
+    "mp4": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v1\\changneung_leader_short_v1.mp4",
+    "srt": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v1\\changneung_leader_short_v1.srt",
+    "technical": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v1\\technical.json",
+    "render_project": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v1\\render_project.json",
+    "clip_plan": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v1\\clip_plan.json",
+    "layout_bounds": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v1\\layout_bounds.json",
+    "ui18proof": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v1\\safearea18_ui_proof.png",
+    "patch_frames": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v1\\patch_evidence.json",
+    "placement_guide": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v1\\placement_guide.md"
+  },
+  "video_sha256": "3ea14519772fb97f54d12505040f738292c4780238baaf5aae815e1dec8b3eeb",
+  "input_versions": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v1\\inputs_manifest.json",
+  "source_script_sha256": "6ffc9fc4819460d4cf6f03fd3b28102e2864402b9965ca14e158230474963982",
+  "source_longform_sha256": "d36d8f70e406d928a1eb7041f4d1c9c4c1873747430d3c12a6f4c7fd99d98642",
+  "source_voice": "Existing approved Jun M009.wav exact 8 units; no speech wording/speed alteration",
+  "validation": {
+    "duration_s": 45.333333,
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": "30/1",
+    "video_codec": "h264",
+    "audio": "AAC 48000Hz stereo",
+    "whole_av_decode": true,
+    "pcm_units_exact": 8,
+    "decoded_audio_correlation": 0.9999773232768072,
+    "decoded_peak_dbfs": -6.323771095652799,
+    "measured_text_elements": 185,
+    "measured_frames": 34,
+    "text_collisions": 0,
+    "ui_geometry_models": 18,
+    "captions": 22,
+    "minimum_caption_seconds": 1.12,
+    "actual_encoded_frames_inspected": [
+      "initial final9 contact sheet; replacement final f307/f605/f1170; direct final encoded39 S1 structure"
+    ],
+    "actual_listening": false,
+    "continuous_playback": false,
+    "real_device_test": false
+  },
+  "resolved_editor_issues": [
+    {
+      "id": "QA-SL-001",
+      "scenes": [
+        "M009_014",
+        "M009_015"
+      ],
+      "change": "Sangam MBC label raised and leader attached; key text remains y830"
+    },
+    {
+      "id": "QA-SL-002",
+      "scenes": [
+        "M009_003",
+        "M009_009"
+      ],
+      "change": "Two exact caption strings have explicit semantic word-boundary newlines; timing and audio unchanged"
+    }
+  ],
+  "unresolved": [
+    "Independent QA final SHA patch recheck pending",
+    "Human listening and continuous audiovisual playback not performed by editor",
+    "New excerpt cut/script completion/publication approvals pending; source approval does not approve new cut"
+  ],
+  "next_role": [
+    "video_qa",
+    "video_director"
+  ],
+  "new_paid_calls": 0,
+  "uploaded": false,
+  "preserved": [
+    "original longform and narration untouched",
+    "pre-background_review.mp4",
+    "pre-s1-label-fix_review.mp4",
+    "pre-caption-wrap_review.mp4"
+  ],
+  "render_receipt": "C:\\projects\\realestate_reco\\output\\video_jobs\\changneung-short-leader-v1-final2\\receipt.json"
+}

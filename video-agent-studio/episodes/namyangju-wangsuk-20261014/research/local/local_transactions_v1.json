@@ -1,0 +1,1493 @@
+{
+  "status": "exploratory_not_comparable_to_new_sale_without_adjustments",
+  "source": "master/trade_events.parquet",
+  "basis": {
+    "unit": "만원",
+    "transaction_type": "apartment_sale",
+    "statistic": "median",
+    "area_m2": "83 <= area < 85",
+    "period": "2026-01-01 to 2026-10-08 inclusive",
+    "cancellations": "is_canceled excluded as recorded in local master",
+    "outliers": "price_per_m2 50..20000 or null",
+    "coverage": {
+      "min": "2006-01-02 00:00:00",
+      "max": "2026-10-08 00:00:00",
+      "n": 155989
+    },
+    "limits": [
+      "local collection coverage not independently audited",
+      "late reported transactions and cancellation updates may be missing",
+      "dong aggregates do not control building age/location/floor",
+      "not directly comparable to 59m2 new-sale price",
+      "no rent or financing-adjusted return calculated"
+    ]
+  },
+  "dong_84m2": [
+    {
+      "dong": "다산동",
+      "n": 1030,
+      "median_manwon": 92000.0,
+      "min_date": "2026-01-01 00:00:00",
+      "max_date": "2026-10-05 00:00:00"
+    },
+    {
+      "dong": "별내동",
+      "n": 393,
+      "median_manwon": 69500.0,
+      "min_date": "2026-01-06 00:00:00",
+      "max_date": "2026-10-04 00:00:00"
+    },
+    {
+      "dong": "진접읍 금곡리",
+      "n": 268,
+      "median_manwon": 45850.0,
+      "min_date": "2026-01-04 00:00:00",
+      "max_date": "2026-10-06 00:00:00"
+    },
+    {
+      "dong": "호평동",
+      "n": 243,
+      "median_manwon": 45300.0,
+      "min_date": "2026-01-05 00:00:00",
+      "max_date": "2026-10-06 00:00:00"
+    },
+    {
+      "dong": "와부읍 덕소리",
+      "n": 197,
+      "median_manwon": 54900.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-10-01 00:00:00"
+    },
+    {
+      "dong": "평내동",
+      "n": 196,
+      "median_manwon": 38850.0,
+      "min_date": "2026-01-01 00:00:00",
+      "max_date": "2026-10-03 00:00:00"
+    },
+    {
+      "dong": "오남읍 오남리",
+      "n": 144,
+      "median_manwon": 28500.0,
+      "min_date": "2026-01-01 00:00:00",
+      "max_date": "2026-09-23 00:00:00"
+    },
+    {
+      "dong": "와부읍 도곡리",
+      "n": 138,
+      "median_manwon": 50600.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-09-30 00:00:00"
+    },
+    {
+      "dong": "퇴계원읍 퇴계원리",
+      "n": 129,
+      "median_manwon": 47500.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-10-07 00:00:00"
+    },
+    {
+      "dong": "진접읍 장현리",
+      "n": 102,
+      "median_manwon": 30000.0,
+      "min_date": "2026-01-03 00:00:00",
+      "max_date": "2026-10-06 00:00:00"
+    },
+    {
+      "dong": "진접읍 부평리",
+      "n": 94,
+      "median_manwon": 41150.0,
+      "min_date": "2026-01-03 00:00:00",
+      "max_date": "2026-10-01 00:00:00"
+    },
+    {
+      "dong": "오남읍 양지리",
+      "n": 84,
+      "median_manwon": 32000.0,
+      "min_date": "2026-01-06 00:00:00",
+      "max_date": "2026-10-07 00:00:00"
+    },
+    {
+      "dong": "화도읍 묵현리",
+      "n": 81,
+      "median_manwon": 26000.0,
+      "min_date": "2026-01-12 00:00:00",
+      "max_date": "2026-10-03 00:00:00"
+    },
+    {
+      "dong": "별내면 청학리",
+      "n": 61,
+      "median_manwon": 32000.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-10-06 00:00:00"
+    },
+    {
+      "dong": "진건읍 용정리",
+      "n": 54,
+      "median_manwon": 24900.0,
+      "min_date": "2026-01-04 00:00:00",
+      "max_date": "2026-09-19 00:00:00"
+    },
+    {
+      "dong": "화도읍 마석우리",
+      "n": 53,
+      "median_manwon": 33000.0,
+      "min_date": "2026-01-16 00:00:00",
+      "max_date": "2026-09-30 00:00:00"
+    },
+    {
+      "dong": "화도읍 녹촌리",
+      "n": 51,
+      "median_manwon": 45500.0,
+      "min_date": "2026-01-05 00:00:00",
+      "max_date": "2026-10-04 00:00:00"
+    },
+    {
+      "dong": "화도읍 창현리",
+      "n": 30,
+      "median_manwon": 30500.0,
+      "min_date": "2026-01-16 00:00:00",
+      "max_date": "2026-09-17 00:00:00"
+    },
+    {
+      "dong": "화도읍 월산리",
+      "n": 22,
+      "median_manwon": 33500.0,
+      "min_date": "2026-01-06 00:00:00",
+      "max_date": "2026-09-21 00:00:00"
+    },
+    {
+      "dong": "화도읍 차산리",
+      "n": 17,
+      "median_manwon": 30500.0,
+      "min_date": "2026-01-28 00:00:00",
+      "max_date": "2026-08-19 00:00:00"
+    },
+    {
+      "dong": "금곡동",
+      "n": 14,
+      "median_manwon": 40250.0,
+      "min_date": "2026-01-05 00:00:00",
+      "max_date": "2026-09-23 00:00:00"
+    },
+    {
+      "dong": "진접읍 진벌리",
+      "n": 14,
+      "median_manwon": 23600.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-10-07 00:00:00"
+    },
+    {
+      "dong": "화도읍 가곡리",
+      "n": 13,
+      "median_manwon": 25000.0,
+      "min_date": "2026-02-05 00:00:00",
+      "max_date": "2026-09-11 00:00:00"
+    },
+    {
+      "dong": "진접읍 내각리",
+      "n": 9,
+      "median_manwon": 26500.0,
+      "min_date": "2026-01-10 00:00:00",
+      "max_date": "2026-08-04 00:00:00"
+    },
+    {
+      "dong": "진건읍 신월리",
+      "n": 5,
+      "median_manwon": 34000.0,
+      "min_date": "2026-02-25 00:00:00",
+      "max_date": "2026-09-01 00:00:00"
+    }
+  ],
+  "complex_84m2": [
+    {
+      "dong": "다산동",
+      "apt_id": "d6742e7d0630390d",
+      "name": "e편한세상 다산",
+      "n": 83,
+      "median_manwon": 93500.0,
+      "min_date": "2026-01-01 00:00:00",
+      "max_date": "2026-09-19 00:00:00",
+      "build_year_min": 2017,
+      "build_year_max": 2017
+    },
+    {
+      "dong": "진접읍 금곡리",
+      "apt_id": "2f5e208ecd030d66",
+      "name": "예당마을신안인스빌",
+      "n": 76,
+      "median_manwon": 46450.0,
+      "min_date": "2026-01-10 00:00:00",
+      "max_date": "2026-10-03 00:00:00",
+      "build_year_min": 2010,
+      "build_year_max": 2010
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "2b273dd4f4263e05",
+      "name": "다산 이편한세상자이",
+      "n": 72,
+      "median_manwon": 98500.0,
+      "min_date": "2026-01-07 00:00:00",
+      "max_date": "2026-09-19 00:00:00",
+      "build_year_min": 2018,
+      "build_year_max": 2018
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "e62b3f8feae8217b",
+      "name": "다산롯데캐슬",
+      "n": 72,
+      "median_manwon": 97750.0,
+      "min_date": "2026-01-03 00:00:00",
+      "max_date": "2026-08-21 00:00:00",
+      "build_year_min": 2017,
+      "build_year_max": 2017
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "836ad9c272c1b7d9",
+      "name": "힐스테이트다산",
+      "n": 67,
+      "median_manwon": 101500.0,
+      "min_date": "2026-01-03 00:00:00",
+      "max_date": "2026-10-03 00:00:00",
+      "build_year_min": 2018,
+      "build_year_max": 2018
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "94b2af716f121557",
+      "name": "다산신안인스빌퍼스트리버",
+      "n": 61,
+      "median_manwon": 86400.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-09-21 00:00:00",
+      "build_year_min": 2019,
+      "build_year_max": 2019
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "9fb3906e1e7565a8",
+      "name": "다산한강반도유보라",
+      "n": 58,
+      "median_manwon": 90000.0,
+      "min_date": "2026-01-04 00:00:00",
+      "max_date": "2026-10-05 00:00:00",
+      "build_year_min": 2019,
+      "build_year_max": 2019
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "cb96e583513f9bf5",
+      "name": "다산유승한내들센트럴",
+      "n": 56,
+      "median_manwon": 95000.0,
+      "min_date": "2026-01-15 00:00:00",
+      "max_date": "2026-09-11 00:00:00",
+      "build_year_min": 2018,
+      "build_year_max": 2018
+    },
+    {
+      "dong": "별내동",
+      "apt_id": "6df17aa90a177bdf",
+      "name": "별내푸르지오",
+      "n": 56,
+      "median_manwon": 63000.0,
+      "min_date": "2026-01-07 00:00:00",
+      "max_date": "2026-09-23 00:00:00",
+      "build_year_min": 2015,
+      "build_year_max": 2015
+    },
+    {
+      "dong": "별내동",
+      "apt_id": "bb26903d3df3e2d0",
+      "name": "별내아이파크2차",
+      "n": 51,
+      "median_manwon": 80750.0,
+      "min_date": "2026-01-10 00:00:00",
+      "max_date": "2026-09-22 00:00:00",
+      "build_year_min": 2015,
+      "build_year_max": 2015
+    },
+    {
+      "dong": "별내동",
+      "apt_id": "997874c369f45fca",
+      "name": "신안인스빌",
+      "n": 48,
+      "median_manwon": 71600.0,
+      "min_date": "2026-01-11 00:00:00",
+      "max_date": "2026-10-01 00:00:00",
+      "build_year_min": 2012,
+      "build_year_max": 2012
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "9a9ccee6e10c3965",
+      "name": "다산신안인스빌퍼스트포레",
+      "n": 47,
+      "median_manwon": 88500.0,
+      "min_date": "2026-01-05 00:00:00",
+      "max_date": "2026-10-02 00:00:00",
+      "build_year_min": 2020,
+      "build_year_max": 2020
+    },
+    {
+      "dong": "별내동",
+      "apt_id": "bc222bac8023501e",
+      "name": "별내우미린스타포레",
+      "n": 46,
+      "median_manwon": 65000.0,
+      "min_date": "2026-01-10 00:00:00",
+      "max_date": "2026-10-04 00:00:00",
+      "build_year_min": 2019,
+      "build_year_max": 2019
+    },
+    {
+      "dong": "진접읍 금곡리",
+      "apt_id": "22b016b0789983e0",
+      "name": "해밀마을5단지 반도유보라 메이플타운",
+      "n": 44,
+      "median_manwon": 43950.0,
+      "min_date": "2026-01-07 00:00:00",
+      "max_date": "2026-09-19 00:00:00",
+      "build_year_min": 2009,
+      "build_year_max": 2009
+    },
+    {
+      "dong": "진접읍 금곡리",
+      "apt_id": "b652d57bd01d4963",
+      "name": "금강펜테리움",
+      "n": 43,
+      "median_manwon": 48000.0,
+      "min_date": "2026-01-05 00:00:00",
+      "max_date": "2026-09-28 00:00:00",
+      "build_year_min": 2010,
+      "build_year_max": 2010
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "3a200f826346f16e",
+      "name": "다산한양수자인리버팰리스",
+      "n": 43,
+      "median_manwon": 99000.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-09-22 00:00:00",
+      "build_year_min": 2017,
+      "build_year_max": 2017
+    },
+    {
+      "dong": "별내동",
+      "apt_id": "3d59c978f9d2c9cb",
+      "name": "별내자이더스타",
+      "n": 40,
+      "median_manwon": 114000.0,
+      "min_date": "2026-01-07 00:00:00",
+      "max_date": "2026-09-20 00:00:00",
+      "build_year_min": 2023,
+      "build_year_max": 2023
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "097e119ba06361b8",
+      "name": "다산펜테리움리버테라스Ⅱ",
+      "n": 38,
+      "median_manwon": 97500.0,
+      "min_date": "2026-01-10 00:00:00",
+      "max_date": "2026-10-02 00:00:00",
+      "build_year_min": 2019,
+      "build_year_max": 2019
+    },
+    {
+      "dong": "진접읍 금곡리",
+      "apt_id": "eab90ac765b3a5f3",
+      "name": "부영사랑으로",
+      "n": 37,
+      "median_manwon": 37000.0,
+      "min_date": "2026-01-04 00:00:00",
+      "max_date": "2026-09-07 00:00:00",
+      "build_year_min": 2009,
+      "build_year_max": 2009
+    },
+    {
+      "dong": "진접읍 부평리",
+      "apt_id": "7e8144a6fcb409ac",
+      "name": "더샵남양주퍼스트시티",
+      "n": 37,
+      "median_manwon": 46900.0,
+      "min_date": "2026-01-03 00:00:00",
+      "max_date": "2026-09-29 00:00:00",
+      "build_year_min": 2021,
+      "build_year_max": 2021
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "eea83f8711b89246",
+      "name": "다산 펜테리움 리버테라스 Ⅰ",
+      "n": 36,
+      "median_manwon": 94650.0,
+      "min_date": "2026-01-03 00:00:00",
+      "max_date": "2026-09-21 00:00:00",
+      "build_year_min": 2018,
+      "build_year_max": 2018
+    },
+    {
+      "dong": "별내동",
+      "apt_id": "e845bbeaef7dfed6",
+      "name": "모아미래도아파트",
+      "n": 35,
+      "median_manwon": 62300.0,
+      "min_date": "2026-01-06 00:00:00",
+      "max_date": "2026-09-28 00:00:00",
+      "build_year_min": 2014,
+      "build_year_max": 2014
+    },
+    {
+      "dong": "와부읍 도곡리",
+      "apt_id": "44c5324d6c1de5cf",
+      "name": "한강우성",
+      "n": 35,
+      "median_manwon": 46000.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-09-24 00:00:00",
+      "build_year_min": 1998,
+      "build_year_max": 1998
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "fef0d29376150581",
+      "name": "다산지금센트럴에일린의뜰",
+      "n": 34,
+      "median_manwon": 82350.0,
+      "min_date": "2026-01-14 00:00:00",
+      "max_date": "2026-09-24 00:00:00",
+      "build_year_min": 2019,
+      "build_year_max": 2019
+    },
+    {
+      "dong": "와부읍 도곡리",
+      "apt_id": "fdb824439e1e4237",
+      "name": "건영덕소리버파크",
+      "n": 33,
+      "median_manwon": 52800.0,
+      "min_date": "2026-01-29 00:00:00",
+      "max_date": "2026-09-21 00:00:00",
+      "build_year_min": 2002,
+      "build_year_max": 2002
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "593bddf11d85189a",
+      "name": "다산자이폴라리스",
+      "n": 32,
+      "median_manwon": 96000.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-08-26 00:00:00",
+      "build_year_min": 2021,
+      "build_year_max": 2021
+    },
+    {
+      "dong": "와부읍 덕소리",
+      "apt_id": "2cf047e68e633369",
+      "name": "덕소아이파크",
+      "n": 32,
+      "median_manwon": 64500.0,
+      "min_date": "2026-01-10 00:00:00",
+      "max_date": "2026-08-21 00:00:00",
+      "build_year_min": 2007,
+      "build_year_max": 2007
+    },
+    {
+      "dong": "진접읍 금곡리",
+      "apt_id": "69468d70c760ce4a",
+      "name": "해밀마을신안인스빌",
+      "n": 31,
+      "median_manwon": 47000.0,
+      "min_date": "2026-01-17 00:00:00",
+      "max_date": "2026-10-06 00:00:00",
+      "build_year_min": 2010,
+      "build_year_max": 2010
+    },
+    {
+      "dong": "호평동",
+      "apt_id": "f98e4b2cc2c636a4",
+      "name": "두산알프하임",
+      "n": 31,
+      "median_manwon": 54000.0,
+      "min_date": "2026-01-13 00:00:00",
+      "max_date": "2026-09-29 00:00:00",
+      "build_year_min": 2021,
+      "build_year_max": 2021
+    },
+    {
+      "dong": "퇴계원읍 퇴계원리",
+      "apt_id": "0ec8fda363ea1133",
+      "name": "퇴계원힐스테이트",
+      "n": 30,
+      "median_manwon": 62125.0,
+      "min_date": "2026-01-07 00:00:00",
+      "max_date": "2026-08-25 00:00:00",
+      "build_year_min": 2014,
+      "build_year_max": 2014
+    },
+    {
+      "dong": "별내동",
+      "apt_id": "7a281f28e178906a",
+      "name": "별내별가람역 한라비발디",
+      "n": 30,
+      "median_manwon": 71000.0,
+      "min_date": "2026-01-07 00:00:00",
+      "max_date": "2026-08-27 00:00:00",
+      "build_year_min": 2013,
+      "build_year_max": 2013
+    },
+    {
+      "dong": "진접읍 부평리",
+      "apt_id": "3d70eb445ea8945d",
+      "name": "진접센트레빌시티1단지",
+      "n": 29,
+      "median_manwon": 34400.0,
+      "min_date": "2026-01-03 00:00:00",
+      "max_date": "2026-10-01 00:00:00",
+      "build_year_min": 2009,
+      "build_year_max": 2009
+    },
+    {
+      "dong": "호평동",
+      "apt_id": "fb37fc2b91e72a59",
+      "name": "호평마을중흥에스-클래스",
+      "n": 28,
+      "median_manwon": 44500.0,
+      "min_date": "2026-01-07 00:00:00",
+      "max_date": "2026-09-13 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "380d8d7efd8886cc",
+      "name": "힐스테이트 황금산",
+      "n": 28,
+      "median_manwon": 79500.0,
+      "min_date": "2026-01-03 00:00:00",
+      "max_date": "2026-09-15 00:00:00",
+      "build_year_min": 2017,
+      "build_year_max": 2017
+    },
+    {
+      "dong": "별내동",
+      "apt_id": "37e2f8a50bdeba1b",
+      "name": "포레나별내",
+      "n": 28,
+      "median_manwon": 72000.0,
+      "min_date": "2026-01-25 00:00:00",
+      "max_date": "2026-09-23 00:00:00",
+      "build_year_min": 2012,
+      "build_year_max": 2012
+    },
+    {
+      "dong": "와부읍 덕소리",
+      "apt_id": "21bcc00003e31a78",
+      "name": "동부센트레빌",
+      "n": 27,
+      "median_manwon": 59000.0,
+      "min_date": "2026-01-24 00:00:00",
+      "max_date": "2026-09-10 00:00:00",
+      "build_year_min": 2006,
+      "build_year_max": 2006
+    },
+    {
+      "dong": "호평동",
+      "apt_id": "a30fba5d54e22ab8",
+      "name": "호평현대아이파크아파트",
+      "n": 27,
+      "median_manwon": 45500.0,
+      "min_date": "2026-01-05 00:00:00",
+      "max_date": "2026-10-06 00:00:00",
+      "build_year_min": 2004,
+      "build_year_max": 2004
+    },
+    {
+      "dong": "오남읍 오남리",
+      "apt_id": "cc98dc285e7583dd",
+      "name": "오남아이파크",
+      "n": 27,
+      "median_manwon": 39000.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-09-23 00:00:00",
+      "build_year_min": 2009,
+      "build_year_max": 2009
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "b5c1f8a384ebc217",
+      "name": "다산e편한세상더퍼스트",
+      "n": 27,
+      "median_manwon": 84500.0,
+      "min_date": "2026-01-05 00:00:00",
+      "max_date": "2026-08-29 00:00:00",
+      "build_year_min": 2019,
+      "build_year_max": 2019
+    },
+    {
+      "dong": "진접읍 장현리",
+      "apt_id": "76606b3cbc2ac07c",
+      "name": "금강펜터리움",
+      "n": 26,
+      "median_manwon": 31500.0,
+      "min_date": "2026-01-17 00:00:00",
+      "max_date": "2026-09-23 00:00:00",
+      "build_year_min": 2007,
+      "build_year_max": 2007
+    },
+    {
+      "dong": "진건읍 용정리",
+      "apt_id": "361b4fd55ac57e15",
+      "name": "한신그린1차",
+      "n": 26,
+      "median_manwon": 24000.0,
+      "min_date": "2026-01-08 00:00:00",
+      "max_date": "2026-09-15 00:00:00",
+      "build_year_min": 1991,
+      "build_year_max": 1991
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "ac52f980a3dcf76b",
+      "name": "다산자이아이비플레이스",
+      "n": 26,
+      "median_manwon": 120000.0,
+      "min_date": "2026-01-14 00:00:00",
+      "max_date": "2026-08-18 00:00:00",
+      "build_year_min": 2021,
+      "build_year_max": 2021
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "28ccc0593c9f4f28",
+      "name": "플루리움2단지",
+      "n": 26,
+      "median_manwon": 67500.0,
+      "min_date": "2026-01-11 00:00:00",
+      "max_date": "2026-09-26 00:00:00",
+      "build_year_min": 2002,
+      "build_year_max": 2002
+    },
+    {
+      "dong": "와부읍 덕소리",
+      "apt_id": "18c039ab5891a8af",
+      "name": "강변삼익",
+      "n": 25,
+      "median_manwon": 54300.0,
+      "min_date": "2026-01-12 00:00:00",
+      "max_date": "2026-09-21 00:00:00",
+      "build_year_min": 1996,
+      "build_year_max": 1996
+    },
+    {
+      "dong": "평내동",
+      "apt_id": "bd4b89ce397dfc71",
+      "name": "평내마을금호어울림",
+      "n": 25,
+      "median_manwon": 41900.0,
+      "min_date": "2026-01-01 00:00:00",
+      "max_date": "2026-09-30 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "와부읍 덕소리",
+      "apt_id": "8d9923a821aa9388",
+      "name": "현대",
+      "n": 25,
+      "median_manwon": 48700.0,
+      "min_date": "2026-01-14 00:00:00",
+      "max_date": "2026-09-29 00:00:00",
+      "build_year_min": 1997,
+      "build_year_max": 1997
+    },
+    {
+      "dong": "별내동",
+      "apt_id": "470840343fd77ba2",
+      "name": "유승한내들",
+      "n": 24,
+      "median_manwon": 57500.0,
+      "min_date": "2026-01-17 00:00:00",
+      "max_date": "2026-09-10 00:00:00",
+      "build_year_min": 2014,
+      "build_year_max": 2014
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "b48f0288f23b7d0a",
+      "name": "한화꿈에그린",
+      "n": 24,
+      "median_manwon": 68800.0,
+      "min_date": "2026-01-05 00:00:00",
+      "max_date": "2026-07-09 00:00:00",
+      "build_year_min": 2008,
+      "build_year_max": 2008
+    },
+    {
+      "dong": "호평동",
+      "apt_id": "54b035fc8941210f",
+      "name": "호평마을동원로얄듀크",
+      "n": 23,
+      "median_manwon": 44000.0,
+      "min_date": "2026-02-26 00:00:00",
+      "max_date": "2026-10-06 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "641cff3e87428843",
+      "name": "롯데낙천대",
+      "n": 23,
+      "median_manwon": 60300.0,
+      "min_date": "2026-01-15 00:00:00",
+      "max_date": "2026-10-03 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "호평동",
+      "apt_id": "334fcf6e5c352503",
+      "name": "호평마을효성백년가약",
+      "n": 23,
+      "median_manwon": 42000.0,
+      "min_date": "2026-01-07 00:00:00",
+      "max_date": "2026-09-20 00:00:00",
+      "build_year_min": 2004,
+      "build_year_max": 2004
+    },
+    {
+      "dong": "별내면 청학리",
+      "apt_id": "07cf6a4fbe4256fd",
+      "name": "청학주공(3단지)",
+      "n": 22,
+      "median_manwon": 33350.0,
+      "min_date": "2026-02-02 00:00:00",
+      "max_date": "2026-10-06 00:00:00",
+      "build_year_min": 1999,
+      "build_year_max": 1999
+    },
+    {
+      "dong": "화도읍 월산리",
+      "apt_id": "aab6c4676ab37978",
+      "name": "화도효성해링턴플레이스",
+      "n": 22,
+      "median_manwon": 33500.0,
+      "min_date": "2026-01-06 00:00:00",
+      "max_date": "2026-09-21 00:00:00",
+      "build_year_min": 2015,
+      "build_year_max": 2015
+    },
+    {
+      "dong": "화도읍 묵현리",
+      "apt_id": "fa6638c3d1031b38",
+      "name": "남양주두산위브트레지움",
+      "n": 22,
+      "median_manwon": 42650.0,
+      "min_date": "2026-01-12 00:00:00",
+      "max_date": "2026-10-03 00:00:00",
+      "build_year_min": 2020,
+      "build_year_max": 2020
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "7bed23f173c63ef3",
+      "name": "다산아이파크",
+      "n": 21,
+      "median_manwon": 95000.0,
+      "min_date": "2026-01-17 00:00:00",
+      "max_date": "2026-07-30 00:00:00",
+      "build_year_min": 2017,
+      "build_year_max": 2017
+    },
+    {
+      "dong": "퇴계원읍 퇴계원리",
+      "apt_id": "1e6fc80cfa59e1e0",
+      "name": "퇴계원쌍용예가",
+      "n": 21,
+      "median_manwon": 46500.0,
+      "min_date": "2026-02-02 00:00:00",
+      "max_date": "2026-10-02 00:00:00",
+      "build_year_min": 2007,
+      "build_year_max": 2007
+    },
+    {
+      "dong": "퇴계원읍 퇴계원리",
+      "apt_id": "f62a1ae8a3b9b0d6",
+      "name": "성원",
+      "n": 20,
+      "median_manwon": 45850.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-09-11 00:00:00",
+      "build_year_min": 1999,
+      "build_year_max": 1999
+    },
+    {
+      "dong": "와부읍 도곡리",
+      "apt_id": "42d855f64c88db00",
+      "name": "덕소두산위브",
+      "n": 20,
+      "median_manwon": 61450.0,
+      "min_date": "2026-01-06 00:00:00",
+      "max_date": "2026-09-20 00:00:00",
+      "build_year_min": 2002,
+      "build_year_max": 2002
+    },
+    {
+      "dong": "평내동",
+      "apt_id": "12393694e9faddf0",
+      "name": "효성타운",
+      "n": 20,
+      "median_manwon": 35750.0,
+      "min_date": "2026-01-16 00:00:00",
+      "max_date": "2026-09-29 00:00:00",
+      "build_year_min": 1998,
+      "build_year_max": 1998
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "78c05cec02ea7419",
+      "name": "동원베네스트",
+      "n": 20,
+      "median_manwon": 57000.0,
+      "min_date": "2026-01-05 00:00:00",
+      "max_date": "2026-09-26 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "진접읍 금곡리",
+      "apt_id": "4e300394270b9a76",
+      "name": "자연&어울림",
+      "n": 20,
+      "median_manwon": 42925.0,
+      "min_date": "2026-01-28 00:00:00",
+      "max_date": "2026-10-01 00:00:00",
+      "build_year_min": 2009,
+      "build_year_max": 2009
+    },
+    {
+      "dong": "호평동",
+      "apt_id": "1667f4d1c53376b9",
+      "name": "호평임광그대가",
+      "n": 20,
+      "median_manwon": 38000.0,
+      "min_date": "2026-01-10 00:00:00",
+      "max_date": "2026-10-06 00:00:00",
+      "build_year_min": 2008,
+      "build_year_max": 2008
+    },
+    {
+      "dong": "화도읍 마석우리",
+      "apt_id": "078b8fa077863c5b",
+      "name": "보미청광플러스원",
+      "n": 19,
+      "median_manwon": 32000.0,
+      "min_date": "2026-01-24 00:00:00",
+      "max_date": "2026-09-30 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "와부읍 도곡리",
+      "apt_id": "a988b3bb2809484b",
+      "name": "벽산",
+      "n": 19,
+      "median_manwon": 46000.0,
+      "min_date": "2026-01-13 00:00:00",
+      "max_date": "2026-08-31 00:00:00",
+      "build_year_min": 1999,
+      "build_year_max": 1999
+    },
+    {
+      "dong": "화도읍 녹촌리",
+      "apt_id": "25d0d2e803668bad",
+      "name": "화도센트럴우방아이유쉘",
+      "n": 19,
+      "median_manwon": 47500.0,
+      "min_date": "2026-01-27 00:00:00",
+      "max_date": "2026-09-23 00:00:00",
+      "build_year_min": 2018,
+      "build_year_max": 2018
+    },
+    {
+      "dong": "평내동",
+      "apt_id": "b829612e8cf19102",
+      "name": "평내마젤란21",
+      "n": 19,
+      "median_manwon": 36850.0,
+      "min_date": "2026-01-22 00:00:00",
+      "max_date": "2026-09-10 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "오남읍 양지리",
+      "apt_id": "ea203f74fba5e9b7",
+      "name": "대림e편한세상1단지",
+      "n": 18,
+      "median_manwon": 45000.0,
+      "min_date": "2026-03-09 00:00:00",
+      "max_date": "2026-09-12 00:00:00",
+      "build_year_min": 2009,
+      "build_year_max": 2009
+    },
+    {
+      "dong": "별내동",
+      "apt_id": "3524068427d04aa6",
+      "name": "남양주별내리슈빌",
+      "n": 18,
+      "median_manwon": 66650.0,
+      "min_date": "2026-06-03 00:00:00",
+      "max_date": "2026-09-20 00:00:00",
+      "build_year_min": 2013,
+      "build_year_max": 2013
+    },
+    {
+      "dong": "퇴계원읍 퇴계원리",
+      "apt_id": "52811c1cf6d0c4a8",
+      "name": "신별내퇴계원어울림",
+      "n": 18,
+      "median_manwon": 53000.0,
+      "min_date": "2026-01-03 00:00:00",
+      "max_date": "2026-09-05 00:00:00",
+      "build_year_min": 2012,
+      "build_year_max": 2012
+    },
+    {
+      "dong": "진접읍 금곡리",
+      "apt_id": "635547c16ba0eb7e",
+      "name": "남양휴튼",
+      "n": 17,
+      "median_manwon": 46300.0,
+      "min_date": "2026-01-05 00:00:00",
+      "max_date": "2026-10-06 00:00:00",
+      "build_year_min": 2010,
+      "build_year_max": 2010
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "42c3cfd316e7e120",
+      "name": "다산센트레빌",
+      "n": 16,
+      "median_manwon": 72800.0,
+      "min_date": "2026-01-23 00:00:00",
+      "max_date": "2026-08-31 00:00:00",
+      "build_year_min": 2016,
+      "build_year_max": 2016
+    },
+    {
+      "dong": "호평동",
+      "apt_id": "809b39b72162e316",
+      "name": "호평마을금강",
+      "n": 16,
+      "median_manwon": 50000.0,
+      "min_date": "2026-01-06 00:00:00",
+      "max_date": "2026-09-30 00:00:00",
+      "build_year_min": 2004,
+      "build_year_max": 2004
+    },
+    {
+      "dong": "평내동",
+      "apt_id": "8a7a29ab34dcbf14",
+      "name": "e편한세상평내메트로원",
+      "n": 16,
+      "median_manwon": 63900.0,
+      "min_date": "2026-01-23 00:00:00",
+      "max_date": "2026-09-06 00:00:00",
+      "build_year_min": 2022,
+      "build_year_max": 2022
+    },
+    {
+      "dong": "와부읍 도곡리",
+      "apt_id": "f6d9d8274abf22ed",
+      "name": "쌍용스윗닷홈리버",
+      "n": 15,
+      "median_manwon": 56000.0,
+      "min_date": "2026-01-09 00:00:00",
+      "max_date": "2026-09-11 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "평내동",
+      "apt_id": "712f445918f29489",
+      "name": "평내마을평내2차대주파크빌",
+      "n": 15,
+      "median_manwon": 36000.0,
+      "min_date": "2026-01-19 00:00:00",
+      "max_date": "2026-08-22 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "오남읍 오남리",
+      "apt_id": "a877db1d08d21243",
+      "name": "신일해피트리(1차)",
+      "n": 15,
+      "median_manwon": 25900.0,
+      "min_date": "2026-01-07 00:00:00",
+      "max_date": "2026-08-20 00:00:00",
+      "build_year_min": 2004,
+      "build_year_max": 2004
+    },
+    {
+      "dong": "오남읍 양지리",
+      "apt_id": "17f48469871ca1b1",
+      "name": "대림e편한세상2단지",
+      "n": 15,
+      "median_manwon": 42900.0,
+      "min_date": "2026-02-13 00:00:00",
+      "max_date": "2026-09-09 00:00:00",
+      "build_year_min": 2009,
+      "build_year_max": 2009
+    },
+    {
+      "dong": "와부읍 덕소리",
+      "apt_id": "e66642dc829e0f31",
+      "name": "주공2",
+      "n": 15,
+      "median_manwon": 48600.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-09-16 00:00:00",
+      "build_year_min": 1998,
+      "build_year_max": 1998
+    },
+    {
+      "dong": "와부읍 덕소리",
+      "apt_id": "1b9198793d5005bf",
+      "name": "신한",
+      "n": 15,
+      "median_manwon": 49000.0,
+      "min_date": "2026-02-08 00:00:00",
+      "max_date": "2026-08-31 00:00:00",
+      "build_year_min": 1998,
+      "build_year_max": 1998
+    },
+    {
+      "dong": "진접읍 장현리",
+      "apt_id": "663d10323e0098f1",
+      "name": "남양주진접롯데캐슬",
+      "n": 15,
+      "median_manwon": 39000.0,
+      "min_date": "2026-01-03 00:00:00",
+      "max_date": "2026-08-29 00:00:00",
+      "build_year_min": 2009,
+      "build_year_max": 2009
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "93bc5bf6afe75119",
+      "name": "해링턴플레이스다산파크",
+      "n": 15,
+      "median_manwon": 85000.0,
+      "min_date": "2026-01-07 00:00:00",
+      "max_date": "2026-08-19 00:00:00",
+      "build_year_min": 2024,
+      "build_year_max": 2024
+    },
+    {
+      "dong": "오남읍 양지리",
+      "apt_id": "56f798b024654918",
+      "name": "삼신",
+      "n": 14,
+      "median_manwon": 24400.0,
+      "min_date": "2026-02-23 00:00:00",
+      "max_date": "2026-09-22 00:00:00",
+      "build_year_min": 1995,
+      "build_year_max": 1995
+    },
+    {
+      "dong": "진접읍 부평리",
+      "apt_id": "1acd04cd8d189f2a",
+      "name": "진접스타힐스",
+      "n": 14,
+      "median_manwon": 42000.0,
+      "min_date": "2026-01-08 00:00:00",
+      "max_date": "2026-09-28 00:00:00",
+      "build_year_min": 2022,
+      "build_year_max": 2022
+    },
+    {
+      "dong": "호평동",
+      "apt_id": "4afb38aaf2ffff18",
+      "name": "호평마을대주파크빌",
+      "n": 14,
+      "median_manwon": 44250.0,
+      "min_date": "2026-01-13 00:00:00",
+      "max_date": "2026-09-02 00:00:00",
+      "build_year_min": 2004,
+      "build_year_max": 2004
+    },
+    {
+      "dong": "진접읍 진벌리",
+      "apt_id": "deebf5c5bfe98af3",
+      "name": "신창비바패밀리",
+      "n": 14,
+      "median_manwon": 23600.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-10-07 00:00:00",
+      "build_year_min": 2006,
+      "build_year_max": 2006
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "6150fe2de3a41983",
+      "name": "경남아너스빌",
+      "n": 14,
+      "median_manwon": 61000.0,
+      "min_date": "2026-01-05 00:00:00",
+      "max_date": "2026-09-16 00:00:00",
+      "build_year_min": 2008,
+      "build_year_max": 2008
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "e98868855704377d",
+      "name": "더힐포레4단지",
+      "n": 14,
+      "median_manwon": 61750.0,
+      "min_date": "2026-01-27 00:00:00",
+      "max_date": "2026-08-24 00:00:00",
+      "build_year_min": 2008,
+      "build_year_max": 2008
+    },
+    {
+      "dong": "평내동",
+      "apt_id": "b65916b94330fffa",
+      "name": "평내화성파크힐즈",
+      "n": 14,
+      "median_manwon": 37500.0,
+      "min_date": "2026-01-02 00:00:00",
+      "max_date": "2026-09-19 00:00:00",
+      "build_year_min": 2004,
+      "build_year_max": 2004
+    },
+    {
+      "dong": "화도읍 차산리",
+      "apt_id": "b08b59f15089ce94",
+      "name": "신창현풍림아이원1차",
+      "n": 13,
+      "median_manwon": 31000.0,
+      "min_date": "2026-01-28 00:00:00",
+      "max_date": "2026-08-19 00:00:00",
+      "build_year_min": 2009,
+      "build_year_max": 2009
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "b45219da3d9c4394",
+      "name": "다산리버펠리체2단지",
+      "n": 13,
+      "median_manwon": 64500.0,
+      "min_date": "2026-01-10 00:00:00",
+      "max_date": "2026-09-17 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "화도읍 창현리",
+      "apt_id": "d950b06fcb85d859",
+      "name": "신한토탈",
+      "n": 13,
+      "median_manwon": 30500.0,
+      "min_date": "2026-01-16 00:00:00",
+      "max_date": "2026-09-17 00:00:00",
+      "build_year_min": 1997,
+      "build_year_max": 1997
+    },
+    {
+      "dong": "퇴계원읍 퇴계원리",
+      "apt_id": "40a6cd0ce5741ef1",
+      "name": "신도",
+      "n": 13,
+      "median_manwon": 44500.0,
+      "min_date": "2026-01-12 00:00:00",
+      "max_date": "2026-10-07 00:00:00",
+      "build_year_min": 2000,
+      "build_year_max": 2000
+    },
+    {
+      "dong": "평내동",
+      "apt_id": "66efbc79f4a798d1",
+      "name": "우남퍼스트빌",
+      "n": 13,
+      "median_manwon": 35000.0,
+      "min_date": "2026-01-06 00:00:00",
+      "max_date": "2026-09-14 00:00:00",
+      "build_year_min": 2004,
+      "build_year_max": 2004
+    },
+    {
+      "dong": "호평동",
+      "apt_id": "84b60b39ea8af8ea",
+      "name": "호평마을한화꿈에그린",
+      "n": 13,
+      "median_manwon": 44000.0,
+      "min_date": "2026-01-17 00:00:00",
+      "max_date": "2026-09-16 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "화도읍 가곡리",
+      "apt_id": "51c51e78ca40166e",
+      "name": "신마석신도브래뉴",
+      "n": 13,
+      "median_manwon": 25000.0,
+      "min_date": "2026-02-05 00:00:00",
+      "max_date": "2026-09-11 00:00:00",
+      "build_year_min": 2008,
+      "build_year_max": 2008
+    },
+    {
+      "dong": "오남읍 오남리",
+      "apt_id": "45110ed4aef3a0f7",
+      "name": "금호어울림",
+      "n": 13,
+      "median_manwon": 30500.0,
+      "min_date": "2026-01-10 00:00:00",
+      "max_date": "2026-09-09 00:00:00",
+      "build_year_min": 2006,
+      "build_year_max": 2006
+    },
+    {
+      "dong": "화도읍 묵현리",
+      "apt_id": "005eaf91ddc5b01a",
+      "name": "영진그린필",
+      "n": 13,
+      "median_manwon": 25700.0,
+      "min_date": "2026-01-30 00:00:00",
+      "max_date": "2026-09-26 00:00:00",
+      "build_year_min": 2003,
+      "build_year_max": 2003
+    },
+    {
+      "dong": "평내동",
+      "apt_id": "3fa2b3fb7bcb3f89",
+      "name": "평내마을중흥에스-클래스(2단지)",
+      "n": 12,
+      "median_manwon": 43000.0,
+      "min_date": "2026-02-06 00:00:00",
+      "max_date": "2026-09-14 00:00:00",
+      "build_year_min": 2004,
+      "build_year_max": 2004
+    },
+    {
+      "dong": "평내동",
+      "apt_id": "8ab7d11ec01a8a24",
+      "name": "평내마을중흥에스-클래스(3단지)",
+      "n": 12,
+      "median_manwon": 41300.0,
+      "min_date": "2026-01-10 00:00:00",
+      "max_date": "2026-09-30 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "화도읍 묵현리",
+      "apt_id": "03613abd9d6d906a",
+      "name": "삼신푸른솔",
+      "n": 12,
+      "median_manwon": 23000.0,
+      "min_date": "2026-02-09 00:00:00",
+      "max_date": "2026-09-17 00:00:00",
+      "build_year_min": 1998,
+      "build_year_max": 1998
+    },
+    {
+      "dong": "별내동",
+      "apt_id": "d175dd8fc2cb991a",
+      "name": "상록리슈빌",
+      "n": 12,
+      "median_manwon": 63900.0,
+      "min_date": "2026-01-27 00:00:00",
+      "max_date": "2026-05-16 00:00:00",
+      "build_year_min": 2013,
+      "build_year_max": 2013
+    },
+    {
+      "dong": "오남읍 양지리",
+      "apt_id": "cbbddcff4160a7d4",
+      "name": "오남쌍용스윗닷홈지티1단지",
+      "n": 12,
+      "median_manwon": 32125.0,
+      "min_date": "2026-01-10 00:00:00",
+      "max_date": "2026-10-07 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "호평동",
+      "apt_id": "65e6d028af77f7d6",
+      "name": "호평마을신명스카이뷰하트",
+      "n": 11,
+      "median_manwon": 48500.0,
+      "min_date": "2026-01-10 00:00:00",
+      "max_date": "2026-09-08 00:00:00",
+      "build_year_min": 2006,
+      "build_year_max": 2006
+    },
+    {
+      "dong": "오남읍 양지리",
+      "apt_id": "6235163ab64f9abc",
+      "name": "양지",
+      "n": 11,
+      "median_manwon": 23000.0,
+      "min_date": "2026-01-06 00:00:00",
+      "max_date": "2026-07-22 00:00:00",
+      "build_year_min": 2001,
+      "build_year_max": 2001
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "db0c26f74a45fe85",
+      "name": "플루리움4,5단지",
+      "n": 11,
+      "median_manwon": 74500.0,
+      "min_date": "2026-01-07 00:00:00",
+      "max_date": "2026-09-10 00:00:00",
+      "build_year_min": 2000,
+      "build_year_max": 2000
+    },
+    {
+      "dong": "다산동",
+      "apt_id": "236ce6b46b47ad52",
+      "name": "다산반도유보라메이플타운",
+      "n": 11,
+      "median_manwon": 89900.0,
+      "min_date": "2026-01-15 00:00:00",
+      "max_date": "2026-09-01 00:00:00",
+      "build_year_min": 2018,
+      "build_year_max": 2018
+    },
+    {
+      "dong": "평내동",
+      "apt_id": "d5e1de809a23ac1f",
+      "name": "평내마을평내1차대주파크빌",
+      "n": 11,
+      "median_manwon": 40000.0,
+      "min_date": "2026-01-13 00:00:00",
+      "max_date": "2026-07-12 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "별내면 청학리",
+      "apt_id": "76a91beb6fbf0659",
+      "name": "청학주공(1단지)",
+      "n": 11,
+      "median_manwon": 33000.0,
+      "min_date": "2026-01-09 00:00:00",
+      "max_date": "2026-09-03 00:00:00",
+      "build_year_min": 1999,
+      "build_year_max": 1999
+    },
+    {
+      "dong": "호평동",
+      "apt_id": "67e6333e1469cbfe",
+      "name": "평내호평역KCC스위첸",
+      "n": 11,
+      "median_manwon": 70000.0,
+      "min_date": "2026-03-04 00:00:00",
+      "max_date": "2026-09-14 00:00:00",
+      "build_year_min": 2017,
+      "build_year_max": 2017
+    },
+    {
+      "dong": "오남읍 오남리",
+      "apt_id": "ed7108808d9e2f64",
+      "name": "남양주오남푸르지오",
+      "n": 10,
+      "median_manwon": 39250.0,
+      "min_date": "2026-02-27 00:00:00",
+      "max_date": "2026-09-07 00:00:00",
+      "build_year_min": 2009,
+      "build_year_max": 2009
+    },
+    {
+      "dong": "오남읍 오남리",
+      "apt_id": "1f4aa820e4c09e39",
+      "name": "두산위브",
+      "n": 10,
+      "median_manwon": 32500.0,
+      "min_date": "2026-01-20 00:00:00",
+      "max_date": "2026-07-27 00:00:00",
+      "build_year_min": 2006,
+      "build_year_max": 2006
+    },
+    {
+      "dong": "진접읍 장현리",
+      "apt_id": "aa5b1b418a41f7cb",
+      "name": "신우",
+      "n": 10,
+      "median_manwon": 25500.0,
+      "min_date": "2026-03-10 00:00:00",
+      "max_date": "2026-10-06 00:00:00",
+      "build_year_min": 1999,
+      "build_year_max": 1999
+    },
+    {
+      "dong": "평내동",
+      "apt_id": "b5337e4283de4a94",
+      "name": "평내마을중흥에스-클래스(1단지)",
+      "n": 10,
+      "median_manwon": 45000.0,
+      "min_date": "2026-02-26 00:00:00",
+      "max_date": "2026-09-03 00:00:00",
+      "build_year_min": 2005,
+      "build_year_max": 2005
+    },
+    {
+      "dong": "화도읍 녹촌리",
+      "apt_id": "8e37852a6e81e4a3",
+      "name": "남양주녹촌두산위브",
+      "n": 10,
+      "median_manwon": 23500.0,
+      "min_date": "2026-01-24 00:00:00",
+      "max_date": "2026-09-11 00:00:00",
+      "build_year_min": 2006,
+      "build_year_max": 2006
+    },
+    {
+      "dong": "진접읍 장현리",
+      "apt_id": "8b35d0c8e18b34a5",
+      "name": "길훈",
+      "n": 10,
+      "median_manwon": 28750.0,
+      "min_date": "2026-01-08 00:00:00",
+      "max_date": "2026-10-02 00:00:00",
+      "build_year_min": 2009,
+      "build_year_max": 2009
+    },
+    {
+      "dong": "와부읍 덕소리",
+      "apt_id": "04e83fab6d3c3b22",
+      "name": "진도",
+      "n": 10,
+      "median_manwon": 50500.0,
+      "min_date": "2026-01-06 00:00:00",
+      "max_date": "2026-10-01 00:00:00",
+      "build_year_min": 1998,
+      "build_year_max": 1998
+    },
+    {
+      "dong": "평내동",
+      "apt_id": "b46e54702a7b75ae",
+      "name": "대명",
+      "n": 10,
+      "median_manwon": 32750.0,
+      "min_date": "2026-03-02 00:00:00",
+      "max_date": "2026-08-21 00:00:00",
+      "build_year_min": 2000,
+      "build_year_max": 2000
+    }
+  ],
+  "source_sha256": "93f305afc915e0562c2d2223dd9d20aa204629223ae7e39944db693511919502",
+  "source_bytes": 217650236
+}

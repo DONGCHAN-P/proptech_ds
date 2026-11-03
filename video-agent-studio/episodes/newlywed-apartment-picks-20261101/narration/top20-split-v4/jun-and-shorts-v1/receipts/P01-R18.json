@@ -1,0 +1,69 @@
+{
+  "asset_id": "P01-R18",
+  "sentence_ids": [
+    "P01-R18-V2-01",
+    "P01-R18-V2-02",
+    "P01-R18-V2-03",
+    "P01-R18-V2-04",
+    "P01-R18-V2-05",
+    "P01-R18-V2-06",
+    "P01-R18-V2-07",
+    "P01-R18-V2-08"
+  ],
+  "status": "complete",
+  "started_at_utc": "2026-11-03T13:24:03.873Z",
+  "authorization_id": "9cde211f3073",
+  "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+  "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+  "input_file_sha256": "1ffda6b22d093a5cdd1a00847ed6fcf1c609d1077b1f154eeb2bd5ea92ca872e",
+  "request_text_sha256": "474f12ede734bef876b0f439d78be94e8a14692c2af735add0e2447862985c52",
+  "characters": 477,
+  "reserved_credits": 477,
+  "actual_credits": 191,
+  "charge_known": true,
+  "request": {
+    "text": "십팔 위는 경기 용인시 기흥구, 칠천육백팔십육 쌍입니다.\n\n기흥구는 동백, 흥덕의 대규모 택지개발 주거지와 기업, 연구시설이 함께 자리한 지역입니다.\n\n직장이 어느 권역에 있는지부터 지도에 놓으면, 넓은 기흥구에서 집과 업무지를 연결해 비교할 기준이 생깁니다.\n\n구성역은 지티엑스 에이와 수인분당선의 연결 거점이며, 사진 속 오 번출구에는 버스 연계 이용이 안내돼 있습니다.\n\n영덕동 용인기흥효성해링턴플레이스 주변 상세도에서는 청곡초등학교와 상갈역을 기준으로 단지의 위치를 읽겠습니다.\n\n구성역 중심의 철도 연결을 볼지, 영덕동의 단지와 학교 주변을 볼지에 따라 확인할 생활 동선도 달라집니다.\n\n거래 중윗값은 동백동 오 억 이천 만 원, 영덕동 칠 억 천오백 만 원으로, 원하는 주거권과 예산을 함께 좁혀볼 수 있습니다.\n\n학교와 장보기 장소를 묶은 일상 동선에 실제 출근 목적지를 더해, 두 사람의 이동이 균형을 이루는 주거권을 찾아보는 방식입니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+  "local_shadow_remaining_before": 16053,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "E9m8n9c19R2CUoGwwAup",
+    "x-request-id": null,
+    "character-cost": "191",
+    "content-type": "application/json",
+    "date": "Tue, 03 Nov 2026 13:24:06 GMT"
+  },
+  "pcm_samples": 2508408,
+  "pcm_duration_s": 56.88,
+  "provider_last_alignment_end_s": 56.96,
+  "complete_tail_after_alignment_s": -0.0799999999999983,
+  "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R18.wav",
+  "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R18/audio.mp3",
+  "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R18/alignment.json",
+  "pcm_sha256": "db7d28ab043efe561c27c809058296a730f101ea0ff43000e64d60c832bb4d13",
+  "artifact_sha256": {
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R18/audio.mp3": "8f1fc8760eef7614c2ef5791dbf3cff14ebb6eca80794a03b1d7fb667c4b591b",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R18/alignment.json": "26f6af2f082e42e2c8f961fcf0b920f026b15d87588d3c70a802443948d0aacc",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R18/normalized_alignment.json": "26f6af2f082e42e2c8f961fcf0b920f026b15d87588d3c70a802443948d0aacc",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R18.wav": "15527958deb41bac9cb8fa3e1b568d7ea548a9131bdc62049ebb05307fbed5a1"
+  },
+  "processing": {
+    "sample_rate_hz": 44100,
+    "channels": 1,
+    "codec": "pcm_s16le",
+    "tempo_factor": 1,
+    "trimmed": false,
+    "tail_preserved": true,
+    "provider_speed": 0.97
+  },
+  "local_shadow_remaining_after": 15862,
+  "completed_at_utc": "2026-11-03T13:24:17.786Z"
+}

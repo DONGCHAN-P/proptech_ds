@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C09P01",
+  "scene_id": "C09",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:08:00.241Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "39fe8aa091969d659ecc2ea4ec3f84ebadd558215a6b69ce89cd5fbf6ea0f860",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "차액을 투자한다는 조건도 실제 행동과 연결됩니다. 매달 남는 돈을 전부 이 티 에프에 넣던 가정에서 절반만 넣고 나머지는 수익이 없는 현금으로 쌓으면, 기본 조건의 십 년 후 순자산은 매매 약 오억구천사백만 원, 전세 약 육억천만 원, 월세 약 육억사천구백만 원입니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 150,
+  "characters": 150,
+  "actual_credits": 60,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19983,
+    "character_limit": 40000,
+    "included_remaining": 20017,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:08:00.235Z",
+  "local_shadow_remaining_before": 20017,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "7Tpi8fjrVWuImFCaDNK8",
+    "x-request-id": null,
+    "character-cost": "60",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:08:00 GMT"
+  },
+  "pcm_samples": 864360,
+  "pcm_duration_s": 19.6,
+  "provider_last_spoken_end_s": 19.68,
+  "artifact_sha256": {
+    "paragraphs/C09P01/audio.mp3": "1614e8e29293fbe31091e5c03c11442ac60cb24aa2875f83cd01d443462f229e",
+    "paragraphs/C09P01/audio.wav": "005129b32c4e2126cd971819dc2b7159b6acd2f6cc757a3a759cb83be7b1fd30",
+    "paragraphs/C09P01/alignment.json": "c9b2325b78a39cf3862afd8a9389b56093bbd2804750b2206850f3f13fc5d393",
+    "paragraphs/C09P01/normalized_alignment.json": "c9b2325b78a39cf3862afd8a9389b56093bbd2804750b2206850f3f13fc5d393"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 19957,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:08:04.928Z"
+}

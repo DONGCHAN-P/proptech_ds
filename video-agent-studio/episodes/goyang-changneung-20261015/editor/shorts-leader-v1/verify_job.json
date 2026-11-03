@@ -1,0 +1,25 @@
+{
+  "task_id": "changneung-short-leader-v1-verify",
+  "inputs": [
+    "video\\src\\changneung-shorts-leader-v1\\entry.tsx",
+    "video\\src\\changneung-shorts-leader-v1\\data.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v1\\public\\voice.wav",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v1\\verify.py",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v1\\inputs_manifest.json"
+  ],
+  "outputs": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v1\\changneung_leader_short_v1.mp4",
+    "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v1\\technical.json"
+  ],
+  "steps": [
+    {
+      "argv": [
+        "C:\\projects\\realestate_reco\\tools\\python311\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v1\\verify.py"
+      ],
+      "cwd": "C:\\projects\\realestate_reco"
+    }
+  ]
+}

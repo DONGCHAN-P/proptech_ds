@@ -1,0 +1,103 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "sentence_id": "P01-R17-V2-05",
+      "token": "3억3,150만원",
+      "display_char_start": 12,
+      "display_char_end": 21,
+      "native_chunk_s": 29.36,
+      "target_s": 10.379999999999995,
+      "basis": "locked explicit display_character_timing; no old/free timing or interpolation",
+      "scene_id": "SHORT01-PROMO-01",
+      "row": 0,
+      "rendered_value": "3억3,150만원",
+      "reveal_local_s": 5.839999999999995,
+      "bar_fraction": 0.44797297299999994,
+      "bar_duration_s": 0.35,
+      "expected_bar_px": 301.93378380199994,
+      "states": [
+        {
+          "offset_s": -0.001,
+          "opacity": 0,
+          "barWidth": 0,
+          "trackWidth": 674
+        },
+        {
+          "offset_s": 0,
+          "opacity": 1,
+          "barWidth": 0,
+          "trackWidth": 674
+        },
+        {
+          "offset_s": 0.175,
+          "opacity": 1,
+          "barWidth": 264.181640625,
+          "trackWidth": 674
+        },
+        {
+          "offset_s": 0.35,
+          "opacity": 1,
+          "barWidth": 301.921875,
+          "trackWidth": 674
+        },
+        {
+          "offset_s": 0.6,
+          "opacity": 1,
+          "barWidth": 301.921875,
+          "trackWidth": 674
+        }
+      ],
+      "passed": true
+    },
+    {
+      "sentence_id": "P01-R17-V2-05",
+      "token": "7억4,000만원",
+      "display_char_start": 27,
+      "display_char_end": 36,
+      "native_chunk_s": 31.68,
+      "target_s": 12.699999999999996,
+      "basis": "locked explicit display_character_timing; no old/free timing or interpolation",
+      "scene_id": "SHORT01-PROMO-01",
+      "row": 1,
+      "rendered_value": "7억4,000만원",
+      "reveal_local_s": 8.159999999999997,
+      "bar_fraction": 1.0,
+      "bar_duration_s": 0.35,
+      "expected_bar_px": 674.0,
+      "states": [
+        {
+          "offset_s": -0.001,
+          "opacity": 0,
+          "barWidth": 0,
+          "trackWidth": 674
+        },
+        {
+          "offset_s": 0,
+          "opacity": 1,
+          "barWidth": 0,
+          "trackWidth": 674
+        },
+        {
+          "offset_s": 0.175,
+          "opacity": 1,
+          "barWidth": 589.75,
+          "trackWidth": 674
+        },
+        {
+          "offset_s": 0.35,
+          "opacity": 1,
+          "barWidth": 674,
+          "trackWidth": 674
+        },
+        {
+          "offset_s": 0.6,
+          "opacity": 1,
+          "barWidth": 674,
+          "trackWidth": 674
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

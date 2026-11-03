@@ -1,0 +1,4 @@
+import fs from 'node:fs/promises';
+const root='video/public/real-assets',url='https://www.lottecastle.co.kr/APT/AT00223/2056/constrt/view.do';const r=await fetch(url,{signal:AbortSignal.timeout(25000)});const html=await r.text();await fs.writeFile(root+'/sources/castle-construction.html',html);
+const images=[...html.matchAll(/<img[^>]+src="([^"]+)"[^>]*>/g)].map(m=>m[1]).filter(u=>/\/files\//.test(u));await fs.writeFile(root+'/sources/castle-image-candidates.json',JSON.stringify(images,null,2));console.log('Official construction images: '+images.length);console.log(JSON.stringify(images.slice(0,6)));
+const purl='https://www.lottecastle.co.kr/APT/AT00223/2024/findmap/view.do';const pr=await fetch(purl,{signal:AbortSignal.timeout(25000)});await fs.writeFile(root+'/sources/castle-location.html',await pr.text());

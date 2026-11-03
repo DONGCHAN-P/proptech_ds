@@ -1,0 +1,71 @@
+{
+  "revision": "rail-route-proof-v1b",
+  "status": "rendered_awaiting_independent_visual_qa",
+  "owner": "video_editor",
+  "next_owner": "video_qa_then_video_director",
+  "scene_ids": [
+    "S002"
+  ],
+  "inputs": {
+    "script_revision": "script-v2",
+    "audio_revision": "audio-v1",
+    "original_master": "outputs/video-review-v3/namyangju-wangsuk_v3.mp4",
+    "research_data": "research/rail-route-proof-v1/data.json",
+    "research_handoff": "research/rail-route-proof-v1/handoff.json",
+    "map_context": "visual-v4 regional OSM paths plus research OSM local roads"
+  },
+  "artifacts": {
+    "mp4": "outputs/rail-route-proof-v1/namyangju_rail-route-proof_v1b.mp4",
+    "technical_check": "outputs/rail-route-proof-v1/technical_check_v1b.json",
+    "render_manifest": "outputs/rail-route-proof-v1/render_manifest_v1b.json",
+    "placement_guide": "outputs/rail-route-proof-v1/placement_guide.md",
+    "project_source": "video/src/NamyangjuRailRouteProofV1.tsx",
+    "project_data": "video/public/namyangju-rail-route-proof-v1/proof_data.json",
+    "render_command": "node video-agent-studio/episodes/namyangju-wangsuk-20261014/editor/rail-route-proof-v1/render.cjs --revision-b"
+  },
+  "verified": {
+    "sha256": "1e3a4d47f07f5d4193db5e12628716eefa3a03169dd91c944df83588acac6964",
+    "bytes": 7991499,
+    "duration_s": 80,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "fps": 30,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2,
+    "whole_decode_passed": true,
+    "actual_encoded_frame_count": 20,
+    "editor_viewed_actual_frames": [
+      "actual_b_037.0s.png"
+    ],
+    "full_master_modified": false,
+    "paid_generation": false,
+    "external_media_transmission": false
+  },
+  "timing": {
+    "original_start_s": 94,
+    "original_end_s": 174,
+    "caption_basis": "preserved_existing_character_weight_estimate_NOT_forced_alignment"
+  },
+  "unverified": [
+    "실제 청취 및 연속 재생",
+    "문장별 음성·자막 정렬",
+    "단지 현장 정문 및 횡단보도·보도 통행 가능성",
+    "도보 끝 도로점에서 별내역4번출구까지 약41m 보도 연결",
+    "실제 소요시간·버스 대기·배차간격"
+  ],
+  "design_notes": [
+    "4호선과 진접 연장 구간은 같은 파란색. 경춘선 녹색, 8호선 분홍색",
+    "8호선 별내역 이후 실제 회차선은 여객 운영 연장으로 오인하지 않도록 표시 범위에서 제외",
+    "전 구간 도보와 버스 이용의 처음·마지막 도보를 별도 보행 아이콘으로 표현",
+    "버스 아이콘은 GBIS48번 실제 탑승~하차 구간에서만 이동",
+    "이동 속도 비교는 설명용 연출이며 실제 시간 비교가 아님",
+    "마지막 출구까지 임의 직선 연결을 추가하지 않음"
+  ],
+  "integration_authorized": false,
+  "publication_authorized": false,
+  "prior_artifact_preserved": "outputs/rail-route-proof-v1/namyangju_rail-route-proof_v1.mp4"
+}

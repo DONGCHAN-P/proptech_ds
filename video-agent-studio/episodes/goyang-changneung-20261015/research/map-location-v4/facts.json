@@ -1,0 +1,125 @@
+{
+  "revision": "map-location-v4",
+  "facts": [
+    {
+      "claim_id": "MAP4-LH-GEOMETRY",
+      "statement": "LH 내집어디 공개3기신도시지도는 고양창릉(bzdt_cd105142) 토지이용 733도형과 지구경계1도형을 제공했다. S1/S4/S5 식별자는 각 공동주택(S-1)/(S-4)/(S-5) 필드에 일치한다.",
+      "source_url": "https://wherehome.lh.or.kr/lhmap.do?mainTabNo=12",
+      "source_file": "raw/landfeatures.geojson;raw/boundaryfeatures.geojson",
+      "evidence_location": "features[].properties.bl_type/bzdt_cd 및 geometry",
+      "as_of": "제공응답의계획기준일미표기",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "geometry_crs": "EPSG:4326",
+      "caution": "측량/법적최종경계아님;독립지도제작기준공간자료.일부필지용도변경가능"
+    },
+    {
+      "claim_id": "MAP4-S1-LOCATION",
+      "statement": "공동주택 (S-1)는 LH WFS의실제MultiPolygon으로확인했다. 학교·공원·도로등동일좌표도형과상세확대할수있다.",
+      "source_url": "https://wherehome.lh.or.kr/lhmap.do?mainTabNo=12",
+      "source_file": "target_blocks.geojson;block_extents.json",
+      "evidence_location": "em_tem_land_use_thirdcity.fid--77134c90_1a140bd29e6_2cb2",
+      "as_of": "LH계획기준일미표기",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "bbox_wgs84": [
+        126.84596651,
+        37.62865988,
+        126.84835268,
+        37.62982871
+      ],
+      "bbox_center": [
+        126.847159595,
+        37.629244295
+      ],
+      "center_basis": "도형bbox중심,출입구아님"
+    },
+    {
+      "claim_id": "MAP4-S4-LOCATION",
+      "statement": "공동주택 (S-4)는 LH WFS의실제MultiPolygon으로확인했다. 학교·공원·도로등동일좌표도형과상세확대할수있다.",
+      "source_url": "https://wherehome.lh.or.kr/lhmap.do?mainTabNo=12",
+      "source_file": "target_blocks.geojson;block_extents.json",
+      "evidence_location": "em_tem_land_use_thirdcity.fid--77134c90_1a140bd29e6_2d00",
+      "as_of": "LH계획기준일미표기",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "bbox_wgs84": [
+        126.86107695,
+        37.62471731,
+        126.86539314,
+        37.62718708
+      ],
+      "bbox_center": [
+        126.863235045,
+        37.625952194999996
+      ],
+      "center_basis": "도형bbox중심,출입구아님"
+    },
+    {
+      "claim_id": "MAP4-S5-LOCATION",
+      "statement": "공동주택 (S-5)는 LH WFS의실제MultiPolygon으로확인했다. 학교·공원·도로등동일좌표도형과상세확대할수있다.",
+      "source_url": "https://wherehome.lh.or.kr/lhmap.do?mainTabNo=12",
+      "source_file": "target_blocks.geojson;block_extents.json",
+      "evidence_location": "em_tem_land_use_thirdcity.fid--77134c90_1a140bd29e6_2ddf",
+      "as_of": "LH계획기준일미표기",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "bbox_wgs84": [
+        126.8670925,
+        37.62185327,
+        126.87023583,
+        37.62423632
+      ],
+      "bbox_center": [
+        126.868664165,
+        37.623044795
+      ],
+      "center_basis": "도형bbox중심,출입구아님"
+    },
+    {
+      "claim_id": "MAP4-SCHOOLS",
+      "statement": "학교코드WFS필드와공고대조결과 S1 초7·유7, S4 초6·유6, S5 초5·유5·중3·고2의계획교육용지를구분할수있다.",
+      "source_url": "https://wherehome.lh.or.kr/lhmap.do?mainTabNo=12",
+      "source_file": "schools_by_block.json;../production-v2/raw/s1_full.txt;../production-v2/raw/s4_latest.txt;../production-v2/raw/s5_corrected.txt",
+      "evidence_location": "WFS교육시설코드/공고학교표및외부여건",
+      "as_of": "블록별공고기준 +LH조회",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "development_status": "approved_plan",
+      "caution": "학교이름/개교확정/배정/통학경로로전환금지"
+    },
+    {
+      "claim_id": "MAP4-STATION-CONTEXT",
+      "statement": "2026 S4 공고첨부 전체토지이용계획도의 창릉역예정기호는 중앙복합CM1/CM2권역 접점에 표시된다. 창릉지구 전체경계와다른공간객체이며 정확출입구·역사경계를 확보한것은아니다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=67715155",
+      "source_file": "../map-clearance-v1/raw/s4_landuse_202607.jpg",
+      "evidence_location": "GTX-A창릉역(예정)라벨·기호와CM1/CM2코드대조",
+      "as_of": "2026S4공고첨부(승인기준일미표기)",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "geometry": [
+        126.87570974,
+        37.62101002,
+        126.87998574,
+        37.62431476
+      ],
+      "geometry_use": "안내권역only"
+    },
+    {
+      "claim_id": "MAP4-VERSION-CHECK",
+      "statement": "2025.12.24고시전체도와이번WFS전체도에서S1서측분리권역/남측초7유7,S4북서측초6유6및북측상업,S5동측A4·남측교육용지군·북측업무와도로의주요관계가육안대조일치했다.733도형전수또는측량수준일치검증은아니다.",
+      "source_url": "https://www.eum.go.kr/web/gs/gv/gvGosiDet.jsp?seq=628391",
+      "source_file": "../map-clearance-v1/raw/eum_lots_overall_20251224.jpg;raw/lh_land.png",
+      "evidence_location": "전체이미지실제열람/주요세블록주변육안관계대조",
+      "as_of": "2025-12-24고시 vs2026-10-16WFS조회",
+      "checked_on": "2026-10-16",
+      "status": "qualified"
+    }
+  ],
+  "rights": {
+    "lh_raw_geometry": "공개조회공간데이터의좌표·용도사실을독립채널지도에표현하는근거.원래지도스타일/폰트/배치복제아님.개별WFS재사용라이선스명시미확보를기록하며포괄가공허가확인으로주장하지않음",
+    "lh_wms_image": "사실대조/검수용.영상직접가공승인확정아님",
+    "eum_kogl3": "변경/2차적저작금지.공식문구에모든화면확대/부분표시가일률금지라고명시되지않음.이전절대금지판단은보수적편집제안이며법적확정아님.이번해법은별도WFS사실자료독립작성",
+    "independent_map": "원자료출처·조회일·계획변경가능표시.임의필지경계/시설이름추가금지"
+  }
+}

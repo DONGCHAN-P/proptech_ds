@@ -35,7 +35,8 @@ window.DETAIL = (function () {
   }
 
   function headTags(i) {
-    const out = [];
+    const householdTag = '<span class="tag">' + (i.household_count ? Number(i.household_count).toLocaleString() + '세대' : '세대수 미확인') + '</span>';
+    const out = [householdTag];
     if (i.nearest_station) {
       out.push('<span class="tag rail">🚇 ' + U.esc(i.nearest_station) +
         (i.nearest_line ? ' (' + U.esc(i.nearest_line) + ')' : '') +
@@ -85,8 +86,9 @@ window.DETAIL = (function () {
     document.getElementById('detailInner').innerHTML = '' +
       '<div class="dt-head">' +
         '<div class="dt-name">' + U.esc(i.apt_name) + '</div>' +
+        '<button type="button" class="jg-account" id="savePublicApartment">관심 단지 저장</button>' +
         '<div class="dt-addr">' + U.esc(i.sigungu_name) + ' ' + U.esc(i.legal_dong_name) +
-          ' · ' + U.esc(i.road_address || '') + '</div>' +
+          '<br>' + U.esc(i.full_road_address || i.road_address || '도로명주소 확인 중') + '</div>' +
         '<div class="dt-tags">' + headTags(i) + '</div>' +
       '</div>' +
 
@@ -152,6 +154,10 @@ window.DETAIL = (function () {
           '총 ' + (i.trade_total || 0).toLocaleString() + '건 누적</div>' +
       '</div>';
 
+    document.getElementById('savePublicApartment').onclick = async () => {
+      try {await JIP.save('apartment', String(i.apt_id), {label:i.apt_name});U.toast('관심 단지를 저장했습니다.');}
+      catch(e){U.toast(e.message,4000);}
+    };
     document.getElementById('detailInner').querySelectorAll('.py-tab').forEach(el => {
       el.addEventListener('click', () => {
         curPyeong = el.dataset.py;

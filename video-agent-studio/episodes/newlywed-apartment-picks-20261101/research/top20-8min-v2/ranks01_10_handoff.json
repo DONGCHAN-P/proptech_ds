@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0",
+  "episode_id": "newlywed-apartment-picks-20261101",
+  "revision": "top20-8min-v2",
+  "task": "ranks01_10 research",
+  "owner": "research",
+  "status": "조사 패킷 작성·자체 구조/계산 검증 완료; 독립QA 및 사진권리 확인 대기",
+  "summary": "R01~R10 10지역, 2023 원표10행 전사·2024 승계값10행·직접계산10행, 지역특징15건, 실제 장소 후보13곳. 12묶음 웹조회. 옛 서구는 현재 서해구+검단구로 구분. PDF는 텍스트 확인이며 화상 미검수; 일부 공식 페이지는 검색 색인 범위로 qualified. 사진 파일·권리·픽셀 검수는 visual 대기. 공통 파일·다른 담당 파일 수정 없음.",
+  "output_paths": {
+    "facts": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/ranks01_10_facts.json",
+    "sources": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/ranks01_10_sources.md",
+    "handoff": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/ranks01_10_handoff.json"
+  },
+  "input_versions": {
+    "top20_revision": "top20-8min-v2",
+    "top20_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+    "upstream_source_sha256": "275ce96232e523428bcea02aa3f11bd0f29ca70f2e8a13bbc55aa40b389d1d61",
+    "brief_revision": "top20-8min-v2",
+    "state_phase": "top20_research_and_assets"
+  },
+  "verification": {
+    "checks": [
+      {
+        "name": "대상은 R01~R10 10행",
+        "passed": true
+      },
+      {
+        "name": "2024값과 장면ID는 입력과 동일",
+        "passed": true
+      },
+      {
+        "name": "전사 10행과 전체 열",
+        "passed": true
+      },
+      {
+        "name": "차이·변화율 계산 10행",
+        "passed": true
+      },
+      {
+        "name": "지역별 특징1~2개·장소1~2곳",
+        "passed": true
+      },
+      {
+        "name": "모든 주장에 필수 근거·상태",
+        "passed": true
+      },
+      {
+        "name": "모든 사진은 미다운로드·권리 미확인",
+        "passed": true
+      },
+      {
+        "name": "출처ID 연결 누락없음",
+        "passed": true
+      },
+      {
+        "name": "요약1600자 이내",
+        "passed": true
+      }
+    ],
+    "actual_regions": 10,
+    "actual_2023_transcription_rows": 10,
+    "actual_comparison_rows": 10,
+    "actual_feature_claims": 15,
+    "actual_all_claim_records": 45,
+    "actual_image_candidates": 13,
+    "web_batches": 12,
+    "independent_qa_performed": false,
+    "pdf_page_image_review_performed": false,
+    "image_files_downloaded": 0,
+    "artifacts_read_back": true
+  },
+  "output_sha256": {
+    "facts": "a436794713cb97290701a909d6702aa2108311b0174d4168d9bbd2769c316c8d",
+    "sources": "a6653cb9d7c4ebc364a0f03a77deeda5b568dd969d3b0f1fc34b8984bf725e6e"
+  },
+  "affected_scene_ids": [
+    "S022",
+    "S021",
+    "S020",
+    "S019",
+    "S018",
+    "S017",
+    "S016",
+    "S015",
+    "S014",
+    "S013"
+  ],
+  "affected_claim_ids_on_data_error": [],
+  "data_errors_found": "2024 승계값에서 수정할 오류를 발견했다고 주장하지 않음. 원표 전사·계산값은 후속 독립QA 대조 대상.",
+  "unresolved": [
+    {
+      "issue_id": "G-PDF-VISUAL",
+      "affected_claim_ids": [
+        "R01-COUNT2023",
+        "R02-COUNT2023",
+        "R03-COUNT2023",
+        "R04-COUNT2023",
+        "R05-COUNT2023",
+        "R06-COUNT2023",
+        "R07-COUNT2023",
+        "R08-COUNT2023",
+        "R09-COUNT2023",
+        "R10-COUNT2023"
+      ],
+      "affected_scene_ids": [
+        "S022",
+        "S021",
+        "S020",
+        "S019",
+        "S018",
+        "S017",
+        "S016",
+        "S015",
+        "S014",
+        "S013"
+      ],
+      "issue": "공식 PDF 텍스트 원표와 표 머리글·주석은 확인했지만 페이지 화상 대조는 미완료.",
+      "evidence": "웹 screenshot 32쪽은 이미지가 검토 가능한 형태로 반환되지 않았고33쪽은 cache miss. 로컬 requests는 네트워크 WinError10013, 로컬 PDF 판독 모듈도 없음.",
+      "proposal": "독립QA 담당이 원 PDF32~33쪽의 전체 열 10행을 실제 화상으로 한 번 대조.",
+      "impact": "현재 수치는 원문 텍스트 전사값이며 이미지 대조까지 완료했다는 표현 금지."
+    },
+    {
+      "issue_id": "G-ADM-R01",
+      "affected_claim_ids": [
+        "R01-ADM",
+        "R01-COUNT2023",
+        "R01-COUNT2024",
+        "R01-YOY"
+      ],
+      "affected_scene_ids": [
+        "S022"
+      ],
+      "issue": "옛 서구 전체와 현재 서해구·검단구의 경계 차이.",
+      "evidence": "인천시 공식 개편 안내 2026-07-01 분구 및 관할동 표.",
+      "proposal": "라벨은 인천 옛 서구(2024 기준), 지도는 옛 구역 외곽과 현재 두 구를 함께 구분.",
+      "impact": "순위·숫자는 유지하고 행정명/지도 설명 반영 필요."
+    },
+    {
+      "issue_id": "G-IMAGE-RIGHTS",
+      "affected_claim_ids": [],
+      "affected_scene_ids": [
+        "S022",
+        "S021",
+        "S020",
+        "S019",
+        "S018",
+        "S017",
+        "S016",
+        "S015",
+        "S014",
+        "S013"
+      ],
+      "issue": "후보13곳의 개별 사진 상업영상 권리·픽셀 동일성·원본URL 미확인.",
+      "evidence": "research는 사진 다운로드를 하지 않았으며 공식 후보 페이지·라이선스 표시만 기록.",
+      "proposal": "visual이 별도 공용라이선스 사진을 확보하고 파일별 검증.",
+      "impact": "이 패킷의 공식 페이지 사진을 곧바로 편집 소스로 승격하지 않음."
+    }
+  ],
+  "additional_qualified_claim_ids": [
+    "R03-F01",
+    "R03-F02",
+    "R08-F02",
+    "R09-F01"
+  ],
+  "next_owners": [
+    {
+      "role": "director",
+      "action": "S022의 옛 서구 범위/현재 행정명 반영. 공통 파일은 총괄만 수정."
+    },
+    {
+      "role": "writer",
+      "action": "2024수·비교율과 검증/qualified 상태를 구분해 1~2문장 제안을 사용. 선택동기·순유입 표현 금지."
+    },
+    {
+      "role": "visual",
+      "action": "후보13곳에서 장소가 맞는 공용라이선스 사진 확보·파일별 권리 확인. 비상업 라이선스 공식 첨부는 상업영상 사용 보류."
+    },
+    {
+      "role": "qa",
+      "action": "2023 원표PDF32~33쪽 실제 화상10행·열과 직접 계산10행 독립 대조."
+    }
+  ],
+  "authorization": {
+    "paid_generation": false,
+    "external_claude_transfer": false,
+    "contact_or_message_send": false,
+    "upload": false,
+    "shared_files_modified": false
+  },
+  "handoff_mode": "직접 peer 메시지 도구 없음; 허용된 이 핸드오프 파일로 총괄에 전달"
+}

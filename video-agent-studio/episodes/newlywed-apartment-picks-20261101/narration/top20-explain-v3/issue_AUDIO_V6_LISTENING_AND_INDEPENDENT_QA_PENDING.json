@@ -1,0 +1,39 @@
+{
+  "issue_id": "AUDIO_V6_LISTENING_AND_INDEPENDENT_QA_PENDING",
+  "scene_ids": [
+    "O001",
+    "O002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "I001",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012",
+    "I002",
+    "S013",
+    "S014",
+    "S015",
+    "S016",
+    "S017",
+    "S018",
+    "S019",
+    "S020",
+    "S021",
+    "S022",
+    "C001"
+  ],
+  "problem": "실제 청취·독립QA 미수행. atempo 후 음소 경계 오차는 미측정.",
+  "evidence": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-explain-v3/verification.json",
+  "proposal": "parent/독립QA가 캐시 로컬ASR와 실제청취 후 판단; 총괄 timing lock, editor 최종 통합.",
+  "impact": "생성/신호/wordcoverage 완료. 자연스러움·발음·최종 영상 승인으로 확대하지 않음.",
+  "next_role": [
+    "director",
+    "editor",
+    "qa"
+  ]
+}

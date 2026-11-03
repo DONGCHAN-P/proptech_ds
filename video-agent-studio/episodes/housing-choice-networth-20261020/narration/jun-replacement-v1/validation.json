@@ -1,0 +1,1599 @@
+{
+  "checked_at_utc": "2026-10-26T05:48:11.196665+00:00",
+  "status": "passed",
+  "validation_scope": "준비 산출물만 별도 Python으로 재읽기. 독립 QA 담당 검수·실제 생성·청취·재생은 수행하지 않음.",
+  "checks_passed": 311,
+  "checks_failed": [],
+  "totals": {
+    "chapters": 10,
+    "paragraphs": 54,
+    "raw_characters": 8715,
+    "proposed_spoken_characters": 8949,
+    "revision_reserve_characters": 1790,
+    "proposed_credit_cap": 10739,
+    "included_remaining": 22558,
+    "headroom": 11819,
+    "additional_cash_usd_cap": 0
+  },
+  "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+  "manifest_sha256": "e2452530e6ce66cb4256dc4ed4e12c2b9d13913e8a76fba4149eea04665191e8",
+  "pronunciation_proposal_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "outputs": [
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/account_readonly.json",
+      "sha256": "e7cc7b9b4f97398d8e623d7becfe62d0c3a54603c2daa43913e18862c89f6dfb",
+      "bytes": 2883
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/account_readonly.mjs",
+      "sha256": "0a75a0693bf2c1eb6e27eca50f1cf80af12686653400e4bd69b4467de3921256",
+      "bytes": 4703
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/account_readonly.sandbox-blocked.json",
+      "sha256": "01bb30a859d9542886454d71c62d8853fbc858533d6b0fca9d613de37f2e0e96",
+      "bytes": 1280
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/budget_proposal.json",
+      "sha256": "d7def310f2ea5ae2daead366eb223d603722d574b43f4de8105f0b70f6393d5b",
+      "bytes": 8994
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/handoff.json",
+      "sha256": "2eccbe83c79586cbf0aa8d9abb355368920999b8388051107b86289c42db83bb",
+      "bytes": 4004
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/issue_JUN_PREPARATION_REVIEW.json",
+      "sha256": "ff277feeb7abf5f11c6f1dab81f1a2510b9d1230b98b93b79949c0010e83ec73",
+      "bytes": 2026
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/narration_body.txt",
+      "sha256": "342feb157535b54502ea564f6098df88961d44916510f13039885c413b575f5c",
+      "bytes": 20758
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/narration_manifest.json",
+      "sha256": "e2452530e6ce66cb4256dc4ed4e12c2b9d13913e8a76fba4149eea04665191e8",
+      "bytes": 56681
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C01P01.txt",
+      "sha256": "ee290a994aa4bb67fe1f68b8e4bf88785c7564d74dc2af71c250f81eb52cbcc5",
+      "bytes": 380
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C01P02.txt",
+      "sha256": "642f0396c08dd7bcebb8b6cc3689f1537f26d063f8c50e526ebd4d8672f9da9f",
+      "bytes": 395
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C01P03.txt",
+      "sha256": "0f72a5eae4393170294c3c8d069f193cfa3cd0c81745a6b1bf9eb81fcd65856b",
+      "bytes": 374
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C01P04.txt",
+      "sha256": "9f67c0dea5a3b07c43c7efdc330045726dda6a6d30237479a72cbadb11386d94",
+      "bytes": 390
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C02P01.txt",
+      "sha256": "7f9044fe6d6cec2fb6bdd11e7020f51ab948de637769d578ac064425b2bd4b8c",
+      "bytes": 420
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C02P02.txt",
+      "sha256": "d67b69c9f48ef29e93fc8b22c6a2e9c90ba7580828320f26bb5180c8092a3ed3",
+      "bytes": 608
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C02P03.txt",
+      "sha256": "9373d76d78383e9bccd5b1470aaaadc3727a7bf2dd4276148847600c29ab9fd2",
+      "bytes": 539
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C02P04.txt",
+      "sha256": "fb3da8fa8eb26a1cce07b7117476535c9e844eda828cf8a07ca2cbde190d4768",
+      "bytes": 538
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C02P05.txt",
+      "sha256": "be8c0a1dfc1c69f30434432008a652bffa193e456992b3811109e9d5cc22f6c8",
+      "bytes": 228
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C02P06.txt",
+      "sha256": "c7c91ed22e9dd709451c5b183bfbba288d8287ac54d7e4077d2f444dde3d1598",
+      "bytes": 300
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C03P01.txt",
+      "sha256": "d2c40f82136c9f9cdc87f84c3e8501b2d4d2a32ff29bd17a858b5c379eb0d676",
+      "bytes": 539
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C03P02.txt",
+      "sha256": "32847c896304a3d4e223e941ff817abba3ee5209991af3d5e4282a19bb408210",
+      "bytes": 328
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C03P03.txt",
+      "sha256": "f2d942fbd49d43d8425a253abfaabf654fbc125f9c223e9ecd37433e3876c93b",
+      "bytes": 445
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C03P04.txt",
+      "sha256": "deb09b7764a713abafe684647407f2e4e0a47dfd9fb97f288a9a3aa3995ee3c8",
+      "bytes": 489
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C03P05.txt",
+      "sha256": "9b6d85ad49ac3a6c2bb3cc05e7b29a4cecf67e5450b42781e3729701f9c2cc2b",
+      "bytes": 379
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C04P01.txt",
+      "sha256": "807f6e057a530bcc3bfba42882d76b0900df0d3f5182ecccee04c91665e4851e",
+      "bytes": 419
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C04P02.txt",
+      "sha256": "0f2a05c98166b476388d07e1e4fde8d985380299d09b9c4d491cb96673e01d76",
+      "bytes": 234
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C04P03.txt",
+      "sha256": "1ce4d901f2e0a5b96e3ab4d2ebfdd3521c5b05b7aa2662f1b506db6b6f2929d3",
+      "bytes": 382
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C04P04.txt",
+      "sha256": "cbdd9b9105ce641ca0de9e4685bd901b886f6330ab2a5ccc659e04770430b2cf",
+      "bytes": 249
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C04P05.txt",
+      "sha256": "1515ec7750a5448dd570b7a01cf0542de52089b580d3ad90cf778990eaa02c48",
+      "bytes": 407
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C05P01.txt",
+      "sha256": "99832fb1024a6a2b06d38177dd6684fab943618acb31bd6c2b4a916257324c82",
+      "bytes": 364
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C05P02.txt",
+      "sha256": "25982cb968abf3874dcb0b2bf3bcecabfb101f82ac3272b8d51301ec71feb92a",
+      "bytes": 387
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C05P03.txt",
+      "sha256": "7e3921eabf9b650c3bbabafbc5d12304f6e6f19e0e259dc70528e5f9254df84f",
+      "bytes": 233
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C05P04.txt",
+      "sha256": "b99f4e9f8bd20e45f0215b4652b8db35cf770623ab21a07d09fe8e9bd732126f",
+      "bytes": 416
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C05P05.txt",
+      "sha256": "ad00f459a9e81e1d1c44a5f454e7351cbe69044cbcc0b9e494a7a3cb2cdfb620",
+      "bytes": 277
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C06P01.txt",
+      "sha256": "0d756c5180d0c9d6a134d2738ec33df772e282327c418f4feb27b58c22b48340",
+      "bytes": 350
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C06P02.txt",
+      "sha256": "ffcdcef030145af85959bf333402058887fa4ab0d85d8103ae42c3e1d7156a0c",
+      "bytes": 394
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C06P03.txt",
+      "sha256": "6fe4f6347a9bfb0e10084b98e07a0b115bf4158ae53a6ca82041696fd81b13df",
+      "bytes": 430
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C06P04.txt",
+      "sha256": "6ecffbf10cd54693061ee0266a98915a4f2245568510aafaee8e50616710fb48",
+      "bytes": 337
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C06P05.txt",
+      "sha256": "8a7a7ca30c2a4950601ffbb3039f6cbfb12ceffdb2f5ba1e43ab29005bab880a",
+      "bytes": 330
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C07P01.txt",
+      "sha256": "b9954e2a486e5943c203260c8c90ff6afccfdf1599e0909b75d5da227acb3ac5",
+      "bytes": 316
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C07P02.txt",
+      "sha256": "a02ff70a42fbfb29f63f5453d11e3b2345e056c7935c83f1fadbda85a2ccb3f0",
+      "bytes": 305
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C07P03.txt",
+      "sha256": "f2c7ea3761d07a344443216b74d5b9dca00a1bb014bc26b12b45d66934e95e96",
+      "bytes": 355
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C07P04.txt",
+      "sha256": "f0febbc56c9d02b796773e1fa0e63c8381b81cbc830b63e6b8d9b91cb03675f6",
+      "bytes": 391
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C07P05.txt",
+      "sha256": "0a6ae5b65a1381609423373baed25f83d96c5847f5f4d6bd0951fcef7642a785",
+      "bytes": 456
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C08P01.txt",
+      "sha256": "7ef2fe8709c55ec5c638265020eb07a9b9f9efbabc1c987322f71cc6dea6b4e6",
+      "bytes": 215
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C08P02.txt",
+      "sha256": "cbfe930f4d02dccb715d59c55fe00c37a7cab408a4ff5301c3e3b33be59deae9",
+      "bytes": 351
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C08P03.txt",
+      "sha256": "0b2b6364590f921c1231e543bf96991f1b03c3abda279d049ffb7225393c8955",
+      "bytes": 613
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C08P04.txt",
+      "sha256": "2d8c4b0b25da524d45ea6a26a4d9b7e145f23e8a04ccfe3fe4f02d9031464dae",
+      "bytes": 335
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C08P05.txt",
+      "sha256": "a2aad3bcb03f47438068da40bc67c6c9167b03825757cdd2f8c9da8468083df8",
+      "bytes": 336
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C08P06.txt",
+      "sha256": "5c2f501850b1266aad3f3adcf75258214cd8c0f199efcac05adee605459d33a4",
+      "bytes": 406
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C08P07.txt",
+      "sha256": "7e95f6a12f6c4a3b15d273c11ba5222ef01adceeb2d0ad0439fb9768e0b3d95c",
+      "bytes": 373
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C08P08.txt",
+      "sha256": "684d90c2dc007eb531ebb338a860a3840d7497a9ea5398d6034727c7770ad85d",
+      "bytes": 315
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C08P09.txt",
+      "sha256": "0112504dd731d90153563b66688628bf60acc7643e7f680a8b170c3078e53a63",
+      "bytes": 323
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C09P01.txt",
+      "sha256": "baebc05d5f5804617e2f9640a7e2d5d1934ee95e5c0ab618bb909d811088dea2",
+      "bytes": 331
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C09P02.txt",
+      "sha256": "18e44327d9ed74d3901829f64c9af072c144485a416fc950e79a6c06418a6592",
+      "bytes": 334
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C09P03.txt",
+      "sha256": "f97d0c3c8f30c60b1783465c2c00d6d9e06a3f2f481c8c79c73f37e32e197d28",
+      "bytes": 410
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C09P04.txt",
+      "sha256": "431e6cd9d777a86e798d7b29a345455e4bce98e736d22475c9ea7ddac68bce7a",
+      "bytes": 544
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C10P01.txt",
+      "sha256": "3be501b1b7e20f28f2b9c2eb7c8204d9f9161071f84584655da7dbe1bf455dbb",
+      "bytes": 337
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C10P02.txt",
+      "sha256": "8e43463ec475e6ef928d6c2d7952dba9e10569b2d824a94d92c2d08ee203f19c",
+      "bytes": 494
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C10P03.txt",
+      "sha256": "c88d053e34a9307349f76a55a22ccc05ad0fb323335b48c9fcdc29b465bb28b4",
+      "bytes": 418
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C10P04.txt",
+      "sha256": "31e1908d0354d667acc5ade14d1838cd5281d435c1fab03609492eae751a01cf",
+      "bytes": 550
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C10P05.txt",
+      "sha256": "8dff065e489c6ad64c11070dde4888c2515f9db6b34c8b604da4e76ce23b5df2",
+      "bytes": 274
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/paragraphs/C10P06.txt",
+      "sha256": "1063553f1a31f553170998156f5778a310374650cf4a72fc95c8b2f638865d3a",
+      "bytes": 309
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/prepare.mjs",
+      "sha256": "6f29ad4c1627abd71b850e2a440fde341b6f0b4343869415db8866aba14773a5",
+      "bytes": 19530
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/pronunciation_proposal.json",
+      "sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+      "bytes": 101447
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/timing_proposals.json",
+      "sha256": "3f074156f73209f12b1aa0286e8e1c3cfe88ccb71f3ad1d477e484c18d7174ed",
+      "bytes": 8739
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/verify_preparation.py",
+      "sha256": "24f34cf04194c56940a4002a62c6feaa55c2b9d58eab8211355a154c6a6757f6",
+      "bytes": 8422
+    }
+  ],
+  "checks": [
+    {
+      "check": "확정 대본 SHA 일치",
+      "passed": true
+    },
+    {
+      "check": "본문만 10장54문단",
+      "passed": true
+    },
+    {
+      "check": "문단 ID 중복 없음",
+      "passed": true
+    },
+    {
+      "check": "C01P01 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C01P01 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C01P02 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C01P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C01P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C01P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C01P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C01P02 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C01P03 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C01P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C01P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C01P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C01P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C01P03 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C01P04 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C01P04 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C02P01 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C02P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P01 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C02P02 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C02P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P02 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C02P03 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C02P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P03 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C02P04 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C02P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P04 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C02P05 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C02P05 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C02P06 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C02P06 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P06 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P06 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C02P06 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C03P01 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C03P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P01 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C03P02 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C03P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P02 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C03P03 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C03P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P03 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C03P04 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C03P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C03P04 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C03P05 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C03P05 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C04P01 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C04P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P01 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C04P02 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C04P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P02 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C04P03 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C04P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P03 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C04P04 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C04P04 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C04P05 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C04P05 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P05 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P05 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C04P05 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C05P01 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C05P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C05P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C05P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C05P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C05P01 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C05P02 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C05P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C05P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C05P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C05P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C05P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C05P02 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C05P03 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C05P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C05P03 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C05P04 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C05P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C05P04 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C05P05 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C05P05 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C06P01 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C06P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P01 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C06P02 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C06P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P02 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C06P03 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C06P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P03 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C06P04 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C06P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C06P04 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C06P05 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C06P05 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C07P01 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C07P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P01 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C07P02 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C07P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P02 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C07P03 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C07P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P03 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C07P04 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C07P04 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C07P05 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C07P05 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C07P05 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P01 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P01 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P02 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P02 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P03 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P03 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P04 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P04 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P04 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P05 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P05 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P05 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P05 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P05 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P05 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P05 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P05 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P05 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P06 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P06 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P06 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P06 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P06 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P06 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P07 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P07 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P07 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P07 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P07 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P07 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P07 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P07 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P07 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C08P07 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P08 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P08 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P09 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C08P09 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C09P01 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C09P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C09P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C09P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C09P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C09P01 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C09P01 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C09P02 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C09P02 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C09P03 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C09P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C09P03 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C09P03 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C09P04 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C09P04 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C10P01 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C10P01 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C10P02 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C10P02 발음 원문 offset",
+      "passed": true
+    },
+    {
+      "check": "C10P02 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C10P03 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C10P03 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C10P04 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C10P04 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C10P05 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C10P05 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "C10P06 원문/파일/근거 일치",
+      "passed": true
+    },
+    {
+      "check": "C10P06 발음 제안/체크섬 일치",
+      "passed": true
+    },
+    {
+      "check": "원문8715·발음후보8949·차이234자",
+      "passed": true
+    },
+    {
+      "check": "본문 합본 SHA/구분자",
+      "passed": true
+    },
+    {
+      "check": "매니페스트 참조 SHA",
+      "passed": true
+    },
+    {
+      "check": "불변 입력 script",
+      "passed": true
+    },
+    {
+      "check": "불변 입력 free_tts_v6_manifest",
+      "passed": true
+    },
+    {
+      "check": "불변 입력 pronunciation_dictionary",
+      "passed": true
+    },
+    {
+      "check": "불변 입력 previous_audio_timing",
+      "passed": true
+    },
+    {
+      "check": "불변 입력 previous_run_inputs",
+      "passed": true
+    },
+    {
+      "check": "불변 입력 tts_config",
+      "passed": true
+    },
+    {
+      "check": "불변 입력 account_snapshot",
+      "passed": true
+    },
+    {
+      "check": "인증 GET3건과 계정 차감 산식",
+      "passed": true
+    },
+    {
+      "check": "승인모델·음성·배수",
+      "passed": true
+    },
+    {
+      "check": "exact_locked_body 20% 상한",
+      "passed": true
+    },
+    {
+      "check": "proposed_v6_pronunciation_expansion 20% 상한",
+      "passed": true
+    },
+    {
+      "check": "상한10739·예비1790·잔여여유11819",
+      "passed": true
+    },
+    {
+      "check": "추가현금0·미생성",
+      "passed": true
+    },
+    {
+      "check": "계정 검토 산식/초과청구 비활성",
+      "passed": true
+    },
+    {
+      "check": "Jun 미측정과 기존 근거 분리",
+      "passed": true
+    },
+    {
+      "check": "인계 산출물 narration_manifest.json",
+      "passed": true
+    },
+    {
+      "check": "인계 산출물 pronunciation_proposal.json",
+      "passed": true
+    },
+    {
+      "check": "인계 산출물 narration_body.txt",
+      "passed": true
+    },
+    {
+      "check": "인계 산출물 budget_proposal.json",
+      "passed": true
+    },
+    {
+      "check": "인계 산출물 timing_proposals.json",
+      "passed": true
+    },
+    {
+      "check": "인계 산출물 issue_JUN_PREPARATION_REVIEW.json",
+      "passed": true
+    },
+    {
+      "check": "인계 산출물 account_readonly.json",
+      "passed": true
+    },
+    {
+      "check": "인계 산출물 account_readonly.sandbox-blocked.json",
+      "passed": true
+    },
+    {
+      "check": "저장물 JSON 구문",
+      "passed": true
+    },
+    {
+      "check": "정확히54개 무개행 TXT",
+      "passed": true
+    },
+    {
+      "check": "현재 검수 범위 명시",
+      "passed": true
+    }
+  ]
+}

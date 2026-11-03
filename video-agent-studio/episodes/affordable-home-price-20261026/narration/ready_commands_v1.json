@@ -1,0 +1,29 @@
+{
+  "cwd": "C:\\projects\\realestate_reco",
+  "current_scope": "local preparation ONLY; generation command MUST NOT run yet",
+  "commands": {
+    "check_gate": "tools/python311/python.exe -B -X utf8 video-agent-studio/episodes/affordable-home-price-20261026/narration/production_v1.py check-gate --prepared video-agent-studio/episodes/affordable-home-price-20261026/narration/prepare-v2-r2/prepared.json",
+    "generate_AFTER_main_instruction_and_dual_lock": "tools/python311/python.exe -B -X utf8 video-agent-studio/episodes/affordable-home-price-20261026/narration/production_v1.py generate --prepared video-agent-studio/episodes/affordable-home-price-20261026/narration/prepare-v2-r2/prepared.json --authorization video-agent-studio/episodes/affordable-home-price-20261026/narration/main_tts_authorization.json --out video-agent-studio/episodes/affordable-home-price-20261026/narration/production-injoon-v2",
+    "offline_tests": "tools/python311/python.exe -B -X utf8 video-agent-studio/episodes/affordable-home-price-20261026/narration/test_local_v1.py"
+  },
+  "gate_requirements": [
+    "main direct instruction recorded with exact script and prepared SHA",
+    "director/production-v1/locked_script.json approved true with actual Codex+Claude receipt file paths and pinned SHA",
+    "canonical outputs/script-final-v2/script_v2.md byte-identical to frozen SHA",
+    "cash0/free-only approval"
+  ],
+  "lock_schema_supported": {
+    "approved": true,
+    "script_path": "outputs/script-final-v2/script_v2.md",
+    "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+    "codex_receipt": {
+      "path": "actual episode-relative receipt",
+      "sha256": "actual receipt SHA"
+    },
+    "claude_receipt": {
+      "path": "actual episode-relative receipt",
+      "sha256": "actual receipt SHA"
+    }
+  },
+  "failure_policy": "stop on first failure; preserve raw/partial files and failure.json; diagnose before explicit resumption; no automatic retry"
+}

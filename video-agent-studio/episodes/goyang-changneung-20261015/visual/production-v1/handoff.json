@@ -1,0 +1,43 @@
+{
+  "role": "visual",
+  "revision": "visual-plan-v1-update2",
+  "outputs": [
+    "scene_visual_plan.json",
+    "assets.json",
+    "reuse_assets.json",
+    "../../outputs/visual-review-v1/S010_whole_locator_review.png",
+    "../../outputs/visual-review-v1/S030_calendar_review.png",
+    "../../outputs/visual-review-v1/S050_comparison_review.png",
+    "review.html"
+  ],
+  "input_versions": [
+    "research-v1 map_asset_register/calendar/comparison_candidates",
+    "video/src/namyangju-v15/project_v15.json readability-cta-v15",
+    "map_platform_research peer: S4 latest p47 2030.03입주·6유6초목표",
+    "research/production-v2/calendar.json",
+    "research/prices-v2/comparisons.json"
+  ],
+  "verified": [
+    "3개PNG 실제 1920x1080 생성·직접 view",
+    "원본전체 fit / crop·overpaint 없음",
+    "브랜드/BGM 경로 존재·SHA256",
+    "S030/S050 실값 갱신 후 PNG 직접 view: 월미정연도band/입주학교별도lane/5개메인+n3참고 확인",
+    "이전 S030/S050 PNG _internal-v1 이름 보존"
+  ],
+  "unresolved": [
+    "최신 전체 고시·상업영상 이용조건",
+    "대본·음성·타임록 미확정",
+    "본편 컴포넌트/bundle/MP4 미생성; 정적HTML+PS원본+PNG만 제공",
+    "최종 v15 Pretendard 적용·실제 음성 타임록·MP4검수는후속편집; 현재내부설계판"
+  ],
+  "affected_scenes": [
+    "S030",
+    "S050"
+  ],
+  "next_owner": [
+    "director",
+    "writer",
+    "research",
+    "editor"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "review_date": "2026-10-22",
+  "trigger": "User questioned whether viewers would accept the housing three-year CAGR of -2.9%.",
+  "status": "comparison_basis_requires_revision_before_publication",
+  "video_changed_in_this_review": false,
+  "findings": [
+    "The label 'recent three years' actually refers to 2022 through 2025 annual observations, not a trailing period ending in October 2026.",
+    "Housing is chained annual median matched-sample price change; S&P is year-end index change. The comparison does not align observation timing.",
+    "Housing is a custom index with equal complex weights and changing matched samples, not an official representative market index.",
+    "Pooling Seoul, Gyeonggi and Incheon conceals materially different regional paths. Regional aggregation does not by itself establish why viewers perceive prices differently."
+  ],
+  "regional_results": [
+    {"region": "Seoul", "2022_to_2025_cagr_pct": 0.7427146140755125, "2023_to_2025_cumulative_pct": 14.85593284511928, "2025_annual_change_pct": 9.201533566347697},
+    {"region": "Gyeonggi", "2022_to_2025_cagr_pct": -3.7331240822028877, "2023_to_2025_cumulative_pct": 3.2557829031686802, "2025_annual_change_pct": 1.251544443240124},
+    {"region": "Incheon", "2022_to_2025_cagr_pct": -4.447039802845509, "2023_to_2025_cumulative_pct": 3.14883770287242, "2025_annual_change_pct": 0.39258095957160927}
+  ],
+  "local_sources": [
+    "analysis/housing_growth_2006/period_growth.csv",
+    "analysis/housing_growth_2006/matched_annual_growth.csv",
+    "analysis/housing_growth_2006/audit.json",
+    "analysis/housing_choice_returns/calculate.py",
+    "analysis/housing_choice_returns/comparison.json"
+  ],
+  "official_methodology_reference": "https://stat.molit.go.kr/portal/cate/statMetaView.do?hRsId=467",
+  "revision_recommendation": [
+    "Show separate Seoul, Gyeonggi and Incheon paths and explicit start and end observation dates.",
+    "Align housing and stock observation periods and recalculate all 3/5/10-year windows consistently.",
+    "Cross-check the custom housing series with the official real-transaction index and report differences.",
+    "Retain negative results if supported; do not select a new start date only to obtain a positive return."
+  ]
+}

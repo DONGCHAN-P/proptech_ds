@@ -1,0 +1,396 @@
+{
+  "task_id": "top20-free-narration-final-cut-handoff",
+  "at_utc": "2026-11-01T15:10:49.539275+00:00",
+  "status": "technical_cut_checks_passed_listening_pending_stop_requested",
+  "final_timing_authority": {
+    "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked_timing.json",
+    "sha256": "6b705657f372955248b614af6f6a928f98b368335be74c53cdfe6984401a6175",
+    "owner": "director",
+    "timing_locked": true,
+    "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+    "audio_sha256": "2de854444aa6e267d8d2e228746f0dfd3d9336de8e9d714158c3bb033d122c44",
+    "audio_origin_global_s": 0,
+    "duration_s": 468.0031746031746,
+    "opening_order": "data_question_hook_then_5s_clean_brand_then_definition",
+    "clean_brand_source": "existing approved clean v7 video audio"
+  },
+  "source_v2_timing": {
+    "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/timing_proposals_v2.json",
+    "sha256": "81ab992bb5a5ee40311290936b439f2a4504c717801ad80ba9ee45c49b0acd34",
+    "status": "historical_narration_proposal_use_director_lock_for_final_clock"
+  },
+  "raw_v1_files_verified_unchanged": 165,
+  "v2_scene_wav_hashes_verified_unchanged": 26,
+  "sentences": 103,
+  "detected_required_technical_defects": 0,
+  "true_phonetic_alignment_error_s": null,
+  "cut_boundary_source_edges": 15,
+  "unique_output_junctions": 12,
+  "min_provider_word_margin_s": 0.3194028722600173,
+  "max_20ms_peak_pcm": 8,
+  "max_20ms_peak_dbfs": -72.24719895935549,
+  "rms_interpretation": "audioop integer RMS rounds below1 to0; peak up to8/32768. Low-level near-silence measurement, not proof of perfect silence or perceptual quality.",
+  "sample_quantization_s": 2.2675736961451248e-05,
+  "alignment_basis": "provider words /1.35 followed by exact PCM slice translation; no char-proportional alignment",
+  "boundaries": [
+    {
+      "scene_id": "S003",
+      "edge": "retained_group_end",
+      "between_sentence_ids": [
+        "S003-03",
+        "S003-04"
+      ],
+      "final_lock_junction_s": 61.77816326530612,
+      "source_v1_cut_time_s": 11.297210884353742,
+      "provider_word_margin_before_cut_s": 0.3712849584278164,
+      "provider_word_margin_after_cut_s": 0.3694557823129241,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 0,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "S004",
+      "edge": "retained_group_end",
+      "between_sentence_ids": [
+        "S004-03",
+        "S004-04"
+      ],
+      "final_lock_junction_s": 73.14018140589569,
+      "source_v1_cut_time_s": 11.36201814058957,
+      "provider_word_margin_before_cut_s": 0.3712773998488288,
+      "provider_word_margin_after_cut_s": 0.3694633408919117,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 0,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "S005",
+      "edge": "retained_group_end",
+      "between_sentence_ids": [
+        "S005-02",
+        "S005-03"
+      ],
+      "final_lock_junction_s": 79.88126984126984,
+      "source_v1_cut_time_s": 6.74108843537415,
+      "provider_word_margin_before_cut_s": 0.3892365835222984,
+      "provider_word_margin_after_cut_s": 0.3885411942554793,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 4,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "S006",
+      "edge": "retained_group_end",
+      "between_sentence_ids": [
+        "S006-03",
+        "S006-04"
+      ],
+      "final_lock_junction_s": 90.21990929705215,
+      "source_v1_cut_time_s": 10.338639455782314,
+      "provider_word_margin_before_cut_s": 0.32938019652305606,
+      "provider_word_margin_after_cut_s": 0.32802721088435227,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 0,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "S008",
+      "edge": "retained_group_end",
+      "between_sentence_ids": [
+        "S008-03",
+        "S008-04"
+      ],
+      "final_lock_junction_s": 151.84659863945578,
+      "source_v1_cut_time_s": 12.111859410430839,
+      "provider_word_margin_before_cut_s": 0.3433408919123213,
+      "provider_word_margin_after_cut_s": 0.3418442932728638,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 0,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "S009",
+      "edge": "retained_group_end",
+      "between_sentence_ids": [
+        "S009-03",
+        "S009-04"
+      ],
+      "final_lock_junction_s": 161.52886621315193,
+      "source_v1_cut_time_s": 9.682267573696144,
+      "provider_word_margin_before_cut_s": 0.395230536659108,
+      "provider_word_margin_after_cut_s": 0.3269916855631134,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 2,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "S010",
+      "edge": "retained_group_end",
+      "between_sentence_ids": [
+        "S010-03",
+        "S010-04"
+      ],
+      "final_lock_junction_s": 176.1871882086168,
+      "source_v1_cut_time_s": 14.658321995464853,
+      "provider_word_margin_before_cut_s": 0.3712849584278164,
+      "provider_word_margin_after_cut_s": 0.36945578231292586,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 0,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "S011",
+      "edge": "retained_group_end",
+      "between_sentence_ids": [
+        "S011-02",
+        "S011-03"
+      ],
+      "final_lock_junction_s": 183.55192743764172,
+      "source_v1_cut_time_s": 7.364739229024943,
+      "provider_word_margin_before_cut_s": 0.3832577475434613,
+      "provider_word_margin_after_cut_s": 0.38526077097505684,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 0,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "S011",
+      "edge": "retained_group_start",
+      "between_sentence_ids": [
+        "S011-03",
+        "S011-04"
+      ],
+      "final_lock_junction_s": 183.55192743764172,
+      "source_v1_cut_time_s": 11.70859410430839,
+      "provider_word_margin_before_cut_s": 0.3752607709750553,
+      "provider_word_margin_after_cut_s": 0.37473922902494294,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 0,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "S017",
+      "edge": "retained_group_end",
+      "between_sentence_ids": [
+        "S017-03",
+        "S017-04"
+      ],
+      "final_lock_junction_s": 315.33197278911564,
+      "source_v1_cut_time_s": 12.662312925170069,
+      "provider_word_margin_before_cut_s": 0.37527588813303403,
+      "provider_word_margin_after_cut_s": 0.3747241118669695,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 5,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "S019",
+      "edge": "retained_group_end",
+      "between_sentence_ids": [
+        "S019-03",
+        "S019-04"
+      ],
+      "final_lock_junction_s": 370.2250340136054,
+      "source_v1_cut_time_s": 10.430657596371882,
+      "provider_word_margin_before_cut_s": 0.3473242630385478,
+      "provider_word_margin_after_cut_s": 0.34712018140589507,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 0,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "S020",
+      "edge": "retained_group_end",
+      "between_sentence_ids": [
+        "S020-02",
+        "S020-03"
+      ],
+      "final_lock_junction_s": 378.59015873015875,
+      "source_v1_cut_time_s": 8.365124716553288,
+      "provider_word_margin_before_cut_s": 0.3373469387755108,
+      "provider_word_margin_after_cut_s": 0.3385789871504148,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 0,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "S020",
+      "edge": "retained_group_start",
+      "between_sentence_ids": [
+        "S020-03",
+        "S020-04"
+      ],
+      "final_lock_junction_s": 378.59015873015875,
+      "source_v1_cut_time_s": 14.283242630385487,
+      "provider_word_margin_before_cut_s": 0.35731670445956176,
+      "provider_word_margin_after_cut_s": 0.35564625850340015,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 0,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "C001",
+      "edge": "retained_group_end",
+      "between_sentence_ids": [
+        "C001-05",
+        "C001-06"
+      ],
+      "final_lock_junction_s": 448.8379365079365,
+      "source_v1_cut_time_s": 22.3008843537415,
+      "provider_word_margin_before_cut_s": 0.3194028722600173,
+      "provider_word_margin_after_cut_s": 0.319486016628872,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 0,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    },
+    {
+      "scene_id": "C001",
+      "edge": "retained_group_start",
+      "between_sentence_ids": [
+        "C001-06",
+        "C001-07"
+      ],
+      "final_lock_junction_s": 448.8379365079365,
+      "source_v1_cut_time_s": 27.46439909297052,
+      "provider_word_margin_before_cut_s": 0.3532879818594097,
+      "provider_word_margin_after_cut_s": 0.40597127739984984,
+      "20ms_pcm_rms_integer": 0,
+      "20ms_pcm_peak": 8,
+      "sample_at_cut": 0,
+      "actual_listening_verified": false,
+      "true_phonetic_error_s": null
+    }
+  ],
+  "qa_playback_windows": [
+    {
+      "junction_s": 61.778163265,
+      "start_s": 60.278163265,
+      "end_s": 63.278163265,
+      "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+      "actual_listening_performed": false
+    },
+    {
+      "junction_s": 73.140181406,
+      "start_s": 71.640181406,
+      "end_s": 74.640181406,
+      "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+      "actual_listening_performed": false
+    },
+    {
+      "junction_s": 79.881269841,
+      "start_s": 78.381269841,
+      "end_s": 81.381269841,
+      "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+      "actual_listening_performed": false
+    },
+    {
+      "junction_s": 90.219909297,
+      "start_s": 88.719909297,
+      "end_s": 91.719909297,
+      "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+      "actual_listening_performed": false
+    },
+    {
+      "junction_s": 151.846598639,
+      "start_s": 150.346598639,
+      "end_s": 153.346598639,
+      "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+      "actual_listening_performed": false
+    },
+    {
+      "junction_s": 161.528866213,
+      "start_s": 160.028866213,
+      "end_s": 163.028866213,
+      "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+      "actual_listening_performed": false
+    },
+    {
+      "junction_s": 176.187188209,
+      "start_s": 174.687188209,
+      "end_s": 177.687188209,
+      "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+      "actual_listening_performed": false
+    },
+    {
+      "junction_s": 183.551927438,
+      "start_s": 182.051927438,
+      "end_s": 185.051927438,
+      "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+      "actual_listening_performed": false
+    },
+    {
+      "junction_s": 315.331972789,
+      "start_s": 313.831972789,
+      "end_s": 316.831972789,
+      "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+      "actual_listening_performed": false
+    },
+    {
+      "junction_s": 370.225034014,
+      "start_s": 368.725034014,
+      "end_s": 371.725034014,
+      "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+      "actual_listening_performed": false
+    },
+    {
+      "junction_s": 378.59015873,
+      "start_s": 377.09015873,
+      "end_s": 380.09015873,
+      "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+      "actual_listening_performed": false
+    },
+    {
+      "junction_s": 448.837936508,
+      "start_s": 447.337936508,
+      "end_s": 450.337936508,
+      "audio_file": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/narration_with_clean_brand.wav",
+      "actual_listening_performed": false
+    }
+  ],
+  "required_pending_qa": [
+    {
+      "id": "CUT_BOUNDARY_LISTENING_UNVERIFIED",
+      "scope": "12 unique output junctions / 15 source cut edges",
+      "status": "not_performed_by_narration",
+      "action": "Listen in final director audio for clipped final/initial syllables, clicks, breath and sentence continuity."
+    }
+  ],
+  "actual_listening_performed": false,
+  "asr_performed_by_narration": false,
+  "parent_asr_status": "Parent reported 8 key scenes offline medium ASR running; results not reviewed by narration and not marked passed.",
+  "independent_qa_performed_by_narration": false,
+  "new_generation_calls": 0,
+  "new_audio_mutations": 0,
+  "new_timing_mutations": 0,
+  "paid_api_calls": 0,
+  "cash_cost_krw": 0,
+  "next_role": "qa; director owns final timing; narration stops after this metadata handoff"
+}

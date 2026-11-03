@@ -1,0 +1,22 @@
+const fs=require('fs'),path=require('path'),cp=require('child_process'),assert=require('assert');
+const dir=__dirname,hist=path.join(dir,'history/before-map-clearance');fs.mkdirSync(hist,{recursive:true});
+for(const p of ['narration_input/M001.txt','manifest.json','script_v1.md','scene_proposals.json']){const dst=path.join(hist,path.basename(p));if(!fs.existsSync(dst))fs.copyFileSync(path.join(dir,p),dst);}
+const bpath=path.join(dir,'build.cjs');let b=fs.readFileSync(bpath,'utf8');
+const old='다만 이번에 확인한 전체 계획도는 과거 공고 첨부판입니다. 최신 지구계획 고시 정본과 대조가 끝나지 않아 전체 면적이나 주택 수를 하나의 확정 숫자로 말하지 않겠습니다.';
+const next='전체 배치는 이천이십오년 십이월 변경고시의 본단지 계획도를 기준으로 보고, 단지별 가격과 입주, 학교는 각 모집공고 기준으로 구분하겠습니다. 이후의 모든 변경까지 확인된 것은 아니므로 전체 면적이나 주택 수를 하나의 최신 확정 숫자로 말하지 않겠습니다.';
+assert(b.includes(old));b=b.replace(old,next);
+b=b.replace("['CN-PLAN-VERSION','CN2-S1-SURROUNDINGS','CN2-S1-SCHOOL','CN-S34-LIFE']","['CN-PLAN-VERSION','CN2-S1-SURROUNDINGS','CN2-S1-SCHOOL','CN-S34-LIFE']");
+b=b.replace('전체 계획도 첫 제시 필요. 최신성·상업영상 이용허락 해결 전 원도면 표시 HOLD. 대체는 독립 사실 관계도, 지도 모사 금지. 거시 화면 블록핀 상시노출 금지.','2025.12.24 국토교통부 고시2025-813 본단지 가구·획지 총괄도 원본 전체·범례·표제를 보존한 비례fit 조건부 후보. 도면 밖 고시일·출처·공공누리3유형·원URL 표시. 크롭·overpaint·trace·지도 위 라벨/테두리 금지. 이후 변경 전수확인 아님. 상세는 독립 사실 관계도. 거시 블록핀 상시노출 금지.');
+b=b.replace('최신 전체 고시정본·도면 상업영상 이용허락·계획역 정밀위치·최신 교육청 개교확정·S1 거주의무 기간.','2025.12.24 이후 후속 변경 전수확인·도면 크롭/가공 권리·계획역 정밀위치·최신 교육청 개교확정·S1 거주의무 기간.');
+b=b.replace('원도면 첫 제시 장면은 권리 해결 전 HOLD다.','고시2025-813 본단지 원도면은 원본 전체 비례fit·외부 출처표시 조건부 후보이며 크롭·덧그리기·트레이싱은 허용 범위가 아니다.');
+b=b.replace("'latest landuse original and commercial display rights'","'post-2025.12.24 changes and map crop/derivative rights'");
+b=b.replace("console.log(JSON.stringify({chapters:chapters.length,individual_characters:",`const scp=path.join(__dirname,'scene_proposals.json'),scdata=JSON.parse(fs.readFileSync(scp,'utf8'));
+scdata.scenes[0].claim_ids=['CN2-S1-TYPE','CN2-S4-TYPE','CN2-S5-PRICE'];
+scdata.scenes[1].hold='원본 전체fit은 개별 공공누리3유형 및 별도제한 확인·외부출처표시 조건부 후보. 크롭/덧그리기/트레이싱/지도 위 locator 금지';
+scdata.scenes[1].gaps=['2025.12.24 이후 모든 변경 전수확인 아님','도면 가공권리 없음','예정역 정밀위치 미확인'];
+scdata.scenes[1].evidence_paths=['research/map-clearance-v1/handoff.md','research/map-clearance-v1/download_manifest.json'];
+scdata.scenes[1].labels=['본단지 계획 기준 2025.12.24','국토교통부 고시2025-813 / 토지이음 / 공공누리3유형','2026 후속 변경 부재 전수확인 아님'];json(scp,scdata);
+const mapInput='research/map-clearance-v1/handoff.md';mf.inputs.push({path:mapInput,sha256:sha(fs.readFileSync(path.join(root,mapInput)))});json(mfpath,mf);
+console.log(JSON.stringify({chapters:chapters.length,individual_characters:`);
+fs.writeFileSync(bpath,b,'utf8');cp.execFileSync(process.execPath,[bpath],{stdio:'inherit'});
+fs.writeFileSync(path.join(dir,'history/map_clearance_change.json'),JSON.stringify({issue_id:'QA-SCRIPT-01',scene_id:'M001',reason:'확보된 고시2025-813 본단지 원도면과 개별KOGL3 근거 반영',old_text:old,new_text:next,other_narration_unchanged:true,metadata_only_addition:'M000 일반공공분양 claim 연결; M001 화면채택조건 갱신',preserved:'history/before-map-clearance/'},null,2)+'\n','utf8');

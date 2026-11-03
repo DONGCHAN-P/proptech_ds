@@ -1,0 +1,29 @@
+{
+  "issue_id": "GATE-SCHEMA-01",
+  "scene_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10"
+  ],
+  "problem": "media_contract는 내용 통과 영수증을 요구하지만 locked_script.json의 실제 필드 규격은 아직 없음",
+  "evidence": "본 작업 시작 시 locked_script.json 미존재. Codex QA는 checked_sha256/approved/required_issues, Claude 실행 영수증은 script_sha256/approved와 별도 review.json을 사용함",
+  "proposal": {
+    "script_path": "writer/private-production-v1/script_v4_candidate.md",
+    "script_sha256": "총괄이 실제 확정 파일에서 계산할 SHA",
+    "codex_receipt": "qa/private-production-v1/content_v4_review.json",
+    "claude_receipt": "실제 동일 SHA의 통과 Claude 실행 receipt.json 경로"
+  },
+  "receipt_contract": "episode 상대 경로 또는 {path,sha256}. 서로 다른 두 파일이어야 하며 동일 복사본 금지. reviewer/agent/role/model_requested로 Codex(video_qa 포함)와 Claude(opus 포함) 식별. approved=true, 실제 script/artifact/checked SHA 일치, required_issues=[] 필요. Claude 실행 receipt에 required_issues가 없으면 같은 폴더 review.json도 확인. exit_code!=0/is_error는 차단. 존재하는 approval_scope/review_scope는 대본 내용 검수여야 함.",
+  "impact": "잠금 파일을 이 담당이 만들거나 승인값을 추정하지 않음. 스키마가 다르면 실패 폐쇄 후 총괄이 연결 규격을 확정해야 함.",
+  "next_owner": "video_director",
+  "peer_message_tool_available": false,
+  "status": "resolved_actual_v5_receipt_schema_and_pins",
+  "resolution_evidence": "production-injoon-v5/run_inputs.json"
+}

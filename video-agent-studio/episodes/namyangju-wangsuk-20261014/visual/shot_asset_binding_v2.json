@@ -1,0 +1,1664 @@
+{
+  "revision": "shot-asset-binding-v2",
+  "inputs": [
+    "writer/shot_plan_video_v2.json",
+    "visual/assets_v5.json",
+    "visual/regional_meta_v3.json"
+  ],
+  "selection_rule": "exact shot_id lookup only; random/modulo selection forbidden; missing id -> explicit same-subject fallback or fail closed",
+  "bindings": [
+    {
+      "shot_id": "V2-001",
+      "chapter_id": "S001",
+      "requested_type": "previous_episode_excerpt",
+      "render_type": "prev_excerpt",
+      "asset_ids": [
+        "PREV_V14"
+      ],
+      "actual_place": "광교·동탄",
+      "reason": "전편 시리즈의 실제 영상 기억을 연결",
+      "claim_ids": [],
+      "mandatory_label": "전편: 광교·동탄",
+      "motion_allowed": "original_excerpt_only",
+      "fallback_ids": [
+        "NATIVE_five_questions"
+      ],
+      "restrictions": [
+        "원본전편 음소거 발췌·기존출처 유지; 남양주 현재영상처럼표현금지"
+      ]
+    },
+    {
+      "shot_id": "V2-002",
+      "chapter_id": "S001",
+      "requested_type": "real_map",
+      "render_type": "real_map",
+      "asset_ids": [
+        "S002_namyangju_regional_osm_v3"
+      ],
+      "actual_place": "남양주 별내·다산·진접·오남·호평·평내·화도·진건·퇴계원·일패·이패",
+      "reason": "전편에서 새 도시로 위치 전환",
+      "claim_ids": [
+        "DEV-001"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "bounded_camera_and_staged_verified_labels",
+      "fallback_ids": [
+        "NATIVE_five_questions"
+      ],
+      "restrictions": [
+        "camera focus는 명시한 검증 지역명만; 좌표의 실제위치 유지",
+        "산업단지/역출입구/왕숙미래노선 정확한pin 미검증이므로 표시 금지"
+      ],
+      "camera_focus_points": [],
+      "geography_file": "visual/regional_geo_v4.geojson",
+      "overview_bounds": [
+        127.03,
+        37.55,
+        127.4,
+        37.85
+      ]
+    },
+    {
+      "shot_id": "V2-003",
+      "chapter_id": "S001",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_five_questions"
+      ],
+      "actual_place": null,
+      "reason": "다섯 질문을 낭독 순서로 소개",
+      "claim_ids": [],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_five_questions"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-004",
+      "chapter_id": "S001",
+      "requested_type": "real_map",
+      "render_type": "real_map",
+      "asset_ids": [
+        "S002_namyangju_regional_osm_v3"
+      ],
+      "actual_place": "남양주 별내·다산·진접·오남·호평·평내·화도·진건·퇴계원·일패·이패",
+      "reason": "이번 조사 범위를 지역으로 보임",
+      "claim_ids": [
+        "DEV-011",
+        "LIV-011"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "bounded_camera_and_staged_verified_labels",
+      "fallback_ids": [
+        "NATIVE_five_questions"
+      ],
+      "restrictions": [
+        "camera focus는 명시한 검증 지역명만; 좌표의 실제위치 유지",
+        "산업단지/역출입구/왕숙미래노선 정확한pin 미검증이므로 표시 금지"
+      ],
+      "camera_focus_points": [
+        {
+          "name": "별내동",
+          "lon": 127.1216627,
+          "lat": 37.6565148,
+          "osm_id": 415154099,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        },
+        {
+          "name": "다산동",
+          "lon": 127.1598281,
+          "lat": 37.6122588,
+          "osm_id": 415154098,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        },
+        {
+          "name": "진접읍",
+          "lon": 127.1976354,
+          "lat": 37.7228358,
+          "osm_id": 415154160,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        }
+      ],
+      "geography_file": "visual/regional_geo_v4.geojson",
+      "overview_bounds": [
+        127.03,
+        37.55,
+        127.4,
+        37.85
+      ]
+    },
+    {
+      "shot_id": "V2-005",
+      "chapter_id": "S001",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_calendar"
+      ],
+      "actual_place": null,
+      "reason": "거래 관측과 입주전 계획의 차이",
+      "claim_ids": [],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_five_questions"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-006",
+      "chapter_id": "S001",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_block_cards"
+      ],
+      "actual_place": null,
+      "reason": "왕숙 예고블록과 이번 사례 구분",
+      "claim_ids": [
+        "LIV-003",
+        "LIV-004"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_five_questions"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-007",
+      "chapter_id": "S001",
+      "requested_type": "ai_concept",
+      "render_type": "ai_concept",
+      "asset_ids": [
+        "AIPREV002"
+      ],
+      "actual_place": null,
+      "reason": "질문을 이어가는 편집적 휴지",
+      "claim_ids": [],
+      "mandatory_label": "AI 개념 이미지 · 실제 왕숙 촬영 아님",
+      "motion_allowed": "still_motion_modest_pan_zoom; preserve AI or photo-date/source labels",
+      "fallback_ids": [
+        "NATIVE_five_questions"
+      ],
+      "restrictions": [
+        "가상 생활 요구의 설명만; 실제 장소·시설·기업 운영 증거 아님"
+      ]
+    },
+    {
+      "shot_id": "V2-008",
+      "chapter_id": "S001",
+      "requested_type": "real_photo",
+      "render_type": "real_photo",
+      "asset_ids": [
+        "PHOTO001"
+      ],
+      "actual_place": "별내역 8호선 승강장",
+      "reason": "실제 생활의 질문으로 도입을 닫음",
+      "claim_ids": [
+        "LIV-010"
+      ],
+      "mandatory_label": "별내역 8호선 승강장",
+      "motion_allowed": "still_motion_modest_pan_zoom; preserve AI or photo-date/source labels",
+      "fallback_ids": [
+        "NATIVE_station_diagram"
+      ],
+      "restrictions": [
+        "촬영/공표일·저작자·라이선스 출처 유지",
+        "역사진으로 지역일자리 운영·왕숙 개통/시설완공 증명 금지"
+      ]
+    },
+    {
+      "shot_id": "V2-009",
+      "chapter_id": "S002",
+      "requested_type": "real_map",
+      "render_type": "real_map",
+      "asset_ids": [
+        "S002_namyangju_regional_osm_v3"
+      ],
+      "actual_place": "남양주 별내·다산·진접·오남·호평·평내·화도·진건·퇴계원·일패·이패",
+      "reason": "기존 남양주 공간 안내",
+      "claim_ids": [
+        "DEV-001"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "bounded_camera_and_staged_verified_labels",
+      "fallback_ids": [
+        "NATIVE_district_size"
+      ],
+      "restrictions": [
+        "camera focus는 명시한 검증 지역명만; 좌표의 실제위치 유지",
+        "산업단지/역출입구/왕숙미래노선 정확한pin 미검증이므로 표시 금지"
+      ],
+      "camera_focus_points": [
+        {
+          "name": "별내동",
+          "lon": 127.1216627,
+          "lat": 37.6565148,
+          "osm_id": 415154099,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        },
+        {
+          "name": "다산동",
+          "lon": 127.1598281,
+          "lat": 37.6122588,
+          "osm_id": 415154098,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        },
+        {
+          "name": "진접읍",
+          "lon": 127.1976354,
+          "lat": 37.7228358,
+          "osm_id": 415154160,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        },
+        {
+          "name": "오남읍",
+          "lon": 127.2230356,
+          "lat": 37.6938801,
+          "osm_id": 415154161,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        },
+        {
+          "name": "호평동",
+          "lon": 127.246594,
+          "lat": 37.6576388,
+          "osm_id": 4913947885,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        },
+        {
+          "name": "평내동",
+          "lon": 127.2357794,
+          "lat": 37.6480755,
+          "osm_id": 415154164,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        },
+        {
+          "name": "화도읍",
+          "lon": 127.3196785,
+          "lat": 37.6538308,
+          "osm_id": 415153536,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        }
+      ],
+      "geography_file": "visual/regional_geo_v4.geojson",
+      "overview_bounds": [
+        127.03,
+        37.55,
+        127.4,
+        37.85
+      ]
+    },
+    {
+      "shot_id": "V2-010",
+      "chapter_id": "S002",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_commute"
+      ],
+      "actual_place": null,
+      "reason": "행정경계와 개인동선 구분",
+      "claim_ids": [],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_district_size"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-011",
+      "chapter_id": "S002",
+      "requested_type": "real_photo",
+      "render_type": "real_photo",
+      "asset_ids": [
+        "PHOTO002"
+      ],
+      "actual_place": "별내역 경춘선 역명표",
+      "reason": "별내역 실제 장소 인식",
+      "claim_ids": [
+        "LIV-010",
+        "DEV-011"
+      ],
+      "mandatory_label": "별내역 경춘선 역명표",
+      "motion_allowed": "still_motion_modest_pan_zoom; preserve AI or photo-date/source labels",
+      "fallback_ids": [
+        "NATIVE_station_diagram"
+      ],
+      "restrictions": [
+        "촬영/공표일·저작자·라이선스 출처 유지",
+        "역사진으로 지역일자리 운영·왕숙 개통/시설완공 증명 금지"
+      ]
+    },
+    {
+      "shot_id": "V2-012",
+      "chapter_id": "S002",
+      "requested_type": "real_map",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_station_diagram"
+      ],
+      "actual_place": null,
+      "reason": "별내역과 별내별가람 구별; 정확한 두 역 좌표 미검증으로 별내역(8호선·경춘선)/별내별가람역(4호선) 관계 도식으로 교체",
+      "claim_ids": [
+        "LIV-010",
+        "LIV-011"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_station_diagram"
+      ],
+      "restrictions": [
+        "평내/화도 등 임의 camera 또는 station pin 사용금지",
+        "도식은 노선관계이며 거리축척 지도 아님"
+      ]
+    },
+    {
+      "shot_id": "V2-013",
+      "chapter_id": "S002",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_station_diagram"
+      ],
+      "actual_place": null,
+      "reason": "이름유사로 생기는 혼동 해소; 정확한 두 역 좌표 미검증으로 별내역(8호선·경춘선)/별내별가람역(4호선) 관계 도식으로 교체",
+      "claim_ids": [
+        "LIV-010",
+        "LIV-011"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_station_diagram"
+      ],
+      "restrictions": [
+        "평내/화도 등 임의 camera 또는 station pin 사용금지",
+        "도식은 노선관계이며 거리축척 지도 아님"
+      ]
+    },
+    {
+      "shot_id": "V2-014",
+      "chapter_id": "S002",
+      "requested_type": "real_photo",
+      "render_type": "real_photo",
+      "asset_ids": [
+        "PHOTO009"
+      ],
+      "actual_place": "다산역 승강장",
+      "reason": "기존 다산 생활공간 보여줌",
+      "claim_ids": [
+        "LIV-012",
+        "DEV-011"
+      ],
+      "mandatory_label": "다산역 승강장",
+      "motion_allowed": "still_motion_modest_pan_zoom; preserve AI or photo-date/source labels",
+      "fallback_ids": [
+        "NATIVE_station_diagram"
+      ],
+      "restrictions": [
+        "촬영/공표일·저작자·라이선스 출처 유지",
+        "역사진으로 지역일자리 운영·왕숙 개통/시설완공 증명 금지"
+      ]
+    },
+    {
+      "shot_id": "V2-015",
+      "chapter_id": "S002",
+      "requested_type": "real_map",
+      "render_type": "real_map",
+      "asset_ids": [
+        "S002_namyangju_regional_osm_v3"
+      ],
+      "actual_place": "남양주 별내·다산·진접·오남·호평·평내·화도·진건·퇴계원·일패·이패",
+      "reason": "목적지부터 거꾸로 후보 찾기",
+      "claim_ids": [],
+      "mandatory_label": "",
+      "motion_allowed": "bounded_camera_and_staged_verified_labels",
+      "fallback_ids": [
+        "NATIVE_district_size"
+      ],
+      "restrictions": [
+        "camera focus는 명시한 검증 지역명만; 좌표의 실제위치 유지",
+        "산업단지/역출입구/왕숙미래노선 정확한pin 미검증이므로 표시 금지"
+      ],
+      "camera_focus_points": [
+        {
+          "name": "다산동",
+          "lon": 127.1598281,
+          "lat": 37.6122588,
+          "osm_id": 415154098,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        },
+        {
+          "name": "별내동",
+          "lon": 127.1216627,
+          "lat": 37.6565148,
+          "osm_id": 415154099,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        },
+        {
+          "name": "진접읍",
+          "lon": 127.1976354,
+          "lat": 37.7228358,
+          "osm_id": 415154160,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        }
+      ],
+      "geography_file": "visual/regional_geo_v4.geojson",
+      "overview_bounds": [
+        127.03,
+        37.55,
+        127.4,
+        37.85
+      ]
+    },
+    {
+      "shot_id": "V2-016",
+      "chapter_id": "S002",
+      "requested_type": "ai_concept",
+      "render_type": "ai_concept",
+      "asset_ids": [
+        "GPT_CONCEPT_FAMILY"
+      ],
+      "actual_place": null,
+      "reason": "대표단지와 생활권 개념 복습",
+      "claim_ids": [],
+      "mandatory_label": "AI 개념 이미지 · 실제 왕숙 촬영 아님",
+      "motion_allowed": "still_motion_modest_pan_zoom; preserve AI or photo-date/source labels",
+      "fallback_ids": [
+        "NATIVE_district_size"
+      ],
+      "restrictions": [
+        "가상 생활 요구의 설명만; 실제 장소·시설·기업 운영 증거 아님"
+      ]
+    },
+    {
+      "shot_id": "V2-017",
+      "chapter_id": "S003",
+      "requested_type": "real_map",
+      "render_type": "official_plan",
+      "asset_ids": [
+        "S003_wangsuk1_official_plan",
+        "S003_wangsuk2_official_plan"
+      ],
+      "actual_place": "남양주왕숙 공공주택지구",
+      "reason": "왕숙1·2 위치를 기존지도에 더함",
+      "claim_ids": [
+        "DEV-001",
+        "DEV-003"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "full_original_static_only",
+      "fallback_ids": [
+        "NATIVE_district_size"
+      ],
+      "restrictions": [
+        "KOGL3 원본전체정지·무변형; crop/overlay/카메라확대금지",
+        "본문의 미검증 특정시설 위치를 도면상의 정확한핀으로 표시 금지"
+      ]
+    },
+    {
+      "shot_id": "V2-018",
+      "chapter_id": "S003",
+      "requested_type": "real_map",
+      "render_type": "official_plan",
+      "asset_ids": [
+        "S003_wangsuk1_official_plan"
+      ],
+      "actual_place": "남양주왕숙 공공주택지구",
+      "reason": "왕숙1의 장소와 면적",
+      "claim_ids": [
+        "DEV-001",
+        "DEV-002"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "full_original_static_only",
+      "fallback_ids": [
+        "NATIVE_district_size"
+      ],
+      "restrictions": [
+        "KOGL3 원본전체정지·무변형; crop/overlay/카메라확대금지",
+        "본문의 미검증 특정시설 위치를 도면상의 정확한핀으로 표시 금지"
+      ]
+    },
+    {
+      "shot_id": "V2-019",
+      "chapter_id": "S003",
+      "requested_type": "real_map",
+      "render_type": "official_plan",
+      "asset_ids": [
+        "S003_wangsuk2_official_plan"
+      ],
+      "actual_place": "남양주왕숙2 공공주택지구",
+      "reason": "왕숙2 별도지구 확인",
+      "claim_ids": [
+        "DEV-001",
+        "DEV-002"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "full_original_static_only",
+      "fallback_ids": [
+        "NATIVE_district_size"
+      ],
+      "restrictions": [
+        "KOGL3 원본전체정지·무변형; crop/overlay/카메라확대금지",
+        "본문의 미검증 특정시설 위치를 도면상의 정확한핀으로 표시 금지"
+      ]
+    },
+    {
+      "shot_id": "V2-020",
+      "chapter_id": "S003",
+      "requested_type": "data_chart",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_district_size"
+      ],
+      "actual_place": null,
+      "reason": "계획규모의 합산 의미",
+      "claim_ids": [
+        "DEV-001"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_district_size"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-021",
+      "chapter_id": "S003",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_stage"
+      ],
+      "actual_place": null,
+      "reason": "계획·분양·입주 지표를 구분",
+      "claim_ids": [
+        "DEV-001"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_district_size"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-022",
+      "chapter_id": "S003",
+      "requested_type": "real_map",
+      "render_type": "official_plan",
+      "asset_ids": [
+        "S003_wangsuk1_official_plan",
+        "S003_wangsuk2_official_plan"
+      ],
+      "actual_place": "남양주왕숙 공공주택지구",
+      "reason": "큰지구 안의 블록차이 질문",
+      "claim_ids": [
+        "DEV-001",
+        "DEV-002"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "full_original_static_only",
+      "fallback_ids": [
+        "NATIVE_district_size"
+      ],
+      "restrictions": [
+        "KOGL3 원본전체정지·무변형; crop/overlay/카메라확대금지",
+        "본문의 미검증 특정시설 위치를 도면상의 정확한핀으로 표시 금지"
+      ]
+    },
+    {
+      "shot_id": "V2-023",
+      "chapter_id": "S003",
+      "requested_type": "ai_concept",
+      "render_type": "ai_concept",
+      "asset_ids": [
+        "GPT_CONCEPT_COMMUTE"
+      ],
+      "actual_place": null,
+      "reason": "도보·생활조건 질문으로 전환",
+      "claim_ids": [],
+      "mandatory_label": "AI 개념 이미지 · 실제 왕숙 촬영 아님",
+      "motion_allowed": "still_motion_modest_pan_zoom; preserve AI or photo-date/source labels",
+      "fallback_ids": [
+        "NATIVE_district_size"
+      ],
+      "restrictions": [
+        "가상 생활 요구의 설명만; 실제 장소·시설·기업 운영 증거 아님"
+      ]
+    },
+    {
+      "shot_id": "V2-024",
+      "chapter_id": "S004",
+      "requested_type": "previous_episode_excerpt",
+      "render_type": "prev_excerpt",
+      "asset_ids": [
+        "PREV_V14"
+      ],
+      "actual_place": "광교·동탄",
+      "reason": "전편 철도 판단기준 기억",
+      "claim_ids": [],
+      "mandatory_label": "전편: 광교·동탄",
+      "motion_allowed": "original_excerpt_only",
+      "fallback_ids": [
+        "NATIVE_commute"
+      ],
+      "restrictions": [
+        "원본전편 음소거 발췌·기존출처 유지; 남양주 현재영상처럼표현금지"
+      ]
+    },
+    {
+      "shot_id": "V2-025",
+      "chapter_id": "S004",
+      "requested_type": "real_map",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_transport_status"
+      ],
+      "actual_place": null,
+      "reason": "현재와 미래 교통망 분리; 검증되지 않은 미래노선 선형 대신 운영/계획/공구추진 상태 도식",
+      "claim_ids": [
+        "DEV-008",
+        "DEV-009",
+        "DEV-011"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_commute"
+      ],
+      "restrictions": [
+        "임의 노선선형·정밀 역위치·구간완료 주장 금지"
+      ]
+    },
+    {
+      "shot_id": "V2-026",
+      "chapter_id": "S004",
+      "requested_type": "data_chart",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_calendar"
+      ],
+      "actual_place": null,
+      "reason": "A1·A3 입주 달력",
+      "claim_ids": [
+        "LIV-003",
+        "LIV-004"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_commute"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-027",
+      "chapter_id": "S004",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_gtx_timeline"
+      ],
+      "actual_place": null,
+      "reason": "GTX-B 목표와 개별역확인 구분",
+      "claim_ids": [
+        "DEV-008"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_commute"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-028",
+      "chapter_id": "S004",
+      "requested_type": "real_map",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_transport_status"
+      ],
+      "actual_place": null,
+      "reason": "9호선 사업과 최신 절차; 검증되지 않은 미래노선 선형 대신 운영/계획/공구추진 상태 도식",
+      "claim_ids": [
+        "DEV-009",
+        "DEV-010"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_commute"
+      ],
+      "restrictions": [
+        "임의 노선선형·정밀 역위치·구간완료 주장 금지"
+      ]
+    },
+    {
+      "shot_id": "V2-029",
+      "chapter_id": "S004",
+      "requested_type": "data_chart",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_calendar"
+      ],
+      "actual_place": null,
+      "reason": "입주와 철도 시차를 읽음",
+      "claim_ids": [
+        "LIV-003",
+        "LIV-004",
+        "DEV-008"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_commute"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-030",
+      "chapter_id": "S004",
+      "requested_type": "ai_concept",
+      "render_type": "ai_concept",
+      "asset_ids": [
+        "GPT_CONCEPT_COMMUTE"
+      ],
+      "actual_place": null,
+      "reason": "통근가구의 생활 질문",
+      "claim_ids": [],
+      "mandatory_label": "AI 개념 이미지 · 실제 왕숙 촬영 아님",
+      "motion_allowed": "still_motion_modest_pan_zoom; preserve AI or photo-date/source labels",
+      "fallback_ids": [
+        "NATIVE_commute"
+      ],
+      "restrictions": [
+        "가상 생활 요구의 설명만; 실제 장소·시설·기업 운영 증거 아님"
+      ]
+    },
+    {
+      "shot_id": "V2-031",
+      "chapter_id": "S004",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_commute"
+      ],
+      "actual_place": null,
+      "reason": "교통 소결 후 일자리 질문 연결",
+      "claim_ids": [],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_commute"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-032",
+      "chapter_id": "S005",
+      "requested_type": "previous_episode_excerpt",
+      "render_type": "prev_excerpt",
+      "asset_ids": [
+        "PREV_V14"
+      ],
+      "actual_place": "광교·동탄",
+      "reason": "전편 사업장 지도 연결",
+      "claim_ids": [],
+      "mandatory_label": "전편: 광교·동탄",
+      "motion_allowed": "original_excerpt_only",
+      "fallback_ids": [
+        "NATIVE_jobs_stage"
+      ],
+      "restrictions": [
+        "원본전편 음소거 발췌·기존출처 유지; 남양주 현재영상처럼표현금지"
+      ]
+    },
+    {
+      "shot_id": "V2-033",
+      "chapter_id": "S005",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_stage"
+      ],
+      "actual_place": null,
+      "reason": "기업이름보다 사업진행 단계",
+      "claim_ids": [],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_jobs_stage"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-034",
+      "chapter_id": "S005",
+      "requested_type": "real_map",
+      "render_type": "real_map",
+      "asset_ids": [
+        "S002_namyangju_regional_osm_v3",
+        "NATIVE_jobs_stage"
+      ],
+      "actual_place": "남양주 별내·다산·진접·오남·호평·평내·화도·진건·퇴계원·일패·이패",
+      "reason": "기존3산단과 신규산단 위치 분리; 산단 정밀 좌표 미검증, 지명 수준과 진행단계로 한정",
+      "claim_ids": [
+        "DEV-012",
+        "DEV-004"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "bounded_camera_and_staged_verified_labels",
+      "fallback_ids": [
+        "NATIVE_jobs_stage"
+      ],
+      "restrictions": [
+        "camera focus는 명시한 검증 지역명만; 좌표의 실제위치 유지",
+        "산업단지/역출입구/왕숙미래노선 정확한pin 미검증이므로 표시 금지",
+        "진관·금곡·광릉 산단 exact pin 금지",
+        "남양주 북부 지역명은 해당 산업단지 위치 확정 증거 아님"
+      ],
+      "camera_focus_points": [
+        {
+          "name": "진건읍",
+          "lon": 127.1788606,
+          "lat": 37.657532,
+          "osm_id": 415154169,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        },
+        {
+          "name": "진접읍",
+          "lon": 127.1976354,
+          "lat": 37.7228358,
+          "osm_id": 415154160,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        }
+      ],
+      "geography_file": "visual/regional_geo_v4.geojson",
+      "overview_bounds": [
+        127.03,
+        37.55,
+        127.4,
+        37.85
+      ]
+    },
+    {
+      "shot_id": "V2-035",
+      "chapter_id": "S005",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_official_document"
+      ],
+      "actual_place": null,
+      "reason": "산단승인의 최신 문서근거",
+      "claim_ids": [
+        "DEV-004"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_jobs_stage"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-036",
+      "chapter_id": "S005",
+      "requested_type": "data_chart",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_industrial_size"
+      ],
+      "actual_place": null,
+      "reason": "규모·사업비의 정의",
+      "claim_ids": [
+        "DEV-005"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_jobs_stage"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-037",
+      "chapter_id": "S005",
+      "requested_type": "real_map",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_company_stage"
+      ],
+      "actual_place": null,
+      "reason": "예정기업과 입지의 연결; 산단 정밀 좌표 미검증, 지명 수준과 진행단계로 한정",
+      "claim_ids": [
+        "DEV-006"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_jobs_stage"
+      ],
+      "restrictions": [
+        "진관·금곡·광릉 산단 exact pin 금지",
+        "남양주 북부 지역명은 해당 산업단지 위치 확정 증거 아님"
+      ]
+    },
+    {
+      "shot_id": "V2-038",
+      "chapter_id": "S005",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_company_timeline"
+      ],
+      "actual_place": null,
+      "reason": "개별기업 진척 사례",
+      "claim_ids": [
+        "DEV-007"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_jobs_stage"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-039",
+      "chapter_id": "S005",
+      "requested_type": "ai_concept",
+      "render_type": "ai_concept",
+      "asset_ids": [
+        "GPT_CONCEPT_WORKPLACE"
+      ],
+      "actual_place": null,
+      "reason": "투자액과 상주인원을 구분",
+      "claim_ids": [],
+      "mandatory_label": "AI 개념 이미지 · 실제 왕숙 촬영 아님",
+      "motion_allowed": "still_motion_modest_pan_zoom; preserve AI or photo-date/source labels",
+      "fallback_ids": [
+        "NATIVE_jobs_stage"
+      ],
+      "restrictions": [
+        "가상 생활 요구의 설명만; 실제 장소·시설·기업 운영 증거 아님"
+      ]
+    },
+    {
+      "shot_id": "V2-040",
+      "chapter_id": "S005",
+      "requested_type": "real_photo",
+      "render_type": "real_photo",
+      "asset_ids": [
+        "PHOTO009"
+      ],
+      "actual_place": "다산역 승강장",
+      "reason": "지역근무가구와 통근가구 조건 차이",
+      "claim_ids": [],
+      "mandatory_label": "다산역 승강장",
+      "motion_allowed": "still_motion_modest_pan_zoom; preserve AI or photo-date/source labels",
+      "fallback_ids": [
+        "NATIVE_station_diagram"
+      ],
+      "restrictions": [
+        "촬영/공표일·저작자·라이선스 출처 유지",
+        "역사진으로 지역일자리 운영·왕숙 개통/시설완공 증명 금지"
+      ]
+    },
+    {
+      "shot_id": "V2-041",
+      "chapter_id": "S006",
+      "requested_type": "ai_concept",
+      "render_type": "ai_concept",
+      "asset_ids": [
+        "GPT_CONCEPT_FAMILY"
+      ],
+      "actual_place": null,
+      "reason": "완성도시 생활관점→첫입주 질문",
+      "claim_ids": [],
+      "mandatory_label": "AI 개념 이미지 · 실제 왕숙 촬영 아님",
+      "motion_allowed": "still_motion_modest_pan_zoom; preserve AI or photo-date/source labels",
+      "fallback_ids": [
+        "NATIVE_school_calendar"
+      ],
+      "restrictions": [
+        "가상 생활 요구의 설명만; 실제 장소·시설·기업 운영 증거 아님"
+      ]
+    },
+    {
+      "shot_id": "V2-042",
+      "chapter_id": "S006",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_school_document"
+      ],
+      "actual_place": null,
+      "reason": "학교4곳 승인근거",
+      "claim_ids": [
+        "LIV-001"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_school_calendar"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-043",
+      "chapter_id": "S006",
+      "requested_type": "data_chart",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_school_calendar"
+      ],
+      "actual_place": null,
+      "reason": "유치원 승인·목표",
+      "claim_ids": [
+        "LIV-002"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_school_calendar"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-044",
+      "chapter_id": "S006",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_stage"
+      ],
+      "actual_place": null,
+      "reason": "심사와 실제개교·배정 차이",
+      "claim_ids": [
+        "LIV-001",
+        "LIV-002"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_school_calendar"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-045",
+      "chapter_id": "S006",
+      "requested_type": "data_chart",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_school_calendar"
+      ],
+      "actual_place": null,
+      "reason": "입주와 학교목표 시간비교",
+      "claim_ids": [
+        "LIV-001",
+        "LIV-003",
+        "LIV-004"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_school_calendar"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-046",
+      "chapter_id": "S006",
+      "requested_type": "real_map",
+      "render_type": "official_plan",
+      "asset_ids": [
+        "S003_wangsuk2_official_plan"
+      ],
+      "actual_place": "남양주왕숙2 공공주택지구",
+      "reason": "WE드림파크는 계획시설",
+      "claim_ids": [
+        "LIV-008"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "full_original_static_only",
+      "fallback_ids": [
+        "NATIVE_school_calendar"
+      ],
+      "restrictions": [
+        "KOGL3 원본전체정지·무변형; crop/overlay/카메라확대금지",
+        "본문의 미검증 특정시설 위치를 도면상의 정확한핀으로 표시 금지",
+        "왕숙2 전체계획도는 지구 설명만; WE드림파크 정확한 위치/완공 증거 아님"
+      ]
+    },
+    {
+      "shot_id": "V2-047",
+      "chapter_id": "S006",
+      "requested_type": "data_chart",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_we_budget"
+      ],
+      "actual_place": null,
+      "reason": "확보비와 총사업비 구분",
+      "claim_ids": [
+        "LIV-008"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_school_calendar"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-048",
+      "chapter_id": "S006",
+      "requested_type": "real_photo",
+      "render_type": "ai_concept",
+      "asset_ids": [
+        "GPT_CONCEPT_FAMILY"
+      ],
+      "actual_place": null,
+      "reason": "첫입주자의 하루를 실감; 왕숙 첫입주 가족생활에 맞는 실제가족사진 미확보, 기존 다산초 오인 대신 가상가족으로 명시 교체",
+      "claim_ids": [],
+      "mandatory_label": "AI 개념 이미지 · 실제 왕숙 촬영 아님",
+      "motion_allowed": "still_motion_modest_pan_zoom; preserve AI or photo-date/source labels",
+      "fallback_ids": [
+        "NATIVE_school_calendar"
+      ],
+      "restrictions": [
+        "가상 생활 요구의 설명만; 실제 장소·시설·기업 운영 증거 아님",
+        "PHOTO010 기존다산초 사용금지; 왕숙 신설학교로 보이지 않게 함"
+      ]
+    },
+    {
+      "shot_id": "V2-049",
+      "chapter_id": "S007",
+      "requested_type": "ai_concept",
+      "render_type": "ai_concept",
+      "asset_ids": [
+        "AIPREV002"
+      ],
+      "actual_place": null,
+      "reason": "가격을 읽는 시선 전환",
+      "claim_ids": [],
+      "mandatory_label": "AI 개념 이미지 · 실제 왕숙 촬영 아님",
+      "motion_allowed": "still_motion_modest_pan_zoom; preserve AI or photo-date/source labels",
+      "fallback_ids": [
+        "NATIVE_price_conditions"
+      ],
+      "restrictions": [
+        "가상 생활 요구의 설명만; 실제 장소·시설·기업 운영 증거 아님"
+      ]
+    },
+    {
+      "shot_id": "V2-050",
+      "chapter_id": "S007",
+      "requested_type": "data_chart",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_price_chart_A1"
+      ],
+      "actual_place": null,
+      "reason": "A1 타입별 표시가격",
+      "claim_ids": [
+        "LIV-005"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_price_conditions"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-051",
+      "chapter_id": "S007",
+      "requested_type": "data_chart",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_price_chart_A3"
+      ],
+      "actual_place": null,
+      "reason": "A3를 같은타입구조로 비교",
+      "claim_ids": [
+        "LIV-006"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_price_conditions"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-052",
+      "chapter_id": "S007",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_price_source"
+      ],
+      "actual_place": null,
+      "reason": "페이지값과 최종계약가 구분",
+      "claim_ids": [
+        "LIV-005",
+        "LIV-006",
+        "LIV-007"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_price_conditions"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-053",
+      "chapter_id": "S007",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_price_conditions"
+      ],
+      "actual_place": null,
+      "reason": "최종비용의 빈칸",
+      "claim_ids": [
+        "LIV-007"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_price_conditions"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-054",
+      "chapter_id": "S007",
+      "requested_type": "real_map",
+      "render_type": "real_map",
+      "asset_ids": [
+        "S002_namyangju_regional_osm_v3"
+      ],
+      "actual_place": "남양주 별내·다산·진접·오남·호평·평내·화도·진건·퇴계원·일패·이패",
+      "reason": "주변비교 조건을 생활권에 연결",
+      "claim_ids": [],
+      "mandatory_label": "",
+      "motion_allowed": "bounded_camera_and_staged_verified_labels",
+      "fallback_ids": [
+        "NATIVE_price_conditions"
+      ],
+      "restrictions": [
+        "camera focus는 명시한 검증 지역명만; 좌표의 실제위치 유지",
+        "산업단지/역출입구/왕숙미래노선 정확한pin 미검증이므로 표시 금지"
+      ],
+      "camera_focus_points": [
+        {
+          "name": "다산동",
+          "lon": 127.1598281,
+          "lat": 37.6122588,
+          "osm_id": 415154098,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        },
+        {
+          "name": "별내동",
+          "lon": 127.1216627,
+          "lat": 37.6565148,
+          "osm_id": 415154099,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        },
+        {
+          "name": "진접읍",
+          "lon": 127.1976354,
+          "lat": 37.7228358,
+          "osm_id": 415154160,
+          "meaning": "지역명 기준점·역/사업장 좌표 아님"
+        }
+      ],
+      "geography_file": "visual/regional_geo_v4.geojson",
+      "overview_bounds": [
+        127.03,
+        37.55,
+        127.4,
+        37.85
+      ]
+    },
+    {
+      "shot_id": "V2-055",
+      "chapter_id": "S007",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_statistic"
+      ],
+      "actual_place": null,
+      "reason": "지표뜻을 분리한 전편 원칙",
+      "claim_ids": [],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_price_conditions"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-056",
+      "chapter_id": "S007",
+      "requested_type": "data_chart",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_supply"
+      ],
+      "actual_place": null,
+      "reason": "계획규모와 연간공급 다름",
+      "claim_ids": [
+        "DEV-001",
+        "LIV-003",
+        "LIV-004"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_price_conditions"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-057",
+      "chapter_id": "S008",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_five_questions"
+      ],
+      "actual_place": null,
+      "reason": "다섯질문 회수",
+      "claim_ids": [],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_five_questions"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-058",
+      "chapter_id": "S008",
+      "requested_type": "data_chart",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_status"
+      ],
+      "actual_place": null,
+      "reason": "미완료범위 가격·공급 회수",
+      "claim_ids": [
+        "LIV-005",
+        "LIV-006",
+        "DEV-001"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_five_questions"
+      ],
+      "restrictions": []
+    },
+    {
+      "shot_id": "V2-059",
+      "chapter_id": "S008",
+      "requested_type": "real_photo",
+      "render_type": "real_photo",
+      "asset_ids": [
+        "PHOTO009",
+        "NATIVE_household_questions"
+      ],
+      "actual_place": "다산역 승강장",
+      "reason": "가구별 우선질문",
+      "claim_ids": [],
+      "mandatory_label": "다산역 승강장",
+      "motion_allowed": "still_motion_modest_pan_zoom; preserve AI or photo-date/source labels",
+      "fallback_ids": [
+        "NATIVE_station_diagram"
+      ],
+      "restrictions": [
+        "촬영/공표일·저작자·라이선스 출처 유지",
+        "역사진으로 지역일자리 운영·왕숙 개통/시설완공 증명 금지"
+      ]
+    },
+    {
+      "shot_id": "V2-060",
+      "chapter_id": "S008",
+      "requested_type": "ai_concept",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_calendar"
+      ],
+      "actual_place": null,
+      "reason": "전편 관측과 이번 준비의 차이; 확인 안 된 기존 시간표PNG 대신 명시적 3달력 native도식",
+      "claim_ids": [],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_five_questions"
+      ],
+      "restrictions": [
+        "랜덤 가족/사무실 이미지로 교체금지"
+      ]
+    },
+    {
+      "shot_id": "V2-061",
+      "chapter_id": "S008",
+      "requested_type": "real_map",
+      "render_type": "official_plan",
+      "asset_ids": [
+        "S003_wangsuk1_official_plan",
+        "S003_wangsuk2_official_plan"
+      ],
+      "actual_place": "남양주왕숙 공공주택지구",
+      "reason": "남양주→왕숙→내블록으로 좁힘",
+      "claim_ids": [
+        "DEV-001"
+      ],
+      "mandatory_label": "",
+      "motion_allowed": "full_original_static_only",
+      "fallback_ids": [
+        "NATIVE_five_questions"
+      ],
+      "restrictions": [
+        "KOGL3 원본전체정지·무변형; crop/overlay/카메라확대금지",
+        "본문의 미검증 특정시설 위치를 도면상의 정확한핀으로 표시 금지"
+      ]
+    },
+    {
+      "shot_id": "V2-062",
+      "chapter_id": "S008",
+      "requested_type": "motion_diagram",
+      "render_type": "native_diagram",
+      "asset_ids": [
+        "NATIVE_five_questions"
+      ],
+      "actual_place": null,
+      "reason": "다섯질문을 시리즈의 끝으로 남김",
+      "claim_ids": [],
+      "mandatory_label": "",
+      "motion_allowed": "native_semantic_frame_animation",
+      "fallback_ids": [
+        "NATIVE_five_questions"
+      ],
+      "restrictions": []
+    }
+  ],
+  "native_asset_definitions": [
+    {
+      "asset_id": "NATIVE_five_questions",
+      "type": "native_semantic_diagram",
+      "source_basis": "same shot facts/purpose; no unrelated media",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_calendar",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_block_cards",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_station_diagram",
+      "type": "native_semantic_diagram",
+      "source_basis": "same shot facts/purpose; no unrelated media",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_district_size",
+      "type": "native_semantic_diagram",
+      "source_basis": "same shot facts/purpose; no unrelated media",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_commute",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_stage",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_transport_status",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_gtx_timeline",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_jobs_stage",
+      "type": "native_semantic_diagram",
+      "source_basis": "same shot facts/purpose; no unrelated media",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_official_document",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_industrial_size",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_company_stage",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_company_timeline",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_school_calendar",
+      "type": "native_semantic_diagram",
+      "source_basis": "same shot facts/purpose; no unrelated media",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_school_document",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_we_budget",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_price_conditions",
+      "type": "native_semantic_diagram",
+      "source_basis": "same shot facts/purpose; no unrelated media",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_price_chart_A1",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_price_chart_A3",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_price_source",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_statistic",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_supply",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_status",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    },
+    {
+      "asset_id": "NATIVE_household_questions",
+      "type": "native_semantic_diagram",
+      "source_basis": "writer shot purpose/claim_ids + research/facts-v1; editor must build this exact semantic component; no arbitrary stockmedia fallback",
+      "actual_place": null
+    }
+  ],
+  "unused_real_photos": [
+    "PHOTO010",
+    "PHOTO015",
+    "PHOTO016"
+  ],
+  "unused_note": "사진6개 전부 사용을 강제하지 않음. 기존학교·2024행사를 왕숙학교·일반가족·현재시설로 대신 사용하지 않음.",
+  "validation": "62shot unique lookup; all file assets manifest-verified; native ids explicitly defined; no unverified exact station/industry pin"
+}

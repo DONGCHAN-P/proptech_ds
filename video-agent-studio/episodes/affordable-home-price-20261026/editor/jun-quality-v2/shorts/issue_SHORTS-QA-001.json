@@ -1,0 +1,18 @@
+{
+  "issue_id": "SHORTS-QA-001",
+  "scene_ids": [
+    "S02",
+    "S03",
+    "S25",
+    "S13",
+    "S14",
+    "S28"
+  ],
+  "problem": "최종 두 쇼츠에 대한 독립 편집 검수와 실제 청취·연속 재생은 이 담당의 도구 실행 범위에서 수행되지 않음.",
+  "evidence": "지정 peer 및 에이전트 직접 메시지·독립 검수 호출 도구가 현재 담당에게 제공되지 않음. 기술 검사와 표본 프레임 검사는 별도 기록함.",
+  "proposal": "총괄이 현재 final_outputs.json의 v4 두 MP4와 qa/portrait-shorts-v4-wood-house 증거, SRT, edit_plan.json을 Sagan 독립 QA에 전달. v3 이후 변경은 issue_SHORTS-V4-SAGAN.json 참조.",
+  "impact": "MP4·정확한 자막·배포 메타데이터·재현 입력은 납품. 독립 QA와 실제 청취를 완료했다고 표시하지 않음.",
+  "next_owner": "parent director / independent QA",
+  "status": "handoff_requested",
+  "public_or_scheduled_upload": false
+}

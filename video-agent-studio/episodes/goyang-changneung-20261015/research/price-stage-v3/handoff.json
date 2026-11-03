@@ -1,0 +1,42 @@
+{
+  "revision": "price-stage-v3",
+  "outputs": [
+    "facts.json",
+    "report.md",
+    "online_checks.json"
+  ],
+  "input_versions": [
+    "production-v2",
+    "prices-v2",
+    "brief.json",
+    "state.json"
+  ],
+  "validation": [
+    "공식 S4/S5 LH HTML 및 S1 시행사 HTML 온라인 열람",
+    "보존 공식공고 추출문 규제·일정 직접 확인",
+    "분양합계와 현재중위값 차액 산술 계산"
+  ],
+  "unresolved": [
+    "PDF 새 다운로드 실패/바이트동일성 재확인 불가",
+    "S1/S5 거주의무 없음 확정 근거 미확보",
+    "미래정량가격 예측근거없음"
+  ],
+  "affected_claim_ids": [
+    "PST3-S1-STAGE",
+    "PST3-S1-RESALE",
+    "PST3-S4-STAGE",
+    "PST3-S4-RESALE",
+    "PST3-S5-STAGE",
+    "PST3-S5-RESALE",
+    "PST3-S4-RESIDENCE",
+    "PST3-S1S5-RESIDENCE-GAP",
+    "PST3-S4-CONTRACT",
+    "PST3-CURRENT-COMPARISON"
+  ],
+  "affected_scene_ids": [
+    "M004",
+    "M006",
+    "M007"
+  ],
+  "next_owner": "writer/director"
+}

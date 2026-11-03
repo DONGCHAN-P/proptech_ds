@@ -1,0 +1,157 @@
+{
+    "task_id":  "guide-v3-chapter-existing-assets",
+    "role":  "visual",
+    "status":  "selection_complete_with_missing",
+    "summary":  "공통6종을 직접 보고 8개 주제와 대조. 4개 고유 이미지를 채택하고 4개 주제는 missing. 새 생성·추가 담당·유료 호출 없음.",
+    "input_revisions":  {
+                            "source_manifest":  {
+                                                    "path":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/manifest.json",
+                                                    "revision":  "v1",
+                                                    "sha256":  "ca7c425d3e85cddcc04f363887f35441f1a241be3c7ed24d1917acd901f9292c"
+                                                },
+                            "scene_script":  {
+                                                 "path":  "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/outputs/readable-video-v2/scene_script.json",
+                                                 "revision":  "readable-v2",
+                                                 "sha256":  "64172e06c45b52c3d98599f4c7d94c59296f21ff72697c2e538bc151e05ad9bc"
+                                             }
+                        },
+    "outputs":  [
+                    "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/guide-v3/chapter_assets.json",
+                    "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/guide-v3/handoff.json"
+                ],
+    "affected_scene_ids":  [
+                               "L001",
+                               "L002",
+                               "L003",
+                               "L004",
+                               "L005",
+                               "L006",
+                               "L007",
+                               "L008"
+                           ],
+    "checks":  [
+                   {
+                       "check":  "6종 직접 이미지 검토",
+                       "result":  "pass",
+                       "evidence":  "view_image로 jobs/transport/price/comparison/supply/school_life 전체 확인. 어두운 왼쪽 여백, 오른쪽 피사체, 따뜻한 저녁빛, 이미지 내 가독 문자 없음."
+                   },
+                   {
+                       "check":  "실제 파일 해상도 및 원본 해시",
+                       "result":  "pass",
+                       "evidence":  [
+                                        {
+                                            "asset_id":  "chapter_jobs_v1",
+                                            "file":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/jobs.png",
+                                            "sha256":  "840d8a8f75210c33646ac583231f0af8d8edc92524fe14b199546401f2aba140",
+                                            "dimensions":  [
+                                                               1672,
+                                                               941
+                                                           ],
+                                            "direct_visual_review":  true
+                                        },
+                                        {
+                                            "asset_id":  "chapter_transport_v1",
+                                            "file":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/transport.png",
+                                            "sha256":  "0c2984ae70ff5d6ad73b5473ee857b1b7fa3513220bcd7d788c703e3e65b9755",
+                                            "dimensions":  [
+                                                               1672,
+                                                               941
+                                                           ],
+                                            "direct_visual_review":  true
+                                        },
+                                        {
+                                            "asset_id":  "chapter_price_v1",
+                                            "file":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/price.png",
+                                            "sha256":  "11cc1523e03712c54b92544d27d48a992c7ac93490e1db8f69ea9c15d60d4bee",
+                                            "dimensions":  [
+                                                               1672,
+                                                               941
+                                                           ],
+                                            "direct_visual_review":  true
+                                        },
+                                        {
+                                            "asset_id":  "chapter_comparison_v1",
+                                            "file":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/comparison.png",
+                                            "sha256":  "1b8bb25f91db083c0ac6cf509a4ad1c085d4b51b8feedbb62d7eef867c6b6294",
+                                            "dimensions":  [
+                                                               1672,
+                                                               941
+                                                           ],
+                                            "direct_visual_review":  true
+                                        },
+                                        {
+                                            "asset_id":  "chapter_supply_v1",
+                                            "file":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/supply.png",
+                                            "sha256":  "333b883051348baea02cf26456818a4b17c774addbf5e30915f8068404b8b762",
+                                            "dimensions":  [
+                                                               1672,
+                                                               941
+                                                           ],
+                                            "direct_visual_review":  true
+                                        },
+                                        {
+                                            "asset_id":  "chapter_school_life_v1",
+                                            "file":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/school_life.png",
+                                            "sha256":  "75e63f9e43c23a87d6b392c3d623176d43ff6afdf1232ad16bb88f736e410a09",
+                                            "dimensions":  [
+                                                               1672,
+                                                               941
+                                                           ],
+                                            "direct_visual_review":  true
+                                        }
+                                    ]
+                   },
+                   {
+                       "check":  "8개 scene_id 및 배정 중복",
+                       "result":  "pass",
+                       "evidence":  "scene_script L001~L008 일치. ready 4, missing 4, 고유 이미지 4."
+                   }
+               ],
+    "production_brief":  {
+                             "composition":  "기존 좌측 저대비 제목 여백·우측 피사체 유지",
+                             "brand":  "기존 글꼴·색·하단 흰 자막 유지. 제목과 AI 표시는 편집에서 합성",
+                             "canvas":  [
+                                            1920,
+                                            1080
+                                        ],
+                             "source_dimensions":  [
+                                                       1672,
+                                                       941
+                                                   ],
+                             "resizing":  "원본 그대로 참조. 이번 작업에서 업스케일 없음. main/editor가 1920x1080 배치 후 제목·AI 표기·하단 자막 대비와 경계 확인",
+                             "usage":  "챕터 전환의 AI 개념 배경. 실제 장소·단지·가격·노선·계획·연구 결과의 근거로 사용 금지",
+                             "ai_label":  "AI 개념 이미지 · 실제 장소 아님"
+                         },
+    "unassigned_assets":  [
+                              {
+                                  "asset_id":  "chapter_jobs_v1",
+                                  "reason":  "업무시설은 적합하나 L006에는 대본의 통근 경로를 더 직접 보여주는 transport 선택. 다른 주제에 전용하지 않음"
+                              },
+                              {
+                                  "asset_id":  "chapter_school_life_v1",
+                                  "reason":  "학교·운동장 중심으로 이번 8주제 핵심과 맞지 않음"
+                              }
+                          ],
+    "additional_reuse_candidates":  [
+
+                                    ],
+    "inventory_scope":  "지정 manifest 6개와 README, chapter-backgrounds 바로 하위 v1만 확인. 다른 기존 자산 광범위 검색 없음",
+    "open_issue_ids":  [
+                           "CHAPTER_MISSING_L002",
+                           "CHAPTER_MISSING_L003",
+                           "CHAPTER_MISSING_L004",
+                           "CHAPTER_MISSING_L008"
+                       ],
+    "unresolved":  {
+                       "missing_scene_ids":  [
+                                                 "L002",
+                                                 "L003",
+                                                 "L004",
+                                                 "L008"
+                                             ],
+                       "next_action":  "main이 부족한 네 주제의 독립 이미지를 생성·검토. ready 파일 반복 배정으로 채우지 않음",
+                       "final_composite_review":  "미수행: 영상 합성·재생·청취·자막 최종 가독성은 이번 범위 밖"
+                   },
+    "next_role":  "main/director",
+    "scope_guard":  "작성은 visual/guide-v3/chapter_assets.json 및 handoff.json만. 기존 이미지·공통 장면표·state·decisions 수정 없음"
+}

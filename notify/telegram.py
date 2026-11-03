@@ -83,12 +83,13 @@ def mask(text: str, token: str = "") -> str:
 
 
 def _post(method: str, token: str, *, data: dict,
-          files: dict | None = None) -> dict:
+          files: dict | None = None, timeout: float | None = None) -> dict:
     """Bot API 호출. 실패해도 예외를 밖으로 던지지 않는다."""
     import requests
     url = f"{API}/bot{token}/{method}"
     try:
-        r = requests.post(url, data=data, files=files, timeout=TIMEOUT)
+        r = requests.post(url, data=data, files=files,
+                          timeout=timeout or TIMEOUT)
         try:
             body = r.json()
         except ValueError:
@@ -200,9 +201,13 @@ def send_file(path, caption: str = "", *, quiet: bool = False) -> bool:
     data = {"chat_id": cid}
     if caption:
         data["caption"] = caption[:1024]
+    # 30초는 글 몇 줄 보낼 때 이야기다. 상한이 50MB 인 전송기가 30초
+    # 안에 끝나기를 기대하면 큰 파일은 **영영 못 보낸다** — 12분짜리
+    # 영상을 올리다 write timeout 으로 끊겼다. 크기에 맞춰 늘려 준다.
+    wait = max(TIMEOUT, 60 + mb * 15)
     with p.open("rb") as fh:
         res = _post("sendDocument", tok, data=data,
-                    files={"document": (p.name, fh)})
+                    files={"document": (p.name, fh)}, timeout=wait)
     if not res.get("ok"):
         print(f"  [텔레그램] 전송 실패 — {explain(res)}")
         return False

@@ -211,7 +211,9 @@ def line_svg(sets: list[tuple[str, list[tuple[int, int]], str]],
                      f'text-anchor="end" font-size="26" fill="{D.SUB}">'
                      f'{gv // 10000}억</text>')
     for y in xs:
-        if y % 3 == 0 or y == x1:
+        # 3년 간격 + 마지막 해. 마지막 해에 바짝 붙은 눈금은 글자가 서로
+        # 닿아 "20252026" 처럼 한 덩어리로 읽힌다. 가까우면 빼 둔다.
+        if y == x1 or (y % 3 == 0 and x1 - y >= 3):
             parts.append(f'<text x="{X(y):.0f}" y="{pt + ih + 46}" '
                          f'text-anchor="middle" font-size="26" '
                          f'fill="{D.SUB}">{y}</text>')
@@ -244,8 +246,7 @@ def line_svg(sets: list[tuple[str, list[tuple[int, int]], str]],
 
 
 # ── 각 장 ────────────────────────────────────────────────────────────────
-def chart_level(c) -> tuple[str, str]:
-    """① 지금 얼마나 벌어져 있나 — 평당가 수준."""
+def rows_level(c) -> list[tuple]:
     rows = []
     base = level(c, "1=1")
     for t in TOWNS:
@@ -255,6 +256,38 @@ def chart_level(c) -> tuple[str, str]:
                          f"{lv[1]:,}만원"))
     rows.sort(key=lambda r: -r[1])
     rows.append(("수도권 전체", base[1], GREY, f"{base[1]:,}만원"))
+    return rows
+
+
+def rows_naive(c) -> list[tuple]:
+    rows = []
+    for t in TOWNS:
+        v = naive(c, town_where(t), 2015, 2026)
+        if v is not None:
+            rows.append((t, v, WIN if t in WINNERS else LOSE, f"+{v:.0f}%"))
+    rows.sort(key=lambda r: -r[1])
+    bv = naive(c, "1=1", 2015, 2026)
+    rows.append(("수도권 전체", bv, GREY, f"+{bv:.0f}%"))
+    return rows
+
+
+def rows_same(c, a: int = 2019, b: int = 2026) -> list[tuple]:
+    rows = []
+    for t in TOWNS:
+        r = same_apt(c, town_where(t), a, b)
+        if r and r[0] >= 4:
+            rows.append((f"{t} <small>{r[0]}곳</small>", r[1],
+                         WIN if t in WINNERS else LOSE, f"{r[1]:+.0f}%"))
+    rows.sort(key=lambda r: -r[1])
+    bb = same_apt(c, "1=1", a, b)
+    rows.append((f"수도권 전체 <small>{bb[0]:,}곳</small>", bb[1], GREY,
+                 f"{bb[1]:+.0f}%"))
+    return rows
+
+
+def chart_level(c) -> tuple[str, str]:
+    """① 지금 얼마나 벌어져 있나 — 평당가 수준."""
+    rows = rows_level(c)
     body = bars(rows) + (
         f'<div class="lg"><span><i style="background:{WIN}"></i>'
         f'광교·동탄</span><span><i style="background:{LOSE}"></i>'
@@ -270,14 +303,7 @@ def chart_level(c) -> tuple[str, str]:
 
 def chart_naive(c) -> tuple[str, str]:
     """② 흔한 착시 — 연도별 중위값으로 보면 정반대."""
-    rows = []
-    for t in TOWNS:
-        v = naive(c, town_where(t), 2015, 2026)
-        if v is not None:
-            rows.append((t, v, WIN if t in WINNERS else LOSE, f"+{v:.0f}%"))
-    rows.sort(key=lambda r: -r[1])
-    bv = naive(c, "1=1", 2015, 2026)
-    rows.append(("수도권 전체", bv, GREY, f"+{bv:.0f}%"))
+    rows = rows_naive(c)
     return "02_naive", deco(page(
         "2015 → 2026 · 동네별 중위 평당가 상승률",
         '이대로 보면 <em>옥정·검단이 광교보다 위</em>입니다',
@@ -308,9 +334,12 @@ def chart_mix(c) -> tuple[str, str]:
                  if r[2] and r[3] else "")
         rows.append((f"{t} {extra}", share,
                      GOLD if share >= 30 else GREY, f"{share:.0f}%"))
+    # 막대는 값 순서로 세운다. 이야기 순서대로 두었더니 두 번째 막대가
+    # 첫 번째보다 길어서, 보는 사람이 그림을 먼저 의심한다.
+    rows.sort(key=lambda r: -r[1])
     return "03_mix", deco(page(
         "2026년 거래 중 '2020년 이후 지은 집'의 비율",
-        '검단은 <em>절반 이상이 새 집</em>이었습니다',
+        '<em>절반 넘게 새 집</em>인 동네가 있습니다',
         bars(rows, mx=100),
         "새 아파트가 대거 입주하면 동네 중위값이 올라갑니다. "
         "기존 집값이 오른 게 아닙니다."), badge="그래프 ③", callout="58%", sub="인천 검단 · 2020년 이후 준공")
@@ -318,16 +347,7 @@ def chart_mix(c) -> tuple[str, str]:
 
 def chart_same(c) -> tuple[str, str]:
     """④ 같은 단지만 추적 — 진짜 답."""
-    rows = []
-    for t in TOWNS:
-        r = same_apt(c, town_where(t), 2019, 2026)
-        if r and r[0] >= 4:
-            rows.append((f"{t} <small>{r[0]}곳</small>", r[1],
-                         WIN if t in WINNERS else LOSE, f"+{r[1]:.0f}%"))
-    rows.sort(key=lambda r: -r[1])
-    b = same_apt(c, "1=1", 2019, 2026)
-    rows.append((f"수도권 전체 <small>{b[0]:,}곳</small>", b[1], GREY,
-                 f"+{b[1]:.0f}%"))
+    rows = rows_same(c, 2019, 2026)
     return "04_same", deco(page(
         "2019 → 2026 · 두 해 모두 거래된 '같은 단지'만",
         '다시 재면 <b>순서가 뒤집힙니다</b>',
@@ -380,8 +400,7 @@ def chart_apt(c) -> tuple[str, str]:
         "그 동네 전체를 대표하지는 않습니다."), badge="그래프 ⑥")
 
 
-def chart_peak(c) -> tuple[str, str]:
-    """⑦ 2021 고점 대비 지금."""
+def rows_peak(c) -> list[tuple]:
     rows = []
     for t in TOWNS:
         r = same_apt(c, town_where(t), 2021, 2026)
@@ -389,9 +408,15 @@ def chart_peak(c) -> tuple[str, str]:
             rows.append((f"{t} <small>{r[0]}곳</small>", r[1],
                          WIN if r[1] >= -5 else LOSE, f"{r[1]:+.0f}%"))
     rows.sort(key=lambda r: -r[1])
-    b = same_apt(c, "1=1", 2021, 2026)
-    rows.append((f"수도권 전체 <small>{b[0]:,}곳</small>", b[1], GREY,
-                 f"{b[1]:+.0f}%"))
+    bb = same_apt(c, "1=1", 2021, 2026)
+    rows.append((f"수도권 전체 <small>{bb[0]:,}곳</small>", bb[1], GREY,
+                 f"{bb[1]:+.0f}%"))
+    return rows
+
+
+def chart_peak(c) -> tuple[str, str]:
+    """⑦ 2021 고점 대비 지금."""
+    rows = rows_peak(c)
     return "07_peak", deco(page(
         "2021년 고점 대비 2026년 · 같은 단지",
         '지키느냐 빠지느냐가 <em>여기서</em> 갈립니다',
@@ -432,8 +457,9 @@ def chart_map(c) -> tuple[str, str]:
         f'<div style="font-size:34px;font-weight:700;color:{LOSE};'
         f'line-height:1.7">검단 · 김포한강<br>운정 · 옥정</div>'
         f'<div style="font-size:26px;color:{D.SUB};margin-top:34px;'
-        f'line-height:1.6">검은 점이 강남입니다.<br>'
-        f'성공한 쪽은 모두 <b style="color:{WIN}">남쪽</b>에 있습니다.</div>')
+        f'line-height:1.6">가운데 <b>큰 점</b>이 강남입니다.<br>'
+        f'성공한 쪽은 모두<br>'
+        f'<b style="color:{WIN}">남쪽</b>에 있습니다.</div>')
     body = (f'<div class="two"><div style="flex:3">{svg}</div>'
             f'<div style="flex:1">{side}</div></div>')
     return "08_map", deco(page(

@@ -1,0 +1,11 @@
+{
+  "revision": "monthly-5eok-permanent-v2",
+  "threshold_manwon": 50000,
+  "trigger": "first contract month median > 50000 then permanently off",
+  "before_trigger": "on from first observed month at <=50000; remains on in no-trade months",
+  "first_observed_over": "never on",
+  "meaning": "no observed monthly breach history; not current affordability or imputed price",
+  "motion": "fixed map; smooth chart/time; no monthly opacity flicker; never relight after breach",
+  "audio": "silent",
+  "user_request": "반짝이지말고 5억 넘는순간부터는 아예 불 안들어오게해봐"
+}

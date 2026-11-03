@@ -1,0 +1,510 @@
+{
+  "task_id": "part1-Jun-shorts-3way-content-plan",
+  "status": "pass",
+  "validation_scope": "신규 승인 화면 팩트·범위/집계 정의·CTA ID 인계",
+  "new_source": {
+    "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-split-v4/part1-jun-and-shorts-v1/shorts_visual_facts.json",
+    "sha256": "b0c20437e57f98dd99c7e6a57104090b234e289d8f7f8ba156f507f473b5bf49",
+    "source_id": "SRC-ACCEPTED-SHORTS-VISUAL-FACTS"
+  },
+  "checked_regions": 10,
+  "checked_rows": 20,
+  "checks": [
+    {
+      "check": "accepted_visual_scope",
+      "result": "pass",
+      "detail": "화면 팩트는20~11위10개 지역"
+    },
+    {
+      "check": "R20_accepted_html_sha",
+      "result": "pass",
+      "detail": "승인 HTML 바이트 SHA 확인; 프레임 검수 아님"
+    },
+    {
+      "check": "R20_two_rows",
+      "result": "pass",
+      "detail": "두 비교 행 유지"
+    },
+    {
+      "check": "R20_row1",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R20_row2",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R20_aggregation_definition",
+      "result": "pass",
+      "detail": "준공 시기별 거래 중위값"
+    },
+    {
+      "check": "R19_accepted_html_sha",
+      "result": "pass",
+      "detail": "승인 HTML 바이트 SHA 확인; 프레임 검수 아님"
+    },
+    {
+      "check": "R19_two_rows",
+      "result": "pass",
+      "detail": "두 비교 행 유지"
+    },
+    {
+      "check": "R19_row1",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R19_row2",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R19_aggregation_definition",
+      "result": "pass",
+      "detail": "동별 거래 중위값"
+    },
+    {
+      "check": "R18_accepted_html_sha",
+      "result": "pass",
+      "detail": "승인 HTML 바이트 SHA 확인; 프레임 검수 아님"
+    },
+    {
+      "check": "R18_two_rows",
+      "result": "pass",
+      "detail": "두 비교 행 유지"
+    },
+    {
+      "check": "R18_row1",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R18_row2",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R18_aggregation_definition",
+      "result": "pass",
+      "detail": "동별 거래 중위값"
+    },
+    {
+      "check": "R17_accepted_html_sha",
+      "result": "pass",
+      "detail": "승인 HTML 바이트 SHA 확인; 프레임 검수 아님"
+    },
+    {
+      "check": "R17_two_rows",
+      "result": "pass",
+      "detail": "두 비교 행 유지"
+    },
+    {
+      "check": "R17_row1",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R17_row2",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R17_aggregation_definition",
+      "result": "pass",
+      "detail": "동별 거래 중위값"
+    },
+    {
+      "check": "R16_accepted_html_sha",
+      "result": "pass",
+      "detail": "승인 HTML 바이트 SHA 확인; 프레임 검수 아님"
+    },
+    {
+      "check": "R16_two_rows",
+      "result": "pass",
+      "detail": "두 비교 행 유지"
+    },
+    {
+      "check": "R16_row1",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R16_row2",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R16_aggregation_definition",
+      "result": "pass",
+      "detail": "단지별 가격대 분포"
+    },
+    {
+      "check": "R15_accepted_html_sha",
+      "result": "pass",
+      "detail": "승인 HTML 바이트 SHA 확인; 프레임 검수 아님"
+    },
+    {
+      "check": "R15_two_rows",
+      "result": "pass",
+      "detail": "두 비교 행 유지"
+    },
+    {
+      "check": "R15_row1",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R15_row2",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R15_aggregation_definition",
+      "result": "pass",
+      "detail": "동별 거래 중위값"
+    },
+    {
+      "check": "R14_accepted_html_sha",
+      "result": "pass",
+      "detail": "승인 HTML 바이트 SHA 확인; 프레임 검수 아님"
+    },
+    {
+      "check": "R14_two_rows",
+      "result": "pass",
+      "detail": "두 비교 행 유지"
+    },
+    {
+      "check": "R14_row1",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R14_row2",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R14_aggregation_definition",
+      "result": "pass",
+      "detail": "동별 거래 중위값"
+    },
+    {
+      "check": "R13_accepted_html_sha",
+      "result": "pass",
+      "detail": "승인 HTML 바이트 SHA 확인; 프레임 검수 아님"
+    },
+    {
+      "check": "R13_two_rows",
+      "result": "pass",
+      "detail": "두 비교 행 유지"
+    },
+    {
+      "check": "R13_row1",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R13_row2",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R13_aggregation_definition",
+      "result": "pass",
+      "detail": "동별 거래 중위값"
+    },
+    {
+      "check": "R12_accepted_html_sha",
+      "result": "pass",
+      "detail": "승인 HTML 바이트 SHA 확인; 프레임 검수 아님"
+    },
+    {
+      "check": "R12_two_rows",
+      "result": "pass",
+      "detail": "두 비교 행 유지"
+    },
+    {
+      "check": "R12_row1",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R12_row2",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R12_aggregation_definition",
+      "result": "pass",
+      "detail": "동별 거래 중위값"
+    },
+    {
+      "check": "R11_accepted_html_sha",
+      "result": "pass",
+      "detail": "승인 HTML 바이트 SHA 확인; 프레임 검수 아님"
+    },
+    {
+      "check": "R11_two_rows",
+      "result": "pass",
+      "detail": "두 비교 행 유지"
+    },
+    {
+      "check": "R11_row1",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R11_row2",
+      "result": "pass",
+      "detail": "값·집단명·거래/단지 표본수·막대 비례"
+    },
+    {
+      "check": "R11_aggregation_definition",
+      "result": "pass",
+      "detail": "동별 거래 중위값"
+    },
+    {
+      "check": "R16_complex_distribution_not_transaction_median",
+      "result": "pass",
+      "detail": "단지별 거래 중위가격의 구간별 단지 수:77단지 중61/16. 둘째 구간은5억 이상7억 미만"
+    },
+    {
+      "check": "covered_ranks_exactly20_to11",
+      "result": "pass",
+      "detail": "53개 구는 순위 모집단. 본편은TOP20 중20~11위10개 지역을 소개"
+    },
+    {
+      "check": "fullmain_CTA_target_is20_to11",
+      "result": "pass",
+      "detail": "본편 연결 범위를53개 구 전체 또는TOP20 전체로 확대하지 않음"
+    },
+    {
+      "check": "price_fact_regions_are_subset",
+      "result": "pass",
+      "detail": "홍보17위 사례 / 내용20~16위 / 내용15~11위에만 가격값 연결"
+    },
+    {
+      "check": "common_CTA_exact65",
+      "result": "pass",
+      "detail": "지정 CTA 원문65자 보존"
+    },
+    {
+      "check": "CTA_alias_mapping",
+      "result": "pass",
+      "detail": "총괄 생성 ID SHORTS-CTA-01/02에 원문 일치로 매핑"
+    },
+    {
+      "check": "plan_and_wording_files_unchanged",
+      "result": "pass",
+      "detail": "계획·문구·기존 검증 기록 수정 없음"
+    }
+  ],
+  "failures": 0,
+  "price_rows": [
+    {
+      "region_id": "R20",
+      "row": 1,
+      "label": "2000년까지 준공",
+      "value": "6억원",
+      "sample": "거래 279건 · 28단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R20",
+      "row": 2,
+      "label": "2011년 이후 준공",
+      "value": "8억9,900만원",
+      "sample": "거래 167건 · 13단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R19",
+      "row": 1,
+      "label": "신내동",
+      "value": "7억4,000만원",
+      "sample": "거래 100건 · 17단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R19",
+      "row": 2,
+      "label": "면목동",
+      "value": "8억4,000만원",
+      "sample": "거래 132건 · 30단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R18",
+      "row": 1,
+      "label": "동백동",
+      "value": "5억2,000만원",
+      "sample": "거래 165건 · 15단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R18",
+      "row": 2,
+      "label": "영덕동",
+      "value": "7억1,500만원",
+      "sample": "거래 179건 · 14단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R17",
+      "row": 1,
+      "label": "연수동",
+      "value": "3억3,150만원",
+      "sample": "거래 70건 · 10단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R17",
+      "row": 2,
+      "label": "송도동",
+      "value": "7억4,000만원",
+      "sample": "거래 860건 · 65단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R16",
+      "row": 1,
+      "label": "5억 미만",
+      "value": "61단지",
+      "sample": "지도 연결 77단지 기준",
+      "result": "pass"
+    },
+    {
+      "region_id": "R16",
+      "row": 2,
+      "label": "5~7억",
+      "value": "16단지",
+      "sample": "지도 연결 77단지 기준",
+      "result": "pass"
+    },
+    {
+      "region_id": "R15",
+      "row": 1,
+      "label": "구로동",
+      "value": "7억8,000만원",
+      "sample": "거래 123건 · 40단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R15",
+      "row": 2,
+      "label": "신도림동",
+      "value": "13억2,000만원",
+      "sample": "거래 80건 · 18단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R14",
+      "row": 1,
+      "label": "신사동",
+      "value": "6억3,800만원",
+      "sample": "거래 67건 · 20단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R14",
+      "row": 2,
+      "label": "진관동",
+      "value": "9억4,000만원",
+      "sample": "거래 91건 · 25단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R13",
+      "row": 1,
+      "label": "금곡동",
+      "value": "5억3,000만원",
+      "sample": "거래 217건 · 17단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R13",
+      "row": 2,
+      "label": "권선동",
+      "value": "6억4,750만원",
+      "sample": "거래 192건 · 18단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R12",
+      "row": 1,
+      "label": "망포동",
+      "value": "7억3,000만원",
+      "sample": "거래 235건 · 23단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R12",
+      "row": 2,
+      "label": "이의동",
+      "value": "11억9,000만원",
+      "sample": "거래 100건 · 10단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R11",
+      "row": 1,
+      "label": "상계동",
+      "value": "7억1,000만원",
+      "sample": "거래 213건 · 43단지",
+      "result": "pass"
+    },
+    {
+      "region_id": "R11",
+      "row": 2,
+      "label": "중계동",
+      "value": "8억6,000만원",
+      "sample": "거래 159건 · 37단지",
+      "result": "pass"
+    }
+  ],
+  "CTA_aliases": [
+    {
+      "writer_sentence_id": "P01-SHORTS-CTA-01",
+      "parent_sentence_id": "SHORTS-CTA-01",
+      "exacttext": "나머지 순위도 궁금하시다면 다른 순위 영상을 확인해 주세요.",
+      "match_basis": "exacttext"
+    },
+    {
+      "writer_sentence_id": "P01-SHORTS-CTA-02",
+      "parent_sentence_id": "SHORTS-CTA-02",
+      "exacttext": "지역별 자세한 가격과 생활권 비교는 본편에서 이어집니다.",
+      "match_basis": "exacttext"
+    }
+  ],
+  "parent_voice_report": {
+    "source": "최신 task packet",
+    "generated_sentences": 92,
+    "CTA_generated_once": true,
+    "actual_reported_value": 2208,
+    "value_unit": "task packet에 단위 미표기",
+    "independently_listened_by_writer": false
+  },
+  "preserved_artifact_sha256": {
+    "shorts_plan.json": "4b78edf4868ae013474c530d7d87b19b37af7f059af904dd0cd12b20b0a431a2",
+    "shorts_plan.md": "877158d1ede0d74df3e07484e880bb4df01b54f205d4bdfe93cb92fcf207d8fc",
+    "short01_promo.json": "2852176dbb994e19630a931b4ec9f766a0c4f16794b936b0a6e699bc1a1a8428",
+    "short02_ranks20_16.json": "71485094fa2787dd167c311013d8a8343827268cd6fef025fc73dc9362de97bc",
+    "short03_ranks15_11.json": "bbf657b92e4a767bbcb819e7e6a67fa7674cd34cf1108f4cc7675697807350f9",
+    "common_cta.json": "04796bb91e54d2515cb45a2ca54b4e7cb998f79d14b2dd2772191738303459e1",
+    "source_manifest.json": "c24ccabdba9e6808a478ea3091d763086f37d13e23ceb41ba7696f5daccd5b2c",
+    "checks.json": "0a20a44c22e2f2d9655c7fbebf681943f1352f6e33f767f6f2d5a5dc50d50825",
+    "issue_DEFINITIONS_AND_LINKS.json": "45396b6dc487cc376f560f5af5e13eb2e7c380c83ca4d2524dc4211375d53626"
+  },
+  "superseded_execution_note": "직전 PowerShell stdin 전달의 한글 인코딩 손상으로 문자열 대조가 무효가 되어 UTF-8 파일 실행으로 교정함. 가격 변경 근거로 사용하지 않음.",
+  "not_performed": [
+    "추가 사실 조사",
+    "본편/계획 문구 변경",
+    "음성 생성",
+    "음성 청취",
+    "프레임 검수",
+    "연속 재생",
+    "독립 미디어 QA"
+  ]
+}

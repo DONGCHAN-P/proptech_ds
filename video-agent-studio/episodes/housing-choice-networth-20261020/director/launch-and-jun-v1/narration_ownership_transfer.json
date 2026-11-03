@@ -1,0 +1,10 @@
+{
+  "task_id": "jun-v1-measurement-handoff-takeover",
+  "reason": "Narration agent01a176ba-5fe5-7b40-b112-59e16fcfcbbb ended with model capacity error after all54 paid TTS requests completed; no final chapter timing handoff yet.",
+  "previous_agent_closed": true,
+  "new_owner": "video_director main agent",
+  "write_scope": "narration/jun-production-v1 local measurement, alignment, validation and handoff only",
+  "preserve_paid_generation_outputs_and_receipts": true,
+  "new_tts_calls_authorized_by_this_transfer": 0,
+  "next_actions": ["Run existing reviewed measure_and_align.py on completed audio files", "Record local validation and exact timing/audio hashes", "Deliver formal timing to editor and independent QA"]
+}

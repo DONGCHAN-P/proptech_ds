@@ -1,0 +1,79 @@
+{
+  "decisions": [
+    {
+      "id": "DI-TOPIC-v1",
+      "type": "topic",
+      "decision": "direct request: Data Insight internal film; all ZIP images"
+    },
+    {
+      "id": "DI-SCRIPT-v1",
+      "type": "script",
+      "decision": "latest request:30s; people; premium quality; prewrite all Korean. Caption file locked before API calls"
+    },
+    {
+      "id": "DI-BUDGET-v1",
+      "type": "budget",
+      "decision": "approved",
+      "max_credits": 300,
+      "max_usd": 3.0,
+      "tax_excluded": true,
+      "expected_credits": 180,
+      "source": "explicit async question reply: 최대 $3.00로 진행"
+    },
+    {
+      "id": "DI-MEDIA-v1",
+      "type": "production",
+      "decision": "Only office photos A02/A04/A11 sent to Runway; UI screenshots preserved locally. AI people are conceptual reenactment, not actual team footage. All Hangul separately composited locally."
+    },
+    {
+      "id": "DI-SCRIPT-v1.1",
+      "type": "accuracy_revision",
+      "decision": "S3a specific09:50 title removed; A01 hourly/A07promo role labels preserved; no extra paid generation; all captions prewritten before local compositing",
+      "basis": "original asset visual inspection + independent QA-P01"
+    },
+    {
+      "id": "DI-SCRIPT-v1.2",
+      "type": "qa_fix",
+      "decision": "GIF source has23.1s timeline; compress all7frames into3s S3c; prewrite label 요건 구체화 · 빠르게 재생; remove redundant S1 copy; no new paid calls",
+      "basis": "QA-F03 actual encoded frame inspection"
+    },
+    {
+      "id": "DI-REVISION-v2",
+      "type": "user_revision",
+      "decision": "Replace all floating screenshot panels with actual monitor/phone use seen over shoulder. User explicitly authorizes sending completed result to configured Telegram chat. v1 retained, no previous completion approval applied.",
+      "budget_status": "new version budget pending",
+      "source": "latest direct user request"
+    },
+    {
+      "id": "DI-BUDGET-v2",
+      "type": "budget",
+      "status": "approved",
+      "max_new_usd": 3,
+      "max_new_credits": 300,
+      "expected_new_usd": 1.8,
+      "tax_excluded": true,
+      "source": "explicit async response: 추가 최대 $3.00로 진행",
+      "version": "v2",
+      "previous_v1_spend": 1.8
+    },
+    {
+      "id": "DI-SCRIPT-v2",
+      "type": "script_revision",
+      "decision": "30s revised device-focused captions and original core claims prewritten in script_v2.md; exact displayed strings in editor-v2/on_screen_text_v2.md before render",
+      "source": "user requested correction; production adaptation within authorized scope"
+    },
+    {
+      "id": "DI-TELEGRAM-v2",
+      "type": "delivery_authorization",
+      "decision": "Send completed reviewed v2 MP4 as original-quality document to existing configured Telegram private chat",
+      "source": "direct current user: 작업결과 텔레그램으로 보내줘",
+      "no_public_upload": true
+    },
+    {
+      "id": "DI-QA-v2-role-scope",
+      "type": "accuracy_correction",
+      "decision": "A13 is monthly issues with original June2026 content despite July filename; no July label. S4 uses only A01 hourly alert examples; weekly promo A07 stays monitorS2. Original daytime alert screenshots are illustrative examples of monitoring, not actual night logs.",
+      "source": "independent QA + original pixel inspection"
+    }
+  ]
+}

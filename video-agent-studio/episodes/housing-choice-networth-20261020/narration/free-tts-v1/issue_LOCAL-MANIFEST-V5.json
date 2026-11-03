@@ -1,0 +1,24 @@
+{
+  "issue_id": "LOCAL-MANIFEST-V5",
+  "scene_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10"
+  ],
+  "problem": "54문단·10장 PCM 생성 완료 뒤 최종 타임맵 source_mapping 저장에서 상대/절대 경로 ValueError",
+  "evidence": "production-injoon-v5/failure_*.json의 completed_chapters=10 및 trace. before_local_finalization.json에서 54문단·10장과 오디오 SHA 검증",
+  "root_cause": "상대 prepared 경로를 절대 ROOT에 바로 relative_to하여 실패. 음성/TTS 서비스 실패가 아님",
+  "proposal": "workspace 경로를 resolve한 뒤 relative_to. 회귀 테스트 후 finalize-existing 명령으로 저장만 명시적 재개. 54개 measured cache를 모두 요구하고 새 합성 분기를 금지",
+  "impact": "원시 음성·WordBoundary·10장 WAV는 보존. 로컬 저장 재개 전후 오디오 SHA를 대조하며 새 TTS 호출0. 실패 기록은 삭제하지 않음",
+  "resume_notification": "직접 메시지 도구가 없어 현재 작업 대화와 이 issue/handoff로 총괄에 명시적 로컬 재개를 전달",
+  "next_owner": "video_director",
+  "status": "resolved_no_new_tts_audio_hashes_preserved",
+  "resolution_evidence": "production-injoon-v5/local_finalization_receipt.json"
+}

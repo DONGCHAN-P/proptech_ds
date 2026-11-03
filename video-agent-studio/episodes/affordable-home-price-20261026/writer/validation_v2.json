@@ -1,0 +1,228 @@
+{
+  "episode_id": "affordable-home-price-20261026",
+  "script_revision": "v2",
+  "frozen_script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "policy_as_of": "2026-10-26",
+  "status": "writer_change_and_structure_checks_only",
+  "checks": [
+    {
+      "check": "v1 기존파일 불변",
+      "result": "pass",
+      "evidence": {
+        "scope": "v2 착수 이전 writer 파일의 보존 해시",
+        "files": {
+          "build_writer_v1.py": "e08e9f4197d3fdfd7d520467d22dd28b6c2b4512565f7edfa6bb45121f0f04fa",
+          "claim_map_v1.json": "829a22cd86ae37063d5e0ddc801b52ab58bbfc59fcec0ea7e712cb38c352e736",
+          "handoff.json": "5af942b207fff5ea2a8a748cc672f0652fbf94b87ba7c083b0665d6c52e09491",
+          "pronunciation_notes_v1.json": "8596f27c41686c354ad93dd3ab490a34dda9541f225e6340f41ac113cec0c162",
+          "protected_numeric_v1.json": "a733148280799e6c9672cc182368b7e2c93cc1c934aa4c03592bd78e4306a80d",
+          "scene_proposals_v1.json": "940fb485ae190cfbdb1428c05145292e295a20f6ef59274d250d2d915859cd76",
+          "script_v1.md": "26ed3cb78465bfde7bf52655df535e0d5b6fd8287e24c105c94266f757e7717f",
+          "validation_v1.json": "b4d9aa36c93c06ad2f3d5df3e52d6b0fffee6deed7a20e2ba05a8ec70c0b122a"
+        }
+      }
+    },
+    {
+      "check": "v2 고정SHA",
+      "result": "pass",
+      "evidence": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3"
+    },
+    {
+      "check": "10개 표제·순서 유지",
+      "result": "pass",
+      "evidence": [
+        "1. 출발점",
+        "2. 보유자금",
+        "3. 담보 한도",
+        "4. 소득 심사",
+        "5. 거래비용",
+        "6. 가격별 계산",
+        "7. 정책대출",
+        "8. 신생아 특례",
+        "9. 월 예산",
+        "10. 다음 선택"
+      ]
+    },
+    {
+      "check": "메타데이터v2·서술문단",
+      "result": "pass",
+      "evidence": "45개 서술문단"
+    },
+    {
+      "check": "표시문자수6800이내",
+      "result": "pass",
+      "evidence": {
+        "narration": 6550,
+        "visible": 6765
+      }
+    },
+    {
+      "check": "도입20~30초 estimate",
+      "result": "pass",
+      "evidence": 25.57
+    },
+    {
+      "check": "문단·장면 표시문 일치",
+      "result": "pass",
+      "evidence": 45
+    },
+    {
+      "check": "의미후보 재조합",
+      "result": "pass",
+      "evidence": "문장/절 의미 경계·타이밍 미지정"
+    },
+    {
+      "check": "보호숫자 큐 경계 불분할",
+      "result": "pass",
+      "evidence": 187
+    },
+    {
+      "check": "claim·기존case 연결 유효",
+      "result": "pass",
+      "evidence": {
+        "current_facts_count": 56,
+        "used_claims": 49
+      }
+    },
+    {
+      "check": "SC01 첫총액·CH6 지역가격 범위",
+      "result": "pass",
+      "evidence": [
+        "S001",
+        "S025"
+      ]
+    },
+    {
+      "check": "SC02 각자소득·입양나이",
+      "result": "pass",
+      "evidence": {
+        "id": "N01",
+        "claim_id": "N01",
+        "statement": "신생아 특례 구입대출은 최근 출산가구의 소득·무주택 요건을 심사한다.",
+        "exact_conditions": "접수일기준2년내출산,2023-01-01이후출생; 입양아는접수일현재만2세미만. 무주택세대주 구입용도. 외벌이합산1.3억이하,맞벌이합산2억이하이며부부각1인의소득1.3억이하. 특별공급/우선공급 나이예외는별도.",
+        "value": {
+          "single_income_max": 1.3,
+          "dual_income_max": 2,
+          "birth_lookback_years": 2,
+          "each_partner_dual_income_max": 1.3
+        },
+        "unit": "억원/년",
+        "source_ids": [
+          "DIRECTOR_CURRENT_NHUF",
+          "DIRECTOR_CURRENT_KB"
+        ],
+        "evidence_locations": [
+          {
+            "source_id": "DIRECTOR_CURRENT_NHUF",
+            "location": "현재HTML 맞벌이 설명/출산범위; evidence/director-newborn-v1/NHUF.html"
+          },
+          {
+            "source_id": "DIRECTOR_CURRENT_KB",
+            "location": "입양자격 및 A1금리; evidence/director-newborn-v1/KB.html"
+          }
+        ],
+        "basis_date": "2026-10-26",
+        "confirmed_as_of": "2026-10-26",
+        "status": "verified",
+        "effective_status": "effective",
+        "qualification": "특공·우선공급 당첨자 자녀나이 예외; 1주택 대환은 별도이고 합산1.3억 초과 대환불가(KB). 토지임대부 특례는 기본사례 제외",
+        "director_correction": "N01A/N01B; copied v1 source pack retained unchanged."
+      }
+    },
+    {
+      "check": "SC03 접수일·가산폭·기본재산정",
+      "result": "pass",
+      "evidence": {
+        "claim_id": "N05A",
+        "statement": "기본 특례5년 종료 후 금리는 신규취급시 부부합산소득 구간과 대출접수일 기준 산식으로 정합니다.",
+        "exact_conditions": "신규시 합산소득8500만원 이하: 특례금리에 [접수일 기준 생애최초 신혼 내집마련디딤돌 최저기본금리−신생아 최저특례금리]를 가산. KB 현행 표의2026.10.19기준 가산폭0.75%p. 기본 특례기간5년; 추가출산 연장·금리우대·자산초과가산·중도상환은 아래 예시에서0.",
+        "value": {
+          "initial_B_rate": 0.029,
+          "basic_special_years": 5,
+          "current_schedule_spread_pp": 0.75,
+          "B_reset_example_rate": 0.0365
+        },
+        "source_ids": [
+          "DIRECTOR_CURRENT_KB",
+          "DIRECTOR_CURRENT_NHUF"
+        ],
+        "status": "verified",
+        "effective_status": "effective",
+        "qualification": "현재접수시점금리표를적용한B기본금리 예시. 추가출산·우대·중도상환0.60회상환잔액/남은300개월 재계산."
+      }
+    },
+    {
+      "check": "SC03 잔액·남은기간·B예산",
+      "result": "pass",
+      "evidence": {
+        "case_id": "B_newborn_6eok_reset_after60_current_schedule",
+        "base_case": "B_newborn_P600000000_C0",
+        "principal_krw": "390740000",
+        "initial_annual_rate": "0.029",
+        "initial_months": 60,
+        "original_months": 360,
+        "initial_monthly_krw": "1626377.024396469120911861925820032915688",
+        "balance_after60_krw": "346755901.4033111344648170787840799400866",
+        "current_schedule_reset_spread_pp": "0.75",
+        "current_schedule_reset_rate": "0.0365",
+        "remaining_months": 300,
+        "reset_monthly_krw": "1763962.030097174623729798006323114551339",
+        "monthly_increase_krw": "137585.005700705502817936080503081635651",
+        "meaning": "A의 최초원금·신규360개월 금리 비교와 별개로, B의60회 상환 후 잔액·남은300개월을 계산했습니다.",
+        "scope": "Current application-rate schedule illustration, base rates before preferences, no additional birth/prepayment; future policy or personal execution changes require corresponding input update."
+      }
+    },
+    {
+      "check": "SC04 공제입력/제약비교·M08일반화 제거",
+      "result": "pass",
+      "evidence": "기존9억 사례의 한도/현금 유지"
+    },
+    {
+      "check": "감면 출산일·취득범위 보존",
+      "result": "pass",
+      "evidence": "T04/T05 상세조건 scene_proposals_v2"
+    },
+    {
+      "check": "기존 사례 수치 전부 유지",
+      "result": "pass",
+      "evidence": "기존 산술 재실행 대신 원값·필드 대조"
+    },
+    {
+      "check": "신규 재산정 숫자 원문 일치",
+      "result": "pass",
+      "evidence": "총괄 독립4검증 인계값 재사용; writer 재실행 아님"
+    },
+    {
+      "check": "A민감도와B재산정 기간 구별",
+      "result": "pass",
+      "evidence": [
+        "S034R",
+        "S040"
+      ]
+    },
+    {
+      "check": "NB01 신생아장 전용·HB01 도입 유지",
+      "result": "pass",
+      "evidence": "그림 미열람·manifest 기준"
+    },
+    {
+      "check": "추정 시간만 사용",
+      "result": "pass",
+      "evidence": "음성 미생성·미청취"
+    },
+    {
+      "check": "발음변환 문자 범위",
+      "result": "pass",
+      "evidence": "DSR/LTV/DTI/퍼센트포인트 및 신규숫자"
+    }
+  ],
+  "passed": 22,
+  "failed": 0,
+  "content_review": "새 고정SHA에 대한 main Claude+Codex 내용검토 대기",
+  "not_performed": [
+    "정책 재조사",
+    "기존157·10검사 및 신규4산술 재실행",
+    "Claude/외부검토 호출",
+    "TTS·청취·영상재생·렌더·업로드"
+  ]
+}

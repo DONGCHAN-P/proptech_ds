@@ -1,0 +1,85 @@
+{
+  "task_id": "top20-explain-v3-prices",
+  "role": "research",
+  "status": "complete_asof_snapshot_with_reporting_limits",
+  "revision": "final-api-20261103-v2",
+  "input_revisions": {
+    "ranking": "top20-8min-v2",
+    "source_responses": "source_manifest.json",
+    "reproduction": "reproduction_manifest.json",
+    "independent_qa_price_values": "video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\qa\\top20-explain-v3\\independent_price_rollup.json"
+  },
+  "outputs": [
+    "writer_price_values.json",
+    "map_price_inputs.json",
+    "price_table20.csv",
+    "facts.json",
+    "facts.csv",
+    "methodology.json",
+    "source_coverage.csv",
+    "aggregate.sql",
+    "source_manifest.json",
+    "reproduction_manifest.json",
+    "validation.json"
+  ],
+  "affected_scene_ids": [
+    "S022",
+    "S021",
+    "S020",
+    "S019",
+    "S018",
+    "S017",
+    "S016",
+    "S015",
+    "S014",
+    "S013",
+    "S012",
+    "S011",
+    "S010",
+    "S009",
+    "S008",
+    "S007",
+    "S006",
+    "S005",
+    "S004",
+    "S003"
+  ],
+  "checks": [
+    {
+      "check": "20지역·20단지 n/중위값 부모 독립 집계 대조",
+      "result": "passed",
+      "evidence": "validation.json"
+    },
+    {
+      "check": "129회 시도·126코드월 전체 페이지·원응답 해시",
+      "result": "passed",
+      "evidence": "../api_collection_receipt.json; source_manifest.json"
+    },
+    {
+      "check": "정상행 보존·해제 표시만 제외",
+      "result": "passed",
+      "evidence": "유효14,303행, 해제550행, 추가 정상행 삭제0행"
+    },
+    {
+      "check": "20지도점 공식 주소/명칭/도형/2024경계",
+      "result": "passed",
+      "evidence": "map_price_inputs.json; representative_official_points.parquet"
+    }
+  ],
+  "open_issue_ids": [],
+  "limitations": [
+    "11월3일 조회 당시 자료입니다. 10월 신고 진행 중이며 전수 완결이 아닙니다.",
+    "조회 이후 해제·정정·지연신고는 미반영입니다.",
+    "단지는 별도 사례이며 구 전체의 전형가격이 아닙니다.",
+    "호가·매물은 포함하지 않습니다."
+  ],
+  "next_role": [
+    "writer Pascal",
+    "visual",
+    "director",
+    "qa"
+  ],
+  "script_gate_required": true,
+  "tts_or_render_executed": false,
+  "shared_state_modified": false
+}

@@ -1,0 +1,12 @@
+{
+  "role": "visual",
+  "revision": "visual-v1",
+  "input_versions": ["input-v1", "script-v2", "scenes-v2", "facts-v1", "config/video_style.json v8", "current_video v14"],
+  "status": "partial_sources_prepared",
+  "outputs": ["visual/assets_v1.json", "visual/source_plan_v1.md", "visual/outputs/S001_five_questions.svg", "visual/outputs/S003_district_comparison.svg", "visual/outputs/S004_calendar.svg", "visual/outputs/S006_school_calendar.svg", "visual/outputs/S007_type_prices.svg"],
+  "validation": ["생성 스크립트 정상 종료, SVG 5개 실제 저장", "1920x1080 SVG 구조 확인", "facts-v1 표시값과 조건 대조", "paid services $0, no external upload"],
+  "unresolved": ["S001/S002/S003/S004/S005 실제 지도 미확보", "공식 경계·최신 변경도면·개별 이용조건 미확인", "SVG raster readability not reviewed", "timing not locked; audio not listened; no video playback"],
+  "affected_scene_ids": ["S001", "S002", "S003", "S004", "S005", "S006", "S007", "S008"],
+  "next_owner": "director -> editor; official map acquisition remains required",
+  "common_files_modified": false
+}

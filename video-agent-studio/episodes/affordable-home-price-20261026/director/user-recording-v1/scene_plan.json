@@ -1,0 +1,1474 @@
+{
+  "status": "design_proposal",
+  "source_sha256": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "scene_count": 31,
+  "covered_narration_paragraphs": 48,
+  "audio_received": false,
+  "measured_duration_s": null,
+  "source_runtime_estimate_minutes": [
+    10,
+    13
+  ],
+  "scenes": [
+    {
+      "scene_id": "S01",
+      "chapter": 1,
+      "message": "첫 1억 다음의 질문",
+      "narration_text": "여러분, 유튜브에서 이런 이야기 많이 들어보셨죠. 일단 1억부터 모아라. 첫 1억이 어렵지, 그다음 2억, 5억, 10억은 훨씬 수월해진다.",
+      "paragraph_ids": [
+        "P007"
+      ],
+      "claim_ids": [
+        "DOC"
+      ],
+      "material_type": "현금 단계",
+      "asset_ids": [
+        "M01"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "일단 1억부터 모아라",
+          "action": "현금 1억 한 칸",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "2억, 5억, 10억",
+          "action": "현금 눈금을 추가하고 집값 결과는 미노출",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "동일 눈금의 현금 토큰을 코드로 제작"
+    },
+    {
+      "scene_id": "S02",
+      "chapter": 1,
+      "message": "통장과 매물 가격 연결",
+      "narration_text": "그런데 막상 돈을 모으고 나면, 여기서 또 막힙니다. 그래서 이 돈으로 무슨 집을 살 수 있는데? 부동산 앱을 켜보면 6억, 10억, 15억짜리 아파트가 나오는데, 내 통장에 있는 돈하고 저 가격이 바로 연결되지는 않거든요.",
+      "paragraph_ids": [
+        "P008"
+      ],
+      "claim_ids": [
+        "DOC"
+      ],
+      "material_type": "집·가격 비교",
+      "asset_ids": [
+        "M02"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "그래서 이 돈으로 무슨 집을 살 수 있는데?",
+          "action": "통장 잔액과 집 세 개를 분리",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "6억, 10억, 15억",
+          "action": "가격별 매물 모형에 금액 표시",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "실제 앱 화면을 쓰지 않고 집 실루엣과 가격으로 제작"
+    },
+    {
+      "scene_id": "S03",
+      "chapter": 1,
+      "message": "오늘 계산의 범위",
+      "narration_text": "1억을 모은 뒤에 자산이 저절로 빨리 늘어나는 것도 아니고요. 대출을 더 받았다고 그만큼 내 재산이 생기는 것도 아닙니다. 갚아야 할 돈이 같이 늘어나는 거니까요.\n\n그래서 오늘은 목표를 조금 구체적으로 잡아보겠습니다. 현금이 1억, 2억, 3억, 4억, 5억 있을 때, 어느 가격대의 집부터 찾아보면 좋을지 계산해볼게요. 집값에 들어가는 돈, 따로 남겨야 하는 돈, 매달 갚아야 하는 돈까지 같이 보겠습니다.\n\n먼저 말씀드리면, 오늘 숫자는 조건을 정해놓은 계산 예시입니다. 현금이 같아도 소득과 기존 대출, 집이 있는 지역에 따라 결과가 달라집니다. 영상 속 집값을 내 대출 승인 금액으로 받아들이시면 안 됩니다.",
+      "paragraph_ids": [
+        "P009",
+        "P010",
+        "P011"
+      ],
+      "claim_ids": [
+        "DOC",
+        "CALC"
+      ],
+      "material_type": "자금 분해",
+      "asset_ids": [
+        "M03"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "갚아야 할 돈이 같이 늘어나는",
+          "action": "주택가격 막대를 자기자금·대출로 분리",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "집값에 들어가는 돈",
+          "action": "집값 투입금→준비금→월 상환액의 세 영역",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "소득과 기존 대출",
+          "action": "현금·대출조건·월 여력 조건행",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "세 영역을 도형으로 설명하며 긴 면책 문구는 추가하지 않음"
+    },
+    {
+      "scene_id": "S04",
+      "chapter": 2,
+      "message": "잔금일의 현금",
+      "narration_text": "집을 살 때 제일 먼저 할 일은 내 돈을 정확하게 세는 겁니다. 지금 자산이 얼마인가보다 잔금일에 실제로 쓸 수 있는 현금이 얼마인가가 중요해요. 전세보증금을 돌려받아야 한다면 날짜가 맞는지도 확인해야겠죠.",
+      "paragraph_ids": [
+        "P014"
+      ],
+      "claim_ids": [
+        "DOC"
+      ],
+      "material_type": "가로 자금 달력",
+      "asset_ids": [
+        "M04"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "잔금일에 실제로 쓸 수 있는 현금",
+          "action": "잔금일 세로 기준선",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "전세보증금을 돌려받아야",
+          "action": "보증금 반환일과 잔금일을 연결",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "개인 계좌나 실제 개인정보 없이 날짜 기호로 제작"
+    },
+    {
+      "scene_id": "S05",
+      "chapter": 2,
+      "message": "집값 밖의 거래비용",
+      "narration_text": "그리고 그 돈을 전부 집값에 넣으면 안 됩니다. 집을 사면 취득세와 지방교육세 같은 세금이 들고요. 중개보수도 내야 합니다. 등기를 하면서 법무사 비용이나 국민주택채권 할인 부담, 인지세 같은 비용도 생길 수 있습니다.",
+      "paragraph_ids": [
+        "P015"
+      ],
+      "claim_ids": [
+        "DOC",
+        "TAX",
+        "BROKER",
+        "BOND"
+      ],
+      "material_type": "영수증 분해",
+      "asset_ids": [
+        "M05"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "취득세와 지방교육세",
+          "action": "취득세·교육세 행",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "중개보수",
+          "action": "중개보수 행",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "법무사 비용이나 국민주택채권 할인 부담, 인지세",
+          "action": "등기 관련 항목을 한 행씩 표시",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "실제 견적서 대신 항목별 영수증 모션"
+    },
+    {
+      "scene_id": "S06",
+      "chapter": 2,
+      "message": "생활에 남길 돈",
+      "narration_text": "여기에 이사비, 도배나 수리비, 새로 필요한 가전과 가구까지 생각해야 합니다. 새집에 들어갔는데 통장에 생활비가 거의 남아 있지 않으면, 작은 지출 하나에도 부담이 커져요. 비상금도 별도로 남겨두는 게 좋겠죠.\n\n세금과 중개보수는 집값이나 조건에 따라 달라지고, 이사와 가전 비용은 선택에 따라 차이가 큽니다. 그러니까 집값의 몇 퍼센트만 무조건 떼놓으면 된다고 외우기보다는 항목별로 견적을 받는 게 좋습니다.",
+      "paragraph_ids": [
+        "P016",
+        "P017"
+      ],
+      "claim_ids": [
+        "DOC"
+      ],
+      "material_type": "집 내부·생활 소품",
+      "asset_ids": [
+        "M06"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "이사비, 도배나 수리비",
+          "action": "이삿짐·벽지·수리 도구",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "가전과 가구",
+          "action": "생활 소품을 교체",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "비상금도 별도로",
+          "action": "비상금 영역을 집값 영역 밖에 보존",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "항목별로 견적",
+          "action": "금액을 채우지 않은 항목별 견적칸을 연결",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "보행 인물 없이 공간과 소품 조각으로 제작"
+    },
+    {
+      "scene_id": "S07",
+      "chapter": 2,
+      "message": "다섯 준비금",
+      "narration_text": "오늘은 계산을 쉽게 보여드리려고 현금 1억이면 2천만 원, 2억이면 3천만 원, 3억이면 4천만 원, 4억이면 5천만 원, 5억이면 6천만 원을 먼저 빼놓겠습니다. 여기에는 세금과 각종 비용, 이사와 가전 예산, 남겨둘 비상금을 함께 넣은 겁니다.\n\n이 금액이 실제 평균 비용이라는 뜻은 아닙니다. 집 상태가 좋고 기존 가전을 그대로 쓰면 덜 들 수 있고, 큰 수리가 필요하면 더 들 수 있어요. 오늘은 이 준비금을 제외한 돈만 집값에 넣는다고 생각하시면 됩니다.",
+      "paragraph_ids": [
+        "P018",
+        "P019"
+      ],
+      "claim_ids": [
+        "DOC",
+        "CALC"
+      ],
+      "material_type": "현금 분리 막대",
+      "asset_ids": [
+        "M07"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "현금 1억이면 2천만 원",
+          "action": "1억−2000만원→8000만원",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "2억이면 3천만 원",
+          "action": "2억−3000만원→1억7000만원",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "3억이면 4천만 원",
+          "action": "3억−4000만원→집값 투입2억6000만원",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "4억이면 5천만 원",
+          "action": "4억−5000만원→집값 투입3억5000만원",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "5억이면 6천만 원",
+          "action": "5억−6000만원→집값 투입4억4000만원",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "준비금을 제외한 돈만 집값에",
+          "action": "주택 투입금 0.8·1.7·2.6·3.5·4.4억만 남김",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "금액을 실제 길이에 맞춘 가로 막대로 제작"
+    },
+    {
+      "scene_id": "S08",
+      "chapter": 3,
+      "message": "LTV의 분모",
+      "narration_text": "그다음이 대출입니다. 여기서 두 가지만 이해하시면 오늘 계산은 따라오실 수 있어요. 먼저 LTV입니다. 집의 담보가치를 기준으로 얼마까지 빌릴 수 있는지를 보는 비율이에요.\n\n설명을 위해 집값과 담보평가액이 같고 LTV가 70퍼센트라고 해보겠습니다. 5억짜리 집이면 LTV 기준으로는 최대 3억 5천만 원까지 계산됩니다. 나머지 1억 5천만 원은 내 돈으로 마련해야 하겠죠.",
+      "paragraph_ids": [
+        "P022",
+        "P023"
+      ],
+      "claim_ids": [
+        "DOC",
+        "FSC_LTV",
+        "CALC"
+      ],
+      "material_type": "담보 분할 막대",
+      "asset_ids": [
+        "M08"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "집의 담보가치를 기준",
+          "action": "집값=담보평가액 5억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "3억 5천만 원",
+          "action": "70% 대출 영역",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "1억 5천만 원",
+          "action": "30% 자기자금 영역",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "고정 담보 막대 70:30 분할로 제작"
+    },
+    {
+      "scene_id": "S09",
+      "chapter": 3,
+      "message": "DSR과 기존 빚",
+      "narration_text": "그런데 여기서 끝이 아닙니다. DSR도 봅니다. 쉽게 말하면, 내 소득에 비해서 1년에 갚는 대출 원금과 이자가 얼마나 되는지를 따져보는 겁니다. 주택담보대출만 보는 게 아니라 기존 신용대출 등 다른 빚도 영향을 줄 수 있어요.\n\n집을 담보로 많이 빌릴 수 있더라도, 내 소득으로 갚기 어렵다고 판단되면 대출한도는 줄어듭니다. 그래서 같은 집을 사는 두 사람도 대출이 다르게 나올 수 있는 거예요.",
+      "paragraph_ids": [
+        "P024",
+        "P025"
+      ],
+      "claim_ids": [
+        "DOC",
+        "FSC_LTV"
+      ],
+      "material_type": "연 소득·상환 예산",
+      "asset_ids": [
+        "M09"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "1년에 갚는 대출 원금과 이자",
+          "action": "연 소득과 연 상환액의 범위 비교",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "기존 신용대출",
+          "action": "기존 빚 상환액이 가용 범위를 차지",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "대출한도는 줄어듭니다",
+          "action": "새 주담대 공간 축소",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "특정 소득·승인금액을 추가 가정하지 않는 비율 도식"
+    },
+    {
+      "scene_id": "S10",
+      "chapter": 3,
+      "message": "심사와 실제 납부",
+      "narration_text": "스트레스 DSR이라는 말도 들어보셨을 겁니다. 금리가 올라갈 상황까지 생각해서 상환능력을 더 보수적으로 심사하는 장치라고 이해하시면 됩니다. 이때 쓰는 스트레스금리가 내 대출금리에 그대로 추가돼서 실제 이자로 청구되는 것은 아닙니다.",
+      "paragraph_ids": [
+        "P026"
+      ],
+      "claim_ids": [
+        "DOC",
+        "STRESS"
+      ],
+      "material_type": "금리 두 경로",
+      "asset_ids": [
+        "M10"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "금리가 올라갈 상황",
+          "action": "심사용 금리의 여유 공간",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "실제 이자로 청구",
+          "action": "실제 납부액 경로와 심사 경로를 나란히 구분",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "심사용 금리 수치를 임의로 덧붙이지 않는 구조 도식"
+    },
+    {
+      "scene_id": "S11",
+      "chapter": 3,
+      "message": "조건별 LTV",
+      "narration_text": "그리고 LTV 70퍼센트가 모든 집, 모든 사람에게 적용되는 것도 아닙니다. 현재 일반적인 무주택자 등의 기준을 보면 비규제지역은 70퍼센트, 규제지역은 40퍼센트처럼 차이가 있고요. 생애최초 구입자는 별도 조건이 있습니다. 무주택자라고 모두 생애최초에 해당하는 건 아닙니다.",
+      "paragraph_ids": [
+        "P027"
+      ],
+      "claim_ids": [
+        "DOC",
+        "FSC_LTV"
+      ],
+      "material_type": "기준표의 해당 행",
+      "asset_ids": [
+        "M11"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "비규제지역은 70퍼센트",
+          "action": "일반 차주 비규제 70% 행; 무주택자·처분조건부1주택자 주택구입 표제 유지",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "규제지역은 40퍼센트",
+          "action": "일반 차주 규제 40% 행; 무주택자·처분조건부1주택자 주택구입 표제 유지",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "생애최초 구입자는 별도 조건",
+          "action": "생애최초를 별도 가지로 분리",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "공식 표를 출처로 삼은 큰 글씨 재작성 표",
+      "scope_label": "일반 무주택자·처분조건부1주택자의 주택구입 기준; 생애최초 별도"
+    },
+    {
+      "scene_id": "S12",
+      "chapter": 3,
+      "message": "이후 사례의 공통 조건",
+      "narration_text": "오늘 사례에서는 LTV 70퍼센트, 기존 대출 없음, 그리고 이 사람의 소득과 심사 조건에 따른 대출한도는 최대 4억 원이라고 가정하겠습니다. 여기서 4억은 정부가 모든 사람에게 정한 일괄 한도가 아닙니다. 계산을 보여드리기 위해 정한 개인별 대출한도예요.\n\n실제로는 지역과 주택가격에 따른 정책상 제한, 은행 심사, 담보평가도 함께 봐야 합니다. 오늘은 이 조건들이 예시 계산을 추가로 제한하지 않는다고 놓고 보겠습니다. 월 상환액은 연 4.5퍼센트, 30년 원리금균등으로 계산할게요. 현재 시중금리를 안내하는 숫자는 아닙니다.",
+      "paragraph_ids": [
+        "P028",
+        "P029"
+      ],
+      "claim_ids": [
+        "DOC",
+        "CALC"
+      ],
+      "material_type": "대출 한도 게이트",
+      "asset_ids": [
+        "M12"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "LTV 70퍼센트",
+          "action": "LTV 게이트 70%",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "최대 4억 원",
+          "action": "사례 개인 한도 4억 게이트",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "연 4.5퍼센트, 30년 원리금균등",
+          "action": "월 원리금 계산 조건 고정",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "LTV·개인한도·월납부 조건을 한 문장씩 구성"
+    },
+    {
+      "scene_id": "S13",
+      "chapter": 4,
+      "message": "현금 1억의 가격",
+      "narration_text": "자, 현금 1억 원부터 보겠습니다. 준비금 2천만 원을 빼면 집값에 넣을 돈이 8천만 원 남습니다.\n\nLTV 70퍼센트라면 내 돈이 집값의 30퍼센트는 있어야 하잖아요. 그래서 8천만 원을 30퍼센트로 나누면, 계산상으로는 약 2억 6천6백만 원대가 나옵니다. 오늘은 조금 내려서 2억 6천6백만 원짜리 집을 예로 들게요.",
+      "paragraph_ids": [
+        "P032",
+        "P033"
+      ],
+      "claim_ids": [
+        "DOC",
+        "CALC"
+      ],
+      "material_type": "현금→가격 계산",
+      "asset_ids": [
+        "M13"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "준비금 2천만 원",
+          "action": "1억에서 2000만원 분리",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "8천만 원",
+          "action": "집값 투입 8000만원",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "30퍼센트로 나누면",
+          "action": "8000만원÷30%",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "2억 6천6백만 원짜리",
+          "action": "집값 2억6600만원 결과",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "워터폴에서 70:30 막대로 이어지는 실제 수치 모션"
+    },
+    {
+      "scene_id": "S14",
+      "chapter": 4,
+      "message": "대출과 월 부담",
+      "narration_text": "내 돈 8천만 원에 대출 1억 8천6백만 원을 더하면 집값이 맞습니다. 이 대출의 월 원리금은 약 94만 원입니다. 물론 이 돈 말고 관리비, 보유세, 생활비도 따로 나가겠죠.\n\n여기서 내가 원하는 지역에 이 가격대의 아파트가 없다면, 그건 계산이 틀렸다는 뜻이 아닙니다. 찾아보는 지역의 범위를 넓히거나 면적을 줄여볼지, 자금을 더 모을지, 다른 주거 선택을 할지 판단할 기준이 생긴 거예요.",
+      "paragraph_ids": [
+        "P034",
+        "P035"
+      ],
+      "claim_ids": [
+        "DOC",
+        "CALC"
+      ],
+      "material_type": "구입자금·월 청구서",
+      "asset_ids": [
+        "M14"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "대출 1억 8천6백만 원",
+          "action": "8000만+1억8600만=2억6600만",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "월 원리금은 약 94만 원",
+          "action": "월 청구서 94만원",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "지역의 범위를 넓히거나 면적을 줄여볼지",
+          "action": "탐색 범위·면적·추가저축 선택 분기",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "실제 단지·평면을 특정하지 않는 검색 범위 모형"
+    },
+    {
+      "scene_id": "S15",
+      "chapter": 4,
+      "message": "현금 2억의 가격",
+      "narration_text": "다음은 현금 2억 원입니다. 준비금 3천만 원을 빼면 집에 넣을 돈은 1억 7천만 원입니다. 같은 방식으로 계산하면 약 5억 6천6백만 원짜리 집을 볼 수 있습니다.\n\n내 돈 1억 7천만 원에 대출 3억 9천6백만 원을 더하는 구조입니다. 오늘 가정한 개인별 대출한도 4억 원 안에도 들어오죠. 다만 월 원리금이 약 201만 원으로 올라갑니다.",
+      "paragraph_ids": [
+        "P036",
+        "P037"
+      ],
+      "claim_ids": [
+        "DOC",
+        "CALC"
+      ],
+      "material_type": "두 사례의 공통축",
+      "asset_ids": [
+        "M15"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "준비금 3천만 원",
+          "action": "2억에서 3000만원 분리",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "5억 6천6백만 원",
+          "action": "자기자금 1.7억+대출 3.96억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "약 201만 원",
+          "action": "월 원리금 201만원",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "S13의 숫자만 교체하지 않고 두 사례를 같은 축에서 비교"
+    },
+    {
+      "scene_id": "S16",
+      "chapter": 4,
+      "message": "집값 증가의 구성",
+      "narration_text": "현금 1억 원을 더 모으니까 볼 수 있는 집값이 많이 올라갔죠. 그런데 그 차이의 상당 부분은 대출이 더 늘어나서 생긴 겁니다. 이 부분을 빼고 집값만 보면, 자산이 갑자기 훨씬 커진 것처럼 착각하기 쉽습니다.",
+      "paragraph_ids": [
+        "P038"
+      ],
+      "claim_ids": [
+        "DOC",
+        "CALC"
+      ],
+      "material_type": "증가분 분해",
+      "asset_ids": [
+        "M16"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "집값이 많이 올라갔죠",
+          "action": "주택 예산 증가 3억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "대출이 더 늘어나서",
+          "action": "자기자금 증가 9000만원·대출 증가 2억1000만원으로 분해",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "3억 증가 막대를 0.9:2.1로 분할; 보유 순자산 증가로 표기하지 않음"
+    },
+    {
+      "scene_id": "S17",
+      "chapter": 4,
+      "message": "같은 현금과 다른 한도",
+      "narration_text": "그리고 현금 2억 원이 있어도 내 소득으로 대출이 2억 원까지만 가능하다면, 같은 준비금을 남겼을 때 집값 예산은 3억 7천만 원입니다. 내 통장 잔액만으로 살 수 있는 집을 확정할 수 없는 이유가 바로 이겁니다.",
+      "paragraph_ids": [
+        "P039"
+      ],
+      "claim_ids": [
+        "DOC",
+        "CALC"
+      ],
+      "material_type": "소득 한도 시나리오",
+      "asset_ids": [
+        "M17"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "대출이 2억 원까지만",
+          "action": "대출 블록 3.96억→2억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "집값 예산은 3억 7천만 원",
+          "action": "자기자금 1.7억 유지·집값 3.7억",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "두 승인한도 시나리오를 동일 축에 정렬"
+    },
+    {
+      "scene_id": "S18",
+      "chapter": 5,
+      "message": "3억에서 걸리는 한도",
+      "narration_text": "현금 3억 원으로 가보겠습니다. 준비금 4천만 원을 빼면 집값에 넣을 돈은 2억 6천만 원입니다.\n\nLTV만 생각하면 더 비싼 집도 계산에 나오겠지만, 오늘 이 사람은 대출한도가 4억 원이죠. 그래서 2억 6천만 원에 4억 원을 더한 6억 6천만 원이 예시 집값이 됩니다. 이때부터는 LTV보다 개인별 대출한도가 먼저 걸리는 겁니다.",
+      "paragraph_ids": [
+        "P042",
+        "P043"
+      ],
+      "claim_ids": [
+        "DOC",
+        "CALC"
+      ],
+      "material_type": "대출 한도에 닿는 막대",
+      "asset_ids": [
+        "M18"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "2억 6천만 원",
+          "action": "주택 투입금 2.6억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "대출한도가 4억 원",
+          "action": "담보상 한도와 개인 한도 4억을 비교",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "6억 6천만 원",
+          "action": "2.6억+4억=6.6억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "개인별 대출한도가 먼저",
+          "action": "개인 한도 게이트 선택",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "대출 상한 4억을 유지하고 자기자금만 늘림"
+    },
+    {
+      "scene_id": "S19",
+      "chapter": 5,
+      "message": "4·5억과 월 부담의 평탄화",
+      "narration_text": "현금 4억 원이면 준비금 5천만 원을 빼고, 내 돈 3억 5천만 원에 대출 4억 원을 더해서 7억 5천만 원입니다. 현금 5억 원이면 준비금 6천만 원을 빼고, 4억 4천만 원에 대출 4억 원을 더해서 8억 4천만 원이고요.\n\n세 경우 모두 대출을 4억 원으로 잡았으니까 월 원리금은 약 203만 원으로 같습니다. 현금이 더 많아져서 볼 수 있는 집값은 올라가지만, 대출한도를 넘어서 빚까지 계속 늘리는 계산은 하지 않는 거예요.",
+      "paragraph_ids": [
+        "P044",
+        "P045"
+      ],
+      "claim_ids": [
+        "DOC",
+        "CALC"
+      ],
+      "material_type": "금액 막대+월 원리금 점",
+      "asset_ids": [
+        "M19"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "7억 5천만 원",
+          "action": "3.5억+4억=7.5억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "8억 4천만 원",
+          "action": "4.4억+4억=8.4억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "약 203만 원으로 같습니다",
+          "action": "현금 3·4·5억의 월 원리금 점을 같은 높이에 배치",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "단위가 다른 집값·월 원리금은 별도 패널로 분리"
+    },
+    {
+      "scene_id": "S20",
+      "chapter": 5,
+      "message": "현금 5억의 두 선택",
+      "narration_text": "물론 현금이 5억 원 있다고 꼭 8억 4천만 원까지 써야 하는 건 아닙니다. 같은 준비금을 남기고 7억 원짜리 집을 고르면 대출은 2억 6천만 원으로 줄고, 오늘 금리 가정에서는 월 원리금이 약 132만 원입니다. 그 차이를 감수하면서 더 좋은 입지를 선택할지, 생활의 여유를 남길지는 각자의 결정입니다.",
+      "paragraph_ids": [
+        "P046"
+      ],
+      "claim_ids": [
+        "DOC",
+        "CALC"
+      ],
+      "material_type": "같은 현금·다른 주택 예산",
+      "asset_ids": [
+        "M20"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "7억 원짜리 집",
+          "action": "8.4억과 7억을 같은 집 크기 아이콘으로 비교",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "대출은 2억 6천만 원",
+          "action": "자기자금 4.4억 유지·대출 4억→2.6억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "약 132만 원",
+          "action": "월 203→132만원; 줄어든 부담 약71만원",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "가격 차이를 면적이나 품질 차이처럼 보이지 않게 금액 막대 중심"
+    },
+    {
+      "scene_id": "S21",
+      "chapter": 5,
+      "message": "준비금 4000만원의 내부",
+      "narration_text": "아까 빼놓은 준비금도 한번 확인해볼게요. 예를 들어 6억 6천만 원짜리 집을 일반적인 1주택 취득, 전용 85제곱미터 이하, 감면이 없는 경우로 계산하면 취득세와 지방교육세가 합쳐서 약 1천16만 원입니다.\n\n중개보수는 이 가격 구간에서 상한요율 0.4퍼센트로 잡고, 일반과세 중개사의 부가세까지 가정하면 약 290만 원이고요. 두 항목만 약 1천307만 원입니다. 준비금 4천만 원을 잡았다고 해서 전부 세금으로 나가는 게 아닙니다. 남은 약 2천693만 원 안에서 등기 관련 비용, 이사, 가전과 가구, 비상금 등을 배분하는 거예요.\n\n집의 면적이나 취득 조건이 달라지면 세금도 달라질 수 있고, 중개보수는 상한 안에서 협의할 수 있습니다. 그러니까 오늘 준비금 숫자를 그대로 복사하지 마시고, 내 집에 맞는 견적으로 다시 채워보시면 됩니다.",
+      "paragraph_ids": [
+        "P047",
+        "P048",
+        "P049"
+      ],
+      "claim_ids": [
+        "DOC",
+        "TAX",
+        "BROKER",
+        "BOND",
+        "CALC"
+      ],
+      "material_type": "정확한 비용 영수증",
+      "asset_ids": [
+        "M21"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "취득세와 지방교육세가 합쳐서",
+          "action": "924만원+92.4만원=1016.4만원",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "약 290만 원",
+          "action": "중개보수·VAT 290.4만원",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "약 1천307만 원",
+          "action": "비용 합계1306.8만원",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "남은 약 2천693만 원",
+          "action": "잔여2693.2만원에 등기·이사·가전·비상금 배분",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "상한 안에서 협의",
+          "action": "복비 상한과 별도 견적 항목 라벨",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "불특정 등기비·이사비에 임의 금액을 배정하지 않음"
+    },
+    {
+      "scene_id": "S22",
+      "chapter": 6,
+      "message": "LTV 70%와 40%",
+      "narration_text": "여기서 꼭 한 번 더 볼 게 있습니다. 오늘은 LTV 70퍼센트로 계산했죠. 그런데 내가 살 집에 40퍼센트가 적용되면 어떻게 될까요?\n\n다른 조건과 준비금은 그대로 두고 계산하면, 현금 1억 원은 약 1억 3천3백만 원, 2억 원은 약 2억 8천3백만 원, 3억 원은 약 4억 3천3백만 원, 4억 원은 약 5억 8천3백만 원, 5억 원은 약 7억 3천3백만 원으로 바뀝니다.",
+      "paragraph_ids": [
+        "P052",
+        "P053"
+      ],
+      "claim_ids": [
+        "DOC",
+        "FSC_LTV",
+        "CALC"
+      ],
+      "material_type": "현금별 두 곡선",
+      "asset_ids": [
+        "M22"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "40퍼센트가 적용되면",
+          "action": "70%·40% 두 시나리오 범례",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "현금 1억 원은",
+          "action": "1억의 2.66↔1.33억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "2억 원은",
+          "action": "2억의 5.66↔2.83억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "3억 원은",
+          "action": "현금3억의 LTV70%6.6억↔40%4.33억 관측점",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "4억 원은",
+          "action": "현금4억의 LTV70%7.5억↔40%5.83억 관측점",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "5억 원은",
+          "action": "현금5억의 LTV70%8.4억↔40%7.33억 관측점",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "가로축 보유현금·세로축 집값 예산; 시간축처럼 연출하지 않음"
+    },
+    {
+      "scene_id": "S23",
+      "chapter": 6,
+      "message": "적용 조건 확인",
+      "narration_text": "차이가 꽤 크죠. 그래서 내가 생애최초인지, 해당 지역과 주택에 어떤 규제가 적용되는지부터 확인해야 합니다. 서울 어디, 경기 어디라는 이름만 보고 같은 대출이 나온다고 생각하면 안 됩니다.",
+      "paragraph_ids": [
+        "P054"
+      ],
+      "claim_ids": [
+        "DOC",
+        "FSC_LTV"
+      ],
+      "material_type": "주택·차주 조건 가지",
+      "asset_ids": [
+        "M23"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "생애최초인지",
+          "action": "주택 이력 가지",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "해당 지역과 주택",
+          "action": "주소·담보·상품 조건 가지",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "현행 지역 지도를 임의로 색칠하지 않고 확인 항목을 연결"
+    },
+    {
+      "scene_id": "S24",
+      "chapter": 6,
+      "message": "계약 전 확인 순서",
+      "narration_text": "실제로 집을 보러 가기 전에는 순서를 이렇게 잡으시면 좋겠습니다. 잔금일에 쓸 수 있는 현금을 정리하고, 남겨둘 준비금을 빼고, 내 소득과 기존 대출을 가지고 은행에서 상담을 받습니다. 그다음 그 집의 담보평가와 대출 조건을 확인하는 거예요.\n\n상담 단계에서 들은 금액과 최종 실행 금액은 다를 수 있습니다. 그래서 대출이 원하는 만큼 나오겠지 하고 계약부터 서두르면 안 됩니다. 계약 전에 자금 일정과 필요한 조건을 확인하고, 불확실한 부분은 구체적으로 협의하셔야 합니다.",
+      "paragraph_ids": [
+        "P055",
+        "P056"
+      ],
+      "claim_ids": [
+        "DOC"
+      ],
+      "material_type": "자금 일정 가로축",
+      "asset_ids": [
+        "M24"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "잔금일에 쓸 수 있는 현금",
+          "action": "현금 확정",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "은행에서 상담",
+          "action": "인정소득·기존채무 점검",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "담보평가와 대출 조건",
+          "action": "대상주택 확인",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "계약 전에",
+          "action": "계약 전 검토 구간을 강조",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "상담→최종실행의 시간 차이를 날짜 확정 없이 단계로 표현"
+    },
+    {
+      "scene_id": "S25",
+      "chapter": 6,
+      "message": "월 상환과 생활",
+      "narration_text": "그리고 은행이 빌려줄 수 있는 금액이 곧 내가 편하게 갚을 수 있는 금액은 아닙니다. 월 200만 원을 낼 수 있다고 해도, 생활비와 교육비, 부모님 지원, 출산이나 이직 계획까지 넣으면 체감이 달라져요.",
+      "paragraph_ids": [
+        "P057"
+      ],
+      "claim_ids": [
+        "DOC"
+      ],
+      "material_type": "생활비 배분",
+      "asset_ids": [
+        "M25"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "내가 편하게 갚을 수 있는 금액",
+          "action": "월 상환 여력 별도 공간",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "생활비와 교육비, 부모님 지원",
+          "action": "생활 항목이 예산을 점유",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "출산이나 이직 계획",
+          "action": "해당 시 필요한 예비 공간",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "모든 시청자에게 자녀·부모지원 비용을 동일하게 가정하지 않음"
+    },
+    {
+      "scene_id": "S26",
+      "chapter": 6,
+      "message": "버틸 수 있는 예산",
+      "narration_text": "금리가 올라가거나 소득이 잠시 줄어도 버틸 수 있는지도 한번 보세요. 집값이 오를 거라는 기대를 빼고, 지금 소득으로 이 집을 유지할 수 있는가를 먼저 계산해보셨으면 좋겠습니다.",
+      "paragraph_ids": [
+        "P058"
+      ],
+      "claim_ids": [
+        "DOC"
+      ],
+      "material_type": "두 스트레스 방향",
+      "asset_ids": [
+        "M26"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "금리가 올라가거나",
+          "action": "원리금 부담 증가 방향",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "소득이 잠시 줄어도",
+          "action": "소득 범위 감소 방향",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "지금 소득으로 이 집을 유지",
+          "action": "남는 월 예산의 경계",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "새 금리·소득 숫자는 넣지 않고 검토 방향만 표현"
+    },
+    {
+      "scene_id": "S27",
+      "chapter": 7,
+      "message": "다섯 결과를 한 번에",
+      "narration_text": "정리해보겠습니다. 오늘 정한 조건에서는 현금 1억 원이면 약 2억 6천6백만 원, 2억 원이면 약 5억 6천6백만 원, 3억 원이면 6억 6천만 원, 4억 원이면 7억 5천만 원, 5억 원이면 8억 4천만 원짜리 집이 계산 예시로 나왔습니다.",
+      "paragraph_ids": [
+        "P061"
+      ],
+      "claim_ids": [
+        "DOC",
+        "CALC"
+      ],
+      "material_type": "최종 예산 비교",
+      "asset_ids": [
+        "M27"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "현금 1억 원이면",
+          "action": "첫 행 2.66억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "2억 원이면",
+          "action": "둘째 행 5.66억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "3억 원이면",
+          "action": "셋째 행 6.6억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "4억 원이면",
+          "action": "넷째 행 집값7.5억·자기자금3.5억·대출4억",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "5억 원이면",
+          "action": "다섯째 행 집값8.4억·자기자금4.4억·대출4억",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "앞 장의 두 LTV 그래프를 재생하지 않고 자기자금·대출 최종 막대"
+    },
+    {
+      "scene_id": "S28",
+      "chapter": 7,
+      "message": "시청자가 적을 세 숫자",
+      "narration_text": "이 숫자 자체보다 중요한 건 계산 순서입니다. 현금에서 준비금을 빼고, 내게 실제로 가능한 대출을 확인하고, 그 대출을 매달 갚을 수 있는지 보는 겁니다. 그래야 부동산 앱에 있는 가격들이 내 상황하고 연결됩니다.",
+      "paragraph_ids": [
+        "P062"
+      ],
+      "claim_ids": [
+        "DOC"
+      ],
+      "material_type": "빈 예산 작성지",
+      "asset_ids": [
+        "M28"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "현금에서 준비금을 빼고",
+          "action": "잔금현금−준비금 입력칸",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "실제로 가능한 대출",
+          "action": "확인한 대출칸",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "매달 갚을 수 있는지",
+          "action": "월 상환 여력칸",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "시청자 자신의 숫자를 적도록 빈칸3개만 남김"
+    },
+    {
+      "scene_id": "S29",
+      "chapter": 7,
+      "message": "정책 해석과 부담",
+      "narration_text": "정책 방향에 대해서는 제 생각을 덧붙여보겠습니다. 최근 정책을 보면 빚을 많이 끼고 투자하는 수요는 억제하고, 청년이나 실수요자 지원은 구분해서 가져가려는 흐름으로 저는 읽고 있습니다. 여러 채를 사거나 전세를 끼고 투자하는 방식이 예전처럼 쉽게 통할 거라고 전제하지 않는 게 좋겠다는 뜻입니다.\n\n그렇다고 실거주로 사기만 하면 정부가 집값을 지켜준다거나, 손해 볼 일이 없다는 이야기는 아닙니다. 실거주자도 대출 규제를 받고, 집값이 내려갈 수 있고, 세금과 유지비를 부담합니다.",
+      "paragraph_ids": [
+        "P063",
+        "P064"
+      ],
+      "claim_ids": [
+        "DOC",
+        "POLICY"
+      ],
+      "material_type": "정책 원자료+생활 비용",
+      "asset_ids": [
+        "M29"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "제 생각을 덧붙여",
+          "action": "정책에 대한 해석 라벨",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "실수요자 지원",
+          "action": "공식 발표의 공급·수요관리·지원 항목",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "대출 규제를 받고",
+          "action": "차주·주택 조건",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "세금과 유지비",
+          "action": "보유기간 비용 구간",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "해석을 정책 목표나 가격 보장으로 시각화하지 않음"
+    },
+    {
+      "scene_id": "S30",
+      "chapter": 7,
+      "message": "내 생활에 맞는 선택",
+      "narration_text": "제 생각에는 정책이 곧 바뀔 거라는 기대만으로 무리하게 맞서기보다, 지금 가능한 조건에서 내 생활에 맞는 집을 찾는 편이 현실적입니다. 출퇴근, 가족 계획, 필요한 면적, 그리고 감당할 수 있는 월 상환액까지 같이 보자는 거죠. 조건이 안 맞으면 더 준비하거나 임차로 지내는 선택도 충분히 가능합니다.",
+      "paragraph_ids": [
+        "P065"
+      ],
+      "claim_ids": [
+        "DOC"
+      ],
+      "material_type": "집 공간과 생활 동선",
+      "asset_ids": [
+        "M30"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "출퇴근, 가족 계획, 필요한 면적",
+          "action": "일자리·생활공간·면적의 세 시각 요소",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "월 상환액",
+          "action": "월 예산 영역 연결",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "더 준비하거나 임차",
+          "action": "매수·준비·임차 선택 갈래",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "구체적 지역 가격이나 실제 평형으로 오인될 평면을 넣지 않음"
+    },
+    {
+      "scene_id": "S31",
+      "chapter": 7,
+      "message": "다음 편으로 연결",
+      "narration_text": "다음 영상에서는 이렇게 정한 가격대 안에서 실제로 어떤 아파트를 골라야 하는지 이야기해보겠습니다. 같은 5억대, 같은 7억대라도 입지와 단지에 따라 선택이 달라지잖아요. 오늘은 먼저 내 예산부터 한번 적어보시면 좋겠습니다.",
+      "paragraph_ids": [
+        "P066"
+      ],
+      "claim_ids": [
+        "DOC"
+      ],
+      "material_type": "같은 예산·다른 입지",
+      "asset_ids": [
+        "M31"
+      ],
+      "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "literal_user_script_anchors_pending_recording",
+      "beats": [
+        {
+          "anchor": "실제로 어떤 아파트를 골라야",
+          "action": "같은 가격표의 두 입지 구조",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "같은 5억대, 같은 7억대",
+          "action": "가격이 같아도 다른 통근·생활 동선",
+          "start": null,
+          "end": null
+        },
+        {
+          "anchor": "내 예산부터 한번 적어",
+          "action": "세 숫자 작성지 CTA; 발화 끝 뒤3초 유지",
+          "start": null,
+          "end": null
+        }
+      ],
+      "status": "designed_not_rendered",
+      "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+      "fallback": "정확한 장소 없이 입지 비교 질문을 남기는 도형; 다음 편에 실제 데이터로 확장"
+    }
+  ],
+  "design_revision": "user-recording-guide-v1-r2",
+  "literal_anchor_count": 101
+}

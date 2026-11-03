@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C03P05",
+  "scene_id": "C03",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:05:34.308Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "9b6d85ad49ac3a6c2bb3cc05e7b29a4cecf67e5450b42781e3729701f9c2cc2b",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "전세와 월세의 대출은 매달 이자만 내고 원금은 그대로 남는 설정입니다. 만기에 보증금을 돌려받으면 대출을 갚습니다. 보증금 전액을 정상적으로 돌려받는 조건도 여기에 포함됩니다. 초기 금융자산은 세 가구 모두 즉시 투자하고, 이후에는 매달 남는 예산을 같은 방식으로 넣습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 153,
+  "characters": 153,
+  "actual_credits": 61,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18316,
+    "character_limit": 40000,
+    "included_remaining": 21684,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:05:22.437Z",
+  "local_shadow_remaining_before": 21526,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "hMO9w707utHBHjLkc0mJ",
+    "x-request-id": null,
+    "character-cost": "61",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:05:34 GMT"
+  },
+  "pcm_samples": 843192,
+  "pcm_duration_s": 19.12,
+  "provider_last_spoken_end_s": 19.2,
+  "artifact_sha256": {
+    "paragraphs/C03P05/audio.mp3": "7e380f1294e5776762989f1487d9a20a90aedf8d26bd57f05dd3f8d784b9a0a4",
+    "paragraphs/C03P05/audio.wav": "8923238672ea3207b39d678f21c957a9ff79a8e67f6dd5ffa136e7d096609226",
+    "paragraphs/C03P05/alignment.json": "e708d433109c0176391dd1c858474820326abbee7f2908ff31a70b1884d09cd3",
+    "paragraphs/C03P05/normalized_alignment.json": "e708d433109c0176391dd1c858474820326abbee7f2908ff31a70b1884d09cd3"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21465,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:05:38.653Z"
+}

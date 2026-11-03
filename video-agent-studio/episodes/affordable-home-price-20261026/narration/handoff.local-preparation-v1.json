@@ -1,0 +1,38 @@
+{
+  "task_id": "affordable-home-price-narration-local-v1",
+  "role": "video_narration",
+  "status": "prepared_WAITING_main_instruction_and_approved_exact_dual_lock",
+  "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "prepared": "prepare-v2-r2/prepared.json",
+  "checks": "checks_v1.json",
+  "commands": "ready_commands_v1.json",
+  "generator": "production_v1.py",
+  "voice": {
+    "name": "ko-KR-InJoonNeural",
+    "rate": "-5%",
+    "pitch": "+0Hz",
+    "provider": "edge-tts",
+    "version": "7.3.1"
+  },
+  "body": "10 chapters / 45 fresh scene paragraphs / 6550 display chars",
+  "meaning_plan": "150 provisional complete sentence/clause units; 1–2 explicit lines; times remain null",
+  "checks_passed": 6,
+  "current_gate": {
+    "status": "blocked_or_failed_NO_automatic_retry",
+    "error_type": "GateError",
+    "reason": "Main explicit TTS instruction not recorded; local preparation only"
+  },
+  "local_required_errors": [],
+  "main_instruction_received": false,
+  "synthesis_started": false,
+  "audio_measured": false,
+  "actual_listening": false,
+  "network_TTS_paid_calls": 0,
+  "cash_spent_krw": 0,
+  "shared_first_episode_readonly": true,
+  "superseded_local_preparation": "prepare-v2 (before gate hardening; retained, do not generate from it)",
+  "next_role": "main: complete exact dual review/canonical lock and send synthesis instruction; forward plan to editor Carson",
+  "future_output": "production-injoon-v2/final_timing.json; 10 measured PCM chapters and full raw MP3/WAV/native metadata/source pairs",
+  "after_generation_required": "native alignment, actual durations/clip/tail/30fps and independent audio/render QA",
+  "peer_message_tool_available": false
+}

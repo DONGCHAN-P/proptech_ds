@@ -1,0 +1,165 @@
+{
+  "task_id": "RPR-PROD1-EDITOR-REQ01",
+  "role": "editor",
+  "status": "unit_fix_complete_ready_for_independent_recheck",
+  "input_revisions": {
+    "qa_findings_sha256": "cd4674abe0f8c9e35678b92007120528f2cd4593e2216a1e8a9acff46c70f114",
+    "chart_data_sha256": "3731da4b839424f7c12a948c6316a0b0ac29cec99aa42c6d6855b832fe7c1899",
+    "approved_script_sha256": "99b40e8730ee0f8fdf74402cffbe04b5b418540344e6d2a7175e6a01c3054664"
+  },
+  "affected_beat_ids": [
+    {
+      "beat_id": "S001-P1",
+      "unit": "2006Q1=100"
+    },
+    {
+      "beat_id": "S001-P3",
+      "unit": "2006Q1=100"
+    },
+    {
+      "beat_id": "S006-P1",
+      "unit": "2006Q1=100"
+    },
+    {
+      "beat_id": "S006-P2",
+      "unit": "2006Q1=100"
+    },
+    {
+      "beat_id": "S006-P3",
+      "unit": "2006Q1=100"
+    },
+    {
+      "beat_id": "S007-P1",
+      "unit": "2006Q1=100"
+    },
+    {
+      "beat_id": "S007-P2",
+      "unit": "2006Q1=100"
+    },
+    {
+      "beat_id": "S007-P3",
+      "unit": "2006Q1=100"
+    },
+    {
+      "beat_id": "S008-P1",
+      "unit": "2006Q1=100"
+    },
+    {
+      "beat_id": "S008-P2",
+      "unit": "2006Q1=100"
+    },
+    {
+      "beat_id": "S008-P3",
+      "unit": "2006Q1=100"
+    },
+    {
+      "beat_id": "S012-P3",
+      "unit": "2006Q1=100"
+    }
+  ],
+  "changed_project_files": [
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/compositions/S001.html",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/compositions/S006.html",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/compositions/S007.html",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/compositions/S008.html",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/compositions/S012.html",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/preview/incheon2008-2016recovery.html"
+  ],
+  "selected_previews": [
+    {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/full2006paths_provisional_v1.mp4",
+      "sha256": "b09e9d14dc8680a6f72a9a8f1ab44de495bfb520afe6bc7d1269c202170d8361",
+      "duration_seconds": 8,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/incheon2008-2016recovery_provisional_v3.mp4",
+      "sha256": "1d03c38d53853a2a97ce22c4b03c6a81a753c5971fc1842cb0d3d045cdb699f0",
+      "duration_seconds": 8,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/rawmedianvsindex_provisional_v1.mp4",
+      "sha256": "c4aafd09a93a7249664ecbfa46b9ba38941d485c253fd7bd4fcf9f83c2aa2f52",
+      "duration_seconds": 8,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "fps": "30/1",
+      "audio_streams": 0
+    }
+  ],
+  "outputs": [
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/incheon2008-2016recovery_provisional_v3.mp4",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/representative_contactsheet_v3.png",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/technical.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/text_bounds.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/scope_and_units.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/visual_review_v3.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/hyperframes_check_units.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/selected_previews.json"
+  ],
+  "checks": {
+    "REQ01": "all12price units2006Q1=100; seven real-region dynamic tests include Sejong2015Q1=100",
+    "glyph_bounds": "39 measurements, fonts loaded, SVG getBBox + half stroke; zero unit overlap or out-of-canvas text",
+    "actual_MP4": "8s/1920x1080/30fps/240decoded frames/audio0; full decode pass",
+    "HyperFrames": {
+      "version": "0.8.181",
+      "ok": true,
+      "browserSkipped": false,
+      "lint_errors": 0,
+      "runtime_errors": 0,
+      "layout_errors": 0,
+      "motion_errors": 0,
+      "contrast_errors": 0,
+      "lint_advisories": 6
+    },
+    "unchanged_two_previews": "HTML and MP4 hashes unchanged; neither rerendered",
+    "originals": "all v1/v2 MP4 and QA evidence hashes retained"
+  },
+  "review_responses": {
+    "RPR-P1-REQ-01": {
+      "editor_status": "fixed_pending_QA_recheck",
+      "change": "episode_chart uses region supported first quarter as index baseline; no episode rebase; heading row carries unit separately from event labels"
+    },
+    "RPR-P1-REC-01": {
+      "editor_status": "fixed_in_v2_reverified_v3",
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/incheon2008-2016recovery_encoded_7.967s.png",
+      "current_evidence": [
+        "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/encoded/incheon_v3_2s.png",
+        "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/encoded/incheon_v3_4s.png",
+        "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/encoded/incheon_v3_7s.png"
+      ],
+      "geometry": "event label baseline245 above plot starting265"
+    },
+    "RPR-P1-REC-02": {
+      "editor_status": "recommended_open_not_falsely_closed",
+      "authored_layout": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project/compositions/S004.html",
+      "generator": "video-agent-studio/episodes/regional-price-recovery-20261022/editor/production-v1/build.py layout sn4 branch",
+      "actual": "S004-P2 is6panels plus28px Seoul/Daegu endpoint highlights, not1or2enlarged panels; overview/numbers unchanged"
+    }
+  },
+  "capture_issue": {
+    "first_attempt": "drawElement reported self-check success but actual2s/4s PNG showed missing partial glyphs",
+    "retained_video": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/incheon_v3_drawelement_attempt.mp4",
+    "retained_frames": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/encoded_drawelement_attempt",
+    "final_fix": "same installed CLI0.8.181 --experimental-fast-capture=false; only Incheon rerendered",
+    "render_log": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/fix_req01/render_incheon_v3.log"
+  },
+  "exact_render_command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File video-agent-studio/episodes/regional-price-recovery-20261022/editor/production-v1/render_unit_fix.ps1",
+  "next_role": "director -> independent QA; QA owns finding closure",
+  "shared_QA_state_files_modified": false,
+  "new_paid_API_voice_cloud_calls": 0,
+  "full_review_followup": "User deferred voice synthesis; a separate explicitly provisional visual-review mode is now authorized. Unit-fix record precedes that preparation."
+}

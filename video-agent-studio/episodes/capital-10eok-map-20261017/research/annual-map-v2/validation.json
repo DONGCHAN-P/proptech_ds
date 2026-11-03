@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "coordinate_count": 8288,
+  "unlinked_count": 884,
+  "map_count_identity_verified_all_21_years": true,
+  "first_observation_rule_checked": true,
+  "no_legacy_vworld_coordinates": true,
+  "native_projection_no_inverse_transform_used": true,
+  "exactly_10eok_shown": 174,
+  "inputs": [
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\capital-10eok-map-20261017\\research\\coordinate-link-v2\\coordinate_links_reviewed.parquet",
+      "sha256": "f7d7c51649770ef4e3f09c5ba96b939e961fa76200e17a760772f2fdbcfedf6a"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\capital-10eok-map-20261017\\research\\coordinate-link-v2\\capital_official_geometry.parquet",
+      "sha256": "9f8d89f5444a92b4328c5cfa3cf028e4d08ad1229893d743220707a2a281a121"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\capital-10eok-map-20261017\\research\\source-completion-v1\\complex_catalog_complete.parquet",
+      "sha256": "dd5ad31f75304beec4e245eeedbedc647525671427b50520d33a9f0b2bc284e9"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\capital-10eok-map-20261017\\research\\source-completion-v1\\annual_status_complete.parquet",
+      "sha256": "22860aca0aa58f33463c0d4b35a634d042f0aeb5a526731da65aa9b5b565d8d5"
+    }
+  ],
+  "packet_sha256": "6fc010df600e45b5bbebd03101fc34dc258c69d4950a9bd5ae6bf5e48a53358b",
+  "external_calls": 0,
+  "paid_calls": 0,
+  "publication_authorized": false,
+  "official_complex_ids_unique": true,
+  "all_measured_text_bboxes_inside_safe_rect": true,
+  "representative_years": [
+    2006,
+    2025,
+    2026
+  ],
+  "actual_encoded_frame_samples": "outputs/map-preview-v2/encoded_frame_samples.json",
+  "full_video_not_rendered": true,
+  "adjacent_year_over_to_under": 374,
+  "all_observed_over_to_under_reappearances": 528,
+  "reappearance_definition": "Compare successive observed price states; no_trade years do not reset last observed status. Actual frame status is still no_trade in those years.",
+  "modeled_mobile_safe_cases": 18,
+  "modeled_mobile_safe_failed": 0
+}

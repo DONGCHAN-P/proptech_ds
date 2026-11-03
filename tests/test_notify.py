@@ -148,13 +148,27 @@ def test_영상은_재인코딩되지_않게_document로_보낸다(setup, monkey
     """sendVideo 는 텔레그램이 다시 인코딩한다. 인스타에 올릴 원본이라
     중간에 화질을 깎으면 안 된다."""
     got = {}
-    monkeypatch.setattr(T, "_post", lambda m, t, *, data, files=None: (
+    monkeypatch.setattr(T, "_post", lambda m, t, *, data, files=None,
+                        timeout=None: (
         got.update(method=m, files=files) or {"ok": True}))
     f = tmp_path / "reels.mp4"
     f.write_bytes(b"0" * 1024)
     assert T.send_file(f, "캡션") is True
     assert got["method"] == "sendDocument"
     assert "document" in got["files"]
+
+
+def test_큰_파일은_기다리는_시간을_늘린다(setup, monkeypatch, tmp_path):
+    """30초는 글 몇 줄 기준이다. 상한이 50MB 인데 30초로 끊으면 큰 파일은
+    영영 못 보낸다 — 12분짜리 영상이 실제로 write timeout 으로 끊겼다."""
+    got = {}
+    monkeypatch.setattr(T, "_post", lambda m, t, *, data, files=None,
+                        timeout=None: (
+        got.update(timeout=timeout) or {"ok": True}))
+    f = tmp_path / "long.mp4"
+    f.write_bytes(b"0" * 30 * 1024 * 1024)
+    assert T.send_file(f, quiet=True) is True
+    assert got["timeout"] > T.TIMEOUT * 10
 
 
 def test_없는_파일은_보내지_않는다(setup):

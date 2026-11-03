@@ -1,0 +1,62 @@
+{
+  "recorded_date": "2026-10-26",
+  "source": "사용자의 현재 대화 지시",
+  "sequence": [
+    "용어·전제·가격별 사례 정리",
+    "대본 및 근거 양측 검수",
+    "무료 TTS·의미 자막",
+    "화면 제작·양측 최종 검수",
+    "YouTube 비공개 업로드·상태 확인"
+  ],
+  "claude_review_authorized": true,
+  "claude_payload_scope": "영상 대본, 공개 근거, 익명 집계, 제작·검수 자료. 자격증명과 개인 금융정보 제외",
+  "free_tts_authorized": true,
+  "free_tts_supersedes_previous_voice_hold": true,
+  "paid_voice_generation_authorized": false,
+  "cash_budget_krw": 0,
+  "youtube_upload_authorized": true,
+  "youtube_visibility": "private",
+  "public_release_authorized": false,
+  "quality_gate": {
+    "codex_review": "required_pass_on_actual_version",
+    "claude_review": "required_pass_on_actual_version",
+    "open_critical_or_required_issues": 0,
+    "final_tts_and_subtitle_checks": "required_after_generation",
+    "guide": "video-agent-studio/guides/제작_기본가이드.md",
+    "feedback": "video-agent-studio/guides/사용자_피드백_이력.md",
+    "preserve_original_media_and_scripts": true,
+    "claims_match_verification_coverage": true
+  },
+  "next_episode_scope": {
+    "topic": "내가 감당 가능한 매매 가격 계산",
+    "explain_first": [
+      "보유자금",
+      "DSR",
+      "LTV",
+      "세금",
+      "중개보수·등기 등 부대비용"
+    ],
+    "price_cases": [
+      "6억원",
+      "9억원",
+      "12억원",
+      "공식 현행 정책의 추가 경계 구간"
+    ],
+    "products": [
+      "일반 주택담보대출",
+      "신생아 특례 구입자금",
+      "기타 공식 정책 구입자금 상품"
+    ],
+    "case_dimensions": [
+      "지역·규제지역",
+      "생애최초·주택 수",
+      "소득·기존 부채",
+      "가구·출산 조건",
+      "주택가격·면적",
+      "만기·상환 방식"
+    ],
+    "policy_effective_date": "공식 원문에서 확인 후 화면과 계산에 명시"
+  },
+  "episode_id": "affordable-home-price-20261026",
+  "first_episode_completed": "https://www.youtube.com/watch?v=exEGpjcqdF0"
+}

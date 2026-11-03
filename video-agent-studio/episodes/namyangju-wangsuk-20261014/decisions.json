@@ -1,0 +1,874 @@
+{
+  "episode_id": "namyangju-wangsuk-20261014",
+  "decisions": [
+    {
+      "decision_id": "NYJ-TOPIC-20261014-01",
+      "gate": "topic",
+      "status": "approved_direct_user_instruction",
+      "version": "brief-v1",
+      "selection": "남양주 소개, 왕숙 자료 적극 활용",
+      "supersedes_topic_proposal": "23a3212d3ec7",
+      "scope": "주제 및 조사·검토용 대본. 유료 생성/업로드 미승인"
+    },
+    {
+      "decision_id": "NYJ-EDITORIAL-20261014-01",
+      "status": "director_decided",
+      "version": "editorial-v1",
+      "selection": "living areas -> Wangsuk1/2 -> first-resident readiness",
+      "reason": "user permits direction changes; evidence supports stage-specific introduction"
+    },
+    {
+      "decision_id": "653757b70b5d",
+      "gate": "script",
+      "status": "superseded",
+      "version": "script-v1",
+      "artifact": "writer/script_v1.md",
+      "qa_revision": "qa-script-v1",
+      "external_notification": "not_sent",
+      "superseded_by": "6130aee08e39"
+    },
+    {
+      "decision_id": "6130aee08e39",
+      "gate": "script",
+      "status": "approved",
+      "version": "script-v2",
+      "artifact": "outputs/script-review-v2/script_v2.md",
+      "reason": "direct continuity revision request",
+      "external_notification": "pending_notice_only",
+      "approval_event": "output\\video_decisions\\inbox\\718066294.json",
+      "applied_at": "2026-10-14T12:21:18.055463+00:00"
+    },
+    {
+      "decision_id": "e2e510eebb19",
+      "gate": "budget",
+      "status": "approved",
+      "version": "budget-v1",
+      "script_revision": "script-v2",
+      "artifact": "budget_v1.json",
+      "approval_event": "output\\video_decisions\\inbox\\718066295.json",
+      "applied_at": "2026-10-14T12:37:43.377239+00:00"
+    },
+    {
+      "decision_id": "501278cb46c1",
+      "gate": "completed",
+      "status": "revision_requested",
+      "version": "video-v1",
+      "artifact": "outputs/video-review-v1/namyangju-wangsuk_v1.mp4",
+      "qa_revision": "findings_video_v1",
+      "publication_authorized": false
+    },
+    {
+      "decision_id": "NYJ-QUALITY-20261015-01",
+      "status": "director_decided",
+      "scope": "video-v2 visual rebuild, unchanged script-v2/audio-v1",
+      "evidence": [
+        "config/current_video.json",
+        "video/src/PilotV11.tsx",
+        "editor/build_video_v1.py"
+      ],
+      "failure_cause": "Static PNG concat substituted for prior frame-based production; media variety and motion quality were not release criteria",
+      "corrective_requirements": [
+        "actual_photo/map/concept/motion mixture",
+        "previous production inheritance",
+        "62 meaning-based shots",
+        "motion proof before whole render",
+        "aesthetic QA distinct from codec/text QA"
+      ],
+      "gpt_image_tool": "built-in image_gen user explicitly requested",
+      "additional_external_api_paid_generation": false
+    },
+    {
+      "id": "441c48235d55",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "남양주·왕숙 검토본 video-v3: outputs/video-review-v3/namyangju-wangsuk_v3.mp4. 지도·사진·GPT 이미지·모션 그래픽 62샷. 전체 디코딩/샷별 화면 검수 완료. 실제 청취·연속 재생·자막 단어 정렬 미확인. 사용자 검토 및 수정 의견 요청. 업로드 미승인.",
+      "status": "pending",
+      "created_at": "2026-10-14T18:27:44.588304+00:00",
+      "expires_at": "2026-10-21T18:27:44.588304+00:00",
+      "version": "video-v3",
+      "artifact": "outputs/video-review-v3/namyangju-wangsuk_v3.mp4",
+      "qa": "qa/findings_video_v3.json"
+    },
+    {
+      "decision_id": "NYJ-RAIL-PROOF-20261015-01",
+      "status": "approved_direct_user_instruction",
+      "scope": "Standalone clip near 2min: rail overlays and one apartment walking/bus route animation; preserve v3 and await proof review before merge",
+      "input_versions": [
+        "script-v2",
+        "audio-v1",
+        "video-v3"
+      ],
+      "full_video_patch_authorized": false,
+      "paid_generation_authorized": false
+    },
+    {
+      "id": "7c87283e1216",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "Standalone rail-route-proof-v1b, 80 sec, source master94-174 sec. Review actual rail overlays and apartment walking/48bus/walking motion. Approval scope: apply this approved clip to a NEW full-video version at94-174sec with original audio preserved. No upload/publication authorization. Do not auto-apply prior full-video approvals.",
+      "status": "revision_requested",
+      "created_at": "2026-10-15T01:31:17.919972+00:00",
+      "expires_at": "2026-10-22T01:31:17.919972+00:00",
+      "version": "rail-route-proof-v1b",
+      "artifact": "outputs/rail-route-proof-v1/namyangju_rail-route-proof_v1b.mp4"
+    },
+    {
+      "decision_id": "NYJ-DASAN-PROOF-20261015-02",
+      "status": "approved_direct_user_instruction",
+      "changed_interval": [
+        40.3,
+        61
+      ],
+      "scope": "Improve standalone proof Dasan station surroundings with verified land-use/urban context; preserve voice and other shots; main merge remains unapproved"
+    },
+    {
+      "id": "2581a0870436",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "Standalone rail-route-proof-v2 80sec: revised40.3-61sec Dasan surroundings using actual residential/commercial/park/building geometry. Approve scope is applying this revised clip to NEW full video94-174sec, original audio preserved. No publication authorization; prior v1b approval not reused.",
+      "status": "revision_requested",
+      "created_at": "2026-10-15T01:45:51.817231+00:00",
+      "expires_at": "2026-10-22T01:45:51.817231+00:00",
+      "version": "rail-route-proof-v2",
+      "artifact": "outputs/rail-route-proof-v2/namyangju_rail-route-proof_v2.mp4"
+    },
+    {
+      "decision_id": "NYJ-WALK-POLISH-20261015-03",
+      "status": "approved_direct_user_instruction",
+      "scope": "Refine oversized stick walking figure and motion in standalone proof; retain other maps, bus, voice and timings; preserve full master"
+    },
+    {
+      "id": "355c471d7c25",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "Standalone rail-route-proof-v3: walking figure/style/motion revision only,80sec. Approve applies this revised clip to NEW full-video94-174sec with original voice. No upload/publication authorization. Prior v2 approval not reused.",
+      "status": "pending",
+      "created_at": "2026-10-15T02:01:48.975072+00:00",
+      "expires_at": "2026-10-22T02:01:48.975072+00:00",
+      "version": "rail-route-proof-v3",
+      "artifact": "outputs/rail-route-proof-v3/namyangju_rail-route-proof_v3.mp4"
+    },
+    {
+      "decision_id": "NYJ-SEMANTIC-CONTEXT-20261015-04",
+      "status": "approved_direct_user_instruction",
+      "scope": "Whole-video semantic captions; record preferred Dasan regional detail guide; integrate latest rail-route proof and improve appropriate regional detail shots in new full-video-v4",
+      "source_versions": [
+        "script-v2",
+        "audio-v1",
+        "video-v3",
+        "rail-route-proof-v3"
+      ],
+      "paid_generation": false,
+      "publication": false
+    },
+    {
+      "decision_id": "NYJ-MAP-LED-REBUILD-20261015-05",
+      "status": "approved_direct_user_instruction",
+      "supersedes": "NYJ-SEMANTIC-CONTEXT-20261015-04",
+      "scope": {
+        "sequence": [
+          "왕숙1·왕숙2 전체 토지이용계획도와 분석 범위",
+          "일자리: 공간과 가동 시점",
+          "교통: 노선·역 위치와 입주 시 이용 가능성",
+          "분양가: 실제 타입·층·비용 조건",
+          "생활시설: 상업·학교·공원 배치와 이용 시점",
+          "주변 공급: 연도별 입주와 생활권 중첩",
+          "대체 지역 대비 분양가 메리트와 감수할 조건",
+          "지구명을 붙인 블록별 주목 단지·대장 후보와 유보 사유"
+        ],
+        "analysis_rule": "각 항목은 지도→편의의 실제 의미→완성/운영 시점→입주자에게 남는 조건의 순서로 답한다. 사실 목록을 낭독하지 않는다.",
+        "candidate_rule": "왕숙1/왕숙2의 동일 A번호를 구분. 후보는 입지·실제 교통·학교·상업·공원·분양 조건으로 선정하고 가격 미확인 블록의 수익 순위를 만들지 않는다.",
+        "captions": "의미 단위 및 수량·단위·고유명사 묶음",
+        "visuals": "실제 계획/현황 지도 중심 확대·축소·노선/구역 모션. 설명에 부족한 생성 이미지 후보는 검토본에서 빈 장면과 요청서로 남기고 조율 후 제작"
+      },
+      "v4_render": "stopped_at20percent_exit1_no_final_mp4",
+      "script_and_budget_approvals": "Previous script-v2 and audio-v1 approvals not applicable to rewritten script-v3/new narration",
+      "paid_generation_or_upload": false
+    },
+    {
+      "id": "28691abb0946",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "script",
+      "summary": "Map-led script-v3 review: outputs/story-review-v3/script_v3.md and map_storyboard.md. Whole Wangsuk1/2 plans first -> jobs/rail/prices/life/supply convenience+completion timelines -> actual alternative prices -> conditional leader candidates Wangsuk1 B17 and Wangsuk2 A3, A1 rival. 274 untimed semantic captions. Two image gaps require discussion. Approve SCRIPT ONLY, not paid TTS/images/upload; previous script-v2/audio-v1 approvals not reused.",
+      "status": "pending",
+      "created_at": "2026-10-15T02:39:20.588566+00:00",
+      "expires_at": "2026-10-22T02:39:20.588566+00:00",
+      "version": "script-v3-map-led",
+      "artifact": "outputs/story-review-v3/script_v3.md",
+      "script_sha256": "faf77b96e68772c8c679c4ba49eaa855a03ffbdf53e7ddcb3e69c7dacb0e87e6"
+    },
+    {
+      "decision_id": "NYJ-HOOK-OUTSIDE-20261015-06",
+      "status": "approved_direct_user_instruction",
+      "scope": "Make map-led video with hook and intro/outro BGM, add comparisons beyond Namyangju; script and paid generation gates apply to new revision",
+      "production_order": "script -> actual voice -> timed edit; visual assets prepared in parallel",
+      "new_paid_generation": false,
+      "publication": false
+    },
+    {
+      "id": "553d76e214f6",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "script",
+      "summary": "Approve script-v4-hook-outside: outputs/story-review-v4/script_v4.md. 11 scenes, 6879 narration chars, stronger hook, intro/outro owned BGM, outside comparisons Goyang Changneung S5 and Hanam Gyosan A2 with product/area distinctions. SHA d816c5ba4341ddaafd4f3f3db6585873a519e1577d865dbf332d183925d4c2da. SCRIPT approval only, no paid generation/upload.",
+      "status": "approved",
+      "created_at": "2026-10-15T03:02:23.107069+00:00",
+      "expires_at": "2026-10-22T03:02:23.107069+00:00",
+      "version": "script-v4-hook-outside",
+      "approval_event": "output/video_decisions/inbox/718066296.json",
+      "approved_script_sha256": "d816c5ba4341ddaafd4f3f3db6585873a519e1577d865dbf332d183925d4c2da",
+      "direct_user_confirmation": {
+        "source": "direct_user_async_question_reply",
+        "question_call": "call_e4a41e8e6a7e452ca6d4e6c230ee5b16",
+        "answers": {
+          "script": "대본 v4 확정",
+          "budget": "음성 제작 예산 승인"
+        },
+        "source_script_sha256": "d816c5ba4341ddaafd4f3f3db6585873a519e1577d865dbf332d183925d4c2da",
+        "scope": {
+          "credit_cap": 8255,
+          "initial_characters": 6879,
+          "correction_reserve": 1376,
+          "additional_cash_usd_cap": 0,
+          "automatic_retry": false,
+          "overage_topup_paid_images": false
+        },
+        "recorded_at": "2026-10-15T03:38:33.290724+00:00"
+      }
+    },
+    {
+      "id": "f86d1138e110",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "budget",
+      "summary": "For exact script SHA d816c5ba4341ddaafd4f3f3db6585873a519e1577d865dbf332d183925d4c2da: Jun/eleven_v4,6879 initial characters+1376 correction reserve; submitted-character AND actual-credit hard caps8255. Included balance34560 verified; additional cash USD0, no overage/topup/new paid imagery/cloud rendering. Existing owned BGM/local render. No automatic retry. Valid only if matching script approval is also recorded.",
+      "status": "approved",
+      "created_at": "2026-10-15T03:02:23.107069+00:00",
+      "expires_at": "2026-10-22T03:02:23.107069+00:00",
+      "version": "budget-v2-script-v4",
+      "direct_user_confirmation": {
+        "source": "direct_user_async_question_reply",
+        "question_call": "call_e4a41e8e6a7e452ca6d4e6c230ee5b16",
+        "answers": {
+          "script": "대본 v4 확정",
+          "budget": "음성 제작 예산 승인"
+        },
+        "source_script_sha256": "d816c5ba4341ddaafd4f3f3db6585873a519e1577d865dbf332d183925d4c2da",
+        "scope": {
+          "credit_cap": 8255,
+          "initial_characters": 6879,
+          "correction_reserve": 1376,
+          "additional_cash_usd_cap": 0,
+          "automatic_retry": false,
+          "overage_topup_paid_images": false
+        },
+        "recorded_at": "2026-10-15T03:38:33.290724+00:00"
+      }
+    },
+    {
+      "id": "a0ef44f61f35",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "검토본 v6: 14:36.4,1080p30; script-v4-hook-outside/audio-v2. 완성본 수정 의견·검토 승인만 해당. MP4 SHA256 f5a90deb175727b756b423a8be48733fd8c80aad661fe63b9b2ab1a0ede50161. 업로드·공개 승인 아님.",
+      "status": "revision_requested",
+      "created_at": "2026-10-15T04:15:33.915640+00:00",
+      "expires_at": "2026-10-22T04:15:33.915640+00:00",
+      "version": "video-review-v6",
+      "artifacts": {
+        "outputs\\video-review-v6\\namyangju-map-led_v6.mp4": "f5a90deb175727b756b423a8be48733fd8c80aad661fe63b9b2ab1a0ede50161",
+        "outputs\\video-review-v6\\namyangju-map-led_v6.srt": "4266d047b2782fece056160add343887381059613a119bdce73831887d24a8fa",
+        "writer\\map-led-v4\\script_v4.md": "d816c5ba4341ddaafd4f3f3db6585873a519e1577d865dbf332d183925d4c2da",
+        "qa\\map-led-v6\\final_review.json": "9d89209cdd95fb5e8726e9a297b71faaeda3de28d13b77657423d74757a888ce"
+      },
+      "qa_scope": "actual_encoded_frame_samples_and_audio_signal_checks; no_actual_listening_or_continuous_playback",
+      "publication_authorized": false,
+      "direct_feedback_at": "2026-10-15T04:42:11.482749+00:00",
+      "direct_feedback_scope": "front land-use map and caption panel revision; see episode outputs/front-review-v7/revision_brief.json"
+    },
+    {
+      "decision_id": "NYJ-FRONT-V7-REVISION",
+      "kind": "internal_edit_application",
+      "source": "direct_user_revision_request",
+      "recorded_at": "2026-10-15T04:42:11.482749+00:00",
+      "scope": "front0..13087frames; existing script/audio unchanged",
+      "revision_brief": "outputs/front-review-v7/revision_brief.json",
+      "no_new_paid_generation": true,
+      "publication_authorized": false
+    },
+    {
+      "id": "47449797986f",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "앞부분 수정 검토본 v7: 00:00~07:16.233,13087frames,1080p30. 기존 대본v4/음성v2 재사용. 흰 자막바·권역/토지이용지도·기업CI·철도맥락 수정. MP4 SHA256 387aedd0f3152dd0347f9d4bdcfae1bfbc5bff1d484b1c5087643d6843837ce6. 이 앞부분 산출물 검토만 해당하며 후반/전체본 적용·업로드 승인은 포함하지 않음.",
+      "status": "revision_requested",
+      "created_at": "2026-10-15T05:07:59.828094+00:00",
+      "expires_at": "2026-10-22T05:07:59.828094+00:00",
+      "version": "front-review-v7",
+      "artifacts": {
+        "outputs\\front-review-v7\\namyangju-landuse_front_v7.mp4": "387aedd0f3152dd0347f9d4bdcfae1bfbc5bff1d484b1c5087643d6843837ce6",
+        "outputs\\front-review-v7\\namyangju-landuse_front_v7.srt": "b0f212200bdc8863069760ebbdc5075ad1bb0ceb1a15ea64a299d183d0b0de88",
+        "writer\\map-led-v4\\script_v4.md": "d816c5ba4341ddaafd4f3f3db6585873a519e1577d865dbf332d183925d4c2da",
+        "qa\\landuse-front-v7\\final_review.json": "3a93804129a7cc1b6fe64b0185fec7cd1b97f2ee7f883b8e459e4ef1825b31e9"
+      },
+      "scope": {
+        "from_frame": 0,
+        "to_frame_exclusive": 13087,
+        "fps": 30,
+        "partial_review_only": true
+      },
+      "publication_authorized": false,
+      "full_episode_application_approved": false,
+      "direct_feedback_at": "2026-10-15T05:31:10.467516+00:00",
+      "direct_feedback_scope": "v8 zoom navigation, geographic linking, block meanings and rear visual extension"
+    },
+    {
+      "decision_id": "NYJ-FULL-V8-REVISION",
+      "source": "direct_user_revision_request",
+      "scope": "full26292frames visualedit; unchangedapprovedscript/audio",
+      "recorded_at": "2026-10-15T05:31:10.467516+00:00",
+      "new_paid_generation": false,
+      "publication_authorized": false,
+      "brief": "outputs/video-review-v8/revision_brief.json"
+    },
+    {
+      "id": "33fb71e0961f",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "script",
+      "summary": "대본 v5 전편 연결·현재 왕숙→다음 창릉→그다음 교산 시리즈 예고. M000234자 교체, M001이후 원문·기존음성10개 동일. 전편5초인트로/10초아웃트로 재사용. Exactscript SHA256 97d44556982b25cd12eef8779dab965f60de08485b3678c91de9c0e5060b6ab7. 예산·완성본·업로드 승인 아님.",
+      "status": "revision_requested",
+      "created_at": "2026-10-15T05:44:51.347062+00:00",
+      "expires_at": "2026-10-22T05:44:51.347062+00:00",
+      "version": "script-v5-series-brand",
+      "source_script_sha256": "97d44556982b25cd12eef8779dab965f60de08485b3678c91de9c0e5060b6ab7",
+      "direct_response_at": "2026-10-15T05:49:08.764164+00:00",
+      "response_source": "direct_user_async_question_reply",
+      "execution_authorized": false,
+      "response_scope_note": "Matching script approval absent. Revised artifacts require new decisions; this approval does not transfer."
+    },
+    {
+      "id": "e0f76cd4e81e",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "budget",
+      "summary": "Only new M000234chars SHA941013e3ea0f467a7aaed1d25aeea5de4a5c811ffb30488bb84c319be323ae58 for script SHA256 97d44556982b25cd12eef8779dab965f60de08485b3678c91de9c0e5060b6ab7: Jun/eleven_v4 initial234+correctionreserve47, submittedcharANDactualcredits hardcap281, includedbalance31809 checked, additionalcashUSD0. Noautomaticretry/overage/topup/newpaidimages/cloudrender. Existing10audiochapters/brandclips reused. Priorbudgetreservenottransferred. Requiresmatchingnewscriptapproval.",
+      "status": "approved",
+      "created_at": "2026-10-15T05:44:51.348062+00:00",
+      "expires_at": "2026-10-22T05:44:51.348062+00:00",
+      "version": "script-v5-series-brand",
+      "source_script_sha256": "97d44556982b25cd12eef8779dab965f60de08485b3678c91de9c0e5060b6ab7",
+      "direct_response_at": "2026-10-15T05:49:08.764164+00:00",
+      "response_source": "direct_user_async_question_reply",
+      "execution_authorized": false,
+      "response_scope_note": "Matching script approval absent. Revised artifacts require new decisions; this approval does not transfer."
+    },
+    {
+      "id": "6d049d09a429",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "script",
+      "summary": "대본 v6: 전편 실제 화면과 확인 안내, 왕숙→창릉→교산 시리즈·구독 안내 추가. 새 M000 236자. 본문10개음성 및 기존5초인트로/10초아웃트로 재사용. Exact script SHA256 428d0e0325097d6d146e358a4f92f2fcfd3337ab12bff7b77e4e7e57ca40ca41.",
+      "status": "approved",
+      "created_at": "2026-10-15T05:51:40.917216+00:00",
+      "expires_at": "2026-10-22T05:51:40.917216+00:00",
+      "version": "script-v6-series-cta",
+      "source_script_sha256": "428d0e0325097d6d146e358a4f92f2fcfd3337ab12bff7b77e4e7e57ca40ca41",
+      "direct_response_at": "2026-10-15T05:54:41.866251+00:00",
+      "response_source": "direct_user_async_reply_call_261254307ead41099ee60ab750b3d87b"
+    },
+    {
+      "id": "ba174396a8ef",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "budget",
+      "summary": "Only new M000 236 chars SHA256 fea5b5541864404a1867408186876cbcdbbcc65ede1a931f47c43876df3f047e, script SHA256 428d0e0325097d6d146e358a4f92f2fcfd3337ab12bff7b77e4e7e57ca40ca41. Jun/eleven_v4 initial236+reserve48, hardcap284 submitted chars AND actual credits; included credits only, additional cash USD0. No automatic retry/overage/topup/new paid images/cloud render. Prior exact-v5 approval not transferred. Requires matching script approval and fresh balance check.",
+      "status": "approved",
+      "created_at": "2026-10-15T05:51:40.918215+00:00",
+      "expires_at": "2026-10-22T05:51:40.918215+00:00",
+      "version": "script-v6-series-cta",
+      "source_script_sha256": "428d0e0325097d6d146e358a4f92f2fcfd3337ab12bff7b77e4e7e57ca40ca41",
+      "direct_response_at": "2026-10-15T05:54:41.866251+00:00",
+      "response_source": "direct_user_async_reply_call_261254307ead41099ee60ab750b3d87b"
+    },
+    {
+      "id": "9143efd1e4d3",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "전체 검토본 v8:14분50.67초,1080p30,275자막. 대본v6·새벡터인트로·기존인트로/아웃트로복원·전체지도수정. MP4 SHA256 94b6d04aa780c93509203b705ce02fa12085d57a0faef23a0629769db0549ba4. 이 산출물의 검토 승인만 해당. 업로드·공개 승인 아님.",
+      "status": "revision_requested",
+      "created_at": "2026-10-15T06:33:21.209698+00:00",
+      "expires_at": "2026-10-22T06:33:21.209698+00:00",
+      "version": "video-review-v8",
+      "artifacts": {
+        "outputs\\video-review-v8\\namyangju-landuse_full_v8.mp4": "94b6d04aa780c93509203b705ce02fa12085d57a0faef23a0629769db0549ba4",
+        "outputs\\video-review-v8\\namyangju-landuse_full_v8.srt": "842df867eae7d1f446f3917e32cf6276021a3b919fb67db7c86879bf090fa2c1",
+        "outputs\\story-review-v6\\script_v6.md": "428d0e0325097d6d146e358a4f92f2fcfd3337ab12bff7b77e4e7e57ca40ca41",
+        "qa\\landuse-full-v8\\final_review.json": "7b4026859ac3d835a99214dee1702fbd0bc72e574bf66640cdb9fc3b79fe048e"
+      },
+      "publication_authorized": false,
+      "qa_scope": "77 actual frames and all26720 caption-bar ROI; actual listening/continuous playback unverified",
+      "direct_feedback_at": "2026-10-15T07:28:53.961435+00:00",
+      "direct_feedback_scope": "v10 actual165..525sec station/road pins, continuous map navigation and on-map focus/callouts"
+    },
+    {
+      "decision_id": "NYJ-MAP-FOCUS-V10",
+      "kind": "internal_edit_application",
+      "source": "direct_user_revision_request",
+      "recorded_at": "2026-10-15T07:28:53.961435+00:00",
+      "scope_s": [
+        165,
+        525
+      ],
+      "brief": "outputs/map-focus-v10/revision_brief.json",
+      "new_paid_generation": false,
+      "publication_authorized": false
+    },
+    {
+      "id": "91a40cf0a547",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "v10 앞부분00:00~08:45 검토본. 변경02:45~08:45: 예정역·도로·위치전환·지도위요약·음성대상강조. 기존대본/음성유지. MP4 SHA256 388ae849afb5d1ce098e4886b9a2cf7fb5f30c0d6d09409fcf0fbc58cd95c5cd. 이 부분산출물검토만해당;08:45이후수정/업로드/공개승인아님.",
+      "status": "revision_requested",
+      "created_at": "2026-10-15T08:02:35.730773+00:00",
+      "expires_at": "2026-10-22T08:02:35.730773+00:00",
+      "version": "map-focus-v10-front",
+      "artifacts": {
+        "outputs\\map-focus-v10\\map-focus_v10_front.mp4": "388ae849afb5d1ce098e4886b9a2cf7fb5f30c0d6d09409fcf0fbc58cd95c5cd",
+        "qa\\map-focus-v10\\front_review.json": "8ede5637aefdab3b24df7b3b0136f3e590e7651a7869f5473d4868607710aa01",
+        "outputs\\story-review-v6\\script_v6.md": "428d0e0325097d6d146e358a4f92f2fcfd3337ab12bff7b77e4e7e57ca40ca41",
+        "outputs\\map-focus-v10\\map-focus_v10_1.mp4": "5404dd3d6eea95adaa93018c478fc696bd8300636b08b2083f71c5594c2be255",
+        "outputs\\map-focus-v10\\map-focus_v10_2.mp4": "f178368ae2ab345dc262e2cb133e2fde16857d8a2183ae25477b61478d4d9728",
+        "outputs\\map-focus-v10\\map-focus_v10_3.mp4": "42cf7619536867a17f3255dda02c937c72960a62db45785960f56563950349b1"
+      },
+      "publication_authorized": false,
+      "scope": {
+        "review_range_s": [
+          0,
+          525
+        ],
+        "changed_range_s": [
+          165,
+          525
+        ],
+        "partial_review_only": true
+      },
+      "qa_scope": "actual encoded representative frames and full caption-bar ROI; actual listening and continuous playback unverified",
+      "direct_feedback_at": "2026-10-15T08:42:15.380371+00:00",
+      "direct_feedback_scope": "v11 remove map motion, rapid cuts, unreadable rail context; reverify planned station positions"
+    },
+    {
+      "decision_id": "NYJ-STABLE-MAPS-V11",
+      "source": "direct_user_revision_request",
+      "recorded_at": "2026-10-15T08:42:15.380371+00:00",
+      "scope_s": [
+        0,
+        525
+      ],
+      "brief": "outputs/stable-maps-v11/revision_brief.json",
+      "publication_authorized": false
+    },
+    {
+      "id": "1ad71ef3e8a0",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "v11 정적지도 앞부분00:00~08:45 검토본.1:04맥락수정,설명지도줌/팬/펄스/선그리기/짧은삽입컷제거,운영철도고대비,추정역핀폐기및공식계획구간재검증. MP4 SHA256 b17fcab290bf13544ae52a889ade1a2d3f7558cbfff599a196ef247cb064ee91. 이부분검토만해당;업로드/공개승인아님.",
+      "status": "revision_requested",
+      "created_at": "2026-10-15T09:00:14.413046+00:00",
+      "expires_at": "2026-10-22T09:00:14.413046+00:00",
+      "version": "stable-maps-v11-front",
+      "artifacts": {
+        "outputs\\stable-maps-v11\\stable-maps_v11_front.mp4": "b17fcab290bf13544ae52a889ade1a2d3f7558cbfff599a196ef247cb064ee91",
+        "qa\\stable-maps-v11\\finalfront_review.json": "df604415035d98e83cc8edce82465eccb3c4633edc149538efea73389aedd3cf",
+        "outputs\\stable-maps-v11\\stable-maps_v11_rail.mp4": "76a0b06e47559acbaad9d53d1769a62fab4711176573dd0fb72e5718968d9ffb",
+        "outputs\\story-review-v6\\script_v6.md": "428d0e0325097d6d146e358a4f92f2fcfd3337ab12bff7b77e4e7e57ca40ca41"
+      },
+      "publication_authorized": false,
+      "scope": {
+        "review_range_s": [
+          0,
+          525
+        ],
+        "partial_review_only": true
+      },
+      "qa_scope": "actual encoded dense frames, full map ROI and cut inventory; actual listening and continuous playback unverified",
+      "direct_feedback_at": "2026-10-15T09:30:35.516237+00:00",
+      "direct_feedback_scope": "Return to final v10; only remove zoom and fix station positions"
+    },
+    {
+      "decision_id": "NYJ-MINIMAL-V12",
+      "source": "direct_user_revision_request",
+      "scope_s": [
+        0,
+        525
+      ],
+      "recorded_at": "2026-10-15T09:30:35.516237+00:00",
+      "brief": "outputs/minimal-v12/revision_brief.json",
+      "publication_authorized": false
+    },
+    {
+      "id": "64737712b492",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "v12 부분검토본00:00~08:45. 최종v10원본을기준으로줌인/줌아웃및중간위치지도제거·예정역표기만수정. 나머지v10구성/모션/음성/자막유지. MP4 SHA256 94d9a65f2e43883735b0719f77a102978ed48a1c38c97ef55ce87d3cb1025f9c. 이부분검토만해당;업로드/공개승인아님.",
+      "status": "revision_requested",
+      "created_at": "2026-10-15T09:42:36.677986+00:00",
+      "expires_at": "2026-10-22T09:42:36.677986+00:00",
+      "version": "minimal-v12-front",
+      "artifacts": {
+        "outputs\\minimal-v12\\minimal_v12_front.mp4": "94d9a65f2e43883735b0719f77a102978ed48a1c38c97ef55ce87d3cb1025f9c",
+        "qa\\minimal-v12\\front_review.json": "cf4ee2dd88f23e4a67e864243661bd39b1aa9f4fcd17cb70d7d91cf62218a2c5",
+        "outputs\\story-review-v6\\script_v6.md": "428d0e0325097d6d146e358a4f92f2fcfd3337ab12bff7b77e4e7e57ca40ca41"
+      },
+      "publication_authorized": false,
+      "scope": {
+        "review_range_s": [
+          0,
+          525
+        ],
+        "base_revision": "map-focus-v10-final",
+        "changes_only": [
+          "camera zoom removal",
+          "station location correction"
+        ],
+        "partial_review_only": true
+      },
+      "direct_feedback_at": "2026-10-15T11:01:07.024941+00:00",
+      "direct_feedback_scope": "v13 brand caption box exception and Ilpae native station placement correction"
+    },
+    {
+      "decision_id": "NYJ-CAPTION-STATION-V13",
+      "source": "direct_user_revision_request",
+      "brief": "outputs/caption-station-v13/revision_brief.json",
+      "recorded_at": "2026-10-15T11:01:07.024941+00:00"
+    },
+    {
+      "id": "2bc84e492326",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "v13수정검토:앞부분0..8:45 및 전체연결본14:50.67. 무음인트로/아웃트로빈흰자막박스제거,일패역철도/업무시설동일원도도해보강,8f구화면·1/4f강조복귀·짧은임시지도삽입제거. 8:45이후본문은기존v8보존,마지막브랜드박스만제거. Full MP4 SHA256 a567476f33043b87092bff363f8a1f37d0aa3229aa42630cdc0b3b5186d98f9b. 업로드/공개승인아님.",
+      "status": "revision_requested",
+      "created_at": "2026-10-15T11:29:29.928315+00:00",
+      "expires_at": "2026-10-22T11:29:29.928315+00:00",
+      "version": "caption-station-v13",
+      "artifacts": {
+        "outputs\\caption-station-v13\\caption-station_v13_front.mp4": "6b15252ee6f1dff4fdd56fed3d614855fdd4b8e0c6eba5ef379145e5a81a2c7a",
+        "outputs\\caption-station-v13\\caption-station_v13_full.mp4": "a567476f33043b87092bff363f8a1f37d0aa3229aa42630cdc0b3b5186d98f9b",
+        "outputs\\caption-station-v13\\brand_intro_v13_no_caption.mp4": "926fbbfd453ef2bb00ed7f723ba254ecb45977f815847227eef5f60844789baf",
+        "outputs\\caption-station-v13\\brand_outro_v13_no_caption.mp4": "8be8e438d6d9cd217bace576176d79dde1995fbcfb63cd126db8dd5a350c8742",
+        "qa\\caption-station-v13\\front_review.json": "20bf51e0d26aa736f89f97843847c356e0d335bed0b5b3fb1159ba59c6b71183",
+        "qa\\caption-station-v13\\full_review.json": "76a4c19c40c044f8a977971bb304d9d8844c89582e34a5a09867a1b0e4c8c7c2",
+        "outputs\\story-review-v6\\script_v6.md": "428d0e0325097d6d146e358a4f92f2fcfd3337ab12bff7b77e4e7e57ca40ca41"
+      },
+      "publication_authorized": false,
+      "scope": {
+        "front_revision_range_s": [
+          0,
+          525
+        ],
+        "unchanged_rear_source": "video-review-v8",
+        "outro_box_removed_frames": [
+          26420,
+          26720
+        ]
+      },
+      "qa_scope": "actual encoded frame boundaries and flash audit; actual listening and continuous playback unverified",
+      "direct_feedback_at": "2026-10-15T11:55:15.309730+00:00",
+      "direct_feedback_scope": "v14 whole-plan locator, timelines, Dasan/Byeollae price maps, and rewrite regional leaders closing"
+    },
+    {
+      "decision_id": "NYJ-LOCATOR-LEADERS-V14",
+      "source": "direct_user_revision_request",
+      "recorded_at": "2026-10-15T11:55:15.309730+00:00",
+      "brief": "outputs/locator-timeline-v14/revision_brief.json",
+      "new_paid_generation_authorized": false
+    },
+    {
+      "id": "d6a6098a1cac",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "script",
+      "summary": "Approve script-v7-region-leaders: outputs/story-review-v7/script_v7.md SHA256 6ce6fefb6cbd439b7073091a0107ec65261ba8638aeeb0f339369c0e68640737. Replace M008/M009 only; preserve preceding nine narration chapters. North Wangsuk1 B1/B2 jointly, south B17, Wangsuk2 A3 and conditional A1 competitor. Exclude newlywed-special housing; distinguish current trading from future ordinary resale after restrictions. Script approval only; no paid generation/publication.",
+      "status": "approved",
+      "created_at": "2026-10-15T12:08:57.900527+00:00",
+      "expires_at": "2026-10-22T12:08:57.900527+00:00",
+      "version": "script-v7-region-leaders",
+      "direct_user_confirmation": {
+        "source": "direct_user_async_question_reply",
+        "question_call": "call_a855c2dee0654fda8ab4f802583d1d63",
+        "answers": {
+          "script": "대본 v7 확정",
+          "budget": "v7 음성 예산 승인"
+        },
+        "script_sha256": "6ce6fefb6cbd439b7073091a0107ec65261ba8638aeeb0f339369c0e68640737",
+        "recorded_at": "2026-10-15T12:20:43.815184+00:00",
+        "scope": {
+          "scene_ids": [
+            "M008",
+            "M009"
+          ],
+          "initial_characters": 1541,
+          "reserve": 309,
+          "submitted_character_hard_cap": 1850,
+          "actual_credit_hard_cap": 1850,
+          "additional_cash_usd_cap": 0,
+          "automatic_retry": false,
+          "topup_overage_paid_images": false
+        }
+      }
+    },
+    {
+      "id": "a1112eba6e2c",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "budget",
+      "summary": "Exact script SHA256 6ce6fefb6cbd439b7073091a0107ec65261ba8638aeeb0f339369c0e68640737, M008/M009 inputs in outputs/story-review-v7/manifest.json. Jun/eleven_v4:1541 initial characters +309 correction reserve; both submitted-character and actual-credit hard caps1850. Fresh included balance31715; additional cash USD0. No automatic retries, topups, overage, new paid images, cloud rendering or upload. Requires separate matching script approval. Existing narration and brand clips reused.",
+      "status": "approved",
+      "created_at": "2026-10-15T12:08:57.900527+00:00",
+      "expires_at": "2026-10-22T12:08:57.900527+00:00",
+      "version": "budget-v7-closing-only",
+      "direct_user_confirmation": {
+        "source": "direct_user_async_question_reply",
+        "question_call": "call_a855c2dee0654fda8ab4f802583d1d63",
+        "answers": {
+          "script": "대본 v7 확정",
+          "budget": "v7 음성 예산 승인"
+        },
+        "script_sha256": "6ce6fefb6cbd439b7073091a0107ec65261ba8638aeeb0f339369c0e68640737",
+        "recorded_at": "2026-10-15T12:20:43.815184+00:00",
+        "scope": {
+          "scene_ids": [
+            "M008",
+            "M009"
+          ],
+          "initial_characters": 1541,
+          "reserve": 309,
+          "submitted_character_hard_cap": 1850,
+          "actual_credit_hard_cap": 1850,
+          "additional_cash_usd_cap": 0,
+          "automatic_retry": false,
+          "topup_overage_paid_images": false
+        }
+      }
+    },
+    {
+      "id": "5f63c4d38f07",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "남양주 v14 전체 검토본15분21.77초: 4:33부터 좌측 단일 전체 토지계획도+상세영역, 교통/학교/입주/일자리 가로 시간축, 다산/별내 실제83~85㎡급 3단지 가격 지도, 승인 대본v7의 일반형 권역별 후보 새 후반. MP4 SHA256 ba5bcfdc625f3c15b3f13548f43696e6f7d8b0579c8f8374d46df7d2083966f1. 실제 전체 프레임/컷/정렬 기술검수, 실제 청취·연속재생 미검증. 사용616크레딧/추가결제0. 이 버전 제작완료 검토만이며 업로드·공개 승인 아님.",
+      "status": "revision_requested",
+      "created_at": "2026-10-15T12:50:13.709077+00:00",
+      "expires_at": "2026-10-22T12:50:13.709077+00:00",
+      "version": "locator-timeline-v14",
+      "artifacts": {
+        "outputs\\locator-timeline-v14\\namyangju_locator_timeline_full_v14.mp4": "ba5bcfdc625f3c15b3f13548f43696e6f7d8b0579c8f8374d46df7d2083966f1",
+        "outputs\\locator-timeline-v14\\namyangju_locator_timeline_full_v14.srt": "71f9ae11e08c241ab76e859d5cc6287d4854f0994b78572cee9adcc46a7660ed",
+        "outputs\\story-review-v7\\script_v7.md": "6ce6fefb6cbd439b7073091a0107ec65261ba8638aeeb0f339369c0e68640737",
+        "qa\\locator-timeline-v14\\final_review.json": "49f48c4ab5d277bdb6ddf85f0a56c3d1df80534821d5a0c2f93ada71b25618bf",
+        "outputs\\locator-timeline-v14\\namyangju_locator_timeline_v14_delivery.zip": "1b2c677a81f583c2b0fdbcb28040dd6100dae8b7cfb2cc1177f737479d7f4193"
+      },
+      "publication_authorized": false,
+      "qa_scope": "actual encoded frames, boundaries, captions, provider alignment and decoded PCM; listening/continuous playback unverified",
+      "direct_feedback_scope": "v15 timeline clipping, jobs locator, station inset timing, south leader-line declutter and literal endingCTA +3s hold",
+      "direct_feedback_at": "2026-10-15T13:14:56.362164+00:00"
+    },
+    {
+      "id": "84b4419e7318",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "script",
+      "summary": "User explicitly requested literal M010 CTA appended after existing v7 M009; no other spoken text change. script-v8 SHA256 574d74b222cde96c5aab3bf59f6ea9a8a04f301fb6ce2ba3efdeb3f50b7c4d67; TXT SHA256 d67f35c05d75736239d631a8afab1c9f6d84a1523ed0b03f5dc653651ba18d11; 59 chars. 3s hold after actual speech then existing10s brand outro. Script scope only, no upload.",
+      "status": "approved",
+      "created_at": "2026-10-15T13:14:56.362164+00:00",
+      "expires_at": "2026-10-22T13:14:56.362164+00:00",
+      "direct_user_confirmation": {
+        "source": "direct_user_revision_request",
+        "recorded_at": "2026-10-15T13:14:56.362164+00:00",
+        "literal_text": "영상이 만족스러웠다면 구독과 좋아요 버튼 한번씩 눌러주시면 감사하겠습니다. 시청해주셔서 대단히 감사합니다.",
+        "literal_text_user_supplied": true,
+        "additional_voice_budget_explicitly_allowed": true,
+        "scope": "only user supplied newCTA; existing voice reused; included credits and cash0/no topup/overage/retry",
+        "script_sha256": "574d74b222cde96c5aab3bf59f6ea9a8a04f301fb6ce2ba3efdeb3f50b7c4d67",
+        "conservative_hard_cap": 71
+      }
+    },
+    {
+      "id": "85656bf61232",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "budget",
+      "summary": "Direct user explicitly allowed budget for only the literal added CTA. Exact script SHA256 574d74b222cde96c5aab3bf59f6ea9a8a04f301fb6ce2ba3efdeb3f50b7c4d67, TXT SHA256 d67f35c05d75736239d631a8afab1c9f6d84a1523ed0b03f5dc653651ba18d11. Jun/eleven_v4 59 initial chars+12 correction reserve, submitted-char AND actual-credit caps 71. Included credit only/additional cashUSD0; verify fresh balance/rates/overage-off before POST. No automatic retries/topups/overage/new paid images. Does not inherit previous unused reserves.",
+      "status": "approved",
+      "created_at": "2026-10-15T13:14:56.362164+00:00",
+      "expires_at": "2026-10-22T13:14:56.362164+00:00",
+      "direct_user_confirmation": {
+        "source": "direct_user_revision_request",
+        "recorded_at": "2026-10-15T13:14:56.362164+00:00",
+        "literal_text": "영상이 만족스러웠다면 구독과 좋아요 버튼 한번씩 눌러주시면 감사하겠습니다. 시청해주셔서 대단히 감사합니다.",
+        "literal_text_user_supplied": true,
+        "additional_voice_budget_explicitly_allowed": true,
+        "scope": "only user supplied newCTA; existing voice reused; included credits and cash0/no topup/overage/retry",
+        "script_sha256": "574d74b222cde96c5aab3bf59f6ea9a8a04f301fb6ce2ba3efdeb3f50b7c4d67",
+        "conservative_hard_cap": 71
+      }
+    },
+    {
+      "id": "4b8219ae2886",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "남양주 v15 수정 전체 검토본15분31.97초: 모든 시간축 글자 잘림 수정,일자리 좌측 전체지도,왕숙역→일패역 설명 시점에 맞는 작은 지도,13:21 교차 인출선 정리,사용자 지정 CTA와🔔👍모션/말끝3초후기존10초outro. 기존301자막+새4=305,추가음성24포함크레딧·현금0. MP4 SHA256 1eb3bee44b4c5953adddfc42f1663afd7da758778bc832000fb155720216c43e. 실제 청취·연속재생은 미검증. 완료 검토만이며 업로드·공개 승인이 아님.",
+      "status": "approved",
+      "created_at": "2026-10-15T13:37:56.563540+00:00",
+      "expires_at": "2026-10-22T13:37:56.563540+00:00",
+      "version": "readability-cta-v15",
+      "artifacts": {
+        "outputs\\readability-cta-v15\\namyangju_readability_cta_full_v15.mp4": "1eb3bee44b4c5953adddfc42f1663afd7da758778bc832000fb155720216c43e",
+        "outputs\\readability-cta-v15\\namyangju_readability_cta_full_v15.srt": "60f2c42c031a53ef255c0b9e0d6d3074906a135d2dc76c00998a03c5c877d9a5",
+        "outputs\\story-review-v8\\script_v8.md": "574d74b222cde96c5aab3bf59f6ea9a8a04f301fb6ce2ba3efdeb3f50b7c4d67",
+        "qa\\readability-cta-v15\\final_review.json": "fa3a0cc6e27935bd1654c9c981df276fd6632deba098c7f11c171a2ac29270e4",
+        "outputs\\readability-cta-v15\\namyangju_readability_cta_v15_delivery.zip": "4c4a9d2c8e00357f1a61b003bb94af4e03d81b1aa1e3aea46007b05f3f3ecf0a"
+      },
+      "publication_authorized": false,
+      "qa_scope": "actual encoded frame and boundary review, all-frame metrics and caption/alignment audit; actual listening and continuous playback unverified",
+      "resolved_at": "2026-10-15T13:49:44.005464+00:00",
+      "approval_source": "direct_current_user_message",
+      "approval_text": "오케이 검수 완료 이거 업로드하자."
+    },
+    {
+      "id": "0df07d80befa",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "pre_upload",
+      "summary": "공개 업로드: 남양주 왕숙, 7억이면 기다릴 만할까? 철도·분양가·대장 후보 지도 분석",
+      "status": "approved",
+      "created_at": "2026-10-15T13:49:44.156429+00:00",
+      "expires_at": "2026-10-22T13:49:44.156429+00:00",
+      "privacy": "public",
+      "artifacts": {
+        "video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\outputs\\youtube-release-v15\\main_job.json": "748aefb070fae9b42043ebbb873344f24b22aae1b3861acf4116adf9eaeb3bf7",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/outputs/readability-cta-v15/namyangju_readability_cta_full_v15.mp4": "1eb3bee44b4c5953adddfc42f1663afd7da758778bc832000fb155720216c43e",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/outputs/youtube-release-v15/thumbnail.jpg": "6d6e6e8bc1ad726d4652b5190c0af86a9ac787bea2a9a9adb2e51ffd77232502",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/qa/readability-cta-v15/final_review.json": "fa3a0cc6e27935bd1654c9c981df276fd6632deba098c7f11c171a2ac29270e4"
+      },
+      "version": "v15",
+      "publication_authorized": true,
+      "resolved_at": "2026-10-15T13:49:44.005464+00:00",
+      "approval_source": "explicit_direct_user_publication_instruction",
+      "approval_text": "공개로 그냥 업로드해버리자",
+      "completed_decision_id": "4b8219ae2886",
+      "five_gates_preserved": true,
+      "scope": "Only exact listed artifact hashes and metadata; no future episode authorization"
+    },
+    {
+      "id": "b9ea33479401",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "사용자 지시로 v15 원음에서 파생 편집한 독립 쇼츠: 왕숙2 A3와 A1, 입지와 예산·입주 비교",
+      "status": "approved",
+      "created_at": "2026-10-15T13:56:55.220896+00:00",
+      "expires_at": "2026-10-22T13:56:55.220896+00:00",
+      "resolved_at": "2026-10-15T13:56:55.202034+00:00",
+      "approval_source": "direct_current_user_delegated_edit_and_publication",
+      "approval_text": "이전과 마찬가지로 쇼츠도 인기있을만한거 혹은 내용이 단독으로 의미있을만한거 잘라서 같이 올려줘. 공개로 그냥 업로드해버리자",
+      "artifacts": {
+        "video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\outputs\\youtube-release-v15\\short_03_choice_job.json": "2830d3119bf66408dfc6d9bb19b85c9e7feb933f3c196a168dd7dd33e76f003f",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/outputs/shorts-release-v1/03_choice.mp4": "c62d6254242a20fe54f5062c23aaedc71fed7416158b7dfbe16b24df5f2e0835",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/qa/shorts-release-v1/03_choice/final_review.json": "eb23de276a7fe09ebba180bef79b29c8748286c410c98c444a669d935e7f3163"
+      },
+      "qa_required_open_count": 0
+    },
+    {
+      "id": "1edb1c3ccf93",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "pre_upload",
+      "summary": "공개 업로드: 왕숙2 A3와 A1, 입지와 예산·입주 비교",
+      "status": "approved",
+      "created_at": "2026-10-15T13:56:55.222897+00:00",
+      "expires_at": "2026-10-22T13:56:55.222897+00:00",
+      "privacy": "public",
+      "artifacts": {
+        "video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\outputs\\youtube-release-v15\\short_03_choice_job.json": "2830d3119bf66408dfc6d9bb19b85c9e7feb933f3c196a168dd7dd33e76f003f",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/outputs/shorts-release-v1/03_choice.mp4": "c62d6254242a20fe54f5062c23aaedc71fed7416158b7dfbe16b24df5f2e0835",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/qa/shorts-release-v1/03_choice/final_review.json": "eb23de276a7fe09ebba180bef79b29c8748286c410c98c444a669d935e7f3163"
+      },
+      "version": "shorts-release-v1-03_choice",
+      "publication_authorized": true,
+      "resolved_at": "2026-10-15T13:56:55.202034+00:00",
+      "approval_source": "explicit_direct_user_publication_instruction",
+      "approval_text": "공개로 그냥 업로드해버리자",
+      "completed_decision_id": "b9ea33479401",
+      "five_gates_preserved": true,
+      "scope": "Only exact listed artifact hashes and metadata; no future episode authorization"
+    },
+    {
+      "id": "979dc4c294fb",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "사용자 지시로 v15 원음에서 파생 편집한 독립 쇼츠: 입주는 2028년, GTX는 2031년? 왕숙 교통 시차",
+      "status": "approved",
+      "created_at": "2026-10-15T13:58:17.450313+00:00",
+      "expires_at": "2026-10-22T13:58:17.450313+00:00",
+      "resolved_at": "2026-10-15T13:58:17.418850+00:00",
+      "approval_source": "direct_current_user_delegated_edit_and_publication",
+      "approval_text": "이전과 마찬가지로 쇼츠도 인기있을만한거 혹은 내용이 단독으로 의미있을만한거 잘라서 같이 올려줘. 공개로 그냥 업로드해버리자",
+      "artifacts": {
+        "video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\outputs\\youtube-release-v15\\short_01_rail_job.json": "5d5ee44c59c03132d70efeb685c4024c22106172d8ae170aaff5ba79f61bb09d",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/outputs/shorts-release-v1/01_rail.mp4": "061de006db6fc8b65e364ac9c50b948e70aa7006d2a00798a64ba04ee280c2f8",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/qa/shorts-release-v1/01_rail/final_review.json": "68a76913a3bedec792f2fd23420420d1c28fb61798e2d05b553cd2445a7614a6"
+      },
+      "qa_required_open_count": 0
+    },
+    {
+      "id": "c24116dbfd7d",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "pre_upload",
+      "summary": "공개 업로드: 입주는 2028년, GTX는 2031년? 왕숙 교통 시차",
+      "status": "approved",
+      "created_at": "2026-10-15T13:58:17.452675+00:00",
+      "expires_at": "2026-10-22T13:58:17.452675+00:00",
+      "privacy": "public",
+      "artifacts": {
+        "video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\outputs\\youtube-release-v15\\short_01_rail_job.json": "5d5ee44c59c03132d70efeb685c4024c22106172d8ae170aaff5ba79f61bb09d",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/outputs/shorts-release-v1/01_rail.mp4": "061de006db6fc8b65e364ac9c50b948e70aa7006d2a00798a64ba04ee280c2f8",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/qa/shorts-release-v1/01_rail/final_review.json": "68a76913a3bedec792f2fd23420420d1c28fb61798e2d05b553cd2445a7614a6"
+      },
+      "version": "shorts-release-v1-01_rail",
+      "publication_authorized": true,
+      "resolved_at": "2026-10-15T13:58:17.418850+00:00",
+      "approval_source": "explicit_direct_user_publication_instruction",
+      "approval_text": "공개로 그냥 업로드해버리자",
+      "completed_decision_id": "979dc4c294fb",
+      "five_gates_preserved": true,
+      "scope": "Only exact listed artifact hashes and metadata; no future episode authorization"
+    },
+    {
+      "id": "2d8684829664",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "completed",
+      "summary": "사용자 지시로 v15 원음에서 파생 편집한 독립 쇼츠: 왕숙이 주변 모든 집보다 쌀까? 84㎡ 실거래 비교",
+      "status": "approved",
+      "created_at": "2026-10-15T14:00:43.033899+00:00",
+      "expires_at": "2026-10-22T14:00:43.033899+00:00",
+      "resolved_at": "2026-10-15T14:00:43.020320+00:00",
+      "approval_source": "direct_current_user_delegated_edit_and_publication",
+      "approval_text": "이전과 마찬가지로 쇼츠도 인기있을만한거 혹은 내용이 단독으로 의미있을만한거 잘라서 같이 올려줘. 공개로 그냥 업로드해버리자",
+      "artifacts": {
+        "video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\outputs\\youtube-release-v15\\short_02_price_job.json": "8583b2b15a96a0528ef1462e8df2af2a0cb0c86faeb8604fe9cfcb6ba24bf266",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/outputs/shorts-release-v1/02_price.mp4": "5405b84beb845c62e26649e6dbb5c37749c07d759a23f6952980c607ab0739ee",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/qa/shorts-release-v1/02_price/final_review.json": "fc6f91c7b406efb4fec3664dbd5dc04f5f9cb4b80994d83670b36ab2e8edfd7a"
+      },
+      "qa_required_open_count": 0
+    },
+    {
+      "id": "7e0f1d5165a1",
+      "episode": "namyangju-wangsuk-20261014",
+      "gate": "pre_upload",
+      "summary": "공개 업로드: 왕숙이 주변 모든 집보다 쌀까? 84㎡ 실거래 비교",
+      "status": "approved",
+      "created_at": "2026-10-15T14:00:43.033899+00:00",
+      "expires_at": "2026-10-22T14:00:43.033899+00:00",
+      "privacy": "public",
+      "artifacts": {
+        "video-agent-studio\\episodes\\namyangju-wangsuk-20261014\\outputs\\youtube-release-v15\\short_02_price_job.json": "8583b2b15a96a0528ef1462e8df2af2a0cb0c86faeb8604fe9cfcb6ba24bf266",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/outputs/shorts-release-v1/02_price.mp4": "5405b84beb845c62e26649e6dbb5c37749c07d759a23f6952980c607ab0739ee",
+        "video-agent-studio/episodes/namyangju-wangsuk-20261014/qa/shorts-release-v1/02_price/final_review.json": "fc6f91c7b406efb4fec3664dbd5dc04f5f9cb4b80994d83670b36ab2e8edfd7a"
+      },
+      "version": "shorts-release-v1-02_price",
+      "publication_authorized": true,
+      "resolved_at": "2026-10-15T14:00:43.020320+00:00",
+      "approval_source": "explicit_direct_user_publication_instruction",
+      "approval_text": "공개로 그냥 업로드해버리자",
+      "completed_decision_id": "2d8684829664",
+      "five_gates_preserved": true,
+      "scope": "Only exact listed artifact hashes and metadata; no future episode authorization"
+    }
+  ]
+}

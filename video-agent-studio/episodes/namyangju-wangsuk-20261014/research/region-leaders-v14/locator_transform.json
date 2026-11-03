@@ -1,0 +1,38 @@
+{
+  "coordinates": "official A1 pamphlet p5 PDF source-native points; not GIS",
+  "whole_viewBox_pdf": [
+    790,
+    119,
+    370,
+    710
+  ],
+  "north": {
+    "dimensions": [
+      1280,
+      1981
+    ],
+    "pdf_clip": [
+      930,
+      120,
+      1085,
+      360
+    ],
+    "x_formula": "930+x*155/1280",
+    "y_formula": "120+y*240/1981"
+  },
+  "south": {
+    "dimensions": [
+      1654,
+      1504
+    ],
+    "pdf_clip": [
+      830,
+      500,
+      1160,
+      800
+    ],
+    "x_formula": "830+x*330/1654",
+    "y_formula": "500+y*300/1504"
+  },
+  "policy": "same exactsourcePDFcoordinates can union owngeometry; intermediateuntracedarea mustnot inventparcels; original copyright plan not implicitly derivative-licensed"
+}

@@ -1,0 +1,26 @@
+{
+  "resolved": [
+    {
+      "stage": "preflight",
+      "issue": "full-frame delta SVG extended content scroll bounds; hidden baseline cards intersected decision cards",
+      "fix": "SVG bounded to content, baseline cards omitted in decision mode",
+      "evidence": "outputs/production-v7-preview/layout_guard.json"
+    },
+    {
+      "stage": "initial brand render",
+      "issue": "channel-brand-v2 source folder missing from bundle public assets, HTTP404",
+      "fix": "explicit copy of existing source assets before render",
+      "log": "render.log",
+      "paid_call": false
+    },
+    {
+      "stage": "sequential render",
+      "issue": "repeated success browser logs and sequential overhead",
+      "fix": "valid PNG cache preserved; existing process stopped; three-page parallel resume with success log filter",
+      "log": "render3.log",
+      "corrupt_cached_png_count": 0
+    }
+  ],
+  "unresolved": [],
+  "retries": "No paid service retries. Scoped local corrections; old outputs preserved."
+}

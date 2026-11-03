@@ -1,0 +1,60 @@
+{
+  "status": "encoded_decode_passed_for_independent_QA",
+  "command": [
+    "npx.cmd",
+    "--no-install",
+    "hyperframes",
+    "render",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-explain-v3\\main\\v2-bgm",
+    "--output",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-explain-v3\\main\\top20_v6_free_v1.mp4",
+    "--fps",
+    "30",
+    "--quality",
+    "delivery",
+    "--workers",
+    "4"
+  ],
+  "source_project_sha256": "9c64b375645ef7930249f0eef4bb4007964702b85c74320265c8555c461cf52f",
+  "timing_sha256": "62c379c0b4d3d73e4ee3f9b17a0ecf6cab18edc2e38151df7b98369a23f206e6",
+  "expected_duration_s": 736.9497052154195,
+  "output": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-explain-v3\\main\\top20_v6_free_v1.mp4",
+  "new_paid_calls": 0,
+  "cloud_render": false,
+  "actual_listening_performed": false,
+  "continuous_playback_performed": false,
+  "exit_code": 0,
+  "elapsed_s": 775.8600000000006,
+  "output_sha256": "80b7cd14b0fa15de21a696796b2a996f0fa47e29ad02ab067ab8ca20448220d1",
+  "bytes": 58030431,
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "30/1",
+        "duration": "736.966667"
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "duration": "736.966000"
+      }
+    ],
+    "format": {
+      "duration": "736.966667",
+      "size": "58030431"
+    }
+  },
+  "full_decode_passed": true,
+  "decode_s": 8.5470000000023
+}

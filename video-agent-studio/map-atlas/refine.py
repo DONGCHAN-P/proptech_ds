@@ -1,0 +1,5 @@
+from pathlib import Path
+p=Path(__file__).parent/'template.html';s=p.read_text(encoding='utf8')
+old="ctx.globalAlpha=1;ctx.restore();if(selected!==null"
+new="""ctx.globalAlpha=1;ctx.restore();if(el('boundary').checked){ctx.font='12px Malgun Gothic';ctx.textAlign='center';let occupied=[];for(const f of DATA.boundary.features){let polys=f.geometry.type==='MultiPolygon'?f.geometry.coordinates:[f.geometry.coordinates],best=null;for(const rings of polys){let r=rings[0],area=0,cx=0,cy=0;for(let j=0,k=r.length-1;j<r.length;k=j++){let z=r[k][0]*r[j][1]-r[j][0]*r[k][1];area+=z;cx+=(r[k][0]+r[j][0])*z;cy+=(r[k][1]+r[j][1])*z}if(Math.abs(area)>Math.abs(best?.area||0))best={area,x:cx/(3*area),y:cy/(3*area)}}if(!best)continue;let [x,y]=xy(best.x,best.y),name=f.properties.name;if(x<330||x>W-345||y<25||y>H-80||occupied.some(p=>Math.abs(x-p[0])<65&&Math.abs(y-p[1])<25))continue;occupied.push([x,y]);ctx.lineWidth=3;ctx.strokeStyle='#f6f4ef';ctx.strokeText(name,x,y);ctx.fillStyle='#526c75';ctx.fillText(name,x,y)}ctx.textAlign='start'}if(selected!==null"""
+assert old in s;s=s.replace(old,new);p.write_text(s,encoding='utf8')

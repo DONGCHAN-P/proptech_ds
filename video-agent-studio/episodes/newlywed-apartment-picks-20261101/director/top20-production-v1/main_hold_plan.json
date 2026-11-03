@@ -1,0 +1,13 @@
+{
+  "input": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-production-v1\\main\\top20_main_free_v3.mp4",
+  "input_sha256": "1db751e9491e3cfa63de322d98a89326409c2bbe7182499d91d66bdaf938759c",
+  "output": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-production-v1\\main\\top20_main_free_v5.mp4",
+  "freeze_source_frame": 13757,
+  "replace_start_frame": 13758,
+  "replace_end_frame_exclusive": 13829,
+  "held_frames": 71,
+  "reason": "Continue final narrated closing state during silent hold; remove E001 production-only title",
+  "audio_stream_copy": true,
+  "speech_and_data_unchanged": true,
+  "ffmpeg_filter": "[0:v]split=3[a][b][c];[a]trim=end_frame=13758,setpts=PTS-STARTPTS[pre];[b]trim=start_frame=13757:end_frame=13758,setpts=PTS-STARTPTS,tpad=stop=70:stop_mode=clone,setpts=N/(30*TB)[hold];[c]trim=start_frame=13829,setpts=PTS-STARTPTS[post];[pre][hold][post]concat=n=3:v=1:a=0[video]"
+}

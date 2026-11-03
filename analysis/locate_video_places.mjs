@@ -1,0 +1,4 @@
+import fs from 'node:fs/promises';
+const queries=['광교중앙역','자연앤힐스테이트 수원','경기도청 수원','수원지방법원','경기남부경찰청','원천저수지','신대저수지','동탄역','동탄역롯데캐슬','롯데백화점 동탄점','삼성전자 수원','삼성전자 기흥','삼성전자 화성'];
+await fs.mkdir('video/public/detail-maps',{recursive:true});const results=[];
+for(const q of queries){const r=await fetch('https://nominatim.openstreetmap.org/search?'+new URLSearchParams({q,format:'jsonv2',countrycodes:'kr',limit:'3'}),{headers:{'User-Agent':'RealestateRecoVideo/1.0 (editorial location maps)','Accept-Language':'ko'},signal:AbortSignal.timeout(20000)});if(!r.ok)throw Error('Geocode HTTP '+r.status);const matches=await r.json();results.push({query:q,matches});await fs.writeFile('video/public/detail-maps/location-research.json',JSON.stringify(results,null,2));console.log(JSON.stringify({query:q,matches:matches.map(p=>({name:p.display_name,lat:p.lat,lon:p.lon,osm_type:p.osm_type,osm_id:p.osm_id}))}));await new Promise(resolve=>setTimeout(resolve,1100));}

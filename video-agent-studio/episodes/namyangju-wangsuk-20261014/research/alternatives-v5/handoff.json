@@ -1,0 +1,30 @@
+{
+  "owner": "research/alternatives-v5",
+  "revision": "alternatives-v5",
+  "outputs": [
+    "comparison.json",
+    "raw_verified_rows.json",
+    "all_candidates.json",
+    "extract.py",
+    "verify_raw.py"
+  ],
+  "verified": [
+    "실제 로컬 원XML3개월49표본 재집계",
+    "LH웹 표시값/정정본문/입주예정 재확인"
+  ],
+  "unresolved": [
+    "10/15실거래 API갱신",
+    "A1최종정정가격표",
+    "역보행거리",
+    "전체연도별주변입주표"
+  ],
+  "next": "writer/director; 가격표 qualified 표시; 최종영상전 최신raw대조",
+  "affected_scene_ids": [
+    "M003",
+    "M006",
+    "M007"
+  ],
+  "warnings": [
+    "all_candidates.json master탐색자료는 최종가격표 금지; raw집계와 표본차 있음"
+  ]
+}

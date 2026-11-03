@@ -1,0 +1,58 @@
+{
+  "revision":"rebuild-v2-chapter-assets-1",
+  "status":"parent_script_titles_and_chapter_IDs_pending",
+  "duration_s":3,
+  "photo_motion":"none",
+  "title":"잠금 대본의 번호+주제; 별도 레이어, 72px Pretendard Bold; 전체3초 중 첫0.2초 fade 후2.8초 유지",
+  "allocations":[
+    {
+      "topic_key":"bank_limits",
+      "locked_chapter_id":null,
+      "required_use_count":1,
+      "asset":"visual/rebuild-v2/bank-limits.png",
+      "sha256":"74c413b1a5e4fc245794f3d67dc79c2932f986b81adbc3e901cfd943589d69ed",
+      "asset_manifest":"visual/rebuild-v2/manifest.json",
+      "type":"ai_concept",
+      "evidence":false,
+      "screen_AI_badge":false
+    },
+    {
+      "topic_key":"transaction_costs",
+      "locked_chapter_id":null,
+      "required_use_count":1,
+      "asset":"visual/rebuild-v2/transaction-costs.png",
+      "sha256":"92c3ade0651a82d4061e7904fb068ad80435bc40bc9bbc17885e1ef09393bbbc",
+      "asset_manifest":"visual/rebuild-v2/manifest.json",
+      "type":"ai_concept",
+      "evidence":false,
+      "screen_AI_badge":false
+    },
+    {
+      "topic_key":"cash_budget",
+      "locked_chapter_id":null,
+      "max_use_count":1,
+      "asset":"visual/hero-budget-v1.png",
+      "sha256":"308e784f63bd86c7782e90c241678634813d3e1e6dedb49167aeeb60b72bb798",
+      "asset_manifest":"visual/hero-budget-v1.json",
+      "type":"ai_concept",
+      "evidence":false,
+      "screen_AI_badge":false
+    },
+    {
+      "topic_key":"newborn_policy",
+      "locked_chapter_id":null,
+      "max_use_count":1,
+      "asset":"visual/newborn-home-v1.png",
+      "sha256":"07149f9c23164c49b3bdb7097472f6cf46f46cb6d53405f60a61de31951a2189",
+      "asset_manifest":"visual/newborn-home-v1.json",
+      "type":"ai_concept",
+      "evidence":false,
+      "screen_AI_badge":false
+    }
+  ],
+  "common_background_manifest":"C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/manifest.json",
+  "remaining_chapters":"최종 대본 후 해당 주제에 정확한 자체 도해 우선. 공통 사진은 의미가 맞는 경우만 서로 다른 사진 배정.",
+  "forbidden_assets_for_this_topic":["chapter_transport_v1","chapter_jobs_v1"],
+  "body_photo_policy":"위 사진들은 챕터 전환에 예약. 본문 재사용 기본0회; 실제 설명상 필요한 별도 사진만 해당 주제1회.",
+  "final_assembly_checks":["필수2장 정확히 각1회", "사진 경로 중복0", "주제↔사진 적합", "독립3초 제목 읽기", "AI배지0", "생성사진을 정책·세금 원문 근거로 소개0"]
+}

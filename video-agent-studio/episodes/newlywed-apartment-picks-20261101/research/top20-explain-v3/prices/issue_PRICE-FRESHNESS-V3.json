@@ -1,0 +1,39 @@
+{
+  "issue_id": "PRICE-FRESHNESS-V3",
+  "scene_ids": [
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012",
+    "S013",
+    "S014",
+    "S015",
+    "S016",
+    "S017",
+    "S018",
+    "S019",
+    "S020",
+    "S021",
+    "S022"
+  ],
+  "problem": "요청한 5~10월 전체 거래와 현재 호가를 로컬 자료로 검증할 수 없습니다.",
+  "evidence": "freshness.json: master 최신 계약 2026-10-10, 서빙 캐시 2026-10-05. 기존 listing_evidence_v1의 현재 판매 확인 매물 0건.",
+  "proposal": "4~9월 동일 조건 관측 실거래를 우선 계산하고 현재가라는 표현을 보류합니다. 무료 원천 API 갱신은 총괄의 범위 결정 이후 별도 수행합니다.",
+  "impact": "20지역 가격 장면의 기준기간·표제·대본 표현. 기존 순위와 지역 범위는 유지합니다.",
+  "to": [
+    "director",
+    "writer",
+    "visual"
+  ],
+  "direct_message_tool_available": false,
+  "status": "resolved_by_official_api_refresh",
+  "resolved_at": "2026-11-03T01:12:04.973751+09:00",
+  "resolution": "권한 상승 수동 확인 후 129회 상한 내 시도로 126코드·월 전체 페이지 수신. v2는 해제 표시만 제외한 14,303행입니다.",
+  "resolution_artifact": "final-api-20261103-v2/writer_price_values.json"
+}

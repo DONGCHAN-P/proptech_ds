@@ -1,0 +1,111 @@
+{
+  "script_revision": "script-v7-region-leaders",
+  "source_script_sha256": "6ce6fefb6cbd439b7073091a0107ec65261ba8638aeeb0f339369c0e68640737",
+  "requests": [
+    {
+      "scene_id": "M008",
+      "status": "complete",
+      "text_sha256": "61f13956c000da25f21998977f13457b76c3896b7c7f6e97c38d575f348423f4",
+      "submitted_text_sha256": "5390c476d7092a116ca34bfe06bef36373ebade7ea2c0e045057b6058d2b6bfb",
+      "crlf_normalized": true,
+      "characters": 1340,
+      "before": {
+        "checked_at": "2026-10-15T12:24:18.036Z",
+        "passed": true,
+        "tier": "starter",
+        "status": "active",
+        "included_remaining": 31715,
+        "character_count": 8285,
+        "character_limit": 40000,
+        "voice_rate": 1,
+        "model_rates": {
+          "character_cost_multiplier": 1,
+          "cost_discount_multiplier": 1
+        },
+        "overage_enabled": false,
+        "allowed_to_extend": false,
+        "max_extension": 0,
+        "paid_api_called": false
+      },
+      "started_at": "2026-10-15T12:24:18.038Z",
+      "http_status": 200,
+      "request_id": "jpY3Kb8co4yhYiVBSmDE",
+      "character_cost": "536",
+      "actual_credits": 536,
+      "pcm_duration_s": 165.2,
+      "frames_30fps": 4956,
+      "frame_padded_duration_s": 165.2,
+      "alignment_end_overrun_characters": [
+        {
+          "character": ".",
+          "index": 1339,
+          "start_s": 164.96,
+          "end_s": 165.28
+        }
+      ],
+      "clamp_policy": "Only nonspoken terminal punctuation end clipped to PCM in derived captions; original alignment preserved; no global shift",
+      "sha256": "92041dad7b01b4235bb786f19163ef08ed061623280e1e92886e86b20b37ab8e",
+      "file": "narration/region-leaders-v7/M008.mp3",
+      "alignment_file": "narration/region-leaders-v7/M008.alignment.json",
+      "captions_file": "narration/region-leaders-v7/M008.captions_timed.json",
+      "script_revision": "script-v7-region-leaders",
+      "account_after_count": 8821,
+      "account_observed_delta": 536,
+      "completed_at": "2026-10-15T12:24:59.404Z"
+    },
+    {
+      "scene_id": "M009",
+      "status": "complete",
+      "text_sha256": "67c0f9705027a3c70bb77df1eb8c9e63330e8c6af3ead4bdb71b3d68ff7ab589",
+      "submitted_text_sha256": "67c0f9705027a3c70bb77df1eb8c9e63330e8c6af3ead4bdb71b3d68ff7ab589",
+      "crlf_normalized": false,
+      "characters": 201,
+      "before": {
+        "checked_at": "2026-10-15T12:25:00.641Z",
+        "passed": true,
+        "tier": "starter",
+        "status": "active",
+        "included_remaining": 31179,
+        "character_count": 8821,
+        "character_limit": 40000,
+        "voice_rate": 1,
+        "model_rates": {
+          "character_cost_multiplier": 1,
+          "cost_discount_multiplier": 1
+        },
+        "overage_enabled": false,
+        "allowed_to_extend": false,
+        "max_extension": 0,
+        "paid_api_called": false
+      },
+      "started_at": "2026-10-15T12:25:00.641Z",
+      "http_status": 200,
+      "request_id": "Qed15dBywUU9RlWjLvo0",
+      "character_cost": "80",
+      "actual_credits": 80,
+      "pcm_duration_s": 25.36,
+      "frames_30fps": 761,
+      "frame_padded_duration_s": 25.366666666666667,
+      "alignment_end_overrun_characters": [
+        {
+          "character": ".",
+          "index": 200,
+          "start_s": 25.2,
+          "end_s": 25.44
+        }
+      ],
+      "clamp_policy": "Only nonspoken terminal punctuation end clipped to PCM in derived captions; original alignment preserved; no global shift",
+      "sha256": "299545fbefc764666c99df85d2e07bfbfec7bbffabbe833f001514922735816c",
+      "file": "narration/region-leaders-v7/M009.mp3",
+      "alignment_file": "narration/region-leaders-v7/M009.alignment.json",
+      "captions_file": "narration/region-leaders-v7/M009.captions_timed.json",
+      "script_revision": "script-v7-region-leaders",
+      "account_after_count": 8821,
+      "account_observed_delta": 0,
+      "completed_at": "2026-10-15T12:25:08.870Z"
+    }
+  ],
+  "submitted_characters": 1541,
+  "actual_credits": 616,
+  "status": "complete_alignment_validated_listening_unverified"
+}

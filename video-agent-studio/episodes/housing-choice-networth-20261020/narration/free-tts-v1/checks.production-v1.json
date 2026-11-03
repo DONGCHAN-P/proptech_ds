@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-10-25T17:24:34.894691+00:00",
+  "status": "passed_preparation_only",
+  "contract_suite_count": 12,
+  "suite_exit_code": 0,
+  "source_reading_mapping_paragraphs": 54,
+  "script_sha256": "62cf5fcf06a35f3c9984de405717718fb2694ace7e1addf839b0f047055ec48d",
+  "wordboundary_probe": "passed",
+  "actual_gate": {
+    "status": "blocked_no_body_synthesis",
+    "reason": "잠금/준비본/실제 대본 SHA가 일치하지 않습니다."
+  },
+  "body_synthesis": false,
+  "final_timing_actual": false,
+  "json_python_validation": "passed",
+  "checks_scope": "own sidecar contracts, actual small probe, synthetic PCM assembly; no body listening or full production run",
+  "artifacts": [
+    {
+      "path": "production_narration.py",
+      "sha256": "c5bee49e00060d21ace49b0e90389829938c112dfb816bff476f3533ce3fea23"
+    },
+    {
+      "path": "production_generate.py",
+      "sha256": "618d4c9b0a9d19de0176b8d7da285395f6b270cb86476f0542358092d4200052"
+    },
+    {
+      "path": "test_production_narration.py",
+      "sha256": "5ccd1bdb249569156d7d63a0c4511a9e50856dc48e2c035ea27c4cba171aeca4"
+    },
+    {
+      "path": "production-prepared-v3\\prepared.json",
+      "sha256": "e7e2895b2dbb7abc7f729c70907c585bbc9f54c30e4cd07f4e8b2b9d87a00ce7"
+    },
+    {
+      "path": "production-prepared-v3\\pronunciation_dictionary.json",
+      "sha256": "8a1c4f37c26f0ef8139e7a49a42057f6386f926b849297fcb922577107dfa638"
+    },
+    {
+      "path": "production_readiness.json",
+      "sha256": "cab21f53db72ab566e3906eebfa6f9713bf0cbd13b8f2241703b74c014d99d44"
+    },
+    {
+      "path": "handoff.json",
+      "sha256": "5c581066588ad1ff364566f846fbfb6f1fa95b34a2385dac4679b702d057b2ce"
+    },
+    {
+      "path": "samples\\injoon-wordboundary-20261026-v1\\validation.json",
+      "sha256": "3a01104f30fbed9bed1282bb144b8bb21571bc7a629d9570e44db6d652f3927e"
+    },
+    {
+      "path": "samples\\injoon-wordboundary-20261026-v1\\sample.mp3",
+      "sha256": "18c35dbef4908047538e1ddc88df22f7542ce0d8e91747be7c722bd1d2600c97"
+    },
+    {
+      "path": "samples\\injoon-wordboundary-20261026-v1\\sample.wav",
+      "sha256": "421981846f8b1bed99022072d78a56ed3ff161d43080a671d8674d21797d0614"
+    }
+  ]
+}

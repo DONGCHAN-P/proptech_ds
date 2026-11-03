@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C05P04",
+  "scene_id": "C05",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:06:17.353Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "5a06b7c8f9f55e953c4d8ea8ee8927cdcb928a96449428e990420f90320e8da6",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "보증금도 같은 원리로 연결합니다. 전세보증금 사억 원을 맡기는 순간 현금은 줄지만 돌려받을 권리가 생깁니다. 계약이 끝나 정상 반환되면 그 권리가 현금으로 바뀝니다. 보증금 반환은 자산의 형태가 현금으로 바뀌는 과정입니다. 대출로 마련한 부분은 반환된 돈으로 갚아야 하므로 순자산에서 빚을 함께 뺍니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 169,
+  "characters": 169,
+  "actual_credits": 68,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:04.412Z",
+  "local_shadow_remaining_before": 21356,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "XsrnVfa9bu7lm8Kf4bPa",
+    "x-request-id": null,
+    "character-cost": "68",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:06:16 GMT"
+  },
+  "pcm_samples": 952560,
+  "pcm_duration_s": 21.6,
+  "provider_last_spoken_end_s": 21.68,
+  "artifact_sha256": {
+    "paragraphs/C05P04/audio.mp3": "8bf2535dfa2db976afc9cdb6b4a9ea0c1d28cf663a20b0a9bacc9ec3bb765c11",
+    "paragraphs/C05P04/audio.wav": "949a8eff7ae7f5728b03360c42939664fb1de0dd528962586c31a719ec8e57b6",
+    "paragraphs/C05P04/alignment.json": "9c31f83d51dc8d71efb9bd5b646fe0e68f9fa75396db40560dc87135a6455094",
+    "paragraphs/C05P04/normalized_alignment.json": "9c31f83d51dc8d71efb9bd5b646fe0e68f9fa75396db40560dc87135a6455094"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21288,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:06:22.145Z"
+}

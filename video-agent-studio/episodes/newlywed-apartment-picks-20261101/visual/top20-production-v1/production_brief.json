@@ -1,0 +1,136 @@
+{
+  "task_id": "top20-thumbnail-v1",
+  "role": "visual",
+  "episode_id": "newlywed-apartment-picks-20261101",
+  "revision": "top20-production-v1",
+  "scope": "썸네일 PNG 1장과 320px 모바일 미리보기. 수정 소유권은 visual/top20-production-v1 및 outputs/top20-production-v1/thumbnail 한정.",
+  "user_requirements": {
+    "headline": "신혼부부는 어디에 살까?",
+    "secondary": "수도권 TOP20",
+    "context": "2024년 신혼부부 수 기준",
+    "dimensions": [
+      1280,
+      720
+    ],
+    "mobile": [
+      320,
+      180
+    ],
+    "style": "기존 승인 채널의 Pretendard ExtraBold, 큰 흰 글자와 노란 질문, 네이비 텍스트 영역, 실제 아파트/공원 사진",
+    "photos": "기존 photo_assets_v2의 검증된 사진 사용, 원본 픽셀 변경 금지, 배치용 축소/제한 크롭 허용",
+    "external_api": "신규 외부 API·유료 생성·imagegen 사용 안 함"
+  },
+  "composition": {
+    "text_area": {
+      "x": 0,
+      "y": 0,
+      "width": 680,
+      "height": 720,
+      "ratio": 0.53125
+    },
+    "photo_area": {
+      "x": 680,
+      "y": 0,
+      "width": 600,
+      "height": 720,
+      "ratio": 0.46875
+    },
+    "palette": {
+      "navy": "#06182e",
+      "white": "#ffffff",
+      "question": "#ffdf2b"
+    },
+    "font": "기존 Pretendard-ExtraBold.woff2",
+    "primary_question_font_px": 127
+  },
+  "ranking_basis": {
+    "scope": "2024 수도권53개구 중 신혼부부 전체 수 TOP20",
+    "reference_date": "2024-11-01",
+    "source_path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+    "sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+    "meaning": "거주지 기준 신혼부부 전체 수 순위. 선호도 조사·구매자 순위·단지 추천 순위로 표시하지 않음."
+  },
+  "choices": {
+    "selected": [
+      "PHOTO_R03",
+      "PHOTO_R02_ALT01"
+    ],
+    "inspected_not_selected": {
+      "asset_id": "PHOTO_R18",
+      "reason": "실제 사진 직접 확인. 역 이미지 추가는 표지의 주택/생활환경 메시지를 분산해 제외."
+    },
+    "alternative": "차별화 필요가 없어 별도 대안 미제작",
+    "map": "실제 사진과 질문의 즉시 인지를 위해 소형 지도·개별 순위 생략"
+  },
+  "preflight": {
+    "master_guide_read": true,
+    "template_read": true,
+    "thumbnail_only_contract_applied": true,
+    "approved_actual_thumbnails_viewed": true,
+    "representative_internal_check": "동일 1안의 최초 출력 1280/320을 직접 확인 후 제목 확대·촬영연도 라벨 위치 수정, 최종 1280/320 재확인",
+    "non_applicable": [
+      "본편 편집",
+      "음성/타이밍 잠금",
+      "쇼츠 생성",
+      "업로드"
+    ]
+  },
+  "initial_input_snapshot": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-production-v1/input_snapshot.json",
+  "final_render_inputs": [
+    {
+      "name": "photo_assets_v2",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photo_assets_v2.json",
+      "sha256": "aedc96c581c397828a5a0a1b464138da6cef8cd54792ff663b900b4292baa1c1"
+    },
+    {
+      "name": "brief",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/brief.json",
+      "sha256": "1739d99fd6bf98f1c9bded9f0ea747488f8a38252d8b06d163febdf23c66e93e"
+    },
+    {
+      "name": "state_at_start",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/state.json",
+      "sha256": "c85366579e7d1fb79b7e9d32500433278452d703b7e31414c279a246c70095e2"
+    },
+    {
+      "name": "channel_style",
+      "path": "C:/projects/realestate_reco/config/channel_style_tokens.json",
+      "sha256": "7c9a9edc4c70139721fc585dd73f73a9ea7cdf22235918fb93f74e9730e2a5be"
+    },
+    {
+      "name": "current_video",
+      "path": "C:/projects/realestate_reco/config/current_video.json",
+      "sha256": "8cf1d6ab50271410a97c79b0dbf57f57a8658c80f8961ea6cb9f832c8d55e507"
+    },
+    {
+      "name": "master_guide",
+      "path": "C:/projects/realestate_reco/video-agent-studio/guides/영상제작_마스터가이드.md",
+      "sha256": "50d179e4b21142ea0a6b04d867916608e61a8179b34758d5a696dc46a771f1a7"
+    },
+    {
+      "name": "font",
+      "path": "C:/projects/realestate_reco/assets/fonts/Pretendard-ExtraBold.woff2",
+      "sha256": "dd7c1e156f508eb962acc7a33a7a1896d1e0b71e11156fad96e731689ceb6dc3"
+    },
+    {
+      "name": "approved_affordable_thumbnail",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/TH001_affordable_photo_v1.png",
+      "sha256": "e8a83381203874fe2768e6bfd57b7b490f65f6fd75ceabd9c635d0592d1fc096"
+    },
+    {
+      "name": "approved_housing_thumbnail",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/outputs/launch-proposal-v2/TH003_housing_modes_1280x720.png",
+      "sha256": "ddeae250181103ca29b5f2c81461cd222d75875f8f3ad97e014ab8a07bc0b085"
+    },
+    {
+      "name": "html",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-production-v1/thumbnail.html",
+      "sha256": "4a7dd9f8e05f5e3df970d33074cc41f32f08dbe898e38c30438b58257974b1f3"
+    },
+    {
+      "name": "renderer",
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-production-v1/render_thumbnail.cjs",
+      "sha256": "53f9d9ee307c32abb82534051e95b16d6994973b769a72d2420be229e762a20d"
+    }
+  ]
+}

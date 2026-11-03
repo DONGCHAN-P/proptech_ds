@@ -1,0 +1,45 @@
+{
+  "script_sha256": "e5812753f42993904cfca7971bfb7f0c8d42459689be2100cc555040e29fa8e3",
+  "scope": "offline text checks only",
+  "source_to_spoken_exact": true,
+  "all_cues_preserve_source_whitespace_normalized": true,
+  "anchor_unique_source_spans": true,
+  "native_alignment_checked": false,
+  "hangul_count": 27,
+  "repeated_question_marks_rejected": true,
+  "numeric_dictionary_unicode_checked": true,
+  "scenes": [
+    {
+      "id": "R001",
+      "transforms": [
+        {
+          "source_start": 30,
+          "source_end": 34,
+          "spoken_start": 30,
+          "spoken_end": 34,
+          "kind": "pronunciation",
+          "original": "3.65",
+          "spoken": "삼점육오",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          5,
+          11
+        ],
+        [
+          30,
+          34
+        ],
+        [
+          30,
+          35
+        ]
+      ],
+      "source_hangul_count": 27,
+      "spoken_hangul_count": 31,
+      "cue_count": 2
+    }
+  ]
+}

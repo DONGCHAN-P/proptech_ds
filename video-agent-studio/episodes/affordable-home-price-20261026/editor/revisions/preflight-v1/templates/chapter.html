@@ -1,0 +1,11 @@
+<!doctype html>
+<!-- Future chapter template only. Resolver must supply a message-specific image/graphic.
+     HB01 only CH01; NB01 only CH08. No blank background or title-only fallback. -->
+<html lang="ko"><head><meta charset="utf-8"><title>@@SHORT_TOPIC@@</title>
+<script src="assets/gsap.min.js"></script><style>@@CSS@@
+.chapter-background{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden}
+.chapter-background img,.chapter-background svg{display:block;width:100%;height:100%;object-fit:cover}
+.chapter-title{position:absolute;left:110px;top:390px;max-width:900px;font-size:76px;line-height:1.2;font-weight:700;color:var(--ink)}
+</style></head><body><div id="root" data-composition-id="@@ID@@" data-width="1920" data-height="1080" data-duration="@@MEASURED_HOLD@@">
+<div class="chapter-background">@@THEMATIC_VISUAL@@</div><h1 class="chapter-title">@@SHORT_TOPIC@@</h1>
+</div><script>const tl=gsap.timeline({paused:true});tl.fromTo('.chapter-title',{opacity:0,y:16},{opacity:1,y:0,duration:.5,ease:'power2.out'},0);window.__timelines=window.__timelines||{};window.__timelines['@@ID@@']=tl;</script></body></html>

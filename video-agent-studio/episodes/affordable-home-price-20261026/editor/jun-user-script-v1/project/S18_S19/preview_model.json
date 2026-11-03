@@ -1,0 +1,122 @@
+{
+  "id": "S18_S19",
+  "scene_ids": [
+    "S18",
+    "S19"
+  ],
+  "duration": 13,
+  "title": "5. 현금이 늘어도, 대출은 4억원에서 멈춥니다",
+  "condition": "사례 가정  LTV 70% · 개인 대출한도 4억원 · 연 4.5% · 30년 원리금균등",
+  "events": [
+    {
+      "at": 0.15,
+      "fills": [
+        "eq-0"
+      ]
+    },
+    {
+      "at": 1.8,
+      "show": [
+        "limit"
+      ]
+    },
+    {
+      "at": 2.8,
+      "show": [
+        "loan-row-0"
+      ],
+      "fills": [
+        "loan-0"
+      ],
+      "duration": 1.1
+    },
+    {
+      "at": 4.1,
+      "show": [
+        "price-0"
+      ]
+    },
+    {
+      "at": 6.0,
+      "show": [
+        "row-1",
+        "loan-row-1",
+        "price-1"
+      ],
+      "fills": [
+        "eq-1",
+        "loan-1"
+      ]
+    },
+    {
+      "at": 8.0,
+      "show": [
+        "row-2",
+        "loan-row-2",
+        "price-2"
+      ],
+      "fills": [
+        "eq-2",
+        "loan-2"
+      ]
+    },
+    {
+      "at": 10,
+      "show": [
+        "monthly"
+      ]
+    }
+  ],
+  "cues": [
+    [
+      0,
+      "준비금 4천만 원을 빼면 집값에\n넣을 돈은 2억 6천만 원입니다."
+    ],
+    [
+      1.8,
+      "LTV만 생각하면 더 비싼 집도 계산에 나오겠지만,\n오늘 이 사람은 대출한도가 4억 원이죠."
+    ],
+    [
+      4.1,
+      "그래서 2억 6천만 원에 4억 원을 더한\n6억 6천만 원이 예시 집값이 됩니다."
+    ],
+    [
+      6,
+      "내 돈 3억 5천만 원에 대출\n4억 원을 더해서 7억 5천만 원입니다."
+    ],
+    [
+      10,
+      "세 경우 모두 대출을 4억 원으로 잡았으니까\n월 원리금은 약 203만 원으로 같습니다."
+    ]
+  ],
+  "anchor_events": {
+    "S18.b01": 0.15,
+    "S18.b02": 1.8,
+    "S18.b03": 4.1,
+    "S18.b04": 4.8,
+    "S19.b01": 6,
+    "S19.b02": 8,
+    "S19.b03": 10
+  },
+  "source": "계산: 사용자 원고의 가상 사례 · 대출한도는 개인별 사례 조건 · 모든 금액 막대 동일 축척",
+  "samples": [
+    0,
+    2.2,
+    3.3,
+    4.7,
+    6.7,
+    8.7,
+    10.7,
+    12.5
+  ],
+  "cue_ids": [
+    "P042Q02",
+    "P043Q01",
+    "P043Q02",
+    "P044Q02",
+    "P045Q01"
+  ],
+  "caption_policy": "Exact supplied display_lines, selected cues only. Preview seconds are NOT narration synchronization.",
+  "timing_basis": "preview_only_unlocked",
+  "audio": null
+}

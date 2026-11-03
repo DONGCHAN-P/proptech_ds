@@ -1,0 +1,572 @@
+{
+  "checked_at": "2026-11-03T00:57:25.400026+09:00",
+  "status": "passed_with_current_price_gap",
+  "checks": [
+    {
+      "check": "입력 SHA256: master/trade_events.parquet",
+      "result": "passed",
+      "evidence": "93f305afc915e0562c2d2223dd9d20aa204629223ae7e39944db693511919502"
+    },
+    {
+      "check": "입력 SHA256: master/apt_id_map.parquet",
+      "result": "passed",
+      "evidence": "ee8ea2bf3a8105e15ffcc28b9bc62c13c681c5775dd12999f147212225528909"
+    },
+    {
+      "check": "입력 SHA256: web/cache/trades.parquet",
+      "result": "passed",
+      "evidence": "0a1788ddcd1ad70179ade38650de8c77dd43b7876ac4edad296c6abc10cfb1b0"
+    },
+    {
+      "check": "입력 SHA256: web/cache/apt_index.parquet",
+      "result": "passed",
+      "evidence": "4d1600f3def279f549147fbe08c69d6990e9bd7e998c86dbeb74607c299d15ab"
+    },
+    {
+      "check": "입력 SHA256: run_step2.py",
+      "result": "passed",
+      "evidence": "88e9477442c65d0d02dffa77899075663098b202786e55e9a0ab05838d05e86a"
+    },
+    {
+      "check": "입력 SHA256: run_step3.py",
+      "result": "passed",
+      "evidence": "aa7fe8928715ffa992cc9872a9295815589d117b0c7ed6645dbd3927cd8f583c"
+    },
+    {
+      "check": "입력 SHA256: web/build_index.py",
+      "result": "passed",
+      "evidence": "648d4a79cb31c805b436447d0f7b754a0a99244bb973fc18f476b178904e4b22"
+    },
+    {
+      "check": "입력 SHA256: raw/rtms_trade_expansion/admin_codes_20261023/jscode20260701.zip",
+      "result": "passed",
+      "evidence": "0b9f143fb6e43657ff72c863ac1412cc4be43e79dce323aac602fb7754663898"
+    },
+    {
+      "check": "입력 SHA256: raw/rtms_trade_expansion/admin_codes_20261023/district_codes.json",
+      "result": "passed",
+      "evidence": "5134c756bac717f927f2733ddac7179a7dd5e6a2b8dec4ea1791fbc8e370edb1"
+    },
+    {
+      "check": "입력 SHA256: video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/top20.json",
+      "result": "passed",
+      "evidence": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b"
+    },
+    {
+      "check": "입력 SHA256: video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-8min-v2/price_context.json",
+      "result": "passed",
+      "evidence": "11b1f8107a81cc03ae017367e1ffa65f39eff9ae8676b5f79f6aae4a5d0f0743"
+    },
+    {
+      "check": "입력 SHA256: video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/listing_evidence_v1.json",
+      "result": "passed",
+      "evidence": "fec6805b379610dc6e324824c44efc21cebf876dcf6986b1df57cd296e7d5b54"
+    },
+    {
+      "check": "입력 SHA256: video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/maps/map_assets.json",
+      "result": "passed",
+      "evidence": "dc3c9b07d3be714cc1bc962433e1ef96079239072dace536a194e9e54ff2261a"
+    },
+    {
+      "check": "입력 SHA256: video-agent-studio/episodes/capital-10eok-map-20261017/research/coordinate-link-v2/capital_official_geometry.parquet",
+      "result": "passed",
+      "evidence": "9f8d89f5444a92b4328c5cfa3cf028e4d08ad1229893d743220707a2a281a121"
+    },
+    {
+      "check": "입력 SHA256: video-agent-studio/episodes/capital-10eok-map-20261017/research/coordinate-link-v2/raw/APHUS_HSMP_CNTC_INFO.shp",
+      "result": "passed",
+      "evidence": "e847c0175758b5e0992688a10094299e5f9ee46d9e616812aa7567ee4c1794de"
+    },
+    {
+      "check": "입력 SHA256: video-agent-studio/episodes/capital-10eok-map-20261017/research/coordinate-link-v2/raw/APHUS_HSMP_CNTC_INFO.shx",
+      "result": "passed",
+      "evidence": "fc3433d5d70645038325ddc6c3d0fbe1c2914e05a604c96e0bf5bd0c770d958e"
+    },
+    {
+      "check": "입력 SHA256: video-agent-studio/episodes/capital-10eok-map-20261017/research/coordinate-link-v2/raw/APHUS_HSMP_CNTC_INFO.prj",
+      "result": "passed",
+      "evidence": "e21b26451491c617318aab7d28abf4d07f5facc2aed1564e082ec8d4268cfa3b"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\admin_crosswalk.json",
+      "result": "passed",
+      "evidence": "034834f144eed5dfd6567a35f4503b105d0b4203fe592830680188bf4f367675"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\apt_id_map_20regions.parquet",
+      "result": "passed",
+      "evidence": "d2dd27a914cf3e56d7db3be3cd4560598522159aa9a3000942c1cdb6f092806f"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R01_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "af31dea0988f5aa5e85771efc876d0123bdd159530ecfedb0fed51080079acf6"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R02_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "c96fc74dbabfe4c95b32868edf719a472e8882e28cd389d1936648aa5c55c59e"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R03_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "c27606f56ea674bce11eb11c9827db16839f7cce8987f40da29983fd16fc4d73"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R04_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "b9bd82f2fef83ae6c037fd6b5003415f87812807871e5e24add74113ea2db57d"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R05_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "f150578d090f3ee3d61bbebf982d8b54ad7dc17e3115253129e9a7e800563dbd"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R06_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "f5d90151107e8f81d572dbc5064f9bd624404bdcb6c380ecb0684747db422d00"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R07_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "f8b1907700418aa5c3fbd74cec2bd209535ec3ce29361ab69bfe9c50799b4129"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R08_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "d2250bb0f75b443f5168f85e56c21f6e7ca3c440feada387a0282c66aaf900d9"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R09_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "063ab52e1d9e158d3666feaab92e9b852dd99f7d8f4d3a8a704e719e4dca25b5"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R10_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "61e8530e1f3dc7e29941159ffbd18acc259647d2a858a45c986a4bcdb2374ed6"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R11_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "555db8d32c4377e23e4559fa8c93059349115c882bb3b933217ea6aa5eb65f36"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R12_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "57bc6128b77479e0ad43f79f94f3e5f152c99669ff4de0e1bd7493372b1a3c34"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R13_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "26b92533c76416876eec95ae10383ef9153feef3fde63d0eb4372e4a2ef1e9b0"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R14_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "72eb5be9accbff967a1f329fe13450c79f0168975ac9ee36b17350e16f1df420"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R15_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "794f5293024467fdb289f8c72b2f45e1703e632bee06987e04623f43824778d3"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R16_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "ac444c1dcd8e585a4684a4a209a98c92f1f1666637b078aba95f24dadad083cb"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R17_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "b7af9474d257d466f6cc00770f624f13865625ddf89c0a63bacfd602460d8934"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R18_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "77d1c6a9e3d8797f32a7ca44cd713d5db33a770c897fa34f05f05226a71efb70"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R19_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "1288343ee3ff7211f65ce865ac3bbcbb32ea4e5a38e2cb6ca39851da89f76512"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\boundary_R20_20241001.geojson.gz",
+      "result": "passed",
+      "evidence": "122e42b0cb7a0efe78c11dd70cd8d51d1d6318e818f3baf57a2ee0868bc43521"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\representative_official_geometry_points.parquet",
+      "result": "passed",
+      "evidence": "2e9413802e228a4aaed7f1a261234f42c2ec6507cf45336ed2c82f4e7b6d261c"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\representative_official_polygon_rings.json",
+      "result": "passed",
+      "evidence": "2c6701d4b340895d1edc0300ac265a60aa718e92eeac8fa596383561c88bd227"
+    },
+    {
+      "check": "스냅샷 SHA256: snapshots\\trade_events_20regions.parquet",
+      "result": "passed",
+      "evidence": "4e8d03c0da499c22d176bae8a57b58f3c65e11f619e061c7ab5a12abced45987"
+    },
+    {
+      "check": "첫 최신성 조사 후 원천 동일",
+      "result": "passed",
+      "evidence": "freshness.json ↔ source_manifest.json"
+    },
+    {
+      "check": "고정 20지역·21코드",
+      "result": "passed",
+      "evidence": "R01 두 코드, 나머지 각 한 코드"
+    },
+    {
+      "check": "R01 분할 코드 중복 없음",
+      "result": "passed",
+      "evidence": "구코드 28260 중복 합산 없음; 전체 snapshot deal_hash 고유"
+    },
+    {
+      "check": "독립 중위값·n R01",
+      "result": "passed",
+      "evidence": "statistics.median=55300; n=1519; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R02",
+      "result": "passed",
+      "evidence": "statistics.median=229500; n=511; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R03",
+      "result": "passed",
+      "evidence": "statistics.median=72000.0; n=1110; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R04",
+      "result": "passed",
+      "evidence": "statistics.median=106000.0; n=588; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R05",
+      "result": "passed",
+      "evidence": "statistics.median=42000; n=585; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R06",
+      "result": "passed",
+      "evidence": "statistics.median=304000; n=219; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R07",
+      "result": "passed",
+      "evidence": "statistics.median=149250.0; n=402; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R08",
+      "result": "passed",
+      "evidence": "statistics.median=135000.0; n=368; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R09",
+      "result": "passed",
+      "evidence": "statistics.median=180000; n=391; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R10",
+      "result": "passed",
+      "evidence": "statistics.median=39000; n=393; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R11",
+      "result": "passed",
+      "evidence": "statistics.median=84600.0; n=668; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R12",
+      "result": "passed",
+      "evidence": "statistics.median=79950.0; n=892; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R13",
+      "result": "passed",
+      "evidence": "statistics.median=57000; n=1123; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R14",
+      "result": "passed",
+      "evidence": "statistics.median=92250.0; n=570; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R15",
+      "result": "passed",
+      "evidence": "statistics.median=80000; n=519; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R16",
+      "result": "passed",
+      "evidence": "statistics.median=43350.0; n=624; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R17",
+      "result": "passed",
+      "evidence": "statistics.median=65600.0; n=1110; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R18",
+      "result": "passed",
+      "evidence": "statistics.median=60500.0; n=1438; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R19",
+      "result": "passed",
+      "evidence": "statistics.median=76000.0; n=452; DuckDB SELECT 일치"
+    },
+    {
+      "check": "독립 중위값·n R20",
+      "result": "passed",
+      "evidence": "statistics.median=70000.0; n=700; DuckDB SELECT 일치"
+    },
+    {
+      "check": "해제 제외와 합계",
+      "result": "passed",
+      "evidence": "14,532건 중 해제 표시 350건 제외, 14,182건"
+    },
+    {
+      "check": "위치 미확인 거래도 지역 집계에 포함",
+      "result": "passed",
+      "evidence": "SQL은 단지·좌표 테이블 없이 scope 코드만 결합하며 전체 조건부 원거래 행수가 일치합니다."
+    },
+    {
+      "check": "대표 사례 20개·최소 5건",
+      "result": "passed",
+      "evidence": "모든 지역 한 단지, 모든 표본 n>=5"
+    },
+    {
+      "check": "대표 사례 가격 R01",
+      "result": "passed",
+      "evidence": "33daedb345f6cca1"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R01",
+      "result": "passed",
+      "evidence": "28260120438710"
+    },
+    {
+      "check": "대표 사례 가격 R02",
+      "result": "passed",
+      "evidence": "c1603296f48ad1b7"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R02",
+      "result": "passed",
+      "evidence": "11710120064707"
+    },
+    {
+      "check": "대표 사례 가격 R03",
+      "result": "passed",
+      "evidence": "6116d5b168243754"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R03",
+      "result": "passed",
+      "evidence": "41281100007806"
+    },
+    {
+      "check": "대표 사례 가격 R04",
+      "result": "passed",
+      "evidence": "e4fd49b27f9236b5"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R04",
+      "result": "passed",
+      "evidence": "11500100001770"
+    },
+    {
+      "check": "대표 사례 가격 R05",
+      "result": "passed",
+      "evidence": "612dffb5f9e07eb8"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R05",
+      "result": "passed",
+      "evidence": "28237100051397"
+    },
+    {
+      "check": "대표 사례 가격 R06",
+      "result": "passed",
+      "evidence": "1cc78230f2d8dd65"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R06",
+      "result": "passed",
+      "evidence": "11680120414794"
+    },
+    {
+      "check": "대표 사례 가격 R07",
+      "result": "passed",
+      "evidence": "24b098fb7f9d144c"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R07",
+      "result": "passed",
+      "evidence": "11740120135126"
+    },
+    {
+      "check": "대표 사례 가격 R08",
+      "result": "passed",
+      "evidence": "73267524c4336cbd"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R08",
+      "result": "passed",
+      "evidence": "11560100001057"
+    },
+    {
+      "check": "대표 사례 가격 R09",
+      "result": "passed",
+      "evidence": "d8a0a51a72a8da10"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R09",
+      "result": "passed",
+      "evidence": "41135100006294"
+    },
+    {
+      "check": "대표 사례 가격 R10",
+      "result": "passed",
+      "evidence": "dc25dade3416fe82"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R10",
+      "result": "passed",
+      "evidence": "28177100218691"
+    },
+    {
+      "check": "대표 사례 가격 R11",
+      "result": "passed",
+      "evidence": "77ce645b7c63e1be"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R11",
+      "result": "passed",
+      "evidence": "11350100050729"
+    },
+    {
+      "check": "대표 사례 가격 R12",
+      "result": "passed",
+      "evidence": "ca9c02001b54fa2f"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R12",
+      "result": "passed",
+      "evidence": "41117100006151"
+    },
+    {
+      "check": "대표 사례 가격 R13",
+      "result": "passed",
+      "evidence": "5c28f4d6d2585067"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R13",
+      "result": "passed",
+      "evidence": "41113120297350"
+    },
+    {
+      "check": "대표 사례 가격 R14",
+      "result": "passed",
+      "evidence": "0a990aca49437ef8"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R14",
+      "result": "passed",
+      "evidence": "11380120154823"
+    },
+    {
+      "check": "대표 사례 가격 R15",
+      "result": "passed",
+      "evidence": "445ea9149a6d5233"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R15",
+      "result": "passed",
+      "evidence": "11530100002007"
+    },
+    {
+      "check": "대표 사례 가격 R16",
+      "result": "passed",
+      "evidence": "97fae08c84368ea4"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R16",
+      "result": "passed",
+      "evidence": "28200120121451"
+    },
+    {
+      "check": "대표 사례 가격 R17",
+      "result": "passed",
+      "evidence": "1585dfc5d4af2aa8"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R17",
+      "result": "passed",
+      "evidence": "28185120380778"
+    },
+    {
+      "check": "대표 사례 가격 R18",
+      "result": "passed",
+      "evidence": "03c147540e4c47a0"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R18",
+      "result": "passed",
+      "evidence": "41463120064879"
+    },
+    {
+      "check": "대표 사례 가격 R19",
+      "result": "passed",
+      "evidence": "1ffaa50fc9592fff"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R19",
+      "result": "passed",
+      "evidence": "11260100002392"
+    },
+    {
+      "check": "대표 사례 가격 R20",
+      "result": "passed",
+      "evidence": "a9d62eaf936b34a7"
+    },
+    {
+      "check": "공식 도형·2024 경계 내부 R20",
+      "result": "passed",
+      "evidence": "41192100007061"
+    },
+    {
+      "check": "가격 주장 현재가 승격 없음",
+      "result": "passed",
+      "evidence": "가격 주장 40개 qualified, 현재가 검증 0개"
+    },
+    {
+      "check": "주장 필수 근거 필드",
+      "result": "passed",
+      "evidence": "63개 주장 전수 확인"
+    },
+    {
+      "check": "API 호출 상한·실패 후 중단",
+      "result": "passed",
+      "evidence": "1회 ConnectionError, HTTP 원응답 0개, 재시도 0회"
+    },
+    {
+      "check": "자격증명 값 미포함",
+      "result": "passed",
+      "evidence": {
+        "matches": 0
+      }
+    }
+  ],
+  "continuous_playback_performed": false,
+  "actual_listening_performed": false,
+  "independent_qa_performed": false,
+  "scope": "데이터 집계·근거·좌표·파일 무결성 자체 점검입니다. 독립 QA 및 영상 검수가 아닙니다."
+}

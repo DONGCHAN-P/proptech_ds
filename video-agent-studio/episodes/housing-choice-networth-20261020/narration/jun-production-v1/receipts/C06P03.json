@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C06P03",
+  "scene_id": "C06",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:06:36.389Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "1a37f4df40283bae66029e5c5f44150e4018d4ce5b8a066dd04ccbe13dc8ea04",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "이번 계산은 배당과 환율 효과를 포함한 원화 총수익을 연 육 퍼센트로 가정합니다. 육 퍼센트는 십 년간 주거 방식에 따른 차이를 보기 위한 비교 조건입니다. 세 가구의 투자계좌에 이 원화 수익 육 퍼센트를 같이 적용합니다. 배당의 세금과 매도 시 과세, 환전비용, 운용보수는 추가 반영 전이며, 실제 상품별 계산에서는 포함 범위를 맞춰야 합니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 193,
+  "characters": 193,
+  "actual_credits": 77,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:26.698Z",
+  "local_shadow_remaining_before": 21380,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "nTPS4BYQJHvgPabClkIa",
+    "x-request-id": null,
+    "character-cost": "77",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:06:36 GMT"
+  },
+  "pcm_samples": 1058400,
+  "pcm_duration_s": 24,
+  "provider_last_spoken_end_s": 24.08,
+  "artifact_sha256": {
+    "paragraphs/C06P03/audio.mp3": "e39d04171695e3121d41be21fc0afd42b80b43e7dc2257c113da4c12aa8c1543",
+    "paragraphs/C06P03/audio.wav": "e46b117ce815b5936d755579a6a918df675bdcb3934d934904c7812dd1c0c338",
+    "paragraphs/C06P03/alignment.json": "4ba232d69c6685181b26c8ffc548e244175fa80dacc6b67f8968ed2411435d5b",
+    "paragraphs/C06P03/normalized_alignment.json": "4ba232d69c6685181b26c8ffc548e244175fa80dacc6b67f8968ed2411435d5b"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21303,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:06:41.808Z"
+}

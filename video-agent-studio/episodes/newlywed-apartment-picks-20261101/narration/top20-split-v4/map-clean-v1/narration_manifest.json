@@ -1,0 +1,51 @@
+{
+  "task_id": "map-clean-v1-criteria-voice-only",
+  "created_at": "2026-11-03T12:35:16.601860+00:00",
+  "decision_id": "291dc0fbeafc",
+  "script_revision": "map-clean-v1",
+  "script_sha256": "6fe716bc6454a6c1e564f713b10b7fd2e8022af653c44ba4d4c74a660018c7d4",
+  "audio_revision": "top20-split-v4-map-clean-v1-free-injoon-atempo135",
+  "input_versions": {
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/map-clean-v1/criteria_script.json": "6fe716bc6454a6c1e564f713b10b7fd2e8022af653c44ba4d4c74a660018c7d4",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-split-v4/part1-map-clean-v1/production_authorization.json": "934af405922f87289e92f75228cbe648b477f68d0ef184e6b3e4e6963a63ea93",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-split-v4/part1-map-clean-v1/script_decision.json": "81095579a2f7028bc122316795dbd9f7ff2f30e6acda0d02a368867eefb2f014",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/part1-v1/produce.py": "775f7cac129192e9ed9be45609c68b5a4c4ddea0cafa0fab0b7ca6c15f2318ff",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/intro-rationale-v3/produce.py": "f7c878fdf9b2dbbbf084736ac698dbc5ac42ce20e35e37016fc62c9c7236b045",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/map-clean-v1/produce.py": "bf1ee4e5c155169f9874e0f9266e644526b2ecac4528b3d3b5fa5f5abf6ae838",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/outputs/private-production-v1/media-bin/ffmpeg.exe": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/deps/edge_tts/communicate.py": "2944b7de57a49a6dc828186a8465e03fd0936102da2e717b9dce45c40c993bb9"
+  },
+  "voice": "ko-KR-InJoonNeural",
+  "rate": "+0%",
+  "postprocess_atempo": 1.35,
+  "sample_rate": 44100,
+  "sentence_count": 2,
+  "chunk_count": 1,
+  "chunks": [
+    {
+      "scene_id": "P01-CRITERIA",
+      "asset_id": "P01-CRITERIA",
+      "sentence_ids": [
+        "P01-CRITERIA-01",
+        "P01-CRITERIA-02"
+      ],
+      "text": "가격은 이천이십육 년 오 월부터 시월까지 계약된 전용 팔십삼에서 팔십오 제곱미터 아파트 실거래를 기준으로 합니다.\n십일 월 삼 일 확인한 거래에서 취소 건을 빼고, 단지별로 가운데 값인 중위가격을 구했습니다.",
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/map-clean-v1/chunks/P01-CRITERIA.txt",
+      "sha256": "3ff14277d01e8676e4c99c2f1ccc3b0a2cc7c4814600a47669031b8f99e18698",
+      "characters": 116
+    }
+  ],
+  "characters": 116,
+  "target_duration_s": null,
+  "assembly": "single_full_chunk_all_processed_PCM_samples_retained",
+  "padding_frames": 0,
+  "cropped_frames": 0,
+  "brand_insertions": 0,
+  "outro_insertions": 0,
+  "existing_approved_audio_generated": false,
+  "automatic_retry": false,
+  "cash_cost_krw": 0,
+  "paid_api_calls": 0,
+  "credentials_loaded": false,
+  "claude_calls": 0
+}

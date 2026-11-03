@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C07P01",
+  "scene_id": "C07",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:06:51.454Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "22f7636fd124a0165f40b07028833e9e5d7100b6262700b874d545a5d9ed9a52",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "이 조건으로 백이십 개월을 계산한 뒤 세 가구의 자산을 펼쳐보겠습니다. 매매 가구의 집은 연 이 퍼센트씩 올라 약 칠억삼천백만 원이 됩니다. 금융자산은 약 일억육천칠백만 원입니다. 여기서 남은 대출 약 이억팔천사백만 원을 빼면 순자산은 약 육억천사백만 원입니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 146,
+  "characters": 146,
+  "actual_credits": 58,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19183,
+    "character_limit": 40000,
+    "included_remaining": 20817,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:51.452Z",
+  "local_shadow_remaining_before": 20817,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "mrl2IaIzRrzzAK4dQDXC",
+    "x-request-id": null,
+    "character-cost": "58",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:06:50 GMT"
+  },
+  "pcm_samples": 829080,
+  "pcm_duration_s": 18.8,
+  "provider_last_spoken_end_s": 18.88,
+  "artifact_sha256": {
+    "paragraphs/C07P01/audio.mp3": "fcd54a4c72d8eec963c8383020a3a321934832712bc76e2017d3670426e0001a",
+    "paragraphs/C07P01/audio.wav": "1903ad8ff1c079187d36da70fb8f5e4a728b49c42db2c10b8c5366c2730512fe",
+    "paragraphs/C07P01/alignment.json": "31bbad9fa6ec52c0b6f7e3006057565e2e25d6bbcdaeb789c6e73240b1cf87d9",
+    "paragraphs/C07P01/normalized_alignment.json": "31bbad9fa6ec52c0b6f7e3006057565e2e25d6bbcdaeb789c6e73240b1cf87d9"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 20759,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:06:56.194Z"
+}

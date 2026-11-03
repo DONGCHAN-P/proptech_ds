@@ -1,0 +1,51 @@
+{
+  "task_id": "narration-production-generator-v1",
+  "role": "video_narration",
+  "status": "본문 생성기·발음 대조표 준비; 본문 미합성",
+  "input_revisions": {
+    "script": "writer/private-production-v1/script_v4_candidate.md",
+    "script_sha256": "62cf5fcf06a35f3c9984de405717718fb2694ace7e1addf839b0f047055ec48d",
+    "contract": "private-production-media-contract-v1",
+    "prepared": "production-prepared-v3/prepared.json"
+  },
+  "outputs": [
+    "narration/free-tts-v1/production_readiness.json",
+    "narration/free-tts-v1/production_generate.py",
+    "narration/free-tts-v1/production_narration.py",
+    "narration/free-tts-v1/production-prepared-v3/pronunciation_dictionary.json",
+    "narration/free-tts-v1/본편_생성_사용법.md",
+    "narration/free-tts-v1/checks.production-v1.json"
+  ],
+  "affected_scene_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10"
+  ],
+  "changed_scene_ids": [],
+  "checks": [
+    {
+      "check": "추가 WordBoundary 샘플1회",
+      "result": "실제 단어경계7개/원문 전체 포함/PCM7.896초; 청취 미확인"
+    },
+    {
+      "check": "오프라인 준비",
+      "result": "10장54문단·발음90항목·원문/낭독/치환위치 보존"
+    },
+    {
+      "check": "합성 게이트",
+      "result": "양측 검수자·동일SHA·필수이슈0·현재 원문/준비본 일치 검증; 복사영수증 차단"
+    }
+  ],
+  "open_issue_ids": [
+    "GATE-SCHEMA-01"
+  ],
+  "unresolved": "실제 게이트 상태는 production_readiness.json 참조. 잠금/본문 생성 후에만 final_timing.json 작성; 현재 null 시간 계획만 있음. 0.6/3.5 leading, gap0.35, tail1.2/최종발화뒤3초 및30fps 실측 조립 구현. 본문 청취·자막 QA 미수행.",
+  "next_role": "video_director"
+}

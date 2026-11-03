@@ -1,0 +1,200 @@
+{
+  "task_id": "RPR-LIT-20261023",
+  "claims": [
+    {
+      "claim_id": "SUP-F01",
+      "sentence": "지방 민간분양 인허가의 가격 반응은 지역별 차이를 보인다는 연구 보고를 확인했다. 서울·경기 탄력성을 추정한 결과는 아니다.",
+      "source_url": "https://www.ejrea.org/archive/view_article?pid=jrea-9-3-1",
+      "source_file": "sources.json",
+      "evidence_location": [
+        "III.1: actual period 2007.12-2022.12; 12-month moving-average private for-sale permits",
+        "III.2, table 2: Daegu price coefficient 4.6687, SE 0.3489; Daejeon 2.6439, SE 0.4952",
+        "IV: limitations and instrument exclusion concerns"
+      ],
+      "reference_date": "13 non-capital provinces/metropolitan cities, 181 monthly observations each",
+      "checked_on": "2026-10-23",
+      "status": "qualified",
+      "qualification": [
+        "Seoul/Gyeonggi not in sample",
+        "IV relevance is not proof of exclusion",
+        "smoothed series and monthly interpolation",
+        "not net stock elasticity"
+      ],
+      "affected_scene_ids": [],
+      "scene_status": "not_assigned",
+      "original_paper_id": "P1"
+    },
+    {
+      "claim_id": "SUP-F02",
+      "sentence": "가락시영 재건축 이주의 목적지 임대·매매가격에 양의 IV 결과가 보고되었다. 전세에서 매수로 이동한 경로가 직접 식별된 것은 아니다.",
+      "source_url": "https://www.kpaj.or.kr/_PR/view/?aidx=50743&bidx=4543",
+      "source_file": "sources.json",
+      "evidence_location": [
+        "III.1-2: 2012.8-2013.5 relocation; 2011Q1-2014Q4 price panel; 916 destination neighborhoods; 59m2 apartments",
+        "III.3: log(1+x) for logged variables; 2009Q3-2011Q4 destination shares",
+        "IV.3, table 5 narrative: positive IV estimates; transmission mechanism not directly tested",
+        "V: interrupted first relocation and external-validity limits"
+      ],
+      "reference_date": "916 actual destination administrative neighborhoods, 2011Q1-2014Q4; exact regression N not transcribed from image table",
+      "checked_on": "2026-10-23",
+      "status": "qualified",
+      "qualification": [
+        "Single event",
+        "Historical shares may contain persistent destination trends",
+        "log(1+x) is not exact raw-variable elasticity at low counts",
+        "Rental-to-purchase mediation not identified",
+        "table-image SE/N not checked"
+      ],
+      "affected_scene_ids": [],
+      "scene_status": "not_assigned",
+      "original_paper_id": "P2"
+    },
+    {
+      "claim_id": "SUP-F03",
+      "sentence": "서울 정비사업의 준공 주변 전세 반응은 상대 시점에 따라 부호가 다르게 보고되며, 인과와 내부표본 오염의 한계가 남는다.",
+      "source_url": "https://researcher.hf.go.kr/researcher/sub04/sub05_3.do?articleNo=592609&attachNo=91197&mode=download",
+      "source_file": "sources.json",
+      "evidence_location": [
+        "Printed pp143-146, tables1-4: data and event samples",
+        "Printed pp147-149: equations and pseudo-repeat units, 337745 pairs, WLS",
+        "Printed p153, table6: q3,0-1km beta -7.80e-6 SE1.83e-6; q12 beta11.56e-6 SE2.33e-6",
+        "Printed p155: internal-project samples not excluded; amenity/supply pathways not separated; reverse causality"
+      ],
+      "reference_date": "Seoul 2017-2023 new Jeonse contracts 859255; pseudo-repeat pairs337745; 192 demolition-proxy approvals and193 completion approvals2015-2023",
+      "checked_on": "2026-10-23",
+      "status": "qualified",
+      "qualification": [
+        "Matched groups are not the same individual dwelling",
+        "Management-disposal approval not actual exit date",
+        "Inside redevelopment boundary not removed",
+        "Time-varying omitted variables and reverse causality",
+        "No separate causal identification of amenities"
+      ],
+      "affected_scene_ids": [],
+      "scene_status": "not_assigned",
+      "original_paper_id": "P3"
+    },
+    {
+      "claim_id": "SUP-F04",
+      "sentence": "한국은행 공식 요약은2006Q1-2017Q3 구간에서 공급 측 요인의 중요성을 보고한다. 원문 표·세부 식별은 확인하지 않았다.",
+      "source_url": "https://www.bok.or.kr/imer/bbs/P0000556/view.do?menuNo=500783&nttId=10049161&pageIndex=3",
+      "source_file": "sources.json",
+      "evidence_location": [
+        "BOK official summary, first and second paragraphs; registered2018-12-31",
+        "Full analysis1988Q1-2017Q3; later subperiod2006Q1-2017Q3 in summary"
+      ],
+      "reference_date": "Nationwide quarterly1988Q1-2017Q3; exact regression N unverified",
+      "checked_on": "2026-10-23",
+      "status": "qualified",
+      "qualification": [
+        "No separate Seoul/Gyeonggi identification",
+        "Full PDF methods/tables not read",
+        "Later-period insignificant price response is not proof of zero causal effect"
+      ],
+      "affected_scene_ids": [],
+      "scene_status": "not_assigned",
+      "original_paper_id": "P4"
+    },
+    {
+      "claim_id": "SUP-F05",
+      "sentence": "수도권과 비수도권의 미분양 관련 변수가 다르게 나타난다는 연구 보고를 확인했다. 신규주택 비율은 최근5년 신축 재고 비중이다.",
+      "source_url": "https://www.kpaj.or.kr/_PR/view/?aidx=47897&bidx=4316",
+      "source_file": "sources.json",
+      "evidence_location": [
+        "IV.2: 229 municipalities,2015-2023, descriptive N2061",
+        "IV.2: new-unit share = apartment stock built within5years / total apartment stock",
+        "V: metropolitan versus non-metropolitan model results; table3 prose",
+        "VI: omitted time-varying policy effects and long-duration-unsold-market limits"
+      ],
+      "reference_date": "229 municipalities2015-2023; descriptive2061 municipality-years; fitted model N not transcribed",
+      "checked_on": "2026-10-23",
+      "status": "qualified",
+      "qualification": [
+        "Supply location selection endogenous",
+        "Internal-lag instruments depend on moment assumptions",
+        "No explicit policy-history controls",
+        "Capital-region result not Seoul-vs-Gyeonggi result",
+        "Regional price-index levels do not measure cross-city absolute prices"
+      ],
+      "affected_scene_ids": [],
+      "scene_status": "not_assigned",
+      "original_paper_id": "P5"
+    },
+    {
+      "claim_id": "SUP-F06",
+      "sentence": "저자 초록은 공급탄력성의 시간 변화와 토지 관련 변수의 유의성을 보고한다. 규제 변수·효과크기는 본문 미확인이다.",
+      "source_url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003121629",
+      "source_file": "sources.json",
+      "evidence_location": [
+        "Author abstract:2004-2022 province panel;2004-2012 versus2013+ comparison",
+        "Keywords:system GMM indication; details unverified"
+      ],
+      "reference_date": "Korean province panel2004-2022; exact province coverage and N unverified",
+      "checked_on": "2026-10-23",
+      "status": "qualified",
+      "qualification": [
+        "Regulation definitions unverified",
+        "Supply stage, SE and exact N unverified",
+        "Abstract possibility language not established cause",
+        "No abstract coefficients adopted as video values"
+      ],
+      "affected_scene_ids": [],
+      "scene_status": "not_assigned",
+      "original_paper_id": "P6"
+    },
+    {
+      "claim_id": "SUP-C01",
+      "sentence": "이주 집중과 대체 공급 부족이 함께 있는 생활권에서 준공 전 인근 임대료 압력이 더 크다.",
+      "source_url": null,
+      "source_file": "../supply_redevelopment_rental.md",
+      "evidence_location": "section3,C1",
+      "reference_date": "planned test:2006+ sales; rentals/data-available subperiods",
+      "checked_on": "2026-10-23",
+      "status": "unverified",
+      "qualification": [
+        "Falsifiable candidate; not tested on episode trades",
+        "Literature provides mechanism only, not evidence of Seoul/Gyeonggi cause"
+      ],
+      "affected_scene_ids": [],
+      "scene_status": "not_assigned"
+    },
+    {
+      "claim_id": "SUP-C02",
+      "sentence": "서울·경기 일부 시장의 가격 반응은 총준공보다 순증/재고와 멸실-입주 공백을 넣을 때 더 잘 설명된다.",
+      "source_url": null,
+      "source_file": "../supply_redevelopment_rental.md",
+      "evidence_location": "section3,C2",
+      "reference_date": "planned test:2006+ sales; rentals/data-available subperiods",
+      "checked_on": "2026-10-23",
+      "status": "unverified",
+      "qualification": [
+        "Falsifiable candidate; not tested on episode trades",
+        "Literature provides mechanism only, not evidence of Seoul/Gyeonggi cause"
+      ],
+      "affected_scene_ids": [],
+      "scene_status": "not_assigned"
+    },
+    {
+      "claim_id": "SUP-C03",
+      "sentence": "비수도권 및 경기 외곽 일부 시장에서 미분양 잔고와 코호트 계약소진이 준공 충격의 지속기간을 구분한다.",
+      "source_url": null,
+      "source_file": "../supply_redevelopment_rental.md",
+      "evidence_location": "section3,C3",
+      "reference_date": "planned test:2006+ sales; rentals/data-available subperiods",
+      "checked_on": "2026-10-23",
+      "status": "unverified",
+      "qualification": [
+        "Falsifiable candidate; not tested on episode trades",
+        "Literature provides mechanism only, not evidence of Seoul/Gyeonggi cause"
+      ],
+      "affected_scene_ids": [],
+      "scene_status": "not_assigned"
+    }
+  ],
+  "price_effect_comparison_rules": {
+    "P1": "permit-quantity elasticity to price index, not realized price level",
+    "P2": "59m2 mean/median, sale and monthly-equivalent rent; no exact coefficient promoted",
+    "P3": "Jeonse deposit per m2, Seoul new contracts, pseudo-repeat groups, event-specific conditional coefficients; boundaries and dates in sources.json",
+    "all": "No original episode price calculation or factual update performed"
+  }
+}

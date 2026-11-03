@@ -1,0 +1,3 @@
+﻿from pathlib import Path
+import json,subprocess
+B=Path('C:/Users/e2ken/AppData/Local/Microsoft/WinGet/Packages/yt-dlp.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe/ffmpeg-N-124716-g054dffd133-win64-gpl/bin');r=Path('output/reference_8shvS0--yBQ.mp4');x=json.loads(subprocess.check_output([str(B/'ffprobe.exe'),'-v','error','-show_streams','-of','json',str(r)]));print([(s.get('width'),s.get('height')) for s in x['streams']]);subprocess.run([str(B/'ffmpeg.exe'),'-v','error','-y','-ss','15','-i',str(r),'-frames:v','1','video-agent-studio/episodes/capital-10eok-map-20261017/outputs/map-preview-v3/reference_frame_15s.png'],check=True)

@@ -1,4 +1,4 @@
-/* THE AI HOUSING ENGINE — v2 intuitive scoring */
+/* 집고리즘 — 기준이 보이는 점수 */
 
 let ALL = [];
 let FILTERED = [];

@@ -1,0 +1,735 @@
+{
+  "task_id": "next-policy-source-prep-v1",
+  "revision": "v2_addendum",
+  "as_of_kst": "2026-10-26",
+  "scope": "MCI/MCG·방공제, G02 DSR/DTI/기존부채, G01 실거주 + main 독립G03 신혼DTI 입력만",
+  "merge_rule": "v1 보존. 동일 claim_id D05/N04/P01은 v2 우선. 나머지는 추가. v1 사례 참고값은 실행한도로 사용 금지.",
+  "facts": [
+    {
+      "id": "M01",
+      "claim_id": "M01",
+      "statement": "LTV 비율과 총액상한만으로 실행액은 확정되지 않는다.",
+      "exact_conditions": "평가액V와 선순위채권·상품별 임대보증금/최우선변제 공제액C를 먼저 확정. 실제 임대차는 별도 상품 산정표를 따르며 보증금과 최우선액을 기계적으로 이중 차감하지 않음.",
+      "value": {
+        "collateral_ceiling": "max(0, V*LTV - 선순위채권 - C)",
+        "review_ceiling": "min(담보차감후상한, 해당규제총액상한, 상품한도, DSR/DTI상한, 매매가 등 기타심사한도)"
+      },
+      "unit": "산식",
+      "source_ids": [
+        "V2_BANK_RULES",
+        "V2_NHUF"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_BANK_RULES",
+          "location": "PDF1쪽1~3"
+        },
+        {
+          "source_id": "V2_NHUF",
+          "location": "신생아 상품 대출금액 산식"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": "소득·담보·임대차·보증 심사 전 참고 상한이다. 은행이 승인·실행할 금액을 보장하지 않음."
+    },
+    {
+      "id": "M02",
+      "claim_id": "M02",
+      "statement": "서울의 현행 최우선변제액은5,500만원이며, 대상 임차보증금 상한1억6,500만원과 다르다.",
+      "exact_conditions": "서울 신규 담보권·현행 적용 사례. 최우선변제 총액은 주택가액의1/2 등 법정 제한. 금융상의 공제방수·공제액은 상품별 결정.",
+      "value": {
+        "priority_amount_krw": 55000000,
+        "tenant_deposit_eligibility_ceiling_krw": 165000000
+      },
+      "unit": "원",
+      "source_ids": [
+        "V2_TENANT"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_TENANT",
+          "location": "제10조1항1호·2~3항, 제11조1항1호"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": ""
+    },
+    {
+      "id": "M03",
+      "claim_id": "M03",
+      "statement": "일반 은행 주담대의 MCI·MCG 취급 여부는 실행 은행·채널·일자 확인이 필요하다.",
+      "exact_conditions": "세칙상 적법한 보증·보험 가입금액은 소액임차보증금 차감 완화에 반영 가능하나, 상품 존재와 실제 취급승인은 다름.",
+      "value": {
+        "capital_area_all_bank_ban_confirmed": false,
+        "all_firstbuyer_room_deduction_waived": false,
+        "bank_execution_confirmation_required": true
+      },
+      "unit": "확인상태",
+      "source_ids": [
+        "V2_BANK_RULES",
+        "V2_HF_GUARANTEE"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_BANK_RULES",
+          "location": "PDF1쪽2나"
+        },
+        {
+          "source_id": "V2_HF_GUARANTEE",
+          "location": "취급은행 상담→신청→심사·승인→실행"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "qualified",
+      "effective_status": "effective",
+      "qualification": "2026-10-26 현재 수도권 전 은행 일률 금지/전면 재개를 단정할 공식 공통근거 미확보. 미확보를 허용 또는 금지의 증거로 사용하지 않음. G10."
+    },
+    {
+      "id": "M04",
+      "claim_id": "M04",
+      "statement": "생애최초 특례구입자금보증은 별도 심사를 거쳐야 하는 보증상품이다.",
+      "exact_conditions": "주택구입자금·권리침해 없는 주택·실행시 임대차 없음(실행일까지 퇴거조건 신청 가능), 등기 후3개월 이내 등. 다른 보증 동시 이용 제한과 정부 LTV·상품별 기준 적용.",
+      "value": {
+        "automatic_waiver": false,
+        "tenancy_at_execution": false,
+        "government_ltv_still_applies": true
+      },
+      "unit": "조건",
+      "source_ids": [
+        "V2_HF_GUARANTEE"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_HF_GUARANTEE",
+          "location": "세 열 비교표 중 생애최초 특례 열·신청시기·주석"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": "은행 일반 생초, 디딤돌 생초, 보금자리 생초를 구별. 디딤돌 보증의6억 기준을 일반 은행 생초 전체에 전용하지 않음."
+    },
+    {
+      "id": "M05",
+      "claim_id": "M05",
+      "statement": "일반 디딤돌은 수도권 아파트의 방공제를 의무 적용하며 저소득·저가 예외가 있다.",
+      "exact_conditions": "수도권 소재 아파트; 연소득4천만원 이하이면서 주택3억원 이하 구입이면 해당 의무공제 제외. MCI보험 불가. 생초·신생아 별도 예외는 M06~M08.",
+      "value": {
+        "low_income_exception_krw": 40000000,
+        "low_price_exception_krw": 300000000,
+        "MCI_available": false,
+        "unrented_apartment_deduction_rooms": 1
+      },
+      "unit": "원/개/조건",
+      "source_ids": [
+        "V2_DIDIM_RULES"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_DIDIM_RULES",
+          "location": "PDF28~30쪽(인쇄25~27), 수도권 공제·보험·공제방수"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": "저소득·저가 예외는 수도권 일률 의무공제의 예외이다. 실제 차감 미적용은 보증가입·상품별 담보산정까지 확인하며 자동 면제로 처리하지 않음."
+    },
+    {
+      "id": "M06",
+      "claim_id": "M06",
+      "statement": "디딤돌 생초는 주택6억원 이하이고 HF 생애최초 특례구입자금보증에 가입하면 방공제 차감 없이 산정할 수 있다.",
+      "exact_conditions": "생초 자격·보증가입·실행시 임대차 없음·다른 상품요건 충족. 수도권/규제지역 생초LTV70 상한은 유지. 보증가입은 자동이 아님.",
+      "value": {
+        "firstbuyer_guarantee_house_ceiling_krw": 600000000,
+        "capital_or_regulated_ltv_percent": 70,
+        "waiver_requires_guarantee": true
+      },
+      "unit": "원/%",
+      "source_ids": [
+        "V2_HUG",
+        "V2_DIDIM_RULES"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_HUG",
+          "location": "161499 기관 답변 중 생초6억·보증가입 요건"
+        },
+        {
+          "source_id": "V2_DIDIM_RULES",
+          "location": "PDF28쪽·31쪽 생초/보증 규정"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": ""
+    },
+    {
+      "id": "M07",
+      "claim_id": "M07",
+      "statement": "신생아 특례는 일반 디딤돌 맞춤형 관리방안의 대상이 아니며 보증요건 충족·가입시 방공제 미적용이 가능하다.",
+      "exact_conditions": "기금 FAQ상 일반구입자금보증 또는 생초특례 가입 필요. 기관 회신상 일반보증은 주택3억 이하·LTV70 이내, 생초특례는6억 이하 등 해당 보증요건 확인.",
+      "value": {
+        "separate_from_ordinary_didim_management": true,
+        "unconditional_no_deduction": false
+      },
+      "unit": "조건",
+      "source_ids": [
+        "V2_NHUF",
+        "V2_HUG"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_NHUF",
+          "location": "[신생아 특례 디딤돌대출] 소액임차보증금 공제(방공제) FAQ"
+        },
+        {
+          "source_id": "V2_HUG",
+          "location": "161499 관리제도팀 답변"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": ""
+    },
+    {
+      "id": "M08",
+      "claim_id": "M08",
+      "statement": "주택6억원 초과 신생아 생초는 HUG 공식 회신상 HF 일반·생초특례보증을 이용할 수 없어 방공제를 반영한다.",
+      "exact_conditions": "신생아9억원 주택자격과 보증6억원 문턱은 별개. 서울·수도권 생초LTV70 및 상품4억원 한도와 담보차감후상한의 최솟값을 비교.",
+      "value": {
+        "house_price_over_krw": 600000000,
+        "deduction_before_product_cap": true
+      },
+      "unit": "원/산정순서",
+      "source_ids": [
+        "V2_HUG",
+        "V2_NHUF"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_HUG",
+          "location": "142863 답변1;161499 보증요건"
+        },
+        {
+          "source_id": "V2_NHUF",
+          "location": "신생아 상품 담보차감 산식"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "qualified",
+      "effective_status": "effective",
+      "qualification": "6억 초과 명시 회신은2025-09-11 게시 자료. 2026-08 회신/현행 FAQ와 일관되지만 현행 보증 통합세칙을 직접 확보하지 못했으므로 신규 실행 전 수탁은행 재확인. G10."
+    },
+    {
+      "id": "M09",
+      "claim_id": "M09",
+      "statement": "보금자리론의 임대차 없는 아파트는 자체 업무기준상 방수공제가 없다.",
+      "exact_conditions": "보금자리론 아파트 기준. 실제 임대차가 있으면 임대보증금을 반영. 연립·다세대/단독주택은 공제방수와 구입자금보증 조건이 별도.",
+      "value": {
+        "unrented_apartment_deduction_rooms": 0
+      },
+      "unit": "개",
+      "source_ids": [
+        "V2_BOGEUM_RULES"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_BOGEUM_RULES",
+          "location": "PDF31쪽(인쇄27) 표/①; 현행 예상조회 주택유형·구입자금보증 안내"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": "일반 은행 MCI/MCG 중단이나 일반 디딤돌 수도권 방공제를 이 상품에 그대로 적용하지 않음.5월 PDF 전체의 최신성은 미확인이나 현행 조회 안내와 교차확인."
+    },
+    {
+      "id": "P01",
+      "claim_id": "P01",
+      "statement": "정책모기지 신규취급의 규제DSR 예외와 DTI·내부 상환능력 심사를 구별한다.",
+      "exact_conditions": "보금자리론·디딤돌(신생아 특례 디딤돌 포함) 해당 상품 신규취급. 현행 감독규정4마(5)·세칙12나(6)의 정책협약대출 예외 틀과 FSC 상품명 명시자료, 현행 DTI를 연결한 해석.",
+      "value": {
+        "regulatory_DSR40_for_new_policy_mortgage": "정책모기지 예외로 취급",
+        "DTI": "상품별 적용",
+        "internal_DSR": "별도 관리·심사 가능"
+      },
+      "unit": "처리",
+      "source_ids": [
+        "V2_BANKREG",
+        "V2_BANK_RULES",
+        "DSR_HISTORY",
+        "DIDIM",
+        "BOGEUM",
+        "NEWBORN"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_BANKREG",
+          "location": "PDF8~9쪽4마"
+        },
+        {
+          "source_id": "V2_BANK_RULES",
+          "location": "PDF9쪽12나(6)/12-1"
+        },
+        {
+          "source_id": "DSR_HISTORY",
+          "location": "2024-08-21 하반기방안② 주석"
+        },
+        {
+          "source_id": "DIDIM",
+          "location": "현행 DTI"
+        },
+        {
+          "source_id": "BOGEUM",
+          "location": "현행 DTI"
+        },
+        {
+          "source_id": "NEWBORN",
+          "location": "상품 DTI"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": "명칭별 제외 설명은2024 FSC 자료이고 현행성은2026 규정/상품기준을 교차독해한 것임을 표시. 모든 부채 무시·무조건 승인이라는 뜻 아님. 보금자리론 업무기준도 DSR 참고지표 산출을 별도로 둠.",
+      "verification_type": "primary_sources_cross_read_inference",
+      "supersedes": [
+        "P01"
+      ]
+    },
+    {
+      "id": "P02",
+      "claim_id": "P02",
+      "statement": "기존 정책 주담대가 있으면 추가 일반대출의 DSR 심사에서 그 부채를 포함한다.",
+      "exact_conditions": "DSR예외가 아닌 은행 일반대출 신규취급, 총대출1억원 초과 차주(신청액 포함·한도대출은 한도액 기준). 기존 정책대출도 기존부채에 포함; 상환예정분과 별도 부채산정 제외는 해당 조항대로 처리.",
+      "value": {
+        "bank_DSR_percent": 40,
+        "total_loan_threshold_krw_exclusive": 100000000,
+        "existing_policy_mortgage_included": true
+      },
+      "unit": "%/원/조건",
+      "source_ids": [
+        "V2_BANKREG",
+        "V2_BANK_RULES"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_BANKREG",
+          "location": "PDF8쪽4가·4마 단서,9쪽4마(5)"
+        },
+        {
+          "source_id": "V2_BANK_RULES",
+          "location": "PDF10쪽12-2바·17~18쪽표3/주1"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": "전액분할상환 개별 주담대는 분할상환 개시 이후 실제 원금상환액과 실제 이자를 반영하는 표3 기준. 정책대출 원금을 일률적 신용대출5년으로 나누지 않음."
+    },
+    {
+      "id": "P03",
+      "claim_id": "P03",
+      "statement": "디딤돌과 신생아 특례는 DTI60% 이내이며 부부 소득·부채를 함께 확인한다.",
+      "exact_conditions": "주담대 연간 원리금과 기타부채 이자 추정액을 연소득으로 나누는 DTI. 상환예정 전세대출 잔액·예적금 잔액 이내 예적금담보 등 명시 조정. 신생아는 별도 특례 외 디딤돌 기준 준용.",
+      "value": {
+        "DTI_percent": 60,
+        "income_and_debt_basis": "원칙 부부합산",
+        "other_debt_interest_estimate": "한은 예금은행 가계대출 잔액금리 + 1%p"
+      },
+      "unit": "%/산식",
+      "source_ids": [
+        "V2_DIDIM_RULES",
+        "V2_NHUF"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_DIDIM_RULES",
+          "location": "PDF18~19쪽(인쇄15~16) 제4장"
+        },
+        {
+          "source_id": "V2_NHUF",
+          "location": "신생아 DTI/말미 디딤돌 준용"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": "DTI 산입방법이 다른 주담대·중복 기금대출을 보유해도 상품자격을 허용한다는 뜻은 아님. 자격·중복대출 제한을 먼저 심사."
+    },
+    {
+      "id": "P04",
+      "claim_id": "P04",
+      "statement": "보금자리론 DTI는 기본60%, 규제지역은 기본50%이며 생초 등 명시 예외는 차감하지 않는다.",
+      "exact_conditions": "규제지역 미차감: 생초·피해자·임차보증금 반환용도·구입 실수요자 등 현행 열거 요건. 신혼1인특례는 HFV2_02의 소득·부채 범위 우선.",
+      "value": {
+        "standard_DTI_percent": 60,
+        "regulated_standard_DTI_percent": 50
+      },
+      "unit": "%",
+      "source_ids": [
+        "BOGEUM",
+        "V2_BOGEUM_RULES",
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "BOGEUM",
+          "location": "현행 DTI 항목"
+        },
+        {
+          "source_id": "V2_BOGEUM_RULES",
+          "location": "PDF20~21쪽(16~17), 주담대 원리금+기타부채 추정이자"
+        },
+        {
+          "source_id": "HF_CURRENT_MARRIAGE_FAQ",
+          "location": "main 인계: 신혼특례 DTI/실수요자 문답"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": "DTI에 배우자 부채를 합산하면서 배우자 소득은 빼는 등 서로 다른 심사방식을 섞지 않음.5월 합본보다10/19 시행 현행 FAQ를 우선."
+    },
+    {
+      "id": "D05",
+      "claim_id": "D05",
+      "statement": "내집마련 디딤돌대출 현행 신규 신청 사례는 실행 후1개월 내 전입하고 전입일부터2년 실거주해야 한다.",
+      "exact_conditions": "전입 마감 해당일이 휴일이면 익영업일. 타당사유 전입 연장·실거주 유예는 별도 심사. 과거 접수·계약·기존 고객에게2년을 일괄 소급하지 않음.",
+      "value": {
+        "move_in_within_months_after_execution": 1,
+        "residence_years_from_move_in": 2
+      },
+      "unit": "개월/년",
+      "source_ids": [
+        "V2_NHUF",
+        "V2_DIDIM_RULES"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_NHUF",
+          "location": "[내집마련 디딤돌대출] 대출 실행 이후 실거주가 불가능한 상황입니다. 예외 적용이 불가능한지? FAQ"
+        },
+        {
+          "source_id": "V2_DIDIM_RULES",
+          "location": "PDF34쪽(인쇄31) 제7장6"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": "기금 원문을 우선하여 KB 동일 페이지의 본문1년/변경이력2년 상충을 현재 신규 사례 범위에서 해소.",
+      "supersedes": [
+        "D05"
+      ]
+    },
+    {
+      "id": "N04",
+      "claim_id": "N04",
+      "statement": "신생아 특례 디딤돌대출 현행 신규 신청 사례는 실행 후1개월 내 전입하고 전입일부터2년 실거주해야 한다.",
+      "exact_conditions": "전입 마감 해당일이 휴일이면 익영업일. 타당사유 전입 연장·실거주 유예는 별도 심사. 과거 접수·계약·기존 고객에게2년을 일괄 소급하지 않음.",
+      "value": {
+        "move_in_within_months_after_execution": 1,
+        "residence_years_from_move_in": 2
+      },
+      "unit": "개월/년",
+      "source_ids": [
+        "V2_NHUF",
+        "V2_DIDIM_RULES"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_NHUF",
+          "location": "[신생아 특례 디딤돌대출] 대출 실행 이후 실거주가 불가능한 상황입니다. 예외 적용이 불가능한지? FAQ"
+        },
+        {
+          "source_id": "V2_DIDIM_RULES",
+          "location": "PDF34쪽(인쇄31) 제7장6"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": "기금 원문을 우선하여 KB 동일 페이지의 본문1년/변경이력2년 상충을 현재 신규 사례 범위에서 해소.",
+      "supersedes": [
+        "N04"
+      ]
+    },
+    {
+      "id": "D06",
+      "claim_id": "D06",
+      "statement": "디딤돌·신생아 실거주 의무의 전입 연장과 실거주 유예는 승인 조건이 다르다.",
+      "exact_conditions": "타당한 전입 곤란 사유 확인시 전입완료예정일2개월 연장 가능. 접수/분양계약 후 발생한 근무·생업·질병·취학·해외이주 등 FAQ 열거 사유의 실거주 유예는 최대3년. 자동 면제 아님.",
+      "value": {
+        "move_in_extension_months": 2,
+        "residence_deferral_max_years": 3
+      },
+      "unit": "개월/년",
+      "source_ids": [
+        "V2_NHUF"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "V2_NHUF",
+          "location": "일반·신생아 각각의 실거주 예외 FAQ"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": "개인별 승인·증빙과 복귀기한을 확인. 과거 계약 경과를 이 숫자만으로 판정하지 않음."
+    },
+    {
+      "id": "HFV2_01",
+      "claim_id": "HFV2_01",
+      "statement": "신혼가구의 기존 합산소득 기준을 넘더라도 채무자가 될 1인의 연소득이7천만원 이하이면 소득특례를 신청할 수 있다.",
+      "exact_conditions": "신규 대출 신청분, 신혼은 혼인7년 이내 또는 신청일부터3개월 이내 결혼예정",
+      "value": {
+        "effective_from": "2026-10-19",
+        "input_fact_id": "HF_ADD01"
+      },
+      "unit": "시행일/처리",
+      "source_ids": [
+        "HF_MARRIAGE_RELEASE_20260928",
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "HF_MARRIAGE_RELEASE_20260928",
+          "location": "director가 실제 읽은 보도/현행FAQ 인계; ../next_episode_hf_addendum.json HF_ADD01"
+        },
+        {
+          "source_id": "HF_CURRENT_MARRIAGE_FAQ",
+          "location": "director가 실제 읽은 보도/현행FAQ 인계; ../next_episode_hf_addendum.json HF_ADD01"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": " 독립 총괄의 원문 열람 인계를 사용했으며 researcher의 중복 직접 열람은 아님.",
+      "verification_type": "director_primary_read_handoff",
+      "provenance": {
+        "input_file": "../next_episode_hf_addendum.json",
+        "sha256": "e4a2bbec61ce9a2cc220697c051739b3486ea920f82482c56312a685e6c9de2a"
+      }
+    },
+    {
+      "id": "HFV2_02",
+      "claim_id": "HFV2_02",
+      "statement": "1인 소득특례로 신청하면 DTI도 그1인의 소득과 부채로 심사하며, 소득을 입증한 사람이 차주가 된다.",
+      "exact_conditions": "보금자리론 신혼가구 해당 조건에서만 적용",
+      "value": {
+        "effective_from": "2026-10-19",
+        "input_fact_id": "HF_ADD02"
+      },
+      "unit": "시행일/처리",
+      "source_ids": [
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "HF_CURRENT_MARRIAGE_FAQ",
+          "location": "director가 실제 읽은 보도/현행FAQ 인계; ../next_episode_hf_addendum.json HF_ADD02"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": " 독립 총괄의 원문 열람 인계를 사용했으며 researcher의 중복 직접 열람은 아님.",
+      "verification_type": "director_primary_read_handoff",
+      "provenance": {
+        "input_file": "../next_episode_hf_addendum.json",
+        "sha256": "e4a2bbec61ce9a2cc220697c051739b3486ea920f82482c56312a685e6c9de2a"
+      }
+    },
+    {
+      "id": "HFV2_03",
+      "claim_id": "HFV2_03",
+      "statement": "신혼소득특례에서도 배우자의 소득과 부채는 우대금리·실수요자 요건과 상환할 기존 대출 확인에 사용한다. 주택보유수는 부부를 합산한다.",
+      "exact_conditions": "보금자리론 신혼가구 해당 조건에서만 적용",
+      "value": {
+        "effective_from": "2026-10-19",
+        "input_fact_id": "HF_ADD03"
+      },
+      "unit": "시행일/처리",
+      "source_ids": [
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "HF_CURRENT_MARRIAGE_FAQ",
+          "location": "director가 실제 읽은 보도/현행FAQ 인계; ../next_episode_hf_addendum.json HF_ADD03"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": " 독립 총괄의 원문 열람 인계를 사용했으며 researcher의 중복 직접 열람은 아님.",
+      "verification_type": "director_primary_read_handoff",
+      "provenance": {
+        "input_file": "../next_episode_hf_addendum.json",
+        "sha256": "e4a2bbec61ce9a2cc220697c051739b3486ea920f82482c56312a685e6c9de2a"
+      }
+    },
+    {
+      "id": "HFV2_04",
+      "claim_id": "HFV2_04",
+      "statement": "기존 신혼 합산소득 기준 이내 가구는 기존 부부합산 방식으로 신청한다. 현재 기준은 무자녀8500만원·1자녀9000만원·2자녀이상1억원이며 미성년자녀 기준이다.",
+      "exact_conditions": "보금자리론 신혼가구 해당 조건에서만 적용",
+      "value": {
+        "effective_from": "2026-10-19",
+        "input_fact_id": "HF_ADD04"
+      },
+      "unit": "시행일/처리",
+      "source_ids": [
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "HF_CURRENT_MARRIAGE_FAQ",
+          "location": "director가 실제 읽은 보도/현행FAQ 인계; ../next_episode_hf_addendum.json HF_ADD04"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": " 독립 총괄의 원문 열람 인계를 사용했으며 researcher의 중복 직접 열람은 아님.",
+      "verification_type": "director_primary_read_handoff",
+      "provenance": {
+        "input_file": "../next_episode_hf_addendum.json",
+        "sha256": "e4a2bbec61ce9a2cc220697c051739b3486ea920f82482c56312a685e6c9de2a"
+      }
+    },
+    {
+      "id": "HFV2_05",
+      "claim_id": "HFV2_05",
+      "statement": "규제지역의 실수요자 LTV·DTI 차감 예외는 구입용도·부부무주택·가격6억원이하·부부합산소득7천만원이하 조건을 함께 판단한다.",
+      "exact_conditions": "보금자리론 신혼가구 해당 조건에서만 적용",
+      "value": {
+        "effective_from": "2026-10-19",
+        "input_fact_id": "HF_ADD05"
+      },
+      "unit": "시행일/처리",
+      "source_ids": [
+        "HF_CURRENT_MARRIAGE_FAQ"
+      ],
+      "evidence_locations": [
+        {
+          "source_id": "HF_CURRENT_MARRIAGE_FAQ",
+          "location": "director가 실제 읽은 보도/현행FAQ 인계; ../next_episode_hf_addendum.json HF_ADD05"
+        }
+      ],
+      "basis_date": "2026-10-26",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "effective_status": "effective",
+      "qualification": "생애최초 등 별도의 차감 예외는 해당 상품 기준에서 따로 판정한다. 독립 총괄의 원문 열람 인계를 사용했으며 researcher의 중복 직접 열람은 아님.",
+      "verification_type": "director_primary_read_handoff",
+      "provenance": {
+        "input_file": "../next_episode_hf_addendum.json",
+        "sha256": "e4a2bbec61ce9a2cc220697c051739b3486ea920f82482c56312a685e6c9de2a"
+      }
+    }
+  ],
+  "product_collateral_matrix": [
+    {
+      "product": "일반 은행",
+      "claim_ids": [
+        "M01",
+        "M02",
+        "M03"
+      ],
+      "seoul_unrented_apartment": "은행 산정 공제방수/보증 미커버분을 확인. 일률5500 차감 또는 면제를 확정하지 않음."
+    },
+    {
+      "product": "은행 생애최초",
+      "claim_ids": [
+        "M03",
+        "M04"
+      ],
+      "seoul_unrented_apartment": "생초LTV와 HF생초특례 보증가입 가능성을 분리; 실제 보증승인 전 자동 공제면제 금지."
+    },
+    {
+      "product": "보금자리론",
+      "claim_ids": [
+        "M09"
+      ],
+      "seoul_unrented_apartment": "자체 업무기준상 방수공제0. 선순위·실제임대차·평가·소득심사는 별도."
+    },
+    {
+      "product": "일반 디딤돌",
+      "claim_ids": [
+        "M05",
+        "M06"
+      ],
+      "seoul_unrented_apartment": "기본1방 공제. 소득4000/집3억은 의무공제 예외이며 보증·담보산정 확인. 생초집6억은 특례보증가입 요건 별도."
+    },
+    {
+      "product": "신생아 특례 디딤돌",
+      "claim_ids": [
+        "M07",
+        "M08"
+      ],
+      "seoul_unrented_apartment": "일반디딤돌 관리방안 제외. 적격HF보증 가입시 미공제; 집6억초과 회신상 보증불가·차감 조건은 실행 전 재확인."
+    }
+  ],
+  "arithmetic_checks_only": [
+    {
+      "id": "A01",
+      "purpose": "산정순서 확인용; 다음편 사례 확정 아님",
+      "V_krw": 600000000,
+      "LTV_percent": 70,
+      "prior_krw": 0,
+      "tenancy_krw": 0,
+      "uncovered_priority_krw": 55000000,
+      "product_cap_krw": 400000000,
+      "collateral_ceiling_krw": 365000000,
+      "before_income_tests_reference_krw": 365000000
+    },
+    {
+      "id": "A02",
+      "purpose": "총액상한에서 방공제를 다시 빼는 오류 방지",
+      "V_krw": 900000000,
+      "LTV_percent": 70,
+      "prior_krw": 0,
+      "tenancy_krw": 0,
+      "uncovered_priority_krw": 55000000,
+      "product_cap_krw": 400000000,
+      "collateral_ceiling_krw": 575000000,
+      "before_income_tests_reference_krw": 400000000
+    }
+  ],
+  "planned_inputs_from_user": {
+    "status": "총괄 구성초안·미확정; 실제 고객정보 아님",
+    "general_bank_income_krw": 100000000,
+    "policy_household_combined_income_krw": 80000000,
+    "notes": "일반은행 가구는 L06 소득9천 이하 특례 자동 해당 아님. 정책가구8천도 보금자리론 실수요자 소득7천 요건 자동충족 아님; 생초 등 다른 예외 별도. 상품·신혼·출산·자산 자격 각각 심사. 새 브리프·episode·숫자 확정 없음."
+  }
+}

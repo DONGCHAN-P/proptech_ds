@@ -1,0 +1,107 @@
+{
+  "checked_on": "2026-10-16",
+  "source_page": "https://wherehome.lh.or.kr/lhmap.do?mainTabNo=12",
+  "discovery_chain": [
+    "3기신도시 공식토지이용계획(MN077)→내집어디",
+    "공개lhmapHTML→thirdCity.js/var.js/map.js",
+    "공개3기신도시목록 bzdtCd105142 확인",
+    "동일공개mapProxy WMS조회 및 WFS명세/GetFeature"
+  ],
+  "requests": [
+    {
+      "response": "raw/landfeatures.geojson",
+      "endpoint": "https://wherehome.lh.or.kr/cmm/action/ProxyGeoMap.do?purl=http://GEOSERVERSECUREURL/geoserver/klhsb/wms",
+      "parameters": {
+        "SERVICE": "WFS",
+        "REQUEST": "GetFeature",
+        "VERSION": "1.0.0",
+        "TYPENAME": "klhsb:em_tem_land_use_thirdcity",
+        "OUTPUTFORMAT": "application/json",
+        "SRSNAME": "EPSG:4326",
+        "CQL_FILTER": "bzdt_cd='105142'",
+        "MAXFEATURES": "1500"
+      }
+    },
+    {
+      "response": "raw/boundaryfeatures.geojson",
+      "endpoint": "https://wherehome.lh.or.kr/cmm/action/ProxyGeoMap.do?purl=http://GEOSERVERSECUREURL/geoserver/klhsb/wms",
+      "parameters": {
+        "SERVICE": "WFS",
+        "REQUEST": "GetFeature",
+        "VERSION": "1.0.0",
+        "TYPENAME": "klhsb:em_jigu_border_thirdcity",
+        "OUTPUTFORMAT": "application/json",
+        "SRSNAME": "EPSG:4326",
+        "CQL_FILTER": "bzdt_cd='105142'",
+        "MAXFEATURES": "1500"
+      }
+    },
+    {
+      "response": "raw/lh_land.png",
+      "endpoint": "https://wherehome.lh.or.kr/cmm/action/ProxyGeoMap.do?purl=http://GEOSERVERSECUREURL/geoserver/klhsb/wms",
+      "parameters": {
+        "SERVICE": "WMS",
+        "REQUEST": "GetMap",
+        "VERSION": "1.1.1",
+        "LAYERS": "klhsb:em_tem_land_use_thirdcity",
+        "STYLES": "",
+        "FORMAT": "image/png",
+        "TRANSPARENT": "true",
+        "SRS": "EPSG:5174",
+        "BBOX": "185894.761334391,454591.72117567,190537.212815168,460033.88199587",
+        "WIDTH": 1800,
+        "HEIGHT": 2100
+      }
+    }
+  ],
+  "files": [
+    {
+      "file": "raw/landfeatures.geojson",
+      "bytes": 851292,
+      "sha256": "801667bb5041e4216cd64350506412f11ed4368af69a61c053ea96a3a6a5a671"
+    },
+    {
+      "file": "raw/boundaryfeatures.geojson",
+      "bytes": 79124,
+      "sha256": "b917511f5e3c931d0c4dc216d1599d037e9a93a053edd96a6965bbbbcfc0f6f5"
+    },
+    {
+      "file": "raw/lh_land.png",
+      "bytes": 948873,
+      "sha256": "b0ec477af2f2cd411ac8a106a46e5b93e287fa691cde0e9b908a86fe5d3a5e5b"
+    },
+    {
+      "file": "raw/lh_descr.xml",
+      "bytes": 1185,
+      "sha256": "62811f6b71c974457feb2a29ee345d971ac90686044b7ddbb1a345a27e6e5203"
+    },
+    {
+      "file": "raw/lhmap.html",
+      "bytes": 1207910,
+      "sha256": "d258b1a41c465cb6ae7b7d364cb24fd7a83c049b1430dea2d92c6f20114cf6c5"
+    },
+    {
+      "file": "raw/mapjs.txt",
+      "bytes": 49309,
+      "sha256": "ab63b712e0fd507cfe69a7bf85d258694965bf4163c764a7deaffdbbe754190b"
+    },
+    {
+      "file": "raw/var.js",
+      "bytes": 10017,
+      "sha256": "6674b782a4d77da7f8a475388aa9690691508bb239d08b678f518d0a3e203034"
+    },
+    {
+      "file": "raw/thirdCity.js",
+      "bytes": 4240,
+      "sha256": "d95e408690fbb1489792136f383f03499f10772aef5e2a5231ee3776b53b4a85"
+    },
+    {
+      "file": "raw/changneung_extent.json",
+      "bytes": 150,
+      "sha256": "e275003b3a58b4efb49f30338bcfd699fc4685b085587a07183605bc8a0a4eb7"
+    }
+  ],
+  "cost": "무료 공개조회; 신규유료API없음",
+  "credentials_included": false,
+  "version_caution": "LH응답에고시번호·갱신일필드없음.조회일만확인"
+}

@@ -1,0 +1,415 @@
+{
+  "schema_version": "1.0",
+  "task_id": "shorts-trend-ui-20261104",
+  "role": "research",
+  "language": "ko",
+  "generated_date": "2026-11-04",
+  "studio_root": "C:/projects/realestate_reco/video-agent-studio",
+  "episode_root": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101",
+  "scope": "기존 3편 Shorts UI·자연스러운 도입/마무리의 공식 자료 조사",
+  "input_revisions": {
+    "brief": {
+      "path": "../../brief.json",
+      "revision": "top20-8min-v2",
+      "sha256": "1739d99fd6bf98f1c9bded9f0ea747488f8a38252d8b06d163febdf23c66e93e"
+    },
+    "state": {
+      "path": "../../state.json",
+      "revision": "top20-enhance-v2",
+      "active_revision": "top20-split-v4",
+      "active_production_revision": "jun-and-shorts-v1",
+      "updated_at": "2026-11-03T14:43:45.545361+00:00",
+      "sha256": "566537a6223c01d67ea04d3ac4199bda60e9de9b68f2173912bb67b668dd3e64"
+    },
+    "authority": "사용자의 task packet와 후속 범위 조정이 이전 brief/state보다 우선",
+    "policy": {
+      "path": "C:/projects/realestate_reco/config/video_call_policy.json",
+      "revision": "local-first-v1",
+      "note": "studio_root/config에는 없으므로 프로젝트 루트의 실제 설정을 읽음"
+    }
+  },
+  "finding": "최신 공식 제품 방향은 텍스트 훅·에피소드 연결·시청 제어다. 첫 1초 훅과 짧은 이야기 완결은 제작 조언이다. 이 조사는 한국 부동산 Shorts 전반에 널리 퍼진 편집 유행이나 성과 상승을 측정하지 않았다.",
+  "evidence_classes": {
+    "guidance": [
+      "S01",
+      "S05"
+    ],
+    "feature_or_metric_documentation": [
+      "S02",
+      "S04",
+      "S06",
+      "S07",
+      "S08"
+    ],
+    "genre_limited_platform_observation": [
+      "S03"
+    ],
+    "measured_widespread_realestate_ui_trend": [],
+    "our_design_inferences": "아래 practical_proposals의 문구·공개 순서·위계·전환 길이·CTA 수는 연구자의 적용 제안"
+  },
+  "sources": [
+    {
+      "source_id": "S01",
+      "title": "YouTube Shorts deep dive: A conversation with product lead Todd Sherman and creator Jenny Hoyos",
+      "url": "https://blog.youtube/creator-and-artist-stories/youtube-shorts-deep-dive/",
+      "publisher": "YouTube 공식 블로그",
+      "published_date": "2025-01-28",
+      "date_evidence": "본문 Jan 28, 2025",
+      "kind": "제작자 조언을 담은 공식 인터뷰 요약",
+      "evidence_location": "The Hook is Everything; Shorts vs. Long-Form: A Different Storytelling Approach (열람본 L63–86)",
+      "supported_principle": "Jenny Hoyos는 첫 1초의 훅과 짧은 이야기의 만족스러운 회수를 조언한다.",
+      "practical_change": "첫 프레임부터 주제·순위 범위와 현재 지역을 보여주고 해당 구간의 답을 영상 안에서 끝낸다.",
+      "limit": "플랫폼 공통 임계값·알고리즘 규칙·효과 실험이 아니다. 로고 도입 제거와 구체적 문구는 우리 추론.",
+      "checked_date": "2026-11-04",
+      "access_method": "공식 원문 웹 텍스트 열람; 임베디드 영상·음성 미재생",
+      "primary_source": true
+    },
+    {
+      "source_id": "S02",
+      "title": "Made On YouTube 2026",
+      "url": "https://blog.youtube/madeonyoutube/",
+      "publisher": "YouTube 공식 블로그",
+      "published_date": null,
+      "date_evidence": "제목의 행사 연도는 2026. 페이지에 게시일·수정일 미표시; 행사 연도를 게시일로 대체하지 않음.",
+      "kind": "공식 제품 발표/행사 FAQ",
+      "evidence_location": "What AI editing tools were announced for creators?; What are Shorts series? (열람본 L45,66–75)",
+      "supported_principle": "텍스트 훅·프레임 재배치 도구와 시즌·에피소드 형태의 Shorts series를 소개한다.",
+      "practical_change": "세 편의 화면 문법을 통일하고 20–16위/15–11위라는 독립 구간과 연결 순서를 명확히 한다.",
+      "limit": "도구 발표가 해당 채널의 기능 접근·한국 배포·사용자 채택률을 증명하지 않는다. API나 새 도구 사용 제안은 아님.",
+      "checked_date": "2026-11-04",
+      "access_method": "공식 원문 웹 텍스트 열람; 임베디드 영상·음성 미재생",
+      "primary_source": true
+    },
+    {
+      "source_id": "S03",
+      "title": "The evolution of web series on YouTube: Microdramas",
+      "url": "https://blog.youtube/culture-and-trends/the-evolution-of-web-series-on-youtube-microdramas/",
+      "publisher": "YouTube 공식 블로그 Culture and Trends",
+      "published_date": "2026-10-27",
+      "date_evidence": "본문 Oct 27, 2026",
+      "kind": "장르 한정 플랫폼 관찰 및 집계 보고",
+      "evidence_location": "도입의 APAC microdrama 설명·집계; GOKKO CLUB; Shorts Break; Supporting microdrama creators (열람본 L65–107)",
+      "supported_principle": "APAC 마이크로드라마의 연속 서사와 세로 화면 구도 사례를 플랫폼이 보고한다.",
+      "practical_change": "전편을 보지 않아도 이해되는 첫 문장과, 이번 구간을 마친 후 다음 범위를 알려주는 연결을 시험한다.",
+      "limit": "장르·지역 한정 보고이며 집계방법 상세가 없다. 주택 데이터 영상 전반의 유행·시청지속 증가 근거로 일반화 금지. 링크된 채널 영상은 재생하지 않음.",
+      "checked_date": "2026-11-04",
+      "access_method": "공식 원문 웹 텍스트 열람; 임베디드 영상·음성 미재생",
+      "primary_source": true
+    },
+    {
+      "source_id": "S04",
+      "title": "New creation tools coming to YouTube Shorts",
+      "url": "https://blog.youtube/news-and-events/new-creation-tools-youtube-shorts-2025/",
+      "publisher": "YouTube 공식 블로그 / Vadim Lavrusik",
+      "published_date": "2025-04-03",
+      "date_evidence": "본문 Apr 03, 2025",
+      "kind": "공식 편집 기능 발표",
+      "evidence_location": "도구 1: precise timing, timed text, preview; 도구 2: sync to beat (열람본 L64–70)",
+      "supported_principle": "클립 타이밍 조절·순서 편집·시간 지정 텍스트·미리보기 기능을 발표했다.",
+      "practical_change": "기존 Jun 발화에 지역명→핵심 수치→해석을 맞춰 공개하고 순위가 바뀌는 의미 경계에서 전환한다.",
+      "limit": "발표 시점의 기능 설명이며, 빠른 컷·비트 동기화가 모든 설명 영상에 우수하다는 증거는 아님.",
+      "checked_date": "2026-11-04",
+      "access_method": "공식 원문 웹 텍스트 열람; 임베디드 영상·음성 미재생",
+      "primary_source": true
+    },
+    {
+      "source_id": "S05",
+      "title": "Enhance your Shorts",
+      "url": "https://support.google.com/youtube/answer/16215842?hl=en",
+      "publisher": "YouTube 공식 도움말",
+      "published_date": null,
+      "date_evidence": "게시일·수정일 미표시; 확인일 기준 현행 도움말",
+      "kind": "공식 제작·가시성 안내",
+      "evidence_location": "Use visual guides; Add text (열람본 L102–119)",
+      "supported_principle": "버튼·댓글·설명 등 피드 UI와 화면 가장자리가 텍스트를 가릴 수 있어 visual guides로 배치를 안내한다.",
+      "practical_change": "순위·지역명·숫자·단위와 기준 표기를 안전영역에 두고 주정보 한 덩어리만 강조한다.",
+      "limit": "고정 픽셀 안전영역이나 글꼴 크기·3단 위계를 규정하지 않는다. 이 값들은 로컬 기준과 실제 화면 검수로 결정.",
+      "checked_date": "2026-11-04",
+      "access_method": "공식 원문 웹 텍스트 열람; 임베디드 영상·음성 미재생",
+      "primary_source": true
+    },
+    {
+      "source_id": "S06",
+      "title": "Add a related video to your YouTube Shorts",
+      "url": "https://support.google.com/youtube/answer/14075157?hl=en",
+      "publisher": "YouTube 공식 도움말",
+      "published_date": null,
+      "date_evidence": "게시일·수정일 미표시; 확인일 기준 현행 도움말",
+      "kind": "공식 기능·자격 조건",
+      "evidence_location": "Add a related video의 Note; How viewers can interact with your related video (열람본 L24–38)",
+      "supported_principle": "관련 영상은 채널 핸들 아래 클릭 링크로 제공된다. 고급 기능 접근이 필요하며 같은 채널의 공개·일부공개 영상을 선택한다.",
+      "practical_change": "마지막 답을 준 뒤 관련 영상 하나만 안내한다. 실제 연결을 확인한 경우에만 '관련 영상에서' 문구를 쓴다.",
+      "limit": "전환율 상승 보장 없음. 새 업로드·공개 전환·Studio 변경 권한은 이 조사에서 부여되지 않음.",
+      "checked_date": "2026-11-04",
+      "access_method": "공식 원문 웹 텍스트 열람; 임베디드 영상·음성 미재생",
+      "primary_source": true
+    },
+    {
+      "source_id": "S07",
+      "title": "Understand your YouTube content performance",
+      "url": "https://support.google.com/youtubecreatorstudio/answer/12220281?hl=en",
+      "publisher": "YouTube Studio 공식 도움말",
+      "published_date": null,
+      "date_evidence": "게시일·수정일 미표시; 확인일 기준 현행 지표 정의",
+      "kind": "공식 분석 지표 정의",
+      "evidence_location": "Shorts > How viewers engaged; Metrics to know (열람본 L118–129,214–223)",
+      "supported_principle": "Engaged views는 초반 이후 시청을 지속한 횟수이며 반복 루프를 제외한다. Stayed to watch는 초반 이후 시청 비율, 평균 시청시간·비율은 시청을 지속한 집단 기준이다.",
+      "practical_change": "같은 기간·길이·유입 조건의 Shorts끼리 초반 지속 비율과 이후 평균 시청시간/비율을 함께 비교한다.",
+      "limit": "실제 채널 분석값은 미열람. 두 순위 구간은 내용이 달라 단순 전후 비교로 UI의 인과 효과를 확정할 수 없음.",
+      "checked_date": "2026-11-04",
+      "access_method": "공식 원문 웹 텍스트 열람; 임베디드 영상·음성 미재생",
+      "primary_source": true
+    },
+    {
+      "source_id": "S08",
+      "title": "How we're updating the YouTube Shorts experience",
+      "url": "https://blog.youtube/news-and-events/youtube-shorts-experience-updates-features/",
+      "publisher": "YouTube 공식 블로그",
+      "published_date": "2026-06-25",
+      "date_evidence": "본문 Jun 25, 2026; 순차 도입 표현",
+      "kind": "공식 시청 UI 업데이트 발표",
+      "evidence_location": "Less distraction, more focus; Watch your way (열람본 L63–74)",
+      "supported_principle": "Clear Screen, 배속·음소거 등 시청 제어 업데이트를 순차 도입한다고 알렸다.",
+      "practical_change": "음소거 상태에도 순위·지역·숫자·단위가 이해되도록 영상 자체에 표기하고, 실제 관련 링크 위치를 확인해 CTA를 배치한다.",
+      "limit": "모든 계정·기기에 같은 UI가 배포됐다는 증거는 아님. 고정 좌표 화살표나 효과 예측의 근거로 사용하지 않음.",
+      "checked_date": "2026-11-04",
+      "access_method": "공식 원문 웹 텍스트 열람; 임베디드 영상·음성 미재생",
+      "primary_source": true
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "SHORTS-UI-01",
+      "sentence": "Jenny Hoyos는 첫 1초의 훅과 짧은 이야기의 만족스러운 회수를 조언한다.",
+      "source_id": "S01",
+      "original_source_url": "https://blog.youtube/creator-and-artist-stories/youtube-shorts-deep-dive/",
+      "evidence_location": "The Hook is Everything; Shorts vs. Long-Form: A Different Storytelling Approach (열람본 L63–86)",
+      "reference_date": "2025-01-28",
+      "reference_date_type": "발표/게시일",
+      "checked_date": "2026-11-04",
+      "status": "qualified",
+      "qualification": "플랫폼 공통 임계값·알고리즘 규칙·효과 실험이 아니다. 로고 도입 제거와 구체적 문구는 우리 추론."
+    },
+    {
+      "claim_id": "SHORTS-UI-02",
+      "sentence": "텍스트 훅·프레임 재배치 도구와 시즌·에피소드 형태의 Shorts series를 소개한다.",
+      "source_id": "S02",
+      "original_source_url": "https://blog.youtube/madeonyoutube/",
+      "evidence_location": "What AI editing tools were announced for creators?; What are Shorts series? (열람본 L45,66–75)",
+      "reference_date": "2026-11-04",
+      "reference_date_type": "열람 기준일; 게시일 아님",
+      "checked_date": "2026-11-04",
+      "status": "verified",
+      "qualification": "도구 발표가 해당 채널의 기능 접근·한국 배포·사용자 채택률을 증명하지 않는다. API나 새 도구 사용 제안은 아님."
+    },
+    {
+      "claim_id": "SHORTS-UI-03",
+      "sentence": "APAC 마이크로드라마의 연속 서사와 세로 화면 구도 사례를 플랫폼이 보고한다.",
+      "source_id": "S03",
+      "original_source_url": "https://blog.youtube/culture-and-trends/the-evolution-of-web-series-on-youtube-microdramas/",
+      "evidence_location": "도입의 APAC microdrama 설명·집계; GOKKO CLUB; Shorts Break; Supporting microdrama creators (열람본 L65–107)",
+      "reference_date": "2026-10-27",
+      "reference_date_type": "발표/게시일",
+      "checked_date": "2026-11-04",
+      "status": "qualified",
+      "qualification": "장르·지역 한정 보고이며 집계방법 상세가 없다. 주택 데이터 영상 전반의 유행·시청지속 증가 근거로 일반화 금지. 링크된 채널 영상은 재생하지 않음."
+    },
+    {
+      "claim_id": "SHORTS-UI-04",
+      "sentence": "클립 타이밍 조절·순서 편집·시간 지정 텍스트·미리보기 기능을 발표했다.",
+      "source_id": "S04",
+      "original_source_url": "https://blog.youtube/news-and-events/new-creation-tools-youtube-shorts-2025/",
+      "evidence_location": "도구 1: precise timing, timed text, preview; 도구 2: sync to beat (열람본 L64–70)",
+      "reference_date": "2025-04-03",
+      "reference_date_type": "발표/게시일",
+      "checked_date": "2026-11-04",
+      "status": "verified",
+      "qualification": "발표 시점의 기능 설명이며, 빠른 컷·비트 동기화가 모든 설명 영상에 우수하다는 증거는 아님."
+    },
+    {
+      "claim_id": "SHORTS-UI-05",
+      "sentence": "버튼·댓글·설명 등 피드 UI와 화면 가장자리가 텍스트를 가릴 수 있어 visual guides로 배치를 안내한다.",
+      "source_id": "S05",
+      "original_source_url": "https://support.google.com/youtube/answer/16215842?hl=en",
+      "evidence_location": "Use visual guides; Add text (열람본 L102–119)",
+      "reference_date": "2026-11-04",
+      "reference_date_type": "열람 기준일; 게시일 아님",
+      "checked_date": "2026-11-04",
+      "status": "verified",
+      "qualification": "고정 픽셀 안전영역이나 글꼴 크기·3단 위계를 규정하지 않는다. 이 값들은 로컬 기준과 실제 화면 검수로 결정."
+    },
+    {
+      "claim_id": "SHORTS-UI-06",
+      "sentence": "관련 영상은 채널 핸들 아래 클릭 링크로 제공된다. 고급 기능 접근이 필요하며 같은 채널의 공개·일부공개 영상을 선택한다.",
+      "source_id": "S06",
+      "original_source_url": "https://support.google.com/youtube/answer/14075157?hl=en",
+      "evidence_location": "Add a related video의 Note; How viewers can interact with your related video (열람본 L24–38)",
+      "reference_date": "2026-11-04",
+      "reference_date_type": "열람 기준일; 게시일 아님",
+      "checked_date": "2026-11-04",
+      "status": "verified",
+      "qualification": "전환율 상승 보장 없음. 새 업로드·공개 전환·Studio 변경 권한은 이 조사에서 부여되지 않음."
+    },
+    {
+      "claim_id": "SHORTS-UI-07",
+      "sentence": "Engaged views는 초반 이후 시청을 지속한 횟수이며 반복 루프를 제외한다. Stayed to watch는 초반 이후 시청 비율, 평균 시청시간·비율은 시청을 지속한 집단 기준이다.",
+      "source_id": "S07",
+      "original_source_url": "https://support.google.com/youtubecreatorstudio/answer/12220281?hl=en",
+      "evidence_location": "Shorts > How viewers engaged; Metrics to know (열람본 L118–129,214–223)",
+      "reference_date": "2026-11-04",
+      "reference_date_type": "열람 기준일; 게시일 아님",
+      "checked_date": "2026-11-04",
+      "status": "verified",
+      "qualification": "실제 채널 분석값은 미열람. 두 순위 구간은 내용이 달라 단순 전후 비교로 UI의 인과 효과를 확정할 수 없음."
+    },
+    {
+      "claim_id": "SHORTS-UI-08",
+      "sentence": "Clear Screen, 배속·음소거 등 시청 제어 업데이트를 순차 도입한다고 알렸다.",
+      "source_id": "S08",
+      "original_source_url": "https://blog.youtube/news-and-events/youtube-shorts-experience-updates-features/",
+      "evidence_location": "Less distraction, more focus; Watch your way (열람본 L63–74)",
+      "reference_date": "2026-06-25",
+      "reference_date_type": "발표/게시일",
+      "checked_date": "2026-11-04",
+      "status": "verified",
+      "qualification": "모든 계정·기기에 같은 UI가 배포됐다는 증거는 아님. 고정 좌표 화살표나 효과 예측의 근거로 사용하지 않음."
+    }
+  ],
+  "practical_proposals": [
+    {
+      "proposal_id": "P01",
+      "affected_short_ids": [
+        "SHORT01-PROMO"
+      ],
+      "scene_scope": "opening / payoff / outro",
+      "source_ids": [
+        "S01",
+        "S05",
+        "S06"
+      ],
+      "evidence_type": "our_inference",
+      "opening_copy": "신혼부부가 많이 사는 동네, 어디일까요?",
+      "first_frame": "신혼부부 거주 수 TOP20 + 2024 기준 + 기존 검증된 대표 데이터",
+      "body_payoff": "검증된 순위 한 가지와 '거주 수 순위'라는 의미를 영상 안에서 제공",
+      "outro_copy_if_linked": "전체 순위는 관련 영상에서 확인해 보세요.",
+      "note": "추천·인기·집값 순위로 오해시키지 않도록 지표를 표시. 새로운 숫자를 만들지 않음."
+    },
+    {
+      "proposal_id": "P02",
+      "affected_short_ids": [
+        "SHORT02-R20-R16"
+      ],
+      "scene_scope": "opening / rank20…16 / outro",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06"
+      ],
+      "evidence_type": "our_inference",
+      "opening_copy": "신혼부부가 많이 사는 동네, 20위부터 16위입니다.",
+      "first_frame": "신혼부부 거주 수｜20→16위 + 2024 기준 + 20위의 검증된 지역",
+      "body_payoff": "20→19→18→17→16위 모두 이 영상에서 공개; 마지막 16위 정보를 마친 뒤 CTA",
+      "outro_copy_if_linked": "여기까지 16위였습니다. 15위부터는 관련 영상에서 이어집니다.",
+      "outro_copy_without_link": "여기까지 16위였습니다. 다음 편은 15위부터 11위입니다.",
+      "note": "다음 구간이 실제 준비·승인돼 있을 때 연결 문구 적용; 모호한 '앞에서 봤죠' 등 전편 의존 도입 피하기."
+    },
+    {
+      "proposal_id": "P03",
+      "affected_short_ids": [
+        "SHORT03-R15-R11"
+      ],
+      "scene_scope": "opening / rank15…11 / outro",
+      "source_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06"
+      ],
+      "evidence_type": "our_inference",
+      "opening_copy": "신혼부부가 많이 사는 동네, 이번엔 15위부터 11위입니다.",
+      "first_frame": "신혼부부 거주 수｜15→11위 + 2024 기준 + 15위의 검증된 지역",
+      "body_payoff": "15→14→13→12→11위 모두 공개; 11위 정보를 마쳐 이번 편 질문을 회수",
+      "outro_copy_if_linked": "11위까지 살펴봤습니다. 전체 순위는 관련 영상에서 확인해 보세요.",
+      "outro_copy_without_link": "여기까지 신혼부부가 많이 사는 동네, 15위부터 11위였습니다.",
+      "note": "10위→1위 후속편은 실제 준비가 확인되지 않아 예고하지 않음."
+    },
+    {
+      "proposal_id": "P04",
+      "affected_short_ids": [
+        "SHORT01-PROMO",
+        "SHORT02-R20-R16",
+        "SHORT03-R15-R11"
+      ],
+      "scene_scope": "all data cards / transitions",
+      "source_ids": [
+        "S04",
+        "S05",
+        "S08"
+      ],
+      "evidence_type": "our_inference",
+      "change": "공통 화면 위계: 주정보=순위·지역명 / 핵심수치=검증된 수·단위 / 보조정보=해석 한 줄·기준·출처. 작은 기초정보도 실제 모바일에서 읽히게 유지. 기존 Jun 발화의 의미 경계에 맞춰 순차 공개.",
+      "transition": "지역 교체에는 동일 앵커의 컷 또는 약 0.15–0.25초 짧은 이동을 초기 후보로 삼고 가독성에 따라 조정. 숫자를 읽는 동안 안정 프레임 유지.",
+      "note": "시간·위계는 공식 권장 수치가 아니다. 카운트업을 쓰더라도 최종값·단위를 읽을 시간을 확보. 가격·순위 값의 원자료 재검증은 총괄 범위."
+    },
+    {
+      "proposal_id": "P05",
+      "affected_short_ids": [
+        "SHORT01-PROMO",
+        "SHORT02-R20-R16",
+        "SHORT03-R15-R11"
+      ],
+      "scene_scope": "opening / outro",
+      "source_ids": [
+        "S01",
+        "S05",
+        "S06",
+        "S08"
+      ],
+      "evidence_type": "our_inference",
+      "change": "로고 전용 시작/끝 화면을 별도로 늘리지 않고, 첫 데이터 화면과 마지막 답 위에 문구를 통합. 행동 요청은 관련 영상 안내 하나를 우선 후보로 사용.",
+      "note": "별도 로고 제거·CTA 하나는 편집 판단이며 알고리즘 규칙이 아니다. 원문 문구는 음성 재사용 가능성을 확인하기 위한 제안일 뿐 새 TTS 요청 아님."
+    }
+  ],
+  "measurement_proposal": {
+    "performed": false,
+    "source_ids": [
+      "S07"
+    ],
+    "metrics": [
+      "Stayed to watch",
+      "Engaged views",
+      "Average view duration",
+      "Average percentage viewed"
+    ],
+    "comparison_conditions": [
+      "동일 업로드 후 관찰 기간",
+      "유사한 영상 길이와 Shorts feed 등 유입 구성",
+      "조회/engaged views의 표본 규모",
+      "주제·순위 구간·공개 시각 차이 명시"
+    ],
+    "interpretation": "초반 지속과 이후 시청의 지표를 나눠 본다. 고정 목표치·알고리즘 보상·향상률은 제시하지 않는다. 콘텐츠가 다른 두 순위 편의 차이를 UI의 인과 효과로 해석하지 않는다."
+  },
+  "limitations": [
+    "기존 3편 MP4·원본 프레임·Jun 음성·원자료는 열람/재생/청취하지 않았으며 로컬 UI·소스 검수는 총괄 담당.",
+    "이전 대화의 Shorts 레퍼런스 4개 URL은 이번 packet에 포함되지 않아 열람하지 않음.",
+    "공식 글에 링크된 Creator Insider·GOKKO CLUB·Shorts Break 영상도 시청하지 않음.",
+    "실제 채널 분석, Shorts series/고급 기능 접근, 한국 계정 UI 배포, 관련 영상 연결 여부는 미확인.",
+    "공식 원문 요약이며 임베디드 미디어의 사용 허가·다운로드·재사용 자산 제공이 아님.",
+    "정확한 장면ID를 읽지 않았으므로 아래 short 단위 범위를 총괄이 공통 장면표에 매핑해야 함."
+  ],
+  "affected_scene_ids": [],
+  "affected_short_ids": [
+    "SHORT01-PROMO",
+    "SHORT02-R20-R16",
+    "SHORT03-R15-R11"
+  ],
+  "open_issue_ids": [
+    "SHORTS-CTA-01"
+  ],
+  "next_role": "director → writer/visual/editor → independent qa"
+}

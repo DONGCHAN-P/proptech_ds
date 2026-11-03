@@ -1,0 +1,84 @@
+{
+  "task_id": "RPR-LIT-20261023",
+  "owner": "supply literature researcher",
+  "as_of": "2026-10-23",
+  "status": "literature_notes_complete_with_documented_evidence_gaps",
+  "outputs": [
+    "C:\\projects\\realestate_reco\\research_notes\\서울 경기 집값 격차의 복합 원인\\supply_redevelopment_rental.md",
+    "C:\\projects\\realestate_reco\\research_notes\\서울 경기 집값 격차의 복합 원인\\supply_redevelopment_rental\\sources.json",
+    "C:\\projects\\realestate_reco\\research_notes\\서울 경기 집값 격차의 복합 원인\\supply_redevelopment_rental\\facts.json",
+    "C:\\projects\\realestate_reco\\research_notes\\서울 경기 집값 격차의 복합 원인\\supply_redevelopment_rental\\issue_RPR-LIT-SUPPLY-01.json",
+    "C:\\projects\\realestate_reco\\research_notes\\서울 경기 집값 격차의 복합 원인\\supply_redevelopment_rental\\validation.json"
+  ],
+  "input_versions": {
+    "video-agent-studio/WORKFLOW.md": {
+      "sha256_at_handoff": "066180aef28e6bf5b75928cf3de6d555d1fb478946b1d6515e23fee26e182060"
+    },
+    "video-agent-studio/agents/video_research.toml": {
+      "sha256_at_handoff": "6e8d5a5fca27220475a4566acef3e9cff7ef0559f7c4cf99f9f285669c0f3a04"
+    },
+    "video-agent-studio/episodes/regional-price-recovery-20261022/brief.json": {
+      "sha256_at_handoff": "03a343f203f6aa324ea95dffa2bc48e042a6b10b80a120c5c86a5fc72caae03a"
+    },
+    "video-agent-studio/episodes/regional-price-recovery-20261022/state.json": {
+      "sha256_at_handoff": "b4ab65a31adbe00d670e75e6bc822e6355f9ded7b3d4ded211310a9b9e69c8df"
+    }
+  },
+  "input_scope": "Task packet latest literature-only scope supersedes episode production stage; no script or media work",
+  "read_episode_stage": "full_visual_review_ready_voice_deferred",
+  "read_episode_state_updated_at": "2026-10-23T07:06:57.501195+00:00",
+  "validation": {
+    "note_exists": true,
+    "note_nonempty": true,
+    "korean_whitespace_word_count": 1993,
+    "top_level_question_sections": 3,
+    "paper_count": 6,
+    "deep_main_text_read_ids": [
+      "P1",
+      "P2",
+      "P5"
+    ],
+    "partial_pdf_read_ids": [
+      "P3"
+    ],
+    "abstract_or_official_summary_only_ids": [
+      "P4",
+      "P6"
+    ],
+    "candidate_claim_count": 3,
+    "long_article_text_in_deliverable": false,
+    "scientific_conclusions_independently_replicated": false,
+    "full_pdf_visual_table_qa": false,
+    "shared_files_modified": false,
+    "transactions_or_collectors_read_or_run": false
+  },
+  "affected_claim_ids": [
+    "SUP-F01",
+    "SUP-F02",
+    "SUP-F03",
+    "SUP-F04",
+    "SUP-F05",
+    "SUP-F06",
+    "SUP-C01",
+    "SUP-C02",
+    "SUP-C03"
+  ],
+  "affected_scene_ids": [],
+  "scene_ids_not_assigned": true,
+  "unresolved": [
+    "P4/P6 full texts and P2/P5 image-table cell verification",
+    "Actual relocation/occupancy dates, destinations and project boundaries",
+    "Historical zoning/FAR/developable-land series and credible exogeneity",
+    "Unsold cohort contracts, cancellation/reclassification and absorption speed",
+    "No causal decomposition of Seoul/Gyeonggi prices"
+  ],
+  "next_owner": "parent director/research integrator, then writer and visual after empirical checks",
+  "authorizations_respected": [
+    "literature research only",
+    "no paid generation",
+    "no script/render/TTS",
+    "no external messages",
+    "no collection restart",
+    "no shared-state edits"
+  ]
+}

@@ -1,0 +1,467 @@
+{
+  "revision": "scene-proposals-v1",
+  "common_scenes_modified": false,
+  "scenes": [
+    {
+      "scene_id": "S001",
+      "narration_anchor": "1장 1~2문단 ‘같은 아파트’",
+      "purpose": "비교 전제 / data_chart",
+      "visual_direction": "한 건물의 같은 창 세 개에 매매·전세·월세 가구 표시. 각 아래 2.5억 자금과 월300만 예산이 동일 길이로 정렬. 현금이 없는 집 모형과 투자계좌 분할을 먼저 보여줌",
+      "evidence": "brief·모형 입력. 특정 아파트 외관을 복제하지 않는 편집 벡터",
+      "asset_status_and_fallback": "제작 예정. 대안은 동일 집 단면 도식. 사진 없음으로도 의미 유지",
+      "claim_ids": [
+        "SIM01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S002",
+      "narration_anchor": "1장 3문단 ‘그 결과’",
+      "purpose": "결과 예고 / data_chart",
+      "visual_direction": "10년 축 끝에서 세 막대 6.14/6.59/6.89억 등장. 가정 라벨 고정. 뒤의 다른 조건 칸이 교체되며 색 순서가 바뀜. 승자 메달 없음",
+      "evidence": "illustrative_results cases 기본·집4%주식2%",
+      "asset_status_and_fallback": "계산값 확보·차트 제작 예정. 대안은 자산분해 막대의 최종 프레임",
+      "claim_ids": [
+        "SIM01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S003",
+      "narration_anchor": "1장 4문단 ‘지난 교산편’",
+      "purpose": "시리즈 연결 / map",
+      "visual_direction": "승인된 교산 지도 프레임의 실제 지구 경계 위 설명 포인터를 유지한 채 화면 우측에 주거방식→예산→단지 선택 3단계 경로가 연결. 교산 집값으로 가상6억을 오해하지 않게 장면 분리",
+      "evidence": "전편 승인 지도·기존 브랜드 manifest. 원본 프레임 경로와 해시 확인 필요",
+      "asset_status_and_fallback": "기존 자산 확인 필요. 미확보 시 실제 LH 교산 경계 출처를 확인해 지도 재구성, 임의 좌표 금지",
+      "claim_ids": [],
+      "asset_types": [
+        "map"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S004",
+      "narration_anchor": "2장 1~2문단 ‘먼저 비교’",
+      "purpose": "조건 / data_chart",
+      "visual_direction": "3가구 장부의 집·기간·월예산 열이 같은 높이로 잠김. 공통 생활비는 세 장부 모두 동일한 바깥 영역으로 빠짐. 하단 짧은 조건띠 집2%·투자6%·금리4%·세금미계산",
+      "evidence": "모형 note·입력. 제목 ‘2. 기준’은 기존 AI 공통 배경 위 별도 레이어",
+      "asset_status_and_fallback": "제작 예정. 대안은 현금흐름 도식에 조건띠 통합, 문장 카드 금지",
+      "claim_ids": [
+        "SIM01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S005",
+      "narration_anchor": "2장 3~4문단 ‘이렇게 조건’",
+      "purpose": "비교 시점 / data_chart",
+      "visual_direction": "동일 집 윤곽과 동일 t=0→120개월 자가 고정. 다른 기간 비교는 도식을 늘리는 대신 동일 끝점 정렬로 설명",
+      "evidence": "연구 회계 제안",
+      "asset_status_and_fallback": "제작 예정. 대안은 세 월장부 타임라인",
+      "claim_ids": [
+        "SIM01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S006",
+      "narration_anchor": "3장 1~2문단 ‘집을 사는’",
+      "purpose": "초기 배분 / data_chart",
+      "visual_direction": "2.5억 자기자금 막대에서 2.4억 집지분·600만 비용·400만 금융자산으로 이동. 외부 대출3.6억이 집으로 유입. 집6억에서 빚3.6억을 분리해 순자산2.44억 표시",
+      "evidence": "기본 초기잔액·수식",
+      "asset_status_and_fallback": "수치 확보. 제작 예정. 도식 각 화살표 실제 합계 검사",
+      "claim_ids": [
+        "SIM01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S007",
+      "narration_anchor": "3장 3문단 ‘전세 가구’",
+      "purpose": "보증금과 부채 / data_chart",
+      "visual_direction": "자기자금2억+대출2억이 보증금4억 채권으로 합쳐짐. 비용100만, ETF4900만은 별도. 보증금 아래 부채2억을 음수 줄로 유지",
+      "evidence": "기본 전세 초기장부",
+      "asset_status_and_fallback": "제작 예정. 대안은 채권·부채 짝 막대",
+      "claim_ids": [
+        "SIM01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S008",
+      "narration_anchor": "3장 4~5문단 ‘월세 가구’",
+      "purpose": "초기 투자 차이 / data_chart",
+      "visual_direction": "보증금1억을 자기자금8000만·대출2000만으로 분해. 투자1.69억이 전세4900만·매매400만과 같은 축에 놓임. 집 아이콘 크기는 모두 동일",
+      "evidence": "기본 초기장부",
+      "asset_status_and_fallback": "제작 예정. 대안은 3가구 자금배분 세로 누적도",
+      "claim_ids": [
+        "SIM01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S009",
+      "narration_anchor": "4장 1~2문단 ‘이제 같은’",
+      "purpose": "월예산 / data_chart",
+      "visual_direction": "월300만원 한 줄이 매매 원리금171.87만·추가비30만·투자98.13만으로 갈라짐. 투자 화살표도 매매 가구에 표시",
+      "evidence": "기본 매매 첫 달·원리금",
+      "asset_status_and_fallback": "제작 예정. 월합300만 검산. 대안은 고정 축 누적막대",
+      "claim_ids": [
+        "SIM01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S010",
+      "narration_anchor": "4장 3~5문단 ‘전세 가구는’",
+      "purpose": "월 흐름 비교 / data_chart",
+      "visual_direction": "전세 이자66.67만+비용5만→투자228.33만, 월세100만+이자6.67만+비용5만→투자188.33만. 초기금액 차트 위에 월 납입 화살표를 함께 표시",
+      "evidence": "기본 세 장부. 매매비30/임차5 차25만",
+      "asset_status_and_fallback": "제작 예정. 대안은 3열 Sankey 편집 모션. 공통비 중복 없음",
+      "claim_ids": [
+        "SIM01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S011",
+      "narration_anchor": "5장 1~2문단 ‘매매 가구가’",
+      "purpose": "원금/이자 / data_chart",
+      "visual_direction": "첫 달171.87만이 이자120만 소멸·원금51.87만 부채 감소로 갈라짐. 대출잔액3.6억→3.5948억→10년2.8362억 선그래프. 원리금 막대 안 이자색 감소·원금색 증가",
+      "evidence": "monthly_ledger 전120개월·대출 닫힌식 QA",
+      "asset_status_and_fallback": "수치 확보·제작 예정. 축0부터 시작. 대안은 1·12·120월 잔액 도식",
+      "claim_ids": [
+        "SIM01",
+        "QA01",
+        "M01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S012",
+      "narration_anchor": "5장 3문단 ‘월 지출에서’",
+      "purpose": "중복 방지 / data_chart",
+      "visual_direction": "현금−원금과 부채−원금 양쪽 화살표가 순자산식에서 상쇄. 마지막에 잔존부채만 한 번 빠짐. 원금 별도 수익 표시 없음",
+      "evidence": "회계식·월별 검산",
+      "asset_status_and_fallback": "제작 예정. 대안은 장부 두 열 변동 연결",
+      "claim_ids": [
+        "SIM01",
+        "M01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S013",
+      "narration_anchor": "5장 4~5문단 ‘보증금도’",
+      "purpose": "반환·기회비용 / data_chart",
+      "visual_direction": "현금→보증금 채권→반환현금 흐름. 전세대출 상환2억이 끝에서 연결. 다른 경로 투자계좌4900만/1.69억의 차이가 복리곡선 출발 차이로 이어짐",
+      "evidence": "기본 초기/종료 장부",
+      "asset_status_and_fallback": "제작 예정. 반환정상가정 짧은 주석. 대안은 채권·대출 상계도",
+      "claim_ids": [
+        "SIM01",
+        "SHEET01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S014",
+      "narration_anchor": "6장 1~2문단 ‘투자 대안’",
+      "purpose": "총수익·환율 / editorial_card+data_chart",
+      "visual_direction": "S&P 방법론 원문 Derived Indices의 해당 부분을 화면 한쪽에 짧게 발췌·출처. 가격과 배당 유입이 총수익 곡선으로 합쳐짐. (1+달러총수익률)×(기말원/달러÷기초원/달러)−1=원화수익률; +10%/+10%→+21%, 이미원화계열은 추가환율 없음",
+      "evidence": "M08~M11·원문 URL·공식 자료 2026-10-20 확인. 원문 캡처 권리/가독성 확인",
+      "asset_status_and_fallback": "원문 링크 확보·발췌 제작 예정. 대안은 출처 표시한 직접 그린 공식 도식. 긴 원문·로고 장식 금지",
+      "claim_ids": [
+        "M08",
+        "M09",
+        "M10",
+        "M11"
+      ],
+      "asset_types": [
+        "data_chart",
+        "editorial_card"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S015",
+      "narration_anchor": "6장 3~4문단 ‘이번 계산’",
+      "purpose": "가정·납입시점 / data_chart",
+      "visual_direction": "원화6% 하나의 입력 노브. 월초 잔액→수익→월말 적립 순서가 한 달 달력에 진행. 연율의12개월 복리 연결을 숫자보다 순서 중심으로 표시",
+      "evidence": "모형 note·월간수익 환산식",
+      "asset_status_and_fallback": "제작 예정. 대안은 월별 계좌 타임라인",
+      "claim_ids": [
+        "SIM01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S016",
+      "narration_anchor": "6장 5문단 ‘집값에는’",
+      "purpose": "주거서비스 / data_chart",
+      "visual_direction": "매매 월세0이 이미 월예산표에 반영된 것을 연결선으로 보여줌. 집 가격곡선에는 가격상승만 표시. FRBSF 원문은 화면 하단 출처로",
+      "evidence": "M06·회계 제안",
+      "asset_status_and_fallback": "제작 예정. 대안은 월세 지출 열과 집 가격 열 나란히",
+      "claim_ids": [
+        "M06"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S017",
+      "narration_anchor": "7장 1~2문단 ‘이 조건으로’",
+      "purpose": "순자산 분해 / data_chart",
+      "visual_direction": "매매 집7.314억+금융1.666억−빚2.836억→6.144억. 전세 보증금4억+금융4.587억−빚2억→6.587억. 항목별 발화 순서대로 물량이 합쳐짐",
+      "evidence": "기본120월 잔액",
+      "asset_status_and_fallback": "수치 확보·제작 예정. 대안은 동일축 waterfall. 매매총집값을 순자산막대로 쓰지 않음",
+      "claim_ids": [
+        "SIM01",
+        "QA01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S018",
+      "narration_anchor": "7장 2~3문단 ‘월세 가구는’",
+      "purpose": "차이의 원인 / data_chart",
+      "visual_direction": "월세 보증금1억+금융6.086억−빚0.2억. 최종 세 막대 위 초기/월적립 화살표 연결. 차이7427만·2991만은 작은 비교선",
+      "evidence": "기본120월",
+      "asset_status_and_fallback": "제작 예정. 수치는 음성반올림과 일관되게 표현. 대안은 세 방식 통합분해도",
+      "claim_ids": [
+        "SIM01",
+        "QA01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S019",
+      "narration_anchor": "7장 4~5문단 ‘이 숫자는’",
+      "purpose": "평가·현금화 / data_chart",
+      "visual_direction": "자산을 집지분/보증금/투자계좌3종으로 분리. 평가모드에서 매각모드로 전환하면 비용·세금 입력칸과 다음집 비용이 나타남. 실제 세후 수치 생성 없음",
+      "evidence": "종료조건 제안. illustrative 청산값은 실제세금이 아니므로 보조자료만",
+      "asset_status_and_fallback": "제작 예정. 대안은 자산의 현금화 순서·절차 흐름",
+      "claim_ids": [
+        "SIM01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S020",
+      "narration_anchor": "8장 1~2문단 ‘이제 집값’",
+      "purpose": "조건 반전 / data_chart",
+      "visual_direction": "가로 투자2/6/8%, 세로 집0/2/4%의 격자. 실제 계산한 칸만 색칠하고 미계산칸은 빈 해칭. 각 칸 클릭형 모션에서 3막대 결과 표시. 정확손익분기선은 계산 전 그리지 않음",
+      "evidence": "실제 계산된5개조합. 중앙기본 포함",
+      "asset_status_and_fallback": "수치 확보·조건부 히트맵 제작 예정. 대안은 5개 소형다중차트. 전 영역 보간 금지",
+      "claim_ids": [
+        "SIM01",
+        "QA01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S021",
+      "narration_anchor": "8장 3~6문단 ‘금리도’",
+      "purpose": "금리 차이 / data_chart",
+      "visual_direction": "집·전세 금리 두 노브가2/6 및6/2로 교체. 월세100→120만원만 바꾼 별도 보조차트에 6.5615억/전세6.5873억을 표시. 월세대출4%는 고정 회색. 시간축 금리변동 선 대신 서로 다른 조건의 월장부를 교체",
+      "evidence": "기본/금리반전2case",
+      "asset_status_and_fallback": "제작 예정. 대안은 두 조건의 초기·월납입·최종순자산 연결",
+      "claim_ids": [
+        "SIM01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S022",
+      "narration_anchor": "9장 1~2문단 ‘차액을 투자’",
+      "purpose": "실행률 / data_chart",
+      "visual_direction": "월 잉여액이 ETF와현금으로 갈라지고 합계는 유지. 100%→50%에서 현금통 증가. ‘미투자=소비’ 표현 없음",
+      "evidence": "실행률0/50% case·현금 ledger",
+      "asset_status_and_fallback": "수치 확보·제작 예정. 대안은 ETF+현금 누적 막대",
+      "claim_ids": [
+        "SIM01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S023",
+      "narration_anchor": "9장 3~4문단 ‘기본 모형은’",
+      "purpose": "유동성 / data_chart",
+      "visual_direction": "월300만 예산선과 지출선을 겹쳐 초과 시 경로중단. 갱신 보증금 추가납입/주식하락/수선비는 수치없는 사건 기호를 별도 주석으로 표시, 계산한민감도와 구분",
+      "evidence": "예산불가능 fixture·범위 밖 사건",
+      "asset_status_and_fallback": "제작 예정. 대안은 가계 달력에 지출시점 연결. 검증되지않은 위험확률 없음",
+      "claim_ids": [
+        "SIM01",
+        "QA01"
+      ],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S024",
+      "narration_anchor": "10장 1문단 ‘한국의 실제’",
+      "purpose": "실제원자료 연결 / map+editorial_card",
+      "visual_direction": "한국 지도에 검증된 잠실·광교 위치2개만 표시 후 국토부 계약행의 단지·정확면적·보증금/월세쌍을 연결. 개인 주소·Google시트 없음. 2016임차료 확보필요는 작은 자료상태띠",
+      "evidence": "KR001~004·data_pilot_local_results. 좌표는 실제주소 지오코딩 후 확인 필요",
+      "asset_status_and_fallback": "데이터 존재확인·지도위치 확인/발췌 제작 예정. 미확보 시 단지명 없는 계약구조 원자료 도식으로 대체",
+      "claim_ids": [
+        "KR001",
+        "KR003",
+        "KR004"
+      ],
+      "asset_types": [
+        "map",
+        "editorial_card"
+      ],
+      "estimate_duration_seconds": 34,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    },
+    {
+      "scene_id": "S025",
+      "narration_anchor": "10장 2~3문단 ‘이번에 확인한’",
+      "purpose": "후속편 / data_chart",
+      "visual_direction": "현재 현금흐름장부가 다음편 예산입력 화면(초기자금/월상환/부대비용)으로 이어짐. 대출승인금액은 미계산으로 표시. 기존아웃트로 연계",
+      "evidence": "시리즈방향·기존브랜드. 다음편규제 별도확인",
+      "asset_status_and_fallback": "제작 예정. 대안은 월예산300만원의 세 항목이 예산계산기 입력으로 이동",
+      "claim_ids": [],
+      "asset_types": [
+        "data_chart"
+      ],
+      "estimate_duration_seconds": 40,
+      "timing_basis": "estimate; no audio generated",
+      "script_revision": "script-v1",
+      "status": "proposal_not_approved"
+    }
+  ]
+}

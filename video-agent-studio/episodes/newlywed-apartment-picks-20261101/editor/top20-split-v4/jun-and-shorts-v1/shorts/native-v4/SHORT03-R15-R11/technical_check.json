@@ -1,0 +1,50 @@
+{
+  "status": "technical_checks_passed",
+  "short_id": "SHORT03-R15-R11",
+  "checks": {
+    "width": true,
+    "height": true,
+    "fps": true,
+    "sar": true,
+    "rotation": true,
+    "duration": true,
+    "frames": true,
+    "audio": true,
+    "native_duration_under_180s": true,
+    "full_av_decode": true,
+    "audio_matches_locked_master": true
+  },
+  "duration_s": 73.133333,
+  "frames": "2194",
+  "video_sha256": "6a10c64902594cf510b4bbb3c11b9576a75f08c219596b58d965bea7a33ea0a6",
+  "master_audio_sha256": "338673c5c3b4d8d8fadb7be6ea1a8805f20157f624b0945ca95b9819ebffe04a",
+  "audio_integrity": {
+    "master_audio_sha256": "338673c5c3b4d8d8fadb7be6ea1a8805f20157f624b0945ca95b9819ebffe04a",
+    "decoded_pcm_correlation": 0.9998734413694527,
+    "sample_rate_for_comparison": 12000,
+    "comparison": "mono downmix of delivered AAC and frozen 48k stereo master; exact duration/alignment; no audible/naturalness judgment",
+    "source_peak": 0.5398608446121216,
+    "encoded_peak": 0.5445483922958374,
+    "encoded_rms": 0.09745475649833679
+  },
+  "ffprobe": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v4\\SHORT03-R15-R11\\ffprobe.json",
+  "decode_argv": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\media-bin\\ffmpeg.exe",
+    "-v",
+    "error",
+    "-i",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-split-v4\\jun-and-shorts-v1\\shorts\\short03_ranks15_11_Jun_native_v4.mp4",
+    "-map",
+    "0:v:0",
+    "-map",
+    "0:a:0",
+    "-f",
+    "null",
+    "-"
+  ],
+  "decode_exit_code": 0,
+  "proof_frames": 41,
+  "actual_listening": false,
+  "continuous_playback": false,
+  "independent_QA": "parent to assign; technical pass is not audiovisual QA approval"
+}

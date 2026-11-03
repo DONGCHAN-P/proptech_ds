@@ -1,0 +1,86 @@
+{
+  "task_id": "changneung_editor_prep_v1",
+  "role": "editor",
+  "status": "brand_produced_preflight_ready_full_edit_blocked_by_inputs",
+  "input_revisions": {
+    "script": "script-v2 draft unapproved",
+    "visual": "production-v2 representative previews",
+    "reference": "reference-direction-v1",
+    "baseline": "readability-cta-v15"
+  },
+  "outputs": [
+    "editor/production-v1/placement_guide.md",
+    "editor/production-v1/render_contract.template.json",
+    "editor/production-v1/validate_render_contract.cjs",
+    "editor/production-v1/episode_preflight.editor.json",
+    "outputs/editor-preflight-v1/input_manifest.json",
+    "outputs/editor-preflight-v1/source_rights_manifest.json",
+    "outputs/editor-preflight-v1/asset_technical.json",
+    "outputs/editor-preflight-v1/brand_audio_identity.json",
+    "outputs/editor-preflight-v1/brand_intro_generic_v1.mp4",
+    "outputs/editor-preflight-v1/brand_outro_generic_v1.mp4",
+    "outputs/editor-preflight-v1/delivery_manifest.json"
+  ],
+  "affected_scene_ids": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M005",
+    "M006",
+    "M007",
+    "M008",
+    "M009"
+  ],
+  "checks": [
+    {
+      "check": "5 original/new media probes + full decode",
+      "result": "passed",
+      "evidence": "outputs/editor-preflight-v1/asset_technical.json"
+    },
+    {
+      "check": "generic brand source music decoded PCM identity",
+      "result": "passed",
+      "evidence": "outputs/editor-preflight-v1/brand_audio_identity.json"
+    },
+    {
+      "check": "7 extracted brand frames directly viewed",
+      "result": "passed_sampled_only",
+      "evidence": "outputs/editor-preflight-v1/brand_*_*.png"
+    },
+    {
+      "check": "M003/M004/M005 preview PNGs directly viewed",
+      "result": "reviewed_not_final_video",
+      "evidence": "outputs/visual-review-v2/"
+    },
+    {
+      "check": "contract blocks absent real inputs",
+      "result": "passed_expected_failure",
+      "evidence": "validate_render_contract.cjs default template exits 1"
+    },
+    {
+      "check": "source JS syntax",
+      "result": "passed_node_check",
+      "evidence": "render_brand.cjs, prepare_inputs.cjs, validate_render_contract.cjs"
+    },
+    {
+      "check": "audio listening, continuous playback, Studio browser verification",
+      "result": "not_performed",
+      "evidence": null
+    }
+  ],
+  "open_issue_ids": [
+    "ED-CN-GEO-001",
+    "ED-CN-TIMING-002"
+  ],
+  "next_role": "director → visual/research and approved narration; editor after timing lock",
+  "limitations": [
+    "Full composition/scene code and final mux are not implemented before locked inputs. placement_guide specifies exact existing source boundaries and next implementation files.",
+    "Structural contract checks do not independently validate approval semantics, original-text subtitle fidelity, geographic truth or actual listening.",
+    "No full video rendered; template placeholders are not completion."
+  ],
+  "paid_calls": 0,
+  "new_package_installs": 0,
+  "publication": false
+}

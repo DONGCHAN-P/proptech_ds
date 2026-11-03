@@ -1,0 +1,28 @@
+{
+  "status": "ready_with_explicit_uncertainty",
+  "scope": "visual station placement revalidation; no narration/paid generation",
+  "outputs": [
+    "station_location_review.json",
+    "old_coordinates_audit.json",
+    "facts.json",
+    "w1_station_reference.png",
+    "w2_station_reference.png",
+    "regional_rail_reference.png",
+    "w2_regional_rail_reference.png"
+  ],
+  "validation": [
+    "Existing rail nearest-distance reproduced:oldWang77.2m/offtrack,oldIlpae73.3m/offtrack.",
+    "Official source-native station symbols re-viewed.",
+    "Independent current news cross-check confirms districts and planned connections, not GPS.",
+    "Extracted existing rail interval paths from stored OSM source, no fake future center coordinate."
+  ],
+  "unresolved": [
+    "No exact official station WGS84 center/exit verified.",
+    "W1 cross-pamphlet native transform not proven; use B17 source-local symbol instead."
+  ],
+  "next_assignees": [
+    "/root/rail_route_editor",
+    "/root/fact_review",
+    "/root"
+  ]
+}

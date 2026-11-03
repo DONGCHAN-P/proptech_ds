@@ -1,0 +1,66 @@
+{
+  "sequence_authority": "Current user commissions both films sequentially; first private upload verified exEGpjcqdF0 before second episode creation.",
+  "cash_budget_krw": 0,
+  "paid_TTS_authorized": false,
+  "upload_visibility": "private",
+  "current_stage": "private_uploaded_verified",
+  "steps": [
+    {
+      "id": "facts",
+      "status": "completed_with_exact_version_evidence",
+      "owner": "director and Bernoulli",
+      "inputs": "research/facts_v2.json;18 inherited cases plus newborn60/300-month reset illustration"
+    },
+    {
+      "id": "script",
+      "status": "completed_with_exact_version_evidence",
+      "owner": "Cicero",
+      "outputs": "writer/script_v2.md and matching scene/numeric/pronunciation proposals"
+    },
+    {
+      "id": "dual_content_review",
+      "status": "completed_with_exact_version_evidence",
+      "owner": "Codex director and Claude Opus effort=max",
+      "condition": "required issues0 on exact current script"
+    },
+    {
+      "id": "voice_timing",
+      "status": "completed_with_exact_version_evidence",
+      "owner": "narration",
+      "method": "Free InJoon; paragraph raw audio and native WordBoundary; meaning-unit1–2line captions from start"
+    },
+    {
+      "id": "visual_templates",
+      "status": "completed_with_exact_version_evidence",
+      "owner": "Carson",
+      "condition": "First approved film styling; varied native data graphics and separate HB01/NB01 images"
+    },
+    {
+      "id": "source_audio_QA",
+      "status": "completed_with_exact_version_evidence",
+      "owner": "independent Codex QA",
+      "condition": "All text/amounts/units/source bounds; actual audio checks and truthful coverage"
+    },
+    {
+      "id": "render",
+      "status": "completed_with_exact_version_evidence",
+      "owner": "Carson",
+      "method": "Pinned HyperFrames0.8.181; canonical BGM carve; measured brand EDL"
+    },
+    {
+      "id": "dual_final_media_QA",
+      "status": "completed_with_exact_version_evidence",
+      "owner": "Codex QA and Claude",
+      "condition": "Exact final MP4/SRT/packaging hashes; required issues0; encoded scene/transition/caption samples"
+    },
+    {
+      "id": "private_upload",
+      "status": "completed_with_exact_version_evidence",
+      "owner": "director",
+      "condition": "Only approved exact version; verify private/no schedule/processing/Korean captions"
+    }
+  ],
+  "verification_limits": "Actual listening and continuous playback must be recorded accurately; ASR/DSP/frames are separate evidence.",
+  "preservation": "Keep raw research, script/audio/render revisions, rights and review receipts. Do not change current public baseline.",
+  "completion": "video-agent-studio/episodes/affordable-home-price-20261026/outputs/private-release-v2/completion.json"
+}

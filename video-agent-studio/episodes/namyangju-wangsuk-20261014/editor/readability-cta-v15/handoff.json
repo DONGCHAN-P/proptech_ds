@@ -1,0 +1,56 @@
+{
+  "revision": "readability-cta-v15",
+  "editor_status": "actual_full_and_metadata_frozen_awaiting_independent_final_QA",
+  "input_video": "outputs/locator-timeline-v14/namyangju_locator_timeline_full_v14.mp4",
+  "input_sha256": "ba5bcfdc625f3c15b3f13548f43696e6f7d8b0579c8f8374d46df7d2083966f1",
+  "timing_lock": "timing_lock_v15.json",
+  "full_video": "outputs/readability-cta-v15/namyangju_readability_cta_full_v15.mp4",
+  "sha256": "1eb3bee44b4c5953adddfc42f1663afd7da758778bc832000fb155720216c43e",
+  "full_srt": "outputs/readability-cta-v15/namyangju_readability_cta_full_v15.srt",
+  "frames": 27959,
+  "fps": 30,
+  "duration_s": 931.9666666666667,
+  "caption_count": 305,
+  "existing_caption_count": 301,
+  "new_CTA_cues": 4,
+  "verified": [
+    "actual baseline88/165/188/801s frames viewed and causes reproduced",
+    "12 actual SVG date cases getBBox including stroke inside1740x95",
+    "source gates passed for whole locator, correct station inset and noncrossing school leaders",
+    "actual full2640/5641/5642/24030/27577 frames directly viewed",
+    "27959frames ffprobe and whole decode passed",
+    "original301 caption objects and narration metadata deep equal",
+    "canonical v14 decoded PCM0..27353 exactly reused",
+    "CTA7.44sec complete PCM retained; provider-last-spoken7.2sec plus exactly3sec to brand",
+    "source_manifest and core metadata generated before independent final QA"
+  ],
+  "audio_manifest": "outputs/readability-cta-v15/audio_mix_manifest_v15.json",
+  "technical": "outputs/readability-cta-v15/technical_full_v15.json",
+  "source_manifest": "outputs/readability-cta-v15/source_manifest_v15.json",
+  "expected_QA": "qa/readability-cta-v15/final_review.json",
+  "pending": [
+    "independent final actual QA signature",
+    "director exact completed decision, ZIP and final Telegram text"
+  ],
+  "actual_listening": false,
+  "continuous_playback": false,
+  "editor_paid_API_calls": 0,
+  "approved_CTA_generation_by_narration_credits": 24,
+  "cash_payment": 0,
+  "file_transmission": false,
+  "next_owner": "director and independent QA",
+  "unmodified_video_ranges": {
+    "frames": [
+      [
+        0,
+        2407
+      ],
+      [
+        15758,
+        18648
+      ]
+    ],
+    "video_payload_exact_reused": false,
+    "method": "canonical v14 exact content/time decoded and reencoded after intermediate payload comparison failed"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "status": "representative_proposals_complete_director_mobile_review_accepted",
+  "outputs": {
+    "price": [
+      "outputs/viewer-review-v1/price_overview.png",
+      "outputs/viewer-review-v1/price_s4.png"
+    ],
+    "supply": [
+      "outputs/viewer-review-v1/supply_s5.png",
+      "outputs/viewer-review-v1/supply_s1.png",
+      "outputs/viewer-review-v1/supply_s4.png"
+    ],
+    "family": "outputs/viewer-review-v1/family_dates.png",
+    "mobile_comparisons": [
+      "outputs/viewer-review-v1/compare_mobile_price.png",
+      "outputs/viewer-review-v1/compare_mobile_supply.png",
+      "outputs/viewer-review-v1/compare_mobile_family.png"
+    ],
+    "motion": "outputs/viewer-review-v1/supply_motion_demo_6s.mp4",
+    "validation": "outputs/viewer-review-v1/validation.json",
+    "placement": "editor/viewer-review-v1/placement_guide.md"
+  },
+  "input_versions": {
+    "baseline_mp4_sha256": "645e2f927da976899737e3813d2e7f4eb28bf3ca51a0e103a51c43ec09b32f06",
+    "claude_review_sha256": "1b5e32a11c0653021d1e4d992174d8a28cc8e6278fa0389f22e52ae430ee0014",
+    "codex_response_sha256": "8cc72c04aaf451c4411f677d3066421c009abfadfdff0d1c4e4cdfb107c8b2c0",
+    "approved_data_sha256": "e16edc18b8813733349ef0ac17d72f50c212d62fdfb28d3658376d7fbbaa58bb",
+    "new_code_sha256": "ff01147bd6de08aadd80363fd60a40c7a7489c002ab30d147bfaf9f1609c79e5"
+  },
+  "verification": [
+    "six actual Remotion stills",
+    "three before/after mobile comparisons individually viewed at512px per panel",
+    "motion actual four stage frames viewed",
+    "silent MP4180frames fully decoded;1080p30fps/no audio;stderr empty",
+    "exact price component sums and rounded main units validated",
+    "supply759+494+1024=2277; S6430 excluded",
+    "family five original events retained; only YYYY.MM placeholders",
+    "r4 baseline SHA unchanged"
+  ],
+  "not_adopted": [
+    "Claude first64seconds single-map claim contradicted by existing brand and prior-episode screens",
+    "two-minute reduction arithmetic unsupported",
+    "narration deletion/rewrite or supply+restrictions merger: outside current representative scope",
+    "unmeasured retention/competitor ranking claims",
+    "invented personal dates, grade or living-cost values"
+  ],
+  "claude_contribution": "provided viewer critique read; Codex selective response followed; new representative code written by editor, no new Claude request",
+  "limitations": [
+    "representative proposals only, full film not re-rendered",
+    "six-second motion is not narration timing locked",
+    "source/type/exact amounts and secondary calendar remain smaller at512px; main reading hierarchy improved",
+    "sampled visual frames and technical full decode, not continuous human playback/listening"
+  ],
+  "affected_scenes": [
+    "M004",
+    "M006",
+    "M008"
+  ],
+  "next_owner": "director: short-alias improvement report/user review; current full MP4 r4 retained",
+  "independent_review": "director actually viewed all three before/after512px comparisons and accepted price unit/difference, supply target/cumulative, family date-input hierarchy",
+  "caption_scope": "정지시안 하단 문구는 기존 의미를 요약한 화면 설명이며, 본편 자막 원문 교체·새 낭독 승인이 아니다. 기존 대본·음성·본편 파일은 변경하지 않았다."
+}

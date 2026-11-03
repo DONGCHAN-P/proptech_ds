@@ -1,0 +1,50 @@
+{
+  "task_id": "two-part-v4-script-v2",
+  "status": "writer_checklist_applied_pending_director_and_qa",
+  "basis": "기존 WORKFLOW·마스터가이드·episode_preflight의 대본 단계 항목 및 최신 v2 사용자 지시",
+  "inputs": "scene_proposals_v2.json#/input_revisions",
+  "original_preservation": "v1 13파일과 v2 MD2개 원문 SHA256 유지",
+  "approvals": {
+    "topic": "기존 두 편 작업 범위",
+    "script": "new_v2_gate_pending",
+    "budget": "새 유료 미실시",
+    "completed": "새 본편 생성 없음",
+    "pre_upload": "이번 작업 업로드 없음"
+  },
+  "story": {
+    "intro": "각5문장·약41초 추정",
+    "region": "7~9문장·가격 대비1개·생활권 중심",
+    "price_contrasts": "동별14지역/준공시기4지역/가격대분포2지역",
+    "retained_screen_data": "20지역의 구·동·준공집단·6구간 원수치",
+    "fact_and_interpretation": "문장별 statement_type·source_fields 명시",
+    "part_connection": "1편10~1위 예고·CTA/2편짧은연결·결정기준·CTA"
+  },
+  "visual": {
+    "layout": "왼쪽 구전체+오른쪽 대표생활권 상세 고정",
+    "photo": "지역 특성 설명 후 실제 장소 사진",
+    "context_match": "58시설의 원자료명과 prices 자산 표시명 목록 일치",
+    "changes": "R10 인항고등학교·R09 수내역으로 교체",
+    "feature_stations": "6곳 전체지도 표시명 목록 반영 확인; 독립QA 확인 중",
+    "map_assets": "40판 실제 파일 존재·OSM20/20 목록 대조",
+    "pixel_review_by_writer": false,
+    "final_map_manifest_sha256": "ffa699de36ec7d2f7809ff5e8defce2dd8ef8a631364ac83580c923063fbdbb2"
+  },
+  "timing": {
+    "status": "estimate_only",
+    "guidance_per_part_seconds": [
+      480,
+      660
+    ],
+    "new_tts_or_timelock": false,
+    "final_duration": "script 게이트 후 실제 음성·장면호흡·브랜드로 결정"
+  },
+  "not_performed": [
+    "새 리서치·외부 사실 취득",
+    "독립 QA",
+    "지도 픽셀/30초 모션 재생",
+    "새 TTS·청취·타임록",
+    "새 본편 렌더",
+    "유료·외부 내보내기·업로드",
+    "공통 scenes/state/decisions 수정"
+  ]
+}

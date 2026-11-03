@@ -1,0 +1,22 @@
+{
+  "status": "awaiting_final_narration_alignment",
+  "baseline_project": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v5\\rendered_project.json",
+  "baseline_sha256": "a13779a6b9dd5da21100d1c5f7db4c3199d8f3eacccb13cdd29f2d36536dbc3a",
+  "segments_expected": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\narration\\jun-v5-final\\segments.json",
+  "timing_expected": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\narration\\jun-v5-final\\timing_proposals.json",
+  "phrase_key": "unit_id",
+  "alignment_fields": [
+    "scene_local_start_s",
+    "scene_local_end_s",
+    "source_character_start",
+    "source_character_end_exclusive"
+  ],
+  "audio_strategy": "Ten full scene WAVs; split M000 PCM once at intro insertion without dropping samples; all other scene clips played intact",
+  "visual_strategy": "Map261 unit IDs to existing v5 PNG/motion sequences. Re-time each phrase from Jun character alignment. Existing PNG source files preserved and reused without new visual generation.",
+  "paid_api_calls_by_editor": 0,
+  "heami_calls": 0,
+  "brand_intro_frames": 150,
+  "brand_outro_frames": 300,
+  "chapter_frames": 90,
+  "ending_hold_frames": 90
+}

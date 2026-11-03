@@ -1,0 +1,73 @@
+{
+  "status": "generated_measured_not_listened",
+  "script_revision": "script-v8",
+  "audio_revision": "audio-v8-preview-heami-rate0",
+  "voice": "Microsoft Heami Desktop - Korean",
+  "engine": "Windows SAPI COM",
+  "rate": 0,
+  "cost": 0,
+  "network_used": false,
+  "duration_s": 1024.408072562358,
+  "ten_minute_requirement_met": true,
+  "scene_count": 9,
+  "semantic_unit_count": 143,
+  "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\production-v8-preview\\audio\\narration_v8_preview.wav",
+  "captions": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\narration\\preview-v8\\captions.srt",
+  "segments": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\narration\\preview-v8\\segments.json",
+  "timing_proposals": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\narration\\preview-v8\\timing_proposals.json",
+  "input_hashes": {
+    "script_v8.md": "6ffc9fc4819460d4cf6f03fd3b28102e2864402b9965ca14e158230474963982",
+    "narration_packet.json": "0bfbf1db8bae231b2549ae3389dd775f74f3ab0ba56bde4dacea40205e7a0d9c"
+  },
+  "audio_sha256": "16fea2b395c17003bd71c874ad895bca788cef334b4ed4ef31e832319fcd0604",
+  "technical_validation": {
+    "sample_rate": 22050,
+    "channels": 1,
+    "sample_width": 2,
+    "peak": 24379,
+    "rms": 3004.117515175526
+  },
+  "verification": [
+    "143 WAV units parsed and PCM frame durations measured",
+    "Combined WAV and 9 chapter WAVs created",
+    "No inserted silence; each unit uses native TTS sentence ending",
+    "Every subtitle scene matches writer narration packet after whitespace normalization",
+    "Approved script SHA256 verified before generation",
+    "Rate0 first-unit sample PCM validation passed before full generation"
+  ],
+  "unverified": [
+    "Actual listening and pronunciation QA not performed",
+    "Subtitle internal word boundaries not measured; each caption exactly matches synthesized semantic file",
+    "Voice is free review placeholder; final Jun replacement requires new measured timing",
+    "Forced alignment not performed"
+  ],
+  "changed_scene_ids": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M007",
+    "M006",
+    "M005",
+    "M009"
+  ],
+  "next_owner": "video_editor",
+  "notes": [
+    "Restricted process SAPI failed 0x80045040; same generation succeeded under approved local execution escalation",
+    "Timeline starts at 0; editor adds intro/outro offsets",
+    "No source Jun audio reused"
+  ],
+  "pcm_tail_measurement": {
+    "last_nonzero_end_s": 1023.7035827664399,
+    "last_above_minus60db_end_s": 1023.684126984127,
+    "trailing_exact_zero_s": 0.7044897959183674,
+    "method": "Scan decoded signed16 PCM samples; amplitude >=33 approximates -60dBFS; this is signal evidence, not human-listened speech boundary",
+    "editor_outro_instruction": "Add at least 3 seconds after measured audio end; chapter and brand inserts belong to editor"
+  },
+  "authorization": {
+    "script_decision_id": "7d9fc3575dff",
+    "mode": "user-approved free review TTS full video",
+    "paid_api_used": false
+  }
+}

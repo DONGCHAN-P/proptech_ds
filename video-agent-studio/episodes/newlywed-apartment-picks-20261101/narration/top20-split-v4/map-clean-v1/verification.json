@@ -1,0 +1,138 @@
+{
+  "checked_at": "2026-11-03T12:35:32.124314+00:00",
+  "full_decode": "passed",
+  "exact_full_processed_PCM_samples_retained": true,
+  "independent_full_atempo_PCM_match": true,
+  "natural_tail_preserved": true,
+  "native_word_coverage": 1.0,
+  "sentence_count": 2,
+  "chunk_count": 1,
+  "word_count": 29,
+  "numeric_value_count": 7,
+  "numeric_checks": [
+    {
+      "sentence_id": "P01-CRITERIA-01",
+      "source_text": "2026",
+      "reading_text": "이천이십육 ",
+      "values": [
+        {
+          "source_value": "2026",
+          "decoded_value": "2026",
+          "unit": "number"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "sentence_id": "P01-CRITERIA-01",
+      "source_text": "5",
+      "reading_text": "오 ",
+      "values": [
+        {
+          "source_value": "5",
+          "decoded_value": "5",
+          "unit": "number"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "sentence_id": "P01-CRITERIA-01",
+      "source_text": "10월",
+      "reading_text": "시월",
+      "values": [
+        {
+          "source_value": "10",
+          "decoded_value": "10",
+          "unit": "calendar_month"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "sentence_id": "P01-CRITERIA-01",
+      "source_text": "83",
+      "reading_text": "팔십삼",
+      "values": [
+        {
+          "source_value": "83",
+          "decoded_value": "83",
+          "unit": "number"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "sentence_id": "P01-CRITERIA-01",
+      "source_text": "85",
+      "reading_text": "팔십오 ",
+      "values": [
+        {
+          "source_value": "85",
+          "decoded_value": "85",
+          "unit": "number"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "sentence_id": "P01-CRITERIA-02",
+      "source_text": "11",
+      "reading_text": "십일 ",
+      "values": [
+        {
+          "source_value": "11",
+          "decoded_value": "11",
+          "unit": "number"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "sentence_id": "P01-CRITERIA-02",
+      "source_text": "3",
+      "reading_text": "삼 ",
+      "values": [
+        {
+          "source_value": "3",
+          "decoded_value": "3",
+          "unit": "number"
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "display_reading_roundtrip_exact": true,
+  "display_and_reading_offsets_exact": true,
+  "sentence_normalized_offsets_cumulative": true,
+  "final_native_word": "구했습니다",
+  "last_native_word_end_s": 11.722222222222221,
+  "natural_tail_after_last_native_word_s": 0.7465079365079372,
+  "target_duration_s": null,
+  "cropped_frames": 0,
+  "padding_frames": 0,
+  "audio": {
+    "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/map-clean-v1/criteria.wav",
+    "sha256": "34406ada6594d6f1f5e594249e3e0c8f572e8da772a2678638341b1c91e8a5e4",
+    "bytes": 1099786,
+    "frames": 549871,
+    "duration_s": 12.468730158730159,
+    "sample_rate": 44100,
+    "channels": 1,
+    "sample_width_bytes": 2,
+    "peak_pcm": 18844,
+    "peak_dbfs": -4.805536787870437,
+    "rms_pcm": 3126,
+    "rms_dbfs": -20.409219225530997,
+    "leading_silence_s": 0.3,
+    "trailing_silence_s": 0.89,
+    "max_silent_run_s": 1.1,
+    "silent_window_fraction": 0.26704089815557336,
+    "silence_threshold_dbfs": -45,
+    "silence_window_s": 0.01,
+    "clip_peak_reached": false
+  },
+  "actual_listening": false,
+  "asr_performed": false,
+  "unverified": "실제 숫자 발음·문장 경계·자연스러움·끝 음절 청취. 제공자 메타데이터 시각은 강제정렬 검증 아님."
+}

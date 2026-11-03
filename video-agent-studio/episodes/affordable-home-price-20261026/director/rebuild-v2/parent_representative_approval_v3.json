@@ -1,0 +1,42 @@
+{
+  "approved": true,
+  "approval_scope": "parent director actual encoded representative visual review, independent from scene editor; specialist v3 review pending",
+  "script_sha256": "cc1ef7d80225e992e7e5d31faffbfb09a8f90c80fb5352e17c36eb8c90755b12",
+  "required_open": 0,
+  "representative_scene_mp4s": [
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\rebuild-v2\\actual-scenes-r2-parent-v3\\scenes\\R003\\R003.mp4",
+      "sha256": "6a0b9c6d1da054a1a6b29eb0d423396cad921cd053099eccb0ed1cbe1963a7c8",
+      "bytes": 920345,
+      "scene_id": "R003"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\rebuild-v2\\actual-scenes-r2-parent-v3\\scenes\\R006\\R006.mp4",
+      "sha256": "17a0c674e3125af5df5b215c60f250768de1dc582212114bb5d7d54b42587138",
+      "bytes": 1187393,
+      "scene_id": "R006"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\rebuild-v2\\actual-scenes-r2-parent-v3\\scenes\\R030\\R030.mp4",
+      "sha256": "6553bc360727f9cec4c3a32ae9629c350002b212a506893d0083b6e11a1e5b95",
+      "bytes": 1059912,
+      "scene_id": "R030"
+    }
+  ],
+  "reviewed": [
+    "v2 R003/R006 actual 4-stage sheets, v3 exact source/audio identity reuse verified",
+    "v2 R0067.31875s full frame confirms opening inputs visible; v3 identical reuse",
+    "v3 R030 actual frames3.3/7.4125/14.15 full-resolution:300/30/100/170 budget segmentation and56586 result",
+    "8 distinct chapter card actual encoded midpoints"
+  ],
+  "coverage": {
+    "sampled_encoded_frames": true,
+    "actual_listening": false,
+    "continuous_playback": false
+  },
+  "required_closed": [
+    "blank opening input context",
+    "R030 lost budget segmentation"
+  ],
+  "expansion_to_full_render_approved": true
+}

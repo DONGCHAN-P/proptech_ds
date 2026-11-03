@@ -1,0 +1,2147 @@
+[
+  {
+    "block": "S4",
+    "destination": "광화문역 서울",
+    "evidence_id": "ev_7859309c550c8d77053face2243703130bc7ac062c0a3bbefe5be8ebabcf45f6",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.625952195,126.863235045"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "광화문역 서울"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "dom"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "b16aa7928567018c863f45b35c6ec9f1d62c07a3bb4227958253d7ea75ff36b8"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 1시간 9분\" [checked]:\n      - img \"대중교통\"\n      - text: 1시간 9분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JVG7+97Q\":\n          - /placeholder: \"\"\n          - text: 8Q98JVG7+97Q\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 광화문역 서울특별시\":\n          - /placeholder: \"\"\n          - text: 광화문역 서울특별시\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"광화문역 1시간 9분\"\n    - listitem:\n      - button \"광화문역\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 1시간 9분 오전 8:00 (월요일)~오전 9:09 버스 046 또는 95 다음 버스 702A(서오릉) 또는 702B(용두초교) 이케아.롯데아울렛고양점부터 오전 8:18 도보 5분 세부정보\":\n      - img \"대중교통\": \n      - text: 1시간 9분\n      - heading \"오전 8:00 (월요일)~오전 9:09\" [level=1]\n      - img \"버스\"\n      - text: \"046\"\n      - img \"또는\"\n      - text: \"95\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 702A(서오릉)\n      - img \"또는\"\n      - text: 702B(용두초교) 이케아.롯데아울렛고양점부터 오전 8:18\n      - img \"도보\": \n      - text: 5분\n      - button \"세부정보\"\n    - button \"대중교통 1시간 7분 오전 8:01 (월요일)~오전 9:08 도보 다음 버스 7728 다음 버스 6002\":\n      - img \"대중교통\": \n      - text: 1시간 7분\n      - heading \"오전 8:01 (월요일)~오전 9:08\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"6002\"\n    - button \"대중교통 1시간 16분 오전 8:00 (월요일)~오전 9:16 도보 다음 버스 024B(평일) 다음 버스 700 또는 1000\":\n      - img \"대중교통\": \n      - text: 1시간 16분\n      - heading \"오전 8:00 (월요일)~오전 9:16\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024B(평일)\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"700\"\n      - img \"또는\"\n      - text: \"1000\"\n    - button \"대중교통 1시간 20분 오전 8:02 (월요일)~오전 9:22 버스 046 다음 지하철 3호선 다음 버스 7019\":\n      - img \"대중교통\": \n      - text: 1시간 20분\n      - heading \"오전 8:02 (월요일)~오전 9:22\" [level=1]\n      - img \"버스\"\n      - text: \"046\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 3호선\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7019\"\n    - button \"대중교통 1시간 31분 오전 8:00 (월요일)~오전 9:31 도보 다음 버스 075B 다음 버스 470\":\n      - img \"대중교통\": \n      - text: 1시간 31분\n      - heading \"오전 8:00 (월요일)~오전 9:31\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 075B\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"470\"\n    - button \"대중교통 1시간 18분 오전 8:09 (월요일)~오전 9:27 도보 다음 버스 024A 또는 024B(평일) 다음 지하철 경의중앙선 다음 버스 271 또는 273\":\n      - img \"대중교통\": \n      - text: 1시간 18분\n      - heading \"오전 8:09 (월요일)~오전 9:27\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024A\n      - img \"또는\"\n      - text: 024B(평일)\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"271\"\n      - img \"또는\"\n      - text: \"273\"\n    - heading \"광화문역 둘러보기\" [level=2]\n    - button \"경복궁·별표 4.6개·리뷰 47,022개\"\n    - text: 경복궁\n    - img \"별표 4.6개 리뷰 47,022개\"\n    - button \"청계천·별표 4.6개·리뷰 11,173개\"\n    - text: 청계천\n    - img \"별표 4.6개 리뷰 11,173개\"\n    - button \"덕수궁·별표 4.6개·리뷰 20,505개\"\n    - text: 덕수궁\n    - img \"별표 4.6개 리뷰 20,505개\"\n    - button \"대한불교조계종 총본산 조계사·별표 4.5개·리뷰 8,289개\"\n    - text: 대한불교조계종 총본산 조계사\n    - img \"별표 4.5개 리뷰 8,289개\"\n    - button \"광화문광장·별표 4.5개·리뷰 14,345개\"\n    - text: 광화문광장\n    - img \"별표 4.5개 리뷰 14,345개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JVG7%252B97Q%2F%25EA%25B4%2591%25ED%2599%2594%25EB%25AC%25B8%25EC%2597%25AD%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2Fdata%3D!3m1!4b1!4m12!4m11!1m0!1m4!1m1!1s0x357ca2ecd7366699%3A0xa53f7758f1d16760!2m1!4s8Q98HX9G%252BVFF!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"2km\""
+  },
+  {
+    "block": "S1",
+    "destination": "광화문역 서울",
+    "evidence_id": "ev_18b423109c91c65c993912f7223b8222a66dfa0b28d7eb3c46b86c002c6ec33e",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.629244295,126.847159595"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "광화문역 서울"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "087be1ff9fb421abbd33744c59ff9ad9e9360c923dd047cee138b54c26ed7443"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 1시간 6분\" [checked]:\n      - img \"대중교통\"\n      - text: 1시간 6분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JRHW+MVV\":\n          - /placeholder: \"\"\n          - text: 8Q98JRHW+MVV\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 광화문역 서울특별시\":\n          - /placeholder: \"\"\n          - text: 광화문역 서울특별시\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"광화문역 1시간 6분\"\n    - listitem:\n      - button \"광화문역\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 1시간 6분 오전 8:00 (월요일)~오전 9:06 도보 다음 버스 1000 또는 1200 행신초등학교(중)부터 오전 8:30 도보 20분 세부정보\":\n      - img \"대중교통\": \n      - text: 1시간 6분\n      - heading \"오전 8:00 (월요일)~오전 9:06\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"1000\"\n      - img \"또는\"\n      - text: 1200 행신초등학교(중)부터 오전 8:30\n      - img \"도보\": \n      - text: 20분\n      - button \"세부정보\"\n    - button \"대중교통 1시간 14분 오전 8:00 (월요일)~오전 9:14 도보 다음 버스 021(화정역) 다음 지하철 경의중앙선 다음 버스 470 또는 721\":\n      - img \"대중교통\": \n      - text: 1시간 14분\n      - heading \"오전 8:00 (월요일)~오전 9:14\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 021(화정역)\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"470\"\n      - img \"또는\"\n      - text: \"721\"\n    - button \"대중교통 1시간 8분 오전 8:02 (월요일)~오전 9:10 도보 다음 지하철 3호선 다음 버스 702A(서오릉) 또는 702B(용두초교)\":\n      - img \"대중교통\": \n      - text: 1시간 8분\n      - heading \"오전 8:02 (월요일)~오전 9:10\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 3호선\n      - img \"다음\": \n      - img \"버스\"\n      - text: 702A(서오릉)\n      - img \"또는\"\n      - text: 702B(용두초교)\n    - button \"대중교통 1시간 28분 오전 8:00 (월요일)~오전 9:28 도보 다음 버스 024A 다음 버스 702A(서오릉)\":\n      - img \"대중교통\": \n      - text: 1시간 28분\n      - heading \"오전 8:00 (월요일)~오전 9:28\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024A\n      - img \"다음\": \n      - img \"버스\"\n      - text: 702A(서오릉)\n    - button \"대중교통 1시간 21분 오전 8:00 (월요일)~오전 9:21 도보 다음 버스 700 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 21분\n      - heading \"오전 8:00 (월요일)~오전 9:21\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"700\"\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 21분 오전 8:00 (월요일)~오전 9:21 도보 다음 버스 7727 다음 버스 271 또는 721\":\n      - img \"대중교통\": \n      - text: 1시간 21분\n      - heading \"오전 8:00 (월요일)~오전 9:21\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7727\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"271\"\n      - img \"또는\"\n      - text: \"721\"\n    - heading \"광화문역 둘러보기\" [level=2]\n    - button \"경복궁·별표 4.6개·리뷰 47,022개\"\n    - text: 경복궁\n    - img \"별표 4.6개 리뷰 47,022개\"\n    - button \"청계천·별표 4.6개·리뷰 11,173개\"\n    - text: 청계천\n    - img \"별표 4.6개 리뷰 11,173개\"\n    - button \"덕수궁·별표 4.6개·리뷰 20,505개\"\n    - text: 덕수궁\n    - img \"별표 4.6개 리뷰 20,505개\"\n    - button \"대한불교조계종 총본산 조계사·별표 4.5개·리뷰 8,289개\"\n    - text: 대한불교조계종 총본산 조계사\n    - img \"별표 4.5개 리뷰 8,289개\"\n    - button \"광화문광장·별표 4.5개·리뷰 14,345개\"\n    - text: 광화문광장\n    - img \"별표 4.5개 리뷰 14,345개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JRHW%252BMVV%2F%25EA%25B4%2591%25ED%2599%2594%25EB%25AC%25B8%25EC%2597%25AD%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2Fdata%3D!3m1!4b1!4m12!4m11!1m0!1m4!1m1!1s0x357ca2ecd7366699%3A0xa53f7758f1d16760!2m1!4s8Q98HX9G%252BVFF!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"2km\""
+  },
+  {
+    "block": "S1",
+    "destination": "상암 MBC",
+    "evidence_id": "ev_c8a05534ed86cafebdb92ee29f0b5bd006355bc2a40701156e52031255aa4d08",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.629244295,126.847159595"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "상암 MBC"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "71d5d8b870393aa68191fffcec9e444e40c4cca3bb721550bf6192ebf33d9364"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 52분\" [checked]:\n      - img \"대중교통\"\n      - text: 52분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JRHW+MVV\":\n          - /placeholder: \"\"\n          - text: 8Q98JRHW+MVV\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 MBC 문화방송 본사 서울특별시 마포구 성암로 267\":\n          - /placeholder: \"\"\n          - text: MBC 문화방송 본사 서울특별시 마포구 성암로 267\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"MBC 문화방송 본사 52분\"\n    - listitem:\n      - button \"MBC 문화방송 본사\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 52분 오전 8:00 (월요일)~오전 8:52 도보 다음 버스 66 또는 7727 다음 도보 행신동(중)부터 오전 8:31 도보 24분 세부정보\":\n      - img \"대중교통\": \n      - text: 52분\n      - heading \"오전 8:00 (월요일)~오전 8:52\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"66\"\n      - img \"또는\"\n      - text: \"7727\"\n      - img \"다음\": \n      - img \"도보\"\n      - text: 행신동(중)부터 오전 8:31\n      - img \"도보\": \n      - text: 24분\n      - button \"세부정보\"\n    - button \"대중교통 55분 오전 8:00 (월요일)~오전 8:55 도보 다음 버스 9711 다음 도보\":\n      - img \"대중교통\": \n      - text: 55분\n      - heading \"오전 8:00 (월요일)~오전 8:55\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"9711\"\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 46분 오전 8:00 (월요일)~오전 8:46 도보 다음 지하철 경의중앙선 다음 도보\":\n      - img \"대중교통\": \n      - text: 46분\n      - heading \"오전 8:00 (월요일)~오전 8:46\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 5분 오전 8:00 (월요일)~오전 9:05 도보 다음 버스 021(화정역) 다음 버스 760 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 5분\n      - heading \"오전 8:00 (월요일)~오전 9:05\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 021(화정역)\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"760\"\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 58분 오전 8:00 (월요일)~오전 8:58 도보 다음 버스 1200 다음 버스 750B 또는 7738 다음 도보\":\n      - img \"대중교통\": \n      - text: 58분\n      - heading \"오전 8:00 (월요일)~오전 8:58\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"1200\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 750B\n      - img \"또는\"\n      - text: \"7738\"\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 55분 오전 8:09 (월요일)~오전 9:04 도보 다음 버스 024A 다음 지하철 경의중앙선 다음 도보\":\n      - img \"대중교통\": \n      - text: 55분\n      - heading \"오전 8:09 (월요일)~오전 9:04\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024A\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"도보\"\n    - heading \"MBC 문화방송 본사 주변 탐색\" [level=2]\n    - button \"디지털미디어시티 (DMC)·별표 4.3개·리뷰 68개\"\n    - text: 디지털미디어시티 (DMC)\n    - img \"별표 4.3개 리뷰 68개\"\n    - button \"한국영상자료원·별표 4.5개·리뷰 501개\"\n    - text: 한국영상자료원\n    - img \"별표 4.5개 리뷰 501개\"\n    - button \"한국영화박물관·별표 4.3개·리뷰 80개\"\n    - text: 한국영화박물관\n    - img \"별표 4.3개 리뷰 80개\"\n    - button \"월드컵로 가을단풍길·별표 4.5개·리뷰 2개\"\n    - text: 월드컵로 가을단풍길\n    - img \"별표 4.5개 리뷰 2개\"\n    - button \"문화비축기지·별표 4.2개·리뷰 2,323개\"\n    - text: 문화비축기지\n    - img \"별표 4.2개 리뷰 2,323개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JRHW%252BMVV%2FMBC%2B%25EB%25AC%25B8%25ED%2599%2594%25EB%25B0%25A9%25EC%2586%25A1%2B%25EB%25B3%25B8%25EC%2582%25AC%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2B%25EB%25A7%2588%25ED%258F%25AC%25EA%25B5%25AC%2B%25EC%2584%25B1%25EC%2595%2594%25EB%25A1%259C%2B267%2Fdata%3D!3m1!4b1!4m12!4m11!1m0!1m4!1m1!1s0x357c990d12720f23%3A0xe26e3a1ad3266fef!2m1!4s8Q98HVJR%252BF86!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"1km\""
+  },
+  {
+    "block": "S1",
+    "destination": "여의도역 서울",
+    "evidence_id": "ev_12657867865f2afe2a7bfebefa8d8f4778fda1f1534a4da93524f0eab142a6e9",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.629244295,126.847159595"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "여의도역 서울"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "3c826a5a10910da5b04c33dbdf239528942bf03704146d4edd28fba8d9bfb4e4"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 1시간 13분\" [checked]:\n      - img \"대중교통\"\n      - text: 1시간 13분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JRHW+MVV\":\n          - /placeholder: \"\"\n          - text: 8Q98JRHW+MVV\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 여의도역 서울특별시\":\n          - /placeholder: \"\"\n          - text: 여의도역 서울특별시\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"여의도역 1시간 13분\"\n    - listitem:\n      - button \"여의도역\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 1시간 13분 오전 8:00 (월요일)~오전 9:13 도보 다음 버스 021(화정역) 다음 지하철 경의중앙선 다음 버스 163 이전유통부터 오전 8:17 도보 11분 세부정보\":\n      - img \"대중교통\": \n      - text: 1시간 13분\n      - heading \"오전 8:00 (월요일)~오전 9:13\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 021(화정역)\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"버스\"\n      - text: 163 이전유통부터 오전 8:17\n      - img \"도보\": \n      - text: 11분\n      - button \"세부정보\"\n    - button \"대중교통 1시간 19분 오전 8:00 (월요일)~오전 9:19 도보 다음 버스 1000 또는 1200 다음 버스 163\":\n      - img \"대중교통\": \n      - text: 1시간 19분\n      - heading \"오전 8:00 (월요일)~오전 9:19\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"1000\"\n      - img \"또는\"\n      - text: \"1200\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"163\"\n    - button \"대중교통 1시간 20분 오전 8:02 (월요일)~오전 9:22 도보 다음 버스 1082 다음 지하철 9호선\":\n      - img \"대중교통\": \n      - text: 1시간 20분\n      - heading \"오전 8:02 (월요일)~오전 9:22\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"1082\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 9호선\n    - button \"대중교통 1시간 3분 오전 8:00 (월요일)~오전 9:03 도보 다음 지하철 경의중앙선 다음 지하철 5호선\":\n      - img \"대중교통\": \n      - text: 1시간 3분\n      - heading \"오전 8:00 (월요일)~오전 9:03\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 5호선\n    - button \"대중교통 1시간 7분 오전 8:14 (월요일)~오전 9:21 도보 다음 버스 021(화정역) 다음 지하철 경의중앙선 다음 지하철 5호선\":\n      - img \"대중교통\": \n      - text: 1시간 7분\n      - heading \"오전 8:14 (월요일)~오전 9:21\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 021(화정역)\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 5호선\n    - button \"대중교통 1시간 19분 오전 8:02 (월요일)~오전 9:21 도보 다음 지하철 3호선 다음 도보 다음 지하철 5호선\":\n      - img \"대중교통\": \n      - text: 1시간 19분\n      - heading \"오전 8:02 (월요일)~오전 9:21\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 3호선\n      - img \"다음\": \n      - img \"도보\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 5호선\n    - heading \"여의도역 둘러보기\" [level=2]\n    - button \"여의도한강공원·별표 4.5개·리뷰 18,443개\"\n    - text: 여의도한강공원\n    - img \"별표 4.5개 리뷰 18,443개\"\n    - button \"여의도공원·별표 4.4개·리뷰 6,226개\"\n    - text: 여의도공원\n    - img \"별표 4.4개 리뷰 6,226개\"\n    - button \"Yeouido·별표 4.5개·리뷰 66개\"\n    - text: Yeouido\n    - img \"별표 4.5개 리뷰 66개\"\n    - button \"여의도순복음교회·별표 4.5개·리뷰 1,248개\"\n    - text: 여의도순복음교회\n    - img \"별표 4.5개 리뷰 1,248개\"\n    - button \"여의도 샛강생태공원·별표 4.4개·리뷰 360개\"\n    - text: 여의도 샛강생태공원\n    - img \"별표 4.4개 리뷰 360개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JRHW%252BMVV%2F%25EC%2597%25AC%25EC%259D%2598%25EB%258F%2584%25EC%2597%25AD%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2Fdata%3D!3m1!4b1!4m12!4m11!1m0!1m4!1m1!1s0x357c9f3d7ec8d931%3A0x149ea3d4b4302050!2m1!4s8Q98GWCF%252BJPF!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"2km\""
+  },
+  {
+    "block": "S1",
+    "destination": "LG사이언스파크",
+    "evidence_id": "ev_4fcdbff68602d4fd8252817442d370a899c651fc6d4f6b3660002be16ca93736",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.629244295,126.847159595"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "LG사이언스파크"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "c3f03bfc0a1cd24695e104f8d5d3551771a8dcc137a1a36af989287d4329524b"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 1시간 12분\" [checked]:\n      - img \"대중교통\"\n      - text: 1시간 12분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JRHW+MVV\":\n          - /placeholder: \"\"\n          - text: 8Q98JRHW+MVV\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 LG사이언스파크 서울특별시 강서구 마곡중앙10로 30\":\n          - /placeholder: \"\"\n          - text: LG사이언스파크 서울특별시 강서구 마곡중앙10로 30\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"LG사이언스파크 1시간 12분\"\n    - listitem:\n      - button \"LG사이언스파크\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 1시간 12분 오전 8:00 (월요일)~오전 9:12 도보 다음 버스 021(화정역) 다음 지하철 경의중앙선 다음 지하철 공항철도 다음 도보 이전유통부터 오전 8:17 도보 22분 세부정보\":\n      - img \"대중교통\": \n      - text: 1시간 12분\n      - heading \"오전 8:00 (월요일)~오전 9:12\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 021(화정역)\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 공항철도\n      - img \"다음\": \n      - img \"도보\"\n      - text: 이전유통부터 오전 8:17\n      - img \"도보\": \n      - text: 22분\n      - button \"세부정보\"\n    - button \"대중교통 1시간 11분 오전 8:01 (월요일)~오전 9:12 도보 다음 버스 66 또는 1000 다음 지하철 공항철도 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 11분\n      - heading \"오전 8:01 (월요일)~오전 9:12\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"66\"\n      - img \"또는\"\n      - text: \"1000\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 공항철도\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 29분 오전 8:00 (월요일)~오전 9:29 도보 다음 버스 85 다음 버스 60 또는 601 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 29분\n      - heading \"오전 8:00 (월요일)~오전 9:29\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"85\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"60\"\n      - img \"또는\"\n      - text: \"601\"\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 12분 오전 8:00 (월요일)~오전 9:12 도보 다음 지하철 경의중앙선 다음 지하철 공항철도 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 12분\n      - heading \"오전 8:00 (월요일)~오전 9:12\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 공항철도\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 10분 오전 8:14 (월요일)~오전 9:24 도보 다음 버스 66 또는 1000 다음 지하철 공항철도 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 10분\n      - heading \"오전 8:14 (월요일)~오전 9:24\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"66\"\n      - img \"또는\"\n      - text: \"1000\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 공항철도\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 39분 오전 8:01 (월요일)~오전 9:40 도보 다음 버스 1082 다음 지하철 9호선 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 39분\n      - heading \"오전 8:01 (월요일)~오전 9:40\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"1082\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 9호선\n      - img \"다음\": \n      - img \"도보\"\n    - heading \"LG사이언스파크 주변 탐색\" [level=2]\n    - button \"서울식물원·별표 4.3개·리뷰 7,838개\"\n    - text: 서울식물원\n    - img \"별표 4.3개 리뷰 7,838개\"\n    - button \"스페이스K 서울·별표 4.3개·리뷰 202개\"\n    - text: 스페이스K 서울\n    - img \"별표 4.3개 리뷰 202개\"\n    - button \"서울식물원 주제정원·별표 4.4개·리뷰 1,711개\"\n    - text: 서울식물원 주제정원\n    - img \"별표 4.4개 리뷰 1,711개\"\n    - button \"서울식물원 열린숲·별표 4.6개·리뷰 251개\"\n    - text: 서울식물원 열린숲\n    - img \"별표 4.6개 리뷰 251개\"\n    - button \"서울식물원 호수원·별표 4.6개·리뷰 425개\"\n    - text: 서울식물원 호수원\n    - img \"별표 4.6개 리뷰 425개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JRHW%252BMVV%2FLG%25EC%2582%25AC%25EC%259D%25B4%25EC%2596%25B8%25EC%258A%25A4%25ED%258C%258C%25ED%2581%25AC%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2B%25EA%25B0%2595%25EC%2584%259C%25EA%25B5%25AC%2B%25EB%25A7%2588%25EA%25B3%25A1%25EC%25A4%2591%25EC%2595%259910%25EB%25A1%259C%2B30%2Fdata%3D!3m1!4b1!4m12!4m11!1m0!1m4!1m1!1s0x357c9c14541010d1%3A0xa6c2cd0160df8438!2m1!4s8Q98HR7J%252BCV6!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"2km\""
+  },
+  {
+    "block": "S1",
+    "destination": "강남역 서울",
+    "evidence_id": "ev_5bc67674f59594e9670699b34b677a00e54a96cf9d2c90024693bc514ae28ad1",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.629244295,126.847159595"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "강남역 서울"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "26e724df21ad2d0d4b0bd9f229ab516453cb56e591a927ed40abb2f1e64c6ec7"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 1시간 24분\" [checked]:\n      - img \"대중교통\"\n      - text: 1시간 24분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JRHW+MVV\":\n          - /placeholder: \"\"\n          - text: 8Q98JRHW+MVV\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 강남 서울특별시 역삼동\":\n          - /placeholder: \"\"\n          - text: 강남 서울특별시 역삼동\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"강남 1시간 24분\"\n    - listitem:\n      - button \"강남\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 1시간 25분 오전 8:02 (월요일)~오전 9:27 도보 다음 지하철 3호선 다음 지하철 2호선 화정부터 오전 8:26 도보 27분 세부정보\":\n      - img \"대중교통\": \n      - text: 1시간 25분\n      - heading \"오전 8:02 (월요일)~오전 9:27\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 3호선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 2호선 화정부터 오전 8:26\n      - img \"도보\": \n      - text: 27분\n      - button \"세부정보\"\n    - button \"대중교통 1시간 37분 오전 8:00 (월요일)~오전 9:37 도보 다음 버스 9711 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 37분\n      - heading \"오전 8:00 (월요일)~오전 9:37\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"9711\"\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 28분 오전 8:02 (월요일)~오전 9:30 도보 다음 지하철 3호선 다음 지하철 신분당선 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 28분\n      - heading \"오전 8:02 (월요일)~오전 9:30\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 3호선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 신분당선\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 24분 오전 8:10 (월요일)~오전 9:34 도보 다음 지하철 3호선 다음 지하철 2호선\":\n      - img \"대중교통\": \n      - text: 1시간 24분\n      - heading \"오전 8:10 (월요일)~오전 9:34\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 3호선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 2호선\n    - button \"대중교통 1시간 44분 오전 8:00 (월요일)~오전 9:44 도보 다음 버스 021(화정역) 다음 지하철 경의중앙선 다음 버스 740\":\n      - img \"대중교통\": \n      - text: 1시간 44분\n      - heading \"오전 8:00 (월요일)~오전 9:44\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 021(화정역)\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"740\"\n    - button \"대중교통 1시간 25분 오전 8:18 (월요일)~오전 9:43 도보 다음 지하철 3호선 다음 지하철 2호선\":\n      - img \"대중교통\": \n      - text: 1시간 25분\n      - heading \"오전 8:18 (월요일)~오전 9:43\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 3호선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 2호선\n    - heading \"강남 주변 탐색\" [level=2]\n    - button \"키이스케이프 강남·별표 4.7개·리뷰 57개\"\n    - text: 키이스케이프 강남\n    - img \"별표 4.7개 리뷰 57개\"\n    - button \"국립어린이청소년도서관·별표 4.6개·리뷰 100개\"\n    - text: 국립어린이청소년도서관\n    - img \"별표 4.6개 리뷰 100개\"\n    - button \"더 스머프 매직 포레스트 강남점·별표 4.6개·리뷰 126개\"\n    - text: 더 스머프 매직 포레스트 강남점\n    - img \"별표 4.6개 리뷰 126개\"\n    - button \"전시대관\"\n    - text: 전시대관\n    - button \"코드케이 강남점·별표 4.5개·리뷰 522개\"\n    - text: 코드케이 강남점\n    - img \"별표 4.5개 리뷰 522개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JRHW%252BMVV%2F%25EA%25B0%2595%25EB%2582%25A8%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2B%25EC%2597%25AD%25EC%2582%25BC%25EB%258F%2599%2Fdata%3D!3m1!4b1!4m12!4m11!1m0!1m4!1m1!1s0x357ca1598c361b2b%3A0xdbf9af292beff3c!2m1!4s8Q99F2XH%252B52Q!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"2km\""
+  },
+  {
+    "block": "S4",
+    "destination": "상암 MBC",
+    "evidence_id": "ev_ddc71d76beb29d7454d751fdccf1bbb669eae2c57deb12d958b1c176f33d4b01",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.625952195,126.863235045"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "상암 MBC"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "390ba7acbff54955d140aea2587bda407a4e4d4afb35b326aded4276c91c8325"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 1시간 4분\" [checked]:\n      - img \"대중교통\"\n      - text: 1시간 4분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JVG7+97Q\":\n          - /placeholder: \"\"\n          - text: 8Q98JVG7+97Q\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 MBC 문화방송 본사 서울특별시 마포구 성암로 267\":\n          - /placeholder: \"\"\n          - text: MBC 문화방송 본사 서울특별시 마포구 성암로 267\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"MBC 문화방송 본사 1시간 4분\"\n    - listitem:\n      - button \"MBC 문화방송 본사\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 1시간 4분 오전 8:00 (월요일)~오전 9:04 도보 다음 버스 730 도래울마을5.6단지부터 오전 8:37 도보 8분 세부정보\":\n      - img \"대중교통\": \n      - text: 1시간 4분\n      - heading \"오전 8:00 (월요일)~오전 9:04\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 730 도래울마을5.6단지부터 오전 8:37\n      - img \"도보\": \n      - text: 8분\n      - button \"세부정보\"\n    - button \"대중교통 1시간 4분 오전 8:00 (월요일)~오전 9:04 도보 다음 버스 075B 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 4분\n      - heading \"오전 8:00 (월요일)~오전 9:04\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 075B\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 3분 오전 8:00 (월요일)~오전 9:03 도보 다음 버스 024B(평일) 다음 버스 700 또는 7727 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 3분\n      - heading \"오전 8:00 (월요일)~오전 9:03\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024B(평일)\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"700\"\n      - img \"또는\"\n      - text: \"7727\"\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 2분 오전 8:00 (월요일)~오전 9:02 도보 다음 버스 7728 다음 버스 750B 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 2분\n      - heading \"오전 8:00 (월요일)~오전 9:02\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 750B\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 55분 오전 8:09 (월요일)~오전 9:04 도보 다음 버스 024A 또는 024B(평일) 다음 지하철 경의중앙선 다음 도보\":\n      - img \"대중교통\": \n      - text: 55분\n      - heading \"오전 8:09 (월요일)~오전 9:04\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024A\n      - img \"또는\"\n      - text: 024B(평일)\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 8분 오전 8:00 (월요일)~오전 9:08 도보 다음 버스 024A 다음 버스 9711 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 8분\n      - heading \"오전 8:00 (월요일)~오전 9:08\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024A\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"9711\"\n      - img \"다음\": \n      - img \"도보\"\n    - heading \"MBC 문화방송 본사 주변 탐색\" [level=2]\n    - button \"디지털미디어시티 (DMC)·별표 4.3개·리뷰 68개\"\n    - text: 디지털미디어시티 (DMC)\n    - img \"별표 4.3개 리뷰 68개\"\n    - button \"한국영상자료원·별표 4.5개·리뷰 501개\"\n    - text: 한국영상자료원\n    - img \"별표 4.5개 리뷰 501개\"\n    - button \"한국영화박물관·별표 4.3개·리뷰 80개\"\n    - text: 한국영화박물관\n    - img \"별표 4.3개 리뷰 80개\"\n    - button \"월드컵로 가을단풍길·별표 4.5개·리뷰 2개\"\n    - text: 월드컵로 가을단풍길\n    - img \"별표 4.5개 리뷰 2개\"\n    - button \"문화비축기지·별표 4.2개·리뷰 2,323개\"\n    - text: 문화비축기지\n    - img \"별표 4.2개 리뷰 2,323개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JVG7%252B97Q%2FMBC%2B%25EB%25AC%25B8%25ED%2599%2594%25EB%25B0%25A9%25EC%2586%25A1%2B%25EB%25B3%25B8%25EC%2582%25AC%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2B%25EB%25A7%2588%25ED%258F%25AC%25EA%25B5%25AC%2B%25EC%2584%25B1%25EC%2595%2594%25EB%25A1%259C%2B267%2Fdata%3D!3m1!4b1!4m12!4m11!1m0!1m4!1m1!1s0x357c990d12720f23%3A0xe26e3a1ad3266fef!2m1!4s8Q98HVJR%252BF86!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"1km\""
+  },
+  {
+    "block": "S4",
+    "destination": "여의도역 서울",
+    "evidence_id": "ev_7a51470e13b4fe33e4b8863011bd056edef6b17b13ae8f5aca2c6bd4cf32bf12",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.625952195,126.863235045"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "여의도역 서울"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "26c91f50e7f0e06849382972ccc7c38c2cfc72b4bc1acbe4007f72208b42c2ba"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 1시간 18분\" [checked]:\n      - img \"대중교통\"\n      - text: 1시간 18분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JVG7+97Q\":\n          - /placeholder: \"\"\n          - text: 8Q98JVG7+97Q\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 여의도역 서울특별시\":\n          - /placeholder: \"\"\n          - text: 여의도역 서울특별시\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"여의도역 1시간 18분\"\n    - listitem:\n      - button \"여의도역\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 1시간 18분 오전 8:00 (월요일)~오전 9:18 도보 다음 버스 7728 다음 버스 163 도래울마을5.6단지부터 오전 8:22 도보 7분 세부정보\":\n      - img \"대중교통\": \n      - text: 1시간 18분\n      - heading \"오전 8:00 (월요일)~오전 9:18\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 163 도래울마을5.6단지부터 오전 8:22\n      - img \"도보\": \n      - text: 7분\n      - button \"세부정보\"\n    - button \"대중교통 1시간 24분 오전 8:00 (월요일)~오전 9:24 도보 다음 버스 7728 다음 버스 6713\":\n      - img \"대중교통\": \n      - text: 1시간 24분\n      - heading \"오전 8:00 (월요일)~오전 9:24\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"6713\"\n    - button \"대중교통 1시간 12분 오전 8:09 (월요일)~오전 9:21 도보 다음 버스 024A 또는 024B(평일) 다음 지하철 경의중앙선 다음 지하철 5호선\":\n      - img \"대중교통\": \n      - text: 1시간 12분\n      - heading \"오전 8:09 (월요일)~오전 9:21\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024A\n      - img \"또는\"\n      - text: 024B(평일)\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 5호선\n    - button \"대중교통 1시간 30분 오전 8:03 (월요일)~오전 9:33 도보 다음 버스 7602 다음 지하철 9호선\":\n      - img \"대중교통\": \n      - text: 1시간 30분\n      - heading \"오전 8:03 (월요일)~오전 9:33\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7602\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 9호선\n    - button \"대중교통 1시간 22분 오전 8:06 (월요일)~오전 9:28 버스 024A 또는 95 다음 지하철 3호선 다음 도보 다음 지하철 5호선\":\n      - img \"대중교통\": \n      - text: 1시간 22분\n      - heading \"오전 8:06 (월요일)~오전 9:28\" [level=1]\n      - img \"버스\"\n      - text: 024A\n      - img \"또는\"\n      - text: \"95\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 3호선\n      - img \"다음\": \n      - img \"도보\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 5호선\n    - button \"대중교통 1시간 30분 오전 8:03 (월요일)~오전 9:33 도보 다음 버스 024A 다음 버스 1082 다음 지하철 9호선\":\n      - img \"대중교통\": \n      - text: 1시간 30분\n      - heading \"오전 8:03 (월요일)~오전 9:33\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024A\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"1082\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 9호선\n    - heading \"여의도역 둘러보기\" [level=2]\n    - button \"여의도한강공원·별표 4.5개·리뷰 18,443개\"\n    - text: 여의도한강공원\n    - img \"별표 4.5개 리뷰 18,443개\"\n    - button \"여의도공원·별표 4.4개·리뷰 6,226개\"\n    - text: 여의도공원\n    - img \"별표 4.4개 리뷰 6,226개\"\n    - button \"Yeouido·별표 4.5개·리뷰 66개\"\n    - text: Yeouido\n    - img \"별표 4.5개 리뷰 66개\"\n    - button \"여의도순복음교회·별표 4.5개·리뷰 1,248개\"\n    - text: 여의도순복음교회\n    - img \"별표 4.5개 리뷰 1,248개\"\n    - button \"여의도 샛강생태공원·별표 4.4개·리뷰 360개\"\n    - text: 여의도 샛강생태공원\n    - img \"별표 4.4개 리뷰 360개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JVG7%252B97Q%2F%25EC%2597%25AC%25EC%259D%2598%25EB%258F%2584%25EC%2597%25AD%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2Fdata%3D!3m1!4b1!4m12!4m11!1m0!1m4!1m1!1s0x357c9f3d7ec8d931%3A0x149ea3d4b4302050!2m1!4s8Q98GWCF%252BJPF!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"2km\""
+  },
+  {
+    "block": "S4",
+    "destination": "LG사이언스파크",
+    "evidence_id": "ev_ed45c435dec14f9e7847d87a77cbe3855736822572309d43b3b95f42c309a93c",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.625952195,126.863235045"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "LG사이언스파크"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "889a5ee0b7faad7bdeaf21a1d6a55cc027638adb223465c5e3fd35d2c4a6b9d6"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 1시간 24분\" [checked]:\n      - img \"대중교통\"\n      - text: 1시간 24분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JVG7+97Q\":\n          - /placeholder: \"\"\n          - text: 8Q98JVG7+97Q\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 LG사이언스파크 서울특별시 강서구 마곡중앙10로 30\":\n          - /placeholder: \"\"\n          - text: LG사이언스파크 서울특별시 강서구 마곡중앙10로 30\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"LG사이언스파크 1시간 24분\"\n    - listitem:\n      - button \"LG사이언스파크\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 1시간 25분 오전 8:03 (월요일)~오전 9:28 도보 다음 버스 730 다음 지하철 공항철도 다음 도보 도래울마을5.6단지부터 오전 8:41 도보 17분 세부정보\":\n      - img \"대중교통\": \n      - text: 1시간 25분\n      - heading \"오전 8:03 (월요일)~오전 9:28\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"730\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 공항철도\n      - img \"다음\": \n      - img \"도보\"\n      - text: 도래울마을5.6단지부터 오전 8:41\n      - img \"도보\": \n      - text: 17분\n      - button \"세부정보\"\n    - button \"대중교통 1시간 14분 오전 8:06 (월요일)~오전 9:20 도보 다음 버스 7728 다음 지하철 공항철도 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 14분\n      - heading \"오전 8:06 (월요일)~오전 9:20\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 공항철도\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 25분 오전 8:03 (월요일)~오전 9:28 도보 다음 버스 075B 다음 지하철 공항철도 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 25분\n      - heading \"오전 8:03 (월요일)~오전 9:28\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 075B\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 공항철도\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 19분 오전 8:09 (월요일)~오전 9:28 도보 다음 버스 024A 또는 024B(평일) 다음 지하철 경의중앙선 다음 지하철 공항철도 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 19분\n      - heading \"오전 8:09 (월요일)~오전 9:28\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024A\n      - img \"또는\"\n      - text: 024B(평일)\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 공항철도\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 36분 오전 8:00 (월요일)~오전 9:36 도보 다음 버스 7728 다음 버스 601 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 36분\n      - heading \"오전 8:00 (월요일)~오전 9:36\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"601\"\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 37분 오전 8:00 (월요일)~오전 9:37 도보 다음 버스 024A 다음 버스 85 다음 버스 60 또는 3000-1 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 37분\n      - heading \"오전 8:00 (월요일)~오전 9:37\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024A\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"85\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"60\"\n      - img \"또는\"\n      - text: 3000-1\n      - img \"다음\": \n      - img \"도보\"\n    - heading \"LG사이언스파크 주변 탐색\" [level=2]\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JVG7%252B97Q%2FLG%25EC%2582%25AC%25EC%259D%25B4%25EC%2596%25B8%25EC%258A%25A4%25ED%258C%258C%25ED%2581%25AC%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2B%25EA%25B0%2595%25EC%2584%259C%25EA%25B5%25AC%2B%25EB%25A7%2588%25EA%25B3%25A1%25EC%25A4%2591%25EC%2595%259910%25EB%25A1%259C%2B30%2Fdata%3D!4m12!4m11!1m0!1m4!1m1!1s0x357c9c14541010d1%3A0xa6c2cd0160df8438!2m1!4s8Q98HR7J%252BCV6!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"2km\""
+  },
+  {
+    "block": "S4",
+    "destination": "강남역 서울",
+    "evidence_id": "ev_3157db064f4728d0d209af2199408feb789a88b69e242efce56d625868978491",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.625952195,126.863235045"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "강남역 서울"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "0e0b118a13d446f24f24134ff9bf29f7e9b8d128f7e1afcb3a9386c85068afdb"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 1시간 27분\" [checked]:\n      - img \"대중교통\"\n      - text: 1시간 27분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JVG7+97Q\":\n          - /placeholder: \"\"\n          - text: 8Q98JVG7+97Q\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 강남 서울특별시 역삼동\":\n          - /placeholder: \"\"\n          - text: 강남 서울특별시 역삼동\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"강남 1시간 27분\"\n    - listitem:\n      - button \"강남\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 1시간 28분 오전 8:06 (월요일)~오전 9:34 버스 024A 또는 95 다음 지하철 3호선 다음 지하철 2호선 이케아.롯데아울렛고양점부터 오전 8:24 도보 6분 세부정보\":\n      - img \"대중교통\": \n      - text: 1시간 28분\n      - heading \"오전 8:06 (월요일)~오전 9:34\" [level=1]\n      - img \"버스\"\n      - text: 024A\n      - img \"또는\"\n      - text: \"95\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 3호선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 2호선 이케아.롯데아울렛고양점부터 오전 8:24\n      - img \"도보\": \n      - text: 6분\n      - button \"세부정보\"\n    - button \"대중교통 1시간 28분 오전 8:06 (월요일)~오전 9:34 버스 024A 또는 95 다음 지하철 3호선 다음 지하철 신분당선 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 28분\n      - heading \"오전 8:06 (월요일)~오전 9:34\" [level=1]\n      - img \"버스\"\n      - text: 024A\n      - img \"또는\"\n      - text: \"95\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 3호선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 신분당선\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 44분 오전 8:00 (월요일)~오전 9:44 도보 다음 버스 7728 다음 버스 740\":\n      - img \"대중교통\": \n      - text: 1시간 44분\n      - heading \"오전 8:00 (월요일)~오전 9:44\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"740\"\n    - button \"대중교통 1시간 37분 오전 8:00 (월요일)~오전 9:37 도보 다음 버스 7728 다음 지하철 6호선 다음 지하철 2호선\":\n      - img \"대중교통\": \n      - text: 1시간 37분\n      - heading \"오전 8:00 (월요일)~오전 9:37\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 6호선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 2호선\n    - button \"대중교통 1시간 47분 오전 8:00 (월요일)~오전 9:47 도보 다음 버스 024B(평일) 다음 버스 9711 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 47분\n      - heading \"오전 8:00 (월요일)~오전 9:47\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024B(평일)\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"9711\"\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 28분 오전 8:22 (월요일)~오전 9:50 버스 024A 또는 95 다음 지하철 3호선 다음 지하철 2호선\":\n      - img \"대중교통\": \n      - text: 1시간 28분\n      - heading \"오전 8:22 (월요일)~오전 9:50\" [level=1]\n      - img \"버스\"\n      - text: 024A\n      - img \"또는\"\n      - text: \"95\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 3호선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 2호선\n    - heading \"강남 주변 탐색\" [level=2]\n    - button \"키이스케이프 강남·별표 4.7개·리뷰 57개\"\n    - text: 키이스케이프 강남\n    - img \"별표 4.7개 리뷰 57개\"\n    - button \"국립어린이청소년도서관·별표 4.6개·리뷰 100개\"\n    - text: 국립어린이청소년도서관\n    - img \"별표 4.6개 리뷰 100개\"\n    - button \"더 스머프 매직 포레스트 강남점·별표 4.6개·리뷰 126개\"\n    - text: 더 스머프 매직 포레스트 강남점\n    - img \"별표 4.6개 리뷰 126개\"\n    - button \"전시대관\"\n    - text: 전시대관\n    - button \"코드케이 강남점·별표 4.5개·리뷰 522개\"\n    - text: 코드케이 강남점\n    - img \"별표 4.5개 리뷰 522개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JVG7%252B97Q%2F%25EA%25B0%2595%25EB%2582%25A8%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2B%25EC%2597%25AD%25EC%2582%25BC%25EB%258F%2599%2Fdata%3D!3m1!4b1!4m12!4m11!1m0!1m4!1m1!1s0x357ca1598c361b2b%3A0xdbf9af292beff3c!2m1!4s8Q99F2XH%252B52Q!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"2km\""
+  },
+  {
+    "block": "S5",
+    "destination": "광화문역 서울",
+    "evidence_id": "ev_de0e7fea95d6194dcbc8582a69b702c4938ef64a7c38374bcaab617573ff1e31",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.623044795,126.868664165"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "광화문역 서울"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "8912b619bc706498d46516cb86250a2273d8dfe95fbe48d7dbd823c6062d1ea3"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 1시간 9분\" [checked]:\n      - img \"대중교통\"\n      - text: 1시간 9분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JVF9+6F7\":\n          - /placeholder: \"\"\n          - text: 8Q98JVF9+6F7\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 광화문역 서울특별시\":\n          - /placeholder: \"\"\n          - text: 광화문역 서울특별시\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"광화문역 1시간 9분\"\n    - listitem:\n      - button \"광화문역\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 1시간 9분 오전 8:00 (월요일)~오전 9:09 도보 다음 버스 7728 다음 버스 470 도래울6.7단지부터 오전 8:18 도보 3분 세부정보\":\n      - img \"대중교통\": \n      - text: 1시간 9분\n      - heading \"오전 8:00 (월요일)~오전 9:09\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 470 도래울6.7단지부터 오전 8:18\n      - img \"도보\": \n      - text: 3분\n      - button \"세부정보\"\n    - button \"대중교통 1시간 1분 오전 8:07 (월요일)~오전 9:08 도보 다음 버스 7728 다음 버스 6002\":\n      - img \"대중교통\": \n      - text: 1시간 1분\n      - heading \"오전 8:07 (월요일)~오전 9:08\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"6002\"\n    - button \"대중교통 1시간 10분 오전 8:00 (월요일)~오전 9:10 도보 다음 버스 702B(용두초교)\":\n      - img \"대중교통\": \n      - text: 1시간 10분\n      - heading \"오전 8:00 (월요일)~오전 9:10\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 702B(용두초교)\n    - button \"대중교통 1시간 7분 오전 8:00 (월요일)~오전 9:07 도보 다음 버스 702A(서오릉)\":\n      - img \"대중교통\": \n      - text: 1시간 7분\n      - heading \"오전 8:00 (월요일)~오전 9:07\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 702A(서오릉)\n    - button \"대중교통 1시간 27분 오전 8:00 (월요일)~오전 9:27 도보 다음 버스 075B 다음 버스 1000 또는 1200\":\n      - img \"대중교통\": \n      - text: 1시간 27분\n      - heading \"오전 8:00 (월요일)~오전 9:27\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 075B\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"1000\"\n      - img \"또는\"\n      - text: \"1200\"\n    - button \"대중교통 1시간 20분 오전 8:00 (월요일)~오전 9:20 도보 다음 버스 7728 다음 버스 1000 또는 1200\":\n      - img \"대중교통\": \n      - text: 1시간 20분\n      - heading \"오전 8:00 (월요일)~오전 9:20\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"1000\"\n      - img \"또는\"\n      - text: \"1200\"\n    - heading \"광화문역 둘러보기\" [level=2]\n    - button \"경복궁·별표 4.6개·리뷰 47,022개\"\n    - text: 경복궁\n    - img \"별표 4.6개 리뷰 47,022개\"\n    - button \"청계천·별표 4.6개·리뷰 11,173개\"\n    - text: 청계천\n    - img \"별표 4.6개 리뷰 11,173개\"\n    - button \"덕수궁·별표 4.6개·리뷰 20,505개\"\n    - text: 덕수궁\n    - img \"별표 4.6개 리뷰 20,505개\"\n    - button \"대한불교조계종 총본산 조계사·별표 4.5개·리뷰 8,289개\"\n    - text: 대한불교조계종 총본산 조계사\n    - img \"별표 4.5개 리뷰 8,289개\"\n    - button \"광화문광장·별표 4.5개·리뷰 14,345개\"\n    - text: 광화문광장\n    - img \"별표 4.5개 리뷰 14,345개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JVF9%252B6F7%2F%25EA%25B4%2591%25ED%2599%2594%25EB%25AC%25B8%25EC%2597%25AD%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2Fdata%3D!3m1!4b1!4m12!4m11!1m0!1m4!1m1!1s0x357ca2ecd7366699%3A0xa53f7758f1d16760!2m1!4s8Q98HX9G%252BVFF!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"1km\""
+  },
+  {
+    "block": "S5",
+    "destination": "상암 MBC",
+    "evidence_id": "ev_9010c321f151164abc3b5338209f949dffe71524c1faec2b9535da844ba83b04",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.623044795,126.868664165"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "상암 MBC"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "239298c1d1fc447861b4373ca1dfc7f7cb336d41718eaadf7ac70d6e32c0cf9d"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 58분\" [checked]:\n      - img \"대중교통\"\n      - text: 58분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JVF9+6F7\":\n          - /placeholder: \"\"\n          - text: 8Q98JVF9+6F7\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 MBC 문화방송 본사 서울특별시 마포구 성암로 267\":\n          - /placeholder: \"\"\n          - text: MBC 문화방송 본사 서울특별시 마포구 성암로 267\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"MBC 문화방송 본사 58분\"\n    - listitem:\n      - button \"MBC 문화방송 본사\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 58분 오전 8:00 (월요일)~오전 8:58 도보 다음 버스 730 도래울6.7단지부터 오전 8:33 도보 4분 세부정보\":\n      - img \"대중교통\": \n      - text: 58분\n      - heading \"오전 8:00 (월요일)~오전 8:58\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 730 도래울6.7단지부터 오전 8:33\n      - img \"도보\": \n      - text: 4분\n      - button \"세부정보\"\n    - button \"대중교통 58분 오전 8:00 (월요일)~오전 8:58 도보 다음 버스 075B 다음 도보\":\n      - img \"대중교통\": \n      - text: 58분\n      - heading \"오전 8:00 (월요일)~오전 8:58\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 075B\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 56분 오전 8:00 (월요일)~오전 8:56 도보 다음 버스 7728 다음 버스 750B 다음 도보\":\n      - img \"대중교통\": \n      - text: 56분\n      - heading \"오전 8:00 (월요일)~오전 8:56\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 750B\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 58분 오전 8:00 (월요일)~오전 8:58 도보 다음 버스 7728 다음 버스 7017 또는 7021 다음 도보\":\n      - img \"대중교통\": \n      - text: 58분\n      - heading \"오전 8:00 (월요일)~오전 8:58\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7017\"\n      - img \"또는\"\n      - text: \"7021\"\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 2분 오전 8:02 (월요일)~오전 9:04 도보 다음 버스 024A 또는 024B(평일) 다음 지하철 경의중앙선 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 2분\n      - heading \"오전 8:02 (월요일)~오전 9:04\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024A\n      - img \"또는\"\n      - text: 024B(평일)\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 59분 오전 8:00 (월요일)~오전 8:59 도보 다음 버스 7727 다음 도보\":\n      - img \"대중교통\": \n      - text: 59분\n      - heading \"오전 8:00 (월요일)~오전 8:59\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7727\"\n      - img \"다음\": \n      - img \"도보\"\n    - heading \"MBC 문화방송 본사 주변 탐색\" [level=2]\n    - button \"디지털미디어시티 (DMC)·별표 4.3개·리뷰 68개\"\n    - text: 디지털미디어시티 (DMC)\n    - img \"별표 4.3개 리뷰 68개\"\n    - button \"한국영상자료원·별표 4.5개·리뷰 501개\"\n    - text: 한국영상자료원\n    - img \"별표 4.5개 리뷰 501개\"\n    - button \"한국영화박물관·별표 4.3개·리뷰 80개\"\n    - text: 한국영화박물관\n    - img \"별표 4.3개 리뷰 80개\"\n    - button \"월드컵로 가을단풍길·별표 4.5개·리뷰 2개\"\n    - text: 월드컵로 가을단풍길\n    - img \"별표 4.5개 리뷰 2개\"\n    - button \"문화비축기지·별표 4.2개·리뷰 2,323개\"\n    - text: 문화비축기지\n    - img \"별표 4.2개 리뷰 2,323개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JVF9%252B6F7%2FMBC%2B%25EB%25AC%25B8%25ED%2599%2594%25EB%25B0%25A9%25EC%2586%25A1%2B%25EB%25B3%25B8%25EC%2582%25AC%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2B%25EB%25A7%2588%25ED%258F%25AC%25EA%25B5%25AC%2B%25EC%2584%25B1%25EC%2595%2594%25EB%25A1%259C%2B267%2Fdata%3D!3m1!4b1!4m12!4m11!1m0!1m4!1m1!1s0x357c990d12720f23%3A0xe26e3a1ad3266fef!2m1!4s8Q98HVJR%252BF86!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"1km\""
+  },
+  {
+    "block": "S5",
+    "destination": "여의도역 서울",
+    "evidence_id": "ev_72ba218006ed2db77dcdcf6c833ea5b5c6b85b187369d03437572e071eb635b3",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.623044795,126.868664165"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "여의도역 서울"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "5594e61fa62bc3380aa145d3bc7d3d51ed4f213614f52fc798b96dfef08fb2fd"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 1시간 12분\" [checked]:\n      - img \"대중교통\"\n      - text: 1시간 12분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JVF9+6F7\":\n          - /placeholder: \"\"\n          - text: 8Q98JVF9+6F7\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 여의도역 서울특별시\":\n          - /placeholder: \"\"\n          - text: 여의도역 서울특별시\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"여의도역 1시간 12분\"\n    - listitem:\n      - button \"여의도역\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 1시간 12분 오전 8:00 (월요일)~오전 9:12 도보 다음 버스 7728 다음 버스 163 도래울6.7단지부터 오전 8:18 도보 3분 세부정보\":\n      - img \"대중교통\": \n      - text: 1시간 12분\n      - heading \"오전 8:00 (월요일)~오전 9:12\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 163 도래울6.7단지부터 오전 8:18\n      - img \"도보\": \n      - text: 3분\n      - button \"세부정보\"\n    - button \"대중교통 1시간 18분 오전 8:00 (월요일)~오전 9:18 도보 다음 버스 7728 다음 버스 753 또는 6713\":\n      - img \"대중교통\": \n      - text: 1시간 18분\n      - heading \"오전 8:00 (월요일)~오전 9:18\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"753\"\n      - img \"또는\"\n      - text: \"6713\"\n    - button \"대중교통 1시간 18분 오전 8:03 (월요일)~오전 9:21 도보 다음 버스 075B 다음 지하철 경의중앙선 다음 지하철 5호선\":\n      - img \"대중교통\": \n      - text: 1시간 18분\n      - heading \"오전 8:03 (월요일)~오전 9:21\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 075B\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 경의중앙선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 5호선\n    - button \"대중교통 1시간 32분 오전 8:01 (월요일)~오전 9:33 도보 다음 버스 7602 다음 지하철 9호선\":\n      - img \"대중교통\": \n      - text: 1시간 32분\n      - heading \"오전 8:01 (월요일)~오전 9:33\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7602\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 9호선\n    - button \"대중교통 1시간 27분 오전 8:01 (월요일)~오전 9:28 도보 다음 버스 024A 또는 95 다음 지하철 3호선 다음 도보 다음 지하철 5호선\":\n      - img \"대중교통\": \n      - text: 1시간 27분\n      - heading \"오전 8:01 (월요일)~오전 9:28\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024A\n      - img \"또는\"\n      - text: \"95\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 3호선\n      - img \"다음\": \n      - img \"도보\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 5호선\n    - button \"대중교통 1시간 25분 오전 8:03 (월요일)~오전 9:28 도보 다음 버스 702B(용두초교) 다음 지하철 5호선\":\n      - img \"대중교통\": \n      - text: 1시간 25분\n      - heading \"오전 8:03 (월요일)~오전 9:28\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 702B(용두초교)\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 5호선\n    - heading \"여의도역 둘러보기\" [level=2]\n    - button \"여의도한강공원·별표 4.5개·리뷰 18,443개\"\n    - text: 여의도한강공원\n    - img \"별표 4.5개 리뷰 18,443개\"\n    - button \"여의도공원·별표 4.4개·리뷰 6,226개\"\n    - text: 여의도공원\n    - img \"별표 4.4개 리뷰 6,226개\"\n    - button \"Yeouido·별표 4.5개·리뷰 66개\"\n    - text: Yeouido\n    - img \"별표 4.5개 리뷰 66개\"\n    - button \"여의도순복음교회·별표 4.5개·리뷰 1,248개\"\n    - text: 여의도순복음교회\n    - img \"별표 4.5개 리뷰 1,248개\"\n    - button \"여의도 샛강생태공원·별표 4.4개·리뷰 360개\"\n    - text: 여의도 샛강생태공원\n    - img \"별표 4.4개 리뷰 360개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JVF9%252B6F7%2F%25EC%2597%25AC%25EC%259D%2598%25EB%258F%2584%25EC%2597%25AD%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2Fdata%3D!3m1!4b1!4m12!4m11!1m0!1m4!1m1!1s0x357c9f3d7ec8d931%3A0x149ea3d4b4302050!2m1!4s8Q98GWCF%252BJPF!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"2km\""
+  },
+  {
+    "block": "S5",
+    "destination": "LG사이언스파크",
+    "evidence_id": "ev_45dd6071c16d3e794fbcaecde46e2a7d431fe81bac8a92e94fffed77c77a775b",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.623044795,126.868664165"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "LG사이언스파크"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "f6ba7156f067e7e05c1df2e55cf60e196b3c2557928bd11af3bfed5646d3b677"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 1시간 6분\" [checked]:\n      - img \"대중교통\"\n      - text: 1시간 6분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JVF9+6F7\":\n          - /placeholder: \"\"\n          - text: 8Q98JVF9+6F7\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 LG사이언스파크 서울특별시 강서구 마곡중앙10로 30\":\n          - /placeholder: \"\"\n          - text: LG사이언스파크 서울특별시 강서구 마곡중앙10로 30\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"LG사이언스파크 1시간 6분\"\n    - listitem:\n      - button \"LG사이언스파크\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 1시간 7분 오전 8:01 (월요일)~오전 9:08 도보 다음 버스 7728 다음 지하철 공항철도 다음 도보 도래울6.7단지부터 오전 8:19 도보 20분 세부정보\":\n      - img \"대중교통\": \n      - text: 1시간 7분\n      - heading \"오전 8:01 (월요일)~오전 9:08\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 공항철도\n      - img \"다음\": \n      - img \"도보\"\n      - text: 도래울6.7단지부터 오전 8:19\n      - img \"도보\": \n      - text: 20분\n      - button \"세부정보\"\n    - button \"대중교통 1시간 20분 오전 8:00 (월요일)~오전 9:20 도보 다음 버스 730 다음 지하철 공항철도 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 20분\n      - heading \"오전 8:00 (월요일)~오전 9:20\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"730\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 공항철도\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 20분 오전 8:00 (월요일)~오전 9:20 도보 다음 버스 075B 다음 지하철 공항철도 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 20분\n      - heading \"오전 8:00 (월요일)~오전 9:20\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 075B\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 공항철도\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 7분 오전 8:17 (월요일)~오전 9:24 도보 다음 버스 7728 다음 지하철 공항철도 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 7분\n      - heading \"오전 8:17 (월요일)~오전 9:24\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 공항철도\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 33분 오전 8:00 (월요일)~오전 9:33 도보 다음 버스 7602 다음 지하철 9호선 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 33분\n      - heading \"오전 8:00 (월요일)~오전 9:33\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7602\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 9호선\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 8분 오전 8:34 (월요일)~오전 9:42 도보 다음 버스 7728 다음 지하철 공항철도 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 8분\n      - heading \"오전 8:34 (월요일)~오전 9:42\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 공항철도\n      - img \"다음\": \n      - img \"도보\"\n    - heading \"LG사이언스파크 주변 탐색\" [level=2]\n    - button \"서울식물원·별표 4.3개·리뷰 7,838개\"\n    - text: 서울식물원\n    - img \"별표 4.3개 리뷰 7,838개\"\n    - button \"스페이스K 서울·별표 4.3개·리뷰 202개\"\n    - text: 스페이스K 서울\n    - img \"별표 4.3개 리뷰 202개\"\n    - button \"서울식물원 주제정원·별표 4.4개·리뷰 1,711개\"\n    - text: 서울식물원 주제정원\n    - img \"별표 4.4개 리뷰 1,711개\"\n    - button \"서울식물원 열린숲·별표 4.6개·리뷰 251개\"\n    - text: 서울식물원 열린숲\n    - img \"별표 4.6개 리뷰 251개\"\n    - button \"서울식물원 호수원·별표 4.6개·리뷰 425개\"\n    - text: 서울식물원 호수원\n    - img \"별표 4.6개 리뷰 425개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JVF9%252B6F7%2FLG%25EC%2582%25AC%25EC%259D%25B4%25EC%2596%25B8%25EC%258A%25A4%25ED%258C%258C%25ED%2581%25AC%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2B%25EA%25B0%2595%25EC%2584%259C%25EA%25B5%25AC%2B%25EB%25A7%2588%25EA%25B3%25A1%25EC%25A4%2591%25EC%2595%259910%25EB%25A1%259C%2B30%2Fdata%3D!3m1!4b1!4m12!4m11!1m0!1m4!1m1!1s0x357c9c14541010d1%3A0xa6c2cd0160df8438!2m1!4s8Q98HR7J%252BCV6!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"1km\""
+  },
+  {
+    "block": "S5",
+    "destination": "강남역 서울",
+    "evidence_id": "ev_0a94d309a51d16631ac42beb75fbdff74b0a165841bbc3dd5b5182f67098b8c4",
+    "parameters": {
+      "browser": {
+        "mode": "launch",
+        "executable_path": "C:/projects/realestate_reco/video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe",
+        "headless": true
+      },
+      "start_url": {
+        "url": "https://www.google.com/maps/dir/",
+        "query": [
+          {
+            "name": "api",
+            "value": {
+              "source": "literal",
+              "value": "1"
+            }
+          },
+          {
+            "name": "origin",
+            "value": {
+              "source": "literal",
+              "value": "37.623044795,126.868664165"
+            }
+          },
+          {
+            "name": "destination",
+            "value": {
+              "source": "literal",
+              "value": "강남역 서울"
+            }
+          },
+          {
+            "name": "travelmode",
+            "value": {
+              "source": "literal",
+              "value": "transit"
+            }
+          }
+        ]
+      },
+      "environment": {
+        "viewport": {
+          "width": 1280,
+          "height": 720,
+          "device_scale_factor": 1
+        },
+        "locale": "ko-KR",
+        "timezone": "Asia/Seoul",
+        "color_scheme": "light",
+        "reduced_motion": "reduce",
+        "service_workers": "block"
+      },
+      "actions": [
+        {
+          "step_id": "wait",
+          "action": "wait_for_timeout",
+          "duration_ms": 3000
+        },
+        {
+          "step_id": "schedule",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "지금 출발"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "depart",
+          "action": "click",
+          "locator": {
+            "kind": "css",
+            "selector": "[role=\"menuitemradio\"]:has-text(\"출발시간\")"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "day",
+          "action": "click",
+          "locator": {
+            "kind": "role",
+            "role": "button",
+            "name": "10월 18일 (일) - 다음 날짜로 이동"
+          },
+          "button": "left",
+          "click_count": 1
+        },
+        {
+          "step_id": "time",
+          "action": "fill",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "value": {
+            "source": "literal",
+            "value": "오전 8:00"
+          }
+        },
+        {
+          "step_id": "commit",
+          "action": "press",
+          "locator": {
+            "kind": "css",
+            "selector": "input[name=\"transit-time\"]"
+          },
+          "key": "Enter"
+        },
+        {
+          "step_id": "waitresult",
+          "action": "wait_for_timeout",
+          "duration_ms": 2500
+        }
+      ],
+      "storage": {
+        "cookies": [],
+        "local_storage": [],
+        "session_storage": []
+      },
+      "secrets": [],
+      "capture": {
+        "after_each_step": [],
+        "at_end": [
+          "accessibility",
+          "url"
+        ],
+        "events": [],
+        "network": {
+          "request_body": false,
+          "response_body": false,
+          "header_values": false
+        }
+      },
+      "scenario_sha256": "869ee1b252aa46112fb33ca1a35863f7d35dfe8f283cf57b56971133d5b91571"
+    },
+    "accessibility": "- document:\n  - menu:\n    - menuitemradio \"오전 12:00\"\n    - menuitemradio \"오전 12:30\"\n    - menuitemradio \"오전 1:00\"\n    - menuitemradio \"오전 1:30\"\n    - menuitemradio \"오전 2:00\"\n    - menuitemradio \"오전 2:30\"\n    - menuitemradio \"오전 3:00\"\n    - menuitemradio \"오전 3:30\"\n    - menuitemradio \"오전 4:00\"\n    - menuitemradio \"오전 4:30\"\n    - menuitemradio \"오전 5:00\"\n    - menuitemradio \"오전 5:30\"\n    - menuitemradio \"오전 6:00\"\n    - menuitemradio \"오전 6:30\"\n    - menuitemradio \"오전 7:00\"\n    - menuitemradio \"오전 7:30\"\n    - menuitemradio \"오전 8:00\" [checked]\n    - menuitemradio \"오전 8:30\"\n    - menuitemradio \"오전 9:00\"\n    - menuitemradio \"오전 9:30\"\n    - menuitemradio \"오전 10:00\"\n    - menuitemradio \"오전 10:30\"\n    - menuitemradio \"오전 11:00\"\n    - menuitemradio \"오전 11:30\"\n    - menuitemradio \"오후 12:00\"\n    - menuitemradio \"오후 12:30\"\n    - menuitemradio \"오후 1:00\"\n    - menuitemradio \"오후 1:30\"\n    - menuitemradio \"오후 2:00\"\n    - menuitemradio \"오후 2:30\"\n    - menuitemradio \"오후 3:00\"\n    - menuitemradio \"오후 3:30\"\n    - menuitemradio \"오후 4:00\"\n    - menuitemradio \"오후 4:30\"\n    - menuitemradio \"오후 5:00\"\n    - menuitemradio \"오후 5:30\"\n    - menuitemradio \"오후 6:00\"\n    - menuitemradio \"오후 6:30\"\n    - menuitemradio \"오후 7:00\"\n    - menuitemradio \"오후 7:30\"\n    - menuitemradio \"오후 8:00\"\n    - menuitemradio \"오후 8:30\"\n    - menuitemradio \"오후 9:00\"\n    - menuitemradio \"오후 9:30\"\n    - menuitemradio \"오후 10:00\"\n    - menuitemradio \"오후 10:30\"\n    - menuitemradio \"오후 11:00\"\n    - menuitemradio \"오후 11:30\"\n  - application \"지도·지도를 이동하려면 화살표 키를 사용하세요.·특정 장소에 대한 세부정보를 확인하려면 해당 숫자 키를 누르세요.\"\n  - radiogroup:\n    - radio \"추천 이동 수단\":\n      - img \"추천 이동 수단\"\n    - radio \"운전을 이용할 수 없음\" [disabled]:\n      - img \"운전을 이용할 수 없음\"\n    - radio \"대중교통 1시간 39분\" [checked]:\n      - img \"대중교통\"\n      - text: 1시간 39분\n    - radio \"도보를 이용할 수 없음\" [disabled]:\n      - img \"도보를 이용할 수 없음\"\n    - radio \"자전거를 이용할 수 없음\" [disabled]:\n      - img \"자전거를 이용할 수 없음\"\n    - radio \"항공편을 이용할 수 없음\" [disabled]:\n      - img \"항공편을 이용할 수 없음\"\n  - button \"길찾기 모드 닫기\"\n  - list:\n    - listitem:\n      - combobox:\n        - textbox \"출발지 8Q98JVF9+6F7\":\n          - /placeholder: \"\"\n          - text: 8Q98JVF9+6F7\n      - button \"검색\"\n    - listitem:\n      - combobox:\n        - textbox \"목적지 강남 서울특별시 역삼동\":\n          - /placeholder: \"\"\n          - text: 강남 서울특별시 역삼동\n      - button \"검색\"\n  - button \"출발지와 목적지 바꾸기\"\n  - button\n  - button \"Show the Input Tools menu\"\n  - list:\n    - listitem:\n      - button \"메뉴\"\n    - listitem:\n      - button \"저장됨\"\n    - listitem:\n      - button \"최근 항목\"\n    - listitem:\n      - button \"강남 1시간 39분\"\n    - listitem:\n      - button \"강남\"\n    - listitem:\n      - button \"앱 설치\"\n  - main \"경로\":\n    - button \"여러 목적지와 대중 교통 길 찾기는 지원되지 않습니다.\"\n    - button \"출발시간\"\n    - textbox: 오전 8:00\n    - button \"이전 경로\"\n    - button \"이후 경로\"\n    - button \"10월 19일 (월)\"\n    - button \"10월 19일 (월) - 이전 날짜로 이동\"\n    - button \"10월 19일 (월) - 다음 날짜로 이동\"\n    - button \"옵션\"\n    - button \"휴대전화로 경로 보내기\"\n    - button \"링크 복사\"\n    - link \"대중교통 1시간 39분 오전 8:00 (월요일)~오전 9:39 도보 다음 버스 7728 다음 버스 740 도래울6.7단지부터 오전 8:18 도보 6분 세부정보\":\n      - img \"대중교통\": \n      - text: 1시간 39분\n      - heading \"오전 8:00 (월요일)~오전 9:39\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 740 도래울6.7단지부터 오전 8:18\n      - img \"도보\": \n      - text: 6분\n      - button \"세부정보\"\n    - button \"대중교통 1시간 32분 오전 8:02 (월요일)~오전 9:34 도보 다음 버스 7728 다음 지하철 6호선 다음 지하철 2호선\":\n      - img \"대중교통\": \n      - text: 1시간 32분\n      - heading \"오전 8:02 (월요일)~오전 9:34\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 6호선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 2호선\n    - button \"대중교통 1시간 33분 오전 8:01 (월요일)~오전 9:34 도보 다음 버스 024A 또는 95 다음 지하철 3호선 다음 지하철 2호선\":\n      - img \"대중교통\": \n      - text: 1시간 33분\n      - heading \"오전 8:01 (월요일)~오전 9:34\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 024A\n      - img \"또는\"\n      - text: \"95\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 3호선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 2호선\n    - button \"대중교통 1시간 30분 오전 8:18 (월요일)~오전 9:48 도보 다음 버스 7728 다음 지하철 6호선 다음 지하철 2호선\":\n      - img \"대중교통\": \n      - text: 1시간 30분\n      - heading \"오전 8:18 (월요일)~오전 9:48\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"7728\"\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 6호선\n      - img \"다음\": \n      - img \"지하철\"\n      - text: 2호선\n    - button \"대중교통 1시간 54분 오전 8:00 (월요일)~오전 9:54 도보 다음 버스 075B 다음 버스 470 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 54분\n      - heading \"오전 8:00 (월요일)~오전 9:54\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: 075B\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"470\"\n      - img \"다음\": \n      - img \"도보\"\n    - button \"대중교통 1시간 59분 오전 8:00 (월요일)~오전 9:59 도보 다음 버스 730 다음 버스 9711 다음 도보\":\n      - img \"대중교통\": \n      - text: 1시간 59분\n      - heading \"오전 8:00 (월요일)~오전 9:59\" [level=1]\n      - img \"도보\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"730\"\n      - img \"다음\": \n      - img \"버스\"\n      - text: \"9711\"\n      - img \"다음\": \n      - img \"도보\"\n    - heading \"강남 주변 탐색\" [level=2]\n    - button \"키이스케이프 강남·별표 4.7개·리뷰 57개\"\n    - text: 키이스케이프 강남\n    - img \"별표 4.7개 리뷰 57개\"\n    - button \"국립어린이청소년도서관·별표 4.6개·리뷰 100개\"\n    - text: 국립어린이청소년도서관\n    - img \"별표 4.6개 리뷰 100개\"\n    - button \"더 스머프 매직 포레스트 강남점·별표 4.6개·리뷰 126개\"\n    - text: 더 스머프 매직 포레스트 강남점\n    - img \"별표 4.6개 리뷰 126개\"\n    - button \"전시대관\"\n    - text: 전시대관\n    - button \"코드케이 강남점·별표 4.5개·리뷰 522개\"\n    - text: 코드케이 강남점\n    - img \"별표 4.5개 리뷰 522개\"\n    - button \"음식점\"\n    - button \"호텔\"\n    - button \"바\"\n    - button \"커피숍\"\n    - button \"자세히\"\n    - text: New! 여정을 계속하려면 휴대전화에서 알림을 탭하여 경로를 확인하세요.\n    - button \"닫기\"\n  - button \"측면 패널 접기\"\n  - button \"Google 앱\"\n  - link \"로그인\":\n    - /url: https://accounts.google.com/ServiceLogin?hl=ko&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F8Q98JVF9%252B6F7%2F%25EA%25B0%2595%25EB%2582%25A8%2B%25EC%2584%259C%25EC%259A%25B8%25ED%258A%25B9%25EB%25B3%2584%25EC%258B%259C%2B%25EC%2597%25AD%25EC%2582%25BC%25EB%258F%2599%2Fdata%3D!4m12!4m11!1m0!1m4!1m1!1s0x357ca1598c361b2b%3A0xdbf9af292beff3c!2m1!4s8Q99F2XH%252B52Q!2m3!6e0!7e2!8j1792396800!3e3%3Fcoh%3D318247%26entry%3Dtt%26ved%3D1t%253A314688&service=local&ec=GAZAcQ\n  - button \"내 위치 보기\"\n  - button \"확대\"\n  - button \"축소\"\n  - button \"스트리트 뷰 이미지 탐색\"\n  - text: 레이어\n  - button \"레이어\"\n  - contentinfo:\n    - text: 지도 데이터 ©2026 TMap Mobility\n    - button \"대한민국\"\n    - button \"약관\"\n    - button \"개인 정보 보호\"\n    - button \"제품 의견 보내기\"\n  - button \"2km\""
+  }
+]

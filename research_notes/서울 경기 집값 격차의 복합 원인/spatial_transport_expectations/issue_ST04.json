@@ -1,0 +1,23 @@
+{
+  "issue_id": "ST04",
+  "task_id": "RPR-LIT-20261023",
+  "severity": "required_before_quantitative_use",
+  "affected_claim_ids": [
+    "ST-F05",
+    "ST-P2"
+  ],
+  "affected_scene_ids": [],
+  "proposed_scene_id": "RPR-LIT-ST-P2 (가설 검증용 제안, 기존 장면 아님)",
+  "problem": "동북선 연구 내부 기술통계 및 모형 결과 불일치로 확정 인과효과 수치 사용에 부적합",
+  "evidence_url": "https://www.ejrea.org/archive/view_article?pid=jrea-11-2-171",
+  "evidence_locations": [
+    "표3:면적평균72.25>최대58",
+    "III.1/IV.1 대상구 목록 차이",
+    "표4 vs 표5:p=0.3866",
+    "표8 PSM계수와 기본DID의 큰 차이",
+    "V:평행추세 불완전 인정"
+  ],
+  "proposal": "사실 요약에 모형별 차이·자료 오류를 함께 쓰고 발표효과 정량 사용은 보류. 코드·자료·원표 정합성 확보 후 재평가.",
+  "impact": "철도 호재의 일률적 상승률·강한 인과 표현 채택 방지",
+  "status": "총괄 검토용 제안; 공통 상태파일 미수정"
+}

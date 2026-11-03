@@ -1,0 +1,33 @@
+{
+  "schema_version": "full-film-global-edl-v1",
+  "clock": "global_frames",
+  "fps": 30,
+  "intervals": "start_frame inclusive, end_frame exclusive; seconds = frame / 30",
+  "output_root": "outputs/rebuild-v2/full-film-r2-v1",
+  "paths": {
+    "edl": "global_edl.json",
+    "mp4": "affordable_home_price_rebuild_r2_v1.mp4",
+    "srt": "captions_global.srt",
+    "render_receipt": "render_receipt.json",
+    "source_manifest": "source_manifest.json",
+    "qa_packet": "qa_packet.json",
+    "signal_receipt": "av_signal_receipt.json",
+    "probe": "probe.json"
+  },
+  "top_level": ["clock", "fps", "total_frames", "total_seconds", "script", "timing", "segments", "scenes", "cues", "beats", "progressions", "zoom", "last_speech_global_s", "outro_start_frame", "outro_start_s"],
+  "segments": {
+    "fields": ["id", "kind", "scene_id", "chapter_id", "start_frame", "end_frame", "duration_frames", "source_in_frame", "source_out_frame", "source", "audio_source", "audio_samples_preserved", "padding_samples", "tail_policy"],
+    "kinds": ["hook", "brand_intro", "chapter", "body", "brand_outro"],
+    "coverage": "Every picture cut, no gap/overlap, covers 0..total_frames. Intro/card/outro have no narration cues. CTA is R034 body with existing 3-second hold."
+  },
+  "scenes": {"fields": ["scene_id", "chapter", "start_frame", "end_frame", "source_in_frame", "source_in_s", "audio_start_frame", "audio_source", "last_speech_global_s", "project", "model", "local_duration_s", "tail_policy"], "order": "exact script.scenes array, never lexical sort"},
+  "cues": {"fields": ["id", "scene_id", "text", "display_lines", "start_frame", "end_frame", "global_start_s", "global_end_s", "local_start_s", "local_end_s", "source_start", "source_end", "spoken_start", "spoken_end", "first_word_index", "last_word_index", "timing_basis"], "quantization": "first visible frame = ceil(local_start_s*30); exclusive end = ceil(local_end_s*30); native seconds retained"},
+  "beats": {"fields": ["scene_id", "beat_index", "anchor", "action", "start_frame", "end_frame", "local_start_s", "local_end_s", "global_start_s", "global_end_s", "source_start", "source_end", "first_word_index", "last_word_index", "cue_ids", "timing_basis", "provider_timing_basis"], "timing_basis": "native_word_boundary", "quantization": "ceil(native local seconds * 30), then scene start_frame"},
+  "progressions": "[{kind,scene_id,beat_frames,timing_basis}] uses same QA normal form; representative scenes R003=funding_waterfall, R006=ltv_dsr, R030=monthly_budget",
+  "zoom": {"mode": "fixed", "max_frames": []},
+  "source_projects": "qa_packet.source_projects=[{scene_id,html:{path,sha256},model:{path,sha256},allowed_text_shapes:[]}]",
+  "source_manifest": "{script_sha256,files:[{path,sha256}]} includes scene projects/fonts/images/JS/CSS, rendered MP4s, original voice WAV, native timing, assembly code and chapter assets",
+  "gap_policy": "Do not add narrator proposed 0.25s: source WAV already includes natural tail. Keep all PCM samples; pad only to CFR or justified scene read hold. Chapters are independent 90-frame clips. No silent duplicate gap clips.",
+  "outro_policy": "outro_start_frame=max(ceil((last_speech_global_s+3)*30), last_scene_start_frame+ceil(actual_PCM_seconds*30)); final WAV already contains 3s hold, never add twice",
+  "review_limits": {"actual_listening": false, "continuous_playback": false}
+}

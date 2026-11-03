@@ -1,0 +1,89 @@
+{
+  "task_id": "part1-Jun-shorts-3way-content-plan",
+  "recipient": "총괄",
+  "direct_peer_message_tool_available": false,
+  "issues": [
+    {
+      "issue_id": "DEF-R20-BOUNDARY",
+      "scene_ids": [
+        "P01-R20",
+        "SHORT02-R20-R16"
+      ],
+      "problem": "동결 집계의 표 이름은 2000년 이전이지만 집계·승인 발화는 2000년을 포함한다.",
+      "evidence": {
+        "source_ids": [
+          "SRC-COHORT-CODE",
+          "SRC-APPROVED-BODY"
+        ],
+        "detail": "cohort 경계 (0,2000); 승인 denominator에 2000년 포함 명시"
+      },
+      "proposal": "쇼츠 표시문만 2000년까지 준공(2000년 포함)으로 정확히 쓴다. 기존 본편 발화는 그대로 재사용한다.",
+      "impact": "가격 정의·화면 집단명",
+      "status": "계획에 반영, 렌더 확인 필요"
+    },
+    {
+      "issue_id": "DEF-AGGREGATION-UNIT",
+      "scene_ids": [
+        "P01-R20",
+        "P01-R19",
+        "P01-R18",
+        "P01-R17",
+        "P01-R16",
+        "P01-R15",
+        "P01-R14",
+        "P01-R13",
+        "P01-R12",
+        "P01-R11"
+      ],
+      "problem": "동별·준공군 거래 중위값, 단지별 거래 중위가격, 남동구 구간별 단지 수는 집계 단위가 다르다.",
+      "evidence": {
+        "source_ids": [
+          "SRC-PRICE-INSIGHTS",
+          "SRC-PRICE-LEGEND"
+        ],
+        "detail": "dong/cohort are transaction medians; mapped quantiles/bands are one median per location-verified complex. Denominators are separate."
+      },
+      "proposal": "동/준공군 거래 중위값과 단지별 중위가격의 분포를 화면에서 구분한다. 남동은 77개 중 61/16개를 모두 유지한다.",
+      "impact": "초기 정의·가격 도표·표본수",
+      "status": "계획에 반영, 편집/QA 확인 필요"
+    },
+    {
+      "issue_id": "DEF-CUTOFF-AND-DEDUP",
+      "scene_ids": [
+        "SHORT01-PROMO",
+        "SHORT02-R20-R16",
+        "SHORT03-R15-R11"
+      ],
+      "problem": "10월은 조회일까지 신고분이며 coverage는 additional_normal_trade_deduplication=false이다.",
+      "evidence": {
+        "source_ids": [
+          "SRC-PRICE-COVERAGE",
+          "SRC-PRICE-LEGEND",
+          "SRC-APPROVED-BODY"
+        ],
+        "detail": "/additional_normal_trade_deduplication=false; 기존 도입의 10월 조회일 신고분 조건"
+      },
+      "proposal": "기간·면적·조회일·취소 제외를 처음에 표시한다. 추가 정상거래 중복 제거를 했다고 주장하지 않는다. 새 조사·집계 없이 동결 값을 보존한다.",
+      "impact": "조건 표기·검증 주장 범위",
+      "status": "제약 기록; 원천 재집계 미실시"
+    },
+    {
+      "issue_id": "LINKS-PENDING",
+      "scene_ids": [
+        "SHORT01-PROMO",
+        "SHORT02-R20-R16",
+        "SHORT03-R15-R11"
+      ],
+      "problem": "새 세 편과 Jun 본편의 게시 URL은 입력에 없다. 10~1위는 현재 state에서 대본 승인 대기다.",
+      "evidence": {
+        "source_ids": [
+          "CTX-STATE"
+        ],
+        "detail": "/active_publication_status=local_only_not_uploaded; /active_parts/1/status=script_approval_pending; 최신 task의 10~1위 공개 전제 금지"
+      },
+      "proposal": "CTA는 지정된 두 문장만 공통 사용한다. 다른 순위 영상은 A↔B, 홍보편은 A/B로 연결하고 20~11위 전체 비교는 본편으로 연결한다. 실제 링크는 총괄이 게시 상태 확인 후 적용한다.",
+      "impact": "게시 시 연결 대상·메타데이터",
+      "status": "총괄 다음 단계 확인 필요; 계획 작성 차단 아님"
+    }
+  ]
+}

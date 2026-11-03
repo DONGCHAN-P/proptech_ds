@@ -1,0 +1,637 @@
+{
+  "episode_id": "regional-price-recovery-20261022",
+  "script_revision": "v3",
+  "timing_locked": false,
+  "scenes": [
+    {
+      "scene_id": "S001",
+      "message": "그 ‘오래’는 몇 년일까요",
+      "narration_text": "집은 오래 들고 있으면 결국 오른다는 말. 그런데 그 오래는 몇 년일까요? 우리 실거래 비교 지수에서 인천은 과거 고점을 다시 넘기까지 칠 년 구 개월이 걸린 구간이 있었습니다. 서울에도 오 년 삼 개월이 걸린 구간이 있습니다.\n\n최근 상승장만 떼어 보면 이 기다림이 잘 보이지 않습니다. 그래서 오늘은 이천육 년부터 자료를 펼쳐 보겠습니다. 서울, 경기, 인천, 부산, 대구, 대전, 그리고 비교 가능한 기간을 따로 표시한 세종입니다.\n\n얼마나 올랐는지와 함께, 그 사이 얼마나 내려갔고 언제 다시 이전 고점에 닿았는지 보겠습니다. 관측 종료는 이천이십육 년 이분기입니다.",
+      "claim_ids": [
+        "FULL-HISTORY-S001"
+      ],
+      "material_type": "actual_data_line_chart_and_source",
+      "asset_ids": [
+        "S001-data"
+      ],
+      "script_revision": "v3",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "narration_paragraphs_not_voice_locked",
+      "status": "script_review_draft",
+      "beats": [
+        {
+          "beat_id": "S001-P1",
+          "narration_text": "집은 오래 들고 있으면 결국 오른다는 말. 그런데 그 오래는 몇 년일까요? 우리 실거래 비교 지수에서 인천은 과거 고점을 다시 넘기까지 칠 년 구 개월이 걸린 구간이 있었습니다. 서울에도 오 년 삼 개월이 걸린 구간이 있습니다.",
+          "visual": "인천 2008Q3→2016Q2 구간에 `31분기·7년 9개월`, 서울 2010Q1→2015Q2에 `21분기·5년 3개월`을 시간축과 함께 표시한다. 보유자 전체의 손익이나 실제 매수자의 결과로 이름 붙이지 않는다.",
+          "source": "`analysis/housing_growth_2006/full_history_v1/episodes.csv`, `summary.csv`.",
+          "readiness": "전체 경로·에피소드 확보, 모션 제작 예정.",
+          "alternative": "확보된 전체 기간·낙폭 PNG와 분기 달력.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S001-P2",
+          "narration_text": "최근 상승장만 떼어 보면 이 기다림이 잘 보이지 않습니다. 그래서 오늘은 이천육 년부터 자료를 펼쳐 보겠습니다. 서울, 경기, 인천, 부산, 대구, 대전, 그리고 비교 가능한 기간을 따로 표시한 세종입니다.",
+          "visual": "시간축을 2006Q1~2026Q2까지 펼친다. 여섯 지역의 시작은 2006Q1, 세종 매칭지수의 시작은 2015Q1로 구분한다.",
+          "source": "`analysis/housing_growth_2006/full_history_v1/episodes.csv`, `summary.csv`.",
+          "readiness": "전체 경로·에피소드 확보, 모션 제작 예정.",
+          "alternative": "확보된 전체 기간·낙폭 PNG와 분기 달력.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S001-P3",
+          "narration_text": "얼마나 올랐는지와 함께, 그 사이 얼마나 내려갔고 언제 다시 이전 고점에 닿았는지 보겠습니다. 관측 종료는 이천이십육 년 이분기입니다.",
+          "visual": "실제 가격선 위에 고점·관측 저점·최초 재도달 세 표식을 순차 표시한다. `수집 실거래로 계산한 자체 비교 지수`와 관측 종점 각주를 유지한다.",
+          "source": "`analysis/housing_growth_2006/full_history_v1/episodes.csv`, `summary.csv`.",
+          "readiness": "전체 경로·에피소드 확보, 모션 제작 예정.",
+          "alternative": "확보된 전체 기간·낙폭 PNG와 분기 달력.",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "scene_id": "S002",
+      "message": "2006년부터 모은 거래를 출발점으로",
+      "narration_text": "이번에 먼저 펼친 것은 이천육 년부터 수집한 아파트 매매 거래입니다. 현재 분석에 반영한 일곱 지역에서 취소거래와 오류값, 중복 등을 정리한 유효거래는 약 육백육십사만 건입니다. 이번 비교는 이 보유 자료의 범위를 기준으로 합니다.\n\n거래량을 볼 때는 이 유효거래 전체를 셉니다. 가격을 볼 때도 전체 거래의 중간 가격과 면적당 가격을 먼저 확인합니다. 오래된 기록을 최근 자료로 잘라내지 않고, 언제 어떤 집이 얼마나 거래됐는지 함께 보려는 겁니다.\n\n그리고 같은 집의 가격 변화에 더 가까이 가기 위해 같은 단지, 같은 면적의 거래를 비교한 자체 지수를 함께 놓겠습니다. 두 자료를 나란히 보면서 전체 거래의 모습과 비슷한 조건의 변화를 함께 읽겠습니다.",
+      "claim_ids": [
+        "FULL-HISTORY-S002"
+      ],
+      "material_type": "actual_data_line_chart_and_source",
+      "asset_ids": [
+        "S002-data"
+      ],
+      "script_revision": "v3",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "narration_paragraphs_not_voice_locked",
+      "status": "script_review_draft",
+      "beats": [
+        {
+          "beat_id": "S002-P1",
+          "narration_text": "이번에 먼저 펼친 것은 이천육 년부터 수집한 아파트 매매 거래입니다. 현재 분석에 반영한 일곱 지역에서 취소거래와 오류값, 중복 등을 정리한 유효거래는 약 육백육십사만 건입니다. 이번 비교는 이 보유 자료의 범위를 기준으로 합니다.",
+          "visual": "2006~2026 연도축 아래 연도별 유효거래 건수를 펼친다. `보유 7개 지역 6,640,041건 / 2026년은 상반기`를 표시한다. 합계에 포함된 세종 2006~2014년 9,776건은 `현행 코드 조회 이력·과거 행정경계 포괄성 미검증`을 병기한다. 전국 전수·가격 매칭 거래건수로 표기하지 않는다.",
+          "source": "`analysis/housing_growth_2006/full_history_v1/annual_valid_volume.csv`, `regional_expansion_v1/analysis_coverage.csv`, `full_transactions_v1/`.",
+          "readiness": "전체 유효거래 574개 지역·분기 집계와 PNG 확보. 건수·단지 수 대조 및 3개 지역·분기 원가격 표본 독립 검산 완료. 모션 미제작.",
+          "alternative": "확보된 거래량·가격 PNG와 집계 범위 도식.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S002-P2",
+          "narration_text": "거래량을 볼 때는 이 유효거래 전체를 셉니다. 가격을 볼 때도 전체 거래의 중간 가격과 면적당 가격을 먼저 확인합니다. 오래된 기록을 최근 자료로 잘라내지 않고, 언제 어떤 집이 얼마나 거래됐는지 함께 보려는 겁니다.",
+          "visual": "전체 유효거래 집계의 가격·면적·㎡당 가격 분포를 보여준다. 거래량 산출에는 별도 2건 이상 매칭 필터를 적용하지 않는다.",
+          "source": "`analysis/housing_growth_2006/full_history_v1/annual_valid_volume.csv`, `regional_expansion_v1/analysis_coverage.csv`, `full_transactions_v1/`.",
+          "readiness": "전체 유효거래 574개 지역·분기 집계와 PNG 확보. 건수·단지 수 대조 및 3개 지역·분기 원가격 표본 독립 검산 완료. 모션 미제작.",
+          "alternative": "확보된 거래량·가격 PNG와 집계 범위 도식.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S002-P3",
+          "narration_text": "그리고 같은 집의 가격 변화에 더 가까이 가기 위해 같은 단지, 같은 면적의 거래를 비교한 자체 지수를 함께 놓겠습니다. 두 자료를 나란히 보면서 전체 거래의 모습과 비슷한 조건의 변화를 함께 읽겠습니다.",
+          "visual": "전체 유효거래 집계와 동일 단지·면적 매칭의 두 갈래를 분리해 표시한다. 매칭 거래 비율을 단지 수에서 역산하지 않는다.",
+          "source": "`analysis/housing_growth_2006/full_history_v1/annual_valid_volume.csv`, `regional_expansion_v1/analysis_coverage.csv`, `full_transactions_v1/`.",
+          "readiness": "전체 유효거래 574개 지역·분기 집계와 PNG 확보. 건수·단지 수 대조 및 3개 지역·분기 원가격 표본 독립 검산 완료. 모션 미제작.",
+          "alternative": "확보된 거래량·가격 PNG와 집계 범위 도식.",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "scene_id": "S003",
+      "message": "전체 거래의 가격과 같은 조건의 가격",
+      "narration_text": "전체 거래의 중간 가격은 실제로 거래된 집들의 모습을 보여줍니다. 거래가격을 낮은 순서부터 세웠을 때 한가운데에 있는 값입니다. 비싼 집 몇 채가 평균을 크게 끌어올리는 영향을 줄일 수 있습니다.\n\n다만 거래된 집의 구성도 달라집니다. 어느 분기에는 큰 집과 새집이 많고, 다른 분기에는 작은 집과 오래된 집이 많이 거래될 수 있습니다. 면적당 가격으로 바꾸면 크기의 차이는 일부 줄지만, 입지와 연식까지 같아지는 것은 아닙니다.\n\n두 선이 다르게 움직이면 거래된 집의 구성이 달라졌는지도 확인해야 합니다. 전체 거래의 중간 가격이 오르고 비교 지수가 제자리라면, 더 비싼 지역이나 새집 쪽에 거래가 몰렸을 가능성도 있습니다. 거래 면적과 가격 분포를 함께 놓고 살펴보겠습니다.",
+      "claim_ids": [
+        "FULL-HISTORY-S003"
+      ],
+      "material_type": "actual_data_line_chart_and_source",
+      "asset_ids": [
+        "S003-data"
+      ],
+      "script_revision": "v3",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "narration_paragraphs_not_voice_locked",
+      "status": "script_review_draft",
+      "beats": [
+        {
+          "beat_id": "S003-P1",
+          "narration_text": "전체 거래의 중간 가격은 실제로 거래된 집들의 모습을 보여줍니다. 거래가격을 낮은 순서부터 세웠을 때 한가운데에 있는 값입니다. 비싼 집 몇 채가 평균을 크게 끌어올리는 영향을 줄일 수 있습니다.",
+          "visual": "전체 유효거래의 지역별 분기 ㎡당 가격 중위값 꺾은선을 실제 금액 축으로 표시한다. 음영은 `㎡당 가격의 25~75백분위`로 표기한다. 총 거래금액의 분포나 신뢰구간과 구별한다.",
+          "source": "`analysis/housing_growth_2006/full_transactions_v1/`, 기존 매칭 산식 `regional_expansion_v1.py`.",
+          "readiness": "전체 유효거래 분기별 가격·면적·㎡당 중위값·분위수·84~85㎡ 집계 및 PNG 확보. 원가격 3개 지역·분기 표본 독립 검산 완료. 매칭지수 확보.",
+          "alternative": "확보된 실제 금액 축의 원가격 PNG와 매칭지수 PNG를 구분해 사용.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S003-P2",
+          "narration_text": "다만 거래된 집의 구성도 달라집니다. 어느 분기에는 큰 집과 새집이 많고, 다른 분기에는 작은 집과 오래된 집이 많이 거래될 수 있습니다. 면적당 가격으로 바꾸면 크기의 차이는 일부 줄지만, 입지와 연식까지 같아지는 것은 아닙니다.",
+          "visual": "같은 분기 자료에서 거래 면적 중위값·거래건수의 변화를 함께 표시한다. 원거래 식별정보를 노출하지 않는다.",
+          "source": "`analysis/housing_growth_2006/full_transactions_v1/`, 기존 매칭 산식 `regional_expansion_v1.py`.",
+          "readiness": "전체 유효거래 분기별 가격·면적·㎡당 중위값·분위수·84~85㎡ 집계 및 PNG 확보. 원가격 3개 지역·분기 표본 독립 검산 완료. 매칭지수 확보.",
+          "alternative": "확보된 실제 금액 축의 원가격 PNG와 매칭지수 PNG를 구분해 사용.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S003-P3",
+          "narration_text": "두 선이 다르게 움직이면 거래된 집의 구성이 달라졌는지도 확인해야 합니다. 전체 거래의 중간 가격이 오르고 비교 지수가 제자리라면, 더 비싼 지역이나 새집 쪽에 거래가 몰렸을 가능성도 있습니다. 거래 면적과 가격 분포를 함께 놓고 살펴보겠습니다.",
+          "visual": "원가격 통계 패널과 자체 매칭지수 패널을 구분해 전환한다. 원가격 중위값의 변화를 동일 품질 수익률로 쓰지 않는다.",
+          "source": "`analysis/housing_growth_2006/full_transactions_v1/`, 기존 매칭 산식 `regional_expansion_v1.py`.",
+          "readiness": "전체 유효거래 분기별 가격·면적·㎡당 중위값·분위수·84~85㎡ 집계 및 PNG 확보. 원가격 3개 지역·분기 표본 독립 검산 완료. 매칭지수 확보.",
+          "alternative": "확보된 실제 금액 축의 원가격 PNG와 매칭지수 PNG를 구분해 사용.",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "scene_id": "S004",
+      "message": "2006년 출발선에서 본 여섯 지역",
+      "narration_text": "이제 긴 가격 경로입니다. 서울, 경기, 인천, 부산, 대구, 대전은 이천육 년 일분기의 자체 지수를 백으로 맞췄습니다. 각 지역의 지수를 같은 기준값 백에서 출발시켜, 그 이후의 상대적인 변화를 보겠습니다.\n\n이천이십육 년 이분기 서울 지수는 약 오백삼십삼, 대구는 약 이백삼입니다. 출발선 백과 비교하면 각각 약 다섯 배와 두 배 수준입니다. 긴 기간에 상승이 있었다는 점과, 그 크기가 지역마다 달랐다는 점을 함께 볼 수 있습니다.\n\n경기와 인천, 부산과 대전의 선도 그 사이에서 서로 다른 경로를 그립니다. 여기서 더 볼 것은 마지막 숫자까지 가는 과정입니다. 이십 년 뒤의 결과를 한 줄로 연결하면, 그 중간에 몇 년씩 지나간 기다림은 사라지기 때문입니다.",
+      "claim_ids": [
+        "FULL-HISTORY-S004"
+      ],
+      "material_type": "actual_data_line_chart_and_source",
+      "asset_ids": [
+        "S004-data"
+      ],
+      "script_revision": "v3",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "narration_paragraphs_not_voice_locked",
+      "status": "script_review_draft",
+      "beats": [
+        {
+          "beat_id": "S004-P1",
+          "narration_text": "이제 긴 가격 경로입니다. 서울, 경기, 인천, 부산, 대구, 대전은 이천육 년 일분기의 자체 지수를 백으로 맞췄습니다. 각 지역의 지수를 같은 기준값 백에서 출발시켜, 그 이후의 상대적인 변화를 보겠습니다.",
+          "visual": "`full_history_six_regions_2006`의 6개 패널을 같은 세로축·2006Q1=100으로 보여준다. 기간을 임의로 2020년에 자르지 않는다.",
+          "source": "`full_history_v1/summary.csv`, `chart_source.csv`.",
+          "readiness": "PNG/SVG·수치 확보.",
+          "alternative": "동일 자료의 고정 꺾은선 위에 구간 강조.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S004-P2",
+          "narration_text": "이천이십육 년 이분기 서울 지수는 약 오백삼십삼, 대구는 약 이백삼입니다. 출발선 백과 비교하면 각각 약 다섯 배와 두 배 수준입니다. 긴 기간에 상승이 있었다는 점과, 그 크기가 지역마다 달랐다는 점을 함께 볼 수 있습니다.",
+          "visual": "서울 종점 533.43, 대구 203.09를 밝힌다. `자체 지수 수준 / 실제 보유 수익률 아님`을 붙인다. 금액 상승 배수로 치환하지 않는다.",
+          "source": "`full_history_v1/summary.csv`, `chart_source.csv`.",
+          "readiness": "PNG/SVG·수치 확보.",
+          "alternative": "동일 자료의 고정 꺾은선 위에 구간 강조.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S004-P3",
+          "narration_text": "경기와 인천, 부산과 대전의 선도 그 사이에서 서로 다른 경로를 그립니다. 여기서 더 볼 것은 마지막 숫자까지 가는 과정입니다. 이십 년 뒤의 결과를 한 줄로 연결하면, 그 중간에 몇 년씩 지나간 기다림은 사라지기 때문입니다.",
+          "visual": "각 선의 평탄·하락·회복 구간을 차례로 강조한다. CAGR 상세표는 화면·근거표에 남기고 6개 수치를 모두 낭독하지 않는다.",
+          "source": "`full_history_v1/summary.csv`, `chart_source.csv`.",
+          "readiness": "PNG/SVG·수치 확보.",
+          "alternative": "동일 자료의 고정 꺾은선 위에 구간 강조.",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "scene_id": "S005",
+      "message": "지금 최고라는 것과 과거에 안 떨어졌다는 것",
+      "narration_text": "이번에는 각 분기까지 기록한 가장 높은 가격을 따라가겠습니다. 그 선보다 가격이 낮아지면, 당시 고점에서 얼마나 내려왔는지 볼 수 있습니다. 나중에 알게 된 고점을 과거에 미리 찍어 두는 방식과 구분되는 비교입니다.\n\n서울은 현재 자체 지수의 전체 관측 최고점에 있습니다. 그래서 지금 최고점까지 남은 거리는 영입니다. 하지만 과거 기록을 보면 십 퍼센트 넘게 내려갔던 구간이 여러 번 있습니다. 현재 최고점과 과거의 하락 경험을 같이 보아야 하는 이유입니다.\n\n다른 지역의 전체 관측 최고 분기는 이번 자료에서도 주로 이천이십일 년과 이천이십이 년에 나옵니다. 이번에는 그 시기를 먼저 정해 놓고 찾은 결과가 아니라, 전체 경로에서 확인한 최고점입니다. 경기, 인천, 대구, 대전, 세종의 기록상 가장 깊은 하락도 최근 구간에 있었고, 관측 종료까지 고점에 돌아오지 못했습니다. 경기의 표본 조건을 바꾼 결과는 뒤에서 함께 보겠습니다.",
+      "claim_ids": [
+        "FULL-HISTORY-S005"
+      ],
+      "material_type": "actual_data_line_chart_and_source",
+      "asset_ids": [
+        "S005-data"
+      ],
+      "script_revision": "v3",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "narration_paragraphs_not_voice_locked",
+      "status": "script_review_draft",
+      "beats": [
+        {
+          "beat_id": "S005-P1",
+          "narration_text": "이번에는 각 분기까지 기록한 가장 높은 가격을 따라가겠습니다. 그 선보다 가격이 낮아지면, 당시 고점에서 얼마나 내려왔는지 볼 수 있습니다. 나중에 알게 된 고점을 과거에 미리 찍어 두는 방식과 구분되는 비교입니다.",
+          "visual": "매 분기까지의 누적 최고선과 실제 지수선 사이 간격을 보여준다. 아래에는 누적 최고 대비 낙폭 꺾은선을 연결한다.",
+          "source": "`full_history_v1/episodes.csv`, `summary.csv`, `running_peak_drawdown_full_history`.",
+          "readiness": "전체 최고·누적 최고 낙폭 확보.",
+          "alternative": "분기별 낙폭 고정 그래프와 사건 표식.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S005-P2",
+          "narration_text": "서울은 현재 자체 지수의 전체 관측 최고점에 있습니다. 그래서 지금 최고점까지 남은 거리는 영입니다. 하지만 과거 기록을 보면 십 퍼센트 넘게 내려갔던 구간이 여러 번 있습니다. 현재 최고점과 과거의 하락 경험을 같이 보아야 하는 이유입니다.",
+          "visual": "서울 최신 낙폭 0%에서 과거 -11.48%, -10.74%, -12.79% 에피소드를 차례로 보여준다.",
+          "source": "`full_history_v1/episodes.csv`, `summary.csv`, `running_peak_drawdown_full_history`.",
+          "readiness": "전체 최고·누적 최고 낙폭 확보.",
+          "alternative": "분기별 낙폭 고정 그래프와 사건 표식.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S005-P3",
+          "narration_text": "다른 지역의 전체 관측 최고 분기는 이번 자료에서도 주로 이천이십일 년과 이천이십이 년에 나옵니다. 이번에는 그 시기를 먼저 정해 놓고 찾은 결과가 아니라, 전체 경로에서 확인한 최고점입니다. 경기, 인천, 대구, 대전, 세종의 기록상 가장 깊은 하락도 최근 구간에 있었고, 관측 종료까지 고점에 돌아오지 못했습니다. 경기의 표본 조건을 바꾼 결과는 뒤에서 함께 보겠습니다.",
+          "visual": "전체 최고 분기 서울 2026Q2 / 경기·인천·대전 2021Q4 / 부산 2022Q2 / 대구·세종 2021Q3를 표시한다. 세종의 전체는 2015Q1 이후 범위다. 경기·인천·대구·대전·세종의 최대 낙폭 구간과 2026Q2 미회복을 표시한다. 경기 기본표본과 민감도 각주를 유지한다.",
+          "source": "`full_history_v1/episodes.csv`, `summary.csv`, `running_peak_drawdown_full_history`.",
+          "readiness": "전체 최고·누적 최고 낙폭 확보.",
+          "alternative": "분기별 낙폭 고정 그래프와 사건 표식.",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "scene_id": "S006",
+      "message": "서울도 회복의 시간이 같지 않았다",
+      "narration_text": "서울의 이천팔 년과 이천십 년 이후를 보겠습니다. 이천팔 년 삼분기의 고점에서는 약 십일 퍼센트 내려간 뒤, 이천구 년 삼분기에 그 고점을 다시 넘었습니다. 고점에서 최초 복귀까지 네 분기, 약 일 년입니다.\n\n그런데 다음 구간은 달랐습니다. 이천십 년 일분기 고점 이후에는 약 십일 퍼센트 내려갔고, 그 고점에 처음 다시 닿은 것은 이천십오 년 이분기였습니다. 고점에서 복귀까지 오 년 삼 개월입니다.\n\n같은 서울에서도 비슷한 낙폭 뒤에 기다린 시간은 같지 않았습니다. 마지막에 가격이 올랐다는 사실만 기억하면 이 차이를 놓치게 됩니다. 고점과 저점, 회복까지의 시간을 한 경로로 볼 때 비로소 보이는 장면입니다.",
+      "claim_ids": [
+        "FULL-HISTORY-S006"
+      ],
+      "material_type": "actual_data_line_chart_and_source",
+      "asset_ids": [
+        "S006-data"
+      ],
+      "script_revision": "v3",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "narration_paragraphs_not_voice_locked",
+      "status": "script_review_draft",
+      "beats": [
+        {
+          "beat_id": "S006-P1",
+          "narration_text": "서울의 이천팔 년과 이천십 년 이후를 보겠습니다. 이천팔 년 삼분기의 고점에서는 약 십일 퍼센트 내려간 뒤, 이천구 년 삼분기에 그 고점을 다시 넘었습니다. 고점에서 최초 복귀까지 네 분기, 약 일 년입니다.",
+          "visual": "서울 2008Q3→2008Q4→2009Q3 구간을 강조하고 고점→최초 복귀 `4분기`를 표시한다.",
+          "source": "`full_history_v1/episodes.csv`, 서울-DD-01/03에 해당하는 분기·값 확인.",
+          "readiness": "에피소드 수치·실제 분기선 확보.",
+          "alternative": "고정 서울 꺾은선과 두 시간 구간 강조.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S006-P2",
+          "narration_text": "그런데 다음 구간은 달랐습니다. 이천십 년 일분기 고점 이후에는 약 십일 퍼센트 내려갔고, 그 고점에 처음 다시 닿은 것은 이천십오 년 이분기였습니다. 고점에서 복귀까지 오 년 삼 개월입니다.",
+          "visual": "서울 2010Q1→2012Q4→2015Q2 구간으로 강조 대상을 바꾸고 `21분기·5년 3개월`을 표시한다.",
+          "source": "`full_history_v1/episodes.csv`, 서울-DD-01/03에 해당하는 분기·값 확인.",
+          "readiness": "에피소드 수치·실제 분기선 확보.",
+          "alternative": "고정 서울 꺾은선과 두 시간 구간 강조.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S006-P3",
+          "narration_text": "같은 서울에서도 비슷한 낙폭 뒤에 기다린 시간은 같지 않았습니다. 마지막에 가격이 올랐다는 사실만 기억하면 이 차이를 놓치게 됩니다. 고점과 저점, 회복까지의 시간을 한 경로로 볼 때 비로소 보이는 장면입니다.",
+          "visual": "두 구간의 낙폭 -11.48% / -10.74%와 완료 회복기간을 나란히 놓는다. 과거 사례를 다음 하락의 예상 회복기간으로 사용하지 않는다.",
+          "source": "`full_history_v1/episodes.csv`, 서울-DD-01/03에 해당하는 분기·값 확인.",
+          "readiness": "에피소드 수치·실제 분기선 확보.",
+          "alternative": "고정 서울 꺾은선과 두 시간 구간 강조.",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "scene_id": "S007",
+      "message": "경기와 인천에서 길었던 기다림",
+      "narration_text": "경기와 인천은 이천팔 년 삼분기의 고점 이후를 함께 보겠습니다. 경기의 자체 지수가 그 고점에 처음 돌아온 것은 이천십사 년 삼분기였습니다. 고점에서 복귀까지 육 년입니다.\n\n인천은 이천십육 년 이분기였습니다. 같은 이천팔 년 고점을 기준으로 칠 년 구 개월이 걸렸습니다. 최근 몇 년의 가격만 보면 이 긴 구간은 차트 바깥으로 사라집니다.\n\n기다린 시간을 세는 출발점도 중요합니다. 지금 말한 육 년과 칠 년 구 개월은 고점부터 센 기간입니다. 저점에서 시작해 계산하는 반등 기간과는 출발점이 다릅니다. 고점에 산 경험과 낮아진 뒤 산 경험이 다르게 느껴지는 이유를 이 시간축에서 볼 수 있습니다.",
+      "claim_ids": [
+        "FULL-HISTORY-S007"
+      ],
+      "material_type": "actual_data_line_chart_and_source",
+      "asset_ids": [
+        "S007-data"
+      ],
+      "script_revision": "v3",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "narration_paragraphs_not_voice_locked",
+      "status": "script_review_draft",
+      "beats": [
+        {
+          "beat_id": "S007-P1",
+          "narration_text": "경기와 인천은 이천팔 년 삼분기의 고점 이후를 함께 보겠습니다. 경기의 자체 지수가 그 고점에 처음 돌아온 것은 이천십사 년 삼분기였습니다. 고점에서 복귀까지 육 년입니다.",
+          "visual": "경기 2008Q3 고점→2014Q3 최초 복귀에 `24분기·6년`을 표시한다.",
+          "source": "`full_history_v1/episodes.csv` 경기-DD-01, 인천-DD-01.",
+          "readiness": "과거 회복 에피소드 확보.",
+          "alternative": "지역별 전체 기간 선과 고점→복귀 달력.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S007-P2",
+          "narration_text": "인천은 이천십육 년 이분기였습니다. 같은 이천팔 년 고점을 기준으로 칠 년 구 개월이 걸렸습니다. 최근 몇 년의 가격만 보면 이 긴 구간은 차트 바깥으로 사라집니다.",
+          "visual": "인천 2008Q3 고점→2013Q1 관측 저점→2016Q2 최초 복귀에 `31분기·7년 9개월`을 표시한다.",
+          "source": "`full_history_v1/episodes.csv` 경기-DD-01, 인천-DD-01.",
+          "readiness": "과거 회복 에피소드 확보.",
+          "alternative": "지역별 전체 기간 선과 고점→복귀 달력.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S007-P3",
+          "narration_text": "기다린 시간을 세는 출발점도 중요합니다. 지금 말한 육 년과 칠 년 구 개월은 고점부터 센 기간입니다. 저점에서 시작해 계산하는 반등 기간과는 출발점이 다릅니다. 고점에 산 경험과 낮아진 뒤 산 경험이 다르게 느껴지는 이유를 이 시간축에서 볼 수 있습니다.",
+          "visual": "고점 시작 커서와 저점 시작 커서를 구분한다. 후자의 가격을 사전에 알 수 있었던 매수기회처럼 연출하지 않는다.",
+          "source": "`full_history_v1/episodes.csv` 경기-DD-01, 인천-DD-01.",
+          "readiness": "과거 회복 에피소드 확보.",
+          "alternative": "지역별 전체 기간 선과 고점→복귀 달력.",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "scene_id": "S008",
+      "message": "부산과 대구의 앞선 하락장도 보겠습니다",
+      "narration_text": "부산과 대구도 최근 하락장 하나만으로 읽기에는 더 긴 기록이 있습니다. 부산은 이천십칠 년 삼분기 고점 이후 약 십 퍼센트 내려갔다가, 이천이십 년 삼분기에 그 고점으로 처음 돌아왔습니다. 고점에서 복귀까지 삼 년이 걸린 구간입니다.\n\n대구는 이천십오 년 삼분기 고점 이후 약 팔 퍼센트 내려갔고, 이천십팔 년 이분기에 그 고점에 다시 닿았습니다. 두 해 구 개월입니다. 화면에서 한 번의 상승과 하락, 복귀가 끝나는 과정을 볼 수 있습니다.\n\n그 뒤 최근 상승장에서는 두 지역 모두 다시 다른 하락 경로가 나타났습니다. 고점 이후 관측한 저점은 부산과 대구가 모두 이천이십오 년 이분기였고, 이천이십육 년 이분기까지는 각각의 전체 최고점에 돌아오지 못했습니다. 완료된 과거 회복과 아직 끝나지 않은 현재 구간을 구분해서 보겠습니다.",
+      "claim_ids": [
+        "FULL-HISTORY-S008"
+      ],
+      "material_type": "actual_data_line_chart_and_source",
+      "asset_ids": [
+        "S008-data"
+      ],
+      "script_revision": "v3",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "narration_paragraphs_not_voice_locked",
+      "status": "script_review_draft",
+      "beats": [
+        {
+          "beat_id": "S008-P1",
+          "narration_text": "부산과 대구도 최근 하락장 하나만으로 읽기에는 더 긴 기록이 있습니다. 부산은 이천십칠 년 삼분기 고점 이후 약 십 퍼센트 내려갔다가, 이천이십 년 삼분기에 그 고점으로 처음 돌아왔습니다. 고점에서 복귀까지 삼 년이 걸린 구간입니다.",
+          "visual": "부산 2017Q3→2019Q3→2020Q3을 실측선에서 강조한다. 낙폭 -10.44%, 고점→복귀 12분기를 표시한다.",
+          "source": "`full_history_v1/episodes.csv`, `summary.csv`.",
+          "readiness": "과거 완료·현재 미완 에피소드 확보.",
+          "alternative": "두 지역 고정 선에 시기별 음영을 교체.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S008-P2",
+          "narration_text": "대구는 이천십오 년 삼분기 고점 이후 약 팔 퍼센트 내려갔고, 이천십팔 년 이분기에 그 고점에 다시 닿았습니다. 두 해 구 개월입니다. 화면에서 한 번의 상승과 하락, 복귀가 끝나는 과정을 볼 수 있습니다.",
+          "visual": "대구 2015Q3→2016Q3→2018Q2를 강조한다. 낙폭 -8.00%, 11분기를 표시한다. 대구는 전 기간 군위 제외다.",
+          "source": "`full_history_v1/episodes.csv`, `summary.csv`.",
+          "readiness": "과거 완료·현재 미완 에피소드 확보.",
+          "alternative": "두 지역 고정 선에 시기별 음영을 교체.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S008-P3",
+          "narration_text": "그 뒤 최근 상승장에서는 두 지역 모두 다시 다른 하락 경로가 나타났습니다. 고점 이후 관측한 저점은 부산과 대구가 모두 이천이십오 년 이분기였고, 이천이십육 년 이분기까지는 각각의 전체 최고점에 돌아오지 못했습니다. 완료된 과거 회복과 아직 끝나지 않은 현재 구간을 구분해서 보겠습니다.",
+          "visual": "부산 2022Q2·대구 2021Q3 고점 이후 구간으로 옮겨 2026Q2의 미회복 끝을 열린 표식으로 표시한다. 향후 복귀 날짜는 그리지 않는다.",
+          "source": "`full_history_v1/episodes.csv`, `summary.csv`.",
+          "readiness": "과거 완료·현재 미완 에피소드 확보.",
+          "alternative": "두 지역 고정 선에 시기별 음영을 교체.",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "scene_id": "S009",
+      "message": "세종의 2006년 자료는 어떻게 다룰까요",
+      "narration_text": "대전은 앞서 본 여섯 지역처럼 이천육 년부터 가격선을 이어 볼 수 있습니다. 세종은 확인된 연속 비교 구간이 이천십오 년부터입니다. 그래서 세종의 가격선은 그때부터 따로 출발시켰습니다.\n\n세종 코드로 조회된 더 이른 거래 기록도 보존하고 있습니다. 하지만 과거 행정구역의 범위와, 같은 조건으로 연결할 수 있는 거래가 충분한지는 별도로 확인해야 합니다. 거래 기록이 존재하는 기간과 비교 가격선을 안정적으로 잇는 기간을 나누어 보는 이유입니다.\n\n따라서 세종의 약 십일 년 기록을 다른 지역의 약 이십 년 기록과 같은 기간의 상승률 순위로 놓지 않겠습니다. 일곱 지역을 같은 출발점으로 함께 보려면 모두 자료가 이어지는 이천십오 년부터의 공통 화면을 사용하겠습니다. 더 긴 여섯 지역의 기록은 그 옆에 그대로 남깁니다.",
+      "claim_ids": [
+        "FULL-HISTORY-S009"
+      ],
+      "material_type": "actual_data_line_chart_and_source",
+      "asset_ids": [
+        "S009-data"
+      ],
+      "script_revision": "v3",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "narration_paragraphs_not_voice_locked",
+      "status": "script_review_draft",
+      "beats": [
+        {
+          "beat_id": "S009-P1",
+          "narration_text": "대전은 앞서 본 여섯 지역처럼 이천육 년부터 가격선을 이어 볼 수 있습니다. 세종은 확인된 연속 비교 구간이 이천십오 년부터입니다. 그래서 세종의 가격선은 그때부터 따로 출발시켰습니다.",
+          "visual": "대전 2006Q1~2026Q2와 세종 2015Q1~2026Q2를 각 패널의 시작점=100으로 표시한다. 서로 다른 기간의 배수 순위를 만들지 않는다.",
+          "source": "`full_history_v1/summary.csv`, `quarterly_index.csv`, `full_transactions_v1/`의 원거래 범위 기록.",
+          "readiness": "기간·거래량·매칭 시작점 확보, 과거 행정구역 포괄성 후속 검증.",
+          "alternative": "지원 시작점과 공통 구간 달력.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S009-P2",
+          "narration_text": "세종 코드로 조회된 더 이른 거래 기록도 보존하고 있습니다. 하지만 과거 행정구역의 범위와, 같은 조건으로 연결할 수 있는 거래가 충분한지는 별도로 확인해야 합니다. 거래 기록이 존재하는 기간과 비교 가격선을 안정적으로 잇는 기간을 나누어 보는 이유입니다.",
+          "visual": "세종 현행 36110 조회 이력 중 가격지수 시작 이전 유효거래 9,776건을 자료 범위 표로만 설명한다. 이를 2006년 세종시 전체 시장으로 이름 붙이지 않는다.",
+          "source": "`full_history_v1/summary.csv`, `quarterly_index.csv`, `full_transactions_v1/`의 원거래 범위 기록.",
+          "readiness": "기간·거래량·매칭 시작점 확보, 과거 행정구역 포괄성 후속 검증.",
+          "alternative": "지원 시작점과 공통 구간 달력.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S009-P3",
+          "narration_text": "따라서 세종의 약 십일 년 기록을 다른 지역의 약 이십 년 기록과 같은 기간의 상승률 순위로 놓지 않겠습니다. 일곱 지역을 같은 출발점으로 함께 보려면 모두 자료가 이어지는 이천십오 년부터의 공통 화면을 사용하겠습니다. 더 긴 여섯 지역의 기록은 그 옆에 그대로 남깁니다.",
+          "visual": "필요 시 7개 지역 공통 2015Q1=100 차트로 전환한다. 세종의 2006~2014 매칭지수는 빈칸으로 유지한다.",
+          "source": "`full_history_v1/summary.csv`, `quarterly_index.csv`, `full_transactions_v1/`의 원거래 범위 기록.",
+          "readiness": "기간·거래량·매칭 시작점 확보, 과거 행정구역 포괄성 후속 검증.",
+          "alternative": "지원 시작점과 공통 구간 달력.",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "scene_id": "S010",
+      "message": "연평균만으로는 기다림이 보이지 않습니다",
+      "narration_text": "긴 기간의 연평균을 구하면 시작과 끝을 연결한 하나의 숫자가 나옵니다. 하지만 그 사이 매년 같은 비율로 움직였던 것은 아닙니다. 오랜 하락과 정체 뒤의 상승도 하나의 평균 안에 들어갑니다.\n\n시작점을 삼 년 전, 오 년 전, 십 년 전으로 옮겨도 답이 달라집니다. 세종은 최근 삼 년의 자체 지수 변화가 연평균 약 일 퍼센트 상승이지만, 오 년은 약 삼 점 사 퍼센트 하락, 십 년은 약 오 점 구 퍼센트 상승입니다. 끝은 모두 이천이십육 년 이분기인데, 출발한 위치가 다른 겁니다.\n\n표본의 조건도 함께 읽어야 합니다. 경기는 같은 단지·면적에서 요구하는 거래 수를 두 건, 세 건, 다섯 건으로 바꾸면 최근 주기의 기준 고점 회복 판정이 달라졌습니다. 여기서 기준 고점은 이천이십 년부터 이천이십이 년 사이의 최고값입니다. 거래가 많은 집단으로 좁혀질수록 비교 대상과 고점 시점도 달라집니다. 긴 기간을 보되, 어떤 거래를 비교했는지도 남겨야 합니다.",
+      "claim_ids": [
+        "FULL-HISTORY-S010"
+      ],
+      "material_type": "actual_data_line_chart_and_source",
+      "asset_ids": [
+        "S010-data"
+      ],
+      "script_revision": "v3",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "narration_paragraphs_not_voice_locked",
+      "status": "script_review_draft",
+      "beats": [
+        {
+          "beat_id": "S010-P1",
+          "narration_text": "긴 기간의 연평균을 구하면 시작과 끝을 연결한 하나의 숫자가 나옵니다. 하지만 그 사이 매년 같은 비율로 움직였던 것은 아닙니다. 오랜 하락과 정체 뒤의 상승도 하나의 평균 안에 들어갑니다.",
+          "visual": "전체 기간 꺾은선과 시작·끝을 연결하는 복리 설명용 보조선을 구별한다. 실제 낙폭선은 화면 아래 유지한다.",
+          "source": "`regional_expansion_v1/regional_summary.csv`, `sensitivity.csv`, `full_history_v1/`.",
+          "readiness": "수치·기간·요약 패널 확보.",
+          "alternative": "실제 기본 선과 기간·표본별 요약값 비교.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S010-P2",
+          "narration_text": "시작점을 삼 년 전, 오 년 전, 십 년 전으로 옮겨도 답이 달라집니다. 세종은 최근 삼 년의 자체 지수 변화가 연평균 약 일 퍼센트 상승이지만, 오 년은 약 삼 점 사 퍼센트 하락, 십 년은 약 오 점 구 퍼센트 상승입니다. 끝은 모두 이천이십육 년 이분기인데, 출발한 위치가 다른 겁니다.",
+          "visual": "세종 2023Q2 / 2021Q2 / 2016Q2→2026Q2 구간을 한 가격선 위에서 순차 강조하고 +0.96% / -3.41% / +5.88%를 표시한다.",
+          "source": "`regional_expansion_v1/regional_summary.csv`, `sensitivity.csv`, `full_history_v1/`.",
+          "readiness": "수치·기간·요약 패널 확보.",
+          "alternative": "실제 기본 선과 기간·표본별 요약값 비교.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S010-P3",
+          "narration_text": "표본의 조건도 함께 읽어야 합니다. 경기는 같은 단지·면적에서 요구하는 거래 수를 두 건, 세 건, 다섯 건으로 바꾸면 최근 주기의 기준 고점 회복 판정이 달라졌습니다. 여기서 기준 고점은 이천이십 년부터 이천이십이 년 사이의 최고값입니다. 거래가 많은 집단으로 좁혀질수록 비교 대상과 고점 시점도 달라집니다. 긴 기간을 보되, 어떤 거래를 비교했는지도 남겨야 합니다.",
+          "visual": "경기 기본 선 옆에 2·3·5건 민감도 요약 패널을 둔다. `최근 주기 기준 고점(2020Q1~2022Q4 중 최고) 대비` -4.08% / -0.58% / +5.24%, 각 기준 고점 2021Q4 / 2021Q4 / 2022Q2를 표시한다. `요약값·3/5건 시계열 미연결`을 표기하고 없는 세 시계열로 잇지 않는다. +5.24%를 전체 관측 최고점 대비로 부르지 않는다.",
+          "source": "`regional_expansion_v1/regional_summary.csv`, `sensitivity.csv`, `full_history_v1/`.",
+          "readiness": "수치·기간·요약 패널 확보.",
+          "alternative": "실제 기본 선과 기간·표본별 요약값 비교.",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "scene_id": "S011",
+      "message": "가격의 차이 다음에 확인할 이유",
+      "narration_text": "이렇게 긴 경로를 확인한 뒤에 공급과 사람, 일자리를 붙여 보겠습니다. 고점 이후 새로 완성된 집이 얼마나 많았는지, 그 가운데 준공 뒤에도 남은 미분양은 얼마나 되는지가 첫 질문입니다.\n\n공표 자료에서 대구 전체 주택 준공은 이천이십삼 년 약 삼만 천육백 호, 이천이십사 년 약 이만 구천사백 호였습니다. 이 물량을 기존 주택과 늘어난 가구에 견주어 보겠습니다. 아파트를 포함한 전체 주택의 수이고 가격 지수와 행정경계도 맞춰야 하므로, 준공 숫자 하나로 가격 변화를 설명하지는 않겠습니다.\n\n사람의 이동도 총인구 하나보다 더 나누어 볼 필요가 있습니다. 가구가 얼마나 늘었는지, 어느 연령이 어디로 이동했는지, 실제 일자리가 어디에서 늘었는지입니다. 같은 시기의 금리 변화 속에서도 이런 지역의 조건이 달랐는지, 긴 가격 경로 옆에서 확인하겠습니다.",
+      "claim_ids": [
+        "FULL-HISTORY-S011"
+      ],
+      "material_type": "actual_data_line_chart_and_source",
+      "asset_ids": [
+        "S011-data"
+      ],
+      "script_revision": "v3",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "narration_paragraphs_not_voice_locked",
+      "status": "script_review_draft",
+      "beats": [
+        {
+          "beat_id": "S011-P1",
+          "narration_text": "이렇게 긴 경로를 확인한 뒤에 공급과 사람, 일자리를 붙여 보겠습니다. 고점 이후 새로 완성된 집이 얼마나 많았는지, 그 가운데 준공 뒤에도 남은 미분양은 얼마나 되는지가 첫 질문입니다.",
+          "visual": "실제 전체 기간 가격선 아래 공급·미분양 시계열의 대응 위치를 설계한다. 아직 확보·검증하지 못한 시계열 값은 임의로 채우지 않는다.",
+          "source": "`research/script-v2-factors/verified_examples.json`, `analysis/housing_growth_2006/research/collection_status.json`.",
+          "readiness": "준공 사례 확보, 가구·연령·일자리 패널 및 인과검증 미완.",
+          "alternative": "확인된 사례와 후속 검증 항목만 표시.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S011-P2",
+          "narration_text": "공표 자료에서 대구 전체 주택 준공은 이천이십삼 년 약 삼만 천육백 호, 이천이십사 년 약 이만 구천사백 호였습니다. 이 물량을 기존 주택과 늘어난 가구에 견주어 보겠습니다. 아파트를 포함한 전체 주택의 수이고 가격 지수와 행정경계도 맞춰야 하므로, 준공 숫자 하나로 가격 변화를 설명하지는 않겠습니다.",
+          "visual": "국토교통부 원표의 대구 2023년 31,630호·2024년 29,441호를 발화에 맞춰 강조한다. `전체 주택·시점별 공표 경계 / 가격은 군위 제외`를 병기한다.",
+          "source": "`research/script-v2-factors/verified_examples.json`, `analysis/housing_growth_2006/research/collection_status.json`.",
+          "readiness": "준공 사례 확보, 가구·연령·일자리 패널 및 인과검증 미완.",
+          "alternative": "확인된 사례와 후속 검증 항목만 표시.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S011-P3",
+          "narration_text": "사람의 이동도 총인구 하나보다 더 나누어 볼 필요가 있습니다. 가구가 얼마나 늘었는지, 어느 연령이 어디로 이동했는지, 실제 일자리가 어디에서 늘었는지입니다. 같은 시기의 금리 변화 속에서도 이런 지역의 조건이 달랐는지, 긴 가격 경로 옆에서 확인하겠습니다.",
+          "visual": "가구·연령 이동·일자리·금융 여건의 관측 기간을 실제 확보 범위에 맞춰 표시한다. 검증 전 원인 화살표·기여율·상관 순위를 만들지 않는다.",
+          "source": "`research/script-v2-factors/verified_examples.json`, `analysis/housing_growth_2006/research/collection_status.json`.",
+          "readiness": "준공 사례 확보, 가구·연령·일자리 패널 및 인과검증 미완.",
+          "alternative": "확인된 사례와 후속 검증 항목만 표시.",
+          "start": null,
+          "end": null
+        }
+      ]
+    },
+    {
+      "scene_id": "S012",
+      "message": "긴 기록에서 확인한 세 가지",
+      "narration_text": "이천육 년부터 자료를 펼치니, 최근 상승장만 보았을 때와 질문이 달라졌습니다. 오늘 확인한 것은 세 가지입니다.\n\n첫째, 긴 기간의 상승과 고점 이후의 기다림은 함께 존재합니다. 전체 기간의 마지막 가격이 높아졌어도, 과거 고점으로 돌아오는 데 여러 해가 걸린 구간이 있었습니다.\n\n둘째, 같은 지역에서도 하락과 회복의 시간은 달랐습니다. 서울의 약 일 년과 오 년 삼 개월, 경기의 육 년과 인천의 칠 년 구 개월은 모두 각 구간의 고점부터 최초 복귀까지 센 과거 기록입니다. 아직 돌아오지 못한 구간에는 회복 날짜를 채우지 않았습니다.\n\n셋째, 출발점과 비교 대상을 함께 읽어야 합니다. 전체 거래의 가격 분포, 같은 조건의 가격 변화, 긴 기간의 평균, 최근 고점에서 남은 거리는 각각 다른 정보를 보여줍니다.\n\n그래서 한 개의 집값 상승률을 모든 지역과 모든 시기에 적용하기보다, 어디에서 어떤 집을 언제부터 비교하는지 먼저 맞추겠습니다. 다음 분석에서는 고점 이후 완성된 주택과 준공 후 미분양을 연결해, 기다림이 길었던 지역의 조건을 확인하겠습니다.\n\n데이터로 보는 부동산이었습니다. 다음 분석도 함께 보시려면 구독과 좋아요 부탁드립니다. 감사합니다.",
+      "claim_ids": [
+        "FULL-HISTORY-S012"
+      ],
+      "material_type": "actual_data_line_chart_and_source",
+      "asset_ids": [
+        "S012-data"
+      ],
+      "script_revision": "v3",
+      "audio_revision": null,
+      "start": null,
+      "end": null,
+      "timing_basis": "narration_paragraphs_not_voice_locked",
+      "status": "script_review_draft",
+      "beats": [
+        {
+          "beat_id": "S012-P1",
+          "narration_text": "이천육 년부터 자료를 펼치니, 최근 상승장만 보았을 때와 질문이 달라졌습니다. 오늘 확인한 것은 세 가지입니다.",
+          "visual": "2006~2026 전체 시간축을 다시 보여주며 핵심 질문을 회수한다.",
+          "source": "앞선 장면의 분석·원자료 기록.",
+          "readiness": "검토 대본, 음성·영상 미제작.",
+          "alternative": "기존 승인 브랜드 자산과 정리된 핵심 차트.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S012-P2",
+          "narration_text": "첫째, 긴 기간의 상승과 고점 이후의 기다림은 함께 존재합니다. 전체 기간의 마지막 가격이 높아졌어도, 과거 고점으로 돌아오는 데 여러 해가 걸린 구간이 있었습니다.",
+          "visual": "누적 상승선 위에 과거 고점 아래에서 보낸 구간을 표시한다.",
+          "source": "앞선 장면의 분석·원자료 기록.",
+          "readiness": "검토 대본, 음성·영상 미제작.",
+          "alternative": "기존 승인 브랜드 자산과 정리된 핵심 차트.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S012-P3",
+          "narration_text": "둘째, 같은 지역에서도 하락과 회복의 시간은 달랐습니다. 서울의 약 일 년과 오 년 삼 개월, 경기의 육 년과 인천의 칠 년 구 개월은 모두 각 구간의 고점부터 최초 복귀까지 센 과거 기록입니다. 아직 돌아오지 못한 구간에는 회복 날짜를 채우지 않았습니다.",
+          "visual": "서울 두 사례와 경기·인천의 완료 회복기간을 시간축으로 비교한다. 미회복 구간은 관측 종료까지의 경과만 표시한다.",
+          "source": "앞선 장면의 분석·원자료 기록.",
+          "readiness": "검토 대본, 음성·영상 미제작.",
+          "alternative": "기존 승인 브랜드 자산과 정리된 핵심 차트.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S012-P4",
+          "narration_text": "셋째, 출발점과 비교 대상을 함께 읽어야 합니다. 전체 거래의 가격 분포, 같은 조건의 가격 변화, 긴 기간의 평균, 최근 고점에서 남은 거리는 각각 다른 정보를 보여줍니다.",
+          "visual": "원거래 가격 / 매칭 변화 / 전체 기간 / 최근 위치의 구분을 실제 차트에 연결한다.",
+          "source": "앞선 장면의 분석·원자료 기록.",
+          "readiness": "검토 대본, 음성·영상 미제작.",
+          "alternative": "기존 승인 브랜드 자산과 정리된 핵심 차트.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S012-P5",
+          "narration_text": "그래서 한 개의 집값 상승률을 모든 지역과 모든 시기에 적용하기보다, 어디에서 어떤 집을 언제부터 비교하는지 먼저 맞추겠습니다. 다음 분석에서는 고점 이후 완성된 주택과 준공 후 미분양을 연결해, 기다림이 길었던 지역의 조건을 확인하겠습니다.",
+          "visual": "다음 분석의 공급·준공 후 미분양 비교를 예고한다. 날짜 헤더·행정경계 검증 전 값을 채우지 않는다.",
+          "source": "앞선 장면의 분석·원자료 기록.",
+          "readiness": "검토 대본, 음성·영상 미제작.",
+          "alternative": "기존 승인 브랜드 자산과 정리된 핵심 차트.",
+          "start": null,
+          "end": null
+        },
+        {
+          "beat_id": "S012-P6",
+          "narration_text": "데이터로 보는 부동산이었습니다. 다음 분석도 함께 보시려면 구독과 좋아요 부탁드립니다. 감사합니다.",
+          "visual": "CTA 이후 마지막 발화 종료 3초 뒤 기존 승인 아웃트로. 실제 음성 확정 전 초 단위 시간은 고정하지 않는다.",
+          "source": "앞선 장면의 분석·원자료 기록.",
+          "readiness": "검토 대본, 음성·영상 미제작.",
+          "alternative": "기존 승인 브랜드 자산과 정리된 핵심 차트.",
+          "start": null,
+          "end": null
+        }
+      ]
+    }
+  ]
+}

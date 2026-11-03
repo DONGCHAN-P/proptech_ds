@@ -1,0 +1,39 @@
+{
+  "revision": "visual-landuse-v7",
+  "status": "actual boards ready for editor integration",
+  "input_version": "script-v4-hook-outside/audio-v2",
+  "outputs": [
+    "visual/landuse-v7/w1_north_board_unlabelled.svg",
+    "visual/landuse-v7/w1_south_board_unlabelled.svg",
+    "visual/landuse-v7/w2_board_unlabelled.svg",
+    "visual/landuse-v7/macro_board_unlabelled.svg",
+    "visual/landuse-v7/w1_north_board.json",
+    "visual/landuse-v7/w1_south_board.json",
+    "visual/landuse-v7/w2_board.json",
+    "visual/landuse-v7/macro_board.json"
+  ],
+  "coordinate_contract": "All features[].polygon and anchor and cameras are local board pixel coordinates. dimensions gives extent. Do not treat these as WGS84. Keep aspect ratio. Use screen-constant selective labels.",
+  "validation": {
+    "actual_pngs_inspected": true,
+    "reference_plan_pages_inspected": true,
+    "feature_counts": {
+      "W1_NORTH_LANDUSE_V7": 30,
+      "W1_SOUTH_LANDUSE_V7": 44,
+      "W2_LANDUSE_V7": 40,
+      "MACRO_LANDUSE_V7": 5
+    },
+    "video_review": false
+  },
+  "unresolved": [
+    "원본 지도 자체의 크롭/변형 허가 미확인. 자체 사실 도해 사용.",
+    "정밀경계/측량/보행경로와 개통·개교를 보장하지 않음.",
+    "기업CI 최종배치는 editor/research 담당."
+  ],
+  "affected_scenes": [
+    "M001",
+    "M002",
+    "M003",
+    "M005"
+  ],
+  "next_owner": "/root/rail_route_editor"
+}

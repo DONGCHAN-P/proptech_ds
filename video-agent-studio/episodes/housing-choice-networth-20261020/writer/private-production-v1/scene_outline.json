@@ -1,0 +1,1970 @@
+{
+  "revision": "scene-outline-script-v4-candidate",
+  "source": "outputs/cost-wording-v3/script_cost_v3.md",
+  "source_sha256": "b973ae6e0893fb4fde687d6a08290216d49e655f092b2b3959f1b4c564e88e67",
+  "target": "writer/private-production-v1/script_v4_candidate.md",
+  "target_sha256": "62cf5fcf06a35f3c9984de405717718fb2694ace7e1addf839b0f047055ec48d",
+  "status": "문단별 제안; 공통 scenes.json 미수정",
+  "style_basis": "제작_기본가이드.md 및 기존 채널 톤앤매너 계승. 설명 자료와 분위기 소재 구분. 제작 주석·AI 여부·프롬프트는 자산 기록에 남기고 시청자 화면에 불필요한 제작 배지·부정형 면책을 붙이지 않음.",
+  "reuse_policy": "동일 대상·동일 의미·동일 수치/기간일 때만 재사용. 같은 차트나 이미지를 무관한 내용에 제목만 바꿔 사용하지 않음. 기존 화면을 실제 확인했다는 기록이 아님.",
+  "legacy_mapping_note": "기존 scene_proposals v1의 2·8·10장 문단 앵커 일부는 v3와 다름. 재사용 힌트는 내용 기반이며 공통 장면ID의 확정 변경 제안은 director가 결정.",
+  "claim_id_basis": "outputs/script-review-v1/scene_proposals.json의 기존 ID를 해당 의미에 한해 제안. research/facts.json 부재로 새 ID를 확정하지 않음. 기존 QA01은 현재 검수 증거로 승계하지 않음.",
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "선택",
+      "chapter_transition": {
+        "asset_type": "ai_concept",
+        "purpose": "주제 전환 분위기",
+        "reuse": "같은 주제에 맞는 기존 배경만 조건부 사용. 주제와 무관한 공통 이미지 반복 금지. 제목은 별도 편집 레이어.",
+        "status": "실제 배경 프레임 미확인"
+      },
+      "paragraphs": [
+        {
+          "scene_id": "W4-C01-P01",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 1,
+          "narration_anchor": "같은 아파트에서 같은 기간을 살아도, 집을 산 가구와 전세로 산 가구, 월세로 산 가구의 자산은 다르게 남습니다. 집",
+          "narration_sha256": "ee290a994aa4bb67fe1f68b8e4bf88785c7564d74dc2af71c250f81eb52cbcc5",
+          "message": "같은 집에 살아도 주거비와 자금 배분에 따라 남는 자산이 달라진다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "동일한 집 단면에 매매·전세·월세의 자금 경로를 나란히 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S001 동일 집·세 가구 비교 도식",
+            "legacy_scene_hint": "S001"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            12,
+            15
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C01-P02",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 2,
+          "narration_anchor": "이번 비교에서는 초기 순자산이 2억5천만원이고 매달 주거와 저축에 쓸 수 있는 돈이 300만원인 세 가구를 놓겠습니다",
+          "narration_sha256": "642f0396c08dd7bcebb8b6cc3689f1537f26d063f8c50e526ebd4d8672f9da9f",
+          "message": "초기 순자산·월예산·집·기간과 투자 규칙을 동일하게 둔다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "초기자금·월예산·주거 수준·기간을 세 가구에 같은 크기로 정렬",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S001의 동일 조건 비교 도식",
+            "legacy_scene_hint": "S001"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            13,
+            16
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C01-P03",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 3,
+          "narration_anchor": "그 결과 기본 가정에서는 10년 후 순자산이 매매 약 6억1천만원, 전세 약 6억6천만원, 월세 약 6억9천만원으로 ",
+          "narration_sha256": "0f72a5eae4393170294c3c8d069f193cfa3cd0c81745a6b1bf9eb81fcd65856b",
+          "message": "기본 결과를 예고하고 가정에 따라 순서가 바뀜을 제시한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "세 순자산 막대와 집값·투자수익 조건 칸을 연결해 결과 예고",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S002 결과 예고 차트",
+            "legacy_scene_hint": "S002"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            13,
+            15
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C01-P04",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 4,
+          "narration_anchor": "지난 교산편에서는 지역의 입지와 가격을 살펴봤습니다. 이번부터는 그다음 선택으로 이어갑니다. 좋은 지역을 찾은 뒤 집",
+          "narration_sha256": "9f67c0dea5a3b07c43c7efdc330045726dda6a6d30237479a72cbadb11386d94",
+          "message": "교산의 입지 판단에서 주거 방식·예산·단지 선택으로 이어진다",
+          "asset_types": [
+            "map"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "전편의 실제 교산 지도와 이번 시리즈 단계 경로를 짧게 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S003 전편 연결 제안; 승인 지도 파일은 담당 확인 필요",
+            "legacy_scene_hint": "S003"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            13,
+            15
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "title": "기준",
+      "chapter_transition": {
+        "asset_type": "ai_concept",
+        "purpose": "주제 전환 분위기",
+        "reuse": "같은 주제에 맞는 기존 배경만 조건부 사용. 주제와 무관한 공통 이미지 반복 금지. 제목은 별도 편집 레이어.",
+        "status": "실제 배경 프레임 미확인"
+      },
+      "paragraphs": [
+        {
+          "scene_id": "W4-C02-P01",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 1,
+          "narration_anchor": "먼저 비교의 출발선을 맞추겠습니다. 세 가구는 집의 면적과 위치, 생활 편의가 같은 것으로 둡니다. 공통 생활비를 지",
+          "narration_sha256": "7f9044fe6d6cec2fb6bdd11e7020f51ab948de637769d578ac064425b2bd4b8c",
+          "message": "동일 주거 서비스와 공통 생활비를 맞춘다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "집의 면적·위치·편의 열과 공통비용을 세 장부에 동일하게 배치",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S004 동일 조건 장부",
+            "legacy_scene_hint": "S004"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            14,
+            16
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C02-P02",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 2,
+          "narration_anchor": "집값은 먼저 짚고 가겠습니다. 최근에 집을 알아보셨다면 연 2%라는 숫자가 작게 느껴질 수 있습니다. 2006년부터 ",
+          "narration_sha256": "d67b69c9f48ef29e93fc8b22c6a2e9c90ba7580828320f26bb5180c8092a3ed3",
+          "message": "같은 단지·면적의 거래를 분기별로 연결한 자체 지수이며 표본 기준에 따라 상승률이 달라진다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "기존 서울·경기·인천의 최근 10년 수치를 유지하고 발화 지역만 강조. 표·차트에 자체 실거래 연결 지수, 2016년 2분기→2026년 2분기, 연환산 복리상승률 %, 두 분기 각각 거래 2건 이상·연결 30단지 이상을 짧게 표시. 분기별 연결 표본의 교체와 표본 선택 민감도를 설명에 연결. 표본 수를 표시할 때는 분기별 연결 단지 수로 명시.",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "qa/private-production-v1/findings.json의 PQA-001 근거와 수정안 확인. writer의 원거래 재집계·독립 지수 재검수는 미수행. 동일 기간·수치 보존.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "기존 최근 10년 지역 상승률 화면만 조건부 재사용. PQA-001의 지수 명칭·기간·단위·거래/연결 문턱·분기별 표본 설명을 추가하고 후속 QA가 실제 표기 확인.",
+            "legacy_scene_hint": null
+          },
+          "changes": [
+            "자체 연결 지수의 동일 단지·동일 면적, 두 분기 각각 거래 2건 이상, 연결 30단지 이상 기준 명시",
+            "분기마다 포함 표본이 바뀜과 표본 선택 기준에 따른 상승률 민감도를 짧게 설명",
+            "기존 연 2% 언급·2006년 수집 시작·최근 10년 기간·지역 상승률 유지"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            21,
+            26
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정",
+          "internal_evidence": {
+            "path": "qa/private-production-v1/findings.json",
+            "sha256": "9db4b0ff96172b879f7ca8e9adf5e6b29b2b47e4dd210ac3fca312816d801db7",
+            "pointer": "/findings/0/evidence",
+            "use": "서울 최소 표본 분기·단지 수와 강화 문턱 민감도 상세는 이 내부 근거에 보존; 낭독에 추가하지 않음"
+          }
+        },
+        {
+          "scene_id": "W4-C02-P03",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 3,
+          "narration_anchor": "다만 앞으로 감당할 집을 정할 때는, 가격이 얼마나 오를지를 보수적으로 잡는 편이 합리적이라고 생각합니다. 높은 상승",
+          "narration_sha256": "9373d76d78383e9bccd5b1470aaaadc3727a7bf2dd4276148847600c29ab9fd2",
+          "message": "집값 연 2%는 상환 지속 가능성을 보는 보수적 계획 조건이다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "계획 가정 2%를 과거 관측 영역과 분리하고 같은 집의 조건별 경로를 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "growth-explanation 보강 제안의 계획 가정·민감도 구간; 과거 평균 차트 재사용 금지",
+            "legacy_scene_hint": null
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            18,
+            21
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C02-P04",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 4,
+          "narration_anchor": "투자계좌는 배당과 환율 효과를 포함한 원화 총수익 연 6%, 금리는 연 4%로 계산합니다. 월세와 보증금은 10년 동",
+          "narration_sha256": "fb3da8fa8eb26a1cce07b7117476535c9e844eda828cf8a07ca2cbde190d4768",
+          "message": "투자·금리·고정 임대료와 비용·세금의 포함 범위를 밝힌다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "총수익·대출·월세·보증금·가정 비용을 자금 흐름에 붙이고 상품별 세금·운용비용 추가 반영 전을 짧게 표시",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S004 구조만 활용; v4 포함 범위와 현재 문단에 맞춰 조건띠 갱신",
+            "legacy_scene_hint": "S004"
+          },
+          "changes": [
+            "배당·환율을 포함한 총수익 가정을 직접 표기"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            17,
+            21
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C02-P05",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 5,
+          "narration_anchor": "이렇게 조건을 먼저 고정하면 집값이 얼마나 올랐는지와 매달 얼마를 저축했는지를 분리할 수 있습니다. 같은 집과 같은 ",
+          "narration_sha256": "be8c0a1dfc1c69f30434432008a652bffa193e456992b3811109e9d5cc22f6c8",
+          "message": "같은 집과 예산으로 주거 방식에 따른 차이를 분리한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "같은 집·예산 축에 가격 변화와 월 저축 흐름을 분리해 배치",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S004~S005 같은 조건 도식의 해당 요소",
+            "legacy_scene_hint": "S005"
+          },
+          "changes": [
+            "잘못된 비교의 예시를 동일 조건의 목적 설명으로 압축"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            7,
+            9
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C02-P06",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 6,
+          "narration_anchor": "비교 기간도 같습니다. 매매는 10년, 투자는 20년으로 늘리거나 한쪽에 유리한 종료 시점을 고르면 결과의 의미가 달",
+          "narration_sha256": "c7c91ed22e9dd709451c5b183bfbba288d8287ac54d7e4077d2f444dde3d1598",
+          "message": "세 가구 모두 같은 종료 시점의 자산과 부채를 평가한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "세 자금 경로의 끝을 동일 120개월 선에 맞춤",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S005 비교 기간 도식",
+            "legacy_scene_hint": "S005"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            10,
+            12
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "title": "출발 자금",
+      "chapter_transition": {
+        "asset_type": "ai_concept",
+        "purpose": "주제 전환 분위기",
+        "reuse": "같은 주제에 맞는 기존 배경만 조건부 사용. 주제와 무관한 공통 이미지 반복 금지. 제목은 별도 편집 레이어.",
+        "status": "실제 배경 프레임 미확인"
+      },
+      "paragraphs": [
+        {
+          "scene_id": "W4-C03-P01",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 1,
+          "narration_anchor": "집을 사는 가구부터 보겠습니다. 6억원 가운데 자기자금 2억4천만원을 넣고 3억6천만원을 빌립니다. 집을 살 때는 집",
+          "narration_sha256": "d2c40f82136c9f9cdc87f84c3e8501b2d4d2a32ff29bd17a858b5c379eb0d676",
+          "message": "매매 초기자금을 자기자금·대출·가정 비용·투자잔액으로 나눈다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "집으로 들어가는 자기자금·대출과 밖으로 나가는 비용, 남는 투자금의 화살표를 분리",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S006 매매 초기 배분; 비용 합계처럼 보이는 항목표는 설명용 비용 묶음으로 수정",
+            "legacy_scene_hint": "S006"
+          },
+          "changes": [
+            "600만원이 실제 항목 합계가 아닌 비용 묶음의 설명용 가정임을 명확화"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            18,
+            21
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C03-P02",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 2,
+          "narration_anchor": "이때 집값 6억원은 대출을 포함한 자산입니다. 집과 투자계좌를 더한 뒤 대출 3억6천만원을 빼야 합니다. 거래비용을 ",
+          "narration_sha256": "32847c896304a3d4e223e941ff817abba3ee5209991af3d5e4282a19bb408210",
+          "message": "집과 투자계좌에서 대출을 차감한 금액이 거래 직후 순자산이다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "집+투자계좌−대출의 순서로 순자산 막대를 조합",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S006 자산·부채 분해",
+            "legacy_scene_hint": "S006"
+          },
+          "changes": [
+            "자산과 순자산의 차이를 긍정형으로 설명"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            11,
+            13
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C03-P03",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 3,
+          "narration_anchor": "전세 가구는 보증금 4억원인 집에 들어갑니다. 자기자금 2억원과 전세대출 2억원을 합칩니다. 전세도 중개보수 등 계약",
+          "narration_sha256": "f2d942fbd49d43d8425a253abfaabf654fbc125f9c223e9ecd37433e3876c93b",
+          "message": "전세 보증금의 자금 출처와 금융자산 잔액을 구분한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "보증금으로 가는 자기자금·대출과 설명용 초기비용·투자계좌를 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S007 전세 자금 도식; 100만원을 비용 묶음 가정으로 표기",
+            "legacy_scene_hint": "S007"
+          },
+          "changes": [
+            "전세 초기비용 100만원도 설명용 비용 묶음임을 명시"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            15,
+            18
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C03-P04",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 4,
+          "narration_anchor": "월세 가구는 보증금 1억원에 월세 100만원인 조건입니다. 보증금에는 자기자금 8천만원과 대출 2천만원이 들어갑니다.",
+          "narration_sha256": "deb09b7764a713abafe684647407f2e4e0a47dfd9fb97f288a9a3aa3995ee3c8",
+          "message": "월세는 보증금에 적게 묶여 초기 투자계좌가 커진다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "월세 보증금의 자금 출처와 남는 투자금 면적을 분리",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S008 월세 초기 배분; 100만원 비용 설명 갱신",
+            "legacy_scene_hint": "S008"
+          },
+          "changes": [
+            "월세 초기비용 100만원도 설명용 비용 묶음임을 명시",
+            "초기 투자금 차이가 생기는 조건을 직접 설명"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            17,
+            20
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C03-P05",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 5,
+          "narration_anchor": "전세와 월세의 대출은 매달 이자만 내고 원금은 그대로 남는 설정입니다. 만기에 보증금을 돌려받으면 대출을 갚습니다. ",
+          "narration_sha256": "9b6d85ad49ac3a6c2bb3cc05e7b29a4cecf67e5450b42781e3729701f9c2cc2b",
+          "message": "임차 대출은 이자만 납부하고 보증금 전액 반환으로 원금을 상환한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "계약 시작·이자 납부·보증금 전액 정상 반환·대출 상환 경로를 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S008 반환 설명 부분만; 초기 배분 막대만 반복하지 않음",
+            "legacy_scene_hint": "S008"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            12,
+            15
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "title": "매달 나가는 돈",
+      "chapter_transition": {
+        "asset_type": "ai_concept",
+        "purpose": "주제 전환 분위기",
+        "reuse": "같은 주제에 맞는 기존 배경만 조건부 사용. 주제와 무관한 공통 이미지 반복 금지. 제목은 별도 편집 레이어.",
+        "status": "실제 배경 프레임 미확인"
+      },
+      "paragraphs": [
+        {
+          "scene_id": "W4-C04-P01",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 1,
+          "narration_anchor": "이제 같은 300만원이 어떻게 나뉘는지 보겠습니다. 매매 가구의 3억6천만원 대출은 30년 동안 원금과 이자를 합친 ",
+          "narration_sha256": "807f6e057a530bcc3bfba42882d76b0900df0d3f5182ecccee04c91665e4851e",
+          "message": "매매 월예산은 원리금·보유비용·투자금으로 나뉜다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "월 300만원 흐름이 원리금과 비용으로 갈라지고 투자금이 남는 도식",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S009 매매 월예산 도식",
+            "legacy_scene_hint": "S009"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            14,
+            17
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C04-P02",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 2,
+          "narration_anchor": "따라서 투자계좌에는 매달 약 98만원이 들어갑니다. 집을 산 가구도 남는 돈을 투자합니다. 세 가구 모두 주거 자산과",
+          "narration_sha256": "0f2a05c98166b476388d07e1e4fde8d985380299d09b9c4d491cb96673e01d76",
+          "message": "매매도 남은 돈을 같은 투자 규칙으로 운용한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "매매의 월 잔액이 다른 두 가구와 같은 투자계좌 규칙에 연결됨을 강조",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S009의 투자계좌 유입 요소",
+            "legacy_scene_hint": "S009"
+          },
+          "changes": [
+            "세 가구의 공통 투자 규칙을 직접 설명"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            8,
+            9
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C04-P03",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 3,
+          "narration_anchor": "전세 가구는 대출 2억원의 이자로 월 약 67만원을 냅니다. 임차인 추가비용을 월 5만원으로 가정하면 월 주거 지출은",
+          "narration_sha256": "1ce4d901f2e0a5b96e3ab4d2ebfdd3521c5b05b7aa2662f1b506db6b6f2929d3",
+          "message": "전세와 월세의 이자·월세·비용 차이가 월 투자금 차이를 만든다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "전세·월세 각각의 예산을 주거지출과 투자금으로 분해",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S010 월 흐름 비교",
+            "legacy_scene_hint": "S010"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            14,
+            16
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C04-P04",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 4,
+          "narration_anchor": "전세는 이 설정에서 매달 투자할 돈이 가장 많습니다. 월세는 처음 투자할 돈이 가장 많습니다. 어느 쪽이 더 크게 남",
+          "narration_sha256": "cbdd9b9105ce641ca0de9e4685bd901b886f6330ab2a5ccc659e04770430b2cf",
+          "message": "전세는 월 적립금, 월세는 초기 투자금이 크다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "초기 투자금과 매달 투자금을 서로 다른 두 축에 놓고 같은 수익 규칙에 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S010 구조; 월세 누적 지출만 보이는 차트는 사용하지 않음",
+            "legacy_scene_hint": "S010"
+          },
+          "changes": [
+            "앞 문장의 초기 투자금·월 적립금·수익 설명과 겹치는 회피 문장 삭제"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            8,
+            10
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C04-P05",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 5,
+          "narration_anchor": "월 30만원과 5만원은 설명을 위한 비용 묶음이며, 매매와 임차의 비용 가정 차이는 25만원입니다. 현실에서는 보유세",
+          "narration_sha256": "1515ec7750a5448dd570b7a01cf0542de52089b580d3ad90cf778990eaa02c48",
+          "message": "월별 추가비용은 가정 묶음이고 공통비용과 실제 부담 차이를 구분한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "공통 관리비 영역과 매매·임차의 추가비용 묶음을 구분",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S010 비용 항목 설명 부분; 숫자에 실제 항목별 합계 라벨 금지",
+            "legacy_scene_hint": "S010"
+          },
+          "changes": [
+            "비용 묶음의 비교 대상을 직접 표기"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            13,
+            16
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "title": "원금과 보증금",
+      "chapter_transition": {
+        "asset_type": "ai_concept",
+        "purpose": "주제 전환 분위기",
+        "reuse": "같은 주제에 맞는 기존 배경만 조건부 사용. 주제와 무관한 공통 이미지 반복 금지. 제목은 별도 편집 레이어.",
+        "status": "실제 배경 프레임 미확인"
+      },
+      "paragraphs": [
+        {
+          "scene_id": "W4-C05-P01",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 1,
+          "narration_anchor": "매매 가구가 낸 월 172만원을 조금 더 나눠보겠습니다. 첫 달 이자는 120만원이고 원금은 약 52만원입니다. 이자",
+          "narration_sha256": "99832fb1024a6a2b06d38177dd6684fab943618acb31bd6c2b4a916257324c82",
+          "message": "대출 상환액 중 이자는 비용, 원금은 부채 감소다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "첫 달 상환액을 이자와 원금으로 나눠 원금 부분만 대출잔액에서 차감",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S011 원금·이자 분해",
+            "legacy_scene_hint": "S011"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            12,
+            15
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C05-P02",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 2,
+          "narration_anchor": "첫 달이 지나면 대출은 3억6천만원에서 약 3억5천950만원으로 줄어듭니다. 다음 달 이자는 줄어든 대출잔액을 기준으",
+          "narration_sha256": "25982cb968abf3874dcb0b2bf3bcecabfb101f82ac3272b8d51301ec71feb92a",
+          "message": "상환이 이어지면 잔액과 이자 비중이 줄고 원금 비중이 늘어난다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "대출잔액 곡선과 원금·이자 구성 변화를 동일 월 축에 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S011 상환 경로",
+            "legacy_scene_hint": "S011"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            14,
+            16
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C05-P03",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 3,
+          "narration_anchor": "처음 빌린 3억6천만원에서 매달 갚은 원금을 차감해 대출잔액을 계산합니다. 마지막 순자산에서는 그 잔액을 한 번 뺍니",
+          "narration_sha256": "183a3a2a7afe1321e49bb2cd0c1fa2510ff3d7d6daa3525fd238da900cd55e23",
+          "message": "갚은 원금은 줄어든 대출잔액으로 최종 순자산에 반영한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "처음 대출에서 누적 상환 원금을 차감하고 마지막 잔액을 순자산 식에 한 번 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S012 회계 구조; 오류 예시 경고 대신 올바른 계산 순서로 수정",
+            "legacy_scene_hint": "S012"
+          },
+          "changes": [
+            "중복계상 경고 대신 원금 차감→남은 빚 반영 순서를 설명"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            8,
+            9
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C05-P04",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 4,
+          "narration_anchor": "보증금도 같은 원리로 연결합니다. 전세보증금 4억원을 맡기는 순간 현금은 줄지만 돌려받을 권리가 생깁니다. 계약이 끝",
+          "narration_sha256": "b99f4e9f8bd20e45f0215b4652b8db35cf770623ab21a07d09fe8e9bd732126f",
+          "message": "보증금 반환은 자산의 현금 전환이며 대출도 함께 상환한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "보증금 권리가 현금으로 바뀐 뒤 대출 상환과 잔액으로 갈라지는 흐름",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S013 보증금 반환 구간",
+            "legacy_scene_hint": "S013"
+          },
+          "changes": [
+            "보증금 반환을 현금 전환으로 직접 설명"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            13,
+            16
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C05-P05",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 5,
+          "narration_anchor": "보증금에 묶인 돈의 기회비용은 처음 투자계좌가 작아지는 데 이미 반영돼 있습니다. 이번 모형은 그 작은 계좌에서 실제",
+          "narration_sha256": "ad00f459a9e81e1d1c44a5f454e7351cbe69044cbcc0b9e494a7a3cb2cdfb620",
+          "message": "보증금·집에 묶인 자기자금은 작은 초기 투자계좌로 반영한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "처음 장부의 주거 자금과 투자금 비율에서 출발해 실제 투자수익만 누적",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S013 기회비용 구간; 반환 화면과 다른 자금 배분 상태를 사용",
+            "legacy_scene_hint": "S013"
+          },
+          "changes": [
+            "기회비용을 초기 투자계좌 크기에 반영한다는 앞 설명 보존·중복 경고 삭제"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            9,
+            11
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        }
+      ]
+    },
+    {
+      "chapter": 6,
+      "title": "투자수익",
+      "chapter_transition": {
+        "asset_type": "ai_concept",
+        "purpose": "주제 전환 분위기",
+        "reuse": "같은 주제에 맞는 기존 배경만 조건부 사용. 주제와 무관한 공통 이미지 반복 금지. 제목은 별도 편집 레이어.",
+        "status": "실제 배경 프레임 미확인"
+      },
+      "paragraphs": [
+        {
+          "scene_id": "W4-C06-P01",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 1,
+          "narration_anchor": "투자 대안은 S&P500을 따라가는 ETF를 떠올릴 수 있습니다. 이때 가격 상승과 배당을 합친 총수익, 실제 ETF",
+          "narration_sha256": "0d756c5180d0c9d6a134d2738ec33df772e282327c418f4feb27b58c22b48340",
+          "message": "총수익은 가격 상승과 배당 재투자를 함께 포함한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "가격 변화와 재투자 배당이 총수익으로 합쳐지는 도식",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "M08",
+            "M09",
+            "M10",
+            "M11"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S014 총수익 구간",
+            "legacy_scene_hint": "S014"
+          },
+          "changes": [
+            "배당을 포함하는 계산 범위를 직접 설명"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            12,
+            15
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C06-P02",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 2,
+          "narration_anchor": "환율도 같은 방식입니다. 달러 자산이 10% 오르고 원·달러 환율도 10% 오르면, 원화 자산은 1.1배에 1.1배를",
+          "narration_sha256": "67bd86d58d4a73cc941e694084c40353edab9872f1a214b33197c77bcb7b4bb7",
+          "message": "원화 수익은 달러 자산 변화와 환율의 곱으로 연결된다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "달러 자산 변화와 환율 변화가 곱해지는 두 단계와 원화 결과를 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "M08",
+            "M09",
+            "M10",
+            "M11"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S014 환율 계산 구간",
+            "legacy_scene_hint": "S014"
+          },
+          "changes": [
+            "원화 수익률의 포함 범위를 직접 설명"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            14,
+            16
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C06-P03",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 3,
+          "narration_anchor": "이번 계산은 배당과 환율 효과를 포함한 원화 총수익을 연 6%로 가정합니다. 6%는 10년간 주거 방식에 따른 차이를",
+          "narration_sha256": "6fe4f6347a9bfb0e10084b98e07a0b115bf4158ae53a6ca82041696fd81b13df",
+          "message": "연 6%는 원화 총수익 가정이며 상품별 세금·보수·환전비용 추가 반영 전이다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "원화 총수익 가정을 세 계좌에 공통 연결하고 세금·환전·운용비용의 포함 범위를 짧게 표시",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S015 가정 설명; v4 세금·비용 문구 갱신",
+            "legacy_scene_hint": "S015"
+          },
+          "changes": [
+            "예측·중복 관련 부정형을 가정의 용도·공통 적용·세금 및 비용 포함 범위로 전환"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            14,
+            17
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C06-P04",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 4,
+          "narration_anchor": "납입 시점도 통일했습니다. 월초에 있던 투자금에 그달 수익을 적용하고, 매달 남는 돈은 월말에 넣습니다. 월말에 새로",
+          "narration_sha256": "6ecffbf10cd54693061ee0266a98915a4f2245568510aafaee8e50616710fb48",
+          "message": "기존 잔액에 월수익을 적용하고 새 납입금은 월말에 넣는다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "월초 잔액→수익 적용→월말 납입→다음 달의 단계와 연·월 복리 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S015 납입 시점·복리 구간",
+            "legacy_scene_hint": "S015"
+          },
+          "changes": [
+            "월말 납입금의 수익 발생 시점을 직접 설명",
+            "연 수익률의 월 복리 변환 기준을 긍정형으로 정리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            12,
+            14
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C06-P05",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 5,
+          "narration_anchor": "집값에는 가격 상승만 넣습니다. 실거주 가구가 월세를 내지 않는 효과는 매달 지출표에 이미 들어 있습니다. 주거 혜택",
+          "narration_sha256": "8a7a7ca30c2a4950601ffbb3039f6cbfb12ceffdb2f5ba1e43ab29005bab880a",
+          "message": "집의 가격 변화와 자가 거주 지출 효과를 서로 다른 장부에 반영한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "집 평가액의 가격 변화와 월 지출표의 주거 효과를 따로 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "M06"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S016 주거 서비스 회계 도식",
+            "legacy_scene_hint": "S016"
+          },
+          "changes": [
+            "자가 거주 혜택의 반영 위치를 직접 설명"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            11,
+            13
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "title": "10년 후",
+      "chapter_transition": {
+        "asset_type": "ai_concept",
+        "purpose": "주제 전환 분위기",
+        "reuse": "같은 주제에 맞는 기존 배경만 조건부 사용. 주제와 무관한 공통 이미지 반복 금지. 제목은 별도 편집 레이어.",
+        "status": "실제 배경 프레임 미확인"
+      },
+      "paragraphs": [
+        {
+          "scene_id": "W4-C07-P01",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 1,
+          "narration_anchor": "이 조건으로 120개월을 계산한 뒤 세 가구의 자산을 펼쳐보겠습니다. 매매 가구의 집은 연 2%씩 올라 약 7억3천1",
+          "narration_sha256": "b9954e2a486e5943c203260c8c90ff6afccfdf1599e0909b75d5da227acb3ac5",
+          "message": "집·금융자산에서 남은 대출을 빼 매매 순자산을 계산한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "매매 집 평가액+금융자산−잔여대출의 분해 막대를 순서대로 조합",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S017 매매 순자산 분해",
+            "legacy_scene_hint": "S017"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            12,
+            14
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C07-P02",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 2,
+          "narration_anchor": "전세 가구는 보증금 4억원과 금융자산 약 4억5천900만원을 보유합니다. 전세대출 2억원을 빼면 순자산은 약 6억5천",
+          "narration_sha256": "a02ff70a42fbfb29f63f5453d11e3b2345e056c7935c83f1fadbda85a2ccb3f0",
+          "message": "임차 순자산은 보증금·금융자산에서 대출을 차감한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "전세와 월세의 보증금+금융자산−대출을 같은 축에서 조합",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S017~S018 해당 임차 분해 구간",
+            "legacy_scene_hint": "S017/S018"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            12,
+            14
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C07-P03",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 3,
+          "narration_anchor": "기본 조건에서 월세 가구는 매매 가구보다 약 7천400만원, 전세 가구보다 약 3천만원 큰 평가 순자산으로 끝납니다.",
+          "narration_sha256": "f2c7ea3761d07a344443216b74d5b9dca00a1bb014bc26b12b45d66934e95e96",
+          "message": "기본 조건의 차이는 초기 투자금과 월 차액의 누적에서 생긴다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "최종 차이와 초기 투자금·월 적립금의 경로를 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S018 차이 설명; 결과 막대만 유지하지 않음",
+            "legacy_scene_hint": "S018"
+          },
+          "changes": [
+            "표 읽기 지시를 주거비와 투자금의 관계 설명으로 압축"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            12,
+            14
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C07-P04",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 4,
+          "narration_anchor": "이 숫자는 집에 계속 사는 상태에서 자산을 평가한 값입니다. 집 지분과 보증금은 모두 자산이지만 즉시 쓸 수 있는 투",
+          "narration_sha256": "f0febbc56c9d02b796773e1fa0e63c8381b81cbc830b63e6b8d9b91cb03675f6",
+          "message": "평가 순자산과 바로 쓸 수 있는 돈의 역할을 구분한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "집 지분·보증금·투자계좌를 현금 전환 경로와 함께 구분",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S019 평가·유동성 도식",
+            "legacy_scene_hint": "S019"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            12,
+            15
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C07-P05",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 5,
+          "narration_anchor": "모두 같은 날 자산을 정리해 현금으로 바꾸는 비교도 따로 만들 수 있습니다. 이 경우 집 매도비용과 조건에 맞는 세금",
+          "narration_sha256": "0a6ae5b65a1381609423373baed25f83d96c5847f5f4d6bd0951fcef7642a785",
+          "message": "현금 청산 비교에는 매도비용·세금과 이후 주거비를 함께 연결한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "현재 계속거주 장부 옆에 청산 시 필요한 비용·다음 주거 연결만 표시",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S019 청산 비교 구간; 새 청산 금액 계산 금지",
+            "legacy_scene_hint": "S019"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            15,
+            18
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        }
+      ]
+    },
+    {
+      "chapter": 8,
+      "title": "조건의 변화",
+      "chapter_transition": {
+        "asset_type": "ai_concept",
+        "purpose": "주제 전환 분위기",
+        "reuse": "같은 주제에 맞는 기존 배경만 조건부 사용. 주제와 무관한 공통 이미지 반복 금지. 제목은 별도 편집 레이어.",
+        "status": "실제 배경 프레임 미확인"
+      },
+      "paragraphs": [
+        {
+          "scene_id": "W4-C08-P01",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 1,
+          "narration_anchor": "집값이 결과를 얼마나 움직이는지부터 보겠습니다. 투자수익은 연 6%, 대출금리는 연 4%에 그대로 두겠습니다. 월세와",
+          "narration_sha256": "7ef2fe8709c55ec5c638265020eb07a9b9f9efbabc1c987322f71cc6dea6b4e6",
+          "message": "투자·금리·임대 조건을 고정하고 집값만 바꾼다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "고정 조건은 유지하고 집값 상승률 입력 칸만 선택",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S020 민감도 구조; 기존 v1 문단 번호 대신 내용으로 대응",
+            "legacy_scene_hint": "S020"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            8,
+            9
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C08-P02",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 2,
+          "narration_anchor": "집값이 연 2% 오르면 매매 가구의 10년 후 순자산은 약 6억1천만원입니다. 연 4%로 바꾸면 약 7억7천만원, 연",
+          "narration_sha256": "cbfe930f4d02dccb715d59c55fe00c37a7cab408a4ff5301c3e3b33be59deae9",
+          "message": "집값 가정 변화로 매매의 순자산과 세 가구 순서가 달라진다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "집값 조건별 매매 결과를 동일 축에서 바꾸고 임차 결과는 고정",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S020 같은 집값 민감도 구간",
+            "legacy_scene_hint": "S020"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            13,
+            15
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C08-P03",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 3,
+          "narration_anchor": "여기에는 대출의 효과가 들어 있습니다. 집을 살 때 넣은 자기자금은 2억4천만원이지만, 가격이 움직이는 대상은 대출을",
+          "narration_sha256": "0b2b6364590f921c1231e543bf96991f1b03c3abda279d049ffb7225393c8955",
+          "message": "대출은 집 전체 가격 변화를 자기자금과 연결하며 하락 위험도 키운다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "자기자금과 대출이 합쳐진 집 전체의 가격 변화·이자·원금 흐름을 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "growth-explanation 레버리지 제안 중 같은 수치 구간; 상승 그래프를 하락 설명에 그대로 반복 금지",
+            "legacy_scene_hint": null
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            20,
+            24
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C08-P04",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 4,
+          "narration_anchor": "이어서 집값과 투자수익을 함께 바꿔보겠습니다. 집값이 연 4% 오르고 투자수익은 연 2%인 조건에서는 매매가 약 7억",
+          "narration_sha256": "2d8c4b0b25da524d45ea6a26a4d9b7e145f23e8a04ccfe3fe4f02d9031464dae",
+          "message": "집값 상승과 낮은 투자수익을 함께 놓으면 결과가 달라진다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "두 입력을 함께 고른 뒤 해당 조건의 세 결과를 강조",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "기존 민감도 차트의 동일 조합만",
+            "legacy_scene_hint": null
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            12,
+            14
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C08-P05",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 5,
+          "narration_anchor": "반대로 집값 상승을 0%, 투자수익을 연 8%로 두면 매매는 약 5억200만원, 전세는 약 7억1천700만원, 월세는",
+          "narration_sha256": "a2aad3bcb03f47438068da40bc67c6c9167b03825757cdd2f8c9da8468083df8",
+          "message": "집값·투자수익 조합에 따라 임차 방식 사이의 순서도 달라진다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "본문의 두 조건 조합을 별도 상태로 전환하고 각 결과에 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "기존 민감도 차트의 동일 조합; 미계산 경계선 추가 금지",
+            "legacy_scene_hint": null
+          },
+          "changes": [
+            "고정 순위의 부정 대신 조건별 결과 변화를 직접 설명"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            12,
+            15
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C08-P06",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 6,
+          "narration_anchor": "월세 수준만 바꿔도 결과가 달라집니다. 같은 보증금에서 월세를 100만원 대신 120만원으로 높이면 월세 가구의 순자",
+          "narration_sha256": "5c2f501850b1266aad3f3adcf75258214cd8c0f199efcac05adee605459d33a4",
+          "message": "월세 인상 가정은 월 투자금과 최종 순자산을 줄인다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "보증금 고정 상태에서 월세 차이가 투자금 감소를 거쳐 최종 결과로 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "기존 월세 민감도 구간만; 집값 차트에 제목만 바꿔 재활용 금지",
+            "legacy_scene_hint": null
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            14,
+            17
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C08-P07",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 7,
+          "narration_anchor": "금리도 경계를 움직입니다. 전세대출은 연 2%, 매매대출은 연 6%로 놓으면 전세 순자산은 약 7억1천300만원, 매",
+          "narration_sha256": "7e95f6a12f6c4a3b15d273c11ba5222ef01adceeb2d0ad0439fb9768e0b3d95c",
+          "message": "매매·전세의 대출금리 차이가 최종 결과를 바꾼다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "매매·전세 금리 입력의 두 조합을 각각 결과에 연결하고 월세 대출금리는 고정",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S021 금리 차이 구간; 기존 문단 앵커가 아닌 내용 기준으로 선택",
+            "legacy_scene_hint": "S021"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            14,
+            17
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C08-P08",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 8,
+          "narration_anchor": "각 화면은 처음부터 서로 다른 고정금리를 적용한 별도 조건입니다. 실제 변동금리 대출은 금리가 바뀌는 시점마다 이자와",
+          "narration_sha256": "684d90c2dc007eb531ebb338a860a3840d7497a9ea5398d6034727c7770ad85d",
+          "message": "각 금리 비교는 처음부터 서로 다른 고정금리를 적용한 조건이다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "별도 고정금리 경로를 나란히 두고 변동금리 설명에는 잔액·적용시점을 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S021 금리 조건 도식; 시간 중 변동인 듯 보이는 화면은 수정",
+            "legacy_scene_hint": "S021"
+          },
+          "changes": [
+            "고정금리 시나리오의 비교 조건을 직접 설명"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            10,
+            12
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C08-P09",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 9,
+          "narration_anchor": "이 표에서 유용한 것은 자신이 생각하는 집값과 투자수익이 어느 칸에 있는지, 금리와 월세가 바뀌면 어느 방향으로 움직",
+          "narration_sha256": "0112504dd731d90153563b66688628bf60acc7643e7f680a8b170c3078e53a63",
+          "message": "계산된 조건을 비교하고 경계 주변을 추가 계산해 판단 범위를 좁힌다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "이미 계산된 조건 칸만 표시하고 집값·수익·금리·월세의 이동 방향을 안내",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "조건 격자 구조; 정확한 손익분기선·미계산 결과를 그리지 않음",
+            "legacy_scene_hint": null
+          },
+          "changes": [
+            "미계산 경고 대신 현재 비교 범위와 다음 계산 방법을 설명"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            10,
+            12
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "title": "실행",
+      "chapter_transition": {
+        "asset_type": "ai_concept",
+        "purpose": "주제 전환 분위기",
+        "reuse": "같은 주제에 맞는 기존 배경만 조건부 사용. 주제와 무관한 공통 이미지 반복 금지. 제목은 별도 편집 레이어.",
+        "status": "실제 배경 프레임 미확인"
+      },
+      "paragraphs": [
+        {
+          "scene_id": "W4-C09-P01",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 1,
+          "narration_anchor": "차액을 투자한다는 조건도 실제 행동과 연결됩니다. 매달 남는 돈을 전부 ETF에 넣던 가정에서 절반만 넣고 나머지는 ",
+          "narration_sha256": "baebc05d5f5804617e2f9640a7e2d5d1934ee95e5c0ab618bb909d811088dea2",
+          "message": "월 차액의 절반은 투자, 나머지는 현금으로 두는 경우를 비교한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "월 잔액을 ETF와 현금으로 반씩 분기하고 최종 자산을 함께 누적",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S022 실행률 구간",
+            "legacy_scene_hint": "S022"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            12,
+            14
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C09-P02",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 2,
+          "narration_anchor": "여기서는 투자하지 않은 돈도 현금으로 남아 저축 원금에 포함됩니다. 매달 남는 돈을 소비하면 저축 원금까지 줄어드는 ",
+          "narration_sha256": "18e44327d9ed74d3901829f64c9af072c144485a416fc950e79a6c06418a6592",
+          "message": "현금 보유도 저축 원금이며 소비와 다른 경로다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "같은 월 잔액이 ETF·현금·소비로 가는 경로를 구분하되 소비 결과값은 추가하지 않음",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S022 현금·저축 구간; 투자 손실 차트를 그대로 사용하지 않음",
+            "legacy_scene_hint": "S022"
+          },
+          "changes": [
+            "미투자 현금 보유와 소비의 차이를 직접 설명"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            11,
+            13
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C09-P03",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 3,
+          "narration_anchor": "기본 모형은 매달 주거 지출이 300만원 안에 들어오는지도 확인합니다. 현금지출이 예산을 넘으면 기존 ETF를 팔거나",
+          "narration_sha256": "f97d0c3c8f30c60b1783465c2c00d6d9e06a3f2f481c8c79c73f37e32e197d28",
+          "message": "월예산을 넘으면 모형 경로를 멈추며 다른 대응은 별도 계산이다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "주거지출과 월예산을 비교해 초과 지점에서 계산 경로 정지; 별도 대응은 분기만",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S023 예산·유동성 구간",
+            "legacy_scene_hint": "S023"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            14,
+            16
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C09-P04",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 4,
+          "narration_anchor": "전세 갱신 때 보증금이 오르거나, 월세가 인상되거나, 투자시장이 하락한 시기에 이사해야 하는 경우도 같은 장부에 넣을",
+          "narration_sha256": "841e6c10f88938aab9a72d9d4f4a2aafce132454195523a18ab197a862d37874",
+          "message": "계약 갱신·투자 하락·이사 시점과 자금 집중 위험을 함께 본다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "계약 갱신과 이사 일정에 보증금·월세·시장가격·필요 현금의 흐름을 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [
+            "SIM01"
+          ],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 script_cost_v3.md의 해당 문단; 수치·원 모형 그대로 계승. 독립 사실·계산 검수는 별도 QA.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S023 유동성 도식; 원금·월세 비교 차트를 무관하게 반복하지 않음",
+            "legacy_scene_hint": "S023"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            14,
+            16
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "title": "다음 선택",
+      "chapter_transition": {
+        "asset_type": "ai_concept",
+        "purpose": "주제 전환 분위기",
+        "reuse": "같은 주제에 맞는 기존 배경만 조건부 사용. 주제와 무관한 공통 이미지 반복 금지. 제목은 별도 편집 레이어.",
+        "status": "실제 배경 프레임 미확인"
+      },
+      "paragraphs": [
+        {
+          "scene_id": "W4-C10-P01",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 1,
+          "narration_anchor": "매매와 전세, 월세를 고를 때는 내가 가진 돈과 매달 감당할 수 있는 지출, 앞으로 얼마나 오래 살지를 함께 봐야 합",
+          "narration_sha256": "3be501b1b7e20f28f2b9c2eb7c8204d9f9161071f84584655da7dbe1bf455dbb",
+          "message": "주거 방식은 가진 돈·월지출·거주기간과 자금 운용을 함께 비교한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "같은 집을 중심으로 초기자금·월 흐름·거주기간을 선택 틀에 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 대본의 화자 관점·조건부 선택 틀·다음 편 예고; 수익 보장이나 새 분석 결과가 아닌 관점 서술.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "기존 비교 틀의 요소만; v1 S024의 실제시장 지도와 의미가 달라 그대로 재사용 금지",
+            "legacy_scene_hint": null
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            11,
+            13
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C10-P02",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 2,
+          "narration_anchor": "이번 계산에서 투자수익은 연 6%로 놓았습니다. 영상의 집값·금리·임대료 조건을 유지하면서 그보다 높은 성과를 꾸준히",
+          "narration_sha256": "847d5866d75994728ad82a6a6c2ac2d77429677f19a11ec9ff1c8721612dc423",
+          "message": "임차의 유리함도 영상의 주거 조건과 꾸준한 차액 투자에 달려 있다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "영상의 집값·금리·임대료 조건을 유지한 채 투자 성과와 적립 지속 경로를 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 대본의 화자 관점·조건부 선택 틀·다음 편 예고; 수익 보장이나 새 분석 결과가 아닌 관점 서술.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "조건부 선택 도식 구조만; 6% 임계선이나 승자 배지 추가 금지",
+            "legacy_scene_hint": null
+          },
+          "changes": [
+            "6%를 보편적인 승리 기준으로 읽지 않도록 영상의 고정 조건에 연결"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            15,
+            17
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C10-P03",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 3,
+          "narration_anchor": "한편 실거주 매매에는 자산을 키우는 기회와 살 집을 안정적으로 확보하는 가치가 함께 있습니다. 종자돈에 대출을 더해 ",
+          "narration_sha256": "c88d053e34a9307349f76a55a22ccc05ad0fb323335b48c9fcdc29b465bb28b4",
+          "message": "실거주 매매는 자산 형성 기대와 주거 안정 가치를 함께 가진다",
+          "asset_types": [
+            "ai_concept"
+          ],
+          "screen_purpose": "분위기·가치 전달",
+          "visual_direction": "집에 머무는 생활 일정과 원금 상환·자산 경로를 양쪽에 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 대본의 화자 관점·조건부 선택 틀·다음 편 예고; 수익 보장이나 새 분석 결과가 아닌 관점 서술.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "기존 주거 안정 설명 화면이 같은 의미일 때만; 자산 수익 차트 단독 반복 금지",
+            "legacy_scene_hint": null
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            13,
+            16
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C10-P04",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 4,
+          "narration_anchor": "제 관점에서는 어느 정도 종자돈이 모였고, 대출을 갚으면서 생활비와 비상자금을 유지할 수 있다면 실거주 매매는 자산 ",
+          "narration_sha256": "31e1908d0354d667acc5ade14d1838cd5281d435c1fab03609492eae751a01cf",
+          "message": "화자는 감당 가능한 매매와 오래 유지할 생활 터전에 가치를 둔다",
+          "asset_types": [
+            "ai_concept"
+          ],
+          "screen_purpose": "분위기·가치 전달",
+          "visual_direction": "한 집에서 생활 계획을 이어가는 개념 화면에 생활비·비상자금·상환 지속 조건을 짧게 연결",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 대본의 화자 관점·조건부 선택 틀·다음 편 예고; 수익 보장이나 새 분석 결과가 아닌 관점 서술.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "동일 주거 안정 소재만 조건부 활용; 다른 장의 지역 사진·이미지 재활용 금지",
+            "legacy_scene_hint": null
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            17,
+            21
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C10-P05",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 5,
+          "narration_anchor": "그래서 집값이 크게 오를 거라는 기대보다 먼저 확인할 것은 내가 보유를 이어갈 수 있는 가격입니다. 소득이 줄거나 금",
+          "narration_sha256": "8dff065e489c6ad64c11070dde4888c2515f9db6b34c8b604da4e76ce23b5df2",
+          "message": "기대 상승보다 보유를 지속할 수 있는 가격과 월 상환 여력을 먼저 본다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "소득·금리 변화에 월 상환과 생활비를 연결해 보유 지속 가능성 표시",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 대본의 화자 관점·조건부 선택 틀·다음 편 예고; 수익 보장이나 새 분석 결과가 아닌 관점 서술.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "기존 감당 가능성 도식이 같은 조건을 설명할 때만; 새 가격 한도 계산 금지",
+            "legacy_scene_hint": null
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            9,
+            11
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        },
+        {
+          "scene_id": "W4-C10-P06",
+          "scene_id_scope": "writer 문단 제안 ID; 공통 장면 ID를 교체하지 않음",
+          "paragraph": 6,
+          "narration_anchor": "다음 시간에는 내 종자돈과 월소득을 기준으로 매매하기에 적절한 금액대를 계산해보겠습니다. 집을 살 때 필요한 추가 비",
+          "narration_sha256": "1063553f1a31f553170998156f5778a310374650cf4a72fc95c8b2f638865d3a",
+          "message": "다음 편은 종자돈·소득·추가비용·비상자금·상환액으로 매매 가격 범위를 계산한다",
+          "asset_types": [
+            "data_chart"
+          ],
+          "screen_purpose": "설명",
+          "visual_direction": "다음 편의 계산 입력이 차례로 이어지는 경로를 보여주며 마무리",
+          "emphasis_action": "발화에 맞춰 위 화면지시의 해당 대상만 강조하고, 무관한 이전 선택·라벨은 해제합니다.",
+          "claim_ids": [],
+          "claim_status": "기존 주장 연결의 제안이며 검수 통과를 승계하지 않음",
+          "evidence": "기준 대본의 화자 관점·조건부 선택 틀·다음 편 예고; 수익 보장이나 새 분석 결과가 아닌 관점 서술.",
+          "existing_screen_reuse": {
+            "status": "내용 일치 시 조건부 가능; 실제 프레임 미확인",
+            "content": "S025 후속 편 연결 구조; 낡은 문단 앵커 대신 현재 예고에 맞춰 교체",
+            "legacy_scene_hint": "S025"
+          },
+          "changes": [
+            "낭독 원문 유지; 문단별 화면 목적만 분리"
+          ],
+          "asset_status": "후속 visual/editor가 실제 자산·기간·단위·강조 대상 확인 후 확정",
+          "fallback": "동일 수치·메시지의 별도 자금 흐름 도식으로 구성; 개념 생활 화면은 동일 의미의 기존 자산이 없으면 신규 소재를 제안",
+          "estimate_duration_seconds": [
+            10,
+            12
+          ],
+          "timing_basis": "estimate; 공백 제외 문자/분 500~600의 임시 가정. 숫자·영문 읽기·쉼·브랜드 길이는 실제 TTS 후 재산정"
+        }
+      ]
+    }
+  ]
+}

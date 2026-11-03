@@ -18,9 +18,9 @@ from pathlib import Path
 from typing import Any
 
 import duckdb
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Depends
 from fastapi.middleware.gzip import GZipMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 
 HERE = Path(__file__).resolve().parent
@@ -77,6 +77,29 @@ app = FastAPI(title="수도권 아파트 실거래 지도", default_response_cla
               openapi_url=None if PRODUCTION else "/openapi.json")
 # 지도 말풍선 · 후보 점 JSON 이 수백 KB 라 압축 효과가 크다
 app.add_middleware(GZipMiddleware, minimum_size=1024)
+from web.service_api import router as service_router, current, get_store, startup as service_startup
+app.include_router(service_router)
+app.on_event('startup')(service_startup)
+
+
+@app.middleware('http')
+async def service_audit(request, call_next):
+    import time
+    started = time.perf_counter()
+    response = await call_next(request)
+    if request.url.path.startswith('/api/'):
+        route = getattr(request.scope.get('route'), 'path', 'unmatched')
+        try:
+            # Never persist request bodies, query strings, cookies, tokens or raw IPs.
+            get_store().audit(route, response.status_code, round((time.perf_counter() - started) * 1000, 1))
+        except Exception:
+            pass  # Telemetry must not turn a successful user request into a failure.
+    if request.url.path.startswith(('/api/account', '/api/saved', '/api/budget', '/api/match')):
+        response.headers['Cache-Control'] = 'no-store'
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    # Tile providers require an honest origin; never disclose private query strings.
+    response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
+    return response
 
 _con: duckdb.DuckDBPyConnection | None = None
 _lock = threading.Lock()
@@ -396,6 +419,10 @@ def apt_detail(apt_id: str) -> dict:
     if not base:
         raise HTTPException(404, "단지를 찾을 수 없습니다")
     info = base[0]
+    from web.addresses import full_road_address
+    info['full_road_address'] = full_road_address(info)
+    from web.complex_facts import lookup
+    info.update(lookup(apt_id))
     pyeongs = rows(f"""
         SELECT pyeong_bucket, area_m2, last_date, last_price, last_ppy, last_floor,
                last_area_m2, trade_total, trade_1y, trade_3m,
@@ -691,7 +718,7 @@ def _safe(fn) -> None:
 
 
 @app.post("/api/match/count")
-def match_count(payload: dict) -> dict:
+def match_count(payload: dict, session=Depends(current)) -> dict:
     from web import match as M
     df, stations, home = match_data()
     ans = _answers(payload)
@@ -700,13 +727,21 @@ def match_count(payload: dict) -> dict:
 
 
 @app.post("/api/match")
-def match_run(payload: dict) -> dict:
+def match_run(payload: dict, session=Depends(current)) -> dict:
     from concurrent.futures import ThreadPoolExecutor
     from web import match as M
 
-    df, stations, home = match_data()
-    ans = _answers(payload)
-    res = M.run_match(df, ans, date.today(), stations, home=home)
+    store = get_store()
+    uid = session['user']['id']
+    if not store.reserve_recommendation(uid):
+        raise HTTPException(429, '오늘의 무료 추천 횟수를 모두 사용했습니다. 저장한 결과는 다시 볼 수 있습니다.')
+    try:
+        df, stations, home = match_data()
+        ans = _answers(payload)
+        res = M.run_match(df, ans, date.today(), stations, home=home)
+    except Exception:
+        store.refund_recommendation(uid)
+        raise HTTPException(503, '추천 데이터를 확인할 수 없습니다. 사용 횟수는 차감하지 않았습니다.') from None
     if ans.work and res["items"]:
         with ThreadPoolExecutor(max_workers=5) as ex:
             real = list(ex.map(lambda it: odsay_commute(it["lat"], it["lng"], *ans.work),
@@ -717,6 +752,15 @@ def match_run(payload: dict) -> dict:
     res["items"] = clean(res["items"])
     res["points"] = clean(res["points"])
     res["today"] = date.today().isoformat()
+    res['engine_version'] = 'long-hold-v1' if ans.objective == 'long_term' else 'fit-v2-strict-budget'
+    res['objective'] = ans.objective
+    res['ranking_basis'] = ('실거주·5년 이상 보유 비교: 업무지 기준역 직선 접근성·유사 연식/역 접근 가격·거래 건수·연식/생활시설·선택 조건. 미래 수익률 예측 아님.'
+                            if ans.objective == 'long_term' else '추정 통근·예산 여유·지역 상대가격·선택 조건 적합도.')
+    res['data_snapshot'] = {Path(p).name: Path(p).stat().st_mtime_ns for p in [APT, PYEONG]}
+    res['entitlements'] = store.entitlements(uid)
+    import uuid
+    store.event(uid, dict(event_id=str(uuid.uuid4()), event_name='recommendation_completed',
+                         props=dict(result_count=len(res['items']), engine_version=res['engine_version'])))
     return res
 
 
@@ -743,6 +787,12 @@ def health() -> dict:
         "cache": {p.name: p.stat().st_size for p in CACHE.glob("*.parquet")},
         "today": date.today().isoformat(),
     }
+
+
+@app.get('/')
+@app.get('/index.html')
+def service_home():
+    return FileResponse(STATIC / 'home.html')
 
 
 app.mount("/", StaticFiles(directory=STATIC, html=True), name="static")

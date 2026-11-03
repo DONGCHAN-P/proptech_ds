@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "status": "v2_delivered_to_telegram_for_user_review",
+  "episode_id": "data-insight-20261019",
+  "guide": "guides/제작_기본가이드.md",
+  "feedback_ledger": "guides/사용자_피드백_이력.md",
+  "baseline": {
+    "current_video": "outputs/v1/data_insight_30s_v1.mp4; preserved user-rejected composition",
+    "script_revision": "v2-device-shots-text-locked",
+    "audio_revision": "no-narration",
+    "bgm": "original local composition planned"
+  },
+  "approvals": {
+    "topic": {
+      "decision_id": "DI-TOPIC-v1",
+      "artifact_hashes": {},
+      "status": "approved_direct"
+    },
+    "script": {
+      "decision_id": "DI-SCRIPT-v1",
+      "artifact_hashes": {},
+      "status": "user_requested_adaptation_prepared"
+    },
+    "budget": {
+      "decision_id": "DI-BUDGET-v2",
+      "artifact_hashes": {},
+      "status": "approved_new_version",
+      "credits_cap": 300,
+      "cash_cap": 3.0,
+      "automatic_retry_allowed": false
+    },
+    "completed": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "awaiting_v2_user_review"
+    },
+    "pre_upload": {
+      "decision_id": null,
+      "artifact_hashes": {},
+      "status": "not_authorized",
+      "visibility": null
+    }
+  },
+  "story": {
+    "order": [
+      "S1",
+      "S2",
+      "S3a",
+      "S3b",
+      "S3c",
+      "S3d",
+      "S4",
+      "S5",
+      "S6"
+    ]
+  },
+  "visual_defaults": {
+    "hangul_separate_local_compositing": true,
+    "rose": "needed now",
+    "purple": "proactive",
+    "before": "gray"
+  },
+  "representative_previews": [
+    "whole_to_detail_locator",
+    "rail_station",
+    "longest_timeline",
+    "price_comparison",
+    "candidate_leaders",
+    "CTA_outro_boundary"
+  ],
+  "facts_required": [
+    "official_geometry_and_plan_date",
+    "station_status_and_location_certainty",
+    "block_use_and_housing_type",
+    "price_area_floor_period_cancellation_sample_statistic",
+    "resale_and_occupancy_conditions",
+    "source_rights_credit"
+  ],
+  "change_control": {
+    "issues": [],
+    "superseded_rules": [],
+    "unchanged_audio_reused": null,
+    "changed_scene_ids": [
+      "V2-S1",
+      "V2-S2",
+      "V2-S3a",
+      "V2-S3b",
+      "V2-S3c",
+      "V2-S3d",
+      "V2-S4",
+      "V2-S5",
+      "V2-S6"
+    ],
+    "single_timing_lock": "900frames at30fps",
+    "package_frozen_before_hash": true
+  },
+  "qa": {
+    "timeline_font_bbox_and_stroke_all_cases": "unverified",
+    "actual_encoded_frames": "900 frames; final v2 samples independently inspected",
+    "all_cut_boundaries_no_flash": "unverified",
+    "inset_matches_spoken_region": "unverified",
+    "station_locations": "unverified",
+    "leaders_do_not_cross": "unverified",
+    "semantic_caption_original_text_match": "unverified",
+    "protected_numbers_units_names": "unverified",
+    "caption_box_exceptions": "unverified",
+    "last_speech_plus_three_seconds": "unverified",
+    "full_decode": "pass_v2",
+    "continuous_playback_performed": false,
+    "actual_listening_performed": false,
+    "evidence_paths": [
+      "editor-v2/technical_verification.json",
+      "editor-v2/frames",
+      "qa-v2/report.md",
+      "qa-v2/findings.json"
+    ],
+    "required_open_issues": 0,
+    "caption_display_mapping_and_numeric_value_match": "unverified",
+    "actual_block_plan_and_locator": "unverified",
+    "district_area_vs_planned_station_distinguished": "unverified"
+  },
+  "release": {
+    "longform": null,
+    "shorts": [],
+    "title_description_sources_chapters": "unverified",
+    "thumbnail": "unverified",
+    "actual_platform_privacy": "unverified",
+    "processing": "unverified",
+    "studio_copyright": "unverified",
+    "telegram_notice_receipt": "outputs/v2/telegram_receipt.json"
+  },
+  "retention": {
+    "keep": [
+      "final_uploaded_files",
+      "reproduction_source_and_dependencies",
+      "raw_research",
+      "rights_sources",
+      "approval_and_QA_records",
+      "reusable_brand_maps_audio_templates"
+    ],
+    "delete_candidates_manifest": null,
+    "dependency_audit_complete": false,
+    "deletion_executed": false
+  },
+  "vertical_video": {
+    "applicable": false
+  },
+  "channel_style_contract": {
+    "applicable": false,
+    "reason": "User supplied independent internal corporate film style overrides property-channel defaults"
+  },
+  "representative_style_QA": "required_before_full_render"
+}

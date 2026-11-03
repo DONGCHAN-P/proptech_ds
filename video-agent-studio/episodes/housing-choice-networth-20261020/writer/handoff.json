@@ -1,0 +1,70 @@
+{
+  "role": "writer",
+  "status": "research_report_and_script_draft_complete_pending_director_gate",
+  "inputs": [
+    "brief.json",
+    "research/korea_sources.json korea-research-v1",
+    "research/method_sources.json methods-v1",
+    "research/sheet_audit.json",
+    "research/illustrative_results.json illustrative-v1",
+    "qa/model-review/handoff.json passed_with_limits"
+  ],
+  "outputs": [
+    "C:\\projects\\realestate_reco\\reports\\거주비를 포함한 주거 선택 비교.md",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\writer\\script_v1.md",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\writer\\script.md",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\writer\\visual_storyboard.md",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\writer\\source_ledger.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\writer\\consensus_record.md",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\writer\\scene_proposals.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\director\\claude-story-v1\\round1.receipt.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\director\\claude-story-v1\\round2.receipt.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\script-review-v1"
+  ],
+  "validation": [
+    "report_urls_in_source_ledger",
+    "source_urls_deduplicated",
+    "claude_two_exit0_is_errorFalse",
+    "receipt_input_hash_matches",
+    "final_packet_script_equal",
+    "private_sheet_not_in_packets",
+    "ten_numbered_topic_headings"
+  ],
+  "unresolved": [
+    "market equivalent housing rent calibration",
+    "actual historical rental/ETF monthly inputs",
+    "year-specific tax/loan feasibility",
+    "user script approval",
+    "media production and playback QA"
+  ],
+  "affected_scene_ids": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012",
+    "S013",
+    "S014",
+    "S015",
+    "S016",
+    "S017",
+    "S018",
+    "S019",
+    "S020",
+    "S021",
+    "S022",
+    "S023",
+    "S024",
+    "S025"
+  ],
+  "next_role": "director: independent script QA, user script delivery/approval; no TTS/paid media/render/upload authorization",
+  "claude_consensus": "writer/consensus_record.md",
+  "manifest": "writer/delivery_manifest.json"
+}

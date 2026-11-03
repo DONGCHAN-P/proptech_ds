@@ -1,0 +1,25 @@
+{
+  "task_id": "gyosan-review-v2-verify-final",
+  "inputs": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\editor\\review-v2\\finish.py",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v2\\gyosan_review_v2_free_tts.mp4",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v2\\technical.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v2\\rendered_project.json"
+  ],
+  "outputs": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v2\\scope_verification.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v2\\cta_motion_verification.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v2\\input_manifest.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\editor\\review-v2\\handoff.json"
+  ],
+  "steps": [
+    {
+      "argv": [
+        "C:\\projects\\realestate_reco\\tools\\python311\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\editor\\review-v2\\finish.py"
+      ]
+    }
+  ]
+}

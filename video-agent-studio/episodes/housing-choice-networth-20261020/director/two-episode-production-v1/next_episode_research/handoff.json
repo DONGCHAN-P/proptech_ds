@@ -1,0 +1,46 @@
+{
+  "task_id": "next-policy-source-prep-v1",
+  "revision": "v2_addendum",
+  "role": "research",
+  "status": "좁은보완완료_실행조건갭분리",
+  "input_revisions": {
+    "policy_as_of_kst": "2026-10-26",
+    "base": "v1 sources/facts/gaps SHA 보존",
+    "main_HF_addendum_sha256": "e4a2bbec61ce9a2cc220697c051739b3486ea920f82482c56312a685e6c9de2a",
+    "workflow": "WORKFLOW·researcher·호출효율 기존열람"
+  },
+  "outputs": [
+    "sources_v2.json",
+    "policy_facts_v2.json",
+    "gaps_v2.json",
+    "changes_v2.json",
+    "issue_R02.json",
+    "verification_v2.json",
+    "evidence/v2/"
+  ],
+  "resolved": [
+    "G01/R01: 현재 신규 일반·신생아1개월전입/전입일부터2년",
+    "G02: 신규DSR예외·DTI·기존정책부채 일반대출 산입 구별",
+    "G03신혼DTI: main 직접읽음 인계 반영"
+  ],
+  "open_issue_ids": [
+    "G10",
+    "G11",
+    "R02",
+    "G03자산면적",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G08",
+    "G09"
+  ],
+  "summary": "방공제 일반/생초/보금자리/디딤돌/신생아 분리. 수도권 전은행MCI/MCG 일률금지·생초자동면제 단정불가. 보금자리 빈 아파트 방수공제0. 신생아6억초과 회신은2025자료 한계 표시. v1가격별숫자는 담보차감전 참고상한. G05/07/08 후순위·별도입력 유지. 소득1억/정책가구8천은 미확정 구상.",
+  "checks": [
+    "세부 실검증 결과 verification_v2.json 참조",
+    "연구자 자체검증; 독립 정책QA 완료 주장 없음"
+  ],
+  "affected_scene_ids": [],
+  "next_role": "director → writer/model·독립 정책검수; 첫영상 완료 후 다음편 브리프 가정 확정",
+  "boundaries": "새episode·미디어·TTS·업로드·state/scenes/타 담당 파일 변경 없음"
+}

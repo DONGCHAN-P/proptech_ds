@@ -1,0 +1,38 @@
+{
+  "status": "ready",
+  "outputs": [
+    "price_map.json",
+    "price_rows_rechecked.json",
+    "raw_xml_independent_recheck.json",
+    "candidates.json",
+    "restriction_source_excerpts.json",
+    "locator_transform.json",
+    "facts.json",
+    "north_b1b2_notice.pdf",
+    "north_b1b2_notice.txt",
+    "downloads.json",
+    "w1_middle_geometry.json",
+    "w1_middle_reference.png",
+    "w1_middle_west_reference.png"
+  ],
+  "validation": [
+    "3원본MLIT XML독립재집계→11/16/22와10.95/6.775/11.85재현",
+    "3실단지OSMpolygon과MLIT주소매칭",
+    "북부B1/B2공식53p공고확보및공급/가격/확장/학교/제한직접텍스트확인",
+    "현전매가능/미래일반매매대상구분",
+    "W1source-native두판동일PDF변환인계",
+    "중앙연속성sourcePDF좌표75개큰면/도로/경계추가"
+  ],
+  "unresolved": [
+    "B1/B2개별우위유보",
+    "정정공고추가내용최종계약전확인필요",
+    "현재최신API취소갱신미조회",
+    "임의자유매매개시일계산금지"
+  ],
+  "next_assignees": [
+    "/root/map_led_narration_v2",
+    "/root/rail_route_editor",
+    "/root/fact_review",
+    "/root"
+  ]
+}

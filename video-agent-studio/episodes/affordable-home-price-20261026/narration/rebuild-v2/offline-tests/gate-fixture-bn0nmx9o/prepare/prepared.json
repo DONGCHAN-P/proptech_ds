@@ -1,0 +1,139 @@
+{
+  "status": "offline_prepared_NOT_synthesized",
+  "episode_id": "FAKE_EPISODE",
+  "script_path": "video-agent-studio/episodes/affordable-home-price-20261026/narration/rebuild-v2/offline-tests/gate-fixture-bn0nmx9o/FAKE_EPISODE/writer/rebuild-v2/fixture.json",
+  "script_sha256": "e5812753f42993904cfca7971bfb7f0c8d42459689be2100cc555040e29fa8e3",
+  "revision": "TEST_FIXTURE_NOT_APPROVED_SCRIPT",
+  "policy_as_of": "2026-10-26",
+  "chapters": [
+    {
+      "id": 1,
+      "title": "현금"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "R001",
+      "paragraph": 1,
+      "chapter": 1,
+      "title": "시험 데이터",
+      "text": "보유자금 2억5천만원으로 살 집을 살펴봅니다. 금리는 3.65%를 적용합니다.",
+      "spoken_text": "보유자금 2억5천만원으로 살 집을 살펴봅니다. 금리는 삼점육오%를 적용합니다.",
+      "display_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 30,
+          "spoken_start": 0,
+          "spoken_end": 30,
+          "kind": "literal"
+        },
+        {
+          "source_start": 30,
+          "source_end": 34,
+          "spoken_start": 30,
+          "spoken_end": 34,
+          "kind": "pronunciation",
+          "original": "3.65",
+          "spoken": "삼점육오"
+        },
+        {
+          "source_start": 34,
+          "source_end": 43,
+          "spoken_start": 34,
+          "spoken_end": 43,
+          "kind": "literal"
+        }
+      ],
+      "transforms": [
+        {
+          "source_start": 30,
+          "source_end": 34,
+          "spoken_start": 30,
+          "spoken_end": 34,
+          "kind": "pronunciation",
+          "original": "3.65",
+          "spoken": "삼점육오",
+          "reason": "소수/쉼표 숫자 발음층"
+        }
+      ],
+      "protected_ranges": [
+        [
+          5,
+          11
+        ],
+        [
+          30,
+          34
+        ],
+        [
+          30,
+          35
+        ]
+      ],
+      "source_hangul_count": 27,
+      "spoken_hangul_count": 31,
+      "beats": [
+        {
+          "anchor": "금리는 3.65%를",
+          "action": "강조",
+          "source_start": 26,
+          "source_end": 36,
+          "spoken_start": 26,
+          "spoken_end": 36
+        }
+      ],
+      "sentence_count": 2,
+      "meaning_plan": [
+        {
+          "text": "보유자금 2억5천만원으로 살 집을 살펴봅니다.",
+          "display_lines": [
+            "보유자금 2억5천만원으로 살 집을 살펴봅니다."
+          ],
+          "source_start": 0,
+          "source_end": 25,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        },
+        {
+          "text": "금리는 3.65%를 적용합니다.",
+          "display_lines": [
+            "금리는 3.65%를 적용합니다."
+          ],
+          "source_start": 26,
+          "source_end": 43,
+          "start_s": null,
+          "end_s": null,
+          "timing_basis": "unmeasured_semantic_plan"
+        }
+      ]
+    }
+  ],
+  "voice": "ko-KR-InJoonNeural",
+  "rate": "+0%",
+  "internal_pauses": "provider_natural_measured_only",
+  "cut_gap_s": 0.25,
+  "inputs": {
+    "video-agent-studio/episodes/affordable-home-price-20261026/narration/rebuild-v2/offline-tests/gate-fixture-bn0nmx9o/FAKE_EPISODE/writer/rebuild-v2/fixture.json": "e5812753f42993904cfca7971bfb7f0c8d42459689be2100cc555040e29fa8e3"
+  },
+  "pipeline_inputs": {
+    "video-agent-studio/episodes/affordable-home-price-20261026/narration/rebuild-v2/build_narration.py": "0804a45c255bb6c6c03d068360eeb2dc14e7d7af037e47aeb3f23c955587196f",
+    "video-agent-studio/episodes/affordable-home-price-20261026/narration/rebuild-v2/build_contract.json": "e23f8f4cb8a2cd933c32114ce05b1e25e255d60c18068df17c5cfed9f0cc2bf4",
+    "video-agent-studio/episodes/affordable-home-price-20261026/narration/production_v1.py": "77cc23a640a1d0c6298ba5a3cc2da6996f3012c476225b7fa844226235b95c3c",
+    "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/production_narration.py": "009e85a92892002c54de3236395e76f0ee12af3fc3a874e9089b60fe02fc4a36"
+  },
+  "dependencies": {
+    "edge_tts": "7.3.1",
+    "deps_path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/free-tts-v1/deps",
+    "ffmpeg_path": "video/node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe",
+    "ffmpeg_sha256": "5d1aa3706022b2f1814993c7108ca689a0a2e6fe9af91ec15dbf0bc05d6d39e4",
+    "python": "3.11.9",
+    "WordBoundary_supported": true,
+    "network_calls": 0,
+    "installation_performed": false
+  },
+  "dictionary": [],
+  "network_calls": 0,
+  "audio_measured": false,
+  "actual_listening": false
+}

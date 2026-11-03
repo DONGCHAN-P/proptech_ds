@@ -1,0 +1,105 @@
+{
+  "task_id": "RPR-PROD1-DATA",
+  "role": "visual",
+  "status": "ready_for_editor",
+  "input_revisions": {
+    "script_revision": "v3",
+    "script_sha256": "99b40e8730ee0f8fdf74402cffbe04b5b418540344e6d2a7175e6a01c3054664",
+    "frozen_revision": [
+      "full_history_v1",
+      "full_transactions_v1",
+      "regional_expansion_v1"
+    ],
+    "lock": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/frozen_inputs.json",
+      "sha256": "ff5c157ac30afe881ee94511e60adea070fc0f931175e35ff4b066a18a720b82",
+      "bytes": 12842
+    }
+  },
+  "outputs": [
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/chart_data.json",
+      "sha256": "3731da4b839424f7c12a948c6316a0b0ac29cec99aa42c6d6855b832fe7c1899",
+      "bytes": 494787
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/assets.json",
+      "sha256": "604329e9ad616ec71ca0f7cc632261fb0284bccb3d3233f4f962f2b1ea8a9701",
+      "bytes": 19345
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/build_chart_data.py",
+      "sha256": "9e39ca9fa0602fe26eb62adc10828edce6903273b8ec334544e030cc10703ed0",
+      "bytes": 20610
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/frozen_inputs.json",
+      "sha256": "ff5c157ac30afe881ee94511e60adea070fc0f931175e35ff4b066a18a720b82",
+      "bytes": 12842
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/validation_receipt.json",
+      "sha256": "fa07f18a3d5053842aea30019862a98bfe28b1d64dcee84834b3e4808c460e5e",
+      "bytes": 14435
+    }
+  ],
+  "affected_scene_ids": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012"
+  ],
+  "checks": [
+    {
+      "check": "UTF-8·원 헤더/타입·null·NaN 금지·전체 셀 일치·SHA",
+      "result": "pass"
+    },
+    {
+      "check": "7지역/574분기/538지수행/33구간·CAGR·끝값의 기존 QA 대조",
+      "result": "pass"
+    }
+  ],
+  "validation_receipt": {
+    "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/validation_receipt.json",
+    "sha256": "fa07f18a3d5053842aea30019862a98bfe28b1d64dcee84834b3e4808c460e5e",
+    "bytes": 14435
+  },
+  "open_issue_ids": [],
+  "inherited_open_issue_ids": [
+    "FHQA-R01"
+  ],
+  "unresolved": [
+    "최종 그래픽/영상/음성 검수는 후속 단계",
+    "실측 timing lock은 총괄/음성 담당 소관"
+  ],
+  "next_role": [
+    "editor",
+    "director"
+  ],
+  "consumer_directories": [
+    "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/editor/production-v1",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/project"
+  ],
+  "reproduce_argv": [
+    "C:/projects/realestate_reco/tools/python311/python.exe",
+    "-X",
+    "utf8",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/build_chart_data.py"
+  ],
+  "check_argv": [
+    "C:/projects/realestate_reco/tools/python311/python.exe",
+    "-X",
+    "utf8",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/build_chart_data.py",
+    "--check"
+  ],
+  "summary": "동결 CSV 계약 변환 완료. 7지역 574분기/538지수행/33구간, CAGR·끝값을 기존 QA와 대조. factors 전체 객체 동일. 세종 초기 포괄 한계·민감도 고점 정의 유지. 신규 수집·원거래 재집계·외부 호출·유료 생성 없음."
+}

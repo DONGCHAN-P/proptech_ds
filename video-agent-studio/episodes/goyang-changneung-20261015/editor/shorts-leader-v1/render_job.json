@@ -1,0 +1,42 @@
+{
+  "task_id": "changneung-short-leader-v1-final2",
+  "inputs": [
+    "video\\src\\changneung-shorts-leader-v1\\entry.tsx",
+    "video\\src\\changneung-shorts-leader-v1\\data.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v1\\public\\voice.wav",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v1\\verify.py",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v1\\inputs_manifest.json"
+  ],
+  "outputs": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v1\\changneung_leader_short_v1.mp4",
+    "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v1\\technical.json"
+  ],
+  "steps": [
+    {
+      "argv": [
+        "node",
+        "C:\\projects\\realestate_reco\\video\\node_modules\\@remotion\\cli\\remotion-cli.js",
+        "render",
+        "video\\src\\changneung-shorts-leader-v1\\entry.tsx",
+        "ChangneungLeaderShortV1",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v1\\changneung_leader_short_v1.mp4",
+        "--public-dir=C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v1\\public",
+        "--browser-executable=C:/Program Files/Google/Chrome/Application/chrome.exe",
+        "--codec=h264",
+        "--crf=18",
+        "--concurrency=8",
+        "--log=error"
+      ],
+      "cwd": "C:\\projects\\realestate_reco"
+    },
+    {
+      "argv": [
+        "C:\\projects\\realestate_reco\\tools\\python311\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v1\\verify.py"
+      ],
+      "cwd": "C:\\projects\\realestate_reco"
+    }
+  ]
+}

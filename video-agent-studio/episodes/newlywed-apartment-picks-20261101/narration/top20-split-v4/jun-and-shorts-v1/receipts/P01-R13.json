@@ -1,0 +1,68 @@
+{
+  "asset_id": "P01-R13",
+  "sentence_ids": [
+    "P01-R13-V2-01",
+    "P01-R13-V2-02",
+    "P01-R13-V2-03",
+    "P01-R13-V2-04",
+    "P01-R13-V2-05",
+    "P01-R13-V2-06",
+    "P01-R13-V2-07"
+  ],
+  "status": "complete",
+  "started_at_utc": "2026-11-03T13:25:17.333Z",
+  "authorization_id": "9cde211f3073",
+  "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+  "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+  "input_file_sha256": "82e4bbaa3edb02891f249880f5afd13d54d8465da7f6b86f6a6970bde8963275",
+  "request_text_sha256": "716bc34eefd92a410fd0245e6a9104f77155e6d1f3bc96a778a95e91ed43c3b7",
+  "characters": 418,
+  "reserved_credits": 418,
+  "actual_credits": 167,
+  "charge_known": true,
+  "request": {
+    "text": "십삼 위는 경기 수원시 권선구, 팔천삼백이십구 쌍입니다.\n\n권선구에는 기존 도심 주거지와 호매실, 당수의 택지개발 생활권이 함께 있습니다.\n\n사진의 수원종합버스터미널은 권선동에 있어, 도시 간 버스 이동을 고려할 때 위치를 살펴볼 거점입니다.\n\n금곡동 와이시티 상세도는 수원중촌초등학교, 상촌초등학교, 칠보중학교와 단지의 배치를 중심으로 읽겠습니다.\n\n권선동 터미널 주변을 볼 때와 금곡동의 학교 주변을 볼 때는, 필요한 교통수단과 일상의 중심을 각각 놓고 비교할 수 있습니다.\n\n거래 중윗값은 금곡동 오 억 삼천 만 원, 권선동 육 억 사천칠백오십 만 원으로, 두 생활권에서 검토할 예산 조건이 다릅니다.\n\n직장으로 가는 실제 경로와 단지 출입구에서 학교, 상점으로 이어지는 길을 더하면, 기존 도심과 택지개발지 사이의 선택 기준이 구체화됩니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+  "local_shadow_remaining_before": 15064,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "vQnFqEzWXxFuWPmfYdGv",
+    "x-request-id": null,
+    "character-cost": "167",
+    "content-type": "application/json",
+    "date": "Tue, 03 Nov 2026 13:25:19 GMT"
+  },
+  "pcm_samples": 2240280,
+  "pcm_duration_s": 50.8,
+  "provider_last_alignment_end_s": 50.88,
+  "complete_tail_after_alignment_s": -0.0800000000000054,
+  "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R13.wav",
+  "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R13/audio.mp3",
+  "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R13/alignment.json",
+  "pcm_sha256": "9b8b2fae4ebdf599dba0435a582bc6a7d0eae1b5658c4b12f9aff599b9e7b4fc",
+  "artifact_sha256": {
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R13/audio.mp3": "2b20045a5ee74525eb51f318488969a1d856bf4845dca3fd26fdc5ec7f6185ff",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R13/alignment.json": "eafa757021b61641a0c1ef0f5d7997d898e122ccfd256b7c520443ece22c681f",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R13/normalized_alignment.json": "eafa757021b61641a0c1ef0f5d7997d898e122ccfd256b7c520443ece22c681f",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R13.wav": "31712f4b4f382a6d8ca0bc4d5a5a51ab8739071fe6e4c8bcbc68d00bd58399ae"
+  },
+  "processing": {
+    "sample_rate_hz": 44100,
+    "channels": 1,
+    "codec": "pcm_s16le",
+    "tempo_factor": 1,
+    "trimmed": false,
+    "tail_preserved": true,
+    "provider_speed": 0.97
+  },
+  "local_shadow_remaining_after": 14897,
+  "completed_at_utc": "2026-11-03T13:25:29.709Z"
+}

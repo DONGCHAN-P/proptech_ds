@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C10P06",
+  "scene_id": "C10",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:08:45.479Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "1063553f1a31f553170998156f5778a310374650cf4a72fc95c8b2f638865d3a",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "다음 시간에는 내 종자돈과 월소득을 기준으로 매매하기에 적절한 금액대를 계산해보겠습니다. 집을 살 때 필요한 추가 비용과 남겨둘 비상자금, 매달 감당할 상환액을 차례로 넣어 내가 살 수 있는 집의 가격 범위를 정해보겠습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 125,
+  "characters": 125,
+  "actual_credits": 50,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19983,
+    "character_limit": 40000,
+    "included_remaining": 20017,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:08:20.529Z",
+  "local_shadow_remaining_before": 19675,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "13X1nucsnsFVxMUamQCE",
+    "x-request-id": null,
+    "character-cost": "50",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:08:44 GMT"
+  },
+  "pcm_samples": 652680,
+  "pcm_duration_s": 14.8,
+  "provider_last_spoken_end_s": 14.88,
+  "artifact_sha256": {
+    "paragraphs/C10P06/audio.mp3": "98529fb69306809289a8b2df22aca0118309a6e02d2d967545aa9bd7de7c1e36",
+    "paragraphs/C10P06/audio.wav": "c194df7cbcc7a18632a511bee0709d4efd9400377d77ae4022da1b85fd4f00d8",
+    "paragraphs/C10P06/alignment.json": "54a26dcb02f2e00ea93dce5ee5bc1196317d256187117fff03986a20a79be73d",
+    "paragraphs/C10P06/normalized_alignment.json": "54a26dcb02f2e00ea93dce5ee5bc1196317d256187117fff03986a20a79be73d"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 19625,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:08:49.403Z"
+}

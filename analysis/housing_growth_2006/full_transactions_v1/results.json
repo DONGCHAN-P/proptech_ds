@@ -1,0 +1,380 @@
+{
+  "task_id": "ALL-VALID-TRANSACTIONS-V1",
+  "checked_at": "2026-10-23T04:42:04.851585+00:00",
+  "period": {
+    "first": "2006Q1",
+    "endpoint": "2026Q2",
+    "endpoint_date": "2026-06-30"
+  },
+  "input_manifest": {
+    "master": {
+      "path": "master/trade_events.parquet",
+      "sha256": "93f305afc915e0562c2d2223dd9d20aa204629223ae7e39944db693511919502",
+      "bytes": 217650236,
+      "mtime_ns": 1791828211893100800
+    },
+    "expansion": {
+      "path": "analysis/housing_growth_2006/regional_expansion_v1/expansion_normalized.parquet",
+      "sha256": "e12a397460797b19d8ca84898a2934217871b3656fa49d21023c1f218ea80450",
+      "bytes": 138842507,
+      "mtime_ns": 1792639168886680600
+    },
+    "frozen_coverage": {
+      "path": "analysis/housing_growth_2006/regional_expansion_v1/analysis_coverage.csv",
+      "sha256": "fb0cf1e4f4910420c0fa50809d920d9a17c10d2e2399546e7da99bd2316bce02",
+      "bytes": 349,
+      "mtime_ns": 1792639252621973900
+    },
+    "frozen_quarterly_volume": {
+      "path": "analysis/housing_growth_2006/regional_expansion_v1/quarterly_volume.csv",
+      "sha256": "b17da4a7f3f2869d6ed28cd30b7fd38a65ab9038f3d418033ff0b3417766bd42",
+      "bytes": 14279,
+      "mtime_ns": 1792639253157581800
+    },
+    "cleaning_reference": {
+      "path": "analysis/housing_growth_2006/regional_expansion_v1.py",
+      "sha256": "ce136e65e529d2c23b8f33b33ab149e8ad8d18c9dd926cfe2d42ed15cb8c97b3",
+      "bytes": 11514,
+      "mtime_ns": 1792639083608806400
+    },
+    "cache_normalization_audit": {
+      "path": "analysis/housing_growth_2006/regional_expansion_v1/normalization.json",
+      "sha256": "a9aed66ac44b477c79e182946225074f3c9d73243e0f481afa339cf5aff03165",
+      "bytes": 385,
+      "mtime_ns": 1792639168887684600
+    },
+    "analysis_script": {
+      "path": "analysis/housing_growth_2006/full_transactions_v1/analyze_full_transactions.py",
+      "sha256": "12cddcb3a7209540c310bfb9df63cba9bc0ff28c89c1eb9f00fc025cecf17ade",
+      "bytes": 16683,
+      "mtime_ns": 1792730512809762000
+    }
+  },
+  "loaded_columns": {
+    "master": [
+      "apt_id",
+      "deal_date",
+      "sigungu_code",
+      "deal_amount",
+      "area_m2",
+      "is_canceled",
+      "deal_hash"
+    ],
+    "expansion": [
+      "apt_id",
+      "deal_date",
+      "sigungu_code",
+      "deal_amount",
+      "area_m2",
+      "is_canceled",
+      "deal_hash",
+      "region"
+    ]
+  },
+  "environment": {
+    "python": "3.11.9",
+    "pandas": "3.0.2",
+    "pyarrow": "24.0.0",
+    "numpy": "2.4.4",
+    "matplotlib": "3.11.2",
+    "font_path": "C:\\Windows\\Fonts\\malgun.ttf",
+    "font_sha256": "7a183cf1c6c56b9609fcc16eda8b5229fbc11758a21e669ec00343239b02192f"
+  },
+  "cleaning_reference": "regional_expansion_v1.py:81-99; same order, cached inputs only",
+  "cache_filter_audit": {
+    "master_cache_rows": 4925669,
+    "expansion_cache_rows": 1883246,
+    "combined_cache_rows": 6808915,
+    "cached_cancellation_flag_true_rows": 99531,
+    "cached_cancellation_flag_null_rows": 0,
+    "removed_by_combined_validity_filter": 99531,
+    "duplicate_hashes_removed_after_validity_filter": 0,
+    "outside_quarter_window_removed": 69018,
+    "gunwi_27720_47720_removed": 325
+  },
+  "normalization_audit": {
+    "xml_files": 9308,
+    "source_manifest_sha256": "867228212e8202ddf97a4bc6063e7a910a10f29b39ba3083544bed848f684213",
+    "api_rows": {
+      "부산": 866481,
+      "대구": 597113,
+      "대전": 392725,
+      "광주": 0,
+      "세종": 65968
+    },
+    "parse_errors": 0,
+    "fallback_id_rows": 0,
+    "duplicate_transaction_keys_removed": 39041,
+    "canceled_after_dedup": 31637
+  },
+  "validation": {
+    "region_totals_equal_frozen": true,
+    "region_complexes_and_dates_equal_frozen": true,
+    "quarterly_counts_and_complexes_equal_frozen": true,
+    "total_equal_6640041": true,
+    "total_valid_transactions": 6640041,
+    "quarterly_rows": 574,
+    "unique_region_quarters": true,
+    "quantile_order_valid": true,
+    "inputs_stat_unchanged_during_run": true
+  },
+  "region_summary": [
+    {
+      "region": "서울",
+      "transactions": 1369095,
+      "complexes": 9388,
+      "first_date": "2006-01-01",
+      "last_date": "2026-06-30",
+      "quarters": 82,
+      "first": {
+        "quarter": "2006Q1",
+        "n": 19582,
+        "complexes": 2875,
+        "median_deal_amount_manwon": 25500.0,
+        "median_area_m2": 73.18,
+        "median_price_per_m2_manwon": 340.3350877113995,
+        "p25_price_per_m2_manwon": 262.9418910940866,
+        "p75_price_per_m2_manwon": 476.74537327254643,
+        "area84_85_n": 5423,
+        "area84_85_median_deal_amount_manwon": 29500.0,
+        "area84_85_median_price_per_m2_manwon": 348.40526216165057
+      },
+      "latest": {
+        "quarter": "2026Q2",
+        "n": 16900,
+        "complexes": 3877,
+        "median_deal_amount_manwon": 91300.0,
+        "median_area_m2": 74.945,
+        "median_price_per_m2_manwon": 1263.580240860768,
+        "p25_price_per_m2_manwon": 945.3265673596333,
+        "p75_price_per_m2_manwon": 1875.4897721993589,
+        "area84_85_n": 5082,
+        "area84_85_median_deal_amount_manwon": 107000.0,
+        "area84_85_median_price_per_m2_manwon": 1259.379147668448
+      }
+    },
+    {
+      "region": "경기",
+      "transactions": 2788845,
+      "complexes": 8573,
+      "first_date": "2006-01-01",
+      "last_date": "2026-06-30",
+      "quarters": 82,
+      "first": {
+        "quarter": "2006Q1",
+        "n": 30976,
+        "complexes": 3385,
+        "median_deal_amount_manwon": 14400.0,
+        "median_area_m2": 68.29,
+        "median_price_per_m2_manwon": 213.33333333333334,
+        "p25_price_per_m2_manwon": 156.76072310052697,
+        "p75_price_per_m2_manwon": 276.6574259721808,
+        "area84_85_n": 8855,
+        "area84_85_median_deal_amount_manwon": 17900.0,
+        "area84_85_median_price_per_m2_manwon": 211.2609749782266
+      },
+      "latest": {
+        "quarter": "2026Q2",
+        "n": 41790,
+        "complexes": 5612,
+        "median_deal_amount_manwon": 52500.0,
+        "median_area_m2": 84.114,
+        "median_price_per_m2_manwon": 687.9929592443175,
+        "p25_price_per_m2_manwon": 478.7040523256925,
+        "p75_price_per_m2_manwon": 983.7100129941284,
+        "area84_85_n": 15106,
+        "area84_85_median_deal_amount_manwon": 58000.0,
+        "area84_85_median_price_per_m2_manwon": 686.4597172942142
+      }
+    },
+    {
+      "region": "인천",
+      "transactions": 646402,
+      "complexes": 2536,
+      "first_date": "2006-01-01",
+      "last_date": "2026-06-30",
+      "quarters": 82,
+      "first": {
+        "quarter": "2006Q1",
+        "n": 6765,
+        "complexes": 865,
+        "median_deal_amount_manwon": 11500.0,
+        "median_area_m2": 59.986,
+        "median_price_per_m2_manwon": 165.82491582491582,
+        "p25_price_per_m2_manwon": 144.27480916030535,
+        "p75_price_per_m2_manwon": 199.03427158167472,
+        "area84_85_n": 1808,
+        "area84_85_median_deal_amount_manwon": 15500.0,
+        "area84_85_median_price_per_m2_manwon": 182.84231468133308
+      },
+      "latest": {
+        "quarter": "2026Q2",
+        "n": 7484,
+        "complexes": 1375,
+        "median_deal_amount_manwon": 38500.0,
+        "median_area_m2": 74.9582,
+        "median_price_per_m2_manwon": 508.8223766644203,
+        "p25_price_per_m2_manwon": 377.09168041480086,
+        "p75_price_per_m2_manwon": 717.7099640513201,
+        "area84_85_n": 2486,
+        "area84_85_median_deal_amount_manwon": 49000.0,
+        "area84_85_median_price_per_m2_manwon": 576.6904095101446
+      }
+    },
+    {
+      "region": "부산",
+      "transactions": 830015,
+      "complexes": 4900,
+      "first_date": "2006-01-01",
+      "last_date": "2026-06-30",
+      "quarters": 82,
+      "first": {
+        "quarter": "2006Q1",
+        "n": 6202,
+        "complexes": 1319,
+        "median_deal_amount_manwon": 10000.0,
+        "median_area_m2": 77.88,
+        "median_price_per_m2_manwon": 141.7139046348783,
+        "p25_price_per_m2_manwon": 113.34750177105471,
+        "p75_price_per_m2_manwon": 174.89004864281412,
+        "area84_85_n": 1913,
+        "area84_85_median_deal_amount_manwon": 12750.0,
+        "area84_85_median_price_per_m2_manwon": 150.28833706013887
+      },
+      "latest": {
+        "quarter": "2026Q2",
+        "n": 8252,
+        "complexes": 1853,
+        "median_deal_amount_manwon": 35500.0,
+        "median_area_m2": 78.19595000000001,
+        "median_price_per_m2_manwon": 474.19988538675057,
+        "p25_price_per_m2_manwon": 312.5475137905671,
+        "p75_price_per_m2_manwon": 691.7012517292532,
+        "area84_85_n": 2839,
+        "area84_85_median_deal_amount_manwon": 47000.0,
+        "area84_85_median_price_per_m2_manwon": 553.1285894514848
+      }
+    },
+    {
+      "region": "대구",
+      "transactions": 567617,
+      "complexes": 2092,
+      "first_date": "2006-01-01",
+      "last_date": "2026-06-30",
+      "quarters": 82,
+      "first": {
+        "quarter": "2006Q1",
+        "n": 4749,
+        "complexes": 783,
+        "median_deal_amount_manwon": 10750.0,
+        "median_area_m2": 59.99,
+        "median_price_per_m2_manwon": 160.24036054081122,
+        "p25_price_per_m2_manwon": 138.0071763731714,
+        "p75_price_per_m2_manwon": 190.79497907949792,
+        "area84_85_n": 1301,
+        "area84_85_median_deal_amount_manwon": 15000.0,
+        "area84_85_median_price_per_m2_manwon": 177.07472553417543
+      },
+      "latest": {
+        "quarter": "2026Q2",
+        "n": 5817,
+        "complexes": 1116,
+        "median_deal_amount_manwon": 33800.0,
+        "median_area_m2": 84.7337,
+        "median_price_per_m2_manwon": 417.1797978179828,
+        "p25_price_per_m2_manwon": 284.1332869248965,
+        "p75_price_per_m2_manwon": 617.8651288690126,
+        "area84_85_n": 2581,
+        "area84_85_median_deal_amount_manwon": 41000.0,
+        "area84_85_median_price_per_m2_manwon": 484.91810533551154
+      }
+    },
+    {
+      "region": "대전",
+      "transactions": 378650,
+      "complexes": 1003,
+      "first_date": "2006-01-02",
+      "last_date": "2026-06-30",
+      "quarters": 82,
+      "first": {
+        "quarter": "2006Q1",
+        "n": 3487,
+        "complexes": 392,
+        "median_deal_amount_manwon": 12200.0,
+        "median_area_m2": 84.44,
+        "median_price_per_m2_manwon": 165.2754590984975,
+        "p25_price_per_m2_manwon": 123.66762895487344,
+        "p75_price_per_m2_manwon": 211.87085465304506,
+        "area84_85_n": 1228,
+        "area84_85_median_deal_amount_manwon": 15500.0,
+        "area84_85_median_price_per_m2_manwon": 182.39585784890562
+      },
+      "latest": {
+        "quarter": "2026Q2",
+        "n": 3723,
+        "complexes": 600,
+        "median_deal_amount_manwon": 34500.0,
+        "median_area_m2": 84.236,
+        "median_price_per_m2_manwon": 447.69085768143265,
+        "p25_price_per_m2_manwon": 311.17579982230745,
+        "p75_price_per_m2_manwon": 588.616163399847,
+        "area84_85_n": 1462,
+        "area84_85_median_deal_amount_manwon": 42000.0,
+        "area84_85_median_price_per_m2_manwon": 494.5796486907865
+      }
+    },
+    {
+      "region": "세종",
+      "transactions": 59417,
+      "complexes": 223,
+      "first_date": "2006-01-02",
+      "last_date": "2026-06-30",
+      "quarters": 82,
+      "first": {
+        "quarter": "2006Q1",
+        "n": 247,
+        "complexes": 22,
+        "median_deal_amount_manwon": 6500.0,
+        "median_area_m2": 59.76,
+        "median_price_per_m2_manwon": 116.25744047619047,
+        "p25_price_per_m2_manwon": 105.09672619047619,
+        "p75_price_per_m2_manwon": 132.00472118534424,
+        "area84_85_n": 25,
+        "area84_85_median_deal_amount_manwon": 11900.0,
+        "area84_85_median_price_per_m2_manwon": 140.01647252617957
+      },
+      "latest": {
+        "quarter": "2026Q2",
+        "n": 1142,
+        "complexes": 190,
+        "median_deal_amount_manwon": 50000.0,
+        "median_area_m2": 84.6799,
+        "median_price_per_m2_manwon": 682.5219658380681,
+        "p25_price_per_m2_manwon": 565.1089380843302,
+        "p75_price_per_m2_manwon": 790.1538633996079,
+        "area84_85_n": 454,
+        "area84_85_median_deal_amount_manwon": 58500.0,
+        "area84_85_median_price_per_m2_manwon": 688.4057758883963
+      }
+    }
+  ],
+  "sejong_2006_2014_cache_audit": {
+    "transactions": 9776,
+    "complexes": 62,
+    "sigungu_code_counts": {
+      "36110": 9776
+    },
+    "interpretation": "캐시의 36110 재매핑 가능 초기 기록; 과거 세종시 전체의 완전한 지역 포괄을 뜻하지 않음"
+  },
+  "quantile_method": "pandas quantile interpolation=linear",
+  "notes": [
+    "전체 유효 거래는 지정된 두 캐시에서 정제 조건을 통과한 거래 전체를 뜻하며, 전국·모든 신고 거래의 완전 수집을 뜻하지 않는다.",
+    "지역·분기별 개별 거래에 동일 가중치. ㎡당 가격=거래금액(만원)/전용면적(㎡)을 먼저 계산하고 중위값·25/75백분위를 산출한다. 중위 거래금액/중위 면적의 비율이 아니다.",
+    "면적·입지·연식·신축/구축·단지의 거래 비중이 바뀌면 중위가격이 달라진다. 84≤전용면적<85㎡ 보조 통계도 입지·연식 구성을 통제하지 않는다.",
+    "명목금액 수준이며 물가 조정을 하지 않았다. 동일 품질 가격지수·주택 보유 수익률·투자수익률로 해석할 수 없다. 기존 매칭 지수에 보완적으로 사용한다.",
+    "해제거래 처리는 캐시 is_canceled 플래그(null=False) 감사 범위다. 확장 캐시의 기존 정규화 기록은 동일 hash의 해제 상태를 max로 전파했다고 기록한다. 이번 작업은 원본 XML·최신 신고 정정·해제 누락을 재확인하지 않았다.",
+    "기간은 2006Q1~2026Q2(2026-06-30)로 고정했다. 마지막 분기는 Q2이고 2026년 연간치·현재 분기·확정된 영구 최종치가 아니다. 캐시 이후 신고·해제 반영은 검증하지 않았다.",
+    "대구는 군위 27720/47720을 제외한 고정 경계다. 세종 초기 기록은 36110 재매핑 가능 기록을 포함하므로 별도 패널에 표시하며 역사적 도시 전체 포괄을 보장하지 않는다."
+  ],
+  "verification_scope": "자체 검산·산출물 기술 확인. 독립 QA·원 XML 재검증·영상 재생·음성 청취 미실시."
+}

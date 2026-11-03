@@ -1,0 +1,41 @@
+const fs=require('fs'),path=require('path'),crypto=require('crypto');
+const root=__dirname,ep=path.resolve(root,'../..'),read=p=>JSON.parse(fs.readFileSync(path.join(ep,p),'utf8').replace(/^\uFEFF/,'')),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const doc=JSON.parse(fs.readFileSync(path.join(root,'working_scenes.json'),'utf8'));
+const additions={M002:['CN3-BUS-WONHEUNG','CN3-BUS-7728','CN3-TT-DMC-HONGDAE','CN3-TT-DMC-GONGDEOK','CN3-TT-DMC-GIMPO'],M003:['CN3-BUS-WONHEUNG','CN3-BUS-7728'],M004:['PST3-S1-STAGE','PST3-S4-STAGE','PST3-S5-STAGE','PST3-CURRENT-COMPARISON'],M006:['PST3-S1-RESALE','PST3-S4-RESALE','PST3-S4-RESIDENCE']};
+const direction={M002:'서북권 업무지 비교축(통근통계 순위 아님)→현재 운영철도·버스 연결. 검증된 역간 시간만 출발역/목적역/대기·접근 제외조건과 함께 표시.',M003:'현재 버스→기존역·환승 목적지 구조도를 먼저 유지. 원흥역95/046/075B/024A·B, 행신역024A·B, 7728 새절·신촌 연결. 노선번호는 설명 구간에만. 새단지 현관 연결로 그리지 않음. 운영 실선/계획 점선. 입주·개통 달력. 도로실측 시간 없음.',M004:'본청약 공고가 표제 고정. 특정84타입·층별 기본가/확장비/합계와 공고일 표시. 기존대안 중위값 범위는 현재비교기준 별도패널. 미래 조건 시나리오는 수치 없는 분기카드. 미래가격 상승 그래프 금지.',M008:'직장·입주시점·기다리는 주거비 3문항→가구 일정 카드. 앞 장의 검증된 교통·가격 재사용.'};
+additions.M003.push('CN3-ROAD-PLAN','CN3-RAIL-FUTURE');
+additions.M002.push('CN3-ILS-GYEONGBOK','CN3-ILS-JONGNO','CN3-ILS-GYODAE');
+direction.M002+=' 핵심표 원흥→경복궁24/종로3가28/교대49분. 코레일 공개 일산선 평일표(2022.8.1시행/2025.8.6등록/2026.10.16조회),07~09시18편 동일열차번호 대조,출발발차→도착 차이(qualified),후속변경 전수확인아님·실측아님·접근대기회사보행별도. DMC구간은 보조표로만 사용: 현행 공개 평일05:30~06:12 사례 발차시각 차이/열차번호 없는 순서대응 산출. DMC→김포공항을 마곡 최적경로로 권하지 않음.';
+direction.M003+=' 버스 근거는 LX 방문기관 안내와 7728 노선안내 qualified. 운행기관 현재 전수검증·입주초기운행 보장 아님을 표 주석으로 명시.';
+fs.mkdirSync(path.join(root,'narration_input'),{recursive:true});
+let chapters=[], changes=[];
+const v1=read('writer/script-v1/scene_proposals.json');
+for(const s of doc.scenes){
+ s.claim_ids=[...new Set([...s.claim_ids,...(additions[s.scene_id]||[])])];
+ if(direction[s.scene_id])s.screen_direction=direction[s.scene_id];
+ s.script_revision='script-v2';s.status='draft_for_revised_script_gate';s.timing_basis='estimate_only_480_characters_per_minute_not_measured';
+ s.duration_estimate_seconds=Math.ceil([...s.narration_text].length/8);
+ s.evidence_paths=[...(s.evidence_paths||[]),...(s.scene_id==='M002'||s.scene_id==='M003'?['research/commute-v3/facts.json']:[]),...(['M004','M006','M007'].includes(s.scene_id)?['research/price-stage-v3/facts.json']:[])];
+ const p='narration_input/'+s.scene_id+'.txt',b=Buffer.from(s.narration_text);fs.writeFileSync(path.join(root,p),b);
+ chapters.push({scene_id:s.scene_id,chapter_id:s.scene_id,path:p,characters:[...s.narration_text].length,characters_including_whitespace:[...s.narration_text].length,characters_excluding_whitespace:[...s.narration_text.replace(/\s/g,'')].length,utf8_bytes:b.length,sha256:sha(b)});
+ if(v1.scenes.find(x=>x.scene_id===s.scene_id).narration_text!==s.narration_text)changes.push(s.scene_id);
+}
+doc.revision='script-v2';doc.status='draft_unapproved';doc.timing_locked=false;
+const write=(p,v)=>fs.writeFileSync(path.join(root,p),typeof v==='string'?v:JSON.stringify(v,null,2));
+write('scene_proposals.json',doc);
+const joined=doc.scenes.map(s=>s.narration_text).join('\n\n');write('narration_joined.txt',joined);
+let md='# 창릉 전체 영상 대본 v2\n\n검토용 수정안. 새 버전 대본·예산 승인 대기. 실제 음성시간 미정이며 아래 시간은 estimate입니다. 유료 호출·음성 생성·청취·영상 검수 없음.\n\n제목 제안: **고양 창릉, 새 철도를 기다릴까? 통근·본청약 가격과 기존 생활권 비교**\n\n썸네일 카피: **창릉을 기다릴까?** / **기존 생활권과 비교**\n';
+for(const s of doc.scenes)md+=`\n## ${s.scene_id} · ${s.message}\n\n예상 낭독 ${s.duration_estimate_seconds}초 (estimate).\n\n### 낭독\n\n${s.narration_text}\n\n### 화면 지시\n\n${s.screen_direction}\n\n자료 유형: ${s.asset_types.join(', ')} / 목적: ${s.visual_purpose}\nclaim_ids: ${s.claim_ids.join(', ')}\n`;
+write('script_v2.md',md);
+let pron=read('writer/script-v1/pronunciation.json');pron.revision='script-v2';pron.dictionary.push({term:'DMC',reading:'디엠씨'},{term:'046 / 075B / 024A·B',reading:'공사육 번 / 공칠오 비 번 / 공이사 에이·비 번'},{term:'7728',reading:'칠칠이팔 번'});pron.emphasis=['본청약 공급가격','현재 비교기준','입주 초기','기존 교통','조건부 첫 선택'];write('pronunciation.json',pron);
+const inputs=['brief.json','writer/script-v1/scene_proposals.json','research/production-v2/facts.json','research/prices-v2/facts.json','research/price-stage-v3/facts.json','research/commute-v3/facts.json','outputs/reference-direction-v1/창릉_레퍼런스_적용안.md'];
+for(const p of inputs)if(!fs.existsSync(path.join(ep,p)))throw new Error('Missing input '+p);
+const manifest={revision:'script-v2',status:'draft_unapproved',encoding:'UTF-8 without BOM',character_definition:'Unicode code points including whitespace, chapter text no terminal newline; joined separator LF LF',chapters,inputs:inputs.map(p=>({path:p,sha256:sha(fs.readFileSync(path.join(ep,p)))})),individual_character_sum:chapters.reduce((a,b)=>a+b.characters,0),total_characters:chapters.reduce((a,b)=>a+b.characters,0),narration_joined:{path:'narration_joined.txt',characters_including_whitespace:[...joined].length,utf8_bytes:Buffer.byteLength(joined),sha256:sha(joined)},source_script_sha256:sha(md),duration_estimate:{speech_seconds:doc.scenes.reduce((a,b)=>a+b.duration_estimate_seconds,0),basis:'480 characters/minute assumption; not measured',brand_intro_seconds:5,post_final_speech_hold_seconds:3,brand_outro_seconds:10},paid_calls:0,actual_listening:false};write('manifest.json',manifest);
+write('changes.json',{revision:'script-v2',changed_narration_scenes:changes,unchanged_narration_scenes:doc.scenes.map(s=>s.scene_id).filter(x=>!changes.includes(x)),changes:[{scenes:['M002','M003'],change:'主要通勤目的地・現在の接続根拠を追加'.replace('主要通勤目的地・現在の接続根拠を追加','주요 통근 목적지·현재 버스와 환승전략 추가')},{scenes:['M004'],change:'본청약가격 명시, 현재 대안 가격범위와 미래 조건 시나리오 구분'},{scenes:['M001','M005','M006','M007','M008'],change:'반복 경고 압축, 사실 한계 보존, 생활 선택 기준 강화'}],brand_and_cta_preserved:true,common_files_modified:false});
+write('handoff.json',{revision:'script-v2',status:'draft_for_script_and_budget_review',outputs:['script_v2.md','scene_proposals.json','narration_input','narration_joined.txt','pronunciation.json','manifest.json','changes.json','verification.json'],input_revisions:['script-v1','production-v2','prices-v2','price-stage-v3','commute-v3','reference-direction-v1'],affected_scenes:changes,next_owner:'director→script/budget gate→narration/visual/editor',unresolved:['새 버전 대본·예산 승인','실제 음성 길이·원문정렬','S1/S5 거주의무 미확인','최종 지도·사진 권리/위치검수'],actual_listening:false,paid_calls:0});
+console.log(JSON.stringify({characters:manifest.total_characters,script_sha256:manifest.source_script_sha256,joined_sha256:manifest.narration_joined.sha256}));
+const registry=new Map();function collect(v,p){if(!v||typeof v!=='object')return;if(v.claim_id)registry.set(v.claim_id,{...v,evidence_registry:p});Object.values(v).forEach(x=>collect(x,p));}
+for(const p of ['research/facts.json','research/production-v2/facts.json','research/prices-v2/facts.json','research/price-stage-v3/facts.json','research/commute-v3/facts.json'])collect(read(p),p);
+write('claim_basis.json',{revision:'script-v2',scope:'선행 리서치 근거 승계와 문장 연결; writer 독립 원자료 재검증 아님',scenes:doc.scenes.map(s=>({scene_id:s.scene_id,claims:s.claim_ids.map(id=>{if(!registry.has(id))throw Error('missing '+id);return registry.get(id)}),editorial_interpretation:['M002','M003','M004','M008','M009'].includes(s.scene_id)?'업무지 비교축·통근전략·미래 조건 시나리오·가구별 판단은 제작팀 해석이며 미래확정 사실 아님':null}))});
+const h=JSON.parse(fs.readFileSync(path.join(root,'handoff.json'),'utf8'));h.outputs.push('claim_basis.json','qa_response.json');h.validation={verification:'verification.json',scope:'장별낭독·문자수·해시·claim존재·입력해시·브랜드CTA 지시; 실행결과는 verification.json 참조',audio_video_validation:false};write('handoff.json',h);
+write('qa_response.json',{revision:'script-v2-corrected',status:'writer_corrections_applied_pending_independent_QA',issues:[{id:'QA-V2-001',scene:'M006',change:'등기 완료 예외와 거주의무 별도 명시'},{id:'QA-V2-002',scene:'M002',change:'홍대·김포 수치는 낭독에서 보조표로 이동'},{id:'QA-V2-003',scene:'M002',change:'원흥→경복궁24/종로3가28/교대49분 공개 시각표 근거·시행일·제외시간 반영'},{id:'QA-V2-004',scene:'M003',change:'방문기관 주변 안내사례 한정, 노선번호 화면 이동, 입주시점 재확인 명시'}],script_sha256:manifest.source_script_sha256,narration_characters:manifest.total_characters});

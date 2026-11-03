@@ -1,0 +1,6 @@
+const path=require('path'),fs=require('fs');
+const repo=path.resolve(__dirname,'../../../../..');
+const {bundle}=require(path.join(repo,'video/node_modules/@remotion/bundler'));
+const {selectComposition,renderStill}=require(path.join(repo,'video/node_modules/@remotion/renderer'));
+const browserExecutable=path.join(repo,'video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe');
+(async()=>{const serveUrl=await bundle({entryPoint:path.join(repo,'video/src/NamyangjuMapLedV6.tsx'),outDir:path.join(__dirname,'bundle-asset-check'),publicDir:path.join(repo,'video/public')});const composition=await selectComposition({serveUrl,browserExecutable,id:'MapLedV6MapAssetPreview'});for(const frame of [0,70,180])await renderStill({serveUrl,browserExecutable,composition,frame,imageFormat:'png',output:path.join(__dirname,`map_asset_${frame}.png`)});for(const candidateId of ['W1-A24','W1-B17','W2-A3'])await renderStill({serveUrl,browserExecutable,composition,inputProps:{candidateId},frame:180,imageFormat:'png',output:path.join(__dirname,`map_asset_${candidateId}.png`)});console.log('six map asset stills; no full render, no narration');})().catch(e=>{console.error(e.message);process.exitCode=1});

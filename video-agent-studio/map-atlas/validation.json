@@ -1,0 +1,51 @@
+{
+  "count": 20058,
+  "unique_ids": 20058,
+  "crs": "EPSG:5179 native xy; no lonlat conversion",
+  "coordinate_rounding_m": 1,
+  "extra_join_count": {
+    "AI": 20055,
+    "AJ": 20055,
+    "AK": 20058,
+    "AM": 20058
+  },
+  "input_files": [
+    {
+      "file": "ES1001AI00101YY2500_csv.csv",
+      "rows": 20055,
+      "sha256": "88d4bf7d3fe02d3076947cdc850a445fb920ac11f8b347e2cef793d07ac767a5"
+    },
+    {
+      "file": "ES1001AJ00101YY2500_csv.csv",
+      "rows": 20055,
+      "sha256": "a1762a28e389551a7221a1f91aac3549b66723275da4cff1bea2e9f5df995029"
+    },
+    {
+      "file": "ES1001AK00101QY2601_csv.csv",
+      "rows": 45851,
+      "sha256": "8562f25221acff8f32ed9f16dcce9fe5e87db53a6a10ecbe8c94f81260e36436"
+    },
+    {
+      "file": "ES1001AM00101MM2608_csv.csv",
+      "rows": 45851,
+      "sha256": "4464c76a72c66690d402ea6e5528bf4d8ee1f07665e5982e48d6899db0b7fd35"
+    }
+  ],
+  "index_bytes": 19479022,
+  "payload_json_bytes": 81267424,
+  "external_requests_required": 0,
+  "network_or_paid_calls": 0,
+  "ui_validation": {
+    "status": "passed",
+    "scope": "desktop and mobile Chromium emulation; real OSM tile service not exercised",
+    "receipts": [
+      "ui_v3_validation.json",
+      "explorer_validation.json",
+      "ui_validation.json",
+      "web_ui_validation.json",
+      "overlay_ui_validation.json"
+    ]
+  },
+  "index_sha256": "24183c8c22e35f1c44de544d2f60e19998960df81c879c5e528e8b17be2a22d7",
+  "optional_external_requests": "OSM visible viewport tiles only when human enables road basemap over HTTP"
+}

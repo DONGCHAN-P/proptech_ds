@@ -1,0 +1,40 @@
+﻿{
+    "task_id":  "development",
+    "role":  "video_research",
+    "status":  "completed_scoped_research",
+    "input_revisions":  {
+                            "inputs":  "input-v1",
+                            "facts":  "development-v1"
+                        },
+    "outputs":  [
+                    "research/development/facts.json",
+                    "research/development/findings.md"
+                ],
+    "affected_scene_ids":  [
+
+                           ],
+    "checks":  [
+                   {
+                       "check":  "공식 원출처 조회 및 제공자료 교차확인",
+                       "result":  "passed",
+                       "evidence":  "facts.json 각 원출처·근거위치·기준일"
+                   },
+                   {
+                       "check":  "JSON 구문 및 claim_id 유일성",
+                       "result":  "passed",
+                       "evidence":  "PowerShell ConvertFrom-Json 성공, 12개 claim_id 중복 없음"
+                   }
+               ],
+    "open_issue_ids":  [
+                           "DEV-SOURCE-EMPLOYMENT",
+                           "DEV-BUDGET-CONFLICT",
+                           "DEV-RAIL-SOURCE-MISLINK"
+                       ],
+    "next_role":  "video_writer",
+    "unresolved":  [
+                       "실제 근로자·기업 준공 미확인",
+                       "최신 철도 공구별 공정·출입구 미확인",
+                       "최신 법정 도면 전수 검증 미완료"
+                   ],
+    "verification_scope":  "텍스트 공식자료 조사. 영상·음성·지도 이미지 시각검수 없음."
+}

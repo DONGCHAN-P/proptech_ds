@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C06P01",
+  "scene_id": "C06",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:06:26.700Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "aea32b6f2e5edac3e715cd9765e2164a20cba7f9db21bd4c7d5cb391700a1b68",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "투자 대안은 에스 앤드 피 오백을 따라가는 이 티 에프를 떠올릴 수 있습니다. 이때 가격 상승과 배당을 합친 총수익, 실제 이 티 에프의 수익, 한국 가구가 원화로 손에 쥐는 수익을 구분해야 합니다. 에스 앤드 피의 총수익지수는 배당 재투자를 포함합니다. 이 총수익으로 배당 효과까지 함께 계산합니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 168,
+  "characters": 168,
+  "actual_credits": 67,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:26.698Z",
+  "local_shadow_remaining_before": 21526,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "IqLdgx4O6MDwKvw2xO5t",
+    "x-request-id": null,
+    "character-cost": "67",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:06:25 GMT"
+  },
+  "pcm_samples": 906696,
+  "pcm_duration_s": 20.56,
+  "provider_last_spoken_end_s": 20.64,
+  "artifact_sha256": {
+    "paragraphs/C06P01/audio.mp3": "da27449a3b7cb343fd534c36e1a7ba7f0f93662b8e54051d1d1dee53867eefa3",
+    "paragraphs/C06P01/audio.wav": "11cc7b0069bf93bd4df4fa3fd6bfded12b300bc7c8858f60e5b04cd520027787",
+    "paragraphs/C06P01/alignment.json": "4efc6f15125ed80be9324154cb26db1bf7bb2b1de3dd9bab904663287e682816",
+    "paragraphs/C06P01/normalized_alignment.json": "4efc6f15125ed80be9324154cb26db1bf7bb2b1de3dd9bab904663287e682816"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21459,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:06:31.190Z"
+}

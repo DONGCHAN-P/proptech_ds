@@ -1,0 +1,847 @@
+{
+  "input_video": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\production-v7-preview\\changneung_full_v7_preview.mp4",
+  "input_video_sha256": "77fb48719ae2f78a98633ef072ec30c1d2cb323bde7a27724fa4f276bb5f98fc",
+  "interval_count": 37,
+  "unit_count": 25,
+  "duration_s": 163.76666666666668,
+  "all_note_modes_mapped": true,
+  "text_only_fallback_allowed": false,
+  "intervals": [
+    {
+      "unit_id": "M000_001",
+      "start_frame": 0,
+      "end_frame": 144,
+      "start_s": 0.0,
+      "end_s": 4.8,
+      "duration_s": 4.8,
+      "narration": "창릉이 완성되면 어떤 아파트가 먼저 선택받을까요?",
+      "caption": "창릉이 완성되면 어떤 아파트가 먼저 선택받을까요?",
+      "current_title": "창릉이 완성되면, 먼저 선택받을 집은?",
+      "current_purpose": [
+        "가격 수준을 이끌 후보",
+        "초기 부담과 도시 완성 효과를 함께 비교"
+      ],
+      "replacement_id": "candidate_question",
+      "replacement_visual": "실제 S1·S4·S5 계획면+세 공고가 배지",
+      "message_specific_execution": "세 후보의 위치와 확인된 공고가격 차이를 동시에 보여주는 질문 화면. 미래 순위·수익률은 수치화하지 않음."
+    },
+    {
+      "unit_id": "M000_002",
+      "start_frame": 144,
+      "end_frame": 224,
+      "start_s": 4.8,
+      "end_s": 7.466666666666667,
+      "duration_s": 2.6666666666666665,
+      "narration": "새집이라는 조건은 비슷한데, 어떤 블록은 더 비싼 값을 인정받고 어떤 블록은 가격 부담이 낮다는 점으로 경쟁할 수 있겠죠.",
+      "caption": "새집이라는 조건은 비슷한데,",
+      "current_title": "창릉이 완성되면, 먼저 선택받을 집은?",
+      "current_purpose": [
+        "가격 수준을 이끌 후보",
+        "초기 부담과 도시 완성 효과를 함께 비교"
+      ],
+      "replacement_id": "candidate_question",
+      "replacement_visual": "실제 S1·S4·S5 계획면+세 공고가 배지",
+      "message_specific_execution": "세 후보의 위치와 확인된 공고가격 차이를 동시에 보여주는 질문 화면. 미래 순위·수익률은 수치화하지 않음."
+    },
+    {
+      "unit_id": "M000_002",
+      "start_frame": 224,
+      "end_frame": 459,
+      "start_s": 7.466666666666667,
+      "end_s": 15.3,
+      "duration_s": 7.833333333333333,
+      "narration": "새집이라는 조건은 비슷한데, 어떤 블록은 더 비싼 값을 인정받고 어떤 블록은 가격 부담이 낮다는 점으로 경쟁할 수 있겠죠.",
+      "caption": "어떤 블록은 더 비싼 값을 인정받고 어떤 블록은 가격 부담이 낮다는 점으로 경쟁할 수 있겠죠.",
+      "current_title": "창릉이 완성되면, 먼저 선택받을 집은?",
+      "current_purpose": [
+        "가격 수준을 이끌 후보",
+        "초기 부담과 도시 완성 효과를 함께 비교"
+      ],
+      "replacement_id": "candidate_question",
+      "replacement_visual": "실제 S1·S4·S5 계획면+세 공고가 배지",
+      "message_specific_execution": "세 후보의 위치와 확인된 공고가격 차이를 동시에 보여주는 질문 화면. 미래 순위·수익률은 수치화하지 않음."
+    },
+    {
+      "unit_id": "M002_007",
+      "start_frame": 5038,
+      "end_frame": 5252,
+      "start_s": 167.93333333333334,
+      "end_s": 175.06666666666666,
+      "duration_s": 7.133333333333334,
+      "narration": "10월 18일 구글 지도에서 다음 날인 19일 월요일 오전 8시 대중교통을 조회하고, 표시된 길 중 가장 이른 도착까지의 시간을 비교했어요.",
+      "caption": "10월 18일 구글 지도에서 다음 날인 19일 월요일 오전 8시 대중교통을 조회하고,",
+      "current_title": "숫자보다 먼저, 조회 조건",
+      "current_purpose": [
+        "블록 대표 좌표 → 표기 목적지",
+        "평일 08:00 · 접근·대기·환승 포함 / 현재 교통"
+      ],
+      "replacement_id": "commute_method",
+      "replacement_visual": "실제 출발3점·목적지5점 지도+08:00시계+접근/대기/환승 도식",
+      "message_specific_execution": "실제 조회조건을 지도와 시간 기준으로 시각화. S4→강남08:06~09:34,08:00기준94분은 기존 조회의 예시로만 사용. 지도 선은 라벨 리더로만 사용."
+    },
+    {
+      "unit_id": "M002_007",
+      "start_frame": 5252,
+      "end_frame": 5389,
+      "start_s": 175.06666666666666,
+      "end_s": 179.63333333333333,
+      "duration_s": 4.566666666666666,
+      "narration": "10월 18일 구글 지도에서 다음 날인 19일 월요일 오전 8시 대중교통을 조회하고, 표시된 길 중 가장 이른 도착까지의 시간을 비교했어요.",
+      "caption": "표시된 길 중 가장 이른 도착까지의 시간을 비교했어요.",
+      "current_title": "숫자보다 먼저, 조회 조건",
+      "current_purpose": [
+        "블록 대표 좌표 → 표기 목적지",
+        "평일 08:00 · 접근·대기·환승 포함 / 현재 교통"
+      ],
+      "replacement_id": "commute_method",
+      "replacement_visual": "실제 출발3점·목적지5점 지도+08:00시계+접근/대기/환승 도식",
+      "message_specific_execution": "실제 조회조건을 지도와 시간 기준으로 시각화. S4→강남08:06~09:34,08:00기준94분은 기존 조회의 예시로만 사용. 지도 선은 라벨 리더로만 사용."
+    },
+    {
+      "unit_id": "M002_008",
+      "start_frame": 5389,
+      "end_frame": 5527,
+      "start_s": 179.63333333333333,
+      "end_s": 184.23333333333332,
+      "duration_s": 4.6,
+      "narration": "8시 이후 차를 타는 경로는 기다리는 시간도 넣었고, 실제로는 출입구와 버스 배차, 환승에 따라 달라질 수 있습니다.",
+      "caption": "8시 이후 차를 타는 경로는 기다리는 시간도 넣었고,",
+      "current_title": "숫자보다 먼저, 조회 조건",
+      "current_purpose": [
+        "블록 대표 좌표 → 표기 목적지",
+        "평일 08:00 · 접근·대기·환승 포함 / 현재 교통"
+      ],
+      "replacement_id": "commute_method",
+      "replacement_visual": "실제 출발3점·목적지5점 지도+08:00시계+접근/대기/환승 도식",
+      "message_specific_execution": "실제 조회조건을 지도와 시간 기준으로 시각화. S4→강남08:06~09:34,08:00기준94분은 기존 조회의 예시로만 사용. 지도 선은 라벨 리더로만 사용."
+    },
+    {
+      "unit_id": "M002_008",
+      "start_frame": 5527,
+      "end_frame": 5609,
+      "start_s": 184.23333333333332,
+      "end_s": 186.96666666666667,
+      "duration_s": 2.7333333333333334,
+      "narration": "8시 이후 차를 타는 경로는 기다리는 시간도 넣었고, 실제로는 출입구와 버스 배차, 환승에 따라 달라질 수 있습니다.",
+      "caption": "실제로는 출입구와 버스 배차,",
+      "current_title": "숫자보다 먼저, 조회 조건",
+      "current_purpose": [
+        "블록 대표 좌표 → 표기 목적지",
+        "평일 08:00 · 접근·대기·환승 포함 / 현재 교통"
+      ],
+      "replacement_id": "commute_method",
+      "replacement_visual": "실제 출발3점·목적지5점 지도+08:00시계+접근/대기/환승 도식",
+      "message_specific_execution": "실제 조회조건을 지도와 시간 기준으로 시각화. S4→강남08:06~09:34,08:00기준94분은 기존 조회의 예시로만 사용. 지도 선은 라벨 리더로만 사용."
+    },
+    {
+      "unit_id": "M002_008",
+      "start_frame": 5609,
+      "end_frame": 5697,
+      "start_s": 186.96666666666667,
+      "end_s": 189.9,
+      "duration_s": 2.933333333333333,
+      "narration": "8시 이후 차를 타는 경로는 기다리는 시간도 넣었고, 실제로는 출입구와 버스 배차, 환승에 따라 달라질 수 있습니다.",
+      "caption": "환승에 따라 달라질 수 있습니다.",
+      "current_title": "숫자보다 먼저, 조회 조건",
+      "current_purpose": [
+        "블록 대표 좌표 → 표기 목적지",
+        "평일 08:00 · 접근·대기·환승 포함 / 현재 교통"
+      ],
+      "replacement_id": "commute_method",
+      "replacement_visual": "실제 출발3점·목적지5점 지도+08:00시계+접근/대기/환승 도식",
+      "message_specific_execution": "실제 조회조건을 지도와 시간 기준으로 시각화. S4→강남08:06~09:34,08:00기준94분은 기존 조회의 예시로만 사용. 지도 선은 라벨 리더로만 사용."
+    },
+    {
+      "unit_id": "M003_011",
+      "start_frame": 10153,
+      "end_frame": 10260,
+      "start_s": 338.43333333333334,
+      "end_s": 342.0,
+      "duration_s": 3.566666666666667,
+      "narration": "가격에서도 두 가지를 같이 봐야 합니다.",
+      "caption": "가격에서도 두 가지를 같이 봐야 합니다.",
+      "current_title": "철도 효과를 가격과 함께 읽기",
+      "current_purpose": [
+        "앞으로 편리해질 여지가 얼마나 남았나",
+        "그 기대를 지금 가격에 얼마나 지불하나"
+      ],
+      "replacement_id": "rail_entry_evidence",
+      "replacement_visual": "기존 입주/철도달력과 실제 공고가3종의 병렬 비교",
+      "message_specific_execution": "완만한 달력행 강조 후 7.77/7.90/8.73억 진입가격을 연결. 미래가격/수익률막대·가공가치차액 생성 금지."
+    },
+    {
+      "unit_id": "M003_012",
+      "start_frame": 10260,
+      "end_frame": 10357,
+      "start_s": 342.0,
+      "end_s": 345.23333333333335,
+      "duration_s": 3.2333333333333334,
+      "narration": "앞으로 편해질 부분이 얼마나 남았는지, 그리고 그 기대를 지금 가격에서 이미 얼마나 지불하는지입니다.",
+      "caption": "앞으로 편해질 부분이 얼마나 남았는지,",
+      "current_title": "철도 효과를 가격과 함께 읽기",
+      "current_purpose": [
+        "앞으로 편리해질 여지가 얼마나 남았나",
+        "그 기대를 지금 가격에 얼마나 지불하나"
+      ],
+      "replacement_id": "rail_entry_evidence",
+      "replacement_visual": "기존 입주/철도달력과 실제 공고가3종의 병렬 비교",
+      "message_specific_execution": "완만한 달력행 강조 후 7.77/7.90/8.73억 진입가격을 연결. 미래가격/수익률막대·가공가치차액 생성 금지."
+    },
+    {
+      "unit_id": "M003_012",
+      "start_frame": 10357,
+      "end_frame": 10510,
+      "start_s": 345.23333333333335,
+      "end_s": 350.3333333333333,
+      "duration_s": 5.1,
+      "narration": "앞으로 편해질 부분이 얼마나 남았는지, 그리고 그 기대를 지금 가격에서 이미 얼마나 지불하는지입니다.",
+      "caption": "그리고 그 기대를 지금 가격에서 이미 얼마나 지불하는지입니다.",
+      "current_title": "철도 효과를 가격과 함께 읽기",
+      "current_purpose": [
+        "앞으로 편리해질 여지가 얼마나 남았나",
+        "그 기대를 지금 가격에 얼마나 지불하나"
+      ],
+      "replacement_id": "rail_entry_evidence",
+      "replacement_visual": "기존 입주/철도달력과 실제 공고가3종의 병렬 비교",
+      "message_specific_execution": "완만한 달력행 강조 후 7.77/7.90/8.73억 진입가격을 연결. 미래가격/수익률막대·가공가치차액 생성 금지."
+    },
+    {
+      "unit_id": "M003_013",
+      "start_frame": 10510,
+      "end_frame": 10613,
+      "start_s": 350.3333333333333,
+      "end_s": 353.76666666666665,
+      "duration_s": 3.433333333333333,
+      "narration": "개통 기대가 큰 곳을 비싸게 사는 것과, 지금 불편한 대신 가격 부담이 낮은 곳을 사는 건 다른 선택이에요.",
+      "caption": "개통 기대가 큰 곳을 비싸게 사는 것과,",
+      "current_title": "철도 효과를 가격과 함께 읽기",
+      "current_purpose": [
+        "앞으로 편리해질 여지가 얼마나 남았나",
+        "그 기대를 지금 가격에 얼마나 지불하나"
+      ],
+      "replacement_id": "rail_entry_evidence",
+      "replacement_visual": "기존 입주/철도달력과 실제 공고가3종의 병렬 비교",
+      "message_specific_execution": "완만한 달력행 강조 후 7.77/7.90/8.73억 진입가격을 연결. 미래가격/수익률막대·가공가치차액 생성 금지."
+    },
+    {
+      "unit_id": "M003_013",
+      "start_frame": 10613,
+      "end_frame": 10786,
+      "start_s": 353.76666666666665,
+      "end_s": 359.53333333333336,
+      "duration_s": 5.766666666666667,
+      "narration": "개통 기대가 큰 곳을 비싸게 사는 것과, 지금 불편한 대신 가격 부담이 낮은 곳을 사는 건 다른 선택이에요.",
+      "caption": "지금 불편한 대신 가격 부담이 낮은 곳을 사는 건 다른 선택이에요.",
+      "current_title": "철도 효과를 가격과 함께 읽기",
+      "current_purpose": [
+        "앞으로 편리해질 여지가 얼마나 남았나",
+        "그 기대를 지금 가격에 얼마나 지불하나"
+      ],
+      "replacement_id": "rail_entry_evidence",
+      "replacement_visual": "기존 입주/철도달력과 실제 공고가3종의 병렬 비교",
+      "message_specific_execution": "완만한 달력행 강조 후 7.77/7.90/8.73억 진입가격을 연결. 미래가격/수익률막대·가공가치차액 생성 금지."
+    },
+    {
+      "unit_id": "M003_014",
+      "start_frame": 10786,
+      "end_frame": 10973,
+      "start_s": 359.53333333333336,
+      "end_s": 365.76666666666665,
+      "duration_s": 6.233333333333333,
+      "narration": "오늘은 입주와 철도 사이의 간격까지 붙여서 진입가격을 비교해 보겠습니다.",
+      "caption": "오늘은 입주와 철도 사이의 간격까지 붙여서 진입가격을 비교해 보겠습니다.",
+      "current_title": "철도 효과를 가격과 함께 읽기",
+      "current_purpose": [
+        "앞으로 편리해질 여지가 얼마나 남았나",
+        "그 기대를 지금 가격에 얼마나 지불하나"
+      ],
+      "replacement_id": "rail_entry_evidence",
+      "replacement_visual": "기존 입주/철도달력과 실제 공고가3종의 병렬 비교",
+      "message_specific_execution": "완만한 달력행 강조 후 7.77/7.90/8.73억 진입가격을 연결. 미래가격/수익률막대·가공가치차액 생성 금지."
+    },
+    {
+      "unit_id": "M004_009",
+      "start_frame": 12648,
+      "end_frame": 12775,
+      "start_s": 421.6,
+      "end_s": 425.8333333333333,
+      "duration_s": 4.233333333333333,
+      "narration": "S1과 비교하면 약 8,300만 원이고요.",
+      "caption": "S1과 비교하면 약 8,300만 원이고요.",
+      "current_title": "같은 조건의 공고가 사례 차이",
+      "current_purpose": [
+        "S4 · S1 대비 약 8,300만원 추가",
+        "타입·공고일 차이를 포함한 사례 비교 · 미래 차익 아님"
+      ],
+      "replacement_id": "actual_price_delta",
+      "replacement_visual": "실제 S1·S4 공고가2막대+정확원/타입/공고일",
+      "message_specific_execution": "S4-S1=82,949,000원, 약8300만원. 원문표의 출처/단위/선택행 연결. 미래차익으로 표시하지 않음."
+    },
+    {
+      "unit_id": "M004_010",
+      "start_frame": 12775,
+      "end_frame": 12927,
+      "start_s": 425.8333333333333,
+      "end_s": 430.9,
+      "duration_s": 5.066666666666666,
+      "narration": "기존 생활권과의 접점이 S4를 먼저 볼 이유는 될 수 있어도, 이 차액이 곧 그 입지의 가치라고 계산할 수는 없습니다.",
+      "caption": "기존 생활권과의 접점이 S4를 먼저 볼 이유는 될 수 있어도,",
+      "current_title": "가격 수준과 상승 여력은 다른 질문",
+      "current_purpose": [
+        "미래 가격이 높을 후보 ≠ 가장 높은 수익률",
+        "실제 진입가격과 주변 대안을 함께 비교"
+      ],
+      "replacement_id": "price_and_location",
+      "replacement_visual": "S4 실제면·기존생활시설지도+S5/S1 대비 실제공고가차이",
+      "message_specific_execution": "입지접점과 공고가차이는 나란히 표시하고 인과/가치환산으로 연결하지 않음."
+    },
+    {
+      "unit_id": "M004_010",
+      "start_frame": 12927,
+      "end_frame": 13066,
+      "start_s": 430.9,
+      "end_s": 435.53333333333336,
+      "duration_s": 4.633333333333334,
+      "narration": "기존 생활권과의 접점이 S4를 먼저 볼 이유는 될 수 있어도, 이 차액이 곧 그 입지의 가치라고 계산할 수는 없습니다.",
+      "caption": "이 차액이 곧 그 입지의 가치라고 계산할 수는 없습니다.",
+      "current_title": "가격 수준과 상승 여력은 다른 질문",
+      "current_purpose": [
+        "미래 가격이 높을 후보 ≠ 가장 높은 수익률",
+        "실제 진입가격과 주변 대안을 함께 비교"
+      ],
+      "replacement_id": "price_and_location",
+      "replacement_visual": "S4 실제면·기존생활시설지도+S5/S1 대비 실제공고가차이",
+      "message_specific_execution": "입지접점과 공고가차이는 나란히 표시하고 인과/가치환산으로 연결하지 않음."
+    },
+    {
+      "unit_id": "M004_011",
+      "start_frame": 13066,
+      "end_frame": 13140,
+      "start_s": 435.53333333333336,
+      "end_s": 438.0,
+      "duration_s": 2.466666666666667,
+      "narration": "공고 시점과 타입도 다르고, 앞으로 취득할 때 실제로 내는 가격은 다시 확인해야 하니까요.",
+      "caption": "공고 시점과 타입도 다르고,",
+      "current_title": "가격 수준과 상승 여력은 다른 질문",
+      "current_purpose": [
+        "미래 가격이 높을 후보 ≠ 가장 높은 수익률",
+        "실제 진입가격과 주변 대안을 함께 비교"
+      ],
+      "replacement_id": "original_price_conditions",
+      "replacement_visual": "기존 S4 공고원문 헤더/단위/84AH 선택행+날짜/타입 비교",
+      "message_specific_execution": "정확원 환산·발코니 합산을 기존 검수된 원문표로 회수. 현재 취득가격은 신규숫자없이 별도확인 표시."
+    },
+    {
+      "unit_id": "M004_011",
+      "start_frame": 13140,
+      "end_frame": 13299,
+      "start_s": 438.0,
+      "end_s": 443.3,
+      "duration_s": 5.3,
+      "narration": "공고 시점과 타입도 다르고, 앞으로 취득할 때 실제로 내는 가격은 다시 확인해야 하니까요.",
+      "caption": "앞으로 취득할 때 실제로 내는 가격은 다시 확인해야 하니까요.",
+      "current_title": "가격 수준과 상승 여력은 다른 질문",
+      "current_purpose": [
+        "미래 가격이 높을 후보 ≠ 가장 높은 수익률",
+        "실제 진입가격과 주변 대안을 함께 비교"
+      ],
+      "replacement_id": "original_price_conditions",
+      "replacement_visual": "기존 S4 공고원문 헤더/단위/84AH 선택행+날짜/타입 비교",
+      "message_specific_execution": "정확원 환산·발코니 합산을 기존 검수된 원문표로 회수. 현재 취득가격은 신규숫자없이 별도확인 표시."
+    },
+    {
+      "unit_id": "M004_012",
+      "start_frame": 13299,
+      "end_frame": 13464,
+      "start_s": 443.3,
+      "end_s": 448.8,
+      "duration_s": 5.5,
+      "narration": "대장 후보와 상승 여력이 꼭 같은 답이 아닌 이유가 여기 있습니다.",
+      "caption": "대장 후보와 상승 여력이 꼭 같은 답이 아닌 이유가 여기 있습니다.",
+      "current_title": "가격 수준과 상승 여력은 다른 질문",
+      "current_purpose": [
+        "미래 가격이 높을 후보 ≠ 가장 높은 수익률",
+        "실제 진입가격과 주변 대안을 함께 비교"
+      ],
+      "replacement_id": "entry_vs_existing_prices",
+      "replacement_visual": "세 공고가와 실제 주변6단지 중위값 지도",
+      "message_specific_execution": "확인된 공고가 사례/주변 실거래 위치라는 서로 다른 근거를 분리. 대장/상승률 순위·미래 수익 숫자 없음."
+    },
+    {
+      "unit_id": "M004_013",
+      "start_frame": 13464,
+      "end_frame": 13596,
+      "start_s": 448.8,
+      "end_s": 453.2,
+      "duration_s": 4.4,
+      "narration": "나중에 더 높은 가격으로 거래될 만한 단지를 골라도, 처음부터 많이 지불했다면 내 가격 대비 여력은 작을 수 있죠.",
+      "caption": "나중에 더 높은 가격으로 거래될 만한 단지를 골라도,",
+      "current_title": "가격 수준과 상승 여력은 다른 질문",
+      "current_purpose": [
+        "미래 가격이 높을 후보 ≠ 가장 높은 수익률",
+        "실제 진입가격과 주변 대안을 함께 비교"
+      ],
+      "replacement_id": "entry_vs_existing_prices",
+      "replacement_visual": "세 공고가와 실제 주변6단지 중위값 지도",
+      "message_specific_execution": "확인된 공고가 사례/주변 실거래 위치라는 서로 다른 근거를 분리. 대장/상승률 순위·미래 수익 숫자 없음."
+    },
+    {
+      "unit_id": "M004_013",
+      "start_frame": 13596,
+      "end_frame": 13747,
+      "start_s": 453.2,
+      "end_s": 458.23333333333335,
+      "duration_s": 5.033333333333333,
+      "narration": "나중에 더 높은 가격으로 거래될 만한 단지를 골라도, 처음부터 많이 지불했다면 내 가격 대비 여력은 작을 수 있죠.",
+      "caption": "처음부터 많이 지불했다면 내 가격 대비 여력은 작을 수 있죠.",
+      "current_title": "가격 수준과 상승 여력은 다른 질문",
+      "current_purpose": [
+        "미래 가격이 높을 후보 ≠ 가장 높은 수익률",
+        "실제 진입가격과 주변 대안을 함께 비교"
+      ],
+      "replacement_id": "entry_vs_existing_prices",
+      "replacement_visual": "세 공고가와 실제 주변6단지 중위값 지도",
+      "message_specific_execution": "확인된 공고가 사례/주변 실거래 위치라는 서로 다른 근거를 분리. 대장/상승률 순위·미래 수익 숫자 없음."
+    },
+    {
+      "unit_id": "M004_014",
+      "start_frame": 13747,
+      "end_frame": 13992,
+      "start_s": 458.23333333333335,
+      "end_s": 466.4,
+      "duration_s": 8.166666666666666,
+      "narration": "반대로 상대적으로 낮은 금액에서 출발한 단지가 생활권을 채워 가면 다른 경쟁력이 생길 수 있습니다.",
+      "caption": "반대로 상대적으로 낮은 금액에서 출발한 단지가 생활권을 채워 가면 다른 경쟁력이 생길 수 있습니다.",
+      "current_title": "가격 수준과 상승 여력은 다른 질문",
+      "current_purpose": [
+        "미래 가격이 높을 후보 ≠ 가장 높은 수익률",
+        "실제 진입가격과 주변 대안을 함께 비교"
+      ],
+      "replacement_id": "completion_evidence",
+      "replacement_visual": "실제 LH 후보면·공원·학교·업무용지+입주일정",
+      "message_specific_execution": "계획면과 입주 예정 시점을 말할 때만 순차 강조. 가상 완공조감도/미래가격곡선 없음."
+    },
+    {
+      "unit_id": "M004_015",
+      "start_frame": 13992,
+      "end_frame": 14150,
+      "start_s": 466.4,
+      "end_s": 471.6666666666667,
+      "duration_s": 5.266666666666667,
+      "narration": "다음 주변 거래표에서는 창릉이 무엇과 경쟁하는지 보겠습니다.",
+      "caption": "다음 주변 거래표에서는 창릉이 무엇과 경쟁하는지 보겠습니다.",
+      "current_title": "가격 수준과 상승 여력은 다른 질문",
+      "current_purpose": [
+        "미래 가격이 높을 후보 ≠ 가장 높은 수익률",
+        "실제 진입가격과 주변 대안을 함께 비교"
+      ],
+      "replacement_id": "resale_descending",
+      "replacement_visual": "기존6단지 내림차순 실거래표→동일실제지도",
+      "message_specific_execution": "기존 검수된6가격/거래건수를 그대로 연결."
+    },
+    {
+      "unit_id": "M005_001",
+      "start_frame": 23132,
+      "end_frame": 23300,
+      "start_s": 771.0666666666667,
+      "end_s": 776.6666666666666,
+      "duration_s": 5.6,
+      "narration": "생활시설은 그 수요가 계속 머물 이유를 만드는 쪽에서 보겠습니다.",
+      "caption": "생활시설은 그 수요가 계속 머물 이유를 만드는 쪽에서 보겠습니다.",
+      "current_title": "생활시설은 정착 수요를 보조하는 조건",
+      "current_purpose": [
+        "상권·학교·공원은 실제 이용 시점으로 확인",
+        "기존 생활권 수요 · 진입가격 · 직장 접근과 함께"
+      ],
+      "replacement_id": "life_parcels",
+      "replacement_visual": "실제 S4 상세필지의 상업·학교·공원면과 전체locator",
+      "message_specific_execution": "구체적 시설면을 색으로 분리하고 말하는 항목만 강조. 실제개장/개교 확정처럼 표현하지 않음."
+    },
+    {
+      "unit_id": "M005_002",
+      "start_frame": 23300,
+      "end_frame": 23339,
+      "start_s": 776.6666666666666,
+      "end_s": 777.9666666666667,
+      "duration_s": 1.3,
+      "narration": "상권과 학교, 공원이 채워지면 출퇴근 외에도 일상에서 선택할 이유가 생기겠죠.",
+      "caption": "상권과 학교,",
+      "current_title": "생활시설은 정착 수요를 보조하는 조건",
+      "current_purpose": [
+        "상권·학교·공원은 실제 이용 시점으로 확인",
+        "기존 생활권 수요 · 진입가격 · 직장 접근과 함께"
+      ],
+      "replacement_id": "life_parcels",
+      "replacement_visual": "실제 S4 상세필지의 상업·학교·공원면과 전체locator",
+      "message_specific_execution": "구체적 시설면을 색으로 분리하고 말하는 항목만 강조. 실제개장/개교 확정처럼 표현하지 않음."
+    },
+    {
+      "unit_id": "M005_002",
+      "start_frame": 23339,
+      "end_frame": 23520,
+      "start_s": 777.9666666666667,
+      "end_s": 784.0,
+      "duration_s": 6.033333333333333,
+      "narration": "상권과 학교, 공원이 채워지면 출퇴근 외에도 일상에서 선택할 이유가 생기겠죠.",
+      "caption": "공원이 채워지면 출퇴근 외에도 일상에서 선택할 이유가 생기겠죠.",
+      "current_title": "생활시설은 정착 수요를 보조하는 조건",
+      "current_purpose": [
+        "상권·학교·공원은 실제 이용 시점으로 확인",
+        "기존 생활권 수요 · 진입가격 · 직장 접근과 함께"
+      ],
+      "replacement_id": "life_parcels",
+      "replacement_visual": "실제 S4 상세필지의 상업·학교·공원면과 전체locator",
+      "message_specific_execution": "구체적 시설면을 색으로 분리하고 말하는 항목만 강조. 실제개장/개교 확정처럼 표현하지 않음."
+    },
+    {
+      "unit_id": "M005_003",
+      "start_frame": 23520,
+      "end_frame": 23671,
+      "start_s": 784.0,
+      "end_s": 789.0333333333333,
+      "duration_s": 5.033333333333333,
+      "narration": "다만 학교 하나의 일정으로 대장 후보를 정하기는 어렵습니다.",
+      "caption": "다만 학교 하나의 일정으로 대장 후보를 정하기는 어렵습니다.",
+      "current_title": "생활시설은 정착 수요를 보조하는 조건",
+      "current_purpose": [
+        "상권·학교·공원은 실제 이용 시점으로 확인",
+        "기존 생활권 수요 · 진입가격 · 직장 접근과 함께"
+      ],
+      "replacement_id": "life_parcels",
+      "replacement_visual": "실제 S4 상세필지의 상업·학교·공원면과 전체locator",
+      "message_specific_execution": "구체적 시설면을 색으로 분리하고 말하는 항목만 강조. 실제개장/개교 확정처럼 표현하지 않음."
+    },
+    {
+      "unit_id": "M005_012",
+      "start_frame": 25692,
+      "end_frame": 25843,
+      "start_s": 856.4,
+      "end_s": 861.4333333333333,
+      "duration_s": 5.033333333333333,
+      "narration": "오늘 대장 후보를 고르는 기준은 기존 수요와 만나는 위치, 취득가격, 업무지 접근성입니다.",
+      "caption": "오늘 대장 후보를 고르는 기준은 기존 수요와 만나는 위치,",
+      "current_title": "생활시설은 정착 수요를 보조하는 조건",
+      "current_purpose": [
+        "상권·학교·공원은 실제 이용 시점으로 확인",
+        "기존 생활권 수요 · 진입가격 · 직장 접근과 함께"
+      ],
+      "replacement_id": "life_as_support",
+      "replacement_visual": "실제3후보면과 공고가/업무지표의 근거 썸네일",
+      "message_specific_execution": "주기준(위치/진입가격/직장) 근거3개를 먼저, 학교 실제필지는 작은 보조로 유지. 새 이사달력 없음."
+    },
+    {
+      "unit_id": "M005_012",
+      "start_frame": 25843,
+      "end_frame": 25875,
+      "start_s": 861.4333333333333,
+      "end_s": 862.5,
+      "duration_s": 1.0666666666666667,
+      "narration": "오늘 대장 후보를 고르는 기준은 기존 수요와 만나는 위치, 취득가격, 업무지 접근성입니다.",
+      "caption": "취득가격,",
+      "current_title": "생활시설은 정착 수요를 보조하는 조건",
+      "current_purpose": [
+        "상권·학교·공원은 실제 이용 시점으로 확인",
+        "기존 생활권 수요 · 진입가격 · 직장 접근과 함께"
+      ],
+      "replacement_id": "life_as_support",
+      "replacement_visual": "실제3후보면과 공고가/업무지표의 근거 썸네일",
+      "message_specific_execution": "주기준(위치/진입가격/직장) 근거3개를 먼저, 학교 실제필지는 작은 보조로 유지. 새 이사달력 없음."
+    },
+    {
+      "unit_id": "M005_012",
+      "start_frame": 25875,
+      "end_frame": 25938,
+      "start_s": 862.5,
+      "end_s": 864.6,
+      "duration_s": 2.1,
+      "narration": "오늘 대장 후보를 고르는 기준은 기존 수요와 만나는 위치, 취득가격, 업무지 접근성입니다.",
+      "caption": "업무지 접근성입니다.",
+      "current_title": "생활시설은 정착 수요를 보조하는 조건",
+      "current_purpose": [
+        "상권·학교·공원은 실제 이용 시점으로 확인",
+        "기존 생활권 수요 · 진입가격 · 직장 접근과 함께"
+      ],
+      "replacement_id": "life_as_support",
+      "replacement_visual": "실제3후보면과 공고가/업무지표의 근거 썸네일",
+      "message_specific_execution": "주기준(위치/진입가격/직장) 근거3개를 먼저, 학교 실제필지는 작은 보조로 유지. 새 이사달력 없음."
+    },
+    {
+      "unit_id": "M005_013",
+      "start_frame": 25938,
+      "end_frame": 26067,
+      "start_s": 864.6,
+      "end_s": 868.9,
+      "duration_s": 4.3,
+      "narration": "학교는 그 판단을 보완하는 항목으로 두겠습니다.",
+      "caption": "학교는 그 판단을 보완하는 항목으로 두겠습니다.",
+      "current_title": "생활시설은 정착 수요를 보조하는 조건",
+      "current_purpose": [
+        "상권·학교·공원은 실제 이용 시점으로 확인",
+        "기존 생활권 수요 · 진입가격 · 직장 접근과 함께"
+      ],
+      "replacement_id": "life_as_support",
+      "replacement_visual": "실제3후보면과 공고가/업무지표의 근거 썸네일",
+      "message_specific_execution": "주기준(위치/진입가격/직장) 근거3개를 먼저, 학교 실제필지는 작은 보조로 유지. 새 이사달력 없음."
+    },
+    {
+      "unit_id": "M009_007",
+      "start_frame": 27048,
+      "end_frame": 27203,
+      "start_s": 901.6,
+      "end_s": 906.7666666666667,
+      "duration_s": 5.166666666666667,
+      "narration": "지금의 통근 조사에서도 모든 업무지에 가장 빠르지는 않았죠.",
+      "caption": "지금의 통근 조사에서도 모든 업무지에 가장 빠르지는 않았죠.",
+      "current_title": "S4 · 가격 수준 후보의 조건",
+      "current_purpose": [
+        "현재 통근이 모든 업무지에서 최단인 것은 아닙니다",
+        "높은 진입가격을 정당화할 수요가 붙는지 확인"
+      ],
+      "replacement_id": "commute_s4_comparison",
+      "replacement_visual": "기존3×5 현재통근표에서 S4열·해당목적지 강조",
+      "message_specific_execution": "S4 모든 목적지 최단 아님을 실제15값으로 확인. 표/지도 겹치지 않음."
+    },
+    {
+      "unit_id": "M009_023",
+      "start_frame": 30722,
+      "end_frame": 30853,
+      "start_s": 1024.0666666666666,
+      "end_s": 1028.4333333333334,
+      "duration_s": 4.366666666666666,
+      "narration": "다음 하남 교산도 같은 기준으로 살펴보겠습니다.",
+      "caption": "다음 하남 교산도 같은 기준으로 살펴보겠습니다.",
+      "current_title": "다음 편 · 하남 교산",
+      "current_purpose": [
+        "데이터로 보는 부동산",
+        "다음 도시에서도 같은 기준으로 비교합니다"
+      ],
+      "replacement_id": "series_evidence_cta",
+      "replacement_visual": "검증된 전편소스+창릉지도/가격표 썸네일과 채널CTA",
+      "message_specific_execution": "교산은 다음편명만 편집텍스트로 표시. 검증되지 않은 교산 지도·현장 이미지 생성/삽입 금지. 마지막무발화홀드도 같은 근거화면 유지."
+    },
+    {
+      "unit_id": "M009_024",
+      "start_frame": 30853,
+      "end_frame": 30972,
+      "start_s": 1028.4333333333334,
+      "end_s": 1032.4,
+      "duration_s": 3.966666666666667,
+      "narration": "도움이 되셨다면 구독과 좋아요 부탁드립니다.",
+      "caption": "도움이 되셨다면 구독과 좋아요 부탁드립니다.",
+      "current_title": "다음 편 · 하남 교산",
+      "current_purpose": [
+        "데이터로 보는 부동산",
+        "구독하고 함께 도시의 변화를 살펴보세요"
+      ],
+      "replacement_id": "series_evidence_cta",
+      "replacement_visual": "검증된 전편소스+창릉지도/가격표 썸네일과 채널CTA",
+      "message_specific_execution": "교산은 다음편명만 편집텍스트로 표시. 검증되지 않은 교산 지도·현장 이미지 생성/삽입 금지. 마지막무발화홀드도 같은 근거화면 유지."
+    },
+    {
+      "unit_id": "M009_025",
+      "start_frame": 30972,
+      "end_frame": 31058,
+      "start_s": 1032.4,
+      "end_s": 1035.2666666666667,
+      "duration_s": 2.8666666666666667,
+      "narration": "시청해 주셔서 감사합니다.",
+      "caption": "시청해 주셔서 감사합니다.",
+      "current_title": "다음 편 · 하남 교산",
+      "current_purpose": [
+        "데이터로 보는 부동산",
+        "시청해 주셔서 감사합니다"
+      ],
+      "replacement_id": "series_evidence_cta",
+      "replacement_visual": "검증된 전편소스+창릉지도/가격표 썸네일과 채널CTA",
+      "message_specific_execution": "교산은 다음편명만 편집텍스트로 표시. 검증되지 않은 교산 지도·현장 이미지 생성/삽입 금지. 마지막무발화홀드도 같은 근거화면 유지."
+    },
+    {
+      "unit_id": "last_hold",
+      "start_frame": 31058,
+      "end_frame": 31126,
+      "start_s": 1035.2666666666667,
+      "end_s": 1037.5333333333333,
+      "duration_s": 2.2666666666666666,
+      "narration": "[마지막발화후무음홀드]",
+      "caption": "",
+      "current_title": "다음 편 · 하남 교산",
+      "current_purpose": [
+        "데이터로 보는 부동산",
+        "시청해 주셔서 감사합니다"
+      ],
+      "replacement_id": "series_evidence_cta",
+      "replacement_visual": "검증된 전편소스+창릉지도/가격표 썸네일과 채널CTA",
+      "message_specific_execution": "교산은 다음편명만 편집텍스트로 표시. 검증되지 않은 교산 지도·현장 이미지 생성/삽입 금지. 마지막무발화홀드도 같은 근거화면 유지."
+    }
+  ],
+  "representative_groups": [
+    {
+      "replacement_id": "candidate_question",
+      "start_frame": 0,
+      "end_frame": 459,
+      "unit_ids": [
+        "M000_001",
+        "M000_002",
+        "M000_002"
+      ],
+      "actual_frame": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\visual-review-v8\\v7_actual_note\\01_candidate_question_f45.png",
+      "seek_frame": 45,
+      "seek_s": 1.5
+    },
+    {
+      "replacement_id": "commute_method",
+      "start_frame": 5038,
+      "end_frame": 5697,
+      "unit_ids": [
+        "M002_007",
+        "M002_007",
+        "M002_008",
+        "M002_008",
+        "M002_008"
+      ],
+      "actual_frame": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\visual-review-v8\\v7_actual_note\\02_commute_method_f5083.png",
+      "seek_frame": 5083,
+      "seek_s": 169.43333333333334
+    },
+    {
+      "replacement_id": "rail_entry_evidence",
+      "start_frame": 10153,
+      "end_frame": 10973,
+      "unit_ids": [
+        "M003_011",
+        "M003_012",
+        "M003_012",
+        "M003_013",
+        "M003_013",
+        "M003_014"
+      ],
+      "actual_frame": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\visual-review-v8\\v7_actual_note\\03_rail_entry_evidence_f10198.png",
+      "seek_frame": 10198,
+      "seek_s": 339.93333333333334
+    },
+    {
+      "replacement_id": "actual_price_delta",
+      "start_frame": 12648,
+      "end_frame": 12775,
+      "unit_ids": [
+        "M004_009"
+      ],
+      "actual_frame": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\visual-review-v8\\v7_actual_note\\04_actual_price_delta_f12693.png",
+      "seek_frame": 12693,
+      "seek_s": 423.1
+    },
+    {
+      "replacement_id": "price_and_location",
+      "start_frame": 12775,
+      "end_frame": 13066,
+      "unit_ids": [
+        "M004_010",
+        "M004_010"
+      ],
+      "actual_frame": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\visual-review-v8\\v7_actual_note\\05_price_and_location_f12820.png",
+      "seek_frame": 12820,
+      "seek_s": 427.3333333333333
+    },
+    {
+      "replacement_id": "original_price_conditions",
+      "start_frame": 13066,
+      "end_frame": 13299,
+      "unit_ids": [
+        "M004_011",
+        "M004_011"
+      ],
+      "actual_frame": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\visual-review-v8\\v7_actual_note\\06_original_price_conditions_f13111.png",
+      "seek_frame": 13111,
+      "seek_s": 437.03333333333336
+    },
+    {
+      "replacement_id": "entry_vs_existing_prices",
+      "start_frame": 13299,
+      "end_frame": 13747,
+      "unit_ids": [
+        "M004_012",
+        "M004_013",
+        "M004_013"
+      ],
+      "actual_frame": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\visual-review-v8\\v7_actual_note\\07_entry_vs_existing_prices_f13344.png",
+      "seek_frame": 13344,
+      "seek_s": 444.8
+    },
+    {
+      "replacement_id": "completion_evidence",
+      "start_frame": 13747,
+      "end_frame": 13992,
+      "unit_ids": [
+        "M004_014"
+      ],
+      "actual_frame": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\visual-review-v8\\v7_actual_note\\08_completion_evidence_f13792.png",
+      "seek_frame": 13792,
+      "seek_s": 459.73333333333335
+    },
+    {
+      "replacement_id": "resale_descending",
+      "start_frame": 13992,
+      "end_frame": 14150,
+      "unit_ids": [
+        "M004_015"
+      ],
+      "actual_frame": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\visual-review-v8\\v7_actual_note\\09_resale_descending_f14037.png",
+      "seek_frame": 14037,
+      "seek_s": 467.9
+    },
+    {
+      "replacement_id": "life_parcels",
+      "start_frame": 23132,
+      "end_frame": 23671,
+      "unit_ids": [
+        "M005_001",
+        "M005_002",
+        "M005_002",
+        "M005_003"
+      ],
+      "actual_frame": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\visual-review-v8\\v7_actual_note\\10_life_parcels_f23177.png",
+      "seek_frame": 23177,
+      "seek_s": 772.5666666666667
+    },
+    {
+      "replacement_id": "life_as_support",
+      "start_frame": 25692,
+      "end_frame": 26067,
+      "unit_ids": [
+        "M005_012",
+        "M005_012",
+        "M005_012",
+        "M005_013"
+      ],
+      "actual_frame": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\visual-review-v8\\v7_actual_note\\11_life_as_support_f25737.png",
+      "seek_frame": 25737,
+      "seek_s": 857.9
+    },
+    {
+      "replacement_id": "commute_s4_comparison",
+      "start_frame": 27048,
+      "end_frame": 27203,
+      "unit_ids": [
+        "M009_007"
+      ],
+      "actual_frame": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\visual-review-v8\\v7_actual_note\\12_commute_s4_comparison_f27093.png",
+      "seek_frame": 27093,
+      "seek_s": 903.1
+    },
+    {
+      "replacement_id": "series_evidence_cta",
+      "start_frame": 30722,
+      "end_frame": 31126,
+      "unit_ids": [
+        "M009_023",
+        "M009_024",
+        "M009_025",
+        "last_hold"
+      ],
+      "actual_frame": "video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\visual-review-v8\\v7_actual_note\\13_series_evidence_cta_f30767.png",
+      "seek_frame": 30767,
+      "seek_s": 1025.5666666666666
+    }
+  ],
+  "scope": "v8 visual proposals only; no new full film or voice generation"
+}

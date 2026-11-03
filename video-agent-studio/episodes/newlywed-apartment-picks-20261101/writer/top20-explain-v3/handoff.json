@@ -1,0 +1,151 @@
+{
+  "task_id": "TOP20-v3-SCRIPT-final-v6-718066312",
+  "role": "writer",
+  "status": "writer_complete_new_script_approval_pending",
+  "input_revisions": {
+    "director/top20-enhance-v2/script_v5.md": {
+      "sha256": "2d849be531d1b165534bee465f0468e605a4b0e50728e8e2034db86d84c8c31b"
+    },
+    "director/top20-enhance-v2/scene_proposals_v5.json": {
+      "sha256": "8c18181b709cb2c7830ab43f06d8dcda2d83157839be4942d62b221cc4b11148"
+    },
+    "research/top20-8min-v2/combined_facts.json": {
+      "sha256": "f83d391dde8ca73898e87c729ad44c00e15e90e07c5cbbca25579eea83bbb541"
+    },
+    "research/top20-8min-v2/top20.json": {
+      "sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b"
+    },
+    "director/top20-explain-v3/requirements.json": {
+      "sha256": "e55e226a460c7ef019b810c6c65ca7ec71dab77999dd202166c0f2db08c52b79"
+    },
+    "director/top20-explain-v3/제작계획.md": {
+      "sha256": "6de50997d29a88e2fb98496ca1e1c4bb3ff8017a1209d003d6dd3f0172d66cb6"
+    },
+    "research/top20-explain-v3/regions/facts.json": {
+      "sha256": "6e1381c4be5c2876f30b1bff419f61606e7d809a960f873098d5e324a8275a70"
+    },
+    "research/top20-explain-v3/regions/narration_suggestions.json": {
+      "sha256": "017bd74ed00b340fe4de75d64b1a871aaa4ad85ab1aeb216cb2d2550f8112624"
+    },
+    "research/top20-explain-v3/regions/region_features.md": {
+      "sha256": "ccf1e91d79c5dcfb17b42f066792041178d587ef9f5b66adab3993e2a6c79be2"
+    },
+    "research/top20-explain-v3/regions/handoff.json": {
+      "sha256": "461f035b2e810ff6377f9282fd942095050916c7ee916e3861b518658e382144"
+    },
+    "research/top20-explain-v3/regions/validation.json": {
+      "sha256": "fca096c3f9f3a9d188adcefed565ba8099d4ebd90d175d3f8ff4b29f84bdd172"
+    },
+    "research/top20-explain-v3/director_supplement.json": {
+      "sha256": "0058cbe2fb373e7a6d72550f5c7d3370a1a2522239eb8dab90e7b3447cab5281"
+    },
+    "director/top20-explain-v3/price_panel_data.json": {
+      "sha256": "844f0ee211dfc89094b8160558d72e0f8f001e8072d361123447e8c1ebfacdef"
+    },
+    "research/top20-explain-v3/prices/final-api-20261103-v2/writer_price_values.json": {
+      "sha256": "bc25425d52e91728922b31bcd4ab869ea155d549366d0a21aab8f2e60eb47f7d"
+    },
+    "research/top20-explain-v3/prices/final-api-20261103-v2/methodology.json": {
+      "sha256": "b98facbcb8d53d472cd175abbbbb659d2f5a849ad72d43f9cf0339eb3cc37d1d"
+    },
+    "C:\\projects\\realestate_reco\\analysis\\newlywed_region_2024\\수도권_신혼부부_순위.md": {
+      "sha256": "3ecb69aa6e5819e9164242111ca25b39593b08ca235c982f89513e40cfc16d2a"
+    }
+  },
+  "outputs": [
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-explain-v3/script_v6.md",
+      "sha256": "4259f50a9c5cadbadd864d838559a16f85e07316818ddcb31ce40939fbccac38"
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-explain-v3/scene_proposals_v6.json",
+      "sha256": "8beec59448e180617327f17913aaa25277b3152769a1815cbdc493351003803e"
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-explain-v3/verification_v6.json",
+      "sha256": "0b399f58109e1ab21cee1b2bc68e4b03483c073719934add3d607d6f6270f963"
+    }
+  ],
+  "affected_scene_ids": [
+    "O001",
+    "O002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "I001",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012",
+    "I002",
+    "S013",
+    "S014",
+    "S015",
+    "S016",
+    "S017",
+    "S018",
+    "S019",
+    "S020",
+    "S021",
+    "S022",
+    "C001",
+    "E001"
+  ],
+  "checks": [
+    {
+      "check": "final text/claim/screen-switch/price values and counts/current SHA",
+      "result": "passed",
+      "evidence": "verification_v6.json:29checks;0failures;20regions/20complexes;26scenes/133sentences;0pending"
+    },
+    {
+      "check": "raw XML reaggregation/coordinates/photo pixels/audio/frames",
+      "result": "not_performed_by_writer",
+      "evidence": "parent/research verified records reused with their stated scope"
+    }
+  ],
+  "open_issue_ids": [
+    "NEW_V6_USER_SCRIPT_APPROVAL",
+    "INDEPENDENT_INTEGRATED_SCRIPT_QA"
+  ],
+  "next_role": "director:review-reading-MD/representative-preview/formal-script-decision;independentQA",
+  "summary_ko": "20지역 특징·랜드마크·부모LOCK 가격v2 통합 최종 v6.26장면133문장,미작성0.최종 요청으로O002-02에혼인신고후5년미경과기준만 추가했으며 다른132문장/읽기문 유지.가격40개/각n/동명/claim/화면전환ID/최신SHA 등29검사 통과.새 대본 승인 대기본;부모의읽기MD·대표시안·formal script결정 다음단계.실제음성 우선,8분초과 유지.TTS/렌더/업로드 없음.",
+  "price_panel_current_sha256": "844f0ee211dfc89094b8160558d72e0f8f001e8072d361123447e8c1ebfacdef",
+  "price_source_revision": "final-api-20261103-v2",
+  "valid_price_rows": 14303,
+  "pricing_conditions": "2026-05-01~10-31계약;2026-11-03조회;83<=㎡<=85양끝포함;전층;중개+직거래;표시해제행만제외;정상행보존;10월신고진행",
+  "geography": "2024 ranking scope maintained;R01 current two-code API responses combined for historical Seo-gu scope per parent lock;no additional legacy-code rows",
+  "approval_state": {
+    "current_authorization": "기획/자료/대본보강",
+    "new_complete_v6_script_user_approval": "pending",
+    "representative_preview": "director_next",
+    "tts_allowed": false,
+    "main_render_allowed": false,
+    "upload_authorized_by_this_task": false
+  },
+  "timing": {
+    "provisional_target_s": [
+      780,
+      960
+    ],
+    "actual_duration_s": null,
+    "required_actual_greater_than_s": 480,
+    "padding_repetition_allowed": false,
+    "timing_locked": false
+  },
+  "write_scope": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-explain-v3",
+  "prior_v5_shared_state_and_approved_media_changed": false,
+  "actual_listening_performed": false,
+  "continuous_playback_performed": false,
+  "tts_render_upload_performed": false,
+  "created_at": "2026-11-03T01:25:44.919068+09:00",
+  "updated_at": "2026-11-03T01:26:58.861923+09:00",
+  "last_change": {
+    "sentence_id": "O002-02",
+    "text": "2024년 11월 1일 거주지를 기준으로, 혼인신고 후 5년이 지나지 않은 부부를 초혼과 재혼을 합쳐 쌍 단위로 비교합니다.",
+    "other_132_sentence_text_and_reading_unchanged": true,
+    "verification": "생성 전후133문장ID 및 text/reading_text 대조;변경ID는O002-02 한개.최종29검사 재실행 통과."
+  }
+}

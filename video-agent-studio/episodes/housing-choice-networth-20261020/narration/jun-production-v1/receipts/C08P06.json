@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C08P06",
+  "scene_id": "C08",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:07:40.801Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "5433b87d2128c8c242f7dc67022cba040d10250ee7ddab79d413c3c3ba6cae33",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "월세 수준만 바꿔도 결과가 달라집니다. 같은 보증금에서 월세를 백만 원 대신 백이십만 원으로 높이면 월세 가구의 순자산은 약 육억오천육백만 원으로 줄어, 전세의 약 육억오천구백만 원보다 작아집니다. 실제 같은 집에서 가능한 계약 조건인지는 시장 자료로 확인해야 하며, 이 비교는 임대료 가정의 영향을 보여줍니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 174,
+  "characters": 174,
+  "actual_credits": 70,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19183,
+    "character_limit": 40000,
+    "included_remaining": 20817,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:07:16.662Z",
+  "local_shadow_remaining_before": 20478,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "0RKLH9HFcReMUFNPlBHd",
+    "x-request-id": null,
+    "character-cost": "70",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:07:40 GMT"
+  },
+  "pcm_samples": 945504,
+  "pcm_duration_s": 21.44,
+  "provider_last_spoken_end_s": 21.52,
+  "artifact_sha256": {
+    "paragraphs/C08P06/audio.mp3": "52fba05be0f8ffe4b6f1bbe833f6265cbbd63225ca6e2068e1ffc64160c67995",
+    "paragraphs/C08P06/audio.wav": "f39bddebd87f86e399cb771a6ab60802d388249bc1ab0b4ca01b1a263d010362",
+    "paragraphs/C08P06/alignment.json": "9b885635122c07a576effd5142e80d827dead5299fdd70a1d435dc449b0303f9",
+    "paragraphs/C08P06/normalized_alignment.json": "9b885635122c07a576effd5142e80d827dead5299fdd70a1d435dc449b0303f9"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 20408,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:07:45.693Z"
+}

@@ -1,0 +1,11 @@
+{
+  "issue_id":"PRICE-DATA03",
+  "affected_claim_ids":["CN-PRICE-6b9e26142b9eb6a3"],
+  "affected_scene_ids":["S050","M008"],
+  "problem":"기존master는동일계약일/면적/층다른금액정상응답2행중1행누락",
+  "evidence":"삼송2차아이파크 2026-08-28 84.739㎡ 10층 94,500만원 행이기존및새raw에존재하나master에없음. run_step3.py dedup_trades는apt_id/deal_date/area_m2/floor별최고금액만보존",
+  "proposal":"본편은prices-v2공식raw item직접집계9.20억원n11사용. 공유파이프라인수정은별도작업으로검토",
+  "impact":"구집계9.17억원n10을새가격차트에재사용금지. 전지역의동일키충돌영향은이번담당범위밖",
+  "status":"corrected_for_this_episode_only",
+  "checked_on":"2026-10-16"
+}

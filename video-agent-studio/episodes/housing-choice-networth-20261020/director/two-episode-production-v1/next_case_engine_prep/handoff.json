@@ -1,0 +1,63 @@
+{
+  "task_id": "next-case-engine-preparation-v1",
+  "role": "research_case_calculation",
+  "as_of_kst": "2026-10-26",
+  "status": "연구용계산완료_독립QA전",
+  "outputs": [
+    "assumptions.json",
+    "cases.json",
+    "engine.py",
+    "handoff.json",
+    "results.json",
+    "tests/test_engine.py"
+  ],
+  "input_versions": "results.json의 policy_inputs 및 input_sha256; 연구v2/총괄 editorial plan SHA 대조 일치",
+  "verification": {
+    "tests": 20,
+    "failures": 0,
+    "errors": 0,
+    "TDD": "미구현19실패 확인→구현→출력통합 오류1수정→최종20통과",
+    "coverage": "독립360회상환(0/2.9/4/7%)·원금합계;부채연600만;세금6/7/7.5/9/12;9/12복비±1원;15/25상한±1원;binding;solver8개±1만원",
+    "artifacts": "JSON·입력SHA·30사례·8solver·납품경로검증 통과"
+  },
+  "run": "tools/python311/python.exe -X utf8 -B engine.py; 같은 폴더에서 -m unittest discover -s tests -v",
+  "key_results": [
+    {
+      "profile_id": "A_ordinary",
+      "deduction_krw": 0,
+      "bank_max_krw": 355050000,
+      "monthly170_max_krw": 355050000
+    },
+    {
+      "profile_id": "A_ordinary",
+      "deduction_krw": 55000000,
+      "bank_max_krw": 265680000,
+      "monthly170_max_krw": 265680000
+    },
+    {
+      "profile_id": "A_first",
+      "deduction_krw": 0,
+      "bank_max_krw": 680100000,
+      "monthly170_max_krw": 565860000
+    },
+    {
+      "profile_id": "A_first",
+      "deduction_krw": 55000000,
+      "bank_max_krw": 518380000,
+      "monthly170_max_krw": 518380000
+    }
+  ],
+  "open_gap_ids": [
+    "CE_G01",
+    "CE_G02",
+    "CE_G03",
+    "CE_G04",
+    "CE_G05",
+    "CE_G06"
+  ],
+  "notes": "기본표무감면.기타150만은 계획예산.신생아2.9는 초기5년 기본금리;디딤돌/보금자리4%는 계산가정.보금자리55/신생아9억C0는 반사실민감도.세율반올림은 지자체%4자리 예시 가정이며 CE_G06 서울실무 미확인.",
+  "affected_scene_ids": [],
+  "next_role": "director → 독립수치·정책QA; 첫privateupload후 다음편 브리프 확정",
+  "paid_api_calls": 0,
+  "boundaries": "지정폴더6파일만.새episode·대본·미디어·TTS·upload·state/scenes·기존모형 변경 없음."
+}

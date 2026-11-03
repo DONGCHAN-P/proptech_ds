@@ -1,0 +1,28 @@
+{
+  "task_id": "TH001-thumbnail-rework-20261030-bounded-review",
+  "status": "completed",
+  "outputs": [
+    "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/visual/thumbnail-rework-20261030/review/review.json"
+  ],
+  "input_versions": {
+    "candidate": "TH001_affordable_photo_v1.png",
+    "checked_sha256": {
+      "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/TH001_affordable_photo_v1.png": "e8a83381203874fe2768e6bfd57b7b490f65f6fd75ceabd9c635d0592d1fc096",
+      "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/mobile_320.png": "ed468c44607c976d22c4088ce98f6c4e01be5e3c9e4612daee336313e924f48b",
+      "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/outputs/thumbnail-rework-20261030/mobile_160.png": "1bf5c5fb94d12812bd53307605efb1643c8eb90527b8e2e604590d2362e50499",
+      "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/outputs/jun-release-v1/thumbnail.png": "ddeae250181103ca29b5f2c81461cd222d75875f8f3ad97e014ab8a07bc0b085"
+    },
+    "state_active_revision": "jun-quality-v2",
+    "state_script_revision": "user-authored-48-paragraphs",
+    "source_qa_sha256": "2864c76df2b722e53468da3f1857dc4e0d7a50f5532f8322cdf91967d795efb5"
+  },
+  "validation": "Previously viewed the full-size candidate, 320px and 160px versions, and reference thumbnail with view_image at original detail. PNG header dimensions and SHA256 were checked in that review. critical=0, required=0. This edit repairs descriptive text only; no media re-review was performed.",
+  "unresolved": [],
+  "affected_scene_ids": [
+    "TH001"
+  ],
+  "next_owner": "director / parent",
+  "summary": "No required corrections in the four requested checks. Supporting text is small at 160px, while the cash range and main question remain readable. Full-script verification, real-location verification, and CTR effects are outside scope.",
+  "write_scope": "visual/thumbnail-rework-20261030/review/**",
+  "completed_at_utc": "2026-10-29T15:12:06.991966+00:00"
+}

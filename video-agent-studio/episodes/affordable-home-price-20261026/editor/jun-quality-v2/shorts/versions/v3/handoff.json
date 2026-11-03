@@ -1,0 +1,92 @@
+{
+  "task_id": "JUN-QUALITY-V2-TWO-PORTRAIT-SHORTS",
+  "role": "editor",
+  "status": "artifacts_complete_pending_parent_audiovisual_QA",
+  "summary": "홍보38.17초·계산요약51.47초 v3 두 편 완성. Jun 원음·세로 전용 모션·SRT·메타데이터·SHA·재현 코드 납품. 전체 디코딩·146개 글자 경계 통과, 44개 출력 표본 관찰. 독립 QA·청취·연속 재생·PRIVATE 업로드는 총괄 담당.",
+  "input_revisions": {
+    "script": "jun-user-script-v1",
+    "audio": "Jun existing chapter WAV",
+    "alignment": "provider_character_alignment_verified",
+    "frozen_inputs": "input_versions.json"
+  },
+  "outputs": [
+    "outputs/jun-quality-v2/shorts/01_promo_jun_v3.mp4",
+    "outputs/jun-quality-v2/shorts/02_summary_jun_v3.mp4",
+    "outputs/jun-quality-v2/shorts/final_outputs.json",
+    "outputs/jun-quality-v2/shorts/publishing_metadata.json",
+    "editor/jun-quality-v2/shorts/edit_plan.json",
+    "editor/jun-quality-v2/shorts/placement_guide.md"
+  ],
+  "affected_scene_ids": [
+    "S02",
+    "S03",
+    "S25",
+    "S13",
+    "S14",
+    "S28"
+  ],
+  "checks": [
+    {
+      "check": "encoded_media_and_full_decode",
+      "result": "passed",
+      "evidence": "qa/portrait-shorts-v3-final/technical_report.json"
+    },
+    {
+      "check": "glyph_bounds_and_font_sizes_146",
+      "result": "passed",
+      "evidence": "layout_validation.json"
+    },
+    {
+      "check": "sampled_encoded_frames_19_plus_25",
+      "result": "inspected_no_required_visual_defect_found",
+      "evidence": "검수기록.md"
+    },
+    {
+      "check": "actual_listening_and_continuous_playback",
+      "result": "unchecked",
+      "evidence": "issue_SHORTS-QA-001.json"
+    },
+    {
+      "check": "independent_qa",
+      "result": "pending_parent",
+      "evidence": "issue_SHORTS-QA-001.json"
+    }
+  ],
+  "open_issue_ids": [
+    "SHORTS-QA-001"
+  ],
+  "next_role": "Sagan independent QA → parent director",
+  "new_external_calls": 0,
+  "new_paid_tts_calls": 0,
+  "upload_performed": false,
+  "framework_decision": {
+    "hyperframes_entry_skill_read": true,
+    "hyperframes_project_built": false,
+    "actual_implementation": "Python/Pillow native portrait frame composition + existing local FFmpeg",
+    "editable_project": "editor/jun-quality-v2/shorts/build_shorts.py",
+    "reason": "본 작업 지시가 기존 로컬 FFmpeg/HyperFrames 사용을 명시적으로 허용했다. HyperFrames 기본 경로를 읽은 뒤 위임된 제작 판단으로 FFmpeg 경로를 선택했다. 이미 고정된 Jun WAV/문자 정렬과 새 세로 도형·텍스트를 결정적 프레임 코드로 연결할 수 있었고, 외부 호출·설치·새 유료 생성 없이 납품할 수 있었다.",
+    "framework_equivalence_claim": false,
+    "render_evidence": "promo_render_command.json; summary_render_command.json; qa/portrait-shorts-v3-final/technical_report.json",
+    "hyperframes_usage": "unknown; CLI usage probe/설치/업데이트/렌더 호출은 수행하지 않음",
+    "report_only_no_rebuild": true
+  },
+  "coordination": {
+    "independent_reviewer_assigned_by_parent": "Sagan",
+    "independent_review_result": "pending; editor has not observed Sagan findings",
+    "hold": "기존 음성·소스·MP4 보존. QA 수정 요청 전 추가 제작 변경 없음."
+  },
+  "upload_handoff": {
+    "user_private_upload_authorized": true,
+    "authorization_basis": "최신 사용자/상위 담당 지시",
+    "requested_visibility": "private",
+    "editor_upload_performed": false,
+    "status": "reported_blocked; no verified upload URL",
+    "reported_blocks": [
+      "YouTube API invalid_grant",
+      "CUA safety stop prevents URL verification"
+    ],
+    "block_evidence_scope": "상위 담당이 최신 메시지로 전달한 상태. editor가 API/CUA를 직접 재실행하거나 독립 확인하지 않음.",
+    "owner": "parent director",
+    "retry_performed_for_this_report": false
+  }
+}

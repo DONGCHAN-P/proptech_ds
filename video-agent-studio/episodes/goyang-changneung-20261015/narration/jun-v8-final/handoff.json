@@ -1,0 +1,139 @@
+{
+  "role": "narration",
+  "status": "generated_measured_provider_aligned_listening_unverified",
+  "script_revision": "script-v8",
+  "audio_revision": "audio-v8-jun",
+  "voice": "Jun - Clear Korean Lecturer",
+  "voice_id": "4p6UA7mnodF5q7JFFrnW",
+  "model": "eleven_v4",
+  "budget_decision_id": "47f13757805b",
+  "input_versions": {
+    "outputs/script-review-v8/script_v8.md": "6ffc9fc4819460d4cf6f03fd3b28102e2864402b9965ca14e158230474963982",
+    "writer/revision-v8/narration_packet.json": "0bfbf1db8bae231b2549ae3389dd775f74f3ab0ba56bde4dacea40205e7a0d9c"
+  },
+  "manifest_sha256": "4536ba1ba13814b23d85040784e71f880f08311e28af535265a3423012412ed2",
+  "artifacts": [
+    "narration/jun-v8-final/generation_ledger.json",
+    "narration/jun-v8-final/segments.json",
+    "narration/jun-v8-final/timing_proposals.json",
+    "narration/jun-v8-final/captions.srt",
+    "outputs/production-v8-jun/audio/narration_v8_jun.wav",
+    "narration/jun-v8-final/account_reconciliation.json"
+  ],
+  "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\production-v8-jun\\audio\\narration_v8_jun.wav",
+  "audio_sha256": "fd71fc786c1266795b9bb78a1ae52dd1d9c34b3aa3102a221263fa33992d0933",
+  "duration_s": 812.8,
+  "scene_order": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M007",
+    "M006",
+    "M005",
+    "M009"
+  ],
+  "scene_count": 9,
+  "semantic_unit_count": 143,
+  "credits": {
+    "submitted_characters": 6543,
+    "provider_actual": 2618,
+    "first_balance": 28527,
+    "final_balance": 25909,
+    "remaining_cap": 5234,
+    "additional_cash_usd": 0,
+    "automatic_retry": false,
+    "account_delta": 2618,
+    "account_reconciled": true,
+    "remaining_submitted_character_allowance": 1309,
+    "remaining_cap_note": "5234 is credit cap headroom only; remaining submitted-text allowance is1309, and any correction requires manual authorization/no automatic retry."
+  },
+  "verification": {
+    "exact_original_alignment": true,
+    "exact_semantic_text_mapping": true,
+    "decoded_PCM": true,
+    "actual_listening": false,
+    "external_ASR_calls": 0
+  },
+  "changed_scene_ids": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M007",
+    "M006",
+    "M005",
+    "M009"
+  ],
+  "changed_sentences": [],
+  "timing_changes": [
+    {
+      "scene_id": "M000",
+      "old_duration_s": 55.935646,
+      "new_duration_s": 44.16,
+      "delta_s": -11.775646000000002
+    },
+    {
+      "scene_id": "M001",
+      "old_duration_s": 70.381769,
+      "new_duration_s": 55.52,
+      "delta_s": -14.861769000000002
+    },
+    {
+      "scene_id": "M002",
+      "old_duration_s": 132.227755,
+      "new_duration_s": 106.32,
+      "delta_s": -25.90775500000001
+    },
+    {
+      "scene_id": "M003",
+      "old_duration_s": 101.404127,
+      "new_duration_s": 79.68,
+      "delta_s": -21.724126999999996
+    },
+    {
+      "scene_id": "M004",
+      "old_duration_s": 104.392789,
+      "new_duration_s": 82.64,
+      "delta_s": -21.752788999999993
+    },
+    {
+      "scene_id": "M007",
+      "old_duration_s": 145.862313,
+      "new_duration_s": 118.32,
+      "delta_s": -27.542313000000007
+    },
+    {
+      "scene_id": "M006",
+      "old_duration_s": 147.367392,
+      "new_duration_s": 117.28,
+      "delta_s": -30.087391999999994
+    },
+    {
+      "scene_id": "M005",
+      "old_duration_s": 98.710386,
+      "new_duration_s": 78.96,
+      "delta_s": -19.750386000000006
+    },
+    {
+      "scene_id": "M009",
+      "old_duration_s": 168.125896,
+      "new_duration_s": 129.92,
+      "delta_s": -38.205896000000024
+    }
+  ],
+  "editor_notes": [
+    "All times start at narration zero; editor owns chapter/intro/outro offsets.",
+    "M000_004 end_s/scene_local_end_s is provider alignment for brand split; preserve PCM content around boundary.",
+    "Segments reference whole scene WAV plus scene_local_start_s/end_s; they are not individually generated unit files.",
+    "Keep three approved display-only school label replacements; literal approved narration unchanged.",
+    "Signal thresholds are measurements, not human-confirmed speech boundaries. Add at least 3s after last speech per approved outro rule."
+  ],
+  "unresolved": [
+    "Actual listening unverified: review S1/S4/S5, GTX-A, LH, MBC, LG, 84㎡, 27대1, school facility numbers, all prices/counts/dates; no literal pronunciation substitutions applied.",
+    "API alignment is not forced alignment or listening proof; semantic cue readability and exact cuts need editor/QA."
+  ],
+  "next_owner": "editor_jun_v8_and_director"
+}

@@ -1,0 +1,73 @@
+{
+  "task_id": "two-part-v4-script",
+  "role": "writer",
+  "status": "writer_verified_pending_director_review_and_new_script_gate",
+  "base_path": "writer/top20-split-v4/",
+  "input_revisions": {
+    "manifest": "scene_proposals_v1.json#/input_revisions",
+    "hashes": "각 입력 SHA256 기록",
+    "context": "최신 context_notes.json 반영"
+  },
+  "outputs": [
+    {
+      "path": "part1_script_v1.md",
+      "sha256": "29d91abc1481a9550bff3da8cac9040c32f735ff1c0582b4c3841618f84179a2"
+    },
+    {
+      "path": "part2_script_v1.md",
+      "sha256": "bd0ea4860d971cc5ef8f7af947c64db12561473a79e58bc9d3dc8d01cc501bb1"
+    },
+    {
+      "path": "scene_proposals_v1.json",
+      "sha256": "c6b5de0bd3f0618523d4402ed75deae63f53caf43129b18dccdc37bae0fa8d3e"
+    },
+    {
+      "path": "validation_v1.json",
+      "sha256": "ec1c047d8ec8c226a93bacab96de74e6b8d71611ce6d81cea9a154409dbe9a96"
+    },
+    {
+      "path": "preflight_writer_v1.json",
+      "sha256": "953da23c35c95949690a3e01341e2228965f0dd5dc1caff0f30351583309d923"
+    }
+  ],
+  "counts": {
+    "parts": 2,
+    "regions": 20,
+    "scenes": 24,
+    "sentences": 227,
+    "sentences_per_region": 10,
+    "verified_claims_reused": 51,
+    "director_supplement": 1,
+    "selected_facilities": 58
+  },
+  "affected_scene_ids": [
+    "P01-INTRO",
+    "P01-R20~R11",
+    "P01-OUTRO",
+    "P02-INTRO",
+    "P02-R10~R01",
+    "P02-OUTRO"
+  ],
+  "checks": [
+    {
+      "check": "수치·출처 필드·분모·시설명·원고 동일성",
+      "result": "pass",
+      "evidence": "validation_v1.json; 자체176항목"
+    }
+  ],
+  "estimate": {
+    "part1_s": 784.9,
+    "part2_s": 821.8,
+    "region_s": [
+      65,
+      73
+    ],
+    "basis": "기존 v6 계획용 읽기속도 참고; 새 음성 실측 아님"
+  },
+  "open_issue_ids": [
+    "W4-CONTEXT-MATCH",
+    "W4-INDEPENDENT-SCRIPT-QA"
+  ],
+  "next_role": "director→독립qa/visual; 새script승인 후 narration",
+  "limits": "독립QA·지도시설매칭·OSM완전성·새음성청취 미실시. 기존v6승인 승계없음. TTS/유료/미디어/업로드/외부내보내기 없음. 공통파일 수정없음."
+}

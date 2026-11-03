@@ -1,0 +1,58 @@
+{
+  "task_id": "FULL-HISTORY-V1",
+  "role": "research",
+  "status": "analysis_complete_internal_validation_pass_independent_qa_pending",
+  "input_revisions": {
+    "revision": "regional_expansion_v1 frozen",
+    "manifest": "analysis/housing_growth_2006/full_history_v1/input_manifest.json"
+  },
+  "output_directory": "analysis/housing_growth_2006/full_history_v1",
+  "chart_paths": [
+    "analysis/housing_growth_2006/full_history_v1/full_history_six_regions_2006.png",
+    "analysis/housing_growth_2006/full_history_v1/full_history_six_regions_2006.svg",
+    "analysis/housing_growth_2006/full_history_v1/full_history_sejong_2015.png",
+    "analysis/housing_growth_2006/full_history_v1/full_history_sejong_2015.svg",
+    "analysis/housing_growth_2006/full_history_v1/running_peak_drawdown_full_history.png",
+    "analysis/housing_growth_2006/full_history_v1/running_peak_drawdown_full_history.svg"
+  ],
+  "outputs": [
+    "analysis/housing_growth_2006/full_history_v1/analyze_full_history.py",
+    "analysis/housing_growth_2006/full_history_v1/summary.csv",
+    "analysis/housing_growth_2006/full_history_v1/episodes.csv",
+    "analysis/housing_growth_2006/full_history_v1/results.json",
+    "analysis/housing_growth_2006/full_history_v1/report.md",
+    "analysis/housing_growth_2006/full_history_v1/chart_source.csv",
+    "analysis/housing_growth_2006/full_history_v1/validation.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/research/full-history-v1/facts.json"
+  ],
+  "affected_scene_ids": [],
+  "scene_mapping": "v3 미배정·총괄 확인",
+  "checks": [
+    {
+      "check": "7개 합성사례·실자료 구조/회복 검사",
+      "result": "pass",
+      "evidence": "analysis/housing_growth_2006/full_history_v1/validation.json"
+    },
+    {
+      "check": "?? CSV ??/?????SVG/PNG??? ?? ??",
+      "result": "pass",
+      "evidence": "analysis/housing_growth_2006/full_history_v1/verification_receipt.json"
+    }
+  ],
+  "open_issue_ids": [
+    "FH-V1-SCRIPT-SCOPE"
+  ],
+  "next_role": [
+    "director",
+    "writer",
+    "visual",
+    "independent_qa"
+  ],
+  "unresolved": [
+    "매칭 거래건수 미제공",
+    "공식 지수 대조·독립 QA 미완료",
+    "추가 지역 수집은 총괄 소관"
+  ],
+  "summary": "2006Q1부터 6개 지역, 세종 2015Q1부터 전체 이력 분석. 특정 고점 창 없이 모든 하락/최초복귀 산출. 미회복 기간 검열 표시. 외부 호출·원자료 수집·공통 상태/대본 편집 없음.",
+  "artifact_manifest": "analysis/housing_growth_2006/full_history_v1/artifact_manifest.json"
+}

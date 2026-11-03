@@ -1,0 +1,43 @@
+{
+  "revision": "commute-v3",
+  "status": "completed_with_qualified_evidence",
+  "artifacts": [
+    "report.md",
+    "facts.json",
+    "sources.json",
+    "addendum_ilsan.md",
+    "ilsan_official.xlsx",
+    "ilsan_calculation.json",
+    "parse_ilsan.py"
+  ],
+  "input_versions": [
+    "brief.json",
+    "state.json script-v1/research production-v2",
+    "research/production-v2/facts.json",
+    "outputs/script-review-v1/script_v1.md"
+  ],
+  "validation": [
+    "facts.json JSON 파싱 성공",
+    "공식 공개 시각표 5개역 본문 확인",
+    "4개 구간 분단위 발차시각 차이 재계산",
+    "단지 임의 합산시간 본문 미채택",
+    "원본XLSX ZIP/XML판독",
+    "동일열차번호 18편 원흥출발~목적지도착4개구간차감",
+    "13claims JSON파싱확인"
+  ],
+  "unresolved": [
+    "S1/S4/S5 출입구와 정류장 방향까지 보행시간",
+    "출근피크 전열차 차번 일치 대조",
+    "지도 지정시각 길찾기 결과",
+    "원도면 상업이용권",
+    "일산선공개표2022시행뒤변경공지전수미확인"
+  ],
+  "affected_scene_ids": [
+    "M002",
+    "M003"
+  ],
+  "next_owner": "writer/director",
+  "actual_measurement": false,
+  "paid_api_used": false,
+  "shared_files_modified": false
+}

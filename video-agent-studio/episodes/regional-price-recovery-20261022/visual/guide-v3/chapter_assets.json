@@ -1,0 +1,84 @@
+{
+    "chapters":  [
+                     {
+                         "scene_id":  "L001",
+                         "topic":  "가격회복",
+                         "image_file":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/price.png",
+                         "source_manifest":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/manifest.json",
+                         "source_kind":  "AI_concept",
+                         "caption":  "같은 수도권, 다른 회복 시점 · AI 개념 이미지",
+                         "reason":  "직접 검토: 오른쪽 아파트 모형과 열쇠가 주택 매매시장 도입에 적합하고 왼쪽 어두운 제목 여백이 있다. 회복 시점·상승률을 나타내는 그림은 아니므로 가격 비교는 D1 차트로 별도 제시한다. 배경의 강·탑을 실제 서울·경기 장소의 증거로 쓰지 않는다.",
+                         "status":  "ready"
+                     },
+                     {
+                         "scene_id":  "L002",
+                         "topic":  "인구가구",
+                         "image_file":  null,
+                         "source_manifest":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/manifest.json",
+                         "source_kind":  "AI_concept",
+                         "caption":  "사람 수 다음에는 어떤 가구인가 · AI 개념 이미지",
+                         "reason":  "6종에 가구 분리·독립·서로 다른 살림을 보여주는 장면이 없다. school_life.png는 학교·운동장 중심이라 인구나 가구 변화를 대신하지 못한다. main에서 가상 가구의 독립과 두 거처를 자연스럽게 보여주는 별도 이미지가 필요하다.",
+                         "status":  "missing"
+                     },
+                     {
+                         "scene_id":  "L003",
+                         "topic":  "공간선택",
+                         "image_file":  null,
+                         "source_manifest":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/manifest.json",
+                         "source_kind":  "AI_concept",
+                         "caption":  "면적과 임차·매수의 선택 · AI 개념 이미지",
+                         "reason":  "기존 6종은 외부 도시·시설과 단지 모형으로, 방·거실의 크기와 생활 공간 선택을 보여주지 못한다. main의 별도 실내 공간 개념 이미지가 필요하다. 실제 남양주왕숙 A-1 59A 평면 증거는 공식 FP59를 사용해야 하며 AI로 대체하지 않는다.",
+                         "status":  "missing"
+                     },
+                     {
+                         "scene_id":  "L004",
+                         "topic":  "재건축이주",
+                         "image_file":  null,
+                         "source_manifest":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/manifest.json",
+                         "source_kind":  "AI_concept",
+                         "caption":  "새집 전에 필요한 거처 · AI 개념 이미지",
+                         "reason":  "공사 장면만으로는 퇴거 후 임시 거처와 입주 사이의 공백을 설명할 수 없다. supply.png는 L005에만 배정한다. main에서 이삿짐·임시 거처를 중심으로 별도 생성할 필요가 있다. 가락시영 실경이나 실제 이주 목적지로 표시하지 않는다.",
+                         "status":  "missing"
+                     },
+                     {
+                         "scene_id":  "L005",
+                         "topic":  "순증공급",
+                         "image_file":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/supply.png",
+                         "source_manifest":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/manifest.json",
+                         "source_kind":  "AI_concept",
+                         "caption":  "몇 채, 언제, 어떤 집이 늘어나는가 · AI 개념 이미지",
+                         "reason":  "직접 검토: 오른쪽 크레인·공사 중 주동과 완성된 주거가 함께 보여 공급 장의 전환 배경에 적합하다. 순증량·철거량·완공일을 확인한 장면은 아니며 1,000-800=200의 가상 계산과 입주 시점은 별도 도식으로 표현한다.",
+                         "status":  "ready"
+                     },
+                     {
+                         "scene_id":  "L006",
+                         "topic":  "일자리통근",
+                         "image_file":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/transport.png",
+                         "source_manifest":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/manifest.json",
+                         "source_kind":  "AI_concept",
+                         "caption":  "역 다음에는 내 직장까지의 경로 · AI 개념 이미지",
+                         "reason":  "직접 검토: 오른쪽 열차·역과 도로의 버스가 함께 있어 걷기·대기·환승을 묻는 통근 장의 도입에 가장 직접적이다. jobs.png의 업무시설 전경보다 경로라는 대본 초점에 가깝다. 실제 역·노선·운행 여부·통근시간·개통 효과의 증거로 사용하지 않는다.",
+                         "status":  "ready"
+                     },
+                     {
+                         "scene_id":  "L007",
+                         "topic":  "실제선택",
+                         "image_file":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/comparison.png",
+                         "source_manifest":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/manifest.json",
+                         "source_kind":  "AI_concept",
+                         "caption":  "가구의 조건을 겹치면 남는 집 · AI 개념 이미지",
+                         "reason":  "직접 검토: 서로 다른 높이·형태의 주거 재고가 함께 보여 여러 집을 놓고 선택 조건을 종합하는 장의 배경에 적합하다. 소득·면적·날짜·통근을 충족하는 실제 매물이나 특정 지역의 선택 가능성을 입증하지 않으며 구체적인 조건은 별도 도식과 제목으로 전달한다.",
+                         "status":  "ready"
+                     },
+                     {
+                         "scene_id":  "L008",
+                         "topic":  "다음분석",
+                         "image_file":  null,
+                         "source_manifest":  "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/manifest.json",
+                         "source_kind":  "AI_concept",
+                         "caption":  "다음에는 이 조건들을 자료로 확인합니다 · AI 개념 이미지",
+                         "reason":  "6종에 후속 데이터 검증이나 분석 작업을 드러내는 장면이 없다. 남은 jobs.png의 사무실과 school_life.png의 학교를 분석 완료나 후속 연구의 이미지로 억지 배정하지 않는다. main에서 숫자·축·분석 결과를 꾸며 넣지 않은 자료 검토 개념 이미지가 필요하다.",
+                         "status":  "missing"
+                     }
+                 ]
+}

@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C09P04",
+  "scene_id": "C09",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:08:13.808Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "431e6cd9d777a86e798d7b29a345455e4bce98e736d22475c9ea7ddac68bce7a",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "전세 갱신 때 보증금이 오르거나, 월세가 인상되거나, 투자시장이 하락한 시기에 이사해야 하는 경우도 같은 장부에 넣을 수 있습니다. 전세·월세는 계약이 끝날 때 보증금을 돌려받을 수 있는지도 함께 확인해야 합니다. 수익률이 높아도 필요한 시점에 돈을 꺼내기 어려우면 주거 계획이 바뀝니다. 집 한 채에 자금이 집중되는 매매와 시장가격이 매일 움직이는 투자계좌는 서로 다른 형태의 위험을 가집니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 221,
+  "characters": 221,
+  "actual_credits": 88,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19983,
+    "character_limit": 40000,
+    "included_remaining": 20017,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:08:00.235Z",
+  "local_shadow_remaining_before": 19834,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "GtMLTVGOteZNw21kDTNG",
+    "x-request-id": null,
+    "character-cost": "88",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:08:13 GMT"
+  },
+  "pcm_samples": 1171296,
+  "pcm_duration_s": 26.56,
+  "provider_last_spoken_end_s": 26.64,
+  "artifact_sha256": {
+    "paragraphs/C09P04/audio.mp3": "b347c017c8e3bbad531f1d8aec9535ac503ca4927ee5337ff4a2140cde6697ff",
+    "paragraphs/C09P04/audio.wav": "6e451f78f69535bd187f09412faf4cf05a2de59cd537e21ee21e0ce0cc41691e",
+    "paragraphs/C09P04/alignment.json": "a92367fd9309214e0e03944dfac94753c05081974d4a2cd3d0eb9ee3b2db148b",
+    "paragraphs/C09P04/normalized_alignment.json": "a92367fd9309214e0e03944dfac94753c05081974d4a2cd3d0eb9ee3b2db148b"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 19746,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:08:19.198Z"
+}

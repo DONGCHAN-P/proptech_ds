@@ -1,0 +1,128 @@
+{
+  "task_id": "next-case-engine-preparation-v1",
+  "as_of_kst": "2026-10-26",
+  "status": "anonymous_research_assumptions_not_bank_approval",
+  "common": {
+    "cash_krw": 250000000,
+    "reserve_krw": 30000000,
+    "misc_plan_krw": 1500000,
+    "months": 360,
+    "prior_claim_krw": 0,
+    "tenancy_deduction_krw": 0,
+    "existing_annual_dsr_krw": 0,
+    "existing_annual_dti_krw": 0,
+    "housing_savings_budget_monthly_krw": 3000000,
+    "ownership_monthly_plan_krw": 300000,
+    "mortgage_budget_monthly_krw": 1700000,
+    "area_sqm": 84,
+    "married_within_7_years": false,
+    "first_purchase": false,
+    "child_within_2_years": false,
+    "net_assets_krw": 250000000
+  },
+  "profiles": {
+    "A_ordinary": {
+      "household_id": "A",
+      "product": "bank",
+      "label": "A 일반 무주택",
+      "annual_income_krw": 100000000,
+      "annual_rate": "0.04",
+      "stress_add": "0.03",
+      "dti_rate": "0.04",
+      "ltv": ".4",
+      "dti_ratio": ".4",
+      "dsr_ratio": ".4",
+      "first_purchase": false
+    },
+    "A_first": {
+      "household_id": "A",
+      "product": "bank",
+      "label": "A 은행 생애최초",
+      "annual_income_krw": 100000000,
+      "annual_rate": "0.04",
+      "stress_add": "0.03",
+      "dti_rate": "0.04",
+      "ltv": ".7",
+      "dti_ratio": ".6",
+      "dsr_ratio": ".4",
+      "first_purchase": true
+    },
+    "B_didim": {
+      "household_id": "B",
+      "product": "didim",
+      "label": "B 디딤돌 신혼",
+      "annual_income_krw": 80000000,
+      "annual_rate": "0.04",
+      "rate_status": "월액 및 DTI 계산용4% 가정; 현행 공시금리 미확인",
+      "dti_rate": "0.04",
+      "ltv": ".7",
+      "dti_ratio": ".6",
+      "dsr_ratio": null,
+      "price_ceiling_krw": 600000000,
+      "product_cap_krw": 320000000,
+      "income_ceiling_krw": 85000000,
+      "asset_ceiling_krw": 511000000,
+      "married_within_7_years": true,
+      "first_purchase": true,
+      "child_within_2_years": true
+    },
+    "B_bogeum": {
+      "household_id": "B",
+      "product": "bogeum",
+      "label": "B 보금자리론 생애최초",
+      "annual_income_krw": 80000000,
+      "annual_rate": "0.04",
+      "rate_status": "월액 및 DTI 계산용4% 가정; 현행 공시금리 미확인",
+      "dti_rate": "0.04",
+      "ltv": ".7",
+      "dti_ratio": ".6",
+      "dsr_ratio": null,
+      "price_ceiling_krw": 600000000,
+      "product_cap_krw": 420000000,
+      "income_ceiling_krw": 85000000,
+      "married_within_7_years": true,
+      "first_purchase": true,
+      "child_within_2_years": true
+    },
+    "B_newborn": {
+      "household_id": "B",
+      "product": "newborn",
+      "label": "B 신생아 특례 디딤돌",
+      "annual_income_krw": 80000000,
+      "annual_rate": "0.029",
+      "rate_status": "공식 기금 동적표/KB 대조: 소득6천초과~8천5백이하·30년 기본2.90%, 기본특례5년; 이후금리 미확정",
+      "dti_rate": "0.029",
+      "ltv": ".7",
+      "dti_ratio": ".6",
+      "dsr_ratio": null,
+      "price_ceiling_krw": 900000000,
+      "product_cap_krw": 400000000,
+      "income_ceiling_krw": 130000000,
+      "asset_ceiling_krw": 511000000,
+      "married_within_7_years": true,
+      "first_purchase": true,
+      "child_within_2_years": true
+    }
+  },
+  "grid": {
+    "prices_krw": [
+      600000000,
+      900000000,
+      1200000000
+    ],
+    "deductions_krw": [
+      0,
+      55000000
+    ]
+  },
+  "solver": {
+    "grid_krw": 10000,
+    "search_max_krw": 3000000000
+  },
+  "notes": [
+    "V=P, 선순위0·임대차없음. 수도권 규제지역 중 투기과열지구를 가정해 일반DTI40/생초60 사용.",
+    "0차감은 보증심사 통과 등 담보 산정 조건의 가정이며 일반·생초 자동면제 아님.",
+    "보금자리 빈 아파트의 현행 방수공제는0;55m은 추가 담보차감 민감도 가정으로만 해석.",
+    "B의9/12억은 상품가격자격 필터 확인용이며6억이 핵심 비교."
+  ]
+}

@@ -1,0 +1,1 @@
+SELECT * FROM read_parquet('C:/projects/realestate_reco/master/trade_events.parquet') WHERE sigungu_code IN (SELECT current_code FROM read_csv('scope_codes.csv',all_varchar=true)) AND deal_date>=DATE '2026-04-01' AND deal_date<DATE '2026-11-01' ORDER BY sigungu_code,deal_date,apt_id,deal_hash;

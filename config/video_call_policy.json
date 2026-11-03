@@ -1,0 +1,30 @@
+{
+  "revision": "local-first-v1",
+  "scope": "video production only",
+  "default_workers": 1,
+  "independent_qa_at_final_or_material_revision": true,
+  "new_worker_context": "scoped task packet; no full conversation fork by default",
+  "task_packet_max_characters": 8000,
+  "handoff_summary_max_characters": 1600,
+  "console_summary_max_characters": 4000,
+  "routine_peer_progress_messages": false,
+  "peer_messages_for": ["blocking issue", "required correction", "handoff", "final result"],
+  "polling": {
+    "fixed_short_sleep_loops": false,
+    "preferred": "process or agent completion event",
+    "fallback": "single running status; bounded wait aligned with expected finish; inspect on failure or user request",
+    "user_progress": "state changes and required visible progress; do not wake a worker only to obtain an update"
+  },
+  "execution": {
+    "runner": "analysis/video_task_runner.py",
+    "raw_logs": "output/video_jobs/<task_id>/step-*.log",
+    "receipt": "output/video_jobs/<task_id>/receipt.json",
+    "cache_key": "job spec + input SHA256 + verified output SHA256",
+    "automatic_retries": false
+  },
+  "qa_reuse_requires": ["same input hashes", "same statistic and thresholds", "same validator version", "same evidence scope"],
+  "approval_gates": ["topic", "script", "budget", "completed", "pre_upload"],
+  "new_paid_services_enabled": false,
+  "external_context_compression_enabled": false,
+  "automatic_model_switching_enabled": false
+}

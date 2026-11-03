@@ -1,0 +1,62 @@
+{
+  "paragraph_id": "C02P04",
+  "scene_id": "C02",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:02:08.184Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "ec94a419866986f663042243d26cad88df9756f74430ea8182694d7566ca9fff",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "투자계좌는 배당과 환율 효과를 포함한 원화 총수익 연 육 퍼센트, 금리는 연 사 퍼센트로 계산합니다. 월세와 보증금은 십 년 동안 같은 금액으로 둡니다. 취득세나 중개보수처럼 계약할 때 한 번 드는 초기 부대비용과 매달 드는 유지비는 뒤에서 설명할 가정 금액을 적용하겠습니다. 집과 보증금, 금융자산에서 남은 빚을 뺀 금액을 비교하며, 실제 상품별 세금과 운용비용을 추가로 반영하기 전의 명목 평가 순자산입니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 230,
+  "characters": 230,
+  "actual_credits": 92,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17702,
+    "character_limit": 40000,
+    "included_remaining": 22298,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "YwP90lqVXCkbsSjRUIEv",
+    "x-request-id": null,
+    "character-cost": "92",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:02:07 GMT"
+  },
+  "pcm_samples": 1291248,
+  "pcm_duration_s": 29.28,
+  "provider_last_spoken_end_s": 29.36,
+  "artifact_sha256": {
+    "paragraphs/C02P04/audio.mp3": "66fff33655c932f3749817a64d6e51dc9af83b78a361a4f4a9aa7efe98d3d55b",
+    "paragraphs/C02P04/audio.wav": "321fcb2f42f89774952d081226b5db475f48ef3688f4156de75e9e3f878a8556",
+    "paragraphs/C02P04/alignment.json": "5adf99318ed80ec1431eb7eab6bedf9aa82f1ba278d2bba493e74a2265ed0f1d",
+    "paragraphs/C02P04/normalized_alignment.json": "5adf99318ed80ec1431eb7eab6bedf9aa82f1ba278d2bba493e74a2265ed0f1d"
+  },
+  "account_after": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17702,
+    "character_limit": 40000,
+    "included_remaining": 22298,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_observed_delta": 0,
+  "completed_at_utc": "2026-10-26T06:02:16.190Z"
+}

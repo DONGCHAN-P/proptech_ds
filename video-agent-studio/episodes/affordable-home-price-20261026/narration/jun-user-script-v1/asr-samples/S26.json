@@ -1,0 +1,47 @@
+{
+  "scene_id": "S26",
+  "audio_sha256": "82ce99a9a02a217273b36872fcd174e0b9a3be4333ba663dcb56848427ebbd38",
+  "reference": "금리가 올라가거나 소득이 잠시 줄어도 버틸 수 있는지도 한번 보세요. 집값이 오를 거라는 기대를 빼고, 지금 소득으로 이 집을 유지할 수 있는가를 먼저 계산해보셨으면 좋겠습니다.",
+  "transcript": "정리가 올라가거나 소득이 잠시 줄어도 버틸 수 있는지도 한번 보세요 집값이 오를 거라는 기대를 빼고 지금 소득으로 이 집을 유지할 수 있는가를 먼저 계산해 보셨으면 좋겠습니다",
+  "comparison": {
+    "normalized_text_equal": false,
+    "normalized_reference": "금리가올라가거나소득이잠시줄어도버틸수있는지도한번보세요집값이오를거라는기대를빼고지금소득으로이집을유지할수있는가를먼저계산해보셨으면좋겠습니다",
+    "normalized_transcript": "정리가올라가거나소득이잠시줄어도버틸수있는지도한번보세요집값이오를거라는기대를빼고지금소득으로이집을유지할수있는가를먼저계산해보셨으면좋겠습니다",
+    "reference_numbers": [],
+    "recognized_numbers": [],
+    "numeric_differences": [],
+    "text_similarity_ratio": 0.986111,
+    "sentences": [
+      {
+        "reference": "금리가 올라가거나 소득이 잠시 줄어도 버틸 수 있는지도 한번 보세요.",
+        "matched_character_fraction": 0.9643,
+        "possible_omission_or_misrecognition": false
+      },
+      {
+        "reference": "집값이 오를 거라는 기대를 빼고, 지금 소득으로 이 집을 유지할 수 있는가를 먼저 계산해보셨으면 좋겠습니다.",
+        "matched_character_fraction": 1.0,
+        "possible_omission_or_misrecognition": false
+      }
+    ],
+    "method": "한자어/아라비아 숫자와 단위 정규화 후 순서·개수 대조; 문장별 문자 정렬 휴리스틱"
+  },
+  "seconds": 11.12,
+  "elapsed_s": 2.0159999999996217,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.86,
+      "text": " 정리가 올라가거나 소득이 잠시 줄어도 버틸 수 있는지도 한번 보세요",
+      "avg_logprob": -0.18074421728810958
+    },
+    {
+      "start": 3.86,
+      "end": 10.72,
+      "text": " 집값이 오를 거라는 기대를 빼고 지금 소득으로 이 집을 유지할 수 있는가를 먼저 계산해 보셨으면 좋겠습니다",
+      "avg_logprob": -0.18074421728810958
+    }
+  ],
+  "actual_listening": false,
+  "naturalness_verified": false,
+  "external_upload": false
+}

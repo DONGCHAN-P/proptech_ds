@@ -1,0 +1,34 @@
+{
+  "name": "proptech-video",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts",
+    "studio:v6": "remotion studio src/PilotV6.tsx",
+    "render:v6": "remotion render src/PilotV6.tsx NewtownV6 out/newtown-v6.mp4 --codec=h264 --crf=18 --concurrency=4",
+    "studio:v7": "remotion studio src/PilotV7.tsx",
+    "render:v7": "remotion render src/PilotV7.tsx NewtownV7 out/newtown-v7.mp4 --codec=h264 --crf=18 --concurrency=4",
+    "studio:v8": "remotion studio src/PilotV8.tsx",
+    "render:v8": "remotion render src/PilotV8.tsx NewtownV8 out/newtown-v8-10min.mp4 --codec=h264 --crf=18 --concurrency=4",
+    "studio:v9": "remotion studio src/PilotV9.tsx",
+    "render:v9": "remotion render src/PilotV9.tsx NewtownV9 out/newtown-v9-assets-10min.mp4 --codec=h264 --crf=18 --concurrency=4",
+    "studio:v10": "remotion studio src/PilotV10.tsx",
+    "render:v10": "remotion render src/PilotV10.tsx NewtownV10 out/newtown-v10-quarterly-10min.mp4 --codec=h264 --crf=18 --concurrency=4",
+    "studio:v11": "remotion studio src/PilotV11.tsx",
+    "render:v11": "remotion render src/PilotV11.tsx NewtownV11 out/newtown-v11-nexttown.mp4 --codec=h264 --crf=18 --concurrency=4"
+  },
+  "dependencies": {
+    "@remotion/bundler": "^4.0.534",
+    "@remotion/cli": "^4.0.534",
+    "@remotion/renderer": "^4.0.534",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.534"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}

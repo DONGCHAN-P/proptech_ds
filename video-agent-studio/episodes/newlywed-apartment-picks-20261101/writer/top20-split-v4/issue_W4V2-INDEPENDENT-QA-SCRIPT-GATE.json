@@ -1,0 +1,12 @@
+{
+  "issue_id": "W4V2-INDEPENDENT-QA-SCRIPT-GATE",
+  "task_id": "two-part-v4-script-v2",
+  "status": "open_required_next_step",
+  "to": ["director", "qa"],
+  "scene_ids": "24개 v2 장면 전체",
+  "problem": "v2 원고의 수치·필드·시설 표시명·요구 반영은 writer 자체 대조입니다. 새 버전의 독립 대본 QA와 script 승인 결정이 필요합니다.",
+  "evidence": ["writer/top20-split-v4/part1_script_v2.md", "writer/top20-split-v4/part2_script_v2.md", "writer/top20-split-v4/scene_proposals_v2.json", "writer/top20-split-v4/validation_v2.json"],
+  "proposal": "도입5문장, 지역당 가격 대비1개, 나머지 수치·주의사항의 화면/근거 보존, 생활권 해석의 사실 범위, 대표 상세도58시설 이름 매칭과 특성역6곳 추가 표시 이슈를 독립 확인합니다. 총괄은 v2 파일 해시에 새 script 결정ID를 연결합니다.",
+  "impact": "v1·v6 승인을 v2에 이월하지 않습니다. 새 본편/TTS는 script 게이트 후 다음 담당이 진행합니다. 실제 음성 길이와 지도·사진 호흡은 아직 확정하지 않았습니다.",
+  "communication": "직접 peer 메시지·독립 QA 실행 도구가 없어 담당 폴더 이슈로 총괄에 인계합니다. 자체 대조를 독립 QA로 표현하지 않습니다."
+}

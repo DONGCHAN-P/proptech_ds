@@ -1,0 +1,74 @@
+{
+  "role": "editor",
+  "status": "assigned_work_complete_return_slot_v6_inputs_pending",
+  "script_sha256": "babeb15213477f3f6dcb8e8ab958e1a4ccc691c53c1fca6ca9ceae99cc5f269b",
+  "inputs": {
+    "truth": "director/two-episode-production-v1/locked_script.json",
+    "manifest": "outputs/private-production-v1/input_manifest.json",
+    "timing": "measured_audio_units"
+  },
+  "artifacts": [
+    "editor/private-production-v1/build.py",
+    "outputs/private-production-v1/index.html",
+    "outputs/private-production-v1/render_plan.json",
+    "outputs/private-production-v1/assembly_edl.json",
+    "outputs/private-production-v1/preview/contact_sheet.jpg",
+    "editor/private-production-v1/placement_guide.md",
+    "editor/private-production-v1/audio_design.json",
+    "outputs/private-production-v1/preview_fixes/handoff.json",
+    "editor/private-production-v1/render_commands.json",
+    "editor/private-production-v1/render_receipt.json",
+    "editor/private-production-v1/encoded_batch_review.json",
+    "outputs/private-production-v1/renders/measured-v5/ch01.mp4",
+    "outputs/private-production-v1/renders/measured-v5/ch02.mp4",
+    "outputs/private-production-v1/renders/measured-v5/ch03.mp4",
+    "outputs/private-production-v1/renders/measured-v5/encoded-preview/"
+  ],
+  "validation": {
+    "chapters": 10,
+    "scenes": 50,
+    "cli": "checks/summary.json",
+    "bbox": "outputs/private-production-v1/preview/bbox_report.json",
+    "source_static": "static_checks.json",
+    "full_resolution_PNGs": 18,
+    "full_render": false,
+    "actual_listening": false,
+    "continuous_playback": false,
+    "actual_cues": 341,
+    "canonical_carve": "pass",
+    "independent_preview": "qa/private-production-v1/preview_pass_receipt.json",
+    "independent_preview_approved": true,
+    "encoded_chapters": [
+      1,
+      2,
+      3
+    ],
+    "encoded_representative_frames_actually_viewed": 6,
+    "encoded_batch_decode": "pass"
+  },
+  "changed_from_v4": [
+    "ch09/s9d deposit return risk",
+    "ch10/s10invest base rank and conditional extra performance"
+  ],
+  "open": [
+    "v6 dual delta approval and locked script",
+    "two regenerated narration paragraphs with measured timing handoff",
+    "new output version with proof-based reuse of preserved ch01-03"
+  ],
+  "next_owner": "main/writer dual delta review and narration two-paragraph regeneration; editor resumes later",
+  "execution_scope": {
+    "authorized_chapters": [
+      1,
+      2,
+      3
+    ],
+    "stop_before_chapter": 4,
+    "final_assembly": false,
+    "workers": 4,
+    "quality": "delivery",
+    "frames_cache": "renders/measured-v5/frames-cache/chNN",
+    "stopped_before_chapter": 4,
+    "further_render_started": false
+  },
+  "slot_return_handoff": "editor/private-production-v1/slot_return_handoff.json"
+}

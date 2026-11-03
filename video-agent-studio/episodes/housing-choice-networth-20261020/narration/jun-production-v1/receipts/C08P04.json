@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C08P04",
+  "scene_id": "C08",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:07:31.497Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "485628ce89ae4afade07e2fa0f9468c08977ddb3589cca67507165d834af40fb",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "이어서 집값과 투자수익을 함께 바꿔보겠습니다. 집값이 연 사 퍼센트 오르고 투자수익은 연 이 퍼센트인 조건에서는 매매가 약 칠억사천만 원, 전세가 약 오억육천이백만 원, 월세가 약 오억삼천육백만 원입니다. 집값의 상승이 커지고 투자계좌의 성장이 작아지면서 순서가 바뀝니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 152,
+  "characters": 152,
+  "actual_credits": 61,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19183,
+    "character_limit": 40000,
+    "included_remaining": 20817,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:07:16.662Z",
+  "local_shadow_remaining_before": 20605,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "9tMpIcuVrufa0a3s9sOe",
+    "x-request-id": null,
+    "character-cost": "61",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:07:30 GMT"
+  },
+  "pcm_samples": 910224,
+  "pcm_duration_s": 20.64,
+  "provider_last_spoken_end_s": 20.64,
+  "artifact_sha256": {
+    "paragraphs/C08P04/audio.mp3": "f9856ef7acdb527295f0c761e86f2dc081cc7b6a458368cfb2281e1a2fc091ad",
+    "paragraphs/C08P04/audio.wav": "e8e30b50b78389257b2ca2db8e6d4428e76b3ef674126358e9831f90b37b4078",
+    "paragraphs/C08P04/alignment.json": "38555cc24ca638d6cf6f0520a51266f8f03043ca826a5c42af4b40a02f294797",
+    "paragraphs/C08P04/normalized_alignment.json": "38555cc24ca638d6cf6f0520a51266f8f03043ca826a5c42af4b40a02f294797"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 20544,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:07:36.168Z"
+}

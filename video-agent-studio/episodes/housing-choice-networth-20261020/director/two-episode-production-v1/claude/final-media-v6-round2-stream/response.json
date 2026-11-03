@@ -1,0 +1,67 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": false,
+  "api_error_status": null,
+  "duration_ms": 630164,
+  "duration_api_ms": 629661,
+  "ttft_ms": 593575,
+  "ttft_stream_ms": 36022,
+  "time_to_request_ms": 500,
+  "num_turns": 2,
+  "result": "검수를 완료했습니다. 판정은 **승인(approved: true)**, 필수 수정 없음입니다.\n\n- **artifact_sha256**: `14078d13…fcae2fc0b` — 이번 완성 MP4의 `media_binding.video_sha256`와 일치.\n- 표본 프레임·기술·자막·로컬ASR·대본 범위에서 글자잘림·잘못된 수치·출처누락·타이밍 문제의 필수 이슈를 찾지 못했습니다.\n- 권고 2건(‘매수→매매’ 표기 통일, 공개 마스터 라우드니스 -14 근처 상향)은 모두 선택 사항입니다.\n- 연속재생·직접청취·ContentID는 미제공이라 수행하지 않았음을 coverage_notes에 명시했고, 발음·A/V 싱크는 ASR 증거로만 판정한 범위임을 밝혔습니다. “완벽”이라 표현하지 않았습니다.",
+  "stop_reason": "end_turn",
+  "session_id": "4b46ef61-c191-4e11-9bc0-26e661a6324b",
+  "total_cost_usd": 2.0656965,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 126764,
+    "cache_read_input_tokens": 74953,
+    "output_tokens": 49437,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 126764,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-opus-4-8": {
+      "inputTokens": 4,
+      "outputTokens": 49437,
+      "cacheReadInputTokens": 74953,
+      "cacheCreationInputTokens": 126764,
+      "webSearchRequests": 0,
+      "costUSD": 2.0656965,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000
+    }
+  },
+  "permission_denials": [],
+  "structured_output": {
+    "artifact_sha256": "14078d1309cb2e32e766a13d66b9aee278af083a14eb75806a21a2acfae2fc0b",
+    "approved": true,
+    "required_issues": [],
+    "recommended": [
+      "[선택] CH01 s3(49.667s) 설정 카드 라벨 '매수'는 제목·썸네일·전 차트의 '매매'와 다른 표기임. 의미·수치 영향 없고 시청자 이해에 지장 없으나, 이후 재렌더 기회가 있으면 '매매'로 통일하면 표기 일관성이 올라감(필수 아님).",
+      "[선택·공개단계] 통합 라우드니스 -17.2 LUFS는 유튜브 기준(-14)보다 다소 작게 재생됨. 비공개 검수에는 무관하나 이후 공개 마스터에서 -14 근처로 올리면 체감 음량이 개선됨. 트루피크 -2.8dBFS·NaN/Inf 0으로 클리핑 여유는 충분."
+    ],
+    "coverage_notes": [
+      "[범위·미확인] 제공된 실제 인코딩 표본 프레임(1920×1080 다수+전체해상도 11장)과 기술·자막·로컬ASR 기록만 검토. 연속재생·직접청취·Studio/ContentID 검토는 미제공이라 수행하지 않았음(했다고 주장 안 함). 전체 디코드 passed, 342큐 무중첩(최대 반올림 0.5ms), CTA 마지막 발화 +3.02s, 챕터 10개 타임스탬프(00:00~22:42) 전부 정합.",
+      "[수치 정합·재계산 생략] 표본 금액이 잠긴 모형/verified_aggregate와 일치: s2g 지역 10년 CAGR(서울11.7·경기6.6·인천4.0·부산3.5·대구2.0·대전5.3·세종5.9%), s4·s7a·s7b·s8h·s8a·s8e 민감도, s3a·s4a·s4b·s5a·s5b 파생(172/120/52만·잔액2억8천400만·원금7천600만), s8l 레버리지(+1,200만=자기자금 5%). 표본 내 잘못된 수치 없음.",
+      "[자막·ASR 구분] 표본 자막 50여 컷 모두 대본 실제 문장 또는 그 연속 구간이며 장면 주제와 일치. ASR 기록상 숫자 모호 7건은 small+medium 로컬ASR로 확정, v6 어휘 2건 closed, 확정 발음오류 보고 없음. 오인식/확정오류 구분은 유지하되 실제 청취 미수행이라 발음·A/V 싱크는 귀로 확정하지 않음.",
+      "[출처·권리] 실거래 연결지수(국토교통부)·교산 지도(국토부 고시+LH)·S&P DJI 총수익·FRED DEXKOUS 환율·FRBSF(2018)·음악 Kevin MacLeod CC BY 4.0(설명문) 모두 표기, 자체모형 컷은 '자체 예시 모형(2026.10)' 라벨. 단, 3D 평면도(썸네일·타이틀·s10life) 이미지의 출처/생성 근거는 본 패킷에 미포함(판정 범위 밖)이며 AI 배지 부재는 사용자 지시에 따른 의도.",
+      "[v6·글자잘림] s5c(666s) 제목·자막 '줄어든 대출잔액', s6b(761.5s) 자막 '한국 돈으로 환산한 자산' 교체 반영 확인. s6b 화면 박스 '원화 자산'은 '원화 수익률 21%'·'원화 총수익 6%'와 일관된 승인 동의어로 모순 아님. 전체해상도 표본에서 글자잘림 미관찰.",
+      "[표본 한계·반복 관찰] s7a(903s)는 매매·전세 워터폴만 그려지고 월세는 미표시(점진 공개 추정; 월세 순자산 6억8,900만은 s7b서 확인, 세부막대 6억900만 등은 표본서 미확인). s5e(713.5s) 자막 공백은 단어정렬 큐 사이 간격으로 정상. '투자계좌 출발' 막대(400/4,900/1억6,900)는 s3c·s4c·s5e서 서로 다른 주석의 콜백으로 재등장—동일 복제 아님."
+    ]
+  },
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "uuid": "bf758ada-bdfa-4971-918d-7cfadc8d3e92"
+}

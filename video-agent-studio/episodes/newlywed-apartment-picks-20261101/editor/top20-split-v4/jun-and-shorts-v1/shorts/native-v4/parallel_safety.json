@@ -1,0 +1,26 @@
+{
+  "maximum_concurrent_projects": 2,
+  "workers_per_project": 2,
+  "maximum_render_workers": 4,
+  "projects": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v4\\SHORT01-PROMO",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v4\\SHORT02-R20-R16",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v4\\SHORT03-R15-R11"
+  ],
+  "outputs": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-split-v4\\jun-and-shorts-v1\\shorts\\short01_promo_Jun_native_v4.mp4",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-split-v4\\jun-and-shorts-v1\\shorts\\short02_ranks20_16_Jun_native_v4.mp4",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-split-v4\\jun-and-shorts-v1\\shorts\\short03_ranks15_11_Jun_native_v4.mp4"
+  ],
+  "file_isolation": "Separate project, log, render output, HF state and extract-cache directories for each clip",
+  "server_policy": "No fixed preview-server port requested by render CLI; renderer manages per-process local servers",
+  "render_order": [
+    [
+      "SHORT01-PROMO",
+      "SHORT03-R15-R11"
+    ],
+    [
+      "SHORT02-R20-R16"
+    ]
+  ]
+}

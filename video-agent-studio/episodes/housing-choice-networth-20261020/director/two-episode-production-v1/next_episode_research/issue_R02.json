@@ -1,0 +1,43 @@
+{
+  "issue_id": "R02",
+  "task_id": "next-policy-source-prep-v1",
+  "status": "model_label_correction_required_before_script",
+  "affected_scene_ids": [],
+  "affected_claim_ids": [
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "D02",
+    "D05",
+    "B01",
+    "B03",
+    "N03",
+    "N04",
+    "P01"
+  ],
+  "problem": "담보차감 전 LTV×평가액/총액상한을 거래 실행한도로 읽을 위험",
+  "evidence": {
+    "claim_ids": [
+      "M01",
+      "M02",
+      "M03",
+      "M05",
+      "M06",
+      "M07",
+      "M08",
+      "M09"
+    ],
+    "source_ids": [
+      "V2_BANK_RULES",
+      "V2_NHUF",
+      "V2_DIDIM_RULES",
+      "V2_HUG",
+      "V2_BOGEUM_RULES"
+    ]
+  },
+  "proposal": "writer/model은 상품별 방공제·선순위·임대차·보증가능성 및 DSR/DTI를 먼저 판정. 미확정 보증은 조건부 표기. 총액상한에서 일괄5500 차감 금지.",
+  "impact": "다음편 필요자금/최대대출 설명에 영향. 첫 영상 제작·업로드와 무관.",
+  "next_role": "director → writer/model → 독립 정책검수",
+  "communication": "직접 peer 메시지 도구 없음; handoff 경로로 전달"
+}

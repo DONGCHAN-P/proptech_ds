@@ -1,0 +1,20 @@
+{
+  "revision": "script-v1",
+  "passed": true,
+  "checks": [
+    "10 UTF-8 no-BOM narration chapters: exact scene text, character count, UTF8 bytes, SHA256",
+    "manifest chapter total / LF-LF join / script source SHA256",
+    "all factual claim_ids exist in frozen source facts",
+    "six final comparisons.json price medians/n matched chapter M007 numeric readings by writer review",
+    "three frozen notice basic+balcony price fields and arithmetic",
+    "input hashes unchanged since build",
+    "final spoken CTA, thanks and next episode included in chapter text"
+  ],
+  "chapter_count": 10,
+  "total_characters": 6874,
+  "joined_total_characters": 6892,
+  "actual_listening": false,
+  "continuous_playback": false,
+  "visual_frame_qa": false,
+  "unresolved": "script approval, paid budget approval and mapped visual holds remain"
+}

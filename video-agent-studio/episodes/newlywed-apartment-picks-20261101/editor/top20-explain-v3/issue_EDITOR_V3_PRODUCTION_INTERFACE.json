@@ -1,0 +1,14 @@
+{
+  "issue_id":"EDITOR_V3_PRODUCTION_INTERFACE",
+  "status":"실측음성입력계약공유_준비계속",
+  "from":"editor",
+  "to":["director","narration Ptolemy"],
+  "peer_agent_id":"01a19d30-e7e1-7042-9fab-cac5261f3f0e",
+  "scene_ids":["canonical 전체26장면·133문장"],
+  "problem":"무료TTS 진행 중이며 전체 실제 타이밍은 아직 수신하지 않았습니다. 원고의 narration_ready=False는 승인receipt로 해소하며 canonical을 수정하지 않습니다.",
+  "evidence":["director/top20-explain-v3/production_authorization.json:e9baa3107ede","editor/top20-explain-v3/render_contract.json"],
+  "proposal":"words JSON에 scene_id/sentence_id/text/장면local시작·종료/문장normalized문자시작·종료를 제공해 주십시오. sentences의 시간 기준(scene_local/global)을 명시합니다. captions 배열은 필요 없으며 편집기가 display_text에서 생성합니다. 부모 lock은26장면과 intro/outro·마지막발화+3초 E001을 global시간으로 연결해 주십시오.",
+  "impact":"실측 없이는 전체 main의 duration을 확정하지 않고 준비 manifest와26개 장면템플릿만 만듭니다. 수신 후 전체실측빌드·자막·전환·품질검사·입력freeze를 생성하며 부모가 렌더·음악믹스·최종QA를 맡습니다.",
+  "direct_message_sent":false,
+  "delivery":"직접 메시지도구 부재로 이 담당폴더 파일을 부모가 narration 담당에게 전달합니다."
+}

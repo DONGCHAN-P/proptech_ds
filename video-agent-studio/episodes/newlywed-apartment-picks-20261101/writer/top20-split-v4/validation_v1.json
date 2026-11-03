@@ -1,0 +1,927 @@
+{
+  "task_id": "two-part-v4-script",
+  "status": "pass",
+  "verification_kind": "writer_self_check_not_independent_QA",
+  "checked_artifact_sha256": "c6b5de0bd3f0618523d4402ed75deae63f53caf43129b18dccdc37bae0fa8d3e",
+  "counts": {
+    "parts": 2,
+    "scenes": 24,
+    "regions": 20,
+    "sentences": 227,
+    "existing_verified_claims_used": 51,
+    "director_supplement_claims_used": 1,
+    "facility_mentions": 58,
+    "checks": 176,
+    "failed_checks": 0
+  },
+  "parts": [
+    {
+      "part": 1,
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/part1_script_v1.md",
+      "sha256": "29d91abc1481a9550bff3da8cac9040c32f735ff1c0582b4c3841618f84179a2",
+      "scenes": 12,
+      "sentences": 113,
+      "estimate_seconds": 784.9
+    },
+    {
+      "part": 2,
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/part2_script_v1.md",
+      "sha256": "bd0ea4860d971cc5ef8f7af947c64db12561473a79e58bc9d3dc8d01cc501bb1",
+      "scenes": 12,
+      "sentences": 114,
+      "estimate_seconds": 821.8
+    }
+  ],
+  "checks": [
+    {
+      "check": "두 편 각 10지역의 순서",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "지역별 8~11문장",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "지역별 예상 길이 50~75초",
+      "result": "pass",
+      "evidence": "추정값만 검사; 실제 새 음성 길이 검사 아님"
+    },
+    {
+      "check": "새 대본 승인 미승계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "단지·거래 커버리지 합계",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "기존 검증 주장 51개와 기흥구 보충 근거 연결",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "문장 ID 고유성",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "출처 파일·JSON 필드·기록값 연결",
+      "result": "pass",
+      "evidence": []
+    },
+    {
+      "check": "R20 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R20 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R19 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R18 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R17 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R16 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R15 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R14 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R13 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R12 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R11 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R10 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R09 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R08 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R07 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R06 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R05 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R04 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R03 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R02 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 순위와 거주쌍 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 구 거래 중위값·건수",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 두 동 거래 중위값·건수·최소20건",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 지도 분모·6구간",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 시설2~3곳·명칭 일치",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 전체지도→특성상세→사진→가격→시설상세",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 문장별 근거·자료유형·동작",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "R01 2000년 포함 범위 명확화",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "1편 읽는 원고와 장면 제안 동일",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "1편 통계범위 한 번·공통범례·분모·주의",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "1편 유입·다음 연결",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "2편 읽는 원고와 장면 제안 동일",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "2편 통계범위 한 번·공통범례·분모·주의",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "2편 유입·다음 연결",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "원고에 도보분·배정·미래가격 보장 표현 없음",
+      "result": "pass",
+      "evidence": null
+    },
+    {
+      "check": "생성 입력 해시 고정",
+      "result": "pass",
+      "evidence": []
+    }
+  ],
+  "not_performed": [
+    "새 웹 사실조사",
+    "독립 대본 QA",
+    "시설 좌표와 실제 v4 지도 표시 매칭",
+    "OSM 레이어 확보·완전성 검사",
+    "새 사진 픽셀·권리 재검수",
+    "TTS·음성 청취·실측 타이밍",
+    "렌더·연속 재생",
+    "유료 호출·업로드·외부 내보내기"
+  ]
+}

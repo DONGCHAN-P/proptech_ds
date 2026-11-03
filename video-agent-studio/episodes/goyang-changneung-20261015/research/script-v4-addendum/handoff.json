@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "inputs": [
+    "research/production-v2",
+    "research/commute-v3",
+    "research/map-location-v4",
+    "writer/editorial-review-v1"
+  ],
+  "outputs": [
+    "facts_addendum.json",
+    "report.md",
+    "s5_corrected_p4.txt",
+    "s4_latest_p4.txt",
+    "s1_full_p5.txt",
+    "s1_full_p44.txt"
+  ],
+  "verification": "공식 원본 PDF 4페이지 실제 재추출, LX·S5 페이지 웹 재조회, JSON 파싱 및 2277 부분합 확인",
+  "unresolved": [
+    "단지별 출입구→역 실제 경로·시간",
+    "주변지역 전체 연도별 공급량",
+    "모든 공고 이후 변경 전수조사"
+  ],
+  "affected_scenes": [
+    "M002",
+    "M003",
+    "M005",
+    "M006",
+    "M008"
+  ],
+  "next_owner": "writer / director",
+  "paid_calls": 0
+}

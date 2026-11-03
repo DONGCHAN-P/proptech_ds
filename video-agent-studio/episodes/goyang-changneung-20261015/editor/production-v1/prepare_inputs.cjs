@@ -1,0 +1,18 @@
+const fs=require('fs'),path=require('path'),crypto=require('crypto');
+const ep=path.resolve(__dirname,'../..'),root=path.resolve(ep,'../../..'),out=path.join(ep,'outputs/editor-preflight-v1');
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const rel=p=>path.relative(root,p).replaceAll('\\','/');
+const files=[path.join(root,'config/current_video.json'),path.join(root,'video/src/namyangju-landuse-v8/PersistentCaptions.tsx'),path.join(root,'video/src/namyangju-landuse-v8/BrandReuse.tsx'),path.join(root,'video/src/namyangju-v15/cta_entry.tsx'),path.join(root,'video/public/namyangju-map-led-v6/data_city_ambient_v1.license.json')];
+for(const sub of ['writer/script-v2','visual/production-v2','outputs/reference-direction-v1'])for(const n of fs.readdirSync(path.join(ep,sub)))if(/\.(json|md|svg)$/.test(n))files.push(path.join(ep,sub,n));
+for(const n of ['M003_transport.png','M004_price.png','M005_life.png'])files.push(path.join(ep,'outputs/visual-review-v2',n));
+files.push(path.join(ep,'research/map-clearance-v1/handoff.md'),path.join(ep,'research/map-clearance-v1/download_manifest.json'),path.join(ep,'research/commute-v3/addendum_ilsan.md'),path.join(ep,'outputs/script-review-v2/script_v2.md'));
+const manifest={revision:'editor-preflight-v1',status:'preparation_only_not_full_video',files:files.map(p=>({path:rel(p),sha256:hash(p),bytes:fs.statSync(p).size})),reuse_boundary:'Reuse fonts, caption styling, CTA design, brand and owned music only. No Wangsuk geography, prices, narration or timing.',actual_listening:false,full_video_rendered:false};
+fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'input_manifest.json'),JSON.stringify(manifest,null,2));
+const script=JSON.parse(fs.readFileSync(path.join(ep,'writer/script-v2/manifest.json')));
+const contract={schema:'changneung-render-input-v1',status:'awaiting_real_audio_timing_and_final_media',fps:30,width:1920,height:1080,script_revision:'script-v2',script_manifest_sha256:hash(path.join(ep,'writer/script-v2/manifest.json')),script_approval:null,budget_approval:null,audio_revision:null,timing_basis:null,timing_lock_path:null,timing_lock_sha256:null,brand_intro:{file:'outputs/editor-preflight-v1/brand_intro_generic_v1.mp4',frames:150,insert_after_scene_id:'M000',insert_after_character_index:null},brand_outro:{file:'outputs/editor-preflight-v1/brand_outro_generic_v1.mp4',frames:300,post_speech_hold_frames:90},scenes:script.chapters.map(c=>({scene_id:c.scene_id,narration_text_path:`writer/script-v2/${c.path}`,narration_text_sha256:c.sha256,audio_path:null,audio_sha256:null,start_frame:null,end_frame:null,last_spoken_frame:null,captions_path:null,shots:[]})),final_media_review:null};
+contract.script_review_path='outputs/script-review-v2/script_v2.md';
+contract.script_review_sha256=hash(path.join(ep,contract.script_review_path));
+if(contract.script_review_sha256!=='74ed7a1af1146a7b0f93b6602869222026667dbb8de2ea0137ee81e66eb3bbba')throw Error('script review version changed');
+contract.pending_decision_ids={script:'81cdb3c2a358',budget:'fef620079862'};
+fs.writeFileSync(path.join(__dirname,'render_contract.template.json'),JSON.stringify(contract,null,2));
+console.log(JSON.stringify({manifest_files:manifest.files.length,scene_count:contract.scenes.length,status:contract.status}));

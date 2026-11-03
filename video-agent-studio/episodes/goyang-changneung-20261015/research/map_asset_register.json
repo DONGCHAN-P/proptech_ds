@@ -1,0 +1,39 @@
+{
+  "assets": [
+    {
+      "asset_id": "CN-MAP01",
+      "type": "official_raster_plan",
+      "file": "raw/s5_landuse_20250131.jpg",
+      "url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=60486878",
+      "sha256": "7b65570d626cf4fea93c8671b9ed513a9ad829c41ea3b91cd1d542fd958717d2",
+      "plan_date": "2025-01-31 공고첨부",
+      "viewed": true,
+      "description": "전체창릉·S5강조 원도면. S3/S4 서측, S5중앙서측, 북측과 남측다른권역 표시",
+      "rights": "상업재가공미확인/연구보존",
+      "georeferenced": false,
+      "use": "최신계획대조 전 원판 기준관계 확인용"
+    },
+    {
+      "asset_id": "CN-MAP02",
+      "type": "official_transport_diagram",
+      "file": "raw/transport_plan_202507.jpg",
+      "url": "https://www.xn--3-3u6ey6lv7rsa.kr/attach/EDITOR/IMAGE/2025/7/jnHDyQ3Y0wXxfmoFnOoB.jpg",
+      "sha256": "bacd50da9b9b5a5c0b40e54074118458af8caa9be0aa1a76ef1bb34a27139055",
+      "viewed": false,
+      "rights": "상업재가공미확인",
+      "use": "원천계획관계연구. 예정역정밀핀 추출금지"
+    }
+  ],
+  "vector_geometry": "missing",
+  "requirements": [
+    "최신고시전체plan과블록용도대조",
+    "지금설명하는한지구전체locator와현재영역",
+    "고정카메라/반복줌금지",
+    "거시화면블록핀제외",
+    "계획역구역/운영역별도",
+    "학교상가계획과운영구분",
+    "지도위요약/가로달력",
+    "기업CI는확정사업장확인후"
+  ],
+  "fallback": "원도면 사용권·최신성 확인 후 전체판 보존+별도 해설레이어. 벡터없으면 부정확한SHP창작대신 관계도임을 표시한 자체도식"
+}

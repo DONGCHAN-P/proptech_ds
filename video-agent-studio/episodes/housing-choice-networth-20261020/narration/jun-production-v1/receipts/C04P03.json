@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C04P03",
+  "scene_id": "C04",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:05:48.703Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "05974e597d0c5728f037b808c1749bfa3294ecf6174672ede56d6d58b398e2e1",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "전세 가구는 대출 이억 원의 이자로 월 약 육십칠만 원을 냅니다. 임차인 추가비용을 월 오만 원으로 가정하면 월 주거 지출은 약 칠십이만 원, 투자금은 약 이백이십팔만 원입니다. 월세 가구는 월세 백만 원에 보증금대출 이자 약 칠만 원, 추가비용 오만 원을 냅니다. 총지출은 약 백십이만 원이고 투자금은 약 백팔십팔만 원입니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 183,
+  "characters": 183,
+  "actual_credits": 73,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:05:40.002Z",
+  "local_shadow_remaining_before": 21411,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "hv38M4lW7w4WGOTcb1us",
+    "x-request-id": null,
+    "character-cost": "73",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:05:48 GMT"
+  },
+  "pcm_samples": 1033704,
+  "pcm_duration_s": 23.44,
+  "provider_last_spoken_end_s": 23.52,
+  "artifact_sha256": {
+    "paragraphs/C04P03/audio.mp3": "9b6f746b8bd45fe159dfcfad64889876656257a3d66af70f368da2ece98ca335",
+    "paragraphs/C04P03/audio.wav": "6b0e3c2afa6e00de90f2d96235d8db816626c2be01a275e74ca7ed308d3492f6",
+    "paragraphs/C04P03/alignment.json": "73f97dc0ab3d01cdb2060f440cfd7506572adca851ad8f1802001a90c217da42",
+    "paragraphs/C04P03/normalized_alignment.json": "73f97dc0ab3d01cdb2060f440cfd7506572adca851ad8f1802001a90c217da42"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21338,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:05:54.495Z"
+}

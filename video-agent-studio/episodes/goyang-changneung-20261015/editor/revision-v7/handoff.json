@@ -1,0 +1,169 @@
+{
+  "revision": "visual-review-v7",
+  "status": "대표12PNG·무음3클립·구조guard·독립 시각QA 완료, 본편 재제작 전 승인 대기",
+  "scope": "새 대본 승인 전 대표/source 수정만. r5본편/음성 보존. 새 전체영상/음성/업로드 없음.",
+  "outputs_root": "outputs/visual-review-v7",
+  "files": [
+    {
+      "file": "01_jobs_actualmap.png",
+      "bytes": 307749,
+      "sha256": "1c4d6ae90cc9ed0b00e7a629f1358c78874b3d44d970285b6bad59160e1c2e9c"
+    },
+    {
+      "file": "02_plan_nobox.png",
+      "bytes": 262214,
+      "sha256": "7f6f20241dfc33676137164a67d97410bcd29b546aa30d1f721b495c8b2aba4c"
+    },
+    {
+      "file": "03_commute_table.png",
+      "bytes": 132982,
+      "sha256": "efb3d26434138de3504568c671529da3fac27b5930d87377a32db22cef4b3f79"
+    },
+    {
+      "file": "04_previous_clean.png",
+      "bytes": 244659,
+      "sha256": "4e9af775239519bd60869be8a7f2c15f86ae69ff9a78b6a3a7b9d4c73dc49800"
+    },
+    {
+      "file": "08_supply_claude.png",
+      "bytes": 135538,
+      "sha256": "4d06c74948892af2df23244572cae6263e8ecd213ea46ff102c3cbb5193f6495"
+    },
+    {
+      "file": "09_restrictions_claude.png",
+      "bytes": 99432,
+      "sha256": "ddc3e6ca87fe5bdd2bb20686893f180c28b83c51618c12ca35dd04601ef964d6"
+    },
+    {
+      "file": "11_S4_basic_original.png",
+      "bytes": 321884,
+      "sha256": "3688212ad5abf3c7bbbf4b63b74889050eff14f7af2b735685aa2aed383c5c34"
+    },
+    {
+      "file": "12_S4_balcony_original.png",
+      "bytes": 215197,
+      "sha256": "649d7915711f39bf3a9c2d8a7fc9d3f56cfcf7e3ed97787603495f94c5146b0b"
+    },
+    {
+      "file": "05_resale_desc.png",
+      "bytes": 156979,
+      "sha256": "1461c3cd2bb5f5c6f9f0f70dd1440e846155f1a397d79cd7d8ef77768d9a05cb"
+    },
+    {
+      "file": "06_resale_map.png",
+      "bytes": 355843,
+      "sha256": "a2b85219764e80e977bb5cd08f43d219456f0914e8cc62c3a7a43c8cb0578baa"
+    },
+    {
+      "file": "10_map_longest.png",
+      "bytes": 363175,
+      "sha256": "b271c23d6784fdecb91afbaa22b99e056e74c2703194f37481f41e7055b36ab6"
+    },
+    {
+      "file": "07_chapter_3seconds.png",
+      "bytes": 41327,
+      "sha256": "4a232ef2c1c1c979b2a30694108223cea530470e374b58ea6ec69f1b6f50c3f1"
+    },
+    {
+      "file": "supply_branch_6s.mp4",
+      "bytes": 135607,
+      "sha256": "fc3a090931afb1b120a86ec8558ac3311ab04b85b76ca95134ed3d72cd18947d"
+    },
+    {
+      "file": "restriction_events_6s.mp4",
+      "bytes": 94899,
+      "sha256": "b05f54e573c57b551935daf5263a240b713b74c5dd5cb2e24cbfbf7f843c280e"
+    },
+    {
+      "file": "chapter_title_3s_demo_4s.mp4",
+      "bytes": 157748,
+      "sha256": "f9b77f9b04d2a6005468d9f1777fb75c67982e61accf4de3a71504a7a14dcef9"
+    },
+    {
+      "file": "pre_capture_layout_checks.json",
+      "bytes": 74382,
+      "sha256": "5a100f8cc4189675dd813d6e18996faf0e760a6f132e27fe43b4d623b8e2d7b4"
+    },
+    {
+      "file": "technical.json",
+      "bytes": 14099,
+      "sha256": "d22af3aaf5601a610ec1d2c6408f88f430252c71e9c46029404014587f0fe7b1"
+    },
+    {
+      "file": "price_quote_manifest.json",
+      "bytes": 1962,
+      "sha256": "b7bc8049a8304b415bacf12f55e855aebc6b620dd7dc530d6dced7ea18821229"
+    },
+    {
+      "file": "원인과_대체화면.json",
+      "bytes": 4429,
+      "sha256": "f27486f7aabd70abef253932a4152d800e112df8e77abc5e747cb91fde13c010"
+    },
+    {
+      "file": "representatives_12.jpg",
+      "bytes": 214909,
+      "sha256": "53ac868e2f47543e8d67e13bd0d532680b631bb446f9e51bb62ba421f34c30e8"
+    }
+  ],
+  "inputs": {
+    "r5_sha256": "5763a26b875a06769347ff384908d01010adee9d7fcc60119f8e803001e3d5f4",
+    "script_v7_sha256": "ceb9a4e443dc2d7b36cdf84f5c515fa726d501a85e04d82ca81a4439c894bbbc",
+    "script_approval": "사용자 대본 승인 대기; 새음성타임록없음",
+    "resale_data": "research/revision-v7/price_table_descending.json;resale_map.geojson",
+    "source_pdf": "outputs/source-review-v7/S4_official.pdf"
+  },
+  "guard": "pre_capture_layout_checks.json 12/12passed; layout_contract.json",
+  "actual_clips": "6초공급branch/6초제약레인/4초중3초장제목;30fps1080p무음;모두전체프레임decode",
+  "claude": "claude/approved_receipt.json·approved_response.md·RawMotion.tsx·contribution.json. formal network execution succeeded. 예시 허위날짜/물량/LH5년 전부기각.",
+  "limitations": [
+    "전체청취/연속재생을 주장하지 않음",
+    "대본의 실제 발화와 정렬된 샘플 아님",
+    "공고 원문은 최소 표 인용/출처 표시, 명시 포괄복제허가 미확인",
+    "호반 지도점은 VWorld 동산동365 주소대표점; 경계/입구 아님",
+    "현재12:35 정확프레임은M007끝; M008삭제는새대본통합때적용"
+  ],
+  "unresolved": [
+    "사용자 대본 승인과 새음성/타임록 후 본편 적용"
+  ],
+  "next_owner": "/root 대본/시안 검토 전달 및 script gate",
+  "analysis_chapter_mapping": {
+    "path": "editor/revision-v7/analysis_chapter_mapping.json",
+    "sha256": "cd36bd439aaf357140356b1ae102af08a1f8b4fe8d696b085a50dbabe08f0abe",
+    "writer_chapter_index": "화면 순서로 보존, 화면 분석번호와 구분"
+  },
+  "source_inputs": [
+    {
+      "path": "video/src/changneung-v7/ReviewBoards.tsx",
+      "sha256": "81b9aabe50d779593ca46541c63d50398526f8dfee6463245816b0453b1db352"
+    },
+    {
+      "path": "video/src/changneung-v7/ClaudeMotion.tsx",
+      "sha256": "27ed415c1e072645932d524e42d8fa853707ebc608e47197ce42f85cf5eb81ae"
+    },
+    {
+      "path": "video/src/changneung-v7/PriceQuote.tsx",
+      "sha256": "b5eddbebab3bb373ff44ed376a503aef251b51d7c80beb617eec90764bf870ba"
+    },
+    {
+      "path": "video/src/changneung-v7/entry.tsx",
+      "sha256": "65b9faa2724247ebf15296210a29383a2495b13e561b117dc1027bd1a1c756d1"
+    },
+    {
+      "path": "video/src/changneung-v7/data.json",
+      "sha256": "129518c73b68d6385c99eaca471167f5565dc699fccdc07bbc209b9befbbd1b9"
+    },
+    {
+      "path": "outputs/source-review-v7/S4_official.pdf",
+      "sha256": "25311d447e7f43c48655b96613b1ff2bc56371612a268932071bfb8429e5107d"
+    },
+    {
+      "path": "editor/revision-v7/claude/approved_receipt.json",
+      "sha256": "dec8bb1330f44ef58877ff3f426c80ec25cbf472a081645a0dedd2b8d467843d"
+    }
+  ],
+  "independent_visual_QA": {
+    "path": "qa/revision-v7/visual_review.json",
+    "sha256": "14cde7c8c8b3869a4f00dabe514873da76451d1cd64422015ad53e0eae9207d8",
+    "required_open": []
+  }
+}

@@ -1,0 +1,1 @@
+import fs from 'node:fs/promises';const dir='video/public/brands-v11';let s=await fs.readFile(dir+'/asml.svg','utf8');const m=s.match(/<symbol[^>]*viewBox="([^"]+)"[^>]*>([\s\S]*?)<\/symbol>/);if(m)await fs.writeFile(dir+'/asml.svg',`<svg xmlns="http://www.w3.org/2000/svg" viewBox="${m[1]}">${m[2]}</svg>`);

@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C08P01",
+  "scene_id": "C08",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:07:16.665Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "6480892d9c6e6048a1abb98ff17038be9b3a5791504509a045e076d03ec0f8e2",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "집값이 결과를 얼마나 움직이는지부터 보겠습니다. 투자수익은 연 육 퍼센트, 대출금리는 연 사 퍼센트에 그대로 두겠습니다. 월세와 보증금도 유지하고 집값 상승률만 바꿉니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 95,
+  "characters": 95,
+  "actual_credits": 38,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19183,
+    "character_limit": 40000,
+    "included_remaining": 20817,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:07:16.662Z",
+  "local_shadow_remaining_before": 20817,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "ssH0NSU6a1rSOomwSOsw",
+    "x-request-id": null,
+    "character-cost": "38",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:07:16 GMT"
+  },
+  "pcm_samples": 536256,
+  "pcm_duration_s": 12.16,
+  "provider_last_spoken_end_s": 12.24,
+  "artifact_sha256": {
+    "paragraphs/C08P01/audio.mp3": "2406c1938f617e7765cd144d7daa17fa903c2dd3e28a0f64fc33ef52da862355",
+    "paragraphs/C08P01/audio.wav": "8c0e08ff3bc5368968bbe6acd5d1251f25c322b8c17b8507e9d98d46bb22ca77",
+    "paragraphs/C08P01/alignment.json": "f95b134e206118bc7f82641a4f29029b8921129aba5f3284fd809c8f4ced69d1",
+    "paragraphs/C08P01/normalized_alignment.json": "f95b134e206118bc7f82641a4f29029b8921129aba5f3284fd809c8f4ced69d1"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 20779,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:07:19.902Z"
+}

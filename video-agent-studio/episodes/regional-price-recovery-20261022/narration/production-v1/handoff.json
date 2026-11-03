@@ -1,0 +1,125 @@
+{
+  "task_id": "RPR-PROD1-JUN-PREP",
+  "role": "narration",
+  "status": "prepared_offline_only_awaiting_director_budget_authorization",
+  "summary": "Jun 원문 4839자·39문단 생성기와 실측 timing builder 준비. 오프라인 검사 22개 통과, 외부·유료 호출 0건. 승인 누락·pending·SHA 불일치·request_started/failed는 모두 네트워크 전에 거절됨. 자막 후보 138개는 원문·문자 범위를 보존하며 시간 미확정. 예산 pending과 FFmpeg sandbox 제한으로 실제 음성·타임록·합본·청취는 미실행. 총괄이 실제 승인 후 새 authorization을 발급해 기록된 명령을 require_escalated로 실행한다.",
+  "input_revisions": {
+    "script_revision": "v3",
+    "script_sha256": "99b40e8730ee0f8fdf74402cffbe04b5b418540344e6d2a7175e6a01c3054664",
+    "manifest_sha256": "92ee18d1477d7d513516682e6eacc70e7788f3240e5d7ad36169a5789dc1c322",
+    "config_sha256": "773b2a6eabf306a251f560137a88e56db761865954c6089e0900e76d6f27934c",
+    "budget_proposal_sha256": "d1875d2c71bc890a25280d84ec82971263a12b8b08428a2ca3de8880c090b3dc",
+    "budget_decision_id": "5fe307eed02c",
+    "budget_decision_status_at_received_task": "pending",
+    "generator_code_sha256": {
+      "common.mjs": "99b63053e73a9414f129e59af50d574a1b1b44cf2064608b26b5c3264d593ed1",
+      "generate.mjs": "2583f6968cd3fc73cd4472a47b4cdec0f0cdf884512c9ba6f8dc979ef205d3b5"
+    },
+    "account_module_sha256": "59b19b1517f7b81c88a35d7c9612ea6670780155043125610e52ac5dd0a770e6"
+  },
+  "outputs": [
+    "generate.mjs",
+    "common.mjs",
+    "build_timing.mjs",
+    "offline_checks.mjs",
+    "authorization.template.json",
+    "offline_preflight.json",
+    "offline_verification.json",
+    "offline_caption_plan.json",
+    "README_prepared.md",
+    "issue_RPR-PROD1-JUN-LOCAL-QA.json"
+  ],
+  "affected_scene_ids": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012"
+  ],
+  "checks": [
+    {
+      "check": "offline_failure_paths_and_caption_contract",
+      "result": "passed",
+      "count": 22,
+      "evidence": "offline_verification.json"
+    },
+    {
+      "check": "frozen_script_manifest_config_and_39_original_paragraphs",
+      "result": "passed",
+      "evidence": "offline_preflight.json"
+    },
+    {
+      "check": "live_synthesis_and_actual_audio_timing",
+      "result": "not_run"
+    },
+    {
+      "check": "actual_listening_and_continuous_playback",
+      "result": "not_run"
+    },
+    {
+      "check": "independent_QA",
+      "result": "director_to_assign"
+    }
+  ],
+  "paid_calls": 0,
+  "external_requests": 0,
+  "active_authorization_created": false,
+  "timing_locked": false,
+  "execute_preconditions": [
+    "Actual scoped budget decision approved with matching script/manifest hashes",
+    "Fresh authorization.json issued by director, maximum 24h, exact code/config/quote/decision hashes",
+    "Director require_escalated execution to access existing Winget ffmpeg"
+  ],
+  "execute_command": "& 'C:/Program Files/nodejs/node.exe' 'C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/narration/production-v1/generate.mjs' '--execute-approved'",
+  "timing_command": "& 'C:/Program Files/nodejs/node.exe' 'C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/narration/production-v1/build_timing.mjs'",
+  "offline_verify_command": "& 'C:/Program Files/nodejs/node.exe' 'C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/narration/production-v1/offline_checks.mjs'",
+  "timing_contract": {
+    "time_origin": "body",
+    "caption_time_origin": "global_body",
+    "paragraph_pause_s": 0.35,
+    "narration_duration_excludes_added_pauses": true,
+    "chapter_gaps_included_s": 0,
+    "chapter_transition_owner": "editor",
+    "chapter_gap_suggestion_s": 1,
+    "intro_added_by_final_assembly_s": 5,
+    "outro_after_last_aligned_character_s": 3
+  },
+  "changed_scene_ids": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012"
+  ],
+  "changed_sentences": [],
+  "new_audio_duration_s": null,
+  "timing_delta_s": null,
+  "open_issue_ids": [
+    "RPR-PROD1-JUN-LOCAL-QA"
+  ],
+  "unresolved": [
+    "Actual budget authorization not issued",
+    "Actual ffmpeg decode/concat and live account guards not exercised",
+    "No actual audio, listening or continuous playback",
+    "Caption semantic and display review remains with editor; common timeline finalization remains with director"
+  ],
+  "next_role": "director",
+  "after_generation_roles": [
+    "editor",
+    "qa"
+  ]
+}

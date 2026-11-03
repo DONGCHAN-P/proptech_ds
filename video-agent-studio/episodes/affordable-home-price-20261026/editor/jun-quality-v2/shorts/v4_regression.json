@@ -1,0 +1,204 @@
+{
+  "passed": true,
+  "source_revision": "portrait-shorts-v3-final",
+  "target_revision": "portrait-shorts-v4-wood-house",
+  "shorts": [
+    {
+      "id": "promo",
+      "exact_timing_unchanged": true,
+      "srt_byte_identical": true,
+      "source_excerpt_wav_byte_identical": true,
+      "final_AAC_stream_byte_identical": true,
+      "encoded_audio_sha256": "762f5c11dfa9f6ab8887ab9657a8b545d2f1ca47ab6ffc3b1e6368c6a23f006f",
+      "raw_composition_changes_confined_to_house_slots": true,
+      "inspected_source_frame_samples": [
+        {
+          "time_s": 0,
+          "changed_pixels": 41634
+        },
+        {
+          "time_s": 0.8,
+          "changed_pixels": 41634
+        },
+        {
+          "time_s": 4.5,
+          "changed_pixels": 41634
+        },
+        {
+          "time_s": 7.5,
+          "changed_pixels": 41634
+        },
+        {
+          "time_s": 10,
+          "changed_pixels": 41634
+        },
+        {
+          "time_s": 11.3,
+          "changed_pixels": 38952
+        },
+        {
+          "time_s": 15.7,
+          "changed_pixels": 38952
+        },
+        {
+          "time_s": 18.6,
+          "changed_pixels": 38952
+        },
+        {
+          "time_s": 21.8,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 23,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 24.5,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 27.8,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 31.6,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 34.8,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 35.5,
+          "changed_pixels": 55374
+        },
+        {
+          "time_s": 37.5,
+          "changed_pixels": 55374
+        }
+      ],
+      "final_video_sha256": "215968608a3a6d5159f35195e65378de4d6b9f8ed63f19e5d00bc97059997953"
+    },
+    {
+      "id": "summary",
+      "exact_timing_unchanged": true,
+      "srt_byte_identical": true,
+      "source_excerpt_wav_byte_identical": true,
+      "final_AAC_stream_byte_identical": true,
+      "encoded_audio_sha256": "7bd153b914915ee4dde7e66a5ee940259aed8c2f6690cab6be109213cc02c63a",
+      "raw_composition_changes_confined_to_house_slots": true,
+      "inspected_source_frame_samples": [
+        {
+          "time_s": 0,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 0.8,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 4.5,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 7.5,
+          "changed_pixels": 38952
+        },
+        {
+          "time_s": 10,
+          "changed_pixels": 38952
+        },
+        {
+          "time_s": 11.3,
+          "changed_pixels": 38952
+        },
+        {
+          "time_s": 15.7,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 18.6,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 21.8,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 23,
+          "changed_pixels": 36321
+        },
+        {
+          "time_s": 24.5,
+          "changed_pixels": 36321
+        },
+        {
+          "time_s": 27.8,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 31.6,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 34.8,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 35.5,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 37.5,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 38.6,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 43.1,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 48.3,
+          "changed_pixels": 0
+        },
+        {
+          "time_s": 50.3,
+          "changed_pixels": 0
+        }
+      ],
+      "final_video_sha256": "cd72bb6c827b6695c2f24d6ed2474f7c6901943114443fe639c33168bcc703c9"
+    }
+  ],
+  "house_asset": {
+    "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\visual\\jun-user-script-v1\\outputs\\S02_house_cutout_AI.png",
+    "sha256": "b77e9bc6e1d6c50c92bcfad81cc3477212c96e1c4d22a142c6d9f30995d35ae1",
+    "source_mode": "RGBA",
+    "source_dimensions": [
+      1347,
+      1167
+    ],
+    "alpha_bbox": [
+      0,
+      0,
+      1327,
+      1143
+    ],
+    "fixed_container_px": [
+      270,
+      208
+    ],
+    "fixed_marker_px": [
+      241,
+      208
+    ],
+    "behavior": "Same asset, displayed size and orientation at all price markers; centers stay in their v3 slots"
+  },
+  "public_description_internal_sentence_removed": true,
+  "framework": "Deliberate deterministic Pillow/FFmpeg implementation delegated by user; no migration needed",
+  "actual_listening": false,
+  "continuous_playback": false,
+  "independent_QA": "Sagan must inspect v4 final encoded files"
+}

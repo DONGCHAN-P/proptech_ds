@@ -1,0 +1,349 @@
+{
+  "task_id": "RPR-LIT-20261023",
+  "claims": [
+    {
+      "claim_id": "ST-F01",
+      "sentence": "수도권 공통요인이 큰 결과는 지역 간 외생적 가격 전이와 구분해야 한다.",
+      "original_source_url": "https://www.bok.or.kr/portal/bbs/P0000800/view.do?menuNo=200560&nttId=224757",
+      "evidence_locations": [
+        "학술지 p.134: 2006.01–2016.09 표본 기간",
+        "학술지 p.138: 공통요인 우세 및 예외 지역",
+        "보고서 p.13 표4: 65개 시·구, 8개 하위시장"
+      ],
+      "source_id": "S1",
+      "as_of": "2026-10-23",
+      "checked_on": "2026-10-23",
+      "status": "qualified",
+      "status_scope": "조건부 문헌 결과/한계; 현재 격차의 확정 인과 아님",
+      "price_conditions": {
+        "statistic": "주택매매가격 변동률 및 분산분해",
+        "geography": "수도권65시·구/8하위시장",
+        "period": "2006-01/2016-09 (학술지 원문 검색 노출)",
+        "sample_count": "65시·구, 거래건수 아님",
+        "area": "특정 전용면적 미확인",
+        "transaction_type": "지수 기반, 개별 거래 아님",
+        "unit": "변동률·분산비율, 정량 기여율 인용 보류",
+        "aggregation": "잠재요인모형",
+        "cancellations": "미확인/개별 실거래 분석 아님"
+      },
+      "affected_scene_ids": [],
+      "scene_note": "기존 장면을 읽지 않아 실제 장면ID 미지정"
+    },
+    {
+      "claim_id": "ST-F02",
+      "sentence": "9호선 저자본 표3의 근거리 개통 후 계수는 0.0392(SE0.0205), 10% 수준 유의다.",
+      "original_source_url": "https://lusk.usc.edu/sites/default/files/working_papers/REE_Final.pdf",
+      "evidence_locations": [
+        "PDF pp.7-8,15: 발표 선반영",
+        "PDF pp.11-13: 비무작위 입지, 자료 및 조사·평가가격",
+        "PDF p.33 Table1: 가정 속도로 계산한 이동시간",
+        "PDF p.38 Table3 col.3: 0.0392, SE0.0205, p<0.1",
+        "PDF p.40 Table4: CATE 부호·아파트유형",
+        "PDF p.43 Table6: 이동시간·편의시설 통제"
+      ],
+      "source_id": "S2",
+      "as_of": "2026-10-23",
+      "checked_on": "2026-10-23",
+      "status": "qualified",
+      "status_scope": "조건부 문헌 결과/한계; 현재 격차의 확정 인과 아님",
+      "price_conditions": {
+        "statistic": "유형별 조사·평가가격 분기평균의 로그 회귀",
+        "geography": "서울9호선 통과 지역",
+        "period": "2000-2015 공개저자본",
+        "sample_count": "표3:201985 유형-분기 관측;1102단지,4161유형",
+        "area": "면적 연속통제, 특정면적만의 결과 아님",
+        "transaction_type": "매매 평가·조사가격, 개별 실거래 아님",
+        "unit": "로그포인트 계수",
+        "aggregation": "DID 및 회귀나무",
+        "cancellations": "평가자료라 직접 처리 확인 불가"
+      },
+      "affected_scene_ids": [],
+      "scene_note": "기존 장면을 읽지 않아 실제 장면ID 미지정"
+    },
+    {
+      "claim_id": "ST-F03",
+      "sentence": "9호선 연구의 이동시간은 네트워크 가정 계산이며 실제 개인 통근시간이 아니다.",
+      "original_source_url": "https://lusk.usc.edu/sites/default/files/working_papers/REE_Final.pdf",
+      "evidence_locations": [
+        "PDF pp.7-8,15: 발표 선반영",
+        "PDF pp.11-13: 비무작위 입지, 자료 및 조사·평가가격",
+        "PDF p.33 Table1: 가정 속도로 계산한 이동시간",
+        "PDF p.38 Table3 col.3: 0.0392, SE0.0205, p<0.1",
+        "PDF p.40 Table4: CATE 부호·아파트유형",
+        "PDF p.43 Table6: 이동시간·편의시설 통제"
+      ],
+      "source_id": "S2",
+      "as_of": "2026-10-23",
+      "checked_on": "2026-10-23",
+      "status": "verified",
+      "status_scope": "문헌에 해당 내용이 있는지 확인; 서울경기 인과 원인 확정 아님",
+      "price_conditions": {
+        "statistic": "유형별 조사·평가가격 분기평균의 로그 회귀",
+        "geography": "서울9호선 통과 지역",
+        "period": "2000-2015 공개저자본",
+        "sample_count": "표3:201985 유형-분기 관측;1102단지,4161유형",
+        "area": "면적 연속통제, 특정면적만의 결과 아님",
+        "transaction_type": "매매 평가·조사가격, 개별 실거래 아님",
+        "unit": "로그포인트 계수",
+        "aggregation": "DID 및 회귀나무",
+        "cancellations": "평가자료라 직접 처리 확인 불가"
+      },
+      "affected_scene_ids": [],
+      "scene_note": "기존 장면을 읽지 않아 실제 장면ID 미지정"
+    },
+    {
+      "claim_id": "ST-F04",
+      "sentence": "신분당선 연구는 단계별 거리 기울기 차이를 보고하지만 원표 미확인으로 정량 사용을 보류한다.",
+      "original_source_url": "https://journal.kci.go.kr/krer/archive/articleView?artiId=ART002478678",
+      "evidence_locations": [
+        "ABSTRACT: 건설단계·역 거리의 차별적 계수"
+      ],
+      "source_id": "S3",
+      "as_of": "2026-10-23",
+      "checked_on": "2026-10-23",
+      "status": "qualified",
+      "status_scope": "조건부 문헌 결과/한계; 현재 격차의 확정 인과 아님",
+      "price_conditions": {
+        "statistic": "사업단계 및 거리별 가격 관계",
+        "geography": "신분당선2단계 정자-광교",
+        "period": null,
+        "sample_count": null,
+        "area": null,
+        "transaction_type": "아파트 매매",
+        "unit": "정량 사용 보류",
+        "aggregation": null,
+        "cancellations": null
+      },
+      "affected_scene_ids": [],
+      "scene_note": "기존 장면을 읽지 않아 실제 장면ID 미지정"
+    },
+    {
+      "claim_id": "ST-F05",
+      "sentence": "동북선 표5의 DID는 p0.3866이며 표3의 면적 평균이 최댓값보다 크다.",
+      "original_source_url": "https://www.ejrea.org/archive/view_article?pid=jrea-11-2-171",
+      "evidence_locations": [
+        "HTML III.1 vs IV.1: 대상 5개 자치구 목록 차이",
+        "표3: 전용면적 평균72.25, 최댓값58",
+        "표4: 600m DID 0.0302(SE0.004)",
+        "표5: DID0.0165(SE0.0191), p0.3866",
+        "표7·관련 본문: 일부 계수·p값 불일치",
+        "표8: PSM-DID0.3831/0.4251/0.4237",
+        "V 한계: 평행추세 불완전"
+      ],
+      "source_id": "S4",
+      "as_of": "2026-10-23",
+      "checked_on": "2026-10-23",
+      "status": "verified",
+      "status_scope": "문헌에 해당 내용이 있는지 확인; 서울경기 인과 원인 확정 아님",
+      "price_conditions": {
+        "statistic": "아파트 실거래가 로그 회귀",
+        "geography": "서울동북권, 대상구 목록 내부 불일치",
+        "period": "2013-01/2024-12",
+        "sample_count": "논문 주장209790건, 패널집계 설명 추가 검증 필요",
+        "area": "통제, 표3면적 오류",
+        "transaction_type": "매매",
+        "unit": "로그포인트",
+        "aggregation": "DID/법정동·연월FE/PSM-DID",
+        "cancellations": "미확인"
+      },
+      "affected_scene_ids": [],
+      "scene_note": "기존 장면을 읽지 않아 실제 장면ID 미지정"
+    },
+    {
+      "claim_id": "ST-F06",
+      "sentence": "ITF는 경기 내부 통근과 교통수단별 일자리 접근을 구분하므로 모든 경기 수요를 서울 통근으로 볼 수 없다.",
+      "original_source_url": "https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/08/accessibility-in-the-seoul-metropolitan-area-does-transport-serve-all-equally_658069ed/4ef85abc-en.pdf",
+      "evidence_locations": [
+        "인쇄p.3: 집필·기여자",
+        "인쇄p.13 Box1: 500m격자 및 행정경계 위험",
+        "인쇄p.15 Figure2 출처: 2016통행, KOTI2018",
+        "인쇄pp.16,20-21: 실측 도로속도·대기·환승",
+        "인쇄p.29: 화성 내부45%, 다른 경기42% 통근",
+        "인쇄pp.30-31: 시간대·일자리 종류 한계"
+      ],
+      "source_id": "S5",
+      "as_of": "2026-10-23",
+      "checked_on": "2026-10-23",
+      "status": "qualified",
+      "status_scope": "조건부 문헌 결과/한계; 현재 격차의 확정 인과 아님",
+      "price_conditions": null,
+      "affected_scene_ids": [],
+      "scene_note": "기존 장면을 읽지 않아 실제 장면ID 미지정"
+    },
+    {
+      "claim_id": "ST-F07",
+      "sentence": "외지인 거래 비중에는 실거주·신규입주가 섞이고 전국/수도권 모형 결과가 다르다.",
+      "original_source_url": "https://www.krihs.re.kr/galleryDownload.es?bid=0025&list_no=27953&seq=1",
+      "evidence_locations": [
+        "인쇄p.6: 2006-2019 현황, 회귀는 위기 이후",
+        "인쇄pp.9-10: 매입자거주지·외지인 정의",
+        "인쇄p.12 각주2, p.26: 실수요 혼재",
+        "인쇄p.17 표5: 교차상관2012Q1-2019Q4",
+        "인쇄pp.18-20 표6-9: AR(1), 로그비중 및 시차",
+        "인쇄p.21: 변환 효과 서술"
+      ],
+      "source_id": "S6",
+      "as_of": "2026-10-23",
+      "checked_on": "2026-10-23",
+      "status": "qualified",
+      "status_scope": "조건부 문헌 결과/한계; 현재 격차의 확정 인과 아님",
+      "price_conditions": {
+        "statistic": "아파트가격지수 로그차분과 거래량·비중 회귀",
+        "geography": "전국/수도권/서울",
+        "period": "현황2006-2019;표5 2012Q1-2019Q4;회귀창 미확인",
+        "sample_count": null,
+        "area": "지수 집계, 특정면적 아님",
+        "transaction_type": "아파트 매매;증여·분양권 분리",
+        "unit": "로그비중 계수와 %p 환산을 구분",
+        "aggregation": "분기 AR(1)",
+        "cancellations": "미확인"
+      },
+      "affected_scene_ids": [],
+      "scene_note": "기존 장면을 읽지 않아 실제 장면ID 미지정"
+    },
+    {
+      "claim_id": "ST-F08",
+      "sentence": "관련 학술지 초록의 Granger는 가격상승이 외지인 거래보다 앞서는 순서를 보고한다.",
+      "original_source_url": "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10724972",
+      "evidence_locations": [
+        "관련 학술지 원초록 Granger 결과"
+      ],
+      "source_id": "S6",
+      "as_of": "2026-10-23",
+      "checked_on": "2026-10-23",
+      "status": "qualified",
+      "status_scope": "조건부 문헌 결과/한계; 현재 격차의 확정 인과 아님",
+      "price_conditions": {
+        "statistic": "아파트가격지수 로그차분과 거래량·비중 회귀",
+        "geography": "전국/수도권/서울",
+        "period": "현황2006-2019;표5 2012Q1-2019Q4;회귀창 미확인",
+        "sample_count": null,
+        "area": "지수 집계, 특정면적 아님",
+        "transaction_type": "아파트 매매;증여·분양권 분리",
+        "unit": "로그비중 계수와 %p 환산을 구분",
+        "aggregation": "분기 AR(1)",
+        "cancellations": "미확인"
+      },
+      "affected_scene_ids": [],
+      "scene_note": "기존 장면을 읽지 않아 실제 장면ID 미지정"
+    },
+    {
+      "claim_id": "ST-F09",
+      "sentence": "서울 투자매입 제한 연구는 인접지로의 수요 대체 통계 증거가 없었다고 보고한다.",
+      "original_source_url": "https://www.sciencedirect.com/science/article/pii/S0165176525000795",
+      "evidence_locations": [
+        "Data: Seoul apartment transactions June2019-June2021",
+        "Abstract: 인접지 가격 하락 및 거래량 증가 증거 없음",
+        "Regression results: 기준 DID와 경계 양쪽 비교"
+      ],
+      "source_id": "S7",
+      "as_of": "2026-10-23",
+      "checked_on": "2026-10-23",
+      "status": "qualified",
+      "status_scope": "조건부 문헌 결과/한계; 현재 격차의 확정 인과 아님",
+      "price_conditions": {
+        "statistic": "서울아파트 실거래가 DID",
+        "geography": "규제·인접지·나머지서울",
+        "period": "2019-06/2021-06",
+        "sample_count": null,
+        "area": null,
+        "transaction_type": "매매",
+        "unit": "정량 사용 보류",
+        "aggregation": "원표 미확인",
+        "cancellations": null
+      },
+      "affected_scene_ids": [],
+      "scene_note": "기존 장면을 읽지 않아 실제 장면ID 미지정"
+    },
+    {
+      "claim_id": "ST-P1",
+      "sentence": "서울 선행성은 사전 통근·주택특성 연결이 큰 경기 지역에서 강하다.",
+      "original_source_url": "https://www.bok.or.kr/portal/bbs/P0000800/view.do?menuNo=200560&nttId=224757",
+      "evidence_locations": [
+        "학술지 p.134: 2006.01–2016.09 표본 기간",
+        "학술지 p.138: 공통요인 우세 및 예외 지역",
+        "보고서 p.13 표4: 65개 시·구, 8개 하위시장"
+      ],
+      "source_id": "S1",
+      "as_of": "2026-10-23",
+      "checked_on": "2026-10-23",
+      "status": "unverified",
+      "status_scope": "우리 자료로 검증하지 않은 가설",
+      "price_conditions": {
+        "statistic": "주택매매가격 변동률 및 분산분해",
+        "geography": "수도권65시·구/8하위시장",
+        "period": "2006-01/2016-09 (학술지 원문 검색 노출)",
+        "sample_count": "65시·구, 거래건수 아님",
+        "area": "특정 전용면적 미확인",
+        "transaction_type": "지수 기반, 개별 거래 아님",
+        "unit": "변동률·분산비율, 정량 기여율 인용 보류",
+        "aggregation": "잠재요인모형",
+        "cancellations": "미확인/개별 실거래 분석 아님"
+      },
+      "affected_scene_ids": [],
+      "scene_note": "기존 장면을 읽지 않아 실제 장면ID 미지정"
+    },
+    {
+      "claim_id": "ST-P2",
+      "sentence": "개통 후 상대가격 변화는 실제 직장 접근성 개선이 큰 단지에서 크다.",
+      "original_source_url": "https://lusk.usc.edu/sites/default/files/working_papers/REE_Final.pdf",
+      "evidence_locations": [
+        "PDF pp.7-8,15: 발표 선반영",
+        "PDF pp.11-13: 비무작위 입지, 자료 및 조사·평가가격",
+        "PDF p.33 Table1: 가정 속도로 계산한 이동시간",
+        "PDF p.38 Table3 col.3: 0.0392, SE0.0205, p<0.1",
+        "PDF p.40 Table4: CATE 부호·아파트유형",
+        "PDF p.43 Table6: 이동시간·편의시설 통제"
+      ],
+      "source_id": "S2",
+      "as_of": "2026-10-23",
+      "checked_on": "2026-10-23",
+      "status": "unverified",
+      "status_scope": "우리 자료로 검증하지 않은 가설",
+      "price_conditions": {
+        "statistic": "유형별 조사·평가가격 분기평균의 로그 회귀",
+        "geography": "서울9호선 통과 지역",
+        "period": "2000-2015 공개저자본",
+        "sample_count": "표3:201985 유형-분기 관측;1102단지,4161유형",
+        "area": "면적 연속통제, 특정면적만의 결과 아님",
+        "transaction_type": "매매 평가·조사가격, 개별 실거래 아님",
+        "unit": "로그포인트 계수",
+        "aggregation": "DID 및 회귀나무",
+        "cancellations": "평가자료라 직접 처리 확인 불가"
+      },
+      "affected_scene_ids": [],
+      "scene_note": "기존 장면을 읽지 않아 실제 장면ID 미지정"
+    },
+    {
+      "claim_id": "ST-P3",
+      "sentence": "투자성 외부매수 증가가 선행한 일부 지역에서 이후 상대가격 상승이 크다.",
+      "original_source_url": "https://www.krihs.re.kr/galleryDownload.es?bid=0025&list_no=27953&seq=1",
+      "evidence_locations": [
+        "인쇄p.6: 2006-2019 현황, 회귀는 위기 이후",
+        "인쇄pp.9-10: 매입자거주지·외지인 정의",
+        "인쇄p.12 각주2, p.26: 실수요 혼재",
+        "인쇄p.17 표5: 교차상관2012Q1-2019Q4",
+        "인쇄pp.18-20 표6-9: AR(1), 로그비중 및 시차",
+        "인쇄p.21: 변환 효과 서술"
+      ],
+      "source_id": "S6",
+      "as_of": "2026-10-23",
+      "checked_on": "2026-10-23",
+      "status": "unverified",
+      "status_scope": "우리 자료로 검증하지 않은 가설",
+      "price_conditions": {
+        "statistic": "아파트가격지수 로그차분과 거래량·비중 회귀",
+        "geography": "전국/수도권/서울",
+        "period": "현황2006-2019;표5 2012Q1-2019Q4;회귀창 미확인",
+        "sample_count": null,
+        "area": "지수 집계, 특정면적 아님",
+        "transaction_type": "아파트 매매;증여·분양권 분리",
+        "unit": "로그비중 계수와 %p 환산을 구분",
+        "aggregation": "분기 AR(1)",
+        "cancellations": "미확인"
+      },
+      "affected_scene_ids": [],
+      "scene_note": "기존 장면을 읽지 않아 실제 장면ID 미지정"
+    }
+  ]
+}

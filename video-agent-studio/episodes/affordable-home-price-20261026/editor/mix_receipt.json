@@ -1,0 +1,456 @@
+{
+  "status": "canonical_carve_pass",
+  "audio_revision": "production-injoon-v3",
+  "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "timing_sha256": "86a3c01e344f8c24da930404355b60d34eb9e1a0f49431cd299b5b38034939e7",
+  "EDL_sha256": "b7ac9e06a4bfacb8ab229f3a9250fed6757bd83656b29fefdd3a680535e17109",
+  "canonical_script_sha256": "7ddef413955ca81b66eba4630e3296220613150d428795f636577f2d8626c160",
+  "core_version": "0.8.181",
+  "core_directory": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\audio-deps",
+  "ffmpeg_sha256": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+  "ffmpeg_receipt_sha256": "87fd7c1448716f22e7f4ffeecb29f9bb816c19b719df37b8d9c6f24f5131623d",
+  "music_sha256": "891d3ea47e443e590a6562a1e2bff37c8830817b3cdf604091f92bfe87e5cc4f",
+  "decoded_music_sha256": "ff62273753d72e3fe844c19e5b655feebea0c566e178bd619ce123adac686593",
+  "music_seconds": 195.89225,
+  "strength": 0.8,
+  "placement_clock": "actual global EDL time including 5s clean intro; ch01 skips those 5s in its local bed",
+  "decode_smokes": [
+    {
+      "file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\regional-price-recovery-20261022\\outputs\\production-v1-jun\\reusable_assets\\thinking_music.mp3",
+      "sha256": "891d3ea47e443e590a6562a1e2bff37c8830817b3cdf604091f92bfe87e5cc4f",
+      "sample_format": "float32 little-endian pipe",
+      "samples": 12000,
+      "peak": 0.22129607200622559
+    },
+    {
+      "file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\production-injoon-v3\\chapter_04.wav",
+      "sha256": "26c6cb2f3ca986e34e41ec57404f2330da60754d9f7c0985d7e4d34ae52ddf08",
+      "sample_format": "float32 little-endian pipe",
+      "samples": 12000,
+      "peak": 0.0
+    }
+  ],
+  "actual_listening": false,
+  "ASR_approval": "pending",
+  "full_film_render_executed": false,
+  "full_film_render_authorized": false,
+  "chapters": [
+    {
+      "chapter": 1,
+      "html_sha256": "0d1b88dcb824dedf1d388a0b41ef012a150e0a9948f16646c2f7de280e99b7d9",
+      "before_carve_html_sha256": "8c7cd7cd71cf18e2209533b5fa2e8a590cf9df72c5baa9f6c6589d7cc075acdc",
+      "voice_sha256": "537b3531b503a7d8da56aaf34f4a272f52ef95e4ea26033d96cde4e4b47c9c78",
+      "bed_sha256": "588b56a43c6b6ba78c0b0f9f213da2a661bf532a75658aac339ddaad55f0f967",
+      "bed_duration_s": 60.833333333333336,
+      "EDL_music_pieces": [
+        {
+          "local_start_s": 0,
+          "local_end_s": 23.033333333333335,
+          "global_start_s": 0,
+          "music_start_s": 0.0
+        },
+        {
+          "local_start_s": 23.033333333333335,
+          "local_end_s": 60.833333333333336,
+          "global_start_s": 28.033333333333335,
+          "music_start_s": 28.033333333333335
+        }
+      ],
+      "carve_argv": [
+        "node",
+        "C:\\Users\\e2ken\\.agents\\skills\\hyperframes-audio\\scripts\\carve.mjs",
+        "--comp",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch01\\index.html",
+        "--bed",
+        "music-bed",
+        "--voice",
+        "narration",
+        "--strength",
+        "0.8",
+        "--core",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\audio-deps"
+      ],
+      "settings": {
+        "enabled": true,
+        "sources": [
+          "voiceover"
+        ],
+        "strength": 0.8
+      },
+      "spectral_nodes": 6,
+      "automation_lanes": 8,
+      "non_audio_DOM_GSAP_byte_identical": true
+    },
+    {
+      "chapter": 2,
+      "html_sha256": "da7866c1e1bd890b065fc316b84ad3471e83b1019cb0184ac01754d73f19f05b",
+      "before_carve_html_sha256": "ed189c997ba523814cf0548b60dd7e44dedc7cdf7bc507fadcb548c6305f19c3",
+      "voice_sha256": "a01eba931f99f766d3feb6bc32e9407db2606924b610616f3dd9957f553019dd",
+      "bed_sha256": "1b0e2fe5dddc74b90e589b7a60e93ea052a80b4a0a872ed2514bb3d538efdd90",
+      "bed_duration_s": 60.333333333333336,
+      "EDL_music_pieces": [
+        {
+          "local_start_s": 0,
+          "local_end_s": 60.333333333333336,
+          "global_start_s": 65.83333333333334,
+          "music_start_s": 65.83333333333334
+        }
+      ],
+      "carve_argv": [
+        "node",
+        "C:\\Users\\e2ken\\.agents\\skills\\hyperframes-audio\\scripts\\carve.mjs",
+        "--comp",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch02\\index.html",
+        "--bed",
+        "music-bed",
+        "--voice",
+        "narration",
+        "--strength",
+        "0.8",
+        "--core",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\audio-deps"
+      ],
+      "settings": {
+        "enabled": true,
+        "sources": [
+          "voiceover"
+        ],
+        "strength": 0.8
+      },
+      "spectral_nodes": 6,
+      "automation_lanes": 8,
+      "non_audio_DOM_GSAP_byte_identical": true
+    },
+    {
+      "chapter": 3,
+      "html_sha256": "10790784e64c2cff2d40a61df87f49fb8f6ba9f78f47b9f3ec99c0c967ed17ea",
+      "before_carve_html_sha256": "80964d13521109b5333fbbf096b6ad220712bd61931a05808805d4ca289a4b14",
+      "voice_sha256": "03849e0624787643bc623099a05fb2863726670656b3c48e0a3e54cf501d472a",
+      "bed_sha256": "b91b8830aa587d3f09c70228f9c0151b1f7c3d33a079b81324d4f485af2158ce",
+      "bed_duration_s": 90.93333333333334,
+      "EDL_music_pieces": [
+        {
+          "local_start_s": 0,
+          "local_end_s": 90.93333333333334,
+          "global_start_s": 126.16666666666669,
+          "music_start_s": 126.16666666666669
+        }
+      ],
+      "carve_argv": [
+        "node",
+        "C:\\Users\\e2ken\\.agents\\skills\\hyperframes-audio\\scripts\\carve.mjs",
+        "--comp",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch03\\index.html",
+        "--bed",
+        "music-bed",
+        "--voice",
+        "narration",
+        "--strength",
+        "0.8",
+        "--core",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\audio-deps"
+      ],
+      "settings": {
+        "enabled": true,
+        "sources": [
+          "voiceover"
+        ],
+        "strength": 0.8
+      },
+      "spectral_nodes": 6,
+      "automation_lanes": 8,
+      "non_audio_DOM_GSAP_byte_identical": true
+    },
+    {
+      "chapter": 4,
+      "html_sha256": "907a3a9027567d6a4b66260501bc213425f764a45788b175285fc7c9f2fadace",
+      "before_carve_html_sha256": "e87ca5f351b47a8bcc02a01c56160b2d1c3b35379ebee21fd5ebc5b104da99a8",
+      "voice_sha256": "26c6cb2f3ca986e34e41ec57404f2330da60754d9f7c0985d7e4d34ae52ddf08",
+      "bed_sha256": "0a3e559a3dafc6b89f042dc88a18c13f44edcff37c21c5ac36409a4031951346",
+      "bed_duration_s": 98.56666666666666,
+      "EDL_music_pieces": [
+        {
+          "local_start_s": 0,
+          "local_end_s": 98.56666666666666,
+          "global_start_s": 217.10000000000002,
+          "music_start_s": 21.207750000000033
+        }
+      ],
+      "carve_argv": [
+        "node",
+        "C:\\Users\\e2ken\\.agents\\skills\\hyperframes-audio\\scripts\\carve.mjs",
+        "--comp",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch04\\index.html",
+        "--bed",
+        "music-bed",
+        "--voice",
+        "narration",
+        "--strength",
+        "0.8",
+        "--core",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\audio-deps"
+      ],
+      "settings": {
+        "enabled": true,
+        "sources": [
+          "voiceover"
+        ],
+        "strength": 0.8
+      },
+      "spectral_nodes": 6,
+      "automation_lanes": 8,
+      "non_audio_DOM_GSAP_byte_identical": true
+    },
+    {
+      "chapter": 5,
+      "html_sha256": "b4be6a4549ecd43cb4ae646c6322d57a2f43f522d48fab29db9c65e0e2156c25",
+      "before_carve_html_sha256": "92508c32f638757c9817d407e15aab2640120c32c5c32cada66df61b68968aac",
+      "voice_sha256": "38c0ff2a89e6864e9941fe81e926f77db20165a0928091dcb23b2db2389e63d3",
+      "bed_sha256": "8f4020dd62c53bd88116871a6caf1702d082c398fc499ef7ea4512add71e9d12",
+      "bed_duration_s": 170.83333333333334,
+      "EDL_music_pieces": [
+        {
+          "local_start_s": 0,
+          "local_end_s": 170.83333333333334,
+          "global_start_s": 315.6666666666667,
+          "music_start_s": 119.7744166666667
+        }
+      ],
+      "carve_argv": [
+        "node",
+        "C:\\Users\\e2ken\\.agents\\skills\\hyperframes-audio\\scripts\\carve.mjs",
+        "--comp",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch05\\index.html",
+        "--bed",
+        "music-bed",
+        "--voice",
+        "narration",
+        "--strength",
+        "0.8",
+        "--core",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\audio-deps"
+      ],
+      "settings": {
+        "enabled": true,
+        "sources": [
+          "voiceover"
+        ],
+        "strength": 0.8
+      },
+      "spectral_nodes": 6,
+      "automation_lanes": 8,
+      "non_audio_DOM_GSAP_byte_identical": true
+    },
+    {
+      "chapter": 6,
+      "html_sha256": "93ef08619e333b43dd70062d9c92a6e75a82d6a1ec7cf04e3b31c9f6e295cd00",
+      "before_carve_html_sha256": "ba647c233c8a81f05ee2db9fc08dbecd14d4df86f3420a9cbd1d0ed97607ba1e",
+      "voice_sha256": "9aa6f2f9362caa928d37ff98f4f08ae78c5c2207848eb7f306424f7773f43f6a",
+      "bed_sha256": "b41f9e92d9c1566e409cb7ef58a8e5b33a8defaf5e5aee9bcfa1a2070d107531",
+      "bed_duration_s": 143.33333333333334,
+      "EDL_music_pieces": [
+        {
+          "local_start_s": 0,
+          "local_end_s": 143.33333333333334,
+          "global_start_s": 486.5,
+          "music_start_s": 94.71550000000002
+        }
+      ],
+      "carve_argv": [
+        "node",
+        "C:\\Users\\e2ken\\.agents\\skills\\hyperframes-audio\\scripts\\carve.mjs",
+        "--comp",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch06\\index.html",
+        "--bed",
+        "music-bed",
+        "--voice",
+        "narration",
+        "--strength",
+        "0.8",
+        "--core",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\audio-deps"
+      ],
+      "settings": {
+        "enabled": true,
+        "sources": [
+          "voiceover"
+        ],
+        "strength": 0.8
+      },
+      "spectral_nodes": 6,
+      "automation_lanes": 8,
+      "non_audio_DOM_GSAP_byte_identical": true
+    },
+    {
+      "chapter": 7,
+      "html_sha256": "cea987b4c189f3c49e2831da82146e5b664d085648e1212daa7c8ebd668d88fc",
+      "before_carve_html_sha256": "482c7e9e90f410b8a0a29cb2be86e03c401e47a212f93d854a91b10dfb615768",
+      "voice_sha256": "66ca7e32d3602b0a5f5169dea390f53c71cb7a3ff38b98134cb5b23613ae4462",
+      "bed_sha256": "79a186cde7efbe71e768acc766d1923a349e5cdffec03dce904101fb8e33170a",
+      "bed_duration_s": 171.3,
+      "EDL_music_pieces": [
+        {
+          "local_start_s": 0,
+          "local_end_s": 171.3,
+          "global_start_s": 629.8333333333334,
+          "music_start_s": 42.1565833333334
+        }
+      ],
+      "carve_argv": [
+        "node",
+        "C:\\Users\\e2ken\\.agents\\skills\\hyperframes-audio\\scripts\\carve.mjs",
+        "--comp",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch07\\index.html",
+        "--bed",
+        "music-bed",
+        "--voice",
+        "narration",
+        "--strength",
+        "0.8",
+        "--core",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\audio-deps"
+      ],
+      "settings": {
+        "enabled": true,
+        "sources": [
+          "voiceover"
+        ],
+        "strength": 0.8
+      },
+      "spectral_nodes": 6,
+      "automation_lanes": 8,
+      "non_audio_DOM_GSAP_byte_identical": true
+    },
+    {
+      "chapter": 8,
+      "html_sha256": "c01c776cda7a64566f5bddde5bc320ad78a7dec30a50308279ce914ca1edd119",
+      "before_carve_html_sha256": "8dfc6b0c58172826f0e8b96ffaca68c7fd3f5e9741abf82b582c38533249f387",
+      "voice_sha256": "c3115182ea886b7b4f79dff68cd12c589118445b066be5ca424318b2024c2794",
+      "bed_sha256": "8be901ebcbeb0b486abfccd706391291ce176aa1487ec0425e0fadfc940cf6d2",
+      "bed_duration_s": 169.2,
+      "EDL_music_pieces": [
+        {
+          "local_start_s": 0,
+          "local_end_s": 169.2,
+          "global_start_s": 801.1333333333334,
+          "music_start_s": 17.56433333333348
+        }
+      ],
+      "carve_argv": [
+        "node",
+        "C:\\Users\\e2ken\\.agents\\skills\\hyperframes-audio\\scripts\\carve.mjs",
+        "--comp",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch08\\index.html",
+        "--bed",
+        "music-bed",
+        "--voice",
+        "narration",
+        "--strength",
+        "0.8",
+        "--core",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\audio-deps"
+      ],
+      "settings": {
+        "enabled": true,
+        "sources": [
+          "voiceover"
+        ],
+        "strength": 0.8
+      },
+      "spectral_nodes": 6,
+      "automation_lanes": 8,
+      "non_audio_DOM_GSAP_byte_identical": true
+    },
+    {
+      "chapter": 9,
+      "html_sha256": "c5af17689b8fc5e482dc7fc809f3512725096126d2bf26831f44ed742ef959ed",
+      "before_carve_html_sha256": "1c84d9bc988568ac9f633e59bd77e7210b20a711603dfe505213cea75aaaf99d",
+      "voice_sha256": "5baa2a578c108fd3482650de7a9a40f93a371407c6cddb231512c9cfa0ccfc90",
+      "bed_sha256": "db1da9916116569c60535346187b857eb233ed187a2e8109112a755bb367ec52",
+      "bed_duration_s": 133.26666666666668,
+      "EDL_music_pieces": [
+        {
+          "local_start_s": 0,
+          "local_end_s": 133.26666666666668,
+          "global_start_s": 970.3333333333335,
+          "music_start_s": 186.76433333333352
+        }
+      ],
+      "carve_argv": [
+        "node",
+        "C:\\Users\\e2ken\\.agents\\skills\\hyperframes-audio\\scripts\\carve.mjs",
+        "--comp",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch09\\index.html",
+        "--bed",
+        "music-bed",
+        "--voice",
+        "narration",
+        "--strength",
+        "0.8",
+        "--core",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\audio-deps"
+      ],
+      "settings": {
+        "enabled": true,
+        "sources": [
+          "voiceover"
+        ],
+        "strength": 0.8
+      },
+      "spectral_nodes": 6,
+      "automation_lanes": 8,
+      "non_audio_DOM_GSAP_byte_identical": true
+    },
+    {
+      "chapter": 10,
+      "html_sha256": "bc72338bb33537f6666954741aa3cfb293c291cd6a3999ab7d84efdc9cbac78b",
+      "before_carve_html_sha256": "131dcb1a9a628631db4bc86b953bef071b461d143a6c1c8404b7ac0a8a66d64a",
+      "voice_sha256": "46b1a00be82bd094493c56f26c4075fbf18808fea7391eb674118ba133d9f63b",
+      "bed_sha256": "57e2ae3b8b53f1e108ba5030284d766254e843de3e6ba1d6b98268f1dcec7712",
+      "bed_duration_s": 69.41312500000001,
+      "EDL_music_pieces": [
+        {
+          "local_start_s": 0,
+          "local_end_s": 69.41312500000001,
+          "global_start_s": 1103.6000000000001,
+          "music_start_s": 124.13875000000019
+        }
+      ],
+      "carve_argv": [
+        "node",
+        "C:\\Users\\e2ken\\.agents\\skills\\hyperframes-audio\\scripts\\carve.mjs",
+        "--comp",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\private-production-v1\\ch10\\index.html",
+        "--bed",
+        "music-bed",
+        "--voice",
+        "narration",
+        "--strength",
+        "0.8",
+        "--core",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\audio-deps"
+      ],
+      "settings": {
+        "enabled": true,
+        "sources": [
+          "voiceover"
+        ],
+        "strength": 0.8
+      },
+      "spectral_nodes": 6,
+      "automation_lanes": 8,
+      "non_audio_DOM_GSAP_byte_identical": true
+    }
+  ],
+  "visual_rebind": {
+    "revision": "visual-v4",
+    "canonical_analysis_rerun": false,
+    "original_analysis_receipt_sha256": "6f920ae7f57d88c5124e9f0b32721a573b0323afb1e0f351d66d9e434b08e2f1",
+    "same_audio_tags_all10": true,
+    "changed_chapters": [
+      1,
+      7,
+      9
+    ]
+  }
+}

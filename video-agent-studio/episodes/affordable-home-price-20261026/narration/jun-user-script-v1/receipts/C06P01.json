@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C06P01",
+  "scene_id": "C06",
+  "status": "complete",
+  "started_at_utc": "2026-10-27T15:50:38.949Z",
+  "authorization_sha256": "ff4a4b0a3b4551435ce1f525f96d01c98c3d01080dec54ec3b96c869a82a0c8e",
+  "text_sha256": "be6e5f2482781e3a45eb8a5bbff9c16be11937c34ad796e20497995f0bb5d467",
+  "phonetic_manifest_sha256": "5290eff5c5724c807bc4062feab7be5889b8decea1316984e48f25b1fe32b9f5",
+  "request": {
+    "text": "여기서 꼭 한 번 더 볼 게 있습니다. 오늘은 엘티브이 칠십퍼센트로 계산했죠. 그런데 내가 살 집에 사십퍼센트가 적용되면 어떻게 될까요?\n\n다른 조건과 준비금은 그대로 두고 계산하면, 현금 일억 원은 약 일억 삼천삼백만 원, 이억 원은 약 이억 팔천삼백만 원, 삼억 원은 약 사억 삼천삼백만 원, 사억 원은 약 오억 팔천삼백만 원, 오억 원은 약 칠억 삼천삼백만 원으로 바뀝니다.\n\n차이가 꽤 크죠. 그래서 내가 생애최초인지, 해당 지역과 주택에 어떤 규제가 적용되는지부터 확인해야 합니다. 서울 어디, 경기 어디라는 이름만 보고 같은 대출이 나온다고 생각하면 안 됩니다.\n\n실제로 집을 보러 가기 전에는 순서를 이렇게 잡으시면 좋겠습니다. 잔금일에 쓸 수 있는 현금을 정리하고, 남겨둘 준비금을 빼고, 내 소득과 기존 대출을 가지고 은행에서 상담을 받습니다. 그다음 그 집의 담보평가와 대출 조건을 확인하는 거예요.\n\n상담 단계에서 들은 금액과 최종 실행 금액은 다를 수 있습니다. 그래서 대출이 원하는 만큼 나오겠지 하고 계약부터 서두르면 안 됩니다. 계약 전에 자금 일정과 필요한 조건을 확인하고, 불확실한 부분은 구체적으로 협의하셔야 합니다.\n\n그리고 은행이 빌려줄 수 있는 금액이 곧 내가 편하게 갚을 수 있는 금액은 아닙니다. 월 이백만 원을 낼 수 있다고 해도, 생활비와 교육비, 부모님 지원, 출산이나 이직 계획까지 넣으면 체감이 달라져요.\n\n금리가 올라가거나 소득이 잠시 줄어도 버틸 수 있는지도 한번 보세요. 집값이 오를 거라는 기대를 빼고, 지금 소득으로 이 집을 유지할 수 있는가를 먼저 계산해보셨으면 좋겠습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 803,
+  "characters": 803,
+  "actual_credits": 321,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 22276,
+    "character_limit": 40000,
+    "included_remaining": 17724,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-27T15:50:38.945Z",
+  "local_shadow_remaining_before": 17724,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "gCthEDxglpb97oEgmVlS",
+    "x-request-id": null,
+    "character-cost": "321",
+    "content-type": "application/json",
+    "date": "Tue, 27 Oct 2026 15:50:39 GMT"
+  },
+  "pcm_samples": 4180680,
+  "pcm_duration_s": 94.8,
+  "provider_last_spoken_end_s": 94.88,
+  "artifact_sha256": {
+    "paragraphs/C06P01/audio.mp3": "ba118bcd3a96b110ffb17a87ad46cd5801d3bb2dc1b581829a89853122c57197",
+    "paragraphs/C06P01/audio.wav": "c30b8b2619e5af37d53d7222151f3e5b6111a1c3aa3fef7b4cd9c9daecaa251c",
+    "paragraphs/C06P01/alignment.json": "fcacf467e9121d387ab5ede388770ff2b91abae73a6293a0c75ccf23d9b8a65d",
+    "paragraphs/C06P01/normalized_alignment.json": "fcacf467e9121d387ab5ede388770ff2b91abae73a6293a0c75ccf23d9b8a65d"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 17403,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-27T15:51:02.146Z"
+}

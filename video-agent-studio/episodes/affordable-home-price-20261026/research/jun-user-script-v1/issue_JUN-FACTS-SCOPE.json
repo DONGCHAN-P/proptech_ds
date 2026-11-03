@@ -1,0 +1,23 @@
+{
+  "task_id": "JUN-USER-SCRIPT-V1-FACTS",
+  "issue_id": "JUN-FACTS-SCOPE",
+  "severity": "nonblocking_scope_limit",
+  "to": "director",
+  "peer_message_tool_available": false,
+  "affected_scene_ids": [
+    "S10",
+    "S05",
+    "S21",
+    "S24"
+  ],
+  "affected_claim_ids": [
+    "J05",
+    "J02",
+    "J19"
+  ],
+  "problem": "스트레스 첨부 세부계수와 개별 주택·은행의 실제 견적/승인은 미확인.",
+  "evidence": "reviewed_claims.json의 sources.STRESS2026·BOND 및 unresolved 참조. 원문에는 이 미확인 수치가 없고 필수 수정0.",
+  "proposal": "48문단 원문 유지. 세부계수·개별 수치를 새로 넣을 때만 해당 사실 추가검증.",
+  "impact": "현재 낭독 진행에 사실수정 장애 없음. Jun 생성은 부모 예산 게이트 대기.",
+  "next_role": "director"
+}

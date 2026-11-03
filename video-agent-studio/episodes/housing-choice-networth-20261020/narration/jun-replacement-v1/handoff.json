@@ -1,0 +1,83 @@
+{
+  "task_id": "housing-choice-jun-replacement-v1-preparation",
+  "role": "video_narration",
+  "status": "준비 완료·생성 미승인",
+  "input_revisions": {
+    "script_revision": "script-final-v6",
+    "script_sha256": "0368c9e08b8a2447ed429d9e78ab9a8238b2d823c27467362174600876a797b7",
+    "manifest_sha256": "e2452530e6ce66cb4256dc4ed4e12c2b9d13913e8a76fba4149eea04665191e8",
+    "pronunciation_proposal_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+    "tts_config_sha256": "773b2a6eabf306a251f560137a88e56db761865954c6089e0900e76d6f27934c"
+  },
+  "outputs": [
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/narration_manifest.json",
+      "sha256": "e2452530e6ce66cb4256dc4ed4e12c2b9d13913e8a76fba4149eea04665191e8"
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/pronunciation_proposal.json",
+      "sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7"
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/narration_body.txt",
+      "sha256": "342feb157535b54502ea564f6098df88961d44916510f13039885c413b575f5c"
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/budget_proposal.json",
+      "sha256": "d7def310f2ea5ae2daead366eb223d603722d574b43f4de8105f0b70f6393d5b"
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/timing_proposals.json",
+      "sha256": "3f074156f73209f12b1aa0286e8e1c3cfe88ccb71f3ad1d477e484c18d7174ed"
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/issue_JUN_PREPARATION_REVIEW.json",
+      "sha256": "ff277feeb7abf5f11c6f1dab81f1a2510b9d1230b98b93b79949c0010e83ec73"
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/account_readonly.json",
+      "sha256": "e7cc7b9b4f97398d8e623d7becfe62d0c3a54603c2daa43913e18862c89f6dfb"
+    },
+    {
+      "path": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/account_readonly.sandbox-blocked.json",
+      "sha256": "01bb30a859d9542886454d71c62d8853fbc858533d6b0fca9d613de37f2e0e96"
+    }
+  ],
+  "affected_scene_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10"
+  ],
+  "changed_scene_ids": [],
+  "checks": [
+    {
+      "check": "본문·근거",
+      "result": "10장54문단·확정SHA/무료v6 manifest/원문 offset 일치",
+      "evidence": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/narration_manifest.json"
+    },
+    {
+      "check": "예산",
+      "result": "원문8715자·확장후보8949자·20%포함상한10739크레딧·잔여22558·추가현금0달러",
+      "evidence": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/budget_proposal.json"
+    },
+    {
+      "check": "API",
+      "result": "인증 GET3건 HTTP200; 생성/샘플/충전/업로드/삭제0",
+      "evidence": "video-agent-studio/episodes/housing-choice-networth-20261020/narration/jun-replacement-v1/account_readonly.json"
+    }
+  ],
+  "account_checked_at_utc": "2026-10-26T05:43:54.129Z",
+  "open_issue_ids": [
+    "JUN_PREPARATION_REVIEW"
+  ],
+  "unresolved": "발음 확장안은 미채택. Jun 음성/실제길이/타임스탬프/청취 미확인. v4 style·boost 비지원 및 professional 플래그 차이는 예산 제안 caveats에 기록. 검증 증거는 validation.json.",
+  "next_role": "video_director → 승인 후 narration → editor → 독립 QA",
+  "summary": "마케팅 제안 우선. 준비 자료만 작성. 공통 상태·장면·결정과 기존 영상/오디오를 수정하지 않음."
+}

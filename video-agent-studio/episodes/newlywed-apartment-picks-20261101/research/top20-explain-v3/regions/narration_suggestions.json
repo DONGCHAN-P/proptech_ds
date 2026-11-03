@@ -1,0 +1,838 @@
+{
+  "revision": "top20-explain-v3-regions-final-1",
+  "checked_date": "2026-11-03",
+  "status": "ready_for_writer_integration",
+  "regions": [
+    {
+      "region_id": "R01",
+      "scene_id": "S022",
+      "text": "2024년 통계의 인천 서구에는 청라와 검단이 함께 들어갑니다. 청라는 업무·주거·문화·레저를 함께 배치한 개발지이며, 청라호수공원은 산책과 여가를 위한 공간입니다. 현재는 아라뱃길 남쪽 서해구와 북쪽 검단구로 나뉩니다.",
+      "character_count_including_spaces": 123,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "2024년 통계의 인천 서구에는 청라와 검단이 함께 들어갑니다.",
+          "claim_ids": [
+            "V3-R01-H01",
+            "V3-R01-G01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "청라는 업무·주거·문화·레저를 함께 배치한 개발지이며, 청라호수공원은 산책과 여가를 위한 공간입니다.",
+          "claim_ids": [
+            "V3-R01-H01",
+            "V3-R01-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "현재는 아라뱃길 남쪽 서해구와 북쪽 검단구로 나뉩니다.",
+          "claim_ids": [
+            "V3-R01-G01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R01-H01",
+        "V3-R01-G01",
+        "V3-R01-L01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "사진의 현재 소재지는 서해구입니다. 청라 사진을 옛 서구 전체나 검단의 전경으로 사용하지 않습니다.",
+        "사진 촬영연도 미상. 2026년 현재 전경으로 표시하지 않습니다.",
+        "청라 개발목표로부터 스타필드·의료복합타운·시티타워가 영업 중이라고 추론하지 않습니다."
+      ]
+    },
+    {
+      "region_id": "R02",
+      "scene_id": "S021",
+      "text": "송파구 잠실권은 2000년대 재건축으로 대단지 아파트가 다시 조성된 지역입니다. 잠실2단지는 2008년, 잠실3단지는 2007년에 준공됐습니다. 석촌호수는 동호와 서호, 산책로가 있는 도심 수변 여가 공간입니다.",
+      "character_count_including_spaces": 118,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "송파구 잠실권은 2000년대 재건축으로 대단지 아파트가 다시 조성된 지역입니다.",
+          "claim_ids": [
+            "V3-R02-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "잠실2단지는 2008년, 잠실3단지는 2007년에 준공됐습니다.",
+          "claim_ids": [
+            "V3-R02-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "석촌호수는 동호와 서호, 산책로가 있는 도심 수변 여가 공간입니다.",
+          "claim_ids": [
+            "V3-R02-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R02-H01",
+        "V3-R02-L01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "완료된 과거 재건축 사례만 설명합니다. 다른 잠실 단지의 현재 사업단계는 확인하지 않았습니다.",
+        "사용 사진은 타워 중심의 옛 PHOTO_R02가 아닌 PHOTO_R02_ALT01 수변 사진입니다."
+      ]
+    },
+    {
+      "region_id": "R03",
+      "scene_id": "S020",
+      "text": "덕양구 삼송은 아파트·오피스텔과 역 주변의 기존 단독주택이 함께 있는 생활권입니다. 삼송택지개발지구의 공동주택 구역과 예전 중심지가 한 동 안에 공존합니다. 사진의 삼송로 일대는 3호선 삼송역과 생활 공공시설을 중심으로 이해할 수 있습니다.",
+      "character_count_including_spaces": 134,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "덕양구 삼송은 아파트·오피스텔과 역 주변의 기존 단독주택이 함께 있는 생활권입니다.",
+          "claim_ids": [
+            "V3-R03-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "삼송택지개발지구의 공동주택 구역과 예전 중심지가 한 동 안에 공존합니다.",
+          "claim_ids": [
+            "V3-R03-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "사진의 삼송로 일대는 3호선 삼송역과 생활 공공시설을 중심으로 이해할 수 있습니다.",
+          "claim_ids": [
+            "V3-R03-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R03-H01",
+        "V3-R03-L01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "공식 소개의 지역특성 본문은 검색 반환 텍스트로 확인했습니다. 직접 URL 열람은 타임아웃이었으며 확인 범위를 남깁니다.",
+        "정확한 카메라 좌표가 없어 교차로·역·단지 핀을 사진 위치로 추정하지 않습니다.",
+        "공식 소개의 서울 중심부 30분 문구는 경로·시간대 조건이 없어 인용하지 않습니다."
+      ]
+    },
+    {
+      "region_id": "R04",
+      "scene_id": "S019",
+      "text": "강서구 마곡은 주거단지와 산업·업무단지, 공원 구역을 나눠 조성한 지역입니다. 공동주택 구역과 산업단지 기반공사는 각각 2016년과 2018년에 완료됐습니다. 서울식물원은 식물 전시와 야외 공원을 함께 갖춘 생활권의 여가 공간입니다.",
+      "character_count_including_spaces": 130,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "강서구 마곡은 주거단지와 산업·업무단지, 공원 구역을 나눠 조성한 지역입니다.",
+          "claim_ids": [
+            "V3-R04-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "공동주택 구역과 산업단지 기반공사는 각각 2016년과 2018년에 완료됐습니다.",
+          "claim_ids": [
+            "V3-R04-H02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "서울식물원은 식물 전시와 야외 공원을 함께 갖춘 생활권의 여가 공간입니다.",
+          "claim_ids": [
+            "V3-R04-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R04-H01",
+        "V3-R04-H02",
+        "V3-R04-L01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "공사 완료 이력은 구역 조성공사입니다. 모든 개별 건물이나 전체 사업의 준공 완료로 표현하지 않습니다.",
+        "서울시 안내의 전체 사업기간이 2026.12와 2028.12로 달라 전체 완료일은 제외합니다."
+      ]
+    },
+    {
+      "region_id": "R05",
+      "scene_id": "S018",
+      "text": "부평구는 부평역 주변 상업 생활권과 삼산2동의 계획형 아파트 주거지를 함께 갖추고 있습니다. 삼산2동은 택지개발로 대규모 단지가 형성된 곳입니다. 사진 속 부평역은 수도권 1호선과 인천1호선이 만나는 환승 거점입니다.",
+      "character_count_including_spaces": 121,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "부평구는 부평역 주변 상업 생활권과 삼산2동의 계획형 아파트 주거지를 함께 갖추고 있습니다.",
+          "claim_ids": [
+            "V3-R05-H01",
+            "V3-R05-H02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "삼산2동은 택지개발로 대규모 단지가 형성된 곳입니다.",
+          "claim_ids": [
+            "V3-R05-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "사진 속 부평역은 수도권 1호선과 인천1호선이 만나는 환승 거점입니다.",
+          "claim_ids": [
+            "V3-R05-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R05-H01",
+        "V3-R05-L01",
+        "V3-R05-H02"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "부평역 주변과 삼산2동은 별도의 설명 대상입니다. 역 사진을 삼산2동 단지 사진으로 사용하지 않습니다."
+      ]
+    },
+    {
+      "region_id": "R06",
+      "scene_id": "S017",
+      "text": "강남구 개포동에는 1983년 사용승인된 개포주공6단지와 2023년 승인된 개포자이프레지던스가 함께 있습니다. 같은 개포동 안에서도 아파트 조성 시기가 크게 다릅니다. 양재천 산책로는 주거지 주변의 수변 보행 공간입니다.",
+      "character_count_including_spaces": 122,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "강남구 개포동에는 1983년 사용승인된 개포주공6단지와 2023년 승인된 개포자이프레지던스가 함께 있습니다.",
+          "claim_ids": [
+            "V3-R06-H01",
+            "V3-R06-H02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "같은 개포동 안에서도 아파트 조성 시기가 크게 다릅니다.",
+          "claim_ids": [
+            "V3-R06-H01",
+            "V3-R06-H02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "양재천 산책로는 주거지 주변의 수변 보행 공간입니다.",
+          "claim_ids": [
+            "V3-R06-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R06-H01",
+        "V3-R06-H02",
+        "V3-R06-L01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "사용승인 연도는 건물 이력입니다. 재건축 대상 여부·사업단계·현재 입주율이나 가격 차이의 원인으로 확대하지 않습니다.",
+        "현재 사진은 테헤란로가 아닌 PHOTO_R06_ALT01 양재천입니다. 이전 검증의 영동6교~대치교 연결구간을 사진 속 영동4교와 동일 지점으로 표시하지 않습니다."
+      ]
+    },
+    {
+      "region_id": "R07",
+      "scene_id": "S016",
+      "text": "강동구 고덕·상일권은 재건축으로 주택 규모와 형태가 바뀐 사례를 볼 수 있습니다. 고덕주공7단지는 기존 890세대에서 1,859세대 계획으로 재건축돼 2019년 준공인가를 받았습니다. 사진 속 고덕역은 5호선 생활 교통의 거점입니다.",
+      "character_count_including_spaces": 130,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "강동구 고덕·상일권은 재건축으로 주택 규모와 형태가 바뀐 사례를 볼 수 있습니다.",
+          "claim_ids": [
+            "V3-R07-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "고덕주공7단지는 기존 890세대에서 1,859세대 계획으로 재건축돼 2019년 준공인가를 받았습니다.",
+          "claim_ids": [
+            "V3-R07-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "사진 속 고덕역은 5호선 생활 교통의 거점입니다.",
+          "claim_ids": [
+            "V3-R07-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R07-H01",
+        "V3-R07-L01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "2018년 사진을 2019년 이후 재건축 완료 단지 전경으로 소개하지 않습니다.",
+        "9호선 연장 등 예정 교통망은 운영 노선 설명에 섞지 않습니다."
+      ]
+    },
+    {
+      "region_id": "R08",
+      "scene_id": "S015",
+      "text": "영등포구에는 여의도의 금융 업무지와 문래동의 아파트 주거지가 함께 있습니다. 문래동6가의 e편한세상 문래 에듀플라츠는 2020년 사용승인된 263세대 단지입니다. 사진 속 여의도는 금융 업무가 모인 지역을 소개하는 자료입니다.",
+      "character_count_including_spaces": 126,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "영등포구에는 여의도의 금융 업무지와 문래동의 아파트 주거지가 함께 있습니다.",
+          "claim_ids": [
+            "V3-R08-H01",
+            "V3-R08-H02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "문래동6가의 e편한세상 문래 에듀플라츠는 2020년 사용승인된 263세대 단지입니다.",
+          "claim_ids": [
+            "V3-R08-H02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "사진 속 여의도는 금융 업무가 모인 지역을 소개하는 자료입니다.",
+          "claim_ids": [
+            "V3-R08-H01"
+          ],
+          "kind": "production_context"
+        }
+      ],
+      "claim_ids": [
+        "V3-R08-H01",
+        "V3-R08-H02"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "기존 금융 입지 사실만 사용합니다. 2026년 건축위원회 심의통과 건물을 이미 완공된 시설로 소개하지 않습니다.",
+        "문래동 단지와 여의도 사진을 동일 장소로 연결하지 않습니다."
+      ]
+    },
+    {
+      "region_id": "R09",
+      "scene_id": "S014",
+      "text": "분당구에는 1991년부터 입주한 분당신도시 주거지와 판교의 연구·업무 생활권이 함께 있습니다. 사진 속 제1판교테크노밸리는 연구기업과 연구지원시설이 모이도록 조성된 곳입니다. 이름이 비슷한 제2·3판교테크노밸리는 수정구에 위치합니다.",
+      "character_count_including_spaces": 130,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "분당구에는 1991년부터 입주한 분당신도시 주거지와 판교의 연구·업무 생활권이 함께 있습니다.",
+          "claim_ids": [
+            "V3-R09-H01",
+            "V3-R09-H02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "사진 속 제1판교테크노밸리는 연구기업과 연구지원시설이 모이도록 조성된 곳입니다.",
+          "claim_ids": [
+            "V3-R09-H02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "이름이 비슷한 제2·3판교테크노밸리는 수정구에 위치합니다.",
+          "claim_ids": [
+            "V3-R09-G01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R09-H01",
+        "V3-R09-H02",
+        "V3-R09-G01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "제2·3판교 사업이나 제1·2판교 합산 기업·고용·매출을 분당구 수치로 쓰지 않습니다.",
+        "현재 사진은 2016년 겨울 거리입니다. 스타트업캠퍼스 특정 건물의 사진이라고 지정하지 않습니다."
+      ]
+    },
+    {
+      "region_id": "R10",
+      "scene_id": "S013",
+      "text": "미추홀구 도화동은 2019년 도시개발사업이 준공된 구역을 포함합니다. 주안역은 수도권 1호선과 인천2호선을 연결하는 기존 철도 생활권의 거점입니다. 사진 속 문학경기장은 2002년 월드컵 경기를 개최한 지역 체육시설입니다.",
+      "character_count_including_spaces": 124,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "미추홀구 도화동은 2019년 도시개발사업이 준공된 구역을 포함합니다.",
+          "claim_ids": [
+            "V3-R10-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "주안역은 수도권 1호선과 인천2호선을 연결하는 기존 철도 생활권의 거점입니다.",
+          "claim_ids": [
+            "V3-R10-H02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "사진 속 문학경기장은 2002년 월드컵 경기를 개최한 지역 체육시설입니다.",
+          "claim_ids": [
+            "V3-R10-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R10-H01",
+        "V3-R10-H02",
+        "V3-R10-L01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "도화의 계획 수용가구를 실제 현재 거주가구로 설명하지 않습니다.",
+        "문학경기장의 2026년 프로그램·운영시간·대관은 별도 확인하지 않았습니다. 과거 공식 도메인 추정 주소의 비공식 리디렉션 페이지는 근거에서 제외했습니다."
+      ]
+    },
+    {
+      "region_id": "R11",
+      "scene_id": "S012",
+      "text": "노원구 상계·중계·하계는 택지개발로 형성된 아파트 생활권을 이루고 있습니다. 경춘선숲길은 열차 운행이 끝난 철길을 공원으로 바꾼 공간입니다. 주거지 사이의 옛 철로를 산책과 주민 교류에 활용하고 있습니다.",
+      "character_count_including_spaces": 114,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "노원구 상계·중계·하계는 택지개발로 형성된 아파트 생활권을 이루고 있습니다.",
+          "claim_ids": [
+            "V3-R11-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "경춘선숲길은 열차 운행이 끝난 철길을 공원으로 바꾼 공간입니다.",
+          "claim_ids": [
+            "V3-R11-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "주거지 사이의 옛 철로를 산책과 주민 교류에 활용하고 있습니다.",
+          "claim_ids": [
+            "V3-R11-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R11-H01",
+        "V3-R11-L01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "현재 사진은 상계 당현천이 아닌 PHOTO_R11_ALT01 경춘선숲길입니다.",
+        "숲길의 옛6km와 2026년 연장 후 수치를 혼용하지 않도록 길이 수치는 제외했습니다."
+      ]
+    },
+    {
+      "region_id": "R12",
+      "scene_id": "S011",
+      "text": "영통구의 광교는 공동주택과 업무·상업 용지를 나눠 계획한 신도시 생활권입니다. 원천호수는 신대호수와 함께 광교호수공원을 이루며, 수변 보행데크와 산책로, 휴식 공간이 조성돼 있습니다.",
+      "character_count_including_spaces": 102,
+      "sentence_count": 2,
+      "sentences": [
+        {
+          "text": "영통구의 광교는 공동주택과 업무·상업 용지를 나눠 계획한 신도시 생활권입니다.",
+          "claim_ids": [
+            "V3-R12-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "원천호수는 신대호수와 함께 광교호수공원을 이루며, 수변 보행데크와 산책로, 휴식 공간이 조성돼 있습니다.",
+          "claim_ids": [
+            "V3-R12-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R12-H01",
+        "V3-R12-L01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "2011 공급공고는 당시 용도 구성의 근거입니다. 현재 필지별 이용·완공·규제 상태의 근거로 사용하지 않습니다.",
+        "광교 전체를 영통구 경계와 동일하게 그리거나 용인시 수지구 구간을 영통구 가격에 합치지 않습니다.",
+        "2014년 사진으로 2026년 주변 건축물의 완공 상태를 설명하지 않습니다."
+      ]
+    },
+    {
+      "region_id": "R13",
+      "scene_id": "S010",
+      "text": "권선구는 기존 도심 주거지와 서수원 호매실·당수의 택지개발 생활권이 함께 있는 지역입니다. 사진은 권선동 수원종합버스터미널 일대이며, 터미널은 도시 간 버스 이동을 연결하는 생활권의 거점입니다.",
+      "character_count_including_spaces": 108,
+      "sentence_count": 2,
+      "sentences": [
+        {
+          "text": "권선구는 기존 도심 주거지와 서수원 호매실·당수의 택지개발 생활권이 함께 있는 지역입니다.",
+          "claim_ids": [
+            "V3-R13-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "사진은 권선동 수원종합버스터미널 일대이며, 터미널은 도시 간 버스 이동을 연결하는 생활권의 거점입니다.",
+          "claim_ids": [
+            "V3-R13-L01"
+          ],
+          "kind": "production_context"
+        }
+      ],
+      "claim_ids": [
+        "V3-R13-H01",
+        "V3-R13-L01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "호매실·당수 안의 개별 블록 입주 완료 여부는 구분 확인하지 않았습니다. 모든 신도시 공사가 완료됐다고 설명하지 않습니다.",
+        "터미널 사진을 호매실·당수 풍경이나 수원역 후문으로 표시하지 않습니다."
+      ]
+    },
+    {
+      "region_id": "R14",
+      "scene_id": "S009",
+      "text": "은평구 진관동의 은평뉴타운은 상림마을과 우물골 등 마을 단위로 나눠 조성된 주거지입니다. 공식 안내는 이를 세 지구로 구분하며, 진관동 주민센터는 우물골 단지 옆에 있습니다. 사진은 이 뉴타운의 공동주택 생활권을 소개하는 자료입니다.",
+      "character_count_including_spaces": 130,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "은평구 진관동의 은평뉴타운은 상림마을과 우물골 등 마을 단위로 나눠 조성된 주거지입니다.",
+          "claim_ids": [
+            "V3-R14-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "공식 안내는 이를 세 지구로 구분하며, 진관동 주민센터는 우물골 단지 옆에 있습니다.",
+          "claim_ids": [
+            "V3-R14-H01",
+            "V3-R14-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "사진은 이 뉴타운의 공동주택 생활권을 소개하는 자료입니다.",
+          "claim_ids": [
+            "V3-R14-H01"
+          ],
+          "kind": "production_context"
+        }
+      ],
+      "claim_ids": [
+        "V3-R14-H01",
+        "V3-R14-L01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "2011년 안내의 통반 수는 현재 수치로 사용하지 않습니다.",
+        "사진은 은평한옥마을이 아니라 은평뉴타운입니다. 두 장소를 같은 경관으로 취급하지 않습니다."
+      ]
+    },
+    {
+      "region_id": "R15",
+      "scene_id": "S008",
+      "text": "구로구 신도림동에는 신도림로와 경인로 주변으로 대림·동아·우성 등 여러 아파트 단지가 분포합니다. 사진 속 신도림역은 1호선과 2호선의 환승역입니다. 구로동에는 금천구 가산동과 이어지는 G밸리 산업지구가 있습니다.",
+      "character_count_including_spaces": 119,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "구로구 신도림동에는 신도림로와 경인로 주변으로 대림·동아·우성 등 여러 아파트 단지가 분포합니다.",
+          "claim_ids": [
+            "V3-R15-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "사진 속 신도림역은 1호선과 2호선의 환승역입니다.",
+          "claim_ids": [
+            "V3-R15-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "구로동에는 금천구 가산동과 이어지는 G밸리 산업지구가 있습니다.",
+          "claim_ids": [
+            "V3-R15-H02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R15-H01",
+        "V3-R15-L01",
+        "V3-R15-H02"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "G밸리는 구로구 구로동과 금천구 가산동에 걸쳐 있습니다. 산업단지 전체를 구로구로 표시하지 않습니다.",
+        "사진의 신도림역과 구로동 산업단지는 다른 장소입니다."
+      ]
+    },
+    {
+      "region_id": "R16",
+      "scene_id": "S007",
+      "text": "남동구 논현동에는 2008년 입주한 888세대 규모의 논현웰카운티처럼 2000년대에 조성된 아파트 단지가 있습니다. 소래습지생태공원은 옛 염전과 갯벌·습지를 보전한 공간입니다. 탐방데크와 전시관에서 해안 생태환경을 살펴볼 수 있습니다.",
+      "character_count_including_spaces": 131,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "남동구 논현동에는 2008년 입주한 888세대 규모의 논현웰카운티처럼 2000년대에 조성된 아파트 단지가 있습니다.",
+          "claim_ids": [
+            "V3-R16-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "소래습지생태공원은 옛 염전과 갯벌·습지를 보전한 공간입니다.",
+          "claim_ids": [
+            "V3-R16-L01",
+            "V3-R16-L02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "탐방데크와 전시관에서 해안 생태환경을 살펴볼 수 있습니다.",
+          "claim_ids": [
+            "V3-R16-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R16-H01",
+        "V3-R16-L01",
+        "V3-R16-L02"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "888세대는 단지 공급규모이며 남동구 전체나 논현동 전체의 주택 수가 아닙니다.",
+        "옛 iH 소개의 수인선 '예정' 문구는 현재 교통 사실에 사용하지 않습니다."
+      ]
+    },
+    {
+      "region_id": "R17",
+      "scene_id": "S006",
+      "text": "연수구는 연수2동의 아파트·중심상가 생활권과 송도의 국제업무·바이오산업 생활권을 함께 포함합니다. 송도 센트럴파크는 해수를 활용한 공원입니다. 산책정원과 수로 주변 여가시설이 도심의 휴식 기능을 맡고 있습니다.",
+      "character_count_including_spaces": 117,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "연수구는 연수2동의 아파트·중심상가 생활권과 송도의 국제업무·바이오산업 생활권을 함께 포함합니다.",
+          "claim_ids": [
+            "V3-R17-H01",
+            "V3-R17-H02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "송도 센트럴파크는 해수를 활용한 공원입니다.",
+          "claim_ids": [
+            "V3-R17-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "산책정원과 수로 주변 여가시설이 도심의 휴식 기능을 맡고 있습니다.",
+          "claim_ids": [
+            "V3-R17-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R17-H01",
+        "V3-R17-H02",
+        "V3-R17-L01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "연수2동 주거 구성의 관찰 기준은 2023.7입니다. 인구·공동주택 수·소득계층 구성을 2026 값으로 제시하지 않습니다.",
+        "송도의 계획인구·계획사업을 현재 입주·영업 규모로 바꾸지 않습니다."
+      ]
+    },
+    {
+      "region_id": "R18",
+      "scene_id": "S005",
+      "text": "기흥구 동백동에는 백현주공9단지처럼 아파트와 단지 상가가 함께 있는 주거지가 있습니다. 구성역은 GTX-A와 수인분당선이 만나는 환승 거점입니다. 용인시는 구성역 5번출구의 버스 연계 이용도 안내하고 있습니다.",
+      "character_count_including_spaces": 117,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "기흥구 동백동에는 백현주공9단지처럼 아파트와 단지 상가가 함께 있는 주거지가 있습니다.",
+          "claim_ids": [
+            "V3-R18-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "구성역은 GTX-A와 수인분당선이 만나는 환승 거점입니다.",
+          "claim_ids": [
+            "V3-R18-H02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "용인시는 구성역 5번출구의 버스 연계 이용도 안내하고 있습니다.",
+          "claim_ids": [
+            "V3-R18-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R18-H01",
+        "V3-R18-L01",
+        "V3-R18-H02"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "동백의 단지 사례를 기흥구 전체의 주택유형 비중으로 일반화하지 않습니다.",
+        "플랫폼시티·복합환승센터·MICE 시설의 미래 계획을 현재 운영 시설로 소개하지 않습니다.",
+        "GTX 서울역 직결·삼성역 개통·배차·통행시간은 확인 범위에서 제외했습니다."
+      ]
+    },
+    {
+      "region_id": "R19",
+      "scene_id": "S004",
+      "text": "중랑구 신내동은 택지개발로 아파트 주거지가 조성된 지역입니다. 현재 신내역은 경춘선과 6호선을 이용할 수 있는 철도 거점입니다. 역 주변 생활시설로는 서울의료원과 청남공원이 공식 주거정보에 안내돼 있습니다.",
+      "character_count_including_spaces": 115,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "중랑구 신내동은 택지개발로 아파트 주거지가 조성된 지역입니다.",
+          "claim_ids": [
+            "V3-R19-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "현재 신내역은 경춘선과 6호선을 이용할 수 있는 철도 거점입니다.",
+          "claim_ids": [
+            "V3-R19-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "역 주변 생활시설로는 서울의료원과 청남공원이 공식 주거정보에 안내돼 있습니다.",
+          "claim_ids": [
+            "V3-R19-L01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        }
+      ],
+      "claim_ids": [
+        "V3-R19-H01",
+        "V3-R19-L01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "2015년 자료사진은 6호선 신내역 개통 이전입니다. 2015년에 6호선 환승이 가능했다고 설명하거나 당시 사진에 현재 시설 표지를 합성하지 않습니다.",
+        "회의록의 과거 아파트 비율98%는 현재 수치로 채택하지 않았습니다."
+      ]
+    },
+    {
+      "region_id": "R20",
+      "scene_id": "S003",
+      "text": "원미구는 중동과 상동에 걸쳐 형성된 중동신도시의 아파트 생활권을 포함합니다. 부천시 정비기본계획도 두 지역을 함께 다루며, 공동주택 블록과 마을 단위를 계획의 기준으로 삼고 있습니다. 사진은 상동의 실제 거리 자료입니다.",
+      "character_count_including_spaces": 123,
+      "sentence_count": 3,
+      "sentences": [
+        {
+          "text": "원미구는 중동과 상동에 걸쳐 형성된 중동신도시의 아파트 생활권을 포함합니다.",
+          "claim_ids": [
+            "V3-R20-H01"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "부천시 정비기본계획도 두 지역을 함께 다루며, 공동주택 블록과 마을 단위를 계획의 기준으로 삼고 있습니다.",
+          "claim_ids": [
+            "V3-R20-H01",
+            "V3-R20-H02"
+          ],
+          "kind": "fact_or_descriptive_synthesis"
+        },
+        {
+          "text": "사진은 상동의 실제 거리 자료입니다.",
+          "claim_ids": [
+            "V3-R20-H01"
+          ],
+          "kind": "production_context"
+        }
+      ],
+      "claim_ids": [
+        "V3-R20-H01",
+        "V3-R20-H02",
+        "V3-R20-G01"
+      ],
+      "style": "정보제공·합니다체",
+      "status": "ready_for_writer_integration_pending_independent_QA",
+      "cautions": [
+        "사진에 없는 부천중앙공원·상동호수공원을 사진의 주피사체로 표시하지 않습니다.",
+        "정비기본계획은 개별 단지 사업인가·착공과 구분합니다.",
+        "2024 원미구와 2023 부천시 전체를 같은 범위로 비교하지 않습니다."
+      ]
+    }
+  ],
+  "comparison_reading": {
+    "reading_id": "V3-COMPARE-01",
+    "kind": "interpretation_not_causal_claim",
+    "status": "qualified",
+    "text": "같은 구 안에서도 주택이 지어진 시기와 업무지·역 주변의 생활 구조는 다릅니다. 지역별 가격은 면적과 거래기간, 거래유형, 표본 수가 같은 조건인지 확인하며 읽습니다. 2024년 신혼부부 거주 순위를 현재의 주거 선호나 가격 상승 원인으로 해석하지 않습니다.",
+    "basis_claim_ids": [
+      "V3-R03-H01",
+      "V3-R06-H01",
+      "V3-R06-H02",
+      "V3-R09-H01",
+      "V3-R09-H02",
+      "V3-R01-G01"
+    ],
+    "source_scope": "본 자료의 검증 사실을 바탕으로 한 비교 조건 해설 제안. 추천·가격 전망·인과관계로 확정한 사실이 아님.",
+    "checked_date": "2026-11-03",
+    "price_values_generated": false
+  },
+  "source_note": "출처는 도입에서 설명하고 화면별 반복 통계청 표기를 요구하지 않습니다. 사진 크레딧·자료시점·가격 비교조건은 유지합니다.",
+  "ranking_limit_note": "순위는 2024-11-01 거주지 통계입니다. 그 뒤 입주·이동이 반영된 2026 현재 순위로 표현하지 않습니다."
+}

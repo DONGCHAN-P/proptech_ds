@@ -1,0 +1,57 @@
+{
+  "role": "visual",
+  "revision": "visual-v4",
+  "status": "mixed_media_inputs_prepared_not_final_video",
+  "input_versions": [
+    "script-v2",
+    "facts-v1",
+    "visual-v3",
+    "actual current video v14",
+    "user-owned asset-pack-v9"
+  ],
+  "outputs": [
+    "visual/assets_v4.json",
+    "visual/photos_verified_v4.json",
+    "visual/source_plan_v4.md",
+    "visual/outputs/photos_v4/PHOTO001.jpg",
+    "visual/outputs/photos_v4/PHOTO002.jpg",
+    "visual/outputs/photos_v4/PHOTO009.jpg",
+    "visual/outputs/photos_v4/PHOTO010.jpg",
+    "visual/outputs/photos_v4/PHOTO015.jpg",
+    "visual/outputs/photos_v4/PHOTO016.jpg",
+    "visual/outputs/previous_owned_v4/AIPREV001.png",
+    "visual/outputs/previous_owned_v4/AIPREV002.png",
+    "visual/regional_geo_v4.geojson",
+    "visual/map_motion_v4.json"
+  ],
+  "validation": [
+    "19자산 실제파일경로 확인",
+    "새 실제사진6개 공개라이선스원문·메타저장",
+    "실사4개contactsheet및공식사진2개원본육안확인",
+    "기존ownedAI2개원본직접확인",
+    "실제OSM좌표/원데이터GeoJSON5265feature변환",
+    "사진·지도·AI·데이터도표·전편회고를분리"
+  ],
+  "unresolved": [
+    "별내별가람역·진접역·도시전경원본HTTP429 RetryAfter600초로미확보",
+    "정밀역핀좌표미검증",
+    "실제왕숙현장사진공식소스KOGL4라제외",
+    "신규ROOT GPTconcept명세통합필요",
+    "최종편집·모션·모바일가독성·연속재생검수별도"
+  ],
+  "restrictions": [
+    "학교사진은기존다산초이며왕숙신설/배정근거금지",
+    "공식KOGL3계획도전체무변형정지표시",
+    "원본사진still_motion이라명시",
+    "AI는실제왕숙촬영아님표시",
+    "전편회고광교·동탄도시명유지"
+  ],
+  "notification": {
+    "sent": true,
+    "evidence": "visual/notification_v4.json",
+    "message_type": "short_status_text_only"
+  },
+  "next_owner": "writer/structure -> editor -> qa",
+  "paid_services_used_by_visual": false,
+  "common_files_modified": false
+}

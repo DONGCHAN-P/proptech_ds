@@ -1,0 +1,205 @@
+{
+  "task_id": "next-policy-source-prep-v1",
+  "revision": "v1",
+  "as_of_kst": "2026-10-26",
+  "source_groups": 15,
+  "sources": [
+    {
+      "id": "FSC26",
+      "title": "부동산 시장 안정을 위한 금융 종합대책 2",
+      "urls": [
+        "https://www.fsc.go.kr/no040101?cnId=3374"
+      ],
+      "date": "2026-08-13",
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web",
+      "evidence_scope": "카드 3·7·8: 현행 LTV/DSR/가격별 한도, 10월 신혼 특례, 2027년 예정 상품",
+      "fetch_limits": "카드의 시행예정 안내만으로 실제 시행을 단정하지 않음; 신혼 특례는 HF 현행 안내로 교차확인"
+    },
+    {
+      "id": "FSC25",
+      "title": "10.15 대책 FAQ 및 6.27 대책",
+      "urls": [
+        "https://www.fsc.go.kr/po020201/85518",
+        "https://www.fsc.go.kr/po020201/85466",
+        "https://www.fsc.go.kr/no010101/84824"
+      ],
+      "date": "2025-06-27 / 2025-10-15 / 2025-10-17",
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web",
+      "evidence_scope": "85518: Q2~4; 85466: Q4 표; 84824: II(3)(4), 수도권·규제지역·생초·실수요·경과조건",
+      "fetch_limits": "2025년 문서를 2026년 카드/현행 상품과 결합; 과거 금리·한도는 현행값으로 재사용하지 않음"
+    },
+    {
+      "id": "STRESS",
+      "title": "스트레스 DSR 금융행정지도 변경 시행",
+      "urls": [
+        "https://better.fsc.go.kr/fsc_new/status/adminMap/OpertnDetail.do?muNo=145&postNo=4215&stNo=11",
+        "https://better.fsc.go.kr/fsc_new/file/displayFile.do?filePath=/2026/06/30&orgFileName=260701_3%EB%8B%A8%EA%B3%84%20%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%8A%A4DSR%20%ED%96%89%EC%A0%95%EC%A7%80%EB%8F%84%20%EB%B3%80%EA%B2%BD%EC%8B%9C%ED%96%89.pdf&sysFileName=b80d2de1d3c34b3ea4ad057ec48aa7fc.pdf"
+      ],
+      "date": "2026-07-01",
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web + read_only_http + local_pdf_visual_inspection",
+      "evidence_scope": "시행중·존속기간 2026-07-01~12-31; 첨부 PDF 1쪽 표·2쪽 경과규정",
+      "fetch_limits": "웹 PDF 열기 오류/옥텟스트림 → 허용된 HTTP 다운로드. 텍스트 추출에서 일부 숫자 누락되어 두 쪽 PNG를 실제 열어 확인",
+      "local_evidence": [
+        "evidence/stress_dsr_20260701.pdf",
+        "evidence/stress_page_1.png",
+        "evidence/stress_page_2.png"
+      ],
+      "pdf_sha256": "cd3ea468aaba90007418f1291c4ef361a341be9d3f49a9b3a7eccfe9c80975d6"
+    },
+    {
+      "id": "DIDIM",
+      "title": "내집마련 디딤돌대출 현행 상품",
+      "urls": [
+        "https://www.hf.go.kr/ko/sub01/sub01_02_01.do",
+        "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030101.jsp"
+      ],
+      "date": null,
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web + read_only_http",
+      "evidence_scope": "HF 상품요건·소득·자산·주택·LTV·DTI·한도; NHUF 요약/대상 중 2026 자산기준",
+      "fetch_limits": "게시/최종개정일 미표시. NHUF는 네이티브 웹 대신 HTTP로 확인; 실거주 세부 항목은 확보하지 못함"
+    },
+    {
+      "id": "BOGEUM",
+      "title": "보금자리론 현행 일반 상품소개",
+      "urls": [
+        "https://www.hf.go.kr/ko/sub01/sub01_01_01.do"
+      ],
+      "date": null,
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web",
+      "evidence_scope": "소득/신혼소득특례자·주택평가·보유수·전입·LTV·DTI·한도",
+      "fetch_limits": "게시/최종개정일 미표시; 자산·전용면적의 별도 상한 유무 및 소득특례자의 DTI 세칙은 이 일반 페이지로 확정하지 않음"
+    },
+    {
+      "id": "NEWBORN",
+      "title": "신생아 특례 디딤돌대출 현행 기금 안내 및 수탁은행 공시",
+      "urls": [
+        "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030801.jsp",
+        "https://obank.kbstar.com/quics?cc=b032425:b033525&page=C020709&prcode=LN40001049"
+      ],
+      "date": "KB 공시 유효기간 2026-08-11~2028-05-31",
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web + read_only_http",
+      "evidence_scope": "NHUF 대출대상/자산; KB 신청자격·대상주택·상품변경·고객유의사항",
+      "fetch_limits": "NHUF 웹 타임아웃 → HTTP로 2026년 5.11억 직접 확인. KB는 본문 1년 거주와 변경이력 2년 거주가 상충"
+    },
+    {
+      "id": "DSR_HISTORY",
+      "title": "가계부채 점검회의: 정책모기지 DSR 및 은행 내부관리 구별",
+      "urls": [
+        "https://www.fsc.go.kr/no010101/82931"
+      ],
+      "date": "2024-08-21",
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web",
+      "evidence_scope": "하반기 가계부채 관리방안 ② 주석(보금자리론·디딤돌) 및 내부관리 DSR",
+      "fetch_limits": "명시적 DSR 제외 근거는 2024년 자료. 2026 현행 규정 별표를 확보하지 못해 현재 적용 주장은 qualified"
+    },
+    {
+      "id": "LOCAL_TAX",
+      "title": "지방세법 제11조·제151조",
+      "urls": [
+        "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0011&lsiSeq=282559&urlMode=lsScJoRltInfoR",
+        "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0151&lsiSeq=282559&urlMode=lsScJoRltInfoR"
+      ],
+      "date": "시행 2026-01-01 / 법률 제21308호",
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web",
+      "evidence_scope": "11①8 가~다 가격별 표준세율·계산식; 151①1 지방교육세",
+      "fetch_limits": "중과 없는 유상 주택취득만 계산. 특정 취득세액 공제 후 지방교육세의 실제 감면액은 별도 미확정"
+    },
+    {
+      "id": "RELIEF",
+      "title": "지방세특례제한법 제36조의3·제36조의5",
+      "urls": [
+        "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1025285313",
+        "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031901089",
+        "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1026446827"
+      ],
+      "date": "시행 2026-06-02 / 법률 제21738호",
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web",
+      "evidence_scope": "36의3①②④; 36의5①②",
+      "fetch_limits": "가구 범위·과거 보유예외·부칙별 적용례 및 중복감면 세칙을 모두 확인한 것은 아님"
+    },
+    {
+      "id": "AGRIC",
+      "title": "농어촌특별세법 제4조11·시행령 제4조⑤",
+      "urls": [
+        "https://www.law.go.kr/LSW/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1031706981",
+        "https://law.go.kr/LSW/lsLinkCommonInfo.do?lspttninfSeq=72626"
+      ],
+      "date": "법 시행 2026-05-12 / 시행령 시행 2026-01-02",
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web",
+      "evidence_scope": "국민주택규모 이하 서민주택 및 부속토지 범위",
+      "fetch_limits": "전용 84㎡ 통상 아파트와 요건을 충족하는 부속토지만 가정. 면적 초과·상가·특수 토지로 일반화 금지"
+    },
+    {
+      "id": "BROKER",
+      "title": "서울·경기 주택 중개보수 요율표",
+      "urls": [
+        "https://land.seoul.go.kr/land/broker/brokerageCommission.do",
+        "https://www.yp21.go.kr/www/contents.do?key=1492"
+      ],
+      "date": "서울 조례 표 시행 2021-12-30; 경기 페이지 게시일 미표시",
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web",
+      "evidence_scope": "매매 2~9 미만 0.4%, 9~12 미만 0.5%, 12~15 미만 0.6%; 상한 내 협의·부가세 별도",
+      "fetch_limits": "서울/경기 확인. 다른 지자체는 해당 조례를 연결"
+    },
+    {
+      "id": "VAT",
+      "title": "국세청 부가가치세 개요",
+      "urls": [
+        "https://b.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7693&mi=2272"
+      ],
+      "date": null,
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web",
+      "evidence_scope": "일반과세자 10%; 간이과세자 계산 구별",
+      "fetch_limits": "일반과세 중개사 가정만 10% 추가. 간이과세자의 납부세액 산식을 고객 청구율로 단정하지 않음"
+    },
+    {
+      "id": "STAMP",
+      "title": "인지세법 제3조",
+      "urls": [
+        "https://www.law.go.kr/lsLinkCommonInfo.do?lsJoLnkSeq=1031595801"
+      ],
+      "date": "시행 2026-01-02 / 법률 제21065호",
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web",
+      "evidence_scope": "① 표 1호 부동산 소유권 이전증서, 2호 금융기관 금전소비대차증서",
+      "fetch_limits": "문서 1통 기준; 매매문서 부담 분담은 계약에 따라 별도, 은행 대출 50% 부담과 혼동 금지"
+    },
+    {
+      "id": "BOND",
+      "title": "국민주택채권 셀프 도우미",
+      "urls": [
+        "https://nhuf.molit.go.kr/FP/FP07/FP0705/FP070509.jsp"
+      ],
+      "date": null,
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web_search_primary_excerpt + read_only_http_title",
+      "evidence_scope": "매입용도·지역·시가표준액에 따른 매입액 및 일자별 고객부담금 안내",
+      "fetch_limits": "네이티브 검색에 수록된 공식 본문 확인; open 오류, HTTP는 제목만 확인. 실제 할인율·매입금액 조회는 안 함"
+    },
+    {
+      "id": "REGISTRATION",
+      "title": "법제처 생활법령: 잔금정산 및 등기",
+      "urls": [
+        "https://www.easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=2&cciNo=2&cnpClsNo=3&csmSeq=666",
+        "https://www.law.go.kr/행정규칙/등기신청수수료 징수에 관한 예규"
+      ],
+      "date": "생활법령 기준 2026-09-15",
+      "confirmed_as_of": "2026-10-26",
+      "method": "native_web",
+      "evidence_scope": "소유권이전 등기신청수수료 18,000/15,000/10,000원, 채권·인지 구분",
+      "fetch_limits": "공식 해설의 수치 확인. 연결된 대법원 예규 원문은 lawService 껍데기만 반환 → 현행 예규 직접 대조 미완료"
+    }
+  ]
+}

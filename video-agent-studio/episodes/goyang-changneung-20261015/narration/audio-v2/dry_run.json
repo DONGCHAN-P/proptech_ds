@@ -1,0 +1,94 @@
+{
+  "revision": "prepare-v2",
+  "checked_at": "2026-10-15T16:33:46.774Z",
+  "status": "dry_run_passed_generation_blocked",
+  "source_script_sha256": "74ed7a1af1146a7b0f93b6602869222026667dbb8de2ea0137ee81e66eb3bbba",
+  "chapter_count": 10,
+  "input_characters": 6384,
+  "network_calls": 0,
+  "post_calls": 0,
+  "actual_listening": false,
+  "decisions": [
+    {
+      "id": "81cdb3c2a358",
+      "status": "pending",
+      "gate": "script"
+    },
+    {
+      "id": "fef620079862",
+      "status": "pending",
+      "gate": "budget"
+    }
+  ],
+  "guard_checks": [
+    "exact script and manifest SHA",
+    "every chapter UTF8 SHA and Unicode character count",
+    "one POST per chapter; no automatic retries",
+    "exclusive execution lock",
+    "both exact decision IDs approved and all bound artifact hashes rechecked",
+    "explicit root authorization file required",
+    "live included balance and overage disabled checks before every chapter",
+    "submitted character and actual credit cap 7661",
+    "persist request_started before POST; unresolved/ambiguous request blocks rerun",
+    "provider original alignment exact text plus normalized alignment preserved",
+    "decoded PCM duration; no ASR external calls"
+  ],
+  "unresolved": [
+    "root explicit GO absent",
+    "script and budget approvals pending",
+    "live model and voice pricing metadata must pass conservative multiplier checks; null voice rate will block",
+    "actual listening unverified"
+  ],
+  "chapters": [
+    {
+      "scene_id": "M000",
+      "characters": 389,
+      "sha256": "0e0e48e0aac392db1d485e9cfb5964c40bbb1ab13882b610cf238969ad50cd78"
+    },
+    {
+      "scene_id": "M001",
+      "characters": 358,
+      "sha256": "cbf174adc469412e1432f25e008e5079a1ae6db4a328b888a9eb3dd130144a8f"
+    },
+    {
+      "scene_id": "M002",
+      "characters": 742,
+      "sha256": "847a55e09749b0826cdcf06c05747b80db7bfdc4cca10c30d94dd1dda338a0e9"
+    },
+    {
+      "scene_id": "M003",
+      "characters": 774,
+      "sha256": "c7d434f3efda11e7fa878ce9f4636aa575e139f9ba52c171e228c79fb2b83f50"
+    },
+    {
+      "scene_id": "M004",
+      "characters": 825,
+      "sha256": "c31fd13b84c9f83937983ffeceaf71dd461722f777d86cf3572d3348698f6d6f"
+    },
+    {
+      "scene_id": "M005",
+      "characters": 631,
+      "sha256": "275ef864b7de9659022f5449ccc16e558af312743e314ab97a0218416a04a900"
+    },
+    {
+      "scene_id": "M006",
+      "characters": 536,
+      "sha256": "d9de4e99fb231dcdb5287ac5bf19aa44255afe02d10aafca536cb2eef87b920d"
+    },
+    {
+      "scene_id": "M007",
+      "characters": 746,
+      "sha256": "45c8d9bdb70a719d441666ea6414175f7caca6052f35df1b106668162e6a01b1"
+    },
+    {
+      "scene_id": "M008",
+      "characters": 485,
+      "sha256": "3ad95e17c97386db82d27593c23802a6d7d1fa32cb5e18ab54c8db37bfd9235a"
+    },
+    {
+      "scene_id": "M009",
+      "characters": 898,
+      "sha256": "6e368f2006bce4ff7ee23b091b910a717f4e33e31045b54a49a97a46429930df"
+    }
+  ]
+}

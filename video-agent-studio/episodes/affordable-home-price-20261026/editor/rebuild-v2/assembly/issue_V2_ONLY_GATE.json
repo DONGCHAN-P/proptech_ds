@@ -1,0 +1,25 @@
+{
+  "issue_id": "V2-ONLY-ASSEMBLY-GATE",
+  "scene_id": "ALL34; representatives R003/R006/R030",
+  "to": ["director", "Tesla", "Bohr"],
+  "status": "v1_explicitly_excluded_waiting_corrected_v2",
+  "problem": "Parent found R006 opening-context blank-body runtime defect in v1. User explicitly disallows assembling v1 files.",
+  "evidence": "Current parent instruction; assembler rejects both actual-scenes-r2-v1 and actual-scenes-r2-parent-v1 manifests.",
+  "proposal": {
+    "scene_manifest": "corrected v2 scene_run_manifest.json; rows encoded with actual path/SHA, source_json_path/html_path as Tesla currently emits",
+    "representative_approval_shape": {
+      "approved": true,
+      "script_sha256": "cc1ef7d80225e992e7e5d31faffbfb09a8f90c80fb5352e17c36eb8c90755b12",
+      "representative_scene_mp4s": [
+        {"scene_id": "R003", "path": "corrected encoded R003.mp4", "sha256": "actual SHA"},
+        {"scene_id": "R006", "path": "corrected encoded R006.mp4", "sha256": "actual SHA"},
+        {"scene_id": "R030", "path": "corrected encoded R030.mp4", "sha256": "actual SHA"}
+      ],
+      "review_receipts": [{"path": "native actualvoice representative QA receipt", "sha256": "actual SHA"}]
+    },
+    "suggested_gate_path": "director/rebuild-v2/representatives_approved_r2.json",
+    "resume": "tools/python311/python.exe -B -X utf8 <episode>/editor/rebuild-v2/assembly/assemble.py render --scene-manifest <corrected-v2-manifest> --representative-approval <actual-representative-gate>"
+  },
+  "impact": "Existing 34 PCM stem, 169 global captions, 115 anchors, eight 3s cards and full music mix preparation remain valid; no v1 MP4 included.",
+  "next_owner": "director exact representative gate + corrected v2 all34 manifest -> assembly full render"
+}

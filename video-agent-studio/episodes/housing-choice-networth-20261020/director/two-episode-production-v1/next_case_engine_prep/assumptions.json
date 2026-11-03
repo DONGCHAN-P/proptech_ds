@@ -1,0 +1,181 @@
+{
+  "task_id": "next-case-engine-preparation-v1",
+  "as_of_kst": "2026-10-26",
+  "scope": "익명 사례 계산 준비만; 다음편 제작은 첫 private upload 이후",
+  "input_versions": [
+    {
+      "path": "next_episode_research\\sources.json",
+      "sha256": "cef13634ea4f3ea18e2f858abd907376ef3188b640573e3bef67b38dc01ce6de"
+    },
+    {
+      "path": "next_episode_research\\policy_facts.json",
+      "sha256": "b56a756d0d33b5f8504ab6158f1b60ae3cb0597595ac38efa911c9dcd68f7b68"
+    },
+    {
+      "path": "next_episode_research\\policy_facts_v2.json",
+      "sha256": "9f91f0bfad5ccb5884f4d2cf81f2814caf33b38c5bf652cf83b9b6d6b83bbfd3"
+    },
+    {
+      "path": "next_episode_research\\sources_v2.json",
+      "sha256": "fb399752b4775107ec334895d2459f6f2b1070deb10caaa6f0ae86546ad93c50"
+    },
+    {
+      "path": "next_episode_research\\gaps_v2.json",
+      "sha256": "d54b003f3f413ee791733b23561c8e435bfd083e675be3b725911c18e09098f2"
+    },
+    {
+      "path": "next_episode_editorial_plan.json",
+      "sha256": "7373effb61ed175bc242033614476998c3133076605634d6f3222f49b064ec1e"
+    }
+  ],
+  "policy_claims_used": [
+    "L01",
+    "L02",
+    "L03",
+    "L04",
+    "L06",
+    "D01",
+    "D02",
+    "B03",
+    "N01",
+    "N02",
+    "N03",
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "C01",
+    "C02",
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07",
+    "M08",
+    "M09",
+    "P01",
+    "P02",
+    "P03",
+    "P04"
+  ],
+  "new_primary_checks": [
+    {
+      "id": "NEWBORN_RATE",
+      "url": "https://nhuf.molit.go.kr/FP/FP05/FP0503/FP05030801.jsp",
+      "location": "대출금리1 특례표:6천만원초과~8.5천만원이하 행·30년열 td#LOANRATE15",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified",
+      "read_only_lookup_url": "https://nhuf.molit.go.kr/init/include/NewBabyGetInform.jsp",
+      "lookup_method": "POST;공식 페이지가 사용하는 공개 조회",
+      "lookup_parameters": {
+        "newBabyGetBuySelect": "newMearryHouse",
+        "productgb": "S"
+      },
+      "selected_cell": {
+        "LOANRATE12": "2.65",
+        "LOANRATE13": "2.75",
+        "LOANRATE14": "2.85",
+        "LOANRATE15": "2.90"
+      },
+      "lookup_response_sha256": "a8703e87c77e10d2cf3a134d9ac82388ed3e6beb7a959f51f04683ab40bdd629",
+      "cross_check_url": "https://obank.kbstar.com/quics?cc=b032425:b033525&page=C020709&prcode=LN40001049",
+      "limits": "기금 본문 금리셀은 동적조회 전 비어 있음; 공식 동적값과 수탁은행 표를 직접 읽음. 금리는 미래 실행시점 재확인."
+    },
+    {
+      "id": "TAX_RATE_ROUNDING",
+      "url": "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0011&lsiSeq=282559&urlMode=lsScJoRltInfoR",
+      "location": "지방세법11조1항8호나",
+      "confirmed_as_of": "2026-10-26",
+      "status": "qualified_rounding_unit_interpretation",
+      "rule": "법정4자리 반올림 문구·원식 /100 확인. 모델은 공식 여수시 예시(7억1.6667%)의 퍼센트4자리 적용; 서울 실무 확인은 CE_G06."
+    },
+    {
+      "id": "DTI_TABLE",
+      "url": "https://www.fsc.go.kr/po020201/85466",
+      "location": "Q4 표·주3~6: 은행일반 투과40/생초60, 정책60, DSR은행40",
+      "confirmed_as_of": "2026-10-26",
+      "date": "2025-10-17",
+      "status": "qualified_current_framework_inherited_from_v2",
+      "limits": "현행성은 기존 v1/v2 근거팩을 계승; 지역 중 투기과열지구를 사례가정으로 명시."
+    },
+    {
+      "id": "BROKER_BOUNDARIES",
+      "url": "https://land.seoul.go.kr/land/broker/brokerageCommission.do",
+      "location": "주택 매매상한9억·12억·15억 경계 및 VAT별도",
+      "confirmed_as_of": "2026-10-26",
+      "status": "verified"
+    },
+    {
+      "id": "TAX_RATE_UNIT_EXAMPLE",
+      "url": "https://www.yeosu.go.kr/contents/3123/tax_2024.pdf",
+      "title": "2024 알아두면 유익한 지방세 안내",
+      "location": "인쇄20쪽 취득가액×조정율 예시:7억1.6667%,8억2.3333%",
+      "date": "2024",
+      "confirmed_as_of": "2026-10-26",
+      "status": "qualified",
+      "rule": "공식 지자체 안내의 퍼센트4자리 예시에 맞춰 모델의 percent 반올림 단위를 채택.",
+      "limits": "검색의 해당 표 본문 추출을 읽음. PDF 전체/서울 세무고지 실무 직접확인은 하지 않음. 현행11조 산식은 /100을 포함하므로 반올림 표기단위에 관한 실무 최종확인은 CE_G06에 남김."
+    }
+  ],
+  "money_calculation": {
+    "arithmetic": "Python Decimal 정밀도40; 원단위 이하 계산값 유지. 판정에는 낭독/표시 반올림 사용하지 않음.",
+    "tax_rate": "퍼센트 수치의 소수4자리 ROUND_HALF_UP 후 /100",
+    "cash_flow": "매매가=과표=담보평가액. 84㎡ 통상아파트·적격부속토지·무감면/비중과; 농특세0.",
+    "fees": "중개보수 협의상한 + 일반과세 VAT10%. 기타1.5m는 등기·채권할인·법무사·인지·보증 관련 총 계획예산이며 실제견적 아님.",
+    "reserve": "30m은 지출 아님;매수 후 남겨둘 현금. 비용에 중복합산하지 않고 자금 필요액에 한 번 반영.",
+    "ongoing": "월3m은 주거·저축에 배분 가능한 가정예산. 보유비0.3m·주담대목표1.7m·남길 저축1m. 연소득을 세후 월예산으로 환산한 수치 아님.",
+    "display": "원단위 표시는 ROUND_HALF_UP; 낭독 만원은 별도 ROUND_HALF_UP. 실제 고지서 끝수/은행 납입금 반올림 규칙 미반영."
+  },
+  "credit_assumptions": {
+    "bank": "기존부채0, 원리금균등·거치없음360개월. DSR40% 심사금리4%+3%=7%;DTI는 실제계산금리4%,일반40/생초60.",
+    "policy": "부부합산80m,신혼7년내·생초·최근2년출산·무주택·자산250m·84㎡. 명시요건 외 신용/주택보유·출생일·거주/보증 심사는 충족 가정. 정책DSR40을 대입하지 않고DTI60 심사. 실제심사금리는 확인 필요.",
+    "didim_bogeum_rates": "두 상품은4% 계산가정으로 월액/DTI 산정; 현행공시금리라고 표현하지 않음.",
+    "newborn": "우대금리 없이 기본2.9%로 초기 월액 계산. 특례기본5년 후 금리변화 가능;30년2.9% 확정 아님. 연장/추가출산 우대 미가정. 이후금리/전체30년 총이자 미산출.",
+    "deduction": "은행 일반/생초 각각0·55m조건분리. 디딤돌/신생아6억은 적격생초보증승인가정0 또는 미커버55m. 신생아9억0은 보증규정예외가 확인된 현재값이 아니라 공제제거 반사실 민감도;55m는 기존HUG회신 기준 대안.",
+    "bogeum_deduction": "빈 아파트 방수공제0이 현행기준.55m는 보증불가시 현행방공제라고 부르지 않는 추가담보차감 민감도.",
+    "shock": "A만 동일 원금·처음부터360개월에4→6% 적용한 첫달 PMT 비교. 특정시점의 잔액/재고정/금리예측 아님."
+  },
+  "conditional_relief": {
+    "firstbuyer_acquisition_max_krw": 2000000,
+    "child_acquisition_max_krw": 5000000,
+    "applied_to_base_costs": false,
+    "combined": false,
+    "note": "각각 자격·12억 가격·전입/거주·기한/추징 등을 별도심사. 기본무감면 표에서 자동차감하지 않으며 감면후 교육세/총납부액 미확정."
+  },
+  "gaps": [
+    {
+      "id": "CE_G01",
+      "topic": "MCI/MCG·생초보증 실행승인",
+      "handling": "0/55m 조건부·반사실 민감도를 명시. 실제은행취급/담보평가/선순위/임대차·보증한도 입력 필요."
+    },
+    {
+      "id": "CE_G02",
+      "topic": "정책상품 실제금리·DTI 심사금리",
+      "handling": "디딤돌/보금자리4% 계획가정. 신생아2.9초기금리만 공식확인. 정책DTI7% 민감도도 산출해 제품한도가 먼저 작동하는지 확인."
+    },
+    {
+      "id": "CE_G03",
+      "topic": "실제세금고지/감면/중개계약/기타비용",
+      "handling": "무감면세율 계산만 기본.교육세감면후총액·고지끝수·실제중개협의보수·1.5m실제견적은 미확정."
+    },
+    {
+      "id": "CE_G04",
+      "topic": "모든 자격·실거주 의무·장래규정",
+      "handling": "기존근거팩 자격조건+미확인 목록 계승.과거접수 경과/신혼1인예외/미래신상품 임의적용 금지."
+    },
+    {
+      "id": "CE_G05",
+      "topic": "독립검수",
+      "handling": "본 산출물은 작성자 테스트.총괄이 독립수치·정책 검수 전 영상 수치 확정 금지."
+    },
+    {
+      "id": "CE_G06",
+      "topic": "6억초과9억이하 세율 반올림 표기단위 실무확인",
+      "handling": "현행11조 원식과 지자체 예시를 함께 기록. 모델은 공식 여수시 예시의 퍼센트4자리 반올림 사용. 다른 도구의 소수비율4자리 방식과 혼용 금지. 실제 서울 고지세액/확정 법률해석 미검증이므로 solver는 이 반올림 가정하 연구 결과로만 사용.6/7.5/9/12억 세액은 두 방식에서 동일."
+    }
+  ],
+  "paid_api_calls": 0
+}

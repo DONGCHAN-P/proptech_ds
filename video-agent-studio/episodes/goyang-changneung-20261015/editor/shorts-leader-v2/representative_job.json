@@ -1,0 +1,59 @@
+{
+  "task_id": "changneung-leader-v2-reps-r3",
+  "inputs": [
+    "C:\\projects\\realestate_reco\\video\\src\\changneung-shorts-leader-v2\\entry.tsx",
+    "C:\\projects\\realestate_reco\\video\\src\\changneung-shorts-leader-v2\\data.json"
+  ],
+  "outputs": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\S4-map.png",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\price.png",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\CTA.png"
+  ],
+  "steps": [
+    {
+      "argv": [
+        "node",
+        "C:\\projects\\realestate_reco\\video\\node_modules\\@remotion\\cli\\remotion-cli.js",
+        "still",
+        "C:\\projects\\realestate_reco\\video\\src\\changneung-shorts-leader-v2\\entry.tsx",
+        "ChangneungLeaderShortV2",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\S4-map.png",
+        "--frame=210",
+        "--public-dir=C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v2\\public",
+        "--browser-executable=C:/Program Files/Google/Chrome/Application/chrome.exe",
+        "--log=error"
+      ],
+      "cwd": "C:\\projects\\realestate_reco"
+    },
+    {
+      "argv": [
+        "node",
+        "C:\\projects\\realestate_reco\\video\\node_modules\\@remotion\\cli\\remotion-cli.js",
+        "still",
+        "C:\\projects\\realestate_reco\\video\\src\\changneung-shorts-leader-v2\\entry.tsx",
+        "ChangneungLeaderShortV2",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\price.png",
+        "--frame=420",
+        "--public-dir=C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v2\\public",
+        "--browser-executable=C:/Program Files/Google/Chrome/Application/chrome.exe",
+        "--log=error"
+      ],
+      "cwd": "C:\\projects\\realestate_reco"
+    },
+    {
+      "argv": [
+        "node",
+        "C:\\projects\\realestate_reco\\video\\node_modules\\@remotion\\cli\\remotion-cli.js",
+        "still",
+        "C:\\projects\\realestate_reco\\video\\src\\changneung-shorts-leader-v2\\entry.tsx",
+        "ChangneungLeaderShortV2",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\shorts-leader-v2\\CTA.png",
+        "--frame=1300",
+        "--public-dir=C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\shorts-leader-v2\\public",
+        "--browser-executable=C:/Program Files/Google/Chrome/Application/chrome.exe",
+        "--log=error"
+      ],
+      "cwd": "C:\\projects\\realestate_reco"
+    }
+  ]
+}

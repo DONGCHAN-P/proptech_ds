@@ -1,0 +1,53 @@
+{
+  "role": "research",
+  "revision": "v1",
+  "inputs": [
+    "brief.json/current",
+    "state.json/research_in_progress",
+    "최신5차고시2026-535",
+    "A2정정2025.4.24",
+    "국토부실거래2026Q3_2026.10.19조회"
+  ],
+  "outputs": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\facts.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\sources.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\summary.md",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\existing_prices_all.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\existing_price_rows.csv",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\latest_plan_20261008.pdf",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\latest_plan_map_20261008.pdf",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\a2_corrected.pdf",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\candidate_addendum.md",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\latest_plan_supply_p5.png"
+  ],
+  "verification": [
+    "공식고시 원문PDF와텍스트",
+    "A2확장비p8 이미지시각확인",
+    "HUIC2024원도p17 시각확인",
+    "최신5차지도는부분도임시각확인",
+    "실거래3개월 totalCount=item수745건 대조",
+    "모든JSON재파싱·필수필드확인",
+    "추가5개claims/p5공급표 시각확인 및 visual실제블록명대응회신"
+  ],
+  "unresolved": [
+    "미래가격·상승률 없음",
+    "A2외 본청약가격미확인",
+    "강남잠실판교집앞총시간미측정",
+    "신설학교개교월미확인",
+    "전체지도geometry의고시일일치visual확인필요",
+    "사진및HUIC원도재사용권리미확인",
+    "B1공공분양 일반형/이익공유형 및 C2/B2 실제분양가·전매거주조건 미확인"
+  ],
+  "affected_scene_ids": [
+    "전체계획",
+    "일자리",
+    "교통",
+    "가격",
+    "생활",
+    "공급",
+    "대안",
+    "후보"
+  ],
+  "next_owner": "director/writer 및 visual",
+  "paid_api_calls": 0
+}

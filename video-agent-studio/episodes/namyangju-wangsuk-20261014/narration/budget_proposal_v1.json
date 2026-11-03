@@ -1,0 +1,85 @@
+﻿{
+    "revision":  "budget-proposal-v1",
+    "verified_date":  "2026-10-14",
+    "script_revision":  "script-v2",
+    "input":  "writer/scene_proposals_v2.json",
+    "input_sha256":  "85AE8D2562AAF6432B0C37C72C2E585A44E897B1C6068AA223362ADD14F700E2",
+    "provider":  "elevenlabs",
+    "model":  "eleven_v4",
+    "voice_name":  "Jun - Clear Korean Lecturer",
+    "voice_id":  "4p6UA7mnodF5q7JFFrnW",
+    "preserve_settings":  true,
+    "character_count_method":  "Sum exact narration_text strings per scene; spaces, punctuation and embedded LF included. No headings/screen instructions, no separators between requests. UTF-16 count; present strings contain no surrogate pairs.",
+    "scene_counts":  [
+                         {
+                             "scene_id":  "S001",
+                             "characters":  592
+                         },
+                         {
+                             "scene_id":  "S002",
+                             "characters":  889
+                         },
+                         {
+                             "scene_id":  "S003",
+                             "characters":  671
+                         },
+                         {
+                             "scene_id":  "S004",
+                             "characters":  1192
+                         },
+                         {
+                             "scene_id":  "S005",
+                             "characters":  1170
+                         },
+                         {
+                             "scene_id":  "S006",
+                             "characters":  1073
+                         },
+                         {
+                             "scene_id":  "S007",
+                             "characters":  1200
+                         },
+                         {
+                             "scene_id":  "S008",
+                             "characters":  632
+                         }
+                     ],
+    "full_take_characters":  7419,
+    "correction_fraction":  0.2,
+    "correction_character_ceiling":  1484,
+    "total_character_ceiling":  8903,
+    "base_credits_per_character":  1,
+    "base_full_take_credits":  7419,
+    "base_credit_ceiling":  8903,
+    "voice_credit_multiplier":  null,
+    "actual_credit_ceiling_formula":  "8903 * confirmed Jun voice multiplier; do not execute if multiplier is unknown or above approved scope",
+    "subscription_plan":  null,
+    "remaining_credits":  null,
+    "marginal_cash_usd":  null,
+    "cash_spend_ceiling_usd":  0,
+    "cash_policy":  "Existing included credits only, sufficient for approved ceiling. No top-up, usage-based billing, upgrade, renewal or automatic rollover to paid spend. Insufficient balance or custom-rate multiplier needs director budget revision.",
+    "reference_subscription_allocation":  {
+                                              "starter_usd_per_month":  6,
+                                              "starter_credits":  30000,
+                                              "full_take_equivalent_usd":  1.4838,
+                                              "ceiling_equivalent_usd":  1.7806,
+                                              "note":  "Illustrative prorated subscription allocation, NOT marginal invoice or verified user plan; excludes taxes and promotions."
+                                          },
+    "minimal_media_extra_cash_usd":  0,
+    "media_scope":  "Native charts/editorial cards, local rendering and owned previous assets whose reuse rights are confirmed. Maps need original source/provider and reuse terms checked; paid maps, stock, AI images/video, music and ASR excluded.",
+    "approval_scope":  "script-v2, existing Jun/eleven_v4, one full take plus at most 1484 correction characters, base 8903 credits subject to confirmed multiplier and sufficient included balance, zero additional cash. Script approval is not paid-generation approval.",
+    "generation_performed":  false,
+    "uncertainties":  [
+                          "Jun custom-rate multiplier unverified",
+                          "Subscription, remaining balance, commercial licence unverified",
+                          "Pronunciation expansion/audio tags can increase exact request characters: recount before execution",
+                          "20% correction budget may not cover entire-scene retries; enforce actual cumulative request characters",
+                          "No generated audio or measured/listened duration; writer estimate 709 seconds only",
+                          "Map rights/provider unresolved"
+                      ],
+    "source_urls":  [
+                        "https://elevenlabs.io/v4",
+                        "https://elevenlabs.io/pricing",
+                        "https://help.elevenlabs.io/hc/en-us/articles/26050485079057-What-are-custom-rates-and-credit-multipliers"
+                    ]
+}

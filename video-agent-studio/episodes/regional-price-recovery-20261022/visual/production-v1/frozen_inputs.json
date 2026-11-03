@@ -1,0 +1,275 @@
+{
+  "task_id": "RPR-PROD1-DATA",
+  "revision": "frozen-csv-v3-production-v1",
+  "regions": [
+    "서울",
+    "경기",
+    "인천",
+    "부산",
+    "대구",
+    "대전",
+    "세종"
+  ],
+  "inputs": {
+    "series": {
+      "path": "analysis/housing_growth_2006/full_history_v1/chart_source.csv",
+      "sha256": "8df60f8d866b72e0e5cbda6bb7c8655bc1070fed2221a07eb9e43e5fecd3781b",
+      "bytes": 87739,
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes",
+      "schema": {
+        "region": "str",
+        "quarter": "str",
+        "source_index": "float",
+        "normalized_start_100": "float",
+        "running_high_index": "float",
+        "running_drawdown_pct": "float",
+        "matched_complexes": "int",
+        "source_row_number_including_header": "int",
+        "source_file": "str"
+      },
+      "rows": 538
+    },
+    "all_transactions": {
+      "path": "analysis/housing_growth_2006/full_transactions_v1/quarterly_all_valid_transactions.csv",
+      "sha256": "75b77faab614ae4f072c16291aa75aef8a505d6a680e78df2ba98b850b61045f",
+      "bytes": 59802,
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes",
+      "schema": {
+        "region": "str",
+        "quarter": "str",
+        "n": "int",
+        "complexes": "int",
+        "median_deal_amount_manwon": "float",
+        "median_area_m2": "float",
+        "median_price_per_m2_manwon": "float",
+        "p25_price_per_m2_manwon": "float",
+        "p75_price_per_m2_manwon": "float",
+        "area84_85_n": "int",
+        "area84_85_median_deal_amount_manwon": "int",
+        "area84_85_median_price_per_m2_manwon": "float"
+      },
+      "rows": 574
+    },
+    "summary": {
+      "path": "analysis/housing_growth_2006/full_history_v1/summary.csv",
+      "sha256": "70cadd0ca0931c486e2d7766a49ca64fe7ecc5c8a0521bc89ce694c4fb39f92e",
+      "bytes": 4518,
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes",
+      "schema": {
+        "region": "str",
+        "price_start_quarter": "str",
+        "price_end_quarter": "str",
+        "price_observed_quarters": "int",
+        "price_elapsed_years": "float",
+        "price_calendar_years_touched": "int",
+        "baseline_index": "float",
+        "latest_index": "float",
+        "full_period_cumulative_change_pct": "float",
+        "full_period_cagr_pct": "float",
+        "all_time_high_index": "float",
+        "all_time_high_first_quarter": "str",
+        "all_time_high_last_quarter": "str",
+        "latest_vs_all_time_high_pct": "float",
+        "latest_is_all_time_high": "bool",
+        "had_past_decline": "bool",
+        "all_drawdown_episode_count": "int",
+        "major_ge_5pct_episode_count": "int",
+        "completed_episode_count": "int",
+        "right_censored_episode_count": "int",
+        "max_historical_drawdown_pct": "float",
+        "max_drawdown_episode_id": "str",
+        "max_drawdown_peak_quarter": "str",
+        "max_drawdown_trough_quarter": "str",
+        "max_drawdown_first_return_quarter": "str",
+        "max_drawdown_right_censored": "bool",
+        "max_drawdown_peak_to_first_return_quarters": "int",
+        "max_drawdown_trough_to_first_return_quarters": "int",
+        "max_drawdown_peak_to_observed_end_quarters": "int",
+        "longest_completed_recovery_episode_id": "str",
+        "longest_completed_recovery_quarters": "int",
+        "longest_completed_recovery_years": "float",
+        "longest_completed_recovery_peak_quarter": "str",
+        "longest_completed_recovery_return_quarter": "str",
+        "longest_completed_trough_recovery_episode_id": "str",
+        "longest_completed_trough_to_first_return_quarters": "int",
+        "active_episode_id": "str",
+        "active_episode_elapsed_quarters_lower_bound": "int",
+        "active_episode_trough_quarter_observed_only": "str",
+        "min_link_matched_complexes": "int",
+        "latest_link_matched_complexes": "int",
+        "full_volume_start_quarter": "str",
+        "full_volume_end_quarter": "str",
+        "full_volume_quarters": "int",
+        "full_volume_calendar_years_touched": "int",
+        "full_volume_first_date": "str",
+        "full_volume_last_date": "str",
+        "full_valid_transaction_total": "int",
+        "valid_transactions_within_price_index_dates": "int",
+        "valid_transactions_before_price_index_start": "int",
+        "matched_transaction_total": "int",
+        "matched_transaction_share_pct": "float",
+        "matched_trade_count_status": "str"
+      },
+      "rows": 7
+    },
+    "episodes": {
+      "path": "analysis/housing_growth_2006/full_history_v1/episodes.csv",
+      "sha256": "1a72bc6fb5ba09776001d4880e6220de4a4ea382a301661ec7e2406b693a376b",
+      "bytes": 6461,
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes",
+      "schema": {
+        "episode_id": "str",
+        "region": "str",
+        "peak_quarter": "str",
+        "peak_index": "float",
+        "peak_is_observation_start": "bool",
+        "first_decline_quarter": "str",
+        "trough_quarter": "str",
+        "trough_index": "float",
+        "max_drawdown_pct": "float",
+        "major_ge_5pct": "bool",
+        "first_return_quarter": "str",
+        "first_return_index": "float",
+        "right_censored": "bool",
+        "observed_end_quarter": "str",
+        "peak_to_trough_quarters": "int",
+        "peak_to_first_return_quarters": "int",
+        "trough_to_first_return_quarters": "int",
+        "peak_to_observed_end_quarters": "int",
+        "peak_to_observed_end_years": "float",
+        "underwater_observed_quarters": "int",
+        "duration_status": "str"
+      },
+      "rows": 33
+    },
+    "annual_volume": {
+      "path": "analysis/housing_growth_2006/full_history_v1/annual_valid_volume.csv",
+      "sha256": "112f8f7c1a3e0a1012f857f55336a6ff532d02a1331b45dde98893c9026627a7",
+      "bytes": 4132,
+      "prior_evidence": "analysis/housing_growth_2006/full_history_v1/artifact_manifest.json#files",
+      "schema": {
+        "region": "str",
+        "year": "int",
+        "valid_transactions": "int",
+        "observed_quarters": "int",
+        "period_note": "str"
+      },
+      "rows": 147
+    },
+    "sensitivity": {
+      "path": "analysis/housing_growth_2006/regional_expansion_v1/sensitivity.csv",
+      "sha256": "b9b861a4dfa630fede449c6dba057378ec561af91b6ddf3b3dc26a82eeb39a0b",
+      "bytes": 2345,
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes",
+      "schema": {
+        "region": "str",
+        "min_trades": "int",
+        "first_contiguous_quarter": "str",
+        "last_quarter": "str",
+        "peak_quarter": "str",
+        "trough_quarter": "str",
+        "drawdown_pct": "float",
+        "first_recovery_quarter": "str",
+        "latest_vs_peak_pct": "float",
+        "latest_vs_trough_pct": "float",
+        "min_matched_complexes": "int",
+        "latest_matched_complexes": "int",
+        "cagr_3y_pct": "float",
+        "cagr_5y_pct": "float",
+        "cagr_10y_pct": "float"
+      },
+      "rows": 13
+    },
+    "horizon": {
+      "path": "analysis/housing_growth_2006/regional_expansion_v1/regional_summary.csv",
+      "sha256": "b1946d45fa82ca0bb060c577f4d68f006327d5e6c00df994d04418fb1ea62619",
+      "bytes": 1385,
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes",
+      "schema": {
+        "region": "str",
+        "min_trades": "int",
+        "first_contiguous_quarter": "str",
+        "last_quarter": "str",
+        "peak_quarter": "str",
+        "trough_quarter": "str",
+        "drawdown_pct": "float",
+        "first_recovery_quarter": "str",
+        "latest_vs_peak_pct": "float",
+        "latest_vs_trough_pct": "float",
+        "min_matched_complexes": "int",
+        "latest_matched_complexes": "int",
+        "cagr_3y_pct": "float",
+        "cagr_5y_pct": "float",
+        "cagr_10y_pct": "float"
+      },
+      "rows": 7
+    },
+    "history_metadata": {
+      "path": "analysis/housing_growth_2006/full_history_v1/results.json",
+      "sha256": "5b3a13a7a5304b633a2493d08de14e76851610adea7e925cc068388477879f19",
+      "bytes": 51033,
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "transactions_metadata": {
+      "path": "analysis/housing_growth_2006/full_transactions_v1/results.json",
+      "sha256": "7197d41717883031a56d497198c2c692dc8ae4e1651656d63421c4ebf7d24479",
+      "bytes": 14774,
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "regional_metadata": {
+      "path": "analysis/housing_growth_2006/regional_expansion_v1/results.json",
+      "sha256": "539ca5e8e6a57463f2c98b9bb0bb53c0e232da2b6dedae5f571257459ecb175a",
+      "bytes": 15958,
+      "prior_evidence": "이번 동결 입력 SHA 고정; 독립 수치 검수 통과로 확대하지 않음"
+    },
+    "cleaning_definition": {
+      "path": "analysis/housing_growth_2006/regional_expansion_v1.py",
+      "sha256": "ce136e65e529d2c23b8f33b33ab149e8ad8d18c9dd926cfe2d42ed15cb8c97b3",
+      "bytes": 11514,
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "artifact_manifest": {
+      "path": "analysis/housing_growth_2006/full_history_v1/artifact_manifest.json",
+      "sha256": "cf345f4be7bccbc14cbf1613c6ad93944a00b159111f9d60f52246a1b3b05c0f",
+      "bytes": 4366,
+      "prior_evidence": "이번 동결 입력 SHA 고정; 독립 수치 검수 통과로 확대하지 않음"
+    },
+    "factors": {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/research/script-v2-factors/verified_examples.json",
+      "sha256": "bbfc41f9bb0f372dab4b11a2532f4454fade2652dadd579945baa11d45612b02",
+      "bytes": 26307,
+      "prior_evidence": "이번 동결 입력 SHA 고정; 독립 수치 검수 통과로 확대하지 않음"
+    },
+    "contract": {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/data_contract.md",
+      "sha256": "aee28cab251474e7b9817f0aca2219f49d539f2fc2beb83c75a223fe46566211",
+      "bytes": 2267,
+      "prior_evidence": "이번 동결 입력 SHA 고정; 독립 수치 검수 통과로 확대하지 않음"
+    },
+    "approved_script": {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/script-review-v3/script_v3.md",
+      "sha256": "99b40e8730ee0f8fdf74402cffbe04b5b418540344e6d2a7175e6a01c3054664",
+      "bytes": 24893,
+      "prior_evidence": "사용자 승인 v3 SHA 및 final_recheck_v3.checked_revision"
+    },
+    "independent_qa": {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/independent_recompute.json",
+      "sha256": "f2a2c530edea4a843db264b91afae44b6fe165826ae9559d82fc4b867234c0af",
+      "bytes": 52373,
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "prior_recheck": {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/recheck_v3.json",
+      "sha256": "ee7532d1e3906505113c7c3361e2e0937bc7e6694d91843ee587315a7fd801e7",
+      "bytes": 26777,
+      "prior_evidence": "이번 동결 입력 SHA 고정; 독립 수치 검수 통과로 확대하지 않음"
+    },
+    "final_recheck": {
+      "path": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json",
+      "sha256": "f4590bd72ac1b3cfa296773a96b71da0bfe26fca1ae232ebe4010f16f6a8b9c0",
+      "bytes": 37841,
+      "prior_evidence": "이번 동결 입력 SHA 고정; 독립 수치 검수 통과로 확대하지 않음"
+    }
+  },
+  "policy": "목록의 소규모 동결 파일만 읽음. master/parquet/XML·새 수집·네트워크 접근 없음. CSV UTF-8(BOM 허용), 결측 null, JSON NaN 금지."
+}

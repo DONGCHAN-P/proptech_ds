@@ -1,0 +1,1777 @@
+{
+  "render_plan.json": {
+    "revision": "private-production-v1",
+    "status": "estimated_placeholder",
+    "script_path": "writer/private-production-v1/script_v4_candidate.md",
+    "script_sha256": "62cf5fcf06a35f3c9984de405717718fb2694ace7e1addf839b0f047055ec48d",
+    "locked_script_present": false,
+    "measured_timing_present": false,
+    "canvas": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 30
+    },
+    "full_render_allowed": false,
+    "tts_external_upload_allowed_in_this_sidecar": false,
+    "chapters": [
+      {
+        "chapter": 1,
+        "total_seconds": 80.96666666666667,
+        "last_speech_end_s": 79.748061,
+        "timing_basis": "estimated_placeholder",
+        "project": "ch01",
+        "scenes": [
+          {
+            "scene_id": "s1",
+            "title": "같은 집 · 세 가구",
+            "start_s": 0,
+            "end_s": 8.008239,
+            "source": "자체 예시 모형(2026.10) · 같은 6억원 집에서 10년 거주 · 막대 높이는 기본 가정의 10년 후 순자산 비율",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_intro_template",
+            "narration_anchor": "같은 아파트에서 같은 기간을 살아도,"
+          },
+          {
+            "scene_id": "s2",
+            "title": "매달 드는 주거비",
+            "start_s": 8.008239,
+            "end_s": 19.632149000000002,
+            "source": "자체 예시 모형(2026.10) · 막대 길이는 기본 가정 첫 달 주거비 비율 · 공통 생활비 제외",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_intro_template",
+            "narration_anchor": "집값 상승률과 주식 수익률만 나란히 놓으면"
+          },
+          {
+            "scene_id": "s3",
+            "title": "비교 조건",
+            "start_s": 19.632149000000002,
+            "end_s": 40.429806,
+            "source": "자체 예시 모형(2026.10) · 초기 순자산 2억5천만원 · 월 300만원 · 6억원 집 · 10년",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_intro_template",
+            "narration_anchor": "이번 비교에서는 초기 순자산이 2억5천만원이고"
+          },
+          {
+            "scene_id": "s4",
+            "title": "10년 후 순자산",
+            "start_s": 40.429806,
+            "end_s": 60.108158,
+            "source": "자체 예시 모형(2026.10) · 금리 연 4% · 월세 100만원 · 세금 미반영 · 10년 시점 보유 평가 · 비교를 위한 가정",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_intro_template",
+            "narration_anchor": "그 결과 기본 가정에서는 10년 후 순자산이"
+          },
+          {
+            "scene_id": "s5",
+            "title": "시리즈 순서",
+            "start_s": 60.108158,
+            "end_s": 80.96666666666667,
+            "source": "지난 편: 하남 교산 v5 화면(국토교통부 고시 2026-535호 · LH 공개 토지이용계획 재구성)",
+            "material_type": "official_plan_reconstruction",
+            "origin": "frozen_intro_template",
+            "narration_anchor": "지난 교산편에서는 지역의 입지와 가격을 살펴봤습니다."
+          }
+        ]
+      },
+      {
+        "chapter": 2,
+        "total_seconds": 146.73333333333332,
+        "last_speech_end_s": 145.510339,
+        "timing_basis": "estimated_placeholder",
+        "project": "ch02",
+        "scenes": [
+          {
+            "scene_id": "s2a",
+            "title": "같은 출발선",
+            "start_s": 3,
+            "end_s": 24.955412000000003,
+            "source": "자체 예시 모형(2026.10) · 같은 집·같은 예산·같은 기간 설정",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": null
+          },
+          {
+            "scene_id": "s2g",
+            "title": "2006년부터 본 집값 · 강조 구간은 최근 10년",
+            "start_s": 24.955412000000003,
+            "end_s": 59.923344,
+            "source": "자료: 국토교통부 실거래 기반 자체 연결지수 · 기준 2026Q2 · 고정 표본이 아닌 분기별 연결 표본",
+            "material_type": "data_chart",
+            "origin": "new_message_scene",
+            "narration_anchor": "집값은 먼저 짚고"
+          },
+          {
+            "scene_id": "s2p",
+            "title": "보수적인 예산 계획 · 집값 연 2%에서 출발",
+            "start_s": 59.923344,
+            "end_s": 89.42164799999999,
+            "source": "자료: 자체 예시 모형 · 6억원 × 1.02^10 · 계획을 위한 집값 시나리오",
+            "material_type": "data_chart",
+            "origin": "new_message_scene",
+            "narration_anchor": "다만 앞으로 감당할"
+          },
+          {
+            "scene_id": "s2b",
+            "title": "계산 가정",
+            "start_s": 89.42164799999999,
+            "end_s": 117.800646,
+            "source": "자체 예시 모형(2026.10) · 초기 순자산 2억5천만원 · 월 300만원 · 6억원 집 · 10년 · 집값 연 2% · 투자 연 6% · 금리 연 4%",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "투자계좌는 배당과"
+          },
+          {
+            "scene_id": "s2c",
+            "title": "조건을 고정하는 이유",
+            "start_s": 117.800646,
+            "end_s": 129.586107,
+            "source": "자체 예시 모형(2026.10) · 같은 집·같은 예산 비교",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "이렇게 조건을 먼저"
+          },
+          {
+            "scene_id": "s2d",
+            "title": "같은 종료 시점",
+            "start_s": 129.586107,
+            "end_s": 146.73333333333332,
+            "source": "자체 예시 모형(2026.10) · 세 가구 모두 120개월 시점 비교",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "비교 기간도"
+          }
+        ]
+      },
+      {
+        "chapter": 3,
+        "total_seconds": 120.76666666666667,
+        "last_speech_end_s": 119.566155,
+        "timing_basis": "estimated_placeholder",
+        "project": "ch03",
+        "scenes": [
+          {
+            "scene_id": "s3a",
+            "title": "매매 · 출발 자금",
+            "start_s": 3,
+            "end_s": 49.780291,
+            "source": "자체 예시 모형(2026.10) · 거래 시작 비용 600만원은 설명용 가정",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": null
+          },
+          {
+            "scene_id": "s3b",
+            "title": "전세 · 출발 자금",
+            "start_s": 49.780291,
+            "end_s": 73.95896599999999,
+            "source": "자체 예시 모형(2026.10) · 초기 계약비용 100만원은 설명용 가정",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "전세 가구는 보증금"
+          },
+          {
+            "scene_id": "s3c",
+            "title": "월세 · 출발 자금",
+            "start_s": 73.95896599999999,
+            "end_s": 100.56090499999999,
+            "source": "자체 예시 모형(2026.10) · 초기 계약비용 100만원은 설명용 가정",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "월세 가구는 보증금 1억원"
+          },
+          {
+            "scene_id": "s3d",
+            "title": "대출과 보증금 반환",
+            "start_s": 100.56090499999999,
+            "end_s": 120.76666666666667,
+            "source": "자체 예시 모형(2026.10) · 임차 대출은 이자만 납부·만기 상환 · 보증금 정상 반환 가정",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "전세와 월세의 대출은"
+          }
+        ]
+      },
+      {
+        "chapter": 4,
+        "total_seconds": 95.8,
+        "last_speech_end_s": 94.583522,
+        "timing_basis": "estimated_placeholder",
+        "project": "ch04",
+        "scenes": [
+          {
+            "scene_id": "s4a",
+            "title": "매매 · 월 300만원",
+            "start_s": 3,
+            "end_s": 39.314136000000005,
+            "source": "자체 예시 모형(2026.10) · 보유·유지비 월 30만원은 설명용 가정",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": null
+          },
+          {
+            "scene_id": "s4b",
+            "title": "세 가구 · 월 300만원",
+            "start_s": 39.314136000000005,
+            "end_s": 60.919548,
+            "source": "자체 예시 모형(2026.10) · 임차인 추가비용 월 5만원은 설명용 가정 · 금액은 첫 달 기준",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "전세 가구는 대출 2억원의"
+          },
+          {
+            "scene_id": "s4c",
+            "title": "처음 투자금과 매달 투자금",
+            "start_s": 60.919548,
+            "end_s": 73.662763,
+            "source": "자체 예시 모형(2026.10) · 초기 순자산 2억5천만원 · 월 300만원 · 6억원 집 · 10년 · 집값 연 2% · 투자 연 6% · 금리 연 4%",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "전세는 이 설정에서"
+          },
+          {
+            "scene_id": "s4d",
+            "title": "비용 묶음",
+            "start_s": 73.662763,
+            "end_s": 95.8,
+            "source": "자체 예시 모형(2026.10) · 월 30만원·5만원은 설명용 비용 묶음",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "월 30만원과 5만원은"
+          }
+        ]
+      },
+      {
+        "chapter": 5,
+        "total_seconds": 93.4,
+        "last_speech_end_s": 92.194911,
+        "timing_basis": "estimated_placeholder",
+        "project": "ch05",
+        "scenes": [
+          {
+            "scene_id": "s5a",
+            "title": "원리금 나누기",
+            "start_s": 3,
+            "end_s": 23.028352,
+            "source": "자체 예시 모형(2026.10) · 대출 3억6천만원 · 30년 원리금균등 · 연 4%",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": null
+          },
+          {
+            "scene_id": "s5b",
+            "title": "대출 잔액",
+            "start_s": 23.028352,
+            "end_s": 44.956866,
+            "source": "자체 예시 모형(2026.10) · 매월 대출잔액(120개월) · 세로축 0부터",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "첫 달이 지나면"
+          },
+          {
+            "scene_id": "s5c",
+            "title": "상환한 원금은 줄어든 빚에 반영",
+            "start_s": 44.956866,
+            "end_s": 56.742326,
+            "source": "자체 예시 모형(2026.10) · 초기 순자산 2억5천만원 · 월 300만원 · 6억원 집 · 10년 · 집값 연 2% · 투자 연 6% · 금리 연 4%",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "처음 빌린 3억6천만원에서"
+          },
+          {
+            "scene_id": "s5d",
+            "title": "보증금의 흐름",
+            "start_s": 56.742326,
+            "end_s": 78.18618699999999,
+            "source": "자체 예시 모형(2026.10) · 전세보증금 4억원 · 전세대출 2억원 · 정상 반환 가정",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "보증금도 같은 원리로"
+          },
+          {
+            "scene_id": "s5e",
+            "title": "기회비용은 한 번",
+            "start_s": 78.18618699999999,
+            "end_s": 93.4,
+            "source": "자체 예시 모형(2026.10) · 초기 순자산 2억5천만원 · 월 300만원 · 6억원 집 · 10년 · 집값 연 2% · 투자 연 6% · 금리 연 4%",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "보증금에 묶인 돈의"
+          }
+        ]
+      },
+      {
+        "chapter": 6,
+        "total_seconds": 104.66666666666667,
+        "last_speech_end_s": 103.45727,
+        "timing_basis": "estimated_placeholder",
+        "project": "ch06",
+        "scenes": [
+          {
+            "scene_id": "s6a",
+            "title": "총수익과 배당",
+            "start_s": 3,
+            "end_s": 22.705250000000003,
+            "source": "S&P Dow Jones Indices, Index Mathematics Methodology(Derived Indices) · S&P500 Total Return FAQ · 2026.10.20 확인",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": null
+          },
+          {
+            "scene_id": "s6b",
+            "title": "환율",
+            "start_s": 22.705250000000003,
+            "end_s": 44.472213,
+            "source": "달러 +10% × 환율 +10% 계산 예시 · FRED DEXKOUS(원/달러) 계열 정의 참고",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "환율도 같은 방식"
+          },
+          {
+            "scene_id": "s6c",
+            "title": "원화 연 6% 가정",
+            "start_s": 44.472213,
+            "end_s": 67.85468499999999,
+            "source": "자체 예시 모형(2026.10) · 투자수익은 원화 기준 단일 가정",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "이번 계산은 배당과"
+          },
+          {
+            "scene_id": "s6d",
+            "title": "납입 시점",
+            "start_s": 67.85468499999999,
+            "end_s": 86.875283,
+            "source": "자체 예시 모형(2026.10) · 월초 잔액에 수익 적용 후 월말 적립 · 월 수익률 = 1.06^(1/12) − 1",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "납입 시점도"
+          },
+          {
+            "scene_id": "s6e",
+            "title": "집값에 넣는 것",
+            "start_s": 86.875283,
+            "end_s": 104.66666666666667,
+            "source": "FRBSF(2018) 주택 총수익 구성 설명 참고 · 이번 모형은 가격 상승만 반영",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "집값에는 가격 상승만"
+          }
+        ]
+      },
+      {
+        "chapter": 7,
+        "total_seconds": 104.03333333333333,
+        "last_speech_end_s": 102.811066,
+        "timing_basis": "estimated_placeholder",
+        "project": "ch07",
+        "scenes": [
+          {
+            "scene_id": "s7a",
+            "title": "10년 후 순자산",
+            "start_s": 3,
+            "end_s": 41.091195,
+            "source": "자체 예시 모형(2026.10) · 초기 순자산 2억5천만원 · 월 300만원 · 6억원 집 · 10년 · 집값 연 2% · 투자 연 6% · 금리 연 4% · 120개월 시점 보유 평가",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": null
+          },
+          {
+            "scene_id": "s7b",
+            "title": "차이의 원인",
+            "start_s": 41.091195,
+            "end_s": 59.638691,
+            "source": "자체 예시 모형(2026.10) · 초기 순자산 2억5천만원 · 월 300만원 · 6억원 집 · 10년 · 집값 연 2% · 투자 연 6% · 금리 연 4% · 120개월 시점 보유 평가",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "기본 조건에서 월세 가구는"
+          },
+          {
+            "scene_id": "s7c",
+            "title": "자산의 성격",
+            "start_s": 59.638691,
+            "end_s": 79.62859499999999,
+            "source": "자체 예시 모형(2026.10) · 계속거주 평가 기준",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "이 숫자는 집에 계속"
+          },
+          {
+            "scene_id": "s7d",
+            "title": "매각 기준 비교",
+            "start_s": 79.62859499999999,
+            "end_s": 104.03333333333333,
+            "source": "자체 예시 모형(2026.10) · 매각 기준 세후 금액은 추가 계산 대상",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "모두 같은 날"
+          }
+        ]
+      },
+      {
+        "chapter": 8,
+        "total_seconds": 189.8,
+        "last_speech_end_s": 188.586511,
+        "timing_basis": "estimated_placeholder",
+        "project": "ch08",
+        "scenes": [
+          {
+            "scene_id": "s8h",
+            "title": "집값만 0% · 2% · 4% · 6%로 변경",
+            "start_s": 3,
+            "end_s": 36.567771,
+            "source": "자료: growth-explanation-v1/facts.json · 초기 2억5천만원 · 월 300만원 · 같은 집·10년",
+            "material_type": "data_chart",
+            "origin": "new_message_scene",
+            "narration_anchor": null
+          },
+          {
+            "scene_id": "s8l",
+            "title": "대출을 더하면 집 전체 가격이 움직입니다",
+            "start_s": 36.567771,
+            "end_s": 69.608643,
+            "source": "자료: facts.json leverage_example · 첫해 단순 가격 변화 · 순자산 최종 수익률과 구분",
+            "material_type": "data_chart",
+            "origin": "new_message_scene",
+            "narration_anchor": "여기에는 대출의 효과"
+          },
+          {
+            "scene_id": "s8a",
+            "title": "집값 × 투자수익",
+            "start_s": 69.608643,
+            "end_s": 110.08465299999999,
+            "source": "자체 예시 모형(2026.10) · 계산한 5개 조합만 표시 · 빗금 칸은 추가 계산 대상 · 금리 연 4% · 월세 100만원",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "이어서 집값과 투자수익을"
+          },
+          {
+            "scene_id": "s8b",
+            "title": "월세 수준",
+            "start_s": 110.08465299999999,
+            "end_s": 132.65937,
+            "source": "자체 예시 모형(2026.10) · 월세만 120만원으로 바꾼 재계산 · 다른 조건 기본값",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "월세 수준만 바꿔도"
+          },
+          {
+            "scene_id": "s8c",
+            "title": "대출 금리",
+            "start_s": 132.65937,
+            "end_s": 156.191842,
+            "source": "자체 예시 모형(2026.10) · 대출금리만 바꾼 별도 고정금리 조건 · 집값 연 2% · 투자 연 6%",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "금리도 경계를"
+          },
+          {
+            "scene_id": "s8d",
+            "title": "고정금리 조건",
+            "start_s": 156.191842,
+            "end_s": 172.477625,
+            "source": "자체 예시 모형(2026.10) · 앞 화면의 금리 조건은 처음부터 고정한 별도 계산",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "각 화면은"
+          },
+          {
+            "scene_id": "s8e",
+            "title": "판단 범위",
+            "start_s": 172.477625,
+            "end_s": 189.8,
+            "source": "자체 예시 모형(2026.10) · 점선 칸은 추가 계산이 필요한 조합 · 추가 조합으로 경계 확인",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "이 표에서 유용한"
+          }
+        ]
+      },
+      {
+        "chapter": 9,
+        "total_seconds": 83.56666666666666,
+        "last_speech_end_s": 82.348061,
+        "timing_basis": "estimated_placeholder",
+        "project": "ch09",
+        "scenes": [
+          {
+            "scene_id": "s9a",
+            "title": "차액 투자 50%",
+            "start_s": 3,
+            "end_s": 22.059047000000003,
+            "source": "자체 예시 모형(2026.10) · 초기 순자산 2억5천만원 · 월 300만원 · 6억원 집 · 10년 · 집값 연 2% · 투자 연 6% · 금리 연 4% · 차액 투자 실행률 50% · 미투자분은 무수익 현금",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": null
+          },
+          {
+            "scene_id": "s9b",
+            "title": "현금으로 남는 돈",
+            "start_s": 22.059047000000003,
+            "end_s": 39.164136,
+            "source": "자체 예시 모형(2026.10) · 초기 순자산 2억5천만원 · 월 300만원 · 6억원 집 · 10년 · 집값 연 2% · 투자 연 6% · 금리 연 4% · 차액 투자 실행률 50%",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "여기서 투자하지 않은"
+          },
+          {
+            "scene_id": "s9c",
+            "title": "예산 한도",
+            "start_s": 39.164136,
+            "end_s": 60.769548,
+            "source": "자체 예시 모형(2026.10) · 월 주거 현금지출이 예산을 넘으면 그 경로는 계산을 멈춤",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "기본 모형은 매달"
+          },
+          {
+            "scene_id": "s9d",
+            "title": "다른 형태의 위험",
+            "start_s": 60.769548,
+            "end_s": 83.56666666666666,
+            "source": "자체 예시 모형(2026.10) · 사건별 확률·금액은 추가 계산 대상",
+            "material_type": "editorial_diagram",
+            "origin": "frozen_motion_v1_graphics_and_motion",
+            "narration_anchor": "전세 갱신 때"
+          }
+        ]
+      },
+      {
+        "chapter": 10,
+        "total_seconds": 125.46666666666667,
+        "last_speech_end_s": 122.466317,
+        "timing_basis": "estimated_placeholder",
+        "project": "ch10",
+        "scenes": [
+          {
+            "scene_id": "s10choice",
+            "title": "내 상황에 맞추는 세 가지 입력",
+            "start_s": 3,
+            "end_s": 20.281987,
+            "source": "자체 예시 모형의 선택 조건 정리 · 투자 역량·저축 실행·주거 안정에 관한 화자 관점",
+            "material_type": "editorial_diagram",
+            "origin": "new_message_scene",
+            "narration_anchor": "매매와 전세, 월세를 고를 때는"
+          },
+          {
+            "scene_id": "s10invest",
+            "title": "투자 역량과 저축 실행을 함께 보기",
+            "start_s": 20.281987,
+            "end_s": 43.814459,
+            "source": "자체 예시 모형의 선택 조건 정리 · 투자 역량·저축 실행·주거 안정에 관한 화자 관점",
+            "material_type": "editorial_diagram",
+            "origin": "new_message_scene",
+            "narration_anchor": "이번 계산에서 투자수익은"
+          },
+          {
+            "scene_id": "s10stable",
+            "title": "실거주 매매 · 자산 형성과 주거 안정",
+            "start_s": 43.814459,
+            "end_s": 65.096769,
+            "source": "자체 예시 모형의 선택 조건 정리 · 투자 역량·저축 실행·주거 안정에 관한 화자 관점",
+            "material_type": "editorial_diagram",
+            "origin": "new_message_scene",
+            "narration_anchor": "한편 실거주 매매에는"
+          },
+          {
+            "scene_id": "s10life",
+            "title": "오래 유지할 생활 계획",
+            "start_s": 65.096769,
+            "end_s": 92.818013,
+            "source": "주거 안정과 생활 계획을 설명하는 그림 · 생활비·비상자금·장기 거주에 관한 화자 관점",
+            "material_type": "ai_concept_living_space",
+            "origin": "new_message_scene",
+            "narration_anchor": "제 관점에서는"
+          },
+          {
+            "scene_id": "s10hold",
+            "title": "보유를 이어갈 수 있는 가격",
+            "start_s": 92.818013,
+            "end_s": 106.853635,
+            "source": "자체 예시 모형의 선택 조건 정리 · 투자 역량·저축 실행·주거 안정에 관한 화자 관점",
+            "material_type": "editorial_diagram",
+            "origin": "new_message_scene",
+            "narration_anchor": "그래서 집값이 크게"
+          },
+          {
+            "scene_id": "s10next",
+            "title": "다음 편 · 내 돈과 소득으로 가격 범위 계산",
+            "start_s": 106.853635,
+            "end_s": 125.46666666666667,
+            "source": "다음 편 예고 · 종자돈·월소득·부대비용·비상자금·월 상환액",
+            "material_type": "editorial_diagram",
+            "origin": "new_message_scene",
+            "narration_anchor": "다음 시간에는"
+          }
+        ]
+      }
+    ],
+    "estimated_total_seconds_without_brand": 1145.2,
+    "offset_map": [
+      {
+        "chapter": 1,
+        "local_start_s": 0,
+        "assembly_start_s": 0,
+        "total_seconds": 80.96666666666667
+      },
+      {
+        "chapter": 2,
+        "local_start_s": 0,
+        "assembly_start_s": 80.96666666666667,
+        "total_seconds": 146.73333333333332
+      },
+      {
+        "chapter": 3,
+        "local_start_s": 0,
+        "assembly_start_s": 227.7,
+        "total_seconds": 120.76666666666667
+      },
+      {
+        "chapter": 4,
+        "local_start_s": 0,
+        "assembly_start_s": 348.46666666666664,
+        "total_seconds": 95.8
+      },
+      {
+        "chapter": 5,
+        "local_start_s": 0,
+        "assembly_start_s": 444.26666666666665,
+        "total_seconds": 93.4
+      },
+      {
+        "chapter": 6,
+        "local_start_s": 0,
+        "assembly_start_s": 537.6666666666666,
+        "total_seconds": 104.66666666666667
+      },
+      {
+        "chapter": 7,
+        "local_start_s": 0,
+        "assembly_start_s": 642.3333333333333,
+        "total_seconds": 104.03333333333333
+      },
+      {
+        "chapter": 8,
+        "local_start_s": 0,
+        "assembly_start_s": 746.3666666666666,
+        "total_seconds": 189.8
+      },
+      {
+        "chapter": 9,
+        "local_start_s": 0,
+        "assembly_start_s": 936.1666666666665,
+        "total_seconds": 83.56666666666666
+      },
+      {
+        "chapter": 10,
+        "local_start_s": 0,
+        "assembly_start_s": 1019.7333333333331,
+        "total_seconds": 125.46666666666667
+      }
+    ],
+    "brand_assembly": {
+      "status": "pending_director_asset_lock",
+      "clean_intro": null,
+      "clean_outro": null,
+      "existing_music": null,
+      "insert_intro_at": "chapter 1 hook end cue boundary; add actual intro duration to every downstream media/caption entry",
+      "outro_start": "chapter 10 measured last_speech_end_s + 3s plus global offset",
+      "caption_exceptions": [
+        "clean_brand_intro",
+        "clean_brand_outro",
+        "final_3s_silent_CTA_hold"
+      ]
+    },
+    "render_command_template": [
+      "hyperframes.cmd",
+      "render",
+      "--output",
+      "chapter_versioned.mp4"
+    ],
+    "render_command_status": "reference only; execute only after director releases measured timing, representative QA and brand lock",
+    "pending": [
+      "script dual-review/locked SHA",
+      "actual voice + final_timing",
+      "representative independent QA",
+      "brand asset lock and global offset map",
+      "actual MP4 metadata/decode/frame checks after authorized render"
+    ],
+    "workflow_notes": {
+      "update_failure": "general-video Unknown skill reported by director; not rerun because external calls forbidden",
+      "skills": "installed general-video/core/animation/registry and local frozen project",
+      "catalog": "director reports 448-item words search: data-chart/mk-line-graph; existing chart geometry and channel primitives reused; no external add"
+    },
+    "image_requests": []
+  },
+  "output_manifest.json": {
+    "assets_manifest.json": "66a169702645b560a16f006ddad64f33fc7effb6e21ac9a7c3608259df87f10b",
+    "index.html": "86737fd6838c1edf8fbb8c160edb2971bf20b708d67f824f129c8ed054f081fe",
+    "render_plan.json": "921a506cb0635b8b91ef5ab6ead61da6b6fae64fb913bf20b9c54a48de8977bb",
+    "snapshot_times.json": "ae9710d098d20be83dda1ec7a32180345aa7c94224e6c7e007c0dbae463262a4",
+    "ch01/anchor_audit.json": "e1267c60317191b2db11e4e5448296ce86a5296a4467aefc41eaa027fb4e233a",
+    "ch01/display_mapping.json": "1c8fcf27953b5a88606e7c726f0e22723678c0691f39d9dad5fc5048343fe5c4",
+    "ch01/hyperframes.json": "e79db797a34144088cba320b0ff7bc9314c8276dc4b162d3bcf167b79a83f8ce",
+    "ch01/index.html": "164547a7f1c03594a8abd9687bfe9c3af55f39deb14719ab3437d485321bc9b5",
+    "ch01/meta.json": "6af14450355604b0279010c21fb944ea0d30cc5041ebe85d7648ce3291f86250",
+    "ch01/package.json": "7b8aef4fa0aec8be85db700244302bce0a119a476c823fd87891ac486b3d5414",
+    "ch01/timing.json": "e4d1fa6583f52c8cf65e0ad1b4905dffdcafb33f8e87480ac3189808a09803ac",
+    "ch01/.hyperframes/history-id": "902ec6115a7c56a4c6eb26cfd66b41936ebefcfb6a340f851d90d6e29123ba6b",
+    "ch01/assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+    "ch01/assets/gyosan_landuse_panel.png": "d42c47c19fa3dbdf105c4b0616d157aca2f13188cc631fc7a4cf159fb935b4ef",
+    "ch01/assets/fonts/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "ch01/assets/fonts/Pretendard-ExtraBold.woff2": "dd7c1e156f508eb962acc7a33a7a1896d1e0b71e11156fad96e731689ceb6dc3",
+    "ch01/assets/fonts/Pretendard-Regular.woff2": "fad853f7f47c6c8b103171e7193fa095708cdcd70850a71d93aa5379e8a61d63",
+    "ch01/assets/fonts/Pretendard-SemiBold.woff2": "c863f76a7de5c1ddc1ed8b2fa794964530774592c4f31407a84e2a2ae93f17f0",
+    "ch02/anchor_audit.json": "9195e5d2206b290a5d06bc0fdd12cc2cc35b1731c4cf08a450c7e74cf6e130cf",
+    "ch02/hyperframes.json": "e79db797a34144088cba320b0ff7bc9314c8276dc4b162d3bcf167b79a83f8ce",
+    "ch02/index.html": "507c4419fac31ca6b90dfd2c042707367c7e57cf188fdf091f70f563b9a78bfc",
+    "ch02/meta.json": "6dbaceba1a178120aa2bd5291191c2141fa1137362720de5c811c3bdfe950473",
+    "ch02/package.json": "fdb860ff0e9ad96b93b212f72f632dd81a50554172d0e2c476c39858dbdc3379",
+    "ch02/timing.json": "16c351055f481db7b59c2ea837e08694481032bfd9da73298bf2fc8c2893fdb8",
+    "ch02/.hyperframes/history-id": "cd1c75ad6f2df52ac4ed1822b7f20747598de6d3716e8dfe307b19198765b12a",
+    "ch02/assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+    "ch02/assets/fonts/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "ch02/assets/fonts/Pretendard-ExtraBold.woff2": "dd7c1e156f508eb962acc7a33a7a1896d1e0b71e11156fad96e731689ceb6dc3",
+    "ch02/assets/fonts/Pretendard-Regular.woff2": "fad853f7f47c6c8b103171e7193fa095708cdcd70850a71d93aa5379e8a61d63",
+    "ch02/assets/fonts/Pretendard-SemiBold.woff2": "c863f76a7de5c1ddc1ed8b2fa794964530774592c4f31407a84e2a2ae93f17f0",
+    "ch03/anchor_audit.json": "3c23f90d2bba87b0ce3f5cfa3212c1e4b9c0ffceba072eaa3ac7b0b16816da3f",
+    "ch03/hyperframes.json": "e79db797a34144088cba320b0ff7bc9314c8276dc4b162d3bcf167b79a83f8ce",
+    "ch03/index.html": "9c1ff6fddd3409cb369309c6fb9ad56bbf1702387c99ed02476f804bf3f777b6",
+    "ch03/meta.json": "9838aaa0267cfc7a4db9ec8bce678e630030fd7952de4d63721148c0a46d5c7c",
+    "ch03/package.json": "e4d36576ab29c42def7c348905920e26590f993ed49ad10613df740b80b2caa9",
+    "ch03/timing.json": "84a2652679a97182b671ddd6eaeb324064709d556ff43503d56e19c76e48ddf4",
+    "ch03/.hyperframes/history-id": "7063bcf4bc9513a25f507352d3ed374f791d2f73809c63db81cf6e8513ad8fe2",
+    "ch03/assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+    "ch03/assets/fonts/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "ch03/assets/fonts/Pretendard-ExtraBold.woff2": "dd7c1e156f508eb962acc7a33a7a1896d1e0b71e11156fad96e731689ceb6dc3",
+    "ch03/assets/fonts/Pretendard-Regular.woff2": "fad853f7f47c6c8b103171e7193fa095708cdcd70850a71d93aa5379e8a61d63",
+    "ch03/assets/fonts/Pretendard-SemiBold.woff2": "c863f76a7de5c1ddc1ed8b2fa794964530774592c4f31407a84e2a2ae93f17f0",
+    "ch04/anchor_audit.json": "c478075b0ff5ccb812b1217109b298a98648e2676fbbcaddf2f2123769e865a5",
+    "ch04/hyperframes.json": "e79db797a34144088cba320b0ff7bc9314c8276dc4b162d3bcf167b79a83f8ce",
+    "ch04/index.html": "d15f703211593ca9b85f59b5eafecee30c944ac06efabbc3356a493e9a00405a",
+    "ch04/meta.json": "e6eafef20066f48c617fc6e57bfd3bcb929d307efb2b7b0f1668cce4e254ab0c",
+    "ch04/package.json": "cfa52b27d339b736a747d13b0ad9d3919fc0b0a802adcd0e2c05f189c6ae7bad",
+    "ch04/timing.json": "92b74366892577e6486efc013d9c70f472af9f9dadb6fa280961808e1cfe97e8",
+    "ch04/.hyperframes/history-id": "dccc5bb5195594dad8dd0702c9cfb2b03f9a3e7b4e343d1927774a278b0cdf79",
+    "ch04/assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+    "ch04/assets/fonts/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "ch04/assets/fonts/Pretendard-ExtraBold.woff2": "dd7c1e156f508eb962acc7a33a7a1896d1e0b71e11156fad96e731689ceb6dc3",
+    "ch04/assets/fonts/Pretendard-Regular.woff2": "fad853f7f47c6c8b103171e7193fa095708cdcd70850a71d93aa5379e8a61d63",
+    "ch04/assets/fonts/Pretendard-SemiBold.woff2": "c863f76a7de5c1ddc1ed8b2fa794964530774592c4f31407a84e2a2ae93f17f0",
+    "ch05/anchor_audit.json": "86caa12c5b667001fd9d3be66002715e7eb0378ee71586fd7ae6377b11f0d8d9",
+    "ch05/hyperframes.json": "e79db797a34144088cba320b0ff7bc9314c8276dc4b162d3bcf167b79a83f8ce",
+    "ch05/index.html": "6de3b2286bf12ed37b0da74d3e7c2e49cef2b8456034cb07509ee2198f2b2351",
+    "ch05/meta.json": "dc3bf08d90704066140b9a6ca72070c980c07da02da4ece407d10a29fe320e14",
+    "ch05/package.json": "b75d91b811a23dfed83f5fd888282c34b82b5a5c05082d7b0093003239f4c2a9",
+    "ch05/timing.json": "39a3e69df45d19ca0dd383a517c25b81e023c337d115895dfcdf1b298a6505fa",
+    "ch05/.hyperframes/history-id": "96160064959056bc3edb7cfaf3d1464db69b38573294a7d09bc3ab07cc4da012",
+    "ch05/assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+    "ch05/assets/fonts/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "ch05/assets/fonts/Pretendard-ExtraBold.woff2": "dd7c1e156f508eb962acc7a33a7a1896d1e0b71e11156fad96e731689ceb6dc3",
+    "ch05/assets/fonts/Pretendard-Regular.woff2": "fad853f7f47c6c8b103171e7193fa095708cdcd70850a71d93aa5379e8a61d63",
+    "ch05/assets/fonts/Pretendard-SemiBold.woff2": "c863f76a7de5c1ddc1ed8b2fa794964530774592c4f31407a84e2a2ae93f17f0",
+    "ch06/anchor_audit.json": "5afe8f30e650edcc79d9ec6c7277a36293d3f0c622c3537496734912b96086a8",
+    "ch06/hyperframes.json": "e79db797a34144088cba320b0ff7bc9314c8276dc4b162d3bcf167b79a83f8ce",
+    "ch06/index.html": "e7ab1a8e5eb3ff040da5572ff9ad1b95e9988898d7dfca4f328c7fe3b1815317",
+    "ch06/meta.json": "3129f9db16419ef27516d70c5ee370a8f4fbb907ad5e32cee87de8a17b2c1724",
+    "ch06/package.json": "90a7c9aed84dea41085a93aa6566a86aa3dd469205931bc1ea997e132ec4b4dd",
+    "ch06/timing.json": "6387d86b3faa69790707d9b599badf691d10ee4bed36d3189c3aa248acb51e13",
+    "ch06/.hyperframes/history-id": "0a5e311dc16491f865cf508d5b5e8d46bc92d9993a6550eb23641fa60d4f44a3",
+    "ch06/assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+    "ch06/assets/fonts/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "ch06/assets/fonts/Pretendard-ExtraBold.woff2": "dd7c1e156f508eb962acc7a33a7a1896d1e0b71e11156fad96e731689ceb6dc3",
+    "ch06/assets/fonts/Pretendard-Regular.woff2": "fad853f7f47c6c8b103171e7193fa095708cdcd70850a71d93aa5379e8a61d63",
+    "ch06/assets/fonts/Pretendard-SemiBold.woff2": "c863f76a7de5c1ddc1ed8b2fa794964530774592c4f31407a84e2a2ae93f17f0",
+    "ch07/anchor_audit.json": "ceb78bf6f40133c25ebf428c144707dd33f429b191c44557574ff9793c516287",
+    "ch07/debug.log": "6c7b5c9ed4c6baa6bc8c90504dd54e4ce9cefee456ac72444640e1018fccec99",
+    "ch07/hyperframes.json": "e79db797a34144088cba320b0ff7bc9314c8276dc4b162d3bcf167b79a83f8ce",
+    "ch07/index.html": "992708fc2d0f8de362dede4dc45f4fe3013a14db8128839dc505d1d3354e062e",
+    "ch07/meta.json": "8e5dd14322e02a5a9bd2bcc15399a10aeccc1e73428edb7371872b28d59783ee",
+    "ch07/package.json": "b2171c328e9670d94707a37b6b8710eceef5d9a414e95454db0cbb507f33ac90",
+    "ch07/timing.json": "ffb3f77fd8ad01a40a28e07acfa2e8a0a5d2955b3caa1866a63316f85a6f2ba2",
+    "ch07/.hyperframes/history-id": "58ba5602904291c9ff43ad5209839e3626818fc544ee2fccd9575a04715d8808",
+    "ch07/assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+    "ch07/assets/fonts/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "ch07/assets/fonts/Pretendard-ExtraBold.woff2": "dd7c1e156f508eb962acc7a33a7a1896d1e0b71e11156fad96e731689ceb6dc3",
+    "ch07/assets/fonts/Pretendard-Regular.woff2": "fad853f7f47c6c8b103171e7193fa095708cdcd70850a71d93aa5379e8a61d63",
+    "ch07/assets/fonts/Pretendard-SemiBold.woff2": "c863f76a7de5c1ddc1ed8b2fa794964530774592c4f31407a84e2a2ae93f17f0",
+    "ch08/anchor_audit.json": "b6feb6342792185b7c42dc96745c9c4f00ddc0b9c0225e1c259047c1105fc69a",
+    "ch08/hyperframes.json": "e79db797a34144088cba320b0ff7bc9314c8276dc4b162d3bcf167b79a83f8ce",
+    "ch08/index.html": "2f314fa1d1decb65c74c7338a84e8ddb00ac44c9b46a188674eb3d5c31a637e8",
+    "ch08/meta.json": "2097d5ffa89bc2f3c52cb94159dcdc47b544c05c784e35c8e940f09b5bbcb6a1",
+    "ch08/package.json": "c0fce763bcc691a8ed3b5cdaca1225d3cff7d07518a81bb754e1fe162bf19f89",
+    "ch08/timing.json": "bf79a67f369ed5724fe9f55d62cf2d419ce7e7a6593da0dee076372a01b876f7",
+    "ch08/.hyperframes/history-id": "93bc44f8d847b9448c9d6dc1ed83486e4dc68c9fb43fb95a17ebb97de9ca11c7",
+    "ch08/assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+    "ch08/assets/fonts/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "ch08/assets/fonts/Pretendard-ExtraBold.woff2": "dd7c1e156f508eb962acc7a33a7a1896d1e0b71e11156fad96e731689ceb6dc3",
+    "ch08/assets/fonts/Pretendard-Regular.woff2": "fad853f7f47c6c8b103171e7193fa095708cdcd70850a71d93aa5379e8a61d63",
+    "ch08/assets/fonts/Pretendard-SemiBold.woff2": "c863f76a7de5c1ddc1ed8b2fa794964530774592c4f31407a84e2a2ae93f17f0",
+    "ch09/anchor_audit.json": "f0d66ec4dae8c906c65b8612fa59815d3316335db5175ffa72f531e693d8f6d9",
+    "ch09/hyperframes.json": "e79db797a34144088cba320b0ff7bc9314c8276dc4b162d3bcf167b79a83f8ce",
+    "ch09/index.html": "043ef749ebc5c5e659b19880c4c9621048827bdb901ec73d1d626054bdc45e4e",
+    "ch09/meta.json": "b29efdbe0ebd299d5b41415beae78faf5adb1c7535b49624fc13408526d94236",
+    "ch09/package.json": "29b13d1bf27f04641e42f801a048b1f501bb278b6810cfd7d30c0453f241a105",
+    "ch09/timing.json": "b69f72d2507a4f77c214e7311680cb97221cd6681fd009ba6cf5788d48fa519e",
+    "ch09/.hyperframes/history-id": "d7ca5e3c5070a17be3e8b890381c6b133b41b90d32f4b4753248cc4b61c03814",
+    "ch09/assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+    "ch09/assets/fonts/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "ch09/assets/fonts/Pretendard-ExtraBold.woff2": "dd7c1e156f508eb962acc7a33a7a1896d1e0b71e11156fad96e731689ceb6dc3",
+    "ch09/assets/fonts/Pretendard-Regular.woff2": "fad853f7f47c6c8b103171e7193fa095708cdcd70850a71d93aa5379e8a61d63",
+    "ch09/assets/fonts/Pretendard-SemiBold.woff2": "c863f76a7de5c1ddc1ed8b2fa794964530774592c4f31407a84e2a2ae93f17f0",
+    "ch10/anchor_audit.json": "f0b7754f07d698b706276cdd280cd4802bbd55e724b669a4794551ee9c971f8b",
+    "ch10/debug.log": "e6f687b3af91f375c548f6a7bc29b001524fd904f937fa733152997ae1a4a3e9",
+    "ch10/hyperframes.json": "e79db797a34144088cba320b0ff7bc9314c8276dc4b162d3bcf167b79a83f8ce",
+    "ch10/index.html": "ef813dbd0f64e7aba1f3ffeb273adb569d7585ac8b49394557a30b32ad20d768",
+    "ch10/meta.json": "808ed9777681509df0ea93c224e163a320d5b2d022570d5978af1ce49727e11b",
+    "ch10/package.json": "e2d98f0e8d890aa17a636ee5cd63bafa792ce19f9bceb2dc1387f135baeb152b",
+    "ch10/timing.json": "c9fbb9fa4e553c7286e11ec30b85897202d15a2414f1235687bd97400fc559a0",
+    "ch10/.hyperframes/history-id": "15b3f97d5cf17ee186d651072364a3b5cc8e94379188dcf286f4491318515556",
+    "ch10/assets/gsap.min.js": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+    "ch10/assets/housing-stability-v1.png": "cdedf97208c116b0a481b71f67d25eaf1035fd1b8c96f05b52363afbc1bbf38d",
+    "ch10/assets/fonts/Pretendard-Bold.woff2": "4609c3356e536fafe38f4add0daeceb3d8595d3057bce13c428c33ddbd43d362",
+    "ch10/assets/fonts/Pretendard-ExtraBold.woff2": "dd7c1e156f508eb962acc7a33a7a1896d1e0b71e11156fad96e731689ceb6dc3",
+    "ch10/assets/fonts/Pretendard-Regular.woff2": "fad853f7f47c6c8b103171e7193fa095708cdcd70850a71d93aa5379e8a61d63",
+    "ch10/assets/fonts/Pretendard-SemiBold.woff2": "c863f76a7de5c1ddc1ed8b2fa794964530774592c4f31407a84e2a2ae93f17f0"
+  },
+  "cli_summary": {
+    "version": "0.8.181",
+    "status": "pass",
+    "chapters": [
+      {
+        "chapter": 1,
+        "returncode": 0,
+        "ok": true,
+        "passes": {
+          "lint": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 9
+          },
+          "runtime": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0
+          },
+          "layout": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              5.606,
+              16.145,
+              34.191,
+              54.205,
+              74.709
+            ],
+            "totalIssueCount": 9
+          },
+          "contrast": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              5.606,
+              16.145,
+              34.191,
+              54.205,
+              74.709
+            ]
+          },
+          "motion": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": 0
+          }
+        },
+        "findings": {
+          "runtime": [],
+          "layout": [
+            {
+              "code": "container_overflow",
+              "severity": "info",
+              "time": 54.205,
+              "selector": "#s4-v00",
+              "message": "Nowrap text is wider than its container.",
+              "rect": {
+                "left": 195,
+                "top": 355,
+                "right": 365,
+                "bottom": 379,
+                "width": 170,
+                "height": 24
+              },
+              "containerSelector": "#s4-ch0 > div:nth-of-type(2)",
+              "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+              "containerRect": {
+                "left": 225,
+                "top": 225,
+                "right": 335,
+                "bottom": 765,
+                "width": 110,
+                "height": 540
+              },
+              "overflow": {
+                "left": 30,
+                "right": 30
+              },
+              "dataAttributes": {},
+              "sourceFile": "index.html",
+              "bbox": {
+                "x": 195,
+                "y": 355,
+                "width": 170,
+                "height": 24
+              },
+              "firstSeen": 54.205,
+              "lastSeen": 54.205,
+              "occurrences": 1,
+              "heldMs": 0,
+              "times": [
+                54.205
+              ]
+            },
+            {
+              "code": "container_overflow",
+              "severity": "info",
+              "time": 54.205,
+              "selector": "#s4-v01",
+              "message": "Nowrap text is wider than its container.",
+              "rect": {
+                "left": 340,
+                "top": 338,
+                "right": 510,
+                "bottom": 362,
+                "width": 170,
+                "height": 24
+              },
+              "containerSelector": "#s4-ch0 > div:nth-of-type(4)",
+              "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+              "containerRect": {
+                "left": 370,
+                "top": 225,
+                "right": 480,
+                "bottom": 765,
+                "width": 110,
+                "height": 540
+              },
+              "overflow": {
+                "left": 30,
+                "right": 30
+              },
+              "dataAttributes": {},
+              "sourceFile": "index.html",
+              "bbox": {
+                "x": 340,
+                "y": 338,
+                "width": 170,
+                "height": 24
+              },
+              "firstSeen": 54.205,
+              "lastSeen": 54.205,
+              "occurrences": 1,
+              "heldMs": 0,
+              "times": [
+                54.205
+              ]
+            },
+            {
+              "code": "container_overflow",
+              "severity": "info",
+              "time": 54.205,
+              "selector": "#s4-v02",
+              "message": "Nowrap text is wider than its container.",
+              "rect": {
+                "left": 485,
+                "top": 326,
+                "right": 655,
+                "bottom": 350,
+                "width": 170,
+                "height": 24
+              },
+              "containerSelector": "#s4-ch0 > div:nth-of-type(6)",
+              "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+              "containerRect": {
+                "left": 515,
+                "top": 225,
+                "right": 625,
+                "bottom": 765,
+                "width": 110,
+                "height": 540
+              },
+              "overflow": {
+                "left": 30,
+                "right": 30
+              },
+              "dataAttributes": {},
+              "sourceFile": "index.html",
+              "bbox": {
+                "x": 485,
+                "y": 326,
+                "width": 170,
+                "height": 24
+              },
+              "firstSeen": 54.205,
+              "lastSeen": 54.205,
+              "occurrences": 1,
+              "heldMs": 0,
+              "times": [
+                54.205
+              ]
+            },
+            {
+              "code": "container_overflow",
+              "severity": "info",
+              "time": 54.205,
+              "selector": "#s4-v10",
+              "message": "Nowrap text is wider than its container.",
+              "rect": {
+                "left": 755,
+                "top": 305,
+                "right": 925,
+                "bottom": 329,
+                "width": 170,
+                "height": 24
+              },
+              "containerSelector": "#s4-ch1 > div:nth-of-type(2)",
+              "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+              "containerRect": {
+                "left": 785,
+                "top": 225,
+                "right": 895,
+                "bottom": 765,
+                "width": 110,
+                "height": 540
+              },
+              "overflow": {
+                "left": 30,
+                "right": 30
+              },
+              "dataAttributes": {},
+              "sourceFile": "index.html",
+              "bbox": {
+                "x": 755,
+                "y": 305,
+                "width": 170,
+                "height": 24
+              },
+              "firstSeen": 54.205,
+              "lastSeen": 54.205,
+              "occurrences": 1,
+              "heldMs": 0,
+              "times": [
+                54.205
+              ]
+            },
+            {
+              "code": "container_overflow",
+              "severity": "info",
+              "time": 54.205,
+              "selector": "#s4-v11",
+              "message": "Nowrap text is wider than its container.",
+              "rect": {
+                "left": 900,
+                "top": 376,
+                "right": 1070,
+                "bottom": 400,
+                "width": 170,
+                "height": 24
+              },
+              "containerSelector": "#s4-ch1 > div:nth-of-type(4)",
+              "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+              "containerRect": {
+                "left": 930,
+                "top": 225,
+                "right": 1040,
+                "bottom": 765,
+                "width": 110,
+                "height": 540
+              },
+              "overflow": {
+                "left": 30,
+                "right": 30
+              },
+              "dataAttributes": {},
+              "sourceFile": "index.html",
+              "bbox": {
+                "x": 900,
+                "y": 376,
+                "width": 170,
+                "height": 24
+              },
+              "firstSeen": 54.205,
+              "lastSeen": 54.205,
+              "occurrences": 1,
+              "heldMs": 0,
+              "times": [
+                54.205
+              ]
+            },
+            {
+              "code": "container_overflow",
+              "severity": "info",
+              "time": 54.205,
+              "selector": "#s4-v12",
+              "message": "Nowrap text is wider than its container.",
+              "rect": {
+                "left": 1045,
+                "top": 387,
+                "right": 1215,
+                "bottom": 411,
+                "width": 170,
+                "height": 24
+              },
+              "containerSelector": "#s4-ch1 > div:nth-of-type(6)",
+              "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+              "containerRect": {
+                "left": 1075,
+                "top": 225,
+                "right": 1185,
+                "bottom": 765,
+                "width": 110,
+                "height": 540
+              },
+              "overflow": {
+                "left": 30,
+                "right": 30
+              },
+              "dataAttributes": {},
+              "sourceFile": "index.html",
+              "bbox": {
+                "x": 1045,
+                "y": 387,
+                "width": 170,
+                "height": 24
+              },
+              "firstSeen": 54.205,
+              "lastSeen": 54.205,
+              "occurrences": 1,
+              "heldMs": 0,
+              "times": [
+                54.205
+              ]
+            },
+            {
+              "code": "container_overflow",
+              "severity": "info",
+              "time": 54.205,
+              "selector": "#s4-v20",
+              "message": "Nowrap text is wider than its container.",
+              "rect": {
+                "left": 1315,
+                "top": 420,
+                "right": 1485,
+                "bottom": 444,
+                "width": 170,
+                "height": 24
+              },
+              "containerSelector": "#s4-ch2 > div:nth-of-type(2)",
+              "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+              "containerRect": {
+                "left": 1345,
+                "top": 225,
+                "right": 1455,
+                "bottom": 765,
+                "width": 110,
+                "height": 540
+              },
+              "overflow": {
+                "left": 30,
+                "right": 30
+              },
+              "dataAttributes": {},
+              "sourceFile": "index.html",
+              "bbox": {
+                "x": 1315,
+                "y": 420,
+                "width": 170,
+                "height": 24
+              },
+              "firstSeen": 54.205,
+              "lastSeen": 54.205,
+              "occurrences": 1,
+              "heldMs": 0,
+              "times": [
+                54.205
+              ]
+            },
+            {
+              "code": "container_overflow",
+              "severity": "info",
+              "time": 54.205,
+              "selector": "#s4-v21",
+              "message": "Nowrap text is wider than its container.",
+              "rect": {
+                "left": 1460,
+                "top": 376,
+                "right": 1630,
+                "bottom": 400,
+                "width": 170,
+                "height": 24
+              },
+              "containerSelector": "#s4-ch2 > div:nth-of-type(4)",
+              "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+              "containerRect": {
+                "left": 1490,
+                "top": 225,
+                "right": 1600,
+                "bottom": 765,
+                "width": 110,
+                "height": 540
+              },
+              "overflow": {
+                "left": 30,
+                "right": 30
+              },
+              "dataAttributes": {},
+              "sourceFile": "index.html",
+              "bbox": {
+                "x": 1460,
+                "y": 376,
+                "width": 170,
+                "height": 24
+              },
+              "firstSeen": 54.205,
+              "lastSeen": 54.205,
+              "occurrences": 1,
+              "heldMs": 0,
+              "times": [
+                54.205
+              ]
+            },
+            {
+              "code": "container_overflow",
+              "severity": "info",
+              "time": 54.205,
+              "selector": "#s4-v22",
+              "message": "Nowrap text is wider than its container.",
+              "rect": {
+                "left": 1605,
+                "top": 387,
+                "right": 1775,
+                "bottom": 411,
+                "width": 170,
+                "height": 24
+              },
+              "containerSelector": "#s4-ch2 > div:nth-of-type(6)",
+              "fixHint": "Resize/reposition the child or container, or mark intentional overflow with data-layout-allow-overflow.",
+              "containerRect": {
+                "left": 1635,
+                "top": 225,
+                "right": 1745,
+                "bottom": 765,
+                "width": 110,
+                "height": 540
+              },
+              "overflow": {
+                "left": 30,
+                "right": 30
+              },
+              "dataAttributes": {},
+              "sourceFile": "index.html",
+              "bbox": {
+                "x": 1605,
+                "y": 387,
+                "width": 170,
+                "height": 24
+              },
+              "firstSeen": 54.205,
+              "lastSeen": 54.205,
+              "occurrences": 1,
+              "heldMs": 0,
+              "times": [
+                54.205
+              ]
+            }
+          ],
+          "contrast": []
+        },
+        "history_record_warning": true
+      },
+      {
+        "chapter": 2,
+        "returncode": 0,
+        "ok": true,
+        "passes": {
+          "lint": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 11
+          },
+          "runtime": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0
+          },
+          "layout": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              18.369,
+              49.433,
+              80.572,
+              109.287,
+              126.05,
+              141.589
+            ],
+            "totalIssueCount": 0
+          },
+          "contrast": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              18.369,
+              49.433,
+              80.572,
+              109.287,
+              141.589
+            ]
+          },
+          "motion": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": 0
+          }
+        },
+        "findings": {
+          "runtime": [],
+          "layout": [],
+          "contrast": []
+        },
+        "history_record_warning": true
+      },
+      {
+        "chapter": 3,
+        "returncode": 0,
+        "ok": true,
+        "passes": {
+          "lint": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 9
+          },
+          "runtime": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0
+          },
+          "layout": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              35.746,
+              66.705,
+              92.58,
+              114.705
+            ],
+            "totalIssueCount": 0
+          },
+          "contrast": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              35.746,
+              66.705,
+              92.58,
+              114.705
+            ]
+          },
+          "motion": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": 0
+          }
+        },
+        "findings": {
+          "runtime": [],
+          "layout": [],
+          "contrast": []
+        },
+        "history_record_warning": true
+      },
+      {
+        "chapter": 4,
+        "returncode": 0,
+        "ok": true,
+        "passes": {
+          "lint": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 9
+          },
+          "runtime": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0
+          },
+          "layout": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              28.42,
+              54.438,
+              69.84,
+              89.159
+            ],
+            "totalIssueCount": 0
+          },
+          "contrast": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              28.42,
+              54.438,
+              69.84,
+              89.159
+            ]
+          },
+          "motion": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": 0
+          }
+        },
+        "findings": {
+          "runtime": [],
+          "layout": [],
+          "contrast": []
+        },
+        "history_record_warning": true
+      },
+      {
+        "chapter": 5,
+        "returncode": 0,
+        "ok": true,
+        "passes": {
+          "lint": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 10
+          },
+          "runtime": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0
+          },
+          "layout": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              17.02,
+              38.378,
+              53.207,
+              71.753,
+              88.836
+            ],
+            "totalIssueCount": 0
+          },
+          "contrast": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              17.02,
+              38.378,
+              53.207,
+              71.753,
+              88.836
+            ]
+          },
+          "motion": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": 0
+          }
+        },
+        "findings": {
+          "runtime": [],
+          "layout": [],
+          "contrast": []
+        },
+        "history_record_warning": true
+      },
+      {
+        "chapter": 6,
+        "returncode": 0,
+        "ok": true,
+        "passes": {
+          "lint": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 10
+          },
+          "runtime": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0
+          },
+          "layout": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              16.794,
+              37.942,
+              60.84,
+              81.169,
+              99.329
+            ],
+            "totalIssueCount": 0
+          },
+          "contrast": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              16.794,
+              37.942,
+              60.84,
+              81.169,
+              99.329
+            ]
+          },
+          "motion": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": 0
+          }
+        },
+        "findings": {
+          "runtime": [],
+          "layout": [],
+          "contrast": []
+        },
+        "history_record_warning": true
+      },
+      {
+        "chapter": 7,
+        "returncode": 0,
+        "ok": true,
+        "passes": {
+          "lint": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 9
+          },
+          "runtime": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0
+          },
+          "layout": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              29.664,
+              54.074,
+              73.632,
+              96.712
+            ],
+            "totalIssueCount": 0
+          },
+          "contrast": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              29.664,
+              54.074,
+              73.632,
+              96.712
+            ]
+          },
+          "motion": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": 0
+          }
+        },
+        "findings": {
+          "runtime": [],
+          "layout": [],
+          "contrast": []
+        },
+        "history_record_warning": true
+      },
+      {
+        "chapter": 8,
+        "returncode": 0,
+        "ok": true,
+        "passes": {
+          "lint": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 12
+          },
+          "runtime": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0
+          },
+          "layout": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              26.497,
+              59.696,
+              97.942,
+              125.887,
+              149.132,
+              167.592,
+              184.603
+            ],
+            "totalIssueCount": 0
+          },
+          "contrast": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              26.497,
+              59.696,
+              125.887,
+              149.132,
+              184.603
+            ]
+          },
+          "motion": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": 0
+          }
+        },
+        "findings": {
+          "runtime": [],
+          "layout": [],
+          "contrast": []
+        },
+        "history_record_warning": true
+      },
+      {
+        "chapter": 9,
+        "returncode": 0,
+        "ok": true,
+        "passes": {
+          "lint": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 9
+          },
+          "runtime": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0
+          },
+          "layout": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              16.341,
+              34.033,
+              54.288,
+              76.728
+            ],
+            "totalIssueCount": 0
+          },
+          "contrast": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              16.341,
+              34.033,
+              54.288,
+              76.728
+            ]
+          },
+          "motion": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": 0
+          }
+        },
+        "findings": {
+          "runtime": [],
+          "layout": [],
+          "contrast": []
+        },
+        "history_record_warning": true
+      },
+      {
+        "chapter": 10,
+        "returncode": 0,
+        "ok": true,
+        "passes": {
+          "lint": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 11
+          },
+          "runtime": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0
+          },
+          "layout": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              15.097,
+              36.755,
+              58.712,
+              84.502,
+              102.643,
+              119.883
+            ],
+            "totalIssueCount": 0
+          },
+          "contrast": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": [
+              15.097,
+              36.755,
+              58.712,
+              84.502,
+              119.883
+            ]
+          },
+          "motion": {
+            "ok": true,
+            "errorCount": 0,
+            "warningCount": 0,
+            "samples": 0
+          }
+        },
+        "findings": {
+          "runtime": [],
+          "layout": [],
+          "contrast": []
+        },
+        "history_record_warning": true
+      }
+    ],
+    "scope": "CLI representative scene checks; no encoded video/audio quality claim"
+  },
+  "unchanged_scene_validation_basis": "v4 generated source hashes before v5 mutation; same byte-identical ch01..08 source/timing can reuse recorded checks"
+}

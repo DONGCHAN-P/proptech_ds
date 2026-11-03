@@ -1,0 +1,62 @@
+{
+  "paragraph_id": "C03P02",
+  "scene_id": "C03",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:02:40.969Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "787f254104423c25e675c896c3a13ea5b19af5e2dbe56a7cf9a33caf4c6a7b38",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "이때 집값 육억 원은 대출을 포함한 자산입니다. 집과 투자계좌를 더한 뒤 대출 삼억육천만 원을 빼야 합니다. 거래비용을 낸 직후 순자산은 이억사천사백만 원입니다. 출발 전 순자산은 같아도 실제로 지출한 비용이 다르면 거래 직후 잔액에 차이가 생깁니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 140,
+  "characters": 140,
+  "actual_credits": 56,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17702,
+    "character_limit": 40000,
+    "included_remaining": 22298,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "PZp19vWahqwRhhrn7fGX",
+    "x-request-id": null,
+    "character-cost": "56",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:02:40 GMT"
+  },
+  "pcm_samples": 786744,
+  "pcm_duration_s": 17.84,
+  "provider_last_spoken_end_s": 17.92,
+  "artifact_sha256": {
+    "paragraphs/C03P02/audio.mp3": "d5fa3f6e13042934636ff4ab3e7f4ad216b5030eacfa77dd552ec7bb0fe17be1",
+    "paragraphs/C03P02/audio.wav": "74adba220fd42c652f88b637dc093a79216c0521fe6c1b7722128852f498195f",
+    "paragraphs/C03P02/alignment.json": "61aba301f91d4df7197cac0ba7c7900f4ea9b57c34e4ef074e78f9c299fff1b1",
+    "paragraphs/C03P02/normalized_alignment.json": "61aba301f91d4df7197cac0ba7c7900f4ea9b57c34e4ef074e78f9c299fff1b1"
+  },
+  "account_after": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18260,
+    "character_limit": 40000,
+    "included_remaining": 21740,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_observed_delta": 558,
+  "completed_at_utc": "2026-10-26T06:02:46.645Z"
+}

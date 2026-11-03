@@ -1,0 +1,14 @@
+{
+  "task_id": "two-part-v4-script",
+  "source": "현재 세션의 상위 task packet 및 최신 사용자 보강 전달",
+  "recorded_date": "2026-11-03",
+  "authorized_scope": "writer/top20-split-v4 안의 두 편 원고·장면 제안·검증·인계 기록",
+  "parts": [{"part": 1, "ranks": [20, 11]}, {"part": 2, "ranks": [10, 1]}],
+  "layout": "구전체 가격분포(왼쪽)+대표생활권 학교/역/상업시설 상세(오른쪽) 고정구도",
+  "context_input": "research/top20-split-v4/context_notes.json",
+  "context_usage_bounds": "자료의 실제 위치명·자료기준일을 사용합니다. 학교배정·도보시간·완전한 최인접역 판정은 없습니다. 시설명 원자료와 지도표시 매칭이 필요합니다.",
+  "context_acquisition_status_reported_by_parent": "OSM 도로/공원/상업시설 20지역 다운로드 진행 중",
+  "native_research_visual_execution": "상위 전달에 따르면 앞선 네이티브 역할 실행은 capacity 오류. 이번 writer가 해당 역할의 신규 리서치 완료로 기록하지 않습니다.",
+  "script_gate": "새 script 결정 대기; 기존 v6 승인 승계 없음",
+  "permissions": {"tts": false, "media_generation": false, "paid": false, "upload": false, "external_export": false}
+}

@@ -1,0 +1,281 @@
+{
+  "episode_id": "hanam-gyosan-20261019",
+  "decision_source": "same conversation direct user instruction",
+  "request_scope": "사용자 2026-10-19 직접 지시: 창릉 최종 포맷 계승 교산 무료 TTS 제작·무료 검수 위임 및 YouTube 비공개 업로드. 유료 소스는 생성하지 않고 자료 준비 영역. 공개/유료 승인 아님.",
+  "decisions": [
+    {
+      "id": "gyosan-topic-20261019",
+      "gate": "topic",
+      "status": "approved_direct_user_request",
+      "scope": "하남 교산 새 롱폼·창릉 최종 포맷",
+      "artifacts": {
+        "brief.json": "3b1d05622bdeb29843eb5ad123dde89b9fb57773bc08b40cbe4176562ef9463c"
+      }
+    },
+    {
+      "id": "gyosan-script-v1-delegated",
+      "gate": "script",
+      "status": "approved_under_explicit_free_production_delegation",
+      "scope": "현재 대본과 무료 검토 제작에 한정, 사실 오류/내용 변경은 버전 추적",
+      "artifacts": {
+        "outputs/script_v1.md": "2f6c5fbbba859029210117776a369920e5e08ce8d4295d85f6618e17b410c101",
+        "writer/scenes_v1.json": "88b6d54b3910c1b031bf5252a1fe70037f774ac077ed72600f52a091b207e5a5",
+        "narration/units.json": "723dcdb859e000562fda85faa4db1c2421beee4be958675e77ed2c9c1745f88d",
+        "research/facts.json": "51ec4018ea266d15b5f800379546025e73b2a4f3f954ff41a838b6bca45644b9"
+      },
+      "visual_revision": "v1r3; factual narration unchanged"
+    },
+    {
+      "id": "gyosan-budget-zero",
+      "gate": "budget",
+      "status": "not_applicable_no_paid_generation",
+      "cash_cap": 0,
+      "paid_api_calls": 0,
+      "automatic_charge": false
+    },
+    {
+      "id": "1cf2e63a13b1",
+      "gate": "completed",
+      "status": "approved",
+      "artifacts": {
+        "outputs/production-v1/gyosan_full_v1r3_free_tts.mp4": "3a2cf75f6e19bc158cf97028cb20c7e254858c33547bfac82b92a3dcb3955fb5",
+        "qa/production-v1/final_review.json": "17240c9f19884d37b989236521f3664e0f0da65921f8366b7312737d24810cf7"
+      },
+      "episode": "hanam-gyosan-20261019",
+      "video_revision": "v1r3-free-tts",
+      "video_sha256": "3a2cf75f6e19bc158cf97028cb20c7e254858c33547bfac82b92a3dcb3955fb5",
+      "approval_basis": "Direct user request 2026-10-19: delegated free production/review and private upload of Hanam Gyosan matching Changneung final; not paid generation or public publication.",
+      "created_at": "2026-10-18T17:04:15.342871+00:00",
+      "artifact_hashes": {
+        "outputs/production-v1/gyosan_full_v1r3_free_tts.mp4": "3a2cf75f6e19bc158cf97028cb20c7e254858c33547bfac82b92a3dcb3955fb5",
+        "outputs/production-v1/gyosan_v1.srt": "9f78a5a7570e1b5e792ddbd410015cd545cb5603be6be77a19efceb16eedad94",
+        "outputs/production-v1/technical_v1r3.json": "f6ab2f34b68a57a41a15b291186b72f92519758fda0335fe423e112a43ebe1f5",
+        "qa/production-v1/final_review.json": "b8389923d5fa7e269b7cd180a097a32905d7a042c1b195cd2060adefc6c14a0e",
+        "outputs/script_v1.md": "2f6c5fbbba859029210117776a369920e5e08ce8d4295d85f6618e17b410c101"
+      },
+      "new_paid_generation_authorized": false
+    },
+    {
+      "id": "d31ebe20d515",
+      "gate": "pre_upload",
+      "status": "approved",
+      "visibility": "private",
+      "public_authorized": false,
+      "artifacts": {},
+      "episode": "hanam-gyosan-20261019",
+      "video_revision": "v1r3-free-tts",
+      "video_sha256": "3a2cf75f6e19bc158cf97028cb20c7e254858c33547bfac82b92a3dcb3955fb5",
+      "job_sha256": "fdd3d32be0b897ca4ca1c7af42b987b124daab66e6696ba15ca43e07ba2f04aa",
+      "channel_id": "UCr_mTC0x_Uobv6MrIsOkrXw",
+      "privacy": "private",
+      "completed_decision_file": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/release-prep-v1/completed_approval.json",
+      "new_paid_generation_authorized": false,
+      "public_upload_authorized": false,
+      "approval_basis": "Direct user request 2026-10-19: delegated free production/review and private upload of Hanam Gyosan matching Changneung final; not paid generation or public publication.",
+      "created_at": "2026-10-18T17:04:15.342871+00:00"
+    },
+    {
+      "id": "14f4b4709c1e",
+      "gate": "script",
+      "status": "approved",
+      "episode": "hanam-gyosan-20261019",
+      "video_revision": "script-v4-research-and-visual-plan",
+      "artifact_hashes": {
+        "outputs/script-review-v4/script_v4.md": "056f3cbc8ecd3d4208f0fbfa50d301a25249ddc8f9d10c6ea46f864052d90177",
+        "writer/scenes_v4.json": "84df468c3e37314e42bb2794e350a0e64db99960c8d661458f34bf0e5906d738",
+        "outputs/script-review-v4/visual_storyboard.md": "126142bd5c3e6920a66e6056f742937f6471eada9f45a09429ef91b5c7f0d8e6"
+      },
+      "approval_basis": "Direct user request 2026-10-20: once script complete proceed with video production; preserve preferred land-use candidate segment.",
+      "new_paid_generation_authorized": false,
+      "created_at": "2026-10-20T08:59:36.571694+00:00"
+    },
+    {
+      "id": "a12c24e4e95a",
+      "gate": "script",
+      "episode": "hanam-gyosan-20261019",
+      "status": "approved_for_requested_editorial_revision",
+      "artifact_hashes": {
+        "outputs/script-review-v5/script_v5.md": "9c3560f2880a299c2e57e0b8775f6a98c87f07f18273d28328cd307787ab0350"
+      },
+      "approval_basis": "Direct user feedback 2026-10-20: simplify headings to numbered topics and remove personal home-buying voice; existing instruction to proceed with production.",
+      "paid_generation_authorized": false,
+      "created_at": "2026-10-20T10:06:34.460269+00:00"
+    },
+    {
+      "id": "f7919c1076ae",
+      "episode": "hanam-gyosan-20261019",
+      "gate": "budget",
+      "status": "approved",
+      "created_at": "2026-10-20T10:21:16.218802+00:00",
+      "expires_at": "2026-10-23T10:21:16.218802+00:00",
+      "scope": "exact_v5_Jun_8379_chars_plus1676_correction_included_credits_only",
+      "script_revision": "script-v5",
+      "artifact_hashes": {
+        "outputs/jun-v5-budget/budget_proposal.json": "1927010faf55b647c431206e4cc9775c5914d118ce950dbb9951d9d8cebd6d86",
+        "narration/jun-v5-plan/manifest.json": "423208f5ee1eead99e8b5825af67c2435b3199774d677e1f6913eac9f19753ec",
+        "outputs/script-review-v5/script_v5.md": "9c3560f2880a299c2e57e0b8775f6a98c87f07f18273d28328cd307787ab0350",
+        "writer/scenes_v5.json": "c188c11da3ed79364fa7eb7e9dfa8abd9b5ca29d2fefdc7eb8ff5387d182b0e9"
+      },
+      "included_credit_cap": 10055,
+      "additional_cash_usd_cap": 0,
+      "automatic_retry": false,
+      "topup_or_overage": false,
+      "paid_images_or_music": false,
+      "upload_authorized": false,
+      "summary": "Jun v5 8379 chars plus1676 partial correction; max10055 included credits; additional payment0; no automatic retry/topup/overage.",
+      "approved_at": "2026-10-20T10:22:37.962265+00:00",
+      "response_source": "direct_user_question_reply",
+      "response_summary": "Jun voice budget approved: included credits max10055/additional cash0/no auto retry/topup/overage"
+    },
+    {
+      "id": "0d5c334a599a",
+      "episode": "hanam-gyosan-20261019",
+      "gate": "completed",
+      "status": "approved",
+      "video_revision": "v5-jun",
+      "video_sha256": "13abf7fc0b873036ad72c0b578251cb08e64ef514ecfe09fa636e26905ed214e",
+      "created_at": "2026-10-20T10:35:45.868747+00:00",
+      "artifacts": {
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/production-v5-jun/gyosan_v5_jun.mp4": "13abf7fc0b873036ad72c0b578251cb08e64ef514ecfe09fa636e26905ed214e",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/qa/review-v5-jun-independent/report.json": "fa43919fa3d816c76acc06ca9df640885273f76c8653025936d3b2d093cd81da",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/script-review-v5/script_v5.md": "9c3560f2880a299c2e57e0b8775f6a98c87f07f18273d28328cd307787ab0350"
+      },
+      "approval_basis": "User explicitly approved v5 content and requested voice API replacement through upload; subsequent direct instruction explicitly authorizes public release. Exact Jun artifact materialized only after required QA=0. No claim that user listened to the Jun artifact.",
+      "actual_listening": false,
+      "continuous_playback": false
+    },
+    {
+      "id": "96f9a40a4d7c",
+      "episode": "hanam-gyosan-20261019",
+      "gate": "pre_upload",
+      "status": "approved",
+      "created_at": "2026-10-20T10:35:45.868747+00:00",
+      "privacy": "public",
+      "video_revision": "v5-jun",
+      "video_sha256": "13abf7fc0b873036ad72c0b578251cb08e64ef514ecfe09fa636e26905ed214e",
+      "job_sha256": "fc4ccc8ff9040ad958794852f4defcfe4e89b509e40eea86eccb487348aad936",
+      "channel_id": "UCr_mTC0x_Uobv6MrIsOkrXw",
+      "completed_decision_file": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/release-prep-v5-jun/completed_approval.json",
+      "new_paid_generation_authorized": false,
+      "artifacts": {
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/release-prep-v5-jun/upload_job.json": "fc4ccc8ff9040ad958794852f4defcfe4e89b509e40eea86eccb487348aad936",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/production-v5-jun/gyosan_v5_jun.mp4": "13abf7fc0b873036ad72c0b578251cb08e64ef514ecfe09fa636e26905ed214e",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/qa/review-v5-jun-independent/report.json": "fa43919fa3d816c76acc06ca9df640885273f76c8653025936d3b2d093cd81da",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/release-prep-v1/thumbnail.png": "3ad3be2600a7d3dc5da247f127ba0f221ceb8790fd802beba38e332a72b2ed31"
+      },
+      "approval_basis": "Direct user instruction 2026-10-20: upload this current v5 Jun episode publicly, not privately, optimize metadata faithful to script; exact artifact fixed after QA. Prior v1r3 upload gates are not reused.",
+      "source_script_sha256": "9c3560f2880a299c2e57e0b8775f6a98c87f07f18273d28328cd307787ab0350",
+      "budget_decision_id": "f7919c1076ae",
+      "five_gate_trace": {
+        "topic": "gyosan-topic-20261019",
+        "script": "a12c24e4e95a",
+        "budget": "f7919c1076ae",
+        "completed": "0d5c334a599a",
+        "pre_upload": "96f9a40a4d7c"
+      }
+    },
+    {
+      "id": "gyosan-short-v1-topic-718066306",
+      "episode": "hanam-gyosan-20261019",
+      "gate": "topic",
+      "status": "approved",
+      "created_at": "2026-10-20T12:22:36.056638+00:00",
+      "video_kind": "shorts",
+      "video_revision": "shorts-leader-v1r2",
+      "video_sha256": "14e972395577696f955c241ada9a5b0a1da41a9de463d89eaa882a64c550247e",
+      "artifacts": {
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/shorts-leader-v1/gyosan_leader_short_v1r2.mp4": "14e972395577696f955c241ada9a5b0a1da41a9de463d89eaa882a64c550247e",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/qa/shorts-leader-v1/final_review.json": "4e21fd77ca7d5eb7d218374a58b6184c6121d68a59fa674bfaaca3e59e0dc433",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/shorts-leader-v1/script_excerpt.md": "f5ea4f60a5b6f4e29905e097a8ef6252e653b79abb721931683fd17733f2223d",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/editor/shorts-leader-v1/clip_plan.json": "f7bd46139890774744383496c4f7e5df4e5e2170812bccf324ad09a7a922089d"
+      },
+      "source_event": "output/telegram_conversation/inbox/718066306.json",
+      "approval_basis": "Explicit request: 하남편 쇼츠도 올려줘; derivative excerpts of approved public Jun v5, same prior promotional Shorts format; no new narration or claims. Scope excludes unrelated drafts, paid generation, or existing-video AI settings.",
+      "new_paid_generation_authorized": false,
+      "cash_cap_krw": 0
+    },
+    {
+      "id": "gyosan-short-v1-script-718066306",
+      "episode": "hanam-gyosan-20261019",
+      "gate": "script",
+      "status": "approved",
+      "created_at": "2026-10-20T12:22:36.056638+00:00",
+      "video_kind": "shorts",
+      "video_revision": "shorts-leader-v1r2",
+      "video_sha256": "14e972395577696f955c241ada9a5b0a1da41a9de463d89eaa882a64c550247e",
+      "artifacts": {
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/shorts-leader-v1/gyosan_leader_short_v1r2.mp4": "14e972395577696f955c241ada9a5b0a1da41a9de463d89eaa882a64c550247e",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/qa/shorts-leader-v1/final_review.json": "4e21fd77ca7d5eb7d218374a58b6184c6121d68a59fa674bfaaca3e59e0dc433",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/shorts-leader-v1/script_excerpt.md": "f5ea4f60a5b6f4e29905e097a8ef6252e653b79abb721931683fd17733f2223d",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/editor/shorts-leader-v1/clip_plan.json": "f7bd46139890774744383496c4f7e5df4e5e2170812bccf324ad09a7a922089d"
+      },
+      "source_event": "output/telegram_conversation/inbox/718066306.json",
+      "approval_basis": "Explicit request: 하남편 쇼츠도 올려줘; derivative excerpts of approved public Jun v5, same prior promotional Shorts format; no new narration or claims. Scope excludes unrelated drafts, paid generation, or existing-video AI settings.",
+      "new_paid_generation_authorized": false,
+      "cash_cap_krw": 0
+    },
+    {
+      "id": "gyosan-short-v1-budget-718066306",
+      "episode": "hanam-gyosan-20261019",
+      "gate": "budget",
+      "status": "not_applicable_no_new_paid_generation",
+      "created_at": "2026-10-20T12:22:36.056638+00:00",
+      "video_kind": "shorts",
+      "video_revision": "shorts-leader-v1r2",
+      "video_sha256": "14e972395577696f955c241ada9a5b0a1da41a9de463d89eaa882a64c550247e",
+      "artifacts": {
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/shorts-leader-v1/gyosan_leader_short_v1r2.mp4": "14e972395577696f955c241ada9a5b0a1da41a9de463d89eaa882a64c550247e",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/qa/shorts-leader-v1/final_review.json": "4e21fd77ca7d5eb7d218374a58b6184c6121d68a59fa674bfaaca3e59e0dc433",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/shorts-leader-v1/script_excerpt.md": "f5ea4f60a5b6f4e29905e097a8ef6252e653b79abb721931683fd17733f2223d",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/editor/shorts-leader-v1/clip_plan.json": "f7bd46139890774744383496c4f7e5df4e5e2170812bccf324ad09a7a922089d"
+      },
+      "source_event": "output/telegram_conversation/inbox/718066306.json",
+      "approval_basis": "Explicit request: 하남편 쇼츠도 올려줘; derivative excerpts of approved public Jun v5, same prior promotional Shorts format; no new narration or claims. Scope excludes unrelated drafts, paid generation, or existing-video AI settings.",
+      "new_paid_generation_authorized": false,
+      "cash_cap_krw": 0
+    },
+    {
+      "id": "gyosan-short-v1-completed-718066306",
+      "episode": "hanam-gyosan-20261019",
+      "gate": "completed",
+      "status": "approved",
+      "created_at": "2026-10-20T12:22:36.056638+00:00",
+      "video_kind": "shorts",
+      "video_revision": "shorts-leader-v1r2",
+      "video_sha256": "14e972395577696f955c241ada9a5b0a1da41a9de463d89eaa882a64c550247e",
+      "artifacts": {
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/shorts-leader-v1/gyosan_leader_short_v1r2.mp4": "14e972395577696f955c241ada9a5b0a1da41a9de463d89eaa882a64c550247e",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/qa/shorts-leader-v1/final_review.json": "4e21fd77ca7d5eb7d218374a58b6184c6121d68a59fa674bfaaca3e59e0dc433",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/shorts-leader-v1/script_excerpt.md": "f5ea4f60a5b6f4e29905e097a8ef6252e653b79abb721931683fd17733f2223d",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/editor/shorts-leader-v1/clip_plan.json": "f7bd46139890774744383496c4f7e5df4e5e2170812bccf324ad09a7a922089d"
+      },
+      "source_event": "output/telegram_conversation/inbox/718066306.json",
+      "approval_basis": "Explicit request: 하남편 쇼츠도 올려줘; derivative excerpts of approved public Jun v5, same prior promotional Shorts format; no new narration or claims. Scope excludes unrelated drafts, paid generation, or existing-video AI settings.",
+      "new_paid_generation_authorized": false,
+      "cash_cap_krw": 0
+    },
+    {
+      "id": "gyosan-short-v1-pre_upload-718066306",
+      "episode": "hanam-gyosan-20261019",
+      "gate": "pre_upload",
+      "status": "approved",
+      "created_at": "2026-10-20T12:22:36.056638+00:00",
+      "video_kind": "shorts",
+      "video_revision": "shorts-leader-v1r2",
+      "video_sha256": "14e972395577696f955c241ada9a5b0a1da41a9de463d89eaa882a64c550247e",
+      "artifacts": {
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/shorts-leader-v1/gyosan_leader_short_v1r2.mp4": "14e972395577696f955c241ada9a5b0a1da41a9de463d89eaa882a64c550247e",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/qa/shorts-leader-v1/final_review.json": "4e21fd77ca7d5eb7d218374a58b6184c6121d68a59fa674bfaaca3e59e0dc433",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/shorts-leader-v1/script_excerpt.md": "f5ea4f60a5b6f4e29905e097a8ef6252e653b79abb721931683fd17733f2223d",
+        "video-agent-studio/episodes/hanam-gyosan-20261019/editor/shorts-leader-v1/clip_plan.json": "f7bd46139890774744383496c4f7e5df4e5e2170812bccf324ad09a7a922089d"
+      },
+      "source_event": "output/telegram_conversation/inbox/718066306.json",
+      "approval_basis": "Explicit request: 하남편 쇼츠도 올려줘; derivative excerpts of approved public Jun v5, same prior promotional Shorts format; no new narration or claims. Scope excludes unrelated drafts, paid generation, or existing-video AI settings.",
+      "new_paid_generation_authorized": false,
+      "cash_cap_krw": 0,
+      "privacy": "public",
+      "channel_id": "UCr_mTC0x_Uobv6MrIsOkrXw",
+      "job_sha256": "2b812134910a0abf4a1157a1dc68ef3d97a2588223692563758e4f5fd5d61d84"
+    }
+  ]
+}

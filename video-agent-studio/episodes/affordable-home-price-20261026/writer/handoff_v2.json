@@ -1,0 +1,183 @@
+{
+  "task_id": "affordable-home-price-writer-v2-SC01-SC04",
+  "role": "writer",
+  "status": "v2_frozen_pending_dual_content_review",
+  "summary": "SC01~04와쉬운공제표현·출산감면시기를 반영했습니다. 기존v1 8개 파일은 해시로 불변 확인. v2는10장·45본문장면, 낭독표시6550자/표제포함6765자, 장전환 포함 약19.75분 estimate. B접수일기준 가산산식과60회후잔액/300개월 월176.4만을 추가했으며 기존사례 숫자는 유지합니다.",
+  "frozen_script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "previous_script_sha256": "26ed3cb78465bfde7bf52655df535e0d5b6fd8287e24c105c94266f757e7717f",
+  "input_revisions": {
+    "video-agent-studio/episodes/affordable-home-price-20261026/brief.json": {
+      "sha256": "1ebf1d2b9d1c1e8a70201b629e4222059406146c6e458dba8016e5eb37dd0317"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/state.json": {
+      "sha256": "e57ed9bdc53d075a5f8af11fb3438e7f1db72946a294db9ce2f07d33243a3f2d"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/qa/content_v1_review.json": {
+      "sha256": "f2928b4c630035178cf45035b1f0c337c6f5c0f424650d9434de5fe3057406c1"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/research/facts_v2.json": {
+      "sha256": "e778c2145e14c34a034795c40e3e47caa2e7db58b8556b50cfaaf3b66e3eb321"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/research/newborn_policy_addendum_v2.json": {
+      "sha256": "daa99c4fad76c9f3361425b2110899f64827564f1eba1c3e2fc99fa10432d61b"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/research/verified_case_packet.json": {
+      "sha256": "8945667612772beab586c7e9e5f9eba295b8731ce0a4103a63cffe1e3d82b02d"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/research/prepared-v1/next_episode_story_findings.json": {
+      "sha256": "f648c31d4c06f65f5a45112c4b0d57654827b39fece76ec5f0553305a256b2ae"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/research/prepared-v1/next_episode_editorial_plan.json": {
+      "sha256": "c56710bd814678cc5d3df5cdfc17592dd3662a05416ac2bbb176cd84b9ddccfd"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/research/prepared-v1/next_policy_independent_qa/findings.json": {
+      "sha256": "4a02722ae8460095cebaa0ff87befb5fc56189918e5132ea8224dba56798831b"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/visual/assets.json": {
+      "sha256": "49d4d1dff643a2456f035ce3c4a686bb22dcfbeb9b5de92e10200e737515895c"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/writer/script_v1.md": {
+      "sha256": "26ed3cb78465bfde7bf52655df535e0d5b6fd8287e24c105c94266f757e7717f"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/writer/scene_proposals_v1.json": {
+      "sha256": "940fb485ae190cfbdb1428c05145292e295a20f6ef59274d250d2d915859cd76"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/writer/claim_map_v1.json": {
+      "sha256": "829a22cd86ae37063d5e0ddc801b52ab58bbfc59fcec0ea7e712cb38c352e736"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/writer/protected_numeric_v1.json": {
+      "sha256": "a733148280799e6c9672cc182368b7e2c93cc1c934aa4c03592bd78e4306a80d"
+    },
+    "video-agent-studio/episodes/affordable-home-price-20261026/writer/pronunciation_notes_v1.json": {
+      "sha256": "8596f27c41686c354ad93dd3ab490a34dda9541f225e6340f41ac113cec0c162"
+    },
+    "v1_instruction_hashes_reused": {
+      "video-agent-studio/WORKFLOW.md": {
+        "sha256": "066180aef28e6bf5b75928cf3de6d555d1fb478946b1d6515e23fee26e182060"
+      },
+      "video-agent-studio/agents/video_writer.toml": {
+        "sha256": "53d66110e511e3b4b504a78c26daa7c69778510b161133bac8924a31cc863609"
+      },
+      "video-agent-studio/guides/제작_기본가이드.md": {
+        "sha256": "816564bd14a98623632182deb406f11cd39e87b3d72a7f01506c84b46d17d260"
+      },
+      "video-agent-studio/guides/지역_상세지도와_의미단위_자막.md": {
+        "sha256": "e2bd55ae010f0e98805c199954da3aece0ffa8ef6db547d03dd2917bec0f8d96"
+      },
+      "video-agent-studio/guides/자료화면_설계_원칙.md": {
+        "sha256": "622eea253e24dd5b1632efcbf3aa525f61b05e356b7aff69e66781834ff22c3d"
+      },
+      "video-agent-studio/guides/호출_효율_운영.md": {
+        "sha256": "7d9acfb13123fb146cfe5920a345048e1e35fc4c6bcc577b5419eb739ea4fd6b"
+      },
+      "config/video_call_policy.json": {
+        "sha256": "52c4ce2df30201a2d4baa41e215c7ea1ed8736e17a18abdf7e76c40a0f0f06a3"
+      }
+    }
+  },
+  "outputs": [
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/writer/script_v2.md",
+      "sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+      "bytes": 15655
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/writer/changes.json",
+      "sha256": "8d5003410b47efcc336ab69ffb3fe62ca44712fc05c5c45fb10c42946b623570",
+      "bytes": 4099
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/writer/scene_proposals_v2.json",
+      "sha256": "9a6571c0da7e8f9e1451e23807ac976d5490306f2f062bcb4d31160945166433",
+      "bytes": 273000
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/writer/claim_map_v2.json",
+      "sha256": "f33e083fda1d595e3c6ee2f8307e6785e28dcbaa5b7491e948c2384e56faa1e8",
+      "bytes": 89690
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/writer/protected_numeric_v2.json",
+      "sha256": "86c570771540c5fb49496106075a7818fa3e4b94445fd40bc2bb808fa2ad1655",
+      "bytes": 58518
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/writer/pronunciation_notes_v2.json",
+      "sha256": "d153dff02f6e6f6ed5f6fa1eac444afccb16389885f8d5698e3966b1f6fea7a6",
+      "bytes": 111602
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/writer/validation_v2.json",
+      "sha256": "c6760fcaba39f9bf13e2428d7cfc992e5c233a822587749a591c70112e880d71",
+      "bytes": 8803
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/writer/v1_preservation_v2.json",
+      "sha256": "8f4087f57e0edec71c0b421dce79cb36917ac594d5a9573aa5c8f41c3a1e54b1",
+      "bytes": 855
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/writer/prepare_script_v2.py",
+      "sha256": "75feffe937deb0b55eb8375e4b214a8b397d04bf6a5573fa87d61d80fc935a4d",
+      "bytes": 7261
+    },
+    {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/writer/build_writer_v2.py",
+      "sha256": "076230fc4fc9739dfcc093b8a353609681d5a8a33c384262bf1a9d713e637952",
+      "bytes": 31002
+    }
+  ],
+  "affected_scene_ids": [
+    "S001",
+    "S003",
+    "S009",
+    "S020",
+    "S025",
+    "S032",
+    "S034",
+    "S034R",
+    "S035",
+    "S010",
+    "S022",
+    "S033",
+    "S040"
+  ],
+  "new_scene_ids": [
+    "S034R"
+  ],
+  "checks": [
+    {
+      "check": "writer 변경범위·구조·원값 연결",
+      "result": "pass",
+      "evidence": "video-agent-studio/episodes/affordable-home-price-20261026/writer/validation_v2.json"
+    },
+    {
+      "check": "Claude+Codex 새SHA 내용검토",
+      "result": "pending",
+      "evidence": null
+    }
+  ],
+  "open_issue_ids": [],
+  "review_issue_status": {
+    "SC01": "implemented_pending_review",
+    "SC02": "implemented_pending_review",
+    "SC03": "implemented_pending_review",
+    "SC04": "implemented_pending_review"
+  },
+  "unresolved": [
+    "v2 고정SHA의 독립 내용검토·버전 승인",
+    "이후 실제 음성·발음 청취·정렬·타임록",
+    "도표/배경 구현·자막 실제 글리프/프레임 검수",
+    "개인별 은행·보증 실행조건, 실제 기타비용과 감면후교육세 포함 세액"
+  ],
+  "scope_notes": [
+    "담당writer만 작성, 공통state/scenes/decisions 및 타담당파일 수정 없음",
+    "v1의18조건부사례 패킷 수치 그대로; B재산정은 addendum 별도예시",
+    "현재접수금리표의 기본금리·추가출산/우대/자산초과가산/중도상환0",
+    "기존 산술/논리와 신규4산술검사는 인계 증거 재사용",
+    "TTS·비용·외부검토·업로드 호출 없음"
+  ],
+  "next_role": "director → Claude+Codex v2 내용검토 → 승인 후 narration/visual/editor",
+  "next_action": "이 frozen_script_sha256으로 검토. 추가수정은 새버전 발급; v1·v2 고정본을 덮어쓰지 않음",
+  "created_at_utc": "2026-10-25T20:36:57.630852+00:00"
+}

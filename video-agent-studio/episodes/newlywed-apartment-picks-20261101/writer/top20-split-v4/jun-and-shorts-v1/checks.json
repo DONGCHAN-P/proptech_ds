@@ -1,0 +1,682 @@
+{
+  "task_id": "part1-Jun-shorts-3way-content-plan",
+  "status": "pass",
+  "validation_kind": "writer_local_content_consistency_not_independent_media_QA",
+  "plan_sha256": "4b78edf4868ae013474c530d7d87b19b37af7f059af904dd0cd12b20b0a431a2",
+  "counts": {
+    "shorts": 3,
+    "full_main_sentences": 90,
+    "full_main_intro": 8,
+    "full_main_criteria": 2,
+    "full_main_body_including_outro": 80,
+    "reused_main_sentence_uses": 25,
+    "reused_main_unique_sentences": 23,
+    "new_unique_CTA_sentences": 2,
+    "new_CTA_sentence_uses": 6,
+    "total_sequence_sentence_uses": 31,
+    "regional_comparisons": 10,
+    "median_price_values": 18,
+    "distribution_band_counts": 2,
+    "full_main_plus_new_CTA_unique_sentences_for_parent_budget": 92
+  },
+  "checks": [
+    {
+      "check": "frozen_source_hashes",
+      "result": "pass",
+      "detail": "동결 입력 바이트 SHA256 재대조. 병렬 총괄이 갱신할 수 있는 CTX 상태/브리프는 스냅샷으로 기록한다."
+    },
+    {
+      "check": "approved_frozen_price_and_rank_versions",
+      "result": "pass",
+      "detail": "승인 본문에 동결된 집계/범례/순위/준공군 코드의 기대 SHA와 현재 입력이 일치하는지 확인한다."
+    },
+    {
+      "check": "main_sentence_inventory_90",
+      "result": "pass",
+      "detail": "본문/마무리80 + 도입8 + 조건2"
+    },
+    {
+      "check": "CTA_exact_two_sentences",
+      "result": "pass",
+      "detail": "최신 task의 CTA 문자·띄어쓰기·문장부호 및 두 문장 구조"
+    },
+    {
+      "check": "CTA_budget_characters",
+      "result": "pass",
+      "detail": "제공자 크레딧 추정이 아닌 로컬 문자수"
+    },
+    {
+      "check": "SHORT01-PROMO_standalone_matches",
+      "result": "pass",
+      "detail": "short01_promo.json"
+    },
+    {
+      "check": "SHORT01-PROMO_verbatim_main",
+      "result": "pass",
+      "detail": "원문과 기존 낭독문을 문장 전체로 대조. 절·문장 조각 추출 없음."
+    },
+    {
+      "check": "SHORT01-PROMO_only_two_new_CTA",
+      "result": "pass",
+      "detail": "공통 CTA 두 문장 외 신규 내레이션 없음"
+    },
+    {
+      "check": "SHORT01-PROMO_no_part2_promotion",
+      "result": "pass",
+      "detail": "10~1위 발화와 그 후속편 예고/구독 CTA를 선택하지 않음"
+    },
+    {
+      "check": "SHORT01-PROMO_complete_rank_and_price_sentences",
+      "result": "pass",
+      "detail": "각 등장 지역의 순위·쌍 수 및 가격 비교 문장 모두 포함"
+    },
+    {
+      "check": "SHORT01-PROMO_F-RANK-DEFINITION_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT01-PROMO_F-PRICE-CONDITIONS_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT01-PROMO_F-PRICE-CUTOFF_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT01-PROMO_F-R17-RANK_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT01-PROMO_F-R17-PRICE_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT01-PROMO_F-R17-PRICE_conditions",
+      "result": "pass",
+      "detail": "기간·면적·조회일"
+    },
+    {
+      "check": "SHORT01-PROMO_estimate_only",
+      "result": "pass",
+      "detail": "새 Jun 시간 미확정·강제 배속 없음"
+    },
+    {
+      "check": "SHORT01-PROMO_early_conditions_and_end_hold",
+      "result": "pass",
+      "detail": "조건의 초기 표시와 마지막 발화 후3초를 계획. 실제 프레임/청취 검증 아님"
+    },
+    {
+      "check": "SHORT02-R20-R16_standalone_matches",
+      "result": "pass",
+      "detail": "short02_ranks20_16.json"
+    },
+    {
+      "check": "SHORT02-R20-R16_verbatim_main",
+      "result": "pass",
+      "detail": "원문과 기존 낭독문을 문장 전체로 대조. 절·문장 조각 추출 없음."
+    },
+    {
+      "check": "SHORT02-R20-R16_only_two_new_CTA",
+      "result": "pass",
+      "detail": "공통 CTA 두 문장 외 신규 내레이션 없음"
+    },
+    {
+      "check": "SHORT02-R20-R16_no_part2_promotion",
+      "result": "pass",
+      "detail": "10~1위 발화와 그 후속편 예고/구독 CTA를 선택하지 않음"
+    },
+    {
+      "check": "SHORT02-R20-R16_complete_rank_and_price_sentences",
+      "result": "pass",
+      "detail": "각 등장 지역의 순위·쌍 수 및 가격 비교 문장 모두 포함"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-RANK-DEFINITION_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-PRICE-CONDITIONS_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-PRICE-CUTOFF_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R20-RANK_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R20-PRICE_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R20-PRICE_conditions",
+      "result": "pass",
+      "detail": "기간·면적·조회일"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R19-RANK_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R19-PRICE_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R19-PRICE_conditions",
+      "result": "pass",
+      "detail": "기간·면적·조회일"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R18-RANK_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R18-PRICE_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R18-PRICE_conditions",
+      "result": "pass",
+      "detail": "기간·면적·조회일"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R17-RANK_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R17-PRICE_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R17-PRICE_conditions",
+      "result": "pass",
+      "detail": "기간·면적·조회일"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R16-RANK_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R16-PRICE_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT02-R20-R16_F-R16-PRICE_conditions",
+      "result": "pass",
+      "detail": "기간·면적·조회일"
+    },
+    {
+      "check": "SHORT02-R20-R16_all_five_regions",
+      "result": "pass",
+      "detail": "다섯 지역 전체, 지역마다 두 완결 문장"
+    },
+    {
+      "check": "SHORT02-R20-R16_estimate_only",
+      "result": "pass",
+      "detail": "새 Jun 시간 미확정·강제 배속 없음"
+    },
+    {
+      "check": "SHORT02-R20-R16_early_conditions_and_end_hold",
+      "result": "pass",
+      "detail": "조건의 초기 표시와 마지막 발화 후3초를 계획. 실제 프레임/청취 검증 아님"
+    },
+    {
+      "check": "SHORT03-R15-R11_standalone_matches",
+      "result": "pass",
+      "detail": "short03_ranks15_11.json"
+    },
+    {
+      "check": "SHORT03-R15-R11_verbatim_main",
+      "result": "pass",
+      "detail": "원문과 기존 낭독문을 문장 전체로 대조. 절·문장 조각 추출 없음."
+    },
+    {
+      "check": "SHORT03-R15-R11_only_two_new_CTA",
+      "result": "pass",
+      "detail": "공통 CTA 두 문장 외 신규 내레이션 없음"
+    },
+    {
+      "check": "SHORT03-R15-R11_no_part2_promotion",
+      "result": "pass",
+      "detail": "10~1위 발화와 그 후속편 예고/구독 CTA를 선택하지 않음"
+    },
+    {
+      "check": "SHORT03-R15-R11_complete_rank_and_price_sentences",
+      "result": "pass",
+      "detail": "각 등장 지역의 순위·쌍 수 및 가격 비교 문장 모두 포함"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-RANK-DEFINITION_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-PRICE-CONDITIONS_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-PRICE-CUTOFF_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R15-RANK_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R15-PRICE_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R15-PRICE_conditions",
+      "result": "pass",
+      "detail": "기간·면적·조회일"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R14-RANK_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R14-PRICE_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R14-PRICE_conditions",
+      "result": "pass",
+      "detail": "기간·면적·조회일"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R13-RANK_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R13-PRICE_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R13-PRICE_conditions",
+      "result": "pass",
+      "detail": "기간·면적·조회일"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R12-RANK_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R12-PRICE_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R12-PRICE_conditions",
+      "result": "pass",
+      "detail": "기간·면적·조회일"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R11-RANK_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R11-PRICE_source_ids",
+      "result": "pass",
+      "detail": "화면 근거 ID 존재"
+    },
+    {
+      "check": "SHORT03-R15-R11_F-R11-PRICE_conditions",
+      "result": "pass",
+      "detail": "기간·면적·조회일"
+    },
+    {
+      "check": "SHORT03-R15-R11_all_five_regions",
+      "result": "pass",
+      "detail": "다섯 지역 전체, 지역마다 두 완결 문장"
+    },
+    {
+      "check": "SHORT03-R15-R11_estimate_only",
+      "result": "pass",
+      "detail": "새 Jun 시간 미확정·강제 배속 없음"
+    },
+    {
+      "check": "SHORT03-R15-R11_early_conditions_and_end_hold",
+      "result": "pass",
+      "detail": "조건의 초기 표시와 마지막 발화 후3초를 계획. 실제 프레임/청취 검증 아님"
+    },
+    {
+      "check": "regional_rank_values",
+      "result": "pass",
+      "detail": "홍보1 + 내용10 지역 표시 사용 대조"
+    },
+    {
+      "check": "price_values_and_samples",
+      "result": "pass",
+      "detail": "홍보2 + 내용20 =22개 값/표본 행 사용 대조"
+    },
+    {
+      "check": "reuse_counts",
+      "result": "pass",
+      "detail": "재사용25회/고유23 + 신규 공통CTA6회/고유2 =총31회"
+    },
+    {
+      "check": "portrait_profile_exact",
+      "result": "pass",
+      "detail": "정확한 프로필을 계승, 보수 프로필 좌표 혼합 없음"
+    },
+    {
+      "check": "CTA_caption_cues_verbatim",
+      "result": "pass",
+      "detail": "자막 의미 단위 분할도 CTA 원문 보존"
+    },
+    {
+      "check": "readable_MD_contains_all_spoken_text",
+      "result": "pass",
+      "detail": "읽기용 문서에 선택한 모든 완결 발화 포함"
+    }
+  ],
+  "failure_count": 0,
+  "source_hashes": [
+    {
+      "source_id": "SRC-BODY-LOCK",
+      "expected_sha256": "24268665021d09ff0c4810dc330a7c6b90b1aa639d53c864692f76fc6b78bdf9",
+      "actual_sha256": "24268665021d09ff0c4810dc330a7c6b90b1aa639d53c864692f76fc6b78bdf9",
+      "required": true
+    },
+    {
+      "source_id": "SRC-INTRO-LOCK",
+      "expected_sha256": "d9112d90c6a1e4629130c5c254afe7ff68c4954386bff76f24bbc3bce592543c",
+      "actual_sha256": "d9112d90c6a1e4629130c5c254afe7ff68c4954386bff76f24bbc3bce592543c",
+      "required": true
+    },
+    {
+      "source_id": "SRC-CRITERIA",
+      "expected_sha256": "6fe716bc6454a6c1e564f713b10b7fd2e8022af653c44ba4d4c74a660018c7d4",
+      "actual_sha256": "6fe716bc6454a6c1e564f713b10b7fd2e8022af653c44ba4d4c74a660018c7d4",
+      "required": true
+    },
+    {
+      "source_id": "SRC-APPROVED-BODY",
+      "expected_sha256": "b20616e6c8b5e128f41bc505ba79875ad90735bee38ecd16d1099739c0c1f951",
+      "actual_sha256": "b20616e6c8b5e128f41bc505ba79875ad90735bee38ecd16d1099739c0c1f951",
+      "required": true
+    },
+    {
+      "source_id": "SRC-PRICE-LEGEND",
+      "expected_sha256": "c3ccb0ba50de09a17712e15c34eabd567f629b45b7083f5db2bc2bc3d58c1fc1",
+      "actual_sha256": "c3ccb0ba50de09a17712e15c34eabd567f629b45b7083f5db2bc2bc3d58c1fc1",
+      "required": true
+    },
+    {
+      "source_id": "SRC-PRICE-INSIGHTS",
+      "expected_sha256": "4ec97af499b520b6030411c636877c93e4c6f877769e43d35d0137ea49ea76d1",
+      "actual_sha256": "4ec97af499b520b6030411c636877c93e4c6f877769e43d35d0137ea49ea76d1",
+      "required": true
+    },
+    {
+      "source_id": "SRC-PRICE-COVERAGE",
+      "expected_sha256": "cf602012f2bc76536b6f0176205adbc80230ee3b62998560e11e1ddfa098bf2d",
+      "actual_sha256": "cf602012f2bc76536b6f0176205adbc80230ee3b62998560e11e1ddfa098bf2d",
+      "required": true
+    },
+    {
+      "source_id": "SRC-COHORT-CODE",
+      "expected_sha256": "47d4f73939ddd1a348e6c1f21df43c51b3b24dcc7fc30bd68591aea6877e1e3c",
+      "actual_sha256": "47d4f73939ddd1a348e6c1f21df43c51b3b24dcc7fc30bd68591aea6877e1e3c",
+      "required": true
+    },
+    {
+      "source_id": "SRC-RANKING",
+      "expected_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+      "actual_sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b",
+      "required": true
+    },
+    {
+      "source_id": "SRC-VERTICAL",
+      "expected_sha256": "30aed5ad4864efe5043e1f4409ac86b7e0d4923edefe30e899972249ae32a907",
+      "actual_sha256": "30aed5ad4864efe5043e1f4409ac86b7e0d4923edefe30e899972249ae32a907",
+      "required": true
+    },
+    {
+      "source_id": "CTX-STATE",
+      "expected_sha256": "dff6662d38b58f38f71a5e954d5d9e7cb53e0ea058a44f5adb46c64ccffa0e0e",
+      "actual_sha256": "dff6662d38b58f38f71a5e954d5d9e7cb53e0ea058a44f5adb46c64ccffa0e0e",
+      "required": false
+    },
+    {
+      "source_id": "CTX-BRIEF",
+      "expected_sha256": "1739d99fd6bf98f1c9bded9f0ea747488f8a38252d8b06d163febdf23c66e93e",
+      "actual_sha256": "1739d99fd6bf98f1c9bded9f0ea747488f8a38252d8b06d163febdf23c66e93e",
+      "required": false
+    }
+  ],
+  "price_checks": [
+    {
+      "short_id": "SHORT01-PROMO",
+      "region_id": "R17",
+      "source_pointer": "/regions/16/dong_prices_by_transaction_count/2",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT01-PROMO",
+      "region_id": "R17",
+      "source_pointer": "/regions/16/dong_prices_by_transaction_count/0",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R20",
+      "source_pointer": "/regions/19/build_cohorts/0",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R20",
+      "source_pointer": "/regions/19/build_cohorts/2",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R19",
+      "source_pointer": "/regions/18/dong_prices_by_transaction_count/1",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R19",
+      "source_pointer": "/regions/18/dong_prices_by_transaction_count/0",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R18",
+      "source_pointer": "/regions/17/dong_prices_by_transaction_count/1",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R18",
+      "source_pointer": "/regions/17/dong_prices_by_transaction_count/0",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R17",
+      "source_pointer": "/regions/16/dong_prices_by_transaction_count/2",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R17",
+      "source_pointer": "/regions/16/dong_prices_by_transaction_count/0",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R16",
+      "source_pointer": "/regions/15/mapped_bands/0",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R16",
+      "source_pointer": "/regions/15/mapped_bands/1",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R15",
+      "source_pointer": "/regions/14/dong_prices_by_transaction_count/0",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R15",
+      "source_pointer": "/regions/14/dong_prices_by_transaction_count/3",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R14",
+      "source_pointer": "/regions/13/dong_prices_by_transaction_count/3",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R14",
+      "source_pointer": "/regions/13/dong_prices_by_transaction_count/1",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R13",
+      "source_pointer": "/regions/12/dong_prices_by_transaction_count/0",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R13",
+      "source_pointer": "/regions/12/dong_prices_by_transaction_count/1",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R12",
+      "source_pointer": "/regions/11/dong_prices_by_transaction_count/0",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R12",
+      "source_pointer": "/regions/11/dong_prices_by_transaction_count/3",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R11",
+      "source_pointer": "/regions/10/dong_prices_by_transaction_count/0",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R11",
+      "source_pointer": "/regions/10/dong_prices_by_transaction_count/1",
+      "result": "pass"
+    }
+  ],
+  "rank_checks": [
+    {
+      "short_id": "SHORT01-PROMO",
+      "region_id": "R17",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R20",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R19",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R18",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R17",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT02-R20-R16",
+      "region_id": "R16",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R15",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R14",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R13",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R12",
+      "result": "pass"
+    },
+    {
+      "short_id": "SHORT03-R15-R11",
+      "region_id": "R11",
+      "result": "pass"
+    }
+  ],
+  "not_performed": [
+    "새 사실 조사",
+    "원거래 재집계",
+    "외부 API",
+    "유료 생성",
+    "Claude",
+    "업로드",
+    "프레임 확인",
+    "실제 청취",
+    "연속 재생",
+    "독립 QA"
+  ]
+}

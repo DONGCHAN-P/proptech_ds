@@ -1,0 +1,12 @@
+import React from 'react';import {Img,staticFile} from 'remotion';
+const blue='#286cda',ink='#173348',muted='#637580';
+export function PriceQuote({balcony=false}:{balcony?:boolean}){return <><div style={{position:'absolute',left:80,top:0,fontSize:27,fontWeight:700}}>창릉 S4 · 2026.06.30 공고 · 84AH 기본형 · 원문 단위: 천원</div>{balcony?<>
+ <div data-zone="quote-balcony-header" style={{position:'absolute',left:80,top:60,width:1760,height:122}}><Img src={staticFile('review-v7/S4_balcony_header.png')} style={{width:'100%',height:'100%',display:'block'}}/></div>
+ <div data-zone="quote-balcony-row" style={{position:'absolute',left:80,top:225,width:1760,height:136}}><Img src={staticFile('review-v7/S4_balcony_84AH.png')} style={{width:'100%',height:'100%',display:'block'}}/><svg width={1760} height={136} viewBox="50 745 750 58" style={{position:'absolute',inset:0}}><rect x={51} y={745.5} width={95} height={57} fill="none" stroke={blue} strokeWidth={1.4}/><rect x={146} y={772} width={220} height={14} fill="#286cda16" stroke={blue} strokeWidth={1.4}/></svg></div>
+ <div style={{position:'absolute',left:100,top:400,fontSize:43,fontWeight:700,color:blue}}>계약자 부담액 6,139천원 = 확장비 6,139,000원</div>
+ <div data-zone="price-sum" style={{position:'absolute',left:100,top:500,width:1720,height:100,fontSize:44,fontWeight:700,color:ink}}>867,190,000원 + 6,139,000원 = 873,329,000원<div style={{fontSize:25,fontWeight:400,color:muted,marginTop:18}}>기본가 + 발코니 확장 · 다른 유상옵션·세금 별도</div></div>
+ </>:<>
+ <div data-zone="quote-basic-header" style={{position:'absolute',left:80,top:50,width:1760,height:251}}><Img src={staticFile('review-v7/S4_basic_header.png')} style={{width:'100%',height:'100%',display:'block'}}/></div>
+ <div data-zone="quote-basic-row" style={{position:'absolute',left:80,top:320,width:1760,height:197}}><Img src={staticFile('review-v7/S4_basic_84AH.png')} style={{width:'100%',height:'100%',display:'block'}}/><svg width={1760} height={197} viewBox="50 328 750 84" style={{position:'absolute',inset:0}}><rect x={103} y={329} width={34} height={82} fill="none" stroke={blue} strokeWidth={1.4}/><rect x={137} y={383} width={168} height={15} fill="#286cda16" stroke={blue} strokeWidth={1.4}/></svg></div>
+ <div data-zone="price-basic-conversion" style={{position:'absolute',left:100,top:550,width:1720,height:95,fontSize:44,fontWeight:700,color:blue}}>84AH · 5층~최상층 · 기본형: 867,190,000원<div style={{fontSize:25,fontWeight:400,color:muted,marginTop:13}}>원문 867,190천원 × 1,000 · 발코니 확장비는 별도 표에서 확인</div></div>
+ </>}</>}

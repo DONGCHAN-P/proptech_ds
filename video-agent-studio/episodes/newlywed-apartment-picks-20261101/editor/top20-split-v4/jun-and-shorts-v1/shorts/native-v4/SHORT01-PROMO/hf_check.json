@@ -1,0 +1,111 @@
+{
+  "argv": [
+    "npx.cmd",
+    "--no-install",
+    "hyperframes",
+    "check",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v4\\SHORT01-PROMO",
+    "--at",
+    "0.080000,1.440000,4.180000,4.180000,10.020000,18.680000,31.020000,38.840000,39.766667",
+    "--json",
+    "--snapshots",
+    "--timeout",
+    "30000"
+  ],
+  "exit_code": 0,
+  "result": {
+    "ok": true,
+    "strict": false,
+    "browserSkipped": false,
+    "lint": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "filesScanned": 7
+    },
+    "runtime": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": []
+    },
+    "layout": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "duration": 39.8,
+      "samples": [
+        0.08,
+        1.44,
+        4.18,
+        10.02,
+        18.68,
+        31.02,
+        38.84,
+        39.767
+      ],
+      "transitionSamples": [],
+      "transitionSamplesDropped": 0,
+      "tolerance": 2,
+      "totalIssueCount": 0,
+      "truncated": false
+    },
+    "motion": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "enabled": false,
+      "samples": 0
+    },
+    "contrast": {
+      "ok": true,
+      "errorCount": 0,
+      "warningCount": 0,
+      "infoCount": 0,
+      "findings": [],
+      "enabled": true,
+      "samples": [
+        0.08,
+        1.44,
+        10.02,
+        31.02,
+        39.767
+      ],
+      "checked": 51,
+      "passed": 51
+    },
+    "hdr": {
+      "autoPromotion": null,
+      "inspection": "available"
+    },
+    "snapshots": {
+      "enabled": true,
+      "files": [
+        ".hyperframes\\artifacts\\snapshots\\b533f774-6a4e-40d0-b795-6805ee4d6a45\\frame-00-at-0.1s.png",
+        ".hyperframes\\artifacts\\snapshots\\b533f774-6a4e-40d0-b795-6805ee4d6a45\\frame-01-at-1.4s.png",
+        ".hyperframes\\artifacts\\snapshots\\b533f774-6a4e-40d0-b795-6805ee4d6a45\\frame-02-at-10.0s.png",
+        ".hyperframes\\artifacts\\snapshots\\b533f774-6a4e-40d0-b795-6805ee4d6a45\\frame-03-at-31.0s.png",
+        ".hyperframes\\artifacts\\snapshots\\b533f774-6a4e-40d0-b795-6805ee4d6a45\\frame-04-at-39.8s.png"
+      ],
+      "times": [
+        0.08,
+        1.44,
+        10.02,
+        31.02,
+        39.767
+      ],
+      "findingFiles": []
+    },
+    "_meta": {
+      "version": "0.8.181",
+      "updateAvailable": false
+    }
+  }
+}

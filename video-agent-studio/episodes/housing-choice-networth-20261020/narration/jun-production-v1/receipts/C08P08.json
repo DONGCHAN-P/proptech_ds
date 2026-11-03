@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C08P08",
+  "scene_id": "C08",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:07:50.971Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "684d90c2dc007eb531ebb338a860a3840d7497a9ea5398d6034727c7770ad85d",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "각 화면은 처음부터 서로 다른 고정금리를 적용한 별도 조건입니다. 실제 변동금리 대출은 금리가 바뀌는 시점마다 이자와 남은 투자금이 달라집니다. 따라서 대출금리 한 숫자뿐 아니라 언제, 어떤 잔액에 적용됐는지도 확인해야 합니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 127,
+  "characters": 127,
+  "actual_credits": 51,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19183,
+    "character_limit": 40000,
+    "included_remaining": 20817,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:07:16.662Z",
+  "local_shadow_remaining_before": 20335,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "O0R0olzQFv6FolxZ6bEC",
+    "x-request-id": null,
+    "character-cost": "51",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:07:50 GMT"
+  },
+  "pcm_samples": 712656,
+  "pcm_duration_s": 16.16,
+  "provider_last_spoken_end_s": 16.24,
+  "artifact_sha256": {
+    "paragraphs/C08P08/audio.mp3": "95939d15243d8e88dca0b06b6ba0f0616fbd002757f617d14c9315b29eb255c0",
+    "paragraphs/C08P08/audio.wav": "19b8872baf31b9f8fb98833a393f18f582c532386d05a9499360acdcd0604383",
+    "paragraphs/C08P08/alignment.json": "0f4de74b9b65cf10e5792e3c7a426ff01b5796c8ade5fd3c60188a0f46ef3078",
+    "paragraphs/C08P08/normalized_alignment.json": "0f4de74b9b65cf10e5792e3c7a426ff01b5796c8ade5fd3c60188a0f46ef3078"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 20284,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:07:54.755Z"
+}

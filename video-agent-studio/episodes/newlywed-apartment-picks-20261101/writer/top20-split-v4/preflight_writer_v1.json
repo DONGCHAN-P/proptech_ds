@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0-scoped-writer",
+  "basis": "video-agent-studio/templates/episode_preflight.json 및 guides/영상제작_마스터가이드.md의 대본 단계 항목",
+  "task_id": "two-part-v4-script",
+  "input_contract": {"narration_mode": "무료 InJoon 선택 계승; 생성 미실시", "original_user_script": "기존 대본_v6.md 보존", "proposed_script_changes": ["part1_script_v1.md", "part2_script_v1.md"], "timing_basis": "estimate", "latest_user_choice": "20~11위/10~1위 분리·생활권 확대·가격 점과 학교/역/상업 맥락"},
+  "approvals": {"topic": "직접 task packet 범위 내 승인", "script": "pending_new_gate", "budget": "현금0원·유료 미실시", "completed": "새 미디어 없음", "pre_upload": "새 업로드 승인 없음"},
+  "story": {"question": "많이 거주하는 구 안에서 어떤 생활권을 어느 예산으로 비교할 수 있는가", "finding": "구 전체 가격과 단지별 분포·동별 거래 구성은 다른 정보를 줍니다", "viewer_choice": "예산 두 조건과 직장·학교·상권 동선으로 후보 동·단지를 좁힙니다", "fact_inference_separation": "문장별 statement_type", "previous_next_connection": "1편 말미10~1위 예고, 2편 짧은 앞편 연결·비교기준·CTA"},
+  "visual_defaults": {"layout": "왼쪽 구 전체+오른쪽 고정 상세", "whole_before_detail": true, "photo_after_feature": true, "empty_chart_repetition": false, "facility_shapes_separate_from_price_colors": true, "context_source_date_and_name_match": "pending_visual_QA"},
+  "timing": {"status": "estimate_only", "measured_new_audio": false, "region_target_seconds": [50,75], "actual_timelock": "새 대본 승인 후 narration 담당"},
+  "not_applicable_this_role": ["음성 생성", "시안·HTML 제작", "렌더", "실제 MP4 디코드", "프레임·연속 재생·실제 청취", "썸네일·쇼츠", "외부 전송·게시", "공통 state/scenes/decisions 수정"],
+  "required_next": ["새 대본 독립 QA", "새 script 결정", "시설명·날짜·실제 지도 표시 매칭", "OSM 상업 맥락 취득 및 정합 확인"]
+}

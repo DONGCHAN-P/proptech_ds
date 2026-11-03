@@ -1,0 +1,14 @@
+{
+  "source_audit": "Read-only bounded formulas, not full spreadsheet validation",
+  "access_result": "success",
+  "unrelated_tabs_read": false,
+  "original_mutated": false,
+  "raw_personal_financial_values_saved": false,
+  "hypothetical_balance_identity": {
+    "status": "passed_node_execution",
+    "units": "unitless fictional",
+    "starting_wealth": 100,
+    "checks": ["home-debt+remaining_liquid=100", "deposit-jeonse_debt+remaining_liquid=100", "rental_deposit+remaining_liquid=100"]
+  },
+  "claude_scope": "Initial method audit only; full-script consensus remains a later separate round"
+}

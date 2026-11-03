@@ -1,0 +1,23 @@
+{
+  "status": "failed",
+  "error_type": "ValueError",
+  "http_status": null,
+  "no_automatic_retry": true,
+  "partial_outputs_preserved": true,
+  "completed_chapters": 10,
+  "current_paragraph": "C10P06",
+  "stage": "chapter_pcm_assembly",
+  "local_reason": "'video-agent-studio\\\\episodes\\\\housing-choice-networth-20261020\\\\narration\\\\free-tts-v1\\\\prepare-v5\\\\prepared.json' is not in the subpath of 'C:\\\\projects\\\\realestate_reco' OR one path is relative and the other is absolute.",
+  "trace_locations": [
+    {
+      "file": "production_generate.py",
+      "line": 196,
+      "function": "generate"
+    },
+    {
+      "file": "pathlib.py",
+      "line": 730,
+      "function": "relative_to"
+    }
+  ]
+}

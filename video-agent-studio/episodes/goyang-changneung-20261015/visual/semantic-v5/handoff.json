@@ -1,0 +1,61 @@
+{
+  "status": "visual_data_pack_ready_for_editor",
+  "input_versions": {
+    "script": "script-v3",
+    "audio": "audio-v3",
+    "timing": "timing-lock-v3",
+    "video": "production-v4-r2",
+    "request": "Telegram update718066298"
+  },
+  "outputs": [
+    "visual/semantic-v5/workplace_geometry.json",
+    "visual/semantic-v5/company_plan.json",
+    "visual/semantic-v5/commute_steps.json",
+    "visual/semantic-v5/message_visual_variety.json",
+    "visual/semantic-v5/assets.json",
+    "outputs/visual-semantic-v5/M002_workplace_basemap.svg",
+    "outputs/visual-semantic-v5/M002_workplace_preview.svg",
+    "outputs/visual-semantic-v5/M002_workplace_preview.png",
+    "outputs/visual-semantic-v5/M002_company_plan.svg",
+    "outputs/visual-semantic-v5/M002_company_plan.png",
+    "outputs/visual-semantic-v5/M002_commute_steps.svg",
+    "outputs/visual-semantic-v5/M002_commute_steps.png",
+    "visual/semantic-v5/assets/M002_commute_journey_concept_AI_v1.png",
+    "visual/semantic-v5/assets/M002_commute_journey_concept_AI_v1.manifest.json",
+    "visual/semantic-v5/assets/M002_commute_journey_concept_AI_v1.prompt.txt"
+  ],
+  "validation": {
+    "osm_original_api_read_success": 4,
+    "coordinates_checked_against_original_station_nodes": true,
+    "png_actual_size": [
+      1920,
+      1080
+    ],
+    "pngs_viewed": 3,
+    "company_and_steps_text_clipping": false,
+    "geometry_camera": "fixed",
+    "new_paid_calls": 0,
+    "audio_listened": false,
+    "continuous_video_playback": false,
+    "video_rendered_by_this_role": false,
+    "final_map_png_rechecked_after_offset_fix": true,
+    "generated_ai_concept_png_viewed": true,
+    "builtin_imagegen_calls": 1,
+    "generated_actual_size": [
+      1672,
+      941
+    ]
+  },
+  "known_limits": [
+    "대표SVG/PNG는 편집용 소스. 최종 본편 자막·현재대상 강조·컷 타이밍 QA는 편집 담당 범위",
+    "강남역 안내앵커는 교대역49분 도착점과 다름. 시간은 교대역 표에서만 표시",
+    "2015 원흥 사진은 기존 사용조건/촬영시점 고지 유지, GPS 메타를 새 위치 검증에 사용하지 않음",
+    "지도는 권역위치 안내이며 실제최다통근량·권역경계·최단노선 검증 아님",
+    "개념이미지는 가상의 집-역-직장 관계 표현. 실제 창릉 준공 모습·철도 직결 동선으로 제시하지 말 것. 출력 원본1672x941, 코드 contain으로 사용하며 업스케일 필요시 별도 기록."
+  ],
+  "affected_scenes": [
+    "M002",
+    "M003"
+  ],
+  "next_owner": "editor → director/QA"
+}

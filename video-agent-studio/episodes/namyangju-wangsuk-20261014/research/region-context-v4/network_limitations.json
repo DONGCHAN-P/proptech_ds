@@ -1,0 +1,12 @@
+{
+  "checked_on": "2026-10-15",
+  "optional_query": "별내역 남부 공원·상업시설 추가공간자료",
+  "results": [
+    {"provider":"overpass.kumi.systems","query":"남부건물·토지이용·공원","result":"65초응답대기후시간초과"},
+    {"provider":"overpass-api.de","query":"동일bbox","result":"HTTP406"},
+    {"provider":"overpass.kumi.systems","query":"공원·슈퍼마켓만축소","result":"65초응답대기후시간초과"}
+  ],
+  "decision": "추가네트워크호출중단;기존검증원본OSM실제폴리곤만재사용",
+  "output_impact": "별내역남부시설전수표시가아닌별내생활권실제등록구역예시. 이마트공식주소는확인했으나정확공간좌표미확보로지도핀표시안함.",
+  "invented_data": false
+}

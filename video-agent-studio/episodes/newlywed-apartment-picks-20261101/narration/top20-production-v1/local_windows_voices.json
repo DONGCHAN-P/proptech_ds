@@ -1,0 +1,37 @@
+﻿{
+    "checked_at_utc":  "2026-11-01T14:45:32.1317982Z",
+    "generation_invoked":  false,
+    "network_requests":  0,
+    "system_speech":  {
+                          "status":  "failed",
+                          "exception":  "MethodInvocationException",
+                          "reason":  "Installed voice enumeration failed; no synthesis attempted"
+                      },
+    "sapi_com":  {
+                     "status":  "enumerated",
+                     "voices":  [
+                                    {
+                                        "name":  "Microsoft Zira Desktop - English (United States)",
+                                        "language_hex":  "409"
+                                    },
+                                    {
+                                        "name":  "Microsoft Heami Desktop - Korean",
+                                        "language_hex":  "412"
+                                    }
+                                ]
+                 },
+    "registry_voices":  [
+                            {
+                                "key":  "TTS_MS_EN-US_ZIRA_11.0",
+                                "registry":  "HKLM:/SOFTWARE/Microsoft/Speech/Voices/Tokens"
+                            },
+                            {
+                                "key":  "TTS_MS_KO-KR_HEAMI_11.0",
+                                "registry":  "HKLM:/SOFTWARE/Microsoft/Speech/Voices/Tokens"
+                            },
+                            {
+                                "key":  "MSTTS_V110_koKR_HeamiM",
+                                "registry":  "HKLM:/SOFTWARE/Microsoft/Speech_OneCore/Voices/Tokens"
+                            }
+                        ]
+}

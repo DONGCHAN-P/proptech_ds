@@ -1,0 +1,10 @@
+{
+  "task_id": "jun-v1-render-monitor-and-postproduction-takeover",
+  "reason": "Editor agent01a176c8-44f4-7c72-94a3-139394b2dc95 encountered model capacity error after source checks/carve and launch of the trusted render pipeline.",
+  "previous_agent_closed": true,
+  "new_owner": "video_director main agent",
+  "scope": "Monitor the already running render without launching a duplicate. After completion, run existing encoded_evidence.py and measure_signal.py and record delivery.",
+  "preserve_running_pipeline_and_all_source_hashes": true,
+  "new_TTS_calls": 0,
+  "uploads_or_deletes_executed_by_this_transfer": 0
+}

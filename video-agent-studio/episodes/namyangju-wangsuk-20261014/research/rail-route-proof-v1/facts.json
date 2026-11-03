@@ -1,0 +1,74 @@
+[
+  {
+    "claim_id": "RAIL-PROOF-001",
+    "sentence": "별내역은 경춘선과8호선 환승역이다.",
+    "status": "verified",
+    "source_url": "https://www.ncuc.or.kr/jj_line/2340",
+    "evidence_location": "시설소개",
+    "as_of": "2026-10-15",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "claim_id": "RAIL-PROOF-002",
+    "sentence": "별내별가람·오남·진접은 운영중4호선 진접선역이며 진접선은4호선 연장구간이다.",
+    "status": "verified",
+    "source_url": "https://nyj.go.kr/www/contents.do?key=3108",
+    "evidence_location": "역사현황표",
+    "as_of": "2026-10-15",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "claim_id": "RAIL-PROOF-003",
+    "sentence": "8호선 운영선은별내역 종착이며별내별가람역까지 운영연장선으로그리지않는다.",
+    "status": "verified",
+    "source_url": "https://www.ncuc.or.kr/jj_line/2340",
+    "evidence_location": "별내선소개",
+    "as_of": "2026-10-15",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "claim_id": "RAIL-PROOF-004",
+    "sentence": "48번은공식GBIS현재노선표 및정류장JSON에 존재한다.",
+    "status": "verified",
+    "source_url": "https://www.gbis.go.kr/service/busInfo/townBus.action?centerId=4136000000&cmd=townBus",
+    "evidence_location": "노선표48",
+    "as_of": "2026-10-15",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "claim_id": "RAIL-PROOF-005",
+    "sentence": "48번별내역방향탑승정류장은별가람고등학교.대원칸타빌23241,하차는별내역4번출구.이마트49448이다.",
+    "status": "verified",
+    "source_url": "https://www.gbis.go.kr/gbis2014/schBusAPI.action?cmd=searchRouteJson&routeId=241347009",
+    "evidence_location": "result.gg.up.list indices6..10",
+    "as_of": "2026-10-15",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "claim_id": "RAIL-PROOF-006",
+    "sentence": "대원칸타빌대표진입도로점부터역인근까지표시한도보는실제OSM도로망예시다.",
+    "status": "qualified",
+    "source_url": "https://www.openstreetmap.org/way/468641433",
+    "evidence_location": "serviceway619940668;현장정문/보도미확인",
+    "as_of": "2026-10-15",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "claim_id": "RAIL-PROOF-007",
+    "sentence": "4번출구좌표는OSMnode12121815056이며경로끝도로점과약41m차이가있다.",
+    "status": "qualified",
+    "source_url": "https://www.openstreetmap.org/node/12121815056",
+    "evidence_location": "OSM ref4출입구;스냅차이",
+    "as_of": "2026-10-15",
+    "verified_on": "2026-10-15"
+  },
+  {
+    "claim_id": "RAIL-PROOF-008",
+    "sentence": "걷기·버스애니메이션속도는이동수단시연이며실제소요시간을검증한값이아니다.",
+    "status": "qualified",
+    "source_url": "local:data.json",
+    "evidence_location": "commute.animation_only",
+    "as_of": "2026-10-15",
+    "verified_on": "2026-10-15"
+  }
+]

@@ -1,0 +1,88 @@
+{
+  "revision": "geographic-v1",
+  "status": "reusable_representative_sources_not_picture_locked",
+  "assets": [
+    {
+      "asset_id": "GEO01_commute",
+      "scene_ids": [
+        "M002",
+        "M003"
+      ],
+      "type": "OSM_geographic_vector_map",
+      "source_or_prompt": "raw/osm.json / raw/query.overpass; 로컬 render.py",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "actual_file": "outputs/geographic-v1/GEO01_commute.png",
+      "vector_source": "visual/geographic-v1/GEO01_commute.svg",
+      "actual_place": "고양 원흥·도래울·삼송·지축과 서울 새절/DMC",
+      "AI": false,
+      "usage_conditions": "OSM ODbL1.0:상업이용가능,출처표시/데이터라이선스고지/파생데이터공유조건준수. ©OpenStreetMap contributors·ODbL·copyright URL 화면내표시. 원벡터/GeoJSON동봉보존.",
+      "review_status": "최종PNG직접view; 북쪽위/비율/가독성/주요대상위치/출처확인. 공식측량수준정밀검증아님",
+      "sha256": "5cdbed331e3ed5c2aa97d0e6e6db4a30fb27595b071db310cb6d35db13500a38",
+      "upscaled": false
+    },
+    {
+      "asset_id": "GEO02_life",
+      "scene_ids": [
+        "M005",
+        "M007",
+        "M009"
+      ],
+      "type": "OSM_geographic_vector_map",
+      "source_or_prompt": "raw/osm.json / raw/query.overpass; 로컬 render.py",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "actual_file": "outputs/geographic-v1/GEO02_life.png",
+      "vector_source": "visual/geographic-v1/GEO02_life.svg",
+      "actual_place": "고양 원흥·도래울·삼송·지축과 서울 새절/DMC",
+      "AI": false,
+      "usage_conditions": "OSM ODbL1.0:상업이용가능,출처표시/데이터라이선스고지/파생데이터공유조건준수. ©OpenStreetMap contributors·ODbL·copyright URL 화면내표시. 원벡터/GeoJSON동봉보존.",
+      "review_status": "최종PNG직접view; 북쪽위/비율/가독성/주요대상위치/출처확인. 공식측량수준정밀검증아님",
+      "sha256": "823b050006f397d9fd3b6e54cd3ec8689c2833d54d6e60784a886ea9ce7f6b7e",
+      "upscaled": false
+    }
+  ],
+  "query": {
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "requests": 1,
+    "retries": 0,
+    "paid": false,
+    "vector_bytes": 4318109,
+    "features": 3785,
+    "query_file": "raw/query.overpass",
+    "response_file": "raw/osm.json",
+    "tile_requests": 0
+  },
+  "coordinates": {
+    "crs": "WGS84 lon/lat",
+    "source": "OSM station nodes, way geometry; exact node/way IDs in locations.json",
+    "validation": "대상명/운영망은commute-v3공식근거재사용; 좌표는OSM태그와실제선형에대조. 매장주소·동일건물관계는IKEA공식사이트추가확인. 독립공식좌표전수대조/실측은하지않음",
+    "precision": "역사는대표station node; 출입구아님. 아파트 표식은OSM용지bbox중심;공식경계/주출입구아님",
+    "source_count": {
+      "unique_station_names": 7,
+      "apartment_polygons": 5
+    }
+  },
+  "official_whole_plan": {
+    "path": "research/map-clearance-v1/raw/eum_lots_overall_20251224.jpg",
+    "display_source": "visual/production-v2/M005_life.svg",
+    "conditions": "국토교통부고시2025-813호(2025.12.24)·토지이음·공공누리3유형·전체비례fit만. 이 OSM지도는 해당도면을trace하지않음",
+    "new_processing": false
+  },
+  "unresolved": [
+    "수색교명칭지오메트리미확보",
+    "창릉호반써밋OSM단지경계미확보;이름붙은정류장을단지핀으로대체하지않음",
+    "S1/S4/S5계획블록핀/사업경계미포함",
+    "지축단지의bbox중심마커는출입구아님",
+    "실제보행경로/횡단보도/소요시간미검증",
+    "시설실사사진사용권미확보;다른지역사진대체없음",
+    "공식좌표독립전수대조미실시"
+  ],
+  "no_new_paid_generation": true,
+  "script_lock": false,
+  "timing_lock": false
+}

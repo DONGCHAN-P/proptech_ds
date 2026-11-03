@@ -1,0 +1,77 @@
+{
+  "comparison": "identity conform encoded picture vs accepted source, full 1920x1080 frame",
+  "rows": [
+    {
+      "name": "question_brand",
+      "source_offset_s": 0,
+      "ssim_all": 0.997147,
+      "command": [
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\media-bin\\ffmpeg.exe",
+        "-v",
+        "info",
+        "-ss",
+        "0.000000000",
+        "-i",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-split-v4\\map-clean-v1\\part1_map_clean_photo_v1.mp4",
+        "-i",
+        "video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\main\\source-smoke-v2\\question_brand\\assets\\conformed_picture.mp4",
+        "-t",
+        "10.200000000",
+        "-filter_complex",
+        "[0:v]setpts=PTS-STARTPTS[a];[1:v]setpts=PTS-STARTPTS[b];[a][b]ssim",
+        "-an",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "name": "photo_to_map",
+      "source_offset_s": 57.6,
+      "ssim_all": 0.993824,
+      "command": [
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\media-bin\\ffmpeg.exe",
+        "-v",
+        "info",
+        "-ss",
+        "57.600000000",
+        "-i",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-split-v4\\map-clean-v1\\part1_map_clean_photo_v1.mp4",
+        "-i",
+        "video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\main\\source-smoke-v2\\photo_to_map\\assets\\conformed_picture.mp4",
+        "-t",
+        "8.666666667",
+        "-filter_complex",
+        "[0:v]setpts=PTS-STARTPTS[a];[1:v]setpts=PTS-STARTPTS[b];[a][b]ssim",
+        "-an",
+        "-f",
+        "null",
+        "-"
+      ]
+    },
+    {
+      "name": "new_price_focus",
+      "source_offset_s": 86.63333333333334,
+      "ssim_all": 0.999055,
+      "command": [
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\outputs\\private-production-v1\\media-bin\\ffmpeg.exe",
+        "-v",
+        "info",
+        "-ss",
+        "86.633333333",
+        "-i",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\outputs\\top20-split-v4\\map-clean-v1\\part1_map_clean_photo_v1.mp4",
+        "-i",
+        "video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\main\\source-smoke-v2\\new_price_focus\\assets\\conformed_picture.mp4",
+        "-t",
+        "8.933333333",
+        "-filter_complex",
+        "[0:v]setpts=PTS-STARTPTS[a];[1:v]setpts=PTS-STARTPTS[b];[a][b]ssim",
+        "-an",
+        "-f",
+        "null",
+        "-"
+      ]
+    }
+  ]
+}

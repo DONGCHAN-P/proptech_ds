@@ -1,0 +1,39 @@
+{
+  "task_id": "top20-enhance-research-v2",
+  "recommended_candidate_id": "A",
+  "status": "original_proposal_preserved_director_split_adopted_N001_N002",
+  "adopted_narration_path": "director/top20-enhance-v2/added_scenes.json",
+  "candidates": [
+    {
+      "candidate_id": "A",
+      "scene_id": "ENHANCE-I004-proposed",
+      "title": "초혼 수로 보면 TOP20 두 곳이 바뀐다",
+      "suggested_insertion": "S022 뒤, C001 앞의 독립 보충 분석. 최종 장면 ID와 삽입 지점은 총괄 결정.",
+      "target_duration_seconds": [45, 75],
+      "duration_basis": "원고 길이 기준 계획값. TTS 생성·실제 청취·PCM 길이 측정은 수행하지 않음.",
+      "claim_ids": ["ENH2-MEMBERSHIP", "ENH2-DONGAN", "ENH2-MAPO", "ENH2-NAMDONG", "ENH2-WONMI", "ENH2-MICHUHOL", "ENH2-TOP4"],
+      "sentences": [
+        "같은 지역도 어떤 부부를 세느냐에 따라 순위가 달라집니다.",
+        "지금까지 본 전체 신혼부부 수 대신, 같은 2024년 11월 1일의 초혼 부부 수로 수도권 53개 구를 다시 정렬해볼게요.",
+        "기존 스무 곳 안에서만 순서를 바꾼 것이 아니라, 처음의 53개 구를 모두 비교했습니다.",
+        "전체 기준 22위였던 안양시 동안구는 초혼 6,510쌍으로 16위에 들어옵니다.",
+        "전체 21위 마포구도 초혼 6,487쌍으로 17위가 됩니다.",
+        "반대로 전체 16위 남동구는 초혼 기준 27위, 전체 20위 원미구는 24위로 TOP20 밖에 놓입니다.",
+        "이렇게 스무 곳 중 두 곳이 교체되고, 열여덟 곳은 두 목록에 모두 남습니다.",
+        "상위권에서도 전체 10위 미추홀구는 초혼 6,162쌍으로 20위가 됩니다.",
+        "다만 1위부터 4위까지는 서구, 송파구, 덕양구, 강서구로 그대로예요.",
+        "이는 시간이 지나 등수가 오른 결과가 아니라, 같은 날 누구를 포함해 집계하느냐에 따른 차이입니다.",
+        "초혼 부부의 거주 규모가 궁금하다면 전체 수와 초혼 수의 순위를 함께 확인해보세요."
+      ],
+      "visual_contract": {
+        "title": "전체 수 TOP20 ↔ 초혼 수 TOP20",
+        "scope_label": "2024.11.1 · 같은 수도권 53개 구 비교",
+        "chart_kind": "전체 순위와 초혼 순위의 두 열 연결도. 상하 이동 대신 비교축을 명시.",
+        "primary_rows": ["경기|안양시 동안구", "서울|마포구", "인천|남동구", "경기|부천시 원미구"],
+        "secondary_rows": ["인천|미추홀구"],
+        "footnote": "전체: 초혼·재혼·혼인종류 미상 포함. 같은 기준일의 지표 비교이며 연도별 순위 변화 아님.",
+        "source": "chart_data.json / total_vs_first_marriage_53_gu"
+      }
+    }
+  ]
+}

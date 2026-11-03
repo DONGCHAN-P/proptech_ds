@@ -1,0 +1,154 @@
+{
+  "version": "final-api-20261103-v2",
+  "dependencies": [
+    {
+      "path": "video-agent-studio\\episodes\\capital-10eok-map-20261017\\research\\coordinate-link-v2\\capital_official_geometry.parquet",
+      "sha256": "9f8d89f5444a92b4328c5cfa3cf028e4d08ad1229893d743220707a2a281a121"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\capital-10eok-map-20261017\\research\\coordinate-link-v2\\raw\\APHUS_HSMP_CNTC_INFO.shp",
+      "sha256": "e847c0175758b5e0992688a10094299e5f9ee46d9e616812aa7567ee4c1794de"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\capital-10eok-map-20261017\\research\\coordinate-link-v2\\raw\\APHUS_HSMP_CNTC_INFO.shx",
+      "sha256": "fc3433d5d70645038325ddc6c3d0fbe1c2914e05a604c96e0bf5bd0c770d958e"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\research\\top20-explain-v3\\prices\\complex_candidates_audit.csv",
+      "sha256": "08bd08588fdf8b7422361b21af3c20100b4667cb35d033d28ea8d4bb27e11e5e"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\research\\top20-explain-v3\\prices\\scope_codes.csv",
+      "sha256": "d52d22176a2f1b2f98def5d179bd510c9cc5451733a63255f9dd6290461ec443"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\research\\top20-explain-v3\\prices\\build_final_api_pack.py",
+      "sha256": "35a78a934094288a17270908fd66565b9b5bf75989e75ce3f6b9a1036c411606"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\research\\top20-explain-v3\\prices\\finish_final_api_pack.py",
+      "sha256": "4729a5be033ebd94bdf1bd5c490294bc4373f1ebefb8e57316966a779775778f"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\research\\top20-explain-v3\\prices\\refresh_official.py",
+      "sha256": "7ff223c6309a41a2840b68734e8a54446218d7fd59824b0cddaf8c91e57959bb"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\research\\top20-8min-v2\\top20.json",
+      "sha256": "be8128d55be506f2af10937d5196bdebf9105ea585b5af734e62866aa658247b"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\visual\\top20-8min-v2\\maps\\map_assets.json",
+      "sha256": "dc3c9b07d3be714cc1bc962433e1ef96079239072dace536a194e9e54ff2261a"
+    },
+    {
+      "path": "video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\qa\\top20-explain-v3\\independent_price_rollup.json",
+      "sha256": "379d4bf0124911a9148be1cf1a58622bcbefa4f483a9a2b57fec0d0fca3429dd"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "aggregate.sql",
+      "bytes": 705,
+      "sha256": "633c4377a5470d6a2ae8e9a1e4ab0ec758c572c256a222db0a066fc5f629dd96"
+    },
+    {
+      "path": "api_rows_all.parquet",
+      "bytes": 10515671,
+      "sha256": "391e2d09538f42e980a5fc07f6c6df56c8b86d5e8f59e2cb34e85ef171739fb1"
+    },
+    {
+      "path": "api_rows_valid83_85.parquet",
+      "bytes": 3471742,
+      "sha256": "4f6d1fa659aad341add4227a21c3450597a5aa81fa7684433193a9fbe03ca7f5"
+    },
+    {
+      "path": "cancellation_match_candidates.json",
+      "bytes": 132896,
+      "sha256": "f224d5f22dc28f9449cbe18c194dc44e66fddeeda637ac2ca909cd2449ee1f5c"
+    },
+    {
+      "path": "facts.csv",
+      "bytes": 62713,
+      "sha256": "ca5c8fb97cd1a9f4eec15756ca6da8690dc1aca208aef563548f2001c9968820"
+    },
+    {
+      "path": "facts.json",
+      "bytes": 102721,
+      "sha256": "29482c85587e3dc64d531b2e36dceebf05360eb243db5ac11d1eedd560c636c8"
+    },
+    {
+      "path": "map_price_inputs.json",
+      "bytes": 43443,
+      "sha256": "81aee59e4da0ad53656af908469280645a011b0d6c7fed39563ddb7ef4c93178"
+    },
+    {
+      "path": "methodology.json",
+      "bytes": 2853,
+      "sha256": "b98facbcb8d53d472cd175abbbbb659d2f5a849ad72d43f9cf0339eb3cc37d1d"
+    },
+    {
+      "path": "price_table20.csv",
+      "bytes": 9577,
+      "sha256": "ed6a98358cfae107911af3208a234d8074e9315407b563a4689b6ef3bd6e723b"
+    },
+    {
+      "path": "regional_prices.csv",
+      "bytes": 7403,
+      "sha256": "fb9ef91fdcabf83cbf303366ac2b72c597424e311b3c695e1efb7dbfcc695b02"
+    },
+    {
+      "path": "regional_prices.json",
+      "bytes": 26017,
+      "sha256": "1d833ac735ac9c12b89c40000322a3174d437cad4bb1958a8aefa7f350e7ba79"
+    },
+    {
+      "path": "representative_api_evidence.csv",
+      "bytes": 134095,
+      "sha256": "b313b56338ef83bffb22d685ae09d069c7693e28f89a295e9fa25b80791c8f79"
+    },
+    {
+      "path": "representative_official_points.parquet",
+      "bytes": 22690,
+      "sha256": "68d1579ac07d0d705debab907d2885511528ae0d88561dfeaed580ce549106ff"
+    },
+    {
+      "path": "representative_official_polygon_rings.json",
+      "bytes": 62250,
+      "sha256": "d6eec1e741983bd77cfcc0c217c875bda66a571a24167f1219c889e067ee97c8"
+    },
+    {
+      "path": "representatives.csv",
+      "bytes": 20849,
+      "sha256": "b88efedae62cdce01b2c2aeb6578f0c538e630b862d0c02d3c0a9114bf19c6fd"
+    },
+    {
+      "path": "representatives.json",
+      "bytes": 54708,
+      "sha256": "937864a5f80a40cb08aacc8c0700e05b85348b001aa89947d6b7200d93102bff"
+    },
+    {
+      "path": "source_coverage.csv",
+      "bytes": 12993,
+      "sha256": "16fddeb271096f937b89e2cb877f3fcbd55e13869dcf553bb748cfec56fa7359"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 26867,
+      "sha256": "6cd7717f644745fe9cb59d24d3b8c206c497d6e8010a6e61e1fb92644440e6bb"
+    },
+    {
+      "path": "validation.json",
+      "bytes": 5854,
+      "sha256": "2bd885ac65dfc3c27aa63ddc753e1ab5aa240de54d3226c9e86c67d600bea032"
+    },
+    {
+      "path": "writer_price_values.json",
+      "bytes": 40795,
+      "sha256": "bc25425d52e91728922b31bcd4ab869ea155d549366d0a21aab8f2e60eb47f7d"
+    }
+  ],
+  "raw_response_manifest": "source_manifest.json",
+  "sql": "aggregate.sql",
+  "network_calls_for_recalculation": 0
+}

@@ -1,0 +1,286 @@
+{
+  "script_revision": "map-clean-v1",
+  "sentences": [
+    {
+      "id": "P01-CRITERIA-01",
+      "sentence_id": "P01-CRITERIA-01",
+      "scene_id": "P01-CRITERIA",
+      "text": "가격은 2026년 5월부터 10월까지 계약된 전용 83~85제곱미터 아파트 실거래를 기준으로 합니다.",
+      "display_text": "가격은 2026년 5월부터 10월까지 계약된 전용 83~85제곱미터 아파트 실거래를 기준으로 합니다.",
+      "original_text": "가격은 2026년 5월부터 10월까지 계약된 전용 83~85제곱미터 아파트 실거래를 기준으로 합니다.",
+      "reading_text": "가격은 이천이십육 년 오 월부터 시월까지 계약된 전용 팔십삼에서 팔십오 제곱미터 아파트 실거래를 기준으로 합니다.",
+      "transformations": [
+        {
+          "source_start": 4,
+          "source_end": 8,
+          "source_text": "2026",
+          "spoken_start": 4,
+          "spoken_end": 10,
+          "spoken_text": "이천이십육 ",
+          "reason": "numeric_counter_or_identifier_value_preserved",
+          "independent_values": [
+            {
+              "source_value": "2026",
+              "decoded_value": "2026",
+              "unit": "number"
+            }
+          ],
+          "value_preserved": true
+        },
+        {
+          "source_start": 10,
+          "source_end": 11,
+          "source_text": "5",
+          "spoken_start": 12,
+          "spoken_end": 14,
+          "spoken_text": "오 ",
+          "reason": "numeric_counter_or_identifier_value_preserved",
+          "independent_values": [
+            {
+              "source_value": "5",
+              "decoded_value": "5",
+              "unit": "number"
+            }
+          ],
+          "value_preserved": true
+        },
+        {
+          "source_start": 15,
+          "source_end": 18,
+          "source_text": "10월",
+          "spoken_start": 18,
+          "spoken_end": 20,
+          "spoken_text": "시월",
+          "reason": "standard_calendar_month_allomorph_10_to_siwol",
+          "independent_values": [
+            {
+              "source_value": "10",
+              "decoded_value": "10",
+              "unit": "calendar_month"
+            }
+          ],
+          "value_preserved": true
+        },
+        {
+          "source_start": 28,
+          "source_end": 30,
+          "source_text": "83",
+          "spoken_start": 30,
+          "spoken_end": 33,
+          "spoken_text": "팔십삼",
+          "reason": "numeric_counter_or_identifier_value_preserved",
+          "independent_values": [
+            {
+              "source_value": "83",
+              "decoded_value": "83",
+              "unit": "number"
+            }
+          ],
+          "value_preserved": true
+        },
+        {
+          "source_start": 30,
+          "source_end": 31,
+          "source_text": "~",
+          "spoken_start": 33,
+          "spoken_end": 36,
+          "spoken_text": "에서 ",
+          "reason": "explicit_name_or_symbol_pronunciation",
+          "independent_values": [],
+          "value_preserved": true
+        },
+        {
+          "source_start": 31,
+          "source_end": 33,
+          "source_text": "85",
+          "spoken_start": 36,
+          "spoken_end": 40,
+          "spoken_text": "팔십오 ",
+          "reason": "numeric_counter_or_identifier_value_preserved",
+          "independent_values": [
+            {
+              "source_value": "85",
+              "decoded_value": "85",
+              "unit": "number"
+            }
+          ],
+          "value_preserved": true
+        }
+      ],
+      "character_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 4,
+          "reading_start": 0,
+          "reading_end": 4,
+          "kind": "identity"
+        },
+        {
+          "source_start": 4,
+          "source_end": 8,
+          "reading_start": 4,
+          "reading_end": 10,
+          "kind": "explicit_transform"
+        },
+        {
+          "source_start": 8,
+          "source_end": 10,
+          "reading_start": 10,
+          "reading_end": 12,
+          "kind": "identity"
+        },
+        {
+          "source_start": 10,
+          "source_end": 11,
+          "reading_start": 12,
+          "reading_end": 14,
+          "kind": "explicit_transform"
+        },
+        {
+          "source_start": 11,
+          "source_end": 15,
+          "reading_start": 14,
+          "reading_end": 18,
+          "kind": "identity"
+        },
+        {
+          "source_start": 15,
+          "source_end": 18,
+          "reading_start": 18,
+          "reading_end": 20,
+          "kind": "explicit_transform"
+        },
+        {
+          "source_start": 18,
+          "source_end": 28,
+          "reading_start": 20,
+          "reading_end": 30,
+          "kind": "identity"
+        },
+        {
+          "source_start": 28,
+          "source_end": 30,
+          "reading_start": 30,
+          "reading_end": 33,
+          "kind": "explicit_transform"
+        },
+        {
+          "source_start": 30,
+          "source_end": 31,
+          "reading_start": 33,
+          "reading_end": 36,
+          "kind": "explicit_transform"
+        },
+        {
+          "source_start": 31,
+          "source_end": 33,
+          "reading_start": 36,
+          "reading_end": 40,
+          "kind": "explicit_transform"
+        },
+        {
+          "source_start": 33,
+          "source_end": 56,
+          "reading_start": 40,
+          "reading_end": 63,
+          "kind": "identity"
+        }
+      ],
+      "display_roundtrip_exact": true,
+      "statement_type": "existing_displayed_transaction_criteria",
+      "price_role": null,
+      "screen_switch_id": "P01-CRITERIA-01",
+      "source_json_pointer": "/sentences/0/text",
+      "scene_display_char_start": 0,
+      "scene_display_char_end": 56,
+      "scene_reading_char_start": 0,
+      "scene_reading_char_end": 63,
+      "actual_listening": false
+    },
+    {
+      "id": "P01-CRITERIA-02",
+      "sentence_id": "P01-CRITERIA-02",
+      "scene_id": "P01-CRITERIA",
+      "text": "11월 3일 확인한 거래에서 취소 건을 빼고, 단지별로 가운데 값인 중위가격을 구했습니다.",
+      "display_text": "11월 3일 확인한 거래에서 취소 건을 빼고, 단지별로 가운데 값인 중위가격을 구했습니다.",
+      "original_text": "11월 3일 확인한 거래에서 취소 건을 빼고, 단지별로 가운데 값인 중위가격을 구했습니다.",
+      "reading_text": "십일 월 삼 일 확인한 거래에서 취소 건을 빼고, 단지별로 가운데 값인 중위가격을 구했습니다.",
+      "transformations": [
+        {
+          "source_start": 0,
+          "source_end": 2,
+          "source_text": "11",
+          "spoken_start": 0,
+          "spoken_end": 3,
+          "spoken_text": "십일 ",
+          "reason": "numeric_counter_or_identifier_value_preserved",
+          "independent_values": [
+            {
+              "source_value": "11",
+              "decoded_value": "11",
+              "unit": "number"
+            }
+          ],
+          "value_preserved": true
+        },
+        {
+          "source_start": 4,
+          "source_end": 5,
+          "source_text": "3",
+          "spoken_start": 5,
+          "spoken_end": 7,
+          "spoken_text": "삼 ",
+          "reason": "numeric_counter_or_identifier_value_preserved",
+          "independent_values": [
+            {
+              "source_value": "3",
+              "decoded_value": "3",
+              "unit": "number"
+            }
+          ],
+          "value_preserved": true
+        }
+      ],
+      "character_mapping": [
+        {
+          "source_start": 0,
+          "source_end": 2,
+          "reading_start": 0,
+          "reading_end": 3,
+          "kind": "explicit_transform"
+        },
+        {
+          "source_start": 2,
+          "source_end": 4,
+          "reading_start": 3,
+          "reading_end": 5,
+          "kind": "identity"
+        },
+        {
+          "source_start": 4,
+          "source_end": 5,
+          "reading_start": 5,
+          "reading_end": 7,
+          "kind": "explicit_transform"
+        },
+        {
+          "source_start": 5,
+          "source_end": 50,
+          "reading_start": 7,
+          "reading_end": 52,
+          "kind": "identity"
+        }
+      ],
+      "display_roundtrip_exact": true,
+      "statement_type": "existing_displayed_transaction_criteria",
+      "price_role": null,
+      "screen_switch_id": "P01-CRITERIA-02",
+      "source_json_pointer": "/sentences/1/text",
+      "scene_display_char_start": 57,
+      "scene_display_char_end": 107,
+      "scene_reading_char_start": 64,
+      "scene_reading_char_end": 116,
+      "actual_listening": false
+    }
+  ]
+}

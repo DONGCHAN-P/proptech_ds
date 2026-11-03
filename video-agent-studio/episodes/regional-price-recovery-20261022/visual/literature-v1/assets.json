@@ -1,0 +1,580 @@
+{
+  "task_id": "regional-literature-visual-v1-scenes",
+  "revision": "literature-visual-v1-scenes-contrast-v2",
+  "production_brief": {
+    "authority": "latest task packet + DESIGN_CONTRACT.md",
+    "canvas": [
+      1920,
+      1080
+    ],
+    "content_box": [
+      80,
+      205,
+      1760,
+      640
+    ],
+    "palette": {
+      "cream": "#f6f4ef",
+      "ink": "#173348",
+      "blue": "#286cda",
+      "gold_diagram": "#c29a44",
+      "muted_text": "#526872",
+      "gold_text": "#8b682c"
+    },
+    "font": "inherited local Pretendard 400/700",
+    "ownership": "only compositions/L002–L006.html and visual/literature-v1/{assets,handoff}.json",
+    "text": "24–32px labels; 52–76px core quantities; notes≥20px",
+    "timing": "provisional timing.json paragraph clips; no speech timing lock"
+  },
+  "inputs": [
+    {
+      "path": "outputs/literature-visual-v1/project/DESIGN_CONTRACT.md",
+      "sha256": "16940e9f3026f5d974624cdd6a344cfedc2fbb676cc4c2e48264e3c7656cf672"
+    },
+    {
+      "path": "outputs/literature-visual-v1/project/timing.json",
+      "sha256": "9d323f3f29288f94fe3e0371b9877a127d83a311ab84d07069ed4fbbad847c28"
+    },
+    {
+      "path": "outputs/literature-video-v1/내레이션_초안.md",
+      "sha256": "5f40c29d4a3e0ef5255ade11eaa63cb04c8093e2c3d1d0296873126707a26d9b"
+    },
+    {
+      "path": "outputs/literature-video-v1/장면표.json",
+      "sha256": "d61f0b1d9711e720929f0f594236c840fea782fa65cad30e9c9a13e6b437e8a9"
+    },
+    {
+      "path": "outputs/literature-video-v1/인용근거.json",
+      "sha256": "812bbde2d80476111ae1f9e5e2882bb94b3eb85c615910003b98e6015bfd3151"
+    }
+  ],
+  "assets": [
+    {
+      "asset_id": "L002_literature_svg_v1",
+      "scene_ids": [
+        "L002"
+      ],
+      "type": "animated_svg_explanatory_diagram",
+      "source_or_prompt": {
+        "approved_script": "outputs/literature-video-v1/내레이션_초안.md",
+        "claims": [
+          "E01",
+          "C02"
+        ],
+        "sources": [
+          "R1"
+        ],
+        "construction": "승인 문장을 자체 SVG 구조로 저술; 논문 표·도판 복제 없음"
+      },
+      "dimensions": {
+        "canvas": [
+          1920,
+          1080
+        ],
+        "svg_viewBox": [
+          0,
+          0,
+          1760,
+          640
+        ],
+        "viewport_origin": [
+          80,
+          205
+        ],
+        "fps": 30
+      },
+      "actual_file": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-visual-v1/project/compositions/L002.html",
+      "actual_place": null,
+      "AI": {
+        "assisted_code_authoring": true,
+        "generated_bitmap": false,
+        "label": "자체 SVG 개념도·가상 예시 또는 문헌 요약"
+      },
+      "usage_conditions": "승인 대본 범위의 자체 설명도. 실제 지도·목적지 강도·시장 비중·실측 통근시간으로 사용하지 않음. R1/R2/R5는 관련성, R3는 외생성 가정의 IV 추정, R4는 시점별 조건부 관계.",
+      "motion": "가구 1곳에서 2곳으로 자녀 이동; 가구 유형별 공간 순차 제시; R1 관련성 연결선; 이전 주거비 되짚기; 이동 구성 분기",
+      "beats": [
+        {
+          "id": "L002-P1",
+          "start": 3.0,
+          "duration": 6.0,
+          "meaning": "인구와 가구 단위"
+        },
+        {
+          "id": "L002-P2",
+          "start": 9.0,
+          "duration": 15.933333333333334,
+          "meaning": "세 사람 유지·한 집에서 두 집"
+        },
+        {
+          "id": "L002-P3",
+          "start": 24.933333333333334,
+          "duration": 14.6,
+          "meaning": "가구 구성과 필요 주거"
+        },
+        {
+          "id": "L002-P4",
+          "start": 39.53333333333333,
+          "duration": 18.333333333333332,
+          "meaning": "R1 관찰된 관련성"
+        },
+        {
+          "id": "L002-P5",
+          "start": 57.86666666666666,
+          "duration": 13.733333333333333,
+          "meaning": "주거비와 전출 해석"
+        },
+        {
+          "id": "L002-P6",
+          "start": 71.6,
+          "duration": 10.966666666666667,
+          "meaning": "누가·어디로·어떤 집"
+        }
+      ],
+      "still_motion": false,
+      "upscaled": false,
+      "sha256": "3f985a93639deb530dfaf0d341ed2228a36620834c58bc799b8722684713b072",
+      "review_status": {
+        "structural": "passed",
+        "local_chrome_samples": "4 samples per beat; no bounds/text overlaps/browser errors",
+        "reverse_seek": "visible geometry/opacity/path state matched",
+        "contrast_text_fix": "#607680→#526872; #c29a44→#8b682c; fill+inline style",
+        "final_text_nodes": 44,
+        "independent_assembled_media_qa": "main-owned, pending"
+      }
+    },
+    {
+      "asset_id": "L003_literature_svg_v1",
+      "scene_ids": [
+        "L003"
+      ],
+      "type": "animated_svg_explanatory_diagram",
+      "source_or_prompt": {
+        "approved_script": "outputs/literature-video-v1/내레이션_초안.md",
+        "claims": [
+          "C03"
+        ],
+        "sources": [
+          "R2"
+        ],
+        "construction": "승인 문장을 자체 SVG 구조로 저술; 논문 표·도판 복제 없음"
+      },
+      "dimensions": {
+        "canvas": [
+          1920,
+          1080
+        ],
+        "svg_viewBox": [
+          0,
+          0,
+          1760,
+          640
+        ],
+        "viewport_origin": [
+          80,
+          205
+        ],
+        "fps": 30
+      },
+      "actual_file": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-visual-v1/project/compositions/L003.html",
+      "actual_place": null,
+      "AI": {
+        "assisted_code_authoring": true,
+        "generated_bitmap": false,
+        "label": "자체 SVG 개념도·가상 예시 또는 문헌 요약"
+      },
+      "usage_conditions": "승인 대본 범위의 자체 설명도. 실제 지도·목적지 강도·시장 비중·실측 통근시간으로 사용하지 않음. R1/R2/R5는 관련성, R3는 외생성 가정의 IV 추정, R4는 시점별 조건부 관계.",
+      "motion": "가구에서 임차·매수 선택으로 분기; 가구별 평면도 순차 제시; 자산 조건과 소득·넓은 면적 임차 관계; 면적×점유 구조; 주택시장 분기",
+      "beats": [
+        {
+          "id": "L003-P1",
+          "start": 3.0,
+          "duration": 9.266666666666667,
+          "meaning": "주거 필요와 매수 선택"
+        },
+        {
+          "id": "L003-P2",
+          "start": 12.266666666666667,
+          "duration": 11.433333333333334,
+          "meaning": "월세·전세·매수 예시"
+        },
+        {
+          "id": "L003-P3",
+          "start": 23.700000000000003,
+          "duration": 17.866666666666667,
+          "meaning": "2020 주거실태조사 조건부 선택 관계"
+        },
+        {
+          "id": "L003-P4",
+          "start": 41.56666666666667,
+          "duration": 9.366666666666667,
+          "meaning": "면적×점유 방식"
+        },
+        {
+          "id": "L003-P5",
+          "start": 50.93333333333334,
+          "duration": 8.3,
+          "meaning": "가구 구성부터 실제 선택까지"
+        }
+      ],
+      "still_motion": false,
+      "upscaled": false,
+      "sha256": "1ff4ad1d46be70c22230f7ecc091ffbbde9206008b3ee95da954a783cba8712f",
+      "review_status": {
+        "structural": "passed",
+        "local_chrome_samples": "4 samples per beat; no bounds/text overlaps/browser errors",
+        "reverse_seek": "visible geometry/opacity/path state matched",
+        "contrast_text_fix": "#607680→#526872; #c29a44→#8b682c; fill+inline style",
+        "final_text_nodes": 36,
+        "independent_assembled_media_qa": "main-owned, pending"
+      }
+    },
+    {
+      "asset_id": "L004_literature_svg_v1",
+      "scene_ids": [
+        "L004"
+      ],
+      "type": "animated_svg_explanatory_diagram",
+      "source_or_prompt": {
+        "approved_script": "outputs/literature-video-v1/내레이션_초안.md",
+        "claims": [
+          "C04"
+        ],
+        "sources": [
+          "R3"
+        ],
+        "construction": "승인 문장을 자체 SVG 구조로 저술; 논문 표·도판 복제 없음"
+      },
+      "dimensions": {
+        "canvas": [
+          1920,
+          1080
+        ],
+        "svg_viewBox": [
+          0,
+          0,
+          1760,
+          640
+        ],
+        "viewport_origin": [
+          80,
+          205
+        ],
+        "fps": 30
+      },
+      "actual_file": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-visual-v1/project/compositions/L004.html",
+      "actual_place": null,
+      "AI": {
+        "assisted_code_authoring": true,
+        "generated_bitmap": false,
+        "label": "자체 SVG 개념도·가상 예시 또는 문헌 요약"
+      },
+      "usage_conditions": "승인 대본 범위의 자체 설명도. 실제 지도·목적지 강도·시장 비중·실측 통근시간으로 사용하지 않음. R1/R2/R5는 관련성, R3는 외생성 가정의 IV 추정, R4는 시점별 조건부 관계.",
+      "motion": "퇴거·거주 공백·입주 순차 연결; 대체 거주로 인물 이동; 실증 연구창 안 이주 구간 제시; IV 추정 관계 분기; 원래 집의 일시 감소와 목적지 수요; 실제 이주기록 확인 구조",
+      "beats": [
+        {
+          "id": "L004-P1",
+          "start": 3.0,
+          "duration": 6.0,
+          "meaning": "재건축 시간표"
+        },
+        {
+          "id": "L004-P2",
+          "start": 9.0,
+          "duration": 15.2,
+          "meaning": "대체 거주 공백"
+        },
+        {
+          "id": "L004-P3",
+          "start": 24.2,
+          "duration": 14.466666666666667,
+          "meaning": "2011Q1–2014Q4 연구창·2012.8–2013.5 주요 이주"
+        },
+        {
+          "id": "L004-P4",
+          "start": 38.666666666666664,
+          "duration": 17.866666666666667,
+          "meaning": "59㎡ 매매·환산 월세 양의 IV 결과"
+        },
+        {
+          "id": "L004-P5",
+          "start": 56.53333333333333,
+          "duration": 16.033333333333335,
+          "meaning": "동일 사업의 두 공간"
+        },
+        {
+          "id": "L004-P6",
+          "start": 72.56666666666666,
+          "duration": 13.0,
+          "meaning": "공급과 실제 이동 기록 확인"
+        }
+      ],
+      "still_motion": false,
+      "upscaled": false,
+      "sha256": "b556a72985d787670de5d30447b400075a123153874f387ca6d651f9effaef81",
+      "review_status": {
+        "structural": "passed",
+        "local_chrome_samples": "4 samples per beat; no bounds/text overlaps/browser errors",
+        "reverse_seek": "visible geometry/opacity/path state matched",
+        "contrast_text_fix": "#607680→#526872; #c29a44→#8b682c; fill+inline style",
+        "final_text_nodes": 47,
+        "independent_assembled_media_qa": "main-owned, pending"
+      }
+    },
+    {
+      "asset_id": "L005_literature_svg_v1",
+      "scene_ids": [
+        "L005"
+      ],
+      "type": "animated_svg_explanatory_diagram",
+      "source_or_prompt": {
+        "approved_script": "outputs/literature-video-v1/내레이션_초안.md",
+        "claims": [
+          "E02",
+          "C05"
+        ],
+        "sources": [
+          "R4"
+        ],
+        "construction": "승인 문장을 자체 SVG 구조로 저술; 논문 표·도판 복제 없음"
+      },
+      "dimensions": {
+        "canvas": [
+          1920,
+          1080
+        ],
+        "svg_viewBox": [
+          0,
+          0,
+          1760,
+          640
+        ],
+        "viewport_origin": [
+          80,
+          205
+        ],
+        "fps": 30
+      },
+      "actual_file": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-visual-v1/project/compositions/L005.html",
+      "actual_place": null,
+      "AI": {
+        "assisted_code_authoring": true,
+        "generated_bitmap": false,
+        "label": "자체 SVG 개념도·가상 예시 또는 문헌 요약"
+      },
+      "usage_conditions": "승인 대본 범위의 자체 설명도. 실제 지도·목적지 강도·시장 비중·실측 통근시간으로 사용하지 않음. R1/R2/R5는 관련성, R3는 외생성 가정의 IV 추정, R4는 시점별 조건부 관계.",
+      "motion": "준공 집 아이콘 제시; 1칸100채 단위의 멸실 취소와 순증 계산; 200 대1000 막대 확장; 입주 공백과 면적·예산·위치 확인; 준공 이후 관측 시점 분리; 수량·순증·날짜·조건 연결",
+      "beats": [
+        {
+          "id": "L005-P1",
+          "start": 3.0,
+          "duration": 6.0,
+          "meaning": "준공 1000채의 질문"
+        },
+        {
+          "id": "L005-P2",
+          "start": 9.0,
+          "duration": 18.6,
+          "meaning": "1000−800=200 / 1000−0=1000"
+        },
+        {
+          "id": "L005-P3",
+          "start": 27.6,
+          "duration": 6.0,
+          "meaning": "가상 순증 비교·총재고 아님"
+        },
+        {
+          "id": "L005-P4",
+          "start": 33.6,
+          "duration": 15.8,
+          "meaning": "날짜와 거주 조건"
+        },
+        {
+          "id": "L005-P5",
+          "start": 49.400000000000006,
+          "duration": 9.5,
+          "meaning": "R4 관측 시점별 조건부 관계"
+        },
+        {
+          "id": "L005-P6",
+          "start": 58.900000000000006,
+          "duration": 12.766666666666667,
+          "meaning": "공급을 읽는 순서"
+        }
+      ],
+      "still_motion": false,
+      "upscaled": false,
+      "sha256": "57937892d3e2a6fe631fd2f7a1253f3b40fc8dd21381f73dd3d9ecc95c511a56",
+      "review_status": {
+        "structural": "passed",
+        "local_chrome_samples": "4 samples per beat; no bounds/text overlaps/browser errors",
+        "reverse_seek": "visible geometry/opacity/path state matched",
+        "contrast_text_fix": "#607680→#526872; #c29a44→#8b682c; fill+inline style",
+        "final_text_nodes": 54,
+        "independent_assembled_media_qa": "main-owned, pending"
+      }
+    },
+    {
+      "asset_id": "L006_literature_svg_v1",
+      "scene_ids": [
+        "L006"
+      ],
+      "type": "animated_svg_explanatory_diagram",
+      "source_or_prompt": {
+        "approved_script": "outputs/literature-video-v1/내레이션_초안.md",
+        "claims": [
+          "E03",
+          "C06",
+          "C07"
+        ],
+        "sources": [
+          "R5",
+          "R6"
+        ],
+        "construction": "승인 문장을 자체 SVG 구조로 저술; 논문 표·도판 복제 없음"
+      },
+      "dimensions": {
+        "canvas": [
+          1920,
+          1080
+        ],
+        "svg_viewBox": [
+          0,
+          0,
+          1760,
+          640
+        ],
+        "viewport_origin": [
+          80,
+          205
+        ],
+        "fps": 30
+      },
+      "actual_file": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-visual-v1/project/compositions/L006.html",
+      "actual_place": null,
+      "AI": {
+        "assisted_code_authoring": true,
+        "generated_bitmap": false,
+        "label": "자체 SVG 개념도·가상 예시 또는 문헌 요약"
+      },
+      "usage_conditions": "승인 대본 범위의 자체 설명도. 실제 지도·목적지 강도·시장 비중·실측 통근시간으로 사용하지 않음. R1/R2/R5는 관련성, R3는 외생성 가정의 IV 추정, R4는 시점별 조건부 관계.",
+      "motion": "집·교통·직장 경로 그리기; 역 거리 동일 후 직접 연결/환승·대기 경로 구분; 통근 유입·유출 네트워크; DIT와 도달 일자리 지표 분리; 통행 과정·시간대 순차 제시; 운영 실선과 계획 점선; 경기 주거지의 두 일자리 연결",
+      "beats": [
+        {
+          "id": "L006-P1",
+          "start": 3.0,
+          "duration": 6.0,
+          "meaning": "주거지와 직장"
+        },
+        {
+          "id": "L006-P2",
+          "start": 9.0,
+          "duration": 15.333333333333334,
+          "meaning": "역 거리와 통근 조건"
+        },
+        {
+          "id": "L006-P3",
+          "start": 24.333333333333336,
+          "duration": 18.1,
+          "meaning": "DIT와 평균가격의 횡단면 관련성"
+        },
+        {
+          "id": "L006-P4",
+          "start": 42.43333333333334,
+          "duration": 9.633333333333333,
+          "meaning": "DIT와 시간 내 도달 일자리 구분"
+        },
+        {
+          "id": "L006-P5",
+          "start": 52.06666666666667,
+          "duration": 10.333333333333334,
+          "meaning": "ITF 접근성 과정"
+        },
+        {
+          "id": "L006-P6",
+          "start": 62.400000000000006,
+          "duration": 14.833333333333334,
+          "meaning": "운영·계획 조건 구분"
+        },
+        {
+          "id": "L006-P7",
+          "start": 77.23333333333333,
+          "duration": 11.066666666666666,
+          "meaning": "행정구역 밖·안 일자리 연결"
+        }
+      ],
+      "still_motion": false,
+      "upscaled": false,
+      "sha256": "657340f9243eca5b520b06943fb2c3231f867cae638dae009ef4045f4b8ec983",
+      "review_status": {
+        "structural": "passed",
+        "local_chrome_samples": "4 samples per beat; no bounds/text overlaps/browser errors",
+        "reverse_seek": "visible geometry/opacity/path state matched",
+        "contrast_text_fix": "#607680→#526872; #c29a44→#8b682c; fill+inline style",
+        "final_text_nodes": 60,
+        "independent_assembled_media_qa": "main-owned, pending"
+      }
+    }
+  ],
+  "validation": {
+    "structural": {
+      "files": 5,
+      "beats": 30,
+      "duplicate_ids": 0,
+      "timing_mismatches": 0,
+      "one_paused_timeline_per_scene": true,
+      "template_style_root_script": true
+    },
+    "isolated_browser": {
+      "browser": "installed Chrome via Python Playwright",
+      "samples": 120,
+      "bounds_findings": 0,
+      "text_overlap_findings": 0,
+      "browser_errors": 0,
+      "reverse_seek_mismatches": 0,
+      "scope": "fragments mounted with shipped common CSS/fonts/GSAP, no assembled root or continuous playback"
+    },
+    "sample_frames_actually_viewed": [
+      "L002-P2",
+      "L005-P2",
+      "L003-P3",
+      "L004-P3",
+      "L004-P4",
+      "L006-P3",
+      "L006-P4",
+      "L006-P7"
+    ],
+    "contrast": {
+      "changed_text_tags": 111,
+      "fill_and_style_agree": true,
+      "non_text_markup_unchanged_by_contrast_patch": true,
+      "diagram_colors_unchanged": true,
+      "ratios": {
+        "#526872": {
+          "#f6f4ef": 5.334,
+          "#fffef9": 5.806
+        },
+        "#8b682c": {
+          "#f6f4ef": 4.644,
+          "#fffef9": 5.055
+        }
+      },
+      "geometry_check_reuse": "only text color start-tag attributes changed; prior layout/seek evidence reused"
+    },
+    "main_reported": "User reports mounted lint/runtime/layout passed; not independently rerun by visual worker",
+    "not_performed": [
+      "TTS",
+      "paid service",
+      "media render",
+      "continuous playback",
+      "audio listening",
+      "upload",
+      "Telegram",
+      "full paper re-research"
+    ]
+  },
+  "open_risks": [
+    "Text-based provisional timing; voice not fixed",
+    "Main owns captions/head/source overlays, assembled frame verification, independent QA and renderer"
+  ],
+  "next_role": "director/editor → independent QA"
+}

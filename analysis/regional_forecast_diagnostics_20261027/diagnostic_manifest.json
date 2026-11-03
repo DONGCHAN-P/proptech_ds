@@ -1,0 +1,25 @@
+{
+  "models": [
+    "v3_hgb",
+    "hgb_full_120m",
+    "hgb_t2_law",
+    "hgb_t2_120m"
+  ],
+  "common_cohort_targets_verified": true,
+  "forecast_rows_per_model": 2222,
+  "scored_rows_per_model": 2141,
+  "unscored_rows_per_model": 81,
+  "origins": 19,
+  "feature_snapshot_sha256": "dda0e9a059f5ca349ba1ae58d7c69ded7570ecc895b677f40e922e6685186515",
+  "balanced_contribution_sum_verified": true,
+  "all_diagnostics_post_hoc": true,
+  "historical_first_vintages_verified": false,
+  "training_factor": "A/C: cumulative since2009; B/D: up to120months since2007; includes start-year difference",
+  "lag_factor": "post2020May t2 sensitivity includes quality fallback; revised snapshots",
+  "as_of": "2026-10-27",
+  "sources": {
+    "releases\\6297866c5207816ec85c": "93c649b6a3066fb10de3395b1be8f6265af4f9bb5942f5527d65e3305ce73331",
+    "timeliness_releases\\2a61ece4c818ecf30e49": "237b5382e756b9fb2039f8435f870e61a593b2577a6df8237eee55264952c679",
+    "feature_panel.parquet": "dda0e9a059f5ca349ba1ae58d7c69ded7570ecc895b677f40e922e6685186515"
+  }
+}

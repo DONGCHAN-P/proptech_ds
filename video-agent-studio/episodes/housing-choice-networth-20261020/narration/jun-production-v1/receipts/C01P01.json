@@ -1,0 +1,62 @@
+{
+  "paragraph_id": "C01P01",
+  "scene_id": "C01",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:00:16.511Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "ee290a994aa4bb67fe1f68b8e4bf88785c7564d74dc2af71c250f81eb52cbcc5",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "같은 아파트에서 같은 기간을 살아도, 집을 산 가구와 전세로 산 가구, 월세로 산 가구의 자산은 다르게 남습니다. 집값 상승률과 주식 수익률만 나란히 놓으면 이 차이를 설명하기 어렵습니다. 세 가구 모두 매달 살 집이 필요하고, 그 집을 마련하는 데 들어가는 돈이 다르기 때문입니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 158,
+  "characters": 158,
+  "actual_credits": 63,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17442,
+    "character_limit": 40000,
+    "included_remaining": 22558,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "19NFU9gCvIqGLo6u0UXz",
+    "x-request-id": null,
+    "character-cost": "63",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:00:15 GMT"
+  },
+  "pcm_samples": 829080,
+  "pcm_duration_s": 18.8,
+  "provider_last_spoken_end_s": 18.88,
+  "artifact_sha256": {
+    "paragraphs/C01P01/audio.mp3": "c8e39a7e8117893c72cc7140d7d3bba0e4b6712083c3f5e110b61fd46483c721",
+    "paragraphs/C01P01/audio.wav": "d253a535940e8c72725e5bdd9340a8b82e2148d82c6a4fd260b99f3bf5bf57eb",
+    "paragraphs/C01P01/alignment.json": "8e5f23e81c875dec1bb4c9c35675f74d2a9b8d36ca7f8366555135924303f609",
+    "paragraphs/C01P01/normalized_alignment.json": "8e5f23e81c875dec1bb4c9c35675f74d2a9b8d36ca7f8366555135924303f609"
+  },
+  "account_after": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17442,
+    "character_limit": 40000,
+    "included_remaining": 22558,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_observed_delta": 0,
+  "completed_at_utc": "2026-10-26T06:00:26.367Z"
+}

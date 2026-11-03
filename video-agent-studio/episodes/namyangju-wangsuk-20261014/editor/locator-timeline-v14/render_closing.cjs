@@ -1,0 +1,5 @@
+const path=require('path'),R=path.resolve(__dirname,'../../../../..'),out=path.resolve(__dirname,'../../outputs/locator-timeline-v14');
+const {bundle}=require(path.join(R,'video/node_modules/@remotion/bundler'));
+const {selectComposition,renderMedia}=require(path.join(R,'video/node_modules/@remotion/renderer'));
+const browserExecutable=path.join(R,'video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe');
+(async()=>{const serveUrl=await bundle({entryPoint:path.join(R,'video/src/namyangju-v14/closing_entry.tsx'),outDir:path.join(__dirname,'closing-restriction-bundle'),publicDir:path.join(R,'video/public')});const composition=await selectComposition({serveUrl,browserExecutable,id:'NewClosingV14'});let last=-1;await renderMedia({serveUrl,browserExecutable,composition,codec:'h264',crf:18,concurrency:4,outputLocation:path.join(out,'new_closing_v14_video.mp4'),onProgress:p=>{const n=Math.floor(p.progress*10);if(n!==last){last=n;console.log(`${n*10}% frames ${p.renderedFrames}`)}}});console.log('new closing render complete')})().catch(e=>{console.error(e.stack);process.exitCode=1});

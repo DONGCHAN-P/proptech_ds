@@ -1,0 +1,1 @@
+﻿import React from 'react';import {Composition,registerRoot} from 'remotion';import {V8Production} from './Production';registerRoot(()=><Composition id="ChangneungV8Production" component={V8Production} durationInFrames={60} fps={30} width={1920} height={1080} defaultProps={{mode:'plan'}}/>);

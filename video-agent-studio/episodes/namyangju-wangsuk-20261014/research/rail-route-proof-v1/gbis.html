@@ -1,0 +1,2113 @@
+
+
+
+
+
+  
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta property="og:image" content="">
+<meta name="application-name" content="경기버스정보" />
+<meta name="description" content="경기버스정보" />
+<meta name="format-detection" content="telephone=no, address=no, email=no" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://" />
+<meta property="og:title" content="경기버스정보" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="경기버스정보" /> 
+<title>마을버스-노선현황 | 경기버스정보</title>
+<!-- google Analytics start -->
+<script type="text/javascript">
+//   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+//   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+//   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+//   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+//   ga('create', 'UA-22388487-2', 'auto');
+//   ga('send', 'pageview');
+</script>
+<!-- google Analytics end -->
+<!-- baepro 20140915 -->
+<!-- AceCounter Log Gathering Script V.71.2010011401 -->
+<script type="text/javascript">
+/*
+if(typeof _GUL == 'undefined'){
+	var _GUL = 'gbis.loginside.co.kr';
+	var _GPT='80';
+	var _SGPT='443';
+	var _AIMG = new Image();
+	var _bn=navigator.appName;
+	var _PR = location.protocol=="https:"?"http://"+_GUL+":"+_GPT:"http://"+_GUL+":"+_GPT;
+	//var _PR = location.protocol=="https:"?"https://"+_GUL+":"+_SGPT:"http://"+_GUL+":"+_GPT;
+	if( _bn.indexOf("Netscape") > -1 || _bn=="Mozilla"){
+		setTimeout("_AIMG.src = _PR+'/?cookie';",1); 
+	} else{
+		_AIMG.src = _PR+'/?cookie';
+	};
+	document.write(unescape("%3Cscript type='text/javascript' src='/gbis2014/js/acecounter/acecounter_V70.js'%3E%3C/script%3E"));
+}
+*/
+//alert('');
+</script>
+<!-- AceCounter Log Gathering Script End -->
+
+<script type="text/javascript" src="/gbis2014/js/clickwhy/UserScriptConf.js"></script>
+
+<link rel="shortcut icon" type="image/x-icon" href="https://www.gbis.go.kr/gbis2014/images/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/gbis2014/resources/css/style.css?ver1.81" />
+<link rel="stylesheet" type="text/css" href="/gbis2014/resources/css/sub.css?ver1.20" />
+<link rel="stylesheet" type="text/css" href="/gbis2014/resources/css/responsive.css" />
+<link rel="stylesheet" type="text/css" href="/gbis2014/resources/css/font-awesome.min.css" />
+
+<script type="text/javascript" src="/gbis2014/js/jquery-1.7.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.7.js" type="text/javascript"></script>
+<script type="text/javascript" src="/gbis2014/js/jquery.bpopup.min.js"></script>
+<script type="text/javascript" src="/gbis2014/js/common.js?ver=1.41"></script>
+<script type="text/javascript" src="/gbis2014/resources/js/gg_main.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+    // 컨텍스트 패스를 써야하는 서비스 이므로 전역변수 설정
+    var _CONTEXT_PATH = ""; 
+
+
+	// 비밀번호으로 이동시 ssl이 적용되어 있으면
+    // http로 변경 후 페이지 이동
+    function goMove(obj){
+    	var urlAddr = location.href;
+    	var urlProtocol = window.location.protocol;
+    	var urlHostNm = window.location.hostname;
+    	document.location.href = obj;
+    	
+    	//if(urlProtocol == "http:"){
+	   	//	document.location.href = "https://"+urlHostNm + obj;
+    	//}else{
+    	//	document.location.href = obj;
+    	//}
+    }
+//]]>
+</script>
+</head>
+<body>
+	<div class="skip">
+	        <a href="#" tabindex="0">본문 바로가기</a>
+	</div>
+<input type="hidden" id="flag" name="flag" value="Y"/>
+
+<!-- ///////////////////////// WA 웹접근성 ///////////////////////////////////////////////////// -->
+	<script>
+	    $('.skip a').on('focus', function(){
+	        $(this).stop().animate({"top":0, "opacity":1});
+	    });
+	    $('.skip a').on('click', function(){
+	        $(this).stop().animate({"top":"-30px", "opacity":0});
+	        $( '.gg_mask' ).slideUp();
+	        $('.skip_to').attr('tabindex','0').focus();
+	        if( $('#focus_01').length ){
+				$('#focus_01').attr('tabindex','0').focus();
+			}
+	    });
+	    $('.skip a').on('focusout', function(){
+	        $(this).stop().animate({"top":"-30px", "opacity":0});
+	    });
+	</script>
+<script type="text/javascript" src="/resources/js/search_cash.js"></script>
+<script type="text/javascript" src="/gbis2014/js/businfo/mtrbsRoute.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+    $(function(){
+    	$('#css2').remove();
+		$('#css3').remove();
+		$('#css4').remove();
+		$('#css5').remove();
+		$('#css6').remove();
+    })
+    
+    var errMsg = "";
+    
+    function onErrorMsg() {
+        if(errMsg != "") {
+            alert(errMsg);
+        }
+    }
+
+    function searchTownBus() {
+	    gForm.action    = "/service/busInfo/townBus.action";
+    	gForm.cmd.value = "townBus";
+    	gForm.target    = "_self";
+		gForm.submit();
+
+    }
+
+    function jsExcel() {
+        document.gForm.target = "_self";
+        document.gForm.action = "/excel/service/busInfo/townBus/townBusListExcel";
+        document.gForm.submit();
+
+     }
+
+    //프린터 설정
+    function jsPrint() {
+    	var opt = "width=950, height=600, status=no, toolbar=no, menubar=no, scrollbars=yes";
+    	var url= "/popup/commons/template/printAction.action";
+    	window.open(url, "", opt);
+    }
+    
+  //]]> 
+</script>
+<!--바로가기 시작-->
+<dl class="hidden">
+	<dt>바로가기메뉴</dt>
+        <dd><a href="#smenu">메뉴 바로가기</a></dd>
+		<dd><a href="#s_content">인허가 노선 바로가기</a></dd>					
+</dl>
+<!--바로가기 끝-->
+
+
+<!--header 시작-->
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	
+	// 날씨조회
+	fnWeatherSearch();
+	
+	setCookie("weatherChange"	, "2", 365 );
+	$("#main_header_wrap #weatherCode").val(getCookie("weatherCode"));
+	$("#main_header_wrap #weatherName").val(getCookie("weatherName"));
+});
+
+
+//기상청날씨 조회
+function fnWeatherSearch(){
+	
+	var obj = "";
+	
+	var weatherCode = getCookie("weatherCode");
+	
+  if (weatherCode != "") {
+      obj = weatherCode;
+  } else {
+  	obj = "41115";
+  	
+  }
+	
+	var url = "/gbis2014/main.action";
+	var data = 'cmd=getWeatherJson';
+		data  += '&code=' + obj;
+	
+	$.ajax({
+		type: "post",
+		contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+		dataType: "json",
+		url: url,
+		data: data,
+		success: resultWeatherSuccess
+	});
+}
+
+//날씨결과값
+function resultWeatherSuccess(data){
+	
+	if(data.success == true) {
+		
+		//오늘날짜,최저기온,최고기온,요일
+		var todayList = data.result.todayList;
+		
+		var todayWeather = data.result.weatherList;
+		
+		if(todayWeather.length <= 0){
+			
+			weather = "w1";
+			weatherText = "맑음";
+			todayValue = "21";
+			
+		}else{
+			
+			//강수형태 코드 : 없음(0), 비(1), 비/눈(2), 눈(3), 소나기(4)
+			var rainValue = todayWeather[0].weatherRain;
+		
+			//하늘상태 코드 : 맑음(1), 구름많음(3), 흐림(4)
+			var skyValue = todayWeather[1].weatherSky;
+			
+			//오늘 온도----------------------------------------------------------------------------------------/
+			var todayValue = todayWeather[2].weatherValue;
+			
+			var weather = "";	
+			var weatherText = "";
+			
+			//하늘/강수 형태
+			if(skyValue == "1" || rainValue =="0" || skyValue == ""){
+				
+				if(skyValue == "1"){
+					
+					weather = "w1";
+					weatherText = "맑음";
+					
+				}
+				
+				//동네예보 하늘상태 변경(구름조금 삭제)
+				/*else if(skyValue == "2"){
+					
+					weather = "w2";
+					weatherText = "구름조금";
+					
+				}*/
+				else if(skyValue == "3"){
+					weather = "w3";
+					weatherText = "구름많음";
+					
+				}else if(skyValue == "4"){
+					weather = "w6";
+					weatherText = "흐림";
+				}
+				
+			}else if(rainValue == "1"){
+				
+				weather = "w4";
+				weatherText = "비";
+						
+			}else if(rainValue == "2"){
+				
+				weather = "w8";
+				weatherText = "비/눈";
+		
+			}else if(rainValue == "3"){
+				
+				weather = "w5";
+				weatherText = "눈";
+				
+			//동네예보 강수형태 변경(소나기 추가)
+			}else if(rainValue == "4"){
+				//기존 비 이미지 활용
+				weather = "w4";
+				weatherText = "소나기";
+				
+			}
+		}
+		
+		
+		//내일 최저온도------------------------------------------------------------------------------/
+		var toMinList = data.result.tomorrowMinList;
+		
+		var toMinRain = "";
+		var toMinSky = "";
+		
+		if(toMinList.length > 0){
+			
+			toMinSky = toMinList[1].weatherSky;
+			toMinRain = toMinList[0].weatherRain;
+		
+		}else{
+			
+			toMinRain = "0";
+			toMinSky = "1";
+		}
+		
+		
+		//내일최저
+		var toMinWeather = "";	
+		var toMinWeatherText = "";
+		
+		if(toMinSky == "1" || toMinSky == "undefined" || toMinRain == "0"){
+			
+			if(toMinSky == "1"){
+				
+				toMinWeather = "w1";
+				toMinWeatherText = "맑음";
+				
+			}
+			//동네예보 하늘상태 변경(구름조금 삭제)
+			/*else if(toMinSky == "2"){
+				
+				toMinWeather = "s2";
+				toMinWeatherText = "구름조금";
+				
+			}*/
+			else if(toMinSky == "3"){
+				toMinWeather = "w3";
+				toMinWeatherText = "구름많음";
+				
+			}else if(toMinSky == "4"){
+				toMinWeather = "w6";
+				toMinWeatherText = "흐림";
+			}
+			
+		}else if(toMinRain == "1"){
+			
+			toMinWeather = "w4";
+			toMinWeatherText = "비";
+			
+		}else if(toMinRain == "2"){
+			
+			toMinWeather = "w8";
+			toMinWeatherText = "눈/비";
+			
+		}else if(toMinRain == "3"){
+			
+			toMinWeather = "w5";
+			toMinWeatherText = "눈";
+		
+		//동네예보 강수형태 변경(소나기 추가)
+		}else if(toMinRain == "4"){
+			//기존 비 이미지 활용
+			toMinWeather = "w4";
+			toMinWeatherText = "소나기";
+			
+		}
+		
+		//내일최고온도
+		var toMaxList = data.result.tomorrowMaxList;
+		
+		var toMaxRain = "";
+		var toMaxSky = "";
+		
+		if(toMaxList.length > 0) {
+			
+			toMaxRain = toMaxList[0].weatherRain;
+			toMaxSky = toMaxList[1].weatherSky;
+			
+		}else{
+			
+			toMaxRain = "0";
+			toMaxSky = "1";
+			
+		}
+		
+		
+		//내일최고
+		var toMaxWeather = "";	
+		var toMaxWeatherText = "";
+		
+		if(toMaxSky == "1" || toMaxRain == "0"){
+
+			if(toMaxSky == "1"){
+				
+				toMaxWeather = "w1";
+				toMaxWeatherText = "맑음";
+				
+			}
+			//동네예보 하늘상태 변경(구름조금 삭제)
+			/*else if(toMaxSky == "2"){
+				
+				toMaxWeather = "s2";
+				toMaxWeatherText = "구름조금";
+				
+			}*/
+			else if(toMaxSky == "3"){
+				toMaxWeather = "w3";
+				toMaxWeatherText = "구름많음";
+				
+			}else if(toMaxSky == "4"){
+				toMaxWeather = "w6";
+				toMaxWeatherText = "흐림";
+			}
+			
+			
+		}else if(toMaxRain == "1"){
+			
+			toMaxWeather = "w4";
+			toMaxWeatherText = "비";
+			
+			
+		}else if(toMaxRain == "2"){
+			
+			toMaxWeather = "w8";
+			toMaxWeatherText = "눈/비";
+		
+		}else if(toMaxRain == "3"){
+			
+			toMaxWeather = "w5";
+			toMaxWeatherText = "눈";
+		
+		//동네예보 강수형태 변경(소나기 추가)
+		}else if(toMaxRain == "4"){
+			//기존 비 이미지 활용
+			toMaxWeather = "w4";
+			toMaxWeatherText = "소나기";
+			
+		}
+		
+		var tomorrowWeatherMin = toMinWeather;
+		var tomorrowWeatherMax = toMaxWeather;
+		
+		
+		if(tomorrowWeatherMin == "s4" || tomorrowWeatherMax == "s4"){
+			toMinWeather = "w4";
+		}
+		var day = todayList[0].today;
+		var week = todayList[0].week;
+		
+		
+		
+		/**지역설정 **********************/
+		var getweatherNm = getCookie("weatherName");
+		
+	    if (getweatherNm != "") {
+	    	weatherNm = getweatherNm;
+	    } else {
+	    	weatherNm = "수원";
+	    	
+	    }
+		
+		/****************************/
+		if(toMinWeather == "") {
+			
+			toMinWeather = "w1";
+			toMinWeatherText = "맑음";
+			
+		}
+		
+		/* 기존 로직 삭제
+		var list = "";
+		list += "<h3 class='sec_tit'>경기도날씨</h3>";
+		list += 	"<div class='status'>" ;
+		list += 		"<span class='date'><em>";
+		list += 			day.substr(0,2) + "." + day.substr(2,2) + "(" + week.substr(0,1) + ")";
+		list += 		"</em></span>";
+		list += 		"<span class='area'><em>" + weatherNm +"</em></span>";
+		list += 			"<a href='javascript:weatherBtn(1);' class='set'>변경/설정</a>";
+		list +=			"</div>";
+		list += 		"<div class='today'>";
+		list += 			"<span class='ico'>";
+		list += 				"<img src='/gbis2014/images/weather/" + weather + ".gif' alt='" + weatherText + "' />";
+		list +=				"</span>";
+		list += 			"<span class='tit'>현재</span>";
+		list += 			"<span class='state'>" + weatherText + "</span>";
+		list += 			"<span class='temp'><span class='plus'>" + todayValue + "℃</span></span>";
+		list += 		"</div>";
+		list += 		"<div class='tomorrow'>";
+		list += 			"<span class='ico'><img src='/gbis2014/images/weather/" + toMinWeather + ".gif' alt='" + toMinWeatherText + "' /></span>";
+		list += 			"<span class='tit'>내일</span>";
+		list += 			"<span class='state'>"+ toMinWeatherText +"</span>";
+		list += 			"<span class='temp'><span class='minus'>" + todayList[0].tomorroMin + "℃</span>";
+		list += 				"/";
+		list += 			"<span class='plus'>" + todayList[0].tomorroMax + "℃</span></span>";
+		list += 		"<div>";
+		*/
+		
+		$("#main_header_wrap .weather .city").html(weatherNm);
+		$("#main_header_wrap .weather .w_img").html("<img src='/gbis2014/resources/img/" + weather + ".png' alt='" + weatherText + "' />");
+		$("#main_header_wrap .weather .tem").html(todayValue + "℃");
+		
+	} else {
+		alert("조회 실패!!!");
+	}
+}
+
+//변경설정
+function weatherBtn(obj) {
+	
+	if(obj == "1") {	//변경
+		
+		$("#main_header_wrap .weather .weather_pop").fadeIn('fast');
+		
+	}else if(obj == "2"){//적용
+		
+		setCookie("weatherChange"	, "2", 365 );
+		setCookie("weatherCode"		,$("#main_header_wrap #weatherCode").val(), 365 );
+		setCookie("weatherName"		,$("#main_header_wrap #weatherName").val(), 365 );
+		
+		fnWeatherSearch();
+		
+		$("#main_header_wrap .weather .weather_pop").fadeOut('fast');
+				
+	}else if(obj == "3"){ //취소
+		
+		setCookie("weatherChange"	, "1", 365 );
+		$("#main_header_wrap .weather .weather_pop").fadeOut('fast', function(){
+			$('#main_header_wrap .weather').find('a').focus();
+		});
+		
+	}
+}
+
+function weatherCode(idx,obj,nm) {
+	
+	var weatherChange = getCookie("weatherChange");
+	
+    if (weatherChange == "2") {
+    	
+    	$("#main_header_wrap #weatherCode").val(obj);
+    	$("#main_header_wrap #weatherName").val(nm);
+    }
+	
+    $("#main_header_wrap .area_list a.active").removeClass("active").attr('title',''); // WA수정사항
+    $("#main_header_wrap .area_list a:eq("+idx+")").addClass("active").attr('title','선택됨');
+}
+
+function setCookie( name, value, exdays ) {
+	
+	var clsDate = new Date();
+	clsDate.setTime( clsDate.getTime() + (exdays*24*60*60*1000 ) );
+	
+	var expires = "expires=" + clsDate.toGMTString();
+	document.cookie =  name + "=" + value + "; " + expires;
+
+}
+
+function getCookie(cname) {
+	
+   var name = cname + "=";
+   var arrList = document.cookie.split(';'); 
+   
+   for( var i=0; i < arrList.length;  i++ ) {
+	   
+	  var c = arrList[i].replace(/\s/g, "");
+     if ( c.indexOf(name) == 0 ) 
+    	 return c.substring( name.length, c.length );
+   }
+
+   return "";
+
+}
+
+// [[[ 웹접근성 ]]] 전체메뉴 닫힘 버튼 keypress 시 포커스가 다시 "전체메뉴" 로 이동
+function backToFocusTop() {
+	document.getElementById("glo").tabIndex = 0;
+	document.getElementById("plus").tabIndex = 0;
+	document.getElementById("minus").tabIndex = 0;
+	$('#allMenu').focus();
+}
+</script>
+<header class="header">
+	
+	<div id="main_header_wrap">
+	    <div class="wrap">
+	    	<div class="header1">
+	    		<ul class="top_link">
+	        		<li class="t1"><a href="/">버스정보</a></li>
+	            	<li class="t2"><a href="https://gits.gg.go.kr" target="_blank" title="경기도 교통정보센터 홈페이지 새창 열림">교통정보</a></li>
+	            	<li class="t3"><a href="https://gits.gg.go.kr/gtdb/web/trafficDb/publicTransport/passengersByRegion.do" target="_blank"  title="경기도 교통정보센터 홈페이지> 교통DB 페이지 새창 열림">교통DB</a></li>
+	        	</ul>
+	             <div class="weather">
+					<input type="hidden" id="weatherCode" name="weatherCode" value=""/>
+					<input type="hidden" id="weatherName" name="weatherName" value=""/>
+					<input type="hidden" id="weatherChange" name="weatherChange" value="1"/>
+	            	<span class="city"></span>
+	                <span class="w_img"></span>
+	                <span class="tem"></span>
+	                <a href="javascript:weatherBtn(1);">지역변경 <i class="fa fa-plus" aria-hidden="true"></i></a>
+	                <div class="weather_pop" id="weather_pop" style="display: none;">
+						
+						<div class="area_list">
+							<a class="active" title="선택됨" href="javascript:weatherCode(0,'41115','수원시');">수원시</a>
+							<a href="javascript:weatherCode(1,'41131','성남시');">성남시</a>
+							<a href="javascript:weatherCode(2,'41150','의정부시');">의정부시</a>
+							<a href="javascript:weatherCode(3,'41171','안양시');">안양시</a>
+							<a href="javascript:weatherCode(4,'41197','부천시');">부천시</a>
+							<a href="javascript:weatherCode(5,'41210','광명시');">광명시</a>
+							<a href="javascript:weatherCode(6,'41220','평택시');">평택시</a>
+							<a href="javascript:weatherCode(7,'41250','동두천시');">동두천시</a>
+							<a href="javascript:weatherCode(8,'41273','안산시');">안산시</a>
+							<a href="javascript:weatherCode(9,'41281','고양시');">고양시</a>
+							<a href="javascript:weatherCode(10,'41290','과천시');">과천시</a>
+							<a href="javascript:weatherCode(11,'41310','구리시');">구리시</a>
+							<a href="javascript:weatherCode(12,'41360','남양주시');">남양주시</a>
+							<a href="javascript:weatherCode(13,'41370','오산시');">오산시</a>
+							<a href="javascript:weatherCode(14,'41390','시흥시');">시흥시</a>
+							<a href="javascript:weatherCode(15,'41410','군포시');">군포시</a>
+							<a href="javascript:weatherCode(16,'41430','의왕시');">의왕시</a>
+							<a href="javascript:weatherCode(17,'41450','하남시');">하남시</a>
+							<a href="javascript:weatherCode(18,'41463','용인시');">용인시</a>
+							<a href="javascript:weatherCode(19,'41480','파주시');">파주시</a>
+							<a href="javascript:weatherCode(20,'41550','안성시');">안성시</a>
+							<a href="javascript:weatherCode(21,'41570','김포시');">김포시</a>
+							<a href="javascript:weatherCode(22,'41590','화성시');">화성시</a>
+							<a href="javascript:weatherCode(23,'41610','광주시');">광주시</a>
+							<a href="javascript:weatherCode(24,'41630','양주시');">양주시</a>
+							<a href="javascript:weatherCode(25,'41650','포천시');">포천시</a>
+						</div>
+						<div class="area_select">
+							<h3 class="hide">지역선택</h3>
+							<button type="button" class="btn_select" onclick="weatherBtn(2);">적용</button>
+							<button type="button" class="btn_close" onclick="weatherBtn(3);">닫기</button>
+						</div>								
+					</div>
+	            </div>
+	        </div>
+	        <div class="header2">
+	        	<ul class="join">
+				
+					
+	            	<!-- <li><a href="/service/member/memberJoin.action?cmd=memberJoin01"><i class="fa fa-user" aria-hidden="true"></i> 회원가입</a></li> -->
+	                <li><a href="/service/mybus/MyBus.action?cmd=login"><i class="fa fa-lock" aria-hidden="true"></i> 로그인</a></li>
+	               	
+	            	
+	         	
+					<li class="menu" ><a id="allMenu" href="#"><i class="fa fa-bars" aria-hidden="true"></i>전체메뉴</a></li>			
+					<li class="glo" ><a id="glo" href="#" >GLOBAL<i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+						<!--글로벌메뉴-->   
+			            <div class="global_menu" style="display: none;">
+			                <h3 class="hide">글로벌메뉴</h3>	
+		                    <ul>
+		                        <li><a id="wa_en" tabindex="0" href="javascript:goMove('/gbis2014/frAPI.action?cmd=main&lang=EN')">English<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+		                        <li><a id="wa_cn" href="javascript:goMove('/gbis2014/frAPI.action?cmd=main&lang=CN')">中文<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+		                        <li><a id="wa_jp" href="javascript:goMove('/gbis2014/frAPI.action?cmd=main&lang=JP')">日本語<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+		                        <li><a id="wa_vt" href="javascript:goMove('/gbis2014/frAPI.action?cmd=main&lang=VT')">Tiếng Việt<i class="fa fa-angle-right" aria-hidden="true"></i></a></li> 
+		                    </ul>
+			            </div>   
+	            
+	            	<li class="plus" ><a id="plus" href="javascript:zoomIn();" title="글자크기 크게">글자크기 <i class="fa fa-plus" aria-hidden="true"></i></a></li>
+	                <li ><a id="minus" href="javascript:zoomOut();" title="글자크기 작게"><i class="fa fa-minus" aria-hidden="true"></i></a></li>
+	            
+	            </ul>        
+	            
+	        </div>
+	    </div>
+   	</div>
+    <!--전체메뉴-->
+	<div class="allmenu">
+	    <ul class="nav">
+	        <li class="menu1">
+	            <h3 id="myBus"><a id="myBusBus" href="/service/mybus/MyBus.action?cmd=login">나의버스</a></h3>
+	            <ul class="two_depth">
+	                <li class="menu1-1">
+	    
+	                        <a href="/service/mybus/MyBus.action?cmd=login">나의페이지</a>
+	                        <ul class="three_depth">
+	                            <li><a href="/service/mybus/MyBus.action?cmd=login"><i class="fa fa-angle-right" aria-hidden="true"></i>로그인</a></li>
+	                            <li><a href="/service/member/lostFound.action?cmd=lostFoundMain"><i class="fa fa-angle-right" aria-hidden="true"></i>비밀번호찾기</a></li>
+	                            <!-- <li><a href="/service/member/memberJoin.action?cmd=memberJoin01"><i class="fa fa-angle-right" aria-hidden="true"></i>회원가입</a></li> -->
+	                        </ul>
+	                        
+	                        
+	                    
+	                </li>
+	                <li class="menu1-2"><a href="/service/mybus/MyBus.action">나의버스 관리</a></li>
+	                <li class="menu1-3"><a href="/service/mybus/MyBus2.action?cmd=startAreaView">지도화면 설정</a></li>
+	            </ul>
+	        </li>
+	        <li class="menu2">
+	            <h3><a href="javascript:goMove('/gbis2014/schBus.action')">버스정보안내</a></h3>
+	            <ul class="two_depth">
+	                <li class="menu2-1"><a href="javascript:goMove('/gbis2014/schBus.action?mapTabCd=1')">통합검색</a></li>
+	                <li class="menu2-2"><a href="javascript:goMove('/gbis2014/schBus.action?mapTabCd=2')">경로검색</a></li>
+	                <!--<li class="menu2-3"><a href="javascript:goMove('/gbis2014/schBus.action?mapTabCd=3')">실시간버스</a></li>-->
+	            </ul>
+	        </li>
+	        <li class="menu3">
+	            <h3><a href="javascript:goMove('/service/busInfo/metroBus.action?cmd=metroBusList')">노선현황</a></h3>
+	            <ul class="two_depth">
+	                <li class="menu3-1">
+	                    <a href="javascript:goMove('/service/busInfo/metroBus.action?cmd=metroBusList')">시내버스-지역별</a>
+	                    <ul class="three_depth">
+	                        <li><a href="javascript:goMove('/service/busInfo/metroBus.action?cmd=metroBusList')"><i class="fa fa-angle-right" aria-hidden="true"></i>인허가 노선</a></li>
+	                        <li><a href="javascript:goMove('/service/busInfo/viaBus.action?cmd=viaBusList')"><i class="fa fa-angle-right" aria-hidden="true"></i>경유 노선</a></li>
+	                    </ul>
+	                </li>
+	                <li class="menu3-2">
+	                    <a href="javascript:goMove('/service/busInfo/wideExprBus.action?cmd=wideExprAuto')">시내버스-유형별</a>
+	                    <ul class="three_depth">
+	                        <li><a href="javascript:goMove('/service/busInfo/wideExprBus.action?cmd=wideExprAuto')"><i class="fa fa-angle-right" aria-hidden="true"></i>광역급행버스</a></li>
+	                        <li><a href="javascript:goMove('/service/busInfo/latenightBus.action?cmd=latenight')"><i class="fa fa-angle-right" aria-hidden="true"></i>심야버스</a></li>
+	                    </ul>
+	                </li>
+	                <li class="menu3-3"><a href="javascript:goMove('/service/busInfo/outBus.action?cmd=outBusList2')">시외버스</a></li>
+	                <li class="menu3-7">
+	                    <a href="javascript:goMove('/service/busInfo/townBus.action?cmd=townBus')">마을버스</a>
+	                </li>
+	                <li class="menu3-4"><a href="javascript:goMove('/service/busInfo/lowfloorBus.action?cmd=lowfloorAuto')">저상버스</a></li>
+	                <li class="menu3-5">
+	                    <a href="javascript:goMove('/service/busInfo/airpIncheonBus.action?cmd=airpIncheon')">공항버스</a>
+	                    <ul class="three_depth">
+	                        <li><a href="javascript:goMove('/service/busInfo/airpIncheonBus.action?cmd=airpIncheon')"><i class="fa fa-angle-right" aria-hidden="true"></i>인천공항(국제선)</a></li>
+	                        <li><a href="javascript:goMove('/service/busInfo/airpGimpoBus.action?cmd=airpGimpo')"><i class="fa fa-angle-right" aria-hidden="true"></i>김포공항(국내선)</a></li>
+	                    </ul>
+	                </li>
+	                <!-- <li class="menu3-6">
+	                    <a href="javascript:goMove('/service/busInfo/tranRoute.action?cmd=tranRouteList')">정류소 현황</a>
+	                    <ul class="three_depth">
+	                        <li><a href="javascript:goMove('/service/busInfo/stationBus.action?cmd=stationBusList')">지역별 정류소 검색</a></li>
+	                        <li><a href="javascript:goMove('/service/busInfo/tranRoute.action?cmd=tranRouteList')"><i class="fa fa-angle-right" aria-hidden="true"></i>주요 철도역경유 노선정보</a></li>
+	                        <li><a href="javascript:goMove('/service/busInfo/terminalRoute.action?cmd=terminalRouteList')"><i class="fa fa-angle-right" aria-hidden="true"></i>주요 터미널경유 노선정보</a></li>
+	                    </ul>
+	                </li> -->
+	            </ul>
+	        </li>
+	        <li class="menu4">
+	            <h3><a href="javascript:goMove('/gbis2014/bbs.action?cmd=notice')">참여마당</a></h3>
+	            <ul class="two_depth">
+	                <li class="menu4-1"><a href="javascript:goMove('/gbis2014/bbs.action?cmd=notice')">공지사항</a></li>
+	   		        <li class="menu4-2"><a href="javascript:goMove('/gbis2014/bbs.action?cmd=infoForm')">정보오류신고</a></li>
+	                <li class="menu4-3"><a href="javascript:goMove('/gbis2014/bbs.action?cmd=routeChange')">노선신설·폐선안내</a></li>
+	    <!-- 										<li class="menu4-3"><a href="javascript:goMove('/service/bbs/reserve/reserve.action')">견학신청</a></li> -->
+	                <li class="menu4-4">
+	                    <a href="javascript:goMove('/service/guide/guide1.action?cmd=myBus')">이용안내</a>
+	                    <ul class="three_depth">
+	                        <li><a href="javascript:goMove('/service/guide/guide1.action?cmd=mybus')"><i class="fa fa-angle-right" aria-hidden="true"></i>홈페이지</a></li>
+	                        <li><a href="javascript:goMove('/service/guide/guide1.action?cmd=ars')"><i class="fa fa-angle-right" aria-hidden="true"></i>ARS(전화)</a></li>
+	    <!-- 												<li><a href="javascript:goMove('/service/guide/guide1.action?cmd=smartPhone')">(구)스마트폰 앱</a></li> -->
+	                        <!-- <li><a href="javascript:goMove('/service/guide/guide1.action?cmd=smartPhoneNew')"><i class="fa fa-angle-right" aria-hidden="true"></i>스마트폰 앱</a></li> -->
+	    <!-- 												<li><a href="javascript:goMove('/service/guide/guide1.action?cmd=inetMobile')">(구)모바일웹</a></li> -->
+	                        <li><a href="javascript:goMove('/service/guide/guide1.action?cmd=inetMobileNew')"><i class="fa fa-angle-right" aria-hidden="true"></i>모바일웹</a></li>
+	    <!-- 												<li><a href="javascript:goMove('/service/guide/guide1.action?cmd=nfcQr')">NFC/QR코드</a></li> -->
+	                    </ul>
+	                </li>
+	                <li class="menu4-5">
+	                    <a href="javascript:goMove('/service/guide/guide6.action?cmd=gbis')">경기버스정보안내</a>
+	                    <ul class="three_depth">
+	                        <li><a href="javascript:goMove('/service/guide/guide6.action?cmd=gbis')"><i class="fa fa-angle-right" aria-hidden="true"></i>버스정보안내</a></li>
+	                        <li><a href="javascript:goMove('/service/guide/guide6.action?cmd=allcAdm')"><i class="fa fa-angle-right" aria-hidden="true"></i>버스운행관리 방법</a></li>
+	                        <li><a href="javascript:goMove('/service/guide/guide6.action?cmd=staInfo')"><i class="fa fa-angle-right" aria-hidden="true"></i>정류소안내기 정보제공</a></li>
+	                        <li><a href="javascript:goMove('/service/guide/guide6.action?cmd=busExe')"><i class="fa fa-angle-right" aria-hidden="true"></i>수도권 버스정보 연계</a></li>
+	                    </ul>
+	                </li>
+	                <li class="menu4-6"><a href="javascript:goMove('/popup/popup.action?cmd=popupWeb&amp;ctg=locationSuwon')">오시는길</a></li>
+	            </ul>
+	        </li>
+	        <li class="menu5">
+	            <h3><a href="javascript:goMove('/gbis2014/publicService.action?cmd=openApiInfo')">공유서비스</a></h3>
+	            <ul class="two_depth">
+	                <li class="menu5-1"><a href="javascript:goMove('/gbis2014/publicService.action?cmd=openApiInfo')">소개</a></li>
+	                <li class="menu5-2">
+	                    <a href="javascript:goMove('/gbis2014/publicService.action?cmd=openApiRest')">개발가이드</a>
+	                    <ul class="three_depth">
+	                        <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=openApiRest')"><i class="fa fa-angle-right" aria-hidden="true"></i>REST방식</a></li>
+	                        <!--li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=openApiSoap')"><i class="fa fa-angle-right" aria-hidden="true"></i>SOAP방식</a></li-->
+	                    </ul>
+	                </li>
+	                <li class="menu5-3">
+	                    <a href="javascript:goMove('/gbis2014/publicService.action?cmd=mBusRoute')">매뉴얼</a>
+	                    <ul class="three_depth">
+	                        <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=mBusRoute')"><i class="fa fa-angle-right" aria-hidden="true"></i>버스노선 조회 서비스</a></li>
+	                        <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=mBusStation')"><i class="fa fa-angle-right" aria-hidden="true"></i>정류소 조회 서비스</a></li>
+	                        <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=mBusLocation')"><i class="fa fa-angle-right" aria-hidden="true"></i>버스위치정보 조회 서비스</a></li>
+	                        <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=mBusArrivalStation')"><i class="fa fa-angle-right" aria-hidden="true"></i>버스도착정보 조회 서비스</a></li>
+	                        <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=mBaseInfo')"><i class="fa fa-angle-right" aria-hidden="true"></i>기반정보 관리 서비스</a></li>
+	                    </ul>
+	                </li>
+	                <li class="menu5-4">
+	                    <a href="javascript:goMove('/gbis2014/publicService.action?cmd=tBusRoute')">테스트</a>
+	                    <ul class="three_depth">
+	                        <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=tBusRoute')"><i class="fa fa-angle-right" aria-hidden="true"></i>버스노선 조회 서비스</a></li>
+	                        <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=tBusStation')"><i class="fa fa-angle-right" aria-hidden="true"></i>정류소 조회 서비스</a></li>
+	                        <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=tBusLocation')"><i class="fa fa-angle-right" aria-hidden="true"></i>버스위치정보 조회 서비스</a></li>
+	                        <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=tBusArrivalStation')"><i class="fa fa-angle-right" aria-hidden="true"></i>버스도착정보 조회 서비스</a></li>
+	                        <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=tBaseInfo')"><i class="fa fa-angle-right" aria-hidden="true"></i>기반정보 관리 서비스</a></li>
+	                    </ul>
+	                </li>
+	                <li class="menu5-5"><a href="javascript:goMove('/gbis2014/publicService.action?cmd=publickKey')">공개키 발급</a></li>
+	                <li class="menu5-6">
+	                    <a href="javascript:goMove('/gbis2014/publicService.action?cmd=apiQna')">게시판</a>
+	                    <ul class="three_depth">
+	                        <!-- <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=apiNotice')">공지사항</a></li>  -->
+	                        <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=apiQna')"><i class="fa fa-angle-right" aria-hidden="true"></i>Q&amp;A</a></li>
+	                        <li><a href="javascript:goMove('/gbis2014/publicService.action?cmd=apiFaq')"><i class="fa fa-angle-right" aria-hidden="true"></i>FAQ</a></li>
+	                    </ul>
+	                </li>
+	            </ul>
+	        </li>
+	    </ul>
+	  <!-- <a href="#none" onclick="$('#allMenu').focus()" class="btn_close">전체 메뉴 닫기<i class="fa fa-times" aria-hidden="true"></i></a>  -->  
+	  <a href="javascript:backToFocusTop()"  class="btn_close">전체 메뉴 닫기<i class="fa fa-times" aria-hidden="true"></i></a>
+	</div>
+	<script type="text/javascript">
+		$('.header').on('click','.menu',function(){
+			var parent = $(this).closest('.header');
+			if ( ! parent.hasClass('is-open')){
+				parent.addClass('is-open');
+				parent.find('.allmenu').slideDown();
+				document.getElementById("glo").tabIndex = -1;
+				document.getElementById("plus").tabIndex = -1;
+				document.getElementById("minus").tabIndex = -1;
+				$('.header.is-open').not(parent).removeClass('is-open');
+			}else{
+				parent.removeClass('is-open');
+				document.getElementById("glo").tabIndex = 0;
+				document.getElementById("plus").tabIndex = 0;
+				document.getElementById("minus").tabIndex = 0;
+				parent.find('.allmenu').slideUp();
+				//document.getElementById("allMenu").focus();
+			}
+		});
+		
+		$('.header .allmenu a.btn_close').on('click', function(){
+			$('.header').removeClass('is-open');
+			$('.header .allmenu').slideUp();
+			$('#allMenu').focus();
+		});
+///////////////////////////////////// WA 추가 사항 ////////////////////////////////////////////////////////		
+		$('.btn_close').focusout(function(){
+			$('#myBusBus').focus();
+		});
+
+		$('#wa_vt').focusout(function(){
+			//console.log('lastLink focusout!! focusout!! ');
+			//$('.global_menu').slideUp();
+			$('#glo').attr('tabindex','0').focus();
+		});
+		
+		
+		
+ 		$('.header').on('click','.glo',function(){
+			if($(this).find('i').attr('class').indexOf('fa-angle-up') > -1){
+				$(this).find('i').attr('class', 'fa fa-angle-down');
+//-------------->//////////// WA 추가 사항 ////////////				
+				$('.glo').on('keydown', function(key){
+					if(key.keyCode == 13){
+						$('#glo').attr("title", "글로벌 메뉴 열림");
+						$('#plus').attr("tabindex", "-1");
+						$('#minus').attr("tabindex", "-1");
+						$('#wa_en').attr("tabindex", "0");
+					}
+				});
+			}else{
+				$(this).find('i').attr('class', 'fa fa-angle-up');
+//-------------->//////////// WA 추가 사항 ////////////							
+				$('.glo').on('keydown', function(key){
+					if(key.keyCode == 13){
+						$('#glo').attr("title", "글로벌 메뉴 닫힘");
+						$('#plus').attr("tabindex", "0");
+						$('#minus').attr("tabindex", "0");
+						$('#glo').attr("tabindex", "0").focus;
+					}
+				});
+			}
+			$('.global_menu').slideToggle('fast');
+		}); 
+		
+		// 접근성 추가사항
+		var nowZoom = 100;
+	    function zoomIn(){
+	    	if(nowZoom < 200){
+	    		nowZoom += 10;
+				document.body.style.zoom = nowZoom + '%';
+	    	}
+	    }
+	    function zoomOut(){
+	    	if(nowZoom > 80){
+	    		nowZoom -= 10;
+				document.body.style.zoom = nowZoom + '%';
+	    	}
+	    }
+
+	</script>
+</header>
+<!--header 끝-->
+
+<nav>
+	<div id="gg_navi24" class="s_menu_wrap">
+	  	<h1 class="logo"><a href="/"><img width="240px" src="/gbis2014/resources/img/logo_202207.png" alt="변화의 중심 기회의 경기 경기버스정보" /></a></h1>
+      	<ul class="gg_main">
+            <li><a id="one" href="/service/mybus/MyBus.action?cmd=login">나의버스</a></li>
+            <li><a id="two" href="javascript:goMove('/gbis2014/schBus.action')">버스정보안내</a></li>
+            <li><a id="three" href="javascript:goMove('/service/busInfo/metroBus.action?cmd=metroBusList')">노선현황</a></li>
+            <li><a id="four" href="javascript:goMove('/gbis2014/bbs.action?cmd=notice')">참여마당</a></li>
+            <li><a id="five" href="javascript:goMove('/gbis2014/publicService.action?cmd=openApiInfo')">공유서비스</a></li>
+	    </ul>
+    	<div class="gg_mask">
+			<div class="gg_move">
+				<div class="gg_subSet">		
+					<ul>
+				<!-- 로그인 전 -->
+				
+					
+						<li><a id="one_1" href="/service/mybus/MyBus.action?cmd=login">나의페이지</a></li>
+					
+					
+				
+						<li><a id="one_2" href="/service/mybus/MyBus.action">나의버스 관리</a></li>
+						<li><a id="one_3" href="/service/mybus/MyBus2.action?cmd=startAreaView">지도화면 설정</a></li>
+					</ul>		
+					<ul>
+						<li><a id="two_1" href="javascript:goMove('/gbis2014/schBus.action?mapTabCd=1')">통합검색</a></li>
+						<li><a id="two_2" href="javascript:goMove('/gbis2014/schBus.action?mapTabCd=2')">경로검색</a></li>
+						<!--<li><a id="two_3" href="javascript:goMove('/gbis2014/schBus.action?mapTabCd=3')">실시간버스</a></li> -->
+					</ul>		
+					<ul>
+			        	<li><a id="three_1" href="javascript:goMove('/service/busInfo/metroBus.action?cmd=metroBusList')">시내버스-지역별</a></li>
+						<li><a id="three_2" href="javascript:goMove('/service/busInfo/wideExprBus.action?cmd=wideExprAuto')">시내버스-유형별</a></li>
+						<li><a id="three_3" href="javascript:goMove('/service/busInfo/outBus.action?cmd=outBusList2')">시외버스</a></li>
+	                    <li><a id="three_4" href="javascript:goMove('/service/busInfo/townBus.action?cmd=townBus')">마을버스</a></li>
+	                    <li><a id="three_5" href="javascript:goMove('/service/busInfo/lowfloorBus.action?cmd=lowfloorAuto')">저상버스</a></li>
+	                    <li><a id="three_6" href="javascript:goMove('/service/busInfo/airpIncheonBus.action?cmd=airpIncheon')">공항버스</a></li>
+					</ul>
+					<ul>
+			        	<li><a id="four_1" href="javascript:goMove('/gbis2014/bbs.action?cmd=notice')">공지사항</a></li>
+					 	<li><a id="four_2" href="javascript:goMove('/gbis2014/bbs.action?cmd=infoForm')">정보오류신고</a></li> 
+						<li><a id="four_3" href="javascript:goMove('/gbis2014/bbs.action?cmd=routeChange')">노선신설·폐선안내</a></li>
+	                    <li><a id="four_4" href="javascript:goMove('/service/guide/guide1.action?cmd=myBus')">이용안내</a></li>
+	                    <li><a id="four_5" href="javascript:goMove('/service/guide/guide6.action?cmd=gbis')">경기버스정보안내</a></li>
+	                    <li><a id="four_6" href="javascript:goMove('/popup/popup.action?cmd=popupWeb&amp;ctg=locationSuwon')">오시는길</a></li>
+					</ul>
+					<ul>
+			        	<li><a id="five_1" href="javascript:goMove('/gbis2014/publicService.action?cmd=openApiInfo')">소개</a></li>
+						<li><a id="five_2" href="javascript:goMove('/gbis2014/publicService.action?cmd=openApiRest')">개발가이드</a></li>
+						<li><a id="five_3" href="javascript:goMove('/gbis2014/publicService.action?cmd=mBusRoute')">메뉴얼</a></li>
+	                    <li><a id="five_4" href="javascript:goMove('/gbis2014/publicService.action?cmd=tBusRoute')">테스트</a></li>
+	                    <li><a id="five_5" href="javascript:goMove('/gbis2014/publicService.action?cmd=publickKey')">공개키 발급</a></li>
+	                    <li><a id="wa_board_02" href="javascript:goMove('/gbis2014/publicService.action?cmd=apiQna')">게시판</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$('#gg_navi24').gg_naviFullWideMove({
+				pageNum:null,           //메인메뉴 페이지인식(1~)
+				subNum:null,            //서브메뉴 페이지인식(1~)
+				subState:false,         //메뉴활성시 서브메뉴의 오픈유무(true,false)
+				motionSpeed:300,        //모션속도(밀리초)
+				delayTime:200           //메뉴아웃시 되돌아가는 딜레이시간(밀리초)
+			});
+///////////////////////////////////// WA 추가 사항 ////////////////////////////////////////////////////////		
+			$('#wa_board_02').focusout(function(){
+				$( '.gg_mask' ).slideUp();
+				if( $('#focus_01').length ){
+					$('#focus_01').attr('tabindex','0').focus();
+				}
+			});
+			
+			$('#one').focusout(function(){
+				$( '#one_1' ).attr('tabindex','0').focus();
+			});
+			$('#one_3').focusout(function(){
+				$( '#two' ).attr('tabindex','0').focus();
+			});
+			$('#two').focusout(function(){
+				$( '#two_1' ).attr('tabindex','0').focus();
+			});
+			$('#two_3').focusout(function(){
+				$( '#three' ).attr('tabindex','0').focus();
+			});
+			$('#three').focusout(function(){
+				$( '#three_1' ).attr('tabindex','0').focus();
+			});
+			$('#three_6').focusout(function(){
+				$( '#four' ).attr('tabindex','0').focus();
+			});
+			$('#four').focusout(function(){
+				$( '#four_1' ).attr('tabindex','0').focus();
+			});
+			$('#four_6').focusout(function(){
+				$( '#five' ).attr('tabindex','0').focus();
+			});
+			$('#five').focusout(function(){
+				$( '#five_1' ).attr('tabindex','0').focus();
+			});
+			
+		</script>
+ 	</div>
+</nav>
+
+<!--위치메뉴 시작-->
+<div class="path_wrap">
+	<ul class="path">
+		<li class="home"><a class="home" href="/">홈</a></li>
+	    <li class="snb_level"><a class="" href="#none" title="1depth 메뉴: 노선현황" >노선현황 <i class="fa fa-angle-down" aria-hidden="true"><span class="hide">열기</span></i></a>
+			<ul class="" style="display:none;">
+				<li class=""><a href="/service/mybus/MyBus.action?cmd=login" title="1depth 메뉴: 나의버스" >나의버스<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li class=""><a href="javascript:goMove('/gbis2014/schBus.action')" title="1depth 메뉴: 버스정보안내" >버스정보안내<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li class=""><a href="javascript:goMove('/service/busInfo/metroBus.action?cmd=metroBusList')" title="1depth 메뉴: 노선현황" >노선현황<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li class=""><a href="javascript:goMove('/gbis2014/bbs.action?cmd=notice')" title="1depth 메뉴: 참여마당" >참여마당<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li class=""><a href="javascript:goMove('/gbis2014/publicService.action?cmd=openApiInfo')" title="1depth 메뉴: 공유서비스" >공유서비스<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+			</ul>
+		</li>
+        <li class="snb_level"><a class="" href="#none" title="2depth 메뉴: 노선현황 > 마을버스" >마을버스 <i class="fa fa-angle-down" aria-hidden="true"><span class="hide">열기</span></i></a>
+			<ul class="" style="display:none;">
+				<li class=""><a href="javascript:goMove('/service/busInfo/metroBus.action?cmd=metroBusList')" title="2depth 메뉴: 노선현황 > 시내버스-지역별" >시내버스-지역별<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li class=""><a href="javascript:goMove('/service/busInfo/wideExprBus.action?cmd=wideExprAuto')" title="2depth 메뉴: 노선현황 > 시내버스-유형별" >시내버스-유형별<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li class=""><a href="javascript:goMove('/service/busInfo/outBus.action?cmd=outBusList2')" title="2depth 메뉴: 노선현황 > 시외버스" >시외버스<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+				<li class=""><a href="javascript:goMove('/service/busInfo/townBus.action?cmd=townBus')" title="2depth 메뉴: 노선현황 > 마을버스" >마을버스<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li class=""><a href="javascript:goMove('/service/busInfo/lowfloorBus.action?cmd=lowfloorAuto')" title="2depth 메뉴: 노선현황 > 저상버스" >저상버스<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li class=""><a href="javascript:goMove('/service/busInfo/lowfloorBus.action?cmd=secondfloorAuto')" title="2depth 메뉴: 노선현황 > 2층버스" >2층버스<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                <li class=""><a href="javascript:goMove('/service/busInfo/airpIncheonBus.action?cmd=airpIncheon')" title="2depth 메뉴: 노선현황 > 공항버스" >공항버스<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<!--위치메뉴 끝-->
+
+<!--인허가 노선 시작-->
+<section id="s_content">
+	<div class="s_ct_wrap">
+    	<h2 class="skip_to">노선현황</h2>
+       	<ul class="s_menu sm1 s_menu7">
+       		<li class=""><a href="/service/busInfo/metroBus.action?cmd=metroBusList">시내버스-지역별</a></li>
+			<li class=""><a href="/service/busInfo/wideExprBus.action?cmd=wideExprAuto">시내버스-유형별</a></li>
+			<li class=""><a href="/service/busInfo/outBus.action?cmd=outBusList2">시외버스</a></li>
+			<li class="on"><a href="/service/busInfo/townBus.action?cmd=townBus" title="마을버스 선택됨">마을버스</a></li>
+            <li class=""><a href="/service/busInfo/lowfloorBus.action?cmd=lowfloorAuto">저상버스</a></li>
+            <li class=""><a href="/service/busInfo/lowfloorBus.action?cmd=secondfloorAuto">2층버스</a></li>
+            <li class=""><a href="/service/busInfo/airpIncheonBus.action?cmd=airpIncheon">공항버스</a></li>
+        </ul>
+        <div class="s_ct" id="print-area">
+        	<div class="sec_search">
+				<form method="post" name="gForm" action="/service/busInfo/townBus.action">
+					<input type="hidden" name="currentPage" value="" />
+					<input type="hidden" name="rowPerPage"  value=""  />
+					<input type="hidden" name="cmd"         value="townBus"  />
+					<fieldset>
+						<legend class="screen_out">글쓰기 작성</legend>
+						<label for="region"><strong>시군선택</strong></label>
+						<div class="inputDesign">
+							<div class="in_select">
+								<select name="centerId" id="region">
+									
+										<option value="4128000000" >고양시</option>
+									
+										<option value="4129000000" >과천시</option>
+									
+										<option value="4121000000" >광명시</option>
+									
+										<option value="4161000000" >광주시</option>
+									
+										<option value="4131000000" >구리시</option>
+									
+										<option value="4141000000" >군포시</option>
+									
+										<option value="4157000000" >김포시</option>
+									
+										<option value="4136000000" selected>남양주시</option>
+									
+										<option value="4119000000" >부천시</option>
+									
+										<option value="4113000000" >성남시</option>
+									
+										<option value="4111000000" >수원시</option>
+									
+										<option value="4139000000" >시흥시</option>
+									
+										<option value="4117000000" >안양시</option>
+									
+										<option value="4163000000" >양주시</option>
+									
+										<option value="4137000000" >오산시</option>
+									
+										<option value="4146000000" >용인시</option>
+									
+										<option value="4143000000" >의왕시</option>
+									
+										<option value="4115000000" >의정부시</option>
+									
+										<option value="4148000000" >파주시</option>
+									
+										<option value="4122000000" >평택시</option>
+									
+										<option value="4145000000" >하남시</option>
+									
+										<option value="4159000000" >화성시</option>
+									
+								</select>
+							</div>
+						</div>
+						<button class="btn" type="submit" onclick = "searchTownBus();return false;"><i class="fa fa-search" aria-hidden="true"></i><span class="sound_only">검색</span></button>
+					</fieldset>
+				</form>
+			</div>
+            <div class="exp">* 시/군 선택 후 검색 버튼을 클릭하시면 해당지역의 인허가 노선을 확인하실 수 있습니다.</div>
+			<table class="list_sty01 mt25">
+				<caption>경기도 마을버스 노선 안내 표. 노선번호, 기점(출발지), 종점, 상행, 하행, 출퇴근배차, 평일배차, 주말배차, 운수사명으로 구성되어 있습니다.</caption>
+				<colgroup>
+					<col width="10%" /> 		<!-- 노선번호 -->
+					<col width="10%" /> 		<!-- 기점 -->
+					<col width="10%" />		<!-- 종점 -->
+					<col width="20%" />		<!-- 상행 -->
+					<col width="20%" />		<!-- 하행 -->
+					<col width="20%" />		<!-- 배차시간 -->
+					<!--		 운수사명 -->
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col" abbr="노선번호">노선번호</th>
+						<th scope="col" abbr="기점">기점</th>
+						<th scope="col" abbr="종점">종점</th>
+						<th scope="col" abbr="상행">상행</th>
+						<th scope="col" abbr="하행">하행</th>
+						<th scope="col" abbr="배차시간">배차시간</th>
+						<th scope="col" abbr="운수사명">운수사명</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<!-- 노선 색깔 결정 -->
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('2', '241348004')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >2</a></td>
+							<td>봉선사입구</td>
+							<td>한양병원</td>
+							<td> <!-- 상행 -->
+									평일 : 06:30 ~ 22:00<br/>
+                                    주말 : 06:30 ~ 22:00<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 05:20 ~ 22:30<br/>
+                                    주말 : 05:20 ~ 22:30<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 10  ~ 20 분<br/>
+										주말 : 15  ~ 30 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-풍양운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('2-2', '241348005')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >2-2</a></td>
+							<td>봉선사입구</td>
+							<td>한양병원</td>
+							<td> <!-- 상행 -->
+									평일 : 06:45 ~ 22:00<br/>
+                                    주말 : 06:45 ~ 22:00<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 05:40 ~ 22:15<br/>
+                                    주말 : 05:40 ~ 22:15<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 0  ~ 0 분<br/>
+										주말 : 40  ~ 45 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-풍양운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('2-2A', '241348002')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >2-2A</a></td>
+							<td>봉선사입구</td>
+							<td>신일아파트</td>
+							<td> <!-- 상행 -->
+									평일 :  ~ <br/>
+                                    주말 :  ~ <br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 09:00 ~ 21:00<br/>
+                                    주말 : 09:00 ~ 21:00<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 40  ~ 50 분<br/>
+										주말 : 40  ~ 50 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-풍양운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('2A', '241348001')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >2A</a></td>
+							<td>봉선사입구</td>
+							<td>신우1.2차아파트</td>
+							<td> <!-- 상행 -->
+									평일 :  ~ <br/>
+                                    주말 :  ~ <br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 08:25 ~ 21:00<br/>
+                                    주말 : 08:25 ~ 21:00<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 10  ~ 20 분<br/>
+										주말 : 15  ~ 30 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-풍양운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('33-1', '241350002')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >33-1</a></td>
+							<td>차고지대기(미정차)</td>
+							<td>에코랜드수영장</td>
+							<td> <!-- 상행 -->
+									평일 : 05:00 ~ 01:15<br/>
+                                    주말 : 05:00 ~ 00:15<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 05:15 ~ 01:30<br/>
+                                    주말 : 05:15 ~ 00:30<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 10  ~ 40 분<br/>
+										주말 : 15  ~ 30 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-흥안운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('48', '241347009')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >48</a></td>
+							<td>부대앞</td>
+							<td>별내역2번.3번.5번출구.광역환승센터</td>
+							<td> <!-- 상행 -->
+									평일 : 05:40 ~ 22:30<br/>
+                                    주말 : 05:40 ~ 22:30<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 05:57 ~ 22:45<br/>
+                                    주말 : 05:57 ~ 22:45<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 10  ~ 35 분<br/>
+										주말 : 10  ~ 35 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-태산운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('48-1', '241347010')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >48-1</a></td>
+							<td>부대앞</td>
+							<td>갈매순환삼거리.푸르지오정문</td>
+							<td> <!-- 상행 -->
+									평일 : 06:00 ~ 22:40<br/>
+                                    주말 : 06:00 ~ 22:40<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:40 ~ 23:10<br/>
+                                    주말 : 06:40 ~ 23:10<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 10  ~ 30 분<br/>
+										주말 : 30  ~ 35 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-태산운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('60', '241349004')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >60</a></td>
+							<td>월문리종점</td>
+							<td>한강우성.해태아파트</td>
+							<td> <!-- 상행 -->
+									평일 : 06:00 ~ 22:30<br/>
+                                    주말 : 06:30 ~ 21:30<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:30 ~ 23:00<br/>
+                                    주말 : 07:00 ~ 22:00<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 30  ~ 75 분<br/>
+										주말 : 30  ~ 90 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-태화상운</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('63', '241349006')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >63</a></td>
+							<td>시우리종점</td>
+							<td>동부센트레빌.덕소아이파크</td>
+							<td> <!-- 상행 -->
+									평일 : 06:30 ~ 21:30<br/>
+                                    주말 : 06:30 ~ 21:30<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 07:40 ~ 20:20<br/>
+                                    주말 : 07:40 ~ 20:20<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 150  ~ 220 분<br/>
+										주말 : 150  ~ 220 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-태화상운</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('64', '241349007')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >64</a></td>
+							<td>봉인사</td>
+							<td>금곡동구종점.금곡초교</td>
+							<td> <!-- 상행 -->
+									평일 : 06:30 ~ 22:15<br/>
+                                    주말 : 06:30 ~ 22:15<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 :  ~ <br/>
+                                    주말 :  ~ <br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 40  ~ 40 분<br/>
+										주말 : 40  ~ 40 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-태화상운</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('80', '241347002')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >80</a></td>
+							<td>오남역</td>
+							<td>부대앞</td>
+							<td> <!-- 상행 -->
+									평일 : 05:20 ~ 23:00<br/>
+                                    주말 : 05:20 ~ 23:00<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:40 ~ 00:00<br/>
+                                    주말 : 06:40 ~ 00:00<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 10  ~ 30 분<br/>
+										주말 : 20  ~ 40 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-태산운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('82A', '241347005')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >82A</a></td>
+							<td>부대앞</td>
+							<td>태릉입구역7번출구.서울생활사박물관</td>
+							<td> <!-- 상행 -->
+									평일 : 05:20 ~ 22:40<br/>
+                                    주말 : 05:20 ~ 22:40<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:20 ~ 23:40<br/>
+                                    주말 : 06:20 ~ 23:40<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 20  ~ 30 분<br/>
+										주말 : 25  ~ 35 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-태산운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('82B', '241347006')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >82B</a></td>
+							<td>별내차고지대기(미정차)</td>
+							<td>태릉입구역7번출구.서울생활사박물관</td>
+							<td> <!-- 상행 -->
+									평일 : 05:20 ~ 23:10<br/>
+                                    주말 : 05:20 ~ 23:10<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:20 ~ 00:00<br/>
+                                    주말 : 06:20 ~ 00:00<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 15  ~ 20 분<br/>
+										주말 : 25  ~ 30 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-태산운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('85-1', '241350004')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >85-1</a></td>
+							<td>차고지대기(미정차)</td>
+							<td>별내역2번.3번.5번출구.광역환승센터</td>
+							<td> <!-- 상행 -->
+									평일 : 05:50 ~ 22:30<br/>
+                                    주말 : 05:50 ~ 22:30<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:15 ~ 23:00<br/>
+                                    주말 : 06:15 ~ 23:00<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 70  ~ 150 분<br/>
+										주말 : 70  ~ 150 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-흥안운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('86', '241347011')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >86</a></td>
+							<td>별내차고지대기(미정차)</td>
+							<td>삼육대후문.논골.포레나별내</td>
+							<td> <!-- 상행 -->
+									평일 : 06:00 ~ 22:40<br/>
+                                    주말 : 06:00 ~ 22:40<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:45 ~ 23:25<br/>
+                                    주말 : 06:45 ~ 23:25<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 40  ~ 50 분<br/>
+										주말 : 40  ~ 50 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-태산운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('88', '241354001')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >88</a></td>
+							<td>한강우성.해태아파트</td>
+							<td>군인APT.석실입구</td>
+							<td> <!-- 상행 -->
+									평일 : 06:25 ~ 21:55<br/>
+                                    주말 : 06:25 ~ 21:55<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:45 ~ 21:28<br/>
+                                    주말 : 06:45 ~ 21:28<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 45  ~ 45 분<br/>
+										주말 : 45  ~ 45 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-태화상운</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('88-2', '241354003')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >88-2</a></td>
+							<td>글개울종점</td>
+							<td>한강우성.해태아파트</td>
+							<td> <!-- 상행 -->
+									평일 : 06:10 ~ 22:15<br/>
+                                    주말 : 07:10 ~ 21:15<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:40 ~ 22:45<br/>
+                                    주말 : 07:40 ~ 21:45<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 60  ~ 60 분<br/>
+										주말 : 60  ~ 60 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-와부버스</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('99-1', '241353002')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >99-1</a></td>
+							<td>동부센트레빌.덕소아이파크</td>
+							<td>자운동</td>
+							<td> <!-- 상행 -->
+									평일 : 06:30 ~ 21:30<br/>
+                                    주말 : 07:30 ~ 20:30<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 07:05 ~ 22:05<br/>
+                                    주말 : 08:05 ~ 21:05<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 60  ~ 60 분<br/>
+										주말 : 60  ~ 60 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-덕소교통</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('99-1A', '241353004')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >99-1A</a></td>
+							<td>동부센트레빌.덕소아이파크</td>
+							<td>덕소정수장</td>
+							<td> <!-- 상행 -->
+									평일 : 06:00 ~ 21:00<br/>
+                                    주말 :  ~ <br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:30 ~ 21:30<br/>
+                                    주말 :  ~ <br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 60  ~ 60 분<br/>
+										주말 :   ~  분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-덕소교통</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('99-2', '241353003')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >99-2</a></td>
+							<td>동부센트레빌.덕소아이파크</td>
+							<td>예봉산등산로입구.어룡</td>
+							<td> <!-- 상행 -->
+									평일 : 06:15 ~ 20:15<br/>
+                                    주말 : 07:15 ~ 20:15<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:45 ~ 20:45<br/>
+                                    주말 : 07:45 ~ 20:45<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 10  ~ 60 분<br/>
+										주말 : 30  ~ 60 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-덕소교통</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('99-2A', '241353005')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >99-2A</a></td>
+							<td>동부센트레빌.덕소아이파크</td>
+							<td>쌍용스윗닷홈.우성.건영아파트</td>
+							<td> <!-- 상행 -->
+									평일 : 06:30 ~ 21:30<br/>
+                                    주말 : 18:00 ~ 21:30<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:50 ~ 21:50<br/>
+                                    주말 : 18:20 ~ 21:50<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 20  ~ 30 분<br/>
+										주말 : 30  ~ 30 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-덕소교통</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('99-3', '241353006')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >99-3</a></td>
+							<td>농협하나로마트</td>
+							<td>예봉산등산로입구.어룡</td>
+							<td> <!-- 상행 -->
+									평일 : 08:00 ~ 18:00<br/>
+                                    주말 : 08:00 ~ 17:00<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 08:25 ~ 18:25<br/>
+                                    주말 : 08:25 ~ 17:25<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 60  ~ 120 분<br/>
+										주말 : 60  ~ 120 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-덕소교통</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('땡큐20', '241347007')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >땡큐20</a></td>
+							<td>별내빙상장입구</td>
+							<td>금곡동구종점.금곡초교</td>
+							<td> <!-- 상행 -->
+									평일 : 05:40 ~ 22:30<br/>
+                                    주말 : 06:00 ~ 22:00<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:40 ~ 23:30<br/>
+                                    주말 : 07:00 ~ 23:00<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 10  ~ 30 분<br/>
+										주말 : 15  ~ 30 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-태산운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('땡큐61', '241349001')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >땡큐61</a></td>
+							<td>한강우성.해태아파트</td>
+							<td>금곡동구종점.금곡초교</td>
+							<td> <!-- 상행 -->
+									평일 : 05:30 ~ 22:35<br/>
+                                    주말 : 06:30 ~ 21:35<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:00 ~ 23:10<br/>
+                                    주말 : 07:00 ~ 22:10<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 30  ~ 40 분<br/>
+										주말 : 45  ~ 45 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-태화상운</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('땡큐85', '241350003')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >땡큐85</a></td>
+							<td>별내빙상장입구</td>
+							<td>별내하우스토리후문</td>
+							<td> <!-- 상행 -->
+									평일 : 05:40 ~ 23:30<br/>
+                                    주말 : 05:40 ~ 22:50<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 05:40 ~ 00:10<br/>
+                                    주말 : 05:40 ~ 23:30<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 10  ~ 30 분<br/>
+										주말 : 10  ~ 30 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-흥안운수</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('땡큐88-1', '241354002')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >땡큐88-1</a></td>
+							<td>한강우성.해태아파트</td>
+							<td>금곡동구종점.금곡초교</td>
+							<td> <!-- 상행 -->
+									평일 : 05:30 ~ 22:35<br/>
+                                    주말 : 06:30 ~ 21:35<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:00 ~ 23:10<br/>
+                                    주말 : 07:00 ~ 22:10<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 30  ~ 40 분<br/>
+										주말 : 45  ~ 45 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-와부버스</td>
+							
+						</tr>
+					
+						
+							
+							
+							
+							
+							
+								
+							
+							
+							
+						
+						<tr>
+							<td><a title="새 창으로 보기" href="javascript:busInfoView('땡큐99', '241353001')" class="yellow" style="border-radius:5px;background-color:#efd200;color:#585858;padding:3px" >땡큐99</a></td>
+							<td>한강우성.해태아파트</td>
+							<td>금곡동구종점.금곡초교</td>
+							<td> <!-- 상행 -->
+									평일 : 05:30 ~ 22:35<br/>
+                                    주말 : 06:30 ~ 21:35<br/>
+							</td>
+							<td><!-- 하행 -->
+									평일 : 06:00 ~ 23:10<br/>
+                                    주말 : 07:00 ~ 22:10<br/>
+							</td>
+							<td><!-- 배차시간 -->
+										평일 : 30  ~ 40 분<br/>
+										주말 : 45  ~ 45 분<br/>
+							</td>
+
+                            <!-- 운수사명 -->
+							<td>남양주-덕소교통</td>
+							
+						</tr>
+					
+				</tbody>
+			</table>
+			<div class="btn_area">
+				<a href="JavaScript: jsPrint();" class="print" title="새 창">인쇄</a>
+				<a href="JavaScript: jsExcel();" class="file_down">다운로드</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+ <!--footer 시작-->
+	<footer>
+		<div id="footer_wrap">
+         <div class="sfooter_wrap">
+        	<div class="f_menu_wrap sf_menu_wrap">
+    			<ul class="f_menu">
+        			<li class="f1 stress"><a href="javascript:goMove('/popup/popup.action?cmd=popupWeb&amp;ctg=course')">개인정보처리방침</a></li>
+            		<li class="f1"><a href="javascript:goMove('/popup/popup.action?cmd=popupWeb&amp;ctg=provision')">이용약관</a></li>
+            		<li class="f1"><a href="javascript:goMove('/popup/popup.action?cmd=popupWeb&amp;ctg=nemail')">이메일무단수집거부</a></li>
+            		<li class="f1"><a href="javascript:goMove('/service/guide/guide1.action?cmd=mybus')">이용안내</a></li>
+            		<li class="f1"><a href="javascript:goMove('/popup/popup.action?cmd=popupWeb&amp;ctg=locationSuwon')">오시는 길</a></li>
+        		</ul>
+        		<div class="select s_select" >
+        			<span class="placeholder"  id="placeholder" tabindex="0" role="button" >관련사이트</span><span class="hide">클릭하여 열기</span>
+                    <ul>
+    					<li><a href="https://topis.seoul.go.kr/" target="_blank" title="새창으로이동">서울교통정보센터<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a href="http://bus.incheon.go.kr/bis/main.view" target="_blank" title="새창으로이동">인천버스정보관리<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.tago.go.kr/" target="_blank" title="새창으로이동">국가대중교통정보센터<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.gg.go.kr/" target="_blank" title="새창으로이동">경기도<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.gg.go.kr/contents/contents.do?ciIdx=758&menuId=2534" target="_blank" title="새창으로이동">수도권통합요금<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a href="https://gits.gg.go.kr/" target="_blank" title="새창으로이동">경기도교통정보센터<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        <li><a id="lastLink" href="http://www.gbus.or.kr/" target="_blank" title="새창으로이동">경기도버스운송조합<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+  				    </ul>
+        		</div>
+                <script type="text/javascript">
+					$('.select').bind('keypress click','.placeholder',function(){
+	  					var parent = $(this).closest('.select');
+	  					if ( ! parent.hasClass('is-open')){
+		   					parent.addClass('is-open');
+		   					parent.attr("title","관련 사이트 목록 열림");
+		    				$('.select.is-open').not(parent).removeClass('is-open');
+	  					}else{
+	    					parent.removeClass('is-open');
+	    					parent.attr("title","관련 사이트 목록 닫힘");
+	  					}
+					}).on('click','ul>li',function(){
+  					var parent = $(this).closest('.select');
+  					parent.removeClass('is-open').find('.placeholder').text( $(this).text() );
+					});
+					
+					$('#lastLink').focusout(function(){
+						$('#placeholder').attr('tabindex','0').focus();
+					});
+			  </script>
+              </div>
+            </div>
+            <div class="footer sfooter">
+            	<div class="add">
+					<address>
+						<p class="ally-hidden">경기도 로고</p>
+						<p>우편번호 16381 경기도 수원시 권선구 칠보로 1번길 38 경기도교통정보센터</p>
+						<!-- <p>Phone 1688-9090 FAX 031-294-6815  </p> -->
+						<p class="copy">Copyright The province of Gyeonggi, All rights reserved.</p>
+					</address>
+            	</div>
+            <div class="call">
+                <span class="callnumber">031-120 </span><span class="callname"> 경기도콜센터</span>
+            </div>
+            
+            <div class="wa">
+			
+			    <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110">
+				   <img src="/gbis2014/resources/img/WA_Mark_202511.png" alt="웹접근성인증마크" style="width:121px;"/>
+			    </a>
+			
+                <a href="javascript:void(0);" class="top" title="위로가기"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>  
+            </div>
+             
+                <script type="text/javascript">
+					$('.footer a.top').on('click',function(){
+						$('html, body').animate({
+							scrollTop: 0
+						}, 'fast');
+					});
+			  </script>
+            </div>
+    	</div>
+	</footer>
+	<!--footer 끝-->
+
+</body>
+</html>

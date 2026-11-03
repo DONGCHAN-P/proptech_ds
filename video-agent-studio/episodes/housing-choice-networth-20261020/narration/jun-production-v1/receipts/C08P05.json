@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C08P05",
+  "scene_id": "C08",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:07:36.173Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "8b057a0c2cd482759d3a13fedbe78ed68c577ac7c6109d0e93e85d0c2ba71ca7",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "반대로 집값 상승을 영 퍼센트, 투자수익을 연 팔 퍼센트로 두면 매매는 약 오억이백만 원, 전세는 약 칠억천칠백만 원, 월세는 약 칠억팔천사백만 원입니다. 집값도 투자수익도 낮게 둔 연 영 퍼센트와 이 퍼센트 조합에서는 전세가 가장 크게 남습니다. 조건에 따라 가장 크게 남는 방식도 달라집니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 165,
+  "characters": 165,
+  "actual_credits": 66,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19183,
+    "character_limit": 40000,
+    "included_remaining": 20817,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:07:16.662Z",
+  "local_shadow_remaining_before": 20544,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "GKvtrvrIKDmgioRnqrmP",
+    "x-request-id": null,
+    "character-cost": "66",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:07:35 GMT"
+  },
+  "pcm_samples": 970200,
+  "pcm_duration_s": 22,
+  "provider_last_spoken_end_s": 22.08,
+  "artifact_sha256": {
+    "paragraphs/C08P05/audio.mp3": "ed64e9239808716b43c086534817709770854bc3eb6de48c8497a7b09cfbc5b5",
+    "paragraphs/C08P05/audio.wav": "aa97516be7fd703ad766d4910ceac057eb7e55a02c74ae459d35878634cfe016",
+    "paragraphs/C08P05/alignment.json": "c664e6871d1d2331b89a0b7c2bd085cfe56188d3fe73df02c0ef3ee43e5be59a",
+    "paragraphs/C08P05/normalized_alignment.json": "c664e6871d1d2331b89a0b7c2bd085cfe56188d3fe73df02c0ef3ee43e5be59a"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 20478,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:07:40.794Z"
+}

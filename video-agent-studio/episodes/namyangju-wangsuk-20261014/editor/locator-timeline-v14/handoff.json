@@ -1,0 +1,71 @@
+{
+  "revision": "locator-timeline-v14-editor-delivered",
+  "base_revision": "caption-station-v13",
+  "base_sha256": "a567476f33043b87092bff363f8a1f37d0aa3229aa42630cdc0b3b5186d98f9b",
+  "artifacts": {
+    "M007_video": "outputs/locator-timeline-v14/region_prices_v14_M007.mp4",
+    "M007_technical": "outputs/locator-timeline-v14/technical_price.json",
+    "detail_sources": "outputs/locator-timeline-v14/source_detail_*.png",
+    "detail_video": "outputs/locator-timeline-v14/landuse_locator_timeline_v14.mp4",
+    "prefix_video": "outputs/locator-timeline-v14/namyangju_v14_review_00-12m01s.mp4",
+    "full_video": "outputs/locator-timeline-v14/namyangju_locator_timeline_full_v14.mp4",
+    "full_srt": "outputs/locator-timeline-v14/namyangju_locator_timeline_full_v14.srt",
+    "timed_captions": "outputs/locator-timeline-v14/timed_captions_v14.json",
+    "new_closing_shots": "outputs/locator-timeline-v14/closing_shot_manifest.json",
+    "audio_mix": "outputs/locator-timeline-v14/audio_mix_manifest_v14.json",
+    "reproduce": "editor/locator-timeline-v14/reproduce.md",
+    "final_QA": "qa/locator-timeline-v14/final_review.json"
+  },
+  "M007_original_frame_range": [
+    15758,
+    18648
+  ],
+  "M007_frames": 2890,
+  "M007_sha256": "68492bc37ac11c9d21f9fde975f6112016d555168961c1f0292cb0a312bd4e14",
+  "verified": [
+    "M007 independent QA passed and Telegram text notified",
+    "detail7568f independent QA passed and Telegram text notified",
+    "prefix21636f independent QA passed and Telegram text notified",
+    "W1 continuous whole locator source gate passed",
+    "closing source gate passed; missing restriction table added during final audit",
+    "new2 chapter exact character alignment 72 cues; full301cueSRT",
+    "prefix PCM samples identical; final AAC reencoded; PCM peak0.4357",
+    "closing restriction-table corrected render complete",
+    "final full 27653f whole decode passed",
+    "first9 caption objects and narration metadata exact equal",
+    "new72 cues exact provider character alignment;301total",
+    "final encoded audio peak -7.24dBFS;NaN/Inf0",
+    "final actual Summary frame26972 viewed: restriction rows and subtitle bar readable",
+    "final301cue SRT generated; source audio alignment 72new cues",
+    "independent final actual QA passed: required0/local_review_ready true; restriction table checked;27653frames/301cues"
+  ],
+  "pending": [
+    "director exact completed decision and delivery ZIP",
+    "director final Telegram text notification (editor final notifier intentionally not run)"
+  ],
+  "actual_listening": false,
+  "continuous_playback": false,
+  "new_paid_generation": false,
+  "next_owners": [
+    "qa/locator-timeline-v14",
+    "director"
+  ],
+  "new_narration": {
+    "approved": true,
+    "included_credits": 616,
+    "cash": 0,
+    "revision": "region-leaders-v7"
+  },
+  "full_sha256": "ba5bcfdc625f3c15b3f13548f43696e6f7d8b0579c8f8374d46df7d2083966f1",
+  "duration_frames": 27653,
+  "caption_count": 301,
+  "editor_status": "render_technical_and_independent_QA_complete",
+  "notifications": {
+    "price": true,
+    "detail": true,
+    "prefix": true,
+    "full": false,
+    "final_notification_owner": "director",
+    "file_transmission": false
+  }
+}

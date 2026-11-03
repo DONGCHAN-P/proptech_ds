@@ -1,0 +1,12 @@
+{
+  "role":"research",
+  "revision":"prices-v2",
+  "status":"ready_with_qualified_comparisons",
+  "input_versions":["research-v1","master/trade_events.parquet 2026-10-13 snapshot","official RTMS 41281 202607-202609 fetched 2026-10-16"],
+  "outputs":["calculate.py","refresh.py","comparisons.json","facts.json","verified_rows.csv","methodology.md","handoff.md","issue_PRICE-DATA03.json","raw"],
+  "verification":["three official response pages complete","68 valid source items","0 exact raw key duplicates","5 master differences identified","no shared master/state modifications"],
+  "unresolved":["future delayed/corrected reports","technical HWP not read","station coordinates source not independently verified","pedestrian entrances/routes and commute times unverified"],
+  "affected_scene_ids":["S050","M008"],
+  "next_roles":["writer","visual","director"],
+  "checked_on":"2026-10-16"
+}

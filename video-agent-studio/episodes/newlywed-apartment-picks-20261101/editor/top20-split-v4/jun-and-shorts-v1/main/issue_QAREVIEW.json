@@ -1,0 +1,15 @@
+{
+  "issue_id": "QAREVIEW",
+  "scene_id": "P01-ALL-caption-rail",
+  "status": "v3_delta_ready_for_parent_review",
+  "problem": "v2 continuous-body white box remained during sentence gaps; fixed per latest explicit cue-union instruction",
+  "evidence": {
+    "video": "outputs/top20-split-v4/jun-and-shorts-v1/main/part1_Jun_conform_jun-v3.mp4",
+    "sha256": "cc6de853097391324aa1c584904c05fa2f118e09978914962ddb151905ab2b3e",
+    "receipt": "jun-v3/render_receipt.json",
+    "actual_encoded_proofs": "jun-v3/proofs/caption_rail_scanline_proof.jpg",
+    "native_HF_proofs": "jun-v3/proofs/native/contact-sheet.jpg"
+  },
+  "proposal": "Parent regenerates main previews and Q evidence from exact v3 output. v1/v2 preserved.",
+  "impact": "caption box visibility only; no anchor/native/audio/design changes"
+}

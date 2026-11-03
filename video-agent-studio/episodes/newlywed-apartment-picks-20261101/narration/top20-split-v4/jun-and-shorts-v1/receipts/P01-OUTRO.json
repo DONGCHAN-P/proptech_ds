@@ -1,0 +1,64 @@
+{
+  "asset_id": "P01-OUTRO",
+  "sentence_ids": [
+    "P01-OUTRO-V2-01",
+    "P01-OUTRO-V2-02",
+    "P01-OUTRO-V2-03"
+  ],
+  "status": "complete",
+  "started_at_utc": "2026-11-03T13:25:57.623Z",
+  "authorization_id": "9cde211f3073",
+  "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+  "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+  "input_file_sha256": "2909d9c036f4077ee6b35c0b27bc61317a4f3ab30db7bd4405541b636b9d0d22",
+  "request_text_sha256": "5fa2b1248e186ceb3ec1911f0f026f17197e1584ef9f2ecf844d5a6d1542b959",
+  "characters": 166,
+  "reserved_credits": 166,
+  "actual_credits": 66,
+  "charge_known": true,
+  "request": {
+    "text": "같은 구 안에서도 예산과 철도 이용 방향, 학교와 장보기 동선에 따라 비교할 생활권은 달라집니다.\n\n다음 편은 미추홀구부터 이천이십사 년 당시 인천 서구까지, 십 위에서 일 위를 같은 지도 범례로 이어 보겠습니다.\n\n상위 열 곳의 생활권과 가격도 함께 비교하실 분들은 구독과 좋아요를 부탁드립니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+  "local_shadow_remaining_before": 14548,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "MmkILmQLxmmzr9ql4kSI",
+    "x-request-id": null,
+    "character-cost": "66",
+    "content-type": "application/json",
+    "date": "Tue, 03 Nov 2026 13:26:00 GMT"
+  },
+  "pcm_samples": 899640,
+  "pcm_duration_s": 20.4,
+  "provider_last_alignment_end_s": 20.48,
+  "complete_tail_after_alignment_s": -0.08000000000000185,
+  "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-OUTRO.wav",
+  "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-OUTRO/audio.mp3",
+  "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-OUTRO/alignment.json",
+  "pcm_sha256": "cf16a99b6c6125ac7afb121104106a3391c703bffbb9ef89b59dbe6ebcf269a3",
+  "artifact_sha256": {
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-OUTRO/audio.mp3": "40652ad204d5d698e7ef63b1965e3fed0a29ead93385172493dca30ee550e671",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-OUTRO/alignment.json": "00d4988ebb03bdc93a16c0de98efecea749aede3bc9e1133b26f1a3931f7dc09",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-OUTRO/normalized_alignment.json": "00d4988ebb03bdc93a16c0de98efecea749aede3bc9e1133b26f1a3931f7dc09",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-OUTRO.wav": "c1a67697201537812a4fa60fae43eedf65f4ab232ec34dce16e991d901ff500a"
+  },
+  "processing": {
+    "sample_rate_hz": 44100,
+    "channels": 1,
+    "codec": "pcm_s16le",
+    "tempo_factor": 1,
+    "trimmed": false,
+    "tail_preserved": true,
+    "provider_speed": 0.97
+  },
+  "local_shadow_remaining_after": 14482,
+  "completed_at_utc": "2026-11-03T13:26:03.145Z"
+}

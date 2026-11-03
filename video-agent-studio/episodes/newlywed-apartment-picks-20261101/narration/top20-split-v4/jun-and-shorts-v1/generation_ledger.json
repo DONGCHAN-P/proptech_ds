@@ -1,0 +1,1104 @@
+{
+  "authorization_id": "9cde211f3073",
+  "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+  "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+  "status": "all16_generated_measured_native_alignment_not_listened",
+  "actual_credits": 2208,
+  "submitted_characters": 5520,
+  "reserved_pending_credits": 0,
+  "requests": [
+    {
+      "asset_id": "INTRO-HOOK",
+      "sentence_ids": [
+        "P01-INTRO-V3-01"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:23:14.252Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "97b42212521e90dbb8c9dab06e296403ed252a1a29d71b2e14418aaa2a7d5396",
+      "request_text_sha256": "97b42212521e90dbb8c9dab06e296403ed252a1a29d71b2e14418aaa2a7d5396",
+      "characters": 33,
+      "reserved_credits": 33,
+      "actual_credits": 13,
+      "charge_known": true,
+      "request": {
+        "text": "우리 예산으로 집을 산다면, 어느 동네부터 찾아봐야 할까요?",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 16664,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "p9n9QIokb0VTbvQ4ffXN",
+        "x-request-id": null,
+        "character-cost": "13",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:23:16 GMT"
+      },
+      "pcm_samples": 172872,
+      "pcm_duration_s": 3.92,
+      "provider_last_alignment_end_s": 4,
+      "complete_tail_after_alignment_s": -0.08000000000000007,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-HOOK.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-HOOK/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-HOOK/alignment.json",
+      "pcm_sha256": "f19b919d715c71e5399b785b08bfc90af0002b6f2f598eb9e6f7d08794758b82",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-HOOK/audio.mp3": "902c14e4f3ebfb98d1e7e2709f3bcaf3063ea331168625e9c61ec0456476fddb",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-HOOK/alignment.json": "4ec04832d2bdf09e989782b610ef62f9d22aea8dafe1f90e383c781ee1b1c330",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-HOOK/normalized_alignment.json": "4ec04832d2bdf09e989782b610ef62f9d22aea8dafe1f90e383c781ee1b1c330",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-HOOK.wav": "f414f803dc2a83e0bcca79ec3e0a4beee020df2c327b48e38468ae80fb45e593"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 16651,
+      "completed_at_utc": "2026-11-03T13:23:18.463Z"
+    },
+    {
+      "asset_id": "INTRO-PURPOSE",
+      "sentence_ids": [
+        "P01-INTRO-V3-02",
+        "P01-INTRO-V3-03",
+        "P01-INTRO-V3-04",
+        "P01-INTRO-V3-05",
+        "P01-INTRO-V3-06"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:23:18.467Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "ca489b9bd99ca98bdadab099da8646f27398b63fbb3fd586ccbc97c85980e024",
+      "request_text_sha256": "104e66409b73364409ea3e54c3e37aba724d3d58069f841b9194081b53b1c101",
+      "characters": 279,
+      "reserved_credits": 279,
+      "actual_credits": 112,
+      "charge_known": true,
+      "request": {
+        "text": "앞으로 이 채널에서는 신혼부부가 실제로 매매를 검토할 만한 지역과 아파트를 가격대별로 찾아드리려고 합니다.\n\n어느 지역부터 소개할지, 그 기준도 데이터에서 찾고 싶었습니다.\n\n그래서 먼저 신혼부부 통계를 통해, 신혼부부가 실제로 많이 살고 있는 지역들을 골라봤습니다.\n\n이번 편에서는 수도권 쉰세 개 구 가운데 이십 위부터 십일 위까지, 지역별 아파트 가격과 생활권을 함께 살펴보겠습니다.\n\n이 지역들을 한 차례 둘러본 뒤에는, 지역마다 더 깊이 들어가 예산별로 비교할 만한 아파트를 찾아보겠습니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 16651,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "iFwZJqPpWeNj6W1a3VcA",
+        "x-request-id": null,
+        "character-cost": "112",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:23:20 GMT"
+      },
+      "pcm_samples": 1425312,
+      "pcm_duration_s": 32.32,
+      "provider_last_alignment_end_s": 32.4,
+      "complete_tail_after_alignment_s": -0.0799999999999983,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-PURPOSE.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-PURPOSE/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-PURPOSE/alignment.json",
+      "pcm_sha256": "84b22b5ceebe2b24eb7c780988adb646cb9a82d4079e8cff5275f6387895157c",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-PURPOSE/audio.mp3": "42b5dd1ae776d43373dc8d191396385dc7c7d9be9eb155954bbcab9f2b9a0a85",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-PURPOSE/alignment.json": "8eacaf8a53cc4f49a0c1b42e3e3ebbab1b9bf06ef9879322b5af4c552e631e3c",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-PURPOSE/normalized_alignment.json": "8eacaf8a53cc4f49a0c1b42e3e3ebbab1b9bf06ef9879322b5af4c552e631e3c",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-PURPOSE.wav": "83a25402c33bf00dd4673de30731d264c4d3f35d64c81458fe2f0837c7b5a776"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 16539,
+      "completed_at_utc": "2026-11-03T13:23:27.688Z"
+    },
+    {
+      "asset_id": "INTRO-CRITERIA",
+      "sentence_ids": [
+        "P01-CRITERIA-01",
+        "P01-CRITERIA-02"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:23:27.692Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "49c2fccbcabe684f2b38ca40b813c4414f0e8f4d4573685a7cfc8b1635ea41ec",
+      "request_text_sha256": "ec11c0cf547245cc1a41ea9ff2adf890a8c73d5da1c124ddf2c74ddf7a2b45b8",
+      "characters": 117,
+      "reserved_credits": 117,
+      "actual_credits": 47,
+      "charge_known": true,
+      "request": {
+        "text": "가격은 이천이십육 년 오 월부터 시월까지 계약된 전용 팔십삼에서 팔십오 제곱미터 아파트 실거래를 기준으로 합니다.\n\n십일 월 삼 일 확인한 거래에서 취소 건을 빼고, 단지별로 가운데 값인 중위가격을 구했습니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 16539,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "RUHdcByCEomxoqCECVO9",
+        "x-request-id": null,
+        "character-cost": "47",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:23:29 GMT"
+      },
+      "pcm_samples": 638568,
+      "pcm_duration_s": 14.48,
+      "provider_last_alignment_end_s": 14.56,
+      "complete_tail_after_alignment_s": -0.08000000000000007,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-CRITERIA.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-CRITERIA/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-CRITERIA/alignment.json",
+      "pcm_sha256": "a1898ef5e38f4d5711f04fcf22198d8ea954fab95ed3f2fc6894a13fd36735a4",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-CRITERIA/audio.mp3": "c0e4604d25756addf7c0395c895c0198302e8850fa334e94449d2dc3c7957a14",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-CRITERIA/alignment.json": "ce2b37faf34c41c92abc0de04cfb5a71a0bd472bb686773fe4ef7462ec2f737a",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-CRITERIA/normalized_alignment.json": "ce2b37faf34c41c92abc0de04cfb5a71a0bd472bb686773fe4ef7462ec2f737a",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-CRITERIA.wav": "8c0a84a600def27207211df814356c97b1c037b30235275821fd35ae773c00c1"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 16492,
+      "completed_at_utc": "2026-11-03T13:23:31.873Z"
+    },
+    {
+      "asset_id": "INTRO-METHOD",
+      "sentence_ids": [
+        "P01-INTRO-V3-07",
+        "P01-INTRO-V3-08"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:23:31.877Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "1b1b56620bd4831af00ecb1769376b59c21cda139247ee7a5aebf4fef8aa0c24",
+      "request_text_sha256": "4ad2877100320c81843fac560373ea8b4db006bf7fd528566a94da6c236f1292",
+      "characters": 72,
+      "reserved_credits": 72,
+      "actual_credits": 29,
+      "charge_known": true,
+      "request": {
+        "text": "지도의 점 하나는 아파트 한 단지이고, 색은 그 단지의 거래 중위가격 구간입니다.\n\n그럼 이십 위 부천 원미구부터 시작하겠습니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 16492,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "DtTWhNTrZVbURDlYqFnQ",
+        "x-request-id": null,
+        "character-cost": "29",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:23:34 GMT"
+      },
+      "pcm_samples": 402192,
+      "pcm_duration_s": 9.12,
+      "provider_last_alignment_end_s": 9.2,
+      "complete_tail_after_alignment_s": -0.08000000000000007,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-METHOD.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-METHOD/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-METHOD/alignment.json",
+      "pcm_sha256": "4556c130b93c4959bc15475ecd75684fae1cac6e1f1d7b9b981ccd993994715f",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-METHOD/audio.mp3": "e805e55bd32835ff857bad2846a5c0f27216224a44cbf489c3d9645d6c45adce",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-METHOD/alignment.json": "a221e560f102cd31433920adb2d73df22eae786fa3a6def4f5d67623f0b27d27",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-METHOD/normalized_alignment.json": "a221e560f102cd31433920adb2d73df22eae786fa3a6def4f5d67623f0b27d27",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-METHOD.wav": "f6af70d4716e5f4c4c97586f6a0ede78e80d60c679c1fa2bcfc55070b9dfc1bd"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 16463,
+      "completed_at_utc": "2026-11-03T13:23:34.654Z"
+    },
+    {
+      "asset_id": "P01-R20",
+      "sentence_ids": [
+        "P01-R20-V2-01",
+        "P01-R20-V2-02",
+        "P01-R20-V2-03",
+        "P01-R20-V2-04",
+        "P01-R20-V2-05",
+        "P01-R20-V2-06",
+        "P01-R20-V2-07",
+        "P01-R20-V2-08"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:23:34.662Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "533a6f92a8d4ee0ad33c76c2fd55ec2c2e40d14c8b9ce9d94db0a460003fe94e",
+      "request_text_sha256": "e9d4b0088003613dfa85ede758c5f11ce3d3f14b9521f0e2db5327efcaea13e3",
+      "characters": 528,
+      "reserved_credits": 528,
+      "actual_credits": 211,
+      "charge_known": true,
+      "request": {
+        "text": "이십 위는 경기 부천시 원미구, 칠천삼백육십오 쌍입니다.\n\n중동과 상동에 걸친 중동신도시는 아파트 단지와 마을, 주변 가로를 함께 살펴볼 생활권입니다.\n\n부천시 정비기본계획도 공동주택 블록과 마을 단위의 통합 검토를 다뤄, 한 단지를 고를 때 주변 주거지까지 볼 기준을 제공합니다.\n\n상동의 도시 가로 사진에서는 아파트가 주변 거리와 만나는 모습을 보며, 단지 안과 마을 밖의 생활을 함께 떠올릴 수 있습니다.\n\n가격에서 눈에 띄는 대비는 준공 시기별 거래 중윗값으로, 이천 년까지 준공된 집단은 육 억 원, 이천십일 년 이후 집단은 팔 억 구천구백 만 원입니다.\n\n이 차이를 비교할 때는 원하는 준공연도와 수리 상태, 마을 단위 정비계획을 함께 놓고 예산을 좁히는 방식이 유용합니다.\n\n중동의 미리내마을 롯데이  주변에는 계남초등학교, 계남중학교가 표시되고, 신중동역까지의 연결도 같은 상세 지도에서 읽을 수 있습니다.\n\n학교와 역은 단지에서 살펴볼 범위가 달라, 자녀의 통학과 두 사람의 출근 경로를 나눠 그려보면 선택 기준이 구체화됩니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 16463,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "nt9la1jbCA1kOHTHelNr",
+        "x-request-id": null,
+        "character-cost": "211",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:23:36 GMT"
+      },
+      "pcm_samples": 2794176,
+      "pcm_duration_s": 63.36,
+      "provider_last_alignment_end_s": 63.44,
+      "complete_tail_after_alignment_s": -0.0799999999999983,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R20.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R20/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R20/alignment.json",
+      "pcm_sha256": "86b0ef63ff36253cbbc3c8e9a67d5ed7db4555b5f1db2ff8af74a60c555c8eed",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R20/audio.mp3": "e2139845316b3168f6470d66ff2f0b8ad069de11cdcd1303c5ca9f4463ae4854",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R20/alignment.json": "7824494e99ed7d233dcfe89342b6e3329c84b618fba3a044adb38e6d4615fc5e",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R20/normalized_alignment.json": "7824494e99ed7d233dcfe89342b6e3329c84b618fba3a044adb38e6d4615fc5e",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R20.wav": "b295c4295d8521fa56afe2b0cb32b137e4f4a8a75f21fafa436417f7725d8ae9"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 16252,
+      "completed_at_utc": "2026-11-03T13:23:50.756Z"
+    },
+    {
+      "asset_id": "P01-R19",
+      "sentence_ids": [
+        "P01-R19-V2-01",
+        "P01-R19-V2-02",
+        "P01-R19-V2-03",
+        "P01-R19-V2-04",
+        "P01-R19-V2-05",
+        "P01-R19-V2-06",
+        "P01-R19-V2-07",
+        "P01-R19-V2-08"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:23:50.761Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "c2abfdc102b74dcdabae29c9ad18ca8c9fddc020e12d545b5209250ece877805",
+      "request_text_sha256": "d78f6b9a7129d1860ab7c291fa80ce7e8b3afda68259cb6bed16a8763c1e555b",
+      "characters": 498,
+      "reserved_credits": 498,
+      "actual_credits": 199,
+      "charge_known": true,
+      "request": {
+        "text": "십구 위는 서울 중랑구, 칠천오백사십칠 쌍입니다.\n\n신내동에는 택지개발로 조성된 아파트 주거지가 있고, 신내역에서는 경춘선과 육 호선을 이용할 수 있습니다.\n\n공식 주거정보는 주변 서울의료원과 청남공원도 안내해, 철도와 의료, 여가 시설을 함께 살펴볼 수 있습니다.\n\n신내역 일대의 자료사진에서는 철도와 버스가 만나는 생활 거점의 모습을 살펴보겠습니다.\n\n면목동 현대 단지 주변으로 옮기면 서울면남초등학교, 용마중학교와 칠 호선 용마산 용마폭포공원 역이 상세 지도의 기준점입니다.\n\n신내권의 경춘선, 육 호선과 면목권의 칠 호선 중 직장 방향에 맞는 연결을 먼저 고르면, 같은 중랑구 안에서도 비교 대상이 선명해집니다.\n\n두 생활권의 거래 중윗값은 신내동 칠 억 사천 만 원, 면목동 팔 억 사천 만 원으로, 예산과 철도 이용 방향을 함께 비교할 출발점이 됩니다.\n\n장보기와 공원 이용은 선택한 단지에서 출발하는 길로 이어 보고, 평일 이동과 주말 생활이 만나는 권역을 골라볼 수 있습니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 16252,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "Ute0TvJuFajxMuSQE49Z",
+        "x-request-id": null,
+        "character-cost": "199",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:23:53 GMT"
+      },
+      "pcm_samples": 2646000,
+      "pcm_duration_s": 60,
+      "provider_last_alignment_end_s": 60.08,
+      "complete_tail_after_alignment_s": -0.0799999999999983,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R19.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R19/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R19/alignment.json",
+      "pcm_sha256": "15aba78874fda378bfba1ef69d54da5813a6d9e2f127e1deeaed51a895707a7a",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R19/audio.mp3": "2a635c7c4839b211694726ff3de38bd456aa6ae3a38711f5f92c098ea479788d",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R19/alignment.json": "082b269b5bd68e9b9cc67b736f5740221b541f991418bec85cbf8d81343cf9e6",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R19/normalized_alignment.json": "082b269b5bd68e9b9cc67b736f5740221b541f991418bec85cbf8d81343cf9e6",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R19.wav": "747591461b2e29024b2ffacbf509fb2b32f7b1400169fd32fc4118df8c244e4d"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 16053,
+      "completed_at_utc": "2026-11-03T13:24:03.865Z"
+    },
+    {
+      "asset_id": "P01-R18",
+      "sentence_ids": [
+        "P01-R18-V2-01",
+        "P01-R18-V2-02",
+        "P01-R18-V2-03",
+        "P01-R18-V2-04",
+        "P01-R18-V2-05",
+        "P01-R18-V2-06",
+        "P01-R18-V2-07",
+        "P01-R18-V2-08"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:24:03.873Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "1ffda6b22d093a5cdd1a00847ed6fcf1c609d1077b1f154eeb2bd5ea92ca872e",
+      "request_text_sha256": "474f12ede734bef876b0f439d78be94e8a14692c2af735add0e2447862985c52",
+      "characters": 477,
+      "reserved_credits": 477,
+      "actual_credits": 191,
+      "charge_known": true,
+      "request": {
+        "text": "십팔 위는 경기 용인시 기흥구, 칠천육백팔십육 쌍입니다.\n\n기흥구는 동백, 흥덕의 대규모 택지개발 주거지와 기업, 연구시설이 함께 자리한 지역입니다.\n\n직장이 어느 권역에 있는지부터 지도에 놓으면, 넓은 기흥구에서 집과 업무지를 연결해 비교할 기준이 생깁니다.\n\n구성역은 지티엑스 에이와 수인분당선의 연결 거점이며, 사진 속 오 번출구에는 버스 연계 이용이 안내돼 있습니다.\n\n영덕동 용인기흥효성해링턴플레이스 주변 상세도에서는 청곡초등학교와 상갈역을 기준으로 단지의 위치를 읽겠습니다.\n\n구성역 중심의 철도 연결을 볼지, 영덕동의 단지와 학교 주변을 볼지에 따라 확인할 생활 동선도 달라집니다.\n\n거래 중윗값은 동백동 오 억 이천 만 원, 영덕동 칠 억 천오백 만 원으로, 원하는 주거권과 예산을 함께 좁혀볼 수 있습니다.\n\n학교와 장보기 장소를 묶은 일상 동선에 실제 출근 목적지를 더해, 두 사람의 이동이 균형을 이루는 주거권을 찾아보는 방식입니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 16053,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "E9m8n9c19R2CUoGwwAup",
+        "x-request-id": null,
+        "character-cost": "191",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:24:06 GMT"
+      },
+      "pcm_samples": 2508408,
+      "pcm_duration_s": 56.88,
+      "provider_last_alignment_end_s": 56.96,
+      "complete_tail_after_alignment_s": -0.0799999999999983,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R18.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R18/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R18/alignment.json",
+      "pcm_sha256": "db7d28ab043efe561c27c809058296a730f101ea0ff43000e64d60c832bb4d13",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R18/audio.mp3": "8f1fc8760eef7614c2ef5791dbf3cff14ebb6eca80794a03b1d7fb667c4b591b",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R18/alignment.json": "26f6af2f082e42e2c8f961fcf0b920f026b15d87588d3c70a802443948d0aacc",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R18/normalized_alignment.json": "26f6af2f082e42e2c8f961fcf0b920f026b15d87588d3c70a802443948d0aacc",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R18.wav": "15527958deb41bac9cb8fa3e1b568d7ea548a9131bdc62049ebb05307fbed5a1"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 15862,
+      "completed_at_utc": "2026-11-03T13:24:17.786Z"
+    },
+    {
+      "asset_id": "P01-R17",
+      "sentence_ids": [
+        "P01-R17-V2-01",
+        "P01-R17-V2-02",
+        "P01-R17-V2-03",
+        "P01-R17-V2-04",
+        "P01-R17-V2-05",
+        "P01-R17-V2-06",
+        "P01-R17-V2-07",
+        "P01-R17-V2-08"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:24:17.790Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "d94742a3f133395e3d4bc8d8123e9954d775f992d91ab9f2c5b6a33e4f4d0666",
+      "request_text_sha256": "e86911c943779af18b55a7b0c3b2a612708a7fd9427b671eb7a912edb397ca88",
+      "characters": 497,
+      "reserved_credits": 497,
+      "actual_credits": 199,
+      "charge_known": true,
+      "request": {
+        "text": "십칠 위는 인천 연수구, 칠천팔백칠십오 쌍입니다.\n\n연수구에는 연수이 동의 아파트, 중심상가 생활권과 송도의 국제업무, 바이오산업 권역이 함께 있습니다.\n\n평소 이용할 상가와 직장이 같은 권역에 모이는지, 서로 다른 권역을 오가게 되는지 살펴보면 집을 비교할 기준이 구체화됩니다.\n\n송도 센트럴파크는 해수 수로와 산책정원을 갖춘 공간으로, 사진에서는 업무 권역과 함께 볼 여가 환경을 살펴보겠습니다.\n\n거래 중윗값은 연수동 삼 억 삼천백오십 만 원, 송도동 칠 억 사천 만 원으로, 두 생활권의 예산 조건이 크게 갈립니다.\n\n직장 위치와 필요한 주택 상태를 먼저 정하면, 기존 연수권을 볼지 송도권을 볼지 비교의 순서가 구체화됩니다.\n\n이편한세상송도 상세도에는 인천송담초등학교, 인천미송중학교와 송도달빛축제공원역을 놓아 학교와 철도 위치를 함께 읽습니다.\n\n공원에서 보내는 여가와 매일의 출근, 장보기 동선을 한 후보 단지에 연결해 보면, 같은 연수구 안의 생활 차이를 비교하기 좋습니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 15862,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "1Z1xzanJPdgkpPRbHIm7",
+        "x-request-id": null,
+        "character-cost": "199",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:24:19 GMT"
+      },
+      "pcm_samples": 2684808,
+      "pcm_duration_s": 60.88,
+      "provider_last_alignment_end_s": 60.96,
+      "complete_tail_after_alignment_s": -0.0799999999999983,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R17.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R17/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R17/alignment.json",
+      "pcm_sha256": "334cc16041712c4739cd6c13089c7690828bd50437f8e82a3019e8fb5ad2dd9f",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R17/audio.mp3": "70aafe0b21879c73f097c1b2b94b8feada6e1385edf5ed3dd9bd3d720e5c5d2d",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R17/alignment.json": "698be408815985776ba4bf8e62547aeda417f44cea7beb5462f6409a530fca4a",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R17/normalized_alignment.json": "698be408815985776ba4bf8e62547aeda417f44cea7beb5462f6409a530fca4a",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R17.wav": "51449e4a916c37ac245d43eb7daab6cbf154c2a27dcedeef0ef65b3499caaefa"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 15663,
+      "completed_at_utc": "2026-11-03T13:24:33.787Z"
+    },
+    {
+      "asset_id": "P01-R16",
+      "sentence_ids": [
+        "P01-R16-V2-01",
+        "P01-R16-V2-02",
+        "P01-R16-V2-03",
+        "P01-R16-V2-04",
+        "P01-R16-V2-05",
+        "P01-R16-V2-06",
+        "P01-R16-V2-07",
+        "P01-R16-V2-08"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:24:33.790Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "af2b16a03b8a0c1b382312a88f97edf8f25586ebf80392e165bdc02a5cda73d1",
+      "request_text_sha256": "8fdb992bcd6b1d9233005d623f6efb7dcb728b5f1524f7b70236fb35f3b42f48",
+      "characters": 512,
+      "reserved_credits": 512,
+      "actual_credits": 205,
+      "charge_known": true,
+      "request": {
+        "text": "십육 위는 인천 남동구, 칠천구백구십칠 쌍입니다.\n\n남동구 논현동에는 논현 웰카운티처럼 이천 년대에 입주한 아파트가 있어, 기존 주택의 상태와 주변 생활을 함께 비교할 수 있습니다.\n\n소래습지생태공원은 갯벌, 습지와 탐방데크가 있는 공간이며, 사진에서는 해안 생태환경을 활용한 여가 모습을 읽을 수 있습니다.\n\n옛 염전을 활용한 학습장도 안내돼 있어, 산책과 생태 학습을 함께 생각해 볼 장소입니다.\n\n대표 사례인 논현 파크 포레 주변에는 인천논곡초등학교와 인천금융고등학교의 위치를 표시합니다.\n\n이 상세 지도에서는 학교와 단지 사이의 도로 연결을 읽고, 장보기와 출근 목적지를 더해 평일 생활의 범위를 잡아볼 수 있습니다.\n\n지도에 연결된 칠십칠 개 단지 가운데 육십일 곳은 중윗값이 오 억 원 미만이고, 나머지 십육 곳은 오 억 원 이상 칠 억 원 미만에 놓입니다.\n\n이 가격 분포에서 예산에 맞는 점을 고른 뒤 학교 주변의 주거 환경과 주택 상태를 비교하면, 구 안에서 볼 단지를 구체적으로 추릴 수 있습니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 15663,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "nlC8HJCt2pZOgNeW1jGv",
+        "x-request-id": null,
+        "character-cost": "205",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:24:36 GMT"
+      },
+      "pcm_samples": 2642472,
+      "pcm_duration_s": 59.92,
+      "provider_last_alignment_end_s": 60,
+      "complete_tail_after_alignment_s": -0.0799999999999983,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R16.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R16/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R16/alignment.json",
+      "pcm_sha256": "bba56047b1fdfd9b76f17ecdebbef7705a65d39389f87d490620d43cee535ead",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R16/audio.mp3": "00b383d1d4fdaf335490a45fbc53fb02b42bfc4fab3d94ebfc78c8fb6edc4a00",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R16/alignment.json": "f3c6012bfeb5e14609d3e094991779777426a69f7bbe5e2f66a57736cba43845",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R16/normalized_alignment.json": "f3c6012bfeb5e14609d3e094991779777426a69f7bbe5e2f66a57736cba43845",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R16.wav": "fd196250b807c9003bcf07a11c9964b7c5598fb464bf918c7e9879629b7cf428"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 15458,
+      "completed_at_utc": "2026-11-03T13:24:47.411Z"
+    },
+    {
+      "asset_id": "P01-R15",
+      "sentence_ids": [
+        "P01-R15-V2-01",
+        "P01-R15-V2-02",
+        "P01-R15-V2-03",
+        "P01-R15-V2-04",
+        "P01-R15-V2-05",
+        "P01-R15-V2-06",
+        "P01-R15-V2-07",
+        "P01-R15-V2-08"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:24:47.415Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "f3a2450fb44c7e42cc10e0e10fcf8fe2d8d566e87770cb3fdc452d307fb72739",
+      "request_text_sha256": "4ae57f350920718fd64db778861f5315640a9de955261c777b5f36259a4c4e4c",
+      "characters": 489,
+      "reserved_credits": 489,
+      "actual_credits": 196,
+      "charge_known": true,
+      "request": {
+        "text": "십오 위는 서울 구로구, 팔천십육 쌍입니다.\n\n구로구에서는 신도림의 아파트, 환승 생활권과 구로동의 산업 업무권을 함께 살펴볼 수 있습니다.\n\n신도림로, 경인로 주변에 여러 아파트 단지가 있고, 사진의 신도림역은 일 호선과 이 호선을 잇는 거점입니다.\n\n지밸리는 구로동과 금천구 가산동에 걸쳐 있어, 직장의 실제 주소를 지도에 놓으면 주거지와 연결할 방향이 구체화됩니다.\n\n구로동 현대연예인 단지 주변에는 서울구일초등학교, 구일중학교, 구일고등학교를 표시해 단지와 학교의 배치를 읽겠습니다.\n\n철도 환승을 우선할지, 학교가 있는 주거권과 업무지의 연결을 우선할지에 따라 후보를 고르는 기준이 달라집니다.\n\n거래 중윗값은 구로동 칠 억 팔천 만 원, 신도림동 십삼 억 이천 만 원으로, 업무지 연결과 예산을 함께 놓고 비교할 차이가 있습니다.\n\n장보기와 퇴근 뒤의 생활까지 실제 후보 단지에서 이어 보면, 신도림과 구로동 중 두 사람의 일상에 맞는 권역을 비교할 수 있습니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 15458,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "mtOM6g1b7taujM0q5Oxm",
+        "x-request-id": null,
+        "character-cost": "196",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:24:50 GMT"
+      },
+      "pcm_samples": 2600136,
+      "pcm_duration_s": 58.96,
+      "provider_last_alignment_end_s": 59.04,
+      "complete_tail_after_alignment_s": -0.0799999999999983,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R15.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R15/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R15/alignment.json",
+      "pcm_sha256": "91388f1a6a08b5ef6475579aa98b0be080e80dd1d4366f2a64a9179ec3ed0bd8",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R15/audio.mp3": "3bfe7c11e37dd32a7db78848087bec7405a14b97d13b6965dc53a7709ba01c96",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R15/alignment.json": "d010aabc2eef83c35a6e9f4ebc644dac79efff5f5ce34884148025b88825bbd6",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R15/normalized_alignment.json": "d010aabc2eef83c35a6e9f4ebc644dac79efff5f5ce34884148025b88825bbd6",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R15.wav": "0b25d1d3dab6302922cedeb76eca454b809d97377e1b4fe41013ffafa5538ba4"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 15262,
+      "completed_at_utc": "2026-11-03T13:25:00.492Z"
+    },
+    {
+      "asset_id": "P01-R14",
+      "sentence_ids": [
+        "P01-R14-V2-01",
+        "P01-R14-V2-02",
+        "P01-R14-V2-03",
+        "P01-R14-V2-04",
+        "P01-R14-V2-05",
+        "P01-R14-V2-06",
+        "P01-R14-V2-07",
+        "P01-R14-V2-08"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:25:00.497Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "bd06d2b4a9225df4990771f7e7eb1486021497bd5de20535664e1a48363d93e1",
+      "request_text_sha256": "a22ac1bc98b0f6a0fcb64713f14342d43dcf0e6dbf99bd8e8ab8f9bad7f7d54e",
+      "characters": 496,
+      "reserved_credits": 496,
+      "actual_credits": 198,
+      "charge_known": true,
+      "request": {
+        "text": "십사 위는 서울 은평구, 팔천이백육십칠 쌍입니다.\n\n진관동의 은평뉴타운은 상림마을과 우물골 등 마을 단위로 조성된 주거지입니다.\n\n우물골 단지 옆의 진관동 주민센터처럼, 공동주택과 일상 공공시설의 관계를 마을 이름과 함께 읽을 수 있습니다.\n\n은평뉴타운의 실제 사진에서는 마을 단위 주거지의 모습을 살펴보고, 상세 지도에서는 선택한 단지 주변으로 범위를 좁히겠습니다.\n\n예산의 대비를 보면 거래 중윗값은 신사동 육 억 삼천팔백 만 원, 진관동 구 억 사천 만 원으로, 구 안에서도 비교할 가격대가 넓습니다.\n\n그 예산에 맞는 단지를 추린 다음, 뉴타운의 마을 구성을 선호하는지 실제 이용할 역 주변을 우선하는지 살펴보는 방식입니다.\n\n응암동 녹번역센트레빌 주변에는 영락중학교, 서울녹번초등학교와 녹번역이 표시돼, 학교와 철도 위치를 함께 읽을 수 있습니다.\n\n진관동의 마을과 응암동의 대표단지를 오가며 출근 목적지, 학교, 장보기 동선을 겹쳐 보면, 실제로 비교할 생활권이 선명해집니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 15262,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "GnT2NjytgBj2kWpzDzbV",
+        "x-request-id": null,
+        "character-cost": "198",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:25:03 GMT"
+      },
+      "pcm_samples": 2684808,
+      "pcm_duration_s": 60.88,
+      "provider_last_alignment_end_s": 60.96,
+      "complete_tail_after_alignment_s": -0.0799999999999983,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R14.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R14/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R14/alignment.json",
+      "pcm_sha256": "5cfb90a3ee8538893bd05cc81b275b80b824640fe3a39b2815fbf26659f1e46c",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R14/audio.mp3": "57c489323c0bb4d52dfcb3d5d57cc5a2e42b2ab7b41fa6908ba1c2c03eb530ec",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R14/alignment.json": "ddcfa33b8a4727661341e760a21ebe95fa765b2073d0144bb5771cf96bfb4449",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R14/normalized_alignment.json": "ddcfa33b8a4727661341e760a21ebe95fa765b2073d0144bb5771cf96bfb4449",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R14.wav": "5249ef16f3cbe851c4653c11243d4dfcd28a8b86304929d4ccb8befa970660db"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 15064,
+      "completed_at_utc": "2026-11-03T13:25:17.328Z"
+    },
+    {
+      "asset_id": "P01-R13",
+      "sentence_ids": [
+        "P01-R13-V2-01",
+        "P01-R13-V2-02",
+        "P01-R13-V2-03",
+        "P01-R13-V2-04",
+        "P01-R13-V2-05",
+        "P01-R13-V2-06",
+        "P01-R13-V2-07"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:25:17.333Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "82e4bbaa3edb02891f249880f5afd13d54d8465da7f6b86f6a6970bde8963275",
+      "request_text_sha256": "716bc34eefd92a410fd0245e6a9104f77155e6d1f3bc96a778a95e91ed43c3b7",
+      "characters": 418,
+      "reserved_credits": 418,
+      "actual_credits": 167,
+      "charge_known": true,
+      "request": {
+        "text": "십삼 위는 경기 수원시 권선구, 팔천삼백이십구 쌍입니다.\n\n권선구에는 기존 도심 주거지와 호매실, 당수의 택지개발 생활권이 함께 있습니다.\n\n사진의 수원종합버스터미널은 권선동에 있어, 도시 간 버스 이동을 고려할 때 위치를 살펴볼 거점입니다.\n\n금곡동 와이시티 상세도는 수원중촌초등학교, 상촌초등학교, 칠보중학교와 단지의 배치를 중심으로 읽겠습니다.\n\n권선동 터미널 주변을 볼 때와 금곡동의 학교 주변을 볼 때는, 필요한 교통수단과 일상의 중심을 각각 놓고 비교할 수 있습니다.\n\n거래 중윗값은 금곡동 오 억 삼천 만 원, 권선동 육 억 사천칠백오십 만 원으로, 두 생활권에서 검토할 예산 조건이 다릅니다.\n\n직장으로 가는 실제 경로와 단지 출입구에서 학교, 상점으로 이어지는 길을 더하면, 기존 도심과 택지개발지 사이의 선택 기준이 구체화됩니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 15064,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "vQnFqEzWXxFuWPmfYdGv",
+        "x-request-id": null,
+        "character-cost": "167",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:25:19 GMT"
+      },
+      "pcm_samples": 2240280,
+      "pcm_duration_s": 50.8,
+      "provider_last_alignment_end_s": 50.88,
+      "complete_tail_after_alignment_s": -0.0800000000000054,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R13.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R13/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R13/alignment.json",
+      "pcm_sha256": "9b8b2fae4ebdf599dba0435a582bc6a7d0eae1b5658c4b12f9aff599b9e7b4fc",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R13/audio.mp3": "2b20045a5ee74525eb51f318488969a1d856bf4845dca3fd26fdc5ec7f6185ff",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R13/alignment.json": "eafa757021b61641a0c1ef0f5d7997d898e122ccfd256b7c520443ece22c681f",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R13/normalized_alignment.json": "eafa757021b61641a0c1ef0f5d7997d898e122ccfd256b7c520443ece22c681f",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R13.wav": "31712f4b4f382a6d8ca0bc4d5a5a51ab8739071fe6e4c8bcbc68d00bd58399ae"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 14897,
+      "completed_at_utc": "2026-11-03T13:25:29.709Z"
+    },
+    {
+      "asset_id": "P01-R12",
+      "sentence_ids": [
+        "P01-R12-V2-01",
+        "P01-R12-V2-02",
+        "P01-R12-V2-03",
+        "P01-R12-V2-04",
+        "P01-R12-V2-05",
+        "P01-R12-V2-06",
+        "P01-R12-V2-07"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:25:29.715Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "7b18926dec170215b2342722b14fe906ec1c56f105adc7cbb91c6898f6100524",
+      "request_text_sha256": "b80b4d8dca1f2219cd96a84b498a7e33a6f987e7ce85c8a590e0551b3be67005",
+      "characters": 424,
+      "reserved_credits": 424,
+      "actual_credits": 170,
+      "charge_known": true,
+      "request": {
+        "text": "십이 위는 경기 수원시 영통구, 팔천삼백팔십팔 쌍입니다.\n\n영통구에서는 광교의 계획형 생활권과 망포동의 단지 주변을 함께 비교해 볼 수 있습니다.\n\n광교는 공동주택과 업무, 상업 용지를 나눠 계획한 곳으로, 집과 업무, 장보기 기능을 지도에 함께 놓고 볼 기준이 됩니다.\n\n원천호수는 신대호수와 함께 광교호수공원을 이루며, 수변공간과 보행로가 여가의 한 축을 이룹니다.\n\n망포마을쌍용일 차 주변으로 옮기면 태장초등학교, 잠원중학교와 망포역을 기준으로 학교와 철도 연결을 읽을 수 있습니다.\n\n공원에서 보내는 시간과 매일 역으로 향하는 시간을 함께 생각하면, 주말의 여가와 평일의 이동 중 무엇을 우선할지 정하기 좋습니다.\n\n거래 중윗값은 망포동 칠 억 삼천 만 원, 이의동 십일 억 구천 만 원으로, 어느 생활권을 선택하느냐에 따라 필요한 예산이 달라집니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 14897,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "AUl6xRmgEVrJ1ygvC1A2",
+        "x-request-id": null,
+        "character-cost": "170",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:25:32 GMT"
+      },
+      "pcm_samples": 2272032,
+      "pcm_duration_s": 51.52,
+      "provider_last_alignment_end_s": 51.6,
+      "complete_tail_after_alignment_s": -0.0799999999999983,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R12.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R12/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R12/alignment.json",
+      "pcm_sha256": "3c6bd5febc93c1856451ed79fddb91f43db1f2ae3c45c0452b133206fe43146e",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R12/audio.mp3": "023f70fe721cac90c8d4e5575cd06a3cd92e1f4624138b986d9884ce71a3afd8",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R12/alignment.json": "a2312464cbb9877ef503c308d9ee598c80cd01a510a0e43816545dc5ca590e56",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R12/normalized_alignment.json": "a2312464cbb9877ef503c308d9ee598c80cd01a510a0e43816545dc5ca590e56",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R12.wav": "5c3ec9b470f999a40e3efce96da5318bec58cc98f73afe234d3e7aff797364a1"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 14727,
+      "completed_at_utc": "2026-11-03T13:25:43.872Z"
+    },
+    {
+      "asset_id": "P01-R11",
+      "sentence_ids": [
+        "P01-R11-V2-01",
+        "P01-R11-V2-02",
+        "P01-R11-V2-03",
+        "P01-R11-V2-04",
+        "P01-R11-V2-05",
+        "P01-R11-V2-06",
+        "P01-R11-V2-07"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:25:43.877Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "9810c9d836430eedbe8e3332aa8af1c951754bcb7ebab9500e38e7d6848fd9fc",
+      "request_text_sha256": "d2b76d821753a279cfb0080ef56b2164461783151e25075d4e153c1d3f63cfbd",
+      "characters": 448,
+      "reserved_credits": 448,
+      "actual_credits": 179,
+      "charge_known": true,
+      "request": {
+        "text": "십일 위는 서울 노원구, 팔천사백칠십삼 쌍입니다.\n\n상계, 중계, 하계에는 택지개발로 형성된 공동주택 생활권이 이어져, 단지와 주변 시설을 마을 단위로 살펴볼 수 있습니다.\n\n경춘선숲길은 폐선 철길을 공원으로 바꾼 공간으로, 하계, 공릉 주거지 사이에서 산책과 주민 교류에 쓰입니다.\n\n상계이 차중앙하이츠 상세도에는 상계중학교, 서울상계초등학교와 노원역이 표시돼, 단지에서 학교와 역을 향하는 방향을 살펴볼 수 있습니다.\n\n학교와 역을 기준점으로 놓고 장보기 목적지를 더하면, 가족의 이동이 어느 곳에 모이는지 실제 후보 단지별로 비교할 수 있습니다.\n\n거래 중윗값은 상계동 칠 억 천 만 원, 중계동 팔 억 육천 만 원으로, 예산에 따라 살펴볼 단지를 좁혀볼 수 있습니다.\n\n택지개발 주거지의 생활 구조에 현재 집의 수리 범위와 관리 상태를 더해 보면, 같은 예산에서 얻을 주거 조건이 구체화됩니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 14727,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "LaEm5aa1n7lDJCveLCDQ",
+        "x-request-id": null,
+        "character-cost": "179",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:25:46 GMT"
+      },
+      "pcm_samples": 2332008,
+      "pcm_duration_s": 52.88,
+      "provider_last_alignment_end_s": 52.96,
+      "complete_tail_after_alignment_s": -0.0799999999999983,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R11.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R11/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R11/alignment.json",
+      "pcm_sha256": "50214bfc0787491cf085fd2d19ea14f1d9136073138b0ecbacf0f3c6fd261922",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R11/audio.mp3": "f913fec78e1606bad0db257d7c293d37d7c3bcce2fa067636fe4aa7bb4f61519",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R11/alignment.json": "da5e6e6a8252409524d1665c0a4dd50c53c430e8519ce3d55d5b494e86826116",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R11/normalized_alignment.json": "da5e6e6a8252409524d1665c0a4dd50c53c430e8519ce3d55d5b494e86826116",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R11.wav": "c16a65f06a13f27df0a74e4de423491f7e8b00431b9f0ed586f7eab3792463c4"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 14548,
+      "completed_at_utc": "2026-11-03T13:25:57.617Z"
+    },
+    {
+      "asset_id": "P01-OUTRO",
+      "sentence_ids": [
+        "P01-OUTRO-V2-01",
+        "P01-OUTRO-V2-02",
+        "P01-OUTRO-V2-03"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:25:57.623Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "2909d9c036f4077ee6b35c0b27bc61317a4f3ab30db7bd4405541b636b9d0d22",
+      "request_text_sha256": "5fa2b1248e186ceb3ec1911f0f026f17197e1584ef9f2ecf844d5a6d1542b959",
+      "characters": 166,
+      "reserved_credits": 166,
+      "actual_credits": 66,
+      "charge_known": true,
+      "request": {
+        "text": "같은 구 안에서도 예산과 철도 이용 방향, 학교와 장보기 동선에 따라 비교할 생활권은 달라집니다.\n\n다음 편은 미추홀구부터 이천이십사 년 당시 인천 서구까지, 십 위에서 일 위를 같은 지도 범례로 이어 보겠습니다.\n\n상위 열 곳의 생활권과 가격도 함께 비교하실 분들은 구독과 좋아요를 부탁드립니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 14548,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "MmkILmQLxmmzr9ql4kSI",
+        "x-request-id": null,
+        "character-cost": "66",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:26:00 GMT"
+      },
+      "pcm_samples": 899640,
+      "pcm_duration_s": 20.4,
+      "provider_last_alignment_end_s": 20.48,
+      "complete_tail_after_alignment_s": -0.08000000000000185,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-OUTRO.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-OUTRO/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-OUTRO/alignment.json",
+      "pcm_sha256": "cf16a99b6c6125ac7afb121104106a3391c703bffbb9ef89b59dbe6ebcf269a3",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-OUTRO/audio.mp3": "40652ad204d5d698e7ef63b1965e3fed0a29ead93385172493dca30ee550e671",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-OUTRO/alignment.json": "00d4988ebb03bdc93a16c0de98efecea749aede3bc9e1133b26f1a3931f7dc09",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-OUTRO/normalized_alignment.json": "00d4988ebb03bdc93a16c0de98efecea749aede3bc9e1133b26f1a3931f7dc09",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-OUTRO.wav": "c1a67697201537812a4fa60fae43eedf65f4ab232ec34dce16e991d901ff500a"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 14482,
+      "completed_at_utc": "2026-11-03T13:26:03.145Z"
+    },
+    {
+      "asset_id": "SHORTS-CTA",
+      "sentence_ids": [
+        "SHORTS-CTA-01",
+        "SHORTS-CTA-02"
+      ],
+      "status": "complete",
+      "started_at_utc": "2026-11-03T13:26:03.151Z",
+      "authorization_id": "9cde211f3073",
+      "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+      "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+      "input_file_sha256": "f7e3ca10dc37c10e1b27a6086dbafea56424f6dbb26bac73f228aa71306b09c6",
+      "request_text_sha256": "ece2bf99d504db833b40c70f49035cb469535fc1baf8f55e035ed69bf74a9443",
+      "characters": 66,
+      "reserved_credits": 66,
+      "actual_credits": 26,
+      "charge_known": true,
+      "request": {
+        "text": "나머지 순위도 궁금하시다면 다른 순위 영상을 확인해 주세요.\n\n지역별 자세한 가격과 생활권 비교는 본편에서 이어집니다.",
+        "model_id": "eleven_v4",
+        "voice_settings": {
+          "stability": 0.6,
+          "similarity_boost": 0.95,
+          "speed": 0.97
+        }
+      },
+      "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+      "local_shadow_remaining_before": 14482,
+      "actual_listening": false,
+      "http_status": 200,
+      "response_headers": {
+        "request-id": "0VUZMTCcMTV4AkrYlLwR",
+        "x-request-id": null,
+        "character-cost": "26",
+        "content-type": "application/json",
+        "date": "Tue, 03 Nov 2026 13:26:05 GMT"
+      },
+      "pcm_samples": 338688,
+      "pcm_duration_s": 7.68,
+      "provider_last_alignment_end_s": 7.76,
+      "complete_tail_after_alignment_s": -0.08000000000000007,
+      "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/SHORTS-CTA.wav",
+      "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/SHORTS-CTA/audio.mp3",
+      "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/SHORTS-CTA/alignment.json",
+      "pcm_sha256": "4124cdf1d83d8c84eb03f9902ee57fdf38d3337be50fcfb92a3e8f1744b2d0bb",
+      "artifact_sha256": {
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/SHORTS-CTA/audio.mp3": "3db71f15e7b394f158379619029106c9aba9e6ea6a15513c0fc7e915b0c13ad3",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/SHORTS-CTA/alignment.json": "2bf8ac5b550725e4c847232a3a104bcbcfd3320e2d3a2c974a068b03fa68ee84",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/SHORTS-CTA/normalized_alignment.json": "2bf8ac5b550725e4c847232a3a104bcbcfd3320e2d3a2c974a068b03fa68ee84",
+        "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/SHORTS-CTA.wav": "2e1ad0d763b6da3f40624031ec574ced79b134396a00007a3ddbdd09de68d8d9"
+      },
+      "processing": {
+        "sample_rate_hz": 44100,
+        "channels": 1,
+        "codec": "pcm_s16le",
+        "tempo_factor": 1,
+        "trimmed": false,
+        "tail_preserved": true,
+        "provider_speed": 0.97
+      },
+      "local_shadow_remaining_after": 14456,
+      "completed_at_utc": "2026-11-03T13:26:05.520Z"
+    }
+  ],
+  "created_at_utc": "2026-11-03T13:23:12.762Z",
+  "automatic_retries": 0,
+  "topup_calls": 0,
+  "overage_calls": 0,
+  "cash_spent_krw": 0,
+  "actual_listening": false,
+  "initial_included_remaining": 16664,
+  "initial_character_count": 23336,
+  "final_included_remaining": 14456,
+  "observed_account_delta": 2208,
+  "header_account_delta_matches": true,
+  "updated_at_utc": "2026-11-03T13:28:53.707Z",
+  "resolved_local_validation_failure": {
+    "type": "AssertionError",
+    "network_code": "ERR_ASSERTION",
+    "reason": "Expected values to be strictly equal:\n\n2208 !== 5520\n"
+  },
+  "reconciliation": {
+    "at_utc": "2026-11-03T13:28:53.707Z",
+    "source": "per_request_character_cost_headers_and_final_account_GET",
+    "initial_final_snapshot_delay_observed": true,
+    "post_retries": 0,
+    "additional_paid_calls": 0,
+    "local_guard_fix": "예상5520과 실제 비용의 동일액을 요구한 로컬 검사 제거. 실제 헤더 합계와 지연 반영 후 계정 차분2208 일치."
+  }
+}

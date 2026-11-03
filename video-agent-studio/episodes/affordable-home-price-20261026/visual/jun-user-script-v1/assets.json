@@ -1,0 +1,598 @@
+{
+  "schema_version": "1.0",
+  "task_id": "FULL-JUN-US1-ASSETS",
+  "revision": "jun-user-script-v1-assets-v1",
+  "scene_plan": {
+    "path": "video-agent-studio/episodes/affordable-home-price-20261026/director/user-recording-v1/scene_plan.json",
+    "sha256": "4dab2711b570621a5f5dbe6b03e9ae83e94030fd149cf8e43d9e1b74ba6d836e",
+    "bytes": 59986
+  },
+  "source_doc_sha256": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "screenbadge": false,
+  "timing_locked_by_visual": false,
+  "timing_note": "scene IDs fixed; no timestamp prefixes assigned",
+  "assets": [
+    {
+      "asset_id": "JUS1_CH01",
+      "chapter": 1,
+      "title_overlay": "돈을 모은 다음의 질문",
+      "scene_ids": [
+        "S01",
+        "S02",
+        "S03"
+      ],
+      "chapter_insert_before_scene": "S01",
+      "type": "ai_concept",
+      "media_kind": "chapter_still",
+      "purpose": "열쇠·구매 준비 책상으로 현금과 집값 사이의 질문을 연다.",
+      "actual_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S01_CH01_AI_1920x1080.png",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S01_CH01_AI_1920x1080.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "c00d359767013a82f5fd001c5786b9fc72f5948ee12e32ebfeb12cf391ed9a66",
+      "bytes": 2261465,
+      "source_or_prompt": "Use case: precise-object-edit. Asset type: clean reused chapter photo for Korean home-budget video. Edit the attached source photograph conservatively. Preserve its exact composition, warm oak table, apartment-window background, keys, blank folder, light, left negative space, photographic realism and camera angle. Make the calculator completely unprinted: remove every numeral, symbol, letter and logo on all its keys and body, keeping physical blank keys and an entirely blank screen. No added objects, no new text or numbers anywhere. Remove any other tiny letter-like markings if present. Keep all other pixels and subjects as close to the source as possible. One single wide photo, no captions, no watermarks.",
+      "provenance": {
+        "mode": "reused_cleaned",
+        "tool": "built-in image_gen",
+        "source_file": "C:/Users/e2ken/.codex/generated_images/01a17e0c-1f4c-7e10-bdcd-6b085cc3f317/exec-cc2d6b1b-9446-4e79-9c6b-1e5d4cb66b86.png",
+        "source_sha256": "296508cb277340191ccc3c9ca0f5905f052bae0f4c5d666fdbfdf2428ffbd392",
+        "source_dimensions": [
+          1672,
+          941
+        ],
+        "original_workspace_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/originals/S01_CH01_source.png",
+        "existing_source": {
+          "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/hero-budget-v1.png",
+          "sha256": "308e784f63bd86c7782e90c241678634813d3e1e6dedb49167aeeb60b72bb798",
+          "bytes": 1920671
+        },
+        "existing_ledger": {
+          "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/hero-budget-v1.json",
+          "sha256": "ea24a87a50189573acc140478646c99bfa94a53a3d7647bf6c4ef8e952df8a56",
+          "bytes": 2179
+        },
+        "transform": "Pillow LANCZOS fit to 1920x1080; centered aspect trim below one source pixel",
+        "upscaled": true,
+        "scale_factor": 1.1483253588516746
+      },
+      "actual_place": null,
+      "actual_location": false,
+      "AI_label": "ai_concept",
+      "screenbadge": false,
+      "screen_AI_badge": false,
+      "usage_conditions": "이번 편과 재사용 가능한 개념 분위기 자료. 실제 단지·지리·면적·가격·승인·정책·공식 문서의 증거로 사용하지 않음. 제목·금액은 별도 편집 레이어.",
+      "title_safe_box_1920": [
+        96,
+        250,
+        820,
+        700
+      ],
+      "title_color": "#173348",
+      "title_max_lines": 2,
+      "motion": "static preferred; if zoomed clip, classify as still_motion",
+      "review_status": "passed_visual_self_review_final_size_contact_and_source_view",
+      "framing_note": "원래 화면 오른쪽 계산기 일부가 프레임 밖에 있음. 원본 구도를 계승한 의도된 소품 재단이며 열쇠·집 펜던트·제목 공간은 보존. 추가 확대 금지.",
+      "review_evidence": "review/chapter_contact.png; representative CH01/CH06 full-size title proofs",
+      "review_notes": "배경에는 제목·번호 없음. 장마다 다른 완성 사진. 인물·졸라맨·가족정책 없음. 제목 공간 및 재단 확인. 실제 MP4 통합 검수는 편집/QA 담당."
+    },
+    {
+      "asset_id": "JUS1_CH02",
+      "chapter": 2,
+      "title_overlay": "집값 밖의 비용",
+      "scene_ids": [
+        "S04",
+        "S05",
+        "S06",
+        "S07"
+      ],
+      "chapter_insert_before_scene": "S04",
+      "type": "ai_concept",
+      "media_kind": "chapter_still",
+      "purpose": "계약 종이·영수증 형태와 열쇠로 거래비용·준비금을 연다.",
+      "actual_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S04_CH02_AI_1920x1080.png",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S04_CH02_AI_1920x1080.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "580cda057e4f7fc8b94081be98e8b8ad97c11f8836a262a186894b4dc1c6dd41",
+      "bytes": 2242979,
+      "source_or_prompt": "Use case: precise-object-edit. Asset type: reused clean chapter photo of home purchase transaction costs. Preserve the source photograph's exact wide composition, warm wood table, papers, three receipts, navy folder, keys, unoccupied apartment background, light and dark left title negative space. Remove all printed marks, writing, pseudo-text, digits, rules, lines, symbols and logos from the contract papers and all receipts, leaving completely blank ivory paper of the same shape and positions. Remove every numeral, symbol, letter and logo from every calculator key and its body; keep physically blank calculator keys and entirely blank screen. Preserve object shapes and arrangement, realistic materials, no new objects. Absolutely no text, letters, numbers, watermarks or captions anywhere. One single wide documentary photograph.",
+      "provenance": {
+        "mode": "reused_cleaned",
+        "tool": "built-in image_gen",
+        "source_file": "C:/Users/e2ken/.codex/generated_images/01a17e0c-1f4c-7e10-bdcd-6b085cc3f317/exec-dcaf4e36-b771-4346-bcd1-51ab8a7e01a1.png",
+        "source_sha256": "ea98db97063553d00d7e2ec3dcc24a057c1ebfd2a4e9a6b3c5392e2c67be2975",
+        "source_dimensions": [
+          1672,
+          941
+        ],
+        "original_workspace_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/originals/S04_CH02_source.png",
+        "existing_source": {
+          "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/rebuild-v2/transaction-costs.png",
+          "sha256": "92c3ade0651a82d4061e7904fb068ad80435bc40bc9bbc17885e1ef09393bbbc",
+          "bytes": 1898155
+        },
+        "existing_ledger": {
+          "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/rebuild-v2/manifest.json",
+          "sha256": "a2332f3facbb7f9e4c8fbb088fec5ffdf2950c9bca5e5e2f8f678596711a7ddb",
+          "bytes": 2314
+        },
+        "transform": "Pillow LANCZOS fit to 1920x1080; centered aspect trim below one source pixel",
+        "upscaled": true,
+        "scale_factor": 1.1483253588516746
+      },
+      "actual_place": null,
+      "actual_location": false,
+      "AI_label": "ai_concept",
+      "screenbadge": false,
+      "screen_AI_badge": false,
+      "usage_conditions": "이번 편과 재사용 가능한 개념 분위기 자료. 실제 단지·지리·면적·가격·승인·정책·공식 문서의 증거로 사용하지 않음. 제목·금액은 별도 편집 레이어.",
+      "title_safe_box_1920": [
+        96,
+        250,
+        820,
+        700
+      ],
+      "title_color": "#FFFFFF",
+      "title_max_lines": 2,
+      "motion": "static preferred; if zoomed clip, classify as still_motion",
+      "review_status": "passed_visual_self_review_final_size_contact_and_source_view",
+      "review_evidence": "review/chapter_contact.png; representative CH01/CH06 full-size title proofs",
+      "review_notes": "배경에는 제목·번호 없음. 장마다 다른 완성 사진. 인물·졸라맨·가족정책 없음. 제목 공간 및 재단 확인. 실제 MP4 통합 검수는 편집/QA 담당."
+    },
+    {
+      "asset_id": "JUS1_CH03",
+      "chapter": 3,
+      "title_overlay": "대출의 기준",
+      "scene_ids": [
+        "S08",
+        "S09",
+        "S10",
+        "S11",
+        "S12"
+      ],
+      "chapter_insert_before_scene": "S08",
+      "type": "ai_concept",
+      "media_kind": "chapter_still",
+      "purpose": "은행과 주택의 모형으로 은행 심사와 담보 관계를 연다.",
+      "actual_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S08_CH03_AI_1920x1080.png",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S08_CH03_AI_1920x1080.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "eabed121c221bfdd16c3c69c8b809601460ea42febc28fdff28e595b43a6640a",
+      "bytes": 1859220,
+      "source_or_prompt": {
+        "source_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/rebuild-v2/bank-limits.png",
+        "source_ledger": "video-agent-studio/episodes/affordable-home-price-20261026/visual/rebuild-v2/manifest.json"
+      },
+      "provenance": {
+        "mode": "reused_existing",
+        "tool": "existing built-in image_gen asset",
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/visual/rebuild-v2/bank-limits.png",
+        "source_sha256": "74c413b1a5e4fc245794f3d67dc79c2932f986b81adbc3e901cfd943589d69ed",
+        "source_dimensions": [
+          1672,
+          941
+        ],
+        "original_workspace_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/originals/S08_CH03_source.png",
+        "existing_source": {
+          "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/rebuild-v2/bank-limits.png",
+          "sha256": "74c413b1a5e4fc245794f3d67dc79c2932f986b81adbc3e901cfd943589d69ed",
+          "bytes": 1690071
+        },
+        "existing_ledger": {
+          "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/rebuild-v2/manifest.json",
+          "sha256": "a2332f3facbb7f9e4c8fbb088fec5ffdf2950c9bca5e5e2f8f678596711a7ddb",
+          "bytes": 2314
+        },
+        "transform": "Pillow LANCZOS fit to 1920x1080; centered aspect trim below one source pixel",
+        "upscaled": true,
+        "scale_factor": 1.1483253588516746
+      },
+      "actual_place": null,
+      "actual_location": false,
+      "AI_label": "ai_concept",
+      "screenbadge": false,
+      "screen_AI_badge": false,
+      "usage_conditions": "이번 편과 재사용 가능한 개념 분위기 자료. 실제 단지·지리·면적·가격·승인·정책·공식 문서의 증거로 사용하지 않음. 제목·금액은 별도 편집 레이어.",
+      "title_safe_box_1920": [
+        96,
+        250,
+        820,
+        700
+      ],
+      "title_color": "#FFFFFF",
+      "title_max_lines": 2,
+      "motion": "static preferred; if zoomed clip, classify as still_motion",
+      "review_status": "passed_visual_self_review_final_size_contact_and_source_view",
+      "review_evidence": "review/chapter_contact.png; representative CH01/CH06 full-size title proofs",
+      "review_notes": "배경에는 제목·번호 없음. 장마다 다른 완성 사진. 인물·졸라맨·가족정책 없음. 제목 공간 및 재단 확인. 실제 MP4 통합 검수는 편집/QA 담당."
+    },
+    {
+      "asset_id": "JUS1_CH04",
+      "chapter": 4,
+      "title_overlay": "현금 1억과 2억",
+      "scene_ids": [
+        "S13",
+        "S14",
+        "S15",
+        "S16",
+        "S17"
+      ],
+      "chapter_insert_before_scene": "S13",
+      "type": "ai_concept",
+      "media_kind": "chapter_still",
+      "purpose": "같은 크기의 두 집·두 저축 수첩으로 공통 조건의 현금 사례 비교를 연다.",
+      "actual_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S13_CH04_AI_1920x1080.png",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S13_CH04_AI_1920x1080.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "752ef4dac66874e92845bd12a18728ef1149e3f576763891da04088dc320f56b",
+      "bytes": 2169500,
+      "source_or_prompt": "Use case: photorealistic-natural. Asset type: 16:9 chapter background for a Korean home purchase budget explainer, chapter comparing one and two units of saved cash without claiming any real property or floor area. Create a believable editorial photograph of an ordinary apartment dining nook in warm morning light. On the right side of a natural oak table are two identical small unpainted wooden house models of exactly the same size and design, each beside a closed completely blank navy savings booklet, separated with comfortable breathing room. No scale of wealth or luxury between houses. Quiet warm ivory walls and pale linen, restrained navy accents, oak grain, natural lens perspective and soft real shadows. Reserve the left 42 percent as low-detail warm ivory wall/table negative space for a separate navy chapter title. Photographic, tactile, modest everyday interior, not cartoon or glossy toy render. Wide 1920x1080 composition, all foreground objects entirely in frame with margins, no people. Absolutely no text, letters, digits, printing, logos, labels, watermarks, currency notes, coins, numerical displays, charts or arrows anywhere. This is generic conceptual lifestyle atmosphere, not an identifiable house. Output one single wide photograph.",
+      "provenance": {
+        "mode": "new_builtin_image",
+        "tool": "built-in image_gen",
+        "source_file": "C:/Users/e2ken/.codex/generated_images/01a17e0c-1f4c-7e10-bdcd-6b085cc3f317/exec-d736595e-f95d-4174-b400-b8ad0dc26b65.png",
+        "source_sha256": "5560ab9248406829d3ad0e6824122a0c21b8960649decb254427af1713a5d66c",
+        "source_dimensions": [
+          1672,
+          941
+        ],
+        "original_workspace_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/originals/S13_CH04_source.png",
+        "existing_source": null,
+        "existing_ledger": null,
+        "transform": "Pillow LANCZOS fit to 1920x1080; centered aspect trim below one source pixel",
+        "upscaled": true,
+        "scale_factor": 1.1483253588516746
+      },
+      "actual_place": null,
+      "actual_location": false,
+      "AI_label": "ai_concept",
+      "screenbadge": false,
+      "screen_AI_badge": false,
+      "usage_conditions": "이번 편과 재사용 가능한 개념 분위기 자료. 실제 단지·지리·면적·가격·승인·정책·공식 문서의 증거로 사용하지 않음. 제목·금액은 별도 편집 레이어.",
+      "title_safe_box_1920": [
+        96,
+        250,
+        820,
+        700
+      ],
+      "title_color": "#173348",
+      "title_max_lines": 2,
+      "motion": "static preferred; if zoomed clip, classify as still_motion",
+      "review_status": "passed_visual_self_review_final_size_contact_and_source_view",
+      "review_evidence": "review/chapter_contact.png; representative CH01/CH06 full-size title proofs",
+      "review_notes": "배경에는 제목·번호 없음. 장마다 다른 완성 사진. 인물·졸라맨·가족정책 없음. 제목 공간 및 재단 확인. 실제 MP4 통합 검수는 편집/QA 담당."
+    },
+    {
+      "asset_id": "JUS1_CH05",
+      "chapter": 5,
+      "title_overlay": "현금 3억부터 5억",
+      "scene_ids": [
+        "S18",
+        "S19",
+        "S20",
+        "S21"
+      ],
+      "chapter_insert_before_scene": "S18",
+      "type": "ai_concept",
+      "media_kind": "chapter_still",
+      "purpose": "주택 모형·열쇠로 한도 안에서 정할 매수 가격대를 연다.",
+      "actual_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S18_CH05_AI_1920x1080.png",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S18_CH05_AI_1920x1080.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "3d99078922ac6d59cac933c18214983fa8fb0cfbf28f1b06bdd0a59fc357f9bc",
+      "bytes": 2484127,
+      "source_or_prompt": {
+        "source_file": "video-agent-studio/assets/chapter-backgrounds/v1/price.png",
+        "source_ledger": "video-agent-studio/assets/chapter-backgrounds/v1/manifest.json"
+      },
+      "provenance": {
+        "mode": "reused_existing",
+        "tool": "existing built-in image_gen asset",
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/price.png",
+        "source_sha256": "11cc1523e03712c54b92544d27d48a992c7ac93490e1db8f69ea9c15d60d4bee",
+        "source_dimensions": [
+          1672,
+          941
+        ],
+        "original_workspace_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/originals/S18_CH05_source.png",
+        "existing_source": {
+          "path": "video-agent-studio/assets/chapter-backgrounds/v1/price.png",
+          "sha256": "11cc1523e03712c54b92544d27d48a992c7ac93490e1db8f69ea9c15d60d4bee",
+          "bytes": 2094846
+        },
+        "existing_ledger": {
+          "path": "video-agent-studio/assets/chapter-backgrounds/v1/manifest.json",
+          "sha256": "ca7c425d3e85cddcc04f363887f35441f1a241be3c7ed24d1917acd901f9292c",
+          "bytes": 3138
+        },
+        "transform": "Pillow LANCZOS fit to 1920x1080; centered aspect trim below one source pixel",
+        "upscaled": true,
+        "scale_factor": 1.1483253588516746
+      },
+      "actual_place": null,
+      "actual_location": false,
+      "AI_label": "ai_concept",
+      "screenbadge": false,
+      "screen_AI_badge": false,
+      "usage_conditions": "이번 편과 재사용 가능한 개념 분위기 자료. 실제 단지·지리·면적·가격·승인·정책·공식 문서의 증거로 사용하지 않음. 제목·금액은 별도 편집 레이어.",
+      "title_safe_box_1920": [
+        96,
+        250,
+        820,
+        700
+      ],
+      "title_color": "#FFFFFF",
+      "title_max_lines": 2,
+      "motion": "static preferred; if zoomed clip, classify as still_motion",
+      "review_status": "passed_visual_self_review_final_size_contact_and_source_view",
+      "review_evidence": "review/chapter_contact.png; representative CH01/CH06 full-size title proofs",
+      "review_notes": "배경에는 제목·번호 없음. 장마다 다른 완성 사진. 인물·졸라맨·가족정책 없음. 제목 공간 및 재단 확인. 실제 MP4 통합 검수는 편집/QA 담당."
+    },
+    {
+      "asset_id": "JUS1_CH06",
+      "chapter": 6,
+      "title_overlay": "지역과 월 상환",
+      "scene_ids": [
+        "S22",
+        "S23",
+        "S24",
+        "S25",
+        "S26"
+      ],
+      "chapter_insert_before_scene": "S22",
+      "type": "ai_concept",
+      "media_kind": "chapter_still",
+      "purpose": "장보기·가계 수첩·빈 달력으로 월 원리금 이후 남는 생활비를 연다.",
+      "actual_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S22_CH06_AI_1920x1080.png",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S22_CH06_AI_1920x1080.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "e7e9460939cf006578113c95133b4178f65ee1f3ed209f05479c1348c3134f03",
+      "bytes": 2176194,
+      "source_or_prompt": "Use case: photorealistic-natural. Asset type: wide 16:9 chapter photograph for a Korean home affordability video, monthly living budget and sustainable repayments. Believable modest lived-in apartment interior, absolutely no people. On the right half of a natural oak dining table: a plain unprinted ivory grocery tote with a few ordinary vegetables peeking out, a folded linen cloth, a plain navy household budget envelope, a completely blank open notebook, a simple wooden upright blank monthly calendar frame with an entirely blank cream card. Background shows a softly defocused modest sofa and oak storage, warm ivory walls, daylight. Objects are everyday life cues, no baby items, no luxury cues, no money. Leave the left 42 percent low-detail warm neutral negative space for a separate navy title; objects fully in frame with safe margins. Natural warm ivory/navy/oak photographic textures and gentle shadows, quiet documentary mood. No text, numbers, letters, logos, labels, watermarks, printed grids, currency, receipts with writing, numeric calculator displays, graphs, charts or arrows anywhere. Generic lifestyle atmosphere, not a real property claim or financial data. One single 1920x1080 wide photograph, no panels, no embedded typography.",
+      "provenance": {
+        "mode": "new_builtin_image",
+        "tool": "built-in image_gen",
+        "source_file": "C:/Users/e2ken/.codex/generated_images/01a17e0c-1f4c-7e10-bdcd-6b085cc3f317/exec-5f0a119e-e85c-4dbe-ad8a-f1b1e492d4e2.png",
+        "source_sha256": "ea121afe5506e99af88f663761e1a66cfb5cf0b1afd651d82effff2f0bcfe5f9",
+        "source_dimensions": [
+          1672,
+          941
+        ],
+        "original_workspace_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/originals/S22_CH06_source.png",
+        "existing_source": null,
+        "existing_ledger": null,
+        "transform": "Pillow LANCZOS fit to 1920x1080; centered aspect trim below one source pixel",
+        "upscaled": true,
+        "scale_factor": 1.1483253588516746
+      },
+      "actual_place": null,
+      "actual_location": false,
+      "AI_label": "ai_concept",
+      "screenbadge": false,
+      "screen_AI_badge": false,
+      "usage_conditions": "이번 편과 재사용 가능한 개념 분위기 자료. 실제 단지·지리·면적·가격·승인·정책·공식 문서의 증거로 사용하지 않음. 제목·금액은 별도 편집 레이어.",
+      "title_safe_box_1920": [
+        96,
+        250,
+        820,
+        700
+      ],
+      "title_color": "#173348",
+      "title_max_lines": 2,
+      "motion": "static preferred; if zoomed clip, classify as still_motion",
+      "review_status": "passed_visual_self_review_final_size_contact_and_source_view",
+      "review_evidence": "review/chapter_contact.png; representative CH01/CH06 full-size title proofs",
+      "review_notes": "배경에는 제목·번호 없음. 장마다 다른 완성 사진. 인물·졸라맨·가족정책 없음. 제목 공간 및 재단 확인. 실제 MP4 통합 검수는 편집/QA 담당."
+    },
+    {
+      "asset_id": "JUS1_CH07",
+      "chapter": 7,
+      "title_overlay": "내 예산 정리",
+      "scene_ids": [
+        "S27",
+        "S28",
+        "S29",
+        "S30",
+        "S31"
+      ],
+      "chapter_insert_before_scene": "S27",
+      "type": "ai_concept",
+      "media_kind": "chapter_still",
+      "purpose": "서로 다른 주거 동네의 분위기로 자기 예산에 맞는 생활·입지 선택을 연다. S28 작성지는 별도 노트 조각과 편집 레이어 사용.",
+      "actual_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S27_CH07_AI_1920x1080.png",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S27_CH07_AI_1920x1080.png",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "sha256": "e42428ecb2566d5cf9cb81ce5850eee1462cfe3e300c46ead477994871bdfa09",
+      "bytes": 3224381,
+      "source_or_prompt": {
+        "source_file": "video-agent-studio/assets/chapter-backgrounds/v1/comparison.png",
+        "source_ledger": "video-agent-studio/assets/chapter-backgrounds/v1/manifest.json"
+      },
+      "provenance": {
+        "mode": "reused_existing",
+        "tool": "existing built-in image_gen asset",
+        "source_file": "C:/projects/realestate_reco/video-agent-studio/assets/chapter-backgrounds/v1/comparison.png",
+        "source_sha256": "1b8bb25f91db083c0ac6cf509a4ad1c085d4b51b8feedbb62d7eef867c6b6294",
+        "source_dimensions": [
+          1672,
+          941
+        ],
+        "original_workspace_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/originals/S27_CH07_source.png",
+        "existing_source": {
+          "path": "video-agent-studio/assets/chapter-backgrounds/v1/comparison.png",
+          "sha256": "1b8bb25f91db083c0ac6cf509a4ad1c085d4b51b8feedbb62d7eef867c6b6294",
+          "bytes": 2669391
+        },
+        "existing_ledger": {
+          "path": "video-agent-studio/assets/chapter-backgrounds/v1/manifest.json",
+          "sha256": "ca7c425d3e85cddcc04f363887f35441f1a241be3c7ed24d1917acd901f9292c",
+          "bytes": 3138
+        },
+        "transform": "Pillow LANCZOS fit to 1920x1080; centered aspect trim below one source pixel",
+        "upscaled": true,
+        "scale_factor": 1.1483253588516746
+      },
+      "actual_place": null,
+      "actual_location": false,
+      "AI_label": "ai_concept",
+      "screenbadge": false,
+      "screen_AI_badge": false,
+      "usage_conditions": "이번 편과 재사용 가능한 개념 분위기 자료. 실제 단지·지리·면적·가격·승인·정책·공식 문서의 증거로 사용하지 않음. 제목·금액은 별도 편집 레이어.",
+      "title_safe_box_1920": [
+        96,
+        250,
+        820,
+        700
+      ],
+      "title_color": "#FFFFFF",
+      "title_max_lines": 2,
+      "motion": "static preferred; if zoomed clip, classify as still_motion",
+      "review_status": "passed_visual_self_review_final_size_contact_and_source_view",
+      "framing_note": "서울을 연상시키는 가상 스카이라인. 실제 서울·특정 단지 이름을 붙이지 않으며 예산/입지 선택의 분위기로만 사용.",
+      "review_evidence": "review/chapter_contact.png; representative CH01/CH06 full-size title proofs",
+      "review_notes": "배경에는 제목·번호 없음. 장마다 다른 완성 사진. 인물·졸라맨·가족정책 없음. 제목 공간 및 재단 확인. 실제 MP4 통합 검수는 편집/QA 담당."
+    }
+  ],
+  "optional_assets": [
+    {
+      "asset_id": "JUS1_HOUSE_CUTOUT",
+      "scene_ids": [
+        "S02",
+        "S08",
+        "S13",
+        "S14",
+        "S15",
+        "S17",
+        "S20",
+        "S30"
+      ],
+      "type": "ai_concept",
+      "media_kind": "optional_cutout",
+      "actual_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S02_house_cutout_AI.png",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S02_house_cutout_AI.png",
+      "sha256": "b77e9bc6e1d6c50c92bcfad81cc3477212c96e1c4d22a142c6d9f30995d35ae1",
+      "dimensions": [
+        1347,
+        1167
+      ],
+      "mode": "RGBA",
+      "source_or_prompt": "Use case: product-mockup. Asset type: transparent PNG cutout of one generic small wooden house model for compositing into financial explanation charts. One simple unpainted light oak house model in a natural three-quarter front view with a pitched roof, one door and two small square window cutouts. Believable tactile miniature photographed in soft daylight, warm ivory and oak, no people, no toy cartoon look. Entire house visible with generous transparent margins, centered, no pedestal, no background scene, no strong cast shadow or contact plane. True transparent background, preserve clean alpha edges. Absolutely no text, numbers, logos, labels, watermark, currency, arrows, furniture, extra houses or annotations. It is a generic visual marker, not a real building, actual floorplan, specified area or relative price/wealth indicator. Output one single isolated house object.",
+      "purpose": "동일 주택 표식. 가격이 달라도 같은 크기·형태로 재사용하며 가격·평형 차이의 증거로 사용하지 않는다.",
+      "actual_place": null,
+      "actual_location": false,
+      "AI_label": "ai_concept",
+      "screenbadge": false,
+      "screen_AI_badge": false,
+      "upscaled": false,
+      "alpha": {
+        "extrema": [
+          0,
+          255
+        ],
+        "fully_transparent_fraction": 0.570871574077785,
+        "near_opaque_fraction": 0.41704279210076156,
+        "visible_bbox": [
+          0,
+          0,
+          1327,
+          1143
+        ]
+      },
+      "provenance": {
+        "source_file": "C:/Users/e2ken/.codex/generated_images/01a17e0c-1f4c-7e10-bdcd-6b085cc3f317/exec-ec43a1e2-7f2e-47c4-8ed6-0d634af2612d.png",
+        "source_sha256": "b77e9bc6e1d6c50c92bcfad81cc3477212c96e1c4d22a142c6d9f30995d35ae1",
+        "tool": "built-in image_gen",
+        "mode": "new_transparent_asset"
+      },
+      "usage_conditions": "560px 이하 보조 조각으로 사용. 동일 집 표식은 항상 같은 크기로, 노트 위 실제 금액·세 입력칸은 별도 편집 레이어. 실제 주택·평형·공식 서류의 근거 아님.",
+      "review_status": "passed_visual_alpha_composites_ivory_and_navy_at_560px_max",
+      "review_evidence": "review/cutout_alpha_contact.png",
+      "recommended_max_display_width_px": 560
+    },
+    {
+      "asset_id": "JUS1_BLANK_BUDGET_NOTEBOOK",
+      "scene_ids": [
+        "S28",
+        "S31"
+      ],
+      "type": "ai_concept",
+      "media_kind": "optional_cutout",
+      "actual_file": "video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S28_blank_budget_notebook_AI.png",
+      "absolute_file": "C:/projects/realestate_reco/video-agent-studio/episodes/affordable-home-price-20261026/visual/jun-user-script-v1/outputs/S28_blank_budget_notebook_AI.png",
+      "sha256": "4118aa8ca263428043b39bccc0e96afce8c9e3269901c628ba6155a46a5b37ea",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "source_or_prompt": "Use case: product-mockup. Asset type: transparent PNG cutout for a Korean home-budget explainer's final checklist worksheet. One open blank ivory notebook with a subtle navy cloth cover edge and one simple unbranded wooden pencil resting beside the notebook, viewed from a gentle overhead angle almost front-on so the two blank pages stay large and useful. Photographic paper fibers, soft natural warm light, understated oak/navy/ivory material palette. Entire notebook and pencil visible inside generous margins. True transparent background with clean alpha, no table, no background, no strong cast shadow, no frame. Both pages completely blank, absolutely no text, letters, numbers, lines, grid, logos, watermarks or marks. Not an official form or real financial document. One isolated notebook-and-pencil object group only. Separate chapter title and checklist fields will be added later by the editor.",
+      "purpose": "빈 예산 작성지 보조. 세 숫자의 칸·라벨은 편집자가 별도 레이어로 추가한다.",
+      "actual_place": null,
+      "actual_location": false,
+      "AI_label": "ai_concept",
+      "screenbadge": false,
+      "screen_AI_badge": false,
+      "upscaled": false,
+      "alpha": {
+        "extrema": [
+          0,
+          254
+        ],
+        "fully_transparent_fraction": 0.2869122823079427,
+        "near_opaque_fraction": 0.6913261413574219,
+        "visible_bbox": [
+          0,
+          36,
+          1516,
+          1024
+        ]
+      },
+      "provenance": {
+        "source_file": "C:/Users/e2ken/.codex/generated_images/01a17e0c-1f4c-7e10-bdcd-6b085cc3f317/exec-21b1a238-9883-40ec-82d4-54213be57bd1.png",
+        "source_sha256": "4118aa8ca263428043b39bccc0e96afce8c9e3269901c628ba6155a46a5b37ea",
+        "tool": "built-in image_gen",
+        "mode": "new_transparent_asset"
+      },
+      "usage_conditions": "560px 이하 보조 조각으로 사용. 동일 집 표식은 항상 같은 크기로, 노트 위 실제 금액·세 입력칸은 별도 편집 레이어. 실제 주택·평형·공식 서류의 근거 아님.",
+      "review_status": "passed_visual_alpha_composites_ivory_and_navy_at_560px_max",
+      "review_evidence": "review/cutout_alpha_contact.png",
+      "recommended_max_display_width_px": 560
+    }
+  ],
+  "chapter_count": 7,
+  "generation": {
+    "built_in_calls": 6,
+    "new_scene_photos": 2,
+    "clean_reuse_edits": 2,
+    "optional_transparent_requests": 2,
+    "external_paid_API_calls": 0,
+    "API_keys_used": false,
+    "audio_generated_or_changed": false
+  },
+  "cutout_search": {
+    "searched": "assets/, video/public/, shared chapter-backgrounds/, housing-choice visual/, regional-price visual/",
+    "result": "No previously verified text-free photographic house/checklist cutout found in the searched inventories. Unrelated emoji, site maps and the apartment-stages SVG were not substituted for photographic assets."
+  },
+  "status": "ready_for_editor_integration",
+  "visual_QA_scope": "제작자 자체 이미지/여백/알파 검수 완료. 독립 영상 QA·오디오 검수는 포함하지 않음."
+}

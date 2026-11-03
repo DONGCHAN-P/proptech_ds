@@ -1,0 +1,17 @@
+{
+  "issue_id": "A001-canonical-carve-dependency",
+  "scene_ids": [
+    "MAIN_BODY"
+  ],
+  "to": [
+    "director"
+  ],
+  "problem": "canonical hyperframes-audio carve 의존 패키지를 로드할 수 없음",
+  "evidence": "audio_carve_receipt.json",
+  "proposal": "새 설치/유료 API 없이 본문은 음성 중심으로 제작하고 clean v7 브랜드의 기존 음악은 보존하는 허용된 대안을 사용. 원본 Thinking Music 경로/CC BY4.0 크레딧은 reusable_media.json에 보존. 사용 가능한 core 패키지 경로가 오면 canonical script로 새 음성 기준 carve 가능.",
+  "impact": "본문 BGM 재사용 항목은 미실시로 명시. 과거 다른 음성에 맞춘 carved bed는 사용하지 않음. 브랜드 시청각은 실제 기존 clean v7 파일 사용.",
+  "actual_audio_listening": false,
+  "new_paid_calls": 0,
+  "status": "resolved_existing_dependency_path_supplied_by_director",
+  "resolution": "canonical script succeeded on all three new voice tracks using existing core; no new install/API"
+}

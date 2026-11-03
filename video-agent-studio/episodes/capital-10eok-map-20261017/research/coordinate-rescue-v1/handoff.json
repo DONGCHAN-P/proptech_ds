@@ -1,0 +1,31 @@
+{
+  "status": "narrow_audit_complete",
+  "input": "research/annual-map-v1/complex_catalog.parquet and canonical_map.parquet",
+  "outputs": [
+    "audit.json",
+    "shared_coordinate_samples.json",
+    "findings.md",
+    "download_feasibility.md",
+    "gis_download_page.html"
+  ],
+  "verified_rescue_count": 0,
+  "external_address_api_calls": 0,
+  "paid_calls": 0,
+  "unresolved": [
+    "Existing per-row coordinate provenance unverified",
+    "GIS building SHP files not yet acquired",
+    "Incheon and Gyeonggi complete ZIP sizes not checked",
+    "Potential co-located legitimate distinct complexes require parcel/building investigation"
+  ],
+  "affected_scene_ids": [
+    "all_annual_map_frames"
+  ],
+  "next_owner": "director and data auditor",
+  "recommendation": "Use openly licensed download-form GIS building SHP plus exact PNU/address matching; do not persist VWorld getCoord results.",
+  "downloaded_shp_bytes": 0,
+  "download_blockers": [
+    "VWorld explicit login required in official download function",
+    "REBPP direct request returned abnormal-access block; no bypass attempted"
+  ],
+  "recommended_next_input": "REBPP nationwide 2025 apartment complex linkage SHP 15.58MB obtained through normal authorized browser"
+}

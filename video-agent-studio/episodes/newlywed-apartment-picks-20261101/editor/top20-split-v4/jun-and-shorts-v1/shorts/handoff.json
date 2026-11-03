@@ -1,0 +1,43 @@
+{
+  "task_id": "3-native-vertical-shorts-Jun-v1",
+  "version": "native-v4",
+  "status": "three_final_mp4s_technical_checks_passed_parent_encoded_QA_in_progress",
+  "delivery_manifest": "outputs/top20-split-v4/jun-and-shorts-v1/shorts/shorts_delivery_manifest.json",
+  "source_manifest": "editor/top20-split-v4/jun-and-shorts-v1/shorts/source_manifest.json",
+  "projects": "editor/top20-split-v4/jun-and-shorts-v1/shorts/native-v4/<short_id>/",
+  "inputs": "Each input_manifest freezes native lock, approved text, exact chart/photo sources, fonts/GSAP, master WAV and render files by SHA256.",
+  "validation": "All3:1080x1920/30fps/SAR1:1/48k stereo; full A/V decode; AAC/master PCM correlation >0.9998; 102 encoded proof frames. Two screen-note suffixes absent in frozen render sources. Cue groups visible only in native cue windows.",
+  "changed_scene_ids": {
+    "SHORT01-PROMO": [
+      "SHORT01-PROMO-00",
+      "SHORT01-PROMO-01",
+      "SHORT01-PROMO-02",
+      "SHORT01-PROMO-03",
+      "SHORT01-PROMO-04"
+    ],
+    "SHORT02-R20-R16": [
+      "SHORT02-R20-R16-00",
+      "SHORT02-R20-R16-01",
+      "SHORT02-R20-R16-02",
+      "SHORT02-R20-R16-03",
+      "SHORT02-R20-R16-04",
+      "SHORT02-R20-R16-05"
+    ],
+    "SHORT03-R15-R11": [
+      "SHORT03-R15-R11-00",
+      "SHORT03-R15-R11-01",
+      "SHORT03-R15-R11-02",
+      "SHORT03-R15-R11-03",
+      "SHORT03-R15-R11-04",
+      "SHORT03-R15-R11-05"
+    ]
+  },
+  "preserved": "v2 and existing v3 sources/outputs/logs; notes/budget; native audio/locks/CTA/prices/sample counts.",
+  "unresolved": [
+    "Parent independent encoded QA in progress; editor performed no actual listening or continuous playback."
+  ],
+  "next_owner": "parent director + independent encoded QA",
+  "further_render_source_changes": "stopped per latest parent request",
+  "paid_TTS_API_calls": 0,
+  "uploads": 0
+}

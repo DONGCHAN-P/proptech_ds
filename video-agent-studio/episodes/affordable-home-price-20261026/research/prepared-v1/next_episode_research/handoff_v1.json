@@ -1,0 +1,58 @@
+{
+  "task_id": "next-policy-source-prep-v1",
+  "role": "research",
+  "status": "준비완료_조건부항목있음",
+  "input_revisions": {
+    "task_packet": "사용자 next-policy-source-prep-v1",
+    "brief": "housing-choice-networth-20261020; 2026-10-20",
+    "state_read": "updated_at 2026-10-26T01:45:24.803903+09:00",
+    "policy_as_of_kst": "2026-10-26",
+    "rules": "WORKFLOW·video_research·호출효율 열람"
+  },
+  "outputs": [
+    "sources.json",
+    "policy_facts.json",
+    "gaps.json",
+    "issue_R01.json",
+    "evidence/stress_dsr_20260701.pdf",
+    "evidence/stress_page_1.png",
+    "evidence/stress_page_2.png"
+  ],
+  "affected_scene_ids": [],
+  "checks": [
+    {
+      "check": "JSON·고유ID·출처/주장참조·필수필드",
+      "result": "통과",
+      "evidence": "출처15묶음/주장37개(verified32·qualified5)/gaps9개"
+    },
+    {
+      "check": "6·9·12억 산술·PDF SHA256·납품경로",
+      "result": "통과",
+      "evidence": "실행 검증값: 취득세600/2700/3600만, 교육세60/270/360만, VAT포함중개264/495/792만"
+    },
+    {
+      "check": "스트레스 DSR 첨부표·경과조항",
+      "result": "확인",
+      "evidence": "PDF 2쪽 텍스트와 실제 열어본 PNG2개"
+    },
+    {
+      "check": "독립 사실검수",
+      "result": "미수행",
+      "evidence": "별도 담당 도구 없음; 총괄이 후속 배정"
+    }
+  ],
+  "open_issue_ids": [
+    "R01",
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G08",
+    "G09"
+  ],
+  "next_role": "director → research 필수 gaps 보완 → writer/독립 정책검수",
+  "summary": "현재·예정·경과 분리. 신혼소득특례/자산5.11억 확인. 거주기간 상충, 정책모기지 DSR 현행세칙, 감면후교육세·채권실액 미확정. 첫 영상 작업/공통상태/다음편 episode·미디어·TTS·업로드 변경 없음."
+}

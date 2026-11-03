@@ -1,0 +1,183 @@
+{
+  "verified_claims": "facts.json에서 검산 후 verified 상태인 가격 주장",
+  "comparison_conditions": {
+    "statistic": "최근 4분기 개별 거래 매매총액 중위값",
+    "geographic_scope": "7개 수집 지역의 식별 가능한 전체 수집 단지에서 분기마다 재선정",
+    "area": "84 <= 전용면적 < 85㎡",
+    "transaction_type": "아파트 매매 신고; API에 포함된 거래를 거래방식/등기여부 추가 제한 없이 사용",
+    "unit": "만원/채",
+    "aggregation": "각 창 안의 개별 거래금액을 정렬; 홀수 가운데값, 짝수 두 가운데값 산술평균",
+    "cancellations": "수도권 included_price_analysis=true 및 is_canceled=false; 확장 기존 거래키별 취소 우선 정규화 후 is_canceled=false",
+    "minimum_n": 5
+  },
+  "notes": [
+    "계약기간 2006-01-01~2026-06-30, 79개 분기, 2,153,830건·12,470개 단지.",
+    "TOP20에 한 번이라도 등장한 단지는 127개. 초기 20개 이후 신규 진입 107건, 재진입 197건. 1위 교체 13회.",
+    "최신 관측 창은 2025Q3~2026Q2. 원자료 수집일은 파일별로 다름. 전 지역 완전 수집으로 표현하지 말 것.",
+    "이벤트는 TOP20 첫 등장/재진입이며 준공·입주 이벤트로 바꾸지 말 것. 동률·표본 탈락만으로도 순위가 바뀔 수 있음.",
+    "장문 표시명 제안과 원명은 name_mapping.csv에 1:1 매핑. 현대14차의 원명은 현대14차(203,204,205,206동).",
+    "민감도는 endpoint와 본편 1위 교체 순간에만 수행. 끝점 5건/10건 포함 여부에 따른 해석은 sensitivity.json 확인.",
+    "다음 담당은 writer/visual, 최종 제작 전 독립 QA. 이 세션의 별도 알고리즘 검산은 독립 담당 검수를 대체하지 않음."
+  ],
+  "unverified": [
+    "현재 단지대장 명칭 대조",
+    "후속 취소/수정 반영",
+    "미수집 지역 순위",
+    "가격 변화 원인"
+  ],
+  "relevant_events": [
+    {
+      "period": "2007Q1",
+      "previous_id": "rtms:11680-216",
+      "id": "rtms:11680-372",
+      "median_manwon": 148000.0,
+      "n": 9,
+      "rank": 1,
+      "name": "개포우성1",
+      "display_name": "개포우성1",
+      "location": "서울 강남구 대치동"
+    },
+    {
+      "period": "2007Q3",
+      "previous_id": "rtms:11680-372",
+      "id": "rtms:11680-3623",
+      "median_manwon": 140750.0,
+      "n": 8,
+      "rank": 1,
+      "name": "도곡렉슬",
+      "display_name": "도곡렉슬",
+      "location": "서울 강남구 도곡동"
+    },
+    {
+      "period": "2007Q4",
+      "previous_id": "rtms:11680-3623",
+      "id": "rtms:11680-428",
+      "median_manwon": 140000.0,
+      "n": 9,
+      "rank": 1,
+      "name": "현대14차(203,204,205,206동)",
+      "display_name": "현대14차",
+      "location": "서울 강남구 압구정동"
+    },
+    {
+      "period": "2008Q4",
+      "previous_id": "rtms:11680-428",
+      "id": "rtms:11680-48",
+      "median_manwon": 133750.0,
+      "n": 10,
+      "rank": 1,
+      "name": "씨티1차102동",
+      "display_name": "씨티1차102동",
+      "location": "서울 강남구 청담동"
+    },
+    {
+      "period": "2009Q1",
+      "previous_id": "rtms:11680-48",
+      "id": "rtms:11680-428",
+      "median_manwon": 135500.0,
+      "n": 9,
+      "rank": 1,
+      "name": "현대14차(203,204,205,206동)",
+      "display_name": "현대14차",
+      "location": "서울 강남구 압구정동"
+    },
+    {
+      "period": "2010Q1",
+      "previous_id": "rtms:11680-428",
+      "id": "rtms:11650-203",
+      "median_manwon": 169000.0,
+      "n": 9,
+      "rank": 1,
+      "name": "한신1차",
+      "display_name": "한신1차",
+      "location": "서울 서초구 반포동"
+    },
+    {
+      "period": "2010Q4",
+      "previous_id": "rtms:11650-203",
+      "id": "rtms:11650-3559",
+      "median_manwon": 151400.0,
+      "n": 12,
+      "rank": 1,
+      "name": "래미안퍼스티지",
+      "display_name": "래미안퍼스티지",
+      "location": "서울 서초구 반포동"
+    },
+    {
+      "period": "2016Q3",
+      "previous_id": "rtms:11650-3559",
+      "id": "rtms:11650-4440",
+      "median_manwon": 184000.0,
+      "n": 11,
+      "rank": 1,
+      "name": "아크로리버파크",
+      "display_name": "아크로리버파크",
+      "location": "서울 서초구 반포동"
+    },
+    {
+      "period": "2022Q4",
+      "previous_id": "rtms:11650-4440",
+      "id": "rtms:11650-3559",
+      "median_manwon": 370000.0,
+      "n": 12,
+      "rank": 1,
+      "name": "래미안퍼스티지",
+      "display_name": "래미안퍼스티지",
+      "location": "서울 서초구 반포동"
+    },
+    {
+      "period": "2023Q1",
+      "previous_id": "rtms:11650-3559",
+      "id": "rtms:11650-4675",
+      "median_manwon": 336500.0,
+      "n": 7,
+      "rank": 1,
+      "name": "신반포자이",
+      "display_name": "신반포자이",
+      "location": "서울 서초구 잠원동"
+    },
+    {
+      "period": "2023Q2",
+      "previous_id": "rtms:11650-4675",
+      "id": "rtms:11650-3559",
+      "median_manwon": 330000.0,
+      "n": 17,
+      "rank": 1,
+      "name": "래미안퍼스티지",
+      "display_name": "래미안퍼스티지",
+      "location": "서울 서초구 반포동"
+    },
+    {
+      "period": "2023Q3",
+      "previous_id": "rtms:11650-3559",
+      "id": "rtms:11650-5126",
+      "median_manwon": 390000.0,
+      "n": 7,
+      "rank": 1,
+      "name": "래미안원베일리",
+      "display_name": "래미안원베일리",
+      "location": "서울 서초구 반포동"
+    },
+    {
+      "period": "2025Q4",
+      "previous_id": "rtms:11650-5126",
+      "id": "rtms:11680-428",
+      "median_manwon": 620000.0,
+      "n": 10,
+      "rank": 1,
+      "name": "현대14차(203,204,205,206동)",
+      "display_name": "현대14차",
+      "location": "서울 강남구 압구정동"
+    }
+  ],
+  "proposed_focus_periods": [
+    "2006Q4",
+    "2010Q4",
+    "2016Q3",
+    "2022Q4",
+    "2023Q1",
+    "2023Q3",
+    "2025Q4",
+    "2026Q2"
+  ]
+}

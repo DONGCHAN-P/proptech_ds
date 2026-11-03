@@ -1,0 +1,5 @@
+const path=require('path'),fs=require('fs'),R=path.resolve(__dirname,'../../../../..');
+const {bundle}=require(path.join(R,'video/node_modules/@remotion/bundler'));
+const {selectComposition,renderStill}=require(path.join(R,'video/node_modules/@remotion/renderer'));
+const browserExecutable=path.join(R,'video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe');
+(async()=>{const serveUrl=await bundle({entryPoint:path.join(R,'video/src/NamyangjuLanduseV7.tsx'),outDir:path.join(__dirname,'bundle-caption'),publicDir:path.join(R,'video/public')});const composition=await selectComposition({serveUrl,browserExecutable,id:'LanduseV7CaptionAudit'});for(const frame of [0,109,110,111,112,668,669])await renderStill({serveUrl,browserExecutable,composition,frame,imageFormat:'png',output:path.join(__dirname,`caption_${frame}.png`)});console.log('seven caption continuity frames rendered; no final map or MP4 render');})().catch(e=>{console.error(e);process.exitCode=1});

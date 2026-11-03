@@ -1,0 +1,48 @@
+{
+  "role": "narration",
+  "status": "budget_prepared_no_generation",
+  "input_versions": {
+    "outputs/script-review-v8/script_v8.md": "6ffc9fc4819460d4cf6f03fd3b28102e2864402b9965ca14e158230474963982",
+    "writer/revision-v8/narration_packet.json": "0bfbf1db8bae231b2549ae3389dd775f74f3ab0ba56bde4dacea40205e7a0d9c"
+  },
+  "artifacts": [
+    "narration/jun-v8-plan/manifest.json",
+    "outputs/jun-v8-budget/budget_proposal.json",
+    "outputs/jun-v8-budget/account_readonly.json",
+    "narration/jun-v8-plan/M000.txt",
+    "narration/jun-v8-plan/M001.txt",
+    "narration/jun-v8-plan/M002.txt",
+    "narration/jun-v8-plan/M003.txt",
+    "narration/jun-v8-plan/M004.txt",
+    "narration/jun-v8-plan/M007.txt",
+    "narration/jun-v8-plan/M006.txt",
+    "narration/jun-v8-plan/M005.txt",
+    "narration/jun-v8-plan/M009.txt"
+  ],
+  "verification": {
+    "exact_source_hashes": true,
+    "exact_packet_character_count": 6543,
+    "immutable_per_scene_hashes": true,
+    "account_readonly": "read_success",
+    "paid_calls": 0,
+    "actual_listening": false,
+    "immutable_files_rechecked": 9
+  },
+  "unresolved": [
+    "New budget gate required; old v3 budget excluded",
+    "M007 display-only school labels differ from approved narration; preserve narration unless new script approved",
+    "Actual Jun timings and listening pending authorized generation"
+  ],
+  "affected_scene_ids": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M007",
+    "M006",
+    "M005",
+    "M009"
+  ],
+  "next_owner": "director_budget_gate_then_narration"
+}

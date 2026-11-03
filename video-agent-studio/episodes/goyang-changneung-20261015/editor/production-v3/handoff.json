@@ -1,0 +1,87 @@
+﻿{
+    "task_id":  "changneung_full_production_v3",
+    "role":  "editor",
+    "status":  "local_review_ready_independent_QA_passed",
+    "input_revisions":  {
+                            "script":  "script-v3",
+                            "audio":  "audio-v3",
+                            "timing":  "timing-lock-v3",
+                            "visual":  "production-v3 current source freeze",
+                            "style":  "channel-style-v1"
+                        },
+    "outputs":  [
+                    "outputs/production-v3/changneung_full_v3r2.mp4",
+                    "outputs/production-v3/changneung_full_v3.srt",
+                    "outputs/production-v3/technical_full_v3.json",
+                    "outputs/production-v3/source_manifest_v3.json",
+                    "outputs/production-v3/audio_mix_v3.json",
+                    "outputs/production-v3/project_v3.json",
+                    "outputs/production-v3/rendered_project_v3.json",
+                    "outputs/production-v3/render_frames_receipt.json",
+                    "editor/production-v3/placement_guide.md"
+                ],
+    "affected_scene_ids":  [
+                               "M000",
+                               "M001",
+                               "M002",
+                               "M003",
+                               "M004",
+                               "M005",
+                               "M006",
+                               "M007",
+                               "M008",
+                               "M009"
+                           ],
+    "checks":  [
+                   {
+                       "check":  "actual MP4 duration/resolution/fps/audio and full decode",
+                       "result":  "passed",
+                       "evidence":  "outputs/production-v3/technical_full_v3.json"
+                   },
+                   {
+                       "check":  "all resampled source audio samples preserved once, no regeneration",
+                       "result":  "passed",
+                       "evidence":  "outputs/production-v3/audio_mix_v3.json"
+                   },
+                   {
+                       "check":  "raw script spans join and SRT/caption semantic mapping",
+                       "result":  "editor assertions passed; independent QA separate",
+                       "evidence":  "outputs/production-v3/project_v3.json"
+                   },
+                   {
+                       "check":  "encoded actual representative and boundary frames",
+                       "result":  "independent QA passed within sampled-frame scope",
+                       "evidence":  "qa/production-v3/final_review.json"
+                   },
+                   {
+                       "check":  "actual listening and continuous playback",
+                       "result":  "not_performed",
+                       "evidence":  null
+                   }
+               ],
+    "open_issue_ids":  [
+
+                       ],
+    "next_role":  "director completed review; publication gate remains separate",
+    "sha256":  "8e68ebc338f7b96e009ca99db9cebd0797f89dbcab855d45eca7b4b34be9c6a4",
+    "duration_frames":  24140,
+    "duration_seconds":  804.6666666666666,
+    "paid_calls_by_editor":  0,
+    "uploaded":  false,
+    "final_qa":  {
+                     "sha256":  "ea6bb0a285b9d70605749ec8f8a6a8c9908f1d25b6487958ffddfb5f72aafcde",
+                     "continuous_playback":  false,
+                     "actual_listening":  false,
+                     "path":  "qa/production-v3/final_review.json",
+                     "critical_open_count":  0,
+                     "required_open_count":  0
+                 },
+    "limitations":  [
+                        "실제 음성 청취와 전체 영상 연속 재생을 수행하지 않았다. 발음·음색·청감 자연스러움은 미확인이다.",
+                        "모든 인코딩 프레임을 시각적으로 전수 열람한 것은 아니다. 전 구간 디코드와 선택 프레임 열람을 구분한다.",
+                        "학교 장면은 공고의 독립 방위 관계 설명이다. 정밀 블록 경계·통학거리·횡단 위치나 출입구를 검증한 지도가 아니다.",
+                        "표본 픽셀 경계 검사는 소스 DOM 전체 글자의 getBBox 검사를 대체하지 않는다. 선택 프레임에서 잘림·겹침은 발견하지 못했다.",
+                        "ZIP은 생성·검수 대상이 아니다. 직접 MP4/SRT/프로젝트 JSON과 기존 해제 소스 폴더를 납품한다.",
+                        "이 검수는 로컬 납품 검토 가능 상태이며 게시·업로드 승인이 아니다."
+                    ]
+}

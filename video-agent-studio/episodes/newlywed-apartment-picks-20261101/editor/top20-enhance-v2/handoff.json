@@ -1,0 +1,88 @@
+{
+  "task_id": "top20-enhance-editor-v2",
+  "status": "editor_scope_complete_parent_owns_normalization_check_and_render",
+  "render_owner": "director",
+  "project": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-enhance-v2\\main",
+  "source_freeze": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-enhance-v2\\source_freeze.json",
+  "project_sha256": "81d57037eaa48e36ea7e9f7921238a7a4c598ad1f6c72e55287a6bd219c15e32",
+  "inputs": {
+    "script": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\director\\top20-enhance-v2\\scene_proposals_v5.json",
+    "script_md": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\director\\top20-enhance-v2\\script_v5.md",
+    "timing": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\director\\top20-enhance-v2\\locked_timing.json",
+    "verified_facts": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\research\\top20-enhance-v2\\verified_facts.json"
+  },
+  "validation": {
+    "check_ok": true,
+    "samples": 34,
+    "snapshots": 34,
+    "report": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-enhance-v2\\evidence\\check-main-locked.json",
+    "actual_listening": false,
+    "continuous_playback": false,
+    "full_render": false
+  },
+  "representative_images": {
+    "I002": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-enhance-v2\\evidence\\final-representatives\\frame-00-at-238.5s.png",
+    "N001": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-enhance-v2\\evidence\\final-representatives\\frame-01-at-454.5s.png",
+    "N002": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-enhance-v2\\evidence\\final-representatives\\frame-02-at-485s.png",
+    "E001": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-enhance-v2\\evidence\\final-representatives\\frame-03-at-517.1s.png",
+    "masked_top5": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-enhance-v2\\evidence\\final-representatives\\frame-04-at-353.83s.png"
+  },
+  "scope": "main only; v1 and Shorts untouched",
+  "next_owner": [
+    "director: full main render v1",
+    "qa: encoded frames/all boundaries/long captions"
+  ],
+  "unresolved": [
+    "Parent preview normalized HTML after initial freeze; parent owns new fingerprint/check and production render.",
+    "Actual enhanced MP4/spec/decode and independent final QA pending.",
+    "Actual listening and continuous playback not performed."
+  ],
+  "pending_documentation": [],
+  "documentation_completed": true,
+  "design_receipt": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-enhance-v2\\design_receipt.json",
+  "placement_guide": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-enhance-v2\\placement_guide.md",
+  "before_after_sheet": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-enhance-v2\\evidence\\before-after3\\before_after3.jpg",
+  "validation_scope": {
+    "original_freeze_project_sha256": "f622ee9e8e8bfef7a61c3083528ede56ea4ce6375718923ce0ef5e4be7cd7323",
+    "check_scope": "34 explicit times across 29 scene centers, brand boundaries and endpoints",
+    "check_passed_at_editor_freeze": true,
+    "lint_warnings_at_editor_freeze": 0,
+    "snapshot_count": 34,
+    "actual_enhanced_mp4_created_by_editor": false,
+    "actual_listening": false,
+    "continuous_playback": false,
+    "current_parent_gate": "Parent preview normalized data-hf-id and added .thumbnails after freeze; parent owns runner fingerprint adjustment and recheck. Historical freeze/check SHA is not claimed to match the current normalized project."
+  },
+  "source_freeze_is_historical": true,
+  "affected_scene_ids": [
+    "O001",
+    "O002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "I001",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012",
+    "I002",
+    "S013",
+    "S014",
+    "S015",
+    "S016",
+    "S017",
+    "I003",
+    "S018",
+    "S019",
+    "S020",
+    "S021",
+    "S022",
+    "N001",
+    "N002",
+    "C001",
+    "E001"
+  ]
+}

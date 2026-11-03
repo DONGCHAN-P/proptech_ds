@@ -1,0 +1,724 @@
+{
+  "schema_version": "1.0",
+  "task_id": "listing-evidence-v1",
+  "role": "research",
+  "episode_id": "newlywed-apartment-picks-20261101",
+  "checked_date": "2026-11-01",
+  "status": "bounded_research_complete_with_gaps",
+  "language": "ko",
+  "scope": "세 생활권59㎡ 후보와 보조84㎡ 후보의 공개 매물 증거 및 호가·실거래 구분. 추천 순위 확정 아님.",
+  "authorization": {
+    "research_only": true,
+    "paid_generation": false,
+    "paid_api": false,
+    "upload": false,
+    "external_claude_transfer": false,
+    "broker_contact": false,
+    "user_message_sent": false
+  },
+  "web_budget": {
+    "limit_bundles": 8,
+    "used_bundles": 8,
+    "counting_rule": "검색·open·find·click을 한 웹 도구 호출에 묶은 횟수",
+    "additional_search_after_parent_admin_update": false
+  },
+  "preflight": {
+    "template": "video-agent-studio/templates/episode_preflight.json",
+    "applied_items": [
+      "가격의 면적·층·기간·통계·해제·표본수",
+      "자료 원문과 사용 권리",
+      "승인 범위"
+    ],
+    "not_applicable_at_this_stage": [
+      "음성·타이밍·영상 렌더·연속 재생·실제 청취"
+    ],
+    "no_production_gate_passed": true
+  },
+  "input_revisions": {
+    "brief_revision": "request_date2026-11-01",
+    "state_revision": "planning-v1",
+    "transaction_candidates": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/transaction_candidates.json",
+      "sha256": "a820e23852714b8a833069dced2a65665ac6ce1aef9952fcfc872ebedadc28f5"
+    },
+    "initial_observed_transaction_sha256": "96ad2e7c8d2f44ab6d71916f85e0c9de41d3d147b4b83887d3bc8961e427a0d6",
+    "input_change_note": "병행 담당이 Q3 필드를 추가한 최신 입력으로 재대조. 네 후보의6개월 n·중위값은 같음.",
+    "parent_admin_update": "2026-05-08 명칭변경 및2026-07-06 의회 출처는 상위 담당 확인 전달; 추가 행정 검색 없음"
+  },
+  "summary": {
+    "candidate_count": 4,
+    "current_verified_listing_count": 0,
+    "primary_target_candidates": 3,
+    "conclusion": "현재 판매 확인 완료 매물0건. 일부 구체 광고 표기는 관찰했지만 본문 정보 부족·갱신일·원문 연결 문제로 listing_verified는 전부 false.",
+    "does_not_mean_no_inventory": true
+  },
+  "price_comparison_contract": {
+    "price_kind": "historical_transaction_aggregate",
+    "statistic": "개별 원거래 중위값; 월중위값 평균 아님",
+    "scope": "각 단지·전용면적 구간",
+    "contract_window": [
+      "2026-04-01",
+      "2026-09-30"
+    ],
+    "floor_filter": ">=3",
+    "area_bands": [
+      "59<=exclusive_m2<60",
+      "84<=exclusive_m2<85"
+    ],
+    "trade_type": "아파트 매매; 중개·직거래 혼합 가능, 중개거래만 필터링하지 않음",
+    "sample_count": "후보별 historical.n",
+    "unit": "만원",
+    "cancellation": "전달된 candidate_method에 따르면 캐시 생성 시 NOT is_canceled 적용. 지연 해제는 게시 전 갱신 필요; 본 담당이 원행을 재검증하지 않음.",
+    "q3": {
+      "window": [
+        "2026-07-01",
+        "2026-09-30"
+      ],
+      "statistic": "별도 원거래 중위값",
+      "sample_count": "후보별 q3_n",
+      "caution": "청라·검단59는 모두49000만원이나 표본15/5건; 포레나59는51000만원5건. 현재 호가·단지 선호 순위로 사용 금지."
+    },
+    "comparability_limits": [
+      "단지별 연식·세부 전용·타입·층 구성 차이",
+      "84㎡ 보조 후보는59㎡와 면적 조건이 다름",
+      "한 개 광고 호가와6개월 중위값 차이를 상승률·할인율로 해석하지 않음",
+      "입력 최종 계약일과 전체 관측기간을 구분; 미신고·지연신고·해제 보정 전"
+    ]
+  },
+  "administrative_crosswalk": {
+    "statistical_geography": "2024년 서구 구역은 현재 서해구+검단구에 걸친 과거 집계 범위로 보존",
+    "current_display_date": "2026-11-01",
+    "effective_date": "2026-07-01",
+    "code_handling": "28275/28290은 로컬 캐시 조회·식별키로 보존. 28275의 캐시명 서구(인천)를 현재 지명으로 그대로 출력하지 않음. 최신 법정동·행정코드 원장과의 전수 매핑은 별도 미확인.",
+    "source_ids": [
+      "ADM_RENAME",
+      "ADM_GEOMDAN",
+      "ADM_OLD_NOTICE",
+      "ADM_PARENT_COUNCIL"
+    ],
+    "parent_evidence_not_reverified": true
+  },
+  "candidates": [
+    {
+      "candidate_id": "CH59",
+      "apt_id": "9a8b510f914bcc5d",
+      "name": "호반베르디움앤영무예다음",
+      "target_area_band": "59",
+      "current_address": "인천광역시 서해구 청라에메랄드로134 (청라동130-4)",
+      "cache_sigungu_code": "28275",
+      "cache_sigungu_name": "서구(인천)",
+      "source_ids": [
+        "CH_KB",
+        "CH_TOWN",
+        "CH_OLD_AD",
+        "CH_BLOCKED"
+      ],
+      "historical": {
+        "n": 40,
+        "median_manwon": 48850,
+        "min_manwon": 36000,
+        "max_manwon": 53500,
+        "area_min_m2": 59.738,
+        "area_max_m2": 59.936,
+        "first_contract": "2026-04-04",
+        "last_contract": "2026-09-19",
+        "floor_min": 3,
+        "floor_max": 29,
+        "q3_n": 15,
+        "q3_median_manwon": 49000
+      },
+      "listing": {
+        "listing_verified": false,
+        "listing_id": "T272013181",
+        "listing_url": "https://town.aipartner.com/memul/T272013181",
+        "checked_date": "2026-11-01",
+        "last_exposure_update_date": null,
+        "last_exposure_update_raw": null,
+        "trade_type": "매매",
+        "advertised_price_manwon": 51000,
+        "verified_current_ask_manwon": null,
+        "exclusive_area_m2": null,
+        "dong": "216",
+        "floor": 5,
+        "total_floors": null,
+        "photo_rights": {
+          "status": "unverified",
+          "downloaded": false,
+          "images_visually_checked": false,
+          "video_reuse_authorized": false
+        },
+        "listing_page_observed": true,
+        "source_id": "CH_TOWN",
+        "status": "partial_page_only",
+        "snippet_only_fields": {
+          "exclusive_area_m2": 59.86,
+          "registered_date": "2026-11-01"
+        },
+        "missing": [
+          "본문의 전용면적",
+          "본문의 등록·노출갱신일",
+          "현재 판매 상태",
+          "총층",
+          "사진 권리"
+        ]
+      },
+      "excluded_offer": {
+        "source_id": "CH_OLD_AD",
+        "listing_id": "2632970951",
+        "advertised_price_manwon": 50000,
+        "exclusive_area_m2": 59.73,
+        "floor": 17,
+        "total_floors": 24,
+        "published_date": "2026-06-18",
+        "listing_verified": false,
+        "reason": "현재 갱신·판매 여부 불명인 이전 광고"
+      },
+      "decision": "본문에서 매매 가격·동·층을 관찰했으나59㎡ 현재 매물로 승인할 증거는 부족",
+      "listing_verified": false
+    },
+    {
+      "candidate_id": "UM59",
+      "apt_id": "9755291bfda5e7ee",
+      "name": "우미린파크뷰2단지",
+      "target_area_band": "59",
+      "current_address": "인천광역시 검단구 이음2로90 (당하동1311-1)",
+      "cache_sigungu_code": "28290",
+      "cache_sigungu_name": "검단구",
+      "source_ids": [
+        "UM_KB",
+        "UM_BROKER_LEAD"
+      ],
+      "historical": {
+        "n": 16,
+        "median_manwon": 48400,
+        "min_manwon": 46000,
+        "max_manwon": 52000,
+        "area_min_m2": 59.8198,
+        "area_max_m2": 59.938,
+        "first_contract": "2026-04-03",
+        "last_contract": "2026-09-27",
+        "floor_min": 6,
+        "floor_max": 25,
+        "q3_n": 5,
+        "q3_median_manwon": 49000
+      },
+      "listing": {
+        "listing_verified": false,
+        "listing_id": null,
+        "listing_url": null,
+        "checked_date": "2026-11-01",
+        "last_exposure_update_date": null,
+        "last_exposure_update_raw": null,
+        "trade_type": "매매",
+        "advertised_price_manwon": null,
+        "verified_current_ask_manwon": null,
+        "exclusive_area_m2": null,
+        "dong": null,
+        "floor": null,
+        "total_floors": null,
+        "photo_rights": {
+          "status": "unverified",
+          "downloaded": false,
+          "images_visually_checked": false,
+          "video_reuse_authorized": false
+        },
+        "listing_page_observed": false,
+        "status": "no_target_detail_page",
+        "missing": [
+          "59㎡ 개별 매물 원문·고유번호",
+          "가격·동·층·전용의 본문 대조",
+          "등록·노출갱신일",
+          "현재 판매 상태",
+          "사진 권리"
+        ]
+      },
+      "snippet_only_lead": {
+        "source_id": "UM_BROKER_LEAD",
+        "advertised_price_manwon": 48000,
+        "exclusive_area_m2": 59.81,
+        "dong": "208",
+        "floor": 24,
+        "registered_raw": "10.08 등록",
+        "registered_year": null,
+        "publishable_as_current_listing": false
+      },
+      "excluded_offer": {
+        "source_url": "https://realty.daangn.com/articles/3980708",
+        "listing_id": "3980708",
+        "exclusive_area_m2": 84.87,
+        "reason": "본문 직접 확인했지만 요청59㎡와 다름; 59㎡ 호가로 사용 금지"
+      },
+      "decision": "KB 단지 정보와 검색상의 중개사 목록만 확보; 현재59㎡ 개별 매물은 미확인",
+      "listing_verified": false
+    },
+    {
+      "candidate_id": "FO59",
+      "apt_id": "8c36915adefc2a67",
+      "name": "포레나루원시티",
+      "target_area_band": "59",
+      "current_address": "인천광역시 서해구 서곶로120 (가정동; 지번 미검증)",
+      "cache_sigungu_code": "28275",
+      "cache_sigungu_name": "서구(인천)",
+      "source_ids": [
+        "FO_AGG",
+        "FO_DYNAMIC",
+        "FO_WRONG84",
+        "FO_WRONG_AREA"
+      ],
+      "historical": {
+        "n": 10,
+        "median_manwon": 50750,
+        "min_manwon": 46000,
+        "max_manwon": 54000,
+        "area_min_m2": 59.8134,
+        "area_max_m2": 59.8134,
+        "first_contract": "2026-04-04",
+        "last_contract": "2026-09-27",
+        "floor_min": 4,
+        "floor_max": 16,
+        "q3_n": 5,
+        "q3_median_manwon": 51000
+      },
+      "listing": {
+        "listing_verified": false,
+        "listing_id": null,
+        "listing_url": null,
+        "checked_date": "2026-11-01",
+        "last_exposure_update_date": null,
+        "last_exposure_update_raw": null,
+        "trade_type": "매매",
+        "advertised_price_manwon": null,
+        "verified_current_ask_manwon": null,
+        "exclusive_area_m2": null,
+        "dong": null,
+        "floor": null,
+        "total_floors": null,
+        "photo_rights": {
+          "status": "unverified",
+          "downloaded": false,
+          "images_visually_checked": false,
+          "video_reuse_authorized": false
+        },
+        "listing_page_observed": false,
+        "status": "secondary_aggregate_only",
+        "missing": [
+          "59㎡ 개별 매물 원문·고유번호",
+          "현재 판매 상태",
+          "동·정확한 전용",
+          "노출 갱신일",
+          "사진 권리"
+        ]
+      },
+      "unverified_aggregate": {
+        "source_id": "FO_AGG",
+        "advertised_min_manwon": 50000,
+        "area_label_m2": 59,
+        "floor": 3,
+        "total_floors": 13,
+        "source_last_checked_date": "2026-10-29",
+        "source_last_checked_date_in_search": "2026-10-31",
+        "reference_parameter": "a=2652939528",
+        "publishable_as_current_listing": false
+      },
+      "decision": "집계상 최저 호가와 본문 열람한84㎡ 광고를59㎡ 현재 매물로 승격하지 않음",
+      "listing_verified": false
+    },
+    {
+      "candidate_id": "SK84",
+      "apt_id": "e4bec114007871f9",
+      "name": "루원시티2차SK리더스뷰",
+      "target_area_band": "84",
+      "role": "보조 면적 확대 후보",
+      "current_address": "인천광역시 서해구 봉오대로270 (가정동709)",
+      "cache_sigungu_code": "28275",
+      "cache_sigungu_name": "서구(인천)",
+      "source_ids": [
+        "SK_KB",
+        "SK_ZIG",
+        "SK_ASIL_INVALID"
+      ],
+      "historical": {
+        "n": 22,
+        "median_manwon": 58750,
+        "min_manwon": 52500,
+        "max_manwon": 61400,
+        "area_min_m2": 84.6771,
+        "area_max_m2": 84.9771,
+        "first_contract": "2026-04-21",
+        "last_contract": "2026-09-21",
+        "floor_min": 3,
+        "floor_max": 43,
+        "q3_n": 13,
+        "q3_median_manwon": 59200
+      },
+      "listing": {
+        "listing_verified": false,
+        "listing_id": null,
+        "listing_url": "https://m.zigbang.com/home/apt/item-catalog?areaHoId=10337339&tranType=trade",
+        "checked_date": "2026-11-01",
+        "last_exposure_update_date": null,
+        "last_exposure_update_raw": "지난 주 확인",
+        "trade_type": "매매",
+        "advertised_price_manwon": 65000,
+        "verified_current_ask_manwon": null,
+        "exclusive_area_m2": 84.96,
+        "dong": "103",
+        "floor": null,
+        "total_floors": 46,
+        "photo_rights": {
+          "status": "unverified",
+          "downloaded": false,
+          "images_visually_checked": false,
+          "video_reuse_authorized": false
+        },
+        "catalog_unit_id": "10337339",
+        "source_id": "SK_ZIG",
+        "floor_band": "고층",
+        "listing_page_observed": true,
+        "status": "dated_catalogue_current_status_unverified",
+        "missing": [
+          "고유 광고 매물번호",
+          "절대 날짜의 갱신일",
+          "현재 판매 상태",
+          "정확한 층",
+          "사진 권리"
+        ]
+      },
+      "decision": "구체 면적·동·호가 표기는 관찰했으나 오래된 수집·상대날짜여서 현재 판매 확인은 보류",
+      "listing_verified": false
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "HIST_CH59",
+      "statement": "로컬 집계에서 호반베르디움앤영무예다음 전용59㎡대의 2026년4~9월 3층 이상 매매 실거래 중위값은 48850만원(40건)이다.",
+      "original_source": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/transaction_candidates.json",
+      "evidence_location": {
+        "apt_id": "9a8b510f914bcc5d",
+        "area_band": "59",
+        "fields": [
+          "median_manwon",
+          "n",
+          "first_contract",
+          "last_contract",
+          "area_min_m2",
+          "area_max_m2"
+        ]
+      },
+      "as_of": "2026-09-30",
+      "checked_date": "2026-11-01",
+      "status": "qualified",
+      "qualification": "입력 파일 값 대조 완료; 국토교통부 원행 재취득·집계 재계산·최신 해제 반영 여부 독립 검수는 수행하지 않음. 호가가 아님."
+    },
+    {
+      "claim_id": "HIST_UM59",
+      "statement": "로컬 집계에서 우미린파크뷰2단지 전용59㎡대의 2026년4~9월 3층 이상 매매 실거래 중위값은 48400만원(16건)이다.",
+      "original_source": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/transaction_candidates.json",
+      "evidence_location": {
+        "apt_id": "9755291bfda5e7ee",
+        "area_band": "59",
+        "fields": [
+          "median_manwon",
+          "n",
+          "first_contract",
+          "last_contract",
+          "area_min_m2",
+          "area_max_m2"
+        ]
+      },
+      "as_of": "2026-09-30",
+      "checked_date": "2026-11-01",
+      "status": "qualified",
+      "qualification": "입력 파일 값 대조 완료; 국토교통부 원행 재취득·집계 재계산·최신 해제 반영 여부 독립 검수는 수행하지 않음. 호가가 아님."
+    },
+    {
+      "claim_id": "HIST_FO59",
+      "statement": "로컬 집계에서 포레나루원시티 전용59㎡대의 2026년4~9월 3층 이상 매매 실거래 중위값은 50750만원(10건)이다.",
+      "original_source": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/transaction_candidates.json",
+      "evidence_location": {
+        "apt_id": "8c36915adefc2a67",
+        "area_band": "59",
+        "fields": [
+          "median_manwon",
+          "n",
+          "first_contract",
+          "last_contract",
+          "area_min_m2",
+          "area_max_m2"
+        ]
+      },
+      "as_of": "2026-09-30",
+      "checked_date": "2026-11-01",
+      "status": "qualified",
+      "qualification": "입력 파일 값 대조 완료; 국토교통부 원행 재취득·집계 재계산·최신 해제 반영 여부 독립 검수는 수행하지 않음. 호가가 아님."
+    },
+    {
+      "claim_id": "HIST_SK84",
+      "statement": "로컬 집계에서 루원시티2차SK리더스뷰 전용84㎡대의 2026년4~9월 3층 이상 매매 실거래 중위값은 58750만원(22건)이다.",
+      "original_source": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/transaction_candidates.json",
+      "evidence_location": {
+        "apt_id": "e4bec114007871f9",
+        "area_band": "84",
+        "fields": [
+          "median_manwon",
+          "n",
+          "first_contract",
+          "last_contract",
+          "area_min_m2",
+          "area_max_m2"
+        ]
+      },
+      "as_of": "2026-09-30",
+      "checked_date": "2026-11-01",
+      "status": "qualified",
+      "qualification": "입력 파일 값 대조 완료; 국토교통부 원행 재취득·집계 재계산·최신 해제 반영 여부 독립 검수는 수행하지 않음. 호가가 아님."
+    },
+    {
+      "claim_id": "ADMIN_CURRENT",
+      "statement": "2026-07-01 행정개편 후 현재 단지 주소는 청라·가정의 서해구와 당하의 검단구로 나누어 표시한다.",
+      "original_source": [
+        "https://www.seohae.go.kr/open_content/main/bbs/bbsMsgDetail.do?bcd=report&msg_seq=18773",
+        "https://www.geomdan.go.kr/main/bbs/bbsMsgDetail.do?bcd=report&msg_seq=4",
+        "https://kbland.kr/se/c/22429",
+        "https://kbland.kr/se/c/354287",
+        "https://realty.daangn.com/articles/4390427",
+        "https://kbland.kr/se/c/47319"
+      ],
+      "evidence_location": "행정개편 공식 발표·출범 보도자료와 후보별 주소 항목",
+      "as_of": "2026-07-01",
+      "checked_date": "2026-11-01",
+      "status": "qualified",
+      "qualification": "행정개편은 공식 자료 확인. 단지 도로명은 공개 단지·광고 본문 대조이며 법정동 코드 원장 전체를 검증한 것은 아님."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "ADM_RENAME",
+      "url": "https://www.seohae.go.kr/open_content/main/bbs/bbsMsgDetail.do?bcd=report&msg_seq=18773",
+      "publisher": "인천광역시 서해구",
+      "published_date": "2026-05-08",
+      "read_scope": "공식 HTML 제목·작성일·현재 누리집 명칭",
+      "evidence_location": "제목 및 작성일; 열람문 L515~533",
+      "supports": "2026-07-01 서구의 서해구 명칭 변경에 관한 공식 발표",
+      "limitations": "첨부 HWP와 법률 원문은 미열람",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "ADM_GEOMDAN",
+      "url": "https://www.geomdan.go.kr/main/bbs/bbsMsgDetail.do?bcd=report&msg_seq=4",
+      "publisher": "인천광역시 검단구",
+      "published_date": "2026-07-02",
+      "read_scope": "공식 보도자료 HTML 본문",
+      "evidence_location": "본문 L1486~1505 및 작성일 L1458~1459",
+      "supports": "2026-07-01 검단구 실제 출범, 당하동 행정서비스 및 서해구와의 공동 대응",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "ADM_OLD_NOTICE",
+      "url": "https://www.seohae.go.kr/open_content/bbs/bbsMsgDetail.do?bcd=notice&msg_seq=29334",
+      "publisher": "인천광역시 서해구",
+      "published_date": "2025-07-07",
+      "read_scope": "공식 HTML 내레이션 자막",
+      "evidence_location": "L553~555",
+      "supports": "개편 전 서구의 아라뱃길 북부·남부 분리 설명",
+      "limitations": "과거 안내문의 새로운 서구 표현을 현재 공식 명칭으로 사용하지 않음",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "ADM_PARENT_COUNCIL",
+      "url": "https://www.seohae.go.kr/open_content/council/bbs/bbsMsgDetail.do?bcd=councilactivity&msg_seq=525",
+      "publisher": "인천광역시 서해구의회",
+      "published_date": "2026-07-06",
+      "read_scope": "상위 담당이 확인했다고 최신 작업 메시지에서 전달한 출처",
+      "read_by_this_agent": false,
+      "supports": "상위 담당 전달: 서해구의회 개설",
+      "limitations": "본 담당의 직접 열람·독립 검증으로 기록하지 않음",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "CH_KB",
+      "url": "https://kbland.kr/se/c/22429",
+      "publisher": "KB부동산",
+      "read_scope": "단지 HTML",
+      "evidence_location": "주소 L20, L172; 시세·최근 실거래·매물평균가 L48~62",
+      "supports": "서해구 청라동 130-4, 청라에메랄드로 134 단지 식별",
+      "limitations": "단지 평균가·KB시세는 개별 매물 호가 근거에서 제외",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "CH_TOWN",
+      "url": "https://town.aipartner.com/memul/T272013181",
+      "publisher": "이실장",
+      "read_scope": "직접 열람 HTML 3줄만 추출",
+      "evidence_location": "L0~2",
+      "supports": "호반베르디움앤영무예다음 216동 5층, 매매 5억 1,000만원 표기",
+      "limitations": "전용59.86㎡·26.11.01 등록은 검색 결과에만 보임. 본문에선 확인 불가. 거래완료 표지·현재 갱신일 확인 불충분",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "CH_OLD_AD",
+      "url": "https://aptrend.f-logic.co.kr/u/가이드공인중개사사무소-b24da935/blog/서구-호반베르디움앤영무예다음-59-73m2-dffbd67f",
+      "publisher": "아파트렌드 내 가이드공인중개사 게시물",
+      "published_date": "2026-06-18",
+      "read_scope": "광고 HTML 표시광고 표",
+      "evidence_location": "L12, L24~39, L49~60, L68~77",
+      "supports": "과거 광고: 전용59.73㎡ 17/24층 매매5억원, 번호2632970951",
+      "limitations": "최신 노출 갱신일·현재 판매 상태 불명. AI 생활형 3D 평면도 표기가 있고 사진 이용허락 미확인",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "CH_BLOCKED",
+      "url": "https://www.zigbang.com/home/apt/item-catalog?areaHoId=4524960&tranType=trade",
+      "publisher": "직방",
+      "read_scope": "직접 열람 실패",
+      "access_status": "403 Forbidden",
+      "supports": null,
+      "limitations": "우회·재시도 없음. 검색 스니펫의 면적을 확인된 매물 정보로 승격하지 않음",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "UM_KB",
+      "url": "https://kbland.kr/se/c/354287",
+      "publisher": "KB부동산",
+      "read_scope": "단지 HTML",
+      "evidence_location": "주소 L28, L172; 시세·실거래·매물평균가 L54~67",
+      "supports": "검단구 당하동 1311-1, 이음2로90 단지 식별",
+      "limitations": "전용59 개별 판매 매물 페이지·번호는 확보 못함",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "UM_BROKER_LEAD",
+      "url": "https://town.aipartner.com/realtor/45586",
+      "publisher": "이실장 내 우미린대표공인중개사사무소",
+      "read_scope": "검색 결과만 확인; 본문 미열람",
+      "evidence_location": "검색 결과의 208동 59.81㎡ 24층 매매4억8천만원·10.08 등록 표기",
+      "supports": "후속 확인할 중개사 매물 목록 위치",
+      "limitations": "개별 매물번호·연도·판매 상태 미확인. 본문 확인 매물로 계산하지 않음",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "FO_AGG",
+      "url": "https://saejipdao.app/apt/2827510600/포레나루원시티/",
+      "publisher": "새집다오",
+      "read_scope": "단지 매물 집계 HTML",
+      "evidence_location": "L10, L22, L32~45",
+      "supports": "2차 집계상 전용59 최저 호가5억원 3/13층 표시, 열람문 마지막 확인일2026-10-29",
+      "limitations": "검색 결과의 마지막 확인일2026-10-31과 본문이 다름. 매물 원문·동·사진·유효 상태 미확인. 최저·중위 호가를 승인하지 않음",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "FO_DYNAMIC",
+      "url": "https://saejipdao.app/verdict/?a=2652939528",
+      "publisher": "새집다오",
+      "read_scope": "관련 링크 클릭 후 HTML 안내문 17줄",
+      "evidence_location": "안내문 L0~16",
+      "supports": "연결 링크 접근 가능",
+      "limitations": "동적 매물 데이터 없음. a 파라미터를 검증된 원 플랫폼 매물번호로 취급하지 않음",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "FO_WRONG84",
+      "url": "https://realty.daangn.com/articles/4390427",
+      "publisher": "당근부동산",
+      "read_scope": "개별 매물 HTML",
+      "evidence_location": "주소 L63, 전용 L90~92, 층 L98~100, 광고설명 L59",
+      "supports": "포레나루원시티 서해구 서곶로120, 213동",
+      "limitations": "전용84.57㎡로 요청59㎡와 다름. 제목6억3천만원과 설명 중3억6천만원이 충돌하여 가격 비교에서 제외",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "FO_WRONG_AREA",
+      "url": "https://realty.daangn.com/articles/4828095",
+      "publisher": "당근부동산",
+      "read_scope": "개별 매물 HTML",
+      "evidence_location": "주소 L74; 공급·전용 L93~99",
+      "supports": "서해구 서곶로120 단지 식별",
+      "limitations": "공급·전용 모두102.4㎡로 기재되어59㎡ 대상 아님. 면적 기재 오류 여부도 미확인",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "SK_KB",
+      "url": "https://kbland.kr/se/c/47319",
+      "publisher": "KB부동산",
+      "read_scope": "단지 HTML",
+      "evidence_location": "주소 L20, L264; 가격 항목 L46~60",
+      "supports": "서해구 가정동709, 봉오대로270, 2차 단지 식별",
+      "limitations": "단지 평균가 및 선택 평형이 명확하지 않은 KB시세는84㎡ 개별 호가로 사용하지 않음",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "SK_ZIG",
+      "url": "https://m.zigbang.com/home/apt/item-catalog?areaHoId=10337339&tranType=trade",
+      "publisher": "직방",
+      "read_scope": "매물 카탈로그 HTML 67줄",
+      "evidence_location": "가격 L2/L38, 면적 L14, 동·층 L22, 2곳 등록 L34, 지난 주 확인 L58",
+      "supports": "전용84.96㎡ 103동 고층/총46층 매매6억5천만원 표기",
+      "limitations": "열람 응답의 크롤링 시점은2개월 전. 확인일은 지난 주라는 상대 표기뿐. areaHoId는 카탈로그 식별자이며 고유 광고 매물번호로 확정 불가",
+      "checked_date": "2026-11-01"
+    },
+    {
+      "source_id": "SK_ASIL_INVALID",
+      "url": "https://asil.kr/app/sale_info_cp.jsp?offer=40894951&os=pc",
+      "publisher": "아실",
+      "read_scope": "HTML 템플릿 추출",
+      "evidence_location": "L53~55, L83",
+      "supports": null,
+      "limitations": "검색 결과는 루원2차를 가리켰으나 열람 본문에2025.09.01~11.19·헬리오시티가 나옴. 대상·시점 불일치로 전부 제외",
+      "checked_date": "2026-11-01"
+    }
+  ],
+  "rejected_evidence_rules": [
+    "검색 첫 결과가 과거인 경우 현재 매물로 채택하지 않음. 청라6월 광고는 현재성 미확인으로 제외.",
+    "아실 열람문의2025년·헬리오시티 템플릿은 대상과 시점 불일치로 제외.",
+    "분양가·실거래 집계·KB시세·매물평균가·AI 예측을 개별 현재 호가로 사용하지 않음.",
+    "403 차단은 우회하지 않음. 청라 직방의 모바일 변형·프록시로 재시도하지 않음."
+  ],
+  "writer_handoff": {
+    "usable_claim_ids": [
+      "HIST_CH59",
+      "HIST_UM59",
+      "HIST_FO59",
+      "HIST_SK84",
+      "ADMIN_CURRENT"
+    ],
+    "usable_with_conditions": [
+      "로컬 실거래 중위값은 기간·면적·표본·층·미갱신 한계를 함께 표기한 자료·기획용 비교로 사용",
+      "공식 발표를 근거로2024년 통계범위와 현재 구 명칭을 구분"
+    ],
+    "not_ready": [
+      "현재 판매 매물 추천 확정",
+      "세 단지의 최저 호가·현재 매수 가능 가격",
+      "신혼부부의 단지별 선호 순위·많이 사는 단지라는 주장",
+      "광고 사진·평면도 영상 사용"
+    ],
+    "required_next_evidence": [
+      "세 단지59㎡ 각각 현재 노출 중인 고유번호가 있는 매물 상세 원문",
+      "본문의 매매가격·전용·동·층·총층·등록/갱신 절대일자·거래완료 여부",
+      "동일 시점의 원 실거래 및 해제 보정",
+      "사진 촬영자·권리자·사용범위와 장소 일치; AI 도면은 장소·가격 증거로 사용 금지"
+    ]
+  },
+  "issues": [
+    {
+      "issue_id": "LISTING_CURRENT_GAP",
+      "problem": "확인된 현재 판매 매물0건",
+      "affected_claim_ids": [
+        "CURRENT_ASK_CH59",
+        "CURRENT_ASK_UM59",
+        "CURRENT_ASK_FO59",
+        "CURRENT_ASK_SK84"
+      ],
+      "affected_scene_ids": [],
+      "scene_note": "장면ID 미지정",
+      "proposal": "총괄이 현재 개별 매물 원문을 확보한 뒤 호가 검증을 갱신. 그 전에는 실거래 비교 후보로만 전달.",
+      "impact": "매물 추천·현재 가격 자막 확정 보류",
+      "routing": "지정 파일3개 소유권에 따라 이슈를 본 파일과 listing_handoff.json 안에 포함; 별도 issue 파일·메시지 생성 없음"
+    }
+  ],
+  "verification_scope": {
+    "web": "공개 HTML·검색 결과의 확인 범위를 분리; 실시간 판매 재고나 중개사 보유 확인 아님",
+    "photos": "실제 이미지 프레임 열람·장소·권리 검증 미수행",
+    "independent_review": "본 담당의 직접 확인; 별도 독립 QA는 미수행",
+    "audio_video": "자료 단계이며 청취·연속 재생·영상 검수 미수행"
+  }
+}

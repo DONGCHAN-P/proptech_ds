@@ -1,0 +1,993 @@
+{
+  "timing_locked": false,
+  "audio_file": null,
+  "timing_basis": "script_estimate_not_audio_aligned",
+  "scenes": [
+    {
+      "scene_id": "O002",
+      "start_s": 0.0,
+      "end_s": 30.0,
+      "anchors": {},
+      "sentence_times": [
+        {
+          "sentence_id": "O002-01",
+          "text": "순위의 출처는 국가데이터처가 발표한 2024년 신혼부부통계입니다.",
+          "claim_ids": [
+            "STAT-PUBLISHER"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "순위의 출처는 국가데이터처가 발표한 2024년 신혼부부통계입니다.",
+          "reading_text": "순위의 출처는 국가데이터처가 발표한 이천이십사 년 신혼부부통계입니다.",
+          "display_notes": "통계 출처를 소개하는 이 장면에 자료명을 표시. 지역별 화면에 동일 출처 꼬리표를 반복하지 않음.",
+          "reading_notes": "합니다/입니다의 평서문. 숫자 읽기는 pronunciation_dictionary를 적용하며 표시문에 역전사하지 않음.",
+          "onscreen_purpose": "자료명·기관·원문 링크를 도입부에 한 번 제시",
+          "anchor_string": "국가데이터처가 발표한 2024년 신혼부부통계",
+          "material_type": "data_chart",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "screen_switch_id": "O002-SW01",
+          "start_s": 0.0,
+          "end_s": 3.085714285714286
+        },
+        {
+          "sentence_id": "O002-02",
+          "text": "2024년 11월 1일 거주지를 기준으로, 혼인신고 후 5년이 지나지 않은 부부를 초혼과 재혼을 합쳐 쌍 단위로 비교합니다.",
+          "claim_ids": [
+            "DEF-2024",
+            "SCOPE-53"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "2024년 11월 1일 거주지를 기준으로, 혼인신고 후 5년이 지나지 않은 부부를 초혼과 재혼을 합쳐 쌍 단위로 비교합니다.",
+          "reading_text": "이천이십사 년 십일 월 일 일 거주지를 기준으로, 혼인신고 후 오 년이 지나지 않은 부부를 초혼과 재혼을 합쳐 쌍 단위로 비교합니다.",
+          "display_notes": "숫자·단위·고유명사를 의미 단위로 보존",
+          "reading_notes": "합니다/입니다의 평서문. 숫자 읽기는 pronunciation_dictionary를 적용하며 표시문에 역전사하지 않음.",
+          "onscreen_purpose": "거주 통계의 기준일과 구역 기준을 같은 줄로 제시",
+          "anchor_string": "2024년 11월 1일",
+          "material_type": "data_chart",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "screen_switch_id": "O002-SW01",
+          "start_s": 3.085714285714286,
+          "end_s": 9.0
+        },
+        {
+          "sentence_id": "O002-06",
+          "text": "이후 입주와 이사로 거주 분포가 달라질 수 있어, 당시의 분포를 출발점으로 살펴보겠습니다.",
+          "claim_ids": [
+            "DEF-2024"
+          ],
+          "statement_type": "data_scope_explanation",
+          "display_text": "이후 입주와 이사로 거주 분포가 달라질 수 있어, 당시의 분포를 출발점으로 살펴보겠습니다.",
+          "reading_text": "이후 입주와 이사로 거주 분포가 달라질 수 있어, 당시의 분포를 출발점으로 살펴보겠습니다.",
+          "display_notes": "숫자·단위·고유명사를 의미 단위로 보존",
+          "reading_notes": "합니다/입니다의 평서문. 숫자 읽기는 pronunciation_dictionary를 적용하며 표시문에 역전사하지 않음.",
+          "onscreen_purpose": "2024 관측 시점과 그 이후의 변화 가능성을 직접 설명. 다음 가격 계약기간 슬롯과 분리.",
+          "anchor_string": "당시의 분포를 출발점",
+          "material_type": "data_chart",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "screen_switch_id": "O002-SW01",
+          "start_s": 9.0,
+          "end_s": 13.285714285714286
+        },
+        {
+          "sentence_id": "O002-07A",
+          "text": "가격은 2026년 5월부터 10월까지 계약된 아파트 매매 실거래를 2026년 11월 3일 조회한 자료입니다.",
+          "claim_ids": [
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "price_methodology",
+          "display_text": "가격은 2026년 5월부터 10월까지 계약된 아파트 매매 실거래를 2026년 11월 3일 조회한 자료입니다.",
+          "reading_text": "가격은 이천이십육 년 오 월부터 십 월까지 계약된 아파트 매매 실거래를 이천이십육 년 십일 월 삼 일 조회한 자료입니다.",
+          "anchor_string": "2026년 5월부터 10월까지",
+          "display_notes": "조건과 연도는 분리하지 않고 표시.10월 신고 진행 설명은 도입 한 번만 낭독.",
+          "reading_notes": "새 대본 승인 대기. 숫자 읽기와 표시문을 별도 유지.",
+          "onscreen_purpose": "2024 거주 통계와 별도로2026 가격 계약기간·조회일·집계조건/10월 신고시차를 설명",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "screen_switch_id": "O002-SW02",
+          "start_s": 13.285714285714286,
+          "end_s": 18.428571428571427
+        },
+        {
+          "sentence_id": "O002-07B",
+          "text": "전용면적 83제곱미터 이상 85제곱미터 이하의 거래를 비교합니다.",
+          "claim_ids": [
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "price_methodology",
+          "display_text": "전용면적 83제곱미터 이상 85제곱미터 이하의 거래를 비교합니다.",
+          "reading_text": "전용면적 팔십삼 제곱미터 이상 팔십오 제곱미터 이하의 거래를 비교합니다.",
+          "anchor_string": "83제곱미터 이상 85제곱미터 이하",
+          "display_notes": "조건과 연도는 분리하지 않고 표시.10월 신고 진행 설명은 도입 한 번만 낭독.",
+          "reading_notes": "새 대본 승인 대기. 숫자 읽기와 표시문을 별도 유지.",
+          "onscreen_purpose": "2024 거주 통계와 별도로2026 가격 계약기간·조회일·집계조건/10월 신고시차를 설명",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "screen_switch_id": "O002-SW02",
+          "start_s": 18.428571428571427,
+          "end_s": 21.514285714285716
+        },
+        {
+          "sentence_id": "O002-07D",
+          "text": "10월 계약분은 신고가 진행 중이어서, 조회 뒤 추가 신고나 정정·해제에 따라 수치가 달라질 수 있습니다.",
+          "claim_ids": [
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "price_methodology",
+          "display_text": "10월 계약분은 신고가 진행 중이어서, 조회 뒤 추가 신고나 정정·해제에 따라 수치가 달라질 수 있습니다.",
+          "reading_text": "십 월 계약분은 신고가 진행 중이어서, 조회 뒤 추가 신고나 정정·해제에 따라 수치가 달라질 수 있습니다.",
+          "anchor_string": "10월 계약분은 신고가 진행 중",
+          "display_notes": "조건과 연도는 분리하지 않고 표시.10월 신고 진행 설명은 도입 한 번만 낭독.",
+          "reading_notes": "새 대본 승인 대기. 숫자 읽기와 표시문을 별도 유지.",
+          "onscreen_purpose": "2024 거주 통계와 별도로2026 가격 계약기간·조회일·집계조건/10월 신고시차를 설명",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "screen_switch_id": "O002-SW02",
+          "start_s": 21.514285714285716,
+          "end_s": 26.571428571428573
+        },
+        {
+          "sentence_id": "O002-08",
+          "text": "중위값은 거래금액을 낮은 순서대로 놓았을 때 가운데에 해당하는 값입니다.",
+          "claim_ids": [
+            "METHOD-MEDIAN"
+          ],
+          "statement_type": "method_definition",
+          "display_text": "중위값은 거래금액을 낮은 순서대로 놓았을 때 가운데에 해당하는 값입니다.",
+          "reading_text": "중위값은 거래금액을 낮은 순서대로 놓았을 때 가운데에 해당하는 값입니다.",
+          "display_notes": "짝수 표본은 가운데 두 값의 평균. 예시값을 실제 지역의 거래로 오인하게 표시하지 않음.",
+          "reading_notes": "합니다/입니다의 평서문. 숫자 읽기는 pronunciation_dictionary를 적용하며 표시문에 역전사하지 않음.",
+          "onscreen_purpose": "정렬한 거래 점의 가운데를 표시; 실제 지역 가격이 확정되기 전 수치 없는 방법 도해",
+          "anchor_string": "가운데에 해당하는 값",
+          "material_type": "data_chart",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "screen_switch_id": "O002-SW03",
+          "start_s": 26.571428571428573,
+          "end_s": 30.0
+        }
+      ]
+    },
+    {
+      "scene_id": "S005",
+      "start_s": 30.0,
+      "end_s": 60.0,
+      "anchors": {},
+      "sentence_times": [
+        {
+          "sentence_id": "S005-01",
+          "text": "18위는 용인시 기흥구, 7,686쌍입니다.",
+          "claim_ids": [
+            "T2024-R18-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "18위는 용인시 기흥구, 7,686쌍입니다.",
+          "reading_text": "십팔 위는 용인시 기흥구, 칠천육백팔십육 쌍입니다.",
+          "display_notes": "숫자·단위·고유명사를 의미 단위로 보존",
+          "reading_notes": "합니다/입니다의 평서문. 숫자 읽기는 pronunciation_dictionary를 적용하며 표시문에 역전사하지 않음.",
+          "onscreen_purpose": "이번 지역의 윤곽·이름·거주 수를 함께 제시. 수를 현재 가격과 같은 연도의 값처럼 배치하지 않음",
+          "anchor_string": "7,686쌍",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "screen_switch_id": "S005-SW01",
+          "start_s": 0.0,
+          "end_s": 2.857142857142857
+        },
+        {
+          "sentence_id": "S005-02",
+          "text": "기흥구는 동백·흥덕의 대규모 택지개발 주거지와 기업·연구시설이 함께 자리한 지역입니다.",
+          "claim_ids": [
+            "V3-R18-DIR-H03"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "기흥구는 동백·흥덕의 대규모 택지개발 주거지와 기업·연구시설이 함께 자리한 지역입니다.",
+          "reading_text": "기흥구는 동백·흥덕의 대규모 택지개발 주거지와 기업·연구시설이 함께 자리한 지역입니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "주거지 형성과 실제 장소의 기능을 이해하도록 지역 내부의 대상을 구분해 제시",
+          "anchor_string": "기흥구는 동백·흥덕의 대규모 택지개발 주거지와 기업·연구시설이 함께 자리한 지역입니다.",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S005-SW02",
+          "start_s": 2.857142857142857,
+          "end_s": 8.571428571428571
+        },
+        {
+          "sentence_id": "S005-03",
+          "text": "구성역은 GTX-A와 수인분당선이 만나는 거점입니다.",
+          "claim_ids": [
+            "V3-R18-H02"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "구성역은 GTX-A와 수인분당선이 만나는 거점입니다.",
+          "reading_text": "구성역은 지티엑스 에이와 수인분당선이 만나는 거점입니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "구성역 5번출구 주변 거리의 기능을 설명; 사진 범위를 주거지나 가격 단지 전체로 확대하지 않음",
+          "anchor_string": "구성역",
+          "material_type": "real_photo",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S005-SW03",
+          "start_s": 8.571428571428571,
+          "end_s": 12.023809523809524
+        },
+        {
+          "sentence_id": "S005-04",
+          "text": "동백과 구성역 주변은 서로 다른 생활권이므로, 단지와 역 위치를 함께 살펴보겠습니다.",
+          "claim_ids": [
+            "V3-R18-H01",
+            "V3-R18-H02"
+          ],
+          "statement_type": "editorial_application",
+          "display_text": "동백과 구성역 주변은 서로 다른 생활권이므로, 단지와 역 위치를 함께 살펴보겠습니다.",
+          "reading_text": "동백과 구성역 주변은 서로 다른 생활권이므로, 단지와 역 위치를 함께 살펴보겠습니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "구성역 5번출구 주변 거리의 기능을 설명; 사진 범위를 주거지나 가격 단지 전체로 확대하지 않음",
+          "anchor_string": "구성역",
+          "material_type": "real_photo",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S005-SW03",
+          "start_s": 12.023809523809524,
+          "end_s": 17.61904761904762
+        },
+        {
+          "sentence_id": "S005-20",
+          "text": "같은 조건으로 집계한 용인시 기흥구 거래 1,381건의 중위값은 6억2,000만원입니다.",
+          "claim_ids": [
+            "V3_API_PRICE_R18",
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "parent_locked_price_fact",
+          "display_text": "같은 조건으로 집계한 용인시 기흥구 거래 1,381건의 중위값은 6억2,000만원입니다.",
+          "reading_text": "같은 조건으로 집계한 용인시 기흥구 거래 천삼백팔십일 건의 중위값은 육 억 이천 만 원입니다.",
+          "anchor_string": "6억2,000만원",
+          "display_notes": "부모 display_price를 반올림 없이 그대로 표시.지역n과 단지n을 별도로 표시하며 단지는 실제 동 이름을 유지.",
+          "reading_notes": "정확값 낭독.해당 새 대본 승인 전 TTS 금지.",
+          "onscreen_purpose": "지역 집계와 별도 단지 사례의 가격·n을 정확하게 구분",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "price_role": "region_price_median",
+          "screen_switch_id": "S005-SW04",
+          "start_s": 17.61904761904762,
+          "end_s": 23.452380952380953
+        },
+        {
+          "sentence_id": "S005-21",
+          "text": "영덕동의 용인기흥효성해링턴플레이스 단지 사례는 같은 조건 35건의 중위값이 6억6,000만원입니다.",
+          "claim_ids": [
+            "V3_API_APT_R18",
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "parent_locked_price_fact",
+          "display_text": "영덕동의 용인기흥효성해링턴플레이스 단지 사례는 같은 조건 35건의 중위값이 6억6,000만원입니다.",
+          "reading_text": "영덕동의 용인기흥효성해링턴플레이스 단지 사례는 같은 조건 서른다섯 건의 중위값이 육 억 육천 만 원입니다.",
+          "anchor_string": "용인기흥효성해링턴플레이스",
+          "display_notes": "부모 display_price를 반올림 없이 그대로 표시.지역n과 단지n을 별도로 표시하며 단지는 실제 동 이름을 유지.",
+          "reading_notes": "정확값 낭독.해당 새 대본 승인 전 TTS 금지.",
+          "onscreen_purpose": "지역 집계와 별도 단지 사례의 가격·n을 정확하게 구분",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "price_role": "representative_complex_price",
+          "screen_switch_id": "S005-SW05",
+          "start_s": 23.452380952380953,
+          "end_s": 30.0
+        }
+      ]
+    },
+    {
+      "scene_id": "S006",
+      "start_s": 60.0,
+      "end_s": 90.0,
+      "anchors": {},
+      "sentence_times": [
+        {
+          "sentence_id": "S006-01",
+          "text": "17위는 인천 연수구, 7,875쌍입니다.",
+          "claim_ids": [
+            "T2024-R17-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "17위는 인천 연수구, 7,875쌍입니다.",
+          "reading_text": "십칠 위는 인천 연수구, 칠천팔백칠십오 쌍입니다.",
+          "display_notes": "숫자·단위·고유명사를 의미 단위로 보존",
+          "reading_notes": "합니다/입니다의 평서문. 숫자 읽기는 pronunciation_dictionary를 적용하며 표시문에 역전사하지 않음.",
+          "onscreen_purpose": "이번 지역의 윤곽·이름·거주 수를 함께 제시. 수를 현재 가격과 같은 연도의 값처럼 배치하지 않음",
+          "anchor_string": "7,875쌍",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "screen_switch_id": "S006-SW01",
+          "start_s": 0.0,
+          "end_s": 2.987012987012987
+        },
+        {
+          "sentence_id": "S006-02",
+          "text": "연수구에는 연수2동의 아파트·중심상가 생활권과 송도의 국제업무·바이오산업 개발 권역이 함께 있습니다.",
+          "claim_ids": [
+            "V3-R17-H01",
+            "V3-R17-H02"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "연수구에는 연수2동의 아파트·중심상가 생활권과 송도의 국제업무·바이오산업 개발 권역이 함께 있습니다.",
+          "reading_text": "연수구에는 연수2동의 아파트·중심상가 생활권과 송도의 국제업무·바이오산업 개발 권역이 함께 있습니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "주거지 형성과 실제 장소의 기능을 이해하도록 지역 내부의 대상을 구분해 제시",
+          "anchor_string": "연수구에는 연수2동의 아파트·중심상가 생활권과 송도의 국제업무·바이오산업 개발 권역이 함께 있습니다.",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S006-SW02",
+          "start_s": 2.987012987012987,
+          "end_s": 10.25974025974026
+        },
+        {
+          "sentence_id": "S006-03",
+          "text": "송도 센트럴파크는 해수를 활용한 공원으로, 산책정원과 수로 주변 여가시설이 도심의 휴식 공간을 이룹니다.",
+          "claim_ids": [
+            "V3-R17-L01"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "송도 센트럴파크는 해수를 활용한 공원으로, 산책정원과 수로 주변 여가시설이 도심의 휴식 공간을 이룹니다.",
+          "reading_text": "송도 센트럴파크는 해수를 활용한 공원으로, 산책정원과 수로 주변 여가시설이 도심의 휴식 공간을 이룹니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "송도 센트럴파크 수로·도시풍경의 기능을 설명; 사진 범위를 주거지나 가격 단지 전체로 확대하지 않음",
+          "anchor_string": "센트럴파크",
+          "material_type": "real_photo",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S006-SW03",
+          "start_s": 10.25974025974026,
+          "end_s": 17.792207792207794
+        },
+        {
+          "sentence_id": "S006-20",
+          "text": "같은 조건으로 집계한 연수구 거래 1,152건의 중위값은 6억7,450만원입니다.",
+          "claim_ids": [
+            "V3_API_PRICE_R17",
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "parent_locked_price_fact",
+          "display_text": "같은 조건으로 집계한 연수구 거래 1,152건의 중위값은 6억7,450만원입니다.",
+          "reading_text": "같은 조건으로 집계한 연수구 거래 천백오십이 건의 중위값은 육 억 칠천사백오십 만 원입니다.",
+          "anchor_string": "6억7,450만원",
+          "display_notes": "부모 display_price를 반올림 없이 그대로 표시.지역n과 단지n을 별도로 표시하며 단지는 실제 동 이름을 유지.",
+          "reading_notes": "정확값 낭독.해당 새 대본 승인 전 TTS 금지.",
+          "onscreen_purpose": "지역 집계와 별도 단지 사례의 가격·n을 정확하게 구분",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "price_role": "region_price_median",
+          "screen_switch_id": "S006-SW04",
+          "start_s": 17.792207792207794,
+          "end_s": 23.636363636363637
+        },
+        {
+          "sentence_id": "S006-21",
+          "text": "송도동의 e편한세상송도 단지 사례는 같은 조건 16건의 중위값이 6억7,275만원입니다.",
+          "claim_ids": [
+            "V3_API_APT_R17",
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "parent_locked_price_fact",
+          "display_text": "송도동의 e편한세상송도 단지 사례는 같은 조건 16건의 중위값이 6억7,275만원입니다.",
+          "reading_text": "송도동의 이편한세상송도 단지 사례는 같은 조건 열여섯 건의 중위값이 육 억 칠천이백칠십오 만 원입니다.",
+          "anchor_string": "e편한세상송도",
+          "display_notes": "부모 display_price를 반올림 없이 그대로 표시.지역n과 단지n을 별도로 표시하며 단지는 실제 동 이름을 유지.",
+          "reading_notes": "정확값 낭독.해당 새 대본 승인 전 TTS 금지.",
+          "onscreen_purpose": "지역 집계와 별도 단지 사례의 가격·n을 정확하게 구분",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "price_role": "representative_complex_price",
+          "screen_switch_id": "S006-SW05",
+          "start_s": 23.636363636363637,
+          "end_s": 30.0
+        }
+      ]
+    },
+    {
+      "scene_id": "S007",
+      "start_s": 90.0,
+      "end_s": 120.0,
+      "anchors": {},
+      "sentence_times": [
+        {
+          "sentence_id": "S007-01",
+          "text": "16위는 인천 남동구, 7,997쌍입니다.",
+          "claim_ids": [
+            "T2024-R16-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "16위는 인천 남동구, 7,997쌍입니다.",
+          "reading_text": "십육 위는 인천 남동구, 칠천구백구십칠 쌍입니다.",
+          "display_notes": "숫자·단위·고유명사를 의미 단위로 보존",
+          "reading_notes": "합니다/입니다의 평서문. 숫자 읽기는 pronunciation_dictionary를 적용하며 표시문에 역전사하지 않음.",
+          "onscreen_purpose": "이번 지역의 윤곽·이름·거주 수를 함께 제시. 수를 현재 가격과 같은 연도의 값처럼 배치하지 않음",
+          "anchor_string": "7,997쌍",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "screen_switch_id": "S007-SW01",
+          "start_s": 0.0,
+          "end_s": 2.738095238095238
+        },
+        {
+          "sentence_id": "S007-02",
+          "text": "남동구 논현동에는 논현웰카운티처럼 2000년대에 입주한 아파트 단지가 있습니다.",
+          "claim_ids": [
+            "V3-R16-H01"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "남동구 논현동에는 논현웰카운티처럼 2000년대에 입주한 아파트 단지가 있습니다.",
+          "reading_text": "남동구 논현동에는 논현웰카운티처럼 이천 년대에 입주한 아파트 단지가 있습니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "주거지 형성과 실제 장소의 기능을 이해하도록 지역 내부의 대상을 구분해 제시",
+          "anchor_string": "남동구 논현동에는 논현웰카운티처럼 2000년대에 입주한 아파트 단지가 있습니다.",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S007-SW02",
+          "start_s": 2.738095238095238,
+          "end_s": 7.976190476190476
+        },
+        {
+          "sentence_id": "S007-03",
+          "text": "소래습지생태공원은 갯벌과 습지, 탐방데크를 갖춘 생태공원입니다.",
+          "claim_ids": [
+            "V3-R16-L01"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "소래습지생태공원은 갯벌과 습지, 탐방데크를 갖춘 생태공원입니다.",
+          "reading_text": "소래습지생태공원은 갯벌과 습지, 탐방데크를 갖춘 생태공원입니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "소래습지생태공원 갈대밭·탐방데크의 기능을 설명; 사진 범위를 주거지나 가격 단지 전체로 확대하지 않음",
+          "anchor_string": "소래습지생태공원",
+          "material_type": "real_photo",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S007-SW03",
+          "start_s": 7.976190476190476,
+          "end_s": 12.142857142857142
+        },
+        {
+          "sentence_id": "S007-04",
+          "text": "공원 안에는 옛 염전을 활용한 학습장도 있어 해안의 생태환경과 염전의 흔적을 함께 살펴볼 수 있습니다.",
+          "claim_ids": [
+            "V3-R16-L01",
+            "V3-R16-L02"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "공원 안에는 옛 염전을 활용한 학습장도 있어 해안의 생태환경과 염전의 흔적을 함께 살펴볼 수 있습니다.",
+          "reading_text": "공원 안에는 옛 염전을 활용한 학습장도 있어 해안의 생태환경과 염전의 흔적을 함께 살펴볼 수 있습니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "주거지 형성과 실제 장소의 기능을 이해하도록 지역 내부의 대상을 구분해 제시",
+          "anchor_string": "공원 안에는 옛 염전을 활용한 학습장도 있어 해안의 생태환경과 염전의 흔적을 함께 살펴볼 수 있습니다.",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S007-SW02",
+          "start_s": 12.142857142857142,
+          "end_s": 18.928571428571427
+        },
+        {
+          "sentence_id": "S007-20",
+          "text": "같은 조건으로 집계한 남동구 거래 632건의 중위값은 4억2,850만원입니다.",
+          "claim_ids": [
+            "V3_API_PRICE_R16",
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "parent_locked_price_fact",
+          "display_text": "같은 조건으로 집계한 남동구 거래 632건의 중위값은 4억2,850만원입니다.",
+          "reading_text": "같은 조건으로 집계한 남동구 거래 육백삼십이 건의 중위값은 사 억 이천팔백오십 만 원입니다.",
+          "anchor_string": "4억2,850만원",
+          "display_notes": "부모 display_price를 반올림 없이 그대로 표시.지역n과 단지n을 별도로 표시하며 단지는 실제 동 이름을 유지.",
+          "reading_notes": "정확값 낭독.해당 새 대본 승인 전 TTS 금지.",
+          "onscreen_purpose": "지역 집계와 별도 단지 사례의 가격·n을 정확하게 구분",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "price_role": "region_price_median",
+          "screen_switch_id": "S007-SW04",
+          "start_s": 18.928571428571427,
+          "end_s": 24.047619047619047
+        },
+        {
+          "sentence_id": "S007-21",
+          "text": "논현동의 논현 파크 포레 단지 사례는 같은 조건 20건의 중위값이 3억9,000만원입니다.",
+          "claim_ids": [
+            "V3_API_APT_R16",
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "parent_locked_price_fact",
+          "display_text": "논현동의 논현 파크 포레 단지 사례는 같은 조건 20건의 중위값이 3억9,000만원입니다.",
+          "reading_text": "논현동의 논현 파크 포레 단지 사례는 같은 조건 스무 건의 중위값이 삼 억 구천 만 원입니다.",
+          "anchor_string": "논현 파크 포레",
+          "display_notes": "부모 display_price를 반올림 없이 그대로 표시.지역n과 단지n을 별도로 표시하며 단지는 실제 동 이름을 유지.",
+          "reading_notes": "정확값 낭독.해당 새 대본 승인 전 TTS 금지.",
+          "onscreen_purpose": "지역 집계와 별도 단지 사례의 가격·n을 정확하게 구분",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "price_role": "representative_complex_price",
+          "screen_switch_id": "S007-SW05",
+          "start_s": 24.047619047619047,
+          "end_s": 30.0
+        }
+      ]
+    },
+    {
+      "scene_id": "S017",
+      "start_s": 120.0,
+      "end_s": 150.0,
+      "anchors": {},
+      "sentence_times": [
+        {
+          "sentence_id": "S017-01",
+          "text": "6위는 서울 강남구, 9,321쌍입니다.",
+          "claim_ids": [
+            "T2024-R06-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "6위는 서울 강남구, 9,321쌍입니다.",
+          "reading_text": "육 위는 서울 강남구, 구천삼백이십일 쌍입니다.",
+          "display_notes": "숫자·단위·고유명사를 의미 단위로 보존",
+          "reading_notes": "합니다/입니다의 평서문. 숫자 읽기는 pronunciation_dictionary를 적용하며 표시문에 역전사하지 않음.",
+          "onscreen_purpose": "이번 지역의 윤곽·이름·거주 수를 함께 제시. 수를 현재 가격과 같은 연도의 값처럼 배치하지 않음",
+          "anchor_string": "9,321쌍",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "screen_switch_id": "S017-SW01",
+          "start_s": 0.0,
+          "end_s": 2.7049180327868854
+        },
+        {
+          "sentence_id": "S017-02",
+          "text": "강남구 개포동에는 1980년대에 사용승인된 개포주공6단지와 2020년대에 승인된 개포자이프레지던스가 함께 있습니다.",
+          "claim_ids": [
+            "V3-R06-H01",
+            "V3-R06-H02"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "강남구 개포동에는 1980년대에 사용승인된 개포주공6단지와 2020년대에 승인된 개포자이프레지던스가 함께 있습니다.",
+          "reading_text": "강남구 개포동에는 천구백팔십 년대에 사용승인된 개포주공 육 단지와 이천이십 년대에 승인된 개포자이프레지던스가 함께 있습니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "주거지 형성과 실제 장소의 기능을 이해하도록 지역 내부의 대상을 구분해 제시",
+          "anchor_string": "강남구 개포동에는 1980년대에 사용승인된 개포주공6단지와 2020년대에 승인된 개포자이프레지던스가 함께 있습니다.",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S017-SW02",
+          "start_s": 2.7049180327868854,
+          "end_s": 10.573770491803279
+        },
+        {
+          "sentence_id": "S017-03",
+          "text": "같은 개포동 안에서도 아파트가 조성된 시기가 크게 다릅니다.",
+          "claim_ids": [
+            "V3-R06-H01",
+            "V3-R06-H02"
+          ],
+          "statement_type": "editorial_interpretation",
+          "display_text": "같은 개포동 안에서도 아파트가 조성된 시기가 크게 다릅니다.",
+          "reading_text": "같은 개포동 안에서도 아파트가 조성된 시기가 크게 다릅니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "주거지 형성과 실제 장소의 기능을 이해하도록 지역 내부의 대상을 구분해 제시",
+          "anchor_string": "같은 개포동 안에서도 아파트가 조성된 시기가 크게 다릅니다.",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S017-SW02",
+          "start_s": 10.573770491803279,
+          "end_s": 14.631147540983607
+        },
+        {
+          "sentence_id": "S017-04",
+          "text": "양재천 산책로는 주거지 주변의 수변 보행 공간입니다.",
+          "claim_ids": [
+            "V3-R06-L01"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "양재천 산책로는 주거지 주변의 수변 보행 공간입니다.",
+          "reading_text": "양재천 산책로는 주거지 주변의 수변 보행 공간입니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "강남구 양재천 영동4교 인근 수변길의 기능을 설명; 사진 범위를 주거지나 가격 단지 전체로 확대하지 않음",
+          "anchor_string": "양재천 산책로",
+          "material_type": "real_photo",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S017-SW03",
+          "start_s": 14.631147540983607,
+          "end_s": 18.19672131147541
+        },
+        {
+          "sentence_id": "S017-20",
+          "text": "같은 조건으로 집계한 강남구 거래 235건의 중위값은 30억3,000만원입니다.",
+          "claim_ids": [
+            "V3_API_PRICE_R06",
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "parent_locked_price_fact",
+          "display_text": "같은 조건으로 집계한 강남구 거래 235건의 중위값은 30억3,000만원입니다.",
+          "reading_text": "같은 조건으로 집계한 강남구 거래 이백삼십오 건의 중위값은 삼십 억 삼천 만 원입니다.",
+          "anchor_string": "30억3,000만원",
+          "display_notes": "부모 display_price를 반올림 없이 그대로 표시.지역n과 단지n을 별도로 표시하며 단지는 실제 동 이름을 유지.",
+          "reading_notes": "정확값 낭독.해당 새 대본 승인 전 TTS 금지.",
+          "onscreen_purpose": "지역 집계와 별도 단지 사례의 가격·n을 정확하게 구분",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "price_role": "region_price_median",
+          "screen_switch_id": "S017-SW04",
+          "start_s": 18.19672131147541,
+          "end_s": 23.60655737704918
+        },
+        {
+          "sentence_id": "S017-21",
+          "text": "개포동의 개포래미안포레스트 단지 사례는 같은 조건 10건의 중위값이 31억9,500만원입니다.",
+          "claim_ids": [
+            "V3_API_APT_R06",
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "parent_locked_price_fact",
+          "display_text": "개포동의 개포래미안포레스트 단지 사례는 같은 조건 10건의 중위값이 31억9,500만원입니다.",
+          "reading_text": "개포동의 개포래미안포레스트 단지 사례는 같은 조건 열 건의 중위값이 삼십일 억 구천오백 만 원입니다.",
+          "anchor_string": "개포래미안포레스트",
+          "display_notes": "부모 display_price를 반올림 없이 그대로 표시.지역n과 단지n을 별도로 표시하며 단지는 실제 동 이름을 유지.",
+          "reading_notes": "정확값 낭독.해당 새 대본 승인 전 TTS 금지.",
+          "onscreen_purpose": "지역 집계와 별도 단지 사례의 가격·n을 정확하게 구분",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "price_role": "representative_complex_price",
+          "screen_switch_id": "S017-SW05",
+          "start_s": 23.60655737704918,
+          "end_s": 30.0
+        }
+      ]
+    },
+    {
+      "scene_id": "S019",
+      "start_s": 150.0,
+      "end_s": 180.0,
+      "anchors": {},
+      "sentence_times": [
+        {
+          "sentence_id": "S019-01",
+          "text": "4위는 서울 강서구, 10,724쌍입니다.",
+          "claim_ids": [
+            "T2024-R04-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "4위는 서울 강서구, 10,724쌍입니다.",
+          "reading_text": "사 위는 서울 강서구, 일만칠백이십사 쌍입니다.",
+          "display_notes": "숫자·단위·고유명사를 의미 단위로 보존",
+          "reading_notes": "합니다/입니다의 평서문. 숫자 읽기는 pronunciation_dictionary를 적용하며 표시문에 역전사하지 않음.",
+          "onscreen_purpose": "이번 지역의 윤곽·이름·거주 수를 함께 제시. 수를 현재 가격과 같은 연도의 값처럼 배치하지 않음",
+          "anchor_string": "10,724쌍",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "screen_switch_id": "S019-SW01",
+          "start_s": 0.0,
+          "end_s": 3.50253807106599
+        },
+        {
+          "sentence_id": "S019-02",
+          "text": "강서구 마곡은 주거단지와 산업·업무단지, 공원 구역을 나눠 계획한 지역입니다.",
+          "claim_ids": [
+            "V3-R04-H01"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "강서구 마곡은 주거단지와 산업·업무단지, 공원 구역을 나눠 계획한 지역입니다.",
+          "reading_text": "강서구 마곡은 주거단지와 산업·업무단지, 공원 구역을 나눠 계획한 지역입니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "주거지 형성과 실제 장소의 기능을 이해하도록 지역 내부의 대상을 구분해 제시",
+          "anchor_string": "강서구 마곡은 주거단지와 산업·업무단지, 공원 구역을 나눠 계획한 지역입니다.",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S019-SW02",
+          "start_s": 3.50253807106599,
+          "end_s": 10.050761421319796
+        },
+        {
+          "sentence_id": "S019-03",
+          "text": "서울식물원은 식물 전시와 야외 공원을 함께 갖춘 생활권의 여가 공간입니다.",
+          "claim_ids": [
+            "V3-R04-L01"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "서울식물원은 식물 전시와 야외 공원을 함께 갖춘 생활권의 여가 공간입니다.",
+          "reading_text": "서울식물원은 식물 전시와 야외 공원을 함께 갖춘 생활권의 여가 공간입니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "마곡 서울식물원 야외의 기능을 설명; 사진 범위를 주거지나 가격 단지 전체로 확대하지 않음",
+          "anchor_string": "서울식물원",
+          "material_type": "real_photo",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S019-SW03",
+          "start_s": 10.050761421319796,
+          "end_s": 16.294416243654823
+        },
+        {
+          "sentence_id": "S019-20",
+          "text": "같은 조건으로 집계한 강서구 거래 579건의 중위값은 10억8,000만원입니다.",
+          "claim_ids": [
+            "V3_API_PRICE_R04",
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "parent_locked_price_fact",
+          "display_text": "같은 조건으로 집계한 강서구 거래 579건의 중위값은 10억8,000만원입니다.",
+          "reading_text": "같은 조건으로 집계한 강서구 거래 오백칠십구 건의 중위값은 십 억 팔천 만 원입니다.",
+          "anchor_string": "10억8,000만원",
+          "display_notes": "부모 display_price를 반올림 없이 그대로 표시.지역n과 단지n을 별도로 표시하며 단지는 실제 동 이름을 유지.",
+          "reading_notes": "정확값 낭독.해당 새 대본 승인 전 TTS 금지.",
+          "onscreen_purpose": "지역 집계와 별도 단지 사례의 가격·n을 정확하게 구분",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "price_role": "region_price_median",
+          "screen_switch_id": "S019-SW04",
+          "start_s": 16.294416243654823,
+          "end_s": 22.99492385786802
+        },
+        {
+          "sentence_id": "S019-21",
+          "text": "염창동의 현대1 단지 사례는 같은 조건 10건의 중위값이 12억1,500만원입니다.",
+          "claim_ids": [
+            "V3_API_APT_R04",
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "parent_locked_price_fact",
+          "display_text": "염창동의 현대1 단지 사례는 같은 조건 10건의 중위값이 12억1,500만원입니다.",
+          "reading_text": "염창동의 현대 일 단지 사례는 같은 조건 열 건의 중위값이 십이 억 천오백 만 원입니다.",
+          "anchor_string": "현대1",
+          "display_notes": "부모 display_price를 반올림 없이 그대로 표시.지역n과 단지n을 별도로 표시하며 단지는 실제 동 이름을 유지.",
+          "reading_notes": "정확값 낭독.해당 새 대본 승인 전 TTS 금지.",
+          "onscreen_purpose": "지역 집계와 별도 단지 사례의 가격·n을 정확하게 구분",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "price_role": "representative_complex_price",
+          "screen_switch_id": "S019-SW05",
+          "start_s": 22.99492385786802,
+          "end_s": 30.0
+        }
+      ]
+    },
+    {
+      "scene_id": "S022",
+      "start_s": 180.0,
+      "end_s": 210.0,
+      "anchors": {},
+      "sentence_times": [
+        {
+          "sentence_id": "S022-01",
+          "text": "1위는 2024년 당시 인천 서구, 15,737쌍입니다.",
+          "claim_ids": [
+            "T2024-R01-TOTAL",
+            "SCOPE-53"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "1위는 2024년 당시 인천 서구, 15,737쌍입니다.",
+          "reading_text": "일 위는 이천이십사 년 당시 인천 서구, 일만오천칠백삼십칠 쌍입니다.",
+          "display_notes": "숫자·단위·고유명사를 의미 단위로 보존",
+          "reading_notes": "합니다/입니다의 평서문. 숫자 읽기는 pronunciation_dictionary를 적용하며 표시문에 역전사하지 않음.",
+          "onscreen_purpose": "이번 지역의 윤곽·이름·거주 수를 함께 제시. 수를 현재 가격과 같은 연도의 값처럼 배치하지 않음",
+          "anchor_string": "15,737쌍",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "screen_switch_id": "S022-SW01",
+          "start_s": 0.0,
+          "end_s": 3.5907335907335907
+        },
+        {
+          "sentence_id": "S022-02",
+          "text": "2024년 통계의 인천 서구에는 청라와 검단이 함께 들어갑니다.",
+          "claim_ids": [
+            "V3-R01-H01",
+            "V3-R01-G01"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "2024년 통계의 인천 서구에는 청라와 검단이 함께 들어갑니다.",
+          "reading_text": "이천이십사 년 통계의 인천 서구에는 청라와 검단이 함께 들어갑니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "주거지 형성과 실제 장소의 기능을 이해하도록 지역 내부의 대상을 구분해 제시",
+          "anchor_string": "2024년 통계의 인천 서구에는 청라와 검단이 함께 들어갑니다.",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S022-SW02",
+          "start_s": 3.5907335907335907,
+          "end_s": 7.644787644787645
+        },
+        {
+          "sentence_id": "S022-03",
+          "text": "청라는 업무·주거·문화·레저 기능을 함께 배치하도록 계획된 지역이며, 청라호수공원은 산책과 여가를 위한 공간입니다.",
+          "claim_ids": [
+            "V3-R01-H01",
+            "V3-R01-L01"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "청라는 업무·주거·문화·레저 기능을 함께 배치하도록 계획된 지역이며, 청라호수공원은 산책과 여가를 위한 공간입니다.",
+          "reading_text": "청라는 업무·주거·문화·레저 기능을 함께 배치하도록 계획된 지역이며, 청라호수공원은 산책과 여가를 위한 공간입니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "청라호수공원의 기능을 설명; 사진 범위를 주거지나 가격 단지 전체로 확대하지 않음",
+          "anchor_string": "청라호수공원",
+          "material_type": "real_photo",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S022-SW03",
+          "start_s": 7.644787644787645,
+          "end_s": 15.057915057915057
+        },
+        {
+          "sentence_id": "S022-04",
+          "text": "현재는 아라뱃길 남쪽 서해구와 북쪽 검단구로 나뉩니다.",
+          "claim_ids": [
+            "V3-R01-G01"
+          ],
+          "statement_type": "verified_fact",
+          "display_text": "현재는 아라뱃길 남쪽 서해구와 북쪽 검단구로 나뉩니다.",
+          "reading_text": "현재는 아라뱃길 남쪽 서해구와 북쪽 검단구로 나뉩니다.",
+          "display_notes": "숫자·고유명사·동 이름을 의미 단위로 보존. 자료사진은 촬영연도/자료사진 여부를 해당 컷에 표시.",
+          "reading_notes": "합니다/입니다 평서문. 승인 전 합성 금지. 계획·준공·사용승인·현재 운영의 범위를 바꾸지 않음.",
+          "onscreen_purpose": "주거지 형성과 실제 장소의 기능을 이해하도록 지역 내부의 대상을 구분해 제시",
+          "anchor_string": "현재는 아라뱃길 남쪽 서해구와 북쪽 검단구로 나뉩니다.",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "source_revision": "top20-explain-v3-regions-final-1",
+          "screen_switch_id": "S022-SW02",
+          "start_s": 15.057915057915057,
+          "end_s": 18.53281853281853
+        },
+        {
+          "sentence_id": "S022-20",
+          "text": "같은 조건으로 집계한 2024년 옛 서구 범위 거래 1,530건의 중위값은 5억5,000만원입니다.",
+          "claim_ids": [
+            "V3_API_PRICE_R01",
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "parent_locked_price_fact",
+          "display_text": "같은 조건으로 집계한 2024년 옛 서구 범위 거래 1,530건의 중위값은 5억5,000만원입니다.",
+          "reading_text": "같은 조건으로 집계한 이천이십사 년 옛 서구 범위 거래 천오백삼십 건의 중위값은 오 억 오천 만 원입니다.",
+          "anchor_string": "5억5,000만원",
+          "display_notes": "부모 display_price를 반올림 없이 그대로 표시.지역n과 단지n을 별도로 표시하며 단지는 실제 동 이름을 유지.",
+          "reading_notes": "정확값 낭독.해당 새 대본 승인 전 TTS 금지.",
+          "onscreen_purpose": "지역 집계와 별도 단지 사례의 가격·n을 정확하게 구분",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "price_role": "region_price_median",
+          "screen_switch_id": "S022-SW04",
+          "start_s": 18.53281853281853,
+          "end_s": 24.903474903474905
+        },
+        {
+          "sentence_id": "S022-21",
+          "text": "당하동의 우미린파크뷰1단지는 같은 조건 5건의 중위값이 5억6,200만원입니다.",
+          "claim_ids": [
+            "V3_API_APT_R01",
+            "V3-PRICE-METHOD"
+          ],
+          "statement_type": "parent_locked_price_fact",
+          "display_text": "당하동의 우미린파크뷰1단지는 같은 조건 5건의 중위값이 5억6,200만원입니다.",
+          "reading_text": "당하동의 우미린파크뷰 일 단지는 같은 조건 다섯 건의 중위값이 오 억 육천이백 만 원입니다.",
+          "anchor_string": "우미린파크뷰1단지",
+          "display_notes": "부모 display_price를 반올림 없이 그대로 표시.지역n과 단지n을 별도로 표시하며 단지는 실제 동 이름을 유지.",
+          "reading_notes": "정확값 낭독.해당 새 대본 승인 전 TTS 금지.",
+          "onscreen_purpose": "지역 집계와 별도 단지 사례의 가격·n을 정확하게 구분",
+          "material_type": "map",
+          "visual_role": "explanation",
+          "status": "complete_text_pending_user_script_approval",
+          "narration_ready": false,
+          "input_owner": "research/top20-explain-v3/prices",
+          "price_role": "representative_complex_price",
+          "screen_switch_id": "S022-SW05",
+          "start_s": 24.903474903474905,
+          "end_s": 30.0
+        }
+      ]
+    }
+  ]
+}

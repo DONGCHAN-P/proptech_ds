@@ -1,0 +1,41 @@
+{
+  "task": "thumbnail_only",
+  "video_id": "0495J7FMmCk",
+  "user_request": "기존 방식으로 썸네일 변경; 낮은 클릭 전환율은 사용자 보고",
+  "reference": {
+    "thumbnail": "housing-choice-networth-20261020/outputs/jun-release-v1/thumbnail.png",
+    "template": "video-agent-studio/assets/thumbnail-series/v1/style.json"
+  },
+  "design": {
+    "white_copy": "현금 1억~5억",
+    "yellow_copy": "얼마짜리 집?",
+    "kicker": "내 집 마련 계산법",
+    "subline": "대출 · 세금 · 월 부담까지",
+    "font": "Pretendard ExtraBold",
+    "yellow": "#FEDC2C",
+    "layout": "fullbleed apartment photo style; large white/yellow type; no cards"
+  },
+  "background": {
+    "asset_id": "TH001",
+    "type": "ai_generated_concept_background",
+    "actual_place": null,
+    "path": "video-agent-studio/episodes/affordable-home-price-20261026/visual/thumbnail-rework-20261030/assets/TH001_background_AI.png",
+    "sha256": "684b62b04ce2da80311cdbf9037a78f65537396cc3ba1928e1887cc8d2e59983",
+    "size": [
+      1672,
+      941
+    ],
+    "generator": "built-in image_gen",
+    "reference_is_style_only": true,
+    "specific_complex_claim": false,
+    "on_screen_ai_label": false
+  },
+  "previous_local_sha256": "063662bc485f991db84d15924ade7b1f37646919174f68a52904a1a4125a7a1f",
+  "new_paid_api_calls": 0,
+  "elevenlabs_credits": 0,
+  "content_video_changed": false,
+  "youtube_thumbnail_replace_authorized": "current direct user request",
+  "thumbnail_generation_calls": 1,
+  "ctr_baseline": "user-reported decline; no measured CTR requested from API in this task",
+  "expected_effect": "hypothesis; no CTR uplift claim"
+}

@@ -1,0 +1,100 @@
+[
+  {
+    "origin": "2026-10-27",
+    "level": "district",
+    "strategy": "fixed_blend",
+    "known_origins": 9,
+    "latest_known_label": "2026-10-01 00:00:00",
+    "weights": {
+      "damped_momentum": 0.5,
+      "v3_hgb": 0.5
+    },
+    "bias_correction_mean_pp": 0.0
+  },
+  {
+    "origin": "2026-10-27",
+    "level": "district",
+    "strategy": "online_best",
+    "known_origins": 9,
+    "latest_known_label": "2026-10-01 00:00:00",
+    "weights": {
+      "zero": 1.0
+    },
+    "bias_correction_mean_pp": 0.0
+  },
+  {
+    "origin": "2026-10-27",
+    "level": "district",
+    "strategy": "online_ensemble",
+    "known_origins": 9,
+    "latest_known_label": "2026-10-01 00:00:00",
+    "weights": {
+      "hgb_full_context_mae": 0.33185643377670004,
+      "lgbm_compact_120m": 0.32308774488210296,
+      "zero": 0.345055821341197
+    },
+    "bias_correction_mean_pp": 0.0
+  },
+  {
+    "origin": "2026-10-27",
+    "level": "district",
+    "strategy": "online_bias_corrected",
+    "known_origins": 9,
+    "latest_known_label": "2026-10-01 00:00:00",
+    "weights": {
+      "hgb_full_context_mae": 0.33185643377670004,
+      "lgbm_compact_120m": 0.32308774488210296,
+      "zero": 0.345055821341197
+    },
+    "bias_correction_mean_pp": -0.5233562466082197
+  },
+  {
+    "origin": "2026-10-27",
+    "level": "province",
+    "strategy": "fixed_blend",
+    "known_origins": 9,
+    "latest_known_label": "2026-10-01 00:00:00",
+    "weights": {
+      "damped_momentum": 0.5,
+      "v3_hgb": 0.5
+    },
+    "bias_correction_mean_pp": 0.0
+  },
+  {
+    "origin": "2026-10-27",
+    "level": "province",
+    "strategy": "online_best",
+    "known_origins": 9,
+    "latest_known_label": "2026-10-01 00:00:00",
+    "weights": {
+      "zero": 1.0
+    },
+    "bias_correction_mean_pp": 0.0
+  },
+  {
+    "origin": "2026-10-27",
+    "level": "province",
+    "strategy": "online_ensemble",
+    "known_origins": 9,
+    "latest_known_label": "2026-10-01 00:00:00",
+    "weights": {
+      "hgb_full_context_mae": 0.31137602296772227,
+      "lgbm_compact_120m": 0.29756605002579994,
+      "zero": 0.3910579270064778
+    },
+    "bias_correction_mean_pp": 0.0
+  },
+  {
+    "origin": "2026-10-27",
+    "level": "province",
+    "strategy": "online_bias_corrected",
+    "known_origins": 9,
+    "latest_known_label": "2026-10-01 00:00:00",
+    "weights": {
+      "hgb_full_context_mae": 0.31137602296772227,
+      "lgbm_compact_120m": 0.29756605002579994,
+      "zero": 0.3910579270064778
+    },
+    "bias_correction_mean_pp": -0.5561523638028049
+  }
+]

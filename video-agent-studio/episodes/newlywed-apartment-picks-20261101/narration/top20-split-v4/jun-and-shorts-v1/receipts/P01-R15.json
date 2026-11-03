@@ -1,0 +1,69 @@
+{
+  "asset_id": "P01-R15",
+  "sentence_ids": [
+    "P01-R15-V2-01",
+    "P01-R15-V2-02",
+    "P01-R15-V2-03",
+    "P01-R15-V2-04",
+    "P01-R15-V2-05",
+    "P01-R15-V2-06",
+    "P01-R15-V2-07",
+    "P01-R15-V2-08"
+  ],
+  "status": "complete",
+  "started_at_utc": "2026-11-03T13:24:47.415Z",
+  "authorization_id": "9cde211f3073",
+  "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+  "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+  "input_file_sha256": "f3a2450fb44c7e42cc10e0e10fcf8fe2d8d566e87770cb3fdc452d307fb72739",
+  "request_text_sha256": "4ae57f350920718fd64db778861f5315640a9de955261c777b5f36259a4c4e4c",
+  "characters": 489,
+  "reserved_credits": 489,
+  "actual_credits": 196,
+  "charge_known": true,
+  "request": {
+    "text": "십오 위는 서울 구로구, 팔천십육 쌍입니다.\n\n구로구에서는 신도림의 아파트, 환승 생활권과 구로동의 산업 업무권을 함께 살펴볼 수 있습니다.\n\n신도림로, 경인로 주변에 여러 아파트 단지가 있고, 사진의 신도림역은 일 호선과 이 호선을 잇는 거점입니다.\n\n지밸리는 구로동과 금천구 가산동에 걸쳐 있어, 직장의 실제 주소를 지도에 놓으면 주거지와 연결할 방향이 구체화됩니다.\n\n구로동 현대연예인 단지 주변에는 서울구일초등학교, 구일중학교, 구일고등학교를 표시해 단지와 학교의 배치를 읽겠습니다.\n\n철도 환승을 우선할지, 학교가 있는 주거권과 업무지의 연결을 우선할지에 따라 후보를 고르는 기준이 달라집니다.\n\n거래 중윗값은 구로동 칠 억 팔천 만 원, 신도림동 십삼 억 이천 만 원으로, 업무지 연결과 예산을 함께 놓고 비교할 차이가 있습니다.\n\n장보기와 퇴근 뒤의 생활까지 실제 후보 단지에서 이어 보면, 신도림과 구로동 중 두 사람의 일상에 맞는 권역을 비교할 수 있습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+  "local_shadow_remaining_before": 15458,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "mtOM6g1b7taujM0q5Oxm",
+    "x-request-id": null,
+    "character-cost": "196",
+    "content-type": "application/json",
+    "date": "Tue, 03 Nov 2026 13:24:50 GMT"
+  },
+  "pcm_samples": 2600136,
+  "pcm_duration_s": 58.96,
+  "provider_last_alignment_end_s": 59.04,
+  "complete_tail_after_alignment_s": -0.0799999999999983,
+  "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R15.wav",
+  "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R15/audio.mp3",
+  "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R15/alignment.json",
+  "pcm_sha256": "91388f1a6a08b5ef6475579aa98b0be080e80dd1d4366f2a64a9179ec3ed0bd8",
+  "artifact_sha256": {
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R15/audio.mp3": "3bfe7c11e37dd32a7db78848087bec7405a14b97d13b6965dc53a7709ba01c96",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R15/alignment.json": "d010aabc2eef83c35a6e9f4ebc644dac79efff5f5ce34884148025b88825bbd6",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R15/normalized_alignment.json": "d010aabc2eef83c35a6e9f4ebc644dac79efff5f5ce34884148025b88825bbd6",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R15.wav": "0b25d1d3dab6302922cedeb76eca454b809d97377e1b4fe41013ffafa5538ba4"
+  },
+  "processing": {
+    "sample_rate_hz": 44100,
+    "channels": 1,
+    "codec": "pcm_s16le",
+    "tempo_factor": 1,
+    "trimmed": false,
+    "tail_preserved": true,
+    "provider_speed": 0.97
+  },
+  "local_shadow_remaining_after": 15262,
+  "completed_at_utc": "2026-11-03T13:25:00.492Z"
+}

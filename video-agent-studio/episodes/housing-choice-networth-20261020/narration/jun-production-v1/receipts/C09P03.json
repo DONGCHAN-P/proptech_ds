@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C09P03",
+  "scene_id": "C09",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:08:09.181Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "638b0b7ee8b8d8ffba6eefed27dadfc0b8060552a4815be414407108de381ab9",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "기본 모형은 매달 주거 지출이 삼백만 원 안에 들어오는지도 확인합니다. 현금지출이 예산을 넘으면 기존 이 티 에프를 팔거나 추가로 빌리는 방식 없이 그 경로를 멈추도록 정했습니다. 현실에서는 비상자금이나 자산 매각으로 대응할 수 있지만, 그 경우에는 세금과 매각 시점, 추가 대출금리를 별도로 계산해야 합니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 173,
+  "characters": 173,
+  "actual_credits": 69,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19983,
+    "character_limit": 40000,
+    "included_remaining": 20017,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:08:00.235Z",
+  "local_shadow_remaining_before": 19903,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "8tVs2NmRJfkkrhTvE1ho",
+    "x-request-id": null,
+    "character-cost": "69",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:08:08 GMT"
+  },
+  "pcm_samples": 917280,
+  "pcm_duration_s": 20.8,
+  "provider_last_spoken_end_s": 20.88,
+  "artifact_sha256": {
+    "paragraphs/C09P03/audio.mp3": "127135adb550f3af50d1493b42b9544a05ba6c14648c7753e73ced435fdef64c",
+    "paragraphs/C09P03/audio.wav": "7d5fa2ac12e398ab397a010c5a362010cd189533fe136a1ed3938973853ba7ed",
+    "paragraphs/C09P03/alignment.json": "4d081d4aa2920487222b0657f9ab316db23702bf83e1e8f10c25090c73f6f89b",
+    "paragraphs/C09P03/normalized_alignment.json": "4d081d4aa2920487222b0657f9ab316db23702bf83e1e8f10c25090c73f6f89b"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 19834,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:08:13.802Z"
+}

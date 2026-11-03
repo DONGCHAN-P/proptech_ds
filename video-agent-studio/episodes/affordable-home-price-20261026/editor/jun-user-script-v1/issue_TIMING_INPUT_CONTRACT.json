@@ -1,0 +1,51 @@
+{
+  "issue_id": "JUN-S-TIMING-CONTRACT",
+  "scene_ids": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10",
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17",
+    "S18",
+    "S19",
+    "S20",
+    "S21",
+    "S22",
+    "S23",
+    "S24",
+    "S25",
+    "S26",
+    "S27",
+    "S28",
+    "S29",
+    "S30",
+    "S31"
+  ],
+  "problem": "Actual Jun audio and measured timings are not supplied; preview timing remains unlocked.",
+  "evidence": {
+    "manifest": {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\jun-user-script-v1\\narration_manifest.json",
+      "sha256": "19fceacda05c451df69103002ce6bd2cf23e53020383a6543b60cb03eec3a018"
+    },
+    "caption_plan": {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\narration\\jun-user-script-v1\\caption_plan.json",
+      "sha256": "243107ea07af60a298783fd8242b996c0e20c510369a2743638f0fc87b623509"
+    }
+  },
+  "proposal": "Narration fills incoming_alignment.template.json using actual character alignment and exact caption display_lines. Parent provides scene-level timing lock; editor emits body EDL.",
+  "impact": "No full 31-scene expansion or final sync before measured input; this is a production prerequisite, not a new user permission request.",
+  "next_owner": "parent / narration",
+  "direct_peer_message_tool_available": false
+}

@@ -1,0 +1,58 @@
+{
+  "task_id": "part1-clean-maps-photo-transitions-v1",
+  "role": "visual",
+  "status": "ready_for_parent_review",
+  "input_revisions": {
+    "photo_assets.json": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photo_assets.json",
+      "sha256": "fedbad09a0d9a6bf06299ba81d11926e647d73c1641aff4360ceb4f9c0e93dac"
+    },
+    "photo_assets_v2.json": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photo_assets_v2.json",
+      "sha256": "aedc96c581c397828a5a0a1b464138da6cef8cd54792ff663b900b4292baa1c1"
+    },
+    "state_observed": {
+      "revision": "top20-enhance-v2",
+      "active_revision": "top20-split-v4",
+      "active_part": 1,
+      "changed": false
+    }
+  },
+  "outputs": [
+    "assets.json",
+    "photos",
+    "contactsheet.jpg",
+    "credits.json",
+    "validation.json"
+  ],
+  "affected_scene_ids": [
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012"
+  ],
+  "scene_id_basis": "기존 photo_assets_v2 장면ID; 새 4초 전환 연결은 R20→R11 region_id로 매칭",
+  "checks": {
+    "photos": 10,
+    "distinct": 10,
+    "fallback_existing_body": 0,
+    "decode_hash_dimensions": "pass",
+    "thumbs_inspected": 10,
+    "AI": false,
+    "upscaled": false,
+    "independent_qa": false
+  },
+  "open_issue_ids": [],
+  "notes": [
+    "촬영일은 사진 원문의 사실이며 통계 기준일·현재 모습과 분리.",
+    "일부 원본 GET 429는 공개 CDN 사본으로 대체; 동일 URL 자동 재시도 없음.",
+    "저장된 파일은 무크롭. 연락시트의 중앙 16:9 크롭과 개별 crop_note를 편집에 적용."
+  ],
+  "next_role": "director/editor: region_id로 연결 후 크레디트·촬영연도 반영, 최종 전환 프레임 독립 QA"
+}

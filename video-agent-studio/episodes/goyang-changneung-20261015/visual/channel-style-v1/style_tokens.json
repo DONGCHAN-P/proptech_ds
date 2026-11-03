@@ -1,0 +1,15 @@
+{
+  "revision": "channel-style-v1",
+  "brief": "사용자 최신: 전편 왕숙/광교동탄 실제 영상의 채널 톤을 계승하고 외부 3레퍼런스는 설명 기법 보완에 사용. 1920x1080. 새 색/여백 지정 없음. visual-review-v2 이질감 수정.",
+  "baseline": {"primary": "config/current_video.json → namyangju_readability_cta_full_v15.mp4", "secondary": "config/video_style.json → video/out/newtown-v14-release.mp4", "source_values_are_not_pixel_measurements": true},
+  "canvas": {"width":1920,"height":1080,"fps":30,"background":"#f6f4ef"},
+  "font": {"family":"Pretendard","regular":400,"bold":700,"source":"video/src/namyangju-v15/common_entry.tsx; public/namyangju-map-led-v6/Pretendard-Regular.woff2 / Pretendard-Bold.woff2"},
+  "colors": {"ink":"#173348","primary":"#286cda","muted":"#607680","price_blue":"#2F6FED","price_resale":"#c29a44","source":"FocusVisuals.tsx / OutsidePrice.tsx; semantic colors vary by material"},
+  "shell": {"brand":{"left":80,"top":32,"fontSize":23},"title":{"left":80,"top":103,"fontSize":43,"fontWeight":700},"source":{"left":80,"top":888,"fontSize":18},"source_file":"video/src/namyangju-v15/FocusVisuals.tsx","note":"main map shell; CTA and material types have documented exceptions"},
+  "caption": {"left":96,"right":96,"bottom":28,"height":130,"padding":"12px 35px","background":"#fff","borderRadius":13,"fontSize":39,"lineHeight":1.25,"source":"video/src/namyangju-landuse-v8/PersistentCaptions.tsx","persistent_between_cues":true,"exceptions":"unspoken brand intro/outro and CTA final silent hold"},
+  "detail": {"main":{"left":440,"top":190,"width":1400,"height":560},"locator":"current district whole plan on left, selected area rectangle","summary":{"fontSize":26,"fontWeight":700,"borderLeft":"5px solid #286cda","near_target":true},"source":"video/src/namyangju-v15/FocusVisuals.tsx"},
+  "price": {"panel":{"left":1040,"top":190,"width":800,"height":560,"background":"#fffef9","borderRadius":16},"titleFontSize":30,"rowFontSize":24,"numberFontSize":25,"footnoteFontSize":18,"source":"video/src/namyangju-v15/OutsidePrice.tsx","transfer_rule":"keep map plus concise evidence table; adapt to verified current data"},
+  "observed": {"primary_frames":[50,175,235,290,365,650,905,916],"secondary_frames":[100,280,440],"unit":"seconds in actual encoded MP4","continuous_playback":false,"actual_listening":false,"contactsheet":"outputs/channel-style-v1/comparison_contactsheet.png"},
+  "must_fix_v2": ["title 48 regular → established 43 bold shell", "remove oversized persistent subtitle/explanatory heading", "geographic railway relationships replace station-to-destination horizontal list as main proof", "thin timeline subordinate to map", "warnings become short adjacent conditions, not dominant gold text", "price scene regains geographic/context anchor while retaining exact table values", "consistent rounded fixed caption geometry"],
+  "not_to_copy": ["other city's boundaries, prices, stations, dates", "old black outer shell as latest default", "external references brand palette", "dynamic map zoom withdrawn by user"]
+}

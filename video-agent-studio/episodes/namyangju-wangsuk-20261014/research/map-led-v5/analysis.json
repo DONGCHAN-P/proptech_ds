@@ -1,0 +1,646 @@
+{
+  "revision": "map-led-research-v5",
+  "checked_on": "2026-10-15",
+  "scope": "지도기반새대본·장면기획리서치;제작/음성/유료생성없음",
+  "central_thesis": "왕숙의계획상공간장점은분명하지만입주시점에완성되는생활과미래완성후조건이각블록마다다르다.지역소개가아닌위치와시점의조건부비교로후보를좁힌다.",
+  "plans": [
+    {
+      "district": "왕숙1",
+      "asset": "visual/outputs/S003_wangsuk1_official_plan.jpg",
+      "source_url": "https://www.nyj.go.kr/www/contents.do?key=3039",
+      "license": "KOGL3 출처표시·변경금지",
+      "source_image": "https://www.nyj.go.kr/site/www/images/contents/cts3039_img01b.jpg",
+      "source_modified_date": "2026-03-04",
+      "allowed_display": "원본전체fit·출처는별도패널",
+      "prohibited": [
+        "크롭",
+        "그림위핀/색강조덧그림",
+        "법정최종2026모든변경반영단정"
+      ],
+      "georegistration": "6블록중4블록LH좌표와개별공고관계도로확인;이원본이미지전체affine지리등록미완료"
+    },
+    {
+      "district": "왕숙2",
+      "asset": "visual/outputs/S003_wangsuk2_official_plan.jpg",
+      "source_url": "https://www.nyj.go.kr/www/contents.do?key=3039",
+      "license": "KOGL3 출처표시·변경금지",
+      "source_image": "https://www.nyj.go.kr/site/www/images/contents/cts3039_img02b.jpg",
+      "source_modified_date": "2026-03-04",
+      "allowed_display": "원본전체fit·출처는별도패널",
+      "prohibited": [
+        "크롭",
+        "그림위핀/색강조덧그림"
+      ],
+      "georegistration": "원본A1서쪽/A3중서쪽라벨읽힘,LH공식안내점대조;정밀경계좌표미추출"
+    }
+  ],
+  "blocks": [
+    {
+      "candidate_id": "W1-A1",
+      "district": "왕숙1",
+      "block_id": "A-1",
+      "households_total": 629,
+      "public_sale_households": 629,
+      "move_in_target": "2028-08",
+      "project_status": "construction",
+      "housing_program": "공공분양",
+      "size_classes": [
+        "59㎡"
+      ],
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?ccrCnntSysDsCd=02&mi=1027&panId=0000060920",
+      "source_file": "w1_a1.html",
+      "coordinates": {
+        "lon": 127.1704842,
+        "lat": 37.6912377,
+        "basis": "LH공식공고안내지도lat_0/lng_0",
+        "status": "qualified_official_guide_point_not_boundary_or_gate"
+      },
+      "prices": [
+        {
+          "housing_type": "59.0000O",
+          "exclusive_area_m2": 59.92,
+          "web_display_price_won": 454417000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        }
+      ],
+      "zone": "왕숙1 북측 첫주거권역",
+      "neighbors": {
+        "east": "자족용지 계획",
+        "west": "S-1 공동주택용지 계획",
+        "south": "공원 계획",
+        "north": "단독주택·근린생활시설 계획"
+      },
+      "school": "왕숙1초·왕숙1유·왕숙2중 2028-03 목표",
+      "school_gap": "입주예정2028-08보다목표상5개월앞섬. 실제개교·통학권은별도확인",
+      "school_page": 40,
+      "environment_page": 37,
+      "strength": "59㎡공공분양과비교적이른입주를찾는가구. 남측공원·북측근린생활계획으로동네생활구조가읽힘",
+      "tradeoff": "왕숙1남측트리플환승권역과다른북측. 모든역세권장점을같이부여하지않음",
+      "construction_evidence_url": "https://www.lh.or.kr/boardDownload.es?bid=0007&list_no=654682&seq=9",
+      "publication_date": "2025-07-24",
+      "price_unknowns": [
+        "동호별추첨가격·확장/추가옵션·정정이력최종계약조건",
+        "2025공고와2026공고의다른가격기준일",
+        "공급유형·면적·층이달라단순가격순위금지"
+      ],
+      "map_evidence": {
+        "notice_pdf": "w1_a1_notice.pdf",
+        "environment_page": 37,
+        "school_page": 40,
+        "pamphlet_pdf": "w1_a1_pamphlet.pdf",
+        "pamphlet_map_page": 5,
+        "display_permission": "LH홍보물재사용허락미확인.지리사실추출/자체관계도만제작가능"
+      }
+    },
+    {
+      "candidate_id": "W1-A2",
+      "district": "왕숙1",
+      "block_id": "A-2",
+      "households_total": 608,
+      "public_sale_households": 401,
+      "move_in_target": "2028-08",
+      "project_status": "construction",
+      "housing_program": "신혼희망타운 공공분양",
+      "size_classes": [
+        "46㎡",
+        "55㎡"
+      ],
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?ccrCnntSysDsCd=02&mi=1027&panId=0000060921",
+      "source_file": "w1_a2.html",
+      "coordinates": {
+        "lon": 127.1692608,
+        "lat": 37.6886373,
+        "basis": "LH공식공고안내지도lat_0/lng_0",
+        "status": "qualified_official_guide_point_not_boundary_or_gate"
+      },
+      "prices": [
+        {
+          "housing_type": "46.0000O",
+          "exclusive_area_m2": 46.7,
+          "web_display_price_won": 351996000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        },
+        {
+          "housing_type": "55.0000O",
+          "exclusive_area_m2": 55.69,
+          "web_display_price_won": 417104000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        }
+      ],
+      "zone": "왕숙1 북측 첫주거권역;A1남쪽 인접군",
+      "neighbors": {
+        "east": "공원 계획",
+        "west": "학교 계획",
+        "south": "공원·커뮤니티시설·학교 계획"
+      },
+      "school": "왕숙1초·왕숙1유·왕숙2중 2028-03 목표",
+      "school_gap": "입주예정2028-08보다목표상5개월앞섬. 실제학교배정·횡단구간미확인",
+      "school_page": 37,
+      "environment_page": 34,
+      "strength": "46/55㎡와학교·공원을우선하는신혼가구가검토할작은면적후보",
+      "tradeoff": "신혼희망타운자격·수익공유형모기지등별도조건;84㎡가격표와같은상품으로비교불가",
+      "construction_evidence_url": "https://www.lh.or.kr/boardDownload.es?bid=0007&list_no=654682&seq=9",
+      "publication_date": "2025-07-24",
+      "price_unknowns": [
+        "동호별추첨가격·확장/추가옵션·정정이력최종계약조건",
+        "2025공고와2026공고의다른가격기준일",
+        "공급유형·면적·층이달라단순가격순위금지"
+      ],
+      "map_evidence": {
+        "notice_pdf": "w1_a2_notice.pdf",
+        "environment_page": 34,
+        "school_page": 37,
+        "pamphlet_pdf": "w1_a2_pamphlet.pdf",
+        "pamphlet_map_page": 5,
+        "display_permission": "LH홍보물재사용허락미확인.지리사실추출/자체관계도만제작가능"
+      }
+    },
+    {
+      "candidate_id": "W1-A24",
+      "district": "왕숙1",
+      "block_id": "A-24",
+      "households_total": 589,
+      "public_sale_households": 390,
+      "move_in_target": "2028-12",
+      "project_status": "construction",
+      "housing_program": "신혼희망타운 공공분양",
+      "size_classes": [
+        "55㎡"
+      ],
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?ccrCnntSysDsCd=02&mi=1027&panId=0000061021",
+      "source_file": "w1_a24.html",
+      "coordinates": {
+        "lon": 127.1695153,
+        "lat": 37.6566599,
+        "basis": "LH공식공고안내지도lat_0/lng_0",
+        "status": "qualified_official_guide_point_not_boundary_or_gate"
+      },
+      "prices": [
+        {
+          "housing_type": "55.0000O",
+          "exclusive_area_m2": 55.73,
+          "web_display_price_won": 458380000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        }
+      ],
+      "zone": "왕숙1 남측 예정왕숙역/중심기능권역",
+      "neighbors": {
+        "west": "학교·공원 계획",
+        "east": "B17공동주택·근린생활시설 계획",
+        "north": "단독주택 계획"
+      },
+      "school": "왕숙11초·왕숙7유 2029-03 목표;왕숙2중2028-03 목표",
+      "school_gap": "초등학교2029-03은입주예정2028-12보다약3개월뒤. 해당기간배치/통학대안미확인",
+      "school_page": 36,
+      "environment_page": 33,
+      "strength": "예정왕숙역권역과서측학교·공원을함께살피는55㎡신혼가구후보",
+      "tradeoff": "교통완성전입주·초등개교시차;작은면적/신혼희망타운을B17의84㎡와동일조건비교금지",
+      "construction_evidence_url": "https://www.lh.or.kr/boardDownload.es?bid=0007&list_no=654682&seq=9",
+      "publication_date": "2025-11-27",
+      "price_unknowns": [
+        "동호별추첨가격·확장/추가옵션·정정이력최종계약조건",
+        "2025공고와2026공고의다른가격기준일",
+        "공급유형·면적·층이달라단순가격순위금지"
+      ],
+      "map_evidence": {
+        "notice_pdf": "w1_a24_notice.pdf",
+        "environment_page": 33,
+        "school_page": 36,
+        "pamphlet_pdf": "w1_a24_pamphlet.pdf",
+        "pamphlet_map_page": 5,
+        "display_permission": "LH홍보물재사용허락미확인.지리사실추출/자체관계도만제작가능"
+      },
+      "representative_55_example": {
+        "type": "55A1",
+        "floor_band": "5층~최상층",
+        "price_won": 459530000,
+        "source_pdf": "w1_a24_notice.pdf",
+        "price_page": 5,
+        "options_included": false,
+        "status": "verified_source_example"
+      }
+    },
+    {
+      "candidate_id": "W1-B17",
+      "district": "왕숙1",
+      "block_id": "B-17",
+      "households_total": 491,
+      "public_sale_households": 491,
+      "move_in_target": "2028-12",
+      "project_status": "construction",
+      "housing_program": "공공분양",
+      "size_classes": [
+        "74㎡",
+        "84㎡"
+      ],
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?ccrCnntSysDsCd=02&mi=1027&panId=0000061020",
+      "source_file": "w1_b17.html",
+      "coordinates": {
+        "lon": 127.171299,
+        "lat": 37.6569231,
+        "basis": "LH공식공고안내지도lat_0/lng_0",
+        "status": "qualified_official_guide_point_not_boundary_or_gate"
+      },
+      "prices": [
+        {
+          "housing_type": "74.0000O",
+          "exclusive_area_m2": 74.95,
+          "web_display_price_won": 565994000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        },
+        {
+          "housing_type": "84.0000O",
+          "exclusive_area_m2": 84.91,
+          "web_display_price_won": 640068000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        }
+      ],
+      "zone": "왕숙1 남측 예정왕숙역/중심기능권역;A24동쪽",
+      "neighbors": {
+        "west": "A24공동주택·단독주택 계획",
+        "south": "근린생활시설 계획",
+        "east": "방음벽 계획"
+      },
+      "school": "왕숙11초2029-03·왕숙7유2029-03목표;왕숙2중2028-03목표",
+      "school_gap": "초등학교목표는입주예정2028-12보다약3개월뒤",
+      "school_page": 43,
+      "environment_page": 40,
+      "strength": "남측예정환승권역을검토하면서74/84㎡를원하는가구의공공분양비교후보",
+      "tradeoff": "동측방음벽계획과도로·철도환경을호별로확인해야함. 광고도보10분을실측으로승격하지않음",
+      "construction_evidence_url": "https://www.lh.or.kr/boardDownload.es?bid=0007&list_no=654682&seq=9",
+      "publication_date": "2025-11-27",
+      "price_unknowns": [
+        "동호별추첨가격·확장/추가옵션·정정이력최종계약조건",
+        "2025공고와2026공고의다른가격기준일",
+        "공급유형·면적·층이달라단순가격순위금지"
+      ],
+      "map_evidence": {
+        "notice_pdf": "w1_b17_notice.pdf",
+        "environment_page": 40,
+        "school_page": 43,
+        "pamphlet_pdf": "w1_b17_pamphlet.pdf",
+        "pamphlet_map_page": 5,
+        "display_permission": "LH홍보물재사용허락미확인.지리사실추출/자체관계도만제작가능"
+      },
+      "comparable_84_example": {
+        "type": "84A",
+        "exclusive_area_m2": 84.91,
+        "floor_band": "5층~최상층",
+        "price_won": 644110000,
+        "basis": "기본형주택가격",
+        "balcony_extension_won": 9575000,
+        "options_included": false,
+        "tax_included": false,
+        "source_pdf": "w1_b17_notice.pdf",
+        "price_page": 6,
+        "extension_page": 7,
+        "status": "verified_source_example"
+      }
+    },
+    {
+      "candidate_id": "W2-A1",
+      "district": "왕숙2",
+      "block_id": "A-1",
+      "households_total": 812,
+      "public_sale_households": 812,
+      "move_in_target": "2029-02",
+      "project_status": "approved_plan",
+      "housing_program": "민간참여 공공분양",
+      "size_classes": [
+        "59㎡",
+        "74㎡",
+        "84㎡"
+      ],
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?ccrCnntSysDsCd=02&mi=1027&panId=0000061080",
+      "source_file": "w2_a1.html",
+      "coordinates": {
+        "lon": 127.1719866,
+        "lat": 37.6195036,
+        "basis": "LH공식공고안내지도lat_0/lng_0",
+        "status": "qualified_official_guide_point_not_boundary_or_gate"
+      },
+      "prices": [
+        {
+          "housing_type": "59.9500A",
+          "exclusive_area_m2": 59.95,
+          "web_display_price_won": 493040000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        },
+        {
+          "housing_type": "59.9500B",
+          "exclusive_area_m2": 59.95,
+          "web_display_price_won": 493040000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        },
+        {
+          "housing_type": "74.9100A",
+          "exclusive_area_m2": 74.91,
+          "web_display_price_won": 613680000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        },
+        {
+          "housing_type": "84.6700A",
+          "exclusive_area_m2": 84.67,
+          "web_display_price_won": 693630000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        }
+      ],
+      "zone": "왕숙2 서쪽;학교군서쪽주거블록",
+      "neighbors": {
+        "east": "유치원·초등학교·중학교 계획",
+        "north": "A11공동주택 계획",
+        "south": "단독주택 계획"
+      },
+      "school": "왕숙2-1초·왕숙2-1중2029-03목표;공고는유치원개원미정으로별도확인요구",
+      "school_gap": "학교목표2029-03은입주예정2029-02보다약1개월뒤. 유치원은교육청목표와공고미정표현을구분",
+      "school_page": 38,
+      "environment_page": 40,
+      "strength": "동쪽학교군과주변공원계획을우선하며59/74/84㎡중선택할가구후보",
+      "tradeoff": "중심상업·계획일패역(가칭)과단지사이실제보행연결확인. 1개월학교시차및조성공사간섭",
+      "construction_evidence_url": null,
+      "publication_date": "2026-04-30",
+      "price_unknowns": [
+        "동호별추첨가격·확장/추가옵션·정정이력최종계약조건",
+        "2025공고와2026공고의다른가격기준일",
+        "공급유형·면적·층이달라단순가격순위금지"
+      ],
+      "map_evidence": {
+        "notice_pdf": "w2_a1_notice.pdf",
+        "environment_page": 40,
+        "school_page": 38,
+        "pamphlet_pdf": null,
+        "pamphlet_map_page": null,
+        "display_permission": "LH홍보물재사용허락미확인.지리사실추출/자체관계도만제작가능"
+      }
+    },
+    {
+      "candidate_id": "W2-A3",
+      "district": "왕숙2",
+      "block_id": "A-3",
+      "households_total": 686,
+      "public_sale_households": 686,
+      "move_in_target": "2030-05",
+      "project_status": "approved_plan",
+      "housing_program": "공공분양",
+      "size_classes": [
+        "59㎡",
+        "74㎡",
+        "84㎡"
+      ],
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?ccrCnntSysDsCd=02&mi=1027&panId=0000061089",
+      "source_file": "w2_a3.html",
+      "coordinates": {
+        "lon": 127.1775469,
+        "lat": 37.6189958,
+        "basis": "LH공식공고안내지도lat_0/lng_0",
+        "status": "qualified_official_guide_point_not_boundary_or_gate"
+      },
+      "prices": [
+        {
+          "housing_type": "59.0000A",
+          "exclusive_area_m2": 59.72,
+          "web_display_price_won": 526340000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        },
+        {
+          "housing_type": "59.0000B",
+          "exclusive_area_m2": 59.81,
+          "web_display_price_won": 527140000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        },
+        {
+          "housing_type": "74.0000A",
+          "exclusive_area_m2": 74.76,
+          "web_display_price_won": 646110000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        },
+        {
+          "housing_type": "84.0000A",
+          "exclusive_area_m2": 84.75,
+          "web_display_price_won": 732450000,
+          "basis": "LH웹주택형평균분양가격표시값;단지평균/최종옵션합계아님",
+          "status": "qualified"
+        }
+      ],
+      "zone": "왕숙2 중서쪽;A1보다지구중심기능쪽",
+      "neighbors": {
+        "east": "A4공동주택·C2주상복합 계획",
+        "south": "AA1공공복합·C1주상복합 계획",
+        "west": "A10공동주택·공원 계획",
+        "north": "단독주택 계획"
+      },
+      "school": "왕숙2-1초·왕숙2-1중·왕숙2-1유2029-03목표",
+      "school_gap": "학교목표가입주예정2030-05보다14개월앞서지만실제개교확인필요",
+      "school_page": 44,
+      "environment_page": 41,
+      "strength": "주상복합·공공복합계획과서측공원을가까운생활조건으로우선보는가구후보",
+      "tradeoff": "A1보다늦은입주와대표가격차이. 계획된상가가입주때모두영업중이라고말할수없음",
+      "construction_evidence_url": null,
+      "publication_date": "2026-04-30",
+      "price_unknowns": [
+        "동호별추첨가격·확장/추가옵션·정정이력최종계약조건",
+        "2025공고와2026공고의다른가격기준일",
+        "공급유형·면적·층이달라단순가격순위금지"
+      ],
+      "map_evidence": {
+        "notice_pdf": "w2_a3_notice.pdf",
+        "environment_page": 41,
+        "school_page": 44,
+        "pamphlet_pdf": "w2_a3_pamphlet.pdf",
+        "pamphlet_map_page": 5,
+        "display_permission": "LH홍보물재사용허락미확인.지리사실추출/자체관계도만제작가능"
+      }
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "JOBS",
+      "claim_ids": [
+        "DEV-004",
+        "DEV-006",
+        "DEV-007"
+      ],
+      "spatial_anchor": "왕숙1남측도시첨단산업단지/왕숙역예정주변자족·공공복합",
+      "status": "approved_plan",
+      "timeline": "산단2026-10-08실시계획승인,2032까지단계추진;우리금융개별2029준공목표",
+      "source_url": "https://nyj.go.kr/www/selectBbsNttView.do?bbsNo=320&key=2498&nttNo=549574",
+      "verified_on": "2026-10-15",
+      "positive_implication": "A24/B17는북측A1/A2보다계획중심환승·산업기능쪽이라는위치차이가있다.현지근무자후보조건에맞춰설명가능",
+      "first_occupancy_gap": "2028입주에산단전체운영을포함불가;2029개별기업목표와2032산단사업완료는다름",
+      "unknown": [
+        "실제상주고용",
+        "기업별입주일",
+        "단지별사업장문까지통근분"
+      ]
+    },
+    {
+      "id": "TRANSPORT",
+      "claim_ids": [
+        "DEV-008",
+        "DEV-010"
+      ],
+      "spatial_anchor": "왕숙1남측왕숙역(가칭):GTX-B·경춘선신설역·9호선계획;왕숙2남측일패역(가칭)경의중앙선/9호선환승신설계획",
+      "status": "mixed_construction_approved_plan",
+      "timeline": "GTX-B국가철도공단2026현재사업기간2031까지;9호선2026-09도의회2031목표및2/5공구사업자미확정",
+      "source_urls": [
+        "https://www.kr.or.kr/sub/info.do?m=05010402",
+        "https://www.ggc.go.kr/site/cmt/xb/lwmkr/lawmakerpressrelease/297475",
+        "https://www.nyj.go.kr/industry/contents.do?key=4956"
+      ],
+      "verified_on": "2026-10-15",
+      "positive_implication": "A24/B17남측환승권역;W2A3는W2A1보다지구중심계획역방향으로안쪽.표시가능한상대배치차이",
+      "first_occupancy_gap": "2028~2030입주예정과2031철도목표는분리.초기엔기존노선/버스연결검증필요",
+      "unknown": [
+        "예정역정밀출입구",
+        "역개통보장일",
+        "도보분",
+        "최종9호선개통연도2031/2032상충해소"
+      ]
+    },
+    {
+      "id": "PRICE",
+      "claim_ids": [
+        "W1-B17-TIME",
+        "W2-A1-TIME",
+        "W2-A3-TIME"
+      ],
+      "spatial_anchor": "6개실제LH블록공고점에면적·가격·공급유형연결",
+      "status": "announced_price",
+      "timeline": "왕숙1주요2025공고/왕숙2주요2026-04-30공고",
+      "positive_implication": "74/84㎡를원하면B17과왕숙2A1/A3를분리조건으로검토;작은면적신혼상품은A2/A24로다른후보축",
+      "first_occupancy_gap": "분양가는지금공고확인가능하지만입주잔금·옵션·관리비·금리·상품요건따로",
+      "unknown": [
+        "최종동호가격",
+        "확장·추가옵션모두포함총액",
+        "2026최신잔여물량/재공급여부"
+      ]
+    },
+    {
+      "id": "LIFE",
+      "claim_ids": [
+        "W1-A1-LIFE",
+        "W1-A2-LIFE",
+        "W1-A24-LIFE",
+        "W1-B17-LIFE",
+        "W2-A1-LIFE",
+        "W2-A3-LIFE"
+      ],
+      "spatial_anchor": "학교와공원을블록별북남동서계획관계로표시;상업기능은학교와운영일정별도",
+      "status": "approved_plan",
+      "timeline": "왕숙1초·중2·유1:2028-03,왕숙11초및왕숙2-1초·중:2029-03목표",
+      "positive_implication": "A2는학교/공원축, A24는서측학교/공원+예정환승권역,A1(W2)은동측학교군,A3(W2)은남측복합기능+서측공원이라는생활우선순위차이",
+      "first_occupancy_gap": "A24/B17초등목표입주뒤3개월,왕숙2A1초중목표입주뒤1개월,A3는목표가14개월전.상업·공원개장일은별도미확인",
+      "unknown": [
+        "학교최종배정",
+        "안전한실제통학로",
+        "상가실제영업일",
+        "공원준공/개장일"
+      ]
+    },
+    {
+      "id": "SUPPLY",
+      "claim_ids": [
+        "DEV-001"
+      ],
+      "spatial_anchor": "왕숙1북측2028상반기·8월/남측2028말,왕숙2서측2029~2030입주예정군",
+      "status": "scheduled_not_delivered",
+      "timeline": "B1 2028-05/B2 2028-06;A1/A2 2028-08;A24/B17 2028-12;W2A1 2029-02;W2A3 2030-05",
+      "positive_implication": "같은왕숙이라도초기입주위치와생활기반형성시점이다르다.초기임대공급·공사간섭을입주군별로보는것이타당",
+      "first_occupancy_gap": "계획8만0114가구를동일연도공급으로말하지않음;선별6블록3815세대도지구전체연간공급통계아님",
+      "unknown": [
+        "모든블록공급달력",
+        "전월세전환비율",
+        "취소·지연·잔여물량",
+        "역/상업완성후주변시세"
+      ]
+    }
+  ],
+  "shortlist": [
+    {
+      "candidate_id": "W1-A2",
+      "role": "46/55㎡와학교·공원을우선하는신혼가구가검토할작은면적후보",
+      "conditional": true,
+      "rank": null,
+      "exclusion_condition": "신혼희망타운자격·수익공유형모기지등별도조건;84㎡가격표와같은상품으로비교불가"
+    },
+    {
+      "candidate_id": "W1-A24",
+      "role": "예정왕숙역권역과서측학교·공원을함께살피는55㎡신혼가구후보",
+      "conditional": true,
+      "rank": null,
+      "exclusion_condition": "교통완성전입주·초등개교시차;작은면적/신혼희망타운을B17의84㎡와동일조건비교금지"
+    },
+    {
+      "candidate_id": "W1-B17",
+      "role": "남측예정환승권역을검토하면서74/84㎡를원하는가구의공공분양비교후보",
+      "conditional": true,
+      "rank": null,
+      "exclusion_condition": "동측방음벽계획과도로·철도환경을호별로확인해야함. 광고도보10분을실측으로승격하지않음"
+    },
+    {
+      "candidate_id": "W2-A1",
+      "role": "동쪽학교군과주변공원계획을우선하며59/74/84㎡중선택할가구후보",
+      "conditional": true,
+      "rank": null,
+      "exclusion_condition": "중심상업·계획일패역(가칭)과단지사이실제보행연결확인. 1개월학교시차및조성공사간섭"
+    },
+    {
+      "candidate_id": "W2-A3",
+      "role": "주상복합·공공복합계획과서측공원을가까운생활조건으로우선보는가구후보",
+      "conditional": true,
+      "rank": null,
+      "exclusion_condition": "A1보다늦은입주와대표가격차이. 계획된상가가입주때모두영업중이라고말할수없음"
+    }
+  ],
+  "shortlist_statement": "대장확정순위가아닌가구조건별먼저살펴볼다섯블록.원래공고는접수마감이므로지금청약가능상품이라고권하지않음.",
+  "move_in_inventory": {
+    "reviewed_six_total": 3815,
+    "unit": "단지계획세대수",
+    "public_sale_only_total": 3409,
+    "not_whole_district": true,
+    "earliest_verified_reviewed_source": "왕숙1B1 2028-05 LH공고pan0000060927",
+    "b1_source": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?ccrCnntSysDsCd=02&mi=1027&panId=0000060927",
+    "all_targets_changeable": true
+  },
+  "map_render_strategy": [
+    "남양주시왕숙1/2전체토지계획도원본fit로두지구위치/용도소개",
+    "자체공간지도에LH공식안내점6개표시·지도좌표와계획상관계명시",
+    "철도/학교/상업기능은예정레이어와현재운영레이어구분",
+    "학교와역핀정밀경계가없으면원본전체도+별도관계패널로설명;지도정밀도과장금지"
+  ],
+  "forbidden": [
+    "블록대장순위확정",
+    "가치상승/안전마진보장",
+    "지연가능성만반복하고장점의위치설명삭제",
+    "원본KOGL3크롭·덧그림",
+    "계획학교로최종배정확정",
+    "공고가격과인근시세서로다른표본단순차감"
+  ],
+  "source_reading_evidence": {
+    "pdf_pages_rendered": [
+      "W1-A1팸플릿5p",
+      "W1-A24팸플릿5p",
+      "W1-B17팸플릿5p",
+      "W2-A3팸플릿4/5p",
+      "W1-A1공고40p학교",
+      "W2-A3공고44p학교",
+      "W1-B17공고6/7p가격",
+      "W1-A24공고5p가격"
+    ],
+    "source_queries": "최신공식LH/NYJ/경기도의회/교육청/KR웹및공고실제다운로드",
+    "audio_listened": false
+  }
+}

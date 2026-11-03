@@ -1,0 +1,10 @@
+{
+  "issue_id": "REPRESENTATIVE_BAR_READY",
+  "scene_ids": ["SHORT01-PROMO", "SHORT02-R20-R16", "SHORT03-R15-R11"],
+  "status": "awaiting_independent_representative_QA",
+  "problem": "Parent-adopted design now includes requested factual proportional bars; independent representative check is required before full render.",
+  "evidence": ["representative_contactboard.jpg", "representative_proofs.json", "SHORT02-R20-R16/source_proofs/price_complete.png", "SHORT02-R20-R16/source_measurement_receipt.json", "SHORT02-R20-R16/price_boundary_checks.json"],
+  "proposal": "QA reviews refreshed screenshots; parent passes exact QA receipt path or confirms QA pass in task message. Editor records the provided evidence inside owned representative_qa_pass.json and starts three delivery renders.",
+  "impact": "Full renders remain held. No changes to audio, common state, baseline, or unrelated projects.",
+  "paid_calls": 0
+}

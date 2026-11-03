@@ -1,0 +1,30 @@
+{
+  "issue_id": "INTRO-V3-LISTENING-AND-INTEGRATION",
+  "scene_id": "P01-INTRO",
+  "problem": "실제 청취와 독립 음성 검수 미실시. 공통 타임록·본편 통합은 총괄 담당.",
+  "evidence": [
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/intro-rationale-v3/verification.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/intro-rationale-v3/timing_proposals.json"
+  ],
+  "proposal": "총괄이 필요 시 오프라인 전사 후 숫자·원미구·의문문·접합부·마지막 발음을 청취 검수하고 새 길이로 본문을 이동.",
+  "impact": {
+    "new_intro_length_s": 47.67231292517007,
+    "timing_delta_s": 1.2386923658352202,
+    "brand_intro": {
+      "start_s": 4.146190476190476,
+      "duration_s": 5.0,
+      "end_s": 9.146190476190476,
+      "source_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/director/top20-production-v1/locked-audio/intro_clean_v7.wav",
+      "source_sha256": "d5a896795e4f6d02bffbc6562566e0c85e253483062da2fba559dac1cdd5f8b0",
+      "insertions": 1,
+      "pcm_unchanged": true
+    }
+  },
+  "next_roles": [
+    "director",
+    "editor",
+    "independent QA"
+  ],
+  "actual_listening": false,
+  "asr_performed": false
+}

@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';
+const root='video/public/real-assets',names=['20240327 gtx-a 동탄역.jpg','동탄역 001.jpg','광교호수공원 (1).jpg','광교호수공원 (3).jpg','광교호수공원.jpg','Dongtan Lake Park, Hwaseong.jpg'];
+const manifest=[];const headers={'User-Agent':'RealestateRecoVideo/1.0 (editorial location asset research)'};
+for(let i=0;i<names.length;i++){
+ const url='https://commons.wikimedia.org/w/api.php?'+new URLSearchParams({action:'query',format:'json',titles:'File:'+names[i],prop:'imageinfo',iiprop:'url|size|extmetadata'});let raw;
+ try{raw=JSON.parse(await fs.readFile(root+`/sources/commons-${i}.json`,'utf8'));}catch{const r=await fetch(url,{headers,signal:AbortSignal.timeout(30000)});if(!r.ok){console.log('Metadata unavailable '+i+' HTTP '+r.status);continue;}raw=await r.json();await fs.writeFile(root+`/sources/commons-${i}.json`,JSON.stringify(raw,null,2));}
+ const info=Object.values(raw.query.pages)[0].imageinfo?.[0];if(!info)continue;const m=info.extmetadata,clean=s=>(s||'').replace(/<[^>]*>/g,'').replace(/&amp;/g,'&');const file=`photo-${i}.jpg`;
+ let downloaded=true;try{await fs.access(root+'/'+file);}catch{const image=await fetch(info.url,{headers,signal:AbortSignal.timeout(45000)});if(image.ok)await fs.writeFile(root+'/'+file,Buffer.from(await image.arrayBuffer()));else{downloaded=false;console.log('Image pending '+i+' HTTP '+image.status);}}
+ const record={id:'commons-'+i,title:names[i],file:downloaded?file:null,source_url:info.descriptionurl,download_url:info.url,author:clean(m.Artist?.value),license:clean(m.LicenseShortName?.value),license_url:m.LicenseUrl?.value,photographed:clean(m.DateTimeOriginal?.value),description:clean(m.ImageDescription?.value),width:info.width,height:info.height,acquired:'2026-10-13',use_status:downloaded?'license_verified':'download_pending',modifications:'original file preserved'};
+ manifest.push(record);console.log(record.title+' | '+record.license+' | '+record.use_status);await fs.writeFile(root+'/manifest.json',JSON.stringify(manifest,null,2));await new Promise(r=>setTimeout(r,2000));
+}
+for(const [id,url] of [['gnews-lake','https://gnews.gg.go.kr/news/news_detail.do?number=201508061056226133C083&s_code=C083'],['castle-official','https://www.lottecastle.co.kr/APT/AT00223/main/index.do']]){try{const r=await fetch(url,{headers,signal:AbortSignal.timeout(25000)});await fs.writeFile(root+'/sources/'+id+'.html',await r.text());console.log(id+' HTML '+r.status+' saved');}catch{console.log(id+' unavailable');}}

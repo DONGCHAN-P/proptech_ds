@@ -1,0 +1,1740 @@
+{
+  "short_id": "SHORT02-R20-R16",
+  "version": "native-v3",
+  "passed": true,
+  "caption_cues": 33,
+  "tested_instants": 129,
+  "changed_render_files": [
+    "compositions/captions.html",
+    "style.css"
+  ],
+  "all_other_render_sources_identical_to_v2": true,
+  "screen_note_cleanup": "Removed current-listing negation suffix only; transaction cutoff wording retained; approved before first v3 render",
+  "audio_lock_cue_text_and_timing_unchanged": true,
+  "master_audio_sha256": "41f6a7c9e8cd82ef3cf78332569e746b9d72ed62ede2f4a70325614185a33d70",
+  "lock_sha256": "d5556ea22ebe3df5cd0e2570a4b8972c2c8de220a670bcdbac0b5654bcaf6c8d",
+  "policy": "Background and text share one timed cue group; no standalone persistent caption rail. No group outside active cue window.",
+  "representative_times_s": [
+    0.08,
+    1.56,
+    14.68,
+    28.299999999999997,
+    41.44,
+    53.78,
+    66.92,
+    75.66666666666667
+  ],
+  "caption_glyphs_measured": 33,
+  "caption_safe_area_passed": true,
+  "results": [
+    {
+      "time_s": 0.08,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 0.281,
+      "expected_active_cues": [
+        0
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-000",
+          "text": "20위는 경기 부천시 원미구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 1.56,
+      "expected_active_cues": [
+        0
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-000",
+          "text": "20위는 경기 부천시 원미구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 2.839,
+      "expected_active_cues": [
+        0
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-000",
+          "text": "20위는 경기 부천시 원미구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 2.8409999999999997,
+      "expected_active_cues": [
+        1
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-001",
+          "text": "7,365쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 3.64,
+      "expected_active_cues": [
+        1
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-001",
+          "text": "7,365쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 4.439,
+      "expected_active_cues": [
+        1
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-001",
+          "text": "7,365쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 4.441000000000001,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 4.640000000000001,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 4.841,
+      "expected_active_cues": [
+        2
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-002",
+          "text": "가격에서 눈에 띄는\n대비는 준공 시기별",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 6.08,
+      "expected_active_cues": [
+        2
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-002",
+          "text": "가격에서 눈에 띄는\n대비는 준공 시기별",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 7.319,
+      "expected_active_cues": [
+        2
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-002",
+          "text": "가격에서 눈에 띄는\n대비는 준공 시기별",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 7.321000000000001,
+      "expected_active_cues": [
+        3
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-003",
+          "text": "거래 중위값으로,\n2000년까지 준공된",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 8.600000000000001,
+      "expected_active_cues": [
+        3
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-003",
+          "text": "거래 중위값으로,\n2000년까지 준공된",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 9.879000000000003,
+      "expected_active_cues": [
+        3
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-003",
+          "text": "거래 중위값으로,\n2000년까지 준공된",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 9.881000000000002,
+      "expected_active_cues": [
+        4
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-004",
+          "text": "집단은 6억원,\n2011년 이후 집단은",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 11.360000000000003,
+      "expected_active_cues": [
+        4
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-004",
+          "text": "집단은 6억원,\n2011년 이후 집단은",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 12.839000000000004,
+      "expected_active_cues": [
+        4
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-004",
+          "text": "집단은 6억원,\n2011년 이후 집단은",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 12.841000000000003,
+      "expected_active_cues": [
+        5
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-005",
+          "text": "8억9,900만원입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 13.520000000000003,
+      "expected_active_cues": [
+        5
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-005",
+          "text": "8억9,900만원입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 14.199000000000003,
+      "expected_active_cues": [
+        5
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-005",
+          "text": "8억9,900만원입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 14.201000000000002,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 14.490000000000002,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 14.68,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 14.780999999999999,
+      "expected_active_cues": [
+        6
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-006",
+          "text": "19위는 서울 중랑구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 15.82,
+      "expected_active_cues": [
+        6
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-006",
+          "text": "19위는 서울 중랑구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 16.858999999999998,
+      "expected_active_cues": [
+        6
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-006",
+          "text": "19위는 서울 중랑구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 16.861,
+      "expected_active_cues": [
+        7
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-007",
+          "text": "7,547쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 17.66,
+      "expected_active_cues": [
+        7
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-007",
+          "text": "7,547쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 18.459,
+      "expected_active_cues": [
+        7
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-007",
+          "text": "7,547쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 18.461000000000002,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 18.66,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 18.861,
+      "expected_active_cues": [
+        8
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-008",
+          "text": "두 생활권의 거래\n중위값은 신내동",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 20.099999999999998,
+      "expected_active_cues": [
+        8
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-008",
+          "text": "두 생활권의 거래\n중위값은 신내동",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 21.338999999999995,
+      "expected_active_cues": [
+        8
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-008",
+          "text": "두 생활권의 거래\n중위값은 신내동",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 21.340999999999998,
+      "expected_active_cues": [
+        9
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-009",
+          "text": "7억4,000만원, 면목동",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 22.259999999999998,
+      "expected_active_cues": [
+        9
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-009",
+          "text": "7억4,000만원, 면목동",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 23.179,
+      "expected_active_cues": [
+        9
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-009",
+          "text": "7억4,000만원, 면목동",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 23.181,
+      "expected_active_cues": [
+        10
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-010",
+          "text": "8억4,000만원으로,\n예산과 철도 이용",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 24.46,
+      "expected_active_cues": [
+        10
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-010",
+          "text": "8억4,000만원으로,\n예산과 철도 이용",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 25.739,
+      "expected_active_cues": [
+        10
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-010",
+          "text": "8억4,000만원으로,\n예산과 철도 이용",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 25.741000000000003,
+      "expected_active_cues": [
+        11
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-011",
+          "text": "방향을 함께 비교할\n출발점이 됩니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 26.78,
+      "expected_active_cues": [
+        11
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-011",
+          "text": "방향을 함께 비교할\n출발점이 됩니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 27.819,
+      "expected_active_cues": [
+        11
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-011",
+          "text": "방향을 함께 비교할\n출발점이 됩니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 27.821,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 28.11,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 28.299999999999997,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 28.401,
+      "expected_active_cues": [
+        12
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-012",
+          "text": "18위는 경기 용인시 기흥구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 29.68,
+      "expected_active_cues": [
+        12
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-012",
+          "text": "18위는 경기 용인시 기흥구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 30.958999999999996,
+      "expected_active_cues": [
+        12
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-012",
+          "text": "18위는 경기 용인시 기흥구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 30.961,
+      "expected_active_cues": [
+        13
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-013",
+          "text": "7,686쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 31.839999999999996,
+      "expected_active_cues": [
+        13
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-013",
+          "text": "7,686쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 32.719,
+      "expected_active_cues": [
+        13
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-013",
+          "text": "7,686쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 32.721,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 32.92,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 33.120999999999995,
+      "expected_active_cues": [
+        14
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-014",
+          "text": "거래 중위값은 동백동\n5억2,000만원,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 34.64,
+      "expected_active_cues": [
+        14
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-014",
+          "text": "거래 중위값은 동백동\n5억2,000만원,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 36.159,
+      "expected_active_cues": [
+        14
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-014",
+          "text": "거래 중위값은 동백동\n5억2,000만원,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 36.160999999999994,
+      "expected_active_cues": [
+        15
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-015",
+          "text": "영덕동 7억1,500만원으로,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 37.2,
+      "expected_active_cues": [
+        15
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-015",
+          "text": "영덕동 7억1,500만원으로,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 38.239000000000004,
+      "expected_active_cues": [
+        15
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-015",
+          "text": "영덕동 7억1,500만원으로,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 38.241,
+      "expected_active_cues": [
+        16
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-016",
+          "text": "원하는 주거권과\n예산을 함께 좁혀볼 수",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 39.466499999999996,
+      "expected_active_cues": [
+        16
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-016",
+          "text": "원하는 주거권과\n예산을 함께 좁혀볼 수",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 40.692,
+      "expected_active_cues": [
+        16
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-016",
+          "text": "원하는 주거권과\n예산을 함께 좁혀볼 수",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 40.693999999999996,
+      "expected_active_cues": [
+        17
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-017",
+          "text": "있습니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 40.826499999999996,
+      "expected_active_cues": [
+        17
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-017",
+          "text": "있습니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 40.959,
+      "expected_active_cues": [
+        17
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-017",
+          "text": "있습니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 40.961,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 41.25,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 41.44,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 41.541,
+      "expected_active_cues": [
+        18
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-018",
+          "text": "17위는 인천 연수구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 42.54,
+      "expected_active_cues": [
+        18
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-018",
+          "text": "17위는 인천 연수구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 43.539,
+      "expected_active_cues": [
+        18
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-018",
+          "text": "17위는 인천 연수구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 43.541,
+      "expected_active_cues": [
+        19
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-019",
+          "text": "7,875쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 44.42,
+      "expected_active_cues": [
+        19
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-019",
+          "text": "7,875쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 45.299,
+      "expected_active_cues": [
+        19
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-019",
+          "text": "7,875쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 45.300999999999995,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 45.5,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 45.70099999999999,
+      "expected_active_cues": [
+        20
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-020",
+          "text": "거래 중위값은 연수동\n3억3,150만원,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 47.42,
+      "expected_active_cues": [
+        20
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-020",
+          "text": "거래 중위값은 연수동\n3억3,150만원,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 49.139,
+      "expected_active_cues": [
+        20
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-020",
+          "text": "거래 중위값은 연수동\n3억3,150만원,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 49.141,
+      "expected_active_cues": [
+        21
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-021",
+          "text": "송도동 7억4,000만원으로,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 50.099999999999994,
+      "expected_active_cues": [
+        21
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-021",
+          "text": "송도동 7억4,000만원으로,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 51.059,
+      "expected_active_cues": [
+        21
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-021",
+          "text": "송도동 7억4,000만원으로,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 51.06099999999999,
+      "expected_active_cues": [
+        22
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-022",
+          "text": "두 생활권의 예산\n조건이 크게 갈립니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 52.17999999999999,
+      "expected_active_cues": [
+        22
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-022",
+          "text": "두 생활권의 예산\n조건이 크게 갈립니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 53.299,
+      "expected_active_cues": [
+        22
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-022",
+          "text": "두 생활권의 예산\n조건이 크게 갈립니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 53.300999999999995,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 53.59,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 53.78,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 53.881,
+      "expected_active_cues": [
+        23
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-023",
+          "text": "16위는 인천 남동구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 54.96000000000001,
+      "expected_active_cues": [
+        23
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-023",
+          "text": "16위는 인천 남동구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 56.03900000000001,
+      "expected_active_cues": [
+        23
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-023",
+          "text": "16위는 인천 남동구,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 56.041000000000004,
+      "expected_active_cues": [
+        24
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-024",
+          "text": "7,997쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 56.800000000000004,
+      "expected_active_cues": [
+        24
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-024",
+          "text": "7,997쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 57.559000000000005,
+      "expected_active_cues": [
+        24
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-024",
+          "text": "7,997쌍입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 57.561,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 57.760000000000005,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 57.961,
+      "expected_active_cues": [
+        25
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-025",
+          "text": "지도에 연결된\n77개 단지 가운데",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 59.120000000000005,
+      "expected_active_cues": [
+        25
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-025",
+          "text": "지도에 연결된\n77개 단지 가운데",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 60.279,
+      "expected_active_cues": [
+        25
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-025",
+          "text": "지도에 연결된\n77개 단지 가운데",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 60.281,
+      "expected_active_cues": [
+        26
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-026",
+          "text": "61곳은 중위값이\n5억원 미만이고,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 61.72,
+      "expected_active_cues": [
+        26
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-026",
+          "text": "61곳은 중위값이\n5억원 미만이고,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 63.159000000000006,
+      "expected_active_cues": [
+        26
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-026",
+          "text": "61곳은 중위값이\n5억원 미만이고,",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 63.161,
+      "expected_active_cues": [
+        27
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-027",
+          "text": "나머지 16곳은\n5억원 이상 7억원",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 64.44,
+      "expected_active_cues": [
+        27
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-027",
+          "text": "나머지 16곳은\n5억원 이상 7억원",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 65.719,
+      "expected_active_cues": [
+        27
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-027",
+          "text": "나머지 16곳은\n5억원 이상 7억원",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 65.721,
+      "expected_active_cues": [
+        28
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-028",
+          "text": "미만에 놓입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 66.08,
+      "expected_active_cues": [
+        28
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-028",
+          "text": "미만에 놓입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 66.439,
+      "expected_active_cues": [
+        28
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-028",
+          "text": "미만에 놓입니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 66.441,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 66.72999999999999,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 66.92,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 67.021,
+      "expected_active_cues": [
+        29
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-029",
+          "text": "나머지 순위도\n궁금하시다면 다른 순위",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 68.17999999999999,
+      "expected_active_cues": [
+        29
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-029",
+          "text": "나머지 순위도\n궁금하시다면 다른 순위",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 69.33899999999998,
+      "expected_active_cues": [
+        29
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-029",
+          "text": "나머지 순위도\n궁금하시다면 다른 순위",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 69.341,
+      "expected_active_cues": [
+        30
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-030",
+          "text": "영상을 확인해 주세요.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 69.85999999999999,
+      "expected_active_cues": [
+        30
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-030",
+          "text": "영상을 확인해 주세요.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 70.37899999999999,
+      "expected_active_cues": [
+        30
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-030",
+          "text": "영상을 확인해 주세요.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 70.381,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 70.66999999999999,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 70.961,
+      "expected_active_cues": [
+        31
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-031",
+          "text": "지역별 자세한\n가격과 생활권 비교는",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 72.25999999999999,
+      "expected_active_cues": [
+        31
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-031",
+          "text": "지역별 자세한\n가격과 생활권 비교는",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 73.55899999999998,
+      "expected_active_cues": [
+        31
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-031",
+          "text": "지역별 자세한\n가격과 생활권 비교는",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 73.56099999999999,
+      "expected_active_cues": [
+        32
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-032",
+          "text": "본편에서 이어집니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 74.1,
+      "expected_active_cues": [
+        32
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-032",
+          "text": "본편에서 이어집니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 74.63899999999998,
+      "expected_active_cues": [
+        32
+      ],
+      "visible_groups": [
+        {
+          "id": "cap-032",
+          "text": "본편에서 이어집니다.",
+          "text_visible": true,
+          "background_visible": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "time_s": 74.64099999999999,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    },
+    {
+      "time_s": 75.66666666666667,
+      "expected_active_cues": [],
+      "visible_groups": [],
+      "passed": true
+    }
+  ],
+  "proofs": [
+    {
+      "time_s": 0.08,
+      "frame": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v3\\SHORT02-R20-R16\\caption_visibility_proofs\\case-00-0.080s.png",
+      "sha256": "9235c83ca732291c678e9304fede48d4aa50281874dfc36fa2039ec73b913518"
+    },
+    {
+      "time_s": 1.56,
+      "frame": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v3\\SHORT02-R20-R16\\caption_visibility_proofs\\case-01-1.560s.png",
+      "sha256": "e5953ffa4f07b68bc7bb7555332e3e5be9c4c8af51faad117681c68fb432cd66"
+    },
+    {
+      "time_s": 14.68,
+      "frame": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v3\\SHORT02-R20-R16\\caption_visibility_proofs\\case-02-14.680s.png",
+      "sha256": "47ca2bf3987df1ea2f0bb98560692bc6dcd171c8d851d6681ebb9cf8640dabfa"
+    },
+    {
+      "time_s": 28.299999999999997,
+      "frame": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v3\\SHORT02-R20-R16\\caption_visibility_proofs\\case-03-28.300s.png",
+      "sha256": "5ee72962457461a84cd996bd07e4e64f51c6fb394884f3381c48ca75a3c24330"
+    },
+    {
+      "time_s": 41.44,
+      "frame": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v3\\SHORT02-R20-R16\\caption_visibility_proofs\\case-04-41.440s.png",
+      "sha256": "47f921e2367d484ca4c77c3ec384494f78a92f5a39b18182e42959b9dd6e7aba"
+    },
+    {
+      "time_s": 53.78,
+      "frame": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v3\\SHORT02-R20-R16\\caption_visibility_proofs\\case-05-53.780s.png",
+      "sha256": "dc1639dfbf344bbb8d51761d5824fb4a212af0cd3da75871f5be8e942a256acf"
+    },
+    {
+      "time_s": 66.92,
+      "frame": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v3\\SHORT02-R20-R16\\caption_visibility_proofs\\case-06-66.920s.png",
+      "sha256": "1254e878f986d41f7558ab2e91008ed3191360195e39b8aef04453d2872509f1"
+    },
+    {
+      "time_s": 75.66666666666667,
+      "frame": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\editor\\top20-split-v4\\jun-and-shorts-v1\\shorts\\native-v3\\SHORT02-R20-R16\\caption_visibility_proofs\\case-07-75.667s.png",
+      "sha256": "45ed5072a1234c05707f55af7277024aca2a445cded954221dae7901aa86c7d0"
+    }
+  ],
+  "actual_listening": false,
+  "continuous_playback": false
+}

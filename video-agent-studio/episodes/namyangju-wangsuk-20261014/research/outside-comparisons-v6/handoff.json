@@ -1,0 +1,36 @@
+{
+  "version": "outside-comparisons-v6",
+  "inputs": [
+    "map-led-v5/analysis.json",
+    "공식LH 창릉S5 공고2025-01-31",
+    "공식푸르지오 교산A2 공고2025-03-31",
+    "하남시2026-09-22 답변",
+    "LH2026-07-03 보도자료"
+  ],
+  "outputs": [
+    "comparison.json",
+    "facts.json",
+    "sources.json",
+    "changneung_s5_notice.pdf",
+    "gyosan_notice.pdf",
+    "changneung_s5_notice_p5.png",
+    "changneung_s5_notice_p45.png",
+    "gyosan_notice_p47.png"
+  ],
+  "verified": "PDF 공급가격·학교표 이미지 샘플 실제 확인, 공고 본문·공식웹 검색 검증.11개 claim.",
+  "unresolved": [
+    "S5 정정공고 전체 변경항목 대조 미완료:2025원공고 기준 명시",
+    "창릉역2030은 공식마이홈 검색색인+의회 원문 기반 qualified; 최근LH본문은 신설계획만 확인",
+    "교산정확한역출입구·좌표·84가격 미확인",
+    "지도/홍보이미지 상업재사용 권리 미확인"
+  ],
+  "affected_scene_ids": [
+    "M007B"
+  ],
+  "next_roles": [
+    "video_writer",
+    "video_qa",
+    "video_director"
+  ],
+  "production": "새 유료생성·TTS·전체영상 제작 없음"
+}

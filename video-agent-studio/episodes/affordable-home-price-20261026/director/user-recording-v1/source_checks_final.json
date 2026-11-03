@@ -1,0 +1,65 @@
+{
+  "status": "guide_stage_partial_policy_check",
+  "items": [
+    {
+      "id": "FSC_LTV",
+      "url": "https://www.fsc.go.kr/po020201/85466",
+      "checked": "2026-10-26",
+      "scope": "2025-10-17 FAQ의 차주별 LTV 비교표를 열람. 일반/생애최초/정책상품 행을 구별.",
+      "status": "primary_page_opened"
+    },
+    {
+      "id": "FSC_CAP",
+      "url": "https://fsc.go.kr/po020201/85518",
+      "checked": "2026-10-26",
+      "scope": "15억·25억 경계의 주담대 상한과 DSR 관련 설명 확인. 본 영상의 개인별 4억 가정과 분리.",
+      "status": "primary_page_opened"
+    },
+    {
+      "id": "STRESS",
+      "url": "https://better.fsc.go.kr/fsc_new/status/adminMap/OpertnDetail.do?muNo=145&postNo=4215&stNo=11",
+      "checked": "2026-10-26",
+      "scope": "2026-07-01~12-31 행정지도 페이지의 시행 상태 확인. 첨부 PDF 재열람은 미실시.",
+      "status": "primary_page_opened_attachment_not_reviewed"
+    },
+    {
+      "id": "POLICY",
+      "url": "https://www.fsc.go.kr/no010101/87517",
+      "checked": "2026-10-26",
+      "scope": "2026-08-13 공급·수요관리·실수요자 지원 발표 본문 열람. P063은 발표를 바탕으로 한 화자의 해석.",
+      "status": "primary_page_opened"
+    },
+    {
+      "id": "TAX",
+      "url": "https://law.go.kr/법령/지방세법",
+      "checked": "2026-10-26",
+      "scope": "일반 법령 URL은 본문 추출이 안 됐으나, 이후 2026-01-01 시행판 제11·151조 공식 개별 조문을 열어 본문 확인. 6.6억 표준 취득세율1.4%와 지방교육세 산정 구조 대조. 원고의 면적·감면 조건을 유지하며 게시 전 대상주택·최신 개정과 재대조.",
+      "status": "primary_articles_opened_conditional_example",
+      "article_urls": [
+        "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0011&lsiSeq=282559&urlMode=lsScJoRltInfoR",
+        "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=00&joNo=0151&lsiSeq=282559&urlMode=lsScJoRltInfoR"
+      ]
+    },
+    {
+      "id": "BROKER",
+      "url": "https://land.seoul.go.kr/land/broker/brokerageCommission.do",
+      "checked": "2026-10-26",
+      "scope": "원 DOCX의 부산 서구 링크 timeout. 서울시 공식 요율 페이지로 보완. 2억~9억 미만 매매 상한0.4% 확인용; VAT는 일반과세 가정.",
+      "status": "supplement_primary_page_opened"
+    },
+    {
+      "id": "BOND",
+      "url": "https://nhuf.molit.go.kr/FP/FP07/FP0705/FP070509.jsp",
+      "checked": "2026-10-26",
+      "scope": "이번 조회 timeout. 채권 할인액은 산정하지 않았으며 등기 견적에 포함할 항목으로만 계획.",
+      "status": "fetch_failed_no_value_asserted"
+    }
+  ],
+  "not_cleared": [
+    "latest_area_designations",
+    "2026_stress_attachment",
+    "final_product_or_bank_approval",
+    "final_property_specific_tax_or_latest_amendment_clearance"
+  ],
+  "scope": "Guide drafting and source planning; no statement of universal credit approval or full policy re-verification."
+}

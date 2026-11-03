@@ -1,0 +1,168 @@
+{
+  "episode_id": "affordable-home-price-20261026",
+  "script_revision": "v2",
+  "frozen_script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "policy_as_of": "2026-10-26",
+  "base_script": "writer/script_v1.md",
+  "base_script_sha256": "26ed3cb78465bfde7bf52655df535e0d5b6fd8287e24c105c94266f757e7717f",
+  "review_input": "qa/content_v1_review.json",
+  "status": "수정 반영·새SHA 독립 내용검토 대기",
+  "changed_body_scene_ids": [
+    "S001",
+    "S003",
+    "S009",
+    "S020",
+    "S025",
+    "S032",
+    "S034",
+    "S034R",
+    "S035"
+  ],
+  "changed_visual_or_condition_scene_ids": [
+    "S001",
+    "S003",
+    "S009",
+    "S010",
+    "S020",
+    "S022",
+    "S025",
+    "S032",
+    "S033",
+    "S034",
+    "S035",
+    "S040",
+    "S034R"
+  ],
+  "new_scene_ids": [
+    "S034R"
+  ],
+  "retained_scene_ids": [
+    "S001",
+    "S002",
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S007",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S012",
+    "S013",
+    "S014",
+    "S015",
+    "S016",
+    "S017",
+    "S018",
+    "S019",
+    "S020",
+    "S021",
+    "S022",
+    "S023",
+    "S024",
+    "S025",
+    "S026",
+    "S027",
+    "S028",
+    "S029",
+    "S030",
+    "S031",
+    "S032",
+    "S033",
+    "S034",
+    "S035",
+    "S036",
+    "S037",
+    "S038",
+    "S039",
+    "S040",
+    "S041",
+    "S042",
+    "S043",
+    "S044"
+  ],
+  "items": [
+    {
+      "issue_id": "SC01",
+      "scene_ids": [
+        "S001",
+        "S003",
+        "S025"
+      ],
+      "change": "총액6억을 수도권·규제지역·시가15억이하 구입 범위로 첫소개부터 명시",
+      "claim_ids": [
+        "L04"
+      ],
+      "status": "implemented_pending_review"
+    },
+    {
+      "issue_id": "SC02",
+      "scene_ids": [
+        "S032"
+      ],
+      "change": "맞벌이합산2억과 각자1.3억·입양아 접수일현재 만2세미만 반영",
+      "claim_ids": [
+        "N01"
+      ],
+      "status": "implemented_pending_review"
+    },
+    {
+      "issue_id": "SC03",
+      "scene_ids": [
+        "S034",
+        "S034R"
+      ],
+      "change": "B 소득구간 접수일 기준 가산산식·현행표2.9→3.65·60회후잔액/남은300개월의 월176.4만을 추가. 우대/추가출산/자산초과가산/중도상환0, B월300·목표170 조건 명시",
+      "claim_ids": [
+        "N05A"
+      ],
+      "case_id": "B_newborn_6eok_reset_after60_current_schedule",
+      "status": "implemented_pending_review"
+    },
+    {
+      "issue_id": "SC04",
+      "scene_ids": [
+        "S035"
+      ],
+      "change": "6억초과 보증범위 단정을 삭제하고9억×70%−공제5500=57500만과 상품40000만 비교로 한도 설명. 기존 현금56615만 유지",
+      "claim_ids": [
+        "N03",
+        "M01"
+      ],
+      "M08_current_generalization_removed": true,
+      "status": "implemented_pending_review"
+    },
+    {
+      "issue_id": "STYLE-C55",
+      "scene_ids": [
+        "S009",
+        "S010",
+        "S022",
+        "S033"
+      ],
+      "change": "보증으로 보완되지 않고 남은 공제액이라는 쉬운 표현",
+      "status": "implemented_pending_review"
+    },
+    {
+      "issue_id": "RELIEF-BIRTH-WINDOW",
+      "scene_ids": [
+        "S020"
+      ],
+      "change": "2028년말 출산 마감과 출산전1년~후5년 취득범위 설명, 상세조건 화면 제안. 감면미합산·순교육세미산출 유지",
+      "claim_ids": [
+        "T04",
+        "T05"
+      ],
+      "status": "implemented_pending_review"
+    }
+  ],
+  "unchanged": [
+    "10장 표제와 순서·서술문단 형식",
+    "기존6/9/12억 사례·거래비용·예비자금·정책상품한도",
+    "A소득·DSR·LTV·가격역산·동일최초원금/새360개월 금리민감도",
+    "HB01 도입/썸네일·NB01 신생아장 전용",
+    "기존 v1 전체 파일"
+  ],
+  "v1_preservation_manifest": "writer/v1_preservation_v2.json"
+}

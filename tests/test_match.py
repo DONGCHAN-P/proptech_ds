@@ -107,11 +107,10 @@ def test_short_distance_uses_walking():
 
 
 # ── 점수 곡선 ─────────────────────────────────────────────────────────
-@pytest.mark.parametrize("ratio,expected", [
-    (1.0, 100), (0.75, 100), (0.875, 100), (0.40, 0), (0.30, 0), (0.575, 50),
-])
-def test_budget_use_score(ratio, expected):
-    assert M.budget_use_score(np.array([ratio]))[0] == pytest.approx(expected)
+def test_budget_margin_not_expensive_budget_exhaustion():
+    values = M.budget_use_score(np.array([0.5, 0.75, 0.95, 1.0]))
+    assert values[0] > values[1] > values[2] >= values[3]
+    assert all(0 <= value <= 100 for value in values)
 
 
 def test_commute_score_bounds():
@@ -184,12 +183,13 @@ def test_weights_sum_to_one_without_work():
     assert sum(w.values()) == pytest.approx(1.0)
 
 
-def test_relaxation_widens_budget_when_short():
+def test_budget_never_automatically_widens_when_short():
     rows = [_row(i, legal_dong_name=f"동{i}", last_price=105000) for i in range(1, 7)]
     df = _frame(rows)
     res = M.run_match(df, _ans(budget=100000), TODAY, stations=None)
-    assert len(res["items"]) == 5
-    assert "budget" in res["relaxed"]
+    assert res['items'] == []
+    assert res['relaxed'] == []
+    assert res['effective']['budget'] == 100000
 
 
 def test_no_relaxation_when_enough():

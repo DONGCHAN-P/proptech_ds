@@ -1,0 +1,21 @@
+{
+  "raw_rows": 4925669,
+  "valid_deduplicated_rows": 4857775,
+  "duplicate_hashes_removed": 0,
+  "first_date": "2006-01-01 00:00:00",
+  "last_date": "2026-10-10 00:00:00",
+  "regions": [
+    "경기",
+    "서울",
+    "인천"
+  ],
+  "last_full_year": 2025,
+  "method": "Annual median price per m2 for identical apt_id and area_m2_key, >=5 trades in each year; average log return within complex, then equal complex weights. Chain annual matched returns. >=30 complexes each year for period summary.",
+  "limitations": [
+    "Not an official price index; changing matched sample, survivor and turnover bias",
+    "No adjustment for floor, renovation or within-year transaction timing",
+    "Source completeness and apt_id stability not independently established",
+    "2026 excluded from full-year chart; no extrapolation",
+    "Prices are in source deal_amount units; returns unit-invariant"
+  ]
+}

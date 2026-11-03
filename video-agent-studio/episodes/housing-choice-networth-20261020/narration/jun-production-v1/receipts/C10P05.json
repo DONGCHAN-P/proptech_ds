@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C10P05",
+  "scene_id": "C10",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:08:42.175Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "8dff065e489c6ad64c11070dde4888c2515f9db6b34c8b604da4e76ce23b5df2",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "그래서 집값이 크게 오를 거라는 기대보다 먼저 확인할 것은 내가 보유를 이어갈 수 있는 가격입니다. 소득이 줄거나 금리가 높아지는 상황까지 생각했을 때, 매달 얼마를 갚을 수 있는지가 출발점이 됩니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 112,
+  "characters": 112,
+  "actual_credits": 45,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19983,
+    "character_limit": 40000,
+    "included_remaining": 20017,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:08:20.529Z",
+  "local_shadow_remaining_before": 19720,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "QsEwSqwUNF9ujZJIsqSE",
+    "x-request-id": null,
+    "character-cost": "45",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:08:41 GMT"
+  },
+  "pcm_samples": 592704,
+  "pcm_duration_s": 13.44,
+  "provider_last_spoken_end_s": 13.52,
+  "artifact_sha256": {
+    "paragraphs/C10P05/audio.mp3": "c40690203d8d616cdf3b911e8fa26887f7935a80ef8e0b7b4d57274b25814092",
+    "paragraphs/C10P05/audio.wav": "8d37236fb948f57148a52cacf616e143b1b4a35991ba935dc6909b6dd7131e6f",
+    "paragraphs/C10P05/alignment.json": "c2d612c438b7cdba25c3f1cd81f66ed4a9ef0ec99e72b2861afb9f6ef13876ca",
+    "paragraphs/C10P05/normalized_alignment.json": "c2d612c438b7cdba25c3f1cd81f66ed4a9ef0ec99e72b2861afb9f6ef13876ca"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 19675,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:08:45.470Z"
+}

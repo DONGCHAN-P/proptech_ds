@@ -1,0 +1,43 @@
+{
+  "task_id": "shorts-trend-ui-20261104",
+  "role": "research",
+  "status": "completed_scoped_research",
+  "input_revisions": {
+    "brief": "top20-8min-v2",
+    "state": "top20-enhance-v2 / active top20-split-v4 / jun-and-shorts-v1",
+    "task_packet": "사용자 최초 지시 + 공식3개 재사용·보강 지시(2026-11-04)"
+  },
+  "outputs": [
+    "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/shorts-ui-v2-20261104/facts.json",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/shorts-ui-v2-20261104/research_packet.md",
+    "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/shorts-ui-v2-20261104/issue_SHORTS-CTA-01.json"
+  ],
+  "affected_scene_ids": [],
+  "affected_short_ids": [
+    "SHORT01-PROMO",
+    "SHORT02-R20-R16",
+    "SHORT03-R15-R11"
+  ],
+  "checks": [
+    {
+      "check": "공식 원문8개 날짜·근거 열람",
+      "result": "passed",
+      "evidence": "facts.json sources S01–S08; 영상 재생 없음"
+    },
+    {
+      "check": "조언/제품 발표/장르 집계/우리 추론 구분",
+      "result": "passed",
+      "evidence": "facts.json evidence_classes, claims, practical_proposals"
+    },
+    {
+      "check": "JSON 및 참조 무결성·담당 범위",
+      "result": "passed",
+      "evidence": "로컬 파일 4개 존재·JSON 3개 파싱·출처 8개/주장 8개/제안 5개 참조·MD URL 8개 일치 확인"
+    }
+  ],
+  "open_issue_ids": [
+    "SHORTS-CTA-01"
+  ],
+  "unresolved": "CTA 실제 연결·기능 접근·대상 공개상태는 총괄 확인. 실제 장면ID 매핑 필요. 영상·Jun·데이터·채널분석 미검수.",
+  "next_role": "director → writer/visual/editor → independent qa"
+}

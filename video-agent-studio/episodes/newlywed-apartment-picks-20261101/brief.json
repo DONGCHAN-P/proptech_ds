@@ -1,0 +1,42 @@
+{
+  "episode_id": "newlywed-apartment-picks-20261101",
+  "studio_root": "C:/projects/realestate_reco/video-agent-studio",
+  "request": "신혼부부 지역별 순위 TOP20을 보여주는8분 본편; 지역별 자료조사와 사용할 이미지 자료 준비",
+  "request_date": "2026-11-01",
+  "type": "new_video",
+  "topic_authority": "current direct user instruction",
+  "planning_assumptions": {
+    "initial_scope": "2024 수도권53개구 TOP20",
+    "format_proposal": "16:9 본편·20위→1위",
+    "duration_proposal": "480초 목표; 실제 음성 생성·정렬 후 타이밍 확정",
+    "voice": "미선택·새 유료 생성 미실행"
+  },
+  "source": "analysis/newlywed_region_2024/rankings.json",
+  "ranking_basis": "2024-11-01 거주지 기준 혼인신고 후 5년 미경과 신혼부부 전체 수",
+  "recommendation_basis": "현재 매물 확인가격과 과거 실거래, 실제 출퇴근 동선·생활·면적·연식·관리비·공급을 대조한 조건별 후보",
+  "paid_generation_authorized": false,
+  "upload_authorized": false,
+  "external_claude_transfer_authorized_for_this_packet": false,
+  "state_note": "자료 기록·리서치·기획 단계. 새 대본은 script 결정 대상으로 별도 전달한다.",
+  "revision": "top20-8min-v2",
+  "target_duration_seconds": 480,
+  "active_scope": "2024 통계구역 수도권53개구 중 신혼부부 전체 수 TOP20.20위부터1위까지 소개하는16:9 본편",
+  "current_stage": "research_media_prepared_and_top20_script_drafted",
+  "superseded_scope": "첫 편을 청라·검단·루원 단지추천에 한정한 planning-v1 구성. 자료와 원고는 보존.",
+  "current_deliverables": [
+    "지역20곳의 공식 근거·설명 포인트",
+    "2023 대비 비교 가능한 신혼부부 수 변화",
+    "지역별 실제 장소 사진 및 출처·이용조건",
+    "지역별 지도 원본 및 PNG",
+    "8분 구성표와 자료화면 안내",
+    "자료 미확보·허락 확인 목록"
+  ],
+  "superseded_planning_assumptions": {
+    "initial_scope": "수도권; 2024 통계구역 기준 구 53곳, 시·군·자치구 66곳 및 세부 지역 79곳 별도 기록",
+    "format_proposal": "16:9 본편 시리즈, 편당 한 지역의 생활권·아파트 3개 안팎 비교",
+    "first_episode_proposal": "2024 인천 서구 권역: 현재 행정구역을 확인해 검단·청라·가정 생활권 비교",
+    "duration_proposal": "7~10분; 실제 음성 확정 전 시간은 추정",
+    "voice": "미선택; 과거 Jun 예산은 이번 편에 승계하지 않음"
+  },
+  "script_draft": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-8min-v2/script_v3.md"
+}

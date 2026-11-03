@@ -1,0 +1,2 @@
+const fs=require('fs'),path=require('path');const ep=path.resolve(__dirname,'../..');
+for(const f of ['editor/production-v1/brand-bundle/public/namyangju-map-led-v6/outside_geometry.json','visual/geographic-v1/raw/osm.json']){const d=JSON.parse(fs.readFileSync(path.join(ep,f)));console.log(f,Object.keys(d));for(const k of Object.keys(d))if(k!=='paths'&&k!=='elements')console.log(k,JSON.stringify(d[k]).slice(0,800));const es=d.elements||d.stations||d.points||[];console.log('STATIONS',es.filter(e=>/강남|여의도|마곡|시청|광화문|공덕/.test((e.tags||{}).name||e.name)).slice(0,20));}

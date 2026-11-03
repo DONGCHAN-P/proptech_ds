@@ -1,0 +1,46 @@
+{
+  "task_id": "FULL-HISTORY-V1",
+  "verified_at": "2026-10-23",
+  "verification_scope": "?? ???? ??/??? ??? ? ?? ??? ??. ?? ???? QA? ?? ????? ??.",
+  "status": "pass",
+  "checks": {
+    "serialized_csv_arithmetic_and_first_return": "pass: 7 regions,33 episodes; separate stdlib arithmetic",
+    "svg_parsing_and_external_references": "pass: 3 standalone SVG, font glyph paths, no external href/image/script",
+    "png_decoding_and_reviewed_sha_reuse": "pass: 3 PNG",
+    "frozen_inputs_builder_font_source_sha": "pass",
+    "facts_claim_metadata_readback": "pass:8 qualified claims"
+  },
+  "reviewed_charts": [
+    {
+      "path": "analysis/housing_growth_2006/full_history_v1/full_history_sejong_2015.png",
+      "sha256": "3d3a6b1839b9699294593f1f57699166990f6719ca379839178f13a06ad5b4e3",
+      "pixels": [
+        1950,
+        1125
+      ],
+      "visual_review": "?? PNG ??; ?? ??/?? ??? ?? ?? ? ???; ??? ?? ?? ?? ?? ???"
+    },
+    {
+      "path": "analysis/housing_growth_2006/full_history_v1/full_history_six_regions_2006.png",
+      "sha256": "451cd98394ae1614b8920cb1d58ccc79bfefb80fea9582f3272df2f36a334575",
+      "pixels": [
+        2400,
+        1950
+      ],
+      "visual_review": "?? PNG ??; ?? ??/?? ??? ?? ?? ? ???; ??? ?? ?? ?? ?? ???"
+    },
+    {
+      "path": "analysis/housing_growth_2006/full_history_v1/running_peak_drawdown_full_history.png",
+      "sha256": "db193abb16607bbcbdd6936be82fbb5eb61345e42cafa8ddb406ff263a1a3535",
+      "pixels": [
+        2400,
+        2250
+      ],
+      "visual_review": "?? PNG ??; ?? ??/?? ??? ?? ?? ? ???; ??? ?? ?? ?? ?? ???"
+    }
+  ],
+  "source_script_sha256": "f573261a37f069fe8e1ce9a2016acd217414cca5cafb7998e961663bfada7a6b",
+  "independent_qa": "?? ?? ??????",
+  "external_calls": 0,
+  "raw_ingestion_runs": 0
+}

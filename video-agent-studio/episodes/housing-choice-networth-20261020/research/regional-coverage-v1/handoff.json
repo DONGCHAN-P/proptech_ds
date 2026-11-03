@@ -1,0 +1,105 @@
+{
+  "task_id": "regional-coverage-20261022",
+  "role": "research",
+  "status": "coverage_audit_complete_with_interpretation_issues",
+  "verified_at": "2026-10-22T12:19:22.971374+09:00",
+  "summary": "200601~202609, 37코드×249개월=9,213셀 검사. complete·수량일치·예상 XML 9,308개 모두 통과, 누락 0. 메타 stored_rows 합계 1,922,287건(중복·해제 미처리). 부산 866,481 / 대구 597,113 / 대전 392,725 / 광주 0 / 세종 65,968. 광주 전 기간 0건과 군위·세종 경계 문제는 후속 확인 필요.",
+  "input_revisions": {
+    "basis_date": "2026-10-22",
+    "fixed_inputs": [
+      {
+        "path": "collector/collect_three_cities.py",
+        "sha256": "24af1f12265bdd1155f6030ec9acee338dd13f7c2f7ff3d76d0848388ef1ac9a"
+      },
+      {
+        "path": "collector/collect_gwangju_sejong.py",
+        "sha256": "72a07e1d764db62ab6f494a0cdf36ca01a233e157c8b78f7718ca790c6cbfb39"
+      },
+      {
+        "path": "video-agent-studio/WORKFLOW.md",
+        "sha256": "066180aef28e6bf5b75928cf3de6d555d1fb478946b1d6515e23fee26e182060"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/brief.json",
+        "sha256": "e2595699a29e53295fe141c5f2724ae3af12603b2e1e3814154beb7a14fbcd2f"
+      },
+      {
+        "path": "video-agent-studio/episodes/housing-choice-networth-20261020/state.json",
+        "sha256": "c2774591c96b158b79626865e7302f0dd4f1ff7204917e686aa8ca71d1891683"
+      },
+      {
+        "path": "video-agent-studio/agents/video_research.toml",
+        "sha256": "6e8d5a5fca27220475a4566acef3e9cff7ef0559f7c4cf99f9f285669c0f3a04"
+      },
+      {
+        "path": "config/video_call_policy.json",
+        "sha256": "52c4ce2df30201a2d4baa41e215c7ea1ed8736e17a18abdf7e76c40a0f0f06a3"
+      }
+    ],
+    "inventory_sha256": "7a1c102de3e88f94b8b8ddff36424cb120818e1925d9cdb0a2462f4d2c2bb06f",
+    "metadata_sources": "coverage.json cells[].meta_path/meta_sha256",
+    "xml_sources": "coverage.json cells[].xml_files"
+  },
+  "outputs": [
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/research/regional-coverage-v1/coverage.json",
+      "sha256": "68842aa45ed2b8ad328312ce2b21ad6285d5a5d972062c0d42f275375688c1f2"
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/research/regional-coverage-v1/issue_REGIONAL_COMPARABILITY.json",
+      "sha256": "2fe0e2281abcca956e903205bdb1b9c17a9d9fea70a5ba2189c2ba1e3b77457d"
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/research/regional-coverage-v1/audit_coverage.py",
+      "sha256": "da94c01c67fec562d9607882c8bbe9d3a5d183a914850f97abc1dc3ef5570a4d"
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/housing-choice-networth-20261020/research/regional-coverage-v1/finalize_coverage.py",
+      "sha256": "b285c6364b0b1fc75e23990706d38e079d8f46466bea07307b2a68ec002457a7"
+    }
+  ],
+  "affected_claim_ids": [],
+  "affected_scene_ids": [],
+  "checks": [
+    {
+      "check": "예상 코드×월 9,213셀과 출력 집합 일치·중복 없음",
+      "result": "passed",
+      "evidence": "finalize_coverage.py assertions"
+    },
+    {
+      "check": "모든 meta.complete=true, totalCount=stored_rows, 기대 XML 존재·비어 있지 않음",
+      "result": "passed",
+      "evidence": "coverage.json totals, missing_or_incomplete_cells, cells"
+    },
+    {
+      "check": "도시·전체 합계 출력 JSON 재집계 일치",
+      "result": "passed",
+      "evidence": "finalize_coverage.py assertions"
+    },
+    {
+      "check": "감사 중 메타/XML 경로·크기·mtime 불변",
+      "result": "passed",
+      "evidence": "coverage.json snapshot"
+    },
+    {
+      "check": "출력 JSON 재개봉·소스 감사 코드 SHA·출력 SHA 확인",
+      "result": "passed",
+      "evidence": "finalize_coverage.py assertions 및 outputs[].sha256"
+    }
+  ],
+  "open_issue_ids": [
+    "REGIONAL_COMPARABILITY"
+  ],
+  "unresolved_findings": [
+    "GWANGJU_ALL_ZERO",
+    "GUNWI_CODE_BOUNDARY",
+    "SEJONG_2012_BOUNDARY"
+  ],
+  "limitations": [
+    "XML 내용·거래일·가격·해제거래·중복 여부 미검증",
+    "지역 경계의 역사적 원인·영향은 결론 내리지 않음",
+    "주장·장면 ID 미제공으로 매핑 미수행"
+  ],
+  "next_role": "director / parent",
+  "next_action": "광주 원응답·조회조건, 군위 코드 처리, 세종 2012 경계 확인 후 부모가 가격 정규화·비교 진행. writer에게 조건과 미확인 사항 전달."
+}

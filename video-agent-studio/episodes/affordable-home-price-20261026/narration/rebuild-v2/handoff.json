@@ -1,0 +1,26 @@
+{
+  "task_id": "affordable-home-price-rebuild-v2-narration-preparation",
+  "role": "video_narration",
+  "status": "implementation_verified_offline_awaiting_parent_final_script",
+  "summary": "배열 순서·장면당1회·InJoon +0%로 준비 완료. 문장별 호출/강제 쉼/PCM 절단 없음. 원문→발음/큐 전체보존/숫자단위/UTF-8/anchor covering WordBoundary 검사 구현. 16개 오프라인 검사 통과. 실제 writer 원고 미사용, 새 TTS·유료·Claude·업로드 호출 0회. 총괄 잠금·무료외부호출 승인 후 부모가 prepare/실행 예정.",
+  "input_revisions": {
+    "reused_logic": "../production_v1.py 및 그 읽기전용 기존 의존성",
+    "new_script_expected": "writer/rebuild-v2/scenes_v3.json",
+    "new_script_consumed": false,
+    "new_script_sha256": null,
+    "pipeline_sha256": "0804a45c255bb6c6c03d068360eeb2dc14e7d7af037e47aeb3f23c955587196f",
+    "contract_revision": "rebuild-v2-narration-contract-v2-scene-once",
+    "contract_sha256": "e23f8f4cb8a2cd933c32114ce05b1e25e255d60c18068df17c5cfed9f0cc2bf4"
+  },
+  "outputs": ["narration/rebuild-v2/build_narration.py", "narration/rebuild-v2/build_contract.json", "narration/rebuild-v2/사용안내.md", "narration/rebuild-v2/timing_proposals.json", "narration/rebuild-v2/offline-tests/verification-v1/receipt.json", "narration/rebuild-v2/issue_NARRATION_CONTRACT_V2.json"],
+  "affected_scene_ids": ["R011", "R029", "R030", "R031", "R032", "R033"],
+  "checks": [
+    {"check": "16개 오프라인 계약·승인 차단·Unicode·정렬·PCM보존·실제 로컬48k변환 검사", "result": "passed", "evidence": "narration/rebuild-v2/offline-tests/verification-v1/receipt.json"},
+    {"check": "새 대본 및 실제 새 제공자 정렬·청취·글리프 렌더 검수", "result": "unchecked", "evidence": null}
+  ],
+  "limitations": ["독립 QA 미실시. 실제 새 음성·최종 시간표는 아직 없음.", "offline-tests의 가상 승인/원고/모의 오디오는 실제 제작 입력이 아님."],
+  "open_issue_ids": ["NARRATION_CONTRACT_V2"],
+  "next_role": "director -> editor(Tesla)",
+  "next_action": "최종 원고 통지 후 부모 prepare. director 소유 SHA 잠금·현재 무료 Edge 실행범위 승인 전 실제 TTS 금지.",
+  "ownership": "narration/rebuild-v2/**만 작성; 공통state/기존output/credentials 미수정"
+}

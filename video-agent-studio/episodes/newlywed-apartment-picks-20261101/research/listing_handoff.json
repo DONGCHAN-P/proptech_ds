@@ -1,0 +1,106 @@
+{
+  "task_id": "listing-evidence-v1",
+  "role": "research",
+  "status": "research_complete_with_gaps",
+  "checked_date": "2026-11-01",
+  "summary": "8묶음 확인 완료. 현재 판매 검증 매물0건이며4후보 모두 listing_verified=false. 청라216동5층5.1억원은 본문 일부만 확인, 검단59는 개별 원문 미확보, 포레나59는2차 집계만 확인, 보조SK84는 오래된 카탈로그·상대 확인일 문제. 실거래6개월/Q3 값을 호가와 분리했다. 행정개편 공식 발표와 실제 출범 및 현재 단지 도로명 연결을 기록했고 상위 담당의2026-07-06 출처는 전달 확인으로 구분했다.",
+  "input_revisions": {
+    "transaction_candidates": {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\research\\transaction_candidates.json",
+      "sha256": "a820e23852714b8a833069dced2a65665ac6ce1aef9952fcfc872ebedadc28f5"
+    },
+    "state_revision": "planning-v1",
+    "role_instructions": "video-agent-studio/agents/video_research.toml",
+    "parent_update": "서해구 명칭·의회 추가 출처 전달 및Q3 추가"
+  },
+  "outputs": [
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\research\\listing_evidence_v1.json",
+      "sha256": "fec6805b379610dc6e324824c44efc21cebf876dcf6986b1df57cd296e7d5b54"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\research\\listing_sources_v1.md",
+      "sha256": "92f0edaa6d20fcd1704282be92910bce61947844982676c6482b5cc75285b8e9"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\research\\listing_handoff.json",
+      "type": "handoff"
+    }
+  ],
+  "affected_claim_ids": [
+    "HIST_CH59",
+    "HIST_UM59",
+    "HIST_FO59",
+    "HIST_SK84",
+    "ADMIN_CURRENT"
+  ],
+  "affected_scene_ids": [],
+  "scene_note": "장면ID 미배정",
+  "checks": [
+    {
+      "check": "JSON 구조·후보4개·출처 연결·한국어 UTF-8 무손상",
+      "result": "passed",
+      "evidence": "listing_evidence_v1.json 및 listing_sources_v1.md 재읽기"
+    },
+    {
+      "check": "4후보6개월/Q3 표본·중위값·범위·기간 최신 입력 대조",
+      "result": "passed",
+      "evidence": "a820e23852714b8a833069dced2a65665ac6ce1aef9952fcfc872ebedadc28f5"
+    },
+    {
+      "check": "현재 검증 매물0건·검증 호가 null·이미지 사용허락 없음",
+      "result": "passed",
+      "evidence": "후보별 listing 및 photo_rights 필드"
+    },
+    {
+      "check": "웹 검색/열람8묶음 상한",
+      "result": "passed",
+      "evidence": "실행한8회 묶음 및 web_budget"
+    },
+    {
+      "check": "현재 판매 상태·원 광고 상세 정보 전체 검증",
+      "result": "not_verified",
+      "evidence": "LISTING_CURRENT_GAP"
+    },
+    {
+      "check": "독립 QA·사진 장소/권리 검증",
+      "result": "not_performed",
+      "evidence": "자료 담당의 공개 HTML 확인 범위만 수행"
+    }
+  ],
+  "open_issue_ids": [
+    "LISTING_CURRENT_GAP"
+  ],
+  "issues": [
+    {
+      "issue_id": "LISTING_CURRENT_GAP",
+      "problem": "현재 매물 추천에 필요한 유효 상세 원문·갱신일·거래가능 상태·사진 권리 부족",
+      "evidence_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\research\\listing_evidence_v1.json",
+      "proposal": "세 단지59㎡의 고유번호가 있는 공개 원문을 추가 확보한 뒤 현재 호가를 확정한다. 그 전에는 기간·면적·표본이 명시된 실거래 비교 후보로만 사용한다.",
+      "impact": "매물 추천·최저 호가·현재 매수가·사진 사용 확정 보류",
+      "affected_scene_ids": []
+    }
+  ],
+  "write_scope": [
+    "research/listing_evidence_v1.json",
+    "research/listing_sources_v1.md",
+    "research/listing_handoff.json"
+  ],
+  "routing": "직접 메시지 도구·지정peer 없음. 사용자 지정3개 파일 소유권을 따라 별도 issue 파일을 만들지 않고 이 핸드오프에 이슈 포함.",
+  "not_performed": [
+    "중개사 연락",
+    "사용자 메시지 발송",
+    "유료 API",
+    "유료 생성",
+    "외부 Claude 전송",
+    "업로드",
+    "사진 다운로드·시각 검증",
+    "실제 청취·연속 재생",
+    "독립 QA"
+  ],
+  "next_role": [
+    "director",
+    "writer"
+  ],
+  "next_action": "총괄은 현재 매물 근거 보강 또는 실거래 비교 후보 기획으로 진행 범위를 정하고 writer에 조건·미확인을 전달."
+}

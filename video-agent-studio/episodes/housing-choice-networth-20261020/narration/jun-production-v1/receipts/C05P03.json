@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C05P03",
+  "scene_id": "C05",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:06:14.104Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "d369a21b1fbe558266b1af2d6184d72e0f7c6d006ff2982ef063b70b29bb7842",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "처음 빌린 삼억육천만 원에서 매달 갚은 원금을 차감해 대출잔액을 계산합니다. 마지막 순자산에서는 그 잔액을 한 번 뺍니다. 원금 상환의 효과는 줄어든 대출잔액에 반영합니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 96,
+  "characters": 96,
+  "actual_credits": 38,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:04.412Z",
+  "local_shadow_remaining_before": 21394,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "EDRBviHD3BUf5Es8VjlA",
+    "x-request-id": null,
+    "character-cost": "38",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:06:13 GMT"
+  },
+  "pcm_samples": 550368,
+  "pcm_duration_s": 12.48,
+  "provider_last_spoken_end_s": 12.56,
+  "artifact_sha256": {
+    "paragraphs/C05P03/audio.mp3": "76cc624d612e50ef643132c65980d9d91af9e551355a8ab94d18281e3068075d",
+    "paragraphs/C05P03/audio.wav": "f21af81e2637bd2436da2b5789b51aea5f4e21c299a6a314539e678e152bdb6b",
+    "paragraphs/C05P03/alignment.json": "ddc5ca90056b56aa37fa8792d91abb7da7de8bf1c505c24cbf877f343ee4f64e",
+    "paragraphs/C05P03/normalized_alignment.json": "ddc5ca90056b56aa37fa8792d91abb7da7de8bf1c505c24cbf877f343ee4f64e"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21356,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:06:17.347Z"
+}

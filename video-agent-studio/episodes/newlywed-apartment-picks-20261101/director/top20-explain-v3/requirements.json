@@ -1,0 +1,33 @@
+{
+  "revision": "top20-explain-v3",
+  "source_event": "output/telegram_conversation/inbox/718066312.json",
+  "request": "1. 설명이 너무 짧다 전체적으로\n해당구의 부동산적인 특징과 랜드마크도 추가로 설명해줘\n2. 요로 끝나는게 아니고 니다 로 끝나는 정보제공에 신최가 가는 말투로 바꿔\n3. 그리고 모든 화면에 통계청 정보라고 넣기보다는 그냥 맨 앞에 어디 자료인지 설명하는걸로하자\n4. 그리고 24년 자료라는 한계점 언급하자\n5. 자료 설명할때 지역별 지도로 부동산 현재 가격도 추가하고 중위가나 대표단지도 추가하자",
+  "requirements": [
+    {
+      "id": "TG312-1",
+      "text": "지역별 부동산 특징과 랜드마크 설명 보강"
+    },
+    {
+      "id": "TG312-2",
+      "text": "합니다/입니다 문체"
+    },
+    {
+      "id": "TG312-3",
+      "text": "통계청 출처는 도입부에서 설명하고 반복 표기 제거"
+    },
+    {
+      "id": "TG312-4",
+      "text": "2024년 자료의 한계 설명"
+    },
+    {
+      "id": "TG312-5",
+      "text": "지역 지도·최근 가격·중위값·대표 단지"
+    }
+  ],
+  "voice": "free InJoon; latest free-TTS preference retained",
+  "cash_cap_krw": 0,
+  "old_private_video_id": "qu18qr0bIQw",
+  "old_video_sha256": "12b2221c246c1a10fb6e2c92750fbb4ca4d40b2195b721bef0afa2ee56bf28f5",
+  "new_upload_approval": "not inherited from previous version",
+  "source_event_sha256_before_application": "38d35dea6f769debd0c82a057317c5c24da490cf8fa9042f69e14eaf430f375b"
+}

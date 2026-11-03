@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C01P01",
+  "scene_id": "C01",
+  "status": "complete",
+  "started_at_utc": "2026-10-27T15:47:37.550Z",
+  "authorization_sha256": "ff4a4b0a3b4551435ce1f525f96d01c98c3d01080dec54ec3b96c869a82a0c8e",
+  "text_sha256": "69369d48ddd267125a3114cc603db3d34a362102755d063ab9937947fd98668b",
+  "phonetic_manifest_sha256": "5290eff5c5724c807bc4062feab7be5889b8decea1316984e48f25b1fe32b9f5",
+  "request": {
+    "text": "여러분, 유튜브에서 이런 이야기 많이 들어보셨죠. 일단 일억부터 모아라. 첫 일억이 어렵지, 그다음 이억, 오억, 십억은 훨씬 수월해진다.\n\n그런데 막상 돈을 모으고 나면, 여기서 또 막힙니다. 그래서 이 돈으로 무슨 집을 살 수 있는데? 부동산 앱을 켜보면 육억, 십억, 십오억짜리 아파트가 나오는데, 내 통장에 있는 돈하고 저 가격이 바로 연결되지는 않거든요.\n\n일억을 모은 뒤에 자산이 저절로 빨리 늘어나는 것도 아니고요. 대출을 더 받았다고 그만큼 내 재산이 생기는 것도 아닙니다. 갚아야 할 돈이 같이 늘어나는 거니까요.\n\n그래서 오늘은 목표를 조금 구체적으로 잡아보겠습니다. 현금이 일억, 이억, 삼억, 사억, 오억 있을 때, 어느 가격대의 집부터 찾아보면 좋을지 계산해볼게요. 집값에 들어가는 돈, 따로 남겨야 하는 돈, 매달 갚아야 하는 돈까지 같이 보겠습니다.\n\n먼저 말씀드리면, 오늘 숫자는 조건을 정해놓은 계산 예시입니다. 현금이 같아도 소득과 기존 대출, 집이 있는 지역에 따라 결과가 달라집니다. 영상 속 집값을 내 대출 승인 금액으로 받아들이시면 안 됩니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 550,
+  "characters": 550,
+  "actual_credits": 220,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 21019,
+    "character_limit": 40000,
+    "included_remaining": 18981,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-27T15:47:37.546Z",
+  "local_shadow_remaining_before": 18981,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "F6CSCyPkOev6afuK2H8P",
+    "x-request-id": null,
+    "character-cost": "220",
+    "content-type": "application/json",
+    "date": "Tue, 27 Oct 2026 15:47:37 GMT"
+  },
+  "pcm_samples": 2818872,
+  "pcm_duration_s": 63.92,
+  "provider_last_spoken_end_s": 64,
+  "artifact_sha256": {
+    "paragraphs/C01P01/audio.mp3": "7649bd593d5b7b3defbf7422724290862567c4bcf8b411b47c7ed561364c960b",
+    "paragraphs/C01P01/audio.wav": "90dae1508045863fc37c61fd2eddffb6139975eaa8ce7d1ccc5eaff242eaf224",
+    "paragraphs/C01P01/alignment.json": "ba450f03f1a50b7022562aba691f96ff1a6d709e764f5fe79bfa918934b44b48",
+    "paragraphs/C01P01/normalized_alignment.json": "ba450f03f1a50b7022562aba691f96ff1a6d709e764f5fe79bfa918934b44b48"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 18761,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-27T15:47:56.659Z"
+}

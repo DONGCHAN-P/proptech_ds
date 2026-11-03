@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C05P05",
+  "scene_id": "C05",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:06:22.150Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "ad00f459a9e81e1d1c44a5f454e7351cbe69044cbcc0b9e494a7a3cb2cdfb620",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "보증금에 묶인 돈의 기회비용은 처음 투자계좌가 작아지는 데 이미 반영돼 있습니다. 이번 모형은 그 작은 계좌에서 실제로 쌓이는 투자수익을 계산합니다. 집에 들어간 자기자금도 같은 방식으로 처리합니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 111,
+  "characters": 111,
+  "actual_credits": 44,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:06:04.412Z",
+  "local_shadow_remaining_before": 21288,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "D94LBs2jaixtNaKsog6I",
+    "x-request-id": null,
+    "character-cost": "44",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:06:21 GMT"
+  },
+  "pcm_samples": 589176,
+  "pcm_duration_s": 13.36,
+  "provider_last_spoken_end_s": 13.44,
+  "artifact_sha256": {
+    "paragraphs/C05P05/audio.mp3": "0c1cf46ac0fdbb771849de4f25699bcd984d60480fbca5be08d384913862b6f2",
+    "paragraphs/C05P05/audio.wav": "41356fa3e72f443cc6883031a37409703912e07ba400be052c281c485f2ae257",
+    "paragraphs/C05P05/alignment.json": "94e7d5327e639fa4ca11997fa6c1f92e10221caace433da93d809796822db6ab",
+    "paragraphs/C05P05/normalized_alignment.json": "94e7d5327e639fa4ca11997fa6c1f92e10221caace433da93d809796822db6ab"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21244,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:06:25.391Z"
+}

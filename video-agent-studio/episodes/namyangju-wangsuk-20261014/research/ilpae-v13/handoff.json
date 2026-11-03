@@ -1,0 +1,22 @@
+{
+  "status": "ready_for_editor_qa",
+  "outputs": [
+    "joint_geometry.json",
+    "facts.json",
+    "actual_v12_205s.png",
+    "source_w2_same_board_crop.png",
+    "source_station_joint_geometry.png",
+    "joint_preview.png",
+    "source_joint_comparison.png"
+  ],
+  "verified": "actual205sec extracted/viewed; officialPDFp5rendered samecrop/viewed; source rotation/crop/scale readback",
+  "unresolved": [
+    "Original label occludes part of corridor; no invented full alignment",
+    "Published symbol is not surveyed exact station center"
+  ],
+  "next_assignees": [
+    "/root/rail_route_editor",
+    "/root/fact_review",
+    "/root"
+  ]
+}

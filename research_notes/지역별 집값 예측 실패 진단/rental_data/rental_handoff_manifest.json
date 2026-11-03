@@ -1,0 +1,78 @@
+﻿{
+    "as_of_date":  "2026-10-27",
+    "created_at_utc":  "2026-10-27T04:06:11.6379879Z",
+    "schema":  "region_code,month,variable,value,available_date,availability_basis",
+    "region_codes":  [
+                         "11",
+                         "26",
+                         "27",
+                         "28",
+                         "29",
+                         "30",
+                         "31",
+                         "36",
+                         "41",
+                         "43",
+                         "44"
+                     ],
+    "normalized_rows":  4533,
+    "price_rows":  2657,
+    "supply_demand_rows":  1876,
+    "canonical_release_dates":  "blank; historical initial publication dates unverified",
+    "assumed_rule":  "EOMONTH(reference month,3); NOT official publication dates",
+    "vintage":  "latest revised 2026-10-27 snapshot; not initial release",
+    "price_base":  "2026-06=100",
+    "features_parent_selected":  [
+                                     "price LOGDIFF3/12",
+                                     "survey level and 3-month difference"
+                                 ],
+    "district_broadcast":  "province values broadcast to district only by explicit parent modeling assumption",
+    "experiment_scope":  "conditional on latest revised vintage; ablation only; no automatic promotion",
+    "files":  [
+                  {
+                      "path":  "C:\\projects\\realestate_reco\\research_notes\\지역별 집값 예측 실패 진단\\rental_data\\rental_normalized.csv",
+                      "bytes":  711501,
+                      "sha256":  "67eb10bd0cd6f8d0e04dc150c8af5b81035425c49a1147347fea935933d18a3c"
+                  },
+                  {
+                      "path":  "C:\\projects\\realestate_reco\\research_notes\\지역별 집값 예측 실패 진단\\rental_data\\rental_normalized_assumed_3m.csv",
+                      "bytes":  942684,
+                      "sha256":  "c165cd37af9ecad8f8c9d7b7c1689eea14a534972e3b36e90128dfc27ab2eaec"
+                  },
+                  {
+                      "path":  "C:\\projects\\realestate_reco\\research_notes\\지역별 집값 예측 실패 진단\\rental_data\\rental_revision_flags.csv",
+                      "bytes":  1160634,
+                      "sha256":  "00845a29e3cf13f8d75053ccbd67ad0d17616fd6f461ab80a3d6aeb971c03364"
+                  },
+                  {
+                      "path":  "C:\\projects\\realestate_reco\\research_notes\\지역별 집값 예측 실패 진단\\rental_data\\rental_coverage.csv",
+                      "bytes":  4171,
+                      "sha256":  "51c6837bed4db242619b9236cbf36c758168eb27231443cb1005095f2967b503"
+                  },
+                  {
+                      "path":  "C:\\projects\\realestate_reco\\research_notes\\지역별 집값 예측 실패 진단\\rental_data\\rental_quality_checks.json",
+                      "bytes":  1713,
+                      "sha256":  "c81ba03ff565c9e8c9e66ddff192a5b86df260d4ecd55c3a4c4e4c6e3e11b28b"
+                  },
+                  {
+                      "path":  "C:\\projects\\realestate_reco\\research_notes\\지역별 집값 예측 실패 진단\\rental_data\\rental_reb_monthly_2609.zip",
+                      "bytes":  18917079,
+                      "sha256":  "fc8d9e959e2523f79254201827cff3f878907a8c677984c058469e36176cf2da"
+                  },
+                  {
+                      "path":  "C:\\projects\\realestate_reco\\research_notes\\지역별 집값 예측 실패 진단\\rental_data\\rental_extracted_manifest.json",
+                      "bytes":  861,
+                      "sha256":  "597e92221af8483d71a3849336f5ed0f4060c5be7c4209845c5d399e7b02e0a4"
+                  },
+                  {
+                      "path":  "C:\\projects\\realestate_reco\\research_notes\\지역별 집값 예측 실패 진단\\rental_data\\rental_download_log.jsonl",
+                      "bytes":  8651,
+                      "sha256":  "63bf013324e446d4a26a64675e464cbc2b9af416532a7a16e139efdb3cefeda4"
+                  },
+                  {
+                      "path":  "C:\\projects\\realestate_reco\\research_notes\\지역별 집값 예측 실패 진단\\rental_data\\rental_verification.json",
+                      "bytes":  813,
+                      "sha256":  "ae05adef38b139e0514190f73ec69909dc61362807f380a72569c48d0e756daa"
+                  }
+              ]
+}

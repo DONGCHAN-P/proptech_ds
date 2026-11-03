@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C10P04",
+  "scene_id": "C10",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:08:35.894Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "31e1908d0354d667acc5ade14d1838cd5281d435c1fab03609492eae751a01cf",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "제 관점에서는 어느 정도 종자돈이 모였고, 대출을 갚으면서 생활비와 비상자금을 유지할 수 있다면 실거주 매매는 자산 격차를 만들 수 있는 중요한 선택이라고 생각합니다. 특히 한 지역에서 오래 살 계획이고 가족의 생활 터전을 안정시키는 일이 중요하다면, 전월세보다 매매에 더 큰 가치를 둘 수 있습니다. 그 가치는 가격 상승으로 남는 돈과 함께, 같은 집에서 생활 계획을 이어갈 수 있다는 데에도 있습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 226,
+  "characters": 226,
+  "actual_credits": 90,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19983,
+    "character_limit": 40000,
+    "included_remaining": 20017,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:08:20.529Z",
+  "local_shadow_remaining_before": 19810,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "Sys2F92qQTatZR1OjHko",
+    "x-request-id": null,
+    "character-cost": "90",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:08:35 GMT"
+  },
+  "pcm_samples": 1181880,
+  "pcm_duration_s": 26.8,
+  "provider_last_spoken_end_s": 26.88,
+  "artifact_sha256": {
+    "paragraphs/C10P04/audio.mp3": "5820d20f8c4848c8046cd7319b3177768da80b9696ef69656188189537e202c3",
+    "paragraphs/C10P04/audio.wav": "0e13cddff3aafed32a0fb2e3d37bf2b0e74da66a51311f99517a894f1bcbb16f",
+    "paragraphs/C10P04/alignment.json": "aa6509dc6dfc24201abd7f024c78f77a9eafdd945861a60583d6c351a86b64b6",
+    "paragraphs/C10P04/normalized_alignment.json": "aa6509dc6dfc24201abd7f024c78f77a9eafdd945861a60583d6c351a86b64b6"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 19720,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:08:42.166Z"
+}

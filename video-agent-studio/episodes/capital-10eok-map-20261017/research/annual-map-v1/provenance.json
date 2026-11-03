@@ -1,0 +1,50 @@
+{
+  "checked_on": "2026-10-17",
+  "source": "master/trade_events.parquet",
+  "source_sha256": "93f305afc915e0562c2d2223dd9d20aa204629223ae7e39944db693511919502",
+  "coordinate_source_sha256": "ee8ea2bf3a8105e15ffcc28b9bc62c13c681c5775dd12999f147212225528909",
+  "eligible_transactions": 1568065,
+  "legacy_apt_ids": 9653,
+  "canonical_complexes": 9114,
+  "quality_counts": {
+    "address_geocode_candidate_unverified": 8369,
+    "excluded_shared_coordinate": 639,
+    "excluded_missing_coordinate": 50,
+    "excluded_ambiguous_identity": 43,
+    "excluded_coordinate_disagreement": 10,
+    "excluded_ambiguous_address": 3
+  },
+  "identity_counts": {
+    "official_sequence": 9610,
+    "ambiguous": 43
+  },
+  "period": [
+    "2006-01-01",
+    "2026-10-10"
+  ],
+  "all_prices_manwon": true,
+  "threshold_manwon": 100000,
+  "strict_over": true,
+  "area_gte": 83,
+  "area_lt": 85,
+  "canceled_excluded": true,
+  "floor_filter": null,
+  "no_trade_carry_forward": false,
+  "reappearance": true,
+  "coordinates_verified": false,
+  "external_calls": 0,
+  "paid_calls": 0,
+  "collection_completeness_verified": false,
+  "raw_page_shortage": {
+    "files": 266,
+    "reported_rows_not_in_cached_xml": 80619,
+    "minimum_extra_pages_numOfRows1000": 277,
+    "affected_regions": 37,
+    "master_reconciliation_pending": true
+  },
+  "latest_contract_date": "2026-10-10",
+  "collection_asof_date": null,
+  "prototype_only": true,
+  "superseded_by": "research/source-completion-v1/analysis_artifact_manifest.json",
+  "historical_prototype_not_current_final_data": true
+}

@@ -1,0 +1,41 @@
+{
+  "task": "existing_data_audit_and_prototype_annual_packet",
+  "status": "historical_prototype_superseded_by_source_complete_prices",
+  "outputs": [
+    "data_audit.md",
+    "map_packet_v1.json",
+    "complex_catalog.parquet",
+    "canonical_map.parquet",
+    "annual_status.json",
+    "annual_summary.json",
+    "excluded_complexes.csv",
+    "provenance.json",
+    "validation.json"
+  ],
+  "input_master_sha256": "93f305afc915e0562c2d2223dd9d20aa204629223ae7e39944db693511919502",
+  "verified": [
+    "actual 2006~2026 data present in all three regions",
+    "83<=area<85, canceled excluded, threshold strict-over, sample counts preserved",
+    "1568065 eligible trades equal annual n sum",
+    "reappearance statuses computed",
+    "raw 21259 XML page-count audited"
+  ],
+  "not_verified": [
+    "coordinate precision and reuse terms",
+    "full market coverage",
+    "API fresh pagination pilot (HTTP403 first call stop)"
+  ],
+  "blocked_final_reasons": [
+    "266 cached region-month XML truncated; 80619 reported missing row positions",
+    "legacy master drops same date/floor/area multiple prices",
+    "official sequence ambiguous legacy43",
+    "745 canonical locations excluded plus all remaining coords unverified"
+  ],
+  "next_owner": "root/director plus source completion researcher",
+  "external_paid_calls": 0,
+  "public_api_attempts": 1,
+  "public_api_attempt_result": "HTTP403; percent-encoded key in config may be double-encoded by params; stopped",
+  "superseded_by": "research/source-completion-v1/handoff.json",
+  "do_not_use_for_final_price_counts": true,
+  "resolution": "266 fresh snapshots completed and episode-only source multiplicity reaggregation finished; coordinate licensing/precision remains pending"
+}

@@ -1,0 +1,54 @@
+{
+  "scene_id": "S14",
+  "chapter": 4,
+  "message": "대출과 월 부담",
+  "narration_text": "내 돈 8천만 원에 대출 1억 8천6백만 원을 더하면 집값이 맞습니다. 이 대출의 월 원리금은 약 94만 원입니다. 물론 이 돈 말고 관리비, 보유세, 생활비도 따로 나가겠죠.\n\n여기서 내가 원하는 지역에 이 가격대의 아파트가 없다면, 그건 계산이 틀렸다는 뜻이 아닙니다. 찾아보는 지역의 범위를 넓히거나 면적을 줄여볼지, 자금을 더 모을지, 다른 주거 선택을 할지 판단할 기준이 생긴 거예요.",
+  "paragraph_ids": [
+    "P034",
+    "P035"
+  ],
+  "claim_ids": [
+    "DOC",
+    "CALC"
+  ],
+  "material_type": "구입자금·월 청구서",
+  "asset_ids": [
+    "M14"
+  ],
+  "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "audio_revision": null,
+  "start": null,
+  "end": null,
+  "timing_basis": "UNLOCKED: awaiting actual Jun alignment",
+  "beats": [
+    {
+      "anchor": "대출 1억 8천6백만 원",
+      "action": "8000만+1억8600만=2억6600만",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "월 원리금은 약 94만 원",
+      "action": "월 청구서 94만원",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "지역의 범위를 넓히거나 면적을 줄여볼지",
+      "action": "탐색 범위·면적·추가저축 선택 분기",
+      "start": null,
+      "end": null
+    }
+  ],
+  "status": "designed_not_rendered",
+  "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+  "fallback": "실제 단지·평면을 특정하지 않는 검색 범위 모형",
+  "template_status": "contract_only_not_authored",
+  "template": "S14",
+  "beat_ids": [
+    "S14.b01",
+    "S14.b02",
+    "S14.b03"
+  ],
+  "preview_seconds": null
+}

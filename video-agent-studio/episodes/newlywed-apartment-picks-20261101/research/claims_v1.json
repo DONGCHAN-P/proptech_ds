@@ -1,0 +1,275 @@
+{
+  "revision": "planning-v1",
+  "claims": [
+    {
+      "claim_id": "NW-RANK",
+      "status": "independent_source_review_passed",
+      "description": "2024 수도권53개구 신혼부부 전체 수 순위",
+      "top5": [
+        {
+          "rank": 1,
+          "province": "인천",
+          "region": "서구",
+          "newlywed_couples": 15737,
+          "first_marriage_couples": 12740,
+          "remarried_couples": 2798,
+          "pdf_page": 32,
+          "reference_date": "2024-11-01",
+          "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32"
+        },
+        {
+          "rank": 2,
+          "province": "서울",
+          "region": "송파구",
+          "newlywed_couples": 11752,
+          "first_marriage_couples": 10382,
+          "remarried_couples": 1331,
+          "pdf_page": 32,
+          "reference_date": "2024-11-01",
+          "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32"
+        },
+        {
+          "rank": 3,
+          "province": "경기",
+          "region": "고양시 덕양구",
+          "newlywed_couples": 11452,
+          "first_marriage_couples": 9715,
+          "remarried_couples": 1665,
+          "pdf_page": 33,
+          "reference_date": "2024-11-01",
+          "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=33"
+        },
+        {
+          "rank": 4,
+          "province": "서울",
+          "region": "강서구",
+          "newlywed_couples": 10724,
+          "first_marriage_couples": 9284,
+          "remarried_couples": 1307,
+          "pdf_page": 32,
+          "reference_date": "2024-11-01",
+          "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32"
+        },
+        {
+          "rank": 5,
+          "province": "인천",
+          "region": "부평구",
+          "newlywed_couples": 10204,
+          "first_marriage_couples": 8134,
+          "remarried_couples": 2032,
+          "pdf_page": 32,
+          "reference_date": "2024-11-01",
+          "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3#page=32"
+        }
+      ],
+      "evidence_path": "analysis\\newlywed_region_2024\\rankings.json",
+      "source_url": "https://mods.go.kr/boardDownload.es?bid=11815&list_no=442387&seq=3",
+      "qa": "qa/ranking_source_review.json"
+    },
+    {
+      "claim_id": "PX-Q3-SAME59",
+      "status": "local_reproduced_aggregate",
+      "window": [
+        "2026-07-01",
+        "2026-09-30"
+      ],
+      "description": "두59㎡ 후보의3개월 중위값4억9000만원 동일, 준공연도2011/2023",
+      "rows": [
+        {
+          "apt_id": "9a8b510f914bcc5d",
+          "apt_name": "호반베르디움앤영무예다음",
+          "sigungu_code": "28275",
+          "sigungu_name": "서구(인천)",
+          "legal_dong_name": "청라동",
+          "road_address": "청라에메랄드로 00134",
+          "lat": 37.536701506,
+          "lng": 126.65687748,
+          "build_year": 2011,
+          "area_band": "59",
+          "n": 40,
+          "first_contract": "2026-04-04",
+          "last_contract": "2026-09-19",
+          "area_min_m2": 59.738,
+          "area_max_m2": 59.936,
+          "median_manwon": 48850.0,
+          "q3_n": 15,
+          "q3_median_manwon": 49000.0,
+          "min_manwon": 36000,
+          "max_manwon": 53500,
+          "floor_min": 3,
+          "floor_max": 29,
+          "evidence_type": "historical_transaction_aggregate",
+          "listing_verification": "pending"
+        },
+        {
+          "apt_id": "9755291bfda5e7ee",
+          "apt_name": "우미린파크뷰2단지",
+          "sigungu_code": "28290",
+          "sigungu_name": "검단구",
+          "legal_dong_name": "당하동",
+          "road_address": "이음2로 00090",
+          "lat": 37.582856042,
+          "lng": 126.716573948,
+          "build_year": 2023,
+          "area_band": "59",
+          "n": 16,
+          "first_contract": "2026-04-03",
+          "last_contract": "2026-09-27",
+          "area_min_m2": 59.8198,
+          "area_max_m2": 59.938,
+          "median_manwon": 48400.0,
+          "q3_n": 5,
+          "q3_median_manwon": 49000.0,
+          "min_manwon": 46000,
+          "max_manwon": 52000,
+          "floor_min": 6,
+          "floor_max": 25,
+          "evidence_type": "historical_transaction_aggregate",
+          "listing_verification": "pending"
+        }
+      ]
+    },
+    {
+      "claim_id": "PX-HALFYEAR-AREA",
+      "status": "local_reproduced_aggregate",
+      "window": [
+        "2026-04-01",
+        "2026-09-30"
+      ],
+      "description": "청라59와 검단84의6개월 중위값 차150만원",
+      "rows": [
+        {
+          "apt_id": "a0b8a75dc38d3a38",
+          "apt_name": "힐데스하임",
+          "sigungu_code": "28275",
+          "sigungu_name": "서구(인천)",
+          "legal_dong_name": "청라동",
+          "road_address": "청라라임로 00017",
+          "lat": 37.529259531,
+          "lng": 126.65256971,
+          "build_year": 2011,
+          "area_band": "59",
+          "n": 22,
+          "first_contract": "2026-04-09",
+          "last_contract": "2026-09-15",
+          "area_min_m2": 59.8871,
+          "area_max_m2": 59.9435,
+          "median_manwon": 54800.0,
+          "q3_n": 11,
+          "q3_median_manwon": 54800.0,
+          "min_manwon": 53000,
+          "max_manwon": 57500,
+          "floor_min": 5,
+          "floor_max": 19,
+          "evidence_type": "historical_transaction_aggregate",
+          "listing_verification": "pending"
+        },
+        {
+          "apt_id": "33daedb345f6cca1",
+          "apt_name": "검단신도시모아미래도엘리트파크",
+          "sigungu_code": "28290",
+          "sigungu_name": "검단구",
+          "legal_dong_name": "당하동",
+          "road_address": "서로3로 00050",
+          "lat": 37.584059066,
+          "lng": 126.706920968,
+          "build_year": 2022,
+          "area_band": "84",
+          "n": 26,
+          "first_contract": "2026-04-06",
+          "last_contract": "2026-09-29",
+          "area_min_m2": 84.6561,
+          "area_max_m2": 84.9395,
+          "median_manwon": 54950.0,
+          "q3_n": 10,
+          "q3_median_manwon": 54000.0,
+          "min_manwon": 35000,
+          "max_manwon": 58900,
+          "floor_min": 3,
+          "floor_max": 25,
+          "evidence_type": "historical_transaction_aggregate",
+          "listing_verification": "pending"
+        }
+      ]
+    },
+    {
+      "claim_id": "PX-FORENA",
+      "status": "local_reproduced_aggregate",
+      "window": [
+        "2026-04-01",
+        "2026-09-30"
+      ],
+      "description": "포레나루원59/84 중위값 차7900만원",
+      "rows": [
+        {
+          "apt_id": "8c36915adefc2a67",
+          "apt_name": "포레나루원시티",
+          "sigungu_code": "28275",
+          "sigungu_name": "서구(인천)",
+          "legal_dong_name": "가정동",
+          "road_address": "서곶로 00120",
+          "lat": 37.528490366,
+          "lng": 126.676990248,
+          "build_year": 2022,
+          "area_band": "59",
+          "n": 10,
+          "first_contract": "2026-04-04",
+          "last_contract": "2026-09-27",
+          "area_min_m2": 59.8134,
+          "area_max_m2": 59.8134,
+          "median_manwon": 50750.0,
+          "q3_n": 5,
+          "q3_median_manwon": 51000.0,
+          "min_manwon": 46000,
+          "max_manwon": 54000,
+          "floor_min": 4,
+          "floor_max": 16,
+          "evidence_type": "historical_transaction_aggregate",
+          "listing_verification": "pending"
+        },
+        {
+          "apt_id": "8c36915adefc2a67",
+          "apt_name": "포레나루원시티",
+          "sigungu_code": "28275",
+          "sigungu_name": "서구(인천)",
+          "legal_dong_name": "가정동",
+          "road_address": "서곶로 00120",
+          "lat": 37.528490366,
+          "lng": 126.676990248,
+          "build_year": 2022,
+          "area_band": "84",
+          "n": 12,
+          "first_contract": "2026-04-03",
+          "last_contract": "2026-09-23",
+          "area_min_m2": 84.5743,
+          "area_max_m2": 84.7096,
+          "median_manwon": 58650.0,
+          "q3_n": 5,
+          "q3_median_manwon": 59000.0,
+          "min_manwon": 56000,
+          "max_manwon": 61000,
+          "floor_min": 3,
+          "floor_max": 26,
+          "evidence_type": "historical_transaction_aggregate",
+          "listing_verification": "pending"
+        }
+      ]
+    },
+    {
+      "claim_id": "AD-CH59",
+      "status": "public_ad_fields_observed",
+      "source": "research/public_page_checks/observation.json",
+      "price_gap_from_q3_median_manwon": 2000
+    }
+  ],
+  "source_snapshots": [
+    {
+      "path": "web\\cache\\apt_index.parquet",
+      "sha256": "4d1600f3def279f549147fbe08c69d6990e9bd7e998c86dbeb74607c299d15ab"
+    },
+    {
+      "path": "web\\cache\\trades.parquet",
+      "sha256": "0a1788ddcd1ad70179ade38650de8c77dd43b7876ac4edad296c6abc10cfb1b0"
+    }
+  ]
+}

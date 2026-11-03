@@ -1,0 +1,65 @@
+{
+  "task_id": "narration-v3-pronunciation-clarity-delta",
+  "status": "PREPARED_WAITING_EXACT_MAIN_PLAN_INSTRUCTION",
+  "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "prepared_sha256": "0c371115cbd7dfe9de40de7e1ef6f03c738bd52e974c217117878a659554ed6a",
+  "generator_sha256": "ada0c8d185fe7c120c71fb8684b7911dc3dad593f9d22adefdb29f31573c11b8",
+  "spoken_diff_sha256": "310807406e42db8bce3683eb70f8101fa864571dc4834251418ac90206300bac",
+  "unchanged41_pins_sha256": "a07e0741f93f6a51ce504a33d00175db985678da3b7b1b8c6542d63939445026",
+  "target_scenes": [
+    "S014",
+    "S019",
+    "S024",
+    "S030"
+  ],
+  "new_network_calls_max": 4,
+  "unchanged_raw_paragraphs": 41,
+  "meaning_cues_frozen": 150,
+  "display_and_financial_values_unchanged": true,
+  "rebuild_chapters": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "identical_audio_chapters_expected": [
+    1,
+    2,
+    3,
+    8,
+    9,
+    10
+  ],
+  "voice_override": {
+    "name": "ko-KR-InJoonNeural",
+    "rate": "-15%",
+    "pitch": "+0Hz",
+    "provider": "edge-tts",
+    "version": "7.3.1"
+  },
+  "preserve_v2_and_root_timing": true,
+  "TTS_calls_performed": 0,
+  "cash_cap_krw": 0,
+  "paid_fallback": false,
+  "source_gate": {
+    "script_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\script-final-v2\\script_v2.md",
+    "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+    "lock_sha256": "b0b1ae715ee013ca40c1c7803c1d7b80aeefc5079498fc85d34178590e0e193d",
+    "receipts": {
+      "codex": {
+        "path": "qa\\content_v2_review.json",
+        "sha256": "fc7597ee56fe39e0ba9384d8b4ec5e1c9ba1f316d976814770967587fc90e961"
+      },
+      "claude": {
+        "path": "director\\production-v1\\claude\\script-v2-round1\\receipt.json",
+        "sha256": "541a7e6c0d2732df8abf57b7eb504c245cea8a911d581462ba45524596e64151"
+      }
+    }
+  },
+  "qa_packet": {
+    "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\qa\\audio-v1\\v3_delta\\target_packet.json",
+    "sha256": "7e6d1d067af7f486f1643fa4b05e17f5963501a8b58baadafe19327e1af3a187",
+    "raw_manifest_sha256": "7b80a96dede740a93aee2648d0bd82993cf68ff7a341f013b51be2e926c4c2d4"
+  },
+  "post_generation_required": "all45 raw/source/native/PCM/clip/30fps/CTA checks plus 41pins/6chapterSHA delta; Kant only4 paragraph ASR; no hearing claim"
+}

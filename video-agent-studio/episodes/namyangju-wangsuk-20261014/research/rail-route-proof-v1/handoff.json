@@ -1,0 +1,38 @@
+{
+  "role": "video_research",
+  "input_revision": "video-v3 / script-v2 / audio-v1",
+  "outputs": [
+    "data.json",
+    "facts.json",
+    "raw_osm.json",
+    "raw_local_osm.json",
+    "searchMapLineJson.json",
+    "searchRouteJson.json"
+  ],
+  "affected_scenes": [
+    "RAIL-PROOF-01",
+    "기존94~174초"
+  ],
+  "verified": [
+    "공식운영역·노선",
+    "GBIS48현재노선·정류장방향·실제선형",
+    "OSM 실제도로연결과금지태그검사"
+  ],
+  "unresolved": [
+    "현장단지정문 미확인",
+    "도보보도·횡단보도현장통행가능성미확인",
+    "4번출구까지41m보도접속미확인",
+    "실제분·버스대기/신호 미검증"
+  ],
+  "next_roles": [
+    "video_editor",
+    "video_qa"
+  ],
+  "instructions": [
+    "본편통합금지:사용자조각시안검토후결정",
+    "운영8호선별내역북쪽회차선표시제외",
+    "4호선진접선동색연장으로표시",
+    "출구끝점임의직선연결금지"
+  ],
+  "data_sha256": "14140378fa69f3b7fd036b0fccba97b97f953c10bc41b166e231a74809a116fe"
+}

@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C07P01",
+  "scene_id": "C07",
+  "status": "complete",
+  "started_at_utc": "2026-10-27T15:51:03.783Z",
+  "authorization_sha256": "ff4a4b0a3b4551435ce1f525f96d01c98c3d01080dec54ec3b96c869a82a0c8e",
+  "text_sha256": "1c32d48a2e6687ca52e198a3a42591981076806e49ac9226d2b4f68dc57a9e3b",
+  "phonetic_manifest_sha256": "5290eff5c5724c807bc4062feab7be5889b8decea1316984e48f25b1fe32b9f5",
+  "request": {
+    "text": "정리해보겠습니다. 오늘 정한 조건에서는 현금 일억 원이면 약 이억 육천육백만 원, 이억 원이면 약 오억 육천육백만 원, 삼억 원이면 육억 육천만 원, 사억 원이면 칠억 오천만 원, 오억 원이면 팔억 사천만 원짜리 집이 계산 예시로 나왔습니다.\n\n이 숫자 자체보다 중요한 건 계산 순서입니다. 현금에서 준비금을 빼고, 내게 실제로 가능한 대출을 확인하고, 그 대출을 매달 갚을 수 있는지 보는 겁니다. 그래야 부동산 앱에 있는 가격들이 내 상황하고 연결됩니다.\n\n정책 방향에 대해서는 제 생각을 덧붙여보겠습니다. 최근 정책을 보면 빚을 많이 끼고 투자하는 수요는 억제하고, 청년이나 실수요자 지원은 구분해서 가져가려는 흐름으로 저는 읽고 있습니다. 여러 채를 사거나 전세를 끼고 투자하는 방식이 예전처럼 쉽게 통할 거라고 전제하지 않는 게 좋겠다는 뜻입니다.\n\n그렇다고 실거주로 사기만 하면 정부가 집값을 지켜준다거나, 손해 볼 일이 없다는 이야기는 아닙니다. 실거주자도 대출 규제를 받고, 집값이 내려갈 수 있고, 세금과 유지비를 부담합니다.\n\n제 생각에는 정책이 곧 바뀔 거라는 기대만으로 무리하게 맞서기보다, 지금 가능한 조건에서 내 생활에 맞는 집을 찾는 편이 현실적입니다. 출퇴근, 가족 계획, 필요한 면적, 그리고 감당할 수 있는 월 상환액까지 같이 보자는 거죠. 조건이 안 맞으면 더 준비하거나 임차로 지내는 선택도 충분히 가능합니다.\n\n다음 영상에서는 이렇게 정한 가격대 안에서 실제로 어떤 아파트를 골라야 하는지 이야기해보겠습니다. 같은 오억대, 같은 칠억대라도 입지와 단지에 따라 선택이 달라지잖아요. 오늘은 먼저 내 예산부터 한번 적어보시면 좋겠습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 823,
+  "characters": 823,
+  "actual_credits": 329,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 23007,
+    "character_limit": 40000,
+    "included_remaining": 16993,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-27T15:51:03.781Z",
+  "local_shadow_remaining_before": 16993,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "Ap19OcAXv83j0eEQWOWR",
+    "x-request-id": null,
+    "character-cost": "329",
+    "content-type": "application/json",
+    "date": "Tue, 27 Oct 2026 15:51:04 GMT"
+  },
+  "pcm_samples": 4244184,
+  "pcm_duration_s": 96.24,
+  "provider_last_spoken_end_s": 96.32,
+  "artifact_sha256": {
+    "paragraphs/C07P01/audio.mp3": "d726ad598079e5fbadbed8cf34d78d23d95049a21d726dc5624b77e81231940b",
+    "paragraphs/C07P01/audio.wav": "b38c2b047e0b8815f86a9e4213d783264d79554d5833e671f407302bcaf1811e",
+    "paragraphs/C07P01/alignment.json": "27427f061b1ba6a341894ceacda1fa708d9dfedac7f29f0175b2f542c1f8e960",
+    "paragraphs/C07P01/normalized_alignment.json": "27427f061b1ba6a341894ceacda1fa708d9dfedac7f29f0175b2f542c1f8e960"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 16664,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-27T15:51:30.580Z"
+}

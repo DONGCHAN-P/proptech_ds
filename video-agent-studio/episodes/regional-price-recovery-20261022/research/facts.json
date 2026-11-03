@@ -1,0 +1,51 @@
+{
+  "claims": [
+    {
+      "claim_id": "C01",
+      "statement": "Same-complex-area quarterly index is sensitive to transaction thresholds; Seoul min 13 complexes for threshold3",
+      "source": "analysis/housing_growth_2006/exploration/quarterly_matched_index.csv",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C02",
+      "statement": "Seoul recovery vs Incheon non-recovery robust across shown thresholds, dates differ",
+      "source": "analysis/housing_growth_2006/exploration/sensitivity.csv",
+      "status": "qualified"
+    },
+    {
+      "claim_id": "C03",
+      "statement": "Daegu completions 2021 16477, 2023 31630, 2024 29441; Seoul 2021 68367, 2024 39119; Incheon 2022 42836, 2023 43277",
+      "source": "analysis/housing_growth_2006/research/extracted/supply_monthly_six_regions.csv",
+      "status": "verified_descriptive_all_housing"
+    },
+    {
+      "claim_id": "C04",
+      "statement": "2025 net migration Seoul -26769 Incheon 32264 Busan -12181 Daegu -4272 Daejeon 2824",
+      "source": "analysis/housing_growth_2006/research/extracted/migration_annual_six_regions.csv",
+      "status": "verified_descriptive"
+    },
+    {
+      "claim_id": "C05",
+      "statement": "Base-rate hiking began 2021-08; 2023-01 rate 3.5",
+      "source": "analysis/housing_growth_2006/research/extracted/bok_base_rate_changes.csv",
+      "status": "verified"
+    },
+    {
+      "claim_id": "H01",
+      "statement": "Post-peak supply burden delays recovery",
+      "status": "unverified_hypothesis"
+    },
+    {
+      "claim_id": "H02",
+      "statement": "Households/youth migration/employment explain prices better than population",
+      "status": "unverified_hypothesis"
+    },
+    {
+      "claim_id": "H03",
+      "statement": "Demand/supply explain heterogeneous monetary responses",
+      "status": "unverified_hypothesis"
+    }
+  ],
+  "source_manifest": "analysis/housing_growth_2006/research/collection_manifest.json",
+  "research_sources": "analysis/housing_growth_2006/research/external_factors_sources.json"
+}

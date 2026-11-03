@@ -1,0 +1,49 @@
+{
+  "assets": [
+    {
+      "asset_id": "ANALYSIS_STOCK_AND_CHANGE",
+      "actual_file": "visual\\top20-8min-v2\\data_cards\\분석_거주규모와_전년변화.png",
+      "regions": [
+        "R01",
+        "R06",
+        "R04"
+      ],
+      "type": "data_chart",
+      "source": "research/top20-8min-v2/combined_facts.json",
+      "scale_max": 16500
+    },
+    {
+      "asset_id": "ANALYSIS_NEAR_EQUAL_RANKS",
+      "actual_file": "visual\\top20-8min-v2\\data_cards\\분석_10위와11위_10쌍차이.png",
+      "regions": [
+        "R10",
+        "R11"
+      ],
+      "type": "data_chart",
+      "difference_couples": 10,
+      "scale_max": 10000
+    },
+    {
+      "asset_id": "ANALYSIS_AREA_MATCHED_PRICE_SPREAD",
+      "actual_file": "visual\\top20-8min-v2\\data_cards\\분석_동일면적_지역별가격분포.png",
+      "regions": [
+        "R01",
+        "R03",
+        "R02"
+      ],
+      "type": "data_chart",
+      "source": "research/top20-8min-v2/price_context.json",
+      "scale_max_manwon": 300000,
+      "period": [
+        "2026-04-01",
+        "2026-09-30"
+      ]
+    }
+  ],
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "ai_generated": false,
+  "qa": "director_visual_check_pending"
+}

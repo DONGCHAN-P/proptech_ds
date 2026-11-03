@@ -1,0 +1,19 @@
+{
+  "task_id": "top20-enhance-research-v2",
+  "role": "research",
+  "status": "completed_self_validated_independent_qa_pending",
+  "input_revisions": {"manifest": "source_manifest.json", "original_table": "2024 표6·해시 일치 독립 QA 통과 원표", "adopted_script": "director/top20-enhance-v2/added_scenes.json / added-analysis-v1"},
+  "outputs": ["verified_facts.json", "chart_data.json", "ranking_53_gu.csv", "top20_yoy.csv", "source_manifest.json", "analyze_and_validate.py", "validation_receipt.json", "added_scenes_claim_review.json", "narrative_candidates.json"],
+  "affected_scene_ids": ["N001", "N002"],
+  "checks": [
+    {"check": "53개구 재정렬·정확한5행·TOP20교체2곳·1~4위동일", "result": "passed", "evidence": "validation_receipt.json"},
+    {"check": "전년 비교19개구 산술·원미구 null·입력12개 SHA256", "result": "passed", "evidence": "validation_receipt.json"},
+    {"check": "채택10문장 표시문·읽기문 사실검토", "result": "passed", "evidence": "added_scenes_claim_review.json"}
+  ],
+  "open_issue_ids": ["ENHANCE-RESEARCH-01"],
+  "unresolved": ["새 산술·채택문 독립 QA는 총괄 배정 필요. 기존2024 출처 검수만 재사용.", "실제 음성 길이·청취 미실시."],
+  "next_role": ["director", "visual", "qa"],
+  "chart_key": "chart_data.json / total_vs_first_marriage_53_gu 및 quoted_five_rows",
+  "replay": "tools/python311/python.exe -X utf8 video-agent-studio/episodes/newlywed-apartment-picks-20261101/research/top20-enhance-v2/analyze_and_validate.py",
+  "ownership": "research/top20-enhance-v2/에만 작성. 렌더·TTS·인터넷·공통파일 수정 없음."
+}

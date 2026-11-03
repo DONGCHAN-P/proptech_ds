@@ -1,0 +1,62 @@
+{
+  "paragraph_id": "C03P01",
+  "scene_id": "C03",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:02:31.751Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "ff090959a0cab36c32ca0b2c66c59b4d62ffc3ddbf3001302d928ba700f90519",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "집을 사는 가구부터 보겠습니다. 육억 원 가운데 자기자금 이억사천만 원을 넣고 삼억육천만 원을 빌립니다. 집을 살 때는 집값 외에 취득세와 부동산 중개보수, 등기 관련 비용도 듭니다. 이번 비교의 약 육백만 원은 이런 항목을 묶은 설명용 가정 금액입니다. 실제 거래의 항목별 비용은 거래 조건에 따라 따로 산정합니다. 초기 순자산 이억 오천만 원 중 집에 들어간 돈과 비용을 빼면 투자계좌에 남는 돈은 사백만 원입니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 234,
+  "characters": 234,
+  "actual_credits": 94,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17702,
+    "character_limit": 40000,
+    "included_remaining": 22298,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "FDc77rg38YzlvTMugdxy",
+    "x-request-id": null,
+    "character-cost": "94",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:02:31 GMT"
+  },
+  "pcm_samples": 1273608,
+  "pcm_duration_s": 28.88,
+  "provider_last_spoken_end_s": 28.96,
+  "artifact_sha256": {
+    "paragraphs/C03P01/audio.mp3": "45d771a800546295e55ba9a76aeafb0aad856b5be2f35b8606d68a331eeff03f",
+    "paragraphs/C03P01/audio.wav": "9feb5dbc68fadb3e912cd7283e20d17e14217ca939dc5366e6d247e9b8fe7d96",
+    "paragraphs/C03P01/alignment.json": "fbac1e0d74aaf5ae856c4d4eedddf1e71de072a24776ed718bbb32e47d9c9c34",
+    "paragraphs/C03P01/normalized_alignment.json": "fbac1e0d74aaf5ae856c4d4eedddf1e71de072a24776ed718bbb32e47d9c9c34"
+  },
+  "account_after": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17702,
+    "character_limit": 40000,
+    "included_remaining": 22298,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_observed_delta": 0,
+  "completed_at_utc": "2026-10-26T06:02:39.649Z"
+}

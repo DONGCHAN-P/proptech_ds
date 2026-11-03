@@ -1,0 +1,81 @@
+{
+  "task_id": "narration-production-generator-v1",
+  "status": "prepared_gate_pending",
+  "script_path": "writer\\private-production-v1\\script_v4_candidate.md",
+  "script_sha256": "62cf5fcf06a35f3c9984de405717718fb2694ace7e1addf839b0f047055ec48d",
+  "prepared": "production-prepared-v3/prepared.json",
+  "pronunciation_dictionary": "production-prepared-v3/pronunciation_dictionary.json",
+  "dictionary_entries": 90,
+  "chapters": 10,
+  "paragraphs": 54,
+  "chapter_paragraph_counts": [
+    4,
+    6,
+    5,
+    5,
+    5,
+    5,
+    5,
+    9,
+    4,
+    6
+  ],
+  "voice": {
+    "name": "ko-KR-InJoonNeural",
+    "rate": "-5%",
+    "pitch": "+0Hz",
+    "provider": "edge-tts",
+    "version": "7.3.1"
+  },
+  "gate_check": {
+    "status": "blocked_no_body_synthesis",
+    "reason": "잠금/준비본/실제 대본 SHA가 일치하지 않습니다."
+  },
+  "gate_evidence": "production-prepared-v3/gate_check.json",
+  "gate_schema_issue": "issue_GATE-SCHEMA-01.json",
+  "additional_probe": {
+    "path": "samples/injoon-wordboundary-20261026-v1/validation.json",
+    "application_synthesis_invocations": 1,
+    "actual_wordboundary_events": 7,
+    "pcm_seconds": 7.896,
+    "last_native_word_end_s": 6.813166,
+    "last_pcm_signal_end_s": 6.81325,
+    "actual_listening": false
+  },
+  "body_synthesis_invocations": 0,
+  "body_audio_generated": false,
+  "final_timing_written": false,
+  "final_timing_plan": "production-prepared-v3/final_timing.plan.json",
+  "planned_body_synthesis_units": 54,
+  "max_paragraph_spoken_bytes": 713,
+  "internal_cue_timing": "actual WordBoundary only; no proportional text timing",
+  "pcm_assembly": {
+    "leading_s": [
+      0.6,
+      3.5
+    ],
+    "paragraph_gap_s": 0.35,
+    "minimum_tail_s": [
+      1.2,
+      3.0
+    ],
+    "final_hold_basis": "max(native final word end, PCM signal end threshold); separate raw values retained",
+    "ceil_to_fps": 30,
+    "rate_hz": 24000,
+    "verified_with_generated_test_PCM": true,
+    "body_runtime_not_run": true
+  },
+  "tests": {
+    "count": 12,
+    "exit_code": 0,
+    "log": "tests.production-v1.log"
+  },
+  "paid_api_calls": 0,
+  "global_installs": 0,
+  "common_state_qa_modified": false,
+  "open_issues": [
+    "GATE-SCHEMA-01",
+    "body_listening_and_caption_QA_pending"
+  ],
+  "next_owner": "video_director"
+}

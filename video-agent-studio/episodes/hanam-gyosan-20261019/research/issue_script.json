@@ -1,0 +1,13 @@
+{
+  "issue_id": "GY-SCRIPT-REF-01",
+  "severity": "required_record_only",
+  "affected_scene_ids": ["M007", "M008"],
+  "problem": "낭독문 사실오류 없음. scenes_v1.json의 묶음 claim_id 두 개가 facts.json에 존재하지 않아 근거참조만 수정 필요.",
+  "evidence": "GY-EXISTING-PRICES 및 GY-CANDIDATE-BLOCKS는 미등록 ID. script_v1_fact_pass_receipt.json에 unit_index별 목록.",
+  "proposal": {
+    "M007": "개별 가격문에는 하남자이 GY-EXISTING-2, 꿈동산신안 GY-EXISTING-3, 대명강변타운 GY-EXISTING-4, 미사레스티아 GY-EXISTING-5, 감일한라비발디 GY-EXISTING-6를 연결. 집계조건 일반문에는 이 5개를 연결 가능.",
+    "M008": "C2문 GY-CANDIDATE-C2, B2문 GY-CANDIDATE-B2; 둘의 조건부 평가문에는 두 ID 연결."
+  },
+  "impact": "대본 낭독문 수정·TTS 재생성 불필요. 장면표 근거 ID만 총괄 소유 파일에서 수정.",
+  "checked_on": "2026-10-19"
+}

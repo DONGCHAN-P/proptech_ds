@@ -1,0 +1,539 @@
+{
+  "revision": "price-stage-v3",
+  "checked_on": "2026-10-16",
+  "inputs": [
+    "production-v2",
+    "prices-v2",
+    "brief/state"
+  ],
+  "facts": [
+    {
+      "claim_id": "PST3-S1-STAGE",
+      "statement": "S1의 기존 제시 가격은 사전청약 추정가가 아니라 2026-04-30 본청약 입주자모집공고의 특정 타입·층구간 공급가격이다. S1 84A84.99㎡5층이상 기본가7억8,340만원,확장698만원으로합계7억9,038만원이다.",
+      "source_id": "PV2-S10",
+      "source_url": "https://gc.lynn.co.kr/fileview/1664/%EC%9E%85%EC%A3%BC%EC%9E%90%EB%AA%A8%EC%A7%91%EA%B3%B5%EA%B3%A0.pdf",
+      "local_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\production-v2\\raw\\s1_full.pdf",
+      "evidence_location": "p4면적,p6기본가격,p7확장",
+      "published_on": "2026-04-30",
+      "as_of": "2026-04-30",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "use": "대본·비교·지도 근거",
+      "rights": "연구용 원문 보존·사실추출. 상업 영상 원도면/이미지 재사용 허락은 미확인",
+      "price": {
+        "statistic": "특정 타입·층구간 공고기본가격",
+        "scope": "S1 84A",
+        "exclusive_area_sqm": 84.99,
+        "floor": "5층~최상층/5층이상",
+        "amount_krw": 783400000,
+        "balcony_extension_krw": 6980000,
+        "basic_plus_balcony_krw": 790380000,
+        "unit": "원",
+        "period": "2026-04-30",
+        "transaction_type": "일반공공분양 최초공급, 실거래아님",
+        "sample_size": null,
+        "aggregation": "단일타입 층구간 공고금액; 확장포함합계는 두공고항목 단순합",
+        "cancelled_transactions": "해당없음",
+        "excluded": [
+          "유상옵션",
+          "취득세·인지세등"
+        ],
+        "comparison_caution": "분양연도·면적·입주월다름. 기존단지실거래와총자금조건차이표시"
+      },
+      "visual_evidence": "raw/s1_price_p6.png 실제열람",
+      "qualification": "가격표는 production-v2 보존 공식PDF/추출문 재확인. 온라인 HTML 공고·분양일정 재조회. PDF 신규 다운로드는 도구실패로 바이트 동일성 재검증 못함.",
+      "affected_scene_ids": [
+        "M004",
+        "M006",
+        "M007"
+      ]
+    },
+    {
+      "claim_id": "PST3-S1-RESALE",
+      "statement": "S1는 입주자로 선정된 날 2026-06-11부터 전매제한 3년. 단순 3년 경과일은 2029-06-11이며 그 전에 해당 주택 소유권이전등기를 완료하면 그때 제한기간이 지난 것으로 보는 공고 예외가 있다. 이 날짜는 자유매매 보장일이나 예상시세 기준일이 아니다.",
+      "source_url": "https://gc.lynn.co.kr/fileview/1664/%EC%9E%85%EC%A3%BC%EC%9E%90%EB%AA%A8%EC%A7%91%EA%B3%B5%EA%B3%A0.pdf",
+      "source_file": "../production-v2/raw/s1_full.txt",
+      "evidence_location": "텍스트3964~3968행 (p30)",
+      "as_of": "2026-04-30",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "calculation": "공고상 선정일의 3년 후 동일 월일, 법적 기간만료시각 판정 아님",
+      "move_in_expected": "2029-05",
+      "qualification": "개별 등기·예외·법령변경·거주의무 등 매도가능 여부 별도 확인"
+    },
+    {
+      "claim_id": "PST3-S4-STAGE",
+      "statement": "S4의 기존 제시 가격은 사전청약 추정가가 아니라 2026-06-30 본청약 입주자모집공고의 특정 타입·층구간 공급가격이다. S4 정정공고84AH84.90㎡5층~최상층 기본형8억6,719만원, 확장613만9천원으로 합계8억7,332만9천원이다.",
+      "source_id": "PV2-S09",
+      "source_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=67715855",
+      "local_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\production-v2\\raw\\s4_latest.pdf",
+      "evidence_location": "p4면적,p6공급가격,p7발코니",
+      "published_on": "2026-06-30",
+      "as_of": "2026-06-30",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "use": "대본·비교·지도 근거",
+      "rights": "연구용 원문 보존·사실추출. 상업 영상 원도면/이미지 재사용 허락은 미확인",
+      "price": {
+        "statistic": "특정 타입·층구간 공고기본가격",
+        "scope": "S4 84AH",
+        "exclusive_area_sqm": 84.9,
+        "floor": "5층~최상층/5층이상",
+        "amount_krw": 867190000,
+        "balcony_extension_krw": 6139000,
+        "basic_plus_balcony_krw": 873329000,
+        "unit": "원",
+        "period": "2026-06-30",
+        "transaction_type": "일반공공분양 최초공급, 실거래아님",
+        "sample_size": null,
+        "aggregation": "단일타입 층구간 공고금액; 확장포함합계는 두공고항목 단순합",
+        "cancelled_transactions": "해당없음",
+        "excluded": [
+          "유상옵션",
+          "취득세·인지세등"
+        ],
+        "comparison_caution": "분양연도·면적·입주월다름. 기존단지실거래와총자금조건차이표시"
+      },
+      "visual_evidence": "raw/s4_price_p6.png 실제열람",
+      "qualification": "가격표는 production-v2 보존 공식PDF/추출문 재확인. 온라인 HTML 공고·분양일정 재조회. PDF 신규 다운로드는 도구실패로 바이트 동일성 재검증 못함.",
+      "affected_scene_ids": [
+        "M004",
+        "M006",
+        "M007"
+      ]
+    },
+    {
+      "claim_id": "PST3-S4-RESALE",
+      "statement": "S4는 입주자로 선정된 날 2026-08-19부터 전매제한 3년. 단순 3년 경과일은 2029-08-19이며 그 전에 해당 주택 소유권이전등기를 완료하면 그때 제한기간이 지난 것으로 보는 공고 예외가 있다. 이 날짜는 자유매매 보장일이나 예상시세 기준일이 아니다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=67715855",
+      "source_file": "../production-v2/raw/s4_latest.txt",
+      "evidence_location": "텍스트8074~8088행 (전매제한·거주의무 안내)",
+      "as_of": "2026-06-30",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "calculation": "공고상 선정일의 3년 후 동일 월일, 법적 기간만료시각 판정 아님",
+      "move_in_expected": "2030-03",
+      "qualification": "개별 등기·예외·법령변경·거주의무 등 매도가능 여부 별도 확인"
+    },
+    {
+      "claim_id": "PST3-S5-STAGE",
+      "statement": "S5의 기존 제시 가격은 사전청약 추정가가 아니라 2025-01-31 본청약 입주자모집공고의 특정 타입·층구간 공급가격이다. 정정PDF의 S5 84A84.64㎡ 5층~최상층 기본형은7억6,998만원, 발코니확장은661만8천원이다. 합계7억7,659만8천원이며 옵션·세금 별도다.",
+      "source_id": "PV2-S06",
+      "source_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=60606564",
+      "local_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\production-v2\\raw\\s5_corrected.pdf",
+      "evidence_location": "p4면적,p5기본가격,p8발코니",
+      "published_on": "2025-01-31",
+      "as_of": "2025-01-31",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "use": "대본·비교·지도 근거",
+      "rights": "연구용 원문 보존·사실추출. 상업 영상 원도면/이미지 재사용 허락은 미확인",
+      "price": {
+        "statistic": "특정 타입·층구간 공고기본가격",
+        "scope": "S5 84A",
+        "exclusive_area_sqm": 84.64,
+        "floor": "5층~최상층/5층이상",
+        "amount_krw": 769980000,
+        "balcony_extension_krw": 6618000,
+        "basic_plus_balcony_krw": 776598000,
+        "unit": "원",
+        "period": "2025-01-31",
+        "transaction_type": "일반공공분양 최초공급, 실거래아님",
+        "sample_size": null,
+        "aggregation": "단일타입 층구간 공고금액; 확장포함합계는 두공고항목 단순합",
+        "cancelled_transactions": "해당없음",
+        "excluded": [
+          "유상옵션",
+          "취득세·인지세등"
+        ],
+        "comparison_caution": "분양연도·면적·입주월다름. 기존단지실거래와총자금조건차이표시"
+      },
+      "qualification": "가격표는 production-v2 보존 공식PDF/추출문 재확인. 온라인 HTML 공고·분양일정 재조회. PDF 신규 다운로드는 도구실패로 바이트 동일성 재검증 못함.",
+      "affected_scene_ids": [
+        "M004",
+        "M006",
+        "M007"
+      ]
+    },
+    {
+      "claim_id": "PST3-S5-RESALE",
+      "statement": "S5는 입주자로 선정된 날 2025-03-06부터 전매제한 3년. 단순 3년 경과일은 2028-03-06이며 그 전에 해당 주택 소유권이전등기를 완료하면 그때 제한기간이 지난 것으로 보는 공고 예외가 있다. 이 날짜는 자유매매 보장일이나 예상시세 기준일이 아니다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=60606564",
+      "source_file": "../production-v2/raw/s5_corrected.txt",
+      "evidence_location": "텍스트5700~5706행 (p29)",
+      "as_of": "2025-01-31",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "calculation": "공고상 선정일의 3년 후 동일 월일, 법적 기간만료시각 판정 아님",
+      "move_in_expected": "2028-01",
+      "qualification": "개별 등기·예외·법령변경·거주의무 등 매도가능 여부 별도 확인"
+    },
+    {
+      "claim_id": "PST3-S4-RESIDENCE",
+      "statement": "S4는 최초 입주가능일부터 3년 이내에 입주하고 거주의무 개시일부터 3년 계속 거주해야 한다. 전매제한 기산일과 다르며 2030년3월 입주예정만으로 거주의무 종료일을 확정할 수 없다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=67715855",
+      "source_file": "../production-v2/raw/s4_latest.txt",
+      "evidence_location": "8084~8088행, 규제표286~289행",
+      "as_of": "2026-06-30",
+      "checked_on": "2026-10-16",
+      "status": "verified"
+    },
+    {
+      "claim_id": "PST3-S1S5-RESIDENCE-GAP",
+      "statement": "S1/S5 이번 보존 공고 추출문에서 거주의무 조항을 확보하지 못했다. 거주의무 없음이라고 단정하지 않는다.",
+      "source_file": "../production-v2/raw/s1_full.txt; ../production-v2/raw/s5_corrected.txt",
+      "source_url": "https://gc.lynn.co.kr/",
+      "evidence_location": "전문 텍스트 거주의무 키워드 검색 결과 없음; 규제표 전매제한 표기",
+      "as_of": "2026-10-16",
+      "checked_on": "2026-10-16",
+      "status": "unverified"
+    },
+    {
+      "claim_id": "PST3-S4-CONTRACT",
+      "statement": "S4는 본청약 접수·당첨자 발표 단계가 지났으나 공식 사이트 계약체결기간은 2026.11.16~11.19다. 2026.10.16 기준 본청약 계약 완료라고 표현하지 않는다.",
+      "source_url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?aisTpCd=05&ccrCnntSysDsCd=02&panId=0000061144&uppAisTpCd=05",
+      "evidence_location": "온라인 공고 공급일정 당첨자발표2026.08.19/계약체결2026.11.16~19",
+      "as_of": "2026-10-16",
+      "checked_on": "2026-10-16",
+      "status": "verified"
+    },
+    {
+      "claim_id": "PST3-CURRENT-COMPARISON",
+      "statement": "현재 비교가격을 가늠하는 기존 대안단지 전용84급 중위값의 폭은 7.45~11.275억원이다. 이는 서로 다른 단지 중위값의 최소~최대이며 전체 거래 최저~최고, 창릉 미래 예상가격, 안전마진 또는 보장수익이 아니다.",
+      "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+      "source_file": "../prices-v2/facts.json; ../prices-v2/verified_rows.csv",
+      "evidence_location": "6개 단지 facts median_eok",
+      "as_of": "2026Q3 계약/2026-10-16조회",
+      "checked_on": "2026-10-16",
+      "status": "qualified",
+      "price": {
+        "statistic": "단지별 중위값의 최소~최대",
+        "scope": "선정된6개 기존대안단지",
+        "exclusive_area_range_sqm": [
+          83,
+          85
+        ],
+        "upper_bound_exclusive": true,
+        "floor_min": 5,
+        "transaction_period": [
+          "2026-07-01",
+          "2026-09-30"
+        ],
+        "transaction_type": "매매/중개·직거래포함",
+        "sample_sizes": [
+          {
+            "name": "삼송2차아이파크",
+            "n": 11
+          },
+          {
+            "name": "삼송원흥역센트럴푸르지오",
+            "n": 3
+          },
+          {
+            "name": "도래울센트럴더포레",
+            "n": 11
+          },
+          {
+            "name": "창릉호반써밋",
+            "n": 20
+          },
+          {
+            "name": "지축역센트럴푸르지오",
+            "n": 6
+          },
+          {
+            "name": "지축역중흥S-클래스북한산파크뷰",
+            "n": 17
+          }
+        ],
+        "unit": "억원",
+        "aggregation": "기존 prices-v2 단지별 중위값 승계; 해제 제외",
+        "cancelled_transactions": "조회시 해제 확인행 제외; 이후 정정·해제 가능"
+      },
+      "qualification": "준공시기·신축성·역접근·철도실제개통·생활권·시점·총자금조건 차이. 원흥n3 소표본."
+    }
+  ],
+  "current_comparisons": [
+    {
+      "claim_id": "CN-PRICE-6b9e26142b9eb6a3",
+      "apt_id": "6b9e26142b9eb6a3",
+      "name": "삼송2차아이파크",
+      "region": "삼송",
+      "selection_reason": "삼송역 이용권, 출입구·도보경로는 별도 확인",
+      "statistic": "median",
+      "median_manwon": 92000,
+      "median_eok": 9.2,
+      "n": 11,
+      "small_sample_warning": false,
+      "exclusive_area_range_sqm": [
+        83,
+        85
+      ],
+      "upper_bound_exclusive": true,
+      "actual_areas_sqm": [
+        84.739,
+        84.762
+      ],
+      "floor_min": 5,
+      "period_start": "2026-07-01",
+      "period_end": "2026-09-30",
+      "transaction_type": "아파트 매매（중개·직거래 포함; raw_dealing_type 별도 열）",
+      "unit": "만원",
+      "raw_rows_before_cancel_exclusion": 12,
+      "raw_canceled_rows": 1,
+      "raw_valid_rows": 11,
+      "status": "qualified",
+      "as_of": "2026-10-16 조회/2026Q3 계약일",
+      "checked_on": "2026-10-16",
+      "source_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202607.xml; C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202608.xml; C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202609.xml",
+      "evidence_location": "verified_rows.csv apt_id 필터",
+      "not_current_asking_price": true,
+      "statement": "삼송2차아이파크의 수집된 2026Q3 전용83≤㎡<85·5층 이상·해제 제외 매매 중위값은 9.2억원, n=11건이다.",
+      "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+      "baseline_reuse": true,
+      "rechecked_online": false,
+      "qualification": "기존 prices-v2 원자료 집계 승계. 이 작업에서 API 재조회·원거래행 전수재집계는 하지 않음. 신규창릉 미래매매 예상값 아님.",
+      "difference_eok": {
+        "S1": 1.2962,
+        "S4": 0.46671,
+        "S5": 1.43402
+      }
+    },
+    {
+      "claim_id": "CN-PRICE-b0b97f17ddc24cb6",
+      "apt_id": "b0b97f17ddc24cb6",
+      "name": "삼송원흥역센트럴푸르지오",
+      "region": "원흥",
+      "selection_reason": "원흥역 생활권; n<5 참고값",
+      "statistic": "median",
+      "median_manwon": 85000,
+      "median_eok": 8.5,
+      "n": 3,
+      "small_sample_warning": true,
+      "exclusive_area_range_sqm": [
+        83,
+        85
+      ],
+      "upper_bound_exclusive": true,
+      "actual_areas_sqm": [
+        84.0409,
+        84.5619
+      ],
+      "floor_min": 5,
+      "period_start": "2026-07-01",
+      "period_end": "2026-09-30",
+      "transaction_type": "아파트 매매（중개·직거래 포함; raw_dealing_type 별도 열）",
+      "unit": "만원",
+      "raw_rows_before_cancel_exclusion": 3,
+      "raw_canceled_rows": 0,
+      "raw_valid_rows": 3,
+      "status": "qualified",
+      "as_of": "2026-10-16 조회/2026Q3 계약일",
+      "checked_on": "2026-10-16",
+      "source_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202607.xml; C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202608.xml; C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202609.xml",
+      "evidence_location": "verified_rows.csv apt_id 필터",
+      "not_current_asking_price": true,
+      "statement": "삼송원흥역센트럴푸르지오의 수집된 2026Q3 전용83≤㎡<85·5층 이상·해제 제외 매매 중위값은 8.5억원, n=3건이다.",
+      "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+      "baseline_reuse": true,
+      "rechecked_online": false,
+      "qualification": "기존 prices-v2 원자료 집계 승계. 이 작업에서 API 재조회·원거래행 전수재집계는 하지 않음. 신규창릉 미래매매 예상값 아님.",
+      "difference_eok": {
+        "S1": 0.5962,
+        "S4": -0.23329,
+        "S5": 0.73402
+      }
+    },
+    {
+      "claim_id": "CN-PRICE-17bae9021d8588e6",
+      "apt_id": "17bae9021d8588e6",
+      "name": "도래울센트럴더포레",
+      "region": "도래울",
+      "selection_reason": "기존 도래울 생활권; 역 도보권으로 단정 금지",
+      "statistic": "median",
+      "median_manwon": 74500,
+      "median_eok": 7.45,
+      "n": 11,
+      "small_sample_warning": false,
+      "exclusive_area_range_sqm": [
+        83,
+        85
+      ],
+      "upper_bound_exclusive": true,
+      "actual_areas_sqm": [
+        84.58,
+        84.79,
+        84.88,
+        84.93,
+        84.94,
+        84.98
+      ],
+      "floor_min": 5,
+      "period_start": "2026-07-01",
+      "period_end": "2026-09-30",
+      "transaction_type": "아파트 매매（중개·직거래 포함; raw_dealing_type 별도 열）",
+      "unit": "만원",
+      "raw_rows_before_cancel_exclusion": 12,
+      "raw_canceled_rows": 1,
+      "raw_valid_rows": 11,
+      "status": "qualified",
+      "as_of": "2026-10-16 조회/2026Q3 계약일",
+      "checked_on": "2026-10-16",
+      "source_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202607.xml; C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202608.xml; C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202609.xml",
+      "evidence_location": "verified_rows.csv apt_id 필터",
+      "not_current_asking_price": true,
+      "statement": "도래울센트럴더포레의 수집된 2026Q3 전용83≤㎡<85·5층 이상·해제 제외 매매 중위값은 7.45억원, n=11건이다.",
+      "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+      "baseline_reuse": true,
+      "rechecked_online": false,
+      "qualification": "기존 prices-v2 원자료 집계 승계. 이 작업에서 API 재조회·원거래행 전수재집계는 하지 않음. 신규창릉 미래매매 예상값 아님.",
+      "difference_eok": {
+        "S1": -0.4538,
+        "S4": -1.28329,
+        "S5": -0.31598
+      }
+    },
+    {
+      "claim_id": "CN-PRICE-6d132d1b88760197",
+      "apt_id": "6d132d1b88760197",
+      "name": "창릉호반써밋",
+      "region": "동산·삼송",
+      "selection_reason": "기존 동산동 대안; 창릉 공공분양 블록과 구분",
+      "statistic": "median",
+      "median_manwon": 83750,
+      "median_eok": 8.375,
+      "n": 20,
+      "small_sample_warning": false,
+      "exclusive_area_range_sqm": [
+        83,
+        85
+      ],
+      "upper_bound_exclusive": true,
+      "actual_areas_sqm": [
+        84.9397,
+        84.954,
+        84.9713,
+        84.9905
+      ],
+      "floor_min": 5,
+      "period_start": "2026-07-01",
+      "period_end": "2026-09-30",
+      "transaction_type": "아파트 매매（중개·직거래 포함; raw_dealing_type 별도 열）",
+      "unit": "만원",
+      "raw_rows_before_cancel_exclusion": 20,
+      "raw_canceled_rows": 0,
+      "raw_valid_rows": 20,
+      "status": "qualified",
+      "as_of": "2026-10-16 조회/2026Q3 계약일",
+      "checked_on": "2026-10-16",
+      "source_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202607.xml; C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202608.xml; C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202609.xml",
+      "evidence_location": "verified_rows.csv apt_id 필터",
+      "not_current_asking_price": true,
+      "statement": "창릉호반써밋의 수집된 2026Q3 전용83≤㎡<85·5층 이상·해제 제외 매매 중위값은 8.375억원, n=20건이다.",
+      "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+      "baseline_reuse": true,
+      "rechecked_online": false,
+      "qualification": "기존 prices-v2 원자료 집계 승계. 이 작업에서 API 재조회·원거래행 전수재집계는 하지 않음. 신규창릉 미래매매 예상값 아님.",
+      "difference_eok": {
+        "S1": 0.4712,
+        "S4": -0.35829,
+        "S5": 0.60902
+      }
+    },
+    {
+      "claim_id": "CN-PRICE-db26aa7d99fb32df",
+      "apt_id": "db26aa7d99fb32df",
+      "name": "지축역센트럴푸르지오",
+      "region": "지축",
+      "selection_reason": "기존 지축역 생활권, 높은 출발 총예산 대안",
+      "statistic": "median",
+      "median_manwon": 112750,
+      "median_eok": 11.275,
+      "n": 6,
+      "small_sample_warning": false,
+      "exclusive_area_range_sqm": [
+        83,
+        85
+      ],
+      "upper_bound_exclusive": true,
+      "actual_areas_sqm": [
+        84.8637,
+        84.9621
+      ],
+      "floor_min": 5,
+      "period_start": "2026-07-01",
+      "period_end": "2026-09-30",
+      "transaction_type": "아파트 매매（중개·직거래 포함; raw_dealing_type 별도 열）",
+      "unit": "만원",
+      "raw_rows_before_cancel_exclusion": 6,
+      "raw_canceled_rows": 0,
+      "raw_valid_rows": 6,
+      "status": "qualified",
+      "as_of": "2026-10-16 조회/2026Q3 계약일",
+      "checked_on": "2026-10-16",
+      "source_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202607.xml; C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202608.xml; C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202609.xml",
+      "evidence_location": "verified_rows.csv apt_id 필터",
+      "not_current_asking_price": true,
+      "statement": "지축역센트럴푸르지오의 수집된 2026Q3 전용83≤㎡<85·5층 이상·해제 제외 매매 중위값은 11.275억원, n=6건이다.",
+      "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+      "baseline_reuse": true,
+      "rechecked_online": false,
+      "qualification": "기존 prices-v2 원자료 집계 승계. 이 작업에서 API 재조회·원거래행 전수재집계는 하지 않음. 신규창릉 미래매매 예상값 아님.",
+      "difference_eok": {
+        "S1": 3.3712,
+        "S4": 2.54171,
+        "S5": 3.50902
+      }
+    },
+    {
+      "claim_id": "CN-PRICE-14f487c544ee4871",
+      "apt_id": "14f487c544ee4871",
+      "name": "지축역중흥S-클래스북한산파크뷰",
+      "region": "지축",
+      "selection_reason": "지축 내 다른 예산대 대안; 역 접근은 단지별 확인",
+      "statistic": "median",
+      "median_manwon": 84500,
+      "median_eok": 8.45,
+      "n": 17,
+      "small_sample_warning": false,
+      "exclusive_area_range_sqm": [
+        83,
+        85
+      ],
+      "upper_bound_exclusive": true,
+      "actual_areas_sqm": [
+        84.9664,
+        84.9833
+      ],
+      "floor_min": 5,
+      "period_start": "2026-07-01",
+      "period_end": "2026-09-30",
+      "transaction_type": "아파트 매매（중개·직거래 포함; raw_dealing_type 별도 열）",
+      "unit": "만원",
+      "raw_rows_before_cancel_exclusion": 17,
+      "raw_canceled_rows": 0,
+      "raw_valid_rows": 17,
+      "status": "qualified",
+      "as_of": "2026-10-16 조회/2026Q3 계약일",
+      "checked_on": "2026-10-16",
+      "source_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202607.xml; C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202608.xml; C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\research\\prices-v2\\raw\\41281_202609.xml",
+      "evidence_location": "verified_rows.csv apt_id 필터",
+      "not_current_asking_price": true,
+      "statement": "지축역중흥S-클래스북한산파크뷰의 수집된 2026Q3 전용83≤㎡<85·5층 이상·해제 제외 매매 중위값은 8.45억원, n=17건이다.",
+      "source_url": "https://www.data.go.kr/data/15126468/openapi.do",
+      "baseline_reuse": true,
+      "rechecked_online": false,
+      "qualification": "기존 prices-v2 원자료 집계 승계. 이 작업에서 API 재조회·원거래행 전수재집계는 하지 않음. 신규창릉 미래매매 예상값 아님.",
+      "difference_eok": {
+        "S1": 0.5462,
+        "S4": -0.28329,
+        "S5": 0.68402
+      }
+    }
+  ],
+  "future_scenario": {
+    "numeric_forecast": null,
+    "statement": "공고와 현재 대안 실거래만으로 해제후 특정 가격대를 정량 추정할 근거는 부족하다. 해제시점 실제 비교거래와 철도개통·생활권성숙·입주물량·금리/대출을 다시 확인한다.",
+    "prohibited": "임의 연상승률 적용 또는 현재 비교범위를 미래 매매 예상가격으로 표시"
+  }
+}

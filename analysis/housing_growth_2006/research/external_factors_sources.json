@@ -1,0 +1,22 @@
+﻿{
+ "as_of":"2026-10-22",
+ "scope":"Literature and measurement design; no local causal estimates yet",
+ "sources":[
+ {"id":"S1","title":"BOK 2022-25 Housing price spillovers","url":"https://www.bok.or.kr/portal/bbs/P0002353/view.do?menuNo=200433&nttId=10071513&pageIndex=1","checked":"official article","supports":"Common financing/policy conditions, local redevelopment and transport expectations, spatial spillovers; not proof for a particular district"},
+ {"id":"S2","title":"KRIHS WP26-03 Regional and regime-dependent house price mechanisms","url":"https://kremap.krihs.re.kr/menu6/ReportView?Kind=81&bID=9005&pID=7","checked":"official summary, full PDF not reviewed","supports":"Heterogeneous regional/regime relationships involving sentiment, completions and interest rates"},
+ {"id":"S3","title":"KRIHS WP22-09 Time-varying effects of interest rates","url":"https://www.krihs.re.kr/gallery.es?act=view&bid=0025&list_cnt=&list_no=29674&mid=a10103090000","checked":"official summary","supports":"Asymmetric and time-varying rate effects; model-specific lags must not be treated as universal"},
+ {"id":"S4","title":"Domestic migration 2019 release","url":"https://www.kostat.go.kr/boardDownload.es?bid=5148&list_no=382661&seq=4","checked":"indexed release excerpt","supports":"Migration reasons include work, housing and family; not causal evidence of migration effects on house prices"},
+ {"id":"S5","title":"Regional employment survey 2021 second half","url":"https://www.kostat.go.kr/boardDownload.es?bid=211&list_no=416875&seq=4","checked":"indexed official release excerpt","supports":"Workplace and residence-based employment differ; commuting definitions matter"},
+ {"id":"S6","title":"MOLIT statistics portal","url":"https://stat.molit.go.kr/portal/main/portalMain.do","checked":"official statistics catalog","supports":"Unsold, completed-unsold and housing construction statistics available; history/geography needs table-level verification"},
+ {"id":"S7","title":"2024 Census on Establishments preliminary release","url":"https://www.kostat.go.kr/board.es?act=view&bid=233&list_no=438719&mid=a10301090300&nPage=1&ref_bid=&tag=","checked":"official release summary","supports":"Industry and establishment-size employment measurements; no housing-price causal estimate"}
+ ],
+ "proposed_variables":[
+ {"factor":"population_households","variables":["net migration per 1000 residents","age 25-44 net migration","household growth","migration origin-destination"],"risk":"Migration can respond to price and supply; net outflow is not automatically weak demand"},
+ {"factor":"employment_income","variables":["workplace employment growth","industry mix","residence income","commuting inflow"],"risk":"Announcements are not realized jobs; workplace output is not household income"},
+ {"factor":"supply","variables":["housing completions / housing stock","completed unsold / housing stock","permits","starts","demolition"],"risk":"Separate apartments from all housing; do not equate permits with actual completions"},
+ {"factor":"finance_policy","variables":["mortgage rate","regional lending","historical regulation designation dates"],"risk":"National rates alone cannot identify regional differences; regulation responds to prices"},
+ {"factor":"accessibility_redevelopment","variables":["verified announcement/start/opening dates","change in job accessibility","redevelopment relocation"],"risk":"Anticipation and simultaneous local changes; current facilities cannot explain historical prices"},
+ {"factor":"expectations_spillovers","variables":["regional housing sentiment","buyer residence distribution","neighboring price changes"],"risk":"Sentiment and transactions jointly respond to prices; nearby simultaneous growth is not proof of diffusion"}
+ ],
+ "analysis_design":{"unit":"district-year for long-run; district-quarter where supported","coverage":"2006 onward only where source definitions permit; shorter common window for sparse external series","outcomes":["matched price changes","volume normalized by housing stock","drawdown and sustained recovery"],"checks":["annual average prices are not year-end values","harmonize historical district boundaries","inspect source revisions and reporting delay","compare multiple sample thresholds","pre-specify plausible lags, report failures as well as matches","time effects and district effects for exploratory panel association; not causal proof"]}
+}

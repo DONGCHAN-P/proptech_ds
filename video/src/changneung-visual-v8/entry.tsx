@@ -1,0 +1,2 @@
+﻿import React from 'react';import {Composition,registerRoot} from 'remotion';import {V8Review} from './Review';import {ImageChapter} from './Chapter';
+registerRoot(()=><><Composition id="ChangneungV8VisualReview" component={V8Review} durationInFrames={90} fps={30} width={1920} height={1080} defaultProps={{mode:'method'}}/><Composition id="ChangneungV8ImageChapter" component={ImageChapter} durationInFrames={90} fps={30} width={1920} height={1080} defaultProps={{theme:'transport'}}/></>);

@@ -1,0 +1,74 @@
+{
+  "scene_id": "S002",
+  "source": "regional_geo_v4.geojson",
+  "projection": "equirectangular cos(37.7) corrected; north up",
+  "bounds": [
+    127.03,
+    37.55,
+    127.4,
+    37.85
+  ],
+  "motion": "raw geographic layers + camera pan + staged12labels, avoid fullscreen card",
+  "camera_targets": [
+    {
+      "name": "별내동",
+      "coordinates": [
+        127.1216627,
+        37.6565148
+      ],
+      "relative_order": 0,
+      "zoom_relative": 1.8
+    },
+    {
+      "name": "다산동",
+      "coordinates": [
+        127.1598281,
+        37.6122588
+      ],
+      "relative_order": 1,
+      "zoom_relative": 1.8
+    },
+    {
+      "name": "진접읍",
+      "coordinates": [
+        127.1976354,
+        37.7228358
+      ],
+      "relative_order": 2,
+      "zoom_relative": 1.6
+    },
+    {
+      "name": "오남읍",
+      "coordinates": [
+        127.2230356,
+        37.6938801
+      ],
+      "relative_order": 3,
+      "zoom_relative": 1.6
+    },
+    {
+      "name": "호평동",
+      "coordinates": [
+        127.246594,
+        37.6576388
+      ],
+      "relative_order": 4,
+      "zoom_relative": 1.6
+    },
+    {
+      "name": "화도읍",
+      "coordinates": [
+        127.3196785,
+        37.6538308
+      ],
+      "relative_order": 5,
+      "zoom_relative": 1.4
+    }
+  ],
+  "restrictions": [
+    "no Wangsuk arbitrary outline/pin",
+    "no commute time/entrance/walking radius",
+    "rail geometry not operating-status evidence"
+  ],
+  "attribution": "© OpenStreetMap contributors | ODbL | https://www.openstreetmap.org/copyright"
+}

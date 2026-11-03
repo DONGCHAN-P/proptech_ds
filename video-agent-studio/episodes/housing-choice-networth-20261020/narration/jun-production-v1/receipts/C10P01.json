@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C10P01",
+  "scene_id": "C10",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:08:20.533Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "3be501b1b7e20f28f2b9c2eb7c8204d9f9161071f84584655da7dbe1bf455dbb",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "매매와 전세, 월세를 고를 때는 내가 가진 돈과 매달 감당할 수 있는 지출, 앞으로 얼마나 오래 살지를 함께 봐야 합니다. 같은 돈으로 시작해도 집에 묶이는 돈과 매달 투자할 수 있는 돈이 달라지고, 그 돈을 어떻게 운용하느냐에 따라 결과도 달라집니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 141,
+  "characters": 141,
+  "actual_credits": 56,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19983,
+    "character_limit": 40000,
+    "included_remaining": 20017,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:08:20.529Z",
+  "local_shadow_remaining_before": 20017,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "5Huq1mF4UJsNwb12wc1c",
+    "x-request-id": null,
+    "character-cost": "56",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:08:20 GMT"
+  },
+  "pcm_samples": 747936,
+  "pcm_duration_s": 16.96,
+  "provider_last_spoken_end_s": 17.04,
+  "artifact_sha256": {
+    "paragraphs/C10P01/audio.mp3": "265056cacecd6d13bd42fa63727d41dd0162724ed649d4ef6214f1139664e38c",
+    "paragraphs/C10P01/audio.wav": "ee220eeb0d05d63f2e7df44d0b896c9bf1324e7c13dd7aa56fd85a8dc16ed0c5",
+    "paragraphs/C10P01/alignment.json": "359e0da13f24a7fd3bb4bc6cd9e76c9fccc9004000e2510de5ddc9e5ac89cf4a",
+    "paragraphs/C10P01/normalized_alignment.json": "359e0da13f24a7fd3bb4bc6cd9e76c9fccc9004000e2510de5ddc9e5ac89cf4a"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 19961,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:08:24.844Z"
+}

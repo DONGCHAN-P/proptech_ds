@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "수도권 공식 단지 atlas 1.0.0",
+  "type": "object",
+  "required": [
+    "meta",
+    "items",
+    "boundary"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "crs",
+        "id_field",
+        "dataset_date",
+        "attribution"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "crs": {
+          "const": "EPSG:5179"
+        },
+        "id_field": {
+          "const": "HSMP_INNB"
+        },
+        "dataset_date": {
+          "type": "string"
+        },
+        "attribution": {
+          "type": "string"
+        },
+        "auxiliary_dates": {
+          "type": "object"
+        }
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "addr",
+          "pnu",
+          "code",
+          "xy",
+          "bbox",
+          "rings",
+          "extra"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[0-9]+$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "addr": {
+            "type": "string"
+          },
+          "pnu": {
+            "type": "string",
+            "pattern": "^[0-9]{19}$"
+          },
+          "code": {
+            "type": "string",
+            "pattern": "^[0-9]{5}$"
+          },
+          "xy": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "number"
+            }
+          },
+          "bbox": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "number"
+            }
+          },
+          "rings": {
+            "type": "array"
+          },
+          "extra": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "boundary": {
+      "type": "object",
+      "required": [
+        "features"
+      ]
+    },
+    "education": {
+      "type": "object",
+      "required": [
+        "meta",
+        "schools",
+        "zones",
+        "links"
+      ],
+      "description": "Optional school points and school-zone rings in native EPSG:5179; separate source dates."
+    }
+  }
+}

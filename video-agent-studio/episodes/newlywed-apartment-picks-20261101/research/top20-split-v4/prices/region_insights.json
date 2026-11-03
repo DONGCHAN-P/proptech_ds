@@ -1,0 +1,3369 @@
+{
+  "regions": [
+    {
+      "region_id": "R01",
+      "rank": 1,
+      "province": "인천",
+      "region": "서구",
+      "scene_id": "S022",
+      "region_median_manwon": 55000.0,
+      "transaction_n": 1530,
+      "observed_complexes": 175,
+      "mapped_complexes": 149,
+      "mapped_transaction_n": 1290,
+      "unmapped_reasons": {
+        "address_not_found": 14,
+        "multiple_road_addresses": 10,
+        "name_not_exact": 2
+      },
+      "price_band_counts_all_observed": [
+        111,
+        50,
+        14,
+        0,
+        0,
+        0
+      ],
+      "price_band_counts_mapped": [
+        100,
+        38,
+        11,
+        0,
+        0,
+        0
+      ],
+      "mapped_min_manwon": 20250.0,
+      "mapped_max_manwon": 84150.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 100,
+          "denominator": 149
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 38,
+          "denominator": 149
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 11,
+          "denominator": 149
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 0,
+          "denominator": 149
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 0,
+          "denominator": 149
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 149
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 24400.0,
+        "0.25": 29200.0,
+        "0.5": 35300.0,
+        "0.75": 56200.0,
+        "0.9": 65360.00000000001
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "당하동",
+          "transaction_n": 322,
+          "complex_n": 24,
+          "median_manwon": 52000.0
+        },
+        {
+          "dong": "원당동",
+          "transaction_n": 252,
+          "complex_n": 17,
+          "median_manwon": 62800.0
+        },
+        {
+          "dong": "가정동",
+          "transaction_n": 204,
+          "complex_n": 13,
+          "median_manwon": 62000.0
+        },
+        {
+          "dong": "청라동",
+          "transaction_n": 184,
+          "complex_n": 14,
+          "median_manwon": 70000.0
+        },
+        {
+          "dong": "마전동",
+          "transaction_n": 120,
+          "complex_n": 24,
+          "median_manwon": 29500.0
+        },
+        {
+          "dong": "불로동",
+          "transaction_n": 97,
+          "complex_n": 18,
+          "median_manwon": 45800.0
+        },
+        {
+          "dong": "신현동",
+          "transaction_n": 63,
+          "complex_n": 5,
+          "median_manwon": 54000.0
+        },
+        {
+          "dong": "왕길동",
+          "transaction_n": 56,
+          "complex_n": 9,
+          "median_manwon": 34000.0
+        },
+        {
+          "dong": "검암동",
+          "transaction_n": 54,
+          "complex_n": 10,
+          "median_manwon": 42400.0
+        },
+        {
+          "dong": "가좌동",
+          "transaction_n": 53,
+          "complex_n": 10,
+          "median_manwon": 43000.0
+        },
+        {
+          "dong": "심곡동",
+          "transaction_n": 23,
+          "complex_n": 6,
+          "median_manwon": 31000.0
+        },
+        {
+          "dong": "석남동",
+          "transaction_n": 22,
+          "complex_n": 6,
+          "median_manwon": 37500.0
+        },
+        {
+          "dong": "경서동",
+          "transaction_n": 21,
+          "complex_n": 4,
+          "median_manwon": 42200.0
+        },
+        {
+          "dong": "금곡동",
+          "transaction_n": 19,
+          "complex_n": 3,
+          "median_manwon": 39500.0
+        },
+        {
+          "dong": "백석동",
+          "transaction_n": 17,
+          "complex_n": 2,
+          "median_manwon": 63900.0
+        },
+        {
+          "dong": "오류동",
+          "transaction_n": 10,
+          "complex_n": 3,
+          "median_manwon": 30150.0
+        },
+        {
+          "dong": "연희동",
+          "transaction_n": 7,
+          "complex_n": 4,
+          "median_manwon": 29300.0
+        },
+        {
+          "dong": "공촌동",
+          "transaction_n": 5,
+          "complex_n": 2,
+          "median_manwon": 27500.0
+        },
+        {
+          "dong": "대곡동",
+          "transaction_n": 1,
+          "complex_n": 1,
+          "median_manwon": 23000.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 136,
+          "complex_n": 34,
+          "median_manwon": 27400.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 402,
+          "complex_n": 66,
+          "median_manwon": 34000.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 992,
+          "complex_n": 75,
+          "median_manwon": 61000.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R02",
+      "rank": 2,
+      "province": "서울",
+      "region": "송파구",
+      "scene_id": "S021",
+      "region_median_manwon": 218500.0,
+      "transaction_n": 513,
+      "observed_complexes": 111,
+      "mapped_complexes": 104,
+      "mapped_transaction_n": 482,
+      "unmapped_reasons": {
+        "ambiguous_official_address": 3,
+        "multiple_road_addresses": 3,
+        "address_not_found": 1
+      },
+      "price_band_counts_all_observed": [
+        0,
+        2,
+        11,
+        27,
+        39,
+        32
+      ],
+      "price_band_counts_mapped": [
+        0,
+        2,
+        11,
+        27,
+        37,
+        27
+      ],
+      "mapped_min_manwon": 63500.0,
+      "mapped_max_manwon": 343500.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 0,
+          "denominator": 104
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 2,
+          "denominator": 104
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 11,
+          "denominator": 104
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 27,
+          "denominator": 104
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 37,
+          "denominator": 104
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 27,
+          "denominator": 104
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 94715.0,
+        "0.25": 123250.0,
+        "0.5": 163875.0,
+        "0.75": 201000.0,
+        "0.9": 243000.00000000003
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "잠실동",
+          "transaction_n": 128,
+          "complex_n": 6,
+          "median_manwon": 328000.0
+        },
+        {
+          "dong": "가락동",
+          "transaction_n": 95,
+          "complex_n": 21,
+          "median_manwon": 219000.0
+        },
+        {
+          "dong": "문정동",
+          "transaction_n": 55,
+          "complex_n": 12,
+          "median_manwon": 194000.0
+        },
+        {
+          "dong": "거여동",
+          "transaction_n": 39,
+          "complex_n": 9,
+          "median_manwon": 145000.0
+        },
+        {
+          "dong": "신천동",
+          "transaction_n": 39,
+          "complex_n": 2,
+          "median_manwon": 290000.0
+        },
+        {
+          "dong": "장지동",
+          "transaction_n": 36,
+          "complex_n": 11,
+          "median_manwon": 183000.0
+        },
+        {
+          "dong": "풍납동",
+          "transaction_n": 33,
+          "complex_n": 13,
+          "median_manwon": 155000.0
+        },
+        {
+          "dong": "방이동",
+          "transaction_n": 30,
+          "complex_n": 8,
+          "median_manwon": 217750.0
+        },
+        {
+          "dong": "오금동",
+          "transaction_n": 22,
+          "complex_n": 11,
+          "median_manwon": 160500.0
+        },
+        {
+          "dong": "마천동",
+          "transaction_n": 15,
+          "complex_n": 8,
+          "median_manwon": 137000.0
+        },
+        {
+          "dong": "송파동",
+          "transaction_n": 15,
+          "complex_n": 7,
+          "median_manwon": 246000.0
+        },
+        {
+          "dong": "석촌동",
+          "transaction_n": 6,
+          "complex_n": 3,
+          "median_manwon": 165000.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 180,
+          "complex_n": 48,
+          "median_manwon": 189750.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 248,
+          "complex_n": 46,
+          "median_manwon": 300000.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 85,
+          "complex_n": 17,
+          "median_manwon": 212000.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R03",
+      "rank": 3,
+      "province": "경기",
+      "region": "고양시 덕양구",
+      "scene_id": "S020",
+      "region_median_manwon": 73000.0,
+      "transaction_n": 1125,
+      "observed_complexes": 107,
+      "mapped_complexes": 90,
+      "mapped_transaction_n": 897,
+      "unmapped_reasons": {
+        "ambiguous_official_address": 12,
+        "address_not_found": 1,
+        "name_not_exact": 3,
+        "multiple_road_addresses": 1
+      },
+      "price_band_counts_all_observed": [
+        43,
+        28,
+        27,
+        9,
+        0,
+        0
+      ],
+      "price_band_counts_mapped": [
+        39,
+        19,
+        23,
+        9,
+        0,
+        0
+      ],
+      "mapped_min_manwon": 20000.0,
+      "mapped_max_manwon": 128000.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 39,
+          "denominator": 90
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 19,
+          "denominator": 90
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 23,
+          "denominator": 90
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 9,
+          "denominator": 90
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 0,
+          "denominator": 90
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 90
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 31770.0,
+        "0.25": 39125.0,
+        "0.5": 53750.0,
+        "0.75": 74875.0,
+        "0.9": 99750.00000000001
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "화정동",
+          "transaction_n": 164,
+          "complex_n": 14,
+          "median_manwon": 57000.0
+        },
+        {
+          "dong": "지축동",
+          "transaction_n": 135,
+          "complex_n": 5,
+          "median_manwon": 87000.0
+        },
+        {
+          "dong": "덕은동",
+          "transaction_n": 110,
+          "complex_n": 7,
+          "median_manwon": 118000.0
+        },
+        {
+          "dong": "행신동",
+          "transaction_n": 108,
+          "complex_n": 16,
+          "median_manwon": 51500.0
+        },
+        {
+          "dong": "도내동",
+          "transaction_n": 104,
+          "complex_n": 6,
+          "median_manwon": 83200.0
+        },
+        {
+          "dong": "동산동",
+          "transaction_n": 73,
+          "complex_n": 2,
+          "median_manwon": 81000.0
+        },
+        {
+          "dong": "토당동",
+          "transaction_n": 71,
+          "complex_n": 13,
+          "median_manwon": 54000.0
+        },
+        {
+          "dong": "고양동",
+          "transaction_n": 65,
+          "complex_n": 10,
+          "median_manwon": 27000.0
+        },
+        {
+          "dong": "원흥동",
+          "transaction_n": 60,
+          "complex_n": 4,
+          "median_manwon": 74000.0
+        },
+        {
+          "dong": "향동동",
+          "transaction_n": 60,
+          "complex_n": 4,
+          "median_manwon": 86900.0
+        },
+        {
+          "dong": "삼송동",
+          "transaction_n": 59,
+          "complex_n": 3,
+          "median_manwon": 84700.0
+        },
+        {
+          "dong": "신원동",
+          "transaction_n": 54,
+          "complex_n": 5,
+          "median_manwon": 64500.0
+        },
+        {
+          "dong": "성사동",
+          "transaction_n": 40,
+          "complex_n": 8,
+          "median_manwon": 60000.0
+        },
+        {
+          "dong": "관산동",
+          "transaction_n": 12,
+          "complex_n": 5,
+          "median_manwon": 34800.0
+        },
+        {
+          "dong": "주교동",
+          "transaction_n": 10,
+          "complex_n": 5,
+          "median_manwon": 35250.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 272,
+          "complex_n": 38,
+          "median_manwon": 52000.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 177,
+          "complex_n": 29,
+          "median_manwon": 52500.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 676,
+          "complex_n": 40,
+          "median_manwon": 85000.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R04",
+      "rank": 4,
+      "province": "서울",
+      "region": "강서구",
+      "scene_id": "S019",
+      "region_median_manwon": 108000.0,
+      "transaction_n": 579,
+      "observed_complexes": 182,
+      "mapped_complexes": 180,
+      "mapped_transaction_n": 574,
+      "unmapped_reasons": {
+        "ambiguous_official_address": 2
+      },
+      "price_band_counts_all_observed": [
+        3,
+        33,
+        65,
+        64,
+        17,
+        0
+      ],
+      "price_band_counts_mapped": [
+        3,
+        33,
+        63,
+        64,
+        17,
+        0
+      ],
+      "mapped_min_manwon": 30000.0,
+      "mapped_max_manwon": 183500.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 3,
+          "denominator": 180
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 33,
+          "denominator": 180
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 63,
+          "denominator": 180
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 64,
+          "denominator": 180
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 17,
+          "denominator": 180
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 180
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 61950.0,
+        "0.25": 72862.5,
+        "0.5": 94250.0,
+        "0.75": 121550.0,
+        "0.9": 143250.0
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "염창동",
+          "transaction_n": 116,
+          "complex_n": 43,
+          "median_manwon": 118250.0
+        },
+        {
+          "dong": "마곡동",
+          "transaction_n": 108,
+          "complex_n": 26,
+          "median_manwon": 122000.0
+        },
+        {
+          "dong": "내발산동",
+          "transaction_n": 94,
+          "complex_n": 29,
+          "median_manwon": 110750.0
+        },
+        {
+          "dong": "화곡동",
+          "transaction_n": 86,
+          "complex_n": 26,
+          "median_manwon": 133750.0
+        },
+        {
+          "dong": "방화동",
+          "transaction_n": 80,
+          "complex_n": 25,
+          "median_manwon": 77500.0
+        },
+        {
+          "dong": "등촌동",
+          "transaction_n": 45,
+          "complex_n": 18,
+          "median_manwon": 110000.0
+        },
+        {
+          "dong": "가양동",
+          "transaction_n": 41,
+          "complex_n": 12,
+          "median_manwon": 127500.0
+        },
+        {
+          "dong": "공항동",
+          "transaction_n": 9,
+          "complex_n": 3,
+          "median_manwon": 80000.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 175,
+          "complex_n": 55,
+          "median_manwon": 102000.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 330,
+          "complex_n": 107,
+          "median_manwon": 102250.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 74,
+          "complex_n": 20,
+          "median_manwon": 166000.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R05",
+      "rank": 5,
+      "province": "인천",
+      "region": "부평구",
+      "scene_id": "S018",
+      "region_median_manwon": 43000.0,
+      "transaction_n": 642,
+      "observed_complexes": 96,
+      "mapped_complexes": 83,
+      "mapped_transaction_n": 547,
+      "unmapped_reasons": {
+        "multiple_road_addresses": 3,
+        "ambiguous_official_address": 4,
+        "name_not_exact": 1,
+        "address_not_found": 5
+      },
+      "price_band_counts_all_observed": [
+        70,
+        22,
+        4,
+        0,
+        0,
+        0
+      ],
+      "price_band_counts_mapped": [
+        61,
+        19,
+        3,
+        0,
+        0,
+        0
+      ],
+      "mapped_min_manwon": 20000.0,
+      "mapped_max_manwon": 79500.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 61,
+          "denominator": 83
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 19,
+          "denominator": 83
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 3,
+          "denominator": 83
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 0,
+          "denominator": 83
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 0,
+          "denominator": 83
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 83
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 27400.0,
+        "0.25": 32437.5,
+        "0.5": 38000.0,
+        "0.75": 52250.0,
+        "0.9": 65099.99999999999
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "산곡동",
+          "transaction_n": 208,
+          "complex_n": 33,
+          "median_manwon": 37500.0
+        },
+        {
+          "dong": "삼산동",
+          "transaction_n": 140,
+          "complex_n": 10,
+          "median_manwon": 54150.0
+        },
+        {
+          "dong": "부평동",
+          "transaction_n": 104,
+          "complex_n": 22,
+          "median_manwon": 56850.0
+        },
+        {
+          "dong": "청천동",
+          "transaction_n": 64,
+          "complex_n": 7,
+          "median_manwon": 47600.0
+        },
+        {
+          "dong": "부개동",
+          "transaction_n": 43,
+          "complex_n": 7,
+          "median_manwon": 46500.0
+        },
+        {
+          "dong": "갈산동",
+          "transaction_n": 36,
+          "complex_n": 7,
+          "median_manwon": 38050.0
+        },
+        {
+          "dong": "십정동",
+          "transaction_n": 36,
+          "complex_n": 8,
+          "median_manwon": 40250.0
+        },
+        {
+          "dong": "일신동",
+          "transaction_n": 6,
+          "complex_n": 1,
+          "median_manwon": 38500.0
+        },
+        {
+          "dong": "구산동",
+          "transaction_n": 5,
+          "complex_n": 1,
+          "median_manwon": 42000.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 305,
+          "complex_n": 49,
+          "median_manwon": 37000.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 172,
+          "complex_n": 24,
+          "median_manwon": 53200.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 165,
+          "complex_n": 23,
+          "median_manwon": 64500.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R06",
+      "rank": 6,
+      "province": "서울",
+      "region": "강남구",
+      "scene_id": "S017",
+      "region_median_manwon": 303000.0,
+      "transaction_n": 235,
+      "observed_complexes": 94,
+      "mapped_complexes": 83,
+      "mapped_transaction_n": 207,
+      "unmapped_reasons": {
+        "ambiguous_official_address": 6,
+        "address_not_found": 4,
+        "name_not_exact": 1
+      },
+      "price_band_counts_all_observed": [
+        0,
+        0,
+        1,
+        6,
+        15,
+        72
+      ],
+      "price_band_counts_mapped": [
+        0,
+        0,
+        1,
+        5,
+        15,
+        62
+      ],
+      "mapped_min_manwon": 98500.0,
+      "mapped_max_manwon": 582500.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 0,
+          "denominator": 83
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 0,
+          "denominator": 83
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 1,
+          "denominator": 83
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 5,
+          "denominator": 83
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 15,
+          "denominator": 83
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 62,
+          "denominator": 83
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 155800.0,
+        "0.25": 198125.0,
+        "0.5": 250400.0,
+        "0.75": 334250.0,
+        "0.9": 359900.0
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "개포동",
+          "transaction_n": 39,
+          "complex_n": 8,
+          "median_manwon": 340000.0
+        },
+        {
+          "dong": "대치동",
+          "transaction_n": 35,
+          "complex_n": 16,
+          "median_manwon": 366000.0
+        },
+        {
+          "dong": "삼성동",
+          "transaction_n": 33,
+          "complex_n": 12,
+          "median_manwon": 325000.0
+        },
+        {
+          "dong": "도곡동",
+          "transaction_n": 25,
+          "complex_n": 9,
+          "median_manwon": 310000.0
+        },
+        {
+          "dong": "역삼동",
+          "transaction_n": 21,
+          "complex_n": 13,
+          "median_manwon": 234000.0
+        },
+        {
+          "dong": "논현동",
+          "transaction_n": 18,
+          "complex_n": 10,
+          "median_manwon": 237500.0
+        },
+        {
+          "dong": "일원동",
+          "transaction_n": 17,
+          "complex_n": 7,
+          "median_manwon": 281000.0
+        },
+        {
+          "dong": "세곡동",
+          "transaction_n": 12,
+          "complex_n": 4,
+          "median_manwon": 189250.0
+        },
+        {
+          "dong": "수서동",
+          "transaction_n": 12,
+          "complex_n": 2,
+          "median_manwon": 250000.0
+        },
+        {
+          "dong": "자곡동",
+          "transaction_n": 8,
+          "complex_n": 5,
+          "median_manwon": 216500.0
+        },
+        {
+          "dong": "청담동",
+          "transaction_n": 7,
+          "complex_n": 5,
+          "median_manwon": 243000.0
+        },
+        {
+          "dong": "압구정동",
+          "transaction_n": 4,
+          "complex_n": 1,
+          "median_manwon": 582500.0
+        },
+        {
+          "dong": "율현동",
+          "transaction_n": 3,
+          "complex_n": 1,
+          "median_manwon": 164000.0
+        },
+        {
+          "dong": "신사동",
+          "transaction_n": 1,
+          "complex_n": 1,
+          "median_manwon": 147000.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 96,
+          "complex_n": 39,
+          "median_manwon": 282500.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 60,
+          "complex_n": 29,
+          "median_manwon": 299500.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 79,
+          "complex_n": 26,
+          "median_manwon": 320000.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R07",
+      "rank": 7,
+      "province": "서울",
+      "region": "강동구",
+      "scene_id": "S016",
+      "region_median_manwon": 158000.0,
+      "transaction_n": 539,
+      "observed_complexes": 162,
+      "mapped_complexes": 155,
+      "mapped_transaction_n": 478,
+      "unmapped_reasons": {
+        "multiple_road_addresses": 4,
+        "address_not_found": 3
+      },
+      "price_band_counts_all_observed": [
+        0,
+        21,
+        61,
+        38,
+        33,
+        9
+      ],
+      "price_band_counts_mapped": [
+        0,
+        21,
+        61,
+        36,
+        30,
+        7
+      ],
+      "mapped_min_manwon": 52000.0,
+      "mapped_max_manwon": 249000.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 0,
+          "denominator": 155
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 21,
+          "denominator": 155
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 61,
+          "denominator": 155
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 36,
+          "denominator": 155
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 30,
+          "denominator": 155
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 7,
+          "denominator": 155
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 66000.0,
+        "0.25": 78750.0,
+        "0.5": 92750.0,
+        "0.75": 144000.0,
+        "0.9": 180799.99999999997
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "둔촌동",
+          "transaction_n": 77,
+          "complex_n": 19,
+          "median_manwon": 225000.0
+        },
+        {
+          "dong": "고덕동",
+          "transaction_n": 74,
+          "complex_n": 7,
+          "median_manwon": 195000.0
+        },
+        {
+          "dong": "상일동",
+          "transaction_n": 73,
+          "complex_n": 8,
+          "median_manwon": 191000.0
+        },
+        {
+          "dong": "암사동",
+          "transaction_n": 64,
+          "complex_n": 19,
+          "median_manwon": 165500.0
+        },
+        {
+          "dong": "성내동",
+          "transaction_n": 57,
+          "complex_n": 33,
+          "median_manwon": 89300.0
+        },
+        {
+          "dong": "천호동",
+          "transaction_n": 57,
+          "complex_n": 27,
+          "median_manwon": 142500.0
+        },
+        {
+          "dong": "명일동",
+          "transaction_n": 49,
+          "complex_n": 12,
+          "median_manwon": 170000.0
+        },
+        {
+          "dong": "길동",
+          "transaction_n": 45,
+          "complex_n": 24,
+          "median_manwon": 87000.0
+        },
+        {
+          "dong": "강일동",
+          "transaction_n": 43,
+          "complex_n": 13,
+          "median_manwon": 133000.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 125,
+          "complex_n": 41,
+          "median_manwon": 149500.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 215,
+          "complex_n": 97,
+          "median_manwon": 104000.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 199,
+          "complex_n": 24,
+          "median_manwon": 198000.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R08",
+      "rank": 8,
+      "province": "서울",
+      "region": "영등포구",
+      "scene_id": "S015",
+      "region_median_manwon": 142000.0,
+      "transaction_n": 343,
+      "observed_complexes": 100,
+      "mapped_complexes": 97,
+      "mapped_transaction_n": 325,
+      "unmapped_reasons": {
+        "multiple_road_addresses": 2,
+        "address_not_found": 1
+      },
+      "price_band_counts_all_observed": [
+        0,
+        1,
+        21,
+        41,
+        32,
+        5
+      ],
+      "price_band_counts_mapped": [
+        0,
+        1,
+        21,
+        39,
+        32,
+        4
+      ],
+      "mapped_min_manwon": 67500.0,
+      "mapped_max_manwon": 243500.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 0,
+          "denominator": 97
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 1,
+          "denominator": 97
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 21,
+          "denominator": 97
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 39,
+          "denominator": 97
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 32,
+          "denominator": 97
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 4,
+          "denominator": 97
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 84650.0,
+        "0.25": 102000.0,
+        "0.5": 134000.0,
+        "0.75": 162500.0,
+        "0.9": 185500.0
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "신길동",
+          "transaction_n": 97,
+          "complex_n": 22,
+          "median_manwon": 151500.0
+        },
+        {
+          "dong": "대림동",
+          "transaction_n": 88,
+          "complex_n": 17,
+          "median_manwon": 89350.0
+        },
+        {
+          "dong": "양평동3가",
+          "transaction_n": 30,
+          "complex_n": 10,
+          "median_manwon": 125000.0
+        },
+        {
+          "dong": "당산동4가",
+          "transaction_n": 22,
+          "complex_n": 9,
+          "median_manwon": 169500.0
+        },
+        {
+          "dong": "문래동3가",
+          "transaction_n": 20,
+          "complex_n": 6,
+          "median_manwon": 181500.0
+        },
+        {
+          "dong": "당산동5가",
+          "transaction_n": 18,
+          "complex_n": 7,
+          "median_manwon": 208500.0
+        },
+        {
+          "dong": "문래동5가",
+          "transaction_n": 16,
+          "complex_n": 4,
+          "median_manwon": 141000.0
+        },
+        {
+          "dong": "영등포동7가",
+          "transaction_n": 9,
+          "complex_n": 2,
+          "median_manwon": 192500.0
+        },
+        {
+          "dong": "양평동1가",
+          "transaction_n": 6,
+          "complex_n": 3,
+          "median_manwon": 188350.0
+        },
+        {
+          "dong": "양평동5가",
+          "transaction_n": 6,
+          "complex_n": 2,
+          "median_manwon": 148000.0
+        },
+        {
+          "dong": "문래동4가",
+          "transaction_n": 5,
+          "complex_n": 3,
+          "median_manwon": 124000.0
+        },
+        {
+          "dong": "도림동",
+          "transaction_n": 4,
+          "complex_n": 1,
+          "median_manwon": 154500.0
+        },
+        {
+          "dong": "당산동3가",
+          "transaction_n": 3,
+          "complex_n": 1,
+          "median_manwon": 162500.0
+        },
+        {
+          "dong": "양평동4가",
+          "transaction_n": 3,
+          "complex_n": 2,
+          "median_manwon": 136900.0
+        },
+        {
+          "dong": "영등포동",
+          "transaction_n": 3,
+          "complex_n": 1,
+          "median_manwon": 154900.0
+        },
+        {
+          "dong": "영등포동5가",
+          "transaction_n": 3,
+          "complex_n": 1,
+          "median_manwon": 100000.0
+        },
+        {
+          "dong": "당산동",
+          "transaction_n": 2,
+          "complex_n": 2,
+          "median_manwon": 147000.0
+        },
+        {
+          "dong": "문래동6가",
+          "transaction_n": 2,
+          "complex_n": 2,
+          "median_manwon": 109250.0
+        },
+        {
+          "dong": "양평동6가",
+          "transaction_n": 2,
+          "complex_n": 2,
+          "median_manwon": 95500.0
+        },
+        {
+          "dong": "영등포동8가",
+          "transaction_n": 2,
+          "complex_n": 1,
+          "median_manwon": 180500.0
+        },
+        {
+          "dong": "당산동1가",
+          "transaction_n": 1,
+          "complex_n": 1,
+          "median_manwon": 164700.0
+        },
+        {
+          "dong": "영등포동1가",
+          "transaction_n": 1,
+          "complex_n": 1,
+          "median_manwon": 83000.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 147,
+          "complex_n": 49,
+          "median_manwon": 127000.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 95,
+          "complex_n": 31,
+          "median_manwon": 128000.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 101,
+          "complex_n": 20,
+          "median_manwon": 179000.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R09",
+      "rank": 9,
+      "province": "경기",
+      "region": "성남시 분당구",
+      "scene_id": "S014",
+      "region_median_manwon": 180000.0,
+      "transaction_n": 369,
+      "observed_complexes": 103,
+      "mapped_complexes": 72,
+      "mapped_transaction_n": 268,
+      "unmapped_reasons": {
+        "ambiguous_official_address": 17,
+        "name_not_exact": 11,
+        "multiple_road_addresses": 2,
+        "address_not_found": 1
+      },
+      "price_band_counts_all_observed": [
+        0,
+        0,
+        1,
+        16,
+        64,
+        22
+      ],
+      "price_band_counts_mapped": [
+        0,
+        0,
+        1,
+        14,
+        46,
+        11
+      ],
+      "mapped_min_manwon": 95250.0,
+      "mapped_max_manwon": 270000.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 0,
+          "denominator": 72
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 0,
+          "denominator": 72
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 1,
+          "denominator": 72
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 14,
+          "denominator": 72
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 46,
+          "denominator": 72
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 11,
+          "denominator": 72
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 134850.0,
+        "0.25": 157625.0,
+        "0.5": 176875.0,
+        "0.75": 191437.5,
+        "0.9": 209725.0
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "서현동",
+          "transaction_n": 49,
+          "complex_n": 11,
+          "median_manwon": 203000.0
+        },
+        {
+          "dong": "대장동",
+          "transaction_n": 41,
+          "complex_n": 6,
+          "median_manwon": 134500.0
+        },
+        {
+          "dong": "이매동",
+          "transaction_n": 41,
+          "complex_n": 12,
+          "median_manwon": 188000.0
+        },
+        {
+          "dong": "구미동",
+          "transaction_n": 36,
+          "complex_n": 9,
+          "median_manwon": 152000.0
+        },
+        {
+          "dong": "정자동",
+          "transaction_n": 36,
+          "complex_n": 18,
+          "median_manwon": 183750.0
+        },
+        {
+          "dong": "백현동",
+          "transaction_n": 31,
+          "complex_n": 5,
+          "median_manwon": 244000.0
+        },
+        {
+          "dong": "야탑동",
+          "transaction_n": 28,
+          "complex_n": 9,
+          "median_manwon": 150500.0
+        },
+        {
+          "dong": "수내동",
+          "transaction_n": 24,
+          "complex_n": 8,
+          "median_manwon": 217000.0
+        },
+        {
+          "dong": "삼평동",
+          "transaction_n": 19,
+          "complex_n": 5,
+          "median_manwon": 207000.0
+        },
+        {
+          "dong": "운중동",
+          "transaction_n": 19,
+          "complex_n": 5,
+          "median_manwon": 176500.0
+        },
+        {
+          "dong": "판교동",
+          "transaction_n": 18,
+          "complex_n": 4,
+          "median_manwon": 184250.0
+        },
+        {
+          "dong": "분당동",
+          "transaction_n": 14,
+          "complex_n": 5,
+          "median_manwon": 160000.0
+        },
+        {
+          "dong": "금곡동",
+          "transaction_n": 13,
+          "complex_n": 6,
+          "median_manwon": 190000.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 221,
+          "complex_n": 68,
+          "median_manwon": 185000.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 90,
+          "complex_n": 27,
+          "median_manwon": 189750.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 58,
+          "complex_n": 8,
+          "median_manwon": 143750.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R10",
+      "rank": 10,
+      "province": "인천",
+      "region": "미추홀구",
+      "scene_id": "S013",
+      "region_median_manwon": 40000.0,
+      "transaction_n": 363,
+      "observed_complexes": 75,
+      "mapped_complexes": 68,
+      "mapped_transaction_n": 291,
+      "unmapped_reasons": {
+        "ambiguous_official_address": 2,
+        "name_not_exact": 1,
+        "address_not_found": 4
+      },
+      "price_band_counts_all_observed": [
+        62,
+        12,
+        1,
+        0,
+        0,
+        0
+      ],
+      "price_band_counts_mapped": [
+        59,
+        9,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mapped_min_manwon": 15900.0,
+      "mapped_max_manwon": 67500.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 59,
+          "denominator": 68
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 9,
+          "denominator": 68
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 0,
+          "denominator": 68
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 0,
+          "denominator": 68
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 0,
+          "denominator": 68
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 68
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 22210.0,
+        "0.25": 25000.0,
+        "0.5": 30000.0,
+        "0.75": 40487.5,
+        "0.9": 56170.00000000001
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "용현동",
+          "transaction_n": 120,
+          "complex_n": 20,
+          "median_manwon": 33000.0
+        },
+        {
+          "dong": "주안동",
+          "transaction_n": 95,
+          "complex_n": 20,
+          "median_manwon": 46300.0
+        },
+        {
+          "dong": "학익동",
+          "transaction_n": 75,
+          "complex_n": 19,
+          "median_manwon": 37000.0
+        },
+        {
+          "dong": "도화동",
+          "transaction_n": 38,
+          "complex_n": 7,
+          "median_manwon": 50000.0
+        },
+        {
+          "dong": "관교동",
+          "transaction_n": 18,
+          "complex_n": 4,
+          "median_manwon": 40725.0
+        },
+        {
+          "dong": "숭의동",
+          "transaction_n": 17,
+          "complex_n": 5,
+          "median_manwon": 46500.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 106,
+          "complex_n": 31,
+          "median_manwon": 27250.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 100,
+          "complex_n": 18,
+          "median_manwon": 36975.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 157,
+          "complex_n": 26,
+          "median_manwon": 57000.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R11",
+      "rank": 11,
+      "province": "서울",
+      "region": "노원구",
+      "scene_id": "S012",
+      "region_median_manwon": 85000.0,
+      "transaction_n": 672,
+      "observed_complexes": 142,
+      "mapped_complexes": 125,
+      "mapped_transaction_n": 592,
+      "unmapped_reasons": {
+        "address_not_found": 5,
+        "name_not_exact": 2,
+        "multiple_road_addresses": 1,
+        "ambiguous_official_address": 9
+      },
+      "price_band_counts_all_observed": [
+        1,
+        50,
+        71,
+        20,
+        0,
+        0
+      ],
+      "price_band_counts_mapped": [
+        0,
+        50,
+        60,
+        15,
+        0,
+        0
+      ],
+      "mapped_min_manwon": 53000.0,
+      "mapped_max_manwon": 136000.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 0,
+          "denominator": 125
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 50,
+          "denominator": 125
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 60,
+          "denominator": 125
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 15,
+          "denominator": 125
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 0,
+          "denominator": 125
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 125
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 59400.0,
+        "0.25": 65500.0,
+        "0.5": 73000.0,
+        "0.75": 86000.0,
+        "0.9": 103100.00000000001
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "상계동",
+          "transaction_n": 213,
+          "complex_n": 43,
+          "median_manwon": 71000.0
+        },
+        {
+          "dong": "중계동",
+          "transaction_n": 159,
+          "complex_n": 37,
+          "median_manwon": 86000.0
+        },
+        {
+          "dong": "공릉동",
+          "transaction_n": 126,
+          "complex_n": 34,
+          "median_manwon": 79000.0
+        },
+        {
+          "dong": "월계동",
+          "transaction_n": 104,
+          "complex_n": 18,
+          "median_manwon": 102500.0
+        },
+        {
+          "dong": "하계동",
+          "transaction_n": 70,
+          "complex_n": 10,
+          "median_manwon": 94350.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 418,
+          "complex_n": 94,
+          "median_manwon": 80000.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 155,
+          "complex_n": 37,
+          "median_manwon": 82500.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 99,
+          "complex_n": 11,
+          "median_manwon": 113850.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R12",
+      "rank": 12,
+      "province": "경기",
+      "region": "수원시 영통구",
+      "scene_id": "S011",
+      "region_median_manwon": 83000.0,
+      "transaction_n": 855,
+      "observed_complexes": 75,
+      "mapped_complexes": 61,
+      "mapped_transaction_n": 691,
+      "unmapped_reasons": {
+        "ambiguous_official_address": 10,
+        "outside_verified_polygon_or_target_region": 3,
+        "multiple_road_addresses": 1
+      },
+      "price_band_counts_all_observed": [
+        9,
+        21,
+        28,
+        12,
+        5,
+        0
+      ],
+      "price_band_counts_mapped": [
+        9,
+        18,
+        17,
+        12,
+        5,
+        0
+      ],
+      "mapped_min_manwon": 33000.0,
+      "mapped_max_manwon": 193250.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 9,
+          "denominator": 61
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 18,
+          "denominator": 61
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 17,
+          "denominator": 61
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 12,
+          "denominator": 61
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 5,
+          "denominator": 61
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 61
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 46000.0,
+        "0.25": 53500.0,
+        "0.5": 77500.0,
+        "0.75": 101800.0,
+        "0.9": 148000.0
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "망포동",
+          "transaction_n": 235,
+          "complex_n": 23,
+          "median_manwon": 73000.0
+        },
+        {
+          "dong": "매탄동",
+          "transaction_n": 174,
+          "complex_n": 12,
+          "median_manwon": 55400.0
+        },
+        {
+          "dong": "영통동",
+          "transaction_n": 154,
+          "complex_n": 15,
+          "median_manwon": 73500.0
+        },
+        {
+          "dong": "이의동",
+          "transaction_n": 100,
+          "complex_n": 10,
+          "median_manwon": 119000.0
+        },
+        {
+          "dong": "하동",
+          "transaction_n": 92,
+          "complex_n": 6,
+          "median_manwon": 125000.0
+        },
+        {
+          "dong": "원천동",
+          "transaction_n": 75,
+          "complex_n": 7,
+          "median_manwon": 136000.0
+        },
+        {
+          "dong": "신동",
+          "transaction_n": 25,
+          "complex_n": 2,
+          "median_manwon": 88000.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 184,
+          "complex_n": 19,
+          "median_manwon": 69950.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 272,
+          "complex_n": 24,
+          "median_manwon": 59800.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 399,
+          "complex_n": 32,
+          "median_manwon": 112000.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R13",
+      "rank": 13,
+      "province": "경기",
+      "region": "수원시 권선구",
+      "scene_id": "S010",
+      "region_median_manwon": 58000.0,
+      "transaction_n": 1148,
+      "observed_complexes": 103,
+      "mapped_complexes": 101,
+      "mapped_transaction_n": 1126,
+      "unmapped_reasons": {
+        "multiple_road_addresses": 2
+      },
+      "price_band_counts_all_observed": [
+        67,
+        24,
+        12,
+        0,
+        0,
+        0
+      ],
+      "price_band_counts_mapped": [
+        66,
+        23,
+        12,
+        0,
+        0,
+        0
+      ],
+      "mapped_min_manwon": 22000.0,
+      "mapped_max_manwon": 91500.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 66,
+          "denominator": 101
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 23,
+          "denominator": 101
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 12,
+          "denominator": 101
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 0,
+          "denominator": 101
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 0,
+          "denominator": 101
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 101
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 32000.0,
+        "0.25": 38200.0,
+        "0.5": 43300.0,
+        "0.75": 61000.0,
+        "0.9": 71000.0
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "금곡동",
+          "transaction_n": 217,
+          "complex_n": 17,
+          "median_manwon": 53000.0
+        },
+        {
+          "dong": "권선동",
+          "transaction_n": 192,
+          "complex_n": 18,
+          "median_manwon": 64750.0
+        },
+        {
+          "dong": "호매실동",
+          "transaction_n": 145,
+          "complex_n": 9,
+          "median_manwon": 56000.0
+        },
+        {
+          "dong": "곡반정동",
+          "transaction_n": 113,
+          "complex_n": 5,
+          "median_manwon": 74750.0
+        },
+        {
+          "dong": "오목천동",
+          "transaction_n": 110,
+          "complex_n": 10,
+          "median_manwon": 46900.0
+        },
+        {
+          "dong": "세류동",
+          "transaction_n": 101,
+          "complex_n": 7,
+          "median_manwon": 61500.0
+        },
+        {
+          "dong": "구운동",
+          "transaction_n": 66,
+          "complex_n": 8,
+          "median_manwon": 59925.0
+        },
+        {
+          "dong": "입북동",
+          "transaction_n": 49,
+          "complex_n": 3,
+          "median_manwon": 47500.0
+        },
+        {
+          "dong": "당수동",
+          "transaction_n": 45,
+          "complex_n": 6,
+          "median_manwon": 34500.0
+        },
+        {
+          "dong": "서둔동",
+          "transaction_n": 45,
+          "complex_n": 4,
+          "median_manwon": 64500.0
+        },
+        {
+          "dong": "고색동",
+          "transaction_n": 32,
+          "complex_n": 7,
+          "median_manwon": 38750.0
+        },
+        {
+          "dong": "탑동",
+          "transaction_n": 17,
+          "complex_n": 8,
+          "median_manwon": 35500.0
+        },
+        {
+          "dong": "평동",
+          "transaction_n": 16,
+          "complex_n": 1,
+          "median_manwon": 49750.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 335,
+          "complex_n": 45,
+          "median_manwon": 42500.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 204,
+          "complex_n": 27,
+          "median_manwon": 43000.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 609,
+          "complex_n": 31,
+          "median_manwon": 65100.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R14",
+      "rank": 14,
+      "province": "서울",
+      "region": "은평구",
+      "scene_id": "S009",
+      "region_median_manwon": 94500.0,
+      "transaction_n": 578,
+      "observed_complexes": 131,
+      "mapped_complexes": 116,
+      "mapped_transaction_n": 505,
+      "unmapped_reasons": {
+        "multiple_road_addresses": 3,
+        "ambiguous_official_address": 4,
+        "address_not_found": 4,
+        "name_not_exact": 4
+      },
+      "price_band_counts_all_observed": [
+        10,
+        33,
+        54,
+        29,
+        5,
+        0
+      ],
+      "price_band_counts_mapped": [
+        10,
+        33,
+        47,
+        24,
+        2,
+        0
+      ],
+      "mapped_min_manwon": 41700.0,
+      "mapped_max_manwon": 151400.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 10,
+          "denominator": 116
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 33,
+          "denominator": 116
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 47,
+          "denominator": 116
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 24,
+          "denominator": 116
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 2,
+          "denominator": 116
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 116
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 51000.0,
+        "0.25": 59237.5,
+        "0.5": 77600.0,
+        "0.75": 93425.0,
+        "0.9": 112425.0
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "응암동",
+          "transaction_n": 137,
+          "complex_n": 25,
+          "median_manwon": 99800.0
+        },
+        {
+          "dong": "진관동",
+          "transaction_n": 91,
+          "complex_n": 25,
+          "median_manwon": 94000.0
+        },
+        {
+          "dong": "불광동",
+          "transaction_n": 86,
+          "complex_n": 13,
+          "median_manwon": 103000.0
+        },
+        {
+          "dong": "신사동",
+          "transaction_n": 67,
+          "complex_n": 20,
+          "median_manwon": 63800.0
+        },
+        {
+          "dong": "수색동",
+          "transaction_n": 56,
+          "complex_n": 7,
+          "median_manwon": 134600.0
+        },
+        {
+          "dong": "녹번동",
+          "transaction_n": 47,
+          "complex_n": 6,
+          "median_manwon": 120000.0
+        },
+        {
+          "dong": "구산동",
+          "transaction_n": 37,
+          "complex_n": 10,
+          "median_manwon": 60500.0
+        },
+        {
+          "dong": "역촌동",
+          "transaction_n": 21,
+          "complex_n": 10,
+          "median_manwon": 73500.0
+        },
+        {
+          "dong": "증산동",
+          "transaction_n": 20,
+          "complex_n": 8,
+          "median_manwon": 172500.0
+        },
+        {
+          "dong": "갈현동",
+          "transaction_n": 10,
+          "complex_n": 5,
+          "median_manwon": 59350.0
+        },
+        {
+          "dong": "대조동",
+          "transaction_n": 6,
+          "complex_n": 2,
+          "median_manwon": 78500.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 105,
+          "complex_n": 26,
+          "median_manwon": 66700.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 221,
+          "complex_n": 75,
+          "median_manwon": 84800.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 252,
+          "complex_n": 30,
+          "median_manwon": 120000.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R15",
+      "rank": 15,
+      "province": "서울",
+      "region": "구로구",
+      "scene_id": "S008",
+      "region_median_manwon": 82000.0,
+      "transaction_n": 544,
+      "observed_complexes": 132,
+      "mapped_complexes": 127,
+      "mapped_transaction_n": 529,
+      "unmapped_reasons": {
+        "ambiguous_official_address": 3,
+        "address_not_found": 1,
+        "multiple_road_addresses": 1
+      },
+      "price_band_counts_all_observed": [
+        9,
+        43,
+        53,
+        21,
+        6,
+        0
+      ],
+      "price_band_counts_mapped": [
+        9,
+        43,
+        51,
+        18,
+        6,
+        0
+      ],
+      "mapped_min_manwon": 37000.0,
+      "mapped_max_manwon": 189000.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 9,
+          "denominator": 127
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 43,
+          "denominator": 127
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 51,
+          "denominator": 127
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 18,
+          "denominator": 127
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 6,
+          "denominator": 127
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 127
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 53780.0,
+        "0.25": 61675.0,
+        "0.5": 75000.0,
+        "0.75": 89850.0,
+        "0.9": 125300.0
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "구로동",
+          "transaction_n": 123,
+          "complex_n": 40,
+          "median_manwon": 78000.0
+        },
+        {
+          "dong": "고척동",
+          "transaction_n": 94,
+          "complex_n": 21,
+          "median_manwon": 74800.0
+        },
+        {
+          "dong": "개봉동",
+          "transaction_n": 91,
+          "complex_n": 17,
+          "median_manwon": 91900.0
+        },
+        {
+          "dong": "신도림동",
+          "transaction_n": 80,
+          "complex_n": 18,
+          "median_manwon": 132000.0
+        },
+        {
+          "dong": "오류동",
+          "transaction_n": 60,
+          "complex_n": 17,
+          "median_manwon": 63500.0
+        },
+        {
+          "dong": "항동",
+          "transaction_n": 54,
+          "complex_n": 7,
+          "median_manwon": 81000.0
+        },
+        {
+          "dong": "천왕동",
+          "transaction_n": 30,
+          "complex_n": 7,
+          "median_manwon": 78600.0
+        },
+        {
+          "dong": "온수동",
+          "transaction_n": 8,
+          "complex_n": 2,
+          "median_manwon": 83250.0
+        },
+        {
+          "dong": "가리봉동",
+          "transaction_n": 2,
+          "complex_n": 1,
+          "median_manwon": 50700.0
+        },
+        {
+          "dong": "궁동",
+          "transaction_n": 2,
+          "complex_n": 2,
+          "median_manwon": 54000.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 226,
+          "complex_n": 58,
+          "median_manwon": 78500.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 221,
+          "complex_n": 56,
+          "median_manwon": 84000.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 97,
+          "complex_n": 18,
+          "median_manwon": 82000.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R16",
+      "rank": 16,
+      "province": "인천",
+      "region": "남동구",
+      "scene_id": "S007",
+      "region_median_manwon": 42850.0,
+      "transaction_n": 632,
+      "observed_complexes": 78,
+      "mapped_complexes": 77,
+      "mapped_transaction_n": 629,
+      "unmapped_reasons": {
+        "name_not_exact": 1
+      },
+      "price_band_counts_all_observed": [
+        62,
+        16,
+        0,
+        0,
+        0,
+        0
+      ],
+      "price_band_counts_mapped": [
+        61,
+        16,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mapped_min_manwon": 19300.0,
+      "mapped_max_manwon": 61700.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 61,
+          "denominator": 77
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 16,
+          "denominator": 77
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 0,
+          "denominator": 77
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 0,
+          "denominator": 77
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 0,
+          "denominator": 77
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 77
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 24980.0,
+        "0.25": 30000.0,
+        "0.5": 38300.0,
+        "0.75": 46000.0,
+        "0.9": 53880.0
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "논현동",
+          "transaction_n": 179,
+          "complex_n": 13,
+          "median_manwon": 45000.0
+        },
+        {
+          "dong": "구월동",
+          "transaction_n": 151,
+          "complex_n": 13,
+          "median_manwon": 50400.0
+        },
+        {
+          "dong": "만수동",
+          "transaction_n": 104,
+          "complex_n": 15,
+          "median_manwon": 30500.0
+        },
+        {
+          "dong": "간석동",
+          "transaction_n": 99,
+          "complex_n": 17,
+          "median_manwon": 41000.0
+        },
+        {
+          "dong": "서창동",
+          "transaction_n": 84,
+          "complex_n": 15,
+          "median_manwon": 43050.0
+        },
+        {
+          "dong": "도림동",
+          "transaction_n": 10,
+          "complex_n": 3,
+          "median_manwon": 31350.0
+        },
+        {
+          "dong": "남촌동",
+          "transaction_n": 5,
+          "complex_n": 2,
+          "median_manwon": 28400.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 136,
+          "complex_n": 23,
+          "median_manwon": 29500.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 334,
+          "complex_n": 32,
+          "median_manwon": 48500.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 162,
+          "complex_n": 23,
+          "median_manwon": 45500.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R17",
+      "rank": 17,
+      "province": "인천",
+      "region": "연수구",
+      "scene_id": "S006",
+      "region_median_manwon": 67450.0,
+      "transaction_n": 1152,
+      "observed_complexes": 119,
+      "mapped_complexes": 113,
+      "mapped_transaction_n": 1136,
+      "unmapped_reasons": {
+        "address_not_found": 5,
+        "multiple_road_addresses": 1
+      },
+      "price_band_counts_all_observed": [
+        47,
+        23,
+        38,
+        11,
+        0,
+        0
+      ],
+      "price_band_counts_mapped": [
+        46,
+        22,
+        35,
+        10,
+        0,
+        0
+      ],
+      "mapped_min_manwon": 24750.0,
+      "mapped_max_manwon": 136000.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 46,
+          "denominator": 113
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 22,
+          "denominator": 113
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 35,
+          "denominator": 113
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 10,
+          "denominator": 113
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 0,
+          "denominator": 113
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 113
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 28040.0,
+        "0.25": 34500.0,
+        "0.5": 58850.0,
+        "0.75": 81000.0,
+        "0.9": 94799.99999999999
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "송도동",
+          "transaction_n": 860,
+          "complex_n": 65,
+          "median_manwon": 74000.0
+        },
+        {
+          "dong": "동춘동",
+          "transaction_n": 125,
+          "complex_n": 14,
+          "median_manwon": 47000.0
+        },
+        {
+          "dong": "연수동",
+          "transaction_n": 70,
+          "complex_n": 10,
+          "median_manwon": 33150.0
+        },
+        {
+          "dong": "옥련동",
+          "transaction_n": 48,
+          "complex_n": 16,
+          "median_manwon": 29200.0
+        },
+        {
+          "dong": "선학동",
+          "transaction_n": 41,
+          "complex_n": 8,
+          "median_manwon": 31750.0
+        },
+        {
+          "dong": "청학동",
+          "transaction_n": 8,
+          "complex_n": 6,
+          "median_manwon": 39750.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 235,
+          "complex_n": 45,
+          "median_manwon": 33400.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 143,
+          "complex_n": 15,
+          "median_manwon": 59500.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 774,
+          "complex_n": 59,
+          "median_manwon": 76150.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R18",
+      "rank": 18,
+      "province": "경기",
+      "region": "용인시 기흥구",
+      "scene_id": "S005",
+      "region_median_manwon": 62000.0,
+      "transaction_n": 1381,
+      "observed_complexes": 142,
+      "mapped_complexes": 137,
+      "mapped_transaction_n": 1331,
+      "unmapped_reasons": {
+        "name_not_exact": 2,
+        "ambiguous_official_address": 2,
+        "multiple_road_addresses": 1
+      },
+      "price_band_counts_all_observed": [
+        53,
+        47,
+        34,
+        8,
+        0,
+        0
+      ],
+      "price_band_counts_mapped": [
+        51,
+        45,
+        34,
+        7,
+        0,
+        0
+      ],
+      "mapped_min_manwon": 24750.0,
+      "mapped_max_manwon": 147500.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 51,
+          "denominator": 137
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 45,
+          "denominator": 137
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 34,
+          "denominator": 137
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 7,
+          "denominator": 137
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 0,
+          "denominator": 137
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 137
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 35960.0,
+        "0.25": 44300.0,
+        "0.5": 54350.0,
+        "0.75": 74750.0,
+        "0.9": 92800.00000000001
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "영덕동",
+          "transaction_n": 179,
+          "complex_n": 14,
+          "median_manwon": 71500.0
+        },
+        {
+          "dong": "동백동",
+          "transaction_n": 165,
+          "complex_n": 15,
+          "median_manwon": 52000.0
+        },
+        {
+          "dong": "구갈동",
+          "transaction_n": 163,
+          "complex_n": 13,
+          "median_manwon": 96700.0
+        },
+        {
+          "dong": "마북동",
+          "transaction_n": 152,
+          "complex_n": 18,
+          "median_manwon": 76900.0
+        },
+        {
+          "dong": "신갈동",
+          "transaction_n": 122,
+          "complex_n": 12,
+          "median_manwon": 70000.0
+        },
+        {
+          "dong": "중동",
+          "transaction_n": 104,
+          "complex_n": 12,
+          "median_manwon": 59500.0
+        },
+        {
+          "dong": "보정동",
+          "transaction_n": 91,
+          "complex_n": 10,
+          "median_manwon": 108000.0
+        },
+        {
+          "dong": "보라동",
+          "transaction_n": 85,
+          "complex_n": 9,
+          "median_manwon": 42500.0
+        },
+        {
+          "dong": "상하동",
+          "transaction_n": 66,
+          "complex_n": 8,
+          "median_manwon": 38000.0
+        },
+        {
+          "dong": "서천동",
+          "transaction_n": 63,
+          "complex_n": 5,
+          "median_manwon": 63700.0
+        },
+        {
+          "dong": "청덕동",
+          "transaction_n": 55,
+          "complex_n": 4,
+          "median_manwon": 42000.0
+        },
+        {
+          "dong": "언남동",
+          "transaction_n": 48,
+          "complex_n": 8,
+          "median_manwon": 62700.0
+        },
+        {
+          "dong": "상갈동",
+          "transaction_n": 29,
+          "complex_n": 4,
+          "median_manwon": 62000.0
+        },
+        {
+          "dong": "하갈동",
+          "transaction_n": 18,
+          "complex_n": 2,
+          "median_manwon": 38650.0
+        },
+        {
+          "dong": "고매동",
+          "transaction_n": 16,
+          "complex_n": 5,
+          "median_manwon": 27600.0
+        },
+        {
+          "dong": "지곡동",
+          "transaction_n": 14,
+          "complex_n": 1,
+          "median_manwon": 32900.0
+        },
+        {
+          "dong": "공세동",
+          "transaction_n": 11,
+          "complex_n": 2,
+          "median_manwon": 30000.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 158,
+          "complex_n": 27,
+          "median_manwon": 49200.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 855,
+          "complex_n": 89,
+          "median_manwon": 53000.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 368,
+          "complex_n": 26,
+          "median_manwon": 75000.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R19",
+      "rank": 19,
+      "province": "서울",
+      "region": "중랑구",
+      "scene_id": "S004",
+      "region_median_manwon": 79150.0,
+      "transaction_n": 404,
+      "observed_complexes": 97,
+      "mapped_complexes": 89,
+      "mapped_transaction_n": 354,
+      "unmapped_reasons": {
+        "ambiguous_official_address": 6,
+        "name_not_exact": 1,
+        "multiple_road_addresses": 1
+      },
+      "price_band_counts_all_observed": [
+        1,
+        29,
+        60,
+        7,
+        0,
+        0
+      ],
+      "price_band_counts_mapped": [
+        1,
+        25,
+        56,
+        7,
+        0,
+        0
+      ],
+      "mapped_min_manwon": 46500.0,
+      "mapped_max_manwon": 149700.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 1,
+          "denominator": 89
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 25,
+          "denominator": 89
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 56,
+          "denominator": 89
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 7,
+          "denominator": 89
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 0,
+          "denominator": 89
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 89
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 60800.0,
+        "0.25": 68550.0,
+        "0.5": 75000.0,
+        "0.75": 84250.0,
+        "0.9": 93560.00000000001
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "면목동",
+          "transaction_n": 132,
+          "complex_n": 30,
+          "median_manwon": 84000.0
+        },
+        {
+          "dong": "신내동",
+          "transaction_n": 100,
+          "complex_n": 17,
+          "median_manwon": 74000.0
+        },
+        {
+          "dong": "묵동",
+          "transaction_n": 47,
+          "complex_n": 19,
+          "median_manwon": 79500.0
+        },
+        {
+          "dong": "망우동",
+          "transaction_n": 46,
+          "complex_n": 12,
+          "median_manwon": 74000.0
+        },
+        {
+          "dong": "상봉동",
+          "transaction_n": 40,
+          "complex_n": 9,
+          "median_manwon": 85950.0
+        },
+        {
+          "dong": "중화동",
+          "transaction_n": 39,
+          "complex_n": 10,
+          "median_manwon": 78000.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 184,
+          "complex_n": 44,
+          "median_manwon": 73450.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 130,
+          "complex_n": 39,
+          "median_manwon": 80850.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 90,
+          "complex_n": 14,
+          "median_manwon": 111500.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    },
+    {
+      "region_id": "R20",
+      "rank": 20,
+      "province": "경기",
+      "region": "부천시 원미구",
+      "scene_id": "S003",
+      "region_median_manwon": 70500.0,
+      "transaction_n": 699,
+      "observed_complexes": 80,
+      "mapped_complexes": 67,
+      "mapped_transaction_n": 577,
+      "unmapped_reasons": {
+        "multiple_road_addresses": 3,
+        "ambiguous_official_address": 8,
+        "address_not_found": 2
+      },
+      "price_band_counts_all_observed": [
+        16,
+        37,
+        25,
+        2,
+        0,
+        0
+      ],
+      "price_band_counts_mapped": [
+        16,
+        29,
+        20,
+        2,
+        0,
+        0
+      ],
+      "mapped_min_manwon": 34500.0,
+      "mapped_max_manwon": 126000.0,
+      "mapped_bands": [
+        {
+          "label": "5억 미만",
+          "color": "#3E82BD",
+          "complex_n": 16,
+          "denominator": 67
+        },
+        {
+          "label": "5~7억",
+          "color": "#299D92",
+          "complex_n": 29,
+          "denominator": 67
+        },
+        {
+          "label": "7~10억",
+          "color": "#BEA52D",
+          "complex_n": 20,
+          "denominator": 67
+        },
+        {
+          "label": "10~15억",
+          "color": "#E3913D",
+          "complex_n": 2,
+          "denominator": 67
+        },
+        {
+          "label": "15~20억",
+          "color": "#D75B58",
+          "complex_n": 0,
+          "denominator": 67
+        },
+        {
+          "label": "20억 이상",
+          "color": "#954B87",
+          "complex_n": 0,
+          "denominator": 67
+        }
+      ],
+      "mapped_complex_price_quantiles": {
+        "0.1": 40800.0,
+        "0.25": 50125.0,
+        "0.5": 60500.0,
+        "0.75": 75000.0,
+        "0.9": 82925.0
+      },
+      "dong_prices_by_transaction_count": [
+        {
+          "dong": "중동",
+          "transaction_n": 320,
+          "complex_n": 29,
+          "median_manwon": 70000.0
+        },
+        {
+          "dong": "상동",
+          "transaction_n": 271,
+          "complex_n": 21,
+          "median_manwon": 73000.0
+        },
+        {
+          "dong": "약대동",
+          "transaction_n": 46,
+          "complex_n": 4,
+          "median_manwon": 71650.0
+        },
+        {
+          "dong": "역곡동",
+          "transaction_n": 44,
+          "complex_n": 16,
+          "median_manwon": 59250.0
+        },
+        {
+          "dong": "원미동",
+          "transaction_n": 10,
+          "complex_n": 3,
+          "median_manwon": 49100.0
+        },
+        {
+          "dong": "심곡동",
+          "transaction_n": 3,
+          "complex_n": 3,
+          "median_manwon": 40500.0
+        },
+        {
+          "dong": "춘의동",
+          "transaction_n": 3,
+          "complex_n": 2,
+          "median_manwon": 56500.0
+        },
+        {
+          "dong": "도당동",
+          "transaction_n": 1,
+          "complex_n": 1,
+          "median_manwon": 42900.0
+        },
+        {
+          "dong": "소사동",
+          "transaction_n": 1,
+          "complex_n": 1,
+          "median_manwon": 37800.0
+        }
+      ],
+      "build_cohorts": [
+        {
+          "label": "2000년 이전 준공",
+          "transaction_n": 279,
+          "complex_n": 28,
+          "median_manwon": 60000.0
+        },
+        {
+          "label": "2001~2010년 준공",
+          "transaction_n": 253,
+          "complex_n": 39,
+          "median_manwon": 74500.0
+        },
+        {
+          "label": "2011년 이후 준공",
+          "transaction_n": 167,
+          "complex_n": 13,
+          "median_manwon": 89900.0
+        }
+      ],
+      "interpretation_limit": "거래구성·세부입지·연식·층·단지상품 차이가 함께 섞인 관측 비교. 인과효과나 개별 단지 가치평가로 해석하지 않음."
+    }
+  ],
+  "method": "dong/cohort are transaction medians; mapped quantiles/bands are one median per location-verified complex. Denominators are separate."
+}

@@ -1,0 +1,42 @@
+{
+  "status": "approved",
+  "approved_at": "2026-11-03T11:45:35.001395+00:00",
+  "decision_id": "d884be1c4e38",
+  "user_request": "진행해줘",
+  "scope": {
+    "part": 1,
+    "revision": "intro-rationale-v3",
+    "changed_scene_ids": [
+      "P01-INTRO"
+    ],
+    "free_InJoon_intro_voice_generation": true,
+    "cash_cap_krw": 0,
+    "paid_generation_authorized": false,
+    "upload_authorized": false,
+    "external_file_export_authorized": false,
+    "part2_production_authorized": false
+  },
+  "artifacts": [
+    {
+      "path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/writer/top20-split-v4/intro-rationale-v3/intro_proposal_v3.json",
+      "sha256": "0cbd68f79ca4981b13d08b68547811c19102be6594933b3d59617af51168ea5d"
+    },
+    {
+      "path": "영상/신혼부부_지역별아파트/2부작_수정안/1편_20-11위_대본_v3_도입수정안.md",
+      "sha256": "0fb9e3c0dc8411ff95ba77860ee6e21c74e84ed176e0977e8f3ea582b278d562"
+    },
+    {
+      "path": "영상/신혼부부_지역별아파트/2부작_수정안/도입_방향과모션_v3.md",
+      "sha256": "0477dfc31e1ef76beb813d618fc6f33d6e7fcf49e2af2448c8640b85c5eb37ff"
+    }
+  ],
+  "existing_body_video": "outputs/top20-split-v4/part1/part1_free_v4.mp4",
+  "existing_body_sha256": "9de0ac10a1d177b49da95b720d863f913fbf8ecc8cdb972a461eb02524b180b2",
+  "approval_gates": [
+    "topic",
+    "script",
+    "budget",
+    "completed",
+    "pre_upload"
+  ]
+}

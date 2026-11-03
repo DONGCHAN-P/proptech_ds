@@ -1,0 +1,91 @@
+{
+  "ordinary_market_candidates": [
+    {
+      "region": "원흥기존생활 접점/도면서측",
+      "blocks": [
+        "S4"
+      ],
+      "reason": "일반공공분양·기존상업시설 접점",
+      "claim_ids": [
+        "CN-S4-TYPE",
+        "CN-S34-LIFE"
+      ],
+      "status": "conditional_not_ranking",
+      "missing": [
+        "최종공고타입층가격",
+        "보행동선",
+        "학교개교",
+        "역거리"
+      ]
+    },
+    {
+      "region": "중앙서측 첫입주권역",
+      "blocks": [
+        "S5"
+      ],
+      "reason": "2028.01입주예정·84A원가격근거 확보",
+      "claim_ids": [
+        "CN-S5-MOVE",
+        "CN-S5-PRICE"
+      ],
+      "status": "conditional_not_ranking",
+      "missing": [
+        "정정공고",
+        "최신학교계획",
+        "계획역동선"
+      ]
+    },
+    {
+      "region": "서측 분리권역",
+      "blocks": [
+        "S1"
+      ],
+      "reason": "공급계획 존재하나 세부검증대기",
+      "claim_ids": [
+        "CN-S1-PLAN"
+      ],
+      "status": "unverified_candidate",
+      "missing": [
+        "모집공고",
+        "상품유형최종조건",
+        "입주월",
+        "생활접근"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "block": "S3",
+      "reason": "이익공유형, 개인간거래불가 안내. 일반매매대장제외",
+      "claim_id": "CN-S3-TYPE"
+    },
+    {
+      "block": "A4",
+      "reason": "신혼희망타운 여부/최종조건 확인 전 일반매매후보 제외"
+    }
+  ],
+  "alternatives": [
+    {
+      "region": "원흥역/도래울",
+      "role": "기존철도·생활시설 대안",
+      "status": "qualified",
+      "verified_access_claim": "CN-EXISTING-RAIL",
+      "prices": null
+    },
+    {
+      "region": "삼송/지축",
+      "role": "3호선생활권 비교대상 탐색",
+      "status": "needs_operator_station_and_complex_check",
+      "prices": null
+    }
+  ],
+  "transaction_availability": "existing_transactions_availability.json",
+  "price_analysis_required": {
+    "area": "83≤전용㎡<85",
+    "period": "영상직전완료분기, 후보별동일",
+    "floor": "5층이상 기본;저층은별도",
+    "cancellations": "is_canceled 및cancel_date로 제외",
+    "statistics": "원거래중위·n·기간·수집일·업데이트지연표시",
+    "no_ranking_before_checks": true
+  }
+}

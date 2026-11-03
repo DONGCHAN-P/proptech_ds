@@ -1,0 +1,62 @@
+{
+  "paragraph_id": "C02P05",
+  "scene_id": "C02",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:02:17.657Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "be8c0a1dfc1c69f30434432008a652bffa193e456992b3811109e9d5cc22f6c8",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "이렇게 조건을 먼저 고정하면 집값이 얼마나 올랐는지와 매달 얼마를 저축했는지를 분리할 수 있습니다. 같은 집과 같은 예산을 맞춰 주거 방식에 따른 차이를 보겠습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 92,
+  "characters": 92,
+  "actual_credits": 37,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17702,
+    "character_limit": 40000,
+    "included_remaining": 22298,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "r2rBAzKzssj8786dDfZI",
+    "x-request-id": null,
+    "character-cost": "37",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:02:16 GMT"
+  },
+  "pcm_samples": 504504,
+  "pcm_duration_s": 11.44,
+  "provider_last_spoken_end_s": 11.52,
+  "artifact_sha256": {
+    "paragraphs/C02P05/audio.mp3": "37948384a828acce453b847b418596bafb027d8be52f2963e5cebaa873a297c1",
+    "paragraphs/C02P05/audio.wav": "a70e4f22fdf348755f054bc3c4cede6965489e872190dcc8e4bc3282d3d69787",
+    "paragraphs/C02P05/alignment.json": "ff4c8a33e152e480b6bf318c7221165e43589229db792cb25e319bb0b6eef944",
+    "paragraphs/C02P05/normalized_alignment.json": "ff4c8a33e152e480b6bf318c7221165e43589229db792cb25e319bb0b6eef944"
+  },
+  "account_after": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 17702,
+    "character_limit": 40000,
+    "included_remaining": 22298,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_observed_delta": 0,
+  "completed_at_utc": "2026-10-26T06:02:22.014Z"
+}

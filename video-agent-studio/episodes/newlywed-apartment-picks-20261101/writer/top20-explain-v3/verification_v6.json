@@ -1,0 +1,179 @@
+{
+  "status": "writer_final_text_checks_passed",
+  "created_at": "2026-11-03T01:26:32.217714+09:00",
+  "checks": [
+    {
+      "check": "20개 지역/장면ID와20→1 순서",
+      "result": "pass",
+      "detail": "R01..R20 / S003..S022"
+    },
+    {
+      "check": "2024 거주 수 원값 보존",
+      "result": "pass",
+      "detail": "지정 top20.json과 대조"
+    },
+    {
+      "check": "문장ID 유일/대기슬롯0",
+      "result": "pass",
+      "detail": 133
+    },
+    {
+      "check": "문장별 필수 자료연결 필드",
+      "result": "pass",
+      "detail": [
+        "anchor_string",
+        "claim_ids",
+        "display_notes",
+        "display_text",
+        "onscreen_purpose",
+        "reading_notes",
+        "reading_text",
+        "screen_switch_id",
+        "sentence_id",
+        "statement_type",
+        "text"
+      ]
+    },
+    {
+      "check": "문체·질문형 제거",
+      "result": "pass",
+      "detail": "합니다체 평서문"
+    },
+    {
+      "check": "claim 해소/qualified 확정문 미사용",
+      "result": "pass",
+      "detail": "리서치 제한된 검증 범위 승계"
+    },
+    {
+      "check": "20지역 특징2~3문장",
+      "result": "pass",
+      "detail": "주거 형성/생활권+실제 장소"
+    },
+    {
+      "check": "최종 사진명세20곳 정확 승계",
+      "result": "pass",
+      "detail": "새 픽셀검수·새 파일해시 계산 아님;명세 기록 대조"
+    },
+    {
+      "check": "가격 v2만 사용/총14303유효행",
+      "result": "pass",
+      "detail": "부모 XML독립 재집계 근거 승계;writer는 패널/전달값 대조"
+    },
+    {
+      "check": "20지역/20단지 정확표시·n·동명",
+      "result": "pass",
+      "detail": []
+    },
+    {
+      "check": "가격 전환 두 단계와n 지도표시",
+      "result": "pass",
+      "detail": "지역가격→별도 단지사례"
+    },
+    {
+      "check": "화면 전환ID 모두 해소",
+      "result": "pass",
+      "detail": "초 단위 타임록 아님"
+    },
+    {
+      "check": "문장 앵커 원문 일치",
+      "result": "pass",
+      "detail": "실제 문자열 연결"
+    },
+    {
+      "check": "기관명 정정/지역 반복푸터 없음",
+      "result": "pass",
+      "detail": "발표기관 도입1회;내부 과거출처 메타데이터는 보존"
+    },
+    {
+      "check": "2024 설명·혼인5년기준·2026 가격연도 분리",
+      "result": "pass",
+      "detail": "대상기준 짧게 유지;부정회피 대신 직접 설명"
+    },
+    {
+      "check": "10월 신고 진행 도입1회",
+      "result": "pass",
+      "detail": "지역별 반복 낭독 없음"
+    },
+    {
+      "check": "필터/정상행 보존방법 정확",
+      "result": "pass",
+      "detail": "표시 해제행만 제외;음성에서 덜어낸 조건은 화면/내부근거 유지"
+    },
+    {
+      "check": "생활권 분리/확정좌표 승계",
+      "result": "pass",
+      "detail": "원래 사진을 가격단지 전경으로 자동 연결하지 않음"
+    },
+    {
+      "check": "R20 공원 지도/상동 거리사진 분리",
+      "result": "pass",
+      "detail": "기존 검증 공원문장 유지"
+    },
+    {
+      "check": "R18·R08 권역 구분",
+      "result": "pass",
+      "detail": "동백/구성 및 문래/여의도 구분"
+    },
+    {
+      "check": "신내2015사진에현재노선합성금지",
+      "result": "pass",
+      "detail": "리서치 편집주의 반영"
+    },
+    {
+      "check": "추정·실제시간 분리/8분초과조건",
+      "result": "pass",
+      "detail": "13~16분은 잠정목표;실제음성 우선"
+    },
+    {
+      "check": "새 승인 대기/TTS·렌더 금지",
+      "result": "pass",
+      "detail": "현재 권한은 기획/자료/대본 보강"
+    },
+    {
+      "check": "MD 작성문 전체 일치",
+      "result": "pass",
+      "detail": "낭독문 누락/이전 대기 설명 잔존 없음"
+    },
+    {
+      "check": "최신 입력 해시 유지",
+      "result": "pass",
+      "detail": "현재price_panel_data와 v2최종메타데이터 SHA 포함"
+    },
+    {
+      "check": "최신 부모패널 SHA 직접일치",
+      "result": "pass",
+      "detail": "844f0ee211dfc89094b8160558d72e0f8f001e8072d361123447e8c1ebfacdef"
+    },
+    {
+      "check": "송파 비교범위와20지역 최소최대 회수",
+      "result": "pass",
+      "detail": "원인/프리미엄 주장 없음;20지역 중위값 최소최대 검사"
+    },
+    {
+      "check": "마지막 중복·도입 음성 간결화",
+      "result": "pass",
+      "detail": "법적정의는 내부근거 유지;실제 도입시간은 음성 승인 이후 확인"
+    },
+    {
+      "check": "기흥 부모 보완근거 통합",
+      "result": "pass",
+      "detail": "부모 공식페이지 L579~585 검증 승계;고용증가/집값원인 추론 없음"
+    }
+  ],
+  "failed": [],
+  "summary": {
+    "regions": 20,
+    "scenes": 26,
+    "written_sentences": 133,
+    "pending_slots": 0,
+    "region_and_complex_price_pairs": 20
+  },
+  "output_sha256": {
+    "script_v6.md": "4259f50a9c5cadbadd864d838559a16f85e07316818ddcb31ce40939fbccac38",
+    "scene_proposals_v6.json": "8beec59448e180617327f17913aaa25277b3152769a1815cbdc493351003803e"
+  },
+  "scope": "새 텍스트·claim·전환ID·40가격/각n·최신입력SHA 검사.독립원XML 재집계·사진픽셀·좌표·음성·실제프레임검수는 writer가 미수행.",
+  "actual_listening_performed": false,
+  "continuous_playback_performed": false,
+  "tts_or_render_performed": false
+}

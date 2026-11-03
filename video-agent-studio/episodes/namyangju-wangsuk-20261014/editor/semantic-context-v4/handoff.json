@@ -1,0 +1,39 @@
+{
+  "revision": "semantic-context-v4-interrupted",
+  "status": "stopped_by_latest_editorial_change",
+  "owner": "video_editor",
+  "next_owner": "video_director",
+  "render": {
+    "session_id": 37486,
+    "stop_action": "Ctrl-C sent to owned unified exec session",
+    "actual_exit_code": 1,
+    "last_observed_progress_percent": 20,
+    "last_observed_frames": 5699,
+    "planned_total_frames": 27389,
+    "owned_renderer_process_count_after_stop": 0,
+    "process_check": "Win32_Process node.exe CommandLine matches semantic-context-v4/render.cjs only",
+    "final_mp4_exists": false,
+    "completed": false,
+    "restart_authorized": false
+  },
+  "preserved": [
+    "video/src/NamyangjuV4.tsx",
+    "video/src/namyangju-v4/",
+    "video/public/namyangju-v4/",
+    "editor/semantic-context-v4/input_manifest.json",
+    "editor/semantic-context-v4/bundle/",
+    "outputs/video-review-v4/source_*.png",
+    "outputs/video-review-v4/namyangju-wangsuk_v4.srt",
+    "outputs/video-review-v4/captions.remotion.json",
+    "outputs/video-review-v4/semantic_caption_keyframes.json",
+    "all prior full masters, proof videos and original narration"
+  ],
+  "completed_package_created": false,
+  "publication": false,
+  "new_paid_generation": false,
+  "notes": [
+    "사용자가 전체 구성과 전개를 변경했으므로 기존 v4 전체 렌더와 납품 패키징을 중단했습니다.",
+    "새 대본·자료 검토와 승인 이전에 음성·이미지 생성이나 렌더를 다시 시작하지 않습니다.",
+    "부분 소스·자막·대표 프레임은 참고용 보존물이며 새 구성의 승인 결과물이 아닙니다."
+  ]
+}

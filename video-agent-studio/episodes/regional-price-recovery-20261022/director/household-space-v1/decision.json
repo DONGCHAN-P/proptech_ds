@@ -1,0 +1,23 @@
+{
+  "task_id": "household-space-v1",
+  "request_type": "enhance_video",
+  "client_date": "2026-10-25",
+  "input_revision": "character-quality-v1/sample-v3",
+  "input_status": "user_disliked_characters_and_walking_but_liked_house_view",
+  "changed_scene_ids": ["L002-P2"],
+  "decision": "Keep cutaway homes; replace walking characters with a living-room/studio reveal, household labels and a shared-color cup motif.",
+  "scope": "20-second local silent direction sample; not a full-film replacement or a user style approval",
+  "script": "Approved literature-video-v1 unchanged",
+  "narration": "generation still on hold",
+  "actual_roles_executed": ["main director/editor", "video_qa"],
+  "qa_agent_id": "01a16930-85f5-7de0-a0dc-cde61cb4b3cc",
+  "qa_report": "qa/household-space-v1/review.md",
+  "qa_scope": "17 encoded samples in contact sheet, 2 full-resolution frames; continuous playback unchecked",
+  "verification": "outputs/household-space-v1/checks/verification.json",
+  "video_sha256": "67851a459535ba6f93feba957aa28abfd0af615d20e7af7322d78aa71a38424a",
+  "required_findings_in_samples": 0,
+  "recommendations_left_for_direction_review": ["small cup motif readability", "mid-transition translucent room and labels"],
+  "new_paid_media_calls": 0,
+  "external_send": false,
+  "full_film_replaced": false
+}

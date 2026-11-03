@@ -1,0 +1,227 @@
+{
+  "episode_id": "hanam-gyosan-20261019",
+  "stage": "published_jun_v5",
+  "execution_allowed": true,
+  "reference_only": false,
+  "budget": {
+    "cash_cap": 0,
+    "paid_api_calls": 0
+  },
+  "authorization": {
+    "user_delegated_free_production_and_review": true,
+    "private_upload_requested": true,
+    "public_upload_authorized": false
+  },
+  "gates": {
+    "topic": {
+      "id": "gyosan-topic-20261019",
+      "status": "approved_direct_user_request",
+      "artifacts": {
+        "brief.json": "3b1d05622bdeb29843eb5ad123dde89b9fb57773bc08b40cbe4176562ef9463c"
+      }
+    },
+    "script": {
+      "id": "gyosan-script-v1-delegated",
+      "status": "approved_under_explicit_free_production_delegation",
+      "artifacts": {
+        "outputs\\script_v1.md": "2f6c5fbbba859029210117776a369920e5e08ce8d4295d85f6618e17b410c101",
+        "writer\\scenes_v1.json": "1618997173edb36a98aeb312e2134be9c62a17b76ed36554c1ceac9d8d2adf35",
+        "narration\\units.json": "0bb3dfb9855c40d857316d9aeb058a9c6128e74ad07b181e61a2cb64362528cb",
+        "research\\facts.json": "51ec4018ea266d15b5f800379546025e73b2a4f3f954ff41a838b6bca45644b9"
+      }
+    },
+    "budget": {
+      "id": "gyosan-budget-zero",
+      "status": "not_applicable_no_paid_generation",
+      "cash_cap": 0,
+      "paid_api_calls": 0,
+      "automatic_charge": false
+    },
+    "completed": {
+      "id": "1cf2e63a13b1",
+      "episode": "hanam-gyosan-20261019",
+      "gate": "completed",
+      "status": "approved",
+      "video_revision": "v1r3-free-tts",
+      "video_sha256": "3a2cf75f6e19bc158cf97028cb20c7e254858c33547bfac82b92a3dcb3955fb5",
+      "approval_basis": "Direct user request 2026-10-19: delegated free production/review and private upload of Hanam Gyosan matching Changneung final; not paid generation or public publication.",
+      "created_at": "2026-10-18T17:04:15.342871+00:00",
+      "artifact_hashes": {
+        "outputs/production-v1/gyosan_full_v1r3_free_tts.mp4": "3a2cf75f6e19bc158cf97028cb20c7e254858c33547bfac82b92a3dcb3955fb5",
+        "outputs/production-v1/gyosan_v1.srt": "9f78a5a7570e1b5e792ddbd410015cd545cb5603be6be77a19efceb16eedad94",
+        "outputs/production-v1/technical_v1r3.json": "f6ab2f34b68a57a41a15b291186b72f92519758fda0335fe423e112a43ebe1f5",
+        "qa/production-v1/final_review.json": "b8389923d5fa7e269b7cd180a097a32905d7a042c1b195cd2060adefc6c14a0e",
+        "outputs/script_v1.md": "2f6c5fbbba859029210117776a369920e5e08ce8d4295d85f6618e17b410c101"
+      },
+      "new_paid_generation_authorized": false
+    },
+    "pre_upload": {
+      "id": "d31ebe20d515",
+      "episode": "hanam-gyosan-20261019",
+      "gate": "pre_upload",
+      "status": "approved",
+      "video_revision": "v1r3-free-tts",
+      "video_sha256": "3a2cf75f6e19bc158cf97028cb20c7e254858c33547bfac82b92a3dcb3955fb5",
+      "job_sha256": "fdd3d32be0b897ca4ca1c7af42b987b124daab66e6696ba15ca43e07ba2f04aa",
+      "channel_id": "UCr_mTC0x_Uobv6MrIsOkrXw",
+      "privacy": "private",
+      "completed_decision_file": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/release-prep-v1/completed_approval.json",
+      "new_paid_generation_authorized": false,
+      "public_upload_authorized": false,
+      "approval_basis": "Direct user request 2026-10-19: delegated free production/review and private upload of Hanam Gyosan matching Changneung final; not paid generation or public publication.",
+      "created_at": "2026-10-18T17:04:15.342871+00:00"
+    }
+  },
+  "script_revision": "script-v1",
+  "audio_revision": "heami-rate2-free-v1",
+  "duration_s": 993.6,
+  "paid_api_calls": 0,
+  "claude_collaboration_receipt": "director/claude_receipt.json",
+  "facts_review": "research/script_v1_fact_pass_receipt.json",
+  "static_preview_video": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v1\\gyosan_full_v1_free_tts.mp4",
+  "static_preview_sha256": "7c9fd7d508aa1a08e4253e19ce232f2498b0e67c481f390c2fb637c64a83f119",
+  "changed_scene_ids": [
+    "M003",
+    "M004",
+    "M006",
+    "M007",
+    "M008"
+  ],
+  "motion_revision": "six-key-states-44-consecutive-30fps",
+  "new_paid_api_calls": 0,
+  "current_render": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\production-v5-jun\\gyosan_v5_jun.mp4",
+  "current_render_sha256": "13abf7fc0b873036ad72c0b578251cb08e64ef514ecfe09fa636e26905ed214e",
+  "current_render_revision": "v5-jun",
+  "required_qa_pending": [],
+  "qa_review": "qa/review-v5-jun-independent/report.json",
+  "qa_sha256": "fa43919fa3d816c76acc06ca9df640885273f76c8653025936d3b2d093cd81da",
+  "required_unresolved": 0,
+  "private_upload_owner": "root",
+  "video_path": "outputs/production-v5-jun/gyosan_v5_jun.mp4",
+  "rendered_video_sha256": "13abf7fc0b873036ad72c0b578251cb08e64ef514ecfe09fa636e26905ed214e",
+  "actual_video_duration_seconds": 1075.7333333333333,
+  "youtube_video_id": "XWAWnSrz7FE",
+  "youtube_url": "https://youtu.be/XWAWnSrz7FE",
+  "youtube_privacy": "public",
+  "youtube_processing": "succeeded",
+  "upload_receipt": "outputs/release-prep-v5-jun/upload_receipt.json",
+  "review_v2": {
+    "status": "delivered_local_review",
+    "requested_at": "2026-10-20T08:00:31.705836+00:00",
+    "baseline_revision": "v1r3-free-tts",
+    "reference_episode": "goyang-changneung-20261015",
+    "scope": "visual edit and independent sampled review; reuse script/audio; no paid generation or upload",
+    "current_gate_artifacts_preserved": true,
+    "actual_listening": false,
+    "continuous_playback": false,
+    "video_sha256": "045cabd59ba3d4b13c755a960b00bd3effc79f58521d1e2ab14ff9ca59d9ba7c",
+    "qa": "qa/review-v2-independent/report.json",
+    "technical": "outputs/production-v2/technical.json",
+    "required_unresolved": 0,
+    "recommended_unresolved": [
+      "empty caption box during final three-second hold"
+    ],
+    "upload_performed": false,
+    "paid_generation_calls": 0,
+    "completed_at": "2026-10-20T08:20:26.177853+00:00",
+    "claude_receipt": "qa/review-v2/claude_receipt.json",
+    "consensus": "director/review_v2_consensus.json"
+  },
+  "previous_private_upload_revision": "v1r3",
+  "script_language_revision": {
+    "revision": "script-v5-neutral-titles",
+    "script": "outputs/script-review-v5/script_v5.md",
+    "script_sha256": "9c3560f2880a299c2e57e0b8775f6a98c87f07f18273d28328cd307787ab0350",
+    "decision_id": "a12c24e4e95a",
+    "status": "approved_for_requested_editorial_revision",
+    "audio_reflected": true,
+    "video_reflected": true,
+    "paid_calls": 0,
+    "render_revision": "v5-free-tts"
+  },
+  "production_v4": {
+    "status": "delivered_local_review",
+    "script_decision_id": "14f4b4709c1e",
+    "paid_calls_allowed": false,
+    "upload_authorized_by_this_request": false,
+    "video": "outputs/production-v4/gyosan_review_v4r1_free_tts.mp4",
+    "video_sha256": "a9582e793267c27695f3dbf8397c8d3ff9d339394be29aed50964811cab9d202",
+    "qa": "qa/review-v4-independent/report.json",
+    "required_unresolved": 0,
+    "paid_calls": 0,
+    "upload_performed": false,
+    "actual_listening": false,
+    "continuous_playback": false,
+    "finished_at": "2026-10-20T09:38:27.887456+00:00"
+  },
+  "production_v5": {
+    "status": "delivered_local_review",
+    "script_revision": "v5",
+    "video": "outputs/production-v5/gyosan_review_v5_free_tts.mp4",
+    "video_sha256": "a13779a6b9dd5da21100d1c5f7db4c3199d8f3eacccb13cdd29f2d36536dbc3a",
+    "required_unresolved": 0,
+    "paid_calls": 0,
+    "upload_performed": false,
+    "actual_listening": false,
+    "continuous_playback": false,
+    "completed_at": "2026-10-20T10:17:21.204568+00:00"
+  },
+  "jun_v5": {
+    "status": "published",
+    "budget_decision_id": "f7919c1076ae",
+    "planned_upload_privacy": "public",
+    "user_request": "Replace v5 free voice with approved Jun API and upload; budget cap awaiting scoped approval",
+    "generation_started": false,
+    "included_credit_cap": 10055,
+    "additional_cash_cap": 0,
+    "generation_owner": "changneung_narration_v2",
+    "publication_authorization": {
+      "source": "direct_user_instruction_2026-10-20",
+      "scope": "Current approved Gyosan v5 Jun replacement; publicly upload after required QA passes; optimize metadata faithful to script",
+      "private_request_superseded": true,
+      "script_revision": "v5",
+      "script_sha256": "9c3560f2880a299c2e57e0b8775f6a98c87f07f18273d28328cd307787ab0350",
+      "voice_budget_decision_id": "f7919c1076ae",
+      "no_extra_paid_assets": true,
+      "schedule": null
+    },
+    "completed_decision_id": "0d5c334a599a",
+    "pre_upload_decision_id": "96f9a40a4d7c",
+    "video_sha256": "13abf7fc0b873036ad72c0b578251cb08e64ef514ecfe09fa636e26905ed214e",
+    "upload_job": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/release-prep-v5-jun/upload_job.json",
+    "video": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/production-v5-jun/gyosan_v5_jun.mp4",
+    "youtube_url": "https://youtu.be/XWAWnSrz7FE",
+    "credits_actual": 3351,
+    "credits_remaining": 22558,
+    "additional_cash": 0,
+    "upload_performed": true,
+    "actual_listening": false,
+    "continuous_playback": false,
+    "completed_at": "2026-10-20T11:13:01.521203+00:00"
+  },
+  "voice": "ElevenLabs Jun",
+  "shorts_leader_v1": {
+    "status": "published",
+    "source_event": 718066306,
+    "source_revision": "v5-jun",
+    "cash_cap": 0,
+    "new_paid_generation_authorized": false,
+    "publication_scope": "user_requested_promotional_short_public_upload_after_qa",
+    "baseline_main_gates_unchanged": true,
+    "revision": "v1r2",
+    "video_path": "video-agent-studio/episodes/hanam-gyosan-20261019/outputs/shorts-leader-v1/gyosan_leader_short_v1r2.mp4",
+    "sha256": "14e972395577696f955c241ada9a5b0a1da41a9de463d89eaa882a64c550247e",
+    "youtube_url": "https://www.youtube.com/shorts/ACJcKe1Xs2c",
+    "youtube_video_id": "ACJcKe1Xs2c",
+    "youtube_processing": "succeeded",
+    "gates": {
+      "topic": "output/video_decisions/decisions/gyosan-short-v1-topic-718066306.json",
+      "script": "output/video_decisions/decisions/gyosan-short-v1-script-718066306.json",
+      "budget": "output/video_decisions/decisions/gyosan-short-v1-budget-718066306.json",
+      "completed": "output/video_decisions/decisions/gyosan-short-v1-completed-718066306.json",
+      "pre_upload": "output/video_decisions/decisions/gyosan-short-v1-pre_upload-718066306.json"
+    },
+    "qa": "video-agent-studio/episodes/hanam-gyosan-20261019/qa/shorts-leader-v1/final_review.json",
+    "completed_at": "2026-10-20T12:24:01.962434+00:00"
+  }
+}

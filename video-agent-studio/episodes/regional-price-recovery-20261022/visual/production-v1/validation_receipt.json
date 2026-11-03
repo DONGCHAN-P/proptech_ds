@@ -1,0 +1,296 @@
+{
+  "task_id": "RPR-PROD1-DATA",
+  "status": "pass",
+  "python": "3.11.9",
+  "script_sha256": "99b40e8730ee0f8fdf74402cffbe04b5b418540344e6d2a7175e6a01c3054664",
+  "input_lock": {
+    "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/frozen_inputs.json",
+    "sha256": "ff5c157ac30afe881ee94511e60adea070fc0f931175e35ff4b066a18a720b82",
+    "bytes": 12842
+  },
+  "inputs": {
+    "series": {
+      "path": "C:/projects/realestate_reco/analysis/housing_growth_2006/full_history_v1/chart_source.csv",
+      "sha256": "8df60f8d866b72e0e5cbda6bb7c8655bc1070fed2221a07eb9e43e5fecd3781b",
+      "bytes": 87739,
+      "relative_path": "analysis/housing_growth_2006/full_history_v1/chart_source.csv",
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "all_transactions": {
+      "path": "C:/projects/realestate_reco/analysis/housing_growth_2006/full_transactions_v1/quarterly_all_valid_transactions.csv",
+      "sha256": "75b77faab614ae4f072c16291aa75aef8a505d6a680e78df2ba98b850b61045f",
+      "bytes": 59802,
+      "relative_path": "analysis/housing_growth_2006/full_transactions_v1/quarterly_all_valid_transactions.csv",
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "summary": {
+      "path": "C:/projects/realestate_reco/analysis/housing_growth_2006/full_history_v1/summary.csv",
+      "sha256": "70cadd0ca0931c486e2d7766a49ca64fe7ecc5c8a0521bc89ce694c4fb39f92e",
+      "bytes": 4518,
+      "relative_path": "analysis/housing_growth_2006/full_history_v1/summary.csv",
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "episodes": {
+      "path": "C:/projects/realestate_reco/analysis/housing_growth_2006/full_history_v1/episodes.csv",
+      "sha256": "1a72bc6fb5ba09776001d4880e6220de4a4ea382a301661ec7e2406b693a376b",
+      "bytes": 6461,
+      "relative_path": "analysis/housing_growth_2006/full_history_v1/episodes.csv",
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "annual_volume": {
+      "path": "C:/projects/realestate_reco/analysis/housing_growth_2006/full_history_v1/annual_valid_volume.csv",
+      "sha256": "112f8f7c1a3e0a1012f857f55336a6ff532d02a1331b45dde98893c9026627a7",
+      "bytes": 4132,
+      "relative_path": "analysis/housing_growth_2006/full_history_v1/annual_valid_volume.csv",
+      "prior_evidence": "analysis/housing_growth_2006/full_history_v1/artifact_manifest.json#files"
+    },
+    "sensitivity": {
+      "path": "C:/projects/realestate_reco/analysis/housing_growth_2006/regional_expansion_v1/sensitivity.csv",
+      "sha256": "b9b861a4dfa630fede449c6dba057378ec561af91b6ddf3b3dc26a82eeb39a0b",
+      "bytes": 2345,
+      "relative_path": "analysis/housing_growth_2006/regional_expansion_v1/sensitivity.csv",
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "horizon": {
+      "path": "C:/projects/realestate_reco/analysis/housing_growth_2006/regional_expansion_v1/regional_summary.csv",
+      "sha256": "b1946d45fa82ca0bb060c577f4d68f006327d5e6c00df994d04418fb1ea62619",
+      "bytes": 1385,
+      "relative_path": "analysis/housing_growth_2006/regional_expansion_v1/regional_summary.csv",
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "history_metadata": {
+      "path": "C:/projects/realestate_reco/analysis/housing_growth_2006/full_history_v1/results.json",
+      "sha256": "5b3a13a7a5304b633a2493d08de14e76851610adea7e925cc068388477879f19",
+      "bytes": 51033,
+      "relative_path": "analysis/housing_growth_2006/full_history_v1/results.json",
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "transactions_metadata": {
+      "path": "C:/projects/realestate_reco/analysis/housing_growth_2006/full_transactions_v1/results.json",
+      "sha256": "7197d41717883031a56d497198c2c692dc8ae4e1651656d63421c4ebf7d24479",
+      "bytes": 14774,
+      "relative_path": "analysis/housing_growth_2006/full_transactions_v1/results.json",
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "regional_metadata": {
+      "path": "C:/projects/realestate_reco/analysis/housing_growth_2006/regional_expansion_v1/results.json",
+      "sha256": "539ca5e8e6a57463f2c98b9bb0bb53c0e232da2b6dedae5f571257459ecb175a",
+      "bytes": 15958,
+      "relative_path": "analysis/housing_growth_2006/regional_expansion_v1/results.json",
+      "prior_evidence": "이번 동결 입력 SHA 고정; 독립 수치 검수 통과로 확대하지 않음"
+    },
+    "cleaning_definition": {
+      "path": "C:/projects/realestate_reco/analysis/housing_growth_2006/regional_expansion_v1.py",
+      "sha256": "ce136e65e529d2c23b8f33b33ab149e8ad8d18c9dd926cfe2d42ed15cb8c97b3",
+      "bytes": 11514,
+      "relative_path": "analysis/housing_growth_2006/regional_expansion_v1.py",
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "artifact_manifest": {
+      "path": "C:/projects/realestate_reco/analysis/housing_growth_2006/full_history_v1/artifact_manifest.json",
+      "sha256": "cf345f4be7bccbc14cbf1613c6ad93944a00b159111f9d60f52246a1b3b05c0f",
+      "bytes": 4366,
+      "relative_path": "analysis/housing_growth_2006/full_history_v1/artifact_manifest.json",
+      "prior_evidence": "이번 동결 입력 SHA 고정; 독립 수치 검수 통과로 확대하지 않음"
+    },
+    "factors": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/research/script-v2-factors/verified_examples.json",
+      "sha256": "bbfc41f9bb0f372dab4b11a2532f4454fade2652dadd579945baa11d45612b02",
+      "bytes": 26307,
+      "relative_path": "video-agent-studio/episodes/regional-price-recovery-20261022/research/script-v2-factors/verified_examples.json",
+      "prior_evidence": "이번 동결 입력 SHA 고정; 독립 수치 검수 통과로 확대하지 않음"
+    },
+    "contract": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/data_contract.md",
+      "sha256": "aee28cab251474e7b9817f0aca2219f49d539f2fc2beb83c75a223fe46566211",
+      "bytes": 2267,
+      "relative_path": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/data_contract.md",
+      "prior_evidence": "이번 동결 입력 SHA 고정; 독립 수치 검수 통과로 확대하지 않음"
+    },
+    "approved_script": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/outputs/script-review-v3/script_v3.md",
+      "sha256": "99b40e8730ee0f8fdf74402cffbe04b5b418540344e6d2a7175e6a01c3054664",
+      "bytes": 24893,
+      "relative_path": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/script-review-v3/script_v3.md",
+      "prior_evidence": "사용자 승인 v3 SHA 및 final_recheck_v3.checked_revision"
+    },
+    "independent_qa": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/independent_recompute.json",
+      "sha256": "f2a2c530edea4a843db264b91afae44b6fe165826ae9559d82fc4b867234c0af",
+      "bytes": 52373,
+      "relative_path": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/independent_recompute.json",
+      "prior_evidence": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json#reuse.prior_raw_input_hashes"
+    },
+    "prior_recheck": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/recheck_v3.json",
+      "sha256": "ee7532d1e3906505113c7c3361e2e0937bc7e6694d91843ee587315a7fd801e7",
+      "bytes": 26777,
+      "relative_path": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/recheck_v3.json",
+      "prior_evidence": "이번 동결 입력 SHA 고정; 독립 수치 검수 통과로 확대하지 않음"
+    },
+    "final_recheck": {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json",
+      "sha256": "f4590bd72ac1b3cfa296773a96b71da0bfe26fca1ae232ebe4010f16f6a8b9c0",
+      "bytes": 37841,
+      "relative_path": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json",
+      "prior_evidence": "이번 동결 입력 SHA 고정; 독립 수치 검수 통과로 확대하지 않음"
+    }
+  },
+  "check_counts": {
+    "입력SHA": 18,
+    "승인SHA": 1,
+    "CSV헤더": 7,
+    "CSV열수": 1319,
+    "CSV타입": 14336,
+    "CSV행수": 7,
+    "지역집합": 3,
+    "직렬화": 1,
+    "기존QA": 4,
+    "승인": 1,
+    "계약": 1,
+    "행수": 4,
+    "요약QA검증범위": 7,
+    "독립QA요약": 357,
+    "지수끝점": 7,
+    "지역지수행수": 7,
+    "지역거래행수끝점": 7,
+    "관측키": 14,
+    "지수기준": 7,
+    "지수끝값QA": 7,
+    "하락끝값QA": 7,
+    "전체기간CAGR_QA": 7,
+    "지역거래수QA": 7,
+    "기준분기null": 7,
+    "매칭수타입": 7,
+    "전체거래수QA": 1,
+    "구간키": 1,
+    "구간전체열": 33,
+    "독립QA구간": 693,
+    "미회복null": 6,
+    "미회복수": 1,
+    "기간별CAGR": 21,
+    "세종기간별CAGR_QA": 3,
+    "연간일치": 147,
+    "factors": 2,
+    "저장재읽기": 1
+  },
+  "total_checks": 17059,
+  "region_controls": {
+    "서울": {
+      "index_rows": 82,
+      "transaction_rows": 82,
+      "valid_transactions": 1369095,
+      "start": "2006Q1",
+      "endpoint": "2026Q2",
+      "latest_index": 533.4313412406232,
+      "full_period_cagr_pct": 8.618828023279912
+    },
+    "경기": {
+      "index_rows": 82,
+      "transaction_rows": 82,
+      "valid_transactions": 2788845,
+      "start": "2006Q1",
+      "endpoint": "2026Q2",
+      "latest_index": 354.9437147055793,
+      "full_period_cagr_pct": 6.455565153948073
+    },
+    "인천": {
+      "index_rows": 82,
+      "transaction_rows": 82,
+      "valid_transactions": 646402,
+      "start": "2006Q1",
+      "endpoint": "2026Q2",
+      "latest_index": 267.44870801308537,
+      "full_period_cagr_pct": 4.9780004846130765
+    },
+    "부산": {
+      "index_rows": 82,
+      "transaction_rows": 82,
+      "valid_transactions": 830015,
+      "start": "2006Q1",
+      "endpoint": "2026Q2",
+      "latest_index": 273.06228350428466,
+      "full_period_cagr_pct": 5.0857404130009165
+    },
+    "대구": {
+      "index_rows": 82,
+      "transaction_rows": 82,
+      "valid_transactions": 567617,
+      "start": "2006Q1",
+      "endpoint": "2026Q2",
+      "latest_index": 203.08788290007232,
+      "full_period_cagr_pct": 3.560531864721006
+    },
+    "대전": {
+      "index_rows": 82,
+      "transaction_rows": 82,
+      "valid_transactions": 378650,
+      "start": "2006Q1",
+      "endpoint": "2026Q2",
+      "latest_index": 235.90045713536944,
+      "full_period_cagr_pct": 4.329315890084073
+    },
+    "세종": {
+      "index_rows": 46,
+      "transaction_rows": 82,
+      "valid_transactions": 59417,
+      "start": "2015Q1",
+      "endpoint": "2026Q2",
+      "latest_index": 185.95990158763672,
+      "full_period_cagr_pct": 5.669191100580573
+    }
+  },
+  "totals": {
+    "regions": 7,
+    "raw_quarters": 574,
+    "index_rows": 538,
+    "episodes": 33,
+    "censored_episodes": 6,
+    "valid_transactions": 6640041
+  },
+  "prior_qa": {
+    "independent_checks_reused": 7130,
+    "v3_checks_reused": 1468,
+    "raw_price_independent_samples_reused": 3,
+    "scope": "원가격 574분기 전량 독립 검산으로 확대하지 않음"
+  },
+  "outputs": [
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/chart_data.json",
+      "sha256": "3731da4b839424f7c12a948c6316a0b0ac29cec99aa42c6d6855b832fe7c1899",
+      "bytes": 494787
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/assets.json",
+      "sha256": "604329e9ad616ec71ca0f7cc632261fb0284bccb3d3233f4f962f2b1ea8a9701",
+      "bytes": 19345
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/build_chart_data.py",
+      "sha256": "9e39ca9fa0602fe26eb62adc10828edce6903273b8ec334544e030cc10703ed0",
+      "bytes": 20610
+    },
+    {
+      "path": "C:/projects/realestate_reco/video-agent-studio/episodes/regional-price-recovery-20261022/visual/production-v1/frozen_inputs.json",
+      "sha256": "ff5c157ac30afe881ee94511e60adea070fc0f931175e35ff4b066a18a720b82",
+      "bytes": 12842
+    }
+  ],
+  "raw_ingestion_runs": 0,
+  "new_api_calls": 0,
+  "external_model_calls": 0,
+  "paid_actions": 0,
+  "new_graphics": 0,
+  "new_videos": 0,
+  "independent_qa_of_this_conversion": "미실시; 기존 독립 수치 QA 재사용과 제작자 변환 검사를 구별",
+  "limitations": [
+    "원거래·원 XML 재집계/재취득 없음",
+    "새 수집 지역 제외",
+    "영상 연속재생·음성청취 대상 없음",
+    "full_volume_first_date/last_date는 동결 CSV 그대로 보존. 기존 독립 QA는 분기 내 위치만 검사했으며 정확한 거래일 독립 검산은 미실시"
+  ],
+  "inherited_open_issue_ids": [
+    "FHQA-R01"
+  ],
+  "inherited_issue_impact": "기존 제작자 검수 메타데이터의 인코딩 권고; 수치 영향 없음. 보정본은 별도 outputs/script-review-v3 기록이며 원본/공통 상태는 수정하지 않음"
+}

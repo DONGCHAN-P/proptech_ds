@@ -1,0 +1,453 @@
+{
+  "task_id": "top20-narration-prep-v1",
+  "created_at_utc": "2026-11-01T14:51:05.033340+00:00",
+  "script_revision": "top20-8min-v3",
+  "audio_revision": null,
+  "input_versions": {
+    "writer/top20-8min-v2/script_v3.md": {
+      "sha256": "4cc70ef2ae3cabda13b560104dd96ef0df0fe1f815a5f1372ac680e729d3be17",
+      "revision": "top20-8min-v3"
+    },
+    "writer/top20-8min-v2/scene_proposals_v3.json": {
+      "sha256": "5ff7d0fc9c414aaf1bc6085039db68ac3d6f11498d00ed271896e70da6941443",
+      "revision": "top20-8min-v3"
+    },
+    "config/tts.json": {
+      "sha256": "773b2a6eabf306a251f560137a88e56db761865954c6089e0900e76d6f27934c",
+      "usage": "Jun 예산 후보 설정"
+    }
+  },
+  "script_acceptance_basis": "최신 task packet: 직전 제시한 로컬 TOP20 원고 수락; 총괄이 공통 승인 기록 반영",
+  "budget_approval_status": "유효한 해당 버전 예산 응답 대기",
+  "generation_started": false,
+  "sentence_count": 116,
+  "spoken_scene_count": 26,
+  "total_scene_count": 27,
+  "display_characters_sum_sentences": 3986,
+  "display_normalized_characters": 4101,
+  "display_body_file_characters": 4126,
+  "input_characters": 4281,
+  "characters_sum_sentences": 4191,
+  "reading_body_file_characters": 4331,
+  "character_count_method": "Unicode code points; chunks/*.txt 각 파일 전체·공백·문장 사이 LF 포함, BOM·말미 LF 없음. 요청 text에 ID·메모·제목·전체 합본의 장면 사이 빈 줄 제외.",
+  "provider": "elevenlabs",
+  "voice_name": "Jun - Clear Korean Lecturer",
+  "voice_id": "4p6UA7mnodF5q7JFFrnW",
+  "model": "eleven_v4",
+  "style_description": "친근한 데이터 해설",
+  "current_voice_speed": 0.97,
+  "supported_request_settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.95,
+    "speed": 0.97
+  },
+  "unsupported_stored_settings": {
+    "style": "현재 모델 can_use_style=false; 요청에 넣지 않음",
+    "use_speaker_boost": "현재 모델 can_use_speaker_boost=false; 요청에 넣지 않음"
+  },
+  "chunks": [
+    {
+      "chunk_id": "O001",
+      "scene_id": "O001",
+      "path": "chunks/O001.txt",
+      "sentence_ids": [
+        "O001-01",
+        "O001-02",
+        "O001-03",
+        "O001-04",
+        "O001-05"
+      ],
+      "text": "신혼부부가 많이 사는 수도권 지역, 어디가 떠오르세요?\n오늘은 수도권 쉰세 개 구 가운데 신혼부부가 많이 사는 스무 곳을, 이십 위부터 거꾸로 만나보겠습니다.\n이름만 줄 세우면 놓치는 게 있어요.\n바로 옆 순위의 차이가 겨우 열 쌍인 곳도 있고, 비슷한 규모인데 부부의 구성이 다른 곳도 있거든요.\n그 차이를 따라가면서, 우리에게 필요한 지역 비교 질문도 함께 찾아보죠.",
+      "characters": 207,
+      "sha256": "5170943e2cb264e1d8479f281d108e1d4fa8908c22129c24a4005d874b38a3ef",
+      "hangul_syllables": 145
+    },
+    {
+      "chunk_id": "O002",
+      "scene_id": "O002",
+      "path": "chunks/O002.txt",
+      "sentence_ids": [
+        "O002-01",
+        "O002-02",
+        "O002-03",
+        "O002-04"
+      ],
+      "text": "기준은 이천이십사 년 십일 월 일 일, 당시 구역별로 집계한 거주 신혼부부 수입니다.\n혼인신고 후 오 년이 지나지 않았고, 혼인관계를 유지하면서 부부 중 적어도 한 명이 국내에 사는 부부가 대상이에요.\n초혼과 재혼을 포함한 전체 수를 보며, 단위는 쌍입니다.\n먼저 기준일에 얼마나 많이 살고 있었는지 보고, 중간중간 일 년 사이의 변화도 짚어볼게요.",
+      "characters": 195,
+      "sha256": "e2dfa159c08d00bdb5056671880c9761a4c7cfa9cf1fefa61bb7fe1a78613002",
+      "hangul_syllables": 137
+    },
+    {
+      "chunk_id": "S003",
+      "scene_id": "S003",
+      "path": "chunks/S003.txt",
+      "sentence_ids": [
+        "S003-01",
+        "S003-02",
+        "S003-03",
+        "S003-04"
+      ],
+      "text": "이십 위는 부천시 원미구, 칠천삼백육십오 쌍입니다.\n원미구는 이천이십사 년에 다시 설치된 구예요.\n원미구 안에서도 상동처럼 구체적인 동네로 좁혀볼 수 있겠죠.\n오늘 순위의 출발점은 이 칠천 쌍대 중반입니다.",
+      "characters": 115,
+      "sha256": "27e4ca48ceb795438ffdbf728898f36383502bb6be92db6e3ede4b568d108822",
+      "hangul_syllables": 84
+    },
+    {
+      "chunk_id": "S004",
+      "scene_id": "S004",
+      "path": "chunks/S004.txt",
+      "sentence_ids": [
+        "S004-01",
+        "S004-02",
+        "S004-03",
+        "S004-04"
+      ],
+      "text": "서울 중랑구가 칠천오백사십칠 쌍으로 십구 위입니다.\n원미구보다 백팔십이 쌍 많아요.\n경기도 부천에서 서울 중랑으로 자리는 바뀌었지만, 거주 규모는 서로 가깝습니다.\n이 정도 차이라면 등수만 기억하기보다, 두 지역을 같은 규모대에 놓고 보는 편이 이해하기 쉽겠죠.",
+      "characters": 146,
+      "sha256": "ff454aa59f7099575e85135cb99e8da28afb7ef75dd90d5b49e0e72234058e92",
+      "hangul_syllables": 107
+    },
+    {
+      "chunk_id": "S005",
+      "scene_id": "S005",
+      "path": "chunks/S005.txt",
+      "sentence_ids": [
+        "S005-01",
+        "S005-02",
+        "S005-03",
+        "S005-04"
+      ],
+      "text": "십팔 위는 용인시 기흥구, 칠천육백팔십육 쌍이에요.\n중랑구와의 차이는 백삼십구 쌍입니다.\n지금은 수가 가까운 지역들을 차례로 보고 있는 거예요.\n이 목록에서 집을 알아볼 곳을 추린다면, 지역 이름 옆에 두 사람의 출퇴근 목적지를 먼저 적어볼 수 있겠죠.",
+      "characters": 141,
+      "sha256": "b5a5d769b654e80e7f0076c11874d697c5ff1923b898138cb601627682cc48d3",
+      "hangul_syllables": 101
+    },
+    {
+      "chunk_id": "S006",
+      "scene_id": "S006",
+      "path": "chunks/S006.txt",
+      "sentence_ids": [
+        "S006-01",
+        "S006-02",
+        "S006-03",
+        "S006-04"
+      ],
+      "text": "다음은 인천 연수구입니다.\n칠천팔백칠십오 쌍으로 십칠 위예요.\n기흥구보다 백팔십구 쌍 더 많은데, 잠시 뒤 두 지역의 전년 변화도 나란히 볼게요.\n같은 칠천 쌍대 안에서도 부천, 서울, 용인, 인천이 차례로 등장하네요.",
+      "characters": 122,
+      "sha256": "03f1926babce1a1ee9f3d512d872bdc05d2534a6b7808410a617bfb1efd9f1e1",
+      "hangul_syllables": 85
+    },
+    {
+      "chunk_id": "S007",
+      "scene_id": "S007",
+      "path": "chunks/S007.txt",
+      "sentence_ids": [
+        "S007-01",
+        "S007-02",
+        "S007-03",
+        "S007-04"
+      ],
+      "text": "십육 위 남동구는 칠천구백구십칠 쌍, 팔천 쌍 바로 아래입니다.\n앞선 연수구보다 백이십이 쌍 많습니다.\n남동구는 이천이십삼 년 팔천오백구십오 쌍에서 오백구십팔 쌍 줄어, 감소율은 칠 점 영 퍼센트였어요.\n여기까지 다섯 곳을 봤는데, 이번에는 순서에서 잠깐 벗어나 변화도 보겠습니다.",
+      "characters": 157,
+      "sha256": "cd9e9f94ee11d1370db623b2ded3ce91090e8b75d08ebb726f0921e6a5cdc2ed",
+      "hangul_syllables": 114
+    },
+    {
+      "chunk_id": "I001",
+      "scene_id": "I001",
+      "path": "chunks/I001.txt",
+      "sentence_ids": [
+        "I001-01",
+        "I001-02",
+        "I001-03",
+        "I001-04",
+        "I001-05",
+        "I001-06"
+      ],
+      "text": "방금 본 기흥구와 연수구는 이천이십삼 년에 똑같이 칠천칠백구십칠 쌍이었어요.\n일 년 뒤에는 기흥구가 백십일 쌍 줄고, 연수구는 칠십팔 쌍 늘었습니다.\n출발점이 같아도 다음 해의 방향은 달라질 수 있는 거죠.\n이번 스무 곳 가운데 같은 범위로 비교할 수 있는 열아홉 곳을 세면, 여섯 곳이 늘고 열세 곳이 줄었어요.\n해마다 새로 혼인한 부부가 들어오고, 혼인 오 년이 지난 부부는 집계 대상에서 빠지는 변화도 함께 생깁니다.\n그래서 현재 규모와 일 년간의 변화는 따로 놓고 읽어야 해요.",
+      "characters": 271,
+      "sha256": "3f6cf6297ad8cfae2a8bb54641382656314916e3dd097608cd13f6fc0af3a512",
+      "hangul_syllables": 190
+    },
+    {
+      "chunk_id": "S008",
+      "scene_id": "S008",
+      "path": "chunks/S008.txt",
+      "sentence_ids": [
+        "S008-01",
+        "S008-02",
+        "S008-03",
+        "S008-04"
+      ],
+      "text": "십오 위는 서울 구로구, 팔천십육 쌍입니다.\n남동구와는 겨우 십구 쌍 차이로, 여기서 팔천 쌍을 넘어요.\n구로구에서는 신도림역 주변 같은 구체적인 생활권도 살펴볼 수 있어요.\n직장 주변을 관심 있게 본다면, 구 이름에 더해 실제 근무지와 주거지를 함께 놓고 비교해보세요.",
+      "characters": 151,
+      "sha256": "be8f90f95c7048a5d8dceb1d424d1463ed162819440e5c480d41770f2012bfb7",
+      "hangul_syllables": 107
+    },
+    {
+      "chunk_id": "S009",
+      "scene_id": "S009",
+      "path": "chunks/S009.txt",
+      "sentence_ids": [
+        "S009-01",
+        "S009-02",
+        "S009-03",
+        "S009-04"
+      ],
+      "text": "십사 위 은평구에는 팔천이백육십칠 쌍이 살고 있습니다.\n구로구보다 이백오십일 쌍 많아요.\n은평구 진관동에는 은평뉴타운이 있습니다.\n관심 지역이 생겼다면, 지역 전체 이름에서 한 걸음 더 들어가 어느 동네를 볼지도 정해보면 좋겠죠.",
+      "characters": 128,
+      "sha256": "b8f2e7297aa74b5ffb739b5d2484b1c7dfce242b0aa0d9ade9f51d3678969029",
+      "hangul_syllables": 94
+    },
+    {
+      "chunk_id": "S010",
+      "scene_id": "S010",
+      "path": "chunks/S010.txt",
+      "sentence_ids": [
+        "S010-01",
+        "S010-02",
+        "S010-03",
+        "S010-04"
+      ],
+      "text": "십삼 위는 수원시 권선구, 팔천삼백이십구 쌍입니다.\n다음 지역도 같은 수원이라 두 곳을 나란히 보겠습니다.\n권선구는 이천이십삼 년 팔천칠백구십이 쌍에서 사백육십삼 쌍 줄어, 감소율은 오 점 삼 퍼센트였습니다.\n현재의 크기와 그사이 달라진 정도를 같이 적어두면 비교할 때 도움이 되겠죠.",
+      "characters": 159,
+      "sha256": "de4b8e9765deab0ada324a9a60666a33c5261ecd529274e7689a72939aa9d092",
+      "hangul_syllables": 116
+    },
+    {
+      "chunk_id": "S011",
+      "scene_id": "S011",
+      "path": "chunks/S011.txt",
+      "sentence_ids": [
+        "S011-01",
+        "S011-02",
+        "S011-03",
+        "S011-04"
+      ],
+      "text": "십이 위는 수원시 영통구, 팔천삼백팔십팔 쌍이에요.\n바로 앞 권선구와는 오십구 쌍 차이입니다.\n같은 도시 안에서 신혼부부 전체 수가 아주 가까운 두 구를 만난 셈이죠.\n잠시 뒤에 이 숫자 안에 담긴 부부의 구성도 나눠볼게요.",
+      "characters": 125,
+      "sha256": "0b3c743c8f53e8d81e946a93997627ff1d78b719f5ba2af67b19818671cf069a",
+      "hangul_syllables": 88
+    },
+    {
+      "chunk_id": "S012",
+      "scene_id": "S012",
+      "path": "chunks/S012.txt",
+      "sentence_ids": [
+        "S012-01",
+        "S012-02",
+        "S012-03",
+        "S012-04"
+      ],
+      "text": "십일 위는 서울 노원구로, 팔천사백칠십삼 쌍입니다.\n노원구 공릉동의 경춘선숲길처럼, 산책길이 있는 실제 장소도 함께 떠올려볼 수 있겠죠.\n이제 상위 열 곳을 앞두고 있습니다.\n등수로는 경계가 딱 나뉘지만, 다음 지역과의 숫자 차이를 눈여겨봐 주세요.",
+      "characters": 139,
+      "sha256": "aecb89e72e90e5a835f90dd23b030ac634ae8b421adf02e1f42bac10e957055e",
+      "hangul_syllables": 100
+    },
+    {
+      "chunk_id": "I002",
+      "scene_id": "I002",
+      "path": "chunks/I002.txt",
+      "sentence_ids": [
+        "I002-01",
+        "I002-02",
+        "I002-03",
+        "I002-04",
+        "I002-05",
+        "I002-06",
+        "I002-07"
+      ],
+      "text": "그전에, 방금 본 수원의 두 구를 한 번 더 보죠.\n전체 수 차이는 오십구 쌍이었는데, 초혼 부부는 영통구 칠천육백삼십사 쌍, 권선구 육천칠백사십육 쌍입니다.\n초혼만 놓으면 영통구가 팔백팔십팔 쌍 더 많아요.\n재혼 부부는 영통구 칠백삼십삼 쌍, 권선구 천오백육십삼 쌍으로 방향이 바뀝니다.\n이번에는 권선구가 팔백삼십 쌍 더 많습니다.\n전체 규모가 비슷해도 통계에 담긴 부부의 구성은 이렇게 달라집니다.\n지역을 이해할 때 전체 수와 그 안의 구성을 함께 살펴볼 이유예요.",
+      "characters": 262,
+      "sha256": "bb113c42a1dcd7d0c3c549816168edeefcb43453c95a62ba1142382af8657057",
+      "hangul_syllables": 186
+    },
+    {
+      "chunk_id": "S013",
+      "scene_id": "S013",
+      "path": "chunks/S013.txt",
+      "sentence_ids": [
+        "S013-01",
+        "S013-02",
+        "S013-03",
+        "S013-04",
+        "S013-05"
+      ],
+      "text": "십 위는 인천 미추홀구, 팔천사백팔십삼 쌍입니다.\n십일 위 노원구와 불과 열 쌍 차이예요.\n순위 한 칸이 실제 규모에서는 이만큼 가까울 수도 있습니다.\n그런데 전년보다 노원구는 삼 점 팔 퍼센트 줄었고, 미추홀구는 오 점 이 퍼센트 늘었어요.\n현재 수가 거의 같아도, 일 년 사이에 움직인 방향은 서로 달랐습니다.",
+      "characters": 175,
+      "sha256": "afabbf86da357874934d9544076624f4e758857c49c39133eb44681367008afe",
+      "hangul_syllables": 121
+    },
+    {
+      "chunk_id": "S014",
+      "scene_id": "S014",
+      "path": "chunks/S014.txt",
+      "sentence_ids": [
+        "S014-01",
+        "S014-02",
+        "S014-04"
+      ],
+      "text": "구 위는 성남시 분당구, 팔천오백팔십칠 쌍입니다.\n분당에서는 삼평동 판교 일대의 업무와 생활 동선을 함께 살펴볼 수 있겠죠.\n업무 환경이 관심 요소라면, 내 근무지가 정확히 어디인지와 살 집까지의 동선을 추가로 비교해보세요.",
+      "characters": 125,
+      "sha256": "66e773b5906a36ea11cbb38407ee81713a49b0f3f2000a8b21e5b3a89cfd32ca",
+      "hangul_syllables": 91
+    },
+    {
+      "chunk_id": "S015",
+      "scene_id": "S015",
+      "path": "chunks/S015.txt",
+      "sentence_ids": [
+        "S015-01",
+        "S015-02",
+        "S015-03",
+        "S015-04"
+      ],
+      "text": "팔 위 서울 영등포구부터는 구천 쌍대입니다.\n전체 수는 구천삼십육 쌍이에요.\n이천이십삼 년 구천십사 쌍과 비교하면 이십이 쌍 늘어, 변화율은 영 점 이 퍼센트입니다.\n이번에는 전년과 거의 비슷한 규모를 유지한 지역을 만났네요.",
+      "characters": 126,
+      "sha256": "87ad69633101b165cdfb4d4cf4faa3e740fa4b70177dc48db2fa115579de37c5",
+      "hangul_syllables": 91
+    },
+    {
+      "chunk_id": "S016",
+      "scene_id": "S016",
+      "path": "chunks/S016.txt",
+      "sentence_ids": [
+        "S016-01",
+        "S016-02",
+        "S016-04"
+      ],
+      "text": "칠 위 강동구는 구천이백팔십칠 쌍입니다.\n고덕역 주변에 관심이 있다면, 집에서 역까지의 동선을 추가로 살펴볼 수 있겠죠.\n그리고 바로 다음 육 위와는 숫자 차이가 다시 작아집니다.",
+      "characters": 100,
+      "sha256": "6df227b33cba88ce2601392dab79dba66ece7bfc9fbff17cc14db82dc7e29a42",
+      "hangul_syllables": 72
+    },
+    {
+      "chunk_id": "S017",
+      "scene_id": "S017",
+      "path": "chunks/S017.txt",
+      "sentence_ids": [
+        "S017-01",
+        "S017-02",
+        "S017-03",
+        "S017-04"
+      ],
+      "text": "육 위는 강남구, 구천삼백이십일 쌍입니다.\n강동구보다 삼십사 쌍 많아요.\n그런데 전년을 보면 팔천오백이십삼 쌍에서 칠백구십팔 쌍 늘었고, 증가율은 구 점 사 퍼센트입니다.\n이천이십사 년의 순위 옆에 일 년간의 변화를 붙이면, 같은 지역도 다른 면이 보이는 거죠.",
+      "characters": 146,
+      "sha256": "e58f1b2f199b201da7897532f2d1891c2bc43d67e3cef04f3f94f0a1a58a0b46",
+      "hangul_syllables": 104
+    },
+    {
+      "chunk_id": "I003",
+      "scene_id": "I003",
+      "path": "chunks/I003.txt",
+      "sentence_ids": [
+        "I003-01",
+        "I003-02",
+        "I003-03",
+        "I003-04",
+        "I003-05",
+        "I003-06"
+      ],
+      "text": "상위 다섯 곳으로 가기 전에, 스무 곳의 지도를 한 번 펼쳐볼까요?\n이번 스무 곳에 든 구의 개수는 서울 아홉 곳, 경기 여섯 곳, 인천 다섯 곳입니다.\n세 시도의 여러 지역이 같은 목록에 들어와 있어요.\n그럼 우리 부부는 이 중 어디를 더 자세히 비교해볼까요?\n두 사람의 직장 위치, 예산, 필요한 집 크기를 함께 놓으면 조사할 질문을 좁혀갈 수 있습니다.\n이제 일만 쌍을 넘는 상위 다섯 곳으로 가보죠.",
+      "characters": 227,
+      "sha256": "20c05cc9f09aecda0859b0bc69215199127b1807c48920027f4ddfbf7469535d",
+      "hangul_syllables": 151
+    },
+    {
+      "chunk_id": "S018",
+      "scene_id": "S018",
+      "path": "chunks/S018.txt",
+      "sentence_ids": [
+        "S018-01",
+        "S018-02",
+        "S018-03",
+        "S018-04"
+      ],
+      "text": "오 위 인천 부평구는 일만 이백사 쌍입니다.\n이천이십삼 년 구천구백일 쌍에서 삼백삼 쌍 늘어, 증가율은 삼 점 일 퍼센트예요.\n생활권은 부평역과 그 앞 거리부터 짚어볼게요.\n관심이 있다면 집에서 장보는 곳까지 어떤 동선을 비교할지 질문을 더해보세요.",
+      "characters": 139,
+      "sha256": "632066cb98322b60e4f39220f1a8b4db732cb37d4b83708228253da5cf92bd45",
+      "hangul_syllables": 100
+    },
+    {
+      "chunk_id": "S019",
+      "scene_id": "S019",
+      "path": "chunks/S019.txt",
+      "sentence_ids": [
+        "S019-01",
+        "S019-02",
+        "S019-03",
+        "S019-04"
+      ],
+      "text": "사 위는 서울 강서구, 일만 칠백이십사 쌍입니다.\n부평구보다 오백이십 쌍 많아요.\n마곡의 서울식물원에서는 야외 공간도 함께 살펴볼 수 있어요.\n지역을 떠올릴 구체적인 장소를 지도 위에 하나씩 놓고 있는 셈이죠.",
+      "characters": 117,
+      "sha256": "b98aabd4d0474e25435c6263420cf55d55c458938afdd68328001a227241996a",
+      "hangul_syllables": 84
+    },
+    {
+      "chunk_id": "S020",
+      "scene_id": "S020",
+      "path": "chunks/S020.txt",
+      "sentence_ids": [
+        "S020-01",
+        "S020-02",
+        "S020-03",
+        "S020-04"
+      ],
+      "text": "삼 위는 고양시 덕양구, 일만 천사백오십이 쌍이에요.\n덕양구 안에서도 삼송로처럼 구체적인 동네의 거리 모습부터 짚어볼게요.\n이 동네에 관심이 간다면, 실제 거주 후보지에서 직장과 생활시설까지의 동선을 비교해볼 수 있겠죠.\n이제 남은 두 지역과 얼마나 차이가 나는지 보겠습니다.",
+      "characters": 154,
+      "sha256": "dbe1878911f9abeddd27721532d9dc4bf1fd45fbaefd3a278f3b6bd2945adcc7",
+      "hangul_syllables": 113
+    },
+    {
+      "chunk_id": "S021",
+      "scene_id": "S021",
+      "path": "chunks/S021.txt",
+      "sentence_ids": [
+        "S021-01",
+        "S021-02",
+        "S021-03",
+        "S021-04"
+      ],
+      "text": "이 위는 서울 송파구, 일만 천칠백오십이 쌍입니다.\n삼 위 덕양구보다 정확히 삼백 쌍 많아요.\n송파의 석촌호수는 동호와 서호, 산책로가 있는 도심 호수공원입니다.\n두 지역의 전체 수는 가까운데, 다음 일 위와는 간격이 더 벌어집니다.",
+      "characters": 130,
+      "sha256": "9721cea17393c75e7d58d0c9c1bffe8d376081aa79336af555d71191b562dab9",
+      "hangul_syllables": 91
+    },
+    {
+      "chunk_id": "S022",
+      "scene_id": "S022",
+      "path": "chunks/S022.txt",
+      "sentence_ids": [
+        "S022-01",
+        "S022-02",
+        "S022-03",
+        "S022-04",
+        "S022-05",
+        "S022-06"
+      ],
+      "text": "일 위는 이천이십사 년 당시 인천 서구, 일만 오천칠백삼십칠 쌍입니다.\n송파구보다 삼천구백팔십오 쌍 많습니다.\n이때의 서구는 현재 서해구와 검단구를 합친 범위예요.\n청라호수공원도 이 구역 안의 실제 생활 여가 공간 중 하나입니다.\n다만 일 년 전 일만 오천구백사십일 쌍과 비교하면 이백사 쌍, 일 점 삼 퍼센트 줄었어요.\n가장 큰 거주 규모와, 전년보다 줄었다는 변화가 한 지역에 함께 나타납니다.",
+      "characters": 222,
+      "sha256": "c083dffde06c9b7b66742d8ada6a64303965e1e3f00cfda5a54514f5b41090d8",
+      "hangul_syllables": 157
+    },
+    {
+      "chunk_id": "C001",
+      "scene_id": "C001",
+      "path": "chunks/C001.txt",
+      "sentence_ids": [
+        "C001-01",
+        "C001-02",
+        "C001-03",
+        "C001-04",
+        "C001-05",
+        "C001-06",
+        "C001-07"
+      ],
+      "text": "오늘 순위를 읽는 데 필요한 세 가지가 모였네요.\n강남구는 구 점 사 퍼센트 늘었고, 규모 일 위인 옛 서구는 일 점 삼 퍼센트 줄었습니다.\n얼마나 많이 사는지와 얼마나 늘었는지는 따로 봐야 해요.\n수원의 두 구처럼 전체가 가까워도 부부의 구성은 다를 수 있었죠.\n눈에 들어온 지역이 있다면, 두 사람의 직장과 예산, 필요한 집 크기를 옆에 적어보세요.\n그 지역에서 무엇을 더 알아봐야 할지, 이제 질문이 좀 더 구체적으로 보일 겁니다.\n다음에는 지역별 아파트 후보를 더 자세히 비교해볼 테니, 이어서 보실 분들은 구독과 좋아요 부탁드려요.",
+      "characters": 302,
+      "sha256": "207dc3ad01997b5588b3d65ef0fca33dab5e56961582c5d46d9aa6b375d6f7b9",
+      "hangul_syllables": 209
+    }
+  ],
+  "shorts_audio_scope": "본편 생성 음성의 문장 ID를 편집 재사용하면 추가 생성 0. 별도 새 쇼츠 문장은 입력 미제공으로 이 견적에 미포함; 별도 문자수·예산 필요."
+}

@@ -1,0 +1,2621 @@
+{
+  "checked_at": "2026-11-03T00:41:14.003243+09:00",
+  "files": [
+    {
+      "path": "master/trade_events.parquet",
+      "bytes": 217650236,
+      "sha256": "93f305afc915e0562c2d2223dd9d20aa204629223ae7e39944db693511919502",
+      "schema": [
+        {
+          "column_name": "apt_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "area_m2_key",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "pyeong_bucket",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "deal_date",
+          "column_type": "TIMESTAMP",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "sigungu_code",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "sigungu_name",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "legal_dong_code",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "legal_dong_name",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "apt_name_raw",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "apt_name_norm",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "deal_amount",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "area_m2",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "floor",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "build_year",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "age_at_deal",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "price_per_m2",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "price_per_pyeong",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "is_canceled",
+          "column_type": "BOOLEAN",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "cancel_date",
+          "column_type": "TIMESTAMP",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "road_address",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "deal_hash",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "first_seen_date",
+          "column_type": "TIMESTAMP",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "first_seen_is_estimate",
+          "column_type": "BOOLEAN",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ],
+      "coverage": {
+        "n": 4925669,
+        "first_contract": "2006-01-01",
+        "last_contract": "2026-10-10"
+      }
+    },
+    {
+      "path": "master/apt_id_map.parquet",
+      "bytes": 1472462,
+      "sha256": "ee8ea2bf3a8105e15ffcc28b9bc62c13c681c5775dd12999f147212225528909",
+      "schema": [
+        {
+          "column_name": "apt_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "apt_group_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "sigungu_code",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "legal_dong_code",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "legal_dong_name",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "apt_name_norm",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "apt_name_raw",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "road_address",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "trade_count",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "kapt_code",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "match_score",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "match_status",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "lat",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "lng",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ]
+    },
+    {
+      "path": "web/cache/trades.parquet",
+      "bytes": 73562402,
+      "sha256": "0a1788ddcd1ad70179ade38650de8c77dd43b7876ac4edad296c6abc10cfb1b0",
+      "schema": [
+        {
+          "column_name": "apt_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "area_m2_key",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "pyeong_bucket",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "deal_date",
+          "column_type": "TIMESTAMP",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "deal_amount",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "area_m2",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "floor",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "build_year",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "price_per_pyeong",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "price_per_m2",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ],
+      "coverage": {
+        "n": 4854560,
+        "first_contract": "2006-01-01",
+        "last_contract": "2026-10-05"
+      }
+    },
+    {
+      "path": "web/cache/apt_index.parquet",
+      "bytes": 1660565,
+      "sha256": "4d1600f3def279f549147fbe08c69d6990e9bd7e998c86dbeb74607c299d15ab",
+      "schema": [
+        {
+          "column_name": "apt_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "apt_name",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "sigungu_code",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "sigungu_name",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "legal_dong_code",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "legal_dong_name",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "road_address",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "lat",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "lng",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "region",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "build_year",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "trade_total",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "pyeong_cnt",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "last_date",
+          "column_type": "TIMESTAMP",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "rep_pyeong",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "rep_area",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "rep_price",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "rep_ppy",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "rep_ppy_1y",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "chg_1y",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "chg_3y",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "vs_peak",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "trade_1y",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "trade_3m",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "peak_price",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "peak_date",
+          "column_type": "TIMESTAMP",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "nearest_station",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "nearest_station_dist",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "nearest_line",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "line_grade",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "walk_min",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "elem_school_cnt_1km",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "nearest_school_dist",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "park_dist",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "river_dist",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "green_score",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "redv_nearby",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "redv_status_best",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "gtx_dist",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "gtx_line",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "commerce_score",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "hospital_cnt",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "infra_score",
+          "column_type": "DOUBLE",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ]
+    },
+    {
+      "path": "web/cache/complex_facts.parquet",
+      "bytes": 447971,
+      "sha256": "0f8021d2734bd164523b09d0cfac640b47813b5367692400255484e7b3bd1596",
+      "schema": [
+        {
+          "column_name": "apt_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "household_count",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "building_count",
+          "column_type": "BIGINT",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "household_source",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "household_match",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        },
+        {
+          "column_name": "household_record_id",
+          "column_type": "VARCHAR",
+          "null": "YES",
+          "key": null,
+          "default": null,
+          "extra": null
+        }
+      ]
+    }
+  ],
+  "scope": [
+    {
+      "region_id": "R01",
+      "province": "인천",
+      "region": "서구",
+      "statistical_region_code_2024": "28260",
+      "current_cache_codes": [
+        "28275",
+        "28290"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "28275",
+          "contract_month": "2026-04",
+          "source_n": 288,
+          "noncanceled_n": 271,
+          "area83_85_n": 106,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "28275",
+          "contract_month": "2026-05",
+          "source_n": 338,
+          "noncanceled_n": 315,
+          "area83_85_n": 120,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "28275",
+          "contract_month": "2026-06",
+          "source_n": 299,
+          "noncanceled_n": 278,
+          "area83_85_n": 118,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "28275",
+          "contract_month": "2026-07",
+          "source_n": 267,
+          "noncanceled_n": 261,
+          "area83_85_n": 120,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "28275",
+          "contract_month": "2026-08",
+          "source_n": 241,
+          "noncanceled_n": 227,
+          "area83_85_n": 103,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "28275",
+          "contract_month": "2026-09",
+          "source_n": 166,
+          "noncanceled_n": 163,
+          "area83_85_n": 72,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "28275",
+          "contract_month": "2026-10",
+          "source_n": 39,
+          "noncanceled_n": 38,
+          "area83_85_n": 10,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-08"
+        },
+        {
+          "sigungu_code": "28290",
+          "contract_month": "2026-04",
+          "source_n": 356,
+          "noncanceled_n": 331,
+          "area83_85_n": 186,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "28290",
+          "contract_month": "2026-05",
+          "source_n": 302,
+          "noncanceled_n": 272,
+          "area83_85_n": 146,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "28290",
+          "contract_month": "2026-06",
+          "source_n": 281,
+          "noncanceled_n": 256,
+          "area83_85_n": 137,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "28290",
+          "contract_month": "2026-07",
+          "source_n": 293,
+          "noncanceled_n": 281,
+          "area83_85_n": 149,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "28290",
+          "contract_month": "2026-08",
+          "source_n": 239,
+          "noncanceled_n": 235,
+          "area83_85_n": 123,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "28290",
+          "contract_month": "2026-09",
+          "source_n": 231,
+          "noncanceled_n": 225,
+          "area83_85_n": 139,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "28290",
+          "contract_month": "2026-10",
+          "source_n": 54,
+          "noncanceled_n": 53,
+          "area83_85_n": 34,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-08"
+        }
+      ],
+      "latest_observed_contract": "2026-10-08"
+    },
+    {
+      "region_id": "R02",
+      "province": "서울",
+      "region": "송파구",
+      "statistical_region_code_2024": "11710",
+      "current_cache_codes": [
+        "11710"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "11710",
+          "contract_month": "2026-04",
+          "source_n": 296,
+          "noncanceled_n": 294,
+          "area83_85_n": 105,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-29"
+        },
+        {
+          "sigungu_code": "11710",
+          "contract_month": "2026-05",
+          "source_n": 396,
+          "noncanceled_n": 393,
+          "area83_85_n": 129,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "11710",
+          "contract_month": "2026-06",
+          "source_n": 276,
+          "noncanceled_n": 272,
+          "area83_85_n": 84,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "11710",
+          "contract_month": "2026-07",
+          "source_n": 299,
+          "noncanceled_n": 295,
+          "area83_85_n": 99,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "11710",
+          "contract_month": "2026-08",
+          "source_n": 170,
+          "noncanceled_n": 168,
+          "area83_85_n": 56,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "11710",
+          "contract_month": "2026-09",
+          "source_n": 115,
+          "noncanceled_n": 115,
+          "area83_85_n": 38,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "11710",
+          "contract_month": "2026-10",
+          "source_n": 7,
+          "noncanceled_n": 7,
+          "area83_85_n": 2,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-06"
+        }
+      ],
+      "latest_observed_contract": "2026-10-06"
+    },
+    {
+      "region_id": "R03",
+      "province": "경기",
+      "region": "고양시 덕양구",
+      "statistical_region_code_2024": "41281",
+      "current_cache_codes": [
+        "41281"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "41281",
+          "contract_month": "2026-04",
+          "source_n": 427,
+          "noncanceled_n": 422,
+          "area83_85_n": 192,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "41281",
+          "contract_month": "2026-05",
+          "source_n": 516,
+          "noncanceled_n": 506,
+          "area83_85_n": 212,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "41281",
+          "contract_month": "2026-06",
+          "source_n": 522,
+          "noncanceled_n": 497,
+          "area83_85_n": 225,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "41281",
+          "contract_month": "2026-07",
+          "source_n": 451,
+          "noncanceled_n": 440,
+          "area83_85_n": 166,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "41281",
+          "contract_month": "2026-08",
+          "source_n": 446,
+          "noncanceled_n": 427,
+          "area83_85_n": 163,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "41281",
+          "contract_month": "2026-09",
+          "source_n": 382,
+          "noncanceled_n": 371,
+          "area83_85_n": 152,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "41281",
+          "contract_month": "2026-10",
+          "source_n": 76,
+          "noncanceled_n": 76,
+          "area83_85_n": 25,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-08"
+        }
+      ],
+      "latest_observed_contract": "2026-10-08"
+    },
+    {
+      "region_id": "R04",
+      "province": "서울",
+      "region": "강서구",
+      "statistical_region_code_2024": "11500",
+      "current_cache_codes": [
+        "11500"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "11500",
+          "contract_month": "2026-04",
+          "source_n": 436,
+          "noncanceled_n": 432,
+          "area83_85_n": 114,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "11500",
+          "contract_month": "2026-05",
+          "source_n": 460,
+          "noncanceled_n": 454,
+          "area83_85_n": 140,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "11500",
+          "contract_month": "2026-06",
+          "source_n": 371,
+          "noncanceled_n": 360,
+          "area83_85_n": 98,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "11500",
+          "contract_month": "2026-07",
+          "source_n": 382,
+          "noncanceled_n": 376,
+          "area83_85_n": 111,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "11500",
+          "contract_month": "2026-08",
+          "source_n": 258,
+          "noncanceled_n": 253,
+          "area83_85_n": 76,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "11500",
+          "contract_month": "2026-09",
+          "source_n": 202,
+          "noncanceled_n": 200,
+          "area83_85_n": 49,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "11500",
+          "contract_month": "2026-10",
+          "source_n": 16,
+          "noncanceled_n": 16,
+          "area83_85_n": 3,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-07"
+        }
+      ],
+      "latest_observed_contract": "2026-10-07"
+    },
+    {
+      "region_id": "R05",
+      "province": "인천",
+      "region": "부평구",
+      "statistical_region_code_2024": "28237",
+      "current_cache_codes": [
+        "28237"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "28237",
+          "contract_month": "2026-04",
+          "source_n": 440,
+          "noncanceled_n": 425,
+          "area83_85_n": 81,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "28237",
+          "contract_month": "2026-05",
+          "source_n": 486,
+          "noncanceled_n": 471,
+          "area83_85_n": 119,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "28237",
+          "contract_month": "2026-06",
+          "source_n": 427,
+          "noncanceled_n": 405,
+          "area83_85_n": 95,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "28237",
+          "contract_month": "2026-07",
+          "source_n": 442,
+          "noncanceled_n": 429,
+          "area83_85_n": 117,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "28237",
+          "contract_month": "2026-08",
+          "source_n": 346,
+          "noncanceled_n": 331,
+          "area83_85_n": 78,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "28237",
+          "contract_month": "2026-09",
+          "source_n": 356,
+          "noncanceled_n": 352,
+          "area83_85_n": 95,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "28237",
+          "contract_month": "2026-10",
+          "source_n": 44,
+          "noncanceled_n": 43,
+          "area83_85_n": 14,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-07"
+        }
+      ],
+      "latest_observed_contract": "2026-10-07"
+    },
+    {
+      "region_id": "R06",
+      "province": "서울",
+      "region": "강남구",
+      "statistical_region_code_2024": "11680",
+      "current_cache_codes": [
+        "11680"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "11680",
+          "contract_month": "2026-04",
+          "source_n": 204,
+          "noncanceled_n": 197,
+          "area83_85_n": 46,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "11680",
+          "contract_month": "2026-05",
+          "source_n": 305,
+          "noncanceled_n": 303,
+          "area83_85_n": 63,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-30"
+        },
+        {
+          "sigungu_code": "11680",
+          "contract_month": "2026-06",
+          "source_n": 214,
+          "noncanceled_n": 205,
+          "area83_85_n": 44,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "11680",
+          "contract_month": "2026-07",
+          "source_n": 155,
+          "noncanceled_n": 153,
+          "area83_85_n": 25,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "11680",
+          "contract_month": "2026-08",
+          "source_n": 98,
+          "noncanceled_n": 93,
+          "area83_85_n": 16,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "11680",
+          "contract_month": "2026-09",
+          "source_n": 93,
+          "noncanceled_n": 92,
+          "area83_85_n": 25,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "11680",
+          "contract_month": "2026-10",
+          "source_n": 7,
+          "noncanceled_n": 7,
+          "area83_85_n": 2,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-07"
+        }
+      ],
+      "latest_observed_contract": "2026-10-07"
+    },
+    {
+      "region_id": "R07",
+      "province": "서울",
+      "region": "강동구",
+      "statistical_region_code_2024": "11740",
+      "current_cache_codes": [
+        "11740"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "11740",
+          "contract_month": "2026-04",
+          "source_n": 204,
+          "noncanceled_n": 203,
+          "area83_85_n": 63,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-29"
+        },
+        {
+          "sigungu_code": "11740",
+          "contract_month": "2026-05",
+          "source_n": 195,
+          "noncanceled_n": 195,
+          "area83_85_n": 69,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-27"
+        },
+        {
+          "sigungu_code": "11740",
+          "contract_month": "2026-06",
+          "source_n": 266,
+          "noncanceled_n": 263,
+          "area83_85_n": 91,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "11740",
+          "contract_month": "2026-07",
+          "source_n": 248,
+          "noncanceled_n": 241,
+          "area83_85_n": 77,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "11740",
+          "contract_month": "2026-08",
+          "source_n": 168,
+          "noncanceled_n": 164,
+          "area83_85_n": 61,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "11740",
+          "contract_month": "2026-09",
+          "source_n": 112,
+          "noncanceled_n": 110,
+          "area83_85_n": 41,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "11740",
+          "contract_month": "2026-10",
+          "source_n": 7,
+          "noncanceled_n": 7,
+          "area83_85_n": 1,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-03"
+        }
+      ],
+      "latest_observed_contract": "2026-10-03"
+    },
+    {
+      "region_id": "R08",
+      "province": "서울",
+      "region": "영등포구",
+      "statistical_region_code_2024": "11560",
+      "current_cache_codes": [
+        "11560"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "11560",
+          "contract_month": "2026-04",
+          "source_n": 255,
+          "noncanceled_n": 253,
+          "area83_85_n": 79,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "11560",
+          "contract_month": "2026-05",
+          "source_n": 219,
+          "noncanceled_n": 218,
+          "area83_85_n": 72,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-30"
+        },
+        {
+          "sigungu_code": "11560",
+          "contract_month": "2026-06",
+          "source_n": 255,
+          "noncanceled_n": 248,
+          "area83_85_n": 69,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "11560",
+          "contract_month": "2026-07",
+          "source_n": 250,
+          "noncanceled_n": 243,
+          "area83_85_n": 74,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "11560",
+          "contract_month": "2026-08",
+          "source_n": 139,
+          "noncanceled_n": 133,
+          "area83_85_n": 43,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "11560",
+          "contract_month": "2026-09",
+          "source_n": 99,
+          "noncanceled_n": 99,
+          "area83_85_n": 31,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "11560",
+          "contract_month": "2026-10",
+          "source_n": 7,
+          "noncanceled_n": 7,
+          "area83_85_n": 0,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-04"
+        }
+      ],
+      "latest_observed_contract": "2026-10-04"
+    },
+    {
+      "region_id": "R09",
+      "province": "경기",
+      "region": "성남시 분당구",
+      "statistical_region_code_2024": "41135",
+      "current_cache_codes": [
+        "41135"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "41135",
+          "contract_month": "2026-04",
+          "source_n": 276,
+          "noncanceled_n": 274,
+          "area83_85_n": 69,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-29"
+        },
+        {
+          "sigungu_code": "41135",
+          "contract_month": "2026-05",
+          "source_n": 425,
+          "noncanceled_n": 419,
+          "area83_85_n": 101,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "41135",
+          "contract_month": "2026-06",
+          "source_n": 449,
+          "noncanceled_n": 445,
+          "area83_85_n": 79,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "41135",
+          "contract_month": "2026-07",
+          "source_n": 451,
+          "noncanceled_n": 448,
+          "area83_85_n": 84,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "41135",
+          "contract_month": "2026-08",
+          "source_n": 159,
+          "noncanceled_n": 157,
+          "area83_85_n": 28,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "41135",
+          "contract_month": "2026-09",
+          "source_n": 139,
+          "noncanceled_n": 139,
+          "area83_85_n": 30,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "41135",
+          "contract_month": "2026-10",
+          "source_n": 10,
+          "noncanceled_n": 10,
+          "area83_85_n": 1,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-05"
+        }
+      ],
+      "latest_observed_contract": "2026-10-05"
+    },
+    {
+      "region_id": "R10",
+      "province": "인천",
+      "region": "미추홀구",
+      "statistical_region_code_2024": "28177",
+      "current_cache_codes": [
+        "28177"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "28177",
+          "contract_month": "2026-04",
+          "source_n": 276,
+          "noncanceled_n": 266,
+          "area83_85_n": 84,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "28177",
+          "contract_month": "2026-05",
+          "source_n": 235,
+          "noncanceled_n": 231,
+          "area83_85_n": 72,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "28177",
+          "contract_month": "2026-06",
+          "source_n": 273,
+          "noncanceled_n": 264,
+          "area83_85_n": 67,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "28177",
+          "contract_month": "2026-07",
+          "source_n": 224,
+          "noncanceled_n": 220,
+          "area83_85_n": 54,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "28177",
+          "contract_month": "2026-08",
+          "source_n": 226,
+          "noncanceled_n": 219,
+          "area83_85_n": 63,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "28177",
+          "contract_month": "2026-09",
+          "source_n": 186,
+          "noncanceled_n": 182,
+          "area83_85_n": 53,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "28177",
+          "contract_month": "2026-10",
+          "source_n": 18,
+          "noncanceled_n": 18,
+          "area83_85_n": 2,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-08"
+        }
+      ],
+      "latest_observed_contract": "2026-10-08"
+    },
+    {
+      "region_id": "R11",
+      "province": "서울",
+      "region": "노원구",
+      "statistical_region_code_2024": "11350",
+      "current_cache_codes": [
+        "11350"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "11350",
+          "contract_month": "2026-04",
+          "source_n": 706,
+          "noncanceled_n": 703,
+          "area83_85_n": 122,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "11350",
+          "contract_month": "2026-05",
+          "source_n": 691,
+          "noncanceled_n": 682,
+          "area83_85_n": 117,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-30"
+        },
+        {
+          "sigungu_code": "11350",
+          "contract_month": "2026-06",
+          "source_n": 678,
+          "noncanceled_n": 667,
+          "area83_85_n": 139,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "11350",
+          "contract_month": "2026-07",
+          "source_n": 699,
+          "noncanceled_n": 692,
+          "area83_85_n": 124,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "11350",
+          "contract_month": "2026-08",
+          "source_n": 533,
+          "noncanceled_n": 521,
+          "area83_85_n": 108,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "11350",
+          "contract_month": "2026-09",
+          "source_n": 244,
+          "noncanceled_n": 242,
+          "area83_85_n": 58,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "11350",
+          "contract_month": "2026-10",
+          "source_n": 5,
+          "noncanceled_n": 5,
+          "area83_85_n": 0,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-07"
+        }
+      ],
+      "latest_observed_contract": "2026-10-07"
+    },
+    {
+      "region_id": "R12",
+      "province": "경기",
+      "region": "수원시 영통구",
+      "statistical_region_code_2024": "41117",
+      "current_cache_codes": [
+        "41117"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "41117",
+          "contract_month": "2026-04",
+          "source_n": 650,
+          "noncanceled_n": 647,
+          "area83_85_n": 175,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "41117",
+          "contract_month": "2026-05",
+          "source_n": 640,
+          "noncanceled_n": 637,
+          "area83_85_n": 171,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-30"
+        },
+        {
+          "sigungu_code": "41117",
+          "contract_month": "2026-06",
+          "source_n": 511,
+          "noncanceled_n": 501,
+          "area83_85_n": 156,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "41117",
+          "contract_month": "2026-07",
+          "source_n": 643,
+          "noncanceled_n": 636,
+          "area83_85_n": 202,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "41117",
+          "contract_month": "2026-08",
+          "source_n": 394,
+          "noncanceled_n": 388,
+          "area83_85_n": 99,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "41117",
+          "contract_month": "2026-09",
+          "source_n": 454,
+          "noncanceled_n": 448,
+          "area83_85_n": 89,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "41117",
+          "contract_month": "2026-10",
+          "source_n": 53,
+          "noncanceled_n": 52,
+          "area83_85_n": 12,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-08"
+        }
+      ],
+      "latest_observed_contract": "2026-10-08"
+    },
+    {
+      "region_id": "R13",
+      "province": "경기",
+      "region": "수원시 권선구",
+      "statistical_region_code_2024": "41113",
+      "current_cache_codes": [
+        "41113"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "41113",
+          "contract_month": "2026-04",
+          "source_n": 432,
+          "noncanceled_n": 418,
+          "area83_85_n": 158,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "41113",
+          "contract_month": "2026-05",
+          "source_n": 414,
+          "noncanceled_n": 409,
+          "area83_85_n": 164,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "41113",
+          "contract_month": "2026-06",
+          "source_n": 543,
+          "noncanceled_n": 524,
+          "area83_85_n": 226,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "41113",
+          "contract_month": "2026-07",
+          "source_n": 641,
+          "noncanceled_n": 617,
+          "area83_85_n": 215,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "41113",
+          "contract_month": "2026-08",
+          "source_n": 468,
+          "noncanceled_n": 452,
+          "area83_85_n": 180,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "41113",
+          "contract_month": "2026-09",
+          "source_n": 441,
+          "noncanceled_n": 433,
+          "area83_85_n": 180,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "41113",
+          "contract_month": "2026-10",
+          "source_n": 75,
+          "noncanceled_n": 75,
+          "area83_85_n": 23,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-10"
+        }
+      ],
+      "latest_observed_contract": "2026-10-10"
+    },
+    {
+      "region_id": "R14",
+      "province": "서울",
+      "region": "은평구",
+      "statistical_region_code_2024": "11380",
+      "current_cache_codes": [
+        "11380"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "11380",
+          "contract_month": "2026-04",
+          "source_n": 257,
+          "noncanceled_n": 252,
+          "area83_85_n": 97,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "11380",
+          "contract_month": "2026-05",
+          "source_n": 316,
+          "noncanceled_n": 311,
+          "area83_85_n": 124,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "11380",
+          "contract_month": "2026-06",
+          "source_n": 257,
+          "noncanceled_n": 252,
+          "area83_85_n": 99,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "11380",
+          "contract_month": "2026-07",
+          "source_n": 281,
+          "noncanceled_n": 277,
+          "area83_85_n": 125,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "11380",
+          "contract_month": "2026-08",
+          "source_n": 214,
+          "noncanceled_n": 208,
+          "area83_85_n": 73,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "11380",
+          "contract_month": "2026-09",
+          "source_n": 154,
+          "noncanceled_n": 150,
+          "area83_85_n": 52,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "11380",
+          "contract_month": "2026-10",
+          "source_n": 13,
+          "noncanceled_n": 13,
+          "area83_85_n": 4,
+          "first_contract": "2026-10-02",
+          "last_contract": "2026-10-09"
+        }
+      ],
+      "latest_observed_contract": "2026-10-09"
+    },
+    {
+      "region_id": "R15",
+      "province": "서울",
+      "region": "구로구",
+      "statistical_region_code_2024": "11530",
+      "current_cache_codes": [
+        "11530"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "11530",
+          "contract_month": "2026-04",
+          "source_n": 309,
+          "noncanceled_n": 307,
+          "area83_85_n": 96,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "11530",
+          "contract_month": "2026-05",
+          "source_n": 370,
+          "noncanceled_n": 368,
+          "area83_85_n": 107,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-29"
+        },
+        {
+          "sigungu_code": "11530",
+          "contract_month": "2026-06",
+          "source_n": 296,
+          "noncanceled_n": 291,
+          "area83_85_n": 93,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "11530",
+          "contract_month": "2026-07",
+          "source_n": 354,
+          "noncanceled_n": 347,
+          "area83_85_n": 113,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "11530",
+          "contract_month": "2026-08",
+          "source_n": 205,
+          "noncanceled_n": 203,
+          "area83_85_n": 57,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "11530",
+          "contract_month": "2026-09",
+          "source_n": 168,
+          "noncanceled_n": 167,
+          "area83_85_n": 53,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "11530",
+          "contract_month": "2026-10",
+          "source_n": 17,
+          "noncanceled_n": 17,
+          "area83_85_n": 8,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-06"
+        }
+      ],
+      "latest_observed_contract": "2026-10-06"
+    },
+    {
+      "region_id": "R16",
+      "province": "인천",
+      "region": "남동구",
+      "statistical_region_code_2024": "28200",
+      "current_cache_codes": [
+        "28200"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "28200",
+          "contract_month": "2026-04",
+          "source_n": 371,
+          "noncanceled_n": 363,
+          "area83_85_n": 118,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "28200",
+          "contract_month": "2026-05",
+          "source_n": 336,
+          "noncanceled_n": 331,
+          "area83_85_n": 126,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "28200",
+          "contract_month": "2026-06",
+          "source_n": 365,
+          "noncanceled_n": 351,
+          "area83_85_n": 103,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "28200",
+          "contract_month": "2026-07",
+          "source_n": 315,
+          "noncanceled_n": 307,
+          "area83_85_n": 94,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "28200",
+          "contract_month": "2026-08",
+          "source_n": 296,
+          "noncanceled_n": 288,
+          "area83_85_n": 89,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "28200",
+          "contract_month": "2026-09",
+          "source_n": 288,
+          "noncanceled_n": 283,
+          "area83_85_n": 94,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "28200",
+          "contract_month": "2026-10",
+          "source_n": 42,
+          "noncanceled_n": 42,
+          "area83_85_n": 19,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-08"
+        }
+      ],
+      "latest_observed_contract": "2026-10-08"
+    },
+    {
+      "region_id": "R17",
+      "province": "인천",
+      "region": "연수구",
+      "statistical_region_code_2024": "28185",
+      "current_cache_codes": [
+        "28185"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "28185",
+          "contract_month": "2026-04",
+          "source_n": 371,
+          "noncanceled_n": 363,
+          "area83_85_n": 150,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "28185",
+          "contract_month": "2026-05",
+          "source_n": 479,
+          "noncanceled_n": 470,
+          "area83_85_n": 191,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "28185",
+          "contract_month": "2026-06",
+          "source_n": 546,
+          "noncanceled_n": 526,
+          "area83_85_n": 227,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "28185",
+          "contract_month": "2026-07",
+          "source_n": 509,
+          "noncanceled_n": 494,
+          "area83_85_n": 215,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "28185",
+          "contract_month": "2026-08",
+          "source_n": 426,
+          "noncanceled_n": 412,
+          "area83_85_n": 177,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "28185",
+          "contract_month": "2026-09",
+          "source_n": 331,
+          "noncanceled_n": 329,
+          "area83_85_n": 150,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "28185",
+          "contract_month": "2026-10",
+          "source_n": 36,
+          "noncanceled_n": 36,
+          "area83_85_n": 15,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-07"
+        }
+      ],
+      "latest_observed_contract": "2026-10-07"
+    },
+    {
+      "region_id": "R18",
+      "province": "경기",
+      "region": "용인시 기흥구",
+      "statistical_region_code_2024": "41463",
+      "current_cache_codes": [
+        "41463"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "41463",
+          "contract_month": "2026-04",
+          "source_n": 654,
+          "noncanceled_n": 640,
+          "area83_85_n": 316,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "41463",
+          "contract_month": "2026-05",
+          "source_n": 688,
+          "noncanceled_n": 674,
+          "area83_85_n": 338,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "41463",
+          "contract_month": "2026-06",
+          "source_n": 972,
+          "noncanceled_n": 947,
+          "area83_85_n": 459,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "41463",
+          "contract_month": "2026-07",
+          "source_n": 212,
+          "noncanceled_n": 209,
+          "area83_85_n": 78,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "41463",
+          "contract_month": "2026-08",
+          "source_n": 255,
+          "noncanceled_n": 254,
+          "area83_85_n": 122,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "41463",
+          "contract_month": "2026-09",
+          "source_n": 258,
+          "noncanceled_n": 253,
+          "area83_85_n": 125,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "41463",
+          "contract_month": "2026-10",
+          "source_n": 43,
+          "noncanceled_n": 43,
+          "area83_85_n": 25,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-08"
+        }
+      ],
+      "latest_observed_contract": "2026-10-08"
+    },
+    {
+      "region_id": "R19",
+      "province": "서울",
+      "region": "중랑구",
+      "statistical_region_code_2024": "11260",
+      "current_cache_codes": [
+        "11260"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "11260",
+          "contract_month": "2026-04",
+          "source_n": 313,
+          "noncanceled_n": 312,
+          "area83_85_n": 104,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "11260",
+          "contract_month": "2026-05",
+          "source_n": 282,
+          "noncanceled_n": 280,
+          "area83_85_n": 108,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-30"
+        },
+        {
+          "sigungu_code": "11260",
+          "contract_month": "2026-06",
+          "source_n": 213,
+          "noncanceled_n": 208,
+          "area83_85_n": 73,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "11260",
+          "contract_month": "2026-07",
+          "source_n": 287,
+          "noncanceled_n": 283,
+          "area83_85_n": 69,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "11260",
+          "contract_month": "2026-08",
+          "source_n": 165,
+          "noncanceled_n": 161,
+          "area83_85_n": 54,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "11260",
+          "contract_month": "2026-09",
+          "source_n": 125,
+          "noncanceled_n": 123,
+          "area83_85_n": 44,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "11260",
+          "contract_month": "2026-10",
+          "source_n": 18,
+          "noncanceled_n": 18,
+          "area83_85_n": 8,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-07"
+        }
+      ],
+      "latest_observed_contract": "2026-10-07"
+    },
+    {
+      "region_id": "R20",
+      "province": "경기",
+      "region": "부천시 원미구",
+      "statistical_region_code_2024": "41192",
+      "current_cache_codes": [
+        "41192"
+      ],
+      "months_by_current_code": [
+        {
+          "sigungu_code": "41192",
+          "contract_month": "2026-04",
+          "source_n": 346,
+          "noncanceled_n": 342,
+          "area83_85_n": 112,
+          "first_contract": "2026-04-01",
+          "last_contract": "2026-04-30"
+        },
+        {
+          "sigungu_code": "41192",
+          "contract_month": "2026-05",
+          "source_n": 436,
+          "noncanceled_n": 427,
+          "area83_85_n": 114,
+          "first_contract": "2026-05-01",
+          "last_contract": "2026-05-31"
+        },
+        {
+          "sigungu_code": "41192",
+          "contract_month": "2026-06",
+          "source_n": 458,
+          "noncanceled_n": 439,
+          "area83_85_n": 128,
+          "first_contract": "2026-06-01",
+          "last_contract": "2026-06-30"
+        },
+        {
+          "sigungu_code": "41192",
+          "contract_month": "2026-07",
+          "source_n": 472,
+          "noncanceled_n": 457,
+          "area83_85_n": 129,
+          "first_contract": "2026-07-01",
+          "last_contract": "2026-07-31"
+        },
+        {
+          "sigungu_code": "41192",
+          "contract_month": "2026-08",
+          "source_n": 465,
+          "noncanceled_n": 458,
+          "area83_85_n": 115,
+          "first_contract": "2026-08-01",
+          "last_contract": "2026-08-31"
+        },
+        {
+          "sigungu_code": "41192",
+          "contract_month": "2026-09",
+          "source_n": 369,
+          "noncanceled_n": 365,
+          "area83_85_n": 102,
+          "first_contract": "2026-09-01",
+          "last_contract": "2026-09-30"
+        },
+        {
+          "sigungu_code": "41192",
+          "contract_month": "2026-10",
+          "source_n": 62,
+          "noncanceled_n": 61,
+          "area83_85_n": 11,
+          "first_contract": "2026-10-01",
+          "last_contract": "2026-10-10"
+        }
+      ],
+      "latest_observed_contract": "2026-10-10"
+    }
+  ],
+  "sqlite": {
+    "path": "legacy/realestate.db",
+    "open_mode": "mode=ro; PRAGMA query_only=ON",
+    "tables": [
+      "subway_stations",
+      "schools",
+      "parks",
+      "rivers",
+      "redevelopment_zones",
+      "commerce_zones",
+      "apt_external",
+      "apt_master"
+    ],
+    "schema": {
+      "apt_master": [
+        [
+          0,
+          "apt_seq",
+          "TEXT",
+          0,
+          null,
+          1
+        ],
+        [
+          1,
+          "apt_name",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          2,
+          "sigungu_code",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          3,
+          "lat",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          4,
+          "lng",
+          "REAL",
+          0,
+          null,
+          0
+        ]
+      ],
+      "apt_external": [
+        [
+          0,
+          "apt_seq",
+          "TEXT",
+          0,
+          null,
+          1
+        ],
+        [
+          1,
+          "nearest_station",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          2,
+          "nearest_station_dist",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          3,
+          "nearest_line",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          4,
+          "line_grade",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          5,
+          "walk_min",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          6,
+          "elem_school_cnt_1km",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          7,
+          "nearest_school_dist",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          8,
+          "park_dist",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          9,
+          "river_dist",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          10,
+          "green_score",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          11,
+          "redv_nearby",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          12,
+          "redv_status_best",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          13,
+          "gtx_dist",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          14,
+          "gtx_line",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          15,
+          "commerce_score",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          16,
+          "hospital_cnt",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          17,
+          "infra_score",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          18,
+          "updated_at",
+          "TEXT",
+          0,
+          null,
+          0
+        ]
+      ]
+    },
+    "finding": "거래 테이블 없음. 거래 근거는 master/trade_events.parquet이며 legacy DB는 시설·단지 보조정보입니다."
+  },
+  "requested_window": [
+    "2026-05-01",
+    "2026-10-31"
+  ],
+  "requested_window_gap": "원거래 전체 최신 계약일 2026-10-10. 10월11~31일은 관측되지 않아 요청한 5~10월 전체를 현재 가격으로 표시할 수 없습니다.",
+  "proposed_primary_window": [
+    "2026-04-01",
+    "2026-09-30"
+  ],
+  "completeness_limit": "달력상 종료된 6개월을 선택합니다. 지역별 원천 수집·지연신고·사후 해제의 완전성은 보장하지 않습니다.",
+  "can_compute_now": [
+    "20지역 83~85㎡ 아파트 매매 관측 중위값·표본수·거래기간",
+    "동일 조건 단지별 중위값 및 대표 사례 후보",
+    "원거래 해제 표시 직접 제외 및 deal_hash 근거",
+    "실주소·좌표 매칭 상태를 구분한 지도 입력"
+  ],
+  "cannot_verify_now": [
+    "현재 판매 가능한 매물·호가",
+    "10월 전체 거래",
+    "최신 사후 해제 반영",
+    "개별 거래의 중개/직거래 구분"
+  ],
+  "sql": "SELECT sigungu_code, strftime(deal_date, '%Y-%m') AS contract_month,\n        count(*) AS source_n, count(*) FILTER (WHERE is_canceled IS FALSE AND cancel_date IS NULL) AS noncanceled_n,\n        count(*) FILTER (WHERE is_canceled IS FALSE AND cancel_date IS NULL AND area_m2 BETWEEN 83 AND 85 AND deal_amount>0) AS area83_85_n,\n        min(deal_date)::DATE AS first_contract, max(deal_date)::DATE AS last_contract\n        FROM read_parquet(?) WHERE deal_date >= DATE '2026-04-01' GROUP BY 1,2 ORDER BY 1,2",
+  "external_data_api_called": false
+}

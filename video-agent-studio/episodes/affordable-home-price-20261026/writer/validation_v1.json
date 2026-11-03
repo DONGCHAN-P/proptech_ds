@@ -1,0 +1,114 @@
+{
+  "episode_id": "affordable-home-price-20261026",
+  "script_revision": "v1",
+  "frozen_script_sha256": "26ed3cb78465bfde7bf52655df535e0d5b6fd8287e24c105c94266f757e7717f",
+  "policy_as_of": "2026-10-26",
+  "status": "writer_structural_checks_only",
+  "checks": [
+    {
+      "check": "고정 대본 SHA",
+      "result": "pass",
+      "evidence": "26ed3cb78465bfde7bf52655df535e0d5b6fd8287e24c105c94266f757e7717f"
+    },
+    {
+      "check": "번호+주제 10장·정확한 첫/끝 표제",
+      "result": "pass",
+      "evidence": [
+        "1. 출발점",
+        "2. 보유자금",
+        "3. 담보 한도",
+        "4. 소득 심사",
+        "5. 거래비용",
+        "6. 가격별 계산",
+        "7. 정책대출",
+        "8. 신생아 특례",
+        "9. 월 예산",
+        "10. 다음 선택"
+      ]
+    },
+    {
+      "check": "프런트메타데이터 v1",
+      "result": "pass",
+      "evidence": "본문 ## 앞 version:v1"
+    },
+    {
+      "check": "본문은 서술 문단·무대지시/출처 부록 없음",
+      "result": "pass",
+      "evidence": "44개 서술문단, 10개 ##"
+    },
+    {
+      "check": "표시문자수5000~6500",
+      "result": "pass",
+      "evidence": {
+        "narration": 6281,
+        "visible_with_headings_breaks": 6494
+      }
+    },
+    {
+      "check": "첫 문단20~30초 추정",
+      "result": "pass",
+      "evidence": 22.93
+    },
+    {
+      "check": "본문과44장면 표시문 완전일치",
+      "result": "pass",
+      "evidence": "서술문단 순서 1:1"
+    },
+    {
+      "check": "의미 단위 후보 재조합 원문일치",
+      "result": "pass",
+      "evidence": "문장/쉼표 절 경계; 타이밍 없음"
+    },
+    {
+      "check": "숫자 보호어가 의미 후보 경계를 넘지 않음",
+      "result": "pass",
+      "evidence": 169
+    },
+    {
+      "check": "사용 claim·case ID 유효 및 반사실 제외",
+      "result": "pass",
+      "evidence": {
+        "claims": 49,
+        "cases": 12
+      }
+    },
+    {
+      "check": "I01~I10 모두 연결",
+      "result": "pass",
+      "evidence": "claim_map_v1.json/story_findings_coverage"
+    },
+    {
+      "check": "HB01 도입·NB01 신생아 장 전용",
+      "result": "pass",
+      "evidence": "manifest만 읽음, 이미지 미검수"
+    },
+    {
+      "check": "모든 장면 실제 시각 미지정·예상 시간",
+      "result": "pass",
+      "evidence": "음성/영상 생성 없음"
+    },
+    {
+      "check": "현재 구성안 해시를 새로 고정",
+      "result": "pass",
+      "evidence": {
+        "sha256": "c56710bd814678cc5d3df5cdfc17592dd3662a05416ac2bbb176cd84b9ddccfd"
+      }
+    },
+    {
+      "check": "발음층 변환 범위 일치",
+      "result": "pass",
+      "evidence": "숫자·약어 변환 전후의 문자 범위 검사, 합성·청취 검수와 구별"
+    }
+  ],
+  "passed": 15,
+  "failed": 0,
+  "content_review": "main의 Claude+Codex 독립 검토 대기. writer 구조 검사로 내용 승인 대체하지 않음",
+  "not_performed": [
+    "정책 웹 재조사",
+    "선행157산술·10논리검사 재실행",
+    "raster 실제 열람",
+    "TTS·청취",
+    "영상 렌더·실제 프레임·연속재생",
+    "외부 전송·업로드"
+  ]
+}

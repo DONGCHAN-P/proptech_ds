@@ -1,0 +1,8 @@
+const path=require('path'),fs=require('fs');
+const repo=path.resolve(__dirname,'../../../../..'),out=path.resolve(__dirname,'../../outputs/video-review-v6');
+const {bundle}=require(path.join(repo,'video/node_modules/@remotion/bundler'));
+const {selectComposition,renderStill,renderMedia}=require(path.join(repo,'video/node_modules/@remotion/renderer'));
+const browserExecutable=path.join(repo,'video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe');
+(async()=>{const serveUrl=await bundle({entryPoint:path.join(repo,'video/src/NamyangjuMapLedV6.tsx'),outDir:path.join(__dirname,'bundle-live'),publicDir:path.join(repo,'video/public')});const composition=await selectComposition({serveUrl,browserExecutable,id:'NamyangjuMapLedV6'});fs.writeFileSync(path.join(__dirname,'composition.json'),JSON.stringify(composition,null,2));
+if(process.argv.includes('--stills')){for(const frame of [120,900,1800,2100,5600,7100,7120,7160,9400,10790,13550,16200,18850,19800,21750,24300,26000]){await renderStill({serveUrl,browserExecutable,composition,frame,imageFormat:'png',output:path.join(out,`source_${frame}.png`)});}console.log('stills complete');return;}
+const full=process.argv.includes('--full');await renderMedia({serveUrl,browserExecutable,composition,codec:'h264',audioCodec:'aac',crf:19,concurrency:4,frameRange:full?undefined:[0,2699],outputLocation:path.join(out,full?'namyangju-map-led_v6.mp4':'map-led_v6_intro-proof.mp4'),onProgress:({progress})=>{const n=Math.floor(progress*100);if(n%5===0&&n!==global.last){global.last=n;console.log('render',n+'%')}}});console.log('render complete');})().catch(e=>{console.error(e.stack);process.exitCode=1});

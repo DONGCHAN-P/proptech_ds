@@ -1,0 +1,9 @@
+﻿import fs from 'node:fs/promises';import {execFileSync} from 'node:child_process';
+const e={};for(const l of (await fs.readFile('.env','utf8')).split(/\r?\n/)){const m=l.match(/^\s*([A-Z_0-9]+)\s*=\s*(.*?)\s*$/);if(m)e[m[1]]=m[2].replace(/^(['"])(.*)\1$/,'$2');}
+const cfg=JSON.parse(await fs.readFile('config/tts.json','utf8'));const dir='video/public/pilot-v2';await fs.mkdir(dir,{recursive:true});const texts=[
+'지도에서 보면 광교와 동탄은 서울 남쪽에 있습니다. 이제 다른 신도시의 대표 단지도 함께 비교해 보겠습니다.',
+'이 그래프는 전용 팔십사 제곱미터 안팎의 연도별 실거래 중위가격입니다. 한 건의 신고가와 여러 거래의 중위가격은 구분해서 봐야 합니다.',
+'광교 자연앤힐스테이트와 동탄역 롯데캐슬, 운정 힐스테이트, 김포 한강힐스테이트, 옥정 어반센트럴입니다. 같은 신도시여도 흐름은 다릅니다.',
+'거래량도 나란히 놓아 보겠습니다. 동탄 일과 이를 합친 표본은 이천칠백칠십구 건입니다. 단순히 많다고 말하는 대신 다른 지역과 비교하면 차이가 보입니다.',
+'그리고 대장 단지의 가격이 도시 전체의 가격은 아닙니다. 십억 원을 넘은 거래의 비율과 지역 중위가격도 함께 살펴보겠습니다.'
+];const segments=[];for(let i=0;i<texts.length;i++){const file='voice-'+i+'.mp3';try{await fs.access(dir+'/'+file);}catch{const r=await fetch('https://api.elevenlabs.io/v1/text-to-speech/'+cfg.voice_id+'?output_format=mp3_44100_128',{method:'POST',headers:{'xi-api-key':e.ELEVENLABS_API_KEY,'Content-Type':'application/json'},body:JSON.stringify({text:texts[i],model_id:cfg.model}),signal:AbortSignal.timeout(90000)});if(!r.ok)throw Error('TTS HTTP '+r.status);await fs.writeFile(dir+'/'+file,Buffer.from(await r.arrayBuffer()));}const duration=Number(execFileSync('video/node_modules/@remotion/compositor-win32-x64-msvc/ffprobe.exe',['-v','error','-show_entries','format=duration','-of','default=noprint_wrappers=1:nokey=1',dir+'/'+file],{encoding:'utf8'}));segments.push({text:texts[i],file,duration,frames:Math.ceil((duration+1)*30)});console.log(i+' '+duration+'s');}await fs.writeFile(dir+'/plan.json',JSON.stringify({segments},null,2));await fs.copyFile('output/metrics_newtown_v2_20261013.json',dir+'/metrics.json');await fs.copyFile('video/out/real-map-v2.png',dir+'/map.png');

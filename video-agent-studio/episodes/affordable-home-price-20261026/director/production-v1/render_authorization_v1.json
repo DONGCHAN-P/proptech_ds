@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "approved": true,
+  "status": "exact_local_render_authorized_after_independent_gates",
+  "scope": "full_local_render_voice_v3_visual_v4",
+  "episode": "affordable-home-price-20261026",
+  "run_id": "measured-v3-visual-v4-r1",
+  "pipeline_sha256": "d85acb22815b51b3f82458108124461ff84333007cb2ed5ba1b7f78c62f8675a",
+  "render_commands_sha256": "61544813eeaaa5188f1c5452fed5aeb1cbafc7119852258d453c4a8891cb03a8",
+  "input_manifest_sha256": "fdb10e110929e63618960434dd3dfa36e83c984253510304b1d99578d6e7869d",
+  "script_sha256": "9658fc12dc76f67bb75d00e9c88170b167933ad8482dae1b752e4009d2aaf1a3",
+  "timing_sha256": "86a3c01e344f8c24da930404355b60d34eb9e1a0f49431cd299b5b38034939e7",
+  "edl_sha256": "b7ac9e06a4bfacb8ab229f3a9250fed6757bd83656b29fefdd3a680535e17109",
+  "captions_sha256": "070ae5624c211f8aaa6b862079d068820bf7e6ad84013e628b7bb40d6718120b",
+  "evidence": {
+    "source_qa": {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/qa/source-media-v1/source_approval_v4.json",
+      "sha256": "db133b230bfd29280d307e2ffa2007753543a2589ce55b3a77d8a688a32ac04d"
+    },
+    "audio_qa": {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/qa/audio-v1/audio_gate_v3.json",
+      "sha256": "52b3c4284925f68225974aebcde9aa77ae1838d4c8ca32d1925897829164b639"
+    },
+    "edl_review": {
+      "path": "video-agent-studio/episodes/affordable-home-price-20261026/director/production-v1/edl_review_v3.json",
+      "sha256": "93346857a473e8f074634a5285c703b8b19f3d8e862135efc1a802dd5623dfd7"
+    }
+  },
+  "authorization_basis": "Current direct user instruction: two sequential reviewed free-voice films and private uploads.",
+  "user_authorization": "video-agent-studio/episodes/affordable-home-price-20261026/director/production-v1/authorization.json",
+  "paid_generation_authorized": false,
+  "new_TTS_calls": 0,
+  "upload_authorized_by_this_file": false,
+  "actual_listening": false,
+  "continuous_playback": false,
+  "at_utc": "2026-10-25T22:01:23.675819+00:00"
+}

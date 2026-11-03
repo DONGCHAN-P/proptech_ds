@@ -1,0 +1,5 @@
+const path=require('path'),R=path.resolve(__dirname,'../../../../..'),out=path.resolve(__dirname,'../../outputs/front-review-v7');
+const {bundle}=require(path.join(R,'video/node_modules/@remotion/bundler'));
+const {selectComposition,renderStill}=require(path.join(R,'video/node_modules/@remotion/renderer'));
+const browserExecutable=path.join(R,'video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe');
+(async()=>{const serveUrl=await bundle({entryPoint:path.join(R,'video/src/NamyangjuLanduseV7.tsx'),outDir:path.join(__dirname,'bundle-price-gate'),publicDir:path.join(R,'video/public')});const composition=await selectComposition({serveUrl,browserExecutable,id:'NamyangjuLanduseFrontV7'});for(const frame of [8400,9000])await renderStill({serveUrl,browserExecutable,composition,frame,imageFormat:'png',output:path.join(out,`source_${frame}.png`)});console.log('price representative2 complete; main render bundle untouched');})().catch(e=>{console.error(e);process.exitCode=1});

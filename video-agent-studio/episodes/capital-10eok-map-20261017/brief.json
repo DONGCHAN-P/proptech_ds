@@ -1,0 +1,34 @@
+{
+  "episode_id": "capital-10eok-map-20261017",
+  "request_type": "new_video",
+  "format": "short_form",
+  "user_request": "실거래가 데이터로 2006년부터 연도별 10억 초과 단지 점이 사라지는 숏폼",
+  "confirmed_scope": {
+    "regions": [
+      "서울",
+      "경기",
+      "인천"
+    ],
+    "exclusive_area_sqm": {
+      "gte": 83,
+      "lt": 85
+    },
+    "statistic": "단지별 계약연도 실거래 중위값",
+    "threshold_krw": 1000000000,
+    "above_threshold": "hide",
+    "at_or_below_threshold": "show",
+    "reappearance": true,
+    "start_year": 2006
+  },
+  "proposed_missing_data_policy": "해당 연도 거래가 없으면 회색으로 별도 표시; 가격초과와 구분. 신축 이전 연도 가격을 역으로 채우지 않음.",
+  "proposed_end_year_policy": "완결 연도와 최신 부분연도를 명확히 구분하며 실제 수집일 표시",
+  "source": "master/trade_events.parquet 및 staged/trade 원문, 기존 좌표 자료는 정밀도 감사 후 사용",
+  "style": "채널 크림/파랑/잉크/Pretendard 유지; 고정 수도권 지도와 연도·단지 수; 줌 반복 없음",
+  "vertical_safe_area": "config/vertical_video_safe_area.json",
+  "budget": {
+    "external_paid_generation_allowed": false,
+    "cash_cap": 0,
+    "voice_generation_allowed": false
+  },
+  "publication_authorized": false
+}

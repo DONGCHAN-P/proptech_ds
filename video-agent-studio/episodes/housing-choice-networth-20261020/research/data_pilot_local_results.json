@@ -1,0 +1,451 @@
+{
+  "checked_on": "2026-10-20",
+  "scope": "offline_presence_only",
+  "trade": [
+    {
+      "candidate": "잠실엘스",
+      "month": "201601",
+      "source": "master/trade_events.parquet",
+      "rows_including_cancelled": 8,
+      "cancel_flags": {
+        "False": 8
+      },
+      "area_m2_values": [
+        84.8,
+        84.88,
+        84.97
+      ],
+      "exact_names": [
+        "잠실엘스"
+      ]
+    },
+    {
+      "candidate": "잠실엘스",
+      "month": "202609",
+      "source": "master/trade_events.parquet",
+      "rows_including_cancelled": 3,
+      "cancel_flags": {
+        "False": 3
+      },
+      "area_m2_values": [
+        84.8,
+        84.88
+      ],
+      "exact_names": [
+        "잠실엘스"
+      ]
+    },
+    {
+      "candidate": "광교자연앤힐스테이트",
+      "month": "201601",
+      "source": "master/trade_events.parquet",
+      "rows_including_cancelled": 5,
+      "cancel_flags": {
+        "False": 5
+      },
+      "area_m2_values": [
+        84.28,
+        84.53,
+        84.68
+      ],
+      "exact_names": [
+        "자연앤힐스테이트"
+      ]
+    },
+    {
+      "candidate": "광교자연앤힐스테이트",
+      "month": "202609",
+      "source": "master/trade_events.parquet",
+      "rows_including_cancelled": 4,
+      "cancel_flags": {
+        "False": 4
+      },
+      "area_m2_values": [
+        84.28,
+        84.37,
+        84.39,
+        84.5
+      ],
+      "exact_names": [
+        "자연앤힐스테이트"
+      ]
+    }
+  ],
+  "rent": [
+    {
+      "candidate": "잠실엘스",
+      "month": "202608",
+      "source": "raw\\rtms_rent\\2026\\08\\11710_202608.xml",
+      "totalCount": "794",
+      "stored_rows": 794,
+      "matched_rows": [
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "7",
+          "deposit": "120,000",
+          "monthlyRent": "0",
+          "contractType": "신규"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "25",
+          "deposit": "10,000",
+          "monthlyRent": "500",
+          "contractType": "신규"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "24",
+          "deposit": "92,500",
+          "monthlyRent": "140",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.97",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "24",
+          "deposit": "100,000",
+          "monthlyRent": "160",
+          "contractType": "신규"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "24",
+          "deposit": "25,000",
+          "monthlyRent": "351",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "14",
+          "deposit": "139,730",
+          "monthlyRent": "0",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.88",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "22",
+          "deposit": "140,000",
+          "monthlyRent": "0",
+          "contractType": "신규"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "22",
+          "deposit": "120,500",
+          "monthlyRent": "0",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "14",
+          "deposit": "125,500",
+          "monthlyRent": "0",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "21",
+          "deposit": "133,000",
+          "monthlyRent": "0",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.88",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "20",
+          "deposit": "135,000",
+          "monthlyRent": "0",
+          "contractType": "신규"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "20",
+          "deposit": "20,000",
+          "monthlyRent": "420",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "7",
+          "deposit": "158,000",
+          "monthlyRent": "0",
+          "contractType": "신규"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.88",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "17",
+          "deposit": "120,000",
+          "monthlyRent": "80",
+          "contractType": "신규"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "14",
+          "deposit": "10,000",
+          "monthlyRent": "460",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "8",
+          "deposit": "70,000",
+          "monthlyRent": "240",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "8",
+          "deposit": "40,000",
+          "monthlyRent": "360",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.88",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "8",
+          "deposit": "120,000",
+          "monthlyRent": "80",
+          "contractType": "신규"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "8",
+          "deposit": "50,000",
+          "monthlyRent": "300",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.88",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "10",
+          "deposit": "120,700",
+          "monthlyRent": "0",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "11",
+          "deposit": "20,000",
+          "monthlyRent": "450",
+          "contractType": "신규"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "11",
+          "deposit": "40,000",
+          "monthlyRent": "355",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.88",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "10",
+          "deposit": "115,000",
+          "monthlyRent": "0",
+          "contractType": "신규"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.97",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "7",
+          "deposit": "113,400",
+          "monthlyRent": "0",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "잠실엘스",
+          "excluUseAr": "84.8",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "7",
+          "deposit": "80,000",
+          "monthlyRent": "170",
+          "contractType": "갱신"
+        }
+      ],
+      "note": "Stored source only; no live update. Different month from requested September."
+    },
+    {
+      "candidate": "광교자연앤힐스테이트",
+      "month": "202608",
+      "source": "raw\\rtms_rent\\2026\\08\\41117_202608.xml",
+      "totalCount": "369",
+      "stored_rows": 369,
+      "matched_rows": [
+        {
+          "aptNm": "자연앤힐스테이트",
+          "excluUseAr": "84.53",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "22",
+          "deposit": "87,000",
+          "monthlyRent": "0",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "자연앤힐스테이트",
+          "excluUseAr": "84.28",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "20",
+          "deposit": "75,000",
+          "monthlyRent": "60",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "자연앤힐스테이트",
+          "excluUseAr": "84.53",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "15",
+          "deposit": "91,300",
+          "monthlyRent": "0",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "자연앤힐스테이트",
+          "excluUseAr": "84.5",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "15",
+          "deposit": "94,000",
+          "monthlyRent": "0",
+          "contractType": "신규"
+        },
+        {
+          "aptNm": "자연앤힐스테이트",
+          "excluUseAr": "84.41",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "18",
+          "deposit": "10,000",
+          "monthlyRent": "238",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "자연앤힐스테이트",
+          "excluUseAr": "84.68",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "14",
+          "deposit": "98,000",
+          "monthlyRent": "0",
+          "contractType": "신규"
+        },
+        {
+          "aptNm": "자연앤힐스테이트",
+          "excluUseAr": "84.74",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "11",
+          "deposit": "84,000",
+          "monthlyRent": "0",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "자연앤힐스테이트",
+          "excluUseAr": "84.46",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "10",
+          "deposit": "87,000",
+          "monthlyRent": "0",
+          "contractType": "갱신"
+        },
+        {
+          "aptNm": "자연앤힐스테이트",
+          "excluUseAr": "84.37",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "8",
+          "deposit": "15,000",
+          "monthlyRent": "350",
+          "contractType": "신규"
+        },
+        {
+          "aptNm": "자연앤힐스테이트",
+          "excluUseAr": "84.37",
+          "dealYear": "2026",
+          "dealMonth": "8",
+          "dealDay": "1",
+          "deposit": "97,000",
+          "monthlyRent": "0",
+          "contractType": "신규"
+        }
+      ],
+      "note": "Stored source only; no live update. Different month from requested September."
+    }
+  ],
+  "limitations": [
+    "84-85㎡ is an area band, not exact identical unit area.",
+    "Presence only. No price statistics or long-run winner calculated.",
+    "Existing master extraction timestamp and full source completeness not re-audited."
+  ]
+}

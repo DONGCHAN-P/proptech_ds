@@ -1,0 +1,4092 @@
+{
+  "schema_revision": "top20-narration-contract-v1",
+  "timing_locked": false,
+  "lock_owner": "director",
+  "status": "v2_complete_measured_proposal_pending_director_lock_and_listening",
+  "timing_basis": "actual_audio",
+  "alignment_basis": "raw_provider_words_scaled_by_1.35_then_sample_cut_translation",
+  "duration_is_actual": true,
+  "actual_listening_performed": false,
+  "asr_performed": false,
+  "character_proportional_alignment_used": false,
+  "provider": "microsoft_edge_consumer_tts",
+  "voice": "ko-KR-InJoonNeural",
+  "edge_rate": "+0%",
+  "postprocess_atempo_factor": 1.35,
+  "audio_body_duration_s": 450.63503401360543,
+  "last_spoken_end_s": 455.0031670445956,
+  "final_audio_tail_already_counted_s": 0.6318669690098204,
+  "required_hold_from_last_spoken_s": 3.0,
+  "additional_silence_after_audio_s": 2.368140589569161,
+  "brand_intro": {
+    "duration_s": 5.0,
+    "frames": 220500,
+    "sample_rate": 44100,
+    "channels": 1,
+    "sample_width_bytes": 2,
+    "peak_pcm": 3519,
+    "rms_pcm": 828,
+    "sha256": "42c4bec1233d81e37a68fa02533b94919c5f6d44c894bf92a60ef6950da1c45b",
+    "path": "video/public/channel-brand-v2/intro.wav",
+    "start_s": 0,
+    "end_s": 5.0
+  },
+  "brand_outro": {
+    "duration_s": 10.0,
+    "frames": 441000,
+    "sample_rate": 44100,
+    "channels": 1,
+    "sample_width_bytes": 2,
+    "peak_pcm": 3519,
+    "rms_pcm": 585,
+    "sha256": "adefdfbe9e0a78f28748c1a391510476ca827f3a4aa9b0f375fb6a3f082b76b3",
+    "path": "video/public/channel-brand-v2/outro.wav",
+    "start_s": 458.0031746031746,
+    "end_s": 468.0031746031746
+  },
+  "brand_selection_status": "discovered_existing_channel_brand_v2_audio_candidate; director/editor decide final common brand selection",
+  "total_duration_with_brand_and_hold_s": 468.0031746031746,
+  "scene_id_count": 27,
+  "sentence_count": 103,
+  "path_semantics": "audio_file/audio_path absolute; metadata paths project root relative",
+  "time_semantics": "scene/sentences/captions global seconds including intro5; sentence_times/anchors local seconds; body audio origin global5; full_brand_audio origin0",
+  "paid_api_calls": 0,
+  "cash_cost_krw": 0,
+  "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+  "script_revision": "top20-production-editorial-v4",
+  "script_sha256": "f1ff6dcd71283335cd8a675f1446f56557f4c81718dab59e8f641588334dbed2",
+  "cut_plan_sha256": "5c8bf1f491d223c45959ab1083b2fb34ba8ec76daed4466cb52f7b8936992625",
+  "source_scene_proposals_v4_sha256": "d6bb699985b6684ff72dacf5788b62bca28e8fcd3c19fd62b0ece67873592aa4",
+  "audio_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\narration_body.wav",
+  "audio_file_time_origin_global_s": 5.0,
+  "full_brand_audio_file": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\narration_full_brand.wav",
+  "full_brand_audio_file_time_origin_global_s": 0.0,
+  "scenes": [
+    {
+      "scene_id": "O001",
+      "start_s": 5.0,
+      "end_s": 28.472539682539683,
+      "duration_s": 23.472539682539683,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\O001.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\O001.mp3",
+      "audio_sha256": "dd5761013c8fb2d503af27d6dc1fbdd26de3716e919e519bd66a5ec1476d0dd5",
+      "source_v1_audio_sha256": "dd5761013c8fb2d503af27d6dc1fbdd26de3716e919e519bd66a5ec1476d0dd5",
+      "narration_text": "신혼부부가 많이 사는 수도권 지역, 어디가 떠오르세요?\n오늘은 수도권 53개 구 가운데 신혼부부가 많이 사는 스무 곳을, 20위부터 거꾸로 만나보겠습니다.\n이름만 줄 세우면 놓치는 게 있어요.\n바로 옆 순위의 차이가 겨우 열 쌍인 곳도 있고, 비슷한 규모인데 부부의 구성이 다른 곳도 있거든요.\n그 차이를 따라가면서, 우리에게 필요한 지역 비교 질문도 함께 찾아보죠.",
+      "reading_text": "신혼부부가 많이 사는 수도권 지역, 어디가 떠오르세요?\n오늘은 수도권 쉰세 개 구 가운데 신혼부부가 많이 사는 스무 곳을, 이십 위부터 거꾸로 만나보겠습니다.\n이름만 줄 세우면 놓치는 게 있어요.\n바로 옆 순위의 차이가 겨우 열 쌍인 곳도 있고, 비슷한 규모인데 부부의 구성이 다른 곳도 있거든요.\n그 차이를 따라가면서, 우리에게 필요한 지역 비교 질문도 함께 찾아보죠.",
+      "sentences": [
+        {
+          "sentence_id": "O001-01",
+          "text": "신혼부부가 많이 사는 수도권 지역, 어디가 떠오르세요?",
+          "reading_text": "신혼부부가 많이 사는 수도권 지역, 어디가 떠오르세요?",
+          "start_s": 5.074074074074074,
+          "end_s": 8.212962962962962,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.212962962962963,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.212962962962963
+        },
+        {
+          "sentence_id": "O001-02",
+          "text": "오늘은 수도권 53개 구 가운데 신혼부부가 많이 사는 스무 곳을, 20위부터 거꾸로 만나보겠습니다.",
+          "reading_text": "오늘은 수도권 쉰세 개 구 가운데 신혼부부가 많이 사는 스무 곳을, 이십 위부터 거꾸로 만나보겠습니다.",
+          "start_s": 8.916666666666666,
+          "end_s": 14.37037037037037,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 15,
+          "source_v1_local_start_s": 3.916666666666666,
+          "source_v1_local_end_s": 9.37037037037037,
+          "local_start_s": 3.916666666666666,
+          "local_end_s": 9.37037037037037
+        },
+        {
+          "sentence_id": "O001-03",
+          "text": "이름만 줄 세우면 놓치는 게 있어요.",
+          "reading_text": "이름만 줄 세우면 놓치는 게 있어요.",
+          "start_s": 15.11111111111111,
+          "end_s": 17.212962962962962,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 10.11111111111111,
+          "source_v1_local_end_s": 12.212962962962962,
+          "local_start_s": 10.11111111111111,
+          "local_end_s": 12.212962962962962
+        },
+        {
+          "sentence_id": "O001-04",
+          "text": "바로 옆 순위의 차이가 겨우 열 쌍인 곳도 있고, 비슷한 규모인데 부부의 구성이 다른 곳도 있거든요.",
+          "reading_text": "바로 옆 순위의 차이가 겨우 열 쌍인 곳도 있고, 비슷한 규모인데 부부의 구성이 다른 곳도 있거든요.",
+          "start_s": 17.907407407407405,
+          "end_s": 23.055555555555554,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 16,
+          "source_v1_local_start_s": 12.907407407407407,
+          "source_v1_local_end_s": 18.055555555555554,
+          "local_start_s": 12.907407407407407,
+          "local_end_s": 18.055555555555554
+        },
+        {
+          "sentence_id": "O001-05",
+          "text": "그 차이를 따라가면서, 우리에게 필요한 지역 비교 질문도 함께 찾아보죠.",
+          "reading_text": "그 차이를 따라가면서, 우리에게 필요한 지역 비교 질문도 함께 찾아보죠.",
+          "start_s": 23.759259259259256,
+          "end_s": 27.824074074074073,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 18.759259259259256,
+          "source_v1_local_end_s": 22.824074074074073,
+          "local_start_s": 18.759259259259256,
+          "local_end_s": 22.824074074074073
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "O001-01",
+          "text": "신혼부부가 많이 사는 수도권 지역, 어디가 떠오르세요?",
+          "reading_text": "신혼부부가 많이 사는 수도권 지역, 어디가 떠오르세요?",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.212962962962963,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.212962962962963
+        },
+        {
+          "sentence_id": "O001-02",
+          "text": "오늘은 수도권 53개 구 가운데 신혼부부가 많이 사는 스무 곳을, 20위부터 거꾸로 만나보겠습니다.",
+          "reading_text": "오늘은 수도권 쉰세 개 구 가운데 신혼부부가 많이 사는 스무 곳을, 이십 위부터 거꾸로 만나보겠습니다.",
+          "start_s": 3.916666666666666,
+          "end_s": 9.37037037037037,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 15,
+          "source_v1_local_start_s": 3.916666666666666,
+          "source_v1_local_end_s": 9.37037037037037
+        },
+        {
+          "sentence_id": "O001-03",
+          "text": "이름만 줄 세우면 놓치는 게 있어요.",
+          "reading_text": "이름만 줄 세우면 놓치는 게 있어요.",
+          "start_s": 10.11111111111111,
+          "end_s": 12.212962962962962,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 10.11111111111111,
+          "source_v1_local_end_s": 12.212962962962962
+        },
+        {
+          "sentence_id": "O001-04",
+          "text": "바로 옆 순위의 차이가 겨우 열 쌍인 곳도 있고, 비슷한 규모인데 부부의 구성이 다른 곳도 있거든요.",
+          "reading_text": "바로 옆 순위의 차이가 겨우 열 쌍인 곳도 있고, 비슷한 규모인데 부부의 구성이 다른 곳도 있거든요.",
+          "start_s": 12.907407407407407,
+          "end_s": 18.055555555555554,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 16,
+          "source_v1_local_start_s": 12.907407407407407,
+          "source_v1_local_end_s": 18.055555555555554
+        },
+        {
+          "sentence_id": "O001-05",
+          "text": "그 차이를 따라가면서, 우리에게 필요한 지역 비교 질문도 함께 찾아보죠.",
+          "reading_text": "그 차이를 따라가면서, 우리에게 필요한 지역 비교 질문도 함께 찾아보죠.",
+          "start_s": 18.759259259259256,
+          "end_s": 22.824074074074073,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 18.759259259259256,
+          "source_v1_local_end_s": 22.824074074074073
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "O001-01",
+          "text": "신혼부부가 많이 사는 수도권 지역, 어디가 떠오르세요?",
+          "start_s": 5.074074074074074,
+          "end_s": 8.212962962962962
+        },
+        {
+          "sentence_id": "O001-02",
+          "text": "오늘은 수도권 53개 구 가운데 신혼부부가 많이 사는 스무 곳을, 20위부터 거꾸로 만나보겠습니다.",
+          "start_s": 8.916666666666666,
+          "end_s": 14.37037037037037
+        },
+        {
+          "sentence_id": "O001-03",
+          "text": "이름만 줄 세우면 놓치는 게 있어요.",
+          "start_s": 15.11111111111111,
+          "end_s": 17.212962962962962
+        },
+        {
+          "sentence_id": "O001-04",
+          "text": "바로 옆 순위의 차이가 겨우 열 쌍인 곳도 있고, 비슷한 규모인데 부부의 구성이 다른 곳도 있거든요.",
+          "start_s": 17.907407407407405,
+          "end_s": 23.055555555555554
+        },
+        {
+          "sentence_id": "O001-05",
+          "text": "그 차이를 따라가면서, 우리에게 필요한 지역 비교 질문도 함께 찾아보죠.",
+          "start_s": 23.759259259259256,
+          "end_s": 27.824074074074073
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "O002",
+      "start_s": 28.472539682539683,
+      "end_s": 50.48095238095238,
+      "duration_s": 22.008412698412698,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\O002.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\O002.mp3",
+      "audio_sha256": "a745794b265a82ae5aaf4e659721497e462b2a6fb8ddd0a620b57c8d969a6a1e",
+      "source_v1_audio_sha256": "a745794b265a82ae5aaf4e659721497e462b2a6fb8ddd0a620b57c8d969a6a1e",
+      "narration_text": "기준은 2024년 11월 1일, 당시 구역별로 집계한 거주 신혼부부 수입니다.\n혼인신고 후 5년이 지나지 않았고, 혼인관계를 유지하면서 부부 중 적어도 한 명이 국내에 사는 부부가 대상이에요.\n초혼과 재혼을 포함한 전체 수를 보며, 단위는 쌍입니다.\n먼저 기준일에 얼마나 많이 살고 있었는지 보고, 중간중간 1년 사이의 변화도 짚어볼게요.",
+      "reading_text": "기준은 이천이십사 년 십일 월 일 일, 당시 구역별로 집계한 거주 신혼부부 수입니다.\n혼인신고 후 오 년이 지나지 않았고, 혼인관계를 유지하면서 부부 중 적어도 한 명이 국내에 사는 부부가 대상이에요.\n초혼과 재혼을 포함한 전체 수를 보며, 단위는 쌍입니다.\n먼저 기준일에 얼마나 많이 살고 있었는지 보고, 중간중간 일 년 사이의 변화도 짚어볼게요.",
+      "sentences": [
+        {
+          "sentence_id": "O002-01",
+          "text": "기준은 2024년 11월 1일, 당시 구역별로 집계한 거주 신혼부부 수입니다.",
+          "reading_text": "기준은 이천이십사 년 십일 월 일 일, 당시 구역별로 집계한 거주 신혼부부 수입니다.",
+          "start_s": 28.546613756613755,
+          "end_s": 33.31513227513227,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 4.842592592592592,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 4.842592592592592
+        },
+        {
+          "sentence_id": "O002-02",
+          "text": "혼인신고 후 5년이 지나지 않았고, 혼인관계를 유지하면서 부부 중 적어도 한 명이 국내에 사는 부부가 대상이에요.",
+          "reading_text": "혼인신고 후 오 년이 지나지 않았고, 혼인관계를 유지하면서 부부 중 적어도 한 명이 국내에 사는 부부가 대상이에요.",
+          "start_s": 34.06513227513227,
+          "end_s": 40.30587301587302,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 17,
+          "source_v1_local_start_s": 5.592592592592592,
+          "source_v1_local_end_s": 11.833333333333332,
+          "local_start_s": 5.592592592592592,
+          "local_end_s": 11.833333333333332
+        },
+        {
+          "sentence_id": "O002-03",
+          "text": "초혼과 재혼을 포함한 전체 수를 보며, 단위는 쌍입니다.",
+          "reading_text": "초혼과 재혼을 포함한 전체 수를 보며, 단위는 쌍입니다.",
+          "start_s": 40.9910582010582,
+          "end_s": 44.30587301587302,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 12.518518518518517,
+          "source_v1_local_end_s": 15.833333333333332,
+          "local_start_s": 12.518518518518517,
+          "local_end_s": 15.833333333333332
+        },
+        {
+          "sentence_id": "O002-04",
+          "text": "먼저 기준일에 얼마나 많이 살고 있었는지 보고, 중간중간 1년 사이의 변화도 짚어볼게요.",
+          "reading_text": "먼저 기준일에 얼마나 많이 살고 있었는지 보고, 중간중간 일 년 사이의 변화도 짚어볼게요.",
+          "start_s": 45.009576719576714,
+          "end_s": 49.87994708994709,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 16.537037037037035,
+          "source_v1_local_end_s": 21.407407407407405,
+          "local_start_s": 16.537037037037035,
+          "local_end_s": 21.407407407407405
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "O002-01",
+          "text": "기준은 2024년 11월 1일, 당시 구역별로 집계한 거주 신혼부부 수입니다.",
+          "reading_text": "기준은 이천이십사 년 십일 월 일 일, 당시 구역별로 집계한 거주 신혼부부 수입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 4.842592592592592,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 4.842592592592592
+        },
+        {
+          "sentence_id": "O002-02",
+          "text": "혼인신고 후 5년이 지나지 않았고, 혼인관계를 유지하면서 부부 중 적어도 한 명이 국내에 사는 부부가 대상이에요.",
+          "reading_text": "혼인신고 후 오 년이 지나지 않았고, 혼인관계를 유지하면서 부부 중 적어도 한 명이 국내에 사는 부부가 대상이에요.",
+          "start_s": 5.592592592592592,
+          "end_s": 11.833333333333332,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 17,
+          "source_v1_local_start_s": 5.592592592592592,
+          "source_v1_local_end_s": 11.833333333333332
+        },
+        {
+          "sentence_id": "O002-03",
+          "text": "초혼과 재혼을 포함한 전체 수를 보며, 단위는 쌍입니다.",
+          "reading_text": "초혼과 재혼을 포함한 전체 수를 보며, 단위는 쌍입니다.",
+          "start_s": 12.518518518518517,
+          "end_s": 15.833333333333332,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 12.518518518518517,
+          "source_v1_local_end_s": 15.833333333333332
+        },
+        {
+          "sentence_id": "O002-04",
+          "text": "먼저 기준일에 얼마나 많이 살고 있었는지 보고, 중간중간 1년 사이의 변화도 짚어볼게요.",
+          "reading_text": "먼저 기준일에 얼마나 많이 살고 있었는지 보고, 중간중간 일 년 사이의 변화도 짚어볼게요.",
+          "start_s": 16.537037037037035,
+          "end_s": 21.407407407407405,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 16.537037037037035,
+          "source_v1_local_end_s": 21.407407407407405
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "O002-01",
+          "text": "기준은 2024년 11월 1일, 당시 구역별로 집계한 거주 신혼부부 수입니다.",
+          "start_s": 28.546613756613755,
+          "end_s": 33.31513227513227
+        },
+        {
+          "sentence_id": "O002-02",
+          "text": "혼인신고 후 5년이 지나지 않았고, 혼인관계를 유지하면서 부부 중 적어도 한 명이 국내에 사는 부부가 대상이에요.",
+          "start_s": 34.06513227513227,
+          "end_s": 40.30587301587302
+        },
+        {
+          "sentence_id": "O002-03",
+          "text": "초혼과 재혼을 포함한 전체 수를 보며, 단위는 쌍입니다.",
+          "start_s": 40.9910582010582,
+          "end_s": 44.30587301587302
+        },
+        {
+          "sentence_id": "O002-04",
+          "text": "먼저 기준일에 얼마나 많이 살고 있었는지 보고, 중간중간 1년 사이의 변화도 짚어볼게요.",
+          "start_s": 45.009576719576714,
+          "end_s": 49.87994708994709
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S003",
+      "start_s": 50.48095238095238,
+      "end_s": 61.77816326530612,
+      "duration_s": 11.297210884353742,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S003.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S003.mp3",
+      "audio_sha256": "7e1e93aa01ddf32958b205e1589665723fc8a8a3eb8380cb5f91ff8a193165b8",
+      "source_v1_audio_sha256": "4ca10e4077a67cf45f417b4ba0924104e3ba6e35530c1e1034342a58eae3ca16",
+      "narration_text": "20위는 부천시 원미구, 7,365쌍입니다.\n원미구는 2024년에 다시 설치된 구예요.\n원미구 안에서도 상동처럼 구체적인 동네로 좁혀볼 수 있겠죠.",
+      "reading_text": "이십 위는 부천시 원미구, 칠천삼백육십오 쌍입니다.\n원미구는 이천이십사 년에 다시 설치된 구예요.\n원미구 안에서도 상동처럼 구체적인 동네로 좁혀볼 수 있겠죠.",
+      "sentences": [
+        {
+          "sentence_id": "S003-01",
+          "text": "20위는 부천시 원미구, 7,365쌍입니다.",
+          "reading_text": "이십 위는 부천시 원미구, 칠천삼백육십오 쌍입니다.",
+          "start_s": 50.55502645502646,
+          "end_s": 53.93465608465608,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.4537037037037033,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.4537037037037033
+        },
+        {
+          "sentence_id": "S003-02",
+          "text": "원미구는 2024년에 다시 설치된 구예요.",
+          "reading_text": "원미구는 이천이십사 년에 다시 설치된 구예요.",
+          "start_s": 54.675396825396824,
+          "end_s": 57.55502645502646,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 4.194444444444444,
+          "source_v1_local_end_s": 7.074074074074074,
+          "local_start_s": 4.194444444444444,
+          "local_end_s": 7.074074074074074
+        },
+        {
+          "sentence_id": "S003-03",
+          "text": "원미구 안에서도 상동처럼 구체적인 동네로 좁혀볼 수 있겠죠.",
+          "reading_text": "원미구 안에서도 상동처럼 구체적인 동네로 좁혀볼 수 있겠죠.",
+          "start_s": 58.2494708994709,
+          "end_s": 61.406878306878305,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 7.768518518518518,
+          "source_v1_local_end_s": 10.925925925925926,
+          "local_start_s": 7.768518518518518,
+          "local_end_s": 10.925925925925926
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S003-01",
+          "text": "20위는 부천시 원미구, 7,365쌍입니다.",
+          "reading_text": "이십 위는 부천시 원미구, 칠천삼백육십오 쌍입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.4537037037037033,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.4537037037037033
+        },
+        {
+          "sentence_id": "S003-02",
+          "text": "원미구는 2024년에 다시 설치된 구예요.",
+          "reading_text": "원미구는 이천이십사 년에 다시 설치된 구예요.",
+          "start_s": 4.194444444444444,
+          "end_s": 7.074074074074074,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 4.194444444444444,
+          "source_v1_local_end_s": 7.074074074074074
+        },
+        {
+          "sentence_id": "S003-03",
+          "text": "원미구 안에서도 상동처럼 구체적인 동네로 좁혀볼 수 있겠죠.",
+          "reading_text": "원미구 안에서도 상동처럼 구체적인 동네로 좁혀볼 수 있겠죠.",
+          "start_s": 7.768518518518518,
+          "end_s": 10.925925925925926,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 7.768518518518518,
+          "source_v1_local_end_s": 10.925925925925926
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S003-01",
+          "text": "20위는 부천시 원미구, 7,365쌍입니다.",
+          "start_s": 50.55502645502646,
+          "end_s": 53.93465608465608
+        },
+        {
+          "sentence_id": "S003-02",
+          "text": "원미구는 2024년에 다시 설치된 구예요.",
+          "start_s": 54.675396825396824,
+          "end_s": 57.55502645502646
+        },
+        {
+          "sentence_id": "S003-03",
+          "text": "원미구 안에서도 상동처럼 구체적인 동네로 좁혀볼 수 있겠죠.",
+          "start_s": 58.2494708994709,
+          "end_s": 61.406878306878305
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S004",
+      "start_s": 61.77816326530612,
+      "end_s": 73.14018140589569,
+      "duration_s": 11.36201814058957,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S004.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S004.mp3",
+      "audio_sha256": "5f7ef636c977bc6a0fb7af9e3fca2513c2e09bca519e8efd6e4da204cb899408",
+      "source_v1_audio_sha256": "9183c24d704a653b451d20bbb88c58ce70c601f6b55e6c30fe19ac3dbf55c1b8",
+      "narration_text": "서울 중랑구가 7,547쌍으로 19위입니다.\n원미구보다 182쌍 많아요.\n경기도 부천에서 서울 중랑으로 자리는 바뀌었지만, 거주 규모는 서로 가깝습니다.",
+      "reading_text": "서울 중랑구가 칠천오백사십칠 쌍으로 십구 위입니다.\n원미구보다 백팔십이 쌍 많아요.\n경기도 부천에서 서울 중랑으로 자리는 바뀌었지만, 거주 규모는 서로 가깝습니다.",
+      "sentences": [
+        {
+          "sentence_id": "S004-01",
+          "text": "서울 중랑구가 7,547쌍으로 19위입니다.",
+          "reading_text": "서울 중랑구가 칠천오백사십칠 쌍으로 십구 위입니다.",
+          "start_s": 61.852237339380196,
+          "end_s": 64.86149659863945,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.083333333333333,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.083333333333333
+        },
+        {
+          "sentence_id": "S004-02",
+          "text": "원미구보다 182쌍 많아요.",
+          "reading_text": "원미구보다 백팔십이 쌍 많아요.",
+          "start_s": 65.58371882086168,
+          "end_s": 67.63927437641723,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 3.8055555555555554,
+          "source_v1_local_end_s": 5.861111111111111,
+          "local_start_s": 3.8055555555555554,
+          "local_end_s": 5.861111111111111
+        },
+        {
+          "sentence_id": "S004-03",
+          "text": "경기도 부천에서 서울 중랑으로 자리는 바뀌었지만, 거주 규모는 서로 가깝습니다.",
+          "reading_text": "경기도 부천에서 서울 중랑으로 자리는 바뀌었지만, 거주 규모는 서로 가깝습니다.",
+          "start_s": 68.31520030234316,
+          "end_s": 72.76890400604685,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 6.537037037037036,
+          "source_v1_local_end_s": 10.99074074074074,
+          "local_start_s": 6.537037037037036,
+          "local_end_s": 10.99074074074074
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S004-01",
+          "text": "서울 중랑구가 7,547쌍으로 19위입니다.",
+          "reading_text": "서울 중랑구가 칠천오백사십칠 쌍으로 십구 위입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.083333333333333,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.083333333333333
+        },
+        {
+          "sentence_id": "S004-02",
+          "text": "원미구보다 182쌍 많아요.",
+          "reading_text": "원미구보다 백팔십이 쌍 많아요.",
+          "start_s": 3.8055555555555554,
+          "end_s": 5.861111111111111,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 3.8055555555555554,
+          "source_v1_local_end_s": 5.861111111111111
+        },
+        {
+          "sentence_id": "S004-03",
+          "text": "경기도 부천에서 서울 중랑으로 자리는 바뀌었지만, 거주 규모는 서로 가깝습니다.",
+          "reading_text": "경기도 부천에서 서울 중랑으로 자리는 바뀌었지만, 거주 규모는 서로 가깝습니다.",
+          "start_s": 6.537037037037036,
+          "end_s": 10.99074074074074,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 6.537037037037036,
+          "source_v1_local_end_s": 10.99074074074074
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S004-01",
+          "text": "서울 중랑구가 7,547쌍으로 19위입니다.",
+          "start_s": 61.852237339380196,
+          "end_s": 64.86149659863945
+        },
+        {
+          "sentence_id": "S004-02",
+          "text": "원미구보다 182쌍 많아요.",
+          "start_s": 65.58371882086168,
+          "end_s": 67.63927437641723
+        },
+        {
+          "sentence_id": "S004-03",
+          "text": "경기도 부천에서 서울 중랑으로 자리는 바뀌었지만, 거주 규모는 서로 가깝습니다.",
+          "start_s": 68.31520030234316,
+          "end_s": 72.76890400604685
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S005",
+      "start_s": 73.14018140589569,
+      "end_s": 79.88126984126984,
+      "duration_s": 6.74108843537415,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S005.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S005.mp3",
+      "audio_sha256": "5b0f03f3f6232b11da9aafd7c10915e3e026a4ef7aee5e9b5835d3e7c9762f72",
+      "source_v1_audio_sha256": "7b590a9c3f23493a071273340f6f0245a4f0b869ce36779ff99e7c297e922d4d",
+      "narration_text": "18위는 용인시 기흥구, 7,686쌍이에요.\n중랑구와의 차이는 139쌍입니다.",
+      "reading_text": "십팔 위는 용인시 기흥구, 칠천육백팔십육 쌍이에요.\n중랑구와의 차이는 백삼십구 쌍입니다.",
+      "sentences": [
+        {
+          "sentence_id": "S005-01",
+          "text": "18위는 용인시 기흥구, 7,686쌍이에요.",
+          "reading_text": "십팔 위는 용인시 기흥구, 칠천육백팔십육 쌍이에요.",
+          "start_s": 73.21425547996976,
+          "end_s": 76.5938851095994,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.4537037037037033,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.4537037037037033
+        },
+        {
+          "sentence_id": "S005-02",
+          "text": "중랑구와의 차이는 139쌍입니다.",
+          "reading_text": "중랑구와의 차이는 백삼십구 쌍입니다.",
+          "start_s": 77.24203325774754,
+          "end_s": 79.49203325774754,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 4.101851851851851,
+          "source_v1_local_end_s": 6.351851851851851,
+          "local_start_s": 4.101851851851851,
+          "local_end_s": 6.351851851851851
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S005-01",
+          "text": "18위는 용인시 기흥구, 7,686쌍이에요.",
+          "reading_text": "십팔 위는 용인시 기흥구, 칠천육백팔십육 쌍이에요.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.4537037037037033,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.4537037037037033
+        },
+        {
+          "sentence_id": "S005-02",
+          "text": "중랑구와의 차이는 139쌍입니다.",
+          "reading_text": "중랑구와의 차이는 백삼십구 쌍입니다.",
+          "start_s": 4.101851851851851,
+          "end_s": 6.351851851851851,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 4.101851851851851,
+          "source_v1_local_end_s": 6.351851851851851
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S005-01",
+          "text": "18위는 용인시 기흥구, 7,686쌍이에요.",
+          "start_s": 73.21425547996976,
+          "end_s": 76.5938851095994
+        },
+        {
+          "sentence_id": "S005-02",
+          "text": "중랑구와의 차이는 139쌍입니다.",
+          "start_s": 77.24203325774754,
+          "end_s": 79.49203325774754
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S006",
+      "start_s": 79.88126984126984,
+      "end_s": 90.21990929705215,
+      "duration_s": 10.338639455782314,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S006.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S006.mp3",
+      "audio_sha256": "1a6338cf309be1b9c7e8f0afc37248fc51eaaf8bdb91c4060405beda145f9781",
+      "source_v1_audio_sha256": "2d6e6b98b023fdee8c8f39e628761e8b3b034972a903659e6bfe79575b5d4551",
+      "narration_text": "다음은 인천 연수구입니다.\n7,875쌍으로 17위예요.\n기흥구보다 189쌍 더 많은데, 잠시 뒤 두 지역의 전년 변화도 나란히 볼게요.",
+      "reading_text": "다음은 인천 연수구입니다.\n칠천팔백칠십오 쌍으로 십칠 위예요.\n기흥구보다 백팔십구 쌍 더 많은데, 잠시 뒤 두 지역의 전년 변화도 나란히 볼게요.",
+      "sentences": [
+        {
+          "sentence_id": "S006-01",
+          "text": "다음은 인천 연수구입니다.",
+          "reading_text": "다음은 인천 연수구입니다.",
+          "start_s": 79.95534391534392,
+          "end_s": 81.63126984126984,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 3,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 1.7499999999999998,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 1.7499999999999998
+        },
+        {
+          "sentence_id": "S006-02",
+          "text": "7,875쌍으로 17위예요.",
+          "reading_text": "칠천팔백칠십오 쌍으로 십칠 위예요.",
+          "start_s": 82.3905291005291,
+          "end_s": 84.57571428571428,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 2.509259259259259,
+          "source_v1_local_end_s": 4.694444444444445,
+          "local_start_s": 2.509259259259259,
+          "local_end_s": 4.694444444444445
+        },
+        {
+          "sentence_id": "S006-03",
+          "text": "기흥구보다 189쌍 더 많은데, 잠시 뒤 두 지역의 전년 변화도 나란히 볼게요.",
+          "reading_text": "기흥구보다 백팔십구 쌍 더 많은데, 잠시 뒤 두 지역의 전년 변화도 나란히 볼게요.",
+          "start_s": 85.279417989418,
+          "end_s": 89.8905291005291,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 5.398148148148148,
+          "source_v1_local_end_s": 10.009259259259258,
+          "local_start_s": 5.398148148148148,
+          "local_end_s": 10.009259259259258
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S006-01",
+          "text": "다음은 인천 연수구입니다.",
+          "reading_text": "다음은 인천 연수구입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 1.7499999999999998,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 3,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 1.7499999999999998
+        },
+        {
+          "sentence_id": "S006-02",
+          "text": "7,875쌍으로 17위예요.",
+          "reading_text": "칠천팔백칠십오 쌍으로 십칠 위예요.",
+          "start_s": 2.509259259259259,
+          "end_s": 4.694444444444445,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 2.509259259259259,
+          "source_v1_local_end_s": 4.694444444444445
+        },
+        {
+          "sentence_id": "S006-03",
+          "text": "기흥구보다 189쌍 더 많은데, 잠시 뒤 두 지역의 전년 변화도 나란히 볼게요.",
+          "reading_text": "기흥구보다 백팔십구 쌍 더 많은데, 잠시 뒤 두 지역의 전년 변화도 나란히 볼게요.",
+          "start_s": 5.398148148148148,
+          "end_s": 10.009259259259258,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 5.398148148148148,
+          "source_v1_local_end_s": 10.009259259259258
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S006-01",
+          "text": "다음은 인천 연수구입니다.",
+          "start_s": 79.95534391534392,
+          "end_s": 81.63126984126984
+        },
+        {
+          "sentence_id": "S006-02",
+          "text": "7,875쌍으로 17위예요.",
+          "start_s": 82.3905291005291,
+          "end_s": 84.57571428571428
+        },
+        {
+          "sentence_id": "S006-03",
+          "text": "기흥구보다 189쌍 더 많은데, 잠시 뒤 두 지역의 전년 변화도 나란히 볼게요.",
+          "start_s": 85.279417989418,
+          "end_s": 89.8905291005291
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S007",
+      "start_s": 90.21990929705215,
+      "end_s": 110.02437641723355,
+      "duration_s": 19.804467120181407,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S007.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S007.mp3",
+      "audio_sha256": "5ffd3cc51dc0fbf3d7ee2ce09fd36e3db7b54a8f3f0d125611bd2ab7a7631b47",
+      "source_v1_audio_sha256": "5ffd3cc51dc0fbf3d7ee2ce09fd36e3db7b54a8f3f0d125611bd2ab7a7631b47",
+      "narration_text": "16위 남동구는 7,997쌍, 8천 쌍 바로 아래입니다.\n앞선 연수구보다 122쌍 많습니다.\n남동구는 2023년 8,595쌍에서 598쌍 줄어, 감소율은 7.0퍼센트였어요.\n여기까지 다섯 곳을 봤는데, 이번에는 순서에서 잠깐 벗어나 변화도 보겠습니다.",
+      "reading_text": "십육 위 남동구는 칠천구백구십칠 쌍, 팔천 쌍 바로 아래입니다.\n앞선 연수구보다 백이십이 쌍 많습니다.\n남동구는 이천이십삼 년 팔천오백구십오 쌍에서 오백구십팔 쌍 줄어, 감소율은 칠 점 영 퍼센트였어요.\n여기까지 다섯 곳을 봤는데, 이번에는 순서에서 잠깐 벗어나 변화도 보겠습니다.",
+      "sentences": [
+        {
+          "sentence_id": "S007-01",
+          "text": "16위 남동구는 7,997쌍, 8천 쌍 바로 아래입니다.",
+          "reading_text": "십육 위 남동구는 칠천구백구십칠 쌍, 팔천 쌍 바로 아래입니다.",
+          "start_s": 90.29398337112623,
+          "end_s": 94.14583522297808,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.9259259259259256,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.9259259259259256
+        },
+        {
+          "sentence_id": "S007-02",
+          "text": "앞선 연수구보다 122쌍 많습니다.",
+          "reading_text": "앞선 연수구보다 백이십이 쌍 많습니다.",
+          "start_s": 94.89583522297808,
+          "end_s": 97.33102040816327,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 5,
+          "source_v1_local_start_s": 4.675925925925926,
+          "source_v1_local_end_s": 7.111111111111111,
+          "local_start_s": 4.675925925925926,
+          "local_end_s": 7.111111111111111
+        },
+        {
+          "sentence_id": "S007-03",
+          "text": "남동구는 2023년 8,595쌍에서 598쌍 줄어, 감소율은 7.0퍼센트였어요.",
+          "reading_text": "남동구는 이천이십삼 년 팔천오백구십오 쌍에서 오백구십팔 쌍 줄어, 감소율은 칠 점 영 퍼센트였어요.",
+          "start_s": 98.10879818594104,
+          "end_s": 104.17361300075586,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 7.888888888888888,
+          "source_v1_local_end_s": 13.953703703703702,
+          "local_start_s": 7.888888888888888,
+          "local_end_s": 13.953703703703702
+        },
+        {
+          "sentence_id": "S007-04",
+          "text": "여기까지 다섯 곳을 봤는데, 이번에는 순서에서 잠깐 벗어나 변화도 보겠습니다.",
+          "reading_text": "여기까지 다섯 곳을 봤는데, 이번에는 순서에서 잠깐 벗어나 변화도 보겠습니다.",
+          "start_s": 104.84027966742252,
+          "end_s": 109.27546485260771,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 14.62037037037037,
+          "source_v1_local_end_s": 19.055555555555554,
+          "local_start_s": 14.62037037037037,
+          "local_end_s": 19.055555555555554
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S007-01",
+          "text": "16위 남동구는 7,997쌍, 8천 쌍 바로 아래입니다.",
+          "reading_text": "십육 위 남동구는 칠천구백구십칠 쌍, 팔천 쌍 바로 아래입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.9259259259259256,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.9259259259259256
+        },
+        {
+          "sentence_id": "S007-02",
+          "text": "앞선 연수구보다 122쌍 많습니다.",
+          "reading_text": "앞선 연수구보다 백이십이 쌍 많습니다.",
+          "start_s": 4.675925925925926,
+          "end_s": 7.111111111111111,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 5,
+          "source_v1_local_start_s": 4.675925925925926,
+          "source_v1_local_end_s": 7.111111111111111
+        },
+        {
+          "sentence_id": "S007-03",
+          "text": "남동구는 2023년 8,595쌍에서 598쌍 줄어, 감소율은 7.0퍼센트였어요.",
+          "reading_text": "남동구는 이천이십삼 년 팔천오백구십오 쌍에서 오백구십팔 쌍 줄어, 감소율은 칠 점 영 퍼센트였어요.",
+          "start_s": 7.888888888888888,
+          "end_s": 13.953703703703702,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 7.888888888888888,
+          "source_v1_local_end_s": 13.953703703703702
+        },
+        {
+          "sentence_id": "S007-04",
+          "text": "여기까지 다섯 곳을 봤는데, 이번에는 순서에서 잠깐 벗어나 변화도 보겠습니다.",
+          "reading_text": "여기까지 다섯 곳을 봤는데, 이번에는 순서에서 잠깐 벗어나 변화도 보겠습니다.",
+          "start_s": 14.62037037037037,
+          "end_s": 19.055555555555554,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 14.62037037037037,
+          "source_v1_local_end_s": 19.055555555555554
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S007-01",
+          "text": "16위 남동구는 7,997쌍, 8천 쌍 바로 아래입니다.",
+          "start_s": 90.29398337112623,
+          "end_s": 94.14583522297808
+        },
+        {
+          "sentence_id": "S007-02",
+          "text": "앞선 연수구보다 122쌍 많습니다.",
+          "start_s": 94.89583522297808,
+          "end_s": 97.33102040816327
+        },
+        {
+          "sentence_id": "S007-03",
+          "text": "남동구는 2023년 8,595쌍에서 598쌍 줄어, 감소율은 7.0퍼센트였어요.",
+          "start_s": 98.10879818594104,
+          "end_s": 104.17361300075586
+        },
+        {
+          "sentence_id": "S007-04",
+          "text": "여기까지 다섯 곳을 봤는데, 이번에는 순서에서 잠깐 벗어나 변화도 보겠습니다.",
+          "start_s": 104.84027966742252,
+          "end_s": 109.27546485260771
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "I001",
+      "start_s": 110.02437641723355,
+      "end_s": 139.73473922902494,
+      "duration_s": 29.710362811791384,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\I001.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\I001.mp3",
+      "audio_sha256": "5f2b7124a7c3a9fad7b39f3969a40bce8e6fb92e8dc0f84397d49ca33a19dfa5",
+      "source_v1_audio_sha256": "5f2b7124a7c3a9fad7b39f3969a40bce8e6fb92e8dc0f84397d49ca33a19dfa5",
+      "narration_text": "방금 본 기흥구와 연수구는 2023년에 똑같이 7,797쌍이었어요.\n1년 뒤에는 기흥구가 111쌍 줄고, 연수구는 78쌍 늘었습니다.\n출발점이 같아도 다음 해의 방향은 달라질 수 있는 거죠.\n이번 스무 곳 가운데 같은 범위로 비교할 수 있는 열아홉 곳을 세면, 여섯 곳이 늘고 열세 곳이 줄었어요.\n해마다 새로 혼인한 부부가 들어오고, 혼인 5년이 지난 부부는 집계 대상에서 빠지는 변화도 함께 생깁니다.\n그래서 현재 규모와 1년간의 변화는 따로 놓고 읽어야 해요.",
+      "reading_text": "방금 본 기흥구와 연수구는 이천이십삼 년에 똑같이 칠천칠백구십칠 쌍이었어요.\n일 년 뒤에는 기흥구가 백십일 쌍 줄고, 연수구는 칠십팔 쌍 늘었습니다.\n출발점이 같아도 다음 해의 방향은 달라질 수 있는 거죠.\n이번 스무 곳 가운데 같은 범위로 비교할 수 있는 열아홉 곳을 세면, 여섯 곳이 늘고 열세 곳이 줄었어요.\n해마다 새로 혼인한 부부가 들어오고, 혼인 오 년이 지난 부부는 집계 대상에서 빠지는 변화도 함께 생깁니다.\n그래서 현재 규모와 일 년간의 변화는 따로 놓고 읽어야 해요.",
+      "sentences": [
+        {
+          "sentence_id": "I001-01",
+          "text": "방금 본 기흥구와 연수구는 2023년에 똑같이 7,797쌍이었어요.",
+          "reading_text": "방금 본 기흥구와 연수구는 이천이십삼 년에 똑같이 칠천칠백구십칠 쌍이었어요.",
+          "start_s": 110.09845049130763,
+          "end_s": 114.70956160241874,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 4.685185185185185,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 4.685185185185185
+        },
+        {
+          "sentence_id": "I001-02",
+          "text": "1년 뒤에는 기흥구가 111쌍 줄고, 연수구는 78쌍 늘었습니다.",
+          "reading_text": "일 년 뒤에는 기흥구가 백십일 쌍 줄고, 연수구는 칠십팔 쌍 늘었습니다.",
+          "start_s": 115.44104308390023,
+          "end_s": 119.48733938019652,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 5.416666666666666,
+          "source_v1_local_end_s": 9.462962962962962,
+          "local_start_s": 5.416666666666666,
+          "local_end_s": 9.462962962962962
+        },
+        {
+          "sentence_id": "I001-03",
+          "text": "출발점이 같아도 다음 해의 방향은 달라질 수 있는 거죠.",
+          "reading_text": "출발점이 같아도 다음 해의 방향은 달라질 수 있는 거죠.",
+          "start_s": 120.24659863945578,
+          "end_s": 123.06141345427059,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 10.222222222222221,
+          "source_v1_local_end_s": 13.037037037037038,
+          "local_start_s": 10.222222222222221,
+          "local_end_s": 13.037037037037038
+        },
+        {
+          "sentence_id": "I001-04",
+          "text": "이번 스무 곳 가운데 같은 범위로 비교할 수 있는 열아홉 곳을 세면, 여섯 곳이 늘고 열세 곳이 줄었어요.",
+          "reading_text": "이번 스무 곳 가운데 같은 범위로 비교할 수 있는 열아홉 곳을 세면, 여섯 곳이 늘고 열세 곳이 줄었어요.",
+          "start_s": 123.79289493575207,
+          "end_s": 128.968820861678,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 18,
+          "source_v1_local_start_s": 13.768518518518517,
+          "source_v1_local_end_s": 18.944444444444443,
+          "local_start_s": 13.768518518518517,
+          "local_end_s": 18.944444444444443
+        },
+        {
+          "sentence_id": "I001-05",
+          "text": "해마다 새로 혼인한 부부가 들어오고, 혼인 5년이 지난 부부는 집계 대상에서 빠지는 변화도 함께 생깁니다.",
+          "reading_text": "해마다 새로 혼인한 부부가 들어오고, 혼인 오 년이 지난 부부는 집계 대상에서 빠지는 변화도 함께 생깁니다.",
+          "start_s": 129.6262282690854,
+          "end_s": 135.20956160241874,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 16,
+          "source_v1_local_start_s": 19.60185185185185,
+          "source_v1_local_end_s": 25.185185185185183,
+          "local_start_s": 19.60185185185185,
+          "local_end_s": 25.185185185185183
+        },
+        {
+          "sentence_id": "I001-06",
+          "text": "그래서 현재 규모와 1년간의 변화는 따로 놓고 읽어야 해요.",
+          "reading_text": "그래서 현재 규모와 일 년간의 변화는 따로 놓고 읽어야 해요.",
+          "start_s": 135.968820861678,
+          "end_s": 139.09845049130763,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 25.944444444444443,
+          "source_v1_local_end_s": 29.074074074074073,
+          "local_start_s": 25.944444444444443,
+          "local_end_s": 29.074074074074073
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "I001-01",
+          "text": "방금 본 기흥구와 연수구는 2023년에 똑같이 7,797쌍이었어요.",
+          "reading_text": "방금 본 기흥구와 연수구는 이천이십삼 년에 똑같이 칠천칠백구십칠 쌍이었어요.",
+          "start_s": 0.07407407407407407,
+          "end_s": 4.685185185185185,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 4.685185185185185
+        },
+        {
+          "sentence_id": "I001-02",
+          "text": "1년 뒤에는 기흥구가 111쌍 줄고, 연수구는 78쌍 늘었습니다.",
+          "reading_text": "일 년 뒤에는 기흥구가 백십일 쌍 줄고, 연수구는 칠십팔 쌍 늘었습니다.",
+          "start_s": 5.416666666666666,
+          "end_s": 9.462962962962962,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 5.416666666666666,
+          "source_v1_local_end_s": 9.462962962962962
+        },
+        {
+          "sentence_id": "I001-03",
+          "text": "출발점이 같아도 다음 해의 방향은 달라질 수 있는 거죠.",
+          "reading_text": "출발점이 같아도 다음 해의 방향은 달라질 수 있는 거죠.",
+          "start_s": 10.222222222222221,
+          "end_s": 13.037037037037038,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 10.222222222222221,
+          "source_v1_local_end_s": 13.037037037037038
+        },
+        {
+          "sentence_id": "I001-04",
+          "text": "이번 스무 곳 가운데 같은 범위로 비교할 수 있는 열아홉 곳을 세면, 여섯 곳이 늘고 열세 곳이 줄었어요.",
+          "reading_text": "이번 스무 곳 가운데 같은 범위로 비교할 수 있는 열아홉 곳을 세면, 여섯 곳이 늘고 열세 곳이 줄었어요.",
+          "start_s": 13.768518518518517,
+          "end_s": 18.944444444444443,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 18,
+          "source_v1_local_start_s": 13.768518518518517,
+          "source_v1_local_end_s": 18.944444444444443
+        },
+        {
+          "sentence_id": "I001-05",
+          "text": "해마다 새로 혼인한 부부가 들어오고, 혼인 5년이 지난 부부는 집계 대상에서 빠지는 변화도 함께 생깁니다.",
+          "reading_text": "해마다 새로 혼인한 부부가 들어오고, 혼인 오 년이 지난 부부는 집계 대상에서 빠지는 변화도 함께 생깁니다.",
+          "start_s": 19.60185185185185,
+          "end_s": 25.185185185185183,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 16,
+          "source_v1_local_start_s": 19.60185185185185,
+          "source_v1_local_end_s": 25.185185185185183
+        },
+        {
+          "sentence_id": "I001-06",
+          "text": "그래서 현재 규모와 1년간의 변화는 따로 놓고 읽어야 해요.",
+          "reading_text": "그래서 현재 규모와 일 년간의 변화는 따로 놓고 읽어야 해요.",
+          "start_s": 25.944444444444443,
+          "end_s": 29.074074074074073,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 25.944444444444443,
+          "source_v1_local_end_s": 29.074074074074073
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "I001-01",
+          "text": "방금 본 기흥구와 연수구는 2023년에 똑같이 7,797쌍이었어요.",
+          "start_s": 110.09845049130763,
+          "end_s": 114.70956160241874
+        },
+        {
+          "sentence_id": "I001-02",
+          "text": "1년 뒤에는 기흥구가 111쌍 줄고, 연수구는 78쌍 늘었습니다.",
+          "start_s": 115.44104308390023,
+          "end_s": 119.48733938019652
+        },
+        {
+          "sentence_id": "I001-03",
+          "text": "출발점이 같아도 다음 해의 방향은 달라질 수 있는 거죠.",
+          "start_s": 120.24659863945578,
+          "end_s": 123.06141345427059
+        },
+        {
+          "sentence_id": "I001-04",
+          "text": "이번 스무 곳 가운데 같은 범위로 비교할 수 있는 열아홉 곳을 세면, 여섯 곳이 늘고 열세 곳이 줄었어요.",
+          "start_s": 123.79289493575207,
+          "end_s": 128.968820861678
+        },
+        {
+          "sentence_id": "I001-05",
+          "text": "해마다 새로 혼인한 부부가 들어오고, 혼인 5년이 지난 부부는 집계 대상에서 빠지는 변화도 함께 생깁니다.",
+          "start_s": 129.6262282690854,
+          "end_s": 135.20956160241874
+        },
+        {
+          "sentence_id": "I001-06",
+          "text": "그래서 현재 규모와 1년간의 변화는 따로 놓고 읽어야 해요.",
+          "start_s": 135.968820861678,
+          "end_s": 139.09845049130763
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S008",
+      "start_s": 139.73473922902494,
+      "end_s": 151.84659863945578,
+      "duration_s": 12.111859410430839,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S008.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S008.mp3",
+      "audio_sha256": "64b58358e2a200cbdb145a270418354f76c66a0c3a76f4f906873439a5b83e7b",
+      "source_v1_audio_sha256": "a80ea4d591e6287c185f5cea96a138b181abf0898d074d9412465f63af9c33a6",
+      "narration_text": "15위는 서울 구로구, 8,016쌍입니다.\n남동구와는 겨우 19쌍 차이로, 여기서 8천 쌍을 넘어요.\n구로구에서는 신도림역 주변 같은 구체적인 생활권도 살펴볼 수 있어요.",
+      "reading_text": "십오 위는 서울 구로구, 팔천십육 쌍입니다.\n남동구와는 겨우 십구 쌍 차이로, 여기서 팔천 쌍을 넘어요.\n구로구에서는 신도림역 주변 같은 구체적인 생활권도 살펴볼 수 있어요.",
+      "sentences": [
+        {
+          "sentence_id": "S008-01",
+          "text": "15위는 서울 구로구, 8,016쌍입니다.",
+          "reading_text": "십오 위는 서울 구로구, 팔천십육 쌍입니다.",
+          "start_s": 139.80881330309902,
+          "end_s": 142.6791836734694,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 2.944444444444444,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 2.944444444444444
+        },
+        {
+          "sentence_id": "S008-02",
+          "text": "남동구와는 겨우 19쌍 차이로, 여기서 8천 쌍을 넘어요.",
+          "reading_text": "남동구와는 겨우 십구 쌍 차이로, 여기서 팔천 쌍을 넘어요.",
+          "start_s": 143.39214663643236,
+          "end_s": 147.02177626606198,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 3.657407407407407,
+          "source_v1_local_end_s": 7.287037037037037,
+          "local_start_s": 3.657407407407407,
+          "local_end_s": 7.287037037037037
+        },
+        {
+          "sentence_id": "S008-03",
+          "text": "구로구에서는 신도림역 주변 같은 구체적인 생활권도 살펴볼 수 있어요.",
+          "reading_text": "구로구에서는 신도림역 주변 같은 구체적인 생활권도 살펴볼 수 있어요.",
+          "start_s": 147.70696145124717,
+          "end_s": 151.50325774754344,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 7.972222222222221,
+          "source_v1_local_end_s": 11.768518518518517,
+          "local_start_s": 7.972222222222221,
+          "local_end_s": 11.768518518518517
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S008-01",
+          "text": "15위는 서울 구로구, 8,016쌍입니다.",
+          "reading_text": "십오 위는 서울 구로구, 팔천십육 쌍입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 2.944444444444444,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 2.944444444444444
+        },
+        {
+          "sentence_id": "S008-02",
+          "text": "남동구와는 겨우 19쌍 차이로, 여기서 8천 쌍을 넘어요.",
+          "reading_text": "남동구와는 겨우 십구 쌍 차이로, 여기서 팔천 쌍을 넘어요.",
+          "start_s": 3.657407407407407,
+          "end_s": 7.287037037037037,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 3.657407407407407,
+          "source_v1_local_end_s": 7.287037037037037
+        },
+        {
+          "sentence_id": "S008-03",
+          "text": "구로구에서는 신도림역 주변 같은 구체적인 생활권도 살펴볼 수 있어요.",
+          "reading_text": "구로구에서는 신도림역 주변 같은 구체적인 생활권도 살펴볼 수 있어요.",
+          "start_s": 7.972222222222221,
+          "end_s": 11.768518518518517,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 7.972222222222221,
+          "source_v1_local_end_s": 11.768518518518517
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S008-01",
+          "text": "15위는 서울 구로구, 8,016쌍입니다.",
+          "start_s": 139.80881330309902,
+          "end_s": 142.6791836734694
+        },
+        {
+          "sentence_id": "S008-02",
+          "text": "남동구와는 겨우 19쌍 차이로, 여기서 8천 쌍을 넘어요.",
+          "start_s": 143.39214663643236,
+          "end_s": 147.02177626606198
+        },
+        {
+          "sentence_id": "S008-03",
+          "text": "구로구에서는 신도림역 주변 같은 구체적인 생활권도 살펴볼 수 있어요.",
+          "start_s": 147.70696145124717,
+          "end_s": 151.50325774754344
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S009",
+      "start_s": 151.84659863945578,
+      "end_s": 161.52886621315193,
+      "duration_s": 9.682267573696144,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S009.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S009.mp3",
+      "audio_sha256": "c72770ae56ab65a80941b2bb1ccc43d6267c6e139c1dd16c5231b3658b46a6a5",
+      "source_v1_audio_sha256": "5a84142c2199bb540142760b297ba7bfadf25033ceb1026060e5b1450a64f2f9",
+      "narration_text": "14위 은평구에는 8,267쌍이 살고 있습니다.\n구로구보다 251쌍 많아요.\n은평구 진관동에는 은평뉴타운이 있습니다.",
+      "reading_text": "십사 위 은평구에는 팔천이백육십칠 쌍이 살고 있습니다.\n구로구보다 이백오십일 쌍 많아요.\n은평구 진관동에는 은평뉴타운이 있습니다.",
+      "sentences": [
+        {
+          "sentence_id": "S009-01",
+          "text": "14위 은평구에는 8,267쌍이 살고 있습니다.",
+          "reading_text": "십사 위 은평구에는 팔천이백육십칠 쌍이 살고 있습니다.",
+          "start_s": 151.92067271352985,
+          "end_s": 155.23548752834466,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.388888888888889,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.388888888888889
+        },
+        {
+          "sentence_id": "S009-02",
+          "text": "구로구보다 251쌍 많아요.",
+          "reading_text": "구로구보다 이백오십일 쌍 많아요.",
+          "start_s": 155.9762282690854,
+          "end_s": 158.068820861678,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 4.12962962962963,
+          "source_v1_local_end_s": 6.222222222222222,
+          "local_start_s": 4.12962962962963,
+          "local_end_s": 6.222222222222222
+        },
+        {
+          "sentence_id": "S009-03",
+          "text": "은평구 진관동에는 은평뉴타운이 있습니다.",
+          "reading_text": "은평구 진관동에는 은평뉴타운이 있습니다.",
+          "start_s": 158.74474678760393,
+          "end_s": 161.13363567649282,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 6.898148148148148,
+          "source_v1_local_end_s": 9.287037037037036,
+          "local_start_s": 6.898148148148148,
+          "local_end_s": 9.287037037037036
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S009-01",
+          "text": "14위 은평구에는 8,267쌍이 살고 있습니다.",
+          "reading_text": "십사 위 은평구에는 팔천이백육십칠 쌍이 살고 있습니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.388888888888889,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.388888888888889
+        },
+        {
+          "sentence_id": "S009-02",
+          "text": "구로구보다 251쌍 많아요.",
+          "reading_text": "구로구보다 이백오십일 쌍 많아요.",
+          "start_s": 4.12962962962963,
+          "end_s": 6.222222222222222,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 4.12962962962963,
+          "source_v1_local_end_s": 6.222222222222222
+        },
+        {
+          "sentence_id": "S009-03",
+          "text": "은평구 진관동에는 은평뉴타운이 있습니다.",
+          "reading_text": "은평구 진관동에는 은평뉴타운이 있습니다.",
+          "start_s": 6.898148148148148,
+          "end_s": 9.287037037037036,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 6.898148148148148,
+          "source_v1_local_end_s": 9.287037037037036
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S009-01",
+          "text": "14위 은평구에는 8,267쌍이 살고 있습니다.",
+          "start_s": 151.92067271352985,
+          "end_s": 155.23548752834466
+        },
+        {
+          "sentence_id": "S009-02",
+          "text": "구로구보다 251쌍 많아요.",
+          "start_s": 155.9762282690854,
+          "end_s": 158.068820861678
+        },
+        {
+          "sentence_id": "S009-03",
+          "text": "은평구 진관동에는 은평뉴타운이 있습니다.",
+          "start_s": 158.74474678760393,
+          "end_s": 161.13363567649282
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S010",
+      "start_s": 161.52886621315193,
+      "end_s": 176.1871882086168,
+      "duration_s": 14.658321995464853,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S010.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S010.mp3",
+      "audio_sha256": "3d819f16802d282f25d362cec3e44ad5db2ddce031f05ebe98d31800965dcfc8",
+      "source_v1_audio_sha256": "e39cd0a052bba4fbe4851664df26ab3e46e9d83ef2d9b019ce55defeb4f8fd9d",
+      "narration_text": "13위는 수원시 권선구, 8,329쌍입니다.\n다음 지역도 같은 수원이라 두 곳을 나란히 보겠습니다.\n권선구는 2023년 8,792쌍에서 463쌍 줄어, 감소율은 5.3퍼센트였습니다.",
+      "reading_text": "십삼 위는 수원시 권선구, 팔천삼백이십구 쌍입니다.\n다음 지역도 같은 수원이라 두 곳을 나란히 보겠습니다.\n권선구는 이천이십삼 년 팔천칠백구십이 쌍에서 사백육십삼 쌍 줄어, 감소율은 오 점 삼 퍼센트였습니다.",
+      "sentences": [
+        {
+          "sentence_id": "S010-01",
+          "text": "13위는 수원시 권선구, 8,329쌍입니다.",
+          "reading_text": "십삼 위는 수원시 권선구, 팔천삼백이십구 쌍입니다.",
+          "start_s": 161.602940287226,
+          "end_s": 165.26034769463342,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.731481481481481,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.731481481481481
+        },
+        {
+          "sentence_id": "S010-02",
+          "text": "다음 지역도 같은 수원이라 두 곳을 나란히 보겠습니다.",
+          "reading_text": "다음 지역도 같은 수원이라 두 곳을 나란히 보겠습니다.",
+          "start_s": 166.01034769463342,
+          "end_s": 168.8714588057445,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 4.481481481481481,
+          "source_v1_local_end_s": 7.342592592592592,
+          "local_start_s": 4.481481481481481,
+          "local_end_s": 7.342592592592592
+        },
+        {
+          "sentence_id": "S010-03",
+          "text": "권선구는 2023년 8,792쌍에서 463쌍 줄어, 감소율은 5.3퍼센트였습니다.",
+          "reading_text": "권선구는 이천이십삼 년 팔천칠백구십이 쌍에서 사백육십삼 쌍 줄어, 감소율은 오 점 삼 퍼센트였습니다.",
+          "start_s": 169.63071806500378,
+          "end_s": 175.81590325018897,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 8.101851851851851,
+          "source_v1_local_end_s": 14.287037037037036,
+          "local_start_s": 8.101851851851851,
+          "local_end_s": 14.287037037037036
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S010-01",
+          "text": "13위는 수원시 권선구, 8,329쌍입니다.",
+          "reading_text": "십삼 위는 수원시 권선구, 팔천삼백이십구 쌍입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.731481481481481,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.731481481481481
+        },
+        {
+          "sentence_id": "S010-02",
+          "text": "다음 지역도 같은 수원이라 두 곳을 나란히 보겠습니다.",
+          "reading_text": "다음 지역도 같은 수원이라 두 곳을 나란히 보겠습니다.",
+          "start_s": 4.481481481481481,
+          "end_s": 7.342592592592592,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 4.481481481481481,
+          "source_v1_local_end_s": 7.342592592592592
+        },
+        {
+          "sentence_id": "S010-03",
+          "text": "권선구는 2023년 8,792쌍에서 463쌍 줄어, 감소율은 5.3퍼센트였습니다.",
+          "reading_text": "권선구는 이천이십삼 년 팔천칠백구십이 쌍에서 사백육십삼 쌍 줄어, 감소율은 오 점 삼 퍼센트였습니다.",
+          "start_s": 8.101851851851851,
+          "end_s": 14.287037037037036,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 8.101851851851851,
+          "source_v1_local_end_s": 14.287037037037036
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S010-01",
+          "text": "13위는 수원시 권선구, 8,329쌍입니다.",
+          "start_s": 161.602940287226,
+          "end_s": 165.26034769463342
+        },
+        {
+          "sentence_id": "S010-02",
+          "text": "다음 지역도 같은 수원이라 두 곳을 나란히 보겠습니다.",
+          "start_s": 166.01034769463342,
+          "end_s": 168.8714588057445
+        },
+        {
+          "sentence_id": "S010-03",
+          "text": "권선구는 2023년 8,792쌍에서 463쌍 줄어, 감소율은 5.3퍼센트였습니다.",
+          "start_s": 169.63071806500378,
+          "end_s": 175.81590325018897
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S011",
+      "start_s": 176.1871882086168,
+      "end_s": 187.5105215419501,
+      "duration_s": 11.323333333333334,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S011.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S011.mp3",
+      "audio_sha256": "fc32e4fc401a98b2cc7902fa420ef83f684da548f16c4b27cb3d35ce58b8f576",
+      "source_v1_audio_sha256": "3cae16fb804be2486de21e5bc7c35ed4ab8662cf81ae9847abb827555063a598",
+      "narration_text": "12위는 수원시 영통구, 8,388쌍이에요.\n바로 앞 권선구와는 59쌍 차이입니다.\n잠시 뒤에 이 숫자 안에 담긴 부부의 구성도 나눠볼게요.",
+      "reading_text": "십이 위는 수원시 영통구, 팔천삼백팔십팔 쌍이에요.\n바로 앞 권선구와는 오십구 쌍 차이입니다.\n잠시 뒤에 이 숫자 안에 담긴 부부의 구성도 나눠볼게요.",
+      "sentences": [
+        {
+          "sentence_id": "S011-01",
+          "text": "12위는 수원시 영통구, 8,388쌍이에요.",
+          "reading_text": "십이 위는 수원시 영통구, 팔천삼백팔십팔 쌍이에요.",
+          "start_s": 176.26126228269086,
+          "end_s": 179.92792894935752,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.7407407407407405,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.7407407407407405
+        },
+        {
+          "sentence_id": "S011-02",
+          "text": "바로 앞 권선구와는 59쌍 차이입니다.",
+          "reading_text": "바로 앞 권선구와는 오십구 쌍 차이입니다.",
+          "start_s": 180.6131141345427,
+          "end_s": 183.16866969009828,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 4.425925925925926,
+          "source_v1_local_end_s": 6.981481481481482,
+          "local_start_s": 4.425925925925926,
+          "local_end_s": 6.981481481481482
+        },
+        {
+          "sentence_id": "S011-04",
+          "text": "잠시 뒤에 이 숫자 안에 담긴 부부의 구성도 나눠볼게요.",
+          "reading_text": "잠시 뒤에 이 숫자 안에 담긴 부부의 구성도 나눠볼게요.",
+          "start_s": 183.92666666666668,
+          "end_s": 186.84333333333333,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 12.083333333333332,
+          "source_v1_local_end_s": 14.999999999999998,
+          "local_start_s": 7.739478458049886,
+          "local_end_s": 10.656145124716552
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S011-01",
+          "text": "12위는 수원시 영통구, 8,388쌍이에요.",
+          "reading_text": "십이 위는 수원시 영통구, 팔천삼백팔십팔 쌍이에요.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.7407407407407405,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.7407407407407405
+        },
+        {
+          "sentence_id": "S011-02",
+          "text": "바로 앞 권선구와는 59쌍 차이입니다.",
+          "reading_text": "바로 앞 권선구와는 오십구 쌍 차이입니다.",
+          "start_s": 4.425925925925926,
+          "end_s": 6.981481481481482,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 4.425925925925926,
+          "source_v1_local_end_s": 6.981481481481482
+        },
+        {
+          "sentence_id": "S011-04",
+          "text": "잠시 뒤에 이 숫자 안에 담긴 부부의 구성도 나눠볼게요.",
+          "reading_text": "잠시 뒤에 이 숫자 안에 담긴 부부의 구성도 나눠볼게요.",
+          "start_s": 7.739478458049886,
+          "end_s": 10.656145124716552,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 12.083333333333332,
+          "source_v1_local_end_s": 14.999999999999998
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S011-01",
+          "text": "12위는 수원시 영통구, 8,388쌍이에요.",
+          "start_s": 176.26126228269086,
+          "end_s": 179.92792894935752
+        },
+        {
+          "sentence_id": "S011-02",
+          "text": "바로 앞 권선구와는 59쌍 차이입니다.",
+          "start_s": 180.6131141345427,
+          "end_s": 183.16866969009828
+        },
+        {
+          "sentence_id": "S011-04",
+          "text": "잠시 뒤에 이 숫자 안에 담긴 부부의 구성도 나눠볼게요.",
+          "start_s": 183.92666666666668,
+          "end_s": 186.84333333333333
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S012",
+      "start_s": 187.5105215419501,
+      "end_s": 204.70535147392292,
+      "duration_s": 17.19482993197279,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S012.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S012.mp3",
+      "audio_sha256": "6cd0926ca2a521ffe5bd1f9b0ee10390a41bf3fdb008598c253566c44cdf536f",
+      "source_v1_audio_sha256": "6cd0926ca2a521ffe5bd1f9b0ee10390a41bf3fdb008598c253566c44cdf536f",
+      "narration_text": "11위는 서울 노원구로, 8,473쌍입니다.\n노원구 공릉동의 경춘선숲길처럼, 산책길이 있는 실제 장소도 함께 떠올려볼 수 있겠죠.\n이제 상위 열 곳을 앞두고 있습니다.\n등수로는 경계가 딱 나뉘지만, 다음 지역과의 숫자 차이를 눈여겨봐 주세요.",
+      "reading_text": "십일 위는 서울 노원구로, 팔천사백칠십삼 쌍입니다.\n노원구 공릉동의 경춘선숲길처럼, 산책길이 있는 실제 장소도 함께 떠올려볼 수 있겠죠.\n이제 상위 열 곳을 앞두고 있습니다.\n등수로는 경계가 딱 나뉘지만, 다음 지역과의 숫자 차이를 눈여겨봐 주세요.",
+      "sentences": [
+        {
+          "sentence_id": "S012-01",
+          "text": "11위는 서울 노원구로, 8,473쌍입니다.",
+          "reading_text": "십일 위는 서울 노원구로, 팔천사백칠십삼 쌍입니다.",
+          "start_s": 187.5845956160242,
+          "end_s": 190.80681783824642,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.2962962962962963,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.2962962962962963
+        },
+        {
+          "sentence_id": "S012-02",
+          "text": "노원구 공릉동의 경춘선숲길처럼, 산책길이 있는 실제 장소도 함께 떠올려볼 수 있겠죠.",
+          "reading_text": "노원구 공릉동의 경춘선숲길처럼, 산책길이 있는 실제 장소도 함께 떠올려볼 수 있겠죠.",
+          "start_s": 191.56607709750566,
+          "end_s": 196.47348450491307,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 4.055555555555555,
+          "source_v1_local_end_s": 8.962962962962962,
+          "local_start_s": 4.055555555555555,
+          "local_end_s": 8.962962962962962
+        },
+        {
+          "sentence_id": "S012-03",
+          "text": "이제 상위 열 곳을 앞두고 있습니다.",
+          "reading_text": "이제 상위 열 곳을 앞두고 있습니다.",
+          "start_s": 197.1957067271353,
+          "end_s": 199.15866969009826,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 9.685185185185183,
+          "source_v1_local_end_s": 11.648148148148147,
+          "local_start_s": 9.685185185185183,
+          "local_end_s": 11.648148148148147
+        },
+        {
+          "sentence_id": "S012-04",
+          "text": "등수로는 경계가 딱 나뉘지만, 다음 지역과의 숫자 차이를 눈여겨봐 주세요.",
+          "reading_text": "등수로는 경계가 딱 나뉘지만, 다음 지역과의 숫자 차이를 눈여겨봐 주세요.",
+          "start_s": 199.91792894935753,
+          "end_s": 204.03829931972788,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 12.407407407407407,
+          "source_v1_local_end_s": 16.527777777777775,
+          "local_start_s": 12.407407407407407,
+          "local_end_s": 16.527777777777775
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S012-01",
+          "text": "11위는 서울 노원구로, 8,473쌍입니다.",
+          "reading_text": "십일 위는 서울 노원구로, 팔천사백칠십삼 쌍입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.2962962962962963,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.2962962962962963
+        },
+        {
+          "sentence_id": "S012-02",
+          "text": "노원구 공릉동의 경춘선숲길처럼, 산책길이 있는 실제 장소도 함께 떠올려볼 수 있겠죠.",
+          "reading_text": "노원구 공릉동의 경춘선숲길처럼, 산책길이 있는 실제 장소도 함께 떠올려볼 수 있겠죠.",
+          "start_s": 4.055555555555555,
+          "end_s": 8.962962962962962,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 4.055555555555555,
+          "source_v1_local_end_s": 8.962962962962962
+        },
+        {
+          "sentence_id": "S012-03",
+          "text": "이제 상위 열 곳을 앞두고 있습니다.",
+          "reading_text": "이제 상위 열 곳을 앞두고 있습니다.",
+          "start_s": 9.685185185185183,
+          "end_s": 11.648148148148147,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 9.685185185185183,
+          "source_v1_local_end_s": 11.648148148148147
+        },
+        {
+          "sentence_id": "S012-04",
+          "text": "등수로는 경계가 딱 나뉘지만, 다음 지역과의 숫자 차이를 눈여겨봐 주세요.",
+          "reading_text": "등수로는 경계가 딱 나뉘지만, 다음 지역과의 숫자 차이를 눈여겨봐 주세요.",
+          "start_s": 12.407407407407407,
+          "end_s": 16.527777777777775,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 12.407407407407407,
+          "source_v1_local_end_s": 16.527777777777775
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S012-01",
+          "text": "11위는 서울 노원구로, 8,473쌍입니다.",
+          "start_s": 187.5845956160242,
+          "end_s": 190.80681783824642
+        },
+        {
+          "sentence_id": "S012-02",
+          "text": "노원구 공릉동의 경춘선숲길처럼, 산책길이 있는 실제 장소도 함께 떠올려볼 수 있겠죠.",
+          "start_s": 191.56607709750566,
+          "end_s": 196.47348450491307
+        },
+        {
+          "sentence_id": "S012-03",
+          "text": "이제 상위 열 곳을 앞두고 있습니다.",
+          "start_s": 197.1957067271353,
+          "end_s": 199.15866969009826
+        },
+        {
+          "sentence_id": "S012-04",
+          "text": "등수로는 경계가 딱 나뉘지만, 다음 지역과의 숫자 차이를 눈여겨봐 주세요.",
+          "start_s": 199.91792894935753,
+          "end_s": 204.03829931972788
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "I002",
+      "start_s": 204.7053514739229,
+      "end_s": 237.16861678004534,
+      "duration_s": 32.46326530612245,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\I002.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\I002.mp3",
+      "audio_sha256": "35e1eec01464bb607d9f4a4efe5c1bb49efaba8c49404fddbc6b9b02aec6bcb9",
+      "source_v1_audio_sha256": "35e1eec01464bb607d9f4a4efe5c1bb49efaba8c49404fddbc6b9b02aec6bcb9",
+      "narration_text": "그전에, 방금 본 수원의 두 구를 한 번 더 보죠.\n전체 수 차이는 59쌍이었는데, 초혼 부부는 영통구 7,634쌍, 권선구 6,746쌍입니다.\n초혼만 놓으면 영통구가 888쌍 더 많아요.\n재혼 부부는 영통구 733쌍, 권선구 1,563쌍으로 방향이 바뀝니다.\n이번에는 권선구가 830쌍 더 많습니다.\n전체 규모가 비슷해도 통계에 담긴 부부의 구성은 이렇게 달라집니다.\n지역을 이해할 때 전체 수와 그 안의 구성을 함께 살펴볼 이유예요.",
+      "reading_text": "그전에, 방금 본 수원의 두 구를 한 번 더 보죠.\n전체 수 차이는 오십구 쌍이었는데, 초혼 부부는 영통구 칠천육백삼십사 쌍, 권선구 육천칠백사십육 쌍입니다.\n초혼만 놓으면 영통구가 팔백팔십팔 쌍 더 많아요.\n재혼 부부는 영통구 칠백삼십삼 쌍, 권선구 천오백육십삼 쌍으로 방향이 바뀝니다.\n이번에는 권선구가 팔백삼십 쌍 더 많습니다.\n전체 규모가 비슷해도 통계에 담긴 부부의 구성은 이렇게 달라집니다.\n지역을 이해할 때 전체 수와 그 안의 구성을 함께 살펴볼 이유예요.",
+      "sentences": [
+        {
+          "sentence_id": "I002-01",
+          "text": "그전에, 방금 본 수원의 두 구를 한 번 더 보죠.",
+          "reading_text": "그전에, 방금 본 수원의 두 구를 한 번 더 보죠.",
+          "start_s": 204.77942554799696,
+          "end_s": 207.5016477702192,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 2.796296296296296,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 2.796296296296296
+        },
+        {
+          "sentence_id": "I002-02",
+          "text": "전체 수 차이는 59쌍이었는데, 초혼 부부는 영통구 7,634쌍, 권선구 6,746쌍입니다.",
+          "reading_text": "전체 수 차이는 오십구 쌍이었는데, 초혼 부부는 영통구 칠천육백삼십사 쌍, 권선구 육천칠백사십육 쌍입니다.",
+          "start_s": 208.14979591836735,
+          "end_s": 214.85349962207104,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 3.4444444444444446,
+          "source_v1_local_end_s": 10.148148148148147,
+          "local_start_s": 3.4444444444444446,
+          "local_end_s": 10.148148148148147
+        },
+        {
+          "sentence_id": "I002-03",
+          "text": "초혼만 놓으면 영통구가 888쌍 더 많아요.",
+          "reading_text": "초혼만 놓으면 영통구가 팔백팔십팔 쌍 더 많아요.",
+          "start_s": 215.57572184429327,
+          "end_s": 218.64979591836732,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 10.87037037037037,
+          "source_v1_local_end_s": 13.944444444444443,
+          "local_start_s": 10.87037037037037,
+          "local_end_s": 13.944444444444443
+        },
+        {
+          "sentence_id": "I002-04",
+          "text": "재혼 부부는 영통구 733쌍, 권선구 1,563쌍으로 방향이 바뀝니다.",
+          "reading_text": "재혼 부부는 영통구 칠백삼십삼 쌍, 권선구 천오백육십삼 쌍으로 방향이 바뀝니다.",
+          "start_s": 219.3349811035525,
+          "end_s": 224.2701662887377,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 14.629629629629628,
+          "source_v1_local_end_s": 19.564814814814813,
+          "local_start_s": 14.629629629629628,
+          "local_end_s": 19.564814814814813
+        },
+        {
+          "sentence_id": "I002-05",
+          "text": "이번에는 권선구가 830쌍 더 많습니다.",
+          "reading_text": "이번에는 권선구가 팔백삼십 쌍 더 많습니다.",
+          "start_s": 225.0201662887377,
+          "end_s": 227.65905517762658,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 20.314814814814813,
+          "source_v1_local_end_s": 22.953703703703702,
+          "local_start_s": 20.314814814814813,
+          "local_end_s": 22.953703703703702
+        },
+        {
+          "sentence_id": "I002-06",
+          "text": "전체 규모가 비슷해도 통계에 담긴 부부의 구성은 이렇게 달라집니다.",
+          "reading_text": "전체 규모가 비슷해도 통계에 담긴 부부의 구성은 이렇게 달라집니다.",
+          "start_s": 228.41831443688585,
+          "end_s": 232.066462585034,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 23.712962962962962,
+          "source_v1_local_end_s": 27.36111111111111,
+          "local_start_s": 23.712962962962962,
+          "local_end_s": 27.36111111111111
+        },
+        {
+          "sentence_id": "I002-07",
+          "text": "지역을 이해할 때 전체 수와 그 안의 구성을 함께 살펴볼 이유예요.",
+          "reading_text": "지역을 이해할 때 전체 수와 그 안의 구성을 함께 살펴볼 이유예요.",
+          "start_s": 232.79794406651547,
+          "end_s": 236.49238851095993,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 28.092592592592588,
+          "source_v1_local_end_s": 31.787037037037035,
+          "local_start_s": 28.092592592592588,
+          "local_end_s": 31.787037037037035
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "I002-01",
+          "text": "그전에, 방금 본 수원의 두 구를 한 번 더 보죠.",
+          "reading_text": "그전에, 방금 본 수원의 두 구를 한 번 더 보죠.",
+          "start_s": 0.07407407407407407,
+          "end_s": 2.796296296296296,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 2.796296296296296
+        },
+        {
+          "sentence_id": "I002-02",
+          "text": "전체 수 차이는 59쌍이었는데, 초혼 부부는 영통구 7,634쌍, 권선구 6,746쌍입니다.",
+          "reading_text": "전체 수 차이는 오십구 쌍이었는데, 초혼 부부는 영통구 칠천육백삼십사 쌍, 권선구 육천칠백사십육 쌍입니다.",
+          "start_s": 3.4444444444444446,
+          "end_s": 10.148148148148147,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 3.4444444444444446,
+          "source_v1_local_end_s": 10.148148148148147
+        },
+        {
+          "sentence_id": "I002-03",
+          "text": "초혼만 놓으면 영통구가 888쌍 더 많아요.",
+          "reading_text": "초혼만 놓으면 영통구가 팔백팔십팔 쌍 더 많아요.",
+          "start_s": 10.87037037037037,
+          "end_s": 13.944444444444443,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 10.87037037037037,
+          "source_v1_local_end_s": 13.944444444444443
+        },
+        {
+          "sentence_id": "I002-04",
+          "text": "재혼 부부는 영통구 733쌍, 권선구 1,563쌍으로 방향이 바뀝니다.",
+          "reading_text": "재혼 부부는 영통구 칠백삼십삼 쌍, 권선구 천오백육십삼 쌍으로 방향이 바뀝니다.",
+          "start_s": 14.629629629629628,
+          "end_s": 19.564814814814813,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 14.629629629629628,
+          "source_v1_local_end_s": 19.564814814814813
+        },
+        {
+          "sentence_id": "I002-05",
+          "text": "이번에는 권선구가 830쌍 더 많습니다.",
+          "reading_text": "이번에는 권선구가 팔백삼십 쌍 더 많습니다.",
+          "start_s": 20.314814814814813,
+          "end_s": 22.953703703703702,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 20.314814814814813,
+          "source_v1_local_end_s": 22.953703703703702
+        },
+        {
+          "sentence_id": "I002-06",
+          "text": "전체 규모가 비슷해도 통계에 담긴 부부의 구성은 이렇게 달라집니다.",
+          "reading_text": "전체 규모가 비슷해도 통계에 담긴 부부의 구성은 이렇게 달라집니다.",
+          "start_s": 23.712962962962962,
+          "end_s": 27.36111111111111,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 23.712962962962962,
+          "source_v1_local_end_s": 27.36111111111111
+        },
+        {
+          "sentence_id": "I002-07",
+          "text": "지역을 이해할 때 전체 수와 그 안의 구성을 함께 살펴볼 이유예요.",
+          "reading_text": "지역을 이해할 때 전체 수와 그 안의 구성을 함께 살펴볼 이유예요.",
+          "start_s": 28.092592592592588,
+          "end_s": 31.787037037037035,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 28.092592592592588,
+          "source_v1_local_end_s": 31.787037037037035
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "I002-01",
+          "text": "그전에, 방금 본 수원의 두 구를 한 번 더 보죠.",
+          "start_s": 204.77942554799696,
+          "end_s": 207.5016477702192
+        },
+        {
+          "sentence_id": "I002-02",
+          "text": "전체 수 차이는 59쌍이었는데, 초혼 부부는 영통구 7,634쌍, 권선구 6,746쌍입니다.",
+          "start_s": 208.14979591836735,
+          "end_s": 214.85349962207104
+        },
+        {
+          "sentence_id": "I002-03",
+          "text": "초혼만 놓으면 영통구가 888쌍 더 많아요.",
+          "start_s": 215.57572184429327,
+          "end_s": 218.64979591836732
+        },
+        {
+          "sentence_id": "I002-04",
+          "text": "재혼 부부는 영통구 733쌍, 권선구 1,563쌍으로 방향이 바뀝니다.",
+          "start_s": 219.3349811035525,
+          "end_s": 224.2701662887377
+        },
+        {
+          "sentence_id": "I002-05",
+          "text": "이번에는 권선구가 830쌍 더 많습니다.",
+          "start_s": 225.0201662887377,
+          "end_s": 227.65905517762658
+        },
+        {
+          "sentence_id": "I002-06",
+          "text": "전체 규모가 비슷해도 통계에 담긴 부부의 구성은 이렇게 달라집니다.",
+          "start_s": 228.41831443688585,
+          "end_s": 232.066462585034
+        },
+        {
+          "sentence_id": "I002-07",
+          "text": "지역을 이해할 때 전체 수와 그 안의 구성을 함께 살펴볼 이유예요.",
+          "start_s": 232.79794406651547,
+          "end_s": 236.49238851095993
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S013",
+      "start_s": 237.16861678004534,
+      "end_s": 258.97029478458046,
+      "duration_s": 21.801678004535148,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S013.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S013.mp3",
+      "audio_sha256": "505ccd5712e2ff3a7abadc38f30f7fe5f14f69efae65d3b1f239d68fe96b5c60",
+      "source_v1_audio_sha256": "505ccd5712e2ff3a7abadc38f30f7fe5f14f69efae65d3b1f239d68fe96b5c60",
+      "narration_text": "10위는 인천 미추홀구, 8,483쌍입니다.\n11위 노원구와 불과 열 쌍 차이예요.\n순위 한 칸이 실제 규모에서는 이만큼 가까울 수도 있습니다.\n그런데 전년보다 노원구는 3.8퍼센트 줄었고, 미추홀구는 5.2퍼센트 늘었어요.\n현재 수가 거의 같아도, 1년 사이에 움직인 방향은 서로 달랐습니다.",
+      "reading_text": "십 위는 인천 미추홀구, 팔천사백팔십삼 쌍입니다.\n십일 위 노원구와 불과 열 쌍 차이예요.\n순위 한 칸이 실제 규모에서는 이만큼 가까울 수도 있습니다.\n그런데 전년보다 노원구는 삼 점 팔 퍼센트 줄었고, 미추홀구는 오 점 이 퍼센트 늘었어요.\n현재 수가 거의 같아도, 일 년 사이에 움직인 방향은 서로 달랐습니다.",
+      "sentences": [
+        {
+          "sentence_id": "S013-01",
+          "text": "10위는 인천 미추홀구, 8,483쌍입니다.",
+          "reading_text": "십 위는 인천 미추홀구, 팔천사백팔십삼 쌍입니다.",
+          "start_s": 237.24269085411942,
+          "end_s": 240.59454270597126,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.4259259259259256,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.4259259259259256
+        },
+        {
+          "sentence_id": "S013-02",
+          "text": "11위 노원구와 불과 열 쌍 차이예요.",
+          "reading_text": "십일 위 노원구와 불과 열 쌍 차이예요.",
+          "start_s": 241.28898715041572,
+          "end_s": 243.71491307634165,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 4.12037037037037,
+          "source_v1_local_end_s": 6.546296296296296,
+          "local_start_s": 4.12037037037037,
+          "local_end_s": 6.546296296296296
+        },
+        {
+          "sentence_id": "S013-03",
+          "text": "순위 한 칸이 실제 규모에서는 이만큼 가까울 수도 있습니다.",
+          "reading_text": "순위 한 칸이 실제 규모에서는 이만큼 가까울 수도 있습니다.",
+          "start_s": 244.41861678004534,
+          "end_s": 247.76120937263792,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 7.249999999999999,
+          "source_v1_local_end_s": 10.592592592592592,
+          "local_start_s": 7.249999999999999,
+          "local_end_s": 10.592592592592592
+        },
+        {
+          "sentence_id": "S013-04",
+          "text": "그런데 전년보다 노원구는 3.8퍼센트 줄었고, 미추홀구는 5.2퍼센트 늘었어요.",
+          "reading_text": "그런데 전년보다 노원구는 삼 점 팔 퍼센트 줄었고, 미추홀구는 오 점 이 퍼센트 늘었어요.",
+          "start_s": 248.48343159486015,
+          "end_s": 253.8167649281935,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 14,
+          "source_v1_local_start_s": 11.314814814814815,
+          "source_v1_local_end_s": 16.64814814814815,
+          "local_start_s": 11.314814814814815,
+          "local_end_s": 16.64814814814815
+        },
+        {
+          "sentence_id": "S013-05",
+          "text": "현재 수가 거의 같아도, 1년 사이에 움직인 방향은 서로 달랐습니다.",
+          "reading_text": "현재 수가 거의 같아도, 일 년 사이에 움직인 방향은 서로 달랐습니다.",
+          "start_s": 254.45565381708238,
+          "end_s": 258.2426908541194,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 17.287037037037035,
+          "source_v1_local_end_s": 21.074074074074073,
+          "local_start_s": 17.287037037037035,
+          "local_end_s": 21.074074074074073
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S013-01",
+          "text": "10위는 인천 미추홀구, 8,483쌍입니다.",
+          "reading_text": "십 위는 인천 미추홀구, 팔천사백팔십삼 쌍입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.4259259259259256,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.4259259259259256
+        },
+        {
+          "sentence_id": "S013-02",
+          "text": "11위 노원구와 불과 열 쌍 차이예요.",
+          "reading_text": "십일 위 노원구와 불과 열 쌍 차이예요.",
+          "start_s": 4.12037037037037,
+          "end_s": 6.546296296296296,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 4.12037037037037,
+          "source_v1_local_end_s": 6.546296296296296
+        },
+        {
+          "sentence_id": "S013-03",
+          "text": "순위 한 칸이 실제 규모에서는 이만큼 가까울 수도 있습니다.",
+          "reading_text": "순위 한 칸이 실제 규모에서는 이만큼 가까울 수도 있습니다.",
+          "start_s": 7.249999999999999,
+          "end_s": 10.592592592592592,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 7.249999999999999,
+          "source_v1_local_end_s": 10.592592592592592
+        },
+        {
+          "sentence_id": "S013-04",
+          "text": "그런데 전년보다 노원구는 3.8퍼센트 줄었고, 미추홀구는 5.2퍼센트 늘었어요.",
+          "reading_text": "그런데 전년보다 노원구는 삼 점 팔 퍼센트 줄었고, 미추홀구는 오 점 이 퍼센트 늘었어요.",
+          "start_s": 11.314814814814815,
+          "end_s": 16.64814814814815,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 14,
+          "source_v1_local_start_s": 11.314814814814815,
+          "source_v1_local_end_s": 16.64814814814815
+        },
+        {
+          "sentence_id": "S013-05",
+          "text": "현재 수가 거의 같아도, 1년 사이에 움직인 방향은 서로 달랐습니다.",
+          "reading_text": "현재 수가 거의 같아도, 일 년 사이에 움직인 방향은 서로 달랐습니다.",
+          "start_s": 17.287037037037035,
+          "end_s": 21.074074074074073,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 17.287037037037035,
+          "source_v1_local_end_s": 21.074074074074073
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S013-01",
+          "text": "10위는 인천 미추홀구, 8,483쌍입니다.",
+          "start_s": 237.24269085411942,
+          "end_s": 240.59454270597126
+        },
+        {
+          "sentence_id": "S013-02",
+          "text": "11위 노원구와 불과 열 쌍 차이예요.",
+          "start_s": 241.28898715041572,
+          "end_s": 243.71491307634165
+        },
+        {
+          "sentence_id": "S013-03",
+          "text": "순위 한 칸이 실제 규모에서는 이만큼 가까울 수도 있습니다.",
+          "start_s": 244.41861678004534,
+          "end_s": 247.76120937263792
+        },
+        {
+          "sentence_id": "S013-04",
+          "text": "그런데 전년보다 노원구는 3.8퍼센트 줄었고, 미추홀구는 5.2퍼센트 늘었어요.",
+          "start_s": 248.48343159486015,
+          "end_s": 253.8167649281935
+        },
+        {
+          "sentence_id": "S013-05",
+          "text": "현재 수가 거의 같아도, 1년 사이에 움직인 방향은 서로 달랐습니다.",
+          "start_s": 254.45565381708238,
+          "end_s": 258.2426908541194
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S014",
+      "start_s": 258.9702947845805,
+      "end_s": 273.7780725623583,
+      "duration_s": 14.807777777777778,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S014.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S014.mp3",
+      "audio_sha256": "a289c45924ff9e9244c3f497671fc9461ca3dbec95baf0bae718627cb92f4325",
+      "source_v1_audio_sha256": "a289c45924ff9e9244c3f497671fc9461ca3dbec95baf0bae718627cb92f4325",
+      "narration_text": "9위는 성남시 분당구, 8,587쌍입니다.\n분당에서는 삼평동 판교 일대의 업무와 생활 동선을 함께 살펴볼 수 있겠죠.\n업무 환경이 관심 요소라면, 내 근무지가 정확히 어디인지와 살 집까지의 동선을 추가로 비교해보세요.",
+      "reading_text": "구 위는 성남시 분당구, 팔천오백팔십칠 쌍입니다.\n분당에서는 삼평동 판교 일대의 업무와 생활 동선을 함께 살펴볼 수 있겠죠.\n업무 환경이 관심 요소라면, 내 근무지가 정확히 어디인지와 살 집까지의 동선을 추가로 비교해보세요.",
+      "sentences": [
+        {
+          "sentence_id": "S014-01",
+          "text": "9위는 성남시 분당구, 8,587쌍입니다.",
+          "reading_text": "구 위는 성남시 분당구, 팔천오백팔십칠 쌍입니다.",
+          "start_s": 259.0443688586546,
+          "end_s": 262.3777021919879,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.407407407407407,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.407407407407407
+        },
+        {
+          "sentence_id": "S014-02",
+          "text": "분당에서는 삼평동 판교 일대의 업무와 생활 동선을 함께 살펴볼 수 있겠죠.",
+          "reading_text": "분당에서는 삼평동 판교 일대의 업무와 생활 동선을 함께 살펴볼 수 있겠죠.",
+          "start_s": 263.1369614512472,
+          "end_s": 266.914739229025,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 4.166666666666666,
+          "source_v1_local_end_s": 7.944444444444444,
+          "local_start_s": 4.166666666666666,
+          "local_end_s": 7.944444444444444
+        },
+        {
+          "sentence_id": "S014-04",
+          "text": "업무 환경이 관심 요소라면, 내 근무지가 정확히 어디인지와 살 집까지의 동선을 추가로 비교해보세요.",
+          "reading_text": "업무 환경이 관심 요소라면, 내 근무지가 정확히 어디인지와 살 집까지의 동선을 추가로 비교해보세요.",
+          "start_s": 267.64622071050644,
+          "end_s": 273.09992441421014,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 8.675925925925926,
+          "source_v1_local_end_s": 14.129629629629628,
+          "local_start_s": 8.675925925925926,
+          "local_end_s": 14.129629629629628
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S014-01",
+          "text": "9위는 성남시 분당구, 8,587쌍입니다.",
+          "reading_text": "구 위는 성남시 분당구, 팔천오백팔십칠 쌍입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.407407407407407,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.407407407407407
+        },
+        {
+          "sentence_id": "S014-02",
+          "text": "분당에서는 삼평동 판교 일대의 업무와 생활 동선을 함께 살펴볼 수 있겠죠.",
+          "reading_text": "분당에서는 삼평동 판교 일대의 업무와 생활 동선을 함께 살펴볼 수 있겠죠.",
+          "start_s": 4.166666666666666,
+          "end_s": 7.944444444444444,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 4.166666666666666,
+          "source_v1_local_end_s": 7.944444444444444
+        },
+        {
+          "sentence_id": "S014-04",
+          "text": "업무 환경이 관심 요소라면, 내 근무지가 정확히 어디인지와 살 집까지의 동선을 추가로 비교해보세요.",
+          "reading_text": "업무 환경이 관심 요소라면, 내 근무지가 정확히 어디인지와 살 집까지의 동선을 추가로 비교해보세요.",
+          "start_s": 8.675925925925926,
+          "end_s": 14.129629629629628,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 8.675925925925926,
+          "source_v1_local_end_s": 14.129629629629628
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S014-01",
+          "text": "9위는 성남시 분당구, 8,587쌍입니다.",
+          "start_s": 259.0443688586546,
+          "end_s": 262.3777021919879
+        },
+        {
+          "sentence_id": "S014-02",
+          "text": "분당에서는 삼평동 판교 일대의 업무와 생활 동선을 함께 살펴볼 수 있겠죠.",
+          "start_s": 263.1369614512472,
+          "end_s": 266.914739229025
+        },
+        {
+          "sentence_id": "S014-04",
+          "text": "업무 환경이 관심 요소라면, 내 근무지가 정확히 어디인지와 살 집까지의 동선을 추가로 비교해보세요.",
+          "start_s": 267.64622071050644,
+          "end_s": 273.09992441421014
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S015",
+      "start_s": 273.77807256235826,
+      "end_s": 290.1533333333333,
+      "duration_s": 16.375260770975057,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S015.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S015.mp3",
+      "audio_sha256": "4edf02a831f6205b01f08d63c46db86b199424715be48f2591f179f641bd4935",
+      "source_v1_audio_sha256": "4edf02a831f6205b01f08d63c46db86b199424715be48f2591f179f641bd4935",
+      "narration_text": "8위 서울 영등포구부터는 9천 쌍대입니다.\n전체 수는 9,036쌍이에요.\n2023년 9,014쌍과 비교하면 22쌍 늘어, 변화율은 0.2퍼센트입니다.\n이번에는 전년과 거의 비슷한 규모를 유지한 지역을 만났네요.",
+      "reading_text": "팔 위 서울 영등포구부터는 구천 쌍대입니다.\n전체 수는 구천삼십육 쌍이에요.\n이천이십삼 년 구천십사 쌍과 비교하면 이십이 쌍 늘어, 변화율은 영 점 이 퍼센트입니다.\n이번에는 전년과 거의 비슷한 규모를 유지한 지역을 만났네요.",
+      "sentences": [
+        {
+          "sentence_id": "S015-01",
+          "text": "8위 서울 영등포구부터는 9천 쌍대입니다.",
+          "reading_text": "팔 위 서울 영등포구부터는 구천 쌍대입니다.",
+          "start_s": 273.85214663643234,
+          "end_s": 276.7132577475434,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 2.935185185185185,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 2.935185185185185
+        },
+        {
+          "sentence_id": "S015-02",
+          "text": "전체 수는 9,036쌍이에요.",
+          "reading_text": "전체 수는 구천삼십육 쌍이에요.",
+          "start_s": 277.4632577475434,
+          "end_s": 279.5465910808768,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 3.6851851851851847,
+          "source_v1_local_end_s": 5.768518518518518,
+          "local_start_s": 3.6851851851851847,
+          "local_end_s": 5.768518518518518
+        },
+        {
+          "sentence_id": "S015-03",
+          "text": "2023년 9,014쌍과 비교하면 22쌍 늘어, 변화율은 0.2퍼센트입니다.",
+          "reading_text": "이천이십삼 년 구천십사 쌍과 비교하면 이십이 쌍 늘어, 변화율은 영 점 이 퍼센트입니다.",
+          "start_s": 280.23177626606196,
+          "end_s": 285.5465910808768,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 6.453703703703703,
+          "source_v1_local_end_s": 11.768518518518517,
+          "local_start_s": 6.453703703703703,
+          "local_end_s": 11.768518518518517
+        },
+        {
+          "sentence_id": "S015-04",
+          "text": "이번에는 전년과 거의 비슷한 규모를 유지한 지역을 만났네요.",
+          "reading_text": "이번에는 전년과 거의 비슷한 규모를 유지한 지역을 만났네요.",
+          "start_s": 286.2410355253212,
+          "end_s": 289.4910355253212,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 12.462962962962962,
+          "source_v1_local_end_s": 15.71296296296296,
+          "local_start_s": 12.462962962962962,
+          "local_end_s": 15.71296296296296
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S015-01",
+          "text": "8위 서울 영등포구부터는 9천 쌍대입니다.",
+          "reading_text": "팔 위 서울 영등포구부터는 구천 쌍대입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 2.935185185185185,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 2.935185185185185
+        },
+        {
+          "sentence_id": "S015-02",
+          "text": "전체 수는 9,036쌍이에요.",
+          "reading_text": "전체 수는 구천삼십육 쌍이에요.",
+          "start_s": 3.6851851851851847,
+          "end_s": 5.768518518518518,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 3.6851851851851847,
+          "source_v1_local_end_s": 5.768518518518518
+        },
+        {
+          "sentence_id": "S015-03",
+          "text": "2023년 9,014쌍과 비교하면 22쌍 늘어, 변화율은 0.2퍼센트입니다.",
+          "reading_text": "이천이십삼 년 구천십사 쌍과 비교하면 이십이 쌍 늘어, 변화율은 영 점 이 퍼센트입니다.",
+          "start_s": 6.453703703703703,
+          "end_s": 11.768518518518517,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 6.453703703703703,
+          "source_v1_local_end_s": 11.768518518518517
+        },
+        {
+          "sentence_id": "S015-04",
+          "text": "이번에는 전년과 거의 비슷한 규모를 유지한 지역을 만났네요.",
+          "reading_text": "이번에는 전년과 거의 비슷한 규모를 유지한 지역을 만났네요.",
+          "start_s": 12.462962962962962,
+          "end_s": 15.71296296296296,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 12.462962962962962,
+          "source_v1_local_end_s": 15.71296296296296
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S015-01",
+          "text": "8위 서울 영등포구부터는 9천 쌍대입니다.",
+          "start_s": 273.85214663643234,
+          "end_s": 276.7132577475434
+        },
+        {
+          "sentence_id": "S015-02",
+          "text": "전체 수는 9,036쌍이에요.",
+          "start_s": 277.4632577475434,
+          "end_s": 279.5465910808768
+        },
+        {
+          "sentence_id": "S015-03",
+          "text": "2023년 9,014쌍과 비교하면 22쌍 늘어, 변화율은 0.2퍼센트입니다.",
+          "start_s": 280.23177626606196,
+          "end_s": 285.5465910808768
+        },
+        {
+          "sentence_id": "S015-04",
+          "text": "이번에는 전년과 거의 비슷한 규모를 유지한 지역을 만났네요.",
+          "start_s": 286.2410355253212,
+          "end_s": 289.4910355253212
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S016",
+      "start_s": 290.1533333333333,
+      "end_s": 302.6696598639455,
+      "duration_s": 12.516326530612245,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S016.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S016.mp3",
+      "audio_sha256": "e7b2f841509dbaa71d677a16481d62611090abc54e06b0b9312cc43da3c323f1",
+      "source_v1_audio_sha256": "e7b2f841509dbaa71d677a16481d62611090abc54e06b0b9312cc43da3c323f1",
+      "narration_text": "7위 강동구는 9,287쌍입니다.\n고덕역 주변에 관심이 있다면, 집에서 역까지의 동선을 추가로 살펴볼 수 있겠죠.\n그리고 바로 다음 6위와는 숫자 차이가 다시 작아집니다.",
+      "reading_text": "칠 위 강동구는 구천이백팔십칠 쌍입니다.\n고덕역 주변에 관심이 있다면, 집에서 역까지의 동선을 추가로 살펴볼 수 있겠죠.\n그리고 바로 다음 육 위와는 숫자 차이가 다시 작아집니다.",
+      "sentences": [
+        {
+          "sentence_id": "S016-01",
+          "text": "7위 강동구는 9,287쌍입니다.",
+          "reading_text": "칠 위 강동구는 구천이백팔십칠 쌍입니다.",
+          "start_s": 290.2274074074074,
+          "end_s": 293.05148148148146,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 5,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 2.898148148148148,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 2.898148148148148
+        },
+        {
+          "sentence_id": "S016-02",
+          "text": "고덕역 주변에 관심이 있다면, 집에서 역까지의 동선을 추가로 살펴볼 수 있겠죠.",
+          "reading_text": "고덕역 주변에 관심이 있다면, 집에서 역까지의 동선을 추가로 살펴볼 수 있겠죠.",
+          "start_s": 293.8107407407407,
+          "end_s": 298.0607407407407,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 3.657407407407407,
+          "source_v1_local_end_s": 7.907407407407407,
+          "local_start_s": 3.657407407407407,
+          "local_end_s": 7.907407407407407
+        },
+        {
+          "sentence_id": "S016-04",
+          "text": "그리고 바로 다음 6위와는 숫자 차이가 다시 작아집니다.",
+          "reading_text": "그리고 바로 다음 육 위와는 숫자 차이가 다시 작아집니다.",
+          "start_s": 298.7737037037037,
+          "end_s": 301.92185185185184,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 8.620370370370368,
+          "source_v1_local_end_s": 11.768518518518517,
+          "local_start_s": 8.620370370370368,
+          "local_end_s": 11.768518518518517
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S016-01",
+          "text": "7위 강동구는 9,287쌍입니다.",
+          "reading_text": "칠 위 강동구는 구천이백팔십칠 쌍입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 2.898148148148148,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 5,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 2.898148148148148
+        },
+        {
+          "sentence_id": "S016-02",
+          "text": "고덕역 주변에 관심이 있다면, 집에서 역까지의 동선을 추가로 살펴볼 수 있겠죠.",
+          "reading_text": "고덕역 주변에 관심이 있다면, 집에서 역까지의 동선을 추가로 살펴볼 수 있겠죠.",
+          "start_s": 3.657407407407407,
+          "end_s": 7.907407407407407,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 3.657407407407407,
+          "source_v1_local_end_s": 7.907407407407407
+        },
+        {
+          "sentence_id": "S016-04",
+          "text": "그리고 바로 다음 6위와는 숫자 차이가 다시 작아집니다.",
+          "reading_text": "그리고 바로 다음 육 위와는 숫자 차이가 다시 작아집니다.",
+          "start_s": 8.620370370370368,
+          "end_s": 11.768518518518517,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 8.620370370370368,
+          "source_v1_local_end_s": 11.768518518518517
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S016-01",
+          "text": "7위 강동구는 9,287쌍입니다.",
+          "start_s": 290.2274074074074,
+          "end_s": 293.05148148148146
+        },
+        {
+          "sentence_id": "S016-02",
+          "text": "고덕역 주변에 관심이 있다면, 집에서 역까지의 동선을 추가로 살펴볼 수 있겠죠.",
+          "start_s": 293.8107407407407,
+          "end_s": 298.0607407407407
+        },
+        {
+          "sentence_id": "S016-04",
+          "text": "그리고 바로 다음 6위와는 숫자 차이가 다시 작아집니다.",
+          "start_s": 298.7737037037037,
+          "end_s": 301.92185185185184
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S017",
+      "start_s": 302.6696598639456,
+      "end_s": 315.33197278911564,
+      "duration_s": 12.662312925170069,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S017.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S017.mp3",
+      "audio_sha256": "6d3cc42eddeaf21fbcdd4cb026544097293b701ee4268459600042122d93df68",
+      "source_v1_audio_sha256": "8aab915503d0130758f16b2ee326e223baf2b70c0d1d38f276166b29a9ecc3c1",
+      "narration_text": "6위는 강남구, 9,321쌍입니다.\n강동구보다 34쌍 많아요.\n그런데 전년을 보면 8,523쌍에서 798쌍 늘었고, 증가율은 9.4퍼센트입니다.",
+      "reading_text": "육 위는 강남구, 구천삼백이십일 쌍입니다.\n강동구보다 삼십사 쌍 많아요.\n그런데 전년을 보면 팔천오백이십삼 쌍에서 칠백구십팔 쌍 늘었고, 증가율은 구 점 사 퍼센트입니다.",
+      "sentences": [
+        {
+          "sentence_id": "S017-01",
+          "text": "6위는 강남구, 9,321쌍입니다.",
+          "reading_text": "육 위는 강남구, 구천삼백이십일 쌍입니다.",
+          "start_s": 302.74373393801966,
+          "end_s": 305.7622524565382,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 5,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.092592592592592,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.092592592592592
+        },
+        {
+          "sentence_id": "S017-02",
+          "text": "강동구보다 34쌍 많아요.",
+          "reading_text": "강동구보다 삼십사 쌍 많아요.",
+          "start_s": 306.5122524565382,
+          "end_s": 308.4844746787604,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 3.8425925925925926,
+          "source_v1_local_end_s": 5.814814814814814,
+          "local_start_s": 3.8425925925925926,
+          "local_end_s": 5.814814814814814
+        },
+        {
+          "sentence_id": "S017-03",
+          "text": "그런데 전년을 보면 8,523쌍에서 798쌍 늘었고, 증가율은 9.4퍼센트입니다.",
+          "reading_text": "그런데 전년을 보면 팔천오백이십삼 쌍에서 칠백구십팔 쌍 늘었고, 증가율은 구 점 사 퍼센트입니다.",
+          "start_s": 309.1233635676493,
+          "end_s": 314.9566969009826,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 6.453703703703703,
+          "source_v1_local_end_s": 12.287037037037035,
+          "local_start_s": 6.453703703703703,
+          "local_end_s": 12.287037037037035
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S017-01",
+          "text": "6위는 강남구, 9,321쌍입니다.",
+          "reading_text": "육 위는 강남구, 구천삼백이십일 쌍입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.092592592592592,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 5,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.092592592592592
+        },
+        {
+          "sentence_id": "S017-02",
+          "text": "강동구보다 34쌍 많아요.",
+          "reading_text": "강동구보다 삼십사 쌍 많아요.",
+          "start_s": 3.8425925925925926,
+          "end_s": 5.814814814814814,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 3.8425925925925926,
+          "source_v1_local_end_s": 5.814814814814814
+        },
+        {
+          "sentence_id": "S017-03",
+          "text": "그런데 전년을 보면 8,523쌍에서 798쌍 늘었고, 증가율은 9.4퍼센트입니다.",
+          "reading_text": "그런데 전년을 보면 팔천오백이십삼 쌍에서 칠백구십팔 쌍 늘었고, 증가율은 구 점 사 퍼센트입니다.",
+          "start_s": 6.453703703703703,
+          "end_s": 12.287037037037035,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 6.453703703703703,
+          "source_v1_local_end_s": 12.287037037037035
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S017-01",
+          "text": "6위는 강남구, 9,321쌍입니다.",
+          "start_s": 302.74373393801966,
+          "end_s": 305.7622524565382
+        },
+        {
+          "sentence_id": "S017-02",
+          "text": "강동구보다 34쌍 많아요.",
+          "start_s": 306.5122524565382,
+          "end_s": 308.4844746787604
+        },
+        {
+          "sentence_id": "S017-03",
+          "text": "그런데 전년을 보면 8,523쌍에서 798쌍 늘었고, 증가율은 9.4퍼센트입니다.",
+          "start_s": 309.1233635676493,
+          "end_s": 314.9566969009826
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "I003",
+      "start_s": 315.33197278911564,
+      "end_s": 341.9631065759637,
+      "duration_s": 26.63113378684807,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\I003.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\I003.mp3",
+      "audio_sha256": "9efb51256c6dd13e2b45159237b0e60197b43c2bd9c26d15664b9b110edc2a8e",
+      "source_v1_audio_sha256": "9efb51256c6dd13e2b45159237b0e60197b43c2bd9c26d15664b9b110edc2a8e",
+      "narration_text": "상위 다섯 곳으로 가기 전에, 스무 곳의 지도를 한 번 펼쳐볼까요?\n이번 TOP20에 든 구의 개수는 서울 아홉 곳, 경기 여섯 곳, 인천 다섯 곳입니다.\n세 시도의 여러 지역이 같은 목록에 들어와 있어요.\n그럼 우리 부부는 이 중 어디를 더 자세히 비교해볼까요?\n두 사람의 직장 위치, 예산, 필요한 집 크기를 함께 놓으면 조사할 질문을 좁혀갈 수 있습니다.\n이제 1만 쌍을 넘는 상위 다섯 곳으로 가보죠.",
+      "reading_text": "상위 다섯 곳으로 가기 전에, 스무 곳의 지도를 한 번 펼쳐볼까요?\n이번 스무 곳에 든 구의 개수는 서울 아홉 곳, 경기 여섯 곳, 인천 다섯 곳입니다.\n세 시도의 여러 지역이 같은 목록에 들어와 있어요.\n그럼 우리 부부는 이 중 어디를 더 자세히 비교해볼까요?\n두 사람의 직장 위치, 예산, 필요한 집 크기를 함께 놓으면 조사할 질문을 좁혀갈 수 있습니다.\n이제 일만 쌍을 넘는 상위 다섯 곳으로 가보죠.",
+      "sentences": [
+        {
+          "sentence_id": "I003-01",
+          "text": "상위 다섯 곳으로 가기 전에, 스무 곳의 지도를 한 번 펼쳐볼까요?",
+          "reading_text": "상위 다섯 곳으로 가기 전에, 스무 곳의 지도를 한 번 펼쳐볼까요?",
+          "start_s": 315.4060468631897,
+          "end_s": 318.98938019652303,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.657407407407407,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.657407407407407
+        },
+        {
+          "sentence_id": "I003-02",
+          "text": "이번 TOP20에 든 구의 개수는 서울 아홉 곳, 경기 여섯 곳, 인천 다섯 곳입니다.",
+          "reading_text": "이번 스무 곳에 든 구의 개수는 서울 아홉 곳, 경기 여섯 곳, 인천 다섯 곳입니다.",
+          "start_s": 319.67456538170825,
+          "end_s": 324.75789871504156,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 15,
+          "source_v1_local_start_s": 4.342592592592593,
+          "source_v1_local_end_s": 9.425925925925926,
+          "local_start_s": 4.342592592592593,
+          "local_end_s": 9.425925925925926
+        },
+        {
+          "sentence_id": "I003-03",
+          "text": "세 시도의 여러 지역이 같은 목록에 들어와 있어요.",
+          "reading_text": "세 시도의 여러 지역이 같은 목록에 들어와 있어요.",
+          "start_s": 325.4986394557823,
+          "end_s": 328.17456538170825,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 10.166666666666666,
+          "source_v1_local_end_s": 12.84259259259259,
+          "local_start_s": 10.166666666666666,
+          "local_end_s": 12.84259259259259
+        },
+        {
+          "sentence_id": "I003-04",
+          "text": "그럼 우리 부부는 이 중 어디를 더 자세히 비교해볼까요?",
+          "reading_text": "그럼 우리 부부는 이 중 어디를 더 자세히 비교해볼까요?",
+          "start_s": 328.8504913076342,
+          "end_s": 331.91530612244895,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 13.518518518518517,
+          "source_v1_local_end_s": 16.583333333333332,
+          "local_start_s": 13.518518518518517,
+          "local_end_s": 16.583333333333332
+        },
+        {
+          "sentence_id": "I003-05",
+          "text": "두 사람의 직장 위치, 예산, 필요한 집 크기를 함께 놓으면 조사할 질문을 좁혀갈 수 있습니다.",
+          "reading_text": "두 사람의 직장 위치, 예산, 필요한 집 크기를 함께 놓으면 조사할 질문을 좁혀갈 수 있습니다.",
+          "start_s": 332.6097505668934,
+          "end_s": 338.1004913076342,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 15,
+          "source_v1_local_start_s": 17.277777777777775,
+          "source_v1_local_end_s": 22.76851851851852,
+          "local_start_s": 17.277777777777775,
+          "local_end_s": 22.76851851851852
+        },
+        {
+          "sentence_id": "I003-06",
+          "text": "이제 1만 쌍을 넘는 상위 다섯 곳으로 가보죠.",
+          "reading_text": "이제 일만 쌍을 넘는 상위 다섯 곳으로 가보죠.",
+          "start_s": 338.80419501133787,
+          "end_s": 341.2486394557823,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 23.47222222222222,
+          "source_v1_local_end_s": 25.916666666666664,
+          "local_start_s": 23.47222222222222,
+          "local_end_s": 25.916666666666664
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "I003-01",
+          "text": "상위 다섯 곳으로 가기 전에, 스무 곳의 지도를 한 번 펼쳐볼까요?",
+          "reading_text": "상위 다섯 곳으로 가기 전에, 스무 곳의 지도를 한 번 펼쳐볼까요?",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.657407407407407,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.657407407407407
+        },
+        {
+          "sentence_id": "I003-02",
+          "text": "이번 TOP20에 든 구의 개수는 서울 아홉 곳, 경기 여섯 곳, 인천 다섯 곳입니다.",
+          "reading_text": "이번 스무 곳에 든 구의 개수는 서울 아홉 곳, 경기 여섯 곳, 인천 다섯 곳입니다.",
+          "start_s": 4.342592592592593,
+          "end_s": 9.425925925925926,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 15,
+          "source_v1_local_start_s": 4.342592592592593,
+          "source_v1_local_end_s": 9.425925925925926
+        },
+        {
+          "sentence_id": "I003-03",
+          "text": "세 시도의 여러 지역이 같은 목록에 들어와 있어요.",
+          "reading_text": "세 시도의 여러 지역이 같은 목록에 들어와 있어요.",
+          "start_s": 10.166666666666666,
+          "end_s": 12.84259259259259,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 10.166666666666666,
+          "source_v1_local_end_s": 12.84259259259259
+        },
+        {
+          "sentence_id": "I003-04",
+          "text": "그럼 우리 부부는 이 중 어디를 더 자세히 비교해볼까요?",
+          "reading_text": "그럼 우리 부부는 이 중 어디를 더 자세히 비교해볼까요?",
+          "start_s": 13.518518518518517,
+          "end_s": 16.583333333333332,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 9,
+          "source_v1_local_start_s": 13.518518518518517,
+          "source_v1_local_end_s": 16.583333333333332
+        },
+        {
+          "sentence_id": "I003-05",
+          "text": "두 사람의 직장 위치, 예산, 필요한 집 크기를 함께 놓으면 조사할 질문을 좁혀갈 수 있습니다.",
+          "reading_text": "두 사람의 직장 위치, 예산, 필요한 집 크기를 함께 놓으면 조사할 질문을 좁혀갈 수 있습니다.",
+          "start_s": 17.277777777777775,
+          "end_s": 22.76851851851852,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 15,
+          "source_v1_local_start_s": 17.277777777777775,
+          "source_v1_local_end_s": 22.76851851851852
+        },
+        {
+          "sentence_id": "I003-06",
+          "text": "이제 1만 쌍을 넘는 상위 다섯 곳으로 가보죠.",
+          "reading_text": "이제 일만 쌍을 넘는 상위 다섯 곳으로 가보죠.",
+          "start_s": 23.47222222222222,
+          "end_s": 25.916666666666664,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 23.47222222222222,
+          "source_v1_local_end_s": 25.916666666666664
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "I003-01",
+          "text": "상위 다섯 곳으로 가기 전에, 스무 곳의 지도를 한 번 펼쳐볼까요?",
+          "start_s": 315.4060468631897,
+          "end_s": 318.98938019652303
+        },
+        {
+          "sentence_id": "I003-02",
+          "text": "이번 TOP20에 든 구의 개수는 서울 아홉 곳, 경기 여섯 곳, 인천 다섯 곳입니다.",
+          "start_s": 319.67456538170825,
+          "end_s": 324.75789871504156
+        },
+        {
+          "sentence_id": "I003-03",
+          "text": "세 시도의 여러 지역이 같은 목록에 들어와 있어요.",
+          "start_s": 325.4986394557823,
+          "end_s": 328.17456538170825
+        },
+        {
+          "sentence_id": "I003-04",
+          "text": "그럼 우리 부부는 이 중 어디를 더 자세히 비교해볼까요?",
+          "start_s": 328.8504913076342,
+          "end_s": 331.91530612244895
+        },
+        {
+          "sentence_id": "I003-05",
+          "text": "두 사람의 직장 위치, 예산, 필요한 집 크기를 함께 놓으면 조사할 질문을 좁혀갈 수 있습니다.",
+          "start_s": 332.6097505668934,
+          "end_s": 338.1004913076342
+        },
+        {
+          "sentence_id": "I003-06",
+          "text": "이제 1만 쌍을 넘는 상위 다섯 곳으로 가보죠.",
+          "start_s": 338.80419501133787,
+          "end_s": 341.2486394557823
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S018",
+      "start_s": 341.9631065759637,
+      "end_s": 359.79437641723354,
+      "duration_s": 17.83126984126984,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S018.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S018.mp3",
+      "audio_sha256": "f0c391d93a99a58bf7885147bb1e6f95263752f5691bfcf0f10c3f00fb4c3273",
+      "source_v1_audio_sha256": "f0c391d93a99a58bf7885147bb1e6f95263752f5691bfcf0f10c3f00fb4c3273",
+      "narration_text": "5위 인천 부평구는 1만 204쌍입니다.\n2023년 9,901쌍에서 303쌍 늘어, 증가율은 3.1퍼센트예요.\n생활권은 부평역과 그 앞 거리부터 짚어볼게요.\n관심이 있다면 집에서 장보는 곳까지 어떤 동선을 비교할지 질문을 더해보세요.",
+      "reading_text": "오 위 인천 부평구는 일만 이백사 쌍입니다.\n이천이십삼 년 구천구백일 쌍에서 삼백삼 쌍 늘어, 증가율은 삼 점 일 퍼센트예요.\n생활권은 부평역과 그 앞 거리부터 짚어볼게요.\n관심이 있다면 집에서 장보는 곳까지 어떤 동선을 비교할지 질문을 더해보세요.",
+      "sentences": [
+        {
+          "sentence_id": "S018-01",
+          "text": "5위 인천 부평구는 1만 204쌍입니다.",
+          "reading_text": "오 위 인천 부평구는 일만 이백사 쌍입니다.",
+          "start_s": 342.0371806500378,
+          "end_s": 344.77792139077854,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 2.8148148148148144,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 2.8148148148148144
+        },
+        {
+          "sentence_id": "S018-02",
+          "text": "2023년 9,901쌍에서 303쌍 늘어, 증가율은 3.1퍼센트예요.",
+          "reading_text": "이천이십삼 년 구천구백일 쌍에서 삼백삼 쌍 늘어, 증가율은 삼 점 일 퍼센트예요.",
+          "start_s": 345.5371806500378,
+          "end_s": 350.5834769463341,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 12,
+          "source_v1_local_start_s": 3.574074074074074,
+          "source_v1_local_end_s": 8.620370370370368,
+          "local_start_s": 3.574074074074074,
+          "local_end_s": 8.620370370370368
+        },
+        {
+          "sentence_id": "S018-03",
+          "text": "생활권은 부평역과 그 앞 거리부터 짚어볼게요.",
+          "reading_text": "생활권은 부평역과 그 앞 거리부터 짚어볼게요.",
+          "start_s": 351.26866213151925,
+          "end_s": 354.1019954648526,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 9.305555555555555,
+          "source_v1_local_end_s": 12.138888888888888,
+          "local_start_s": 9.305555555555555,
+          "local_end_s": 12.138888888888888
+        },
+        {
+          "sentence_id": "S018-04",
+          "text": "관심이 있다면 집에서 장보는 곳까지 어떤 동선을 비교할지 질문을 더해보세요.",
+          "reading_text": "관심이 있다면 집에서 장보는 곳까지 어떤 동선을 비교할지 질문을 더해보세요.",
+          "start_s": 354.796439909297,
+          "end_s": 359.0927362055933,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 12.833333333333332,
+          "source_v1_local_end_s": 17.12962962962963,
+          "local_start_s": 12.833333333333332,
+          "local_end_s": 17.12962962962963
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S018-01",
+          "text": "5위 인천 부평구는 1만 204쌍입니다.",
+          "reading_text": "오 위 인천 부평구는 일만 이백사 쌍입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 2.8148148148148144,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 2.8148148148148144
+        },
+        {
+          "sentence_id": "S018-02",
+          "text": "2023년 9,901쌍에서 303쌍 늘어, 증가율은 3.1퍼센트예요.",
+          "reading_text": "이천이십삼 년 구천구백일 쌍에서 삼백삼 쌍 늘어, 증가율은 삼 점 일 퍼센트예요.",
+          "start_s": 3.574074074074074,
+          "end_s": 8.620370370370368,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 12,
+          "source_v1_local_start_s": 3.574074074074074,
+          "source_v1_local_end_s": 8.620370370370368
+        },
+        {
+          "sentence_id": "S018-03",
+          "text": "생활권은 부평역과 그 앞 거리부터 짚어볼게요.",
+          "reading_text": "생활권은 부평역과 그 앞 거리부터 짚어볼게요.",
+          "start_s": 9.305555555555555,
+          "end_s": 12.138888888888888,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 6,
+          "source_v1_local_start_s": 9.305555555555555,
+          "source_v1_local_end_s": 12.138888888888888
+        },
+        {
+          "sentence_id": "S018-04",
+          "text": "관심이 있다면 집에서 장보는 곳까지 어떤 동선을 비교할지 질문을 더해보세요.",
+          "reading_text": "관심이 있다면 집에서 장보는 곳까지 어떤 동선을 비교할지 질문을 더해보세요.",
+          "start_s": 12.833333333333332,
+          "end_s": 17.12962962962963,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 12.833333333333332,
+          "source_v1_local_end_s": 17.12962962962963
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S018-01",
+          "text": "5위 인천 부평구는 1만 204쌍입니다.",
+          "start_s": 342.0371806500378,
+          "end_s": 344.77792139077854
+        },
+        {
+          "sentence_id": "S018-02",
+          "text": "2023년 9,901쌍에서 303쌍 늘어, 증가율은 3.1퍼센트예요.",
+          "start_s": 345.5371806500378,
+          "end_s": 350.5834769463341
+        },
+        {
+          "sentence_id": "S018-03",
+          "text": "생활권은 부평역과 그 앞 거리부터 짚어볼게요.",
+          "start_s": 351.26866213151925,
+          "end_s": 354.1019954648526
+        },
+        {
+          "sentence_id": "S018-04",
+          "text": "관심이 있다면 집에서 장보는 곳까지 어떤 동선을 비교할지 질문을 더해보세요.",
+          "start_s": 354.796439909297,
+          "end_s": 359.0927362055933
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S019",
+      "start_s": 359.79437641723354,
+      "end_s": 370.2250340136054,
+      "duration_s": 10.430657596371882,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S019.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S019.mp3",
+      "audio_sha256": "e5495124c4b0ba95885b6140f392c45edca689f731ccc264e781d5f5f6145723",
+      "source_v1_audio_sha256": "d3fc8f8981abea3a78023b289beba518df5d90801accb1385f1fa696adc28c88",
+      "narration_text": "4위는 서울 강서구, 1만 724쌍입니다.\n부평구보다 520쌍 많아요.\n마곡의 서울식물원에서는 야외 공간도 함께 살펴볼 수 있어요.",
+      "reading_text": "사 위는 서울 강서구, 일만 칠백이십사 쌍입니다.\n부평구보다 오백이십 쌍 많아요.\n마곡의 서울식물원에서는 야외 공간도 함께 살펴볼 수 있어요.",
+      "sentences": [
+        {
+          "sentence_id": "S019-01",
+          "text": "4위는 서울 강서구, 1만 724쌍입니다.",
+          "reading_text": "사 위는 서울 강서구, 일만 칠백이십사 쌍입니다.",
+          "start_s": 359.8684504913076,
+          "end_s": 362.9610430839002,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.1666666666666665,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.1666666666666665
+        },
+        {
+          "sentence_id": "S019-02",
+          "text": "부평구보다 520쌍 많아요.",
+          "reading_text": "부평구보다 오백이십 쌍 많아요.",
+          "start_s": 363.7110430839002,
+          "end_s": 365.7851171579743,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 3.916666666666666,
+          "source_v1_local_end_s": 5.9907407407407405,
+          "local_start_s": 3.916666666666666,
+          "local_end_s": 5.9907407407407405
+        },
+        {
+          "sentence_id": "S019-03",
+          "text": "마곡의 서울식물원에서는 야외 공간도 함께 살펴볼 수 있어요.",
+          "reading_text": "마곡의 서울식물원에서는 야외 공간도 함께 살펴볼 수 있어요.",
+          "start_s": 366.4425245653817,
+          "end_s": 369.87770975056685,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 6.648148148148147,
+          "source_v1_local_end_s": 10.083333333333334,
+          "local_start_s": 6.648148148148147,
+          "local_end_s": 10.083333333333334
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S019-01",
+          "text": "4위는 서울 강서구, 1만 724쌍입니다.",
+          "reading_text": "사 위는 서울 강서구, 일만 칠백이십사 쌍입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.1666666666666665,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.1666666666666665
+        },
+        {
+          "sentence_id": "S019-02",
+          "text": "부평구보다 520쌍 많아요.",
+          "reading_text": "부평구보다 오백이십 쌍 많아요.",
+          "start_s": 3.916666666666666,
+          "end_s": 5.9907407407407405,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 3.916666666666666,
+          "source_v1_local_end_s": 5.9907407407407405
+        },
+        {
+          "sentence_id": "S019-03",
+          "text": "마곡의 서울식물원에서는 야외 공간도 함께 살펴볼 수 있어요.",
+          "reading_text": "마곡의 서울식물원에서는 야외 공간도 함께 살펴볼 수 있어요.",
+          "start_s": 6.648148148148147,
+          "end_s": 10.083333333333334,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 6.648148148148147,
+          "source_v1_local_end_s": 10.083333333333334
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S019-01",
+          "text": "4위는 서울 강서구, 1만 724쌍입니다.",
+          "start_s": 359.8684504913076,
+          "end_s": 362.9610430839002
+        },
+        {
+          "sentence_id": "S019-02",
+          "text": "부평구보다 520쌍 많아요.",
+          "start_s": 363.7110430839002,
+          "end_s": 365.7851171579743
+        },
+        {
+          "sentence_id": "S019-03",
+          "text": "마곡의 서울식물원에서는 야외 공간도 함께 살펴볼 수 있어요.",
+          "start_s": 366.4425245653817,
+          "end_s": 369.87770975056685
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S020",
+      "start_s": 370.22503401360547,
+      "end_s": 382.6395011337869,
+      "duration_s": 12.414467120181406,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S020.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S020.mp3",
+      "audio_sha256": "3a816381b105a68cf8ab7ef9e7df46d818d5560cfed1868da4798c86a9e71a7d",
+      "source_v1_audio_sha256": "2aca9ee1aebe8f118000b37af565281be9603726c52c554737d0d40db7636199",
+      "narration_text": "3위는 고양시 덕양구, 1만 1,452쌍이에요.\n덕양구 안에서도 삼송로처럼 구체적인 동네의 거리 모습부터 짚어볼게요.\n이제 남은 두 지역과 얼마나 차이가 나는지 보겠습니다.",
+      "reading_text": "삼 위는 고양시 덕양구, 일만 천사백오십이 쌍이에요.\n덕양구 안에서도 삼송로처럼 구체적인 동네의 거리 모습부터 짚어볼게요.\n이제 남은 두 지역과 얼마나 차이가 나는지 보겠습니다.",
+      "sentences": [
+        {
+          "sentence_id": "S020-01",
+          "text": "3위는 고양시 덕양구, 1만 1,452쌍이에요.",
+          "reading_text": "삼 위는 고양시 덕양구, 일만 천사백오십이 쌍이에요.",
+          "start_s": 370.29910808767954,
+          "end_s": 373.6139229024944,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.388888888888889,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.388888888888889
+        },
+        {
+          "sentence_id": "S020-02",
+          "text": "덕양구 안에서도 삼송로처럼 구체적인 동네의 거리 모습부터 짚어볼게요.",
+          "reading_text": "덕양구 안에서도 삼송로처럼 구체적인 동네의 거리 모습부터 짚어볼게요.",
+          "start_s": 374.2898488284203,
+          "end_s": 378.25281179138324,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 4.064814814814814,
+          "source_v1_local_end_s": 8.027777777777777,
+          "local_start_s": 4.064814814814814,
+          "local_end_s": 8.027777777777777
+        },
+        {
+          "sentence_id": "S020-04",
+          "text": "이제 남은 두 지역과 얼마나 차이가 나는지 보겠습니다.",
+          "reading_text": "이제 남은 두 지역과 얼마나 차이가 나는지 보겠습니다.",
+          "start_s": 378.94580498866213,
+          "end_s": 381.8995086923659,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 14.638888888888888,
+          "source_v1_local_end_s": 17.59259259259259,
+          "local_start_s": 8.720770975056688,
+          "local_end_s": 11.674474678760392
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S020-01",
+          "text": "3위는 고양시 덕양구, 1만 1,452쌍이에요.",
+          "reading_text": "삼 위는 고양시 덕양구, 일만 천사백오십이 쌍이에요.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.388888888888889,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.388888888888889
+        },
+        {
+          "sentence_id": "S020-02",
+          "text": "덕양구 안에서도 삼송로처럼 구체적인 동네의 거리 모습부터 짚어볼게요.",
+          "reading_text": "덕양구 안에서도 삼송로처럼 구체적인 동네의 거리 모습부터 짚어볼게요.",
+          "start_s": 4.064814814814814,
+          "end_s": 8.027777777777777,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 4.064814814814814,
+          "source_v1_local_end_s": 8.027777777777777
+        },
+        {
+          "sentence_id": "S020-04",
+          "text": "이제 남은 두 지역과 얼마나 차이가 나는지 보겠습니다.",
+          "reading_text": "이제 남은 두 지역과 얼마나 차이가 나는지 보겠습니다.",
+          "start_s": 8.720770975056688,
+          "end_s": 11.674474678760392,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 14.638888888888888,
+          "source_v1_local_end_s": 17.59259259259259
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S020-01",
+          "text": "3위는 고양시 덕양구, 1만 1,452쌍이에요.",
+          "start_s": 370.29910808767954,
+          "end_s": 373.6139229024944
+        },
+        {
+          "sentence_id": "S020-02",
+          "text": "덕양구 안에서도 삼송로처럼 구체적인 동네의 거리 모습부터 짚어볼게요.",
+          "start_s": 374.2898488284203,
+          "end_s": 378.25281179138324
+        },
+        {
+          "sentence_id": "S020-04",
+          "text": "이제 남은 두 지역과 얼마나 차이가 나는지 보겠습니다.",
+          "start_s": 378.94580498866213,
+          "end_s": 381.8995086923659
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S021",
+      "start_s": 382.63950113378684,
+      "end_s": 399.1579818594104,
+      "duration_s": 16.518480725623583,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S021.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S021.mp3",
+      "audio_sha256": "10c8ea2391f7dc60674ff502b11247574f6d41a43ca5d5734eafe24213996a11",
+      "source_v1_audio_sha256": "10c8ea2391f7dc60674ff502b11247574f6d41a43ca5d5734eafe24213996a11",
+      "narration_text": "2위는 서울 송파구, 1만 1,752쌍입니다.\n3위 덕양구보다 정확히 300쌍 많아요.\n송파의 석촌호수는 동호와 서호, 산책로가 있는 도심 호수공원입니다.\n두 지역의 전체 수는 가까운데, 다음 1위와는 간격이 더 벌어집니다.",
+      "reading_text": "이 위는 서울 송파구, 일만 천칠백오십이 쌍입니다.\n삼 위 덕양구보다 정확히 삼백 쌍 많아요.\n송파의 석촌호수는 동호와 서호, 산책로가 있는 도심 호수공원입니다.\n두 지역의 전체 수는 가까운데, 다음 일 위와는 간격이 더 벌어집니다.",
+      "sentences": [
+        {
+          "sentence_id": "S021-01",
+          "text": "2위는 서울 송파구, 1만 1,752쌍입니다.",
+          "reading_text": "이 위는 서울 송파구, 일만 천칠백오십이 쌍입니다.",
+          "start_s": 382.7135752078609,
+          "end_s": 385.9635752078609,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.3240740740740735,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 3.3240740740740735
+        },
+        {
+          "sentence_id": "S021-02",
+          "text": "3위 덕양구보다 정확히 300쌍 많아요.",
+          "reading_text": "삼 위 덕양구보다 정확히 삼백 쌍 많아요.",
+          "start_s": 386.7135752078609,
+          "end_s": 389.1209826152683,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 4.0740740740740735,
+          "source_v1_local_end_s": 6.481481481481481,
+          "local_start_s": 4.0740740740740735,
+          "local_end_s": 6.481481481481481
+        },
+        {
+          "sentence_id": "S021-03",
+          "text": "송파의 석촌호수는 동호와 서호, 산책로가 있는 도심 호수공원입니다.",
+          "reading_text": "송파의 석촌호수는 동호와 서호, 산책로가 있는 도심 호수공원입니다.",
+          "start_s": 389.77839002267575,
+          "end_s": 393.7506122448979,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 7.1388888888888875,
+          "source_v1_local_end_s": 11.11111111111111,
+          "local_start_s": 7.1388888888888875,
+          "local_end_s": 11.11111111111111
+        },
+        {
+          "sentence_id": "S021-04",
+          "text": "두 지역의 전체 수는 가까운데, 다음 1위와는 간격이 더 벌어집니다.",
+          "reading_text": "두 지역의 전체 수는 가까운데, 다음 일 위와는 간격이 더 벌어집니다.",
+          "start_s": 394.5006122448979,
+          "end_s": 398.40801965230537,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 11.861111111111109,
+          "source_v1_local_end_s": 15.768518518518519,
+          "local_start_s": 11.861111111111109,
+          "local_end_s": 15.768518518518519
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S021-01",
+          "text": "2위는 서울 송파구, 1만 1,752쌍입니다.",
+          "reading_text": "이 위는 서울 송파구, 일만 천칠백오십이 쌍입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 3.3240740740740735,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 3.3240740740740735
+        },
+        {
+          "sentence_id": "S021-02",
+          "text": "3위 덕양구보다 정확히 300쌍 많아요.",
+          "reading_text": "삼 위 덕양구보다 정확히 삼백 쌍 많아요.",
+          "start_s": 4.0740740740740735,
+          "end_s": 6.481481481481481,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 4.0740740740740735,
+          "source_v1_local_end_s": 6.481481481481481
+        },
+        {
+          "sentence_id": "S021-03",
+          "text": "송파의 석촌호수는 동호와 서호, 산책로가 있는 도심 호수공원입니다.",
+          "reading_text": "송파의 석촌호수는 동호와 서호, 산책로가 있는 도심 호수공원입니다.",
+          "start_s": 7.1388888888888875,
+          "end_s": 11.11111111111111,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 7.1388888888888875,
+          "source_v1_local_end_s": 11.11111111111111
+        },
+        {
+          "sentence_id": "S021-04",
+          "text": "두 지역의 전체 수는 가까운데, 다음 1위와는 간격이 더 벌어집니다.",
+          "reading_text": "두 지역의 전체 수는 가까운데, 다음 일 위와는 간격이 더 벌어집니다.",
+          "start_s": 11.861111111111109,
+          "end_s": 15.768518518518519,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 11.861111111111109,
+          "source_v1_local_end_s": 15.768518518518519
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S021-01",
+          "text": "2위는 서울 송파구, 1만 1,752쌍입니다.",
+          "start_s": 382.7135752078609,
+          "end_s": 385.9635752078609
+        },
+        {
+          "sentence_id": "S021-02",
+          "text": "3위 덕양구보다 정확히 300쌍 많아요.",
+          "start_s": 386.7135752078609,
+          "end_s": 389.1209826152683
+        },
+        {
+          "sentence_id": "S021-03",
+          "text": "송파의 석촌호수는 동호와 서호, 산책로가 있는 도심 호수공원입니다.",
+          "start_s": 389.77839002267575,
+          "end_s": 393.7506122448979
+        },
+        {
+          "sentence_id": "S021-04",
+          "text": "두 지역의 전체 수는 가까운데, 다음 1위와는 간격이 더 벌어집니다.",
+          "start_s": 394.5006122448979,
+          "end_s": 398.40801965230537
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "S022",
+      "start_s": 399.1579818594104,
+      "end_s": 426.537052154195,
+      "duration_s": 27.37907029478458,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S022.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\S022.mp3",
+      "audio_sha256": "d48c9dd7c53b38df24f7b67ec8bb876d60d1c8898e4cedfbf159da73f18e2faa",
+      "source_v1_audio_sha256": "d48c9dd7c53b38df24f7b67ec8bb876d60d1c8898e4cedfbf159da73f18e2faa",
+      "narration_text": "1위는 2024년 당시 인천 서구, 1만 5,737쌍입니다.\n송파구보다 3,985쌍 많습니다.\n이때의 서구는 현재 서해구와 검단구를 합친 범위예요.\n청라호수공원도 이 구역 안의 실제 생활 여가 공간 중 하나입니다.\n다만 1년 전 1만 5,941쌍과 비교하면 204쌍, 1.3퍼센트 줄었어요.\n가장 큰 거주 규모와, 전년보다 줄었다는 변화가 한 지역에 함께 나타납니다.",
+      "reading_text": "일 위는 이천이십사 년 당시 인천 서구, 일만 오천칠백삼십칠 쌍입니다.\n송파구보다 삼천구백팔십오 쌍 많습니다.\n이때의 서구는 현재 서해구와 검단구를 합친 범위예요.\n청라호수공원도 이 구역 안의 실제 생활 여가 공간 중 하나입니다.\n다만 일 년 전 일만 오천구백사십일 쌍과 비교하면 이백사 쌍, 일 점 삼 퍼센트 줄었어요.\n가장 큰 거주 규모와, 전년보다 줄었다는 변화가 한 지역에 함께 나타납니다.",
+      "sentences": [
+        {
+          "sentence_id": "S022-01",
+          "text": "1위는 2024년 당시 인천 서구, 1만 5,737쌍입니다.",
+          "reading_text": "일 위는 이천이십사 년 당시 인천 서구, 일만 오천칠백삼십칠 쌍입니다.",
+          "start_s": 399.2320559334845,
+          "end_s": 403.74131519274374,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 4.583333333333333,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 4.583333333333333
+        },
+        {
+          "sentence_id": "S022-02",
+          "text": "송파구보다 3,985쌍 많습니다.",
+          "reading_text": "송파구보다 삼천구백팔십오 쌍 많습니다.",
+          "start_s": 404.47279667422526,
+          "end_s": 406.96353741496597,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 5.314814814814814,
+          "source_v1_local_end_s": 7.8055555555555545,
+          "local_start_s": 5.314814814814814,
+          "local_end_s": 7.8055555555555545
+        },
+        {
+          "sentence_id": "S022-03",
+          "text": "이때의 서구는 현재 서해구와 검단구를 합친 범위예요.",
+          "reading_text": "이때의 서구는 현재 서해구와 검단구를 합친 범위예요.",
+          "start_s": 407.6857596371882,
+          "end_s": 410.7690929705215,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 8.527777777777777,
+          "source_v1_local_end_s": 11.61111111111111,
+          "local_start_s": 8.527777777777777,
+          "local_end_s": 11.61111111111111
+        },
+        {
+          "sentence_id": "S022-04",
+          "text": "청라호수공원도 이 구역 안의 실제 생활 여가 공간 중 하나입니다.",
+          "reading_text": "청라호수공원도 이 구역 안의 실제 생활 여가 공간 중 하나입니다.",
+          "start_s": 411.47279667422526,
+          "end_s": 414.9357596371882,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 12.314814814814815,
+          "source_v1_local_end_s": 15.777777777777777,
+          "local_start_s": 12.314814814814815,
+          "local_end_s": 15.777777777777777
+        },
+        {
+          "sentence_id": "S022-05",
+          "text": "다만 1년 전 1만 5,941쌍과 비교하면 204쌍, 1.3퍼센트 줄었어요.",
+          "reading_text": "다만 일 년 전 일만 오천구백사십일 쌍과 비교하면 이백사 쌍, 일 점 삼 퍼센트 줄었어요.",
+          "start_s": 415.6579818594104,
+          "end_s": 421.0190929705215,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 15,
+          "source_v1_local_start_s": 16.499999999999996,
+          "source_v1_local_end_s": 21.86111111111111,
+          "local_start_s": 16.499999999999996,
+          "local_end_s": 21.86111111111111
+        },
+        {
+          "sentence_id": "S022-06",
+          "text": "가장 큰 거주 규모와, 전년보다 줄었다는 변화가 한 지역에 함께 나타납니다.",
+          "reading_text": "가장 큰 거주 규모와, 전년보다 줄었다는 변화가 한 지역에 함께 나타납니다.",
+          "start_s": 421.70427815570673,
+          "end_s": 425.8061300075586,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 22.546296296296294,
+          "source_v1_local_end_s": 26.64814814814815,
+          "local_start_s": 22.546296296296294,
+          "local_end_s": 26.64814814814815
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "S022-01",
+          "text": "1위는 2024년 당시 인천 서구, 1만 5,737쌍입니다.",
+          "reading_text": "일 위는 이천이십사 년 당시 인천 서구, 일만 오천칠백삼십칠 쌍입니다.",
+          "start_s": 0.07407407407407407,
+          "end_s": 4.583333333333333,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 4.583333333333333
+        },
+        {
+          "sentence_id": "S022-02",
+          "text": "송파구보다 3,985쌍 많습니다.",
+          "reading_text": "송파구보다 삼천구백팔십오 쌍 많습니다.",
+          "start_s": 5.314814814814814,
+          "end_s": 7.8055555555555545,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 4,
+          "source_v1_local_start_s": 5.314814814814814,
+          "source_v1_local_end_s": 7.8055555555555545
+        },
+        {
+          "sentence_id": "S022-03",
+          "text": "이때의 서구는 현재 서해구와 검단구를 합친 범위예요.",
+          "reading_text": "이때의 서구는 현재 서해구와 검단구를 합친 범위예요.",
+          "start_s": 8.527777777777777,
+          "end_s": 11.61111111111111,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 7,
+          "source_v1_local_start_s": 8.527777777777777,
+          "source_v1_local_end_s": 11.61111111111111
+        },
+        {
+          "sentence_id": "S022-04",
+          "text": "청라호수공원도 이 구역 안의 실제 생활 여가 공간 중 하나입니다.",
+          "reading_text": "청라호수공원도 이 구역 안의 실제 생활 여가 공간 중 하나입니다.",
+          "start_s": 12.314814814814815,
+          "end_s": 15.777777777777777,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 12.314814814814815,
+          "source_v1_local_end_s": 15.777777777777777
+        },
+        {
+          "sentence_id": "S022-05",
+          "text": "다만 1년 전 1만 5,941쌍과 비교하면 204쌍, 1.3퍼센트 줄었어요.",
+          "reading_text": "다만 일 년 전 일만 오천구백사십일 쌍과 비교하면 이백사 쌍, 일 점 삼 퍼센트 줄었어요.",
+          "start_s": 16.499999999999996,
+          "end_s": 21.86111111111111,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 15,
+          "source_v1_local_start_s": 16.499999999999996,
+          "source_v1_local_end_s": 21.86111111111111
+        },
+        {
+          "sentence_id": "S022-06",
+          "text": "가장 큰 거주 규모와, 전년보다 줄었다는 변화가 한 지역에 함께 나타납니다.",
+          "reading_text": "가장 큰 거주 규모와, 전년보다 줄었다는 변화가 한 지역에 함께 나타납니다.",
+          "start_s": 22.546296296296294,
+          "end_s": 26.64814814814815,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 11,
+          "source_v1_local_start_s": 22.546296296296294,
+          "source_v1_local_end_s": 26.64814814814815
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "S022-01",
+          "text": "1위는 2024년 당시 인천 서구, 1만 5,737쌍입니다.",
+          "start_s": 399.2320559334845,
+          "end_s": 403.74131519274374
+        },
+        {
+          "sentence_id": "S022-02",
+          "text": "송파구보다 3,985쌍 많습니다.",
+          "start_s": 404.47279667422526,
+          "end_s": 406.96353741496597
+        },
+        {
+          "sentence_id": "S022-03",
+          "text": "이때의 서구는 현재 서해구와 검단구를 합친 범위예요.",
+          "start_s": 407.6857596371882,
+          "end_s": 410.7690929705215
+        },
+        {
+          "sentence_id": "S022-04",
+          "text": "청라호수공원도 이 구역 안의 실제 생활 여가 공간 중 하나입니다.",
+          "start_s": 411.47279667422526,
+          "end_s": 414.9357596371882
+        },
+        {
+          "sentence_id": "S022-05",
+          "text": "다만 1년 전 1만 5,941쌍과 비교하면 204쌍, 1.3퍼센트 줄었어요.",
+          "start_s": 415.6579818594104,
+          "end_s": 421.0190929705215
+        },
+        {
+          "sentence_id": "S022-06",
+          "text": "가장 큰 거주 규모와, 전년보다 줄었다는 변화가 한 지역에 함께 나타납니다.",
+          "start_s": 421.70427815570673,
+          "end_s": 425.8061300075586
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "C001",
+      "start_s": 426.537052154195,
+      "end_s": 455.63503401360543,
+      "duration_s": 29.09798185941043,
+      "audio_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\C001.wav",
+      "mp3_path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\newlywed-apartment-picks-20261101\\narration\\top20-production-v1\\production-v2\\C001.mp3",
+      "audio_sha256": "a1518e8bea70ee91dd559eb76b396ee5196557af291f201249236a43beced72c",
+      "source_v1_audio_sha256": "3a4547ff67ab124f0b1a04b1bf3bcc88229393dc442c77e8e481e3dac5696cb3",
+      "narration_text": "오늘 순위를 읽는 데 필요한 세 가지가 모였네요.\n강남구는 9.4퍼센트 늘었고, 규모 1위인 옛 서구는 1.3퍼센트 줄었습니다.\n얼마나 많이 사는지와 얼마나 늘었는지는 따로 봐야 해요.\n수원의 두 구처럼 전체가 가까워도 부부의 구성은 다를 수 있었죠.\n눈에 들어온 지역이 있다면, 두 사람의 직장과 예산, 필요한 집 크기를 옆에 적어보세요.\n다음에는 지역별 아파트 후보를 더 자세히 비교해볼 테니, 이어서 보실 분들은 구독과 좋아요 부탁드려요.",
+      "reading_text": "오늘 순위를 읽는 데 필요한 세 가지가 모였네요.\n강남구는 구 점 사 퍼센트 늘었고, 규모 일 위인 옛 서구는 일 점 삼 퍼센트 줄었습니다.\n얼마나 많이 사는지와 얼마나 늘었는지는 따로 봐야 해요.\n수원의 두 구처럼 전체가 가까워도 부부의 구성은 다를 수 있었죠.\n눈에 들어온 지역이 있다면, 두 사람의 직장과 예산, 필요한 집 크기를 옆에 적어보세요.\n다음에는 지역별 아파트 후보를 더 자세히 비교해볼 테니, 이어서 보실 분들은 구독과 좋아요 부탁드려요.",
+      "sentences": [
+        {
+          "sentence_id": "C001-01",
+          "text": "오늘 순위를 읽는 데 필요한 세 가지가 모였네요.",
+          "reading_text": "오늘 순위를 읽는 데 필요한 세 가지가 모였네요.",
+          "start_s": 426.6111262282691,
+          "end_s": 429.10186696900985,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 2.5648148148148144,
+          "local_start_s": 0.07407407407407407,
+          "local_end_s": 2.5648148148148144
+        },
+        {
+          "sentence_id": "C001-02",
+          "text": "강남구는 9.4퍼센트 늘었고, 규모 1위인 옛 서구는 1.3퍼센트 줄었습니다.",
+          "reading_text": "강남구는 구 점 사 퍼센트 늘었고, 규모 일 위인 옛 서구는 일 점 삼 퍼센트 줄었습니다.",
+          "start_s": 429.77779289493577,
+          "end_s": 434.8703854875283,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 16,
+          "source_v1_local_start_s": 3.2407407407407405,
+          "source_v1_local_end_s": 8.333333333333332,
+          "local_start_s": 3.2407407407407405,
+          "local_end_s": 8.333333333333332
+        },
+        {
+          "sentence_id": "C001-03",
+          "text": "얼마나 많이 사는지와 얼마나 늘었는지는 따로 봐야 해요.",
+          "reading_text": "얼마나 많이 사는지와 얼마나 늘었는지는 따로 봐야 해요.",
+          "start_s": 435.6203854875283,
+          "end_s": 438.6759410430839,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 9.083333333333332,
+          "source_v1_local_end_s": 12.138888888888888,
+          "local_start_s": 9.083333333333332,
+          "local_end_s": 12.138888888888888
+        },
+        {
+          "sentence_id": "C001-04",
+          "text": "수원의 두 구처럼 전체가 가까워도 부부의 구성은 다를 수 있었죠.",
+          "reading_text": "수원의 두 구처럼 전체가 가까워도 부부의 구성은 다를 수 있었죠.",
+          "start_s": 439.3611262282691,
+          "end_s": 442.88890400604686,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 12.824074074074073,
+          "source_v1_local_end_s": 16.35185185185185,
+          "local_start_s": 12.824074074074073,
+          "local_end_s": 16.35185185185185
+        },
+        {
+          "sentence_id": "C001-05",
+          "text": "눈에 들어온 지역이 있다면, 두 사람의 직장과 예산, 필요한 집 크기를 옆에 적어보세요.",
+          "reading_text": "눈에 들어온 지역이 있다면, 두 사람의 직장과 예산, 필요한 집 크기를 옆에 적어보세요.",
+          "start_s": 443.59260770975055,
+          "end_s": 448.5185336356765,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 17.055555555555554,
+          "source_v1_local_end_s": 21.98148148148148,
+          "local_start_s": 17.055555555555554,
+          "local_end_s": 21.98148148148148
+        },
+        {
+          "sentence_id": "C001-07",
+          "text": "다음에는 지역별 아파트 후보를 더 자세히 비교해볼 테니, 이어서 보실 분들은 구독과 좋아요 부탁드려요.",
+          "reading_text": "다음에는 지역별 아파트 후보를 더 자세히 비교해볼 테니, 이어서 보실 분들은 구독과 좋아요 부탁드려요.",
+          "start_s": 449.2439077853364,
+          "end_s": 455.0031670445956,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 14,
+          "source_v1_local_start_s": 27.87037037037037,
+          "source_v1_local_end_s": 33.629629629629626,
+          "local_start_s": 22.706855631141348,
+          "local_end_s": 28.466114890400604
+        }
+      ],
+      "sentence_times": [
+        {
+          "sentence_id": "C001-01",
+          "text": "오늘 순위를 읽는 데 필요한 세 가지가 모였네요.",
+          "reading_text": "오늘 순위를 읽는 데 필요한 세 가지가 모였네요.",
+          "start_s": 0.07407407407407407,
+          "end_s": 2.5648148148148144,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 0.07407407407407407,
+          "source_v1_local_end_s": 2.5648148148148144
+        },
+        {
+          "sentence_id": "C001-02",
+          "text": "강남구는 9.4퍼센트 늘었고, 규모 1위인 옛 서구는 1.3퍼센트 줄었습니다.",
+          "reading_text": "강남구는 구 점 사 퍼센트 늘었고, 규모 일 위인 옛 서구는 일 점 삼 퍼센트 줄었습니다.",
+          "start_s": 3.2407407407407405,
+          "end_s": 8.333333333333332,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 16,
+          "source_v1_local_start_s": 3.2407407407407405,
+          "source_v1_local_end_s": 8.333333333333332
+        },
+        {
+          "sentence_id": "C001-03",
+          "text": "얼마나 많이 사는지와 얼마나 늘었는지는 따로 봐야 해요.",
+          "reading_text": "얼마나 많이 사는지와 얼마나 늘었는지는 따로 봐야 해요.",
+          "start_s": 9.083333333333332,
+          "end_s": 12.138888888888888,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 8,
+          "source_v1_local_start_s": 9.083333333333332,
+          "source_v1_local_end_s": 12.138888888888888
+        },
+        {
+          "sentence_id": "C001-04",
+          "text": "수원의 두 구처럼 전체가 가까워도 부부의 구성은 다를 수 있었죠.",
+          "reading_text": "수원의 두 구처럼 전체가 가까워도 부부의 구성은 다를 수 있었죠.",
+          "start_s": 12.824074074074073,
+          "end_s": 16.35185185185185,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 10,
+          "source_v1_local_start_s": 12.824074074074073,
+          "source_v1_local_end_s": 16.35185185185185
+        },
+        {
+          "sentence_id": "C001-05",
+          "text": "눈에 들어온 지역이 있다면, 두 사람의 직장과 예산, 필요한 집 크기를 옆에 적어보세요.",
+          "reading_text": "눈에 들어온 지역이 있다면, 두 사람의 직장과 예산, 필요한 집 크기를 옆에 적어보세요.",
+          "start_s": 17.055555555555554,
+          "end_s": 21.98148148148148,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 13,
+          "source_v1_local_start_s": 17.055555555555554,
+          "source_v1_local_end_s": 21.98148148148148
+        },
+        {
+          "sentence_id": "C001-07",
+          "text": "다음에는 지역별 아파트 후보를 더 자세히 비교해볼 테니, 이어서 보실 분들은 구독과 좋아요 부탁드려요.",
+          "reading_text": "다음에는 지역별 아파트 후보를 더 자세히 비교해볼 테니, 이어서 보실 분들은 구독과 좋아요 부탁드려요.",
+          "start_s": 22.706855631141348,
+          "end_s": 28.466114890400604,
+          "timing_basis": "provider_word_boundary_divided_by_1.35_then_exact_sample_cut_translation",
+          "confidence": "provider_metadata_not_listening_verified",
+          "word_count": 14,
+          "source_v1_local_start_s": 27.87037037037037,
+          "source_v1_local_end_s": 33.629629629629626
+        }
+      ],
+      "captions": [
+        {
+          "sentence_id": "C001-01",
+          "text": "오늘 순위를 읽는 데 필요한 세 가지가 모였네요.",
+          "start_s": 426.6111262282691,
+          "end_s": 429.10186696900985
+        },
+        {
+          "sentence_id": "C001-02",
+          "text": "강남구는 9.4퍼센트 늘었고, 규모 1위인 옛 서구는 1.3퍼센트 줄었습니다.",
+          "start_s": 429.77779289493577,
+          "end_s": 434.8703854875283
+        },
+        {
+          "sentence_id": "C001-03",
+          "text": "얼마나 많이 사는지와 얼마나 늘었는지는 따로 봐야 해요.",
+          "start_s": 435.6203854875283,
+          "end_s": 438.6759410430839
+        },
+        {
+          "sentence_id": "C001-04",
+          "text": "수원의 두 구처럼 전체가 가까워도 부부의 구성은 다를 수 있었죠.",
+          "start_s": 439.3611262282691,
+          "end_s": 442.88890400604686
+        },
+        {
+          "sentence_id": "C001-05",
+          "text": "눈에 들어온 지역이 있다면, 두 사람의 직장과 예산, 필요한 집 크기를 옆에 적어보세요.",
+          "start_s": 443.59260770975055,
+          "end_s": 448.5185336356765
+        },
+        {
+          "sentence_id": "C001-07",
+          "text": "다음에는 지역별 아파트 후보를 더 자세히 비교해볼 테니, 이어서 보실 분들은 구독과 좋아요 부탁드려요.",
+          "start_s": 449.2439077853364,
+          "end_s": 455.0031670445956
+        }
+      ],
+      "anchors": {
+        "narration_start": 0.07407407407407407
+      },
+      "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/words_v2.json",
+      "timing_basis": "actual_sample_cut_audio_with_translated_scaled_provider_boundaries",
+      "is_estimate": false,
+      "audio_revision": "free-edge-injoon-atempo135-sentencecut-v2",
+      "actual_listening_performed": false
+    },
+    {
+      "scene_id": "E001",
+      "start_s": 455.63503401360543,
+      "end_s": 458.0031746031746,
+      "duration_s": 2.368140589569161,
+      "audio_path": null,
+      "narration_text": "",
+      "sentences": [],
+      "sentence_times": [],
+      "captions": [],
+      "anchors": {},
+      "timing_basis": "last_scaled_provider_word_end_plus_3s_sample_quantized; existing_tail_counted_once",
+      "is_estimate": false
+    }
+  ],
+  "word_count": 928,
+  "removed_sentence_ids": [
+    "S003-04",
+    "S004-04",
+    "S005-03",
+    "S005-04",
+    "S006-04",
+    "S008-04",
+    "S009-04",
+    "S010-04",
+    "S011-03",
+    "S017-04",
+    "S019-04",
+    "S020-03",
+    "C001-06"
+  ],
+  "changed_scene_ids": [
+    "S003",
+    "S004",
+    "S005",
+    "S006",
+    "S008",
+    "S009",
+    "S010",
+    "S011",
+    "S017",
+    "S019",
+    "S020",
+    "C001"
+  ],
+  "timing_delta_s": -69.44623582766434,
+  "time_transform": {
+    "formula": "new_scene_global_start + (raw_provider_local_time/1.35 - kept_group_source_start_frame/44100 + kept_group_output_start_frame/44100)",
+    "source_audio_regenerated": false,
+    "atempo_factor_unchanged": 1.35,
+    "edit_mode": "PCM slices in word-gap quiet windows; no further compression, silence padding, or resynthesis",
+    "caution": "原 제공자 경계 배율에 대한 cut 이동. 실제 음소 정렬·청취 검증 아님."
+  },
+  "boundary_qa": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-production-v1/production-v2/cut_boundary_qa.json",
+  "tts_calls_this_edit": 0
+}

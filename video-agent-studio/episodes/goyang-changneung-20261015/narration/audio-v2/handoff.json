@@ -1,0 +1,39 @@
+{
+  "role": "narration",
+  "status": "dry_run_passed_generation_blocked",
+  "input_versions": {
+    "script": "script-v2",
+    "source_sha256": "74ed7a1af1146a7b0f93b6602869222026667dbb8de2ea0137ee81e66eb3bbba",
+    "manifest_sha256": "951efa604ddf593ff8a2e65355a25dcc3748ce48dff78930164f9052ea5bf137"
+  },
+  "artifacts": [
+    "narration/audio-v2/generate.mjs",
+    "narration/audio-v2/dry_run.json"
+  ],
+  "verification": [
+    "node --check",
+    "offline input exacthash dry-run: 10 chapters / 6384 Unicode characters / zero network calls"
+  ],
+  "unresolved": [
+    "root explicit GO absent",
+    "script and budget approvals pending",
+    "live model and voice pricing metadata must pass conservative multiplier checks; null voice rate will block",
+    "actual listening unverified"
+  ],
+  "affected_scene_ids": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M005",
+    "M006",
+    "M007",
+    "M008",
+    "M009"
+  ],
+  "next_owner": "director",
+  "actual_listening": false,
+  "generation_started": false,
+  "notes": "Conservative implementation reuses Wangsuk Jun exact-input alignment approach and CTA explicit-root authorization receipt pattern. Corrections are not automatically executed; separate root-approved scope required. Persistent lock must only be reconciled by director after inspecting ledger. No credentials copied or logged."
+}

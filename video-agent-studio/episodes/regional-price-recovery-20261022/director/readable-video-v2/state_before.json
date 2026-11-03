@@ -1,0 +1,202 @@
+{
+  "episode_id": "regional-price-recovery-20261022",
+  "stage": "literature_relocation_chapter_local_review_ready_narration_on_hold",
+  "script_status": "approved_for_visual_production_by_explicit_reply",
+  "research_status": "Literature mechanisms reviewed; hypotheses and external-data tests specified; no local causal decomposition yet",
+  "collection_status_file": "raw/rtms_trade_expansion/additional_20261023/batch_status.json",
+  "updated_at": "2026-10-25T09:53:11.352559+00:00",
+  "budget_status": "voice_generation_deferred_by_user",
+  "pre_upload_status": "not_authorized",
+  "script_revision": "literature-video-v1",
+  "script_file": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-video-v1/내레이션_초안.md",
+  "script_sha256": "5f40c29d4a3e0ef5255ade11eaa63cb04c8093e2c3d1d0296873126707a26d9b",
+  "claude_collaboration": {
+    "requested_model": "opus",
+    "requested_effort": "max",
+    "cli_subscription_reported": "pro",
+    "status": "editorial_review_completed",
+    "payload_authorized": true,
+    "actual_generated_text": true,
+    "actual_model_usage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 32281,
+        "outputTokens": 20,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.032381,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000
+      },
+      "claude-opus-4-8": {
+        "inputTokens": 20,
+        "outputTokens": 33051,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 35727,
+        "webSearchRequests": 0,
+        "costUSD": 1.04966875,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000
+      }
+    },
+    "reviewed_script_sha256": "3c4d9607622045c940f04421a8783e280b3c3ee271898bcfc034a4ddee0d8318",
+    "receipt": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/script-review-v3/collaboration/claude_execution_receipt.json",
+    "integration_record": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/script-review-v3/검토반영.md"
+  },
+  "audio_status": "existing_bgm_only_narration_user_hold",
+  "timing_locked": false,
+  "qa_file": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/full-history-v1/final_recheck_v3.json",
+  "qa_history": [
+    "qa/script-v2/findings.json",
+    "qa/script-v2/recheck.json",
+    "qa/script-v2/claude_recheck.json",
+    "qa/full-history-v1/findings.json",
+    "qa/full-history-v1/recheck_v3.json",
+    "qa/full-history-v1/final_recheck_v3.json",
+    "qa/literature-visual-v1/final_findings.json"
+  ],
+  "telegram_delivery_receipt": "output/telegram_deliveries/regional_script_v3.json",
+  "delivery_verification": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/script-review-v3/delivery_verification.json",
+  "collection_snapshot_file": "raw/rtms_trade_expansion/additional_20261023/snapshot.json",
+  "collection_not_yet_integrated": true,
+  "script_decision_id": "regional-literature-script-v1-20261023",
+  "production_revision": "literature-visual-v1",
+  "budget_decision_id": "5fe307eed02c",
+  "full_review_scope": "Full visuals/captions with provisional timing and reused local brand/music; not an actual Jun timing lock",
+  "production_render": {
+    "mode": "visual-review",
+    "status": "complete_for_local_visual_review",
+    "video_sha256": "da4490634c89cd371065bc293659e3a974a37a366766dd2902fb6319f76635ee",
+    "duration": 568.266667,
+    "expected_duration_seconds": 568.266667,
+    "paid_calls": 0,
+    "timing_locked": false,
+    "narration_present": false
+  },
+  "production_review_video": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-visual-v1/previews/literature_visual_review_v1.mp4",
+  "production_review_qa": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/literature-visual-v1/final_findings.json",
+  "production_delivery_manifest": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-visual-v1/delivery_manifest.json",
+  "production_review_telegram_receipt": "output/telegram_deliveries/regional_full_visual_review_v1_parts.json",
+  "production_review_telegram_format": "four720p30parts; native1080p local master preserved",
+  "content_status": "new_literature_based_draft_pending_review_prior_chart_recitation_superseded_as_direction",
+  "current_direction": "Literature-cited explanatory episode: household composition, redevelopment relocation gaps, commuting and job connections; observed price paths provide context, no local causal attribution",
+  "next_script_status": "approved_for_visual_production",
+  "new_render_authorized_at_this_stage": true,
+  "literature_research_notes": "research_notes/서울 경기 집값 격차의 복합 원인",
+  "literature_expected_report": "reports/서울 경기 집값 격차의 복합 원인.md",
+  "literature_report": "reports/서울 경기 집값 격차의 복합 원인.md",
+  "literature_report_sha256": "8c8ba9faff955bcd7f6085f80f822d3267cc071dde0f03a18b6a8c1ee398d492",
+  "literature_qa": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/literature-mechanisms-v1/report_recheck.json",
+  "literature_delivery_manifest": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-review-v1/delivery_manifest.json",
+  "literature_telegram_status": "not_sent_user_selected_local_only",
+  "literature_delivery_preference": {
+    "mode": "local_only",
+    "report": "reports/서울 경기 집값 격차의 복합 원인.md",
+    "report_sha256": "8c8ba9faff955bcd7f6085f80f822d3267cc071dde0f03a18b6a8c1ee398d492",
+    "basis": "User chose local file only in the specific report delivery question",
+    "at_utc": "2026-10-23T09:29:50.794400+00:00"
+  },
+  "next_script_file": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-video-v1/내레이션_초안.md",
+  "next_script_sha256": "5f40c29d4a3e0ef5255ade11eaa63cb04c8093e2c3d1d0296873126707a26d9b",
+  "next_script_decision_id": "regional-literature-script-v1-20261023",
+  "literature_video_plan": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-video-v1/영상구성안.md",
+  "literature_video_claims": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-video-v1/인용근거.json",
+  "literature_video_scenes": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-video-v1/장면표.json",
+  "literature_video_text_qa": {
+    "path": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/literature-video-v1/recheck.json",
+    "sha256": "2543519d2e736c6ca36f3df18c14cd282b53ed2d002c64bca9e9187c160e325e",
+    "critical_open": 0,
+    "required_open": 0,
+    "recommended_open": 0,
+    "scope": "Narration and treatment text review plus changed-paragraph recheck; media unreviewed"
+  },
+  "literature_visual_script_approval": "video-agent-studio/episodes/regional-price-recovery-20261022/director/literature-visual-v1/script_approval.json",
+  "literature_visual_output": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-visual-v1",
+  "previous_script_v3": {
+    "script_revision": "v3",
+    "script_file": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/script-review-v3/script_v3.md",
+    "script_sha256": "99b40e8730ee0f8fdf74402cffbe04b5b418540344e6d2a7175e6a01c3054664",
+    "script_status": "v3_approved_by_direct_production_request",
+    "script_decision_id": "00054f140c83"
+  },
+  "previous_production_v1_jun": {
+    "production_revision": "production-v1-jun",
+    "production_review_video": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/previews/full_visual_review_v1.mp4",
+    "production_render": {
+      "mode": "visual-review",
+      "status": "complete_for_visual_review",
+      "owner_pid": 24020,
+      "owner_file": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/production-v1-jun/checks/visual-review/owner.json",
+      "expected_duration_seconds": 855.7,
+      "body_frames": 25221,
+      "caption_count": 113,
+      "capture": "screenshot",
+      "paid_calls": 0,
+      "timing_locked": false,
+      "video_sha256": "bba7566079f9d452663f2adccaff8d1a5aff66f41fd298d893ab32c240babd89"
+    },
+    "production_review_qa": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/production-v1/full_visual_review/findings.json",
+    "production_delivery_manifest": "video-agent-studio/episodes/regional-price-recovery-20261022/director/production-v1/delivery/delivery_manifest.json"
+  },
+  "literature_visual_revision": "literature-visual-v1",
+  "literature_visual_review": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-visual-v1/previews/literature_visual_review_v1.mp4",
+  "literature_visual_delivery_manifest": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/literature-visual-v1/delivery_manifest.json",
+  "literature_visual_qa": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/literature-visual-v1/final_findings.json",
+  "literature_visual_timing_locked": false,
+  "visual_quality_feedback": {
+    "date": "2026-10-25",
+    "user_request": "집 단면 구도는 좋으나 인물/걷기가 부자연스러움. 더 자연스러운 방식 요청",
+    "previous_sample_status": "character_sample_v3_rejected_by_user",
+    "status": "household_space_sample_accepted_by_user",
+    "sample_revision": "household-space-v1",
+    "sample": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/household-space-v1/household_space_sample_v1.mp4",
+    "sample_sha256": "67851a459535ba6f93feba957aa28abfd0af615d20e7af7322d78aa71a38424a",
+    "review_note": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/household-space-v1/검토안내.md",
+    "full_film_visual_acceptance": "revision_pending",
+    "full_film_replaced": false,
+    "narration": "still_on_hold",
+    "external_send": false,
+    "acceptance_record": "director/household-space-v1/user_acceptance.json"
+  },
+  "visual_quality_feedback_history": [
+    {
+      "date": "2026-10-23",
+      "user_request": "막대 인물 교체, 낮은 모션 품질의 원인과 설치 필요성 확인",
+      "previous_stage": "literature_visual_v1_local_review_ready_narration_on_hold",
+      "status": "replacement_direction_sample_ready_full_film_revision_pending",
+      "sample_revision": "character-quality-v1/sample-v3",
+      "sample": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/character-quality-v1/character_quality_sample_v3.mp4",
+      "review_note": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/character-quality-v1/검토안내.md",
+      "full_film_visual_acceptance": "not_accepted_current_user_feedback",
+      "latest_sample_checks": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/character-quality-v1/checks/verification-v3.json",
+      "narration": "still_on_hold",
+      "external_send": false
+    }
+  ],
+  "updated_client_date": "2026-10-25",
+  "active_visual_task": {
+    "revision": "relocation-space-v1",
+    "scene_ids": [
+      "L004"
+    ],
+    "scope": "complete chapter visual revision",
+    "status": "local_chapter_review_ready",
+    "video": "video-agent-studio/episodes/regional-price-recovery-20261022/outputs/relocation-space-v1/relocation_space_chapter_v1.mp4",
+    "sha256": "2409106183dbead4fc7f55723523abadc1ca9a970f6560d7d863b93e0fc36c6c",
+    "qa_report": "video-agent-studio/episodes/regional-price-recovery-20261022/qa/relocation-space-v1/review.md",
+    "full_film_replaced": false,
+    "voice": "still_on_hold"
+  },
+  "visual_scene_revisions": {
+    "L002-P2": {
+      "revision": "household-space-v1",
+      "status": "user_accepted",
+      "acceptance_record": "director/household-space-v1/user_acceptance.json"
+    },
+    "L004": {
+      "revision": "relocation-space-v1",
+      "status": "local_review_ready",
+      "full_film_integration": "pending"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "asset_id": "P01-R20",
+  "sentence_ids": [
+    "P01-R20-V2-01",
+    "P01-R20-V2-02",
+    "P01-R20-V2-03",
+    "P01-R20-V2-04",
+    "P01-R20-V2-05",
+    "P01-R20-V2-06",
+    "P01-R20-V2-07",
+    "P01-R20-V2-08"
+  ],
+  "status": "complete",
+  "started_at_utc": "2026-11-03T13:23:34.662Z",
+  "authorization_id": "9cde211f3073",
+  "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+  "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+  "input_file_sha256": "533a6f92a8d4ee0ad33c76c2fd55ec2c2e40d14c8b9ce9d94db0a460003fe94e",
+  "request_text_sha256": "e9d4b0088003613dfa85ede758c5f11ce3d3f14b9521f0e2db5327efcaea13e3",
+  "characters": 528,
+  "reserved_credits": 528,
+  "actual_credits": 211,
+  "charge_known": true,
+  "request": {
+    "text": "이십 위는 경기 부천시 원미구, 칠천삼백육십오 쌍입니다.\n\n중동과 상동에 걸친 중동신도시는 아파트 단지와 마을, 주변 가로를 함께 살펴볼 생활권입니다.\n\n부천시 정비기본계획도 공동주택 블록과 마을 단위의 통합 검토를 다뤄, 한 단지를 고를 때 주변 주거지까지 볼 기준을 제공합니다.\n\n상동의 도시 가로 사진에서는 아파트가 주변 거리와 만나는 모습을 보며, 단지 안과 마을 밖의 생활을 함께 떠올릴 수 있습니다.\n\n가격에서 눈에 띄는 대비는 준공 시기별 거래 중윗값으로, 이천 년까지 준공된 집단은 육 억 원, 이천십일 년 이후 집단은 팔 억 구천구백 만 원입니다.\n\n이 차이를 비교할 때는 원하는 준공연도와 수리 상태, 마을 단위 정비계획을 함께 놓고 예산을 좁히는 방식이 유용합니다.\n\n중동의 미리내마을 롯데이  주변에는 계남초등학교, 계남중학교가 표시되고, 신중동역까지의 연결도 같은 상세 지도에서 읽을 수 있습니다.\n\n학교와 역은 단지에서 살펴볼 범위가 달라, 자녀의 통학과 두 사람의 출근 경로를 나눠 그려보면 선택 기준이 구체화됩니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+  "local_shadow_remaining_before": 16463,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "nt9la1jbCA1kOHTHelNr",
+    "x-request-id": null,
+    "character-cost": "211",
+    "content-type": "application/json",
+    "date": "Tue, 03 Nov 2026 13:23:36 GMT"
+  },
+  "pcm_samples": 2794176,
+  "pcm_duration_s": 63.36,
+  "provider_last_alignment_end_s": 63.44,
+  "complete_tail_after_alignment_s": -0.0799999999999983,
+  "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R20.wav",
+  "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R20/audio.mp3",
+  "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R20/alignment.json",
+  "pcm_sha256": "86b0ef63ff36253cbbc3c8e9a67d5ed7db4555b5f1db2ff8af74a60c555c8eed",
+  "artifact_sha256": {
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R20/audio.mp3": "e2139845316b3168f6470d66ff2f0b8ad069de11cdcd1303c5ca9f4463ae4854",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R20/alignment.json": "7824494e99ed7d233dcfe89342b6e3329c84b618fba3a044adb38e6d4615fc5e",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/P01-R20/normalized_alignment.json": "7824494e99ed7d233dcfe89342b6e3329c84b618fba3a044adb38e6d4615fc5e",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/P01-R20.wav": "b295c4295d8521fa56afe2b0cb32b137e4f4a8a75f21fafa436417f7725d8ae9"
+  },
+  "processing": {
+    "sample_rate_hz": 44100,
+    "channels": 1,
+    "codec": "pcm_s16le",
+    "tempo_factor": 1,
+    "trimmed": false,
+    "tail_preserved": true,
+    "provider_speed": 0.97
+  },
+  "local_shadow_remaining_after": 16252,
+  "completed_at_utc": "2026-11-03T13:23:50.756Z"
+}

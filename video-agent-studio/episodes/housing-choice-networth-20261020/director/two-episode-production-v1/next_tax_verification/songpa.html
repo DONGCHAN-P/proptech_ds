@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<title>송파구 지방세 자동 계산기</title>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge; text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+	<meta name="robots" content="index, follow" />
+	<meta name="author" content="송파구청 | SONGPA OFFICE"/>
+	<meta name="publisher" content="송파구청 | SONGPA OFFICE" />
+	<meta name="keywords" content="송파구 지방세 자동 계산기" />
+	<meta name="description" content="송파구 지방세 자동 계산기" />
+	
+	<link rel="stylesheet" type="text/css" href="/index_tax/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/index_tax/css/sub.css">
+	
+	<script type="text/javascript" src="/js/prefixfree.js" ></script>
+	<script type="text/javascript" src="/js/jquery-2.0.0.min.js" ></script>
+	<script type="text/javascript" src="/index_tax/js/tax_js.js"></script>
+	<script type="text/javascript" src="/index_tax/js/calculator.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="content">
+			<div class="head">
+				<h1><a href="/tax/index.html" class="tip"><img src="/images/index_tax/main/logo.gif" alt="서울을 이끄는 송파 songpa leading seoul" /></a></h1>
+			</div>
+			<div class="page-cont">
+				<p class="abt-txt"><span>취득세</span> 자동계산기</p>
+				<p class="black-txt">주택 (일반매매 및 신규분양)</p>
+				<ul class="tab-2 clearfix">
+					<li class="on"><a href="/tax/tax_acquisition_house_1.html">1세대 4주택미만</a></li>
+					<li><a href="/tax/tax_acquisition_house_2.html">1세대 4주택이상</a></li>
+				</ul>
+				<div class="white-box2">
+					<div class="tab-cont">
+						<div class="on">
+							<ul class="tab2-2 clearfix">
+								<li class="on"><a href="/tax/tax_acquisition_house_1.html">전용면적 85㎡ 이하</a><span><img src="/images/index_tax/sub/ar_bg.gif" alt="" /></span></li>
+								<li><a href="/tax/tax_acquisition_house_1_1.html">전용면적 85㎡ 초과</a><span><img src="/images/index_tax/sub/ar_bg.gif" alt="" /></span></li>
+							</ul>
+							<div class="tab-cont2">
+								<div class="on">
+									<p class="wb-txt2 txt-red">주택의 일부지분만을 취득할 경우에는 취득세액이 본 모의계산식과 달라질 수 있으므로<br />반드시 해당 자치 단체의 취득세 담당자에게 확인 바랍니다.</p>
+									<div class="gap20"></div>
+									<div class="ipt-area clearfix">
+										<label for="ipt01">취득가격(과세표준) 입력</label>
+										<div class="ipt ipt2-2">
+											<input id="txtStandardPrice" onkeydown="javascript:InpuOnlyNumber(event,this)" onkeyup="javascript:set_price(this.id);" type="text" pattern="\d*" data-role="none" value="" />
+											<span>원</span>
+										</div>
+									</div>
+									<div class="wb-btns">
+										<span class="btn-txt">주택공시가격 조회 </span>
+										<a href="https://www.realtyprice.kr:447/notice/main/mainBody.htm" target="_blank" class="tip">부동산 공시가격 알리미</a>
+									</div>
+									<div class="gap20"></div>
+									<p class="wb-txt2 ">
+										<strong>취득가격(과세표준)</strong><br />
+										취득가격이 공동주택가격보다 작을시 과세표준은 공동주택가격이 됩니다.<br />
+										신규분양 ⇒ 분양가액 + 프리미엄 + (옵션 - 옵션의 부가가치세) - 부가가치세
+									</p>
+									<div class="gap20"></div>
+									<p class="wb-txt2 ">
+										○ 위 취득세 모의계산은 1세대 1주택 경우의 세액임을 알려 드립니다.<br />
+										○ 부동산대책 관련 입법예고(20.8.3)이후 취득세는 세무1과로 문의하시길 바랍니다. (전화 02-2147-2550)
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-group clearfix">
+					<a href="javascript:calAcqu('N');" class="cal-btn">
+						<span>계산하기</span>
+					</a>
+					<a href="javascript:history.back();" class="back-btn">
+						<span>이전으로</span>
+					</a>
+				</div>
+			</div>
+			
+			<!-- 계산결과 -->
+			<div class="result-cont">
+				<div class="white-box">
+					<div class="wb-in">
+						<ul class="order-info">
+							<li class="clearfix">
+								<span class="name">취득가격(과세표준)</span>
+								<span class="price" id="principal"></span>
+							</li>
+							<li class="clearfix">
+								<span class="name">취득세 본세액</span>
+								<span class="price" id="resultPTTax"></span>
+							</li>
+							<li class="clearfix">
+								<span class="name">지방교육세</span>
+								<span class="price" id="resultPTEdu"></span>
+							</li>
+							<li class="clearfix">
+								<p class="name2">총납부 취득세액</p>
+								<p class="price2" id="resultPTTotal"></p>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="btn-group2 clearfix">
+					<a href="javascript:reCal();" class="cal-btn">
+						<span>다시 계산하기</span>
+					</a>
+					<a href="javascript:showCal();" class="cal-formula-btn">
+						<span>산출계산식 보기</span>
+					</a>
+					<a href="javascript:history.back();" class="back-btn">
+						<span>이전으로</span>
+					</a>
+				</div>
+				
+				<div class="white-box tax_info">
+					<div class="wb-in">
+						<p class="p-tit">취득세본세 = 과세표준 × 취득금액별 세율</p>
+						<ul class="ul-txt">
+							<li>1. 과세표준 = 실거래가와 주택공시가격 중 높은 금액</li>
+							<li>2. 구간별 세율</li>
+						</ul>
+						<div class="gap20"></div>
+						<div class="cont-table">
+							<table>
+								<caption>취득가격과 세율정보</caption>
+								<colgroup>
+									<col style="width: 40%" />
+									<col style="width: 60%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">취득가격</th>
+										<th scope="col">세율</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>6억원 이하</td>
+										<td>1%</td>
+									</tr>
+									<tr>
+										<td>6억원 초과 9억원 이하</td>
+										<td>(취득가액(단위:억) X 2/3 - 3)%</td>
+									</tr>
+									<tr>
+										<td>9억원 초과</td>
+										<td>3%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="gap20"></div>
+						<p class="p-tit">지방교육세 = 취득세본세액 × 10%</p>
+					</div>
+				</div>
+			</div>
+			<!-- // 계산결과 -->
+			
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "roundtrip_algorithm": "independent forward series against inverse series in link.py; not independent PROJ library",
+  "native_crs": "EPSG:5179",
+  "test_count": 20058,
+  "max_roundtrip_error_m": 1.807906669443166e-05,
+  "origin_test_lon_lat": [
+    1000000.0,
+    2000000.0
+  ],
+  "quality_counts": {
+    "exact_parcel_name": 8288,
+    "unmatched": 782,
+    "review_shared_official_complex": 44,
+    "review_unique_parcel_name_mismatch": 37,
+    "ambiguous_multiple_official_candidates": 21
+  },
+  "eligible_without_identity_conflicts": 8288,
+  "shared_official_complex_rows": 44,
+  "independent_proj_check_pending": true
+}

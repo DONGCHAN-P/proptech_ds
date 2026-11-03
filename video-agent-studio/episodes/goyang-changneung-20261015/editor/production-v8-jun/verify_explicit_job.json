@@ -1,0 +1,23 @@
+{
+  "task_id": "changneung-v8-jun-explicitcodec-decode",
+  "inputs": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\production-v8-jun\\changneung_full_v8_jun.mp4",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\production-v8-jun\\assemble.py",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\production-v8-jun\\mix_metrics.json",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\production-v8-jun\\rendered_project_v8_jun.json"
+  ],
+  "outputs": [
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\outputs\\production-v8-jun\\technical_v8_jun.json"
+  ],
+  "steps": [
+    {
+      "argv": [
+        "C:\\projects\\realestate_reco\\tools\\python311\\python.exe",
+        "-X",
+        "utf8",
+        "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\goyang-changneung-20261015\\editor\\production-v8-jun\\assemble.py",
+        "--verify-only"
+      ]
+    }
+  ]
+}

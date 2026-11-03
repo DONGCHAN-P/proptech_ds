@@ -1,0 +1,156 @@
+{
+  "task_id": "apartment-top20-race-20261029-research-v1",
+  "role": "research",
+  "status": "data_ready",
+  "input_revisions": {
+    "video-agent-studio/episodes/capital-10eok-map-20261017/research/source-completion-v1/episode_84_source_rows.parquet": "86b39d1800da16c87039bcaf58e3f0a1a143b2dcafb12eb8a793148b3f1399ab",
+    "analysis/housing_growth_2006/regional_expansion_v1/expansion_normalized.parquet": "e12a397460797b19d8ca84898a2934217871b3656fa49d21023c1f218ea80450",
+    "analysis/housing_growth_2006/regional_expansion_v1/source_files.json": "efeb189b3a3968afb810ac885bcde5f448106c68961a0a3052d815600b93bbcd",
+    "video-agent-studio/episodes/capital-10eok-map-20261017/research/source-completion-v1/identity_catalog_complete.parquet": "7bc71256112561f32675425ab1ad54295ebb2c03df2a3a39c54e2171971e3c8a",
+    "video-agent-studio/episodes/apartment-top20-race-20261029/brief.json": "80cac15f14b5d1826947f3d7784fbdd9abdf6f33132fd7120f056ca72ee01b0e",
+    "video-agent-studio/episodes/apartment-top20-race-20261029/state.json": "2ff79ce9d9507021d036ed80932628b149ff47a40f608be6b45df7ff5c77722f"
+  },
+  "outputs": [
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/data.json",
+      "sha256": "c7f6176ceef5ff5c6c75c37ac01ef038e50860ed7c45e2d1f11e63d682f31ea4",
+      "bytes": 1686361
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/top20_quarterly.csv",
+      "sha256": "cbcda0d83c810dbb8f35ec7c98beca03da5da8b2a08a534aa0bafcf2dc20b7b5",
+      "bytes": 235919
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/facts.json",
+      "sha256": "778d66246b6e87a598923c354a15b93968c7851e55ab3568b436e26c9fe12727",
+      "bytes": 2962052
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/name_mapping.csv",
+      "sha256": "8f249e18688ff69ce87d45b1b80de111438123f150a7e119ab487efb895fd7e5",
+      "bytes": 20410
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/entry_events.csv",
+      "sha256": "86d332bd840127f6793e2eea307316246eef6722c4a7adcce47ea78a3acc8fad",
+      "bytes": 36373
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/leader_changes.csv",
+      "sha256": "cae3b0012d921bdf1604a8ab7da5f239e5bfafa29aaa090bac9a883261758017",
+      "bytes": 1707
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/sensitivity.json",
+      "sha256": "b8161ce151946ff1262ff12bfbf0ec248f1ad36d6b595c4b64cbfcee9af4c9c5",
+      "bytes": 132671
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/coverage.csv",
+      "sha256": "96dedc429c83aea75bc1f849f9bf47374a01eb9d11710b2ab514d0e2bd63a246",
+      "bytes": 334
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/period_accounting.csv",
+      "sha256": "8db4c78eced5f87203079355fe33ab953622369d761c3eee871d1de68a52f691",
+      "bytes": 8598
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/row_accounting.json",
+      "sha256": "fa7708b56afcaa185288302bd651ba1d82d481594435cc21577909909e79b9b7",
+      "bytes": 2651
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/identity_review.json",
+      "sha256": "e54a50d6b933add01fb3009289f02fee5d4cd9641b552eace07b219ac7f3f0d2",
+      "bytes": 339
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/median_evidence.csv",
+      "sha256": "40fbb07163d015e4a7d7f7eefc7eaaa1e1e291ae4fae89a6f1c091efde1308d4",
+      "bytes": 866817
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/validation.json",
+      "sha256": "e64f09ac6300882eba2ab669ee7f8a8f10aa6c28256690ee0b98bbb0ee575d6d",
+      "bytes": 852
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/writer_handoff.json",
+      "sha256": "6c63918bb253009132d52de970d9fdd7539ca7d298f3364168b5a36224bb14e2",
+      "bytes": 6231
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/research_preflight.json",
+      "sha256": "b71ed4dd2dabdcce52db5352003b2515be495002a9c770efcd6e819c3df61fcd",
+      "bytes": 923
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/build_top20.py",
+      "sha256": "ad0d13a4ea970d48cbece3adace15b7744d97be09e471c04e7bec87406f8e0aa",
+      "bytes": 12572
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/package_top20.py",
+      "sha256": "5547cc1bf309bc67531b17d09b5b2e3fc19f71c2dc4b8c702ff0bcbc64b8ce41",
+      "bytes": 13200
+    },
+    {
+      "path": "video-agent-studio/episodes/apartment-top20-race-20261029/research/verify_top20.py",
+      "sha256": "a8800c4becebda8ecd4e5a7d3b415814a2fb6189c0c843b5644ea967d48a8cb7",
+      "bytes": 11558
+    }
+  ],
+  "data_contract": "frames[].top20 와 frames[].top 은 동일한 20개 배열. 금액=만원/채, n=해당 4분기 유효거래 수.",
+  "affected_scene_ids": [
+    "全레이스79분기",
+    "최종TOP20",
+    "신규진입",
+    "1위교체"
+  ],
+  "checks": [
+    {
+      "check": "79개 분기·1580개 가격/표본수/순위 및 전체 풀 TOP20",
+      "result": "passed",
+      "evidence": "validation.json"
+    },
+    {
+      "check": "127개 등장 단지 canonical aptSeq·명칭·법정동 코드 단일성",
+      "result": "passed",
+      "evidence": "identity_review.json; validation.json"
+    },
+    {
+      "check": "원자료 해시·취소/면적/기간·지역 중복·중앙 원행 증거",
+      "result": "passed",
+      "evidence": "row_accounting.json; median_evidence.csv"
+    },
+    {
+      "check": "제작물 실제 프레임·연속 재생·청취",
+      "result": "not_performed_research_only",
+      "evidence": null
+    },
+    {
+      "check": "담당자 독립 QA",
+      "result": "pending_next_role",
+      "evidence": null
+    }
+  ],
+  "open_issue_ids": [],
+  "unresolved": [
+    "원자료 파일별 수집시각·후속 취소 갱신 차이",
+    "확장 자료의 기존 중복제거 한계",
+    "미수집 지역 전체순위",
+    "외부 단지대장 현재명칭 대조"
+  ],
+  "next_role": [
+    "writer",
+    "visual",
+    "qa"
+  ],
+  "network_calls": 0,
+  "paid_calls": 0,
+  "claude_calls": 0,
+  "uploads": 0,
+  "summary": "7개 수집 지역 12,470단지·2,153,830건. 2006Q4~2026Q2 79개 분기 TOP20 재선정. 총 127단지, 신규 진입 107·재진입 197·1위 교체 13회. 2026-10-10까지 포함된 선행 소스도 2026-06-30 계약 종료로 제한. 0원/전방 채움 없음. 1,580개 중위값·표본 수·순위 검산 통과. 원명과 표시명 매핑, 원거래 중앙행 증거 동봉."
+}

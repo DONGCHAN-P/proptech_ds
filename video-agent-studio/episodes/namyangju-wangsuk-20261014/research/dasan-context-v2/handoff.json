@@ -1,0 +1,36 @@
+{
+  "role": "video_research",
+  "input_revision": "rail-route-proof-v1;다산단독구간40.3~61초보완",
+  "outputs": [
+    "context.json",
+    "raw_osm.json",
+    "facts.json"
+  ],
+  "affected_scenes": [
+    "DASAN-CTX-V2"
+  ],
+  "verified": [
+    "1686 OSM공간자료다운로드",
+    "주거25/상업12/공원23 실제폴리곤",
+    "394건물/963도로",
+    "7장소공식이름주소근거대조",
+    "모든feature폴리곤닫힘검사"
+  ],
+  "unresolved": [
+    "법정토지계획도직접재사용권리미확인",
+    "OSM정밀경계·현장시설상태미검증"
+  ],
+  "next_roles": [
+    "video_editor",
+    "video_qa"
+  ],
+  "editor_rules": [
+    "주변배치현황·공개지도기준표기",
+    "기존80초다른구간/audio보존",
+    "법정용도지역/계획승인완공도오인표현금지",
+    "아파트노랑/상업핑크/공원초록은OSM태그polygon만",
+    "미확인필지임의색칠금지",
+    "© OpenStreetMap contributors출처고정"
+  ],
+  "context_sha256": "557e129c3cddef35c26bb38b03910fe03a7ae4fe5ad5c69fafa257d5fb587dee"
+}

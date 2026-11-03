@@ -1,0 +1,13 @@
+from pathlib import Path
+from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
+from functools import partial
+import threading,subprocess,re,json,html
+O=Path(__file__).parent;chrome=O.parents[1]/'video/node_modules/.remotion/chrome-headless-shell/win64/chrome-headless-shell-win64/chrome-headless-shell.exe'
+test='''<script>let timer=setInterval(()=>{if(!window.ATLAS)return;clearInterval(timer);let o={count:ATLAS.data.items.length,schema:ATLAS.data.meta.schema_version,loaded:!document.getElementById('loading')};try{document.getElementById('toggle-search').click();o.search_toggle=document.body.classList.contains('show-search');let s=document.getElementById('search');s.value='반포자이';s.dispatchEvent(new Event('input'));let r=document.querySelector('[data-i]');o.search=!!r;r.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter',bubbles:true}));o.keyboard_detail=document.getElementById('title').textContent.includes('반포자이');document.getElementById('toggle-detail').click();o.mobile_toggle=true;document.getElementById('capture').click();o.capture=document.body.classList.contains('capture')}catch(e){o.error=e.message}let p=document.createElement('pre');p.id='qa_result';p.textContent=JSON.stringify(o);document.body.append(p)},100)</script>'''
+f=O/'web/qa_runtime.html';f.write_text((O/'web/index.html').read_text(encoding='utf8').replace('</html>',test+'</html>'),encoding='utf8')
+class Quiet(SimpleHTTPRequestHandler):
+ def log_message(self,*a):pass
+server=ThreadingHTTPServer(('127.0.0.1',0),partial(Quiet,directory=str(O/'web')));thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
+try:
+ url=f'http://127.0.0.1:{server.server_port}/qa_runtime.html';r=subprocess.run([str(chrome),'--headless','--no-sandbox','--disable-gpu','--dump-dom','--window-size=390,844','--virtual-time-budget=15000',url],capture_output=True,timeout=50);s=r.stdout.decode('utf8',errors='replace');m=re.search(r'<pre id="qa_result">(.*?)</pre>',s,re.S);result=json.loads(html.unescape(m[1])) if m else {'failure':'missing result','stderr':r.stderr.decode('utf8',errors='replace')[-1000:]};result['test_transport']='temporary loopback HTTP; stopped after QA';(O/'web_ui_validation.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf8');print(json.dumps(result,ensure_ascii=False,indent=2));assert all(result.get(k) for k in ['loaded','search_toggle','search','keyboard_detail','mobile_toggle','capture']);subprocess.run([str(chrome),'--headless','--no-sandbox','--disable-gpu',f'--screenshot={O / "mobile_preview.png"}','--window-size=390,844','--virtual-time-budget=15000',f'http://127.0.0.1:{server.server_port}/index.html'],capture_output=True,timeout=50)
+finally:server.shutdown();server.server_close();f.unlink()

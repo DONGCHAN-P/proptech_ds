@@ -1,0 +1,9 @@
+{
+  "issue_id": "EDL-CAPTION-V7-INPUT",
+  "scene_id": "all global captions",
+  "problem": "main review_edl.py currently reads root v6 final_timing; v7 has new cue boundaries and explicit display lines",
+  "proposal": "support --timing narration/free-tts-v1/caption-v7/final_timing.json with --source-dir outputs/private-production-v3 --receipt edl_review_caption_v7.json; normalize only display whitespace",
+  "evidence": "v3 preserves v2 EDL/picture/audio clocks exactly; SRT alone changes",
+  "impact": "main EDL/SRT receipt required for source render gate",
+  "next_owner": "main; editor does not edit the shared review tool"
+}

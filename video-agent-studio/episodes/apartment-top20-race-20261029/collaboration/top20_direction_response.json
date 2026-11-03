@@ -1,0 +1,72 @@
+{
+  "type": "result",
+  "subtype": "success",
+  "is_error": false,
+  "api_error_status": null,
+  "duration_ms": 96890,
+  "duration_api_ms": 97955,
+  "ttft_ms": 87403,
+  "ttft_stream_ms": 1703,
+  "time_to_request_ms": 168,
+  "num_turns": 1,
+  "result": "문자설계·집계만 검토한 지적입니다(영상·원자료는 보지 않음).\n\n【통계·표현 오해 — 필수 수정】\n① '전체 TOP20'·'20년'은 과장. 실제는 7개 지역·식별단지 표본(2,153,830건), 기간은 약 19.5년. 제목 옆 상단에 '7개 지역 표본'을 상시 소형 표기.\n② 중위값 n5~15는 표본이 얇다. 63.00억식 2자리는 과도한 정밀 → 소수 1자리로 낮추고 각 행에 n을 늘 노출. '최소 5건이면 끝점 1위가 바뀐다'는 사실의 시각적 근거가 된다.\n③ 최종 1위 현대14차는 '새 단지'가 아닌 구축이다. '누가 올라왔을까/치고 올라온다'는 신축 오해를 부른다. 진입 뱃지는 '신규'가 아니라 '순위 진입'으로.\n④ 동적 구간 '두 분기 범위' 날짜는 실제 집계창(최근 4분기=1년)과 어긋나 보인다. 전 구간 '최근 1년' 창으로 통일.\n\n【가독성 — 필수 수정】\n⑤ 37.5px 행에 31px 글자는 여백 3px, 20행은 폰에서 빽빽·작다(쇼츠는 폰 시청). 태블릿 기준만 고집 말고 TOP15로 줄이거나 글자·간격을 키울 것.\n⑥ 교차 시 글자 가림이 79분기÷45초(분기당 0.5초)에선 깜빡임 난무. 모션 중엔 막대·순위만, 이름은 홀드 구간만 노출로 정리.\n⑦ 28/30/31px 혼용은 정렬이 흔들려 보인다. 급을 명확히(순위<이름<가격).\n\n【연출·훅】\n⑧ 45초에 79스냅은 과속. 홀드 제외하면 분기당 0.4초라 '치고 올라오는 그림'이 안 읽힌다. 길이를 늘리거나 스냅을 솎을 것.\n⑨ 더 센 훅: 끝점 반전을 전면에. \"1위가 13번 바뀌었다\" 또는 \"20년 끝, 1위는 신축이 아니었다\" — 호기심·반전·정확성을 동시에 잡는다.",
+  "stop_reason": "end_turn",
+  "session_id": "52ea5d3f-c060-4944-865a-3718052c0496",
+  "total_cost_usd": 0.17172925000000003,
+  "usage": {
+    "input_tokens": 1,
+    "cache_creation_input_tokens": 1921,
+    "cache_read_input_tokens": 0,
+    "output_tokens": 6315,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1921,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 1,
+        "output_tokens": 6315,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 1921,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1921
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "modelUsage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 1753,
+      "outputTokens": 18,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001843,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000
+    },
+    "claude-opus-4-8": {
+      "inputTokens": 1,
+      "outputTokens": 6315,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 1921,
+      "webSearchRequests": 0,
+      "costUSD": 0.16988625000000002,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000
+    }
+  },
+  "permission_denials": [],
+  "terminal_reason": "completed",
+  "fast_mode_state": "off",
+  "uuid": "a44a314e-c0ad-44fc-b32f-b460e371c24a"
+}

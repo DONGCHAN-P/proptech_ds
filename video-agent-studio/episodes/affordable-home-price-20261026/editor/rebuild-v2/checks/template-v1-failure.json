@@ -1,0 +1,10 @@
+{
+  "status":"aborted_diagnosed",
+  "phase":"local_template_check_only",
+  "MP4_rendered":false,
+  "observation":"브라우저 시작·폰트 로드·타임라인 등록은 완료. 이후 page.evaluate의 seek가 끝나지 않음.",
+  "root_cause":"__sourceSeek가 GSAP Timeline을 반환. GSAP은 thenable이므로 Playwright가 paused 타임라인의 완료를 계속 기다림.",
+  "fix":"QA seek 함수를 블록 본문으로 바꿔 undefined를 반환. 렌더용 타임라인은 paused 상태 유지.",
+  "prior_generated_sources":"outputs/rebuild-v2/template-check-v1 (보존)",
+  "recheck":"outputs/rebuild-v2/template-check-v2"
+}

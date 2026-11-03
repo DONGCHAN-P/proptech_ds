@@ -1,0 +1,79 @@
+{
+  "revision": "delivery-v1",
+  "status": "draft_not_user_approved",
+  "narration_chars": 7438,
+  "estimate_minutes": [
+    13,
+    16
+  ],
+  "scenes": 25,
+  "report_unique_urls": 23,
+  "source_ledger_unique_urls": 31,
+  "source_ledger_claim_entries": 35,
+  "claude_rounds": 2,
+  "claude_final_packet_script_exact_match": true,
+  "claude_response_adopted": "limited_agreement_with_rejected_unsupported_claims",
+  "files": [
+    {
+      "path": "C:\\projects\\realestate_reco\\reports\\거주비를 포함한 주거 선택 비교.md",
+      "sha256": "c6b9a490d6892cb6e7d66a647565fc73a72136275083d4811bd95cd6f6981bb0",
+      "bytes": 19996
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\writer\\script_v1.md",
+      "sha256": "50fb52edd265d9f26ec9c52fb03adb0c91dd95963160ebe0f4108bb75b9cf90f",
+      "bytes": 18474
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\writer\\script.md",
+      "sha256": "50fb52edd265d9f26ec9c52fb03adb0c91dd95963160ebe0f4108bb75b9cf90f",
+      "bytes": 18474
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\writer\\visual_storyboard.md",
+      "sha256": "9192da1ac74c51149bdfea919662f19e09d68101fb01d37d51d2574bbc1a6fb5",
+      "bytes": 11738
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\writer\\source_ledger.json",
+      "sha256": "162a92d1c38c35519e60d654ac83a518bd28ebf9c6a3a0a9f9f43e9278bd757c",
+      "bytes": 20609
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\writer\\consensus_record.md",
+      "sha256": "2aa983dafed568cc7f873686243a4ec719ac6641ff07adc9e2125473acc417c2",
+      "bytes": 5213
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\writer\\scene_proposals.json",
+      "sha256": "a18d3cea53eac965a25b9a4c3bd9f22b53f4801e9b0f398c87748b39b28610de",
+      "bytes": 21642
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\director\\claude-story-v1\\round1.receipt.json",
+      "sha256": "731109ec0d07b868e11c59545fe121c90d7f8d8689293b1a09f59578144fd8fe",
+      "bytes": 330
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\housing-choice-networth-20261020\\director\\claude-story-v1\\round2.receipt.json",
+      "sha256": "8d2a7d083e4aca1cb0bcd751e3453991de290aa2c09a147ca0da8bb43b20984d",
+      "bytes": 321
+    }
+  ],
+  "checks": [
+    "report_urls_in_source_ledger",
+    "source_urls_deduplicated",
+    "claude_two_exit0_is_errorFalse",
+    "receipt_input_hash_matches",
+    "final_packet_script_equal",
+    "private_sheet_not_in_packets",
+    "ten_numbered_topic_headings"
+  ],
+  "not_performed": [
+    "voice_generation",
+    "actual_audio_listening",
+    "video_render",
+    "continuous_playback",
+    "upload"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "task_id": "RPR-V2-FACTORS",
+  "role": "research",
+  "status": "complete",
+  "input_revisions": {
+    "detail": "verified_examples.json#/input_revisions",
+    "script_revision": "v2 참고자료; 대본 미열람·미수정"
+  },
+  "outputs": [
+    "video-agent-studio/episodes/regional-price-recovery-20261022/research/script-v2-factors/verified_examples.json",
+    "video-agent-studio/episodes/regional-price-recovery-20261022/research/script-v2-factors/handoff.json"
+  ],
+  "affected_claim_ids": [
+    "C03",
+    "C04"
+  ],
+  "affected_scene_ids": [],
+  "checks": [
+    {
+      "check": "원첨부 4개 SHA·크기와 기존 manifest 일치",
+      "result": "pass",
+      "evidence": "verified_examples.json#/sources"
+    },
+    {
+      "check": "준공 3개 연간값·36개 월값 일치; 순이동 2개 산식·다른 시트 일치",
+      "result": "pass",
+      "evidence": "verified_examples.json#/examples"
+    },
+    {
+      "check": "공식 정의·셀·행·URL·예시별 2문장 확인",
+      "result": "pass",
+      "evidence": "verified_examples.json#/verification"
+    }
+  ],
+  "open_issue_ids": [],
+  "blockers": [],
+  "limitations": [
+    "대구의 과거 고정 행정경계 환산은 미확인. 공표 절대값만 인용.",
+    "가격 인과관계 미확인. 가격 지수 QA는 수행 범위에 없음.",
+    "독립 QA·v2 반영 검수 미실시. 공식 PDF의 정의는 웹 텍스트로 확인."
+  ],
+  "next_role": "writer",
+  "next_action": "외부 writer가 사례를 선택하고 director가 장면ID를 연결한 뒤 반영 문구를 QA한다."
+}

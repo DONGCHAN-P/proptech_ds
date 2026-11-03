@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C04P02",
+  "scene_id": "C04",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:05:45.465Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "2480f5ad2b01e9d3b9d8030581f5cb6821352936dd100c8b7487432129fa04af",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "따라서 투자계좌에는 매달 약 구십팔만 원이 들어갑니다. 집을 산 가구도 남는 돈을 투자합니다. 세 가구 모두 주거 자산과 투자계좌를 함께 보유하고 같은 투자수익률을 적용합니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 98,
+  "characters": 98,
+  "actual_credits": 39,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:05:40.002Z",
+  "local_shadow_remaining_before": 21450,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "LnFDY5zs7bOD6gVce1iv",
+    "x-request-id": null,
+    "character-cost": "39",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:05:44 GMT"
+  },
+  "pcm_samples": 543312,
+  "pcm_duration_s": 12.32,
+  "provider_last_spoken_end_s": 12.4,
+  "artifact_sha256": {
+    "paragraphs/C04P02/audio.mp3": "186d7833d80e907bfba86ef42e2dd50a63a3ab807620330e5f1d10abc75d8828",
+    "paragraphs/C04P02/audio.wav": "0f225c40802ebb01ecd5840e8f655ab58a19dd185586b7ea38c3ce939d6d300e",
+    "paragraphs/C04P02/alignment.json": "bdd13b2f0aeed836bd01c290dadd36d34fc20c6b718e2bea86dccc15188fbfe3",
+    "paragraphs/C04P02/normalized_alignment.json": "bdd13b2f0aeed836bd01c290dadd36d34fc20c6b718e2bea86dccc15188fbfe3"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21411,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:05:48.697Z"
+}

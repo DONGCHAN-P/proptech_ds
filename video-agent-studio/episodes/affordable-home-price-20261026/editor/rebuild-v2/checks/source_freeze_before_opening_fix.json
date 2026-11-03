@@ -1,0 +1,71 @@
+{
+  "status": "source_frozen_parent_orchestrates",
+  "script_sha256": "cc1ef7d80225e992e7e5d31faffbfb09a8f90c80fb5352e17c36eb8c90755b12",
+  "files": [
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\scene_render.py",
+      "sha256": "396e34c4d3d20eaf97981eb9ec1bcd4be5963d12f0deeb5008cc1111a2a68428"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\pipeline.py",
+      "sha256": "f09efb07b0cc1c50df7a2982e3f17417728bd24c67f56874bf0048d99b2e902c"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\opening_context.py",
+      "sha256": "540ac94741493182e2c050d4c73508ca1d639f6af1474c7806f90c62fc910fa3"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\frozen_graphics.py",
+      "sha256": "f95d783542042322be4402dcac84b8a7fe967f8280f076cc581d22c5d6f15654"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\graphics.py",
+      "sha256": "fea1a0fa4bf71fb6b7e56561b5afac698fbc56b0016d07accbcd40eab6ec3ea4"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\runtime.js",
+      "sha256": "fe693732b30683944b6ca0c61d22d87a8a04f085f09d7f890a06c840d9769f1d"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\shell.css",
+      "sha256": "bf18ed742a4f7ee0e816d3eb38419de26be04f450ce18cea704dcca9f6706ebb"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\voice_adapter.py",
+      "sha256": "3309aabd9c5e9c6eadd202a2ceca6d8ffc499cd0d3851064b2ed43b09218a02a"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\verify_templates.cjs",
+      "sha256": "965f210a8365af3757dbaf86c2a6c8db1cc8aeadfffcb11b678d3f5c598f1144"
+    }
+  ],
+  "actual_representative_source_geometry": {
+    "status": "pass",
+    "scene_ids": [
+      "R005",
+      "R009",
+      "R030"
+    ],
+    "findings": 0,
+    "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\outputs\\rebuild-v2\\actual-scenes-r2-v1\\geometry_receipt.json",
+    "encoded_media": false
+  },
+  "entrypoint": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\scene_render.py",
+  "parent_run": "actual-scenes-r2-parent-v1",
+  "commands": [
+    "tools/python311/python.exe -B -X utf8 C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\scene_render.py prepare --run actual-scenes-r2-parent-v1",
+    "tools/python311/python.exe -B -X utf8 C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\affordable-home-price-20261026\\editor\\rebuild-v2\\scene_render.py render --run actual-scenes-r2-parent-v1 --scene R005 --scene R009 --scene R030"
+  ],
+  "render_executed_by_editor": false,
+  "opening_contract": "pipeline.emit_project automatically attaches known-input opening for actual first anchor >=1.5s; no writer beats added/retimed; hidden one frame before first anchor",
+  "source_footer": "human-readable institutions and basis date only; full source_ids retained in scene.json",
+  "numeric_fixes": [
+    "R011 186.5 exact decimal monthly",
+    "R025/R026 162.6/176.4 monthly",
+    "R017 common proportional base 6/4/2",
+    "R029/R030 hide value and label as semantic group",
+    "R006 hide ordinary-gap at first-time stage"
+  ],
+  "next_owner": "Parent render orchestration; Lovelace global assembly",
+  "edits_until_actual_QA": "frozen"
+}

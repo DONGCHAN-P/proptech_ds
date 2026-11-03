@@ -1,0 +1,10 @@
+{
+  "revision": "minimal-v12",
+  "base": "outputs/map-focus-v10/map-focus_v10_front.mp4",
+  "base_sha256": "388ae849afb5d1ce098e4886b9a2cf7fb5f30c0d6d09409fcf0fbc58cd95c5cd",
+  "changes": ["Remove camera interpolation and temporary locator during zoom transitions", "Replace unverified station center pins with verified existing-track planned intervals; retire W1 invalid native pin; preserve W2 native symbol"],
+  "preserved": ["v10 layout and shot schedule", "pulse", "rail line drawing", "dim", "summary", "mini locator", "price", "school and park highlighting", "166 captions", "white caption bar", "approved audio"],
+  "v11_layout_used": false,
+  "new_paid_calls": 0,
+  "scope_s": [0,525]
+}

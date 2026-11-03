@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C04P01",
+  "scene_id": "C04",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:05:40.007Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "c0e04108f9ba91582a8a669b191380eb09de2b860f707ea226994128d9ed5b72",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "이제 같은 삼백만 원이 어떻게 나뉘는지 보겠습니다. 매매 가구의 삼억육천만 원 대출은 삼십 년 동안 원금과 이자를 합친 같은 금액을 갚는 방식입니다. 연 사 퍼센트에서 월 상환액은 약 백칠십이만 원입니다. 여기에 보유세와 수선비 등 집을 보유하면서 드는 비용을 월평균 삼십만 원으로 묶어 가정하면 주거 관련 현금지출은 약 이백이만 원입니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 190,
+  "characters": 190,
+  "actual_credits": 76,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 18474,
+    "character_limit": 40000,
+    "included_remaining": 21526,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:05:40.002Z",
+  "local_shadow_remaining_before": 21526,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "hdHAm9cYoo0gaKD1pb0b",
+    "x-request-id": null,
+    "character-cost": "76",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:05:39 GMT"
+  },
+  "pcm_samples": 1065456,
+  "pcm_duration_s": 24.16,
+  "provider_last_spoken_end_s": 24.24,
+  "artifact_sha256": {
+    "paragraphs/C04P01/audio.mp3": "b2fb691708d190f19a6dfe38e7c6216d29886390830fb672e5efcb066ad02fed",
+    "paragraphs/C04P01/audio.wav": "850c8e9f83d3ddeda36796c9e09e1c39213fd985812ac894563c992eb9daf906",
+    "paragraphs/C04P01/alignment.json": "b8f8c93925dea1311e06dfd988467baf74a9609d755d956b3110ac9cffbd412f",
+    "paragraphs/C04P01/normalized_alignment.json": "b8f8c93925dea1311e06dfd988467baf74a9609d755d956b3110ac9cffbd412f"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 21450,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:05:45.460Z"
+}

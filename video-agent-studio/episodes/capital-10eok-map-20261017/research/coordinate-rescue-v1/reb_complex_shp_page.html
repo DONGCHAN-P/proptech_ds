@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Block</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-script-type" content="text/javascript">
+	<style>
+		html,
+		body {
+			margin: 0;
+			text-align: center;
+			background-color: #f8f9fa;
+			letter-spacing: -0.7px;
+		}
+
+		.content-1 h1 {
+			font-family: sb, sans-serif;
+			font-weight: bold;
+			font-size: 28px;
+			color: #343a40;
+			margin: 0;
+		}
+
+		.content-1 p {
+			font-family: sr, sans-serif;
+			font-size: 14px;
+			color: #868e96;
+		}
+
+		.line {
+			width: 100%;
+			height: 1px;
+			background-color: #dee2e6;
+			margin: 55px auto;
+		}
+
+		.container {
+			margin-top: 50px;
+		}
+
+		.container h2 {
+			font-family: sr, sans-serif;
+			font-size: 16px;
+			margin-bottom: 15px;
+			text-align: left;
+		}
+
+		.content-input p {
+			text-align: left;
+		}
+
+		table {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		table tr {
+			font-family: sr, sans-serif;
+			font-size: 14px;
+			color: #495057;
+			text-align: left;
+		}
+
+		input[type="text"] {
+			width: 100%;
+			padding: 10px 10px;
+			border: 1px solid #ced4da;
+			border-radius: 3px;
+			box-sizing: border-box;
+		}
+
+		.card {
+			width: 400px;
+			padding: 50px 60px;
+			margin: 15% auto 0;
+			background-color: #fff;
+			border: none;
+			border-radius: 10px;
+			box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+		}
+
+		.btn-primary:not(hover) {
+			font-family: sr, sans-serif;
+			font-weight: bold;
+			font-size: 14px;
+			color: #fff;
+			width: 100%;
+			background-color: #2196f3;
+			border: none;
+			border-radius: 4px;
+			padding: 16px 48px;
+			cursor: pointer;
+			outline: 0;
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+			transition: all 0.1s linear;
+		}
+
+		.btn-primary:hover {
+			background-color: #309bf3;
+			box-shadow: 0 3px 15px 0 rgba(0, 174, 239, 0.4);
+			transition: all 0.1s linear;
+		}
+
+		.btn-primary:active {
+			background-color: #0090d1;
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+		}
+
+		#mini_frame {
+			background-color: #fff;
+			border-radius: 5px;
+			padding: 20px;
+			box-shadow: 0 6px 18px 2px rgba(0, 0, 0, 0.1);
+		}
+
+		#mini_calendar,
+		#mini_calendar2 {
+			padding: 20px;
+		}
+
+		.box-calendar {
+			width: 94%;
+			position: relative;
+			display: inline-block;
+		}
+
+		.box-calendar p {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 0;
+		}
+
+		.searchInput input[type="text"] {
+			padding: 6px 10px;
+		}
+
+		.searchInput {
+			margin-bottom: 60px;
+		}
+
+		.logo {
+			width: 100px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+
+		.content-1 p {
+			color: #4c4a379e;
+			font-weight: 1000;
+			font-family: sb, sans-serif;
+			font-size: 18px;
+			line-height: 32px;
+			margin: 0 0 0px;
+		}
+
+		.content-1 .prefix {
+			color: #4c4a379e;
+			font-weight: 500;
+			font-family: sr, sans-serif;
+			font-size: 14px;
+			line-height: 32px;
+			margin: 30px 0 0px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="card">
+		<div class="content-1">
+			<div class="logo"><img>
+				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 468.293 468.293"
+					style="enable-background:new 0 0 468.293 468.293;" xml:space="preserve">
+					<path style="fill:#D5D6DB;" d="M234.146,0C162.202,36.721,90.259,36.721,18.315,0v167.028c0,144.867,84.269,240.623,215.831,301.265
+	h0h0c131.562-60.642,215.831-156.398,215.831-301.265V0C378.034,36.721,306.09,36.721,234.146,0z" />
+					<path style="fill:#CE412D;" d="M234.146,430.927C111.648,370.329,52.038,283.873,52.038,167.026V49.981
+	c24.667,7.502,49.479,11.283,74.192,11.283c36.016,0,72.242-8.029,107.916-23.903c35.673,15.874,71.9,23.903,107.916,23.903
+	c24.713,0,49.525-3.781,74.192-11.283v117.045C416.254,283.873,356.645,370.329,234.146,430.927z" />
+					<path style="fill:#EBF0F3;"
+						d="M220.868,276.374l-9.985-101.764v-29.385c0-12.848,10.415-23.263,23.263-23.263h0
+	c12.848,0,23.263,10.415,23.263,23.263v29.385l-9.846,101.747c-0.665,6.874-6.442,12.119-13.348,12.119h0
+	C227.316,288.474,221.542,283.24,220.868,276.374z M212.72,324.823L212.72,324.823c0-11.876,9.627-21.503,21.503-21.503h0
+	c11.876,0,21.503,9.627,21.503,21.503v0c0,11.876-9.627,21.503-21.503,21.503h0C222.347,346.325,212.72,336.698,212.72,324.823z" />
+					<g>
+					</g>
+					<g>
+					</g>
+					<g>
+					</g>
+					<g>
+					</g>
+					<g>
+					</g>
+					<g>
+					</g>
+					<g>
+					</g>
+					<g>
+					</g>
+					<g>
+					</g>
+					<g>
+					</g>
+					<g>
+					</g>
+					<g>
+					</g>
+					<g>
+					</g>
+					<g>
+					</g>
+					<g>
+					</g>
+				</svg>
+				</img>
+			</div>
+			<h2>ë¹ì ì ì ê·¼</h2>
+			<p>ë¹ì ì ì ê·¼ì¼ë¡ ì¸íì¬</p>
+			<p>íì´ì§ê° ì°¨ë¨ëììµëë¤.</p>
+			<p class="prefix">ì ìì ì¸ ì ê·¼ì¸ ê²½ì° í´ë¹ ê´ë¦¬ììê² ë¬¸ìíì¬ ì£¼ìê¸° ë°ëëë¤.</p>
+		</div>
+
+	</div>
+
+</body>
+
+</html>

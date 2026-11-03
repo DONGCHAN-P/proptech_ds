@@ -1,0 +1,19 @@
+{
+  "issue_id": "EDL-FIELD-CONTRACT-RESPONSE",
+  "scene_id": "ALL34+INTRO+CHAPTER1..8+OUTRO",
+  "to": ["director", "Bohr 01a177f7-d126-7390-8eb3-b883ee74d6ce", "Tesla"],
+  "status": "ready_for_parent_relay_no_direct_agent_message_tool",
+  "problem": "QA 및 scene 렌더러에 전역 조립 필드/사진 소유권 전달",
+  "evidence": "qa/rebuild-v2/media-qa/issue_EDL_FIELD_CONTRACT.json 및 실제 final_timing.json 확인",
+  "proposal": {
+    "contract": "editor/rebuild-v2/assembly/edl_contract.json",
+    "output": "outputs/rebuild-v2/full-film-r2-v1",
+    "timing": "30fps global_frames; [start_frame,end_frame), scenes/segments/cues/beats/progressions 별도 배열",
+    "gap": "장면 WAV 자연 꼬리 보존, narrator 제안 0.25초는 추가하지 않음. CFR 정수 프레임/읽기 정지 여백만 기록.",
+    "outro": "R034 WAV의 last_speech_end_s=40.65, duration_s=43.65; 최종발화+3초 정수프레임까지 보존, 3초 추가 없음.",
+    "request_to_Tesla": "실제 대표 승인 receipt 경로와 전체34 MP4 manifest(장면ID,파일/SHA,project/model,프레임수)를 전달. 챕터8개는 assembly 전담이며 사진은 요청된8종 각각1회만 사용, 본문 동일사진 재사용 피함.",
+    "request_to_QA": "계약을 기준으로 adapter 준비. 잠정 global_edl_draft.json 후 실제 scene frames로 global_edl.json 확정. source_manifest와 qa_packet은 최종 렌더 후 exact SHA 기록."
+  },
+  "impact": "전역 cue/beat 및 모든 컷 독립 검수 가능; 기존 영상/다른 담당 폴더 변경 없음",
+  "next_owner": "director relay; Tesla scene-manifest; Bohr independent QA"
+}

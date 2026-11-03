@@ -1,0 +1,109 @@
+{
+  "decisions": [
+    {
+      "id": "2e5b264c50fa",
+      "episode": "capital-10eok-map-20261017",
+      "gate": "topic",
+      "summary": "수도권 84㎡급(83≤면적<85) 단지 연도별 거래중위값 지도: 2006년부터 10억 초과 숨김, 10억 이하 재진입 시 재등장. 사용자가 주제와 범위를 직접 지정.",
+      "status": "approved",
+      "created_at": "2026-10-16T15:54:45.342905+00:00",
+      "expires_at": "2026-10-23T15:54:45.342905+00:00",
+      "artifact_hashes": {
+        "brief.json": "8ce08bc34c5794dac70e493fbe7691c43fc6f8fbeab5a2a0c325e516df90fb32"
+      },
+      "response": {
+        "source": "direct_user_chat_and_async_scope_answers",
+        "at": "2026-10-16T15:54:45.351080+00:00",
+        "note": "숏폼 제작 요청 및 수도권/84㎡/재등장 기준 직접 선택"
+      }
+    },
+    {
+      "id": "62eef4ce2996",
+      "gate": "script",
+      "episode": "capital-10eok-map-20261017",
+      "status": "approved",
+      "created_at": "2026-10-17T06:41:06.832384+00:00",
+      "summary": "사용자가 v3 구도와 화면 문구를 수락하고 같은 방식으로 전체 연도 쇼츠 제작 지시. 2006~2026, 무료 로컬 렌더, 기존 시안처럼 무음. 게시 및 유료 생성 제외.",
+      "artifact_hashes": {
+        "outputs/map-preview-v3/style_preview_9s.mp4": "ce1ce94cd0006ab7cddc1a206c0e608816be2cedecff4c6889237ecf0d1fe295",
+        "research/annual-map-v2/map_packet_v2.json": "6fc010df600e45b5bbebd03101fc34dc258c69d4950a9bd5ae6bf5e48a53358b"
+      },
+      "response": {
+        "source": "direct_user_chat",
+        "note": "쇼츠 맘에든다 이거대로 한번 영상 만들어줘",
+        "at": "2026-10-17T06:41:06.832384+00:00"
+      }
+    },
+    {
+      "id": "b2885fb26650",
+      "episode": "capital-10eok-map-20261017",
+      "gate": "completed",
+      "status": "revision_requested",
+      "created_at": "2026-10-17T06:46:23.162480+00:00",
+      "summary": "승인v3구도 2006~2026 전체40초 무음 검토용 쇼츠 제작완료. 독립최종검수 후 전달. 사용자 완성본 검토 대기, 게시 승인 아님.",
+      "artifact_hashes": {
+        "outputs/full-short-v1/capital_10eok_2006-2026_v1.mp4": "fbf5e3868f7a706261863719a8e348c3a7e5a0b1bdf5366a15da8a7605190ec6"
+      },
+      "revision_feedback": [
+        "5억으로 월단위로 보자 너무 영상이 뚝뚝 끊기는 느낌이다",
+        "그리고 모션그래픽으로 좀 더 자연스럽게 만들어봐"
+      ]
+    },
+    {
+      "id": "80cf1941e45a",
+      "episode": "capital-10eok-map-20261017",
+      "gate": "script",
+      "status": "approved",
+      "created_at": "2026-10-17T07:18:02.883862+00:00",
+      "summary": "직접 수정지시:5억·월별중위값·부드러운 모션으로 새 버전 제작. 기존10억승인의 자동승계아님.",
+      "artifact_hashes": {
+        "monthly_5eok_revision.json": "9840084b5038b22e2c6ae065df044ea77bda2a618b84819d90d853d3c6b7520d"
+      },
+      "response": {
+        "source": "direct_user_chat",
+        "note": [
+          "5억으로 월단위로 보자 너무 영상이 뚝뚝 끊기는 느낌이다",
+          "그리고 모션그래픽으로 좀 더 자연스럽게 만들어봐"
+        ]
+      }
+    },
+    {
+      "id": "d6dd635f1032",
+      "episode": "capital-10eok-map-20261017",
+      "gate": "completed",
+      "status": "revision_requested",
+      "created_at": "2026-10-17T07:28:54.326806+00:00",
+      "summary": "5억·월중위값 2006.01~2026.10 250개월57초 무음 모션 검토본. 완성본 사용자 검토 대기, 게시 승인 아님.",
+      "artifact_hashes": {
+        "outputs/monthly-5eok-v1/capital_5eok_monthly_2006-2026_v1.mp4": "18e73426dea8ceba5f2819d205f4941e2136fb89a2af22654456d080ce0b965a"
+      },
+      "revision_feedback": "5억 첫 초과 후 영구소등, 무거래 반짝임 제거"
+    },
+    {
+      "id": "b6fea120e2af",
+      "episode": "capital-10eok-map-20261017",
+      "gate": "script",
+      "status": "approved",
+      "created_at": "2026-10-17T11:11:58.231205+00:00",
+      "summary": "직접 수정지시:5억 초과 첫 관측 이후 영구소등·반짝임제거, 기존 유료/게시승인승계없음",
+      "artifact_hashes": {
+        "monthly_permanent_revision.json": "1a58ffb9f95a937ac5538ec1d41d261b74e774516df5be7ea32148232db73af7"
+      },
+      "response": {
+        "source": "direct_user_chat",
+        "note": "반짝이지말고 5억 넘는순간부터는 아예 불 안들어오게해봐"
+      }
+    },
+    {
+      "id": "76b11e2a7122",
+      "episode": "capital-10eok-map-20261017",
+      "gate": "completed",
+      "status": "pending",
+      "created_at": "2026-10-17T11:16:15.549953+00:00",
+      "summary": "5억 월중위값 첫초과 영구소등·무거래유지 57초무음 수정본 사용자검토대기. 현재가격지도가아닌누적초과이력지도. 게시승인없음",
+      "artifact_hashes": {
+        "outputs/monthly-5eok-permanent-v2/capital_5eok_permanent_monthly_2006-2026_v2.mp4": "599f3f3fb3e3c597edf5001e75dfbb437bb65965e2bf296710b56988d0f892da"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "scene_id": "S08",
+  "chapter": 3,
+  "message": "LTV의 분모",
+  "narration_text": "그다음이 대출입니다. 여기서 두 가지만 이해하시면 오늘 계산은 따라오실 수 있어요. 먼저 LTV입니다. 집의 담보가치를 기준으로 얼마까지 빌릴 수 있는지를 보는 비율이에요.\n\n설명을 위해 집값과 담보평가액이 같고 LTV가 70퍼센트라고 해보겠습니다. 5억짜리 집이면 LTV 기준으로는 최대 3억 5천만 원까지 계산됩니다. 나머지 1억 5천만 원은 내 돈으로 마련해야 하겠죠.",
+  "paragraph_ids": [
+    "P022",
+    "P023"
+  ],
+  "claim_ids": [
+    "DOC",
+    "FSC_LTV",
+    "CALC"
+  ],
+  "material_type": "담보 분할 막대",
+  "asset_ids": [
+    "M08"
+  ],
+  "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "audio_revision": null,
+  "start": null,
+  "end": null,
+  "timing_basis": "UNLOCKED: awaiting actual Jun alignment",
+  "beats": [
+    {
+      "anchor": "집의 담보가치를 기준",
+      "action": "집값=담보평가액 5억",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "3억 5천만 원",
+      "action": "70% 대출 영역",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "1억 5천만 원",
+      "action": "30% 자기자금 영역",
+      "start": null,
+      "end": null
+    }
+  ],
+  "status": "designed_not_rendered",
+  "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+  "fallback": "고정 담보 막대 70:30 분할로 제작",
+  "template_status": "contract_only_not_authored",
+  "template": "S08",
+  "beat_ids": [
+    "S08.b01",
+    "S08.b02",
+    "S08.b03"
+  ],
+  "preview_seconds": null
+}

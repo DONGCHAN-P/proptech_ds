@@ -1,0 +1,37 @@
+{
+  "task_id": "RPR-LIT-SOURCEFIX-001",
+  "checked_at": "2026-10-23T08:39:56.594137+00:00",
+  "result": "pass",
+  "verification_scope": "로컬 메타데이터·산출물 무결성; 독립 QA 아님",
+  "checks": {
+    "all_json_reopened": true,
+    "prepatch_copy_sha256_matches": true,
+    "postpatch_sha256_matches": true,
+    "receipt_sha256_matches_handoff": true,
+    "only_ST_F08_changed": true,
+    "other_11_claims_unchanged": true,
+    "outside_ST_F08_text_unchanged": true,
+    "journal_subsource_binding_resolves": true,
+    "abstract_only_2009Q1_2019Q4": true,
+    "no_WP_AR1_or_period_in_ST_F08": true,
+    "unknown_counts_and_index_details_null_unverified": true,
+    "qualified_retained": true,
+    "sources_and_S6_notes_hashes_unchanged": true,
+    "listed_outputs_exist_nonempty": true
+  },
+  "facts_prepatch_sha256": "ddfb4224d55f1364c4353404291f6bb63a306e82887c54accea04b9407f4093e",
+  "facts_postpatch_sha256": "0536b7a98d9fa5167ae3635ce16d4849241084a4e0860b524e4072dec33fc5f5",
+  "artifact_sha256": {
+    "change_receipt.json": "5391bdd06a150ffd5f1d00a0395d92ebe58ec408a00d84c0a32432eaba2c5b87",
+    "facts.prepatch.json": "ddfb4224d55f1364c4353404291f6bb63a306e82887c54accea04b9407f4093e",
+    "handoff.json": "10f769be4d9d362c0694efcf428c99d7d00f6fc348c7bbf3830764b2bcd475d2",
+    "issue_RPR-LIT-SOURCEFIX-001.json": "ec321fc52d5e88ef89b52b9074dffcf693df7081c695e4974d6a848a728f652f"
+  },
+  "affected_claim_ids": [
+    "ST-F08"
+  ],
+  "affected_scene_ids": [],
+  "independent_qa_status": "pending_narrow_closure_RPR-LIT-QA-001",
+  "direct_agent_message_sent": false,
+  "routing_issue": "issue_RPR-LIT-SOURCEFIX-001.json"
+}

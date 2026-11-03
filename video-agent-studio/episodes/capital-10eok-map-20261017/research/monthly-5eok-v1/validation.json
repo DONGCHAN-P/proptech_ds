@@ -1,0 +1,43 @@
+{
+  "valid_source_rows": 1626292,
+  "all_month_n_sum": 1626292,
+  "mapped_month_n_sum": 1450300,
+  "month_count": 250,
+  "map_catalog": 8288,
+  "all_catalog": 9172,
+  "exactly_5eok_map_complex_months": 3454,
+  "reappearances_after_over_including_no_trade_gaps": 7148,
+  "adjacent_month_over_to_under": 3640,
+  "first_observation_before_hidden": true,
+  "status_code": {
+    "under": 0,
+    "over": 1,
+    "no_trade": 2,
+    "not_yet_observed": 3
+  },
+  "all_month_count_identities_verified": true,
+  "threshold_manwon": 50000,
+  "threshold_operator": "<=50000 shown; >50000 hidden",
+  "minimum_observed_ratio": 29.773869346733665,
+  "maximum_observed_ratio": 97.61227970437749,
+  "chart_axis_percent": [
+    20,
+    100
+  ],
+  "partial_last_month": "2026-10",
+  "latest_contract_date": "2026-10-10",
+  "inputs": [
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\capital-10eok-map-20261017\\research\\source-completion-v1\\episode_84_source_rows.parquet",
+      "bytes": 42349980,
+      "sha256": "86b39d1800da16c87039bcaf58e3f0a1a143b2dcafb12eb8a793148b3f1399ab"
+    },
+    {
+      "path": "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\capital-10eok-map-20261017\\research\\annual-map-v2\\map_packet_v2.json",
+      "bytes": 12462885,
+      "sha256": "6fc010df600e45b5bbebd03101fc34dc258c69d4950a9bd5ae6bf5e48a53358b"
+    }
+  ],
+  "new_api_calls": 0,
+  "paid_calls": 0
+}

@@ -1,0 +1,62 @@
+{
+  "status": "representative_previews_delivered_not_full_render",
+  "outputs": [
+    "outputs/visual-review-v2/M003_transport.png",
+    "outputs/visual-review-v2/M004_price.png",
+    "outputs/visual-review-v2/M005_life.png",
+    "visual/production-v2/review.html",
+    "visual/production-v2/assets.json",
+    "visual/production-v2/sceneplan.json",
+    "visual/production-v2/audio_cues.json"
+  ],
+  "input_versions": [
+    "commute-v3 report",
+    "price-stage-v3",
+    "production-v2 calendar/facts",
+    "map-clearance-v1",
+    "reference-direction-v1"
+  ],
+  "input_sha256": {
+    "research/commute-v3/report.md": "a245ea9ac6e63f2d64581f634ba0bbb10e62a45c9167cc9fed4ea65703c894d0",
+    "research/price-stage-v3/facts.json": "dd78eeacdf8c1906b54f08dde72789414797dd6168c25ba6bf2c28a5268c4cc6",
+    "research/production-v2/calendar.json": "7eb606d652717888ffab15bfca60b0b9e11c8589c7ca885fc006677c8652d96d",
+    "research/production-v2/facts.json": "b046de0cb6079fe1b304c9f7914315717b221f86752d915b3612416ae169d74c",
+    "research/facts.json": "2bd76ab09771f7d49dcd3bb002c085ed058efd63fdf108502da36513f897833a",
+    "research/map-clearance-v1/handoff.md": "bb1e6a1ed94008a9787a7bb1895cca2bf3c536e154a3a8efa24510bed69d2ed3",
+    "research/map-clearance-v1/raw/eum_lots_overall_20251224.jpg": "79ef5d327327bfc6900e78f301f3ab03b905f0ce2122145d89affb487857ab58",
+    "outputs/reference-direction-v1/창릉_레퍼런스_적용안.md": "3912f692f44418eb923c6daf9548f2c6ad5c2f99eca1cbc4ecefc79ef8d772fe"
+  },
+  "verification": {
+    "png_dimensions": [
+      1920,
+      1080
+    ],
+    "png_viewed_count": 3,
+    "final_s4_revised_viewed": true,
+    "all_text_measured_within_canvas": true,
+    "map_source_viewed": true,
+    "official_map_whole_fit": true,
+    "source_crop_or_overpaint": false,
+    "continuous_video_playback": false,
+    "audio_listened": false,
+    "full_video_rendered": false
+  },
+  "unresolved": [
+    "실제음성/대본v2문장/타임록매핑",
+    "원도면전체fit은조건부채택후보; 최신고시이후완결성미확인",
+    "원도면내S4테두리금지; 실제정밀locator는미해결",
+    "학교최신교육청개교확정",
+    "단지실제출입구·횡단보도·접근시간",
+    "효과음미선정/미청취",
+    "최종폰트v15Pretendard통합은편집단계"
+  ],
+  "affected_scenes": [
+    "M003",
+    "M004",
+    "M005",
+    "M007"
+  ],
+  "next_owner": "director → editor; script-v2 확정 뒤 매핑",
+  "paid_api_calls": 0,
+  "generated_ai_images": 0
+}

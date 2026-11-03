@@ -1,0 +1,100 @@
+{
+  "source": "analysis\\housing_growth_2006\\full_transactions_v1\\quarterly_all_valid_transactions.csv",
+  "source_sha256": "75b77faab614ae4f072c16291aa75aef8a505d6a680e78df2ba98b850b61045f",
+  "measure": "분기별 전용면적 84㎡ 이상 85㎡ 미만 아파트 유효 거래금액의 중위값, 만원",
+  "regions": [
+    "서울",
+    "경기",
+    "인천",
+    "부산",
+    "대구",
+    "대전"
+  ],
+  "period": [
+    "2006Q1",
+    "2026Q2"
+  ],
+  "rows": 492,
+  "area84_sample_total": 2075440,
+  "min_region_quarter_n": 368,
+  "latest_n": 29556,
+  "gap_seoul_gyeonggi_manwon": {
+    "2006Q1": 11600.0,
+    "2026Q2": 49000.0
+  },
+  "endpoints": [
+    {
+      "region": "서울",
+      "quarter": "2006Q1",
+      "median_manwon": 29500.0,
+      "n": 5423
+    },
+    {
+      "region": "경기",
+      "quarter": "2006Q1",
+      "median_manwon": 17900.0,
+      "n": 8855
+    },
+    {
+      "region": "인천",
+      "quarter": "2006Q1",
+      "median_manwon": 15500.0,
+      "n": 1808
+    },
+    {
+      "region": "부산",
+      "quarter": "2006Q1",
+      "median_manwon": 12750.0,
+      "n": 1913
+    },
+    {
+      "region": "대구",
+      "quarter": "2006Q1",
+      "median_manwon": 15000.0,
+      "n": 1301
+    },
+    {
+      "region": "대전",
+      "quarter": "2006Q1",
+      "median_manwon": 15500.0,
+      "n": 1228
+    },
+    {
+      "region": "서울",
+      "quarter": "2026Q2",
+      "median_manwon": 107000.0,
+      "n": 5082
+    },
+    {
+      "region": "경기",
+      "quarter": "2026Q2",
+      "median_manwon": 58000.0,
+      "n": 15106
+    },
+    {
+      "region": "인천",
+      "quarter": "2026Q2",
+      "median_manwon": 49000.0,
+      "n": 2486
+    },
+    {
+      "region": "부산",
+      "quarter": "2026Q2",
+      "median_manwon": 47000.0,
+      "n": 2839
+    },
+    {
+      "region": "대구",
+      "quarter": "2026Q2",
+      "median_manwon": 41000.0,
+      "n": 2581
+    },
+    {
+      "region": "대전",
+      "quarter": "2026Q2",
+      "median_manwon": 42000.0,
+      "n": 1462
+    }
+  ],
+  "interpretation": "지역마다 거래된 단지·연식·입지의 구성이 바뀌는 거래가격 수준 비교. 동일 아파트 보유수익률이나 동일품질 가격지수로 해석하지 않는다. 명목 가격. 캐시 종료 2026-06-30. 대구 군위 제외. 세종은 초기 행정경계/표본 문제로 이번 장기 비교에서 제외."
+}

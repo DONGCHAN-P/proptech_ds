@@ -1,0 +1,66 @@
+{
+  "asset_id": "INTRO-PURPOSE",
+  "sentence_ids": [
+    "P01-INTRO-V3-02",
+    "P01-INTRO-V3-03",
+    "P01-INTRO-V3-04",
+    "P01-INTRO-V3-05",
+    "P01-INTRO-V3-06"
+  ],
+  "status": "complete",
+  "started_at_utc": "2026-11-03T13:23:18.467Z",
+  "authorization_id": "9cde211f3073",
+  "authorization_sha256": "856f75436d5dbd1dec461ad6c162c49362fc9caee07c7485961a16b069791680",
+  "manifest_sha256": "f4bd6d8bfefb3fff65ded62ea8ec013658df5ad1e19cfc1cff836dcc37b7ebe1",
+  "input_file_sha256": "ca489b9bd99ca98bdadab099da8646f27398b63fbb3fd586ccbc97c85980e024",
+  "request_text_sha256": "104e66409b73364409ea3e54c3e37aba724d3d58069f841b9194081b53b1c101",
+  "characters": 279,
+  "reserved_credits": 279,
+  "actual_credits": 112,
+  "charge_known": true,
+  "request": {
+    "text": "앞으로 이 채널에서는 신혼부부가 실제로 매매를 검토할 만한 지역과 아파트를 가격대별로 찾아드리려고 합니다.\n\n어느 지역부터 소개할지, 그 기준도 데이터에서 찾고 싶었습니다.\n\n그래서 먼저 신혼부부 통계를 통해, 신혼부부가 실제로 많이 살고 있는 지역들을 골라봤습니다.\n\n이번 편에서는 수도권 쉰세 개 구 가운데 이십 위부터 십일 위까지, 지역별 아파트 가격과 생활권을 함께 살펴보겠습니다.\n\n이 지역들을 한 차례 둘러본 뒤에는, 지역마다 더 깊이 들어가 예산별로 비교할 만한 아파트를 찾아보겠습니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "endpoint": "/v1/text-to-speech/4p6UA7mnodF5q7JFFrnW/with-timestamps?output_format=mp3_44100_128",
+  "local_shadow_remaining_before": 16651,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "iFwZJqPpWeNj6W1a3VcA",
+    "x-request-id": null,
+    "character-cost": "112",
+    "content-type": "application/json",
+    "date": "Tue, 03 Nov 2026 13:23:20 GMT"
+  },
+  "pcm_samples": 1425312,
+  "pcm_duration_s": 32.32,
+  "provider_last_alignment_end_s": 32.4,
+  "complete_tail_after_alignment_s": -0.0799999999999983,
+  "wav_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-PURPOSE.wav",
+  "raw_audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-PURPOSE/audio.mp3",
+  "alignment_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-PURPOSE/alignment.json",
+  "pcm_sha256": "84b22b5ceebe2b24eb7c780988adb646cb9a82d4079e8cff5275f6387895157c",
+  "artifact_sha256": {
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-PURPOSE/audio.mp3": "42b5dd1ae776d43373dc8d191396385dc7c7d9be9eb155954bbcab9f2b9a0a85",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-PURPOSE/alignment.json": "8eacaf8a53cc4f49a0c1b42e3e3ebbab1b9bf06ef9879322b5af4c552e631e3c",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/raw/INTRO-PURPOSE/normalized_alignment.json": "8eacaf8a53cc4f49a0c1b42e3e3ebbab1b9bf06ef9879322b5af4c552e631e3c",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-split-v4/jun-and-shorts-v1/processed/INTRO-PURPOSE.wav": "83a25402c33bf00dd4673de30731d264c4d3f35d64c81458fe2f0837c7b5a776"
+  },
+  "processing": {
+    "sample_rate_hz": 44100,
+    "channels": 1,
+    "codec": "pcm_s16le",
+    "tempo_factor": 1,
+    "trimmed": false,
+    "tail_preserved": true,
+    "provider_speed": 0.97
+  },
+  "local_shadow_remaining_after": 16539,
+  "completed_at_utc": "2026-11-03T13:23:27.688Z"
+}

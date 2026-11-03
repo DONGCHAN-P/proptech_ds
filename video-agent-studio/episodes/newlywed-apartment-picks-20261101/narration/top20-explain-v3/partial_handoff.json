@@ -1,0 +1,71 @@
+{
+  "task_id": "TOP20-explain-v3-narration",
+  "role": "narration",
+  "status": "partial_first3_measured_ready",
+  "created_at": "2026-11-02T17:06:44.357974+00:00",
+  "input_revisions": {
+    "script_revision": "v6",
+    "script_md_sha256": "4259f50a9c5cadbadd864d838559a16f85e07316818ddcb31ce40939fbccac38",
+    "scene_json_sha256": "8beec59448e180617327f17913aaa25277b3152769a1815cbdc493351003803e",
+    "approval_sha256": "b7c12aa3d8b61a8118d898256c0c440dc2b549fd8c12c5e2012d64f3116739a3",
+    "authorization_sha256": "b7c12aa3d8b61a8118d898256c0c440dc2b549fd8c12c5e2012d64f3116739a3",
+    "manifest_sha256": "bb34c09bfed19190011db5aa29b0c78d2a80d1047f2b889b51235eac9a84d4ae"
+  },
+  "outputs": [
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-explain-v3/partial_first3_with_clean_intro_v6.wav",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-explain-v3/partial_timing_proposals.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-explain-v3/partial_words.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-explain-v3/partial_verification.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-explain-v3/pronunciation_ledger.json",
+    "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-explain-v3/approval_receipt.json"
+  ],
+  "audio_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-explain-v3/partial_first3_with_clean_intro_v6.wav",
+  "audio_sha256": "e25a5cc786fe7533077bd60533a129c6aba367d20059323ab26d82b35cc15806",
+  "timing_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-explain-v3/partial_timing_proposals.json",
+  "words_path": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-explain-v3/partial_words.json",
+  "words_sha256": "82752e5a6f0bbf025dcaeb4e079193d67adde6f2260ae9ffaa9a4b0b5e931b50",
+  "new_length_s": 90.51068027210884,
+  "affected_scene_ids": [
+    "O001",
+    "O002",
+    "S003"
+  ],
+  "changed_sentence_ids": [
+    "O001-02",
+    "O001-03",
+    "O002-01",
+    "O002-02",
+    "O002-06",
+    "O002-07A",
+    "O002-07B",
+    "O002-07D",
+    "O002-08",
+    "S003-01",
+    "S003-02",
+    "S003-03",
+    "S003-04",
+    "S003-20",
+    "S003-21"
+  ],
+  "timing_delta_s": null,
+  "timing_delta_note": "new v6 whole reading; compare only against approved lock after director integration",
+  "checks": [
+    {
+      "check": "exact SHA, UTF8 roundtrip, display restoration, numeric independent values, native wordcoverage, decoded PCM peak/RMS/silence",
+      "result": "passed",
+      "evidence": "video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-explain-v3/partial_verification.json"
+    },
+    {
+      "check": "actual listening / ASR / independent QA / timing lock",
+      "result": "pending_other_roles",
+      "evidence": null
+    }
+  ],
+  "open_issue_ids": [],
+  "next_role": "director locks timing; editor integrates; parent/independent QA does local ASR/listening",
+  "actual_listening": false,
+  "unverified_scope": "all actual sound pronunciation/naturalness and atempo phonetic sync; ASR not run here",
+  "paid_api_calls": 0,
+  "cash_cost_krw": 0,
+  "reproduction": "tools/python311/python.exe -X utf8 video-agent-studio/episodes/newlywed-apartment-picks-20261101/narration/top20-explain-v3/produce.py prepare; generate-first3; build-first3; generate-rest; build-final (each is a separate subcommand; complete same-input provider receipts reuse verified files, failed receipts never auto retry)"
+}

@@ -1,0 +1,50 @@
+{
+  "task_id": "writer-v8",
+  "role": "writer",
+  "status": "draft_needs_review",
+  "input_revisions": {
+    "script": "script-v7",
+    "script_sha256": "ceb9a4e443dc2d7b36cdf84f5c515fa726d501a85e04d82ca81a4439c894bbbc",
+    "packets": "writer/revision-v7"
+  },
+  "outputs": [
+    "outputs/script-review-v8/script_v8.md",
+    "outputs/script-review-v8/changes_v8.md",
+    "writer/revision-v8/narration_packet.json",
+    "writer/revision-v8/scene_proposals.json",
+    "writer/revision-v8/evidence_comparison.json",
+    "writer/revision-v8/validation.json",
+    "writer/revision-v8/script_v7_to_v8.diff"
+  ],
+  "affected_scene_ids": [
+    "M000",
+    "M001",
+    "M002",
+    "M003",
+    "M004",
+    "M007",
+    "M006",
+    "M005",
+    "M009"
+  ],
+  "checks": [
+    {
+      "check": "same numeric tokens and existing claims",
+      "result": "pass",
+      "evidence": "writer/revision-v8/evidence_comparison.json"
+    },
+    {
+      "check": "independent review",
+      "result": "pending",
+      "evidence": null
+    }
+  ],
+  "open_issue_ids": [],
+  "next_role": "director_then_independent_qa",
+  "limits": [
+    "v7 unchanged",
+    "no new facts",
+    "no voice/render",
+    "no approval/state changes"
+  ]
+}

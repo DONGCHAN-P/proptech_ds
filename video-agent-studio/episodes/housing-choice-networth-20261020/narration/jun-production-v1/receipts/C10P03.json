@@ -1,0 +1,60 @@
+{
+  "paragraph_id": "C10P03",
+  "scene_id": "C10",
+  "status": "complete",
+  "started_at_utc": "2026-10-26T06:08:30.837Z",
+  "authorization_sha256": "9a39be95ad1546f8949f4de9df29decc87bcec1fa6a6cb84646820dbcaf65c7d",
+  "text_sha256": "c88d053e34a9307349f76a55a22ccc05ad0fb323335b48c9fcdc29b465bb28b4",
+  "phonetic_manifest_sha256": "ea636bf3e07e4fa73fd7dbb25f04e89c38aec191cad02abf3de309af6fbd72a7",
+  "request": {
+    "text": "한편 실거주 매매에는 자산을 키우는 기회와 살 집을 안정적으로 확보하는 가치가 함께 있습니다. 종자돈에 대출을 더해 집을 보유하고, 오랜 기간 가격 상승을 기대하면서 원금을 갚아가는 구조입니다. 저는 한국에서 내 집 마련을 선호하는 배경에도 이런 자산 형성과 주거 안정에 대한 기대가 함께 있다고 봅니다.",
+    "model_id": "eleven_v4",
+    "voice_settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.95,
+      "speed": 0.97
+    }
+  },
+  "reserved_credits": 170,
+  "characters": 170,
+  "actual_credits": 68,
+  "charge_known": true,
+  "account_before": {
+    "tier": "starter",
+    "status": "active",
+    "character_count": 19983,
+    "character_limit": 40000,
+    "included_remaining": 20017,
+    "max_credit_limit_extension": 0,
+    "can_extend_character_limit": false,
+    "allowed_to_extend_character_limit": false
+  },
+  "account_before_scope": "실행 재개/장 시작 GET 스냅샷. 즉시 요청 전 실시간 계정값으로 해석하지 않음.",
+  "account_snapshot_at_utc": "2026-10-26T06:08:20.529Z",
+  "local_shadow_remaining_before": 19878,
+  "actual_listening": false,
+  "http_status": 200,
+  "response_headers": {
+    "request-id": "uhlyle7XXBfnNwpzDQ2k",
+    "x-request-id": null,
+    "character-cost": "68",
+    "content-type": "application/json",
+    "date": "Mon, 26 Oct 2026 06:08:30 GMT"
+  },
+  "pcm_samples": 903168,
+  "pcm_duration_s": 20.48,
+  "provider_last_spoken_end_s": 20.56,
+  "artifact_sha256": {
+    "paragraphs/C10P03/audio.mp3": "36873688a34830a58579dbc395b8d74f9a873b557d09e90e6977ff48c4fc027c",
+    "paragraphs/C10P03/audio.wav": "0f1dc124676ffc5feaa145b659d9fb86c3e700b666374b62abf27e3ee417904a",
+    "paragraphs/C10P03/alignment.json": "a41d0ae7252b0dbee30df7132a7570b41052e6dfc6f6e7331a626036bc7633d2",
+    "paragraphs/C10P03/normalized_alignment.json": "a41d0ae7252b0dbee30df7132a7570b41052e6dfc6f6e7331a626036bc7633d2"
+  },
+  "account_after": {
+    "status": "no_per_paragraph_get_rate_limit_policy",
+    "local_shadow_remaining_after": 19810,
+    "observed_remaining": null
+  },
+  "account_observed_delta": null,
+  "completed_at_utc": "2026-10-26T06:08:35.885Z"
+}

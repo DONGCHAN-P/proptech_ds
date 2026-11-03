@@ -1,0 +1,262 @@
+{
+  "review": "script-v1 bounded fact-to-wording audit",
+  "checked_on": "2026-10-19",
+  "status": "pass_wording_with_reference_issues",
+  "scope": [
+    "outputs/script_v1.md 全낭독문 열람",
+    "writer/scenes_v1.json claims 참조 무결성",
+    "확정 facts수치·면적·통계·기간·기산일·교통상태와 대본 문장대조",
+    "C2/B2후보 공식표근거 및 조건부분석표현 검토"
+  ],
+  "input_hashes": {
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\outputs\\script_v1.md": "2f6c5fbbba859029210117776a369920e5e08ce8d4295d85f6618e17b410c101",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\writer\\scenes_v1.json": "5b0931e1f0284ee266958c52d82122fd713eb76e8c9f0a910a7a1b6a1ac7e8b6",
+    "C:\\projects\\realestate_reco\\video-agent-studio\\episodes\\hanam-gyosan-20261019\\research\\facts.json": "51ec4018ea266d15b5f800379546025e73b2a4f3f954ff41a838b6bca45644b9"
+  },
+  "required_issues": [
+    {
+      "scene_id": "M007",
+      "unit_index": 0,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 1,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 2,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 3,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 4,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 5,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 6,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 7,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 8,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 9,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 10,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 11,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 12,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 13,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 14,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 15,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 16,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 17,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 18,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 19,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M008",
+      "unit_index": 5,
+      "claim_id": "GY-CANDIDATE-BLOCKS"
+    },
+    {
+      "scene_id": "M008",
+      "unit_index": 6,
+      "claim_id": "GY-CANDIDATE-BLOCKS"
+    },
+    {
+      "scene_id": "M008",
+      "unit_index": 7,
+      "claim_id": "GY-CANDIDATE-BLOCKS"
+    }
+  ],
+  "missing_claim_references": [
+    {
+      "scene_id": "M007",
+      "unit_index": 0,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 1,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 2,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 3,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 4,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 5,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 6,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 7,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 8,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 9,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 10,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 11,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 12,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 13,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 14,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 15,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 16,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 17,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 18,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M007",
+      "unit_index": 19,
+      "claim_id": "GY-EXISTING-PRICES"
+    },
+    {
+      "scene_id": "M008",
+      "unit_index": 5,
+      "claim_id": "GY-CANDIDATE-BLOCKS"
+    },
+    {
+      "scene_id": "M008",
+      "unit_index": 6,
+      "claim_id": "GY-CANDIDATE-BLOCKS"
+    },
+    {
+      "scene_id": "M008",
+      "unit_index": 7,
+      "claim_id": "GY-CANDIDATE-BLOCKS"
+    }
+  ],
+  "observations": [
+    "최신36,669/87,319, A2확장포함가격, 기존5개단지 중위값/n 모두 연구팩과 일치",
+    "C2=85㎡초과민간786, B2=60~85㎡민간281는 고시p5와일치",
+    "공공분양 소형A2를대장으로단정하지않으며 C2/B2는조건부관찰후보",
+    "현재교통/실시설계/2032목표/A2입주를분리함",
+    "주변84㎡실거래와A2 59㎡공고가격의차익산출없음"
+  ],
+  "limitations": [
+    "오디오청취·영상프레임검수 아님",
+    "지형/실제역출입구/학교배정 최종확정 검토 아님",
+    "후보 순위는편집판단이며공식가격서열보증아님"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "scene_id": "S09",
+  "chapter": 3,
+  "message": "DSR과 기존 빚",
+  "narration_text": "그런데 여기서 끝이 아닙니다. DSR도 봅니다. 쉽게 말하면, 내 소득에 비해서 1년에 갚는 대출 원금과 이자가 얼마나 되는지를 따져보는 겁니다. 주택담보대출만 보는 게 아니라 기존 신용대출 등 다른 빚도 영향을 줄 수 있어요.\n\n집을 담보로 많이 빌릴 수 있더라도, 내 소득으로 갚기 어렵다고 판단되면 대출한도는 줄어듭니다. 그래서 같은 집을 사는 두 사람도 대출이 다르게 나올 수 있는 거예요.",
+  "paragraph_ids": [
+    "P024",
+    "P025"
+  ],
+  "claim_ids": [
+    "DOC",
+    "FSC_LTV"
+  ],
+  "material_type": "연 소득·상환 예산",
+  "asset_ids": [
+    "M09"
+  ],
+  "script_revision": "f28deb75e0a271e30e3d29dbe52291ef30e28b0ef0bfc2648ad98bbd652e6a73",
+  "audio_revision": null,
+  "start": null,
+  "end": null,
+  "timing_basis": "UNLOCKED: awaiting actual Jun alignment",
+  "beats": [
+    {
+      "anchor": "1년에 갚는 대출 원금과 이자",
+      "action": "연 소득과 연 상환액의 범위 비교",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "기존 신용대출",
+      "action": "기존 빚 상환액이 가용 범위를 차지",
+      "start": null,
+      "end": null
+    },
+    {
+      "anchor": "대출한도는 줄어듭니다",
+      "action": "새 주담대 공간 축소",
+      "start": null,
+      "end": null
+    }
+  ],
+  "status": "designed_not_rendered",
+  "preparation_status": "graphic_to_author; source text and arithmetic available; conditional sources tracked separately",
+  "fallback": "특정 소득·승인금액을 추가 가정하지 않는 비율 도식",
+  "template_status": "contract_only_not_authored",
+  "template": "S09",
+  "beat_ids": [
+    "S09.b01",
+    "S09.b02",
+    "S09.b03"
+  ],
+  "preview_seconds": null
+}

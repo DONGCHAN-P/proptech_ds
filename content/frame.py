@@ -111,7 +111,7 @@ def chrome_html(ep: str, chapter: str, total: int, idx: int,
         f'<div class="shell">{shell_svg()}</div><div class="ring"></div>'
         f'<div class="head">'
         f'  <div class="who"><div class="rail"></div>'
-        f'  <div class="handle">{D.HANDLE}</div></div>'
+        f'  <div class="handle">{D.CHANNEL}</div></div>'
         f'  <div class="ep">{ep}{chap}</div></div>'
         f'<div class="foot"><div class="src">{source}</div>'
         f'<div class="dots">{dots}</div></div>')

@@ -1,0 +1,324 @@
+{
+  "revision": "map-focus-v10-with-qualified-regional-guides",
+  "checked_on": "2026-10-15",
+  "stations": [
+    {
+      "id": "wangsuk_planned",
+      "board_id": "w1_south",
+      "pixel": [
+        620,
+        595
+      ],
+      "label": "왕숙역(가칭·계획)",
+      "lines": [
+        "경춘선 신설역 계획",
+        "GTX-B 계획",
+        "9호선 연장 계획"
+      ],
+      "status": "approved_plan",
+      "position_status": "published_schematic_station_symbol_matched_to_same_landuse_geography; approximate board anchor, not surveyed entrance",
+      "position_tolerance_board_px": 45,
+      "source_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=64513046",
+      "source_file": "research/map-led-v5/w1_b17_pamphlet.pdf",
+      "source_page": 5,
+      "evidence_file": "research/map-focus-v10/w1_station_reference.png",
+      "method": "B17 pamphlet p5 explicit station circle at PDF[1044.5,635], matched to A1 pamphlet p5 plan using same A24/B17 and commercial17/rail corridor placement. Native board pixel is approximate correspondence, not exact PDF reuse transform.",
+      "required_note": "역 위치는 공개 계획도 기준 개략 · 출입구/보행거리 표시 아님",
+      "lonlat": [
+        127.1623,
+        37.65391
+      ],
+      "gis_label": "왕숙역(가칭·계획) · 위치 개략",
+      "gis_position_status": "approximate_reading_of_official_regional_schematic_not_published_station_GPS",
+      "gis_uncertainty_radius_m": 500,
+      "gis_evidence": "research/map-focus-v10/regional_registration_evidence.json",
+      "gis_method": "Official LH regional diagram planned station symbol fit against seven existing station locations from stored OSM. Broad guidance only, no legal/geodetic registration.",
+      "gis_required_note": "계획역 위치 개략 · 공개 교통도 기준 추정 안내 · 출입구 아님"
+    },
+    {
+      "id": "ilpae_planned",
+      "board_id": "w2",
+      "pixel": [
+        606,
+        848
+      ],
+      "label": "일패역(가칭·계획)",
+      "alternative_user_reference": "왕숙2 경의중앙선 신설역",
+      "lines": [
+        "경의중앙선 신설역 계획",
+        "9호선 연장 계획"
+      ],
+      "status": "approved_plan",
+      "position_status": "published_schematic_station_symbol_exact_source_crop_transform; schematic not survey",
+      "position_tolerance_board_px": 12,
+      "source_url": "https://apply.lh.or.kr/lhapply/lhFile.do?fileid=66836710",
+      "source_file": "research/map-led-v5/w2_a3_pamphlet.pdf",
+      "source_page": 5,
+      "evidence_file": "research/map-focus-v10/w2_station_reference.png",
+      "method": "PDF station circle center approx[1041,527.5]; board x=(1041-839)*3,y=(527.5-245)*3. Official label is 일패역(가칭·예정), not settled 王숙2駅 official name.",
+      "required_note": "역 위치는 공개 계획도 기준 개략 · 역명/계획 변경 가능",
+      "lonlat": [
+        127.17994,
+        37.61529
+      ],
+      "gis_label": "일패역(가칭·계획) · 위치 개략",
+      "gis_position_status": "approximate_reading_of_official_regional_schematic_not_published_station_GPS",
+      "gis_uncertainty_radius_m": 500,
+      "gis_evidence": "research/map-focus-v10/regional_registration_evidence.json",
+      "gis_method": "Official LH regional diagram planned station symbol fit against seven existing station locations from stored OSM. Broad guidance only, no legal/geodetic registration.",
+      "gis_required_note": "계획역 위치 개략 · 공개 교통도 기준 추정 안내 · 출입구 아님"
+    }
+  ],
+  "roads": [
+    {
+      "id": "w1_north_road_ns",
+      "board_id": "w1_north",
+      "points": [
+        [
+          525,
+          400
+        ],
+        [
+          565,
+          535
+        ],
+        [
+          610,
+          670
+        ],
+        [
+          653,
+          770
+        ],
+        [
+          694,
+          835
+        ]
+      ],
+      "anchor": [
+        570,
+        520
+      ],
+      "label": "지구 내부 도로 계획",
+      "status": "approved_plan",
+      "source_file": "research/map-led-v5/w1_a1_pamphlet.pdf",
+      "source_page": 5,
+      "precision": "manual schematic centerline; no official road name assigned"
+    },
+    {
+      "id": "w1_north_road_cross",
+      "board_id": "w1_north",
+      "points": [
+        [
+          466,
+          395
+        ],
+        [
+          640,
+          344
+        ],
+        [
+          840,
+          286
+        ]
+      ],
+      "anchor": [
+        610,
+        345
+      ],
+      "label": "단지 주변 도로 계획",
+      "status": "approved_plan",
+      "source_file": "research/map-led-v5/w1_a1_pamphlet.pdf",
+      "source_page": 5,
+      "precision": "manual schematic centerline"
+    },
+    {
+      "id": "w1_south_road_cross",
+      "board_id": "w1_south",
+      "points": [
+        [
+          320,
+          549
+        ],
+        [
+          505,
+          531
+        ],
+        [
+          730,
+          510
+        ],
+        [
+          943,
+          553
+        ],
+        [
+          1080,
+          604
+        ]
+      ],
+      "anchor": [
+        832,
+        536
+      ],
+      "label": "A24·B17 남측 도로 계획",
+      "status": "approved_plan",
+      "source_file": "research/map-led-v5/w1_a1_pamphlet.pdf",
+      "source_page": 5,
+      "precision": "manual schematic centerline; does not claim traversable route or station entrance"
+    },
+    {
+      "id": "w1_south_road_ns",
+      "board_id": "w1_south",
+      "points": [
+        [
+          693,
+          278
+        ],
+        [
+          719,
+          409
+        ],
+        [
+          728,
+          510
+        ],
+        [
+          726,
+          625
+        ],
+        [
+          716,
+          796
+        ],
+        [
+          710,
+          929
+        ]
+      ],
+      "anchor": [
+        727,
+        459
+      ],
+      "label": "지구 내부 도로 계획",
+      "status": "approved_plan",
+      "source_file": "research/map-led-v5/w1_a1_pamphlet.pdf",
+      "source_page": 5,
+      "precision": "manual schematic centerline"
+    },
+    {
+      "id": "w2_road_a3",
+      "board_id": "w2",
+      "points": [
+        [
+          250,
+          226
+        ],
+        [
+          280,
+          296
+        ],
+        [
+          355,
+          390
+        ],
+        [
+          441,
+          467
+        ],
+        [
+          500,
+          555
+        ],
+        [
+          547,
+          613
+        ],
+        [
+          615,
+          700
+        ],
+        [
+          752,
+          793
+        ],
+        [
+          941,
+          880
+        ],
+        [
+          1041,
+          966
+        ],
+        [
+          1110,
+          1100
+        ]
+      ],
+      "anchor": [
+        540,
+        615
+      ],
+      "label": "A3 인접 도로 계획",
+      "status": "approved_plan",
+      "source_file": "research/map-led-v5/w2_a3_pamphlet.pdf",
+      "source_page": 5,
+      "precision": "manual schematic centerline"
+    },
+    {
+      "id": "w2_road_cross",
+      "board_id": "w2",
+      "points": [
+        [
+          363,
+          841
+        ],
+        [
+          442,
+          818
+        ],
+        [
+          524,
+          781
+        ],
+        [
+          615,
+          700
+        ],
+        [
+          700,
+          606
+        ],
+        [
+          799,
+          487
+        ],
+        [
+          905,
+          369
+        ]
+      ],
+      "anchor": [
+        640,
+        685
+      ],
+      "label": "상업·주거 연결 도로 계획",
+      "status": "approved_plan",
+      "source_file": "research/map-led-v5/w2_a3_pamphlet.pdf",
+      "source_page": 5,
+      "precision": "manual schematic centerline; no actual trip/path duration implied"
+    }
+  ],
+  "limitations": [
+    "Station WGS84s are independently estimated regional schematic guides with 500m+ uncertainty, NOT official exact coordinates.",
+    "Native land-use plan station symbols are future schematic locations, not operational stations or exits.",
+    "No north board station pin invented from proximity; north roads only.",
+    "All road labels describe planned layout rather than an assigned street name or current road operation."
+  ],
+  "affected_scene_ids": [
+    "M003",
+    "M004",
+    "M005"
+  ],
+  "scope": "user requested edits through 8:45 only; unchanged audio/script"
+}

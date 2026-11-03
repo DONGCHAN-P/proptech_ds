@@ -1,0 +1,74 @@
+{
+  "task_id": "top20-thumbnail-v1",
+  "revision": "top20-production-v1",
+  "assets": [
+    {
+      "asset_id": "TH001",
+      "scene_ids": [
+        "TH001"
+      ],
+      "type": "thumbnail_real_photo_native_text",
+      "source_or_prompt": {
+        "method": "native static HTML/CSS; local Chromium export",
+        "photos": [
+          {
+            "asset_id": "PHOTO_R03",
+            "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/R03_덕양_삼송도시풍경.jpg",
+            "sha256": "f9649606b6719ad6b82ece49097f72a2138b7247a0d7df1fdde4a0cc61d89582",
+            "author": "H. Y. Shin 000",
+            "file_page": "https://commons.wikimedia.org/wiki/File:Samsong-Jichuk,_Goyang_20211114_163247.jpg",
+            "capture_year": 2021,
+            "license": "CC0"
+          },
+          {
+            "asset_id": "PHOTO_R02_ALT01",
+            "path": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/visual/top20-8min-v2/photos/alternates/R02_ALT_석촌호수_수변_CC0.jpg",
+            "sha256": "730366156b1f7c8cc7d7ce1eeefd592f8118c45b1079a5ad0c5005c61b6c97b4",
+            "author": "Striker9498",
+            "file_page": "https://commons.wikimedia.org/wiki/File:20250409_%EC%84%9D%EC%B4%8C%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90_2.jpg",
+            "capture_year": 2025,
+            "license": "CC0 1.0"
+          }
+        ]
+      },
+      "dimensions": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/thumbnail/TH001_신혼부부_수도권TOP20_1280x720.png",
+      "sha256": "773a483c341749547878500bbd0028efc617ea2a76147cb9afeb48af415bd571",
+      "actual_place": [
+        "경기 고양 삼송로",
+        "서울 송파 석촌호수 동호"
+      ],
+      "AI_표기": "해당 없음: 출처가 있는 실제 장소 사진과 네이티브 텍스트",
+      "ai_generated": false,
+      "upscaled": false,
+      "usage_conditions": "사진 2장 CC0 1.0. 개별 원문·저자·촬영연도·원본 이용조건은 source_ledger.json에 보존. 최종 배치의 제한 크롭 및 텍스트 오버레이를 별도 표시.",
+      "inspection_status": "self_checked_pending_independent_QA"
+    },
+    {
+      "asset_id": "TH001_MOBILE320",
+      "scene_ids": [
+        "TH001"
+      ],
+      "type": "thumbnail_mobile_preview",
+      "source_or_prompt": {
+        "derived_from": "TH001",
+        "method": "browser canvas high quality proportional downsample"
+      },
+      "dimensions": {
+        "width": 320,
+        "height": 180
+      },
+      "actual_file": "C:/projects/realestate_reco/video-agent-studio/episodes/newlywed-apartment-picks-20261101/outputs/top20-production-v1/thumbnail/TH001_신혼부부_수도권TOP20_mobile_320.png",
+      "sha256": "50706f9b6f76476055dba604f3e52cf9761dd3e77c8811a2f050104b6b81bb81",
+      "actual_place": "TH001과 동일",
+      "AI_표기": "해당 없음",
+      "ai_generated": false,
+      "upscaled": false,
+      "usage_conditions": "TH001 출처와 동일",
+      "inspection_status": "self_checked_pending_independent_QA"
+    }
+  ]
+}
